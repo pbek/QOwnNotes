@@ -205,7 +205,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
       <source>Aragonese</source>
-      <translation type="unfinished">Aragonese</translation>
+      <translation>Aragonese</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="66"/>
@@ -245,12 +245,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
       <source>Amharic</source>
-      <translation type="unfinished">Amharic</translation>
+      <translation>Amarike</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
       <source>Ancient Greek</source>
-      <translation type="unfinished">Ancient Greek</translation>
+      <translation>Greqishtja e lashtë</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
@@ -260,7 +260,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Armenian</source>
-      <translation type="unfinished">Armenian</translation>
+      <translation>Armenisht</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
@@ -270,7 +270,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Bask</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
@@ -300,12 +300,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
       <source>Catalan (Valencian)</source>
-      <translation type="unfinished">Catalan (Valencian)</translation>
+      <translation>Katalanisht (Valencian)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
       <source>Chuvash (Russia)</source>
-      <translation type="unfinished">Chuvash (Russia)</translation>
+      <translation>Uashington (Rusi)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
@@ -330,7 +330,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>English (Medical Dictionary)</source>
-      <translation type="unfinished">English (Medical Dictionary)</translation>
+      <translation>Anglisht (Fjalor mjekësor)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
@@ -340,7 +340,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
       <source>Esperanto</source>
-      <translation type="unfinished">Esperanto</translation>
+      <translation>Esperanto të</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
@@ -350,12 +350,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
       <source>Faroese</source>
-      <translation type="unfinished">Faroese</translation>
+      <translation>Faroisht</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
       <source>Friulian</source>
-      <translation type="unfinished">Friulian</translation>
+      <translation>Friulian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
@@ -370,17 +370,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
       <source>Georgian</source>
-      <translation type="unfinished">Georgian</translation>
+      <translation>Gjeorgjisht</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>German (Classical Spelling)</source>
-      <translation type="unfinished">German (Classical Spelling)</translation>
+      <translation>Gjermanisht (Drejtshkrim klasik)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
       <source>German (Medical Dictionary)</source>
-      <translation type="unfinished">German (Medical Dictionary)</translation>
+      <translation>Gjermanisht (Fjalor mjekësor)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
@@ -390,7 +390,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation type="unfinished">Modern Greek (Polytonic Greek)</translation>
+      <translation>Greqishtja Moderne (Greqia Politonike)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
@@ -405,7 +405,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>Hindi</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="70"/>
@@ -425,27 +425,27 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
       <source>Kaszebsczi</source>
-      <translation type="unfinished">Kaszebsczi</translation>
+      <translation>Kaszebsczi</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
       <source>Kazakh</source>
-      <translation type="unfinished">Kazakh</translation>
+      <translation>Kazak</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>Kmere</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
       <source>Komi (Russia)</source>
-      <translation type="unfinished">Komi (Russia)</translation>
+      <translation>Komi (Rusi)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Koreançe</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
@@ -460,12 +460,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
       <source>Latgalian</source>
-      <translation type="unfinished">Latgalian</translation>
+      <translation>Latgalian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>Latine</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
@@ -480,27 +480,27 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>Saksoni e ulët gjermane / e ulët</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>Luksemburgase (Letzeburgesch)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Maqedonas</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>Malayalam</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>Mongolian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
@@ -525,12 +525,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Papiamentu</source>
-      <translation type="unfinished">Papiamentu</translation>
+      <translation>Papiamentu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="95"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persisht</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
@@ -540,17 +540,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
       <source>Romansh</source>
-      <translation type="unfinished">Romansh</translation>
+      <translation>Rome</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Russian Medical Dictionary</source>
-      <translation type="unfinished">Russian Medical Dictionary</translation>
+      <translation>Fjalor mjekësor rus</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation type="unfinished">Rusyn / Ruthene (Slovakia)</translation>
+      <translation>Rusyn / Ruthene (Sllovaki)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
@@ -565,12 +565,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>Shona</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Sindhi</source>
-      <translation type="unfinished">Sindhi</translation>
+      <translation>Sindhi</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="108"/>
@@ -595,17 +595,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="114"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>Tagalog</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Tajik</source>
-      <translation type="unfinished">Tajik</translation>
+      <translation>Taxhik</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="116"/>
       <source>Tatar (Russia)</source>
-      <translation type="unfinished">Tatar (Russia)</translation>
+      <translation>Tatar (Rusi)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
@@ -625,12 +625,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
       <source>Turkmen</source>
-      <translation type="unfinished">Turkmen</translation>
+      <translation>Turkmenisht</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
       <source>Udmurt (Russia)</source>
-      <translation type="unfinished">Udmurt (Russia)</translation>
+      <translation>Udmurt (Rusi)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
@@ -645,17 +645,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="124"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>Uzbeke</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Venda</source>
-      <translation type="unfinished">Venda</translation>
+      <translation>Venda</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="126"/>
       <source>Venetian</source>
-      <translation type="unfinished">Venetian</translation>
+      <translation>Veneciane</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
@@ -665,17 +665,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="128"/>
       <source>Welsh</source>
-      <translation type="unfinished">Welsh</translation>
+      <translation>Uellsit</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>Xhosa</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="130"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>Zulu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="256"/>
@@ -1034,17 +1034,17 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
-      <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+      <translation>
+        <numerusform>%n rresht %1ed %2 herë.</numerusform>
+        <numerusform>%n rreshta %1ed %2 herë.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
+      <translation>
+        <numerusform>rreshti %n u zbeh.</numerusform>
+        <numerusform>%n rreshta u zbehën.</numerusform>
       </translation>
     </message>
     <message>
@@ -1570,7 +1570,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="86"/>
       <source>Trashed</source>
-      <translation type="unfinished">Trashed</translation>
+      <translation>U zhvendos në plehra</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
@@ -1983,7 +1983,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1107"/>
       <source>To&amp;do</source>
-      <translation type="unfinished">To&amp;do</translation>
+      <translation>Për të &amp;bërë</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1113"/>
@@ -2106,7 +2106,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1592"/>
       <source>Show &amp;changelog</source>
-      <translation type="unfinished">Show &amp;changelog</translation>
+      <translation>Trego &amp;ndryshimin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1601"/>
@@ -2141,7 +2141,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1661"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>Vendos bllokun e &amp;kodit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1673"/>
@@ -2166,7 +2166,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1711"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>Shfaq shiritin e &amp;veglave</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1719"/>
@@ -2202,17 +2202,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1782"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Shfaq shënimin në &amp;menaxherin e skedarëve</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1794"/>
       <source>Format text &amp;bold</source>
-      <translation type="unfinished">Format text &amp;bold</translation>
+      <translation>Formati i tekstit &amp;bold</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1806"/>
       <source>Format text &amp;italic</source>
-      <translation type="unfinished">Format text &amp;italic</translation>
+      <translation>Formati i tekstit &amp;italic</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1818"/>
@@ -2338,7 +2338,7 @@
       <location filename="../mainwindow.ui" line="2287"/>
       <location filename="../mainwindow.cpp" line="6086"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>Vendos &amp;kuotën e bllokut</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2295"/>
@@ -2479,7 +2479,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1877"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation type="unfinished">Use &amp;vertical preview layout</translation>
+      <translation>Përdorni paraqitjen &amp;vertikale të parapamjes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1880"/>
@@ -2537,7 +2537,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1565"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp;Shënim shtypi (vrojtim)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1971"/>
@@ -2618,7 +2618,7 @@ Rivendosni shënimin aktual?</translation>
       <location filename="../mainwindow.cpp" line="6544"/>
       <location filename="../mainwindow.cpp" line="9645"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Anuloj</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
@@ -2635,7 +2635,7 @@ Rivendosni shënimin aktual?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2967"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Ndërprit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2967"/>
@@ -2650,9 +2650,9 @@ Rivendosni shënimin aktual?</translation>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3197"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Ovedshtë hequr %n kopja e bazës së të dhënave me konflikt</numerusform>
+        <numerusform>Janë hequr %n kopje të bazës së të dhënave të konfliktuara</numerusform>
       </translation>
     </message>
     <message>
@@ -2688,12 +2688,12 @@ Rivendosni shënimin aktual?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3616"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Hiq shënimin aktual: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3943"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
+      <translation>Ju lutemi shkruani &lt;strong&gt; fjalëkalimin &lt;/strong&gt; të kësaj shënimi të koduar.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3967"/>
@@ -2715,13 +2715,13 @@ Rivendosni shënimin aktual?</translation>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+      <translation>
+        <numerusform>Hiqni &lt;strong&gt;%n &lt;/strong&gt; shënimin e zgjedhur?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni në gjendje t'i riktheni ato nga atje.</numerusform>
+        <numerusform>Hiqni &lt;strong&gt;%n &lt;/strong&gt; shëniminet e zgjedhur?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni në gjendje t'i riktheni ato nga atje.</numerusform>
       </translation>
     </message>
     <message>
@@ -2733,9 +2733,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4220"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+      <translation>
+        <numerusform>Hiq &lt;strong&gt;%n &lt;/strong&gt; dosjen e zgjedhur? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Të gjitha skedarët dhe dosjet në këto dosje do të hiqen gjithashtu!</numerusform>
+        <numerusform>Hiq &lt;strong&gt;%n &lt;/strong&gt; dosjenet e zgjedhur? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Të gjitha skedarët dhe dosjet në këto dosje do të hiqen gjithashtu!</numerusform>
       </translation>
     </message>
     <message>
@@ -2751,9 +2751,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4250"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+      <translation>
+        <numerusform>Hiq &lt;strong&gt;%n&lt;/strong&gt; etiketën e zgjedhur? Asnjë shënim nuk do të hiqet në këtë proces.</numerusform>
+        <numerusform>Hiqni &lt;strong&gt;%n&lt;/strong&gt; etiketat e zgjedhura? Asnjë shënim nuk do të hiqet në këtë proces.</numerusform>
       </translation>
     </message>
     <message>
@@ -2765,9 +2765,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4304"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Zhvendosni %n shënime e zgjedhura në &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Zhvendosni %n shënimeet e zgjedhura në &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2779,9 +2779,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4405"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Kopjoni %n shënime e zgjedhura në &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Kopjoni %n shënimeet e zgjedhura në &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2793,9 +2793,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4433"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation>
+        <numerusform>%n shënimi u kopjua në &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n shënime u kopjuan në &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
@@ -2806,9 +2806,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4447"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Shënoni %n shënimin e përzgjedhur me &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Etiketoni %n shënime të zgjedhura me &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2867,7 +2867,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5889"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>Dosjet e shënimeve</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6015"/>
@@ -2949,25 +2949,25 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6949"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+      <translation>
+        <numerusform>Kopjuar %n shënime në %1</numerusform>
+        <numerusform>Kopjuar %n shënimeet në %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6958"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>Nuk arriti të kopjojë %n shënime (ka shumë të ngjarë tashmë ekzistuese)</numerusform>
+        <numerusform>Nuk arriti të kopjojë %n shënimes (ka shumë të ngjarë tashmë ekzistuese)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6968"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>Kopjimi i kopjimit të shënimit %n (pa shënjime ose skedar teksti ose nuk lexohet)</numerusform>
+        <numerusform>Kopjimi i kopjuar i %n shënimeve (pa shënjime ose skedar teksti ose nuk lexohet)</numerusform>
       </translation>
     </message>
     <message>
@@ -3076,7 +3076,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9494"/>
       <source>Jump to the note's sub-folder</source>
-      <translation type="unfinished">Jump to the note's sub-folder</translation>
+      <translation>Shko te nën-dosja e shënimit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9498"/>
@@ -3150,9 +3150,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="10781"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>%n shkrumb</numerusform>
+        <numerusform>%n gërma</numerusform>
       </translation>
     </message>
     <message>
@@ -3183,9 +3183,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8025"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>%n shënimi i zgjedhur</numerusform>
+        <numerusform>%n shënime të zgjedhura</numerusform>
       </translation>
     </message>
     <message>
@@ -3197,7 +3197,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.ui" line="1197"/>
       <source>&amp;Tag</source>
-      <translation type="unfinished">&amp;Tag</translation>
+      <translation>&amp;Etiketë</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4519"/>
@@ -3207,17 +3207,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4520"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Hiq etiketën &lt;strong&gt;%1&lt;/strong&gt; nga %n shënime e zgjedhura?</numerusform>
+        <numerusform>Hiq etiketën &lt;strong&gt;%1&lt;/strong&gt; nga %n shënimeet e zgjedhura?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4579"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+      <translation>
+        <numerusform>Etiketa &lt;strong&gt;%1 &lt;/strong&gt; u hoq nga %n shënim</numerusform>
+        <numerusform>Etiketa &lt;strong&gt;%1 &lt;/strong&gt; u hoq nga %n shënimet</numerusform>
       </translation>
     </message>
     <message>
@@ -3268,7 +3268,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5055"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Ju nuk keni zgjedhur asnjë listë të Todos. &lt;br/&gt; Ju lutemi kontrolloni konfigurimin tuaj të &lt;strong&gt; Todo &lt;/strong&gt; në cilësimet!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5870"/>
@@ -3348,9 +3348,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8717"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Zhvendosni %n shënime e zgjedhura për të shënuar nën-dosjen &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Zhvendosni %n shënimeet e zgjedhura për të shënuar nën-dosjen &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -3362,9 +3362,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8798"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n shënim u zhvendos në shënimin e nën-dosjes "%2"</numerusform>
+        <numerusform>%n shënimet u zhvendos në shënimin e nën-dosjes "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3781,7 +3781,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6544"/>
       <source>&amp;Decrypt</source>
-      <translation type="unfinished">&amp;Decrypt</translation>
+      <translation>&amp;Dekodojnë</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6570"/>
@@ -3951,9 +3951,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>Fshini &lt;strong&gt;%n&lt;/strong&gt; skedarët e zgjedhur?</numerusform>
+        <numerusform>Fshini &lt;strong&gt;%n&lt;/strong&gt; skedarët e zgjedhur?</numerusform>
       </translation>
     </message>
   </context>
@@ -4002,9 +4002,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>Fshini &lt;strong&gt;%n&lt;/strong&gt; skedarët e zgjedhur?</numerusform>
+        <numerusform>Fshini &lt;strong&gt;%n&lt;/strong&gt; skedarët e zgjedhur?</numerusform>
       </translation>
     </message>
   </context>
@@ -4048,12 +4048,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1070"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>Hapni &amp;cilësimet</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1070"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Anuloj</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1124"/>
@@ -4175,17 +4175,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2718"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>U zbulua një ndryshim në rrugën e shënimit. Dëshironi të zëvendësoni të gjitha dukuritë e &lt;strong&gt;%1&lt;/strong&gt; lidhjeve me &lt;strong&gt;%2&lt;/strong&gt; dhe lidhjet me emrin e skedarit &lt;strong&gt;%3&lt;/strong&gt; me &lt;strong&gt;%4&lt;/strong&gt; në &lt;strong&gt;%n&lt;/strong&gt; skedar shënimesh?</numerusform>
+        <numerusform>U zbulua një ndryshim në rrugën e shënimit. Dëshironi të zëvendësoni të gjitha dukuritë e &lt;strong&gt;%1&lt;/strong&gt; lidhjeve me &lt;strong&gt;%2&lt;/strong&gt; dhe lidhjet me emrin e skedarit &lt;strong&gt;%3&lt;/strong&gt; me &lt;strong&gt;%4&lt;/strong&gt; në &lt;strong&gt;%n&lt;/strong&gt; skedarë shënimesh?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="3195"/>
       <source>…and %n more note(s)</source>
-      <translation type="unfinished">
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
+      <translation>
+        <numerusform>… Dhe %n më shumë shënim(a)</numerusform>
+        <numerusform>… dhe %n më shumë shënima</numerusform>
       </translation>
     </message>
     <message>
@@ -4227,7 +4227,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/cloudconnection.cpp" line="281"/>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>E parazgjedhur</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="216"/>
@@ -4670,14 +4670,14 @@ Dëshiron ta instalosh gjithsesi?</translation>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>importuar %v i %m bookmark(e)</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n faqeshënues &lt;/strong&gt; i gjetur në server</numerusform>
+        <numerusform>&lt;strong&gt;%n faqeshënuesit &lt;/strong&gt; të gjetura në server</numerusform>
       </translation>
     </message>
   </context>
@@ -4702,12 +4702,12 @@ Dëshiron ta instalosh gjithsesi?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="495"/>
       <source>&amp;Add folder</source>
-      <translation type="unfinished">&amp;Add folder</translation>
+      <translation>&amp;Shto dosje</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="519"/>
       <source>&amp;Remove folder</source>
-      <translation type="unfinished">&amp;Remove folder</translation>
+      <translation>&amp;Hiq dosjen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="733"/>
@@ -4727,12 +4727,12 @@ Dëshiron ta instalosh gjithsesi?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="852"/>
       <source>Your ownCloud server</source>
-      <translation type="unfinished">Your ownCloud server</translation>
+      <translation>Serveri juaj ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1273"/>
       <source>ownCloud server url:</source>
-      <translation type="unfinished">ownCloud server url:</translation>
+      <translation>url serveri i ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1295"/>
@@ -4757,12 +4757,12 @@ Dëshiron ta instalosh gjithsesi?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1181"/>
       <source>ownCloud server detected</source>
-      <translation type="unfinished">ownCloud server detected</translation>
+      <translation>serveri i ownCloud u zbulua</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1215"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation type="unfinished">connection to QOwnNotesAPI</translation>
+      <translation>lidhje me QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1198"/>
@@ -4783,7 +4783,7 @@ Dëshiron ta instalosh gjithsesi?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1114"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Kliko këtu për të testuar lidhjen me serverin tuaj ownCloud. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1232"/>
@@ -5502,7 +5502,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2285"/>
       <source>Irish</source>
-      <translation type="unfinished">Irish</translation>
+      <translation>Irlandez</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2296"/>
@@ -5527,12 +5527,12 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2340"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>Hindi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2362"/>
       <source>Hiligaynon</source>
-      <translation type="unfinished">Hiligaynon</translation>
+      <translation>Hiligaynon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2373"/>
@@ -5572,7 +5572,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2505"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>Uzbeke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2549"/>
@@ -5761,7 +5761,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4220"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Mënyra më e mirë për të postuar çështje është të përdorni ndihmësin e çështjes duke shtypur &lt;span style = "font-weight: 600;"&gt; Butoni i asistentit të hapur &lt;/span&gt; në fund. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4582"/>
@@ -5806,27 +5806,27 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
       <source>This is the best way to open an issue</source>
-      <translation type="unfinished">This is the best way to open an issue</translation>
+      <translation>Kjo është mënyra më e mirë për të hapur një çështje</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4264"/>
       <source>Please use this in the issue tracker</source>
-      <translation type="unfinished">Please use this in the issue tracker</translation>
+      <translation>Ju lutemi përdorni këtë në gjurmuesin e çështjes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4267"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+      <translation>&amp;Kopjoni informacionin e debugimit në klipboard</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4278"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation type="unfinished">Please don't use this in the issue tracker</translation>
+      <translation>Ju lutemi mos e përdorni këtë në gjurmuesin e çështjes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4624"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation type="unfinished">Use editor highlighting styles also for the preview</translation>
+      <translation>Përdorni stilet e theksimit të redaktorit gjithashtu për pamjen paraprake</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4984"/>
@@ -5866,7 +5866,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5659"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation type="unfinished">Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</translation>
+      <translation>Panelet mund të ndizen dhe çaktivizohen në menunë kryesore &lt;i&gt; Dritare / Panele &lt;/i&gt; dhe gjithashtu mund të konfiguroni vendet e ndryshme të &lt;i&gt; Vendeve të Punës &lt;/i&gt; për konfigurimin e paneleve të ndryshme.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5736"/>
@@ -5936,7 +5936,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5849"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
+      <translation>Instaloni &lt;a href="%1"&gt; Shtesën e shfletuesit të Internetit Companion &lt;/a&gt; nga &lt;a href="%2"&gt; Dyqani në ueb i Chrome &lt;/a&gt; ose &lt;a href="%3"&gt; Shtesa Firefox- faqe e faqeve &lt;/a&gt; për të përdorur QOwnNotes si kapëse në internet.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3750"/>
@@ -6061,7 +6061,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4827"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ju mund të dëshironi të hidhni një sy në të gjithë &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt; në dispozicion. Formatet &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4977"/>
@@ -6234,7 +6234,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1761"/>
       <source>Legacy ownCloud calendar</source>
-      <translation type="unfinished">Legacy ownCloud calendar</translation>
+      <translation>Kalendari i kalendarit të ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1794"/>
@@ -6591,7 +6591,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
       <location filename="../dialogs/settingsdialog.ui" line="4324"/>
       <location filename="../dialogs/settingsdialog.ui" line="4479"/>
       <source>Fonts</source>
-      <translation type="unfinished">Fonts</translation>
+      <translation>Fontet</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4347"/>
@@ -6704,7 +6704,7 @@ Mesazhi i gabimit në lidhje:</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2038"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+      <translation>Ju lutemi mos e përdorni këtë në gjurmuesin e çështjes, kopjoni tekstin e informacionit të debugimit drejtpërdrejt në botim.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2045"/>
@@ -6805,7 +6805,7 @@ Mesazhi i gabimit në lidhje:</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3971"/>
       <source>The debug information was copied to the clipboard.</source>
-      <translation type="unfinished">The debug information was copied to the clipboard.</translation>
+      <translation>Informacioni i korrigjimit u kopjua në klipboard.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2612"/>
@@ -7083,25 +7083,25 @@ Shënimet tuaja do të qëndrojnë të paprekura!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="216"/>
       <source>80</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">80</translation>
+      <translation>80</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="217"/>
       <source>-ise suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes</translation>
+      <translation>suffixes -ise</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="218"/>
       <source>-ize suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes</translation>
+      <translation>suffixes -ize</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="219"/>
       <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and with accents</translation>
+      <translation>suffixes -ise dhe me thekse</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="221"/>
@@ -7209,7 +7209,7 @@ Shënimet tuaja do të qëndrojnë të paprekura!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="326"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7237,7 +7237,7 @@ Shënimet tuaja do të qëndrojnë të paprekura!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation type="unfinished">Columns:</translation>
+      <translation>Kolona:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
@@ -7252,7 +7252,7 @@ Shënimet tuaja do të qëndrojnë të paprekura!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation type="unfinished">Select table layout or enter text:</translation>
+      <translation>Zgjidhni paraqitjen e tabelës ose shkruani tekstin:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -7349,7 +7349,7 @@ Shënimet tuaja do të qëndrojnë të paprekura!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="113"/>
       <source>Reminder</source>
-      <translation type="unfinished">Reminder</translation>
+      <translation>Kujtesë</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
@@ -7359,7 +7359,7 @@ Shënimet tuaja do të qëndrojnë të paprekura!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Ruaj</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
@@ -7369,17 +7369,17 @@ Shënimet tuaja do të qëndrojnë të paprekura!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
       <source>Save and insert into note</source>
-      <translation type="unfinished">Save and insert into note</translation>
+      <translation>Ruani dhe futni në shënim</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Heq</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="278"/>
       <source>Show completed items</source>
-      <translation type="unfinished">Show completed items</translation>
+      <translation>Trego artikujt e përfunduar</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
@@ -7530,7 +7530,7 @@ Kjo nuk mund të zhbëhet!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation type="unfinished">Move &amp;Up</translation>
+      <translation>&amp;Leviz</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
@@ -7545,7 +7545,7 @@ Kjo nuk mund të zhbëhet!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation type="unfinished">Move &amp;Down</translation>
+      <translation>Leviz &amp;poshte</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>

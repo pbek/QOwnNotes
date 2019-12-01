@@ -493,7 +493,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>Malayalam</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
@@ -2863,7 +2863,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="5889"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>Notitie bestanden</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6015"/>
@@ -3072,7 +3072,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="9494"/>
       <source>Jump to the note's sub-folder</source>
-      <translation type="unfinished">Jump to the note's sub-folder</translation>
+      <translation>Spring naar de submap van de notitie</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9498"/>
@@ -5819,7 +5819,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4624"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation type="unfinished">Use editor highlighting styles also for the preview</translation>
+      <translation>Gebruik editor-markeerstijlen ook voor het voorbeeld</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4984"/>
@@ -7199,7 +7199,7 @@ Je notities zullen intact blijven!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="326"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7242,7 +7242,7 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation type="unfinished">Select table layout or enter text:</translation>
+      <translation>Selecteer een tabelindeling of voer tekst in:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>

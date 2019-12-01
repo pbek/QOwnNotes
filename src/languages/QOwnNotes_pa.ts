@@ -140,12 +140,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
       <source>If checked only the downloaded dictionaries will be used</source>
-      <translation type="unfinished">If checked only the downloaded dictionaries will be used</translation>
+      <translation>ਜੇ ਜਾਂਚ ਕੀਤੀ ਗਈ ਤਾਂ ਸਿਰਫ ਡਾਉਨਲੋਡ ਕੀਤੇ ਸ਼ਬਦਕੋਸ਼ ਹੀ ਵਰਤੇ ਜਾਣਗੇ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="176"/>
       <source>Disable external dictionaries</source>
-      <translation type="unfinished">Disable external dictionaries</translation>
+      <translation>ਬਾਹਰੀ ਸ਼ਬਦਕੋਸ਼ਾਂ ਨੂੰ ਅਯੋਗ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="183"/>
@@ -180,47 +180,47 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
       <source>French</source>
-      <translation type="unfinished">French</translation>
+      <translation>ਫ੍ਰੈਂਚ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="111"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>ਸਪੈਨਿਸ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
       <source>Russian</source>
-      <translation type="unfinished">Russian</translation>
+      <translation>ਰੂਸੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
       <source>Polish</source>
-      <translation type="unfinished">Polish</translation>
+      <translation>ਪੋਲਿਸ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="73"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>ਇਤਾਲਵੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
       <source>Aragonese</source>
-      <translation type="unfinished">Aragonese</translation>
+      <translation>ਅਰਾਗਾਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="66"/>
       <source>Gujarati</source>
-      <translation type="unfinished">Gujarati</translation>
+      <translation>ਗੁਜਰਾਤੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
       <source>Portugese (Brazilian)</source>
-      <translation type="unfinished">Portugese (Brazilian)</translation>
+      <translation>ਪੁਰਤਗਾਲੀ (ਬ੍ਰਾਜ਼ੀਲੀਅਨ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
       <source>Portugese</source>
-      <translation type="unfinished">Portugese</translation>
+      <translation>ਪੁਰਤਗਾਲੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
@@ -230,452 +230,452 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>ਸਵੀਡਿਸ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>ਚੈੱਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
       <source>Afrikaans</source>
-      <translation type="unfinished">Afrikaans</translation>
+      <translation>ਅਫ਼ਰੀਕੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
       <source>Amharic</source>
-      <translation type="unfinished">Amharic</translation>
+      <translation>ਅਮਹੈਰਿਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
       <source>Ancient Greek</source>
-      <translation type="unfinished">Ancient Greek</translation>
+      <translation>ਪ੍ਰਾਚੀਨ ਯੂਨਾਨੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
       <source>Arabic</source>
-      <translation type="unfinished">Arabic</translation>
+      <translation>ਅਰਬੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Armenian</source>
-      <translation type="unfinished">Armenian</translation>
+      <translation>ਅਰਮੀਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>ਅਲਬਾਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>ਬਾਸਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
       <source>Belarusian</source>
-      <translation type="unfinished">Belarusian</translation>
+      <translation>ਬੇਲਾਰੂਸ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>ਬੁਲਗਾਰੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>ਬੰਗਾਲੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
       <source>Breton</source>
-      <translation type="unfinished">Breton</translation>
+      <translation>ਬ੍ਰੇਟਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>ਕੈਟਲਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
       <source>Catalan (Valencian)</source>
-      <translation type="unfinished">Catalan (Valencian)</translation>
+      <translation>ਕੈਟਲਾਨ (ਵੈਲੈਂਸੀਅਨ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
       <source>Chuvash (Russia)</source>
-      <translation type="unfinished">Chuvash (Russia)</translation>
+      <translation>ਚੁਵਾਸ਼ (ਰੂਸ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>ਕ੍ਰੋਏਸ਼ੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="44"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>ਡੱਚ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
       <source>English (Australian)</source>
-      <translation type="unfinished">English (Australian)</translation>
+      <translation>ਇੰਗਲਿਸ਼ (ਆਸਟਰੇਲੀਆਈ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
       <source>English (Canadian)</source>
-      <translation type="unfinished">English (Canadian)</translation>
+      <translation>ਇੰਗਲਿਸ਼ (ਕੈਨੇਡੀਅਨ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>English (Medical Dictionary)</source>
-      <translation type="unfinished">English (Medical Dictionary)</translation>
+      <translation>ਅੰਗਰੇਜ਼ੀ (ਮੈਡੀਕਲ ਡਿਕਸ਼ਨਰੀ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
       <source>English (South African)</source>
-      <translation type="unfinished">English (South African)</translation>
+      <translation>ਅੰਗਰੇਜ਼ੀ (ਦੱਖਣੀ ਅਫਰੀਕਾ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
       <source>Esperanto</source>
-      <translation type="unfinished">Esperanto</translation>
+      <translation>ਐਸਪੇਰਾਂਤੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>ਇਸਤੋਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
       <source>Faroese</source>
-      <translation type="unfinished">Faroese</translation>
+      <translation>ਫ਼ਿਰੋਜ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
       <source>Friulian</source>
-      <translation type="unfinished">Friulian</translation>
+      <translation>ਫ੍ਰੀਉਲਿਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
       <source>Gaelic</source>
-      <translation type="unfinished">Gaelic</translation>
+      <translation>ਗੈਲਿਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="57"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>ਗੈਲੀਸ਼ਿਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
       <source>Georgian</source>
-      <translation type="unfinished">Georgian</translation>
+      <translation>ਜਾਰਜੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>German (Classical Spelling)</source>
-      <translation type="unfinished">German (Classical Spelling)</translation>
+      <translation>ਜਰਮਨ (ਕਲਾਸੀਕਲ ਸਪੈਲਿੰਗ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
       <source>German (Medical Dictionary)</source>
-      <translation type="unfinished">German (Medical Dictionary)</translation>
+      <translation>ਜਰਮਨ (ਡਾਕਟਰੀ ਕੋਸ਼)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>ਯੂਨਾਨੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation type="unfinished">Modern Greek (Polytonic Greek)</translation>
+      <translation>ਆਧੁਨਿਕ ਯੂਨਾਨੀ (ਪੌਲੀਟੋਨਿਕ ਯੂਨਾਨੀ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
       <source>Gurani</source>
-      <translation type="unfinished">Gurani</translation>
+      <translation>ਗੁਰਾਨੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>ਇਬਰਾਨੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>ਹਿੰਦੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="70"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>ਹੰਗਰੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>ਆਈਸਲੈਂਡਿਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>ਇੰਡੋਨੇਸ਼ੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
       <source>Kaszebsczi</source>
-      <translation type="unfinished">Kaszebsczi</translation>
+      <translation>ਕਾਸਜ਼ੇਬਸਕੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
       <source>Kazakh</source>
-      <translation type="unfinished">Kazakh</translation>
+      <translation>ਕਜ਼ਾਖ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>ਖਮੇਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
       <source>Komi (Russia)</source>
-      <translation type="unfinished">Komi (Russia)</translation>
+      <translation>ਕੋਮੀ (ਰੂਸ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>ਕੋਰੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
       <source>Kurdish (Turkey)</source>
-      <translation type="unfinished">Kurdish (Turkey)</translation>
+      <translation>ਕੁਰਦਿਸ਼ (ਤੁਰਕੀ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
       <source>Lao</source>
-      <translation type="unfinished">Lao</translation>
+      <translation>ਲਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
       <source>Latgalian</source>
-      <translation type="unfinished">Latgalian</translation>
+      <translation>ਲੈਟਗਾਲੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>ਲਾਤੀਨੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>ਲਿਥੁਆਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>ਲਾਤਵੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>ਹੇਠਲੀ ਜਰਮਨ / ਲੋ ਸਕਸਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>ਲਕਸਮਬਰਗੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>ਮਕਦੂਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>ਮਲਿਆਲਮ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>ਮੰਗੋਲੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
       <source>Nepali</source>
-      <translation type="unfinished">Nepali</translation>
+      <translation>ਨੇਪਾਲੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
       <source>Norwegian (Bokmål)</source>
-      <translation type="unfinished">Norwegian (Bokmål)</translation>
+      <translation>ਨਾਰਵੇਜੀਅਨ (ਬੋਕਮਾਲ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="92"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+      <translation>ਨਾਰਵੇਜੀਅਨ (ਨੈਨੋਰਸਕ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="93"/>
       <source>Occitan</source>
-      <translation type="unfinished">Occitan</translation>
+      <translation>ਓਕਸੀਟਾਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Papiamentu</source>
-      <translation type="unfinished">Papiamentu</translation>
+      <translation>ਪਪੀਮੈਂਟੁ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="95"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>ਫ਼ਾਰਸੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>ਰੋਮਾਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
       <source>Romansh</source>
-      <translation type="unfinished">Romansh</translation>
+      <translation>ਰੋਮਾਂਸ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Russian Medical Dictionary</source>
-      <translation type="unfinished">Russian Medical Dictionary</translation>
+      <translation>ਰੂਸੀ ਮੈਡੀਕਲ ਕੋਸ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation type="unfinished">Rusyn / Ruthene (Slovakia)</translation>
+      <translation>ਰਸਿਨ / ਰੁਥਨੀ (ਸਲੋਵਾਕੀਆ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
       <source>Serbian (Cyrillic)</source>
-      <translation type="unfinished">Serbian (Cyrillic)</translation>
+      <translation>ਸਰਬੀਅਨ (ਸਿਰਿਲਿਕ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
       <source>Serbian (Latin)</source>
-      <translation type="unfinished">Serbian (Latin)</translation>
+      <translation>ਸਰਬੀਅਨ (ਸਿਰਿਲਿਕ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>ਸ਼ੋਨਾ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Sindhi</source>
-      <translation type="unfinished">Sindhi</translation>
+      <translation>ਸਿੰਧੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="108"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>Sinhala</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>ਸਲੋਵਾਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="110"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>ਸਲੋਵੇਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
       <source>Swahili</source>
-      <translation type="unfinished">Swahili</translation>
+      <translation>ਸਵਾਹਿਲੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="114"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>ਤਾਗਾਲੋਗ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Tajik</source>
-      <translation type="unfinished">Tajik</translation>
+      <translation>ਤਾਜਿਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="116"/>
       <source>Tatar (Russia)</source>
-      <translation type="unfinished">Tatar (Russia)</translation>
+      <translation>ਤਤਾਰ (ਰੂਸ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
       <source>Telugu</source>
-      <translation type="unfinished">Telugu</translation>
+      <translation>ਤੇਲਗੂ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
       <source>Thai</source>
-      <translation type="unfinished">Thai</translation>
+      <translation>ਥਾਈ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>ਤੁਰਕੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
       <source>Turkmen</source>
-      <translation type="unfinished">Turkmen</translation>
+      <translation>ਤੁਰਕਮਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
       <source>Udmurt (Russia)</source>
-      <translation type="unfinished">Udmurt (Russia)</translation>
+      <translation>ਉਦਮੁਰਟ (ਰੂਸ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>ਯੂਕਰੇਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>ਉਰਦੂ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="124"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>ਉਜ਼ਬੇਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Venda</source>
-      <translation type="unfinished">Venda</translation>
+      <translation>ਵੇਂਡਾ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="126"/>
       <source>Venetian</source>
-      <translation type="unfinished">Venetian</translation>
+      <translation>ਵੇਨੇਸ਼ੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>ਵੀਅਤਨਾਮੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="128"/>
       <source>Welsh</source>
-      <translation type="unfinished">Welsh</translation>
+      <translation>ਵੈਲਸ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>ਜੋਸਾ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="130"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>ਜ਼ੂਲੂ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="256"/>
@@ -939,9 +939,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
+      <translation>
+        <numerusform>%n ਲਾਈਨ ਮੂਵ ਕੀਤੀ.</numerusform>
+        <numerusform>%n ਲਾਈਨਾਂ ਮੂਵ ਕੀਤੀਆਂ.</numerusform>
       </translation>
     </message>
     <message>
@@ -977,9 +977,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
+      <translation>
+        <numerusform>%n ਲਾਈਨ ਫਿਲਟਰ.</numerusform>
+        <numerusform>%n ਲਾਈਨਾਂ ਫਿਲਟਰ ਕੀਤੀਆਂ.</numerusform>
       </translation>
     </message>
     <message>
@@ -1025,18 +1025,18 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
       <source>%n lines indented.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
+      <translation>
+        <numerusform>%n ਲਾਈਨ ਇੰਡੈਂਟ ਕੀਤੀ.</numerusform>
+        <numerusform>%n ਲਾਈਨਾਂ ਇੰਡੈਂਟ ਕੀਤੀਆਂ.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
-      <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+      <translation>
+        <numerusform>%n ਲਾਈਨ %1ed %2 ਵਾਰ.</numerusform>
+        <numerusform>%n ਲਾਈਨਾਂ %1ed %2 ਵਾਰ.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1279,7 +1279,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="221"/>
       <source>Trailing space</source>
-      <translation type="unfinished">Trailing space</translation>
+      <translation>ਪਿਛਲੀ ਜਗ੍ਹਾ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="230"/>
@@ -1349,7 +1349,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
       <source>&amp;Crop</source>
-      <translation type="unfinished">&amp;Crop</translation>
+      <translation>&amp;ਫਸਲ</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
@@ -1607,9 +1607,9 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣੀ ਹੋਈ ਨੋਟ ਨੂੰ ਰੀਸਟੋਰ ਕਰੋ?</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਨੂੰ ਬਹਾਲ ਕਰਨਾ ਹੈ?</numerusform>
       </translation>
     </message>
     <message>
@@ -1620,17 +1620,17 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਨੋਟ ਰੀਸਟੋਰ ਕੀਤਾ ਗਿਆ</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਨੋਟ ਬਹਾਲ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣਿਆ ਨੋਟ ਹਟਾਓ?</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣੇ ਨੋਟ ਹਟਾਓ?</numerusform>
       </translation>
     </message>
     <message>
@@ -1641,9 +1641,9 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਨੋਟ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਸੀ</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਨੋਟ ਹਟਾ ਦਿੱਤੇ ਗਏ ਸਨ</numerusform>
       </translation>
     </message>
   </context>
@@ -2650,9 +2650,9 @@ Restore current note?</source>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3197"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>%n ਵਿਵਾਦਪੂਰਨ ਡਾਟਾਬੇਸ ਕਾਪੀ ਹਟਾਈ ਗਈ</numerusform>
+        <numerusform>ਵਿਵਾਦਪੂਰਨ ਡਾਟਾਬੇਸ ਕਾਪੀਆਂ %n ਹਟਾਈਆਂ</numerusform>
       </translation>
     </message>
     <message>
@@ -2673,12 +2673,12 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3384"/>
       <source>&amp;Retry</source>
-      <translation type="unfinished">&amp;Retry</translation>
+      <translation>&amp;ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3384"/>
       <source>&amp;Exit</source>
-      <translation type="unfinished">&amp;Exit</translation>
+      <translation>&amp;ਨਿਕਾਸ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3615"/>
@@ -2693,7 +2693,7 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3943"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਇਨਕ੍ਰਿਪਟਡ ਨੋਟ ਦਾ &lt;strong&gt; ਪਾਸਵਰਡ &lt;/strong&gt; ਭਰੋ.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3967"/>
@@ -2715,13 +2715,14 @@ Restore current note?</source>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣਿਆ ਨੋਟ ਹਟਾਓ?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+ਜੇ ਰੱਦੀ ਨੂੰ ਤੁਹਾਡੇ ਆਪਣੇ ਕਲਾਉਡ ਸਰਵਰ ਤੇ ਸਮਰੱਥ ਬਣਾਇਆ ਗਿਆ ਹੈ ਤਾਂ ਤੁਹਾਨੂੰ ਉਨ੍ਹਾਂ ਨੂੰ ਉਥੋਂ ਮੁੜ ਸਥਾਪਤ ਕਰਨ ਦੇ ਯੋਗ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ.</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣੇ ਨੋਟ ਹਟਾਓ?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+
+ਜੇ ਰੱਦੀ ਨੂੰ ਤੁਹਾਡੇ ਆਪਣੇ ਕਲਾਉਡ ਸਰਵਰ ਤੇ ਸਮਰੱਥ ਬਣਾਇਆ ਗਿਆ ਹੈ ਤਾਂ ਤੁਹਾਨੂੰ ਉਨ੍ਹਾਂ ਨੂੰ ਉਥੋਂ ਮੁੜ ਸਥਾਪਤ ਕਰਨ ਦੇ ਯੋਗ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ.</numerusform>
       </translation>
     </message>
     <message>
@@ -2733,9 +2734,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4220"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣੇ ਫੋਲਡਰ ਨੂੰ ਹਟਾਓ? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; ਇਨ੍ਹਾਂ ਫੋਲਡਰਾਂ ਵਿਚਲੀਆਂ ਸਾਰੀਆਂ ਫਾਈਲਾਂ ਅਤੇ ਫੋਲਡਰਾਂ ਨੂੰ ਵੀ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ!</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣੇ ਫੋਲਡਰ ਹਟਾਉਣੇ ਹਨ? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; ਇਨ੍ਹਾਂ ਫੋਲਡਰਾਂ ਵਿਚਲੀਆਂ ਸਾਰੀਆਂ ਫਾਈਲਾਂ ਅਤੇ ਫੋਲਡਰਾਂ ਨੂੰ ਵੀ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ!</numerusform>
       </translation>
     </message>
     <message>
@@ -2751,9 +2752,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4250"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣਿਆ ਟੈਗ ਹਟਾਓ? ਇਸ ਪ੍ਰਕਿਰਿਆ ਵਿਚ ਕੋਈ ਨੋਟ ਨਹੀਂ ਹਟਾਏ ਜਾਣਗੇ.</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਚੁਣੇ ਟੈਗ ਹਟਾਉਣੇ ਹਨ? ਇਸ ਪ੍ਰਕਿਰਿਆ ਵਿਚ ਕੋਈ ਨੋਟ ਨਹੀਂ ਹਟਾਏ ਜਾਣਗੇ.</numerusform>
       </translation>
     </message>
     <message>
@@ -2765,9 +2766,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4304"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>ਕੀ %n ਚੁਣੇ ਨੋਟ ਨੂੰ &lt;strong&gt;%2&lt;/strong&gt; ਤੇ ਭੇਜੋ?</numerusform>
+        <numerusform>ਕੀ %n ਚੁਣੇ ਨੋਟਾਂ ਨੂੰ &lt;strong&gt;%2&lt;/strong&gt; ਤੇ ਭੇਜੋ?</numerusform>
       </translation>
     </message>
     <message>
@@ -2779,9 +2780,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4405"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>%n ਚੁਣੇ ਨੋਟ ਨੂੰ &lt;strong&gt;%2 &lt;/strong&gt; ਤੇ ਕਾਪੀ ਕਰਨਾ ਹੈ?</numerusform>
+        <numerusform>ਚੁਣੇ ਗਏ %n ਨੋਟਾਂ ਨੂੰ &lt;strong&gt;%2 &lt;/ strong&gt; ਤੇ ਕਾਪੀ ਕਰਨਾ ਹੈ?</numerusform>
       </translation>
     </message>
     <message>
@@ -2793,9 +2794,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4433"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation>
+        <numerusform>%n ਨੋਟ &lt;/ strong&gt;%2 &lt;/ strong&gt; ਤੇ ਨਕਲ ਕੀਤੇ ਗਏ ਸਨ.</numerusform>
+        <numerusform>%n ਨੋਟ &lt;strong&gt;%2&lt;/strong&gt; ਤੇ ਨਕਲ ਕੀਤੇ ਗਏ ਸਨ.</numerusform>
       </translation>
     </message>
     <message>
@@ -2806,9 +2807,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4447"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>%n ਚੁਣੇ ਨੋਟਾਂ ਨਾਲ ਟੈਗ ਕਰੋ &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>ਕੀ %n ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਨੂੰ &lt;strong&gt;%2 &lt;/strong&gt; ਨਾਲ ਟੈਗ ਕਰਨਾ ਹੈ?</numerusform>
       </translation>
     </message>
     <message>
@@ -2849,9 +2850,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5267"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ਦੇ ਕਿਸੇ ਵੀ ਕਾਰਜਕਾਲ ਦੀ &lt;/ strong&gt;%n &lt;/strong&gt; ਮੌਜੂਦਗੀ (ਜ਼) ਨੂੰ ਮਿਲਿਆ</numerusform>
+        <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ਦੇ ਕਿਸੇ ਵੀ ਕਾਰਜਕਾਲ ਦੀ &lt;/ strong&gt;%n &lt;/ strong&gt; ਮੌਜੂਦਗੀ (ਜ਼) ਨੂੰ ਮਿਲਿਆ</numerusform>
       </translation>
     </message>
     <message>
@@ -2867,17 +2868,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5889"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>ਨੋਟ ਫੋਲਡਰ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6015"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
+      <translation>ਨੋਟ ਸੰਸਕਰਣ ਇਸ ਸਮੇਂ ਤੁਹਾਡੇ ownCloud ਸਰਵਰ ਤੋਂ ਲੋਡ ਕੀਤੇ ਗਏ ਹਨ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6030"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">Trashed notes are currently loaded from your ownCloud server</translation>
+      <translation>ਟ੍ਰੈਸ਼ ਕੀਤੇ ਨੋਟ ਇਸ ਸਮੇਂ ਤੁਹਾਡੇ ownCloud ਸਰਵਰ ਤੋਂ ਲੋਡ ਕੀਤੇ ਗਏ ਹਨ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6096"/>
@@ -2949,25 +2950,25 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6949"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%1 &lt;/strong&gt; ਦੇ ਕਿਸੇ ਵੀ ਕਾਰਜਕਾਲ ਦੀ &lt;/ strong&gt;%n &lt;/ strong&gt; ਮੌਜੂਦਗੀ (ਜ਼) ਨੂੰ ਮਿਲਿਆ</numerusform>
+        <numerusform>ਨੋਟ %s ਨੂੰ %1 ਉੱਤੇ ਨਕਲ ਕੀਤਾ</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6958"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>%n ਨੋਟ (ਜ਼) ਦੀ ਨਕਲ ਕਰਨ ਵਿੱਚ ਅਸਫਲ (ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ)</numerusform>
+        <numerusform>%n ਨੋਟ ਦੀ ਨਕਲ ਕਰਨ ਵਿੱਚ ਅਸਫਲ (ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6968"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>%n ਨੋਟ ਦੀ ਕਾਪੀ ਛੱਡ ਦਿੱਤੀ ਗਈ (ਕੋਈ ਮਾਰਕਡਾਉਨ ਜਾਂ ਟੈਕਸਟ ਫਾਈਲ ਨਹੀਂ ਪੜ੍ਹਨ ਯੋਗ ਨਹੀਂ)</numerusform>
+        <numerusform>%n ਨੋਟ (ਜ਼) ਦੀ ਕਾਪੀ ਛੱਡ ਦਿੱਤੀ ਗਈ (ਕੋਈ ਮਾਰਕਡਾਉਨ ਜਾਂ ਟੈਕਸਟ ਫਾਈਲ ਨਹੀਂ ਪੜ੍ਹਨ ਯੋਗ ਨਹੀਂ)</numerusform>
       </translation>
     </message>
     <message>
@@ -3076,7 +3077,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9494"/>
       <source>Jump to the note's sub-folder</source>
-      <translation type="unfinished">Jump to the note's sub-folder</translation>
+      <translation>ਨੋਟ ਦੇ ਸਬ-ਫੋਲਡਰ 'ਤੇ ਜਾਓ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9498"/>
@@ -3197,7 +3198,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.ui" line="1197"/>
       <source>&amp;Tag</source>
-      <translation type="unfinished">&amp;Tag</translation>
+      <translation>&amp;ਟੈਗ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4519"/>
@@ -3207,17 +3208,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4520"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>ਕੀ %n ਚੁਣੇ ਨੋਟਾਂ ਤੋਂ &lt;strong&gt; %1 &lt;/strong&gt; ਟੈਗ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?</numerusform>
+        <numerusform>ਕੀ %n ਚੁਣੇ ਨੋਟਾਂ ਤੋਂ &lt;strong&gt;%1&lt;/strong&gt; ਟੈਗ ਹਟਾਉਣਾ ਹੈ?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4579"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+      <translation>
+        <numerusform>ਟੈਗ &lt;strong&gt;%1 &lt;/ strong&gt; ਨੂੰ %n ਨੋਟ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ</numerusform>
+        <numerusform>ਟੈਗ &lt;strong&gt;%1&lt;/strong&gt; ਨੂੰ %n ਨੋਟਾਂ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ</numerusform>
       </translation>
     </message>
     <message>
@@ -3348,9 +3349,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8717"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>ਕੀ %n ਚੁਣੇ ਨੋਟ ਨੂੰ ਸਬਫੋਲਡਰ &lt;strong&gt;%2&lt;/strong&gt; ਨੋਟ ਕਰਨ ਲਈ ਮੂਵ ਕਰਨਾ ਹੈ?</numerusform>
+        <numerusform>%n ਚੁਣੇ ਨੋਟਾਂ ਨੂੰ ਸਬਫੋਲਡਰ &lt;strong&gt;%2&lt;/strong&gt; ਨੋਟ ਕਰਨ ਲਈ ਮੂਵ ਕਰੋ?</numerusform>
       </translation>
     </message>
     <message>
@@ -3362,25 +3363,25 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8798"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n ਨੋਟ ਨੂੰ ਸਬਫੋਲਡਰ "%2" ਨੋਟ ਕਰਨ ਲਈ ਭੇਜਿਆ ਗਿਆ ਹੈ</numerusform>
+        <numerusform>%n ਨੋਟਜ਼ ਨੂੰ ਸਬਫੋਲਡਰ "%2" ਨੋਟ ਕਰਨ ਲਈ ਭੇਜਿਆ ਗਿਆ ਹੈ</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8819"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>ਸਬ-ਫੋਲਡਰ &lt;strong&gt;%2&lt;/strong&gt; ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ %n ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਦੀ ਨਕਲ ਕਰੋ?</numerusform>
+        <numerusform>ਸਬ-ਫੋਲਡਰ &lt;strong&gt;%2&lt;/strong&gt; ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ %n ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਦੀ ਨਕਲ ਕਰੋ?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8884"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>ਸਬ-ਫੋਲਡਰ "%2" ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ %n ਨੋਟ ਨਕਲ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
+        <numerusform>ਸਬ-ਫੋਲਡਰ "%2" ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ %n ਨੋਟ ਨਕਲ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
       </translation>
     </message>
     <message>
@@ -3456,7 +3457,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5016"/>
       <source>&amp;Ok</source>
-      <translation type="unfinished">&amp;Ok</translation>
+      <translation>&amp;ਠੀਕ ਹੈ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9449"/>
@@ -3497,9 +3498,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2743"/>
       <source>Stored %n note(s) to disk</source>
-      <translation type="unfinished">
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
+      <translation>
+        <numerusform>%n ਨੋਟ ਡਿਸਕ ਤੇ ਸੰਭਾਲਿਆ</numerusform>
+        <numerusform>ਡਿਸਕ ਉੱਤੇ %n ਨੋਟਸ ਸਟੋਰ ਕੀਤੇ ਗਏ</numerusform>
       </translation>
     </message>
     <message>
@@ -3516,7 +3517,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8248"/>
       <source>&amp;Add tag</source>
-      <translation type="unfinished">&amp;Add tag</translation>
+      <translation>&amp;ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8297"/>
@@ -3715,17 +3716,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4503"/>
       <source>%n note(s) were tagged with "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+      <translation>
+        <numerusform>%n ਨੋਟ ਨੂੰ "%2" ਨਾਲ ਟੈਗ ਕੀਤਾ ਗਿਆ ਸੀ</numerusform>
+        <numerusform>%n ਨੋਟ "%2" ਨਾਲ ਟੈਗ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5266"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt;ਦੀ ਮੌਜੂਦਗੀ &lt;strong&gt;%1&lt;/strong&gt; ਮਿਲੀ ਹੈ</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ਦੀਆਂ &lt;strong&gt;%1&lt;/strong&gt; ਘਟਨਾਵਾਂ ਮਿਲੀਆਂ</numerusform>
       </translation>
     </message>
     <message>
@@ -3737,7 +3738,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="6085"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>ਹਵਾਲਾ &amp;ਚੁਣਿਆ ਗਿਆ ਪਾਠ ਨੂੰ ਰੋਕੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7055"/>
@@ -3760,7 +3761,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5058"/>
       <location filename="../mainwindow.cpp" line="9644"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>ਸੈਟਿੰਗਾਂ &amp;ਖੋਲ੍ਹੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
@@ -3771,7 +3772,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6483"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
+      <translation>ਨੋਟ ਨੂੰ ਐਨਕ੍ਰਿਪਟ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ &lt;strong&gt; ਪਾਸਵਰਡ &lt;/strong&gt; ਭਰੋ. &lt;br/&gt;
+
+ਯਾਦ ਰੱਖੋ ਕਿ ਤੁਹਾਨੂੰ ਨੋਟ ਦੀ ਸਮੱਗਰੀ ਨੂੰ ਪੜ੍ਹਨ ਲਈ ਆਪਣਾ ਪਾਸਵਰਡ &lt;strong&gt; ਯਾਦ &lt;/strong&gt; ਦੇਣਾ ਪਵੇਗਾ &lt;br/&gt; ਅਤੇ ਇਹ ਕਿ ਤੁਸੀਂ &lt;strong&gt; ਸਿਰਫ &lt;/strong&gt; ਕਰ ਸਕਦੇ ਹੋ &lt;strong&gt; QOwnNotes &lt;/strong&gt; ਵਿੱਚ!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6539"/>
@@ -3781,7 +3784,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6544"/>
       <source>&amp;Decrypt</source>
-      <translation type="unfinished">&amp;Decrypt</translation>
+      <translation>&amp;ਡਿਕ੍ਰਿਪਟ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6570"/>
@@ -3916,7 +3919,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation type="unfinished">Open &amp;folder</translation>
+      <translation>ਫੋਲਡਰ &amp;ਖੋਲ੍ਹੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
@@ -3951,9 +3954,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>ਚੁਣੀ ਗਈ ਫਾਈਲ ਨੂੰ &lt;strong&gt;%n&lt;/strong&gt; ਮਿਟਾਉਣਾ ਹੈ?</numerusform>
+        <numerusform>ਕੀ ਚੁਣੀਆਂ ਗਈਆਂ ਫਾਈਲਾਂ ਨੂੰ &lt;strong&gt;%n&lt;/strong&gt; ਮਿਟਾਉਣਾ ਹੈ?</numerusform>
       </translation>
     </message>
   </context>
@@ -4002,9 +4005,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>ਚੁਣੀ ਗਈ ਫਾਈਲ ਨੂੰ &lt;strong&gt;%n&lt;/ strong&gt; ਮਿਟਾਉਣਾ ਹੈ?</numerusform>
+        <numerusform>ਕੀ ਚੁਣੀਆਂ ਗਈਆਂ ਫਾਈਲਾਂ ਨੂੰ &lt;strong&gt;%n&lt;/ strong&gt; ਮਿਟਾਉਣਾ ਹੈ?</numerusform>
       </translation>
     </message>
   </context>
@@ -4048,12 +4051,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1070"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>ਸੈਟਿੰਗਾਂ &amp;ਖੋਲ੍ਹੋ</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1070"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;ਰੱਦ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1124"/>
@@ -4099,7 +4102,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1277"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>ਤੁਹਾਡੇ CaldaV ਸਰਵਰ ਦੁਆਰਾ ਗਲਤੀ ਸੁਨੇਹਾ: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1946"/>
@@ -4670,14 +4673,14 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>%v ਦੇ %m ਬੁੱਕਮਾਰਕ ਆਯਾਤ ਕੀਤਾ</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>ਸਰਵਰ ਉੱਤੇ &lt;strong&gt;%n ਬੁੱਕਮਾਰਕ &lt;/ strong&gt; ਮਿਲੇ</numerusform>
+        <numerusform>ਸਰਵਰ ਉੱਤੇ &lt;strong&gt;%n ਬੁੱਕਮਾਰਕ &lt;/ strong&gt; ਮਿਲੇ</numerusform>
       </translation>
     </message>
   </context>
@@ -4717,7 +4720,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="575"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation type="unfinished">Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</translation>
+      <translation>ownCloud ਮਾਰਗ ਸੈੱਟ ਕਰੋ ਜਿੱਥੇ ਨੋਟ ਫੋਲਡਰ ਮਾਰਗ ਨੂੰ ਤੁਹਾਡੇ ownCloud ਸਰਵਰ ਤੇ ਸਿੰਕ ਕੀਤਾ ਜਾਏਗਾ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="749"/>
@@ -4727,27 +4730,27 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="852"/>
       <source>Your ownCloud server</source>
-      <translation type="unfinished">Your ownCloud server</translation>
+      <translation>ਤੁਹਾਡਾ ownCloud ਸਰਵਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1273"/>
       <source>ownCloud server url:</source>
-      <translation type="unfinished">ownCloud server url:</translation>
+      <translation>ownCloud ਸਰਵਰ url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1295"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਖੁਦ ਦੇ ਕਲਾਉਡ ਸਰਵਰ ਦਾ URL ਦਾਖਲ ਕਰੋ, ਉਦਾਹਰਣ ਵਜੋਂ: &lt;span style = "font-style: italic;"&gt; https://cloud.yourserver.com &lt;/span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1051"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਖੁਦ ਦੇ ਕਲਾਉਡ ਸਰਵਰ ਤੇ ਉਪਯੋਗਕਰਤਾ ਨਾਮ ਭਰੋ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1086"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਉਪਭੋਗਤਾ ਨਾਮ ਲਈ ਪਾਸਵਰਡ ਭਰੋ. &lt;br/&gt; ਇਸ ਸਮੇਂ ਪਾਸਵਰਡ ਨੂੰ ਦੂਜੀ ਸੈਟਿੰਗਾਂ ਨਾਲ ਇਨਕ੍ਰਿਪਟਡ ਸਟੋਰ ਕੀਤਾ ਜਾਵੇਗਾ, ਪਰ ਬਹੁਤ ਜ਼ਿਆਦਾ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੈ. &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1164"/>
@@ -4757,12 +4760,12 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1181"/>
       <source>ownCloud server detected</source>
-      <translation type="unfinished">ownCloud server detected</translation>
+      <translation>ownCloud ਸਰਵਰ ਖੋਜਿਆ ਗਿਆ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1215"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation type="unfinished">connection to QOwnNotesAPI</translation>
+      <translation>QOwnNotesAPI ਨਾਲ ਕੁਨੈਕਸ਼ਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1198"/>
@@ -4783,7 +4786,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1114"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ਆਪਣੇ ਖੁਦ ਦੇ ਕਲਾਉਡ ਸਰਵਰ ਨਾਲ ਕੁਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰਨ ਲਈ ਇੱਥੇ ਕਲਿੱਕ ਕਰੋ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1232"/>
@@ -4803,7 +4806,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="911"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ਤੁਹਾਡਾ ਆਪਣਾ ਕਲਾਉਡ ਸਰਵਰ ਖੋਲ੍ਹਦਾ ਹੈ &lt;span style=" font-weight:600;"&gt; ਐਪ ਕੌਨਫਿਗਰੇਸ਼ਨ &lt;/span&gt; ਤੁਹਾਡੇ ਵੈਬ ਬਰਾserਜ਼ਰ ਵਿੱਚ ਪੇਜ QOwnNotesAPI ਸਥਾਪਤ ਕਰਨ ਜਾਂ ਅਪਡੇਟ ਕਰਨ ਅਤੇ ਕੋਰ ਐਪਸ ਨੂੰ ਸਮਰੱਥ ਕਰਨ ਲਈ&lt;span style=" font-weight:600;"&gt;ਵਰਜਨ&lt;/span&gt;ਅਤੇ&lt;span style=" font-weight:600;"&gt;ਹਟਾਈਆਂ ਫਾਈਲਾਂ&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="715"/>
@@ -4818,7 +4821,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="628"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation type="unfinished">Click here to select your remote note path on your ownCloud server</translation>
+      <translation>ਆਪਣੇ ownCloud ਸਰਵਰ ਤੇ ਰਿਮੋਟ ਨੋਟ ਮਾਰਗ ਦੀ ਚੋਣ ਕਰਨ ਲਈ ਇੱਥੇ ਕਲਿੱਕ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="681"/>
@@ -4828,7 +4831,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="879"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt; &lt;head/&gt;&lt;body&gt; &lt;p&gt;ਤੁਹਾਡੇ ਕੋਲ ਦੋ ਖੁਦ ਦੇ ਕਲਾਉਡ ਕੋਰ ਐਪਸ ਹੋਣ ਦੀ ਵੀ ਜ਼ਰੂਰਤ ਹੈ &lt;span style = "font-weight: 600;"&gt; ਵਰਜਨ &lt;/ span&gt; ਅਤੇ &lt;span style="font-weight: 600;"&gt; ਮਿਟਾਏ ਗਏ ਫਾਈਲਾਂ &lt;/span&gt; ਨੂੰ ਚਾਲੂ ਤੁਹਾਡਾ ਆਪਣਾ ਕਲਾਉਡ ਸਰਵਰ (ਜੋ ਕਿ ਡਿਫਾਲਟ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="958"/>
@@ -5038,7 +5041,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2081"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ਜੇ ਤੁਸੀਂ QOwnNotes ਦਾ ਅਨੁਵਾਦ ਕਰਨ ਜਾਂ ਕਿਸੇ ਮੌਜੂਦਾ ਅਨੁਵਾਦ ਨੂੰ ਅਪਡੇਟ ਕਰਨ ਵਿੱਚ ਸਹਾਇਤਾ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਪੜ੍ਹੋ: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt; ਮੈਂ QOwnNotes ਦਾ ਅਨੁਵਾਦ ਕਰਨ ਵਿੱਚ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦਾ ਹਾਂ? &lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2762"/>
@@ -5068,7 +5071,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1533"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ਤੁਸੀਂ &lt;a href="https://letsencrypt.org/"&gt; ਆਓ ਐਨਕ੍ਰਿਪਟ &lt;/a&gt; ਤੋਂ ਇੱਕ ਮੁਫਤ SSL ਸਰਟੀਫਿਕੇਟ ਪ੍ਰਾਪਤ ਕਰਨ ਬਾਰੇ ਵਿਚਾਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2725"/>
@@ -5103,7 +5106,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3829"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ਜੇ ਜਾਂਚ ਕੀਤੀ ਗਈ ਤਾਂ ਤੁਹਾਨੂੰ ਹਮੇਸ਼ਾਂ ਬਾਹਰੀ ਸੋਧ ਬਾਰੇ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ, ਭਾਵੇਂ ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਪਿਛਲੇ ਮਿੰਟ ਵਿੱਚ ਸੰਪਾਦਿਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਸੀ. ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ&lt;span style=" font-style:italic;"&gt; ਚੈੱਕ ਨਾ ਕੀਤਾ &lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3712"/>
@@ -5297,17 +5300,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="684"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation type="unfinished">&amp;Use as ownCloud path</translation>
+      <translation>&amp;ownCloud ਮਾਰਗ ਦੇ ਤੌਰ ਤੇ ਵਰਤਣ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation type="unfinished">Please select your note folder on your ownCloud server:</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ownCloud ਸਰਵਰ ਤੇ ਆਪਣਾ ਨੋਟ ਫੋਲਡਰ ਚੁਣੋ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="766"/>
       <source>Path on your ownCloud server:</source>
-      <translation type="unfinished">Path on your ownCloud server:</translation>
+      <translation>ਤੁਹਾਡੇ ownCloud ਸਰਵਰ 'ਤੇ ਮਾਰਗ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="773"/>
@@ -5323,27 +5326,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="787"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
+      <translation>ਧਿਆਨ ਰੱਖੋ ਕਿ ownCloud ਨੋਟਸ ਐਪ ਸਬ-ਫੋਲਡਰਾਂ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰ ਰਹੀ ਹੈ!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="790"/>
       <source>Use note sub-folders</source>
-      <translation type="unfinished">Use note sub-folders</translation>
+      <translation>ਨੋਟ ਸਬ-ਫੋਲਡਰਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="797"/>
       <source>You need to have git installed to make this work!</source>
-      <translation type="unfinished">You need to have git installed to make this work!</translation>
+      <translation>ਇਹ ਕੰਮ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਗਿੱਟ ਸਥਾਪਤ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="800"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation type="unfinished">Use git to keep a local history of your notes</translation>
+      <translation>ਆਪਣੇ ਨੋਟਾਂ ਦਾ ਸਥਾਨਕ ਇਤਿਹਾਸ ਰੱਖਣ ਲਈ ਗਿਟ ਦੀ ਵਰਤੋਂ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="829"/>
       <source>ownCloud support</source>
-      <translation type="unfinished">ownCloud support</translation>
+      <translation>ownCloud ਸਹਿਯੋਗ ਨੂੰ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="835"/>
@@ -5502,7 +5505,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2285"/>
       <source>Irish</source>
-      <translation type="unfinished">Irish</translation>
+      <translation>ਆਇਰਿਸ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2296"/>
@@ -5552,7 +5555,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>ਲਾਤਵੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2428"/>
@@ -5572,7 +5575,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2505"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>ਉਜ਼ਬੇਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2549"/>
@@ -5761,7 +5764,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4220"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; ਮੁੱਦਿਆਂ ਨੂੰ ਪੋਸਟ ਕਰਨ ਦਾ ਸਭ ਤੋਂ ਉੱਤਮ isੰਗ ਹੈ ਨੂੰ ਦਬਾ ਕੇ ਮੁੱਦਾ ਸਹਾਇਕ ਦੀ ਵਰਤੋਂ ਕਰਨਾ &lt;span style=" font-weight:600;"&gt; ਤਲ 'ਤੇ ਜਾਰੀ ਮੁੱਦਾ ਸਹਾਇਕ &lt;/span&gt; ਬਟਨ ਨੂੰ ਖੋਲ੍ਹੋ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4582"/>
@@ -5801,32 +5804,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2648"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>ਵੀਅਤਨਾਮੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
       <source>This is the best way to open an issue</source>
-      <translation type="unfinished">This is the best way to open an issue</translation>
+      <translation>ਇਹ ਮੁੱਦਾ ਖੋਲ੍ਹਣ ਦਾ ਸਭ ਤੋਂ ਵਧੀਆ ਤਰੀਕਾ ਹੈ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4264"/>
       <source>Please use this in the issue tracker</source>
-      <translation type="unfinished">Please use this in the issue tracker</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਮੁੱਦੇ ਦੇ ਟਰੈਕਰ ਵਿੱਚ ਵਰਤੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4267"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+      <translation>&amp;ਡੀਬੱਗ ਜਾਣਕਾਰੀ ਨੂੰ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4278"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation type="unfinished">Please don't use this in the issue tracker</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਇਸ਼ੂ ਟ੍ਰੈਕਰ ਵਿੱਚ ਨਾ ਵਰਤੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4624"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation type="unfinished">Use editor highlighting styles also for the preview</translation>
+      <translation>ਪੂਰਵਦਰਸ਼ਨ ਲਈ ਸੰਪਾਦਕ ਨੂੰ ਉਜਾਗਰ ਕਰਨ ਵਾਲੀਆਂ ਸ਼ੈਲੀਆਂ ਦੀ ਵਰਤੋਂ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4984"/>
@@ -5866,7 +5869,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5659"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation type="unfinished">Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</translation>
+      <translation>ਪੈਨਲਾਂ ਨੂੰ &lt;i&gt; ਵਿੰਡੋ / ਪੈਨਲ &lt;/i&gt; ਮੁੱਖ ਮੇਨੂ ਵਿੱਚ ਚਾਲੂ ਅਤੇ ਬੰਦ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ ਅਤੇ ਤੁਸੀਂ ਵੱਖਰੇ ਪੈਨਲ ਕੌਂਫਿਗਰੇਸ਼ਨਾਂ ਲਈ ਵੱਖਰੇ &lt;i&gt; ਵਰਕਸਪੇਸ &lt;/i&gt; ਵੀ ਤਿਆਰ ਕਰ ਸਕਦੇ ਹੋ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5736"/>
@@ -6704,7 +6707,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2038"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਇਸ਼ੂ ਟ੍ਰੈਕਰ ਵਿੱਚ ਨਾ ਵਰਤੋ, ਡੀਬੱਗ ਜਾਣਕਾਰੀ ਟੈਕਸਟ ਨੂੰ ਸਿੱਧੇ ਮੁੱਦੇ ਵਿੱਚ ਕਾਪੀ ਕਰੋ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2045"/>
@@ -6805,7 +6808,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3971"/>
       <source>The debug information was copied to the clipboard.</source>
-      <translation type="unfinished">The debug information was copied to the clipboard.</translation>
+      <translation>ਡੀਬੱਗ ਜਾਣਕਾਰੀ ਨੂੰ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਨਕਲ ਕੀਤਾ ਗਿਆ ਸੀ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2612"/>
@@ -6825,7 +6828,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1565"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>ਸ਼ਾਰਟਕੱਟ &lt;strong&gt;%1&lt;/strong&gt; ਪਹਿਲਾਂ ਹੀ &lt;strong&gt;%2&lt;/strong&gt; ਨੂੰ ਨਿਰਧਾਰਤ ਕੀਤਾ ਗਿਆ ਹੈ! ਕੀ ਤੁਸੀਂ ਸ਼ਾਰਟਕੱਟ ਤੇ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹੋ?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2708"/>
@@ -6907,7 +6910,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3532"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
+      <translation>ਲੌਗ ਫਾਈਲ &lt;strong&gt;%1&lt;/strong&gt; ਨੂੰ ਸਾਫ਼ ਕਰ ਦਿੱਤਾ ਗਿਆ ਸੀ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3568"/>
@@ -7024,7 +7027,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2022"/>
       <source>Clear &amp;database</source>
-      <translation type="unfinished">Clear &amp;database</translation>
+      <translation>ਸਾਫ਼ &amp;ਡਾਟਾਬੇਸ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2207"/>
@@ -7071,121 +7074,121 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="214"/>
       <source>40</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">40</translation>
+      <translation>40</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="215"/>
       <source>60</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">60</translation>
+      <translation>60</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="216"/>
       <source>80</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">80</translation>
+      <translation>80</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="217"/>
       <source>-ise suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes</translation>
+      <translation>-ise ਪਿਛੇਤਰ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="218"/>
       <source>-ize suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes</translation>
+      <translation>-ize ਪਿਛੇਤਰ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="219"/>
       <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and with accents</translation>
+      <translation>-ise ਪਿਛੇਤਰ ਅਤੇ ਲਹਿਜ਼ੇ ਨਾਲ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="221"/>
       <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and without accents</translation>
+      <translation>-ise ਪਿਛੇਤਰ ਅਤੇ ਲਹਿਜ਼ੇ ਬਿਨਾ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="224"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes and with accents</translation>
+      <translation>-ize ਪਿਛੇਤਰ ਅਤੇ ਲਹਿਜ਼ੇ ਨਾਲ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes and without accents</translation>
+      <translation>-ize ਪਿਛੇਤਰ ਅਤੇ ਲਹਿਜ਼ੇ ਬਿਨਾ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="229"/>
       <source>large</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">large</translation>
+      <translation>ਵੱਡਾ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="230"/>
       <source>medium</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">medium</translation>
+      <translation>ਮਾਧਿਅਮ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="231"/>
       <source>small</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">small</translation>
+      <translation>ਛੋਟਾ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="232"/>
       <source>variant 0</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 0</translation>
+      <translation>ਵੇਰੀਐਂਟ 0</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="233"/>
       <source>variant 1</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 1</translation>
+      <translation>ਵੇਰੀਐਂਟ 1</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
       <source>variant 2</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 2</translation>
+      <translation>ਵੇਰੀਐਂਟ 2</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="236"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">without accents</translation>
+      <translation>ਲਹਿਜ਼ੇ ਬਿਨਾ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="237"/>
       <source>with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with accents</translation>
+      <translation>ਲਹਿਜ਼ੇ ਦੇ ਨਾਲ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="239"/>
       <source>with ye, modern russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with ye, modern russian</translation>
+      <translation>ਆਧੁਨਿਕ ਰੂਸੀ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
       <source>with yeyo, modern and old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yeyo, modern and old russian</translation>
+      <translation>ਆਧੁਨਿਕ ਅਤੇ ਪੁਰਾਣੇ ਰੂਸੀ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="244"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yo, old russian</translation>
+      <translation>ਪੁਰਾਣੀ ਰੂਸੀ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="245"/>
@@ -7209,7 +7212,7 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="326"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7252,7 +7255,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation type="unfinished">Select table layout or enter text:</translation>
+      <translation>ਟੇਬਲ ਲੇਆਉਟ ਚੁਣੋ ਜਾਂ ਟੈਕਸਟ ਦਰਜ ਕਰੋ:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>

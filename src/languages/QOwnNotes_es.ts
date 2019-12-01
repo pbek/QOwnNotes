@@ -2866,7 +2866,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="5889"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>Carpetas de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6015"/>
@@ -7201,7 +7201,7 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="326"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
