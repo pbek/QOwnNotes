@@ -43,7 +43,7 @@ install:
       sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
       sudo apt-add-repository -y ppa:beineri/opt-qt562-trusty
       sudo apt-get -qq update
-      sudo apt-get -qq install g++-4.8 libc6-i386 qt56tools qt56svg qt56script qt56websockets libaspell-dev
+      sudo apt-get -qq install g++-4.8 libc6-i386 qt56tools qt56svg qt56script qt56websockets
       export CXX="g++-4.8"
       export CC="gcc-4.8"
     fi
@@ -53,7 +53,7 @@ install:
     if [[ "$TRAVIS_OS_NAME" == "osx" ]]
     then
       brew update > /dev/null
-      brew install qt5 ccache aspell
+      brew install qt5 ccache
       export PATH="/usr/local/opt/ccache/bin:$PATH"
       export QTDIR="/usr/local/opt/qt5"
     fi

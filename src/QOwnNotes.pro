@@ -10,6 +10,7 @@ QT       += core gui widgets sql svg network xml xmlpatterns printsupport qml we
 # Windows and macOS seem to ignore that
 #QT       += quick
 
+#CONFIG += with_aspell
 
 # Sonnet support if we can get it to run in the future
 #CONFIG += with_sonnet
