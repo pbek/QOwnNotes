@@ -83,7 +83,7 @@ float NoteHistoryItem::getRelativeScrollBarPosition() const {
  *
  * @param textEdit
  */
-void NoteHistoryItem::restoreTextEditPosition(QPlainTextEdit *textEdit) {
+void NoteHistoryItem::restoreTextEditPosition(QPlainTextEdit *textEdit) const {
     // set the cursor position
     QTextCursor c = textEdit->textCursor();
     c.setPosition(_cursorPosition);
@@ -95,7 +95,7 @@ void NoteHistoryItem::restoreTextEditPosition(QPlainTextEdit *textEdit) {
                             scrollBar->maximum() *_relativeScrollBarPosition));
 }
 
-bool NoteHistoryItem::isNoteValid() {
+bool NoteHistoryItem::isNoteValid() const {
     Note note = getNote();
     return note.exists();
 }

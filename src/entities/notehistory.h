@@ -20,9 +20,9 @@ public:
     int getCursorPosition() const;
     float getRelativeScrollBarPosition() const;
     Note getNote() const;
-    bool isNoteValid();
+    bool isNoteValid() const;
     bool operator ==(const NoteHistoryItem &item) const;
-    void restoreTextEditPosition(QPlainTextEdit *textEdit);
+    void restoreTextEditPosition(QPlainTextEdit *textEdit) const;
 
 private:
     QString _noteName;
