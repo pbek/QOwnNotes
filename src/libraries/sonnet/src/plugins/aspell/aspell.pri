@@ -1,9 +1,4 @@
-#TARGET = sonnet-hunspell
-#TEMPLATE = lib
-#CONFIG += staticlib
 QT -= gui
-
-#include($$PWD/hunspell/hunspell_lib.pri)
 
 SOURCES += $$PWD/aspelldict.cpp \
            $$PWD/aspellclient.cpp \
@@ -18,11 +13,6 @@ DEFINES += SONNET_STATIC
 
 INCLUDEPATH += ../../core
 INCLUDEPATH += $$PWD
-#INCLUDEPATH += hunspell/src/hunspell
-#INCLUDEPATH += hunspell/src/
 
-#DEFINES += HUNSPELL_DEBUG_ON
-
-LIBS += -laspell
-
+DEFINES += ASPELL_DEBUG_ON
 

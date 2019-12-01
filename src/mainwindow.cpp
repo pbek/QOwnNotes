@@ -2272,7 +2272,7 @@ void MainWindow::readSettings() {
     ui->actionCheck_spelling->setChecked(settings.value(QStringLiteral("checkSpelling"), true).toBool());
 
     //load backends
-#ifdef Q_OS_LINUX
+#ifdef ASPELL_ENABLED
     spellBackendGroup = new QActionGroup(ui->menuSpelling_backend);
     loadSpellingBackends();
 #else

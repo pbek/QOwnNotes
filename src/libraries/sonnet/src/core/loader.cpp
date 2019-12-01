@@ -41,7 +41,7 @@
 
 
 #include "../plugins/hunspell/hunspellclient.h"
-#ifdef Q_OS_LINUX
+#ifdef ASPELL_ENABLED
 #include "../plugins/aspell/aspellclient.h"
 #endif
 
@@ -383,7 +383,7 @@ void Loader::loadPlugins()
 //    loadPlugin(QStringLiteral("NSSpellchecker"));
 //#endif //define mac
 //#ifndef Q_OS_MACOS
-#ifdef  Q_OS_LINUX
+#ifdef ASPELL_ENABLED
     QSettings settings;
     QString plugin = settings.value(QLatin1String("spellCheckBackend"),
                                     QLatin1String("Hunspell")).toString();
@@ -420,7 +420,7 @@ void Loader::loadPlugin(const QString &pluginPath)
     if (pluginPath == QLatin1String("Hunspell")) {
         d->client = new HunspellClient(this);
     }
-#ifdef Q_OS_LINUX
+#ifdef ASPELL_ENABLED
     else if (pluginPath == QLatin1String("Aspell")) {
         d->client = new ASpellClient(this);
     }
