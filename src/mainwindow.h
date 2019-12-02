@@ -418,6 +418,12 @@ private slots:
 
     void on_noteSubFolderTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
 
+    void on_noteSubFolderTreeWidget_itemSelectionChanged();
+
+    void filterNotesByMultipleNoteSubFolders();
+
+    void clearTagFilteringColumn();
+
     void on_noteSubFolderLineEdit_textChanged(const QString &arg1);
 
     void on_noteSubFolderTreeWidget_itemExpanded(QTreeWidgetItem *item);

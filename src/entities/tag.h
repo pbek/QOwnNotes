@@ -50,11 +50,16 @@ public:
 
     QStringList fetchAllLinkedNoteFileNames(bool fromAllSubfolders) const;
 
+    QStringList fetchAllLinkedNoteFileNamesForFolder(const NoteSubFolder &noteSubFolder,
+                                                     bool fromAllSubfolders) const;
+
     QList<Note> fetchAllLinkedNotes();
 
     bool isLinkedToNote(const Note &note) const;
 
     int countLinkedNoteFileNames(bool fromAllSubfolder, bool recursive) const;
+
+    int countLinkedNoteFileNamesForNoteFolder(NoteSubFolder noteSubFolder, bool recursive) const;
 
     int getParentId() const;
 

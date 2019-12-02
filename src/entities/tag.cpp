@@ -604,6 +604,39 @@ QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) const {
 }
 
 /**
+ * Fetches all linked note file names for a given subfolder
+ */
+
+QStringList Tag::fetchAllLinkedNoteFileNamesForFolder(const NoteSubFolder &noteSubFolder, bool fromAllSubfolders) const {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    QStringList fileNameList;
+
+    if (fromAllSubfolders) {
+         // 'All notes' selected in note subfolder panel
+        query.prepare(QStringLiteral("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id"));
+    } else {
+        query.prepare(QStringLiteral("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id "
+                              "AND note_sub_folder_path LIKE :noteSubFolderPath"));
+        query.bindValue(QStringLiteral(":noteSubFolderPath"), noteSubFolder.relativePath() + "%");
+    }
+
+    query.bindValue(QStringLiteral(":id"), this->id);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            fileNameList.append(query.value(QStringLiteral("note_file_name")).toString());
+        }
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+
+    return fileNameList;
+}
+
+/**
  * Fetches all linked notes
  */
 QList<Note> Tag::fetchAllLinkedNotes() {
@@ -673,6 +706,42 @@ QStringList Tag::fetchAllNames() {
     DatabaseService::closeDatabaseConnection(db, query);
 
     return nameList;
+}
+
+/**
+ * Count the linked note file names for a note folder
+ */
+int Tag::countLinkedNoteFileNamesForNoteFolder(NoteSubFolder noteSubFolder, bool recursive) const {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+
+    if (recursive) {
+        query.prepare(QStringLiteral("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
+                              "WHERE tag_id = :id AND "
+                              "note_sub_folder_path LIKE :noteSubFolderPath"));
+        query.bindValue(QStringLiteral(":noteSubFolderPath"),
+                        noteSubFolder.relativePath() + QLatin1Char('%'));
+    } else {
+        query.prepare(QStringLiteral("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
+                      "WHERE tag_id = :id AND "
+                      "note_sub_folder_path = :noteSubFolderPath"));
+        query.bindValue(QStringLiteral(":noteSubFolderPath"),
+                        noteSubFolder.relativePath() + QLatin1Char('%'));
+    }
+    query.bindValue(QStringLiteral(":id"), this->id);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        int result = query.value(QStringLiteral("cnt")).toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
+
+        return result;
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+
+    return 0;
 }
 
 /**
