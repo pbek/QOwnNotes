@@ -5946,9 +5946,9 @@ void MainWindow::generateSystemTrayContextMenu() {
                 action->setIcon(QIcon::fromTheme(
                         QStringLiteral("text-x-generic"),
                         QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/text-x-generic.svg"))));
-
-                connect(action, &QAction::triggered, [this, &note](){
-                    setCurrentNoteFromNoteId(note.getId());
+                int noteId = note.getId();
+                connect(action, &QAction::triggered, [this, noteId](){
+                    setCurrentNoteFromNoteId(noteId);
                 });
             }
     }
