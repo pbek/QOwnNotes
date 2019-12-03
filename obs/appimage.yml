@@ -5,6 +5,7 @@ build:
     - linuxdeployqt
     - sqlite3
     - sqlite3-devel
+    - aspell-devel
     - pkgconfig(sqlite3)
     - pkgconfig(Qt5Svg)
     - pkgconfig(Qt5Sql)
