@@ -201,12 +201,12 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Code (inline)"),
                           MarkdownHighlighter::InlineCodeBlock);
 
-    addTextTreeWidgetItem(tr("Code (Keyword)"), MarkdownHighlighter::CodeKeyWord);
-    addTextTreeWidgetItem(tr("Code (Type)"), MarkdownHighlighter::CodeType);
-    addTextTreeWidgetItem(tr("Code (Comment)"), MarkdownHighlighter::CodeComment);
-    addTextTreeWidgetItem(tr("Code (String)"), MarkdownHighlighter::CodeString);
-    addTextTreeWidgetItem(tr("Code (Num literal)"), MarkdownHighlighter::CodeNumLiteral);
-    addTextTreeWidgetItem(tr("Code (Other)"), MarkdownHighlighter::CodeOther);
+    addTextTreeWidgetItem(tr("Code (keyword)"), MarkdownHighlighter::CodeKeyWord);
+    addTextTreeWidgetItem(tr("Code (type)"), MarkdownHighlighter::CodeType);
+    addTextTreeWidgetItem(tr("Code (comment)"), MarkdownHighlighter::CodeComment);
+    addTextTreeWidgetItem(tr("Code (string)"), MarkdownHighlighter::CodeString);
+    addTextTreeWidgetItem(tr("Code (num literal)"), MarkdownHighlighter::CodeNumLiteral);
+    addTextTreeWidgetItem(tr("Code (other)"), MarkdownHighlighter::CodeOther);
 
     addTextTreeWidgetItem(tr("List item"), MarkdownHighlighter::List);
     addTextTreeWidgetItem(tr("Header, level 1"), MarkdownHighlighter::H1);
