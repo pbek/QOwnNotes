@@ -2547,11 +2547,6 @@ p, li { white-space: pre-wrap; }
     <string>Manage dictionaries</string>
    </property>
   </action>
-  <action name="actionasd">
-   <property name="text">
-    <string notr="true">asd</string>
-   </property>
-  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>

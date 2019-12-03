@@ -102,7 +102,6 @@
 #include <utility>
 #include <QScreen>
 #include "libraries/sonnet/src/core/speller.h"
-#include "loader_p.h"
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
