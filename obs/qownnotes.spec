@@ -22,14 +22,12 @@ BuildRequires:  qt5-qtdeclarative-devel
 BuildRequires:  qt5-qtxmlpatterns-devel
 BuildRequires:  qt5-qtwebsockets-devel
 BuildRequires:  desktop-file-utils
-BuildRequires:  aspell-devel
 Requires:       qt5-qtsvg qt5-qtxmlpatterns qt5-qtwebsockets
 
 %else
 # This is for all SUSE
 
 BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel libQt5XmlPatterns-devel libqt5-qtwebsockets-devel
-BuildRequires:  libaspell15
 BuildRequires:  update-desktop-files
 Requires:       libQt5Svg5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5 libQt5XmlPatterns5 libQt5PrintSupport5 libQt5WebSockets5
 
