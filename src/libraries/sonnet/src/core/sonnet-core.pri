@@ -35,6 +35,29 @@ HEADERS += $$PWD/client_p.h \
 # Sonnet Plugins
 include($$PWD/../plugins/hunspell/hunspell.pri)
 
+#linux / mac
+CONFIG(with_aspell) {
+unix: {
+    exists("/usr/include/aspell.h") {
+        DEFINES += ASPELL_ENABLED
+        message ("ASpell enabled")
+        include($$PWD/../plugins/aspell/aspell.pri)
+        LIBS += -laspell
+    }
+}
+}
+
+#windows
+CONFIG(with_aspell) {
+win32: {
+    exists ("C:\\Qt\\5.13\\mingw73_32\\include\\aspell.h") {
+        message ("Windows ASpell enabled")
+        LIBS += -laspell-15
+        DEFINES += ASPELL_ENABLED
+    }
+}
+}
+
 #macx {
 #    include($$PWD/../plugins/nsspellchecker/nsspellchecker.pri)
 #}

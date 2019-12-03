@@ -1083,6 +1083,11 @@ p, li { white-space: pre-wrap; }
       <string>Languages</string>
      </property>
     </widget>
+    <widget class="QMenu" name="menuSpelling_backend">
+     <property name="title">
+      <string>Spelling backend</string>
+     </property>
+    </widget>
     <addaction name="menuEditNote"/>
     <addaction name="action_Remove_note"/>
     <addaction name="separator"/>
@@ -1099,6 +1104,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="menuExtra"/>
     <addaction name="separator"/>
     <addaction name="actionCheck_spelling"/>
+    <addaction name="menuSpelling_backend"/>
     <addaction name="menuLanguages"/>
     <addaction name="actionManage_dictionaries"/>
    </widget>
@@ -2589,9 +2595,9 @@ p, li { white-space: pre-wrap; }
   <tabstop>noteTextView</tabstop>
  </tabstops>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
-  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -2270,6 +2270,14 @@ void MainWindow::readSettings() {
     //restore old spell check settings
     ui->actionCheck_spelling->setChecked(settings.value(QStringLiteral("checkSpelling"), true).toBool());
 
+    //load backends
+#ifdef ASPELL_ENABLED
+    spellBackendGroup = new QActionGroup(ui->menuSpelling_backend);
+    loadSpellingBackends();
+#else
+    ui->menuSpelling_backend->menuAction()->setVisible(false);
+#endif
+
     //load language dicts names into menu
     languageGroup = new QActionGroup(ui->menuLanguages);
     loadDictionaryNames();
@@ -11587,6 +11595,38 @@ void MainWindow::onLanguageChanged(QAction *action) {
     QSettings settings;
     settings.setValue(QStringLiteral("spellCheckLanguage"), lang);
     ui->noteTextEdit->updateSettings();
+}
+
+void MainWindow::loadSpellingBackends()
+{
+    QSettings settings;
+    QString prevBackend = settings.value("spellCheckBackend", "Hunspell").toString();
+
+    spellBackendGroup->setExclusive(true);
+    connect(spellBackendGroup, SIGNAL(triggered(QAction*)), this, SLOT(onBackendChanged(QAction*)));
+
+    QAction *hs = ui->menuSpelling_backend->addAction("Hunspell");
+    hs->setCheckable(true);
+    hs->setData("Hunspell");
+    hs->setActionGroup(spellBackendGroup);
+    QAction *as = ui->menuSpelling_backend->addAction("Aspell");
+    as->setCheckable(true);
+    as->setActionGroup(spellBackendGroup);
+    as->setData("Aspell");
+
+    if (prevBackend == hs->data()) {
+        hs->setChecked(true);
+    } else {
+        as->setChecked(true);
+    }
+}
+
+void MainWindow::onBackendChanged(QAction *action) {
+    QString backend = action->data().toString();
+    QSettings settings;
+    settings.setValue(QStringLiteral("spellCheckBackend"), backend);
+    Utils::Misc::needRestart();
+    showRestartNotificationIfNeeded();
 }
 
 void MainWindow::on_actionManage_dictionaries_triggered() {

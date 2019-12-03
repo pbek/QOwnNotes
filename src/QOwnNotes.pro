@@ -10,6 +10,8 @@ QT       += core gui widgets sql svg network xml xmlpatterns printsupport qml we
 # Windows and macOS seem to ignore that
 #QT       += quick
 
+#CONFIG += with_aspell
+
 TARGET = QOwnNotes
 TEMPLATE = app
 ICON = QOwnNotes.icns

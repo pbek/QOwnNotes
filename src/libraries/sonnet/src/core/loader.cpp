@@ -23,15 +23,17 @@
 #include "client_p.h"
 #include "spellerplugin_p.h"
 
-#include <QHash>
+//#include <QHash>
 #include <QMap>
 #include <QLocale>
 #include <QCoreApplication>
 #include <QPluginLoader>
 #include "core_debug.h"
-#include <QDir>
+//#include <QDir>
 
-#include <algorithm>
+//#include <algorithm>
+#include <QSettings>
+
 
 #define SONNET_STATIC 1
 
@@ -39,6 +41,9 @@
 
 
 #include "../plugins/hunspell/hunspellclient.h"
+#ifdef ASPELL_ENABLED
+#include "../plugins/aspell/aspellclient.h"
+#endif
 
 /*
 #ifdef Q_OS_MACOS
@@ -378,7 +383,14 @@ void Loader::loadPlugins()
 //    loadPlugin(QStringLiteral("NSSpellchecker"));
 //#endif //define mac
 //#ifndef Q_OS_MACOS
-    loadPlugin(QStringLiteral("Hunspell"));
+#ifdef ASPELL_ENABLED
+    QSettings settings;
+    QString plugin = settings.value(QLatin1String("spellCheckBackend"),
+                                    QLatin1String("Hunspell")).toString();
+    loadPlugin(plugin);
+#else
+    loadPlugin("Hunspell");
+#endif
 //#endif //not def mac
 #endif //not static
 }
@@ -405,9 +417,14 @@ void Loader::loadPlugin(const QString &pluginPath)
 //hunspell only for non Mac
     //Client *client = nullptr;
 //#ifndef Q_OS_MACOS
-  //  if (pluginPath == QLatin1String("Hunspell")) {
+    if (pluginPath == QLatin1String("Hunspell")) {
         d->client = new HunspellClient(this);
-   // }
+    }
+#ifdef ASPELL_ENABLED
+    else if (pluginPath == QLatin1String("Aspell")) {
+        d->client = new ASpellClient(this);
+    }
+#endif
 //#endif //not mac
 //#ifdef Q_OS_MACOS
 //    if (pluginPath == QLatin1String("NSSpellchecker")) {

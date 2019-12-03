@@ -595,6 +595,8 @@ private slots:
 
     void onLanguageChanged(QAction* action);
 
+    void onBackendChanged(QAction* action);
+
     void on_actionManage_dictionaries_triggered();
 
 private:
@@ -683,6 +685,7 @@ private:
     bool _lastNoteSelectionWasMultiple;
     WebSocketServerService *_webSocketServerService;
     QActionGroup *languageGroup;
+    QActionGroup *spellBackendGroup;
 
     void createSystemTrayIcon();
 
@@ -1004,4 +1007,6 @@ private:
     void handleNoteTextChanged();
 
     void loadDictionaryNames();
+
+    void loadSpellingBackends();
 };
