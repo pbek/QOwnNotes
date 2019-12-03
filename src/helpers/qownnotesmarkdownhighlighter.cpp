@@ -134,6 +134,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
     if (codeHighlightingOn) {
         if (previousBlockState() == HighlighterState::CodeBlock ||
             previousBlockState() == HighlighterState::CodeBlockEnd ||
+            previousBlockState() >= HighlighterState::CodeCpp ||
             text.contains(QStringLiteral("```"))) {
             highlightCodeBlock(text);
         }
