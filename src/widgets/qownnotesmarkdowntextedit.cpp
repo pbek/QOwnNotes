@@ -126,6 +126,13 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::BrokenLink);
     setFormatStyle(MarkdownHighlighter::HighlighterState::TrailingSpace);
 
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CodeType);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CodeKeyWord);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CodeComment);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CodeString);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CodeNumLiteral);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CodeOther);
+
 #ifdef Q_OS_WIN32
     QSettings settings;
 

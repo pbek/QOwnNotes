@@ -327,8 +327,14 @@ QFont Utils::Schema::Settings::getEditorFixedFont() const {
  */
 QFont Utils::Schema::Settings::getEditorFont(int index) const {
     if (index == MarkdownHighlighter::CodeBlock ||
-            index == MarkdownHighlighter::InlineCodeBlock ||
-            index == MarkdownHighlighter::Table) {
+        index == MarkdownHighlighter::InlineCodeBlock ||
+        index == MarkdownHighlighter::CodeKeyWord ||
+        index == MarkdownHighlighter::CodeType ||
+        index == MarkdownHighlighter::CodeComment ||
+        index == MarkdownHighlighter::CodeString ||
+        index == MarkdownHighlighter::CodeNumLiteral ||
+        index == MarkdownHighlighter::CodeOther ||
+        index == MarkdownHighlighter::Table) {
         return getEditorFixedFont();
     } else {
         return getEditorTextFont();
