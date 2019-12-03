@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 19.12.1
+- you now can select multiple note sub-folders to filter notes
+  (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
+- attempted to switch to Core18 for the snap release on Launchpad
+  (for [#1439](https://github.com/pbek/QOwnNotes/issues/1439))
+- fixed headline background highlighting (for [#1473](https://github.com/pbek/QOwnNotes/issues/1473), thank you @Waqar144)
+- added basic C, C++, JS, PHP, Bash, Python and QML syntax highlighting support (thank you @Waqar144)
+- added optional aspell support (for [#1468](https://github.com/pbek/QOwnNotes/pull/1468), thank you @Waqar144)
+
 ## 19.12.0
 - improved code block styling matching (for [#1462](https://github.com/pbek/QOwnNotes/issues/1462))
 - fixed link headline styling (for [#29](https://github.com/pbek/qmarkdowntextedit/pull/29), thank you @Waqar144)
