@@ -6,6 +6,7 @@
 - attempted to switch to Core18 for the snap release on Launchpad
   (for [#1439](https://github.com/pbek/QOwnNotes/issues/1439))
 - fixed headline background highlighting (for [#1473](https://github.com/pbek/QOwnNotes/issues/1473), thank you @Waqar144)
+- fixed notes not switching from system tray menu (for [#1467](https://github.com/pbek/QOwnNotes/issues/1467), thank you @Waqar144)
 - added basic C, C++, JS, PHP, Bash, Python and QML syntax highlighting support (thank you @Waqar144)
 - added optional aspell support (for [#1468](https://github.com/pbek/QOwnNotes/pull/1468), thank you @Waqar144)
 - added more Spanish, German, Catalan translation (thank you richarson, rakekniven, MGuerra)
