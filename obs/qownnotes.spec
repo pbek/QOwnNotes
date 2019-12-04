@@ -29,7 +29,14 @@ Requires:       qt5-qtsvg qt5-qtxmlpatterns qt5-qtwebsockets
 # This is for all SUSE
 
 BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel libQt5XmlPatterns-devel libqt5-qtwebsockets-devel
+
+# no aspell for SLE
+%if 0%{?sle_version} == 150000 || 0%{?sle_version} == 150100 && !0%{?is_backports}
+#BuildRequires:  aspell-devel
+%else
 BuildRequires:  libaspell15
+%endif
+
 BuildRequires:  update-desktop-files
 Requires:       libQt5Svg5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5 libQt5XmlPatterns5 libQt5PrintSupport5 libQt5WebSockets5
 
