@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.12.2
+- added rust, java, csharp, go, v-lang and SQL syntax highlighting support
+  in code blocks in the note edit (for [#38](https://github.com/pbek/qmarkdowntextedit/pull/38), thank you @Waqar144)
+
 ## 19.12.1
 - you now can select multiple note sub-folders to filter notes
   (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
