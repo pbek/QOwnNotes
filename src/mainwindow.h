@@ -364,6 +364,8 @@ private slots:
 
     void on_tagTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
 
+    void on_tagTreeWidget_itemSelectionChanged();
+
     void on_tagTreeWidget_customContextMenuRequested(const QPoint &pos);
 
     void moveSelectedTagsToTagId(int tagId);

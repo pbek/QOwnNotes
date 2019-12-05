@@ -5347,27 +5347,48 @@ void MainWindow::filterNotesByTag() {
             fileNameList = Note::fetchAllNotTaggedNames();
             break;
         default:
-            // check if there is an active tag
-            Tag activeTag = Tag::activeTag();
+            //check for multiple active;
+            auto selectedItems = ui->tagTreeWidget->selectedItems();
+            QList<int> tagIds;
+            Tag activeTag;
 
-            if (!activeTag.isFetched()) {
-                return;
+            if (selectedItems.count() > 1) {
+                Q_FOREACH(const QTreeWidgetItem *i, selectedItems) {
+
+                    int id = i->data(0, Qt::UserRole).toInt();
+                    tagIds << id;
+                }
+            } else {
+                // check if there is an active tag
+                activeTag = Tag::activeTag();
+                if (!activeTag.isFetched()) {
+                    return;
+                }
+                tagIds << activeTag.getId();
             }
 
             QList<Tag> tags;
 
-            // check if the notes should be viewed recursively
-            if (Tag::isTaggingShowNotesRecursively()) {
-                tags = Tag::fetchRecursivelyByParentId(activeTag.getId());
-            } else {
-                tags << activeTag;
+            Q_FOREACH(int id, tagIds) {
+                tags << Tag::fetch(id);
             }
 
-            qDebug() << __func__ << " - 'tags': " << tags;
+            QList<Tag> tagList;
+
+            Q_FOREACH(const Tag &t, tags) {
+                // check if the notes should be viewed recursively
+                if (Tag::isTaggingShowNotesRecursively()) {
+                    tagList << Tag::fetchRecursivelyByParentId(t.getId());
+                } else {
+                    tagList << t;
+                }
+            }
+
+            qDebug() << __func__ << " - 'tags': " << tagList;
 
             auto selectedFolderItems = ui->noteSubFolderTreeWidget->selectedItems();
 
-            Q_FOREACH(const Tag &tag, tags) {
+            Q_FOREACH(const Tag &tag, tagList) {
                     // fetch all linked note names
                 if (selectedFolderItems.count() > 1) {
                     Q_FOREACH(const QTreeWidgetItem *i, selectedFolderItems) {
@@ -8270,6 +8291,31 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
     // set the tag id as active
     int tagId = current->data(0, Qt::UserRole).toInt();
     Tag::setAsActive(tagId);
+
+    int count = ui->tagTreeWidget->selectedItems().count();
+    if (count > 1) return;
+
+    const QSignalBlocker blocker(ui->searchLineEdit);
+    Q_UNUSED(blocker)
+
+    ui->searchLineEdit->clear();
+    filterNotes();
+}
+
+/**
+ * Triggers filtering when multiple tags are selected
+ */
+void MainWindow::on_tagTreeWidget_itemSelectionChanged() {
+
+    int count = ui->tagTreeWidget->selectedItems().count();
+
+    if (count <= 1) {
+        if (count == 1) {
+           on_tagTreeWidget_currentItemChanged( ui->tagTreeWidget->selectedItems().first(),
+                                                Q_NULLPTR);
+        }
+        return;
+    }
 
     const QSignalBlocker blocker(ui->searchLineEdit);
     Q_UNUSED(blocker)
