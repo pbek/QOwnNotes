@@ -9845,6 +9845,14 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
 }
 
 void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged() {
+    auto items = ui->noteSubFolderTreeWidget->selectedItems();
+    //if no items selected or only one selected
+    if (ui->noteSubFolderTreeWidget->selectedItems().count() <= 1) {
+        if (items.count() == 1) {
+            on_noteSubFolderTreeWidget_currentItemChanged(items.first(), Q_NULLPTR);
+        }
+        return;
+    }
     filterNotes();
     reloadTagTree();
 }
@@ -9852,10 +9860,6 @@ void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged() {
 void MainWindow::filterNotesByMultipleNoteSubFolders() {
 
     auto items = ui->noteSubFolderTreeWidget->selectedItems();
-    //if no items selected
-    if (items.count() <= 1) {
-        return;
-    }
 
     QList<int> noteSubFolderIds;
     QList<int> noteIdList;
