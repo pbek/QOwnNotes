@@ -5351,10 +5351,10 @@ void MainWindow::filterNotesByTag() {
             auto selectedItems = ui->tagTreeWidget->selectedItems();
             QList<int> tagIds;
             Tag activeTag;
-            qWarning () << selectedItems.count();
+
             if (selectedItems.count() > 1) {
                 Q_FOREACH(const QTreeWidgetItem *i, selectedItems) {
-                    qWarning () << i->data(0, Qt::DisplayRole).toString();
+
                     int id = i->data(0, Qt::UserRole).toInt();
                     tagIds << id;
                 }
@@ -8303,7 +8303,7 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
 }
 
 /**
- * Sets a new active tag
+ * Triggers filtering when multiple tags are selected
  */
 void MainWindow::on_tagTreeWidget_itemSelectionChanged() {
 
