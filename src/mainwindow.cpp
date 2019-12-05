@@ -8309,7 +8309,13 @@ void MainWindow::on_tagTreeWidget_itemSelectionChanged() {
 
     int count = ui->tagTreeWidget->selectedItems().count();
 
-    if (count <= 1) return;
+    if (count <= 1) {
+        if (count == 1) {
+           on_tagTreeWidget_currentItemChanged( ui->tagTreeWidget->selectedItems().first(),
+                                                Q_NULLPTR);
+        }
+        return;
+    }
 
     const QSignalBlocker blocker(ui->searchLineEdit);
     Q_UNUSED(blocker)
