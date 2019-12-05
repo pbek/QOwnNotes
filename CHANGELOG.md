@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 19.12.2
+- you now can select multiple note tags to filter notes
+  (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
+- you can now move paragraphs up/down with <kbd>Ctrl + Shift + ↑/↓</kbd>
+  (for [#569](https://github.com/pbek/QOwnNotes/issues/569), thank you @Waqar144)
 - added rust, java, csharp, go, v-lang and SQL syntax highlighting support
   in code blocks in the note edit (for [#38](https://github.com/pbek/qmarkdowntextedit/pull/38), thank you @Waqar144)
 - fixed SLE build process (thank you @Waqar144)
