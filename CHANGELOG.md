@@ -6,6 +6,7 @@
   will now raise across other windows if activated while already active
   (for [#1485](https://github.com/pbek/QOwnNotes/issues/1485))
 - the Gentoo EBuilds now are using EAPI7 (for [#1484](https://github.com/pbek/QOwnNotes/issues/1484), thank you @internethering)
+- added more Danish, Finnish translation (thank you Fabijenna)
 
 ## 19.12.2
 - you now can select multiple note tags to filter notes
