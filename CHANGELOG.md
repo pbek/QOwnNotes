@@ -2,6 +2,9 @@
 
 ## 19.12.3
 - fixed deselection of multi folder selection (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
+- dialogs like the *Todo dialog*, the *Issue assistant dialog* or the *Action dialog*
+  will now raise across other windows if activated while already active
+  (for [#1485](https://github.com/pbek/QOwnNotes/issues/1485))
 - the Gentoo EBuilds now are using EAPI7 (for [#1484](https://github.com/pbek/QOwnNotes/issues/1484), thank you @internethering)
 
 ## 19.12.2

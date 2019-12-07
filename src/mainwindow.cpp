@@ -5080,6 +5080,8 @@ void MainWindow::openTodoDialog(const QString& taskUid) {
     }
 
     _todoDialog->show();
+    _todoDialog->activateWindow();
+    _todoDialog->raise();
 
     // generate the system tray context menu to show modified tasks
     generateSystemTrayContextMenu();
@@ -5848,6 +5850,8 @@ void MainWindow::openIssueAssistantDialog() {
     }
 
     _issueAssistantDialog->show();
+    _issueAssistantDialog->activateWindow();
+    _issueAssistantDialog->raise();
 }
 
 void MainWindow::on_actionAlphabetical_triggered(bool checked) {
@@ -10871,6 +10875,8 @@ void MainWindow::on_actionFind_action_triggered() {
     }
 
     _actionDialog->show();
+    _actionDialog->activateWindow();
+    _actionDialog->raise();
 }
 
 /**
