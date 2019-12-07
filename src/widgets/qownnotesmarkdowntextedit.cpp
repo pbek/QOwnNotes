@@ -131,6 +131,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::CodeComment);
     setFormatStyle(MarkdownHighlighter::HighlighterState::CodeString);
     setFormatStyle(MarkdownHighlighter::HighlighterState::CodeNumLiteral);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CodeBuiltIn);
     setFormatStyle(MarkdownHighlighter::HighlighterState::CodeOther);
 
 #ifdef Q_OS_WIN32

@@ -333,6 +333,7 @@ QFont Utils::Schema::Settings::getEditorFont(int index) const {
         index == MarkdownHighlighter::CodeComment ||
         index == MarkdownHighlighter::CodeString ||
         index == MarkdownHighlighter::CodeNumLiteral ||
+        index == MarkdownHighlighter::CodeBuiltIn ||
         index == MarkdownHighlighter::CodeOther ||
         index == MarkdownHighlighter::Table) {
         return getEditorFixedFont();
