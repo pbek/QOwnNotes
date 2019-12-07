@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.12.3
+- fixed deselection of multi folder selection (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
+- the Gentoo EBuilds now are using EAPI7 (for [#1484](https://github.com/pbek/QOwnNotes/issues/1484), thank you @internethering)
+
 ## 19.12.2
 - you now can select multiple note tags to filter notes
   (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
