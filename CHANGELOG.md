@@ -4,6 +4,7 @@
 - fixed a problem with loading notes if no note sub-folder was selected
   (for [#1489](https://github.com/pbek/QOwnNotes/issues/1489))
 - lots of syntax highlighting improvements were made (for [#40](https://github.com/pbek/qmarkdowntextedit/pull/40), thank you @Waqar144)
+- fixed deselection of multi folder selection again (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
 - added more Uzbek, Lithuanian, Danish, Estonian, Albanian translation (thank you Fabijenna)
 
 ## 19.12.3
