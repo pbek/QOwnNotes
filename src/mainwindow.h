@@ -422,8 +422,6 @@ private slots:
 
     void on_noteSubFolderTreeWidget_itemSelectionChanged();
 
-    void filterNotesByMultipleNoteSubFolders();
-
     void clearTagFilteringColumn();
 
     void on_noteSubFolderLineEdit_textChanged(const QString &arg1);

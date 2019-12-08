@@ -5188,8 +5188,6 @@ void MainWindow::filterNotes(bool searchForText) {
         filterNotesByNoteSubFolders();
     }
 
-    filterNotesByMultipleNoteSubFolders();
-
     // moved condition whether to filter notes by tag at all into
     // filterNotesByTag() -- it can now be used as a slot at startup
     filterNotesByTag();
@@ -5261,10 +5259,6 @@ void MainWindow::filterNotesBySearchLineEditText() {
 
             // hide all filtered notes
             item->setHidden(isHidden);
-            //set the item as filtered
-            //we will use this value in multiple note folder filtering
-            //to check whether a note is filtered
-            item->setData(3, Qt::UserRole, isHidden);
 
             // count occurrences of search terms in notes
             if (!isHidden && showMatches) {
@@ -5437,27 +5431,35 @@ void MainWindow::filterNotesByTag() {
  * Does the note filtering by note sub folders
  */
 void MainWindow::filterNotesByNoteSubFolders() {
-    int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
-    QList<int> noteSubFolderIds;
-    QList<int> noteIdList;
+    auto selectedItems = ui->noteSubFolderTreeWidget->selectedItems();
 
+    //get all the folder ids
+    QList<int> selectedNoteSubFolderIds;
+    Q_FOREACH(QTreeWidgetItem *i, selectedItems) {
+        selectedNoteSubFolderIds << i->data(0, Qt::UserRole).toInt();
+    }
+
+    QList<int> noteSubFolderIds;
     // check if the notes should be viewed recursively
     if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
-        noteSubFolderIds = NoteSubFolder::fetchIdsRecursivelyByParentId(
-                activeNoteSubFolderId);
-    } else {
-        noteSubFolderIds << activeNoteSubFolderId;
+        Q_FOREACH(int subFolId, selectedNoteSubFolderIds) {
+            noteSubFolderIds << NoteSubFolder::fetchIdsRecursivelyByParentId(subFolId);
+        }
+    }
+    else {
+        noteSubFolderIds << selectedNoteSubFolderIds;
     }
 
     qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
 
     // get the notes from the subfolders
+    QList<int> noteIdList;
     Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
-            // get all notes of a note sub folder
-            QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
+        // get all notes of a note sub folder
+        QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
                     noteSubFolderId);
-            noteIdList << Note::noteIdListFromNoteList(noteList);
-        }
+        noteIdList << Note::noteIdListFromNoteList(noteList);
+    }
 
     // omit the already hidden notes
     QTreeWidgetItemIterator it(ui->noteTreeWidget,
@@ -9859,53 +9861,6 @@ void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged() {
     }
     filterNotes();
     reloadTagTree();
-}
-
-void MainWindow::filterNotesByMultipleNoteSubFolders() {
-
-    auto items = ui->noteSubFolderTreeWidget->selectedItems();
-
-    QList<int> noteSubFolderIds;
-    QList<int> noteIdList;
-    //get all the folder ids
-    Q_FOREACH(QTreeWidgetItem *item, items) {
-        noteSubFolderIds << item->data(0, Qt::UserRole).toInt();
-    }
-
-    QList<int> noteSubFolderRecursiveIds;
-    if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
-        Q_FOREACH(int subFolId, noteSubFolderIds) {
-            noteSubFolderRecursiveIds << NoteSubFolder::fetchIdsRecursivelyByParentId(subFolId);
-        }
-    }
-    else {
-        noteSubFolderRecursiveIds << noteSubFolderIds;
-    }
-
-    // get the notes from the subfolders
-    Q_FOREACH(int noteSubFolderId, noteSubFolderRecursiveIds) {
-        // get all notes of a note sub folder
-        QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
-                    noteSubFolderId);
-        noteIdList << Note::noteIdListFromNoteList(noteList);
-    }
-
-    QTreeWidgetItemIterator it(ui->noteTreeWidget);
-
-    while (*it) {
-        // hide all notes that are not in selection
-        if (!noteIdList.contains((*it)->data(0, Qt::UserRole).toInt())) {
-            (*it)->setHidden(true);
-        } else {
-            //if the item wasn't filtered by the searchLineEdit
-            if (!(*it)->data(3, Qt::UserRole).toBool()) {
-                (*it)->setHidden(false);
-            }
-        }
-        //reset the value for searchLineEdit
-        (*it)->setData(3, Qt::UserRole, false);
-        ++it;
-    }
 }
 
 void MainWindow::clearTagFilteringColumn() {
