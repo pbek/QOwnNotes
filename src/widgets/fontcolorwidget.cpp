@@ -205,6 +205,7 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Code (type)"), MarkdownHighlighter::CodeType);
     addTextTreeWidgetItem(tr("Code (comment)"), MarkdownHighlighter::CodeComment);
     addTextTreeWidgetItem(tr("Code (string)"), MarkdownHighlighter::CodeString);
+    addTextTreeWidgetItem(tr("Code (built in)"), MarkdownHighlighter::CodeBuiltIn);
     addTextTreeWidgetItem(tr("Code (num literal)"), MarkdownHighlighter::CodeNumLiteral);
     addTextTreeWidgetItem(tr("Code (other)"), MarkdownHighlighter::CodeOther);
 
