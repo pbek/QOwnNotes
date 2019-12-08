@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.12.4
+- fixed a problem with loading notes if no note sub-folder was selected
+  (for [#1489](https://github.com/pbek/QOwnNotes/issues/1489))
+- lots of syntax highlighting improvements were made (for [#40](https://github.com/pbek/qmarkdowntextedit/pull/40), thank you @Waqar144)
+
 ## 19.12.3
 - fixed deselection of multi folder selection (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
 - dialogs like the *Todo dialog*, the *Issue assistant dialog* or the *Action dialog*
