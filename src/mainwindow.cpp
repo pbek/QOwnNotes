@@ -2194,7 +2194,7 @@ void MainWindow::readSettings() {
             settings.value(QStringLiteral("MainWindow/menuBarGeometry")).toByteArray());
 
     // read all relevant settings, that can be set in the settings dialog
-    readSettingsFromSettingsDialog();
+    readSettingsFromSettingsDialog(true);
 
     // get the notes path
     // prepend the portable data path if we are in portable mode
@@ -2340,7 +2340,7 @@ void MainWindow::restoreToolbars() {
 /**
  * @brief Reads all relevant settings, that can be set in the settings dialog
  */
-void MainWindow::readSettingsFromSettingsDialog() {
+void MainWindow::readSettingsFromSettingsDialog(bool isAppLaunch) {
     QSettings settings;
 
     this->notifyAllExternalModifications =
@@ -2460,6 +2460,12 @@ void MainWindow::readSettingsFromSettingsDialog() {
 
     // reset cloud service instance
     OwnCloudService::instance(true);
+
+    // the notes need to be reloaded and sub-folder panel needs to be populated
+    // if sub-folders were activated for a note folder in the settings
+    if (!isAppLaunch && NoteFolder::isCurrentShowSubfolders()) {
+        buildNotesIndexAndLoadNoteDirectoryList();
+    }
 }
 
 /**

@@ -732,7 +732,7 @@ private:
 
     void makeCurrentNoteFirstInNoteList();
 
-    void readSettingsFromSettingsDialog();
+    void readSettingsFromSettingsDialog(bool isAppLaunch = false);
 
     void setCurrentNoteFromHistoryItem(NoteHistoryItem item);
 
