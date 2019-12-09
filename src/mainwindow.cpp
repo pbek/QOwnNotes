@@ -1406,12 +1406,12 @@ void MainWindow::initStyling() {
 
 #ifdef Q_OS_MAC
     // no stylesheets needed for OS X, the margins doesn't work the same there
-    ui->tagFrame->setStyleSheet(QStringLiteral(""));
-    ui->notesListFrame->setStyleSheet(QStringLiteral(""));
-    ui->noteListSubFrame->setStyleSheet(QStringLiteral(""));
-    ui->navigationFrame->setStyleSheet(QStringLiteral(""));
-    ui->noteEditFrame->setStyleSheet(QStringLiteral(""));
-    ui->noteViewFrame->setStyleSheet(QStringLiteral(""));
+    ui->tagFrame->setStyleSheet(QString());
+    ui->notesListFrame->setStyleSheet(QString());
+    ui->noteListSubFrame->setStyleSheet(QString());
+    ui->navigationFrame->setStyleSheet(QString());
+    ui->noteEditFrame->setStyleSheet(QString());
+    ui->noteViewFrame->setStyleSheet(QString());
 
     // add some margins in OS X to match the styling of the note list
     ui->navigationFrame->setContentsMargins(3, 0, 3, 0);
@@ -1813,7 +1813,7 @@ void MainWindow::storeRecentNoteFolder(const QString& addFolderName,
     recentNoteFolders.removeAll(removeFolderName);
 
     // remove empty paths
-    recentNoteFolders.removeAll(QStringLiteral(""));
+    recentNoteFolders.removeAll(QString());
 
     if (addFolderName != removeFolderName) {
         recentNoteFolders.prepend(addFolderName);
@@ -4765,7 +4765,7 @@ QOwnNotesMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
  */
 void MainWindow::handleTextNoteLinking() {
     QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    auto *dialog = new LinkDialog(QStringLiteral(""), this);
+    auto *dialog = new LinkDialog(QString(), this);
 
     QString selectedText = textEdit->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
@@ -5630,7 +5630,7 @@ void MainWindow::on_action_New_note_triggered() {
         bool ok;
         QString headline = QInputDialog::getText(
                 this, tr("New note"), tr("Note headline"), QLineEdit::Normal,
-                QStringLiteral(""), &ok);
+                QString(), &ok);
 
         if (!ok) {
             return;
@@ -5727,7 +5727,7 @@ void MainWindow::openLocalUrl(QString urlString) {
 
     // convert relative file urls to absolute urls and open them
     if (urlString.startsWith(QStringLiteral("file://..")) && !isNoteFileUrl) {
-        QString windowsSlash = QStringLiteral("");
+        QString windowsSlash = QString();
 
 #ifdef Q_OS_WIN32
     // we need another slash for Windows
@@ -6792,7 +6792,7 @@ void MainWindow::on_actionInsert_code_block_triggered() {
             // add another newline if there is no newline at the end of the
             // selected text
             QString endNewline = selectedText.endsWith(QStringLiteral("\n"))
-                    ? QStringLiteral("") : QStringLiteral("\n");
+                    ? QString() : QStringLiteral("\n");
 
             selectedText = QStringLiteral("``\n") + selectedText + endNewline + QStringLiteral("``");
             addNewline = true;
@@ -7655,7 +7655,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
                     .arg(name, QString::number(linkCount));
     item->setData(0, Qt::UserRole, tagId);
     item->setText(0, name);
-    item->setText(1, linkCount > 0 ? QString::number(linkCount) : QStringLiteral(""));
+    item->setText(1, linkCount > 0 ? QString::number(linkCount) : QString());
     item->setForeground(1, QColor(Qt::gray));
     item->setIcon(0, QIcon::fromTheme(
                     QStringLiteral("tag"), QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/tag.svg"))));
@@ -9115,7 +9115,7 @@ void MainWindow::on_actionAutocomplete_triggered() {
     QStringList autocompletionList = ScriptingService::instance()
             ->callAutocompletionHook();
     if (!autocompletionList.isEmpty()) {
-        QAction *action = menu.addAction(QStringLiteral(""));
+        QAction *action = menu.addAction(QString());
         action->setSeparator(true);
 
         Q_FOREACH(QString text, autocompletionList) {
@@ -10756,7 +10756,7 @@ void MainWindow::on_actionRemove_current_workspace_triggered() {
 
     // remove all settings in the group
     settings.beginGroup(QStringLiteral("workspace-") + uuid);
-    settings.remove(QStringLiteral(""));
+    settings.remove(QString());
     settings.endGroup();
 
     // update the menu and combo box
@@ -11087,7 +11087,7 @@ void MainWindow::on_tagTreeWidget_itemExpanded(QTreeWidgetItem *item) {
 void MainWindow::storeTagTreeWidgetExpandState() const {
     // get all items
     QList<QTreeWidgetItem*> allItems = ui->tagTreeWidget->
-            findItems(QStringLiteral(""), Qt::MatchContains | Qt::MatchRecursive);
+            findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     QStringList expandedList;
     Q_FOREACH(QTreeWidgetItem *item, allItems) {
@@ -11340,7 +11340,7 @@ void MainWindow::on_actionImport_notes_from_text_files_triggered() {
         return;
     }
 
-    QProgressDialog progressDialog(QStringLiteral(""), tr("Cancel"), 0, fileCount, this);
+    QProgressDialog progressDialog(QString(), tr("Cancel"), 0, fileCount, this);
     progressDialog.setWindowModality(Qt::WindowModal);
 
     const QSignalBlocker blocker(noteDirectoryWatcher);
