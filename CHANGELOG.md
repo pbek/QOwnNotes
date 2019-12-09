@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.12.5
+- fixed populating of the sub-folder panel if you turn on sub-folders for a note folder
+  in the settings (for [#1493](https://github.com/pbek/QOwnNotes/issues/1493))
+- lots of fixes and improvements for the code highlighting were made and support
+  for JSON and XML was added (thank you @Waqar144)
+
 ## 19.12.4
 - fixed a problem with loading notes if no note sub-folder was selected
   (for [#1489](https://github.com/pbek/QOwnNotes/issues/1489))
