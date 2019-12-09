@@ -7340,7 +7340,6 @@ void MainWindow::reloadTagTree() {
 
     ui->tagTreeWidget->clear();
 
-    int activeNoteSubFolderId = _showNotesFromAllNoteSubFolders ? -1 : NoteSubFolder::activeNoteSubFolderId();
     QList<int> noteSubFolderIds;
     QList<int> noteIdList;
     int untaggedNoteCount = 0;
@@ -7892,11 +7891,11 @@ void MainWindow::linkTagNameToCurrentNote(const QString& tagName,
  * @param doRemove
  * @param triggerPostMethods
  */
-void MainWindow::handleScriptingNoteTagging(Note note, const QString& tagName,
+void MainWindow::handleScriptingNoteTagging(Note &note, const QString& tagName,
                                             bool doRemove,
                                             bool triggerPostMethods) {
-    QString oldNoteText = note.getNoteText();
-    QString noteText = ScriptingService::instance()->callNoteTaggingHook(
+    const QString &oldNoteText = note.getNoteText();
+    const QString &noteText = ScriptingService::instance()->callNoteTaggingHook(
             note, doRemove ? QStringLiteral("remove") : QStringLiteral("add"), tagName).toString();
 
     if (noteText.isEmpty() || (oldNoteText == noteText)) {
@@ -7939,8 +7938,8 @@ void MainWindow::handleScriptingNotesTagUpdating() {
     // workaround when signal blocking doesn't work correctly
     directoryWatcherWorkaround(true, true);
 
-    QList<Note> notes = Note::fetchAll();
-    Q_FOREACH(Note note, notes) {
+    const QList<Note> &notes = Note::fetchAll();
+    Q_FOREACH(const Note &note, notes) {
             QStringList tagNameList = ScriptingService::instance()
                     ->callNoteTaggingHook(note, QStringLiteral("list")).toStringList();
             QStringList tagNameList2 = Tag::fetchAllNamesOfNote(note);

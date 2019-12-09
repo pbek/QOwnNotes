@@ -2548,7 +2548,7 @@ int Note::countByNoteSubFolderId(int noteSubFolderId, bool recursive) {
  * @param note
  * @return
  */
-bool Note::isSameFile(const Note &note) {
+bool Note::isSameFile(const Note &note) const {
     return (id == note.getId()) &&
             (noteSubFolderId == note.getNoteSubFolderId());
 }
@@ -2701,7 +2701,7 @@ QString Note::relativeFilePath(const QString &path) const {
  *
  * @param oldNote
  */
-void Note::handleNoteMoving(const Note &oldNote) {
+void Note::handleNoteMoving(const Note &oldNote) const {
     QList<int> noteIdList = oldNote.findLinkedNoteIds();
     int noteCount = noteIdList.count();
 

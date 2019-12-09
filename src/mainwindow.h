@@ -953,7 +953,7 @@ private:
 
     void selectAllNotesInTagTreeWidget() const;
 
-    void handleScriptingNoteTagging(Note note, const QString& tagName,
+    void handleScriptingNoteTagging(Note &note, const QString& tagName,
                                     bool doRemove = false,
                                     bool triggerPostMethods = true);
 

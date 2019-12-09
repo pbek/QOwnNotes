@@ -206,7 +206,7 @@ public:
 
     QString noteSubFolderPathData() const;
 
-    bool isSameFile(const Note &note);
+    bool isSameFile(const Note &note) const;
 
     QString getShareUrl() const;
 
@@ -235,7 +235,7 @@ public:
 
     QList<int> findLinkedNoteIds() const;
 
-    void handleNoteMoving(const Note &oldNote);
+    void handleNoteMoving(const Note &oldNote) const;
 
     static QString createNoteHeader(const QString& name);
 
