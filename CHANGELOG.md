@@ -5,6 +5,9 @@
   in the settings (for [#1493](https://github.com/pbek/QOwnNotes/issues/1493))
 - lots of fixes and improvements for the code highlighting were made and support
   for JSON and XML was added (thank you @Waqar144)
+- added more Lithuanian, Italian, German, Spanish, Slovenian, Croatian, Slovak,
+  Catalan, Russian translation (thank you Fabijenna, mlocati, rakekniven,
+  richarson, MGuerra, unchase)
 
 ## 19.12.4
 - fixed a problem with loading notes if no note sub-folder was selected
