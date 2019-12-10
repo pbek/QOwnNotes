@@ -176,7 +176,7 @@ bool NoteSubFolder::remove() {
 /**
  * Removes the directory recursively from the file system
  */
-bool NoteSubFolder::removeFromFileSystem() {
+bool NoteSubFolder::removeFromFileSystem() const {
     QDir dir = this->dir();
 
     if (dir.exists()) {
@@ -279,8 +279,8 @@ QList<int> NoteSubFolder::fetchAllIds() {
     return idList;
 }
 
-QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(
-        int parentId, const QString& sortBy) {
+QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId,
+                                                       const QString& sortBy) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
@@ -313,7 +313,7 @@ QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(
 QList<int> NoteSubFolder::fetchIdsRecursivelyByParentId(int parentId) {
     QList<int> idList = QList<int>() << parentId;
 
-    Q_FOREACH(NoteSubFolder noteSubFolder, fetchAllByParentId(parentId)) {
+    Q_FOREACH(const NoteSubFolder &noteSubFolder, fetchAllByParentId(parentId)) {
             int id = noteSubFolder.getId();
             idList << fetchIdsRecursivelyByParentId(id);
         }
@@ -478,7 +478,7 @@ NoteSubFolder NoteSubFolder::activeNoteSubFolder() {
 /**
  * Saves the expand status of the item
  */
-void NoteSubFolder::saveTreeWidgetExpandState(bool expanded) {
+void NoteSubFolder::saveTreeWidgetExpandState(bool expanded) const {
     QSettings settings;
     QString settingsKey = treeWidgetExpandStateSettingsKey();
 
@@ -501,7 +501,7 @@ void NoteSubFolder::saveTreeWidgetExpandState(bool expanded) {
 /**
  * Fetches the expand status of the item
  */
-bool NoteSubFolder::treeWidgetExpandState() {
+bool NoteSubFolder::treeWidgetExpandState() const {
     QSettings settings;
     QString settingsKey = treeWidgetExpandStateSettingsKey();
 
@@ -536,7 +536,7 @@ QString NoteSubFolder::treeWidgetExpandStateSettingsKey(int noteFolderId) {
  * @brief NoteSubFolder::depth return the depth of the folder in regard to the note folder
  * @return
  */
-int NoteSubFolder::depth() {
+int NoteSubFolder::depth() const {
     auto relativePath = this->relativePath("\n");
 
     if (relativePath.isEmpty()) {

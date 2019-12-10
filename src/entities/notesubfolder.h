@@ -77,13 +77,13 @@ public:
 
     static NoteSubFolder fetchByNameAndParentId(const QString& name, int parentId);
 
-    void saveTreeWidgetExpandState(bool expanded);
+    void saveTreeWidgetExpandState(bool expanded) const;
 
-    bool treeWidgetExpandState();
+    bool treeWidgetExpandState() const;
 
     static QString treeWidgetExpandStateSettingsKey(int noteFolderId = 0);
 
-    bool removeFromFileSystem();
+    bool removeFromFileSystem() const;
 
     QDir dir() const;
 
@@ -95,7 +95,7 @@ public:
 
     static bool isNoteSubfoldersPanelShowNotesRecursively();
 
-    int depth();
+    int depth() const;
 
 protected:
     int id;

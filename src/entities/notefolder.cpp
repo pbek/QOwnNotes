@@ -291,7 +291,7 @@ bool NoteFolder::isFetched() const {
     return (this->id > 0);
 }
 
-void NoteFolder::setAsCurrent() {
+void NoteFolder::setAsCurrent() const {
     QSettings settings;
     settings.setValue("currentNoteFolderId", id);
 

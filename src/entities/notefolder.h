@@ -27,7 +27,7 @@ public:
     void setPriority(int value);
     void setCloudConnectionId(int id);
     void setRemotePath(const QString &text);
-    void setAsCurrent();
+    void setAsCurrent() const;
     bool isCurrent() const;
     bool localPathExists() const;
     QString suggestRemotePath();

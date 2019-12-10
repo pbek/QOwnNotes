@@ -871,7 +871,7 @@ QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
     return noteIdList;
 }
 
-int Note::countSearchTextInNote(QString &search) {
+int Note::countSearchTextInNote(const QString &search) const {
     return noteText.count(search, Qt::CaseInsensitive);
 }
 
@@ -2217,7 +2217,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     return result;
 }
 
-bool Note::isFetched() {
+bool Note::isFetched() const {
     return (this->id > 0);
 }
 

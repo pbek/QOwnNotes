@@ -121,7 +121,7 @@ public:
                            bool forExport = false, bool decrypt = true,
                            bool base64Images = false);
 
-    bool isFetched();
+    bool isFetched() const;
 
     bool copyToPath(const QString& destinationPath, QString noteFolderPath = "");
 
@@ -177,7 +177,7 @@ public:
                                     bool ignoreNoteSubFolder = false,
                                     int noteSubFolderId = -1);
 
-    int countSearchTextInNote(QString &search);
+    int countSearchTextInNote(const QString &search) const;
 
     static QStringList buildQueryStringList(
             QString searchString, bool escapeForRegularExpression = false);
