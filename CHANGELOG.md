@@ -7,6 +7,9 @@
 - improved code block colors for the *Light editor schema*
 - improved application execution speed (for [#1497](https://github.com/pbek/QOwnNotes/issues/1497), thank you @Waqar144)
 - added CSS syntax highlighting (for [#48](https://github.com/pbek/qmarkdowntextedit/pull/48), thank you @Waqar144)
+- added more Uzbek, Urdu (Pakistan), Bosnian, Irish, Serbian (Cyrillic),
+  Norwegian, Swedish, Estonian, Lithuanian, Hebrew, Finnish, Romanian, Dutch,
+  Hungarian, Basque, Icelandic, Czech, Danish translation (thank you Fabijenna)
 
 ## 19.12.5
 - fixed populating of the sub-folder panel if you turn on sub-folders for a note folder
