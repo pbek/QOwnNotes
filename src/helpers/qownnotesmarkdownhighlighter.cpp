@@ -106,24 +106,34 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
 
 void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
     if (!text.isEmpty()) {
-        highlightAdditionalRules(_highlightingRulesPre, text);
 
-        // needs to be called after the horizontal ruler highlighting
         const QString &next = currentBlock().next().text();
-        if (text.startsWith(QStringLiteral("# ")) || text.startsWith(QStringLiteral("## ")) ||
-            next.startsWith(QStringLiteral("===")) || next.startsWith(QStringLiteral("---")) ||
-            text.startsWith(QStringLiteral("===")) || text.startsWith(QStringLiteral("---")) ||
-            text.startsWith(QStringLiteral("### ")) || text.startsWith(QStringLiteral("#### ")) ||
-            text.startsWith(QStringLiteral("##### ")) || text.startsWith(QStringLiteral("###### "))) {
-            highlightHeadline(text);
-        }
+        const bool isHeading =
+                text.startsWith(QLatin1String("# ")) || text.startsWith(QLatin1String("## ")) ||
+                text.startsWith(QLatin1String("### ")) || text.startsWith(QLatin1String("#### ")) ||
+                text.startsWith(QLatin1String("##### ")) || text.startsWith(QLatin1String("###### "));
+        const bool isHeadWithUnderline =
+                text.startsWith(QLatin1String("===")) || text.startsWith(QLatin1String("---"));
+        const bool nextHasUnderLine =
+                next.startsWith(QLatin1String("===")) || next.startsWith(QLatin1String("---"));
+        const bool isCodeBlock = previousBlockState() == CodeBlock ||
+                previousBlockState() >= HighlighterState::CodeCpp ||
+                text.startsWith(QLatin1String("```"));
 
-        highlightAdditionalRules(_highlightingRulesAfter, text);
+        if (!isCodeBlock) {
+            highlightAdditionalRules(_highlightingRulesPre, text);
 
-        // highlight broken note links
+            // needs to be called after the horizontal ruler highlighting
+            if (isHeading || isHeadWithUnderline || nextHasUnderLine) {
+                highlightHeadline(text);
+            }
 
-        if (text.contains(QStringLiteral("note://")) || text.contains(QStringLiteral(".md"))) {
-            highlightBrokenNotesLink(text);
+            highlightAdditionalRules(_highlightingRulesAfter, text);
+
+            // highlight broken note links
+            if (text.contains(QLatin1String("note://")) || text.contains(QLatin1String(".md"))) {
+                highlightBrokenNotesLink(text);
+            }
         }
 
     }
@@ -135,7 +145,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
         if (previousBlockState() == HighlighterState::CodeBlock ||
             previousBlockState() == HighlighterState::CodeBlockEnd ||
             previousBlockState() >= HighlighterState::CodeCpp ||
-            text.contains(QStringLiteral("```"))) {
+            text.startsWith(QLatin1String("```"))) {
             highlightCodeBlock(text);
         }
     }
