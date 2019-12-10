@@ -10138,7 +10138,7 @@ void MainWindow::initShortcuts() {
                         continue;
                     }
 
-                    const QString oldShortcut = action->shortcut().toString();
+                    QString oldShortcut = action->shortcut().toString();
 
 #ifdef Q_OS_MAC
                     // #1222, replace Option key by Ctrl key on macOS to prevent blocking
