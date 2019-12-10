@@ -3710,7 +3710,9 @@ void MainWindow::closeEvent(QCloseEvent *event) {
 //    isJustHide = true;
 #endif
 
-    if (isJustHide && !forceQuit) {
+    // #1496, don't ignore close event when the app is hidden to tray
+    // this can occur when the OS issues close events on shutdown
+    if (isJustHide && !forceQuit && !isHidden()) {
 #ifdef Q_OS_MAC
         showMinimized();
 #else
