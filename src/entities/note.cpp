@@ -871,7 +871,7 @@ QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
     return noteIdList;
 }
 
-int Note::countSearchTextInNote(QString &search) {
+int Note::countSearchTextInNote(const QString &search) const {
     return noteText.count(search, Qt::CaseInsensitive);
 }
 
@@ -2217,7 +2217,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     return result;
 }
 
-bool Note::isFetched() {
+bool Note::isFetched() const {
     return (this->id > 0);
 }
 
@@ -2548,7 +2548,7 @@ int Note::countByNoteSubFolderId(int noteSubFolderId, bool recursive) {
  * @param note
  * @return
  */
-bool Note::isSameFile(const Note &note) {
+bool Note::isSameFile(const Note &note) const {
     return (id == note.getId()) &&
             (noteSubFolderId == note.getNoteSubFolderId());
 }
@@ -2701,7 +2701,7 @@ QString Note::relativeFilePath(const QString &path) const {
  *
  * @param oldNote
  */
-void Note::handleNoteMoving(const Note &oldNote) {
+void Note::handleNoteMoving(const Note &oldNote) const {
     QList<int> noteIdList = oldNote.findLinkedNoteIds();
     int noteCount = noteIdList.count();
 

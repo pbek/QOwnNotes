@@ -121,7 +121,7 @@ public:
                            bool forExport = false, bool decrypt = true,
                            bool base64Images = false);
 
-    bool isFetched();
+    bool isFetched() const;
 
     bool copyToPath(const QString& destinationPath, QString noteFolderPath = "");
 
@@ -177,7 +177,7 @@ public:
                                     bool ignoreNoteSubFolder = false,
                                     int noteSubFolderId = -1);
 
-    int countSearchTextInNote(QString &search);
+    int countSearchTextInNote(const QString &search) const;
 
     static QStringList buildQueryStringList(
             QString searchString, bool escapeForRegularExpression = false);
@@ -206,7 +206,7 @@ public:
 
     QString noteSubFolderPathData() const;
 
-    bool isSameFile(const Note &note);
+    bool isSameFile(const Note &note) const;
 
     QString getShareUrl() const;
 
@@ -235,7 +235,7 @@ public:
 
     QList<int> findLinkedNoteIds() const;
 
-    void handleNoteMoving(const Note &oldNote);
+    void handleNoteMoving(const Note &oldNote) const;
 
     static QString createNoteHeader(const QString& name);
 
