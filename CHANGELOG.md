@@ -6,6 +6,7 @@
 - fixed a problem with XML syntax highlighting (for [#47](https://github.com/pbek/qmarkdowntextedit/pull/47), thank you @Waqar144)
 - improved code block colors for the *Light editor schema*
 - improved application execution speed (for [#1497](https://github.com/pbek/QOwnNotes/issues/1497), thank you @Waqar144)
+- added CSS syntax highlighting (for [#48](https://github.com/pbek/qmarkdowntextedit/pull/48), thank you @Waqar144)
 
 ## 19.12.5
 - fixed populating of the sub-folder panel if you turn on sub-folders for a note folder
