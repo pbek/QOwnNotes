@@ -7294,6 +7294,7 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
 
     if (noteFolder.isFetched()) {
         changeNoteFolder(noteFolderId);
+        areBrokenTagNoteLinksRemoved = false;
     }
 
     // hide the noteSubFolderDockWidget menu entry if sub-folders are
