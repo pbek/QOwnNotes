@@ -686,6 +686,7 @@ private:
     WebSocketServerService *_webSocketServerService;
     QActionGroup *languageGroup;
     QActionGroup *spellBackendGroup;
+    bool areBrokenTagNoteLinksRemoved = false;
 
     void createSystemTrayIcon();
 

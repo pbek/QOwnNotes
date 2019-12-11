@@ -7330,7 +7330,10 @@ void MainWindow::reloadTagTree() {
     QSettings settings;
 
     // remove all broken note tag links
-    Tag::removeBrokenLinks();
+    if (!areBrokenTagNoteLinksRemoved) {
+        Tag::removeBrokenLinks();
+        areBrokenTagNoteLinksRemoved = true;
+    }
 
     ui->tagTreeWidget->clear();
 
