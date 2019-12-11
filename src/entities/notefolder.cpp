@@ -212,10 +212,11 @@ QList<NoteFolder> NoteFolder::fetchAll() {
 
     QList<NoteFolder> noteFolderList;
 
-    query.prepare("SELECT * FROM noteFolder ORDER BY priority ASC, id ASC");
+    query.prepare(QStringLiteral("SELECT * FROM noteFolder ORDER BY priority ASC, id ASC"));
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        noteFolderList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             NoteFolder noteFolder = noteFolderFromQuery(query);
             noteFolderList.append(noteFolder);
@@ -233,23 +234,23 @@ bool NoteFolder::store() {
     QSqlQuery query(db);
 
     if (this->id > 0) {
-        query.prepare(
+        query.prepare(QStringLiteral(
                 "UPDATE noteFolder SET name = :name, local_path = :localPath, "
                         "cloud_connection_id = :cloudConnectionId, "
                         "remote_path = :remotePath, priority = :priority, "
                         "active_tag_id = :activeTagId, show_subfolders = "
                         ":showSubfolders, active_note_sub_folder_data = "
                         ":activeNoteSubFolderData, use_git = :useGit WHERE "
-                        "id = :id");
+                        "id = :id"));
         query.bindValue(":id", this->id);
     } else {
-        query.prepare(
+        query.prepare(QStringLiteral(
                 "INSERT INTO noteFolder (name, local_path, cloud_connection_id, "
                         "remote_path, priority, active_tag_id, "
                         "show_subfolders, active_note_sub_folder_data, use_git)"
                         " VALUES (:name, :localPath, :cloudConnectionId, "
                         ":remotePath, :priority, :activeTagId, "
-                        ":showSubfolders, :activeNoteSubFolderData, :useGit)");
+                        ":showSubfolders, :activeNoteSubFolderData, :useGit)"));
     }
 
     query.bindValue(":name", this->name);
