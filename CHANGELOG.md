@@ -5,7 +5,7 @@
 - improved CSS color attribute highlighting (for [#49](https://github.com/pbek/qmarkdowntextedit/pull/49), thank you @Waqar144)
 - fixed highlighting issue for punctuation after links (for [#1498](https://github.com/pbek/QOwnNotes/issues/1498))
 - fixed inserting of images from urls in the *Image dialog* (for [#1500](https://github.com/pbek/QOwnNotes/issues/1500))
-- improved folder switching time when tags are used (for [#1499](https://github.com/pbek/QOwnNotes/issues/1499), thank you @Waqar144)
+- improved folder switching time when tags are used (for [#1499](https://github.com/pbek/QOwnNotes/pull/1499), thank you @Waqar144)
 - added more Albanian, Kurdish, Indonesian, Uzbek, Urdu (Pakistan), Bosnian,
   Irish, Persian, Bulgarian, Serbian (Cyrillic), Norwegian, Swedish, Estonian
   translation (thank you Fabijenna, zmni)
