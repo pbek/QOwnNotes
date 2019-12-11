@@ -2422,7 +2422,7 @@ void SettingsDialog::on_noteFolderLocalPathButton_clicked()
  */
 void SettingsDialog::on_noteFolderActiveCheckBox_stateChanged(int arg1)
 {
-    Q_UNUSED(arg1);
+    Q_UNUSED(arg1)
 
     if (!ui->noteFolderActiveCheckBox->isChecked()) {
         const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
@@ -2430,6 +2430,7 @@ void SettingsDialog::on_noteFolderActiveCheckBox_stateChanged(int arg1)
         ui->noteFolderActiveCheckBox->setChecked(true);
     } else {
         _selectedNoteFolder.setAsCurrent();
+        MainWindow::instance()->resetBrokenTagNotesLinkFlag();
     }
 }
 
