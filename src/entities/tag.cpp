@@ -92,7 +92,7 @@ Tag Tag::fetchByName(QString name, const bool startsWith) {
     Tag tag;
     const QString sql = QStringLiteral("SELECT * FROM tag WHERE name ") %
             QString(startsWith ? QStringLiteral("LIKE") : QStringLiteral("="))
-                    % " :name ORDER BY name";
+                    % QStringLiteral(" :name ORDER BY name");
     query.prepare(sql);
 
     if (startsWith) {
@@ -806,7 +806,7 @@ bool Tag::store() {
     query.bindValue(QStringLiteral(":name"), this->name);
     query.bindValue(QStringLiteral(":priority"), this->priority);
     query.bindValue(QStringLiteral(":parentId"), this->parentId);
-    query.bindValue(QStringLiteral(":color"), _color.isValid() ? _color.name() : QStringLiteral(""));
+    query.bindValue(QStringLiteral(":color"), _color.isValid() ? _color.name() : QString());
 
     if (!query.exec()) {
         // on error
