@@ -635,7 +635,7 @@ QString GuessLanguage::identify(const QString &text, const QStringList &suggesti
         return suggestionsList.first();
     }
 
-    qCWarning(SONNET_LOG_CORE) << "Unable to find any suggestion for" << text;
+    qCDebug(SONNET_LOG_CORE) << "Unable to find any suggestion for" << text;
 
     // Not even any suggestions, give up
     return QString();
