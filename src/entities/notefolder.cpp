@@ -216,7 +216,6 @@ QList<NoteFolder> NoteFolder::fetchAll() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        noteFolderList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             NoteFolder noteFolder = noteFolderFromQuery(query);
             noteFolderList.append(noteFolder);

@@ -595,13 +595,13 @@ QList<Note> Note::fetchAll(int limit) {
     query.prepare(sql);
 
     if (limit >= 0) {
+        noteList.reserve(limit);
         query.bindValue(QStringLiteral(":limit"), limit);
     }
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        noteList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             Note note = noteFromQuery(query);
             noteList.append(note);
@@ -629,6 +629,7 @@ QList<int> Note::fetchAllIds(int limit, int offset) {
     query.prepare(sql);
 
     if (limit >= 0) {
+        noteIdList.reserve(limit);
         query.bindValue(QStringLiteral(":limit"), limit);
     }
 
@@ -639,7 +640,6 @@ QList<int> Note::fetchAllIds(int limit, int offset) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        noteIdList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             Note note = noteFromQuery(query);
             noteIdList.append(note.getId());
@@ -663,7 +663,6 @@ QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        noteList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             Note note = noteFromQuery(query);
             noteList.append(note);
@@ -757,7 +756,6 @@ QList<Note> Note::search(const QString& text) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        noteList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             Note note = noteFromQuery(query);
             noteList.append(note);
@@ -785,7 +783,6 @@ QList<QString> Note::searchAsNameListInCurrentNoteSubFolder(
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        nameList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             nameList.append(query.value(QStringLiteral("name")).toString());
         }
@@ -808,7 +805,6 @@ QList<QString> Note::searchAsNameList(const QString& text, bool searchInNameOnly
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        nameList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             nameList.append(query.value(QStringLiteral("name")).toString());
         }
@@ -874,7 +870,6 @@ QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        noteIdList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             noteIdList.append(query.value(QStringLiteral("id")).toInt());
         }
@@ -949,7 +944,6 @@ QStringList Note::fetchNoteNamesInCurrentNoteSubFolder() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        list.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             QString name = query.value(QStringLiteral("name")).toString();
             if (!name.isEmpty()) {
@@ -995,7 +989,6 @@ QStringList Note::fetchNoteFileNames() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        list.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             list.append(query.value(QStringLiteral("file_name")).toString());
         }
@@ -1017,7 +1010,6 @@ QList<int> Note::fetchAllIdsByNoteTextPart(const QString& textPart) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        list.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             list.append(query.value(QStringLiteral("id")).toInt());
         }

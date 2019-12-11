@@ -243,13 +243,13 @@ QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     query.prepare(sql);
 
     if (limit >= 0) {
+        noteSubFolderList.reserve(limit);
         query.bindValue(":limit", limit);
     }
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        noteSubFolderList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
             noteSubFolderList.append(noteSubFolder);
@@ -271,7 +271,6 @@ QList<int> NoteSubFolder::fetchAllIds() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        idList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
             idList.append(noteSubFolder.getId());
@@ -296,7 +295,6 @@ QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId,
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        noteSubFolderList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
             noteSubFolderList.append(noteSubFolder);
