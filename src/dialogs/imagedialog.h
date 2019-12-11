@@ -54,6 +54,7 @@ private:
     QTemporaryFile *_tempFile;
     QRubberBand *_rubberBand;
     bool _imageWasCropped = false;
+    bool _imageWasDownloaded = false;
     QRect _rubberBandSceneRect;
     QRect _lastRubberBandViewportRect;
 

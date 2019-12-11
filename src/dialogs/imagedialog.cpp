@@ -124,7 +124,7 @@ void ImageDialog::setPixmap(const QPixmap& pixmap, bool updateBase) {
 void ImageDialog::on_buttonBox_accepted() {
     // if the image was manipulated or from the clipboard we will store it into
     // a temporary file
-    if (ui->fileEdit->text().isEmpty() || _imageWasCropped ||
+    if (ui->fileEdit->text().isEmpty() || _imageWasCropped || _imageWasDownloaded ||
         ui->widthSpinBox->value() != _basePixmap.width()) {
 
         _tempFile = new QTemporaryFile(QDir::tempPath() + QDir::separator() +
@@ -188,9 +188,12 @@ void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
         }
 
         setPixmap(pixmap, true);
+        _imageWasDownloaded = true;
 
         return;
     }
+
+    _imageWasDownloaded = false;
 
     if (url.scheme() == "file") {
         pathOrUrl = url.toLocalFile();
