@@ -595,15 +595,13 @@ QList<Note> Note::fetchAll(int limit) {
     query.prepare(sql);
 
     if (limit >= 0) {
-        noteList.reserve(limit);
         query.bindValue(QStringLiteral(":limit"), limit);
-    } else {
-        noteList.reserve(query.size());
     }
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        noteList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             Note note = noteFromQuery(query);
             noteList.append(note);
@@ -631,10 +629,7 @@ QList<int> Note::fetchAllIds(int limit, int offset) {
     query.prepare(sql);
 
     if (limit >= 0) {
-        noteIdList.reserve(limit);
         query.bindValue(QStringLiteral(":limit"), limit);
-    } else {
-        noteIdList.reserve(query.size());
     }
 
     if (offset >= 0) {
@@ -644,6 +639,7 @@ QList<int> Note::fetchAllIds(int limit, int offset) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        noteIdList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             Note note = noteFromQuery(query);
             noteIdList.append(note.getId());

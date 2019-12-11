@@ -233,8 +233,8 @@ QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     QSqlQuery query(db);
 
     QList<NoteSubFolder> noteSubFolderList;
-    QString sql = "SELECT * FROM noteSubFolder "
-            "ORDER BY file_last_modified DESC";
+    QString sql = QStringLiteral("SELECT * FROM noteSubFolder "
+            "ORDER BY file_last_modified DESC");
 
     if (limit >= 0) {
         sql += " LIMIT :limit";
@@ -249,6 +249,7 @@ QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        noteSubFolderList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
             noteSubFolderList.append(noteSubFolder);
@@ -270,6 +271,7 @@ QList<int> NoteSubFolder::fetchAllIds() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        idList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
             idList.append(noteSubFolder.getId());
@@ -294,6 +296,7 @@ QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId,
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        noteSubFolderList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
             noteSubFolderList.append(noteSubFolder);
@@ -312,8 +315,10 @@ QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId,
  */
 QList<int> NoteSubFolder::fetchIdsRecursivelyByParentId(int parentId) {
     QList<int> idList = QList<int>() << parentId;
+    auto noteSubFolders = fetchAllByParentId(parentId);
+    idList.reserve(noteSubFolders.count());
 
-    Q_FOREACH(const NoteSubFolder &noteSubFolder, fetchAllByParentId(parentId)) {
+    Q_FOREACH(const NoteSubFolder &noteSubFolder, noteSubFolders) {
             int id = noteSubFolder.getId();
             idList << fetchIdsRecursivelyByParentId(id);
         }
