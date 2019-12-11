@@ -38,7 +38,7 @@ public:
 
     int getPriority() const;
 
-    void setPriority(int value);
+    void setPriority(const int value);
 
     void setAsActive();
 
@@ -48,24 +48,24 @@ public:
 
     bool removeLinkToNote(const Note &note) const;
 
-    QStringList fetchAllLinkedNoteFileNames(bool fromAllSubfolders) const;
+    QStringList fetchAllLinkedNoteFileNames(const bool fromAllSubfolders) const;
 
     QStringList fetchAllLinkedNoteFileNamesForFolder(const NoteSubFolder &noteSubFolder,
                                                      bool fromAllSubfolders) const;
 
-    QList<Note> fetchAllLinkedNotes();
+    QList<Note> fetchAllLinkedNotes() const;
 
     bool isLinkedToNote(const Note &note) const;
 
-    int countLinkedNoteFileNames(bool fromAllSubfolder, bool recursive) const;
+    int countLinkedNoteFileNames(const bool fromAllSubfolder, const bool recursive) const;
 
-    int countLinkedNoteFileNamesForNoteFolder(NoteSubFolder noteSubFolder, bool recursive) const;
+    int countLinkedNoteFileNamesForNoteFolder(const NoteSubFolder &noteSubFolder, const bool recursive) const;
 
     int getParentId() const;
 
-    void setParentId(int id);
+    void setParentId(const int id);
 
-    bool hasChild(int tagId) const;
+    bool hasChild(const int tagId) const;
 
     QColor getColor() const;
 
@@ -84,9 +84,9 @@ public:
 
     static Tag activeTag();
 
-    static Tag fetchByName(QString name, bool startsWith = false);
+    static Tag fetchByName(QString name, const bool startsWith = false);
 
-    static Tag fetchByName(const QString &name, int parentId);
+    static Tag fetchByName(const QString &name, const int parentId);
 
     static QList<Tag> fetchAllOfNote(const Note &note);
 
@@ -97,22 +97,22 @@ public:
     static bool renameNoteFileNamesOfLinks(const QString& oldFileName,
                                            const QString& newFileName);
 
-    static bool renameNoteSubFolderPathsOfLinks(QString &oldPath,
-                                                QString &newPath);
+    static bool renameNoteSubFolderPathsOfLinks(const QString &oldPath,
+                                                const QString &newPath);
 
-    static Tag fetch(int id);
+    static Tag fetch(const int id);
 
     static Tag tagFromQuery(const QSqlQuery& query);
 
     static QList<Tag> fetchAllWithLinkToNoteNames(const QStringList& noteNameList);
 
-    static QList<Tag> fetchAllByParentId(int parentId, const QString& sortBy = "created DESC");
+    static QList<Tag> fetchAllByParentId(const int parentId, const QString& sortBy = "created DESC");
 
-    static int countAllParentId(int parentId);
+    static int countAllParentId(const int parentId);
 
     static int countAllOfNote(const Note &note);
 
-    static void setAsActive(int tagId);
+    static void setAsActive(const int tagId);
 
     static void convertDirSeparator();
 
@@ -126,7 +126,7 @@ public:
 
     static QStringList searchAllNamesByName(const QString& name);
 
-    static QList<Tag> fetchRecursivelyByParentId(int parentId);
+    static QList<Tag> fetchRecursivelyByParentId(const int parentId);
 
     static bool isTaggingShowNotesRecursively();
 
@@ -141,5 +141,5 @@ protected:
 
     QString colorFieldName();
 
-    static bool removeNoteLinkById(int id);
+    static bool removeNoteLinkById(const int id);
 };
