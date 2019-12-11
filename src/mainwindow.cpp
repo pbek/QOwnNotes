@@ -5354,6 +5354,7 @@ void MainWindow::filterNotesByTag() {
             Tag activeTag;
 
             if (selectedItems.count() > 1) {
+                tagIds.reserve(selectedItems.count());
                 Q_FOREACH(const QTreeWidgetItem *i, selectedItems) {
 
                     int id = i->data(0, Qt::UserRole).toInt();
@@ -5369,13 +5370,13 @@ void MainWindow::filterNotesByTag() {
             }
 
             QList<Tag> tags;
-
+            tags.reserve(tagIds.count());
             Q_FOREACH(int id, tagIds) {
                 tags << Tag::fetch(id);
             }
 
             QList<Tag> tagList;
-
+            tagList.reserve(tags.count());
             Q_FOREACH(const Tag &t, tags) {
                 // check if the notes should be viewed recursively
                 if (Tag::isTaggingShowNotesRecursively()) {
@@ -5440,11 +5441,13 @@ void MainWindow::filterNotesByNoteSubFolders() {
 
     //get all the folder ids
     QList<int> selectedNoteSubFolderIds;
+    selectedNoteSubFolderIds.reserve(selectedItems.count());
     Q_FOREACH(QTreeWidgetItem *i, selectedItems) {
         selectedNoteSubFolderIds << i->data(0, Qt::UserRole).toInt();
     }
 
     QList<int> noteSubFolderIds;
+    noteSubFolderIds.reserve(selectedNoteSubFolderIds.count());
     // check if the notes should be viewed recursively
     if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
         Q_FOREACH(int subFolId, selectedNoteSubFolderIds) {
@@ -5459,6 +5462,7 @@ void MainWindow::filterNotesByNoteSubFolders() {
 
     // get the notes from the subfolders
     QList<int> noteIdList;
+    noteIdList.reserve(noteSubFolderIds.count());
     Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
         // get all notes of a note sub folder
         QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
