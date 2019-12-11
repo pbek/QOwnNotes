@@ -31,7 +31,7 @@ int Tag::getParentId() const {
     return this->parentId;
 }
 
-void Tag::setParentId(int id) {
+void Tag::setParentId(const int id) {
     this->parentId = id;
 }
 
@@ -55,11 +55,11 @@ int Tag::getPriority() const {
     return this->priority;
 }
 
-void Tag::setPriority(int value) {
+void Tag::setPriority(const int value) {
     this->priority = value;
 }
 
-Tag Tag::fetch(int id) {
+Tag Tag::fetch(const int id) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -86,13 +86,13 @@ Tag Tag::fetch(int id) {
  * @param startsWith if true the tag only has to start with name
  * @return
  */
-Tag Tag::fetchByName(QString name, bool startsWith) {
+Tag Tag::fetchByName(QString name, const bool startsWith) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     Tag tag;
-    QString sql = QStringLiteral("SELECT * FROM tag WHERE name ") %
+    const QString sql = QStringLiteral("SELECT * FROM tag WHERE name ") %
             QString(startsWith ? QStringLiteral("LIKE") : QStringLiteral("="))
-                    % " :name ORDER BY name";
+                    % QStringLiteral(" :name ORDER BY name");
     query.prepare(sql);
 
     if (startsWith) {
@@ -112,7 +112,7 @@ Tag Tag::fetchByName(QString name, bool startsWith) {
     return tag;
 }
 
-Tag Tag::fetchByName(const QString &name, int parentId) {
+Tag Tag::fetchByName(const QString &name, const int parentId) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     Tag tag;
@@ -256,7 +256,7 @@ QList<Tag> Tag::fetchAll() {
     return tagList;
 }
 
-QList<Tag> Tag::fetchAllByParentId(int parentId, const QString& sortBy) {
+QList<Tag> Tag::fetchAllByParentId(const int parentId, const QString& sortBy) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Tag> tagList;
@@ -300,7 +300,7 @@ QList<Tag> Tag::fetchAllByParentId(int parentId, const QString& sortBy) {
  * @param parentId
  * @return
  */
-QList<Tag> Tag::fetchRecursivelyByParentId(int parentId) {
+QList<Tag> Tag::fetchRecursivelyByParentId(const int parentId) {
     QList<Tag> tagList = QList<Tag>() << fetch(parentId);
 
     Q_FOREACH(const Tag &tag, fetchAllByParentId(parentId)) {
@@ -318,7 +318,7 @@ bool Tag::isTaggingShowNotesRecursively() {
     return settings.value(QStringLiteral("taggingShowNotesRecursively")).toBool();
 }
 
-int Tag::countAllParentId(int parentId) {
+int Tag::countAllParentId(const int parentId) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -342,7 +342,7 @@ int Tag::countAllParentId(int parentId) {
 /**
  * Checks if the current tag has a child with tagId
  */
-bool Tag::hasChild(int tagId) const {
+bool Tag::hasChild(const int tagId) const {
     Q_FOREACH(const Tag &tag, fetchAllByParentId(id)) {
             qDebug() << __func__ << " - 'tag': " << tag;
 
@@ -573,7 +573,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList& noteNameList) {
  * Fetches all linked note file names
  */
 
-QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) const {
+QStringList Tag::fetchAllLinkedNoteFileNames(const bool fromAllSubfolders) const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList fileNameList;
@@ -639,7 +639,7 @@ QStringList Tag::fetchAllLinkedNoteFileNamesForFolder(const NoteSubFolder &noteS
 /**
  * Fetches all linked notes
  */
-QList<Note> Tag::fetchAllLinkedNotes() {
+QList<Note> Tag::fetchAllLinkedNotes() const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Note> noteList;
@@ -711,7 +711,7 @@ QStringList Tag::fetchAllNames() {
 /**
  * Count the linked note file names for a note folder
  */
-int Tag::countLinkedNoteFileNamesForNoteFolder(NoteSubFolder noteSubFolder, bool recursive) const {
+int Tag::countLinkedNoteFileNamesForNoteFolder(const NoteSubFolder &noteSubFolder, const bool recursive) const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -747,7 +747,7 @@ int Tag::countLinkedNoteFileNamesForNoteFolder(NoteSubFolder noteSubFolder, bool
 /**
  * Count the linked note file names
  */
-int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) const {
+int Tag::countLinkedNoteFileNames(const bool fromAllSubfolders, const bool recursive) const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -806,7 +806,7 @@ bool Tag::store() {
     query.bindValue(QStringLiteral(":name"), this->name);
     query.bindValue(QStringLiteral(":priority"), this->priority);
     query.bindValue(QStringLiteral(":parentId"), this->parentId);
-    query.bindValue(QStringLiteral(":color"), _color.isValid() ? _color.name() : QStringLiteral(""));
+    query.bindValue(QStringLiteral(":color"), _color.isValid() ? _color.name() : QString());
 
     if (!query.exec()) {
         // on error
@@ -1001,7 +1001,7 @@ void Tag::removeBrokenLinks() {
  * @param id
  * @return
  */
-bool Tag::removeNoteLinkById(int id) {
+bool Tag::removeNoteLinkById(const int id) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare(QStringLiteral("DELETE FROM noteTagLink WHERE id = :id"));
@@ -1052,7 +1052,7 @@ bool Tag::renameNoteFileNamesOfLinks(const QString& oldFileName, const QString& 
 /**
  * Renames the note sub folder paths of note links
  */
-bool Tag::renameNoteSubFolderPathsOfLinks(QString &oldPath, QString &newPath) {
+bool Tag::renameNoteSubFolderPathsOfLinks(const QString &oldPath, const QString &newPath) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare(QStringLiteral("UPDATE noteTagLink SET note_sub_folder_path = "
@@ -1092,7 +1092,7 @@ void Tag::setAsActive() {
     Tag::setAsActive(id);
 }
 
-void Tag::setAsActive(int tagId) {
+void Tag::setAsActive(const int tagId) {
     NoteFolder noteFolder = NoteFolder::currentNoteFolder();
     noteFolder.setActiveTagId(tagId);
     noteFolder.store();

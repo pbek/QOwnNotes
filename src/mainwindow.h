@@ -172,6 +172,8 @@ public:
 
     void insertHtml(QString html);
 
+    void resetBrokenTagNotesLinkFlag();
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -686,6 +688,7 @@ private:
     WebSocketServerService *_webSocketServerService;
     QActionGroup *languageGroup;
     QActionGroup *spellBackendGroup;
+    bool _brokenTagNoteLinksRemoved = false;
 
     void createSystemTrayIcon();
 

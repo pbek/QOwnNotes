@@ -1725,6 +1725,9 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
     // store the note history of the old note folder
     noteHistory.storeForCurrentNoteFolder();
 
+    //recheck for broken tag note links
+    resetBrokenTagNotesLinkFlag();
+
     const NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (!noteFolder.isFetched()) {
         return;
@@ -7119,6 +7122,12 @@ void MainWindow::insertHtml(QString html) {
     c.insertText(html);
 }
 
+void MainWindow::resetBrokenTagNotesLinkFlag()
+{
+    if (_brokenTagNoteLinksRemoved)
+        _brokenTagNoteLinksRemoved = false;
+}
+
 /**
  * Evaluates if file is a media file
  */
@@ -7294,6 +7303,7 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
 
     if (noteFolder.isFetched()) {
         changeNoteFolder(noteFolderId);
+        resetBrokenTagNotesLinkFlag();
     }
 
     // hide the noteSubFolderDockWidget menu entry if sub-folders are
@@ -7330,7 +7340,10 @@ void MainWindow::reloadTagTree() {
     QSettings settings;
 
     // remove all broken note tag links
-    Tag::removeBrokenLinks();
+    if (!_brokenTagNoteLinksRemoved) {
+        Tag::removeBrokenLinks();
+        _brokenTagNoteLinksRemoved = true;
+    }
 
     ui->tagTreeWidget->clear();
 
