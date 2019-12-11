@@ -245,6 +245,7 @@ QList<Tag> Tag::fetchAll() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        tagList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             Tag tag = tagFromQuery(query);
             tagList.append(tag);
@@ -282,6 +283,7 @@ QList<Tag> Tag::fetchAllByParentId(const int parentId, const QString& sortBy) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        tagList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             Tag tag = tagFromQuery(query);
             tagList.append(tag);
@@ -302,8 +304,10 @@ QList<Tag> Tag::fetchAllByParentId(const int parentId, const QString& sortBy) {
  */
 QList<Tag> Tag::fetchRecursivelyByParentId(const int parentId) {
     QList<Tag> tagList = QList<Tag>() << fetch(parentId);
+    const auto tags = fetchAllByParentId(parentId);
+    tagList.reserve(tags.size());
 
-    Q_FOREACH(const Tag &tag, fetchAllByParentId(parentId)) {
+    Q_FOREACH(const Tag &tag, tags) {
             tagList << fetchRecursivelyByParentId(tag.getId());
         }
 
@@ -375,6 +379,7 @@ QList<Tag> Tag::fetchAllOfNote(const Note &note) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        tagList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             Tag tag = tagFromQuery(query);
             tagList.append(tag);
@@ -395,6 +400,7 @@ QList<Tag> Tag::fetchAllOfNotes(const QList<Note> &notes) {
     Q_FOREACH (const Note &note, notes) {
             QList<Tag> tagList = Tag::fetchAllOfNote(note);
 
+            resultTagList.reserve(tagList.size());
             Q_FOREACH (const Tag &tag, tagList) {
                     if (!resultTagList.contains(tag)) {
                         resultTagList.append(tag);
@@ -427,6 +433,7 @@ QStringList Tag::fetchAllNamesOfNote(const Note &note) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        tagNameList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             tagNameList << query.value(QStringLiteral("name")).toString();
         }
@@ -453,6 +460,7 @@ QStringList Tag::searchAllNamesByName(const QString& name) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        tagNameList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             tagNameList << query.value(QStringLiteral("name")).toString();
         }
@@ -558,6 +566,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList& noteNameList) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        tagList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             Tag tag = tagFromQuery(query);
             tagList.append(tag);
@@ -593,6 +602,7 @@ QStringList Tag::fetchAllLinkedNoteFileNames(const bool fromAllSubfolders) const
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        fileNameList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             fileNameList.append(query.value(QStringLiteral("note_file_name")).toString());
         }
@@ -626,6 +636,7 @@ QStringList Tag::fetchAllLinkedNoteFileNamesForFolder(const NoteSubFolder &noteS
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        fileNameList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             fileNameList.append(query.value(QStringLiteral("note_file_name")).toString());
         }
@@ -651,6 +662,7 @@ QList<Note> Tag::fetchAllLinkedNotes() const {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        noteList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             QString fileName = query.value(QStringLiteral("note_file_name")).toString();
             QString noteSubFolderPath = query.value(QStringLiteral("note_sub_folder_path")).toString();
@@ -698,6 +710,7 @@ QStringList Tag::fetchAllNames() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
+        nameList.reserve(query.size());
         for (int r = 0; query.next(); r++) {
             nameList.append(query.value(QStringLiteral("name")).toString());
         }
