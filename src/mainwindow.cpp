@@ -3902,9 +3902,13 @@ void MainWindow::searchInNoteTextEdit(QString str) {
         const QStringList queryStrings = Note::buildQueryStringList(queryStr, true);
 
         if (queryStrings.count() > 0) {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
+            const QRegularExpression regExp(QLatin1String("(") + queryStrings.join(
+                            QLatin1String("|")) + QLatin1String(")"), QRegularExpression::CaseInsensitiveOption);
+#else
             const QRegExp regExp(QLatin1String("(") + queryStrings.join(
                             QLatin1String("|")) + QLatin1String(")"), Qt::CaseInsensitive);
-
+#endif
             while (ui->noteTextEdit->find(regExp)) {
                 QTextEdit::ExtraSelection extra = QTextEdit::ExtraSelection();
                 extra.format.setBackground(color);
