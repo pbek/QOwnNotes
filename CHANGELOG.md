@@ -13,6 +13,8 @@
       colors you are able to print to a PDF (if your operating system supports it)
     - the trailing newline in code blocks will now be removed when exporting so
       that there isn't an empty line at the end of each code block
+- added more Basque, Macedonian, Ukrainian, Persian, Albanian, Kurdish, Finnish
+  translation (thank you Fabijenna)
 
 ## 19.12.7
 - hid the excessive `Unable to find any suggestion for` spellchecker warnings

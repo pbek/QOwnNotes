@@ -104,173 +104,173 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="14"/>
       <source>Dictionary manager</source>
-      <translation type="unfinished">Dictionary manager</translation>
+      <translation>مدیر فرهنگ لغت</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="61"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>لغو</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="89"/>
       <source>Download dictionary</source>
-      <translation type="unfinished">Download dictionary</translation>
+      <translation>دانلود فرهنگ لغت</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="107"/>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="165"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>نام</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="115"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>متن جستجوی خود را وارد کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="118"/>
       <source>Find dictionary</source>
-      <translation type="unfinished">Find dictionary</translation>
+      <translation>فرهنگ لغت را پیدا کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="137"/>
       <source>Downloaded dictionaries</source>
-      <translation type="unfinished">Downloaded dictionaries</translation>
+      <translation>لغت نامه های بارگیری شده</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
       <source>If checked only the downloaded dictionaries will be used</source>
-      <translation type="unfinished">If checked only the downloaded dictionaries will be used</translation>
+      <translation>در صورت علامت گذاری ، فقط از لغت نامه های بارگیری شده استفاده می شود</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="176"/>
       <source>Disable external dictionaries</source>
-      <translation type="unfinished">Disable external dictionaries</translation>
+      <translation>غیرفعال کردن فرهنگ لغت های خارجی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="183"/>
       <source>Delete selected dictionaries</source>
-      <translation type="unfinished">Delete selected dictionaries</translation>
+      <translation>لغت نامه های انتخاب شده را حذف کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="47"/>
       <source>English (British)</source>
-      <translation type="unfinished">English (British)</translation>
+      <translation>انگلیسی (انگلیسی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
       <source>English (American)</source>
-      <translation type="unfinished">English (American)</translation>
+      <translation>انگلیسی (آمریکایی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="59"/>
       <source>German (Austrian)</source>
-      <translation type="unfinished">German (Austrian)</translation>
+      <translation>آلمانی (اتریشی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="61"/>
       <source>German (German)</source>
-      <translation type="unfinished">German (German)</translation>
+      <translation>آلمانی (آلمانی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
       <source>German (Swiss)</source>
-      <translation type="unfinished">German (Swiss)</translation>
+      <translation>آلمانی (سوئیس)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
       <source>French</source>
-      <translation type="unfinished">French</translation>
+      <translation>فرانسوی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="111"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>اسپانیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
       <source>Russian</source>
-      <translation type="unfinished">Russian</translation>
+      <translation>روسی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
       <source>Polish</source>
-      <translation type="unfinished">Polish</translation>
+      <translation>لهستانی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="73"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>ایتالیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
       <source>Aragonese</source>
-      <translation type="unfinished">Aragonese</translation>
+      <translation>آراگانی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="66"/>
       <source>Gujarati</source>
-      <translation type="unfinished">Gujarati</translation>
+      <translation>گجراتی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
       <source>Portugese (Brazilian)</source>
-      <translation type="unfinished">Portugese (Brazilian)</translation>
+      <translation>پرتغالی (برزیلی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
       <source>Portugese</source>
-      <translation type="unfinished">Portugese</translation>
+      <translation>پرتغالی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>دانمارکی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>سوئدی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>کشور چک</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
       <source>Afrikaans</source>
-      <translation type="unfinished">Afrikaans</translation>
+      <translation>افریقایی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
       <source>Amharic</source>
-      <translation type="unfinished">Amharic</translation>
+      <translation>آماتور</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
       <source>Ancient Greek</source>
-      <translation type="unfinished">Ancient Greek</translation>
+      <translation>یونان باستان</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
       <source>Arabic</source>
-      <translation type="unfinished">Arabic</translation>
+      <translation>عربی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Armenian</source>
-      <translation type="unfinished">Armenian</translation>
+      <translation>ارمنی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>آلبانیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>باسک</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
@@ -280,12 +280,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>بلغاری</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>بنگالی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
@@ -295,67 +295,67 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>کاتالان</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
       <source>Catalan (Valencian)</source>
-      <translation type="unfinished">Catalan (Valencian)</translation>
+      <translation>کاتالان (والنسی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
       <source>Chuvash (Russia)</source>
-      <translation type="unfinished">Chuvash (Russia)</translation>
+      <translation>چاووش (روسیه)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>کرواتی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="44"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>هلندی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
       <source>English (Australian)</source>
-      <translation type="unfinished">English (Australian)</translation>
+      <translation>انگلیسی (استرالیایی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
       <source>English (Canadian)</source>
-      <translation type="unfinished">English (Canadian)</translation>
+      <translation>انگلیسی (کانادایی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>English (Medical Dictionary)</source>
-      <translation type="unfinished">English (Medical Dictionary)</translation>
+      <translation>انگلیسی (فرهنگ لغت پزشکی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
       <source>English (South African)</source>
-      <translation type="unfinished">English (South African)</translation>
+      <translation>انگلیسی (آفریقای جنوبی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
       <source>Esperanto</source>
-      <translation type="unfinished">Esperanto</translation>
+      <translation>اسپرانتو</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>استونیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
       <source>Faroese</source>
-      <translation type="unfinished">Faroese</translation>
+      <translation>انگلیسی (فرهنگ لغت پزشکی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
       <source>Friulian</source>
-      <translation type="unfinished">Friulian</translation>
+      <translation>فریولی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
@@ -370,27 +370,27 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
       <source>Georgian</source>
-      <translation type="unfinished">Georgian</translation>
+      <translation>گرجی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>German (Classical Spelling)</source>
-      <translation type="unfinished">German (Classical Spelling)</translation>
+      <translation>آلمانی (هجی کلاسیک)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
       <source>German (Medical Dictionary)</source>
-      <translation type="unfinished">German (Medical Dictionary)</translation>
+      <translation>آلمانی (فرهنگ لغت پزشکی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>یونانی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation type="unfinished">Modern Greek (Polytonic Greek)</translation>
+      <translation>یونانی مدرن (یونانی پولیتونیک)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
@@ -400,52 +400,52 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>عبری</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>هندی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="70"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>مجارستانی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>ایسلندی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>اندونزیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
       <source>Kaszebsczi</source>
-      <translation type="unfinished">Kaszebsczi</translation>
+      <translation>کازسبسکی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
       <source>Kazakh</source>
-      <translation type="unfinished">Kazakh</translation>
+      <translation>قزاق</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>خمر</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
       <source>Komi (Russia)</source>
-      <translation type="unfinished">Komi (Russia)</translation>
+      <translation>کومی (روسیه)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>کره ای</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
@@ -460,47 +460,47 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
       <source>Latgalian</source>
-      <translation type="unfinished">Latgalian</translation>
+      <translation>لتگالیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>لاتین</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>لیتوانیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>لتونی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>کم آلمانی / زاکسن پایین</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>لوکزامبورگ (Letzeburgesch)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>مقدونی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>مالایایی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>مغولی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
@@ -525,7 +525,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Papiamentu</source>
-      <translation type="unfinished">Papiamentu</translation>
+      <translation>پاپیامنتو</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="95"/>
@@ -540,17 +540,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
       <source>Romansh</source>
-      <translation type="unfinished">Romansh</translation>
+      <translation>رومانیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Russian Medical Dictionary</source>
-      <translation type="unfinished">Russian Medical Dictionary</translation>
+      <translation>فرهنگ لغت پزشکی روسی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation type="unfinished">Rusyn / Ruthene (Slovakia)</translation>
+      <translation>Rusyn / Ruthene (اسلواکی)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
@@ -595,7 +595,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="114"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>تاگالوگ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
@@ -620,7 +620,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>ترکی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
@@ -635,12 +635,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>اوکراینی</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>اردو</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="124"/>
@@ -2989,25 +2989,25 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7000"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+      <translation>
+        <numerusform>%n توجه داشته باشید به %1 کپی شد</numerusform>
+        <numerusform>%n یادداشتها به %1 کپی شد</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7009"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>کپی کردن %n نت (به احتمال زیاد موجود) انجام نشد</numerusform>
+        <numerusform>کپی کردن %n یادداشت انجام نشد (به احتمال زیاد موجود است)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7019"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>کپی کردن %n نت (بدون علامت گذاری یا پرونده متنی یا قابل خواندن) وجود ندارد</numerusform>
+        <numerusform>کپی کردن %n یادداشت (بدون علامت گذاری یا پرونده متنی یا قابل خواندن) وجود ندارد</numerusform>
       </translation>
     </message>
     <message>
@@ -3116,7 +3116,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9588"/>
       <source>Jump to the note's sub-folder</source>
-      <translation type="unfinished">Jump to the note's sub-folder</translation>
+      <translation>به زیر پوشه یادداشت پرش کنید</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9592"/>
@@ -3581,12 +3581,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8649"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation type="unfinished">Moved tag '%1' to new tag</translation>
+      <translation>برچسب '%1' به برچسب جدید منتقل شد</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7647"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation type="unfinished">show all notes tagged with '%1' (%2)</translation>
+      <translation>نمایش تمام یادداشتهای دارای برچسب '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8353"/>
@@ -3676,32 +3676,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1200"/>
       <source>Show %1 panel</source>
-      <translation type="unfinished">Show %1 panel</translation>
+      <translation>نمایش پانل %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1239"/>
       <source>Show %1</source>
-      <translation type="unfinished">Show %1</translation>
+      <translation>نمایش %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1551"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>حالت بدون حواس پرت را ترک کنید</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2073"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
+      <translation>نمایش یادداشتها در پوشه "%1" (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2113"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;آخرین اصلاح شده: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2118"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
+      <translation>&lt;br /&gt; مسیر: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2301"/>
@@ -4213,7 +4213,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="2717"/>
       <source>Note file path changed</source>
-      <translation type="unfinished">Note file path changed</translation>
+      <translation>مسیر پرونده توجه داشته باشید</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2718"/>
@@ -4260,7 +4260,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/git.cpp" line="75"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
+      <translation>دستور &lt;code&gt;%1&lt;/code&gt; انجام نشد!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3925"/>
@@ -4270,7 +4270,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/cloudconnection.cpp" line="281"/>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>پیش فرض</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="216"/>
@@ -4293,17 +4293,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="570"/>
       <source>No suggestions for %1</source>
-      <translation type="unfinished">No suggestions for %1</translation>
+      <translation>هیچ پیشنهادی برای %1 ندارید</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="581"/>
       <source>Ignore</source>
-      <translation type="unfinished">Ignore</translation>
+      <translation>چشم پوشی</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="582"/>
       <source>Add to Dictionary</source>
-      <translation type="unfinished">Add to Dictionary</translation>
+      <translation>اضافه کردن به فرهنگ لغت</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="638"/>
@@ -5460,12 +5460,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1723"/>
       <source>Todo settings</source>
-      <translation type="unfinished">Todo settings</translation>
+      <translation>تنظیمات Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Enable todo calendar support</source>
-      <translation type="unfinished">Enable todo calendar support</translation>
+      <translation>پشتیبانی تقویم todo را فعال کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
@@ -5500,7 +5500,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2131"/>
       <source>Bosnian</source>
-      <translation type="unfinished">Bosnian</translation>
+      <translation>بوسنیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2142"/>
@@ -5545,7 +5545,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2285"/>
       <source>Irish</source>
-      <translation type="unfinished">Irish</translation>
+      <translation>ایرلندی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2296"/>
@@ -5590,22 +5590,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2406"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>کردی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>لتونی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2428"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>لیتوانیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2439"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>مقدونی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2461"/>
@@ -5615,7 +5615,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2505"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>ازبکی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2549"/>
@@ -5844,32 +5844,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2648"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>ویتنامی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
       <source>This is the best way to open an issue</source>
-      <translation type="unfinished">This is the best way to open an issue</translation>
+      <translation>این بهترین روش برای باز کردن یک مسئله است</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4264"/>
       <source>Please use this in the issue tracker</source>
-      <translation type="unfinished">Please use this in the issue tracker</translation>
+      <translation>لطفاً از این مورد در ردیاب شماره استفاده کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4267"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+      <translation>&amp;اطلاعات اشکال زدایی را در کلیپ بورد کپی کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4278"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation type="unfinished">Please don't use this in the issue tracker</translation>
+      <translation>لطفاً در ردیاب شماره از این استفاده نکنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4624"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation type="unfinished">Use editor highlighting styles also for the preview</translation>
+      <translation>برای پیش نمایش از سبک های برجسته ویرایشگر نیز استفاده کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4984"/>
@@ -5904,12 +5904,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5488"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-      <translation type="unfinished">Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</translation>
+      <translation>به جای یک لیست یادداشت ، از یک درخت توجه با همه زیر پوشه ها استفاده کنید (اگر برای پوشه یادداشت روشن شده اند)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5659"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation type="unfinished">Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</translation>
+      <translation>پانل ها را می توان در منوی اصلی &lt;i&gt; پنجره / پنل ها &lt;/i&gt; روشن و خاموش کرد و همچنین می توانید برای تنظیمات پانل های مختلف &lt;i&gt; مکانهای مختلف&lt;/i&gt; را تنظیم کنید.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5736"/>
@@ -6747,7 +6747,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2038"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+      <translation>لطفاً در ردیاب شماره از این استفاده نکنید ، متن اطلاعات اشکال زدایی را مستقیماً در شماره کپی کنید.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2045"/>
@@ -6802,12 +6802,15 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2595"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+      <translation>برای شروع سریع ، به &lt;a href="٪1"&gt; اسکریپت اسکریپت نویسی &lt;/a&gt; نگاهی بیندازید.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2597"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>اگر در QOwnNotes به عملکرد خاصی نیاز دارید ، لطفاً یک شماره را در این مورد باز کنید
+&lt;a href="٪1"&gt;
+صفحه شماره QOwnNotes
+&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2618"/>
@@ -6848,7 +6851,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3971"/>
       <source>The debug information was copied to the clipboard.</source>
-      <translation type="unfinished">The debug information was copied to the clipboard.</translation>
+      <translation>اطلاعات اشکال زدایی در کلیپ بورد کپی شد.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2612"/>
@@ -6868,7 +6871,11 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1565"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>میانبر
+&lt;strong&gt;%1&lt;/strong&gt;
+قبلاً اختصاص داده شده است
+&lt;strong&gt;%2&lt;/strong&gt;!
+آیا می خواهید به میانبر بروید?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2708"/>
@@ -6878,7 +6885,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2709"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>اسکریپت فعلی &lt;strong&gt;%1&lt;/ strong&gt; حذف شود?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2760"/>
@@ -6940,7 +6947,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3369"/>
       <source>Reset and &amp;exit</source>
-      <translation type="unfinished">Reset and &amp;exit</translation>
+      <translation>تنظیم مجدد و &amp;خروج</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3531"/>
@@ -6950,7 +6957,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3532"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
+      <translation>پرونده گزارش &lt;strong&gt;%1&lt;/strong&gt; پاک شد.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3568"/>
@@ -6986,7 +6993,10 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="93"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+      <translation>می توانید مشتری git خود را از اینجا بارگیری کنید:
+&lt;a href="٪url"&gt;
+برای Windows استفاده کنید
+&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="414"/>
@@ -7057,7 +7067,9 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="438"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
+      <translation>شما پیدا خواهید کرد
+&lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt;
+در مسیر انتشار خود برای شروع QOwnNotes در حالت قابل حمل.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2019"/>
@@ -7114,19 +7126,19 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="219"/>
       <source>40</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">40</translation>
+      <translation>40</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="220"/>
       <source>60</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">60</translation>
+      <translation>60</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="221"/>
       <source>80</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">80</translation>
+      <translation>80</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="222"/>
@@ -7168,67 +7180,67 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
       <source>large</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">large</translation>
+      <translation>بزرگ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="235"/>
       <source>medium</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">medium</translation>
+      <translation>متوسط</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="236"/>
       <source>small</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">small</translation>
+      <translation>کوچک</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="237"/>
       <source>variant 0</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 0</translation>
+      <translation>نوع 0</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="238"/>
       <source>variant 1</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 1</translation>
+      <translation>نوع 1</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="239"/>
       <source>variant 2</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 2</translation>
+      <translation>نوع 2</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">without accents</translation>
+      <translation>بدون لهجه</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="242"/>
       <source>with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with accents</translation>
+      <translation>با لهجه</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="244"/>
       <source>with ye, modern russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with ye, modern russian</translation>
+      <translation>روسی مدرن</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="246"/>
       <source>with yeyo, modern and old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yeyo, modern and old russian</translation>
+      <translation>مدرن و قدیمی روسی</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="249"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yo, old russian</translation>
+      <translation>old russian</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="250"/>

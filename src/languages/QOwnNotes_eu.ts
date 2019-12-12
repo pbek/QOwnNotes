@@ -350,12 +350,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
       <source>Faroese</source>
-      <translation type="unfinished">Faroese</translation>
+      <translation>Faroese</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
       <source>Friulian</source>
-      <translation type="unfinished">Friulian</translation>
+      <translation>Friulian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
@@ -370,7 +370,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
       <source>Georgian</source>
-      <translation type="unfinished">Georgian</translation>
+      <translation>Georgian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
@@ -425,27 +425,27 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
       <source>Kaszebsczi</source>
-      <translation type="unfinished">Kaszebsczi</translation>
+      <translation>Kaszebsczi</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
       <source>Kazakh</source>
-      <translation type="unfinished">Kazakh</translation>
+      <translation>Kazakh</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>Khmer</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
       <source>Komi (Russia)</source>
-      <translation type="unfinished">Komi (Russia)</translation>
+      <translation>Komi (Errusia)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Koreera</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
@@ -460,12 +460,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
       <source>Latgalian</source>
-      <translation type="unfinished">Latgalian</translation>
+      <translation>Latgalian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>Latin</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
@@ -480,17 +480,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>Behe Alemaniako / Behe saxoia</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>Luxenburgera (Letzeburgesch)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Mazedoniera</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
@@ -500,7 +500,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>Mongoliako</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
@@ -525,12 +525,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Papiamentu</source>
-      <translation type="unfinished">Papiamentu</translation>
+      <translation>Papiamentu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="95"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
@@ -545,7 +545,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Russian Medical Dictionary</source>
-      <translation type="unfinished">Russian Medical Dictionary</translation>
+      <translation>Errusiako Hiztegi Medikoa</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
@@ -605,7 +605,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="116"/>
       <source>Tatar (Russia)</source>
-      <translation type="unfinished">Tatar (Russia)</translation>
+      <translation>Tartaroa (Errusia)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
@@ -625,12 +625,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
       <source>Turkmen</source>
-      <translation type="unfinished">Turkmen</translation>
+      <translation>Udmurt (Errusia)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
       <source>Udmurt (Russia)</source>
-      <translation type="unfinished">Udmurt (Russia)</translation>
+      <translation>Veneziako</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
@@ -645,7 +645,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="124"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>Uzbekera</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>

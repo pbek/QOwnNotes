@@ -104,609 +104,609 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="14"/>
       <source>Dictionary manager</source>
-      <translation type="unfinished">Dictionary manager</translation>
+      <translation>Менеджер словників</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="61"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Скасувати</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="89"/>
       <source>Download dictionary</source>
-      <translation type="unfinished">Download dictionary</translation>
+      <translation>Завантажити словник</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="107"/>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="165"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Ім'я</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="115"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>Введіть текст запиту</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="118"/>
       <source>Find dictionary</source>
-      <translation type="unfinished">Find dictionary</translation>
+      <translation>Знайти словник</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="137"/>
       <source>Downloaded dictionaries</source>
-      <translation type="unfinished">Downloaded dictionaries</translation>
+      <translation>Завантажені словники</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
       <source>If checked only the downloaded dictionaries will be used</source>
-      <translation type="unfinished">If checked only the downloaded dictionaries will be used</translation>
+      <translation>Якщо встановлено прапорець, використовуються лише завантажені словники</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="176"/>
       <source>Disable external dictionaries</source>
-      <translation type="unfinished">Disable external dictionaries</translation>
+      <translation>Вимкнути зовнішні словники</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="183"/>
       <source>Delete selected dictionaries</source>
-      <translation type="unfinished">Delete selected dictionaries</translation>
+      <translation>Видалити вибрані словники</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="47"/>
       <source>English (British)</source>
-      <translation type="unfinished">English (British)</translation>
+      <translation>Англійська (англійська)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
       <source>English (American)</source>
-      <translation type="unfinished">English (American)</translation>
+      <translation>Англійська (американська)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="59"/>
       <source>German (Austrian)</source>
-      <translation type="unfinished">German (Austrian)</translation>
+      <translation>Німецька (австрійська)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="61"/>
       <source>German (German)</source>
-      <translation type="unfinished">German (German)</translation>
+      <translation>Німецька (німецька)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
       <source>German (Swiss)</source>
-      <translation type="unfinished">German (Swiss)</translation>
+      <translation>Німецька (швейцарська)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
       <source>French</source>
-      <translation type="unfinished">French</translation>
+      <translation>Французька</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="111"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>Іспанська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
       <source>Russian</source>
-      <translation type="unfinished">Russian</translation>
+      <translation>Російська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
       <source>Polish</source>
-      <translation type="unfinished">Polish</translation>
+      <translation>Польська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="73"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>Італійська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
       <source>Aragonese</source>
-      <translation type="unfinished">Aragonese</translation>
+      <translation>Арагонський</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="66"/>
       <source>Gujarati</source>
-      <translation type="unfinished">Gujarati</translation>
+      <translation>Гуджараті</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
       <source>Portugese (Brazilian)</source>
-      <translation type="unfinished">Portugese (Brazilian)</translation>
+      <translation>Португальська (бразильська)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
       <source>Portugese</source>
-      <translation type="unfinished">Portugese</translation>
+      <translation>Португальська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Датська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Шведська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>Чешська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
       <source>Afrikaans</source>
-      <translation type="unfinished">Afrikaans</translation>
+      <translation>Африкаанс</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
       <source>Amharic</source>
-      <translation type="unfinished">Amharic</translation>
+      <translation>Амхарський</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
       <source>Ancient Greek</source>
-      <translation type="unfinished">Ancient Greek</translation>
+      <translation>Давньогрецька</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
       <source>Arabic</source>
-      <translation type="unfinished">Arabic</translation>
+      <translation>Арабська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Armenian</source>
-      <translation type="unfinished">Armenian</translation>
+      <translation>Вірменська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>Албанська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Баскі</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
       <source>Belarusian</source>
-      <translation type="unfinished">Belarusian</translation>
+      <translation>Білоруська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>Болгарка</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>Бенгальська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
       <source>Breton</source>
-      <translation type="unfinished">Breton</translation>
+      <translation>Бретонський</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>Каталанська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
       <source>Catalan (Valencian)</source>
-      <translation type="unfinished">Catalan (Valencian)</translation>
+      <translation>Каталанська (Валенсія)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
       <source>Chuvash (Russia)</source>
-      <translation type="unfinished">Chuvash (Russia)</translation>
+      <translation>Чуваш (Росія)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>Хорватська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="44"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>Нідерландська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
       <source>English (Australian)</source>
-      <translation type="unfinished">English (Australian)</translation>
+      <translation>Англійська (австралійська)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
       <source>English (Canadian)</source>
-      <translation type="unfinished">English (Canadian)</translation>
+      <translation>Англійська (канадська)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>English (Medical Dictionary)</source>
-      <translation type="unfinished">English (Medical Dictionary)</translation>
+      <translation>Англійська (медичний словник)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
       <source>English (South African)</source>
-      <translation type="unfinished">English (South African)</translation>
+      <translation>Англійська (південноафриканська)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
       <source>Esperanto</source>
-      <translation type="unfinished">Esperanto</translation>
+      <translation>Есперанто</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>Естонська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
       <source>Faroese</source>
-      <translation type="unfinished">Faroese</translation>
+      <translation>Фарерський</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
       <source>Friulian</source>
-      <translation type="unfinished">Friulian</translation>
+      <translation>Фріульська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
       <source>Gaelic</source>
-      <translation type="unfinished">Gaelic</translation>
+      <translation>Гельська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="57"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>Галицька</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
       <source>Georgian</source>
-      <translation type="unfinished">Georgian</translation>
+      <translation>Грузинська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>German (Classical Spelling)</source>
-      <translation type="unfinished">German (Classical Spelling)</translation>
+      <translation>Німецька (класичний правопис)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
       <source>German (Medical Dictionary)</source>
-      <translation type="unfinished">German (Medical Dictionary)</translation>
+      <translation>Німецька (медичний словник)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>Грецька</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation type="unfinished">Modern Greek (Polytonic Greek)</translation>
+      <translation>Сучасна грецька (політонічна грецька)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
       <source>Gurani</source>
-      <translation type="unfinished">Gurani</translation>
+      <translation>Гурані</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>Іврит</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>Хіді</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="70"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>Угорська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>Ісландська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>Індонезійська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
       <source>Kaszebsczi</source>
-      <translation type="unfinished">Kaszebsczi</translation>
+      <translation>Kaszebsczi</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
       <source>Kazakh</source>
-      <translation type="unfinished">Kazakh</translation>
+      <translation>Казахська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>Кхмерський</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
       <source>Komi (Russia)</source>
-      <translation type="unfinished">Komi (Russia)</translation>
+      <translation>Комі (Росія)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Корейська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
       <source>Kurdish (Turkey)</source>
-      <translation type="unfinished">Kurdish (Turkey)</translation>
+      <translation>Курдська (Туреччина)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
       <source>Lao</source>
-      <translation type="unfinished">Lao</translation>
+      <translation>Лаоська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
       <source>Latgalian</source>
-      <translation type="unfinished">Latgalian</translation>
+      <translation>Латгальська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>Латинська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>Литовська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>Латвійська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>Низька німецька / низькосаксонська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>Люксембурзька (Letzeburgesch)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Македонська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>Малаялам</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>Монгольська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
       <source>Nepali</source>
-      <translation type="unfinished">Nepali</translation>
+      <translation>Непалі</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
       <source>Norwegian (Bokmål)</source>
-      <translation type="unfinished">Norwegian (Bokmål)</translation>
+      <translation>Норвезька (Bokmål)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="92"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+      <translation>Норвезька (нюнорськ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="93"/>
       <source>Occitan</source>
-      <translation type="unfinished">Occitan</translation>
+      <translation>Окситанська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Papiamentu</source>
-      <translation type="unfinished">Papiamentu</translation>
+      <translation>Папіаменту</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="95"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Перська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Румунська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
       <source>Romansh</source>
-      <translation type="unfinished">Romansh</translation>
+      <translation>Романський</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Russian Medical Dictionary</source>
-      <translation type="unfinished">Russian Medical Dictionary</translation>
+      <translation>Російський медичний словник</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation type="unfinished">Rusyn / Ruthene (Slovakia)</translation>
+      <translation>Русин / Рутен (Словаччина)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
       <source>Serbian (Cyrillic)</source>
-      <translation type="unfinished">Serbian (Cyrillic)</translation>
+      <translation>Сербська (кирилиця)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
       <source>Serbian (Latin)</source>
-      <translation type="unfinished">Serbian (Latin)</translation>
+      <translation>Сербська (латинська)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>Шона</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Sindhi</source>
-      <translation type="unfinished">Sindhi</translation>
+      <translation>Сінді</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="108"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>Сінгала</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Словацька</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="110"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Словенська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
       <source>Swahili</source>
-      <translation type="unfinished">Swahili</translation>
+      <translation>Суахілі</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="114"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>Tagalog</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Tajik</source>
-      <translation type="unfinished">Tajik</translation>
+      <translation>Таджик</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="116"/>
       <source>Tatar (Russia)</source>
-      <translation type="unfinished">Tatar (Russia)</translation>
+      <translation>Татарська (Росія)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
       <source>Telugu</source>
-      <translation type="unfinished">Telugu</translation>
+      <translation>Телугу</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
       <source>Thai</source>
-      <translation type="unfinished">Thai</translation>
+      <translation>Тайська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>Турецька</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
       <source>Turkmen</source>
-      <translation type="unfinished">Turkmen</translation>
+      <translation>Туркмен</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
       <source>Udmurt (Russia)</source>
-      <translation type="unfinished">Udmurt (Russia)</translation>
+      <translation>Удмурт (Росія)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>Українська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>Урду</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="124"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>Узбек</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Venda</source>
-      <translation type="unfinished">Venda</translation>
+      <translation>Венда</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="126"/>
       <source>Venetian</source>
-      <translation type="unfinished">Venetian</translation>
+      <translation>Венеціанський</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>В’єтнамці</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="128"/>
       <source>Welsh</source>
-      <translation type="unfinished">Welsh</translation>
+      <translation>Валлійська</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>Хоса</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="130"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>Зулу</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="256"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>Помилка завантаження</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="257"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>Помилка під час завантаження:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="271"/>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="369"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>Помилка файлу</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="272"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>Не вдалося зберегти завантажений файл:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="370"/>
       <source>Could not remove dictionary file:
 %1</source>
-      <translation type="unfinished">Could not remove dictionary file:
+      <translation>Не вдалося видалити файл словника:
 %1</translation>
     </message>
   </context>
@@ -1040,11 +1040,11 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
-      <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+      <translation>
+        <numerusform>%n рядок %1ed %2 рази.</numerusform>
+        <numerusform>%n рядків %1ed %2 рази.</numerusform>
+        <numerusform>%n рядків %1ed %2 рази.</numerusform>
+        <numerusform>%n рядків %1ed %2 рази.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1228,37 +1228,37 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Code (keyword)</source>
-      <translation type="unfinished">Code (keyword)</translation>
+      <translation>Код (ключове слово)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Code (type)</source>
-      <translation type="unfinished">Code (type)</translation>
+      <translation>Код (тип)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Code (comment)</source>
-      <translation type="unfinished">Code (comment)</translation>
+      <translation>Код (коментар)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Code (string)</source>
-      <translation type="unfinished">Code (string)</translation>
+      <translation>Код (рядок)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Code (built in)</source>
-      <translation type="unfinished">Code (built in)</translation>
+      <translation>Код (вбудований)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Code (num literal)</source>
-      <translation type="unfinished">Code (num literal)</translation>
+      <translation>Код (буквальне число)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Code (other)</source>
-      <translation type="unfinished">Code (other)</translation>
+      <translation>Код (інше)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
@@ -1324,7 +1324,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="230"/>
       <source>Trailing space</source>
-      <translation type="unfinished">Trailing space</translation>
+      <translation>Простий простір</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="239"/>
@@ -1692,11 +1692,11 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; замітка була видалена</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; примітки були видалені</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; примітки були видалені</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; примітки були видалені</numerusform>
       </translation>
     </message>
   </context>
@@ -2036,7 +2036,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1088"/>
       <source>Spelling backend</source>
-      <translation type="unfinished">Spelling backend</translation>
+      <translation>Правопис бекенда</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1113"/>
@@ -2532,7 +2532,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2547"/>
       <source>Manage dictionaries</source>
-      <translation type="unfinished">Manage dictionaries</translation>
+      <translation>Керуйте словниками</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1883"/>
@@ -2709,11 +2709,11 @@ Restore current note?</source>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3205"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Видалено %n конфліктну копію бази даних</numerusform>
+        <numerusform>Видалено %n конфліктні копії бази даних</numerusform>
+        <numerusform>Видалено %n конфліктні копії бази даних</numerusform>
+        <numerusform>Видалено %n конфліктні копії бази даних</numerusform>
       </translation>
     </message>
     <message>
@@ -2915,16 +2915,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5039"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Ви вимкнули списки todo. &lt;br /&gt; Будь ласка, перевірте конфігурацію &lt;strong&gt; Todo &lt;/strong&gt; у налаштуваннях!</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5284"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Знайдено &lt;strong&gt;%n&lt;/strong&gt; зустрічання будь-якого терміна &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Знайдено &lt;strong&gt;%n&lt;/strong&gt; випадків будь-якого терміна &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Знайдено &lt;strong&gt;%n&lt;/strong&gt; випадків будь-якого терміна &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Знайдено &lt;strong&gt;%n&lt;/strong&gt; випадків будь-якого терміна &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -2940,7 +2940,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5940"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>Тека для нотаток</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6066"/>
@@ -3155,7 +3155,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9588"/>
       <source>Jump to the note's sub-folder</source>
-      <translation type="unfinished">Jump to the note's sub-folder</translation>
+      <translation>Перейдіть до підпапки нотатки</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9592"/>
@@ -3824,11 +3824,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5283"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Знайдено &lt;strong&gt;%n&lt;/strong&gt; зустріч &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Знайдено &lt;strong&gt;%n&lt;/strong&gt; випадки &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Знайдено &lt;strong&gt;%n&lt;/strong&gt; випадки &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Знайдено &lt;strong&gt;%n&lt;/strong&gt; випадки &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -4282,11 +4282,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2718"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Було виявлено зміну шляху примітки. Ви хочете замінити всі події &lt;strong&gt;%1 &lt;/strong&gt; посилань на &lt;strong&gt;%2 &lt;/strong&gt; та посилання з іменем файлу &lt;strong&gt;%3&lt;/strong&gt; на &lt;strong&gt;%4 &lt;/strong&gt; &gt; у &lt;strong&gt;%n &lt;/strong&gt; файлі примітки?</numerusform>
+        <numerusform>Було виявлено зміну шляху примітки. Ви хочете замінити всі посилання &lt;strong&gt;%1 &lt;/strong&gt; посилань на &lt;strong&gt;%2 &lt;/strong&gt; та посилання на ім’я файлу &lt;strong&gt;%3 &lt;/strong&gt; на &lt;strong&gt;%4 &lt;/strong&gt; &gt; у &lt;strong&gt;%n &lt;/strong&gt; файлах приміток?</numerusform>
+        <numerusform>Було виявлено зміну шляху примітки. Ви хочете замінити всі посилання &lt;strong&gt;%1 &lt;/strong&gt; посилань на &lt;strong&gt;%2 &lt;/strong&gt; та посилання на ім’я файлу &lt;strong&gt;%3 &lt;/strong&gt; на &lt;strong&gt;%4 &lt;/strong&gt; &gt; у &lt;strong&gt;%n &lt;/strong&gt; файлах приміток?</numerusform>
+        <numerusform>Було виявлено зміну шляху примітки. Ви хочете замінити всі посилання &lt;strong&gt;%1 &lt;/strong&gt; посилань на &lt;strong&gt;%2 &lt;/strong&gt; та посилання на ім’я файлу &lt;strong&gt;%3 &lt;/strong&gt; на &lt;strong&gt;%4 &lt;/strong&gt; &gt; у &lt;strong&gt;%n &lt;/strong&gt; файлах приміток?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -5468,7 +5468,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Вам все одно знадобиться &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; client sync client sync &lt;/span&gt; &lt;/a&gt; (або інший клієнт для синхронізації на робочому столі), щоб синхронізувати ваші нотатки! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
@@ -5612,7 +5612,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2285"/>
       <source>Irish</source>
-      <translation type="unfinished">Irish</translation>
+      <translation>Ірландська</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2296"/>
@@ -5662,7 +5662,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>Латвійська</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2428"/>
@@ -5682,7 +5682,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2505"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>Узбек</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2549"/>
@@ -5911,32 +5911,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2648"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>В’єтнамці</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
       <source>This is the best way to open an issue</source>
-      <translation type="unfinished">This is the best way to open an issue</translation>
+      <translation>Це найкращий спосіб відкрити питання</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4264"/>
       <source>Please use this in the issue tracker</source>
-      <translation type="unfinished">Please use this in the issue tracker</translation>
+      <translation>Будь ласка, використовуйте це в трекері випусків</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4267"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+      <translation>&amp;Скопіюйте інформацію про налагодження у буфер обміну</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4278"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation type="unfinished">Please don't use this in the issue tracker</translation>
+      <translation>Будь ласка, не використовуйте це в трекері проблем</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4624"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation type="unfinished">Use editor highlighting styles also for the preview</translation>
+      <translation>Використовуйте стилі виділення редактора також для попереднього перегляду</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4984"/>
@@ -5976,7 +5976,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5659"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation type="unfinished">Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</translation>
+      <translation>Панелі можна включати та вимикати у головному меню &lt;i&gt; Вікно / Панелі &lt;/i&gt;, а також можна налаштувати різні &lt;i&gt; Робочі області &lt;/i&gt; для різних конфігурацій панелі.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5736"/>
@@ -6046,7 +6046,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5849"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
+      <translation>Встановіть &lt;a href="%1"&gt; розширення веб-переглядача Web Companion &lt;/a&gt; з &lt;a href="%2"&gt; Веб-магазину Chrome &lt;/a&gt; або &lt;a href="%3"&gt; Сторінка додатків Firefox &lt;/a&gt;, щоб використовувати QOwnNotes як веб-відсікача.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3750"/>
@@ -6814,7 +6814,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2038"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+      <translation>Будь ласка, не використовуйте це в трекері проблем, скопіюйте текст інформації про налагодження безпосередньо у випуску.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2045"/>
@@ -6915,7 +6915,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3971"/>
       <source>The debug information was copied to the clipboard.</source>
-      <translation type="unfinished">The debug information was copied to the clipboard.</translation>
+      <translation>Інформація про налагодження була скопійована у буфер обміну.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2612"/>
@@ -7319,7 +7319,7 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="331"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7362,7 +7362,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation type="unfinished">Select table layout or enter text:</translation>
+      <translation>Виберіть макет таблиці або введіть текст:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>

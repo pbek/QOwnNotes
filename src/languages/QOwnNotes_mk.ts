@@ -140,12 +140,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
       <source>If checked only the downloaded dictionaries will be used</source>
-      <translation type="unfinished">If checked only the downloaded dictionaries will be used</translation>
+      <translation>Ако се проверат, само преземените речници ќе се користат</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="176"/>
       <source>Disable external dictionaries</source>
-      <translation type="unfinished">Disable external dictionaries</translation>
+      <translation>Оневозможи надворешни речници</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="183"/>
@@ -180,47 +180,47 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
       <source>French</source>
-      <translation type="unfinished">French</translation>
+      <translation>Француски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="111"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>Шпански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
       <source>Russian</source>
-      <translation type="unfinished">Russian</translation>
+      <translation>Руски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
       <source>Polish</source>
-      <translation type="unfinished">Polish</translation>
+      <translation>Полски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="73"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>Италијански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
       <source>Aragonese</source>
-      <translation type="unfinished">Aragonese</translation>
+      <translation>Арагонески</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="66"/>
       <source>Gujarati</source>
-      <translation type="unfinished">Gujarati</translation>
+      <translation>Гуџарати</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
       <source>Portugese (Brazilian)</source>
-      <translation type="unfinished">Portugese (Brazilian)</translation>
+      <translation>Португалски (бразилски)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
       <source>Portugese</source>
-      <translation type="unfinished">Portugese</translation>
+      <translation>Португалски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
@@ -230,452 +230,452 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Шведски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>Чешка</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
       <source>Afrikaans</source>
-      <translation type="unfinished">Afrikaans</translation>
+      <translation>Африканс</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
       <source>Amharic</source>
-      <translation type="unfinished">Amharic</translation>
+      <translation>Амхарски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
       <source>Ancient Greek</source>
-      <translation type="unfinished">Ancient Greek</translation>
+      <translation>Антички грчки</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
       <source>Arabic</source>
-      <translation type="unfinished">Arabic</translation>
+      <translation>Арапски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Armenian</source>
-      <translation type="unfinished">Armenian</translation>
+      <translation>Ерменски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>Албански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Баскиски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
       <source>Belarusian</source>
-      <translation type="unfinished">Belarusian</translation>
+      <translation>Белоруски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>Бугарски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>Бенгалски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
       <source>Breton</source>
-      <translation type="unfinished">Breton</translation>
+      <translation>Бретонски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>Каталонски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
       <source>Catalan (Valencian)</source>
-      <translation type="unfinished">Catalan (Valencian)</translation>
+      <translation>Каталонски (валенсијан)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
       <source>Chuvash (Russia)</source>
-      <translation type="unfinished">Chuvash (Russia)</translation>
+      <translation>Чуваш (Русија)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>Хрватски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="44"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>Холандски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
       <source>English (Australian)</source>
-      <translation type="unfinished">English (Australian)</translation>
+      <translation>Англиски (австралиски)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
       <source>English (Canadian)</source>
-      <translation type="unfinished">English (Canadian)</translation>
+      <translation>Англиски (канадски)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>English (Medical Dictionary)</source>
-      <translation type="unfinished">English (Medical Dictionary)</translation>
+      <translation>Англиски (медицински речник)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
       <source>English (South African)</source>
-      <translation type="unfinished">English (South African)</translation>
+      <translation>Англиски (јужноафрикански)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
       <source>Esperanto</source>
-      <translation type="unfinished">Esperanto</translation>
+      <translation>Есперанто</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>Естонски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
       <source>Faroese</source>
-      <translation type="unfinished">Faroese</translation>
+      <translation>Фарски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
       <source>Friulian</source>
-      <translation type="unfinished">Friulian</translation>
+      <translation>Фрулијански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
       <source>Gaelic</source>
-      <translation type="unfinished">Gaelic</translation>
+      <translation>Галски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="57"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>Галициски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
       <source>Georgian</source>
-      <translation type="unfinished">Georgian</translation>
+      <translation>Грузиски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>German (Classical Spelling)</source>
-      <translation type="unfinished">German (Classical Spelling)</translation>
+      <translation>Германски (класичен правопис)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
       <source>German (Medical Dictionary)</source>
-      <translation type="unfinished">German (Medical Dictionary)</translation>
+      <translation>Германски (медицински речник)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>Грчки</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation type="unfinished">Modern Greek (Polytonic Greek)</translation>
+      <translation>Современ грчки (политоничен грчки)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
       <source>Gurani</source>
-      <translation type="unfinished">Gurani</translation>
+      <translation>Гурани</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>Хебрејски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>Хинди</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="70"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>Унгарски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>Исландски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>Индонезиски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
       <source>Kaszebsczi</source>
-      <translation type="unfinished">Kaszebsczi</translation>
+      <translation>Касебсци</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
       <source>Kazakh</source>
-      <translation type="unfinished">Kazakh</translation>
+      <translation>Казахстански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>Кмерски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
       <source>Komi (Russia)</source>
-      <translation type="unfinished">Komi (Russia)</translation>
+      <translation>Коми (Русија)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Корејски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
       <source>Kurdish (Turkey)</source>
-      <translation type="unfinished">Kurdish (Turkey)</translation>
+      <translation>Курдски (Турција)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
       <source>Lao</source>
-      <translation type="unfinished">Lao</translation>
+      <translation>Лаонски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
       <source>Latgalian</source>
-      <translation type="unfinished">Latgalian</translation>
+      <translation>Латгалија</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>Латински</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>Литвански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>Латвиски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>Ниско германски / низок саксон</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>Луксембург (Лецбургеш)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Македонски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>Малајалам</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>Монголски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
       <source>Nepali</source>
-      <translation type="unfinished">Nepali</translation>
+      <translation>Непалски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
       <source>Norwegian (Bokmål)</source>
-      <translation type="unfinished">Norwegian (Bokmål)</translation>
+      <translation>Норвешки (шведски)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="92"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+      <translation>Норвешки (нонрск)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="93"/>
       <source>Occitan</source>
-      <translation type="unfinished">Occitan</translation>
+      <translation>Окситански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Papiamentu</source>
-      <translation type="unfinished">Papiamentu</translation>
+      <translation>Папиаменту</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="95"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Персиски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Романски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
       <source>Romansh</source>
-      <translation type="unfinished">Romansh</translation>
+      <translation>Реторомански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Russian Medical Dictionary</source>
-      <translation type="unfinished">Russian Medical Dictionary</translation>
+      <translation>Руски медицински речник</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation type="unfinished">Rusyn / Ruthene (Slovakia)</translation>
+      <translation>Русин / Рутен (Словачка)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
       <source>Serbian (Cyrillic)</source>
-      <translation type="unfinished">Serbian (Cyrillic)</translation>
+      <translation>Српски (кирилица)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
       <source>Serbian (Latin)</source>
-      <translation type="unfinished">Serbian (Latin)</translation>
+      <translation>Српски (латински)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>Шона</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Sindhi</source>
-      <translation type="unfinished">Sindhi</translation>
+      <translation>Синди</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="108"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>Синхалски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Словачки</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="110"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Словенечки</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
       <source>Swahili</source>
-      <translation type="unfinished">Swahili</translation>
+      <translation>Свахили</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="114"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>Тагалог</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Tajik</source>
-      <translation type="unfinished">Tajik</translation>
+      <translation>Таџикистански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="116"/>
       <source>Tatar (Russia)</source>
-      <translation type="unfinished">Tatar (Russia)</translation>
+      <translation>Татарски (Русија)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
       <source>Telugu</source>
-      <translation type="unfinished">Telugu</translation>
+      <translation>Телугу</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
       <source>Thai</source>
-      <translation type="unfinished">Thai</translation>
+      <translation>Тајландски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>Турски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
       <source>Turkmen</source>
-      <translation type="unfinished">Turkmen</translation>
+      <translation>Туркменски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
       <source>Udmurt (Russia)</source>
-      <translation type="unfinished">Udmurt (Russia)</translation>
+      <translation>Удмурт (Русија)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>Украински</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>Урду</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="124"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>Узбекистански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Venda</source>
-      <translation type="unfinished">Venda</translation>
+      <translation>Ванда</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="126"/>
       <source>Venetian</source>
-      <translation type="unfinished">Venetian</translation>
+      <translation>Венецијански</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>Виетнамски</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="128"/>
       <source>Welsh</source>
-      <translation type="unfinished">Welsh</translation>
+      <translation>Велшки</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>Xhоса</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="130"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>Зулу</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="256"/>
@@ -755,7 +755,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
       <source>%v of %m note(s) imported</source>
-      <translation type="unfinished">%v of %m note(s) imported</translation>
+      <translation>увезени %v од %m белешка(а)</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="81"/>
@@ -939,9 +939,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
+      <translation>
+        <numerusform>%n линија се премести.</numerusform>
+        <numerusform>%n линии се преселија.</numerusform>
       </translation>
     </message>
     <message>
@@ -977,9 +977,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
+      <translation>
+        <numerusform>%n линија се филтрира.</numerusform>
+        <numerusform>%n линии се филтрираат.</numerusform>
       </translation>
     </message>
     <message>
@@ -1025,9 +1025,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
       <source>%n lines indented.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
+      <translation>
+        <numerusform>%n линија вовлечен.</numerusform>
+        <numerusform>%n линии вовлечен.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1218,37 +1218,37 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Code (keyword)</source>
-      <translation type="unfinished">Code (keyword)</translation>
+      <translation>Код (клучен збор)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Code (type)</source>
-      <translation type="unfinished">Code (type)</translation>
+      <translation>Код (тип)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Code (comment)</source>
-      <translation type="unfinished">Code (comment)</translation>
+      <translation>Код (коментар)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Code (string)</source>
-      <translation type="unfinished">Code (string)</translation>
+      <translation>Код (низа)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Code (built in)</source>
-      <translation type="unfinished">Code (built in)</translation>
+      <translation>Код (вграден)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Code (num literal)</source>
-      <translation type="unfinished">Code (num literal)</translation>
+      <translation>Код (буквален број)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Code (other)</source>
-      <translation type="unfinished">Code (other)</translation>
+      <translation>Код (друг)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
@@ -1314,7 +1314,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="230"/>
       <source>Trailing space</source>
-      <translation type="unfinished">Trailing space</translation>
+      <translation>Заостанува простор</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="239"/>
@@ -1637,48 +1637,48 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
+      <translation>Датотеката &lt;strong&gt;%1 &lt;/strong&gt; не е читлива и не може да се врати!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Врати &lt;strong&gt;%n&lt;/strong&gt; избрана белешка?</numerusform>
+        <numerusform>Врати &lt;strong&gt;%n&lt;/strong&gt; избрани белешки?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation type="unfinished">Notes restored</translation>
+      <translation>Белешките се обновени</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; белешка е обновен</numerusform>
+        <numerusform>Обновени се &lt;strong&gt;%n&lt;/strong&gt; белешки</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Отстрани &lt;strong&gt;%n&lt;/strong&gt; избрана белешка?</numerusform>
+        <numerusform>Отстрани &lt;strong&gt;%n&lt;/strong&gt; избрани белешки?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation type="unfinished">Notes removed</translation>
+      <translation>Белешките се отстранети</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; белешка беше отстранета</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; белешки беа отстранети</numerusform>
       </translation>
     </message>
   </context>
@@ -1687,7 +1687,7 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>Дневници</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
@@ -1769,22 +1769,22 @@
     <message>
       <location filename="../mainwindow.ui" line="850"/>
       <source>&amp;Note</source>
-      <translation type="unfinished">&amp;Note</translation>
+      <translation>&amp;Забелешка</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="854"/>
       <source>Note &amp;folders</source>
-      <translation type="unfinished">Note &amp;folders</translation>
+      <translation>Папки &amp;за белешка</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="859"/>
       <source>Sort by</source>
-      <translation type="unfinished">Sort by</translation>
+      <translation>Сортирај по</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="966"/>
       <source>&amp;Help</source>
-      <translation type="unfinished">&amp;Help</translation>
+      <translation>&amp;Помош</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1123"/>
@@ -1809,32 +1809,32 @@
     <message>
       <location filename="../mainwindow.ui" line="1267"/>
       <source>&amp;Quit</source>
-      <translation type="unfinished">&amp;Quit</translation>
+      <translation>&amp;Престани</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1282"/>
       <source>&amp;Setup note folders</source>
-      <translation type="unfinished">&amp;Setup note folders</translation>
+      <translation>&amp;Постави папки за белешки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1291"/>
       <source>&amp;Find note</source>
-      <translation type="unfinished">&amp;Find note</translation>
+      <translation>&amp;Најдете белешка</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1303"/>
       <source>&amp;Remove current note</source>
-      <translation type="unfinished">&amp;Remove current note</translation>
+      <translation>&amp;Отстранете ја тековната нота</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1327"/>
       <source>&amp;New note</source>
-      <translation type="unfinished">&amp;New note</translation>
+      <translation>&amp;Нова нота</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1339"/>
       <source>Check for &amp;updates</source>
-      <translation type="unfinished">Check for &amp;updates</translation>
+      <translation>Проверете за &amp;ажурирања</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1351"/>
@@ -1864,7 +1864,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1400"/>
       <source>Show note &amp;versions</source>
-      <translation type="unfinished">Show note &amp;versions</translation>
+      <translation>Прикажи верзии за &amp;белешки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1403"/>
@@ -1880,13 +1880,13 @@
       <location filename="../mainwindow.ui" line="1420"/>
       <location filename="../mainwindow.cpp" line="9672"/>
       <source>Select &amp;all notes</source>
-      <translation type="unfinished">Select &amp;all notes</translation>
+      <translation>Изберете &amp;ги сите белешки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1429"/>
       <location filename="../mainwindow.cpp" line="6130"/>
       <source>Insert &amp;link</source>
-      <translation type="unfinished">Insert &amp;link</translation>
+      <translation>Вметнете &amp;врска</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1432"/>
@@ -1896,7 +1896,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1444"/>
       <source>&amp;Find in current note</source>
-      <translation type="unfinished">&amp;Find in current note</translation>
+      <translation>&amp;Најдете во тековната белешка</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1447"/>
@@ -1911,12 +1911,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1472"/>
       <source>&amp;Back in note history</source>
-      <translation type="unfinished">&amp;Back in note history</translation>
+      <translation>&amp;Врати се во историјата на белешки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1385"/>
       <source>&amp;Settings</source>
-      <translation type="unfinished">&amp;Settings</translation>
+      <translation>&amp;Поставки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
@@ -1978,7 +1978,7 @@
     <message>
       <location filename="../mainwindow.ui" line="997"/>
       <source>&amp;Edit</source>
-      <translation type="unfinished">&amp;Edit</translation>
+      <translation>&amp;Уредување</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1001"/>
@@ -2018,17 +2018,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1088"/>
       <source>Spelling backend</source>
-      <translation type="unfinished">Spelling backend</translation>
+      <translation>Запис на правопис</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1113"/>
       <source>To&amp;do</source>
-      <translation type="unfinished">To&amp;do</translation>
+      <translation>Да &amp;направиш</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1119"/>
       <source>&amp;Window</source>
-      <translation type="unfinished">&amp;Window</translation>
+      <translation>&amp;Прозорец</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1135"/>
@@ -2106,12 +2106,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1514"/>
       <source>Insert current &amp;time</source>
-      <translation type="unfinished">Insert current &amp;time</translation>
+      <translation>Вметнете го тековното &amp;време</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1526"/>
       <source>Show &amp;Todo List</source>
-      <translation type="unfinished">Show &amp;Todo List</translation>
+      <translation>Покажете го &amp;Тодо списокот</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1538"/>
@@ -2131,12 +2131,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1559"/>
       <source>&amp;Print note (text)</source>
-      <translation type="unfinished">&amp;Print note (text)</translation>
+      <translation>&amp;Белешка за печатење (текст)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1583"/>
       <source>Insert &amp;image</source>
-      <translation type="unfinished">Insert &amp;image</translation>
+      <translation>Вметнете &amp;слика</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1586"/>
@@ -2146,17 +2146,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1598"/>
       <source>Show &amp;changelog</source>
-      <translation type="unfinished">Show &amp;changelog</translation>
+      <translation>Покажи &amp;промена</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1607"/>
       <source>&amp;Encrypt note</source>
-      <translation type="unfinished">&amp;Encrypt note</translation>
+      <translation>&amp;Шифрирај белешка</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1616"/>
       <source>Edit encrypted note</source>
-      <translation type="unfinished">Edit encrypted note</translation>
+      <translation>Уреди криптирана нота</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1628"/>
@@ -2166,22 +2166,22 @@
     <message>
       <location filename="../mainwindow.ui" line="1637"/>
       <source>&amp;Open note in external editor</source>
-      <translation type="unfinished">&amp;Open note in external editor</translation>
+      <translation>&amp;Отворете белешка во надворешен уредувач</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1649"/>
       <source>&amp;Export note as markdown file</source>
-      <translation type="unfinished">&amp;Export note as markdown file</translation>
+      <translation>&amp;Изведете белешка како датотека за обележувачи</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1658"/>
       <source>&amp;Get involved</source>
-      <translation type="unfinished">&amp;Get involved</translation>
+      <translation>&amp;Вклучете се</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1667"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>Вметнете &amp;блок за код</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1679"/>
@@ -2196,7 +2196,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1703"/>
       <source>&amp;Distraction free mode</source>
-      <translation type="unfinished">&amp;Distraction free mode</translation>
+      <translation>&amp;Режим без одвраќање</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1706"/>
@@ -2206,7 +2206,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1717"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>Покажи &amp;лента со алатки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1725"/>
@@ -2242,17 +2242,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1788"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Прикажи белешка во &amp;управувачот со датотеки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1800"/>
       <source>Format text &amp;bold</source>
-      <translation type="unfinished">Format text &amp;bold</translation>
+      <translation>Формат текст &amp;задебелен</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1812"/>
       <source>Format text &amp;italic</source>
-      <translation type="unfinished">Format text &amp;italic</translation>
+      <translation>Формат на &amp;италик за текст</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1824"/>
@@ -2272,17 +2272,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1860"/>
       <source>&amp;Add tag to note</source>
-      <translation type="unfinished">&amp;Add tag to note</translation>
+      <translation>&amp;Додадете ознака за забелешка</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1872"/>
       <source>&amp;Reload note folder</source>
-      <translation type="unfinished">&amp;Reload note folder</translation>
+      <translation>&amp;Вчитајте ја папката за белешки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1944"/>
       <source>Show log</source>
-      <translation type="unfinished">Show log</translation>
+      <translation>Прикажи дневник</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1953"/>
@@ -2378,7 +2378,7 @@
       <location filename="../mainwindow.ui" line="2293"/>
       <location filename="../mainwindow.cpp" line="6137"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>Вметнете &amp;понуда за блок</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2301"/>
@@ -2519,7 +2519,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1883"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation type="unfinished">Use &amp;vertical preview layout</translation>
+      <translation>Користете го распоредот за &amp;вертикален преглед</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1886"/>
@@ -2658,7 +2658,7 @@ Restore current note?</source>
       <location filename="../mainwindow.cpp" line="6595"/>
       <location filename="../mainwindow.cpp" line="9739"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Откажи</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
@@ -2690,9 +2690,9 @@ Restore current note?</source>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3205"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Отстранета %n конфликтна копија на базата на податоци</numerusform>
+        <numerusform>Отстранети %n конфликтни копии на базата на податоци</numerusform>
       </translation>
     </message>
     <message>
@@ -2713,12 +2713,12 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3392"/>
       <source>&amp;Retry</source>
-      <translation type="unfinished">&amp;Retry</translation>
+      <translation>&amp;Обидете се повторно</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3392"/>
       <source>&amp;Exit</source>
-      <translation type="unfinished">&amp;Exit</translation>
+      <translation>&amp;Излез</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3623"/>
@@ -2728,12 +2728,12 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3624"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Отстранете ја тековната белешка: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3951"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
+      <translation>Внесете ја &lt;strong&gt; лозинката &lt;/strong&gt; на оваа шифрирана нота.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3975"/>
@@ -2755,13 +2755,13 @@ Restore current note?</source>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+      <translation>
+        <numerusform>Отстрани &lt;strong&gt;%n&lt;/strong&gt; избрана белешка?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+Ако ѓубрето е овозможено на вашиот сопствен ownCloud, треба да можете да ги вратите од таму.</numerusform>
+        <numerusform>Отстрани &lt;strong&gt;%n&lt;/strong&gt; избрани белешки?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+Ако ѓубрето е овозможено на вашиот сопствен ownCloud, треба да можете да ги вратите од таму.</numerusform>
       </translation>
     </message>
     <message>
@@ -2773,9 +2773,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4228"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+      <translation>
+        <numerusform>Отстранете ја избраната папка &lt;strong&gt;%n&lt;/strong&gt;? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Сите датотеки и папки во овие папки ќе бидат отстранети, исто така!</numerusform>
+        <numerusform>Отстранете ги избраните папки &lt;strong&gt;%n&lt;/strong&gt;? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Сите датотеки и папки во овие папки ќе бидат отстранети, исто така!</numerusform>
       </translation>
     </message>
     <message>
@@ -2791,9 +2791,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4258"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+      <translation>
+        <numerusform>Отстранете ја избраната ознака &lt;strong&gt;%n&lt;/strong&gt;? Нема белешки да се отстранат во овој процес.</numerusform>
+        <numerusform>Отстранете ги избраните ознаки &lt;strong&gt;%n&lt;/strong&gt;? Нема белешки да се отстранат во овој процес.</numerusform>
       </translation>
     </message>
     <message>
@@ -2805,16 +2805,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4312"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Поместете ја избраната нота %n на &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Преместете ги %n одбрани белешки на &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4412"/>
       <location filename="../mainwindow.cpp" line="8919"/>
       <source>Copy selected notes</source>
-      <translation type="unfinished">Copy selected notes</translation>
+      <translation>Копирајте ги избраните белешки</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4413"/>
@@ -2828,7 +2828,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4440"/>
       <location filename="../mainwindow.cpp" line="4586"/>
       <source>Done</source>
-      <translation type="unfinished">Done</translation>
+      <translation>Направено</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4441"/>
@@ -2841,7 +2841,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4454"/>
       <source>Tag selected notes</source>
-      <translation type="unfinished">Tag selected notes</translation>
+      <translation>Означете ги избраните белешки</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4455"/>
@@ -2854,7 +2854,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4724"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>Рестартирајте ја апликацијата</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4730"/>
@@ -3116,7 +3116,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9588"/>
       <source>Jump to the note's sub-folder</source>
-      <translation type="unfinished">Jump to the note's sub-folder</translation>
+      <translation>Скокни до потпапката на белешката</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9592"/>
@@ -3397,7 +3397,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4738"/>
       <location filename="../mainwindow.cpp" line="11379"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Откажи</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8892"/>
@@ -3501,12 +3501,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9543"/>
       <source>&amp;Remove notes</source>
-      <translation type="unfinished">&amp;Remove notes</translation>
+      <translation>&amp;Отстранете ги белешките</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6130"/>
       <source>&amp;Link selected text</source>
-      <translation type="unfinished">&amp;Link selected text</translation>
+      <translation>&amp;Врска избрана текст</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="982"/>
@@ -3826,7 +3826,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6621"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
+      <translation>&lt;br /&gt;Вие ќе можете да ја уредувате вашата шифрирана нота.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6685"/>
@@ -3951,27 +3951,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation type="unfinished">Open &amp;attachment</translation>
+      <translation>Отворен &amp;прилог</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation type="unfinished">Open &amp;folder</translation>
+      <translation>Отворена &amp;папка</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
-      <translation type="unfinished">File size:</translation>
+      <translation>Големина на Фајлот:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
-      <translation type="unfinished">File type:</translation>
+      <translation>Тип на датотека:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
-      <translation type="unfinished">File path:</translation>
+      <translation>Патека на датотека:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
@@ -4002,7 +4002,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
       <source>Orphaned images</source>
-      <translation type="unfinished">Orphaned images</translation>
+      <translation>Сирачиња слики</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
@@ -4073,27 +4073,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1034"/>
       <source>ownCloud server connection error</source>
-      <translation type="unfinished">ownCloud server connection error</translation>
+      <translation>ownCloud грешка на серверот врската</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1038"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
+      <translation>грешка на серверот на свој сервер: &lt;strong&gt;%1&lt;/strong&gt; &lt;br/&gt; Проверете ја вашата конфигурација на ownCloud.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1057"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation type="unfinished">You need to setup your ownCloud server!</translation>
+      <translation>Вие треба да ги конфигурирате вашите ownCloud сервер!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1070"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>Отворете ги &amp;поставките</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1070"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Откажи</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1124"/>
@@ -4747,7 +4747,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="519"/>
       <source>&amp;Remove folder</source>
-      <translation type="unfinished">&amp;Remove folder</translation>
+      <translation>&amp;Отстранете ја папката</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="733"/>
@@ -4767,7 +4767,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="852"/>
       <source>Your ownCloud server</source>
-      <translation type="unfinished">Your ownCloud server</translation>
+      <translation>Вашиот ownCloud сервер</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1273"/>
@@ -4797,17 +4797,17 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1181"/>
       <source>ownCloud server detected</source>
-      <translation type="unfinished">ownCloud server detected</translation>
+      <translation>ownCloud откриен сервер</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1215"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation type="unfinished">connection to QOwnNotesAPI</translation>
+      <translation>врска со QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1198"/>
       <source>username and password correct</source>
-      <translation type="unfinished">username and password correct</translation>
+      <translation>корисничко име и лозинка точни</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1154"/>
@@ -4818,27 +4818,27 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="1239"/>
       <location filename="../dialogs/settingsdialog.ui" line="1256"/>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>непознат</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1114"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Кликни тука за да се тестира врската со вашето ownCloud серверот. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1232"/>
       <source>versions app enabled on server</source>
-      <translation type="unfinished">versions app enabled on server</translation>
+      <translation>апликација за верзии е овозможена на серверот</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1249"/>
       <source>trash app enabled on server</source>
-      <translation type="unfinished">trash app enabled on server</translation>
+      <translation>апликација за ѓубре е овозможена на серверот</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1266"/>
       <source>notes path found on server</source>
-      <translation type="unfinished">notes path found on server</translation>
+      <translation>патека за белешки пронајдена на серверот</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="911"/>
@@ -4928,17 +4928,17 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1781"/>
       <source>Default ownCloud calendar</source>
-      <translation type="unfinished">Default ownCloud calendar</translation>
+      <translation>Стандардно ownCloud календар</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
       <source>Interface</source>
-      <translation type="unfinished">Interface</translation>
+      <translation>Интерфејс</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1751"/>
       <source>Other CalDAV server</source>
-      <translation type="unfinished">Other CalDAV server</translation>
+      <translation>Друг сервер на CalDAV</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2798"/>
@@ -4996,7 +4996,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2219"/>
       <source>English</source>
-      <translation type="unfinished">English</translation>
+      <translation>Англиски</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
@@ -5266,7 +5266,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3207"/>
       <source>&amp;Remove script</source>
-      <translation type="unfinished">&amp;Remove script</translation>
+      <translation>&amp;Отстранете ја скриптата</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3486"/>
@@ -5296,7 +5296,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>Панели</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="239"/>
@@ -5337,7 +5337,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="684"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation type="unfinished">&amp;Use as ownCloud path</translation>
+      <translation>&amp;Употреба како ownCloud пат</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
@@ -5437,12 +5437,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1092"/>
       <source>Your ownCloud password</source>
-      <translation type="unfinished">Your ownCloud password</translation>
+      <translation>Вашата лозинка ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1120"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation type="unfinished">&amp;Connect to ownCloud server</translation>
+      <translation>&amp;Поврзете се со ownCloud сервер</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1147"/>
@@ -5542,7 +5542,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2285"/>
       <source>Irish</source>
-      <translation type="unfinished">Irish</translation>
+      <translation>Ирски</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2296"/>
@@ -5592,7 +5592,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>Латвиски</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2428"/>
@@ -5612,7 +5612,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2505"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>Узбекистански</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2549"/>
@@ -5732,7 +5732,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3196"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>&amp;Додадете скрипта…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3842"/>
@@ -5821,17 +5821,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4880"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>Целосно потенцирајте ги блоккотите</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4950"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Ширина на курсорот за уредување на белешка:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4899"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation type="unfinished">Enable Vim mode (some QOwnNotes shortcuts will not work)</translation>
+      <translation>Овозможи режим Vim (некои кратенки QOwnNotes нема да работат)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
@@ -5841,32 +5841,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2648"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>Виетнамски</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
       <source>This is the best way to open an issue</source>
-      <translation type="unfinished">This is the best way to open an issue</translation>
+      <translation>Ова е најдобриот начин да се отвори проблем</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4264"/>
       <source>Please use this in the issue tracker</source>
-      <translation type="unfinished">Please use this in the issue tracker</translation>
+      <translation>Ве молиме користете го ова во проследувачот на проблем</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4267"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+      <translation>&amp;Копирајте ги информациите за дебагирање во таблата со исечоци</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4278"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation type="unfinished">Please don't use this in the issue tracker</translation>
+      <translation>Ве молиме, не користете го ова во проследувачот на проблемот</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4624"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation type="unfinished">Use editor highlighting styles also for the preview</translation>
+      <translation>Користете ги стиловите за означување на уредникот, исто така, за прегледот</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4984"/>
@@ -5906,7 +5906,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5659"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation type="unfinished">Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</translation>
+      <translation>Панелите може да се вклучат и исклучат во главното мени &lt;i&gt; Прозорец / Панели &lt;/i&gt; и исто така можете да конфигурирате различни &lt;i&gt; работни места &lt;/i&gt; за различни конфигурации на панели.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5736"/>
@@ -6101,7 +6101,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4827"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Можеби ќе ги разгледате сите достапни &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;формати на време&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4977"/>
@@ -6208,7 +6208,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="5076"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
+      <translation>Вие по избор може да користите "%notePath%" за патеката на белешката.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5099"/>
@@ -6244,7 +6244,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="914"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation type="unfinished">Open your ownCloud server &amp;Apps page</translation>
+      <translation>Отворете ownCloud сервер &amp;апликации вашата страница</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
@@ -6364,7 +6364,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3346"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>Автор(и):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3760"/>
@@ -6545,12 +6545,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2714"/>
       <source>Arabic</source>
-      <translation type="unfinished">Arabic</translation>
+      <translation>Арапски</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2852"/>
       <source>Icons</source>
-      <translation type="unfinished">Icons</translation>
+      <translation>Икони</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2861"/>
@@ -6669,7 +6669,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4281"/>
       <source>&amp;Save debug information</source>
-      <translation type="unfinished">&amp;Save debug information</translation>
+      <translation>&amp;Зачувајте информации за дебагирање</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="455"/>
@@ -6744,7 +6744,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2038"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+      <translation>Ве молиме, не користете го ова во проследувачот на проблемот, копирајте го текстот со информации за дебагирање директно во проблемот.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2045"/>
@@ -6845,7 +6845,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3971"/>
       <source>The debug information was copied to the clipboard.</source>
-      <translation type="unfinished">The debug information was copied to the clipboard.</translation>
+      <translation>Информациите за дебагирање беа копирани во клипбордот.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2612"/>
@@ -6865,17 +6865,17 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1565"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>Кратенката &lt;strong&gt;%1&lt;/strong&gt; веќе е доделена на &lt;strong&gt;%2&lt;/strong&gt;! Дали сакате да скокнете на кратенката?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2708"/>
       <source>Remove script</source>
-      <translation type="unfinished">Remove script</translation>
+      <translation>Отстранете ја скриптата</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2709"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Отстранете ја тековната скрипта &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2760"/>
@@ -6937,12 +6937,12 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3369"/>
       <source>Reset and &amp;exit</source>
-      <translation type="unfinished">Reset and &amp;exit</translation>
+      <translation>Ресетирајте и &amp;излезете</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3531"/>
       <source>Log file cleared</source>
-      <translation type="unfinished">Log file cleared</translation>
+      <translation>Датотеката е најавена</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3532"/>
@@ -6952,48 +6952,48 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3568"/>
       <source>Executable files</source>
-      <translation type="unfinished">Executable files</translation>
+      <translation>Извршни датотеки</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3569"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3571"/>
       <source>All files</source>
-      <translation type="unfinished">All files</translation>
+      <translation>Сите датотеки</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3579"/>
       <source>Please select the path of your git executable</source>
-      <translation type="unfinished">Please select the path of your git executable</translation>
+      <translation>Ве молиме одберете ја патеката на извршна корист</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3679"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
+      <translation>Дали навистина сакате да ги ресетирате преовладувањата на сите полиња за пораки?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2028"/>
       <source>The Database was reinitialized.</source>
-      <translation type="unfinished">The Database was reinitialized.</translation>
+      <translation>Базата на податоци беше повторно воспоставена.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="90"/>
       <source>New script</source>
-      <translation type="unfinished">New script</translation>
+      <translation>Нова скрипта</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="93"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+      <translation>Можете да го преземете вашиот клиент за git тука: &lt;a href="%url"&gt; Git за Windows &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="414"/>
       <source>enabled</source>
-      <translation type="unfinished">enabled</translation>
+      <translation>овозможено</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="414"/>
       <source>disabled</source>
-      <translation type="unfinished">disabled</translation>
+      <translation>оневозможено</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="417"/>
@@ -7008,7 +7008,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="421"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
-      <translation type="unfinished">the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</translation>
+      <translation>внатрешната база на податоци на sqlite и поставките ќе бидат зачувани во папката &lt;code&gt; data &lt;/code&gt; на локацијата на бинарот</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="424"/>
@@ -7023,7 +7023,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="433"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-      <translation type="unfinished">It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
+      <translation>Willе се активира ако извршите QOwnNotes со параметарот &lt;code&gt; - преносен &lt;/code&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2046"/>
@@ -7064,7 +7064,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2022"/>
       <source>Clear &amp;database</source>
-      <translation type="unfinished">Clear &amp;database</translation>
+      <translation>Јасна &amp;база на податоци</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2207"/>
@@ -7231,7 +7231,7 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="250"/>
       <source>extended</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">extended</translation>
+      <translation>продолжено</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="325"/>
@@ -7249,7 +7249,7 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="331"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7292,7 +7292,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation type="unfinished">Select table layout or enter text:</translation>
+      <translation>Изберете го распоредот на табелата или внесете текст:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -7909,7 +7909,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="36"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Откажи</translation>
     </message>
   </context>
   <context>
@@ -7932,15 +7932,15 @@ This cannot be undone!</source>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="188"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>Создаден е %n обележувач</numerusform>
+        <numerusform>Создадени %n обележувачи</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="327"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 беше исклучен од серверот QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -7982,22 +7982,22 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation type="unfinished">&amp;Back</translation>
+      <translation>&amp;Назад</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation type="unfinished">&amp;Next</translation>
+      <translation>&amp;Следно</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation type="unfinished">&amp;Finished</translation>
+      <translation>&amp;Завршено</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Откажи</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
