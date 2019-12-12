@@ -418,6 +418,7 @@ QDebug operator<<(QDebug dbg, const NoteHistory &history) {
  */
 QList<NoteHistoryItem> NoteHistory::getNoteHistoryItems() const {
     QList<NoteHistoryItem> items;
+    items.reserve(noteHistory->count());
 
     for (int i = 0; i < noteHistory->count(); i++) {
         const NoteHistoryItem &item = noteHistory->at(i);

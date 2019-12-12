@@ -302,8 +302,10 @@ QList<Tag> Tag::fetchAllByParentId(const int parentId, const QString& sortBy) {
  */
 QList<Tag> Tag::fetchRecursivelyByParentId(const int parentId) {
     QList<Tag> tagList = QList<Tag>() << fetch(parentId);
+    const auto tags = fetchAllByParentId(parentId);
+    tagList.reserve(tags.size());
 
-    Q_FOREACH(const Tag &tag, fetchAllByParentId(parentId)) {
+    Q_FOREACH(const Tag &tag, tags) {
             tagList << fetchRecursivelyByParentId(tag.getId());
         }
 
@@ -395,6 +397,7 @@ QList<Tag> Tag::fetchAllOfNotes(const QList<Note> &notes) {
     Q_FOREACH (const Note &note, notes) {
             QList<Tag> tagList = Tag::fetchAllOfNote(note);
 
+            resultTagList.reserve(tagList.size());
             Q_FOREACH (const Tag &tag, tagList) {
                     if (!resultTagList.contains(tag)) {
                         resultTagList.append(tag);
