@@ -4792,7 +4792,7 @@ void MainWindow::handleTextNoteLinking() {
  * @brief Sets the current note from a CurrentNoteHistoryItem
  * @param item
  */
-void MainWindow::setCurrentNoteFromHistoryItem(NoteHistoryItem item) {
+void MainWindow::setCurrentNoteFromHistoryItem(const NoteHistoryItem &item) {
     qDebug() << item;
     qDebug() << item.getNote();
 

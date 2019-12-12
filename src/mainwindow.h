@@ -737,7 +737,7 @@ private:
 
     void readSettingsFromSettingsDialog(const bool isAppLaunch = false);
 
-    void setCurrentNoteFromHistoryItem(NoteHistoryItem item);
+    void setCurrentNoteFromHistoryItem(const NoteHistoryItem &item);
 
     bool prepareExportNoteAsPDFPrinter(QPrinter *printer);
 
