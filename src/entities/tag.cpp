@@ -544,7 +544,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList& noteNameList) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Tag> tagList;
-    QString noteIdListString = noteNameList.join("','");
+    QString noteIdListString = noteNameList.join(QStringLiteral("','"));
 
     QString sql = QStringLiteral(
             "SELECT t.* FROM tag t "

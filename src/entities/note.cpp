@@ -171,9 +171,9 @@ bool Note::addNote(const QString& name, const QString& fileName, const QString& 
     query.prepare(
             QStringLiteral("INSERT INTO note ( name, file_name, note_text ) "
                     "VALUES ( :name, :file_name, :note_text )"));
-    query.bindValue(":name", name);
-    query.bindValue(":file_name", fileName);
-    query.bindValue(":note_text", text);
+    query.bindValue(QStringLiteral(":name"), name);
+    query.bindValue(QStringLiteral(":file_name"), fileName);
+    query.bindValue(QStringLiteral(":note_text"), text);
     return query.exec();
 }
 
@@ -184,7 +184,7 @@ Note Note::fetch(int id) {
     Note note;
 
     query.prepare(QStringLiteral("SELECT * FROM note WHERE id = :id"));
-    query.bindValue(":id", id);
+    query.bindValue(QStringLiteral(":id"), id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -242,10 +242,10 @@ bool Note::fillByFileName(const QString &fileName, int noteSubFolderId) {
         noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
     }
 
-    query.prepare("SELECT * FROM note WHERE file_name = :file_name AND "
-                          "note_sub_folder_id = :note_sub_folder_id");
-    query.bindValue(":file_name", fileName);
-    query.bindValue(":note_sub_folder_id", noteSubFolderId);
+    query.prepare(QStringLiteral("SELECT * FROM note WHERE file_name = :file_name AND "
+                          "note_sub_folder_id = :note_sub_folder_id"));
+    query.bindValue(QStringLiteral(":file_name"), fileName);
+    query.bindValue(QStringLiteral(":note_sub_folder_id"), noteSubFolderId);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -271,7 +271,7 @@ Note Note::fetchByRelativeFilePath(const QString& relativePath) {
 
     // load note sub-folder and note from the relative path
     // be aware that there must not be a ".." in the path, a canonical path must be presented!
-    auto noteSubFolder = NoteSubFolder::fetchByPathData(fileInfo.path(), "/");
+    auto noteSubFolder = NoteSubFolder::fetchByPathData(fileInfo.path(), QStringLiteral("/"));
     Note note = Note::fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
 
     return note;
@@ -295,8 +295,8 @@ bool Note::remove(bool withFile) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    query.prepare("DELETE FROM note WHERE id = :id");
-    query.bindValue(":id", this->id);
+    query.prepare(QStringLiteral("DELETE FROM note WHERE id = :id"));
+    query.bindValue(QStringLiteral(":id"), this->id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
