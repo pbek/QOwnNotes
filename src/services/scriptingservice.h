@@ -32,22 +32,22 @@ public:
     explicit ScriptingService(QObject *parent = 0);
     static ScriptingService *instance();
     static ScriptingService *createInstance(QObject *parent);
-    QQmlEngine* engine();
+    QQmlEngine* engine() const;
     void initComponents();
     QString callInsertMediaHook(QFile *file, QString markdownText);
     QVariant callNoteTaggingHook(const Note &note, const QString& action,
                                  const QString& tagName = "", const QString& newTagName = "");
-    bool noteTaggingHookExists();
-    bool handleNoteNameHookExists();
-    bool methodExists(const QString& methodName);
+    bool noteTaggingHookExists() const;
+    bool handleNoteNameHookExists() const;
+    bool methodExists(const QString& methodName) const;
     static bool validateScript(Script script, QString &errorMessage);
     Q_INVOKABLE bool startDetachedProcess(const QString& executablePath,
                                           const QStringList& parameters);
     Q_INVOKABLE QByteArray startSynchronousProcess(
             const QString& executablePath, QStringList parameters,
-            QByteArray data = QByteArray());
+            QByteArray data = QByteArray()) const;
     Q_INVOKABLE QString currentNoteFolderPath();
-    Q_INVOKABLE NoteApi *currentNote();
+    Q_INVOKABLE NoteApi *currentNote() const;
     Q_INVOKABLE void log(QString text);
     Q_INVOKABLE QString downloadUrlToString(const QUrl& url);
     Q_INVOKABLE QString downloadUrlToMedia(const QUrl &url,
@@ -147,19 +147,19 @@ public:
 
     Q_INVOKABLE bool jumpToNoteSubFolder(const QString &noteSubFolderPath,
                                          const QString &separator = QStringLiteral("/"));
-    QStringList callAutocompletionHook();
+    QStringList callAutocompletionHook() const;
 
-    Q_INVOKABLE QStringList searchTagsByName(const QString &name);
+    Q_INVOKABLE QStringList searchTagsByName(const QString &name) const;
 
-    Q_INVOKABLE void regenerateNotePreview();
+    Q_INVOKABLE void regenerateNotePreview() const;
 
-    Q_INVOKABLE QList<int> selectedNotesIds();
+    Q_INVOKABLE QList<int> selectedNotesIds() const;
 
-    Q_INVOKABLE bool writeToFile(const QString &filePath, const QString &data);
+    Q_INVOKABLE bool writeToFile(const QString &filePath, const QString &data) const;
 
-    Q_INVOKABLE QList<int> fetchNoteIdsByNoteTextPart(const QString &text);
+    Q_INVOKABLE QList<int> fetchNoteIdsByNoteTextPart(const QString &text) const;
 
-    Q_INVOKABLE void triggerMenuAction(const QString& objectName, const QString& checked = "");
+    Q_INVOKABLE void triggerMenuAction(const QString& objectName, const QString& checked = "") const;
 
 private:
     QQmlEngine *_engine;
@@ -167,7 +167,7 @@ private:
     Note *_currentNote;
     QMap<int, ScriptComponent> _scriptComponents;
     QHash<int, QList<QVariant>> _settingsVariables;
-    bool methodExistsForObject(QObject *object, const QString& method);
+    bool methodExistsForObject(QObject *object, const QString& method) const;
     QString callInsertMediaHookForObject(QObject *object,
                                          QFile *file,
                                          const QString& markdownText);

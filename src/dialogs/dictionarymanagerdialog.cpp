@@ -19,8 +19,8 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     setupMainSplitter();
 
     _networkManager = new QNetworkAccessManager(this);
-    QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)),
-                     this, SLOT(slotReplyFinished(QNetworkReply *)));
+    QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply*)),
+                     this, SLOT(slotReplyFinished(QNetworkReply*)));
 
     // you can add more dictionaries from https://github.com/qownnotes/dictionaries/tree/master
     addDictionaryItem(tr("Afrikaans"), QStringLiteral("af_ZA"));
@@ -226,8 +226,8 @@ void DictionaryManagerDialog::downloadFile(const QString &url) {
 
     QNetworkReply *reply = _networkManager->get(networkRequest);
 
-    connect(reply, SIGNAL(downloadProgress(qint64, qint64)),
-            this, SLOT(downloadProgress(qint64, qint64)));
+    connect(reply, SIGNAL(downloadProgress(qint64,qint64)),
+            this, SLOT(downloadProgress(qint64,qint64)));
     connect(ui->downloadCancelButton, SIGNAL(clicked()),
             reply, SLOT(abort()));
 }

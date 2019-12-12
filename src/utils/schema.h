@@ -70,7 +70,7 @@ namespace Utils {
 
         QString textSettingsKey(const QString& key, int index);
 
-        QString encodeCssTextCharFormat(QTextCharFormat format);
+        QString encodeCssTextCharFormat(const QTextCharFormat &format);
 
         QString encodeCssStyleForState(MarkdownHighlighter::HighlighterState index,
                                            const QString &htmlTag);
