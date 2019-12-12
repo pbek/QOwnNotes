@@ -169,7 +169,7 @@ bool QTextEditSearchWidget::doReplace(bool forAll) {
     int searchMode = ui->modeComboBox->currentIndex();
     if (searchMode == RegularExpressionMode) {
         QString text = c.selectedText();
-        text.replace(QRegExp(ui->searchLineEdit->text()),
+        text.replace(QRegularExpression(ui->searchLineEdit->text()),
                              ui->replaceLineEdit->text());
         c.insertText(text);
     } else {
@@ -228,7 +228,11 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
 
     bool found;
     if (searchMode == RegularExpressionMode) {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
+        found = _textEdit->find(QRegularExpression(text), options);
+#else
         found = _textEdit->find(QRegExp(text), options);
+#endif
     } else {
         found = _textEdit->find(text, options);
     }

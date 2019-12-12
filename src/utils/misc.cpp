@@ -637,8 +637,8 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable)
     auto text = html;
 
     if (!clickable) {
-        text.replace(QRegExp(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[ ?\])"), Qt::CaseInsensitive), QStringLiteral("\\1&#9744;"));
-        text.replace(QRegExp(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[[xX]\])"), Qt::CaseInsensitive), QStringLiteral("\\1&#9745;"));
+        text.replace(QRegularExpression(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[ ?\])"), QRegularExpression::CaseInsensitiveOption), QStringLiteral("\\1&#9744;"));
+        text.replace(QRegularExpression(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[[xX]\])"), QRegularExpression::CaseInsensitiveOption), QStringLiteral("\\1&#9745;"));
         return text;
     }
 
@@ -648,8 +648,8 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable)
     // should be provided by the markdown parser
 
     const QString checkboxStart = QStringLiteral(R"(<a class="task-list-item-checkbox" href="checkbox://_)");
-    text.replace(QRegExp(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[ ?\])"), Qt::CaseInsensitive), QStringLiteral("\\1") % checkboxStart % QStringLiteral("\">&#9744;</a>"));
-    text.replace(QRegExp(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[[xX]\])"), Qt::CaseInsensitive), QStringLiteral("\\1") % checkboxStart % QStringLiteral("\">&#9745;</a>"));
+    text.replace(QRegularExpression(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[ ?\])"), QRegularExpression::CaseInsensitiveOption), QStringLiteral("\\1") % checkboxStart % QStringLiteral("\">&#9744;</a>"));
+    text.replace(QRegularExpression(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[[xX]\])"), QRegularExpression::CaseInsensitiveOption), QStringLiteral("\\1") % checkboxStart % QStringLiteral("\">&#9745;</a>"));
 
     int count = 0;
     int pos = 0;
@@ -730,7 +730,7 @@ QString Utils::Misc::logFilePath() {
  * @return
  */
 QString Utils::Misc::transformLineFeeds(QString text) {
-    return text.replace(QRegExp(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")), QStringLiteral("\n"));
+    return text.replace(QRegularExpression(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")), QStringLiteral("\n"));
 }
 
 /**
