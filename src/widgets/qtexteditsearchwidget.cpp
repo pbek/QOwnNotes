@@ -28,8 +28,8 @@ QTextEditSearchWidget::QTextEditSearchWidget(QTextEdit *parent) :
 
     QObject::connect(ui->closeButton, SIGNAL(clicked()),
                      this, SLOT(deactivate()));
-    QObject::connect(ui->searchLineEdit, SIGNAL(textChanged(const QString &)),
-                     this, SLOT(searchLineEditTextChanged(const QString &)));
+    QObject::connect(ui->searchLineEdit, SIGNAL(textChanged(QString)),
+                     this, SLOT(searchLineEditTextChanged(QString)));
     QObject::connect(ui->searchDownButton, SIGNAL(clicked()),
                      this, SLOT(doSearchDown()));
     QObject::connect(ui->searchUpButton, SIGNAL(clicked()),

@@ -44,7 +44,7 @@ QString CalendarItem::getICSData() {
     return this->icsData;
 }
 
-QString CalendarItem::getUid() {
+QString CalendarItem::getUid() const {
     return this->uid;
 }
 

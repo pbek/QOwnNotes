@@ -49,7 +49,7 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
     QStringList searchList;
 
     if (searchFlags & TreeWidgetSearchFlag::EveryWordSearch) {
-        searchList = text.split(QRegularExpression("\\s+"));
+        searchList = text.split(QRegularExpression(QStringLiteral("\\s+")));
     } else {
         searchList << text;
     }
@@ -349,7 +349,7 @@ bool Utils::Gui::isMessageBoxPresent() {
     QWidgetList topWidgets = QApplication::topLevelWidgets();
     foreach (QWidget *w, topWidgets) {
             if (auto *mb = dynamic_cast<QMessageBox *>(w)) {
-                Q_UNUSED(mb);
+                Q_UNUSED(mb)
                 return true;
             }
         }
@@ -434,7 +434,7 @@ void Utils::Gui::copyCodeBlockText(const QTextBlock& initialBlock) {
     codeBlockTextList.removeLast();
 
     QClipboard *clipboard = QApplication::clipboard();
-    clipboard->setText(codeBlockTextList.join("\n") + "\n");
+    clipboard->setText(codeBlockTextList.join(QStringLiteral("\n") + QStringLiteral("\n")));
 }
 
 /**
@@ -451,13 +451,13 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
     QTextBlock block = initialBlock;
 
     // return if text doesn't seem to be part of a table
-    if (!block.text().startsWith("|")) {
+    if (!block.text().startsWith(QLatin1String("|"))) {
         return false;
     }
 
     QString tableText = block.text();
     QList <QStringList> tableTextList;
-    tableTextList << tableText.split("|");
+    tableTextList << tableText.split(QStringLiteral("|"));
     int startPosition = block.position();
     int maxColumns = 0;
     bool tableWasModified = false;
@@ -471,11 +471,11 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
         }
 
         QString prevBlockText = block.text();
-        if (!prevBlockText.startsWith("|")) {
+        if (!prevBlockText.startsWith(QLatin1String("|"))) {
             break;
         }
 
-        const QStringList &stringList = prevBlockText.split("|");
+        const QStringList &stringList = prevBlockText.split(QStringLiteral("|"));
         tableTextList.prepend(stringList);
         startPosition = block.position();
         maxColumns = std::max(maxColumns, stringList.count());
@@ -491,17 +491,17 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
         }
 
         QString nextBlockText = block.text();
-        if (!nextBlockText.startsWith("|")) {
+        if (!nextBlockText.startsWith(QLatin1String("|"))) {
             break;
         }
 
-        const QStringList &stringList = nextBlockText.split("|");
+        const QStringList &stringList = nextBlockText.split(QStringLiteral("|"));
         tableTextList.append(stringList);
         endPosition = block.position() + nextBlockText.count();
         maxColumns = std::max(maxColumns, stringList.count());
     }
 
-    QRegularExpression headlineSeparatorRegExp(R"(^-+$)");
+    QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^-+$)"));
     QString justifiedText;
 
     // justify text in tableTextList
@@ -542,8 +542,8 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
             if (maxTextLength > 2 &&
                 headlineSeparatorRegExp.match(text.trimmed()).hasMatch()) {
                 // justify the headline separator text
-                justifiedText = " " + text.trimmed().leftJustified(
-                        maxTextLength - 2, '-') + " ";
+                justifiedText = QStringLiteral(" ") + text.trimmed().leftJustified(
+                        maxTextLength - 2, '-') + QStringLiteral(" ");
             } else {
                 // justify the text
                 justifiedText = text.leftJustified(maxTextLength);
@@ -567,10 +567,10 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
     // generate the new table text
     QString newTableText;
     for (int line = 0; line < lineCount; line++) {
-        newTableText += tableTextList.at(line).join("|");
+        newTableText += tableTextList.at(line).join(QStringLiteral("|"));
 
         if (line < (lineCount - 1)) {
-            newTableText += "\n";
+            newTableText += QStringLiteral("\n");
         }
     }
 
@@ -591,20 +591,20 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
 void Utils::Gui::updateInterfaceFontSize(int fontSize) {
     QSettings settings;
     bool overrideInterfaceFontSize = settings.value(
-            "overrideInterfaceFontSize", false).toBool();
+            QStringLiteral("overrideInterfaceFontSize"), false).toBool();
 
     // remove old style
     QString stylesheet = qApp->styleSheet().remove(QRegularExpression(
             QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
-            ".*" + QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING)));
+            QStringLiteral(".*") + QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING)));
 
     if (overrideInterfaceFontSize) {
         int interfaceFontSize = fontSize != -1 ?
-                fontSize : settings.value("interfaceFontSize", 11).toInt();
+                fontSize : settings.value(QStringLiteral("interfaceFontSize"), 11).toInt();
 
-        stylesheet += "\n" + QString(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
-                "QWidget {font-size: " + QString::number(interfaceFontSize) +
-                "px;}" + QString(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING);
+        stylesheet += QStringLiteral("\n") + QString(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
+                QStringLiteral("QWidget {font-size: ") + QString::number(interfaceFontSize) +
+                QStringLiteral("px;}") + QString(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING);
     }
 
     qApp->setStyleSheet(stylesheet);

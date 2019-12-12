@@ -9,19 +9,19 @@
 class NoteApi : public QObject, public Note {
     Q_OBJECT
 
-    Q_PROPERTY(int id READ getId())
+    Q_PROPERTY(int id READ getId() CONSTANT)
     Q_PROPERTY(QString name READ getName() WRITE setName)
-    Q_PROPERTY(QString fileName READ getFileName())
-    Q_PROPERTY(QString fullNoteFilePath READ fullNoteFilePath())
-    Q_PROPERTY(QString fullNoteFileDirPath READ fullNoteFileDirPath())
-    Q_PROPERTY(int noteSubFolderId READ getNoteSubFolderId())
+    Q_PROPERTY(QString fileName READ getFileName() CONSTANT)
+    Q_PROPERTY(QString fullNoteFilePath READ fullNoteFilePath() CONSTANT)
+    Q_PROPERTY(QString fullNoteFileDirPath READ fullNoteFileDirPath() CONSTANT)
+    Q_PROPERTY(int noteSubFolderId READ getNoteSubFolderId() CONSTANT)
     Q_PROPERTY(QString noteText READ getNoteText() WRITE setNoteText())
     Q_PROPERTY(QString decryptedNoteText READ getDecryptedNoteText()
                        WRITE setDecryptedNoteText())
-    Q_PROPERTY(QDateTime fileCreated READ getFileCreated())
-    Q_PROPERTY(QDateTime fileLastModified READ getFileLastModified())
-    Q_PROPERTY(bool hasDirtyData READ getHasDirtyData())
-    Q_PROPERTY(QQmlListProperty<TagApi> tags READ tags)
+    Q_PROPERTY(QDateTime fileCreated READ getFileCreated() CONSTANT)
+    Q_PROPERTY(QDateTime fileLastModified READ getFileLastModified() CONSTANT)
+    Q_PROPERTY(bool hasDirtyData READ getHasDirtyData() CONSTANT)
+    Q_PROPERTY(QQmlListProperty<TagApi> tags READ tags CONSTANT)
 
 private:
     QList<TagApi *> _tags;
