@@ -1,5 +1,19 @@
 # QOwnNotes Changelog
 
+## 19.12.8
+- trailing and leading spaces will now be trimmed from pasted urls in the
+  *Image dialog* (for [#1500](https://github.com/pbek/QOwnNotes/issues/1500))
+- more general performance optimizations were done (for [#1501](https://github.com/pbek/QOwnNotes/pull/1501)
+  and [#1502](https://github.com/pbek/QOwnNotes/pull/1502), thank you @Waqar144)
+- when exporting the preview of a note (full note or just selected text in the note
+  editor) a uniform set of styles will now be used regardless of if in dark mode or not
+  (for [#1469](https://github.com/pbek/QOwnNotes/issues/1469))
+    - printing the preview of a note (full note or just selected text in the note
+      editor) still uses the styles of the preview, if you want to use your custom
+      colors you are able to print to a PDF (if your operating system supports it)
+    - the trailing newline in code blocks will now be removed when exporting so
+      that there isn't an empty line at the end of each code block
+
 ## 19.12.7
 - hid the excessive `Unable to find any suggestion for` spellchecker warnings
 - improved CSS color attribute highlighting (for [#49](https://github.com/pbek/qmarkdowntextedit/pull/49), thank you @Waqar144)
