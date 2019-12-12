@@ -2135,6 +2135,9 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                                  "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
                                  "</style></head><body class=\"export\">%3</body></html>")
                 .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle, codeBackgroundColor);
+
+        // remove trailing newline in code blocks
+        result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     } else {
         QString schemaStyles = settings.value("MainWindow/noteTextView.useEditorStyles", true).toBool() ?
                     Utils::Schema::getSchemaStyles() : QString();

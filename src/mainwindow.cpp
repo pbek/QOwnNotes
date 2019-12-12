@@ -6260,7 +6260,7 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
             // export the selected text (preview) as PDF
             QString html = currentNote.textToMarkdownHtml(
                     selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
-                    getMaxImageWidth());
+                    getMaxImageWidth(), true);
             html = Utils::Misc::parseTaskList(html, false);
             auto *textEdit = new QTextEdit(this);
             textEdit->setHtml(html);
@@ -6345,7 +6345,7 @@ void MainWindow::on_actionOpen_List_triggered() {
 void MainWindow::on_action_Export_note_as_PDF_markdown_triggered() {
     bool decrypt = ui->noteTextEdit->isHidden();
     QString html = currentNote.toMarkdownHtml(NoteFolder::currentLocalPath(),
-                                              getMaxImageWidth(), false, decrypt);
+                                              getMaxImageWidth(), true, decrypt);
     html = Utils::Misc::parseTaskList(html, false);
 
     auto doc = ui->noteTextView->document()->clone();
