@@ -30,7 +30,7 @@ ImageDialog::ImageDialog(QWidget *parent) :
         ui->disableCopyingCheckBox->setDisabled(true);
         setPixmap(pixmap, true);
     } else {
-        QString text = clipboard->text();
+        QString text = clipboard->text().trimmed();
         QUrl url(text);
 
         // set text from clipboard
@@ -63,7 +63,7 @@ QFile *ImageDialog::getImageFile() {
 }
 
 QString ImageDialog::getFilePathOrUrl() {
-    return ui->fileEdit->text();
+    return ui->fileEdit->text().trimmed();
 }
 
 QString ImageDialog::getImageTitle() {
@@ -89,7 +89,7 @@ void ImageDialog::on_openButton_clicked() {
             ui->disableCopyingCheckBox->setEnabled(true);
             ui->fileEdit->setEnabled(true);
             // the pixmap will be updated by the textChanged handler
-            ui->fileEdit->setText(filePath);
+            ui->fileEdit->setText(filePath.trimmed());
         }
     }
 }
@@ -124,7 +124,7 @@ void ImageDialog::setPixmap(const QPixmap& pixmap, bool updateBase) {
 void ImageDialog::on_buttonBox_accepted() {
     // if the image was manipulated or from the clipboard we will store it into
     // a temporary file
-    if (ui->fileEdit->text().isEmpty() || _imageWasCropped || _imageWasDownloaded ||
+    if (ui->fileEdit->text().trimmed().isEmpty() || _imageWasCropped || _imageWasDownloaded ||
         ui->widthSpinBox->value() != _basePixmap.width()) {
 
         _tempFile = new QTemporaryFile(QDir::tempPath() + QDir::separator() +
@@ -136,7 +136,7 @@ void ImageDialog::on_buttonBox_accepted() {
             _imageFile = new QFile(_tempFile->fileName());
         }
     } else {
-        _imageFile = new QFile(ui->fileEdit->text());
+        _imageFile = new QFile(ui->fileEdit->text().trimmed());
     }
 }
 
