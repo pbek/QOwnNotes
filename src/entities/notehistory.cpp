@@ -57,7 +57,7 @@ QString NoteHistoryItem::getNoteSubFolderPathData() const {
     return _noteSubFolderPathData;
 }
 
-Note NoteHistoryItem::getNote() {
+Note NoteHistoryItem::getNote() const {
     NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(
             _noteSubFolderPathData);
     return Note::fetchByName(_noteName, noteSubFolder.getId());
@@ -76,7 +76,7 @@ float NoteHistoryItem::getRelativeScrollBarPosition() const {
  *
  * @param textEdit
  */
-void NoteHistoryItem::restoreTextEditPosition(QPlainTextEdit *textEdit) {
+void NoteHistoryItem::restoreTextEditPosition(QPlainTextEdit *textEdit) const {
     // set the cursor position
     QTextCursor c = textEdit->textCursor();
     c.setPosition(_cursorPosition);
@@ -88,7 +88,7 @@ void NoteHistoryItem::restoreTextEditPosition(QPlainTextEdit *textEdit) {
                             scrollBar->maximum() *_relativeScrollBarPosition));
 }
 
-bool NoteHistoryItem::isNoteValid() {
+bool NoteHistoryItem::isNoteValid() const {
     Note note = getNote();
     return note.exists();
 }
@@ -311,11 +311,11 @@ bool NoteHistory::forward() {
     return true;
 }
 
-int NoteHistory::lastIndex() {
+int NoteHistory::lastIndex() const {
     return noteHistory->size() - 1;
 }
 
-NoteHistoryItem NoteHistory::getCurrentHistoryItem() {
+NoteHistoryItem NoteHistory::getCurrentHistoryItem() const {
     return currentHistoryItem;
 }
 
@@ -387,7 +387,7 @@ void NoteHistory::restoreForCurrentNoteFolder() {
     }
 
     int maxIndex = -1;
-    Q_FOREACH(QVariant item, noteHistoryVariantItems) {
+    Q_FOREACH(const QVariant &item, noteHistoryVariantItems) {
             // check if the NoteHistoryItem could be de-serialized
             if (item.isValid()) {
                 NoteHistoryItem noteHistoryItem =

@@ -18,10 +18,10 @@ public:
     QString getNoteSubFolderPathData() const;
     int getCursorPosition() const;
     float getRelativeScrollBarPosition() const;
-    Note getNote();
-    bool isNoteValid();
+    Note getNote() const;
+    bool isNoteValid() const;
     bool operator ==(const NoteHistoryItem &item) const;
-    void restoreTextEditPosition(QPlainTextEdit *textEdit);
+    void restoreTextEditPosition(QPlainTextEdit *textEdit) const;
 
 private:
     QString _noteName;
@@ -42,7 +42,7 @@ private:
     QList<NoteHistoryItem> *noteHistory;
     int currentIndex;
     NoteHistoryItem currentHistoryItem;
-    int lastIndex();
+    int lastIndex() const;
 
 public:
     NoteHistory();
@@ -59,7 +59,7 @@ public:
     bool back();
     bool forward();
     bool isEmpty() const;
-    NoteHistoryItem getCurrentHistoryItem();
+    NoteHistoryItem getCurrentHistoryItem() const;
     void updateCursorPositionOfNote(Note note, QPlainTextEdit *textEdit);
     void clear();
     NoteHistoryItem getLastItemOfNote(const Note &note) const;

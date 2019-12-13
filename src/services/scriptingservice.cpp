@@ -86,7 +86,7 @@ ScriptingService * ScriptingService::createInstance(QObject *parent) {
 /**
  * Returns the engine
  */
-QQmlEngine* ScriptingService::engine() {
+QQmlEngine* ScriptingService::engine() const {
     return _engine;
 }
 
@@ -316,7 +316,7 @@ void ScriptingService::reloadScriptingEngine() {
  * Checks if a method exists for an object
  */
 bool ScriptingService::methodExistsForObject(QObject *object,
-                                             const QString& method) {
+                                             const QString& method) const {
     return object->metaObject()->indexOfMethod(method.toStdString().c_str())
            > -1;
 }
@@ -421,7 +421,7 @@ QVariant ScriptingService::callNoteTaggingHook(const Note &note, const QString& 
  * Checks if a noteTaggingHook function exists in a script
  * @return true if a function was found
  */
-bool ScriptingService::noteTaggingHookExists() {
+bool ScriptingService::noteTaggingHookExists() const {
     return methodExists(QStringLiteral("noteTaggingHook(QVariant,QVariant,QVariant,QVariant)"));
 }
 
@@ -429,7 +429,7 @@ bool ScriptingService::noteTaggingHookExists() {
  * Checks if a handleNoteNameHook function exists in a script
  * @return true if a function was found
  */
-bool ScriptingService::handleNoteNameHookExists() {
+bool ScriptingService::handleNoteNameHookExists() const {
     return methodExists(QStringLiteral("handleNoteNameHook(QVariant)"));
 }
 
@@ -437,7 +437,7 @@ bool ScriptingService::handleNoteNameHookExists() {
  * Checks if a method exists in a script
  * @return true if method was found
  */
-bool ScriptingService::methodExists(const QString& methodName) {
+bool ScriptingService::methodExists(const QString& methodName)  const {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
@@ -458,7 +458,7 @@ bool ScriptingService::methodExists(const QString& methodName) {
  *
  * @return QStringList of text for the autocomplete list
  */
-QStringList ScriptingService::callAutocompletionHook() {
+QStringList ScriptingService::callAutocompletionHook() const {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
     QStringList results;
 
@@ -849,7 +849,7 @@ bool ScriptingService::startDetachedProcess(const QString& executablePath,
  * @return the text that was returned by the process
  */
 QByteArray ScriptingService::startSynchronousProcess(
-        const QString& executablePath, QStringList parameters, QByteArray data) {
+        const QString& executablePath, QStringList parameters, QByteArray data) const {
     MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
 
@@ -905,7 +905,7 @@ void ScriptingService::callCustomActionInvokedForObject(QObject *object,
  *
  * @return {NoteApi} the the current note
  */
-NoteApi* ScriptingService::currentNote() {
+NoteApi* ScriptingService::currentNote() const {
     MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
 
@@ -1162,7 +1162,7 @@ QString ScriptingService::insertMediaFile(const QString& mediaFilePath,
 /**
  * Regenerates the note preview
  */
-void ScriptingService::regenerateNotePreview() {
+void ScriptingService::regenerateNotePreview() const {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
@@ -1659,7 +1659,7 @@ QStringList ScriptingService::selectedNotesPaths() {
  *
  * @return {QList<int>} list of selected note ids
  */
-QList<int> ScriptingService::selectedNotesIds() {
+QList<int> ScriptingService::selectedNotesIds() const {
     QList<int> selectedNotesIds;
     MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
@@ -1685,7 +1685,7 @@ QList<int> ScriptingService::selectedNotesIds() {
  *
  * @return {QList<int>} list of note ids
  */
-QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(const QString &text) {
+QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(const QString &text) const {
     QList<int> noteIds = Note::fetchAllIdsByNoteTextPart(text);
     return noteIds;
 }
@@ -1833,7 +1833,7 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
  * @param name {QString} name to search for
  * @return {QStringList} list of tag names
  */
-QStringList ScriptingService::searchTagsByName(const QString &name) {
+QStringList ScriptingService::searchTagsByName(const QString &name) const {
     MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
 
@@ -1848,7 +1848,7 @@ QStringList ScriptingService::searchTagsByName(const QString &name) {
  * @param data
  * @return
  */
-bool ScriptingService::writeToFile(const QString &filePath, const QString &data)
+bool ScriptingService::writeToFile(const QString &filePath, const QString &data) const
 {
     if (filePath.isEmpty())
         return false;
@@ -1872,7 +1872,7 @@ bool ScriptingService::writeToFile(const QString &filePath, const QString &data)
  *                          different than this parameter (can be 0 or 1)
  */
 void ScriptingService::triggerMenuAction(const QString& objectName,
-        const QString& checked) {
+        const QString& checked) const {
     MetricsService::instance()->sendVisitIfEnabled(
             QStringLiteral("scripting/") % QString(__func__));
 

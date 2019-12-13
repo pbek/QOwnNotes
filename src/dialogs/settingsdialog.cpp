@@ -112,8 +112,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     _noteNotificationNoneCheckBox->setHidden(true);
     _noteNotificationButtonGroup->addButton(_noteNotificationNoneCheckBox);
     connect(_noteNotificationButtonGroup,
-            SIGNAL(buttonPressed(QAbstractButton *)),
-            this, SLOT(noteNotificationButtonGroupPressed(QAbstractButton *)));
+            SIGNAL(buttonPressed(QAbstractButton*)),
+            this, SLOT(noteNotificationButtonGroupPressed(QAbstractButton*)));
 
     for (int i = 0; i <= 8; i++) {
         setOKLabelData(i, "unknown", SettingsDialog::Unknown);
@@ -1049,10 +1049,10 @@ void SettingsDialog::readSettings() {
 
     const QSignalBlocker overrideInterfaceFontSizeGroupBoxBlocker(
             ui->overrideInterfaceFontSizeGroupBox);
-    Q_UNUSED(overrideInterfaceFontSizeGroupBoxBlocker);
+    Q_UNUSED(overrideInterfaceFontSizeGroupBoxBlocker)
     const QSignalBlocker interfaceFontSizeSpinBoxBlocker(
             ui->interfaceFontSizeSpinBox);
-    Q_UNUSED(interfaceFontSizeSpinBoxBlocker);
+    Q_UNUSED(interfaceFontSizeSpinBoxBlocker)
     ui->overrideInterfaceFontSizeGroupBox->setChecked(
             settings.value("overrideInterfaceFontSize", false).toBool());
     ui->interfaceFontSizeSpinBox->setValue(
@@ -1495,7 +1495,7 @@ void SettingsDialog::loadShortcutSettings() {
                     keyWidget->setDefaultKeySequence(action->data().toString());
                     keyWidget->setKeySequence(action->shortcut());
 
-                    connect(keyWidget, &QKeySequenceWidget::keySequenceAccepted, [this, action](){
+                    connect(keyWidget, &QKeySequenceWidget::keySequenceAccepted, this, [this, action](){
                         keySequenceEvent(action->objectName());
                     });
 
@@ -1740,7 +1740,7 @@ void SettingsDialog::connectTestCallback(bool appIsValid,
         ui->connectionTestLabel->setText(
                 tr("The connection was made successfully!\n"
                    "Server version: %1\nQOwnNotesAPI version: %2")
-                    .arg(serverVersion).arg(appVersion));
+                    .arg(serverVersion, appVersion));
     } else {
         // hide password
         if (!ui->passwordEdit->text().isEmpty()) {
@@ -2261,7 +2261,7 @@ void SettingsDialog::setupNoteFolderPage() {
 
 void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
         QListWidgetItem *current, QListWidgetItem *previous) {
-    Q_UNUSED(previous);
+    Q_UNUSED(previous)
 
     setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
 
@@ -2524,7 +2524,7 @@ QTreeWidgetItem *SettingsDialog::findNoteFolderRemotePathTreeWidgetItem(
 
 void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
-    Q_UNUSED(previous);
+    Q_UNUSED(previous)
 
     QString folderName =
             generatePathFromCurrentNoteFolderRemotePathItem(current);
@@ -2804,8 +2804,8 @@ void SettingsDialog::on_scriptPathButton_clicked() {
  */
 void SettingsDialog::on_scriptListWidget_currentItemChanged(
         QListWidgetItem *current, QListWidgetItem *previous) {
-    Q_UNUSED(current);
-    Q_UNUSED(previous);
+    Q_UNUSED(current)
+    Q_UNUSED(previous)
 
     reloadCurrentScriptPage();
 }
@@ -2877,7 +2877,7 @@ void SettingsDialog::reloadCurrentScriptPage() {
                             new ScriptSettingWidget(this, _selectedScript,
                                                     varMap);
 
-                    QString name = varMap["name"].toString();
+//                    QString name = varMap["name"].toString();
 
                     ui->scriptSettingsFrame->layout()->addWidget(
                             scriptSettingWidget);
@@ -3143,7 +3143,7 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(
 
 void SettingsDialog::on_settingsTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
-    Q_UNUSED(previous);
+    Q_UNUSED(previous)
     const int currentIndex = current->whatsThis(0).toInt();
 
     ui->settingsStackedWidget->setCurrentIndex(currentIndex);
@@ -3229,7 +3229,7 @@ void SettingsDialog::initMainSplitter() {
 }
 
 void SettingsDialog::closeEvent(QCloseEvent *event) {
-    Q_UNUSED(event);
+    Q_UNUSED(event)
 
     // make sure no settings get written after after we got the
     // clearAppDataAndExit call
@@ -3629,7 +3629,7 @@ void SettingsDialog::checkForScriptUpdates() {
  * @param item
  */
 void SettingsDialog::on_scriptListWidget_itemChanged(QListWidgetItem *item) {
-    Q_UNUSED(item);
+    Q_UNUSED(item)
 
     storeScriptListEnabledState();
     reloadCurrentScriptPage();

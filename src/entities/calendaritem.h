@@ -39,7 +39,7 @@ public:
     void setSummary(QString text);
     void setDescription(QString text);
     bool updateWithICSData(QString icsData);
-    QString getUid();
+    QString getUid() const;
     static CalendarItem fetchByUid(QString uid);
     int getPriority();
     QString generateNewICSData();
