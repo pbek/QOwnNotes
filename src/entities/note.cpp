@@ -664,8 +664,7 @@ QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            Note note = noteFromQuery(query);
-            noteList.append(note);
+            noteList.append(noteFromQuery(query));
         }
     }
 
@@ -676,15 +675,13 @@ QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
  * Gets a list of note ids from a note list
  */
 QList<int> Note::noteIdListFromNoteList(const QList<Note>& noteList) {
-    QListIterator<Note> itr(noteList);
     QList<int> idList;
     idList.reserve(noteList.size());
 
-    while (itr.hasNext()) {
-        Note note = itr.next();
-        idList << note.getId();
+    QList<Note>::const_iterator i;
+    for (i = noteList.constBegin(); i != noteList.constEnd(); ++i) {
+        idList.append((*i).getId());
     }
-
     return idList;
 }
 
@@ -701,16 +698,13 @@ QList<Note> Note::fetchAllNotTagged(int activeNoteSubFolderId) {
     QList<Note> untaggedNoteList;
     untaggedNoteList.reserve(noteList.size());
 
-    QListIterator<Note> itr(noteList);
-
-    while (itr.hasNext()) {
-        Note note = itr.next();
-        int tagCount = Tag::countAllOfNote(note);
-        if (tagCount == 0) {
-            untaggedNoteList << note;
-        }
+    QList<Note>::const_iterator i;
+    int tagCount = 0;
+    for (i = noteList.constBegin(); i != noteList.constEnd(); ++i) {
+        tagCount = Tag::countAllOfNote(*i);
+        if (tagCount == 0)
+            untaggedNoteList.append(*i);
     }
-
     return untaggedNoteList;
 }
 
