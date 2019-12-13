@@ -30,7 +30,7 @@
  * Checks if there is at least one child that is visible
  */
 bool Utils::Gui::isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item) {
-    for (int i = 0; i < item->childCount(); ++i) {
+    for (int i = 0; i < item->childCount(); i++) {
         QTreeWidgetItem *child = item->child(i);
         if (!child->isHidden() || isOneTreeWidgetItemChildVisible(child)) {
             return true;
@@ -69,7 +69,7 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
                 bool show = false;
 
                 // look in all columns that we want to search
-                for (int index = 0; index < searchColumnCount; ++index) {
+                for (int index = 0; index < searchColumnCount; index++) {
                     bool loopShow = true;
 
                     foreach(QString searchText, searchList) {
