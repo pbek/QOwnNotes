@@ -1627,7 +1627,7 @@ void MainWindow::loadNoteFolderListMenu() {
     int c = 0;
     Q_FOREACH(QAction* action, actions) {
             // start with the 2nd item, the first item is the menu itself
-            if (++c > 0) {
+            if (c++ > 0) {
                 // hide menu item
                 action->setVisible(false);
             }
@@ -1666,9 +1666,7 @@ void MainWindow::loadNoteFolderListMenu() {
                 action->setStatusTip(noteFolder.getLocalPath());
                 action->setObjectName(
                         QStringLiteral("noteFolder-") + QString::number(folderId));
-                action->setIcon(QIcon::fromTheme(
-                        QStringLiteral("folder"),
-                        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
+                action->setIcon(folderIcon);
 
                 if (noteFolder.isCurrent()) {
                     QFont font = action->font();
@@ -1897,9 +1895,7 @@ void MainWindow::loadNoteDirectoryList() {
         noteFolderItem->setText(0, tr("Note folder"));
         noteFolderItem->setData(0, Qt::UserRole, 0);
         noteFolderItem->setData(0, Qt::UserRole + 1, FolderType);
-        noteFolderItem->setIcon(0, QIcon::fromTheme(
-                                    QStringLiteral("folder"),
-                                    QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
+        noteFolderItem->setIcon(0, folderIcon);
         noteFolderItem->setForeground(1, QColor(Qt::gray));
         ui->noteTreeWidget->addTopLevelItem(noteFolderItem);
 
@@ -1973,10 +1969,7 @@ bool MainWindow::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *pare
     noteItem->setText(0, name);
     noteItem->setData(0, Qt::UserRole, note.getId());
     noteItem->setData(0, Qt::UserRole + 1, NoteType);
-    noteItem->setIcon(0, QIcon::fromTheme(
-                    QStringLiteral("text-x-generic"),
-                    QIcon(":icons/breeze-qownnotes/16x16/"
-                                  "text-x-generic.svg")));
+    noteItem->setIcon(0, noteIcon);
 
     const Tag tag = Tag::fetchOneOfNoteWithColor(note);
     if (tag.isFetched()) {
@@ -2057,9 +2050,7 @@ QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
     item->setData(0, Qt::UserRole, id);
     item->setData(0, Qt::UserRole + 1, FolderType);
     item->setToolTip(0, toolTip);
-    item->setIcon(0, QIcon::fromTheme(
-                                QStringLiteral("folder"),
-                                QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
+    item->setIcon(0, folderIcon);
     item->setForeground(1, QColor(Qt::gray));
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
@@ -5945,9 +5936,7 @@ void MainWindow::generateSystemTrayContextMenu() {
                 font.setBold(true);
                 action->setFont(font);
 
-                action->setIcon(QIcon::fromTheme(
-                        QStringLiteral("folder"),
-                        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
+                action->setIcon(folderIcon);
             }
 
             const int folderId = noteFolder.getId();
@@ -5982,9 +5971,7 @@ void MainWindow::generateSystemTrayContextMenu() {
 
         Q_FOREACH(const Note &note, noteList) {
                 QAction *action = noteMenu->addAction(note.getName());
-                action->setIcon(QIcon::fromTheme(
-                        QStringLiteral("text-x-generic"),
-                        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/text-x-generic.svg"))));
+                action->setIcon(noteIcon);
                 int noteId = note.getId();
                 connect(action, &QAction::triggered, this, [this, noteId](){
                     setCurrentNoteFromNoteId(noteId);
@@ -7314,7 +7301,6 @@ void MainWindow::hideNoteFolderComboBoxIfNeeded() {
  */
 void MainWindow::reloadTagTree() {
     qDebug() << __func__;
-
     // take care that the tags are synced from the notes to the internal db
     handleScriptingNotesTagUpdating();
 
@@ -7369,7 +7355,6 @@ void MainWindow::reloadTagTree() {
     allItem->setIcon(0, QIcon::fromTheme(
             QStringLiteral("edit-copy"),
             QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-copy.svg"))));
-
     // this time, the tags come first
     buildTagTreeForParentItem();
     // and get sorted
@@ -7410,6 +7395,7 @@ void MainWindow::reloadTagTree() {
     ui->tagTreeWidget->resizeColumnToContents(1);
 
     highlightCurrentNoteTagsInTagTree();
+
 }
 
 /**
@@ -7457,9 +7443,7 @@ void MainWindow::reloadNoteSubFolderTree() {
     }
     item->setData(0, Qt::UserRole, 0);
     item->setToolTip(0, toolTip);
-    item->setIcon(0, QIcon::fromTheme(
-            QStringLiteral("folder"),
-            QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
+    item->setIcon(0, folderIcon);
     item->setForeground(1, QColor(Qt::gray));
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
@@ -7580,27 +7564,27 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent, bool topLeve
 
     const QList<Tag> tagList = Tag::fetchAllByParentId(parentId);
     Q_FOREACH(const Tag &tag, tagList) {
-            const int tagId = tag.getId();
-            QTreeWidgetItem *item = addTagToTagTreeWidget(parent, tag);
+        const int tagId = tag.getId();
+        QTreeWidgetItem *item = addTagToTagTreeWidget(parent, tag);
 
-            // set the active item
-            if (activeTagId == tagId) {
-                const QSignalBlocker blocker(ui->tagTreeWidget);
-                Q_UNUSED(blocker)
+        // set the active item
+        if (activeTagId == tagId) {
+            const QSignalBlocker blocker(ui->tagTreeWidget);
+            Q_UNUSED(blocker)
 
-                ui->tagTreeWidget->setCurrentItem(item);
-            }
-
-            // recursively populate the next level
-            buildTagTreeForParentItem(item);
-
-            // set expanded state
-            item->setExpanded(expandedList.contains(QString::number(tagId)));
-
-            if (settings.value(QStringLiteral("tagsPanelSort")).toInt() == SORT_ALPHABETICAL) {
-                item->sortChildren(0, toQtOrder(settings.value(QStringLiteral("tagsPanelOrder")).toInt()));
-            }
+            ui->tagTreeWidget->setCurrentItem(item);
         }
+
+        // recursively populate the next level
+        buildTagTreeForParentItem(item);
+
+        // set expanded state
+        item->setExpanded(expandedList.contains(QString::number(tagId)));
+
+        if (settings.value(QStringLiteral("tagsPanelSort")).toInt() == SORT_ALPHABETICAL) {
+            item->sortChildren(0, toQtOrder(settings.value(QStringLiteral("tagsPanelOrder")).toInt()));
+        }
+    }
 
     // update the UI
     // this will crash the app sporadically
@@ -7639,8 +7623,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
     item->setText(0, name);
     item->setText(1, linkCount > 0 ? QString::number(linkCount) : QString());
     item->setForeground(1, QColor(Qt::gray));
-    item->setIcon(0, QIcon::fromTheme(
-                    QStringLiteral("tag"), QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/tag.svg"))));
+    item->setIcon(0, tagIcon);
     item->setToolTip(0, toolTip);
     item->setToolTip(1, toolTip);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
@@ -7683,7 +7666,7 @@ void MainWindow::handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
 
     // if no color was set reset it by using a transparent white
     if (!color.isValid()) {
-        color = QColor(255, 255, 255, 0);
+        color = Qt::transparent;
     }
 
     QBrush brush = QBrush(color);
