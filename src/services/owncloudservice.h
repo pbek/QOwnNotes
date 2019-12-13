@@ -68,7 +68,7 @@ public:
 
     void setPermissionsOnSharedNote(const Note &note, ShareDialog *dialog);
 
-    void fetchShares(const QString& path = "");
+    void fetchShares(const QString& path = QString());
 
     void fetchBookmarks();
 
@@ -137,10 +137,10 @@ private:
     void loadDirectory(QString &data);
 
     void showOwnCloudServerErrorMessage(
-            const QString& message = QString(""), bool withSettingsButton = true);
+            const QString& message = QString(), bool withSettingsButton = true);
 
     void showOwnCloudMessage(
-            QString headline = QString(""), QString message = QString(""),
+            QString headline = QString(), QString message = QString(),
             bool withSettingsButton = true);
 
     void updateNoteShareStatusFromShare(QString &data);

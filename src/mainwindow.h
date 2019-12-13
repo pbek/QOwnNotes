@@ -588,7 +588,7 @@ private slots:
 
     void moveSelectedNotesToFolder(const QString& destinationFolder);
 
-    void copySelectedNotesToFolder(const QString& destinationFolder, const QString& noteFolderPath = "");
+    void copySelectedNotesToFolder(const QString& destinationFolder, const QString& noteFolderPath = QString());
 
     void on_actionTypewriter_mode_toggled(bool arg1);
 
@@ -762,7 +762,7 @@ private:
 
     void updateEncryptNoteButtons();
 
-    void askForEncryptedNotePasswordIfNeeded(const QString& additionalText = "");
+    void askForEncryptedNotePasswordIfNeeded(const QString& additionalText = QString());
 
     void showAppMetricsNotificationIfNeeded();
 
@@ -885,7 +885,7 @@ private:
 
     void copySelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder);
 
-    void createNewNote(QString noteName = "", bool withNameAppend = true);
+    void createNewNote(QString noteName = QString(), bool withNameAppend = true);
 
     bool selectedNotesHaveTags();
 

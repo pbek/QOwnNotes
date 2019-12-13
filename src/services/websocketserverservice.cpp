@@ -26,7 +26,7 @@ QT_USE_NAMESPACE
 
 static QString getIdentifier(QWebSocket *peer) {
     if (peer == Q_NULLPTR) {
-        return "";
+        return QString();
     }
 
     return QStringLiteral("%1:%2").arg(peer->peerAddress().toString(),
@@ -160,7 +160,7 @@ void WebSocketServerService::processMessage(const QString &message) {
 
         mainWindow->createNewNote(
                 name,
-                contentTypeIsHTML ? "" : text,
+                contentTypeIsHTML ? QString() : text,
                 MainWindow::CreateNewNoteOptions(
                         MainWindow::CreateNewNoteOption::UseNameAsHeadline));
 
@@ -264,7 +264,7 @@ QJsonArray WebSocketServerService::createBookmarks(const QJsonObject &jsonObject
 QString WebSocketServerService::getBookmarksJsonText() const {
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow == Q_NULLPTR) {
-            return "";
+            return QString();
         }
 
     Tag tag = Tag::fetchByName(getBookmarksTag());

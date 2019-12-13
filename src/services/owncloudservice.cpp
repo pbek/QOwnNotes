@@ -150,7 +150,7 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
     QString calendarPath =
             QStringLiteral("/remote.php/") % calendarBackendString % QStringLiteral("/calendars/") % todoCalendarCloudConnection.getUsername();
     todoCalendarServerUrl = todoCalendarCloudConnection.getServerUrl().isEmpty() ?
-                QStringLiteral("") : todoCalendarCloudConnection.getServerUrl() % calendarPath;
+                QString() : todoCalendarCloudConnection.getServerUrl() % calendarPath;
     todoCalendarServerUrlWithoutPath = todoCalendarCloudConnection.getServerUrlWithoutPath();
     todoCalendarServerUrlPath = todoCalendarCloudConnection.getServerUrlPath() % calendarPath;
     todoCalendarUsername = todoCalendarCloudConnection.getUsername();
@@ -168,11 +168,11 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
                         .toString());
 
         todoCalendarServerUrlWithoutPath = todoCalendarServerUrl;
-        if (todoCalendarServerUrlPath != QStringLiteral("")) {
+        if (!todoCalendarServerUrlPath.isEmpty()) {
             // remove the path from the calendar server url
             todoCalendarServerUrlWithoutPath.replace(QRegularExpression(
                     QRegularExpression::escape(
-                            todoCalendarServerUrlPath) % QStringLiteral("$")), QStringLiteral(""));
+                            todoCalendarServerUrlPath) % QStringLiteral("$")), QString());
         }
     }
 }
@@ -308,13 +308,13 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                                 " route \"tasksplus.page.index\" as such route"
                                 " does not exist.</s:message>")) >
                     20) {
-                    data = QStringLiteral("");
+                    data = QString();
                 }
 
                 if (todoDialog != Q_NULLPTR) {
                     // this will mostly happen after the PUT request to update
                     // or create a task item
-                    if (data == QStringLiteral("")) {
+                    if (data.isEmpty()) {
                         // reload the task list from server
                         todoDialog->reloadTodoList();
                     }
@@ -373,7 +373,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
         } else if (url.toString() == serverUrl) {
             qDebug() << "Reply from main server url";
 
-            if (data != QStringLiteral("")) {
+            if (!data.isEmpty()) {
                 settingsDialog->setOKLabelData(1, QStringLiteral("ok"), SettingsDialog::OK);
             } else {
                 settingsDialog->setOKLabelData(1, QStringLiteral("not found"),
@@ -411,7 +411,7 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
     settingsDialog->setOKLabelData(6, QStringLiteral("unknown"), SettingsDialog::Unknown);
     settingsDialog->setOKLabelData(7, QStringLiteral("unknown"), SettingsDialog::Unknown);
 
-    if (serverVersion != QStringLiteral("")) {
+    if (!serverVersion.isEmpty()) {
         VersionNumber serverAppVersion = VersionNumber(appVersion);
         VersionNumber minAppVersion = VersionNumber(QOWNNOTESAPI_MIN_VERSION);
 
@@ -707,7 +707,7 @@ void OwnCloudService::shareNote(const Note &note, ShareDialog *dialog) {
 
     // return if no settings are set
     if (!hasOwnCloudSettings()) {
-        showOwnCloudMessage(QStringLiteral(""), QStringLiteral("You need to setup your ownCloud server "
+        showOwnCloudMessage(QString(), QStringLiteral("You need to setup your ownCloud server "
                 "to share notes"));
         return;
     }
@@ -781,7 +781,7 @@ void OwnCloudService::removeNoteShare(const Note &note, ShareDialog *dialog) {
 
     // return if no settings are set
     if (!hasOwnCloudSettings()) {
-        showOwnCloudMessage(QStringLiteral(""), QStringLiteral("You need to setup your ownCloud server "
+        showOwnCloudMessage(QString(), QStringLiteral("You need to setup your ownCloud server "
                 "to remove a note share"));
         return;
     }
@@ -1186,7 +1186,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
 #endif
 
     // check if we get any data at all
-    if (data == QStringLiteral("")) {
+    if (data == QString()) {
         showOwnCloudServerErrorMessage();
         return;
     }
@@ -1213,7 +1213,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     QString directory = result.property(0).property(QStringLiteral("directory")).toString();
 
     // check if we got no useful data
-    if (directory == QStringLiteral("")) {
+    if (directory.isEmpty()) {
         showOwnCloudServerErrorMessage();
         return;
     }
@@ -1222,7 +1222,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     QJSValue notes = result.property(0).property(QStringLiteral("notes"));
 
     // check if we got no useful data
-    if (notes.toString() == QStringLiteral("")) {
+    if (notes.toString().isEmpty()) {
         QMessageBox::information(0, tr("No trashed notes"),
                                  tr("No trashed notes were found on the "
                                             "server."));
@@ -1414,7 +1414,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
             if (urlPartNodes.length()) {
                 QString urlPart = urlPartNodes.at(0).toElement().text();
 
-                if (urlPart == QStringLiteral("")) {
+                if (urlPart.isEmpty()) {
                     continue;
                 }
 
@@ -1426,7 +1426,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
                                                                   QStringLiteral("getetag"));
                 if (etagNodes.length()) {
                     QString etag = etagNodes.at(0).toElement().text();
-                    etag.replace(QStringLiteral("\""), QStringLiteral(""));
+                    etag.replace(QStringLiteral("\""), QString());
 //                    qDebug() << __func__ << " - 'etag': " << etag;
 
                     // check if we have a last modified date
@@ -1585,7 +1585,7 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
 
     // if permissions are empty we assume there was not "ocs/data", which means the share was deleted
     if (permissions.trimmed().isEmpty()) {
-        note.setShareUrl(QStringLiteral(""));
+        note.setShareUrl(QString());
         note.setShareId(0);
     }
 
@@ -1703,7 +1703,7 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
         QString fileName = fileInfo.fileName();
         QString fileParentPath = fileInfo.dir().path();
         if (fileParentPath == QStringLiteral(".")) {
-            fileParentPath = QStringLiteral("");
+            fileParentPath = QString();
         }
 
         // fetch the note sub folder of the note
@@ -1753,7 +1753,7 @@ void OwnCloudService::loadDirectory(QString &data) {
     doc.setContent(data, true);
 
     if (data.isEmpty()) {
-        showOwnCloudServerErrorMessage(QStringLiteral(""), false);
+        showOwnCloudServerErrorMessage(QString(), false);
     }
 
     QStringList pathList;
@@ -1795,7 +1795,7 @@ void OwnCloudService::loadDirectory(QString &data) {
 
                 QRegularExpressionMatch match = re.match(urlPart);
                 QString folderString =
-                        match.hasMatch() ? match.captured(1) : QStringLiteral("");
+                        match.hasMatch() ? match.captured(1) : QString();
 
                 if (!folderString.isEmpty()) {
                     pathList << QUrl::fromPercentEncoding(
@@ -1942,7 +1942,7 @@ void OwnCloudService::handleImportBookmarksReply(QString &data) {
 
 
     // check if we got no useful data
-    if (bookmarks.toString() == QStringLiteral("")) {
+    if (bookmarks.toString().isEmpty()) {
         QMessageBox::information(0, tr("No bookmarks"),
                                  tr("No bookmarks were found on the server."));
         return;

@@ -88,7 +88,7 @@ void FontColorWidget::initSchemaSelector() {
     QSettings settings;
     QString currentSchemaKey = settings.value("Editor/CurrentSchemaKey",
                                        _defaultSchemaKeys.length() > 0 ?
-                                       _defaultSchemaKeys[0] : "").toString();
+                                       _defaultSchemaKeys[0] : QString()).toString();
     int index = 0;
     int currentIndex = 0;
 
@@ -600,7 +600,7 @@ void FontColorWidget::updateBackgroundColorCheckBox(bool checked, bool store) {
  * Removes the current schema
  */
 void FontColorWidget::on_deleteSchemeButton_clicked() {
-    if (_currentSchemaKey == "") {
+    if (_currentSchemaKey == QString()) {
         return;
     }
 
@@ -615,7 +615,7 @@ void FontColorWidget::on_deleteSchemeButton_clicked() {
     QSettings settings;
     settings.beginGroup(_currentSchemaKey);
     // remove the group and all its keys
-    settings.remove("");
+    settings.remove(QString());
     settings.endGroup();
 
     // remove the current schema from the list of schemas
@@ -745,7 +745,7 @@ void FontColorWidget::initFontSelectors() {
     QString fontString = settings.value(
             "MainWindow/noteTextEdit.font").toString();
 
-    if (fontString != "") {
+    if (!fontString.isEmpty()) {
         // set the note text edit font
         font.fromString(fontString);
     } else {

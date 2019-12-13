@@ -15,12 +15,6 @@
 Tag::Tag() :
     id(0), priority(0), parentId(0),
     _color(QColor()), name(QString()) {
-
-  //  id = 0;
-  //  name = "";
-  //  priority = 0;
-  //  parentId = 0;
-  //  _color = QColor();
 }
 
 int Tag::getId() const {

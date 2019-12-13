@@ -89,7 +89,7 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
 
         itemName = property.toString();
 
-        if (itemName == "") {
+        if (itemName.isEmpty()) {
             continue;
         }
 

@@ -84,7 +84,7 @@ private:
 
     void updateSchemeEditFrame();
 
-    void setSchemaValue(const QString& key, const QVariant& value, QString schemaKey = "");
+    void setSchemaValue(const QString& key, const QVariant& value, QString schemaKey = QString());
 
     QString textSettingsKey(const QString& key, QTreeWidgetItem *item = Q_NULLPTR);
 

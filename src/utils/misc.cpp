@@ -304,7 +304,7 @@ QString Utils::Misc::toSentenceCase(const QString& text) {
         }
     }
 
-    return sentences.join(QStringLiteral(""));
+    return sentences.join(QString());
 }
 
 /**
@@ -323,7 +323,7 @@ QString Utils::Misc::toStartCase(const QString& text) {
         }
     }
 
-    return words.join("");
+    return words.join(QString());
 }
 
 /**
@@ -451,7 +451,7 @@ void Utils::Misc::waitMsecs(int msecs) {
  * @return the path
  */
 QString Utils::Misc::portableDataPath() {
-    QString path = QStringLiteral("");
+    QString path = QString();
 
     if (qApp != Q_NULLPTR) {
         path = QCoreApplication::applicationDirPath();
@@ -689,7 +689,7 @@ QList<QObject *> Utils::Misc::getParents(QObject *object) {
  * @return
  */
 QString Utils::Misc::appDataPath() {
-    QString path = QStringLiteral("");
+    QString path = QString();
 
     if (isInPortableMode()) {
         path = portableDataPath();
@@ -1217,7 +1217,7 @@ QString Utils::Misc::prepareDebugInformationLine(
         const QString &headline, QString data, bool withGitHubLineBreaks,
         const QString& typeText) {
     // add two spaces if we don't want GitHub line breaks
-    QString spaces = withGitHubLineBreaks ? QStringLiteral("") : QStringLiteral("  ");
+    QString spaces = withGitHubLineBreaks ? QString() : QStringLiteral("  ");
 
     if (data.contains(QStringLiteral("\n"))) {
         data = QStringLiteral("\n```\n") % data.trimmed() % QStringLiteral("\n```");
@@ -1615,7 +1615,7 @@ QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag) {
 QString Utils::Misc::createUuidString() {
     QUuid uuid = QUuid::createUuid();
     QString uuidString = uuid.toString();
-    uuidString.replace(QStringLiteral("{"), QStringLiteral("")).replace(QStringLiteral("}"), QStringLiteral(""));
+    uuidString.replace(QStringLiteral("{"), QString()).replace(QStringLiteral("}"), QString());
 
     return uuidString;
 }

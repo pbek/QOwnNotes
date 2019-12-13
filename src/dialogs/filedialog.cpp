@@ -72,5 +72,5 @@ void FileDialog::storeDirectory(const QStringList& files) {
  */
 QString FileDialog::selectedFile() {
     QStringList fileNames = selectedFiles();
-    return fileNames.count() > 0 ? fileNames.at(0) : QStringLiteral("");
+    return fileNames.count() > 0 ? fileNames.at(0) : QString();
 }

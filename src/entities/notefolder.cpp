@@ -17,10 +17,7 @@ NoteFolder::NoteFolder() : name(QString()),
                            localPath(QString()),
                            remotePath(QString()) {
     id = 0;
-//    name = "";
-//    localPath = "";
     cloudConnectionId = 1;
-//    remotePath = "";
     priority = 0;
     activeTagId = 0;
     showSubfolders = false;

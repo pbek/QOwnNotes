@@ -33,7 +33,7 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
 
         url = property.toString();
 
-        if (url == "") {
+        if (url == QString()) {
             continue;
         }
 

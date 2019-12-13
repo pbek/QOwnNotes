@@ -48,7 +48,7 @@ public:
 
     void setNoteSubFolder(const NoteSubFolder &noteSubFolder);
 
-    QString relativeNoteFilePath(QString separator = "");
+    QString relativeNoteFilePath(QString separator = QString());
 
     QString getNoteSubFolderPathData();
 

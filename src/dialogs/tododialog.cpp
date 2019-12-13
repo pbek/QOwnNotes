@@ -264,7 +264,7 @@ void TodoDialog::reloadTodoListItems() {
             QString uid = calItem.getUid();
 
             // skip items that were not fully loaded yet
-            if (uid == "") {
+            if (uid.isEmpty()) {
                 continue;
             }
 
@@ -307,7 +307,7 @@ void TodoDialog::jumpToTodoListItem() {
             row = findTodoItemRowByUID(_jumpToCalendarItemUid);
 
             if (row != 1) {
-                _jumpToCalendarItemUid = "";
+                _jumpToCalendarItemUid = QString();
             }
         }
 
@@ -340,8 +340,8 @@ void TodoDialog::clearTodoList() {
 }
 
 void TodoDialog::resetEditFrameControls() {
-    ui->summaryEdit->setText("");
-    ui->descriptionEdit->setPlainText("");
+    ui->summaryEdit->setText(QString());
+    ui->descriptionEdit->setPlainText(QString());
     ui->prioritySlider->setValue(0);
     ui->reminderCheckBox->setChecked(false);
     ui->reminderDateTimeEdit->hide();

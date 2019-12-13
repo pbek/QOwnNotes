@@ -49,14 +49,14 @@ public:
 
     void setParentId(int parentId);
 
-    QString relativePath(QString separator = "") const;
+    QString relativePath(QString separator = QString()) const;
 
     QString fullPath() const;
 
     NoteSubFolder getParent() const;
 
     static QList<NoteSubFolder> fetchAllByParentId(int parentId,
-            const QString& sortBy = "file_last_modified DESC");
+            const QString& sortBy = QStringLiteral("file_last_modified DESC"));
 
     static QList<int> fetchIdsRecursivelyByParentId(int parentId);
 
@@ -73,7 +73,7 @@ public:
     QString pathData() const;
 
     static NoteSubFolder fetchByPathData(QString pathData,
-                                         const QString& separator = "\n");
+                                         const QString& separator = QStringLiteral("\n"));
 
     static NoteSubFolder fetchByNameAndParentId(const QString& name, int parentId);
 

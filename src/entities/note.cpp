@@ -915,7 +915,7 @@ QStringList Note::buildQueryStringList(QString searchString,
         }
 
     // remove empty items, so the search will not run amok
-    queryStrings.removeAll("");
+    queryStrings.removeAll(QString());
 
     // remove duplicate query items
     queryStrings.removeDuplicates();

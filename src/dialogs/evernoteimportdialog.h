@@ -53,7 +53,7 @@ private:
 
     QTreeWidgetItem *addMetaDataTreeWidgetItem(
             const QString& name,
-            const QString& attributeName = "",
+            const QString& attributeName = QString(),
             QTreeWidgetItem *parentItem = nullptr);
 
     void setupMetaDataTreeWidgetItems();

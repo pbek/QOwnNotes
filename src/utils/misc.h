@@ -44,8 +44,8 @@ namespace Utils {
         QString appendIfDoesNotEndWith(QString text, const QString& endString);
         bool startDetachedProcess(const QString& executablePath,
                                   const QStringList& parameters = QStringList(),
-                                  QString workingDirectory = "");
-        QString shorten(QString text, int length, const QString& sequence = "...");
+                                  QString workingDirectory = QString());
+        QString shorten(QString text, int length, const QString& sequence = QStringLiteral("..."));
         QString cycleTextCase(const QString& text);
         QString toSentenceCase(const QString& text);
         QString toStartCase(const QString& text);
@@ -92,7 +92,7 @@ namespace Utils {
         QString prepareDebugInformationLine(
             const QString &headline, QString data,
             bool withGitHubLineBreaks = true,
-            const QString& typeText = "");
+            const QString& typeText = QString());
         QString generateDebugInformation(bool withGitHubLineBreaks = true);
         bool regExpInListMatches(const QString& text, const QStringList &regExpList);
         bool isDarkModeIconTheme();

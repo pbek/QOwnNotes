@@ -55,7 +55,7 @@ private:
     void setupMainSplitter();
 
     void storeSettings();
-    void addDictionaryItem(const QString &name, const QString &pathPart, QString fileNamePart = "");
+    void addDictionaryItem(const QString &name, const QString &pathPart, QString fileNamePart = QString());
     void downloadFile(const QString &url);
     void loadLocalDictionaries();
     QString getDictionaryName(const QString &fileNamePart);

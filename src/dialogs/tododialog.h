@@ -20,8 +20,8 @@ class TodoDialog : public MasterDialog
     Q_OBJECT
 
 public:
-    explicit TodoDialog(MainWindow *mainWindow, QString taskUid = "",
-                            QWidget *parent = 0);
+    explicit TodoDialog(MainWindow *mainWindow, QString taskUid = QString(),
+                            QWidget *parent = nullptr);
     ~TodoDialog();
 
     void reloadTodoListItems();

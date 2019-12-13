@@ -160,7 +160,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
     // modify the text edit default font
     QString fontString = settings.value(
             QStringLiteral("MainWindow/noteTextEdit.font")).toString();
-    if (fontString != "") {
+    if (!fontString.isEmpty()) {
         font.fromString(fontString);
 
         fontSize = font.pointSize();
@@ -198,7 +198,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
 
     // modify the text edit code font
     fontString = settings.value(QStringLiteral("MainWindow/noteTextEdit.code.font")).toString();
-    if (fontString != "") {
+    if (!fontString.isEmpty()) {
         font.fromString(fontString);
 
         int codeFontSize = font.pointSize();
@@ -256,7 +256,7 @@ void QOwnNotesMarkdownTextEdit::openUrl(QString urlString) {
         << urlString;
 
     QString notesPath = NoteFolder::currentLocalPath();
-    QString windowsSlash = QStringLiteral("");
+    QString windowsSlash = QString();
 
 #ifdef Q_OS_WIN32
     // we need another slash for Windows

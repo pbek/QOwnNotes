@@ -349,7 +349,7 @@ QString ScriptingService::callInsertMediaHookForObject(
         return newMarkdownText.toString();
     }
 
-    return "";
+    return QString();
 }
 
 /**
@@ -501,7 +501,7 @@ QString ScriptingService::callInsertingFromMimeDataHookForObject(
         return text.toString();
     }
 
-    return "";
+    return QString();
 }
 
 /**
@@ -524,7 +524,7 @@ QString ScriptingService::callInsertingFromMimeDataHook(
         }
     }
 
-    return QStringLiteral("");
+    return QString();
 }
 
 /**
@@ -550,7 +550,7 @@ QString ScriptingService::callHandleNoteTextFileNameHookForObject(
         return text.toString();
     }
 
-    return QStringLiteral("");
+    return QString();
 }
 
 /**
@@ -571,7 +571,7 @@ QString ScriptingService::callHandleNoteTextFileNameHook(
         }
     }
 
-    return QStringLiteral("");
+    return QString();
 }
 
 
@@ -592,7 +592,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHookForObject(
         return text.toString();
     }
 
-    return QStringLiteral("");
+    return QString();
 }
 
 /**
@@ -641,7 +641,7 @@ QString ScriptingService::callHandleNoteNameHook(Note *note) {
         }
     }
 
-    return QStringLiteral("");
+    return QString();
 }
 
 /**
@@ -661,7 +661,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHook(const QString& headline)
         }
     }
 
-    return QStringLiteral("");
+    return QString();
 }
 
 /**
@@ -684,7 +684,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
         return text.toString();
     }
 
-    return QStringLiteral("");
+    return QString();
 }
 
 /**
@@ -708,7 +708,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(
         }
     }
 
-    return html == resultHtml ? QStringLiteral("") : resultHtml;
+    return html == resultHtml ? QString() : resultHtml;
 }
 
 /**
@@ -747,7 +747,7 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(
         }
     }
 
-    return markdown == resultMarkdown ? QStringLiteral("") : resultMarkdown;
+    return markdown == resultMarkdown ? QString() : resultMarkdown;
 }
 
 /**
@@ -773,7 +773,7 @@ QString ScriptingService::callEncryptionHookForObject(
         return result.toString();
     }
 
-    return QStringLiteral("");
+    return QString();
 }
 
 /**
@@ -801,7 +801,7 @@ QString ScriptingService::callEncryptionHook(const QString& text, const QString&
         }
     }
 
-    return QStringLiteral("");
+    return QString();
 }
 
 /**
@@ -943,9 +943,9 @@ QString ScriptingService::noteTextEditSelectedText() {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     return mainWindow != Q_NULLPTR ?
-           mainWindow->selectedNoteTextEditText() : QStringLiteral("");
+           mainWindow->selectedNoteTextEditText() : QString();
 #else
-    return "";
+    return QString();
 #endif
 }
 
@@ -1063,10 +1063,10 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     return mainWindow != Q_NULLPTR ?
-           mainWindow->noteTextEditCurrentWord(withPreviousCharacters) : "";
+           mainWindow->noteTextEditCurrentWord(withPreviousCharacters) : QString();
 #else
     Q_UNUSED(withPreviousCharacters)
-    return "";
+    return QString();
 #endif
 }
 
@@ -1153,7 +1153,7 @@ QString ScriptingService::insertMediaFile(const QString& mediaFilePath,
     auto *mediaFile = new QFile(mediaFilePath);
 
     if (!mediaFile->exists()) {
-        return QStringLiteral("");
+        return QString();
     }
 
     return _currentNote->getInsertMediaMarkdown(mediaFile, true, returnUrlOnly);
@@ -1558,7 +1558,7 @@ QString ScriptingService::getOpenFileName(const QString& caption,
     Q_UNUSED(filter)
 #endif
 
-    return QStringLiteral("");
+    return QString();
 }
 
 /**
@@ -1586,7 +1586,7 @@ QString ScriptingService::getSaveFileName(const QString& caption,
     Q_UNUSED(filter)
 #endif
 
-    return QStringLiteral("");
+    return QString();
 }
 
 /**
@@ -1715,7 +1715,7 @@ QString ScriptingService::inputDialogGetItem(
     Q_UNUSED(items)
     Q_UNUSED(current)
     Q_UNUSED(editable)
-    return "";
+    return QString();
 #endif
 }
 
@@ -1739,7 +1739,7 @@ QString ScriptingService::inputDialogGetText(
     Q_UNUSED(title)
     Q_UNUSED(label)
     Q_UNUSED(text)
-    return "";
+    return QString();
 #endif
 }
 
@@ -1890,7 +1890,7 @@ void ScriptingService::triggerMenuAction(const QString& objectName,
     }
 
     // script wants to set a checked state
-    if (checked != QStringLiteral("")) {
+    if (!checked.isEmpty()) {
         // return if action is not checkable
         if (!action->isCheckable()) {
             return;
