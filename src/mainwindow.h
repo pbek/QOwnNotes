@@ -686,15 +686,15 @@ private:
     bool _noteEditIsCentralWidget;
     bool _lastNoteSelectionWasMultiple;
     WebSocketServerService *_webSocketServerService;
-    QActionGroup *languageGroup;
-    QActionGroup *spellBackendGroup;
+    QActionGroup *_languageGroup;
+    QActionGroup *_spellBackendGroup;
     bool _brokenTagNoteLinksRemoved = false;
-    const QIcon tagIcon = QIcon::fromTheme(
+    const QIcon _tagIcon = QIcon::fromTheme(
                 QStringLiteral("tag"), QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/tag.svg")));
-    const QIcon folderIcon = QIcon::fromTheme(
+    const QIcon _folderIcon = QIcon::fromTheme(
                 QStringLiteral("folder"),
                 QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg")));
-    const QIcon noteIcon = QIcon::fromTheme(QStringLiteral("text-x-generic"),
+    const QIcon _noteIcon = QIcon::fromTheme(QStringLiteral("text-x-generic"),
                 QIcon(":icons/breeze-qownnotes/16x16/text-x-generic.svg"));
 
     void createSystemTrayIcon();

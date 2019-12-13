@@ -1666,7 +1666,7 @@ void MainWindow::loadNoteFolderListMenu() {
                 action->setStatusTip(noteFolder.getLocalPath());
                 action->setObjectName(
                         QStringLiteral("noteFolder-") + QString::number(folderId));
-                action->setIcon(folderIcon);
+                action->setIcon(_folderIcon);
 
                 if (noteFolder.isCurrent()) {
                     QFont font = action->font();
@@ -1895,7 +1895,7 @@ void MainWindow::loadNoteDirectoryList() {
         noteFolderItem->setText(0, tr("Note folder"));
         noteFolderItem->setData(0, Qt::UserRole, 0);
         noteFolderItem->setData(0, Qt::UserRole + 1, FolderType);
-        noteFolderItem->setIcon(0, folderIcon);
+        noteFolderItem->setIcon(0, _folderIcon);
         noteFolderItem->setForeground(1, QColor(Qt::gray));
         ui->noteTreeWidget->addTopLevelItem(noteFolderItem);
 
@@ -1969,7 +1969,7 @@ bool MainWindow::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *pare
     noteItem->setText(0, name);
     noteItem->setData(0, Qt::UserRole, note.getId());
     noteItem->setData(0, Qt::UserRole + 1, NoteType);
-    noteItem->setIcon(0, noteIcon);
+    noteItem->setIcon(0, _noteIcon);
 
     const Tag tag = Tag::fetchOneOfNoteWithColor(note);
     if (tag.isFetched()) {
@@ -2050,7 +2050,7 @@ QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
     item->setData(0, Qt::UserRole, id);
     item->setData(0, Qt::UserRole + 1, FolderType);
     item->setToolTip(0, toolTip);
-    item->setIcon(0, folderIcon);
+    item->setIcon(0, _folderIcon);
     item->setForeground(1, QColor(Qt::gray));
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
@@ -2242,14 +2242,14 @@ void MainWindow::readSettings() {
 
     //load backends
 #ifdef ASPELL_ENABLED
-    spellBackendGroup = new QActionGroup(ui->menuSpelling_backend);
+    _spellBackendGroup = new QActionGroup(ui->menuSpelling_backend);
     loadSpellingBackends();
 #else
     ui->menuSpelling_backend->menuAction()->setVisible(false);
 #endif
 
     //load language dicts names into menu
-    languageGroup = new QActionGroup(ui->menuLanguages);
+    _languageGroup = new QActionGroup(ui->menuLanguages);
     loadDictionaryNames();
 }
 
@@ -5936,7 +5936,7 @@ void MainWindow::generateSystemTrayContextMenu() {
                 font.setBold(true);
                 action->setFont(font);
 
-                action->setIcon(folderIcon);
+                action->setIcon(_folderIcon);
             }
 
             const int folderId = noteFolder.getId();
@@ -5971,7 +5971,7 @@ void MainWindow::generateSystemTrayContextMenu() {
 
         Q_FOREACH(const Note &note, noteList) {
                 QAction *action = noteMenu->addAction(note.getName());
-                action->setIcon(noteIcon);
+                action->setIcon(_noteIcon);
                 int noteId = note.getId();
                 connect(action, &QAction::triggered, this, [this, noteId](){
                     setCurrentNoteFromNoteId(noteId);
@@ -7443,7 +7443,7 @@ void MainWindow::reloadNoteSubFolderTree() {
     }
     item->setData(0, Qt::UserRole, 0);
     item->setToolTip(0, toolTip);
-    item->setIcon(0, folderIcon);
+    item->setIcon(0, _folderIcon);
     item->setForeground(1, QColor(Qt::gray));
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
@@ -7623,7 +7623,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
     item->setText(0, name);
     item->setText(1, linkCount > 0 ? QString::number(linkCount) : QString());
     item->setForeground(1, QColor(Qt::gray));
-    item->setIcon(0, tagIcon);
+    item->setIcon(0, _tagIcon);
     item->setToolTip(0, toolTip);
     item->setToolTip(1, toolTip);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
@@ -11516,14 +11516,14 @@ void MainWindow::loadDictionaryNames() {
         return;
     }
 
-    languageGroup->setExclusive(true);
-    connect(languageGroup, &QActionGroup::triggered, this, &MainWindow::onLanguageChanged);
+    _languageGroup->setExclusive(true);
+    connect(_languageGroup, &QActionGroup::triggered, this, &MainWindow::onLanguageChanged);
 
     //first add autoDetect
     QAction *autoDetect = ui->menuLanguages->addAction(tr("Automatically detect"));
     autoDetect->setCheckable(true);
     autoDetect->setData(QStringLiteral("auto"));
-    autoDetect->setActionGroup(languageGroup);
+    autoDetect->setActionGroup(_languageGroup);
     QString prevLang = settings.value(QStringLiteral("spellCheckLanguage"),
                                       QStringLiteral("auto") ).toString();
     //if only one dictionary found, disable auto detect
@@ -11548,7 +11548,7 @@ void MainWindow::loadDictionaryNames() {
     for (; it != langNames.constEnd(); ++it, ++itt) {
         QAction *action = ui->menuLanguages->addAction(*it);
         action->setCheckable(true);
-        action->setActionGroup(languageGroup);
+        action->setActionGroup(_languageGroup);
         action->setData(*itt);
 
         if (*itt == prevLang || languages.length() == 1){
@@ -11571,16 +11571,16 @@ void MainWindow::loadSpellingBackends()
     QString prevBackend = settings.value(QStringLiteral("spellCheckBackend"),
                                          QStringLiteral("Hunspell")).toString();
 
-    spellBackendGroup->setExclusive(true);
-    connect(spellBackendGroup, &QActionGroup::triggered, this, &MainWindow::onBackendChanged);
+    _spellBackendGroup->setExclusive(true);
+    connect(_spellBackendGroup, &QActionGroup::triggered, this, &MainWindow::onBackendChanged);
 
     QAction *hs = ui->menuSpelling_backend->addAction(QStringLiteral("Hunspell"));
     hs->setCheckable(true);
     hs->setData("Hunspell");
-    hs->setActionGroup(spellBackendGroup);
+    hs->setActionGroup(_spellBackendGroup);
     QAction *as = ui->menuSpelling_backend->addAction(QStringLiteral("Aspell"));
     as->setCheckable(true);
-    as->setActionGroup(spellBackendGroup);
+    as->setActionGroup(_spellBackendGroup);
     as->setData("Aspell");
 
     if (prevBackend == hs->data()) {
