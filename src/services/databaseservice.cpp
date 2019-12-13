@@ -549,7 +549,7 @@ bool DatabaseService::setupTables() {
     if (version < 17) {
         // remove some deprecated settings
         settings.beginGroup(QStringLiteral("LogDialog"));
-        settings.remove(QStringLiteral(""));
+        settings.remove(QString());
         settings.endGroup();
 
         settings.remove(QStringLiteral("LogWidget/geometry"));
@@ -746,5 +746,5 @@ QString DatabaseService::getAppData(const QString& name, const QString& connecti
         return query.value(QStringLiteral("value")).toString();
     }
 
-    return "";
+    return QString();
 }

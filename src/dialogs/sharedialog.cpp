@@ -60,7 +60,7 @@ void ShareDialog::on_linkCheckBox_toggled(bool checked) {
         ownCloud->shareNote(note, this);
 
         Utils::Gui::information(
-                this, "",
+                this, QString(),
                 Utils::Misc::replaceOwnCloudText(
                         tr("Keep in mind that you still have to sync your "
                            "notes with your server by using the ownCloud "

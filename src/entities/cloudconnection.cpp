@@ -12,12 +12,10 @@
 #include <services/cryptoservice.h>
 
 
-CloudConnection::CloudConnection() {
+CloudConnection::CloudConnection()
+    : name(QString()), serverUrl(QString()), username(QString()), password(QString())
+{
     id = 0;
-    name = "";
-    serverUrl = "";
-    username = "";
-    password = "";
     priority = 0;
 }
 
@@ -41,10 +39,10 @@ QString CloudConnection::getServerUrlWithoutPath() {
     QString serverUrlWithoutPath = serverUrl;
     const QString serverUrlPath = getServerUrlPath();
 
-    if (serverUrlPath != "") {
+    if (!serverUrlPath.isEmpty()) {
         // remove the path from the server url
         serverUrlWithoutPath.replace(QRegularExpression(
-                QRegularExpression::escape(serverUrlPath) + "$"), "");
+                QRegularExpression::escape(serverUrlPath) + "$"), QString());
     }
 
     return serverUrlWithoutPath;

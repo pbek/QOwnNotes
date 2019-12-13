@@ -20,11 +20,11 @@ public:
             const QString& path,
             const QString& eventCategory,
             const QString& eventAction,
-            const QString& eventName = "",
+            const QString& eventName = QString(),
             int eventValue = 0);
     void sendHeartbeat();
     static MetricsService *instance();
-    static MetricsService *createInstance(QObject *parent = 0);
+    static MetricsService *createInstance(QObject *parent = nullptr);
     void sendLocaleEvent();
 
 private:

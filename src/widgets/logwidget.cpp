@@ -84,7 +84,7 @@ QString LogWidget::getLogText() {
 #ifndef INTEGRATION_TESTS
     return ui->logTextEdit->toPlainText();
 #else
-    return "";
+    return QString();
 #endif
 }
 
@@ -246,7 +246,7 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
  * @return
  */
 QString LogWidget::logTypeText(LogType logType) {
-    QString type = "";
+    QString type = QString();
 
     switch (logType) {
         case DebugLogType:

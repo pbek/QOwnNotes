@@ -208,8 +208,8 @@ void QTextEditSearchWidget::doReplaceAll() {
 bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
     QString text = ui->searchLineEdit->text();
 
-    if (text == "") {
-        ui->searchLineEdit->setStyleSheet("");
+    if (text.isEmpty()) {
+        ui->searchLineEdit->setStyleSheet(QString());
         return false;
     }
 

@@ -36,7 +36,7 @@ public:
     void initComponents();
     QString callInsertMediaHook(QFile *file, QString markdownText);
     QVariant callNoteTaggingHook(const Note &note, const QString& action,
-                                 const QString& tagName = "", const QString& newTagName = "");
+                                 const QString& tagName = QString(), const QString& newTagName = QString());
     bool noteTaggingHookExists() const;
     bool handleNoteNameHookExists() const;
     bool methodExists(const QString& methodName) const;
@@ -55,8 +55,8 @@ public:
     Q_INVOKABLE QString insertMediaFile(const QString& mediaFilePath,
                                         bool returnUrlOnly = false);
     Q_INVOKABLE void registerCustomAction(
-            const QString& identifier, const QString& menuText, const QString& buttonText = "",
-            const QString& icon = "", bool useInNoteEditContextMenu = false,
+            const QString& identifier, const QString& menuText, const QString& buttonText = QString(),
+            const QString& icon = QString(), bool useInNoteEditContextMenu = false,
             bool hideButtonInToolbar = false,
             bool useInNoteListContextMenu = false);
     Q_INVOKABLE void createNote(QString text);
@@ -86,21 +86,21 @@ public:
     Q_INVOKABLE void setClipboardText(const QString& text, bool asHtml = false);
     Q_INVOKABLE void setCurrentNote(NoteApi *note);
 
-    Q_INVOKABLE void informationMessageBox(const QString& text, const QString& title = "");
+    Q_INVOKABLE void informationMessageBox(const QString& text, const QString& title = QString());
 
     Q_INVOKABLE int questionMessageBox(
-            const QString& text, const QString& title = "",
+            const QString& text, const QString& title = QString(),
             int buttons =
             QMessageBox::StandardButtons(QMessageBox::Yes | QMessageBox::No),
             int defaultButton = QMessageBox::NoButton);
 
-    Q_INVOKABLE QString getOpenFileName(const QString& caption = "", const QString& dir = "",
-                                        const QString& filter = "");
+    Q_INVOKABLE QString getOpenFileName(const QString& caption = QString(), const QString& dir = QString(),
+                                        const QString& filter = QString());
 
-    Q_INVOKABLE QString getSaveFileName(const QString& caption = "", const QString& dir = "",
-                                        const QString& filter = "");
+    Q_INVOKABLE QString getSaveFileName(const QString& caption = QString(), const QString& dir = QString(),
+                                        const QString& filter = QString());
 
-    Q_INVOKABLE void registerLabel(const QString& identifier, const QString& text = "");
+    Q_INVOKABLE void registerLabel(const QString& identifier, const QString& text = QString());
 
     Q_INVOKABLE void setLabelText(const QString& identifier, const QString& text);
 
@@ -134,7 +134,7 @@ public:
             const QStringList &items, int current = 0, bool editable = false);
 
     Q_INVOKABLE QString inputDialogGetText(
-            const QString &title, const QString &label, const QString &text = "");
+            const QString &title, const QString &label, const QString &text = QString());
 
     Q_INVOKABLE void setPersistentVariable(const QString &key,
                                            const QVariant &value);
@@ -159,7 +159,7 @@ public:
 
     Q_INVOKABLE QList<int> fetchNoteIdsByNoteTextPart(const QString &text) const;
 
-    Q_INVOKABLE void triggerMenuAction(const QString& objectName, const QString& checked = "") const;
+    Q_INVOKABLE void triggerMenuAction(const QString& objectName, const QString& checked = QString()) const;
 
 private:
     QQmlEngine *_engine;

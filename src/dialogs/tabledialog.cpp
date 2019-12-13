@@ -125,7 +125,7 @@ void TableDialog::createMarkdownTable() {
     }
 
     // start with two newlines to make sure that a proper table is inserted
-    QString text = "\n\n";
+    QString text = QStringLiteral("\n\n");
     int colWidth = ui->columnWidthSpinBox->value();
     QString space = QString(" ").repeated(colWidth);
     QString headline = QString("-").repeated(
@@ -135,19 +135,19 @@ void TableDialog::createMarkdownTable() {
         // add all columns of the row
         for (int col = 0; col < ui->columnSpinBox->value(); col++) {
             auto item = ui->createTableWidget->item(row, col);
-            QString itemText = item != nullptr ? item->text() : "";
-            text += "|" + (itemText.isEmpty() ? space : itemText.leftJustified(colWidth, ' '));
+            QString itemText = item != nullptr ? item->text() : QString();
+            text += QStringLiteral("|") + (itemText.isEmpty() ? space : itemText.leftJustified(colWidth, ' '));
         }
 
-        text += "|\n";
+        text += QStringLiteral("|\n");
 
         // add the headline separator row
         if ((row == 0) && ui->headlineCheckBox->isChecked()) {
             for (int col = 0; col < ui->columnSpinBox->value(); col++) {
-                text += "|" + headline;
+                text += QStringLiteral("|") + headline;
             }
 
-            text += "|\n";
+            text += QStringLiteral("|\n");
         }
     }
 

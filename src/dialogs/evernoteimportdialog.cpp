@@ -433,7 +433,7 @@ QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
             QDir::tempPath() + QDir::separator() + QStringLiteral("media-XXXXXX.") + suffix);
 
     if (!tempFile->open()) {
-        return "";
+        return QString();
     }
 
     // write file data to the temporary file

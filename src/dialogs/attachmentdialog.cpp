@@ -81,7 +81,7 @@ void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
 void AttachmentDialog::on_downloadButton_clicked() {
     ui->downloadButton->setDisabled(true);
     ui->downloadProgressBar->setValue(0);
-    ui->downloadSizeLabel->setText("");
+    ui->downloadSizeLabel->setText(QString());
     ui->downloadFrame->show();
 
     QUrl url(ui->fileEdit->text());

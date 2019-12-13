@@ -56,7 +56,7 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
 
     // get all items
     QList<QTreeWidgetItem*> allItems = treeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+            findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
     if (text.count() >= 1) {
@@ -121,7 +121,7 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
 void Utils::Gui::searchForTextInListWidget(QListWidget *listWidget,
                                            const QString& text) {
     QList<QListWidgetItem*> allItems = listWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+            findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
     if (text.count() >= 1) {
@@ -160,7 +160,7 @@ QTreeWidgetItem *Utils::Gui::getTreeWidgetItemWithUserData(
         QTreeWidget *treeWidget, const QVariant &userData, int column) {
     // get all items
     QList<QTreeWidgetItem*> allItems = treeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+            findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     Q_FOREACH(QTreeWidgetItem *item, allItems) {
             if (userData == item->data(column, Qt::UserRole)) {
@@ -175,7 +175,7 @@ QListWidgetItem *Utils::Gui::getListWidgetItemWithUserData(
         QListWidget *listWidget, const QVariant &userData) {
     // get all items
     QList<QListWidgetItem*> allItems = listWidget->
-            findItems("", Qt::MatchContains);
+            findItems(QString(), Qt::MatchContains);
 
     Q_FOREACH(QListWidgetItem *item, allItems) {
             if (userData == item->data(Qt::UserRole)) {
@@ -196,7 +196,7 @@ void Utils::Gui::resetBoldStateOfAllTreeWidgetItems(
         QTreeWidget *treeWidget, int column) {
     // get all items
     QList<QTreeWidgetItem*> allItems = treeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+            findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     Q_FOREACH(QTreeWidgetItem *item, allItems) {
             auto font = item->font(column);

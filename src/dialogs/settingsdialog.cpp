@@ -1112,7 +1112,7 @@ void SettingsDialog::readSettings() {
             .toString();
 
     // store the current font if there isn't any set yet
-    if (fontString == "") {
+    if (fontString.isEmpty()) {
         auto *textEdit = new QTextEdit();
         fontString = textEdit->font().toString();
         settings.setValue("MainWindow/noteTextView.font", fontString);
@@ -1128,7 +1128,7 @@ void SettingsDialog::readSettings() {
             .toString();
 
     // set a default note text view code font
-    if (fontString == "") {
+    if (fontString.isEmpty()) {
         // reset the note text view code font
         on_noteTextViewCodeResetButton_clicked();
 
@@ -1694,7 +1694,7 @@ QString SettingsDialog::getSelectedListWidgetValue(QListWidget* listWidget) {
         return items.first()->whatsThis();
     }
 
-    return "";
+    return QString();
 }
 
 void SettingsDialog::setFontLabel(QLineEdit *label, const QFont& font) {
@@ -1847,10 +1847,10 @@ void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData>& it
 
     QString serverUrlText(serverUrl.toString());
     QString serverUrlPath = serverUrl.path();
-    if (serverUrlPath != "") {
+    if (!serverUrlPath.isEmpty()) {
         // remove the path from the end because we already got it in the url
         serverUrlText.replace(QRegularExpression(
-                QRegularExpression::escape(serverUrlPath) + "$"), "");
+                QRegularExpression::escape(serverUrlPath) + "$"), QString());
     }
 
     QListIterator<CalDAVCalendarData> itr(items);
@@ -1945,7 +1945,7 @@ void SettingsDialog::on_noteTextEditCodeButton_clicked()
     bool ok;
     QFont font = Utils::Gui::fontDialogGetFont(
             &ok, noteTextEditCodeFont, this,
-            "", QFontDialog::MonospacedFonts);
+            QString(), QFontDialog::MonospacedFonts);
     if (ok) {
         noteTextEditCodeFont = font;
         setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
@@ -1972,7 +1972,7 @@ void SettingsDialog::on_noteTextViewCodeButton_clicked()
     bool ok;
     QFont font = Utils::Gui::fontDialogGetFont(
             &ok, noteTextViewCodeFont, this,
-            "", QFontDialog::MonospacedFonts);
+            QString(), QFontDialog::MonospacedFonts);
     if (ok) {
         noteTextViewCodeFont = font;
         setFontLabel(ui->noteTextViewCodeFontLabel, noteTextViewCodeFont);
@@ -2410,7 +2410,7 @@ void SettingsDialog::on_noteFolderLocalPathButton_clicked()
 
     QDir d = QDir(dir);
 
-    if (d.exists() && (dir != "")) {
+    if (d.exists() && (!dir.isEmpty())) {
         ui->noteFolderLocalPathLineEdit->setText(dir);
         _selectedNoteFolder.setLocalPath(dir);
         _selectedNoteFolder.store();
@@ -2445,7 +2445,7 @@ void SettingsDialog::on_noteFolderRemotePathButton_clicked()
             tr("Loading folders from server"));
 
     OwnCloudService *ownCloud = OwnCloudService::instance(true, _selectedNoteFolder.getCloudConnectionId());
-    ownCloud->settingsGetFileList(this, "");
+    ownCloud->settingsGetFileList(this, QString());
 }
 
 /**
@@ -2560,13 +2560,13 @@ void SettingsDialog::on_useOwnCloudPathButton_clicked() {
 QString SettingsDialog::generatePathFromCurrentNoteFolderRemotePathItem(
         QTreeWidgetItem *item) {
     if (item == nullptr) {
-        return "";
+        return QString();
     }
 
     QTreeWidgetItem *parent = item->parent();
     if (parent != nullptr) {
         return generatePathFromCurrentNoteFolderRemotePathItem(parent)
-               + "/" + item->text(0);
+               + QStringLiteral("/") + item->text(0);
     }
 
     return item->text(0);
@@ -2767,7 +2767,7 @@ void SettingsDialog::on_scriptPathButton_clicked() {
 
         QFile file(path);
 
-        if (file.exists() && (path != "")) {
+        if (file.exists() && (!path.isEmpty())) {
             QString scriptName = _selectedScript.getName();
 
             // set the script name from the file name if none was set yet
@@ -3099,7 +3099,7 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(
         const QString &arg1) {
     // get all items
     QList<QTreeWidgetItem*> allItems = ui->shortcutTreeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+            findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
     if (arg1.count() >= 1) {
@@ -3373,7 +3373,7 @@ void SettingsDialog::on_resetToolbarPushButton_clicked() {
 
         // remove all settings in the group
         settings.beginGroup("toolbar");
-        settings.remove("");
+        settings.remove(QString());
         settings.endGroup();
 
         qApp->quit();
@@ -3397,7 +3397,7 @@ void SettingsDialog::on_imageScaleDownCheckBox_toggled(bool checked) {
  */
 void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
     QList<QTreeWidgetItem*> allItems = ui->settingsTreeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+            findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
     if (arg1.count() >= 1) {
@@ -3683,7 +3683,7 @@ void SettingsDialog::on_resetMessageBoxesButton_clicked() {
 
         // remove all settings in the group
         settings.beginGroup("MessageBoxOverride");
-        settings.remove("");
+        settings.remove(QString());
         settings.endGroup();
     }
 }

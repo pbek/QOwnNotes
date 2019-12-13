@@ -82,7 +82,7 @@ public:
 
     static QString defaultNoteFileExtension();
 
-    static QStringList customNoteFileExtensionList(const QString& prefix = "");
+    static QStringList customNoteFileExtensionList(const QString& prefix = QString());
 
     static QString getFullFilePathForFile(const QString& fileName);
 
@@ -123,9 +123,9 @@ public:
 
     bool isFetched() const;
 
-    bool copyToPath(const QString& destinationPath, QString noteFolderPath = "");
+    bool copyToPath(const QString& destinationPath, QString noteFolderPath = QString());
 
-    bool moveToPath(const QString &destinationPath, const QString &noteFolderPath = "");
+    bool moveToPath(const QString &destinationPath, const QString &noteFolderPath = QString());
 
     static QString generateTextForLink(QString text);
 
@@ -200,7 +200,7 @@ public:
 
     bool isInCurrentNoteSubFolder() const;
 
-    QString relativeNoteFilePath(QString separator = "") const;
+    QString relativeNoteFilePath(QString separator = QString()) const;
 
     QString relativeNoteSubFolderPath() const;
 
@@ -239,15 +239,15 @@ public:
 
     static QString createNoteHeader(const QString& name);
 
-    QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true, bool returnUrlOnly = false, QString title = "");
+    QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true, bool returnUrlOnly = false, QString title = QString());
 
-    QString getInsertAttachmentMarkdown(QFile *file, QString fileName = "", bool returnUrlOnly= false);
+    QString getInsertAttachmentMarkdown(QFile *file, QString fileName = QString(), bool returnUrlOnly= false);
 
     static bool scaleDownImageFileIfNeeded(QFile &file);
 
     QString downloadUrlToMedia(const QUrl& url, bool returnUrlOnly = false);
 
-    QString importMediaFromBase64(QString &data, const QString& imageSuffix = "dat");
+    QString importMediaFromBase64(QString &data, const QString& imageSuffix = QStringLiteral("dat"));
 
     bool canWriteToNoteFile();
 

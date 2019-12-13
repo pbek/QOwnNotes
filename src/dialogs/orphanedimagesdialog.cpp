@@ -99,7 +99,7 @@ void OrphanedImagesDialog::on_fileTreeWidget_currentItemChanged(
  */
 QString OrphanedImagesDialog::getFilePath(QTreeWidgetItem *item) {
     if (item == Q_NULLPTR) {
-        return "";
+        return QString();
     }
 
     QString fileName = NoteFolder::currentMediaPath() + QDir::separator() +

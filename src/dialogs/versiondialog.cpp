@@ -72,7 +72,7 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
 
         itemName = property.toString();
 
-        if (itemName == "") {
+        if (itemName.isEmpty()) {
             continue;
         }
 

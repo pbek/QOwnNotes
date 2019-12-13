@@ -19,8 +19,8 @@ CalendarItem::CalendarItem() {
     icsDataKeyList = QStringList();
     priority = 0;
     sortPriority = 0;
-    summary = "";
-    description = "";
+    summary = QString();
+    description = QString();
     completed = false;
 }
 
@@ -624,7 +624,7 @@ QString CalendarItem::generateNewICSData() {
         QString key = icsDataKeyList.at(i);
         QString realKey = key;
         // cut out the numbers at the end
-        realKey.replace(QRegularExpression("\\d*$"), "");
+        realKey.replace(QRegularExpression("\\d*$"), QString());
 
         QString line = icsDataHash.value(key);
 
@@ -735,7 +735,7 @@ bool CalendarItem::updateWithICSData(QString icsData) {
 //    }
 
     summary = icsDataHash.contains("SUMMARY") ?
-              icsDataHash["SUMMARY"].trimmed() : "";
+              icsDataHash["SUMMARY"].trimmed() : QString();
     completed = icsDataHash.contains("PERCENT-COMPLETE") ?
                 icsDataHash["PERCENT-COMPLETE"] == "100" : false;
 
@@ -745,9 +745,9 @@ bool CalendarItem::updateWithICSData(QString icsData) {
                 icsDataHash["STATUS"] == "COMPLETED";
     }
 
-    uid = icsDataHash.contains("UID") ? icsDataHash["UID"] : "";
+    uid = icsDataHash.contains("UID") ? icsDataHash["UID"] : QString();
     description = icsDataHash.contains("DESCRIPTION") ?
-                  icsDataHash["DESCRIPTION"] : "";
+                  icsDataHash["DESCRIPTION"] : QString();
     priority = icsDataHash.contains("PRIORITY") ?
                icsDataHash["PRIORITY"].toInt() : 0;
     created = icsDataHash.contains("CREATED") ?
@@ -762,9 +762,9 @@ bool CalendarItem::updateWithICSData(QString icsData) {
     // descriptions the alarm description isn't taken
     QString alarmDescription =
             getICSDataAttributeInBlock("VALARM", "DESCRIPTION");
-    if ((description != "") && (alarmDescription != "") &&
+    if ((!description.isEmpty()) && (!alarmDescription.isEmpty()) &&
             (description == alarmDescription)) {
-        description = "";
+        description = QString();
     }
 
     QString alarmDateString =
@@ -775,7 +775,7 @@ bool CalendarItem::updateWithICSData(QString icsData) {
                 QDateTime::fromString(icsDataHash["DUE"], ICS_DATETIME_FORMAT)
                                             : QDateTime();
 
-    if (alarmDateString != "") {
+    if (!alarmDateString.isEmpty()) {
         QDateTime dateTime =
                 QDateTime::fromString(alarmDateString, ICS_DATETIME_FORMAT);
         // convert the UTC from the server to local time, because sqlite
@@ -814,7 +814,7 @@ QString CalendarItem::getICSDataAttributeInBlock(QString block, QString attribut
         }
     }
 
-    return "";
+    return QString();
 }
 
 /**
@@ -938,9 +938,9 @@ void CalendarItem::generateICSDataHash() {
     QListIterator<QString> i(iscDataLines);
     while (i.hasNext()) {
         QString line = i.next();
-        line.replace("\r", "");
+        line.replace("\r", QString());
 
-        if (line == "") {
+        if (line.isEmpty()) {
             continue;
         }
 
@@ -958,7 +958,7 @@ void CalendarItem::generateICSDataHash() {
             // set last key for multi line texts
             lastKey = match.captured(1);
 
-            if (lastKey == "") {
+            if (lastKey.isEmpty()) {
                 continue;
             }
 
@@ -1079,7 +1079,7 @@ int CalendarItem::getCurrentCalendarIndex() {
 
     QString todoListSelectorSelectedItem = settings.value(
             "TodoDialog/todoListSelectorSelectedItem").toString();
-    if (todoListSelectorSelectedItem != "") {
+    if (!todoListSelectorSelectedItem.isEmpty()) {
         QStringList todoCalendarEnabledList = settings.value(
                 "ownCloud/todoCalendarEnabledList").toStringList();
 
@@ -1111,7 +1111,7 @@ QString CalendarItem::getCurrentCalendarUrl() {
         return todoCalendarEnabledUrlList.at(index);
     }
 
-    return "";
+    return QString();
 }
 
 /**

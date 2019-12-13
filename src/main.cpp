@@ -73,27 +73,27 @@ bool mainStartupMisc(const QStringList &arguments) {
     QCommandLineParser parser;
     parser.setApplicationDescription("QOwnNotes " + QString(VERSION));
     const QCommandLineOption helpOption = parser.addHelpOption();
-    const QCommandLineOption portableOption(
-            "portable", QCoreApplication::translate("main", "Runs the "
+    const QCommandLineOption portableOption(QStringLiteral(
+            "portable"), QCoreApplication::translate("main", "Runs the "
                     "application in portable mode."));
     parser.addOption(portableOption);
-    const QCommandLineOption dumpSettingsOption(
-            "dump-settings", QCoreApplication::translate("main", "Prints out "
+    const QCommandLineOption dumpSettingsOption(QStringLiteral(
+            "dump-settings"), QCoreApplication::translate("main", "Prints out "
                     "a dump of the settings and other information about the "
                     "application and environment in GitHub Markdown and exits "
                     "the application."));
     parser.addOption(dumpSettingsOption);
-    const QCommandLineOption allowMultipleInstancesOption(
-            "allow-multiple-instances", QCoreApplication::translate("main",
+    const QCommandLineOption allowMultipleInstancesOption(QStringLiteral(
+            "allow-multiple-instances"), QCoreApplication::translate("main",
                     "Allows multiple instances of QOwnNotes to be started "
                     "even if disallowed in the settings."));
     parser.addOption(allowMultipleInstancesOption);
-    const QCommandLineOption clearSettingsOption(
-            "clear-settings", QCoreApplication::translate("main", "Clears the "
+    const QCommandLineOption clearSettingsOption(QStringLiteral(
+            "clear-settings"), QCoreApplication::translate("main", "Clears the "
                     "settings and runs the application."));
     parser.addOption(clearSettingsOption);
-    const QCommandLineOption sessionOption(
-            "session", QCoreApplication::translate("main", "Runs the "
+    const QCommandLineOption sessionOption(QStringLiteral(
+            "session"), QCoreApplication::translate("main", "Runs the "
                     "application in a different context for settings and "
                     "internal files."), "name");
     parser.addOption(sessionOption);
@@ -107,54 +107,54 @@ bool mainStartupMisc(const QStringList &arguments) {
     }
 
     QSettings settings;
-    QString interfaceStyle = settings.value("interfaceStyle").toString();
+    QString interfaceStyle = settings.value(QStringLiteral("interfaceStyle")).toString();
 
     // restore the interface style
     if (!interfaceStyle.isEmpty()) {
         QApplication::setStyle(interfaceStyle);
     }
 
-    bool systemIconTheme = settings.value("systemIconTheme").toBool();
+    bool systemIconTheme = settings.value(QStringLiteral("systemIconTheme")).toBool();
 
     if (!systemIconTheme) {
-        bool internalIconTheme = settings.value("internalIconTheme").toBool();
+        bool internalIconTheme = settings.value(QStringLiteral("internalIconTheme")).toBool();
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-        if (!internalIconTheme && QIcon::themeName() == "") {
+        if (!internalIconTheme && QIcon::themeName().isEmpty()) {
             QIcon::setThemeName(QIcon::fallbackThemeName());
         }
 #endif
 
-        if (QIcon::themeName() == "" || internalIconTheme) {
-            QIcon::setThemeName("breeze-qownnotes");
+        if (QIcon::themeName().isEmpty() || internalIconTheme) {
+            QIcon::setThemeName(QStringLiteral("breeze-qownnotes"));
         }
 
         if (Utils::Misc::isDarkModeIconTheme()) {
-            QIcon::setThemeName("breeze-dark-qownnotes");
+            QIcon::setThemeName(QStringLiteral("breeze-dark-qownnotes"));
         }
     }
 
     MetricsService *metricsService = MetricsService::createInstance();
-    metricsService->sendVisitIfEnabled("app/start", "App Start");
-    metricsService->sendEventIfEnabled(
-            "app/qt-version-build", "app", "qt version build",
-            QString(QT_VERSION_STR));
-    metricsService->sendEventIfEnabled(
-            "app/qt-version-runtime", "app", "qt version runtime",
+    metricsService->sendVisitIfEnabled(QStringLiteral("app/start"), QStringLiteral("App Start"));
+    metricsService->sendEventIfEnabled(QStringLiteral(
+            "app/qt-version-build"), QStringLiteral("app"), QStringLiteral("qt version build"),
+            QStringLiteral(QT_VERSION_STR));
+    metricsService->sendEventIfEnabled(QStringLiteral(
+            "app/qt-version-runtime"), QStringLiteral("app"), QStringLiteral("qt version runtime"),
             qVersion());
-    metricsService->sendEventIfEnabled(
-            "app/theme", "app", "theme", QIcon::themeName());
-    metricsService->sendEventIfEnabled(
-            "app/release", "app", "release",
+    metricsService->sendEventIfEnabled(QStringLiteral(
+            "app/theme"), QStringLiteral("app"), QStringLiteral("theme"), QIcon::themeName());
+    metricsService->sendEventIfEnabled(QStringLiteral(
+            "app/release"), QStringLiteral("app"), QStringLiteral("release"),
             qApp->property("release").toString());
-    metricsService->sendEventIfEnabled(
-            "app/portable", "app", "portable",
-            Utils::Misc::isInPortableMode() ? "yes" : "no");
+    metricsService->sendEventIfEnabled(QStringLiteral(
+            "app/portable"), QStringLiteral("app"), QStringLiteral("portable"),
+            Utils::Misc::isInPortableMode() ? QStringLiteral("yes") : QStringLiteral("no"));
 
     if (qApp->property("snap").toBool()) {
-        metricsService->sendEventIfEnabled(
-                "app/styles", "app", "styles",
-                QStyleFactory::keys().join(" "));
+        metricsService->sendEventIfEnabled(QStringLiteral(
+                "app/styles"), QStringLiteral("app"), QStringLiteral("styles"),
+                QStyleFactory::keys().join(QChar(' ')));
     }
 
     QString productType;
@@ -165,40 +165,40 @@ bool mainStartupMisc(const QStringList &arguments) {
     productType += " Qt " + QString(QT_VERSION_STR);
 #endif
 
-    metricsService->sendEventIfEnabled(
-            "app/product-type", "app", "product-type", productType);
+    metricsService->sendEventIfEnabled(QStringLiteral(
+            "app/product-type"), QStringLiteral("app"), QStringLiteral("product-type"), productType);
 
-    QString platform = "other";
+    QString platform = QStringLiteral("other");
 #ifdef Q_OS_LINUX
-    platform = "linux";
+    platform = QStringLiteral("linux");
 #endif
 #ifdef Q_OS_MAC
-    platform = "mac";
+    platform = QStringLiteral("mac");
 #endif
 #ifdef Q_OS_WIN
-    platform = "windows";
+    platform = QStringLiteral("windows");
 #endif
 
     // disable the automatic update dialog per default for repositories and
     // self-builds if nothing is already set
     Utils::Misc::presetDisableAutomaticUpdateDialog();
 
-    metricsService->sendEventIfEnabled(
-            "app/platform", "app", "platform", platform);
+    metricsService->sendEventIfEnabled(QStringLiteral(
+            "app/platform"), QStringLiteral("app"), QStringLiteral("platform"), platform);
 
     // sends locale information
     metricsService->sendLocaleEvent();
 
     // check legacy setting
-    QString notesPath = settings.value("General/notesPath").toString();
+    QString notesPath = settings.value(QStringLiteral("General/notesPath")).toString();
 
     // migration: remove old setting if we found one and store new one
     if (!notesPath.isEmpty()) {
-        settings.setValue("notesPath", notesPath);
-        settings.remove("General/notesPath");
+        settings.setValue(QStringLiteral("notesPath"), notesPath);
+        settings.remove(QStringLiteral("General/notesPath"));
     } else {
         // load the notes path
-        notesPath = settings.value("notesPath").toString();
+        notesPath = settings.value(QStringLiteral("notesPath")).toString();
     }
 
     if (!notesPath.isEmpty()) {
@@ -230,7 +230,7 @@ bool mainStartupMisc(const QStringList &arguments) {
             return false;
         }
 
-        settings.setValue("notesPath", notesPath);
+        settings.setValue(QStringLiteral("notesPath"), notesPath);
 
         // prepend the portable data path if we are in portable mode
         notesPath = Utils::Misc::prependPortableDataPathIfNeeded(notesPath);
@@ -335,28 +335,28 @@ int main(int argc, char *argv[]) {
     bool snap = false;
     bool allowOnlyOneAppInstance = true;
     QStringList arguments;
-    QString appNameAdd = "";
+    QString appNameAdd = QString();
 
 #ifdef QT_DEBUG
-    appNameAdd = "Debug";
+    appNameAdd = QStringLiteral("Debug");
 #endif
 
     for (int i = 0; i < argc; ++i) {
         QString arg(argv[i]);
         arguments << arg;
 
-        if (arg == "--snap") {
+        if (arg == QStringLiteral("--snap")) {
             // override the release string for snaps
-            release = "Snapcraft";
+            release = QStringLiteral("Snapcraft");
             snap = true;
-        } else if (arg == "--portable") {
+        } else if (arg == QStringLiteral("--portable")) {
             portable = true;
-        } else if (arg == "--clear-settings") {
+        } else if (arg == QStringLiteral("--clear-settings")) {
             clearSettings = true;
-        } else if (arg == "--help" || arg == "--dump-settings" ||
-            arg == "-h" || arg == "--allow-multiple-instances") {
+        } else if (arg == QStringLiteral("--help") || arg == QStringLiteral("--dump-settings") ||
+            arg == QStringLiteral("-h") || arg == QStringLiteral("--allow-multiple-instances")) {
             allowOnlyOneAppInstance = false;
-        } else if (arg == "--after-update") {
+        } else if (arg == QStringLiteral("--after-update")) {
             qWarning() << __func__ << " - 'arg': " << arg;
 #if not defined(Q_OS_WIN)
             // check if there is a 2nd parameter with the script path
@@ -368,10 +368,10 @@ int main(int argc, char *argv[]) {
                 file.remove();
             }
 #endif
-        } else if (arg == "--session") {
+        } else if (arg == QStringLiteral("--session")) {
             // check if there is a 2nd parameter with the session name
             if (argc > (i+1)) {
-                appNameAdd += "-" + QString(argv[i+1]).trimmed();
+                appNameAdd += QStringLiteral("-") + QString(argv[i+1]).trimmed();
             }
         }
     }
@@ -394,29 +394,29 @@ int main(int argc, char *argv[]) {
 
     // fixing some troubles in Windows 8.1
 #ifdef Q_OS_WIN32
-    QCoreApplication::addLibraryPath("./");
+    QCoreApplication::addLibraryPath(QStringLiteral("./"));
 #endif
 
-    QCoreApplication::setOrganizationDomain("PBE");
-    QCoreApplication::setOrganizationName("PBE");
-    QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
+    QCoreApplication::setOrganizationDomain(QStringLiteral("PBE"));
+    QCoreApplication::setOrganizationName(QStringLiteral("PBE"));
+    QCoreApplication::setApplicationName(QStringLiteral("QOwnNotes") + appNameAdd);
 
-    QString appVersion = QString(VERSION);
+    QString appVersion = QStringLiteral(VERSION);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    appVersion += " " + QSysInfo::prettyProductName();
+    appVersion += QStringLiteral(" ") + QSysInfo::prettyProductName();
 
     if (!appVersion.contains(QSysInfo::currentCpuArchitecture())) {
-        appVersion += " " + QSysInfo::currentCpuArchitecture();
+        appVersion += QStringLiteral(" ") + QSysInfo::currentCpuArchitecture();
     }
 #else
-    appVersion += " Qt " + QString(QT_VERSION_STR);
+    appVersion += QStringLiteral(" Qt ") + QStringLiteral(QT_VERSION_STR);
 #endif
 
-    appVersion += " " + QString(release);
+    appVersion += QStringLiteral(" ") + QString(release);
 
 #ifdef QT_DEBUG
-    appVersion += " Debug";
+    appVersion += QStringLiteral(" Debug");
 #endif
 
     QCoreApplication::setApplicationVersion(appVersion);
@@ -444,7 +444,7 @@ int main(int argc, char *argv[]) {
     }
 
     QSettings settings;
-    QString locale = settings.value("interfaceLanguage").toString();
+    QString locale = settings.value(QStringLiteral("interfaceLanguage")).toString();
 
     if (locale.isEmpty()) {
         locale = QLocale::system().name().section('_', 0, 0);
@@ -482,14 +482,14 @@ int main(int argc, char *argv[]) {
     // if allowOnlyOneAppInstance still has the default true let's ask the
     // settings
     if (allowOnlyOneAppInstance) {
-        allowOnlyOneAppInstance = settings.value(
-                "allowOnlyOneAppInstance", true).toBool();
+        allowOnlyOneAppInstance = settings.value(QStringLiteral(
+                "allowOnlyOneAppInstance"), true).toBool();
     }
 #endif
 
     if ( allowOnlyOneAppInstance && !SingleApplication::isSupported() ) {
         allowOnlyOneAppInstance = false;
-        settings.setValue("allowOnlyOneAppInstance", false);
+        settings.setValue(QStringLiteral("allowOnlyOneAppInstance"), false);
 
         qWarning() << QCoreApplication::translate(
                 "main", "Single application mode is not supported on your "

@@ -23,7 +23,7 @@ public:
         Cancel
     };
 
-    explicit NoteDiffDialog(QWidget *parent = 0, const QString& html = "");
+    explicit NoteDiffDialog(QWidget *parent = nullptr, const QString& html = QString());
     ~NoteDiffDialog();
     int resultActionRole();
 

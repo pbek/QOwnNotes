@@ -21,7 +21,7 @@ QString BotanWrapper::Hash(QString Data) {
         QString Value = QString::fromStdString(pipe.read_all_as_string(0));
         return Value;
     } catch (...) {
-        return "";
+        return QString();
     }
 }
 
@@ -32,7 +32,7 @@ QString BotanWrapper::HexHash(QString Data) {
         QString Value = QString::fromStdString(pipe.read_all_as_string(0));
         return Value;
     } catch (...) {
-        return "";
+        return QString();
     }
 }
 
@@ -43,7 +43,7 @@ QString BotanWrapper::Encode(QString Data) {
         QString Value = QString::fromStdString(pipe.read_all_as_string(0));
         return Value;
     } catch (...) {
-        return "";
+        return QString();
     }
 }
 
@@ -54,7 +54,7 @@ QString BotanWrapper::Decode(QString Data) {
         QString Value = QString::fromStdString(pipe.read_all_as_string(0));
         return Value;
     } catch (...) {
-        return "";
+        return QString();
     }
 }
 
@@ -82,7 +82,7 @@ QString BotanWrapper::Encrypt(QString Data) {
         QString Value = QString::fromStdString(pipe.read_all_as_string(0));
         return Value;
     } catch (...) {
-        return "";
+        return QString();
     }
 }
 
@@ -111,7 +111,7 @@ QString BotanWrapper::Decrypt(QString Data) {
         return Value;
     }
     catch (...) {
-        return "";
+        return QString();
     }
 }
 

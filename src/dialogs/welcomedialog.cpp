@@ -203,7 +203,7 @@ void WelcomeDialog::on_noteFolderButton_clicked() {
 
     QDir d = QDir(dir);
 
-    if (d.exists() && (dir != "")) {
+    if (d.exists() && (!dir.isEmpty())) {
 #ifdef Q_OS_WIN32
         // check if user chose a different drive in portable mode
         if (Utils::Misc::isInPortableMode() &&

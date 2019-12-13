@@ -14,8 +14,8 @@
 class Bookmark {
 public:
     explicit Bookmark();
-    explicit Bookmark(QString url, QString name = "",
-            QStringList tagList = QStringList(), QString description = "");
+    explicit Bookmark(QString url, QString name = QString(),
+            QStringList tagList = QStringList(), QString description = QString());
     friend QDebug operator<<(QDebug dbg, const Bookmark &bookmark);
     QJsonObject jsonObject();
     static QList<Bookmark> parseBookmarks(const QString& text, bool withBasicUrls = false);

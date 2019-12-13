@@ -13,7 +13,7 @@ class LinkDialog : public MasterDialog
     Q_OBJECT
 
 public:
-    explicit LinkDialog(const QString &dialogTitle = QStringLiteral(""), QWidget *parent = nullptr);
+    explicit LinkDialog(const QString &dialogTitle = QString(), QWidget *parent = nullptr);
     ~LinkDialog();
 
     QString getSelectedNoteName() const;

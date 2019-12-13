@@ -588,7 +588,7 @@ private slots:
 
     void moveSelectedNotesToFolder(const QString& destinationFolder);
 
-    void copySelectedNotesToFolder(const QString& destinationFolder, const QString& noteFolderPath = "");
+    void copySelectedNotesToFolder(const QString& destinationFolder, const QString& noteFolderPath = QString());
 
     void on_actionTypewriter_mode_toggled(bool arg1);
 
@@ -686,15 +686,15 @@ private:
     bool _noteEditIsCentralWidget;
     bool _lastNoteSelectionWasMultiple;
     WebSocketServerService *_webSocketServerService;
-    QActionGroup *languageGroup;
-    QActionGroup *spellBackendGroup;
+    QActionGroup *_languageGroup;
+    QActionGroup *_spellBackendGroup;
     bool _brokenTagNoteLinksRemoved = false;
-    const QIcon tagIcon = QIcon::fromTheme(
+    const QIcon _tagIcon = QIcon::fromTheme(
                 QStringLiteral("tag"), QIcon(QStringLiteral(":/icons/breeze-qownnotes/16x16/tag.svg")));
-    const QIcon folderIcon = QIcon::fromTheme(
+    const QIcon _folderIcon = QIcon::fromTheme(
                 QStringLiteral("folder"),
                 QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg")));
-    const QIcon noteIcon = QIcon::fromTheme(QStringLiteral("text-x-generic"),
+    const QIcon _noteIcon = QIcon::fromTheme(QStringLiteral("text-x-generic"),
                 QIcon(":icons/breeze-qownnotes/16x16/text-x-generic.svg"));
 
     void createSystemTrayIcon();
@@ -762,7 +762,7 @@ private:
 
     void updateEncryptNoteButtons();
 
-    void askForEncryptedNotePasswordIfNeeded(const QString& additionalText = "");
+    void askForEncryptedNotePasswordIfNeeded(const QString& additionalText = QString());
 
     void showAppMetricsNotificationIfNeeded();
 
@@ -885,7 +885,7 @@ private:
 
     void copySelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder);
 
-    void createNewNote(QString noteName = "", bool withNameAppend = true);
+    void createNewNote(QString noteName = QString(), bool withNameAppend = true);
 
     bool selectedNotesHaveTags();
 

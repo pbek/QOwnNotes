@@ -146,7 +146,7 @@ QString LayoutWidget::getLayoutName(const QString& layoutIdentifier) {
         return tr("Single column", "Layout name");
     }
 
-    return "";
+    return QString();
 }
 
 QString LayoutWidget::getLayoutDescription(const QString& layoutIdentifier) {
@@ -178,7 +178,7 @@ QString LayoutWidget::getLayoutDescription(const QString& layoutIdentifier) {
                centralWidgetAddText;
     }
 
-    return "";
+    return QString();
 }
 
 void LayoutWidget::resizeEvent(QResizeEvent* event) {

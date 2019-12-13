@@ -424,7 +424,7 @@ QString ScriptRepositoryDialog::getCurrentInfoJsonString() {
     QTreeWidgetItem *item = ui->scriptTreeWidget->currentItem();
 
     if (item == Q_NULLPTR) {
-        return "";
+        return QString();
     }
 
     QString data = item->data(0, Qt::UserRole).toString();

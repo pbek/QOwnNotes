@@ -81,7 +81,7 @@ void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
 
 QString LinkDialog::getSelectedNoteName() const {
     return ui->notesListWidget->currentRow() > -1
-           ? ui->notesListWidget->currentItem()->text() : QStringLiteral("");
+           ? ui->notesListWidget->currentItem()->text() : QString();
 }
 
 Note LinkDialog::getSelectedNote() const {
@@ -177,7 +177,7 @@ QString LinkDialog::getTitleForUrl(const QUrl& url) {
     const QString html = Utils::Misc::downloadUrl(url);
 
     if (html.isEmpty()) {
-        return QStringLiteral("");
+        return QString();
     }
 
     // parse title from webpage

@@ -117,7 +117,7 @@ void OrphanedAttachmentsDialog::on_fileTreeWidget_currentItemChanged(
  */
 QString OrphanedAttachmentsDialog::getFilePath(QTreeWidgetItem *item) {
     if (item == Q_NULLPTR) {
-        return "";
+        return QString();
     }
 
     QString fileName = NoteFolder::currentAttachmentsPath() + QDir::separator() +
