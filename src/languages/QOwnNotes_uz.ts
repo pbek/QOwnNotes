@@ -3994,8 +3994,15 @@ Tanlangan papkalarni &lt;strong&gt;%n&lt;/strong&gt; o&apos;chirish kerakmi!</nu
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
+        <translation type="obsolete">
             <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
             <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         </translation>
@@ -4045,8 +4052,15 @@ Tanlangan papkalarni &lt;strong&gt;%n&lt;/strong&gt; o&apos;chirish kerakmi!</nu
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
+        <translation type="obsolete">
             <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
             <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         </translation>

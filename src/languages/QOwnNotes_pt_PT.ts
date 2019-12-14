@@ -3990,8 +3990,15 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; ficheiro(s) selecionado(s)?</numerusform>
             <numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; ficheiro(s) selecionado(s)?</numerusform>
         </translation>
@@ -4041,8 +4048,15 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; ficheiro(s) selecionado(s)?</numerusform>
             <numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; ficheiro(s) selecionado(s)?</numerusform>
         </translation>

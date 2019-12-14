@@ -3990,8 +3990,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
+        <translation type="obsolete">
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; নির্বাচিত ফাইল(গুলো) মুছবেন?</numerusform>
             <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         </translation>
@@ -4041,8 +4048,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; নির্বাচিত ফাইল(গুলো) মুছবেন?</numerusform>
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; নির্বাচিত ফাইল(গুলো) মুছবেন?</numerusform>
         </translation>

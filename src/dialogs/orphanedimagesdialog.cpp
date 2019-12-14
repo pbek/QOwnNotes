@@ -120,7 +120,7 @@ void OrphanedImagesDialog::on_deleteButton_clicked() {
     if (Utils::Gui::question(
             this,
             tr("Delete selected files"),
-            tr("Delete <strong>%n</strong> selected files(s)?",
+            tr("Delete <strong>%n</strong> selected file(s)?",
                "", selectedItemsCount),
             "delete-files") != QMessageBox::Yes) {
         return;

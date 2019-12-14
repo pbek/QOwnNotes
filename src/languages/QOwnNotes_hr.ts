@@ -4019,8 +4019,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Želite li izbrisati &lt;strong&gt;%n &lt;/strong&gt; odabranu datoteku?</numerusform>
             <numerusform>Želite li izbrisati &lt;strong&gt;%n &lt;/strong&gt; odabrane datoteke?</numerusform>
             <numerusform>Želite li izbrisati &lt;strong&gt;%n &lt;/strong&gt; odabrane datoteke?</numerusform>
@@ -4071,8 +4079,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabrane datoteke (s)?</numerusform>
             <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabranih datoteka(s)?</numerusform>
             <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabranih datoteka(s)?</numerusform>

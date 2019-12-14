@@ -3990,8 +3990,15 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Eliminar o ficheiro seleccionado &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
             <numerusform>Elimina os ficheiros seleccionados &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
         </translation>
@@ -4041,8 +4048,15 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Elimina os ficheiros seleccionados &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
             <numerusform>Elimina os ficheiros seleccionados &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
         </translation>

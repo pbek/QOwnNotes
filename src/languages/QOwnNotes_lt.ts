@@ -4026,8 +4026,16 @@ Jei šiukšliadėžė įgalinta jūsų ownCloud serveryje, turėtumėte galėti 
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Ištrinti &lt;strong&gt;%n&lt;/strong&gt; pasirinktą failą?</numerusform>
             <numerusform>Ištrinti &lt;strong&gt;%n&lt;/strong&gt; pasirinktus failus?</numerusform>
             <numerusform>Ištrinti &lt;strong&gt;%n&lt;/strong&gt; pasirinktus failus?</numerusform>
@@ -4078,8 +4086,16 @@ Jei šiukšliadėžė įgalinta jūsų ownCloud serveryje, turėtumėte galėti 
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Ištrinti &lt;strong&gt;%n&lt;/strong&gt; pasirinktą failą?</numerusform>
             <numerusform>Ištrinti &lt;strong&gt;%n&lt;/strong&gt; pasirinktus failus?</numerusform>
             <numerusform>Ištrinti &lt;strong&gt;%n&lt;/strong&gt; pasirinktus failus?</numerusform>

@@ -3990,8 +3990,15 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Fshini &lt;strong&gt;%n&lt;/strong&gt; skedarët e zgjedhur?</numerusform>
             <numerusform>Fshini &lt;strong&gt;%n&lt;/strong&gt; skedarët e zgjedhur?</numerusform>
         </translation>
@@ -4041,8 +4048,15 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Fshini &lt;strong&gt;%n&lt;/strong&gt; skedarët e zgjedhur?</numerusform>
             <numerusform>Fshini &lt;strong&gt;%n&lt;/strong&gt; skedarët e zgjedhur?</numerusform>
         </translation>

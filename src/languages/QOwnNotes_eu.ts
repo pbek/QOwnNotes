@@ -3991,8 +3991,15 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Ezabatu &lt;strong&gt;%n&lt;/strong&gt; hautatutako fitxategia?</numerusform>
             <numerusform>Ezabatu hautatutako &lt;strong&gt;%n&lt;/strong&gt; fitxategiak?</numerusform>
         </translation>
@@ -4042,8 +4049,15 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Ezabatu &lt;strong&gt;%n&lt;/strong&gt; hautatutako fitxategia?</numerusform>
             <numerusform>Ezabatu hautatutako &lt;strong&gt;%n&lt;/strong&gt; fitxategiak?</numerusform>
         </translation>

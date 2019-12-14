@@ -4026,8 +4026,16 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
+        <translation type="obsolete">
             <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczony plik?</numerusform>
             <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone pliki?</numerusform>
             <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych plików?</numerusform>
@@ -4078,8 +4086,16 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczony plik?</numerusform>
             <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone pliki?</numerusform>
             <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych plików?</numerusform>

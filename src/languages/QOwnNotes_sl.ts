@@ -4062,8 +4062,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Ali želite izbrisati izbrano datoteko &lt;strong&gt;%n &lt;/strong&gt;?</numerusform>
             <numerusform>Ali želite izbrisati &lt;strong&gt;%n &lt;/strong&gt; izbrane datoteke?</numerusform>
             <numerusform>Ali želite izbrisati &lt;strong&gt;%n &lt;/strong&gt; izbrane datoteke?</numerusform>
@@ -4115,8 +4124,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Ali želite izbrisati izbrano datoteko &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
             <numerusform>Ali želite izbrisati &lt;strong&gt;%n &lt;/strong&gt; izbrane datoteke?</numerusform>
             <numerusform>Ali želite izbrisati &lt;strong&gt;%n &lt;/strong&gt; izbrane datoteke?</numerusform>

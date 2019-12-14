@@ -3985,8 +3985,15 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Excluir arquivos &lt;strong&gt;%n&lt;/strong&gt; selecionado (s)?</numerusform>
             <numerusform>Excluir arquivos &lt;strong&gt;%n&lt;/strong&gt; selecionados?</numerusform>
         </translation>
@@ -4036,8 +4043,15 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Excluir arquivos &lt;strong&gt;%n&lt;/strong&gt; selecionado (s)?</numerusform>
             <numerusform>Excluir arquivos &lt;strong&gt;%n&lt;/strong&gt; selecionado (s)?</numerusform>
         </translation>

@@ -3954,8 +3954,14 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Hapus &lt;strong&gt;%n&lt;/strong&gt; berkas yang dipilih?</numerusform>
         </translation>
     </message>
@@ -4004,8 +4010,14 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Hapus &lt;strong&gt;%n&lt;/strong&gt; berkas yang dipilih?</numerusform>
         </translation>
     </message>

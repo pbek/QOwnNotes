@@ -3982,8 +3982,15 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Voleu esborrar &lt;strong&gt;%n&lt;/strong&gt; fitxer(s) seleccionat(s)?</numerusform>
             <numerusform>Voleu esborrar &lt;strong&gt;%n&lt;/strong&gt; fitxer(s) seleccionat(s)?</numerusform>
         </translation>
@@ -4033,8 +4040,15 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Voleu esborrar &lt;strong&gt;%n&lt;/strong&gt; fitxer(s) seleccionat(s)?</numerusform>
             <numerusform>Voleu esborrar &lt;strong&gt;%n&lt;/strong&gt; fitxer(s) seleccionat(s)?</numerusform>
         </translation>

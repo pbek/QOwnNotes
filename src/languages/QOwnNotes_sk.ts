@@ -4026,8 +4026,16 @@ Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho o
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Odstrániť &lt;strong&gt;%n&lt;/strong&gt; vybrané súbory?</numerusform>
             <numerusform>Odstrániť &lt;strong&gt;%n&lt;/strong&gt; vybrané súbory?</numerusform>
             <numerusform>Odstrániť &lt;strong&gt;%n&lt;/strong&gt; vybrané súbory?</numerusform>
@@ -4078,8 +4086,16 @@ Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho o
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Odstrániť vybratý súbor &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
             <numerusform>Odstrániť vybraté súbory &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
             <numerusform>Odstrániť vybraté súbory &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>

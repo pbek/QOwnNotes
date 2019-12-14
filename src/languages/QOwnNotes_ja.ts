@@ -3954,8 +3954,14 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; 個の選択したファイルを削除しますか？</numerusform>
         </translation>
     </message>
@@ -4004,8 +4010,14 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; 個の選択ファイルを削除しますか？</numerusform>
         </translation>
     </message>

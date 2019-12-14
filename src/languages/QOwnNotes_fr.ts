@@ -3989,8 +3989,15 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Supprimer le(s) &lt;strong&gt;%n&lt;/strong&gt; fichier(s) sélectionné(s) ?</numerusform>
             <numerusform>Supprimer le(s) &lt;strong&gt;%n&lt;/strong&gt; fichier(s) sélectionné(s) ?</numerusform>
         </translation>
@@ -4040,8 +4047,15 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     </message>
     <message numerus="yes">
         <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; fichier(s) sélectionné(s) ?</numerusform>
             <numerusform>Supprimer les &lt;strong&gt;%n&lt;/strong&gt; fichiers sélectionné(s) ?</numerusform>
         </translation>
