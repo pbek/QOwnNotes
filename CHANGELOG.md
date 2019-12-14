@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 19.12.9
+- you can now choose in the *Preview settings* if you want to use the internal export
+  styling for exporting (also partial) or printing of notes or if you want to use the
+  styling of your preview (for [#1469](https://github.com/pbek/QOwnNotes/issues/1469))
+    - by default the internal styling will be used
+    - this is especially useful for the dark mode
+- a lot of general performance optimizations were done (for [#1503](https://github.com/pbek/QOwnNotes/pull/1503)
+  and [#1505](https://github.com/pbek/QOwnNotes/pull/1505), thank you @Waqar144)
+
 ## 19.12.8
 - trailing and leading spaces will now be trimmed from pasted urls in the
   *Image dialog* (for [#1500](https://github.com/pbek/QOwnNotes/issues/1500))
