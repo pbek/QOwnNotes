@@ -1141,7 +1141,7 @@ void MainWindow::initPanelMenu() {
 //            updatePanelMenu();
 //        });
 
-        // this connect works without crash
+        // this connect works without crash, it doesn't seem to trigger on exit
         QObject::connect(dockWidget, SIGNAL(visibilityChanged(bool)),
                 this, SLOT(updatePanelMenu()));
 
