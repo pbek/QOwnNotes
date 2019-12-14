@@ -760,6 +760,8 @@ private:
 
     void printNote(QTextEdit *textEdit);
 
+    void printTextDocument(QTextDocument *textDocument);
+
     void updateEncryptNoteButtons();
 
     void askForEncryptedNotePasswordIfNeeded(const QString& additionalText = QString());
@@ -1019,4 +1021,6 @@ private:
     void loadDictionaryNames();
 
     void loadSpellingBackends();
+
+    QTextDocument *getDocumentForPreviewExport();
 };

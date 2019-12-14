@@ -2145,8 +2145,6 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                                  "a { color: #FF9137; text-decoration: none; } %1 %3 %4"
                                  "</style></head><body class=\"preview\">%2</body></html>")
                 .arg(codeStyleSheet, result, rtlStyle, schemaStyles);
-
-        qDebug() << "result: " << result;
     }
 
     // check if there is a script that wants to modify the content

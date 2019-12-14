@@ -4815,13 +4815,7 @@ bool MainWindow::preparePrintNotePrinter(QPrinter *printer) {
  * @param textEdit
  */
 void MainWindow::printNote(QPlainTextEdit *textEdit) {
-    auto *printer = new QPrinter();
-
-    if (preparePrintNotePrinter(printer)) {
-        textEdit->document()->print(printer);
-    }
-
-    delete printer;
+    printTextDocument(textEdit->document());
 }
 
 /**
@@ -4829,10 +4823,18 @@ void MainWindow::printNote(QPlainTextEdit *textEdit) {
  * @param textEdit
  */
 void MainWindow::printNote(QTextEdit *textEdit) {
+    printTextDocument(textEdit->document());
+}
+
+/**
+ * @brief Prints the content of a text document
+ * @param textEdit
+ */
+void MainWindow::printTextDocument(QTextDocument *textDocument) {
     auto *printer = new QPrinter();
 
     if (preparePrintNotePrinter(printer)) {
-        textEdit->document()->print(printer);
+        textDocument->print(printer);
     }
 
     delete printer;
@@ -6206,7 +6208,7 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
             // print the selected text (preview)
             QString html = currentNote.textToMarkdownHtml(
                     selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
-                    getMaxImageWidth());
+                    getMaxImageWidth(), Utils::Misc::useInternalExportStylingForPreview());
             auto *textEdit = new QTextEdit(this);
             textEdit->setHtml(html);
             printNote(textEdit);
@@ -6220,7 +6222,7 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
             // export the selected text (preview) as PDF
             QString html = currentNote.textToMarkdownHtml(
                     selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
-                    getMaxImageWidth(), true);
+                    getMaxImageWidth(), Utils::Misc::useInternalExportStylingForPreview());
             html = Utils::Misc::parseTaskList(html, false);
             auto *textEdit = new QTextEdit(this);
             textEdit->setHtml(html);
@@ -6303,13 +6305,7 @@ void MainWindow::on_actionOpen_List_triggered() {
  * @brief Exports the current note as PDF (markdown)
  */
 void MainWindow::on_action_Export_note_as_PDF_markdown_triggered() {
-    bool decrypt = ui->noteTextEdit->isHidden();
-    QString html = currentNote.toMarkdownHtml(NoteFolder::currentLocalPath(),
-                                              getMaxImageWidth(), true, decrypt);
-    html = Utils::Misc::parseTaskList(html, false);
-
-    auto doc = ui->noteTextView->document()->clone();
-    doc->setHtml(html);
+    auto doc = getDocumentForPreviewExport();
     exportNoteAsPDF(doc);
     doc->deleteLater();
 }
@@ -6322,14 +6318,27 @@ void MainWindow::on_action_Export_note_as_PDF_text_triggered() {
     exportNoteAsPDF(textEdit);
 }
 
+QTextDocument *MainWindow::getDocumentForPreviewExport() {
+    bool decrypt = ui->noteTextEdit->isHidden();
+    QString html = currentNote.toMarkdownHtml(
+                NoteFolder::currentLocalPath(), getMaxImageWidth(),
+                Utils::Misc::useInternalExportStylingForPreview(), decrypt);
+    html = Utils::Misc::parseTaskList(html, false);
+
+    auto doc = ui->noteTextView->document()->clone();
+    doc->setHtml(html);
+
+    return doc;
+}
+
 /**
  * @brief Prints the current note (markdown)
  */
 void MainWindow::on_action_Print_note_markdown_triggered() {
-    // reload the preview in case it is turned off
-    setNoteTextFromNote(&currentNote, true, true);
+    auto doc = getDocumentForPreviewExport();
+    printTextDocument(doc);
+    doc->deleteLater();
 
-    printNote(ui->noteTextView);
 }
 
 /**

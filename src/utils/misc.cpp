@@ -1088,6 +1088,16 @@ bool Utils::Misc::isNoteEditingAllowed() {
 }
 
 /**
+ * Returns if "useInternalExportStyling" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::useInternalExportStylingForPreview() {
+    QSettings settings;
+    return settings.value(QStringLiteral("MainWindow/noteTextView.useInternalExportStyling"), true).toBool();
+}
+
+/**
  * Returns if "allowNoteEditing" is turned on
  *
  * @return
