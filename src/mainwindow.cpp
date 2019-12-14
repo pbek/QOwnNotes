@@ -1136,9 +1136,14 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
 void MainWindow::initPanelMenu() {
     // update the panel menu if the visibility of a panel was changed
     Q_FOREACH(QDockWidget *dockWidget, findChildren<QDockWidget *>()) {
-        connect(dockWidget, &QDockWidget::visibilityChanged, this, [this](){
-            updatePanelMenu();
-        });
+        // seems to crash the application on exit
+//        connect(dockWidget, &QDockWidget::visibilityChanged, this, [this](){
+//            updatePanelMenu();
+//        });
+
+        // this connect works without crash
+        QObject::connect(dockWidget, SIGNAL(visibilityChanged(bool)),
+                this, SLOT(updatePanelMenu()));
 
         // we are disabling the dock widget context menu to prevent enabling
         // of the note sub-folder toolbar if sub-folders are disabled
@@ -1167,6 +1172,8 @@ void MainWindow::initToolbarMenu() {
  * Updates the panel menu entries
  */
 void MainWindow::updatePanelMenu() {
+    qDebug() << __func__ << " - 'updatePanelMenu'";
+
     ui->menuPanels->clear();
     QSettings settings;
 
