@@ -8,6 +8,7 @@
     - this is especially useful for the dark mode
 - a lot of general performance optimizations were done (for [#1503](https://github.com/pbek/QOwnNotes/pull/1503)
   and [#1505](https://github.com/pbek/QOwnNotes/pull/1505), thank you @Waqar144)
+- added more Uzbek translation (thank you Fabijenna)
 
 ## 19.12.8
 - trailing and leading spaces will now be trimmed from pasted urls in the
