@@ -629,13 +629,14 @@ QString GuessLanguage::identify(const QString &text, const QStringList &suggesti
         return identified;
     }
 
-    qCDebug(SONNET_LOG_CORE()) << "Unable to identify string with dictionaries:" << text;
+//    qCDebug(SONNET_LOG_CORE()) << "Unable to identify string with dictionaries:" << text;
+
     // None of our methods worked, just return the best suggestion
     if (!suggestionsList.isEmpty()) {
         return suggestionsList.first();
     }
 
-    qCDebug(SONNET_LOG_CORE) << "Unable to find any suggestion for" << text;
+//    qCDebug(SONNET_LOG_CORE) << "Unable to find any suggestion for" << text;
 
     // Not even any suggestions, give up
     return QString();
