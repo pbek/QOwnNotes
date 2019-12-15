@@ -382,7 +382,7 @@ MainWindow::MainWindow(QWidget *parent) :
         if (isInDistractionFreeMode()) {
             restoreCurrentWorkspace();
         } else {
-            QTimer::singleShot(500, this, &MainWindow::restoreCurrentWorkspace);
+            QTimer::singleShot(500, this, SLOT(restoreCurrentWorkspace()));
         }
     }
 
@@ -778,7 +778,7 @@ void MainWindow::initDockWidgets() {
         settings.setValue(QStringLiteral("dockWasInitializedOnce"), true);
 
         // releasing the forced maximum sizes
-        QTimer::singleShot(250, this, &MainWindow::releaseDockWidgetSizes);
+        QTimer::singleShot(250, this, SLOT(releaseDockWidgetSizes()));
     }
 
 //    ui->noteEditFrame->setStyleSheet("* { border: none; }");
@@ -825,7 +825,7 @@ void MainWindow::initShowHidden() {
     QSettings settings;
     const bool startHidden = settings.value(QStringLiteral("StartHidden"), false).toBool();
     if (startHidden) {
-        QTimer::singleShot(250, this, &MainWindow::hide);
+        QTimer::singleShot(250, this, SLOT(hide()));
     }
 }
 
@@ -961,7 +961,7 @@ void MainWindow::reloadTodoLists() {
 
         // generate the system tray context menu to show modified tasks
         // in 15 sec (because we don't know when all new tasks will be loaded)
-        QTimer::singleShot(15000, this, &MainWindow::generateSystemTrayContextMenu);
+        QTimer::singleShot(15000, this, SLOT(generateSystemTrayContextMenu()));
     }
 }
 
@@ -2421,7 +2421,7 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     ui->encryptedNoteTextEdit->setPaperMargins();
 
     if (_webSocketServerService == Q_NULLPTR) {
-        QTimer::singleShot(250, this, &MainWindow::initWebSocketServerService);
+        QTimer::singleShot(250, this,SLOT(initWebSocketServerService()));
     } else if (Utils::Misc::isSocketServerEnabled()) {
         if (_webSocketServerService->getPort() !=
             WebSocketServerService::getSettingsPort()) {
@@ -2929,7 +2929,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         files = notesDir.entryList(filters, QDir::Files, QDir::Time);
 
         // jump to the welcome note in the note selector in 500ms
-        QTimer::singleShot(500, this, &MainWindow::jumpToWelcomeNote);
+        QTimer::singleShot(500, this, SLOT(jumpToWelcomeNote()));
     }
 
     // get the current crypto key to set it again
@@ -3373,8 +3373,8 @@ QString MainWindow::selectOwnCloudNotesFolder() {
                     // No other way to quit the application worked
                     // in the constructor
                     //Waqar144: this doesn't seem very wise...
-                    QTimer::singleShot(0, this, &MainWindow::quitApp);
-                    QTimer::singleShot(100, this, &MainWindow::quitApp);
+                    QTimer::singleShot(0, this, SLOT(quitApp()));
+                    QTimer::singleShot(100, this, SLOT(quitApp()));
                     break;
             }
         }
@@ -8873,7 +8873,7 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFo
                    noteSubFolderCount).arg(noteSubFolder.getName()), 5000);
 
         // wait some time to enable the check again to prevent troubles on macOS
-        QTimer::singleShot(4000, this, &MainWindow::enableNoteExternallyRemovedCheck);
+        QTimer::singleShot(4000, this, SLOT(enableNoteExternallyRemovedCheck()));
     }
 }
 
@@ -9034,7 +9034,7 @@ void MainWindow::onNoteTextViewResize(QSize size, QSize oldSize) {
     // just regenerate the note once a second for performance reasons
     if (!_noteViewIsRegenerated) {
         _noteViewIsRegenerated = true;
-        QTimer::singleShot(1000, this, &MainWindow::regenerateNotePreview);
+        QTimer::singleShot(1000, this, SLOT(regenerateNotePreview()));
     }
 }
 
