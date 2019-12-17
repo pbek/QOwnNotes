@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## 19.12.10
+- you now can choose if you want to use a **<kbd>Tab</kbd> or spaces** to **indent text**
+  in the *Editor settings* (for [#1455](https://github.com/pbek/QOwnNotes/issues/1455))
+    - you can also choose how many spaces should be used
+    - this also works with indenting selected text and in lists
+    - now by default four spaces will be used to indent text instead of a <kbd>Tab</kbd>
+- the num literal highlighter in CSH was re-implemented, multiline comment support was added
+  and more syntax highlighter refactoring and optimization was done
+  (for [#52](https://github.com/pbek/qmarkdowntextedit/pull/52),
+  [#53](https://github.com/pbek/qmarkdowntextedit/pull/53),
+  [#54](https://github.com/pbek/qmarkdowntextedit/pull/54) and
+  [#55](https://github.com/pbek/qmarkdowntextedit/pull/55) thank you @Waqar144)
+
 ## 19.12.9
 - you can now choose in the *Preview settings* if you want to use the internal export
   styling for exporting (also partial) or printing of notes or if you want to use the
