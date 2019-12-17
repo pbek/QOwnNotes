@@ -12,6 +12,11 @@
   [#53](https://github.com/pbek/qmarkdowntextedit/pull/53),
   [#54](https://github.com/pbek/qmarkdowntextedit/pull/54) and
   [#55](https://github.com/pbek/qmarkdowntextedit/pull/55) thank you @Waqar144)
+- added more Spanish, Italian, Catalan, Slovenian, Polish, Macedonian, Swedish,
+  Basque, Uzbek, Danish, Bulgarian, Cebuano, Croatian, Norwegian, Czech, Finnish,
+  Icelandic, Punjabi, Latvian, Romanian, Lithuanian, Dutch, Hungarian, Slovak,
+  Russian, German translation (thank you richarson, mlocati, MGuerra, Fabijenna,
+  unchase, rakekniven, tiwi90)
 
 ## 19.12.9
 - you can now choose in the *Preview settings* if you want to use the internal export
