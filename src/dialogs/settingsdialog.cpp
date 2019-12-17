@@ -703,6 +703,10 @@ void SettingsDialog::storeSettings() {
                       ui->vimModeCheckBox->isChecked());
     settings.setValue("Editor/disableCursorBlinking",
                       ui->disableCursorBlinkingCheckBox->isChecked());
+    settings.setValue("Editor/useTabIndent",
+                      ui->useTabIndentCheckBox->isChecked());
+    settings.setValue("Editor/indentSize",
+                      ui->indentSizeSpinBox->value());
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -1038,6 +1042,8 @@ void SettingsDialog::readSettings() {
     ui->vimModeCheckBox->setChecked(settings.value("Editor/vimMode").toBool());
     ui->disableCursorBlinkingCheckBox->setChecked(settings.value(
             "Editor/disableCursorBlinking").toBool());
+    ui->useTabIndentCheckBox->setChecked(settings.value("Editor/useTabIndent").toBool());
+    ui->indentSizeSpinBox->setValue(Utils::Misc::indentSize());
     ui->markdownHighlightingCheckBox->setChecked(
             settings.value("markdownHighlightingEnabled", true).toBool());
     ui->fullyHighlightedBlockquotesCheckBox->setChecked(

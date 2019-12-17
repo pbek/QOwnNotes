@@ -89,6 +89,8 @@ namespace Utils {
         bool doAutomaticNoteFolderDatabaseClosing();
         bool isNoteListPreview();
         bool isEnableNoteTree();
+        QString indentCharacters();
+        int indentSize();
         QString toHumanReadableByteSize(qint64 size);
         QString prepareDebugInformationLine(
             const QString &headline, QString data,

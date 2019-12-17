@@ -1149,6 +1149,28 @@ bool Utils::Misc::isEnableNoteTree() {
 }
 
 /**
+ * Returns the characters to use to indent
+ *
+ * @return
+ */
+QString Utils::Misc::indentCharacters() {
+    QSettings settings;
+    return settings.value("Editor/useTabIndent").toBool() ?
+                "\t" :
+                QStringLiteral(" ").repeated(indentSize());
+}
+
+/**
+ * Returns the indent size
+ *
+ * @return
+ */
+int Utils::Misc::indentSize() {
+    QSettings settings;
+    return settings.value("Editor/indentSize", 4).toInt();
+}
+
+/**
  * Unescapes html special characters
  *
  * @param html

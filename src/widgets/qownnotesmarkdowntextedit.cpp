@@ -652,6 +652,11 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                     mainWindow->disallowNoteEditing();
 
                     return true;
+                } else if ((keyEvent->key() == Qt::Key_Tab) ||
+                         (keyEvent->key() == Qt::Key_Backtab)) {
+                    // handle entered tab and reverse tab keys
+                    return handleTabEntered(keyEvent->key() == Qt::Key_Backtab,
+                                            Utils::Misc::indentCharacters());
                 }
             }
         }
