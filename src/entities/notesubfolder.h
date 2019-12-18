@@ -49,7 +49,7 @@ public:
 
     void setParentId(int parentId);
 
-    QString relativePath(QString separator = QString()) const;
+    QString relativePath(QString separator = "") const;
 
     QString fullPath() const;
 

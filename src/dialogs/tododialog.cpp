@@ -307,7 +307,7 @@ void TodoDialog::jumpToTodoListItem() {
             row = findTodoItemRowByUID(_jumpToCalendarItemUid);
 
             if (row != 1) {
-                _jumpToCalendarItemUid = QString();
+                _jumpToCalendarItemUid = "";
             }
         }
 

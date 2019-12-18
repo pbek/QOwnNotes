@@ -600,7 +600,7 @@ void FontColorWidget::updateBackgroundColorCheckBox(bool checked, bool store) {
  * Removes the current schema
  */
 void FontColorWidget::on_deleteSchemeButton_clicked() {
-    if (_currentSchemaKey == QString()) {
+    if (_currentSchemaKey.isEmpty()) {
         return;
     }
 
@@ -615,7 +615,7 @@ void FontColorWidget::on_deleteSchemeButton_clicked() {
     QSettings settings;
     settings.beginGroup(_currentSchemaKey);
     // remove the group and all its keys
-    settings.remove(QString());
+    settings.remove("");
     settings.endGroup();
 
     // remove the current schema from the list of schemas

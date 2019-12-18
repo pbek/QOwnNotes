@@ -1860,7 +1860,7 @@ void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData>& it
     if (!serverUrlPath.isEmpty()) {
         // remove the path from the end because we already got it in the url
         serverUrlText.replace(QRegularExpression(
-                QRegularExpression::escape(serverUrlPath) + "$"), QString());
+                QRegularExpression::escape(serverUrlPath) + "$"), "");
     }
 
     QListIterator<CalDAVCalendarData> itr(items);
@@ -2455,7 +2455,7 @@ void SettingsDialog::on_noteFolderRemotePathButton_clicked()
             tr("Loading folders from server"));
 
     OwnCloudService *ownCloud = OwnCloudService::instance(true, _selectedNoteFolder.getCloudConnectionId());
-    ownCloud->settingsGetFileList(this, QString());
+    ownCloud->settingsGetFileList(this, "");
 }
 
 /**
@@ -3377,13 +3377,13 @@ void SettingsDialog::on_resetToolbarPushButton_clicked() {
                        "The application will be closed in the process, the "
                        "default toolbars will be restored when you start it "
                        "again."),
-            tr("Reset and &exit"), tr("&Cancel"), QString(),
+            tr("Reset and &exit"), tr("&Cancel"), "",
             1) == 0) {
         QSettings settings;
 
         // remove all settings in the group
         settings.beginGroup("toolbar");
-        settings.remove(QString());
+        settings.remove("");
         settings.endGroup();
 
         qApp->quit();
@@ -3693,7 +3693,7 @@ void SettingsDialog::on_resetMessageBoxesButton_clicked() {
 
         // remove all settings in the group
         settings.beginGroup("MessageBoxOverride");
-        settings.remove(QString());
+        settings.remove("");
         settings.endGroup();
     }
 }

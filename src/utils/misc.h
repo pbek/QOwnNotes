@@ -44,7 +44,7 @@ namespace Utils {
         QString appendIfDoesNotEndWith(QString text, const QString& endString);
         bool startDetachedProcess(const QString& executablePath,
                                   const QStringList& parameters = QStringList(),
-                                  QString workingDirectory = QString());
+                                  QString workingDirectory = "");
         QString shorten(QString text, int length, const QString& sequence = QStringLiteral("..."));
         QString cycleTextCase(const QString& text);
         QString toSentenceCase(const QString& text);

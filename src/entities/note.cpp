@@ -765,7 +765,7 @@ QList<QString> Note::searchAsNameListInCurrentNoteSubFolder(
     QSqlQuery query(db);
 
     QList<QString> nameList;
-    QString textSearchSql = !searchInNameOnly ? QStringLiteral("OR note_text LIKE :text ") : QString();
+    QString textSearchSql = !searchInNameOnly ? QStringLiteral("OR note_text LIKE :text ") : "";
     int noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
     query.prepare(QStringLiteral("SELECT name FROM note WHERE (name LIKE :text ") +
@@ -790,7 +790,7 @@ QList<QString> Note::searchAsNameList(const QString& text, bool searchInNameOnly
     QSqlQuery query(db);
 
     QList<QString> nameList;
-    QString textSearchSql = !searchInNameOnly ? QStringLiteral("OR note_text LIKE :text ") : QString();
+    QString textSearchSql = !searchInNameOnly ? QStringLiteral("OR note_text LIKE :text ") : "";
 
     query.prepare(QStringLiteral("SELECT name FROM note WHERE (name LIKE :text ") +
             textSearchSql + QStringLiteral(") ORDER BY file_last_modified DESC"));
@@ -915,7 +915,7 @@ QStringList Note::buildQueryStringList(QString searchString,
         }
 
     // remove empty items, so the search will not run amok
-    queryStrings.removeAll(QString());
+    queryStrings.removeAll("");
 
     // remove duplicate query items
     queryStrings.removeDuplicates();
@@ -1216,7 +1216,7 @@ bool Note::storeNoteTextFileToDisk() {
     if (!decryptedNoteText.isEmpty()) {
         noteText = decryptedNoteText;
         encryptNoteText();
-        decryptedNoteText = QString();
+        decryptedNoteText = "";
     }
 
     // transform all types of newline to \n
@@ -1478,7 +1478,7 @@ bool Note::updateNoteTextFromDisk() {
     file.close();
 
     // strangely it sometimes gets null
-    if (this->noteText.isNull()) this->noteText = QString();
+    if (this->noteText.isNull()) this->noteText = "";
 
     return true;
 }
@@ -1555,7 +1555,7 @@ QString Note::relativeNoteFilePath(QString separator) const {
  * Returns the relative path of the note subfolder
  */
 QString Note::relativeNoteSubFolderPath() const {
-    QString path = QString();
+    QString path = "";
 
     if (noteSubFolderId > 0) {
         NoteSubFolder noteSubFolder = getNoteSubFolder();
@@ -1571,7 +1571,7 @@ QString Note::relativeNoteSubFolderPath() const {
  * Returns the path-data of the note subfolder file
  */
 QString Note::noteSubFolderPathData() const {
-    QString path = QString();
+    QString path = "";
 
     if (noteSubFolderId > 0) {
         NoteSubFolder noteSubFolder = getNoteSubFolder();
@@ -1587,7 +1587,7 @@ QString Note::noteSubFolderPathData() const {
  * Returns the full url of the note file
  */
 QUrl Note::fullNoteFileUrl() const {
-    QString windowsSlash = QString();
+    QString windowsSlash = "";
 
 #ifdef Q_OS_WIN32
     // we need another slash for Windows
@@ -1943,7 +1943,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
 
     hoedown_document *document = hoedown_document_new(renderer, extensions, 32);
 
-    QString windowsSlash = QString();
+    QString windowsSlash = "";
 
 #ifdef Q_OS_WIN32
     // we need another slash for Windows
@@ -2027,7 +2027,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
 
     // return an empty string if the note is empty
     if (length == 0) {
-        return QString();
+        return "";
     }
 
     hoedown_buffer *html = hoedown_buffer_new(length);
@@ -2069,7 +2069,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
             .toString();
 
     // set the stylesheet for the <code> blocks
-    QString codeStyleSheet = QString();
+    QString codeStyleSheet = "";
     if (!fontString.isEmpty()) {
         // set the note text view font
         QFont font;
@@ -2101,7 +2101,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     // correct the strikeout tag
     result.replace(QRegularExpression(QStringLiteral("<del>([^<]+)<\\/del>")), QStringLiteral("<s>\\1</s>"));
     bool rtl = settings.value(QStringLiteral("MainWindow/noteTextView.rtl")).toBool();
-    QString rtlStyle = rtl ? QStringLiteral("body {text-align: right; direction: rtl;}") : QString();
+    QString rtlStyle = rtl ? QStringLiteral("body {text-align: right; direction: rtl;}") : "";
 
     if (forExport) {
         // get defined body font from settings
@@ -2109,7 +2109,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                 .toString();
 
         // create export stylesheet
-        QString exportStyleSheet = QString();
+        QString exportStyleSheet = "";
         if (!bodyFontString.isEmpty()) {
             QFont bodyFont;
             bodyFont.fromString(bodyFontString);
@@ -2134,7 +2134,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     } else {
         QString schemaStyles = settings.value("MainWindow/noteTextView.useEditorStyles", true).toBool() ?
-                    Utils::Schema::getSchemaStyles() : QString();
+                    Utils::Schema::getSchemaStyles() : "";
 
         // for preview
         result = QStringLiteral("<html><head><style>"
@@ -2362,7 +2362,7 @@ QString Note::getEncryptedNoteText() const {
 
     // check if we have an encrypted note text and return it if so
     QRegularExpressionMatch match = re.match(noteText);
-    return match.hasMatch() ? match.captured(1) : QString();
+    return match.hasMatch() ? match.captured(1) : "";
 }
 
 /**
@@ -2831,14 +2831,14 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
         // return the image link
         // we add a "\n" in the end so that hoedown recognizes multiple images
         return QStringLiteral("![") + title + QStringLiteral("](") + mediaUrlString + QStringLiteral(")") +
-                (addNewLine ? QStringLiteral("\n") : QString());
+                (addNewLine ? QStringLiteral("\n") : "");
     }
 
-    return QString();
+    return "";
 }
 
 QString Note::mediaUrlStringForFileName(const QString &fileName) const {
-    QString urlString = QString();
+    QString urlString = "";
     QSettings settings;
 
     if (settings.value(QStringLiteral("legacyLinking")).toBool()) {
@@ -2857,7 +2857,7 @@ QString Note::mediaUrlStringForFileName(const QString &fileName) const {
 }
 
 QString Note::attachmentUrlStringForFileName(const QString &fileName) const {
-    QString urlString = QString();
+    QString urlString = "";
     QSettings settings;
 
     if (settings.value(QStringLiteral("legacyLinking")).toBool()) {
@@ -2916,7 +2916,7 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
                 attachmentUrlString + QStringLiteral(")");
     }
 
-    return QString();
+    return "";
 }
 
 /**
@@ -2977,7 +2977,7 @@ QString Note::importMediaFromBase64(QString &data, const QString& imageSuffix) {
 
     if (!tempFile->open()) {
         delete tempFile;
-        return QString();
+        return "";
     }
 
     // write image to the temporary file
@@ -3130,10 +3130,10 @@ QString Note::getNotePreviewText(bool asHtml, int lines) const {
     const QStringList &lineList = noteText.split(QStringLiteral("\n"));
 
     if (lineList.isEmpty()) {
-        return QString();
+        return "";
     }
 
-    noteText = QString();
+    noteText = "";
     for (int i = 0; i < std::min(lines, lineList.count()); i++) {
         if (i > 0) {
             noteText += QStringLiteral("\n");
@@ -3185,7 +3185,7 @@ QString Note::generateMultipleNotesPreviewText(const QList<Note> &notes) {
     bool isOdd = false;
     for (int i = 0; i < displayedNotesCount; i++) {
         Note note = notes[i];
-        QString oddStyle = isOdd ? QStringLiteral(" class='odd'") : QString();
+        QString oddStyle = isOdd ? QStringLiteral(" class='odd'") : "";
         QDateTime modified = note.getFileLastModified();
         QString noteText = note.getNotePreviewText(true, 5);
         QString noteLink = note.getNoteIdURL();
@@ -3233,7 +3233,7 @@ QList<Bookmark> Note::getParsedBookmarks() const {
 }
 
 void Note::resetNoteTextHtmlConversionHash() {
-    _noteTextHtmlConversionHash = QString();
+    _noteTextHtmlConversionHash = "";
 }
 
 /**
