@@ -14,7 +14,7 @@
 NoteSubFolder::NoteSubFolder() {
     this->id = 0;
     this->parentId = 0;
-    this->name = QString();
+    this->name = "";
 }
 
 int NoteSubFolder::getId() const {

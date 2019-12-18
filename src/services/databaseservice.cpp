@@ -293,6 +293,13 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 13;
     }
 
+    if (version < 14) {
+        // removing broken tag assignments from https://github.com/pbek/QOwnNotes/issues/1510
+        queryDisk.exec(QStringLiteral("DELETE FROM noteTagLink WHERE note_sub_folder_path IS NULL"));
+
+        version = 14;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"),
                    QString::number(version), QStringLiteral("note_folder"));
