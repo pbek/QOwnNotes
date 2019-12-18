@@ -5885,17 +5885,17 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5023"/>
       <source>Tabs and Indents</source>
-      <translation type="unfinished">Tabs and Indents</translation>
+      <translation>Lapok és bekezdések</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5031"/>
       <source>Use tab character instead of spaces</source>
-      <translation type="unfinished">Use tab character instead of spaces</translation>
+      <translation>Használjon tabulátor karaktert szóköz helyett</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5038"/>
       <source>Indent:</source>
-      <translation type="unfinished">Indent:</translation>
+      <translation>Bekezdés:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5281"/>

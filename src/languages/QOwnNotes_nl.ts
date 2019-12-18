@@ -5879,17 +5879,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5023"/>
       <source>Tabs and Indents</source>
-      <translation type="unfinished">Tabs and Indents</translation>
+      <translation>Tabbladen en inspringingen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5031"/>
       <source>Use tab character instead of spaces</source>
-      <translation type="unfinished">Use tab character instead of spaces</translation>
+      <translation>Gebruik tabteken in plaats van spaties</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5038"/>
       <source>Indent:</source>
-      <translation type="unfinished">Indent:</translation>
+      <translation>Inspringing:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5281"/>
