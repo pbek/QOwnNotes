@@ -10,7 +10,7 @@
  */
 
 NoteHistoryItem::NoteHistoryItem(Note *note, QPlainTextEdit *textEdit) :
-    _noteName(QString()), _noteSubFolderPathData(QString())
+    _noteName(""), _noteSubFolderPathData("")
 {
     _cursorPosition = 0;
     _relativeScrollBarPosition = 0;

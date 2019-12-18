@@ -31,7 +31,7 @@ const QString Script::ScriptRepositoryRawContentUrlPrefix =
         QStringLiteral("https://raw.githubusercontent.com/qownnotes/scripts/master/");
 
 
-Script::Script() : id(0), name(QString()), scriptPath(QString()),
+Script::Script() : id(0), name(""), scriptPath(""),
                    priority(0), enabled(true)
 {
 }
@@ -303,7 +303,7 @@ QList<Script> Script::fetchAll(bool enabledOnly) {
     QList<Script> scriptList;
     query.prepare(
             QStringLiteral("SELECT * FROM script %1 ORDER BY priority ASC, id ASC")
-                    .arg(enabledOnly ? QStringLiteral("WHERE enabled = 1") : QString()));
+                    .arg(enabledOnly ? QStringLiteral("WHERE enabled = 1") : ""));
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();

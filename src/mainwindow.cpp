@@ -1798,7 +1798,7 @@ void MainWindow::storeRecentNoteFolder(const QString& addFolderName,
     recentNoteFolders.removeAll(removeFolderName);
 
     // remove empty paths
-    recentNoteFolders.removeAll(QString());
+    recentNoteFolders.removeAll("");
 
     if (addFolderName != removeFolderName) {
         recentNoteFolders.prepend(addFolderName);
@@ -4466,6 +4466,7 @@ void MainWindow::tagSelectedNotes(const Tag &tag) {
 
                 // tag note
                 const bool result = tag.linkToNote(note);
+
                 if (result) {
                     tagCount++;
                     qDebug() << "Note was tagged:" << note.getName();
@@ -10724,7 +10725,7 @@ void MainWindow::on_actionRemove_current_workspace_triggered() {
 
     // remove all settings in the group
     settings.beginGroup(QStringLiteral("workspace-") + uuid);
-    settings.remove(QString());
+    settings.remove("");
     settings.endGroup();
 
     // update the menu and combo box
@@ -11055,7 +11056,7 @@ void MainWindow::on_tagTreeWidget_itemExpanded(QTreeWidgetItem *item) {
 void MainWindow::storeTagTreeWidgetExpandState() const {
     // get all items
     QList<QTreeWidgetItem*> allItems = ui->tagTreeWidget->
-            findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
 
     QStringList expandedList;
     Q_FOREACH(QTreeWidgetItem *item, allItems) {

@@ -14,7 +14,7 @@
 
 Tag::Tag() :
     id(0), priority(0), parentId(0),
-    _color(QColor()), name(QString()) {
+    _color(QColor()), name("") {
 }
 
 int Tag::getId() const {
@@ -803,7 +803,7 @@ bool Tag::store() {
     query.bindValue(QStringLiteral(":name"), this->name);
     query.bindValue(QStringLiteral(":priority"), this->priority);
     query.bindValue(QStringLiteral(":parentId"), this->parentId);
-    query.bindValue(QStringLiteral(":color"), _color.isValid() ? _color.name() : QString());
+    query.bindValue(QStringLiteral(":color"), _color.isValid() ? _color.name() : "");
 
     if (!query.exec()) {
         // on error
@@ -881,6 +881,7 @@ bool Tag::linkToNote(const Note &note) const {
 
     // update the parent tag for correct sorting by last use
     if (this->parentId > 0) {
+
         QSqlQuery parentQuery(db);
         parentQuery.prepare(QStringLiteral("SELECT * FROM tag WHERE id = :parentId"));
         parentQuery.bindValue(QStringLiteral(":parentId"), this->parentId);

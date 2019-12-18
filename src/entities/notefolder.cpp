@@ -13,9 +13,9 @@
 #include <QtCore/QJsonDocument>
 
 
-NoteFolder::NoteFolder() : name(QString()),
-                           localPath(QString()),
-                           remotePath(QString()) {
+NoteFolder::NoteFolder() : name(""),
+                           localPath(""),
+                           remotePath("") {
     id = 0;
     cloudConnectionId = 1;
     priority = 0;
@@ -353,7 +353,7 @@ QString NoteFolder::currentRemotePath(bool addTrailingSlash) {
  * Fetches the current local path
  */
 QString NoteFolder::currentLocalPath() {
-    QString path = QString();
+    QString path = "";
     NoteFolder noteFolder = currentNoteFolder();
 
     if (noteFolder.isFetched()) {
