@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 19.12.11
-- note tagging is working again (got broken in 19.12.9, for [#1510](https://github.com/pbek/QOwnNotes/issues/1510))
+- fixed note tagging (got broken in 19.12.9, for [#1510](https://github.com/pbek/QOwnNotes/issues/1510))
 - improved text indentation of selected text blocks (for [#1455](https://github.com/pbek/QOwnNotes/issues/1455))
 - added typescript highlighting support (for [#1513](https://github.com/pbek/QOwnNotes/pull/1513), thank you @Waqar144)
 
