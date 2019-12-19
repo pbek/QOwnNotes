@@ -343,7 +343,8 @@ QFont Utils::Schema::Settings::getEditorFont(int index) const {
 }
 
 QString Utils::Schema::getSchemaStyles() {
-    QString schemaStyles;
+    // reset background color of code blocks
+    QString schemaStyles = "code {background-color: transparent;}";
 
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::NoState, QStringLiteral("body"));
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::H1, QStringLiteral("h1"));
@@ -356,7 +357,7 @@ QString Utils::Schema::getSchemaStyles() {
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Bold, QStringLiteral("b, strong"));
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Italic, QStringLiteral("i, em"));
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::CodeBlock, QStringLiteral("code, pre > code"));
-    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::InlineCodeBlock, QStringLiteral("p > code"));
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::InlineCodeBlock, QStringLiteral("p > code, li > code"));
 
     return schemaStyles;
 }
