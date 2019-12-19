@@ -7820,6 +7820,9 @@ void MainWindow::linkTagNameToCurrentNote(const QString& tagName,
         return;
     }
 
+    // workaround when signal block doesn't work correctly
+    directoryWatcherWorkaround(true, true);
+
     // create a new tag if it doesn't exist
     Tag tag = Tag::fetchByName(tagName);
     if (!tag.isFetched()) {
@@ -7863,6 +7866,9 @@ void MainWindow::linkTagNameToCurrentNote(const QString& tagName,
         // handle the coloring of the note in the note tree widget
         handleNoteTreeTagColoringForNote(currentNote);
     }
+
+    // turn off the workaround again
+    directoryWatcherWorkaround(false, true);
 }
 
 /**
@@ -11221,13 +11227,27 @@ void MainWindow::on_tagTreeWidget_itemDoubleClicked(
     Tag tag = Tag::fetch(item->data(0, Qt::UserRole).toInt());
 
     if (tag.isFetched()) {
+        // workaround when signal block doesn't work correctly
+        directoryWatcherWorkaround(true, true);
+
+        const QSignalBlocker blocker(noteDirectoryWatcher);
+        Q_UNUSED(blocker)
+
         if (tag.isLinkedToNote(currentNote)) {
             tag.removeLinkToNote(currentNote);
         } else {
             tag.linkToNote(currentNote);
         }
 
+        if (!NoteFolder::isCurrentNoteTreeEnabled()) {
+            filterNotes();
+        }
+
+        reloadCurrentNoteTags();
         reloadTagTree();
+
+        // turn off the workaround again
+        directoryWatcherWorkaround(false, true);
     }
 }
 
