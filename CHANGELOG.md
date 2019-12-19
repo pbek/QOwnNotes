@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.12.13
+- fixed build error on older Qt versions
+
 ## 19.12.12
 - improved text un-indentation of list elements (for [#1455](https://github.com/pbek/QOwnNotes/issues/1455))
 - improved dark mode code block highlighting in the preview if editor highlighting

@@ -46,9 +46,8 @@
 #include <QStringBuilder>
 
 #ifndef INTEGRATION_TESTS
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
 #include <QScreen>
-#else
+#if (QT_VERSION < QT_VERSION_CHECK(5, 6, 0))
 #include <QGuiApplication>
 #endif
 #endif
