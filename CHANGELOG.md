@@ -9,6 +9,8 @@
 - the screen resolution is now shown in the *Debug settings*
 - fixed a possible highlighting crash and css class and id highlighting
   (for [#57](https://github.com/pbek/qmarkdowntextedit/pull/57), thank you @Waqar144)
+- added more Catalan, Swedish, Bosnian, Greek, Hebrew, Danish, Croatian, Romanian,
+  Finnish, Polish, Slovenian, Slovak translation (thank you MGuerra, Fabijenna)
 
 ## 19.12.11
 - fixed note tagging (got broken in 19.12.9, for [#1510](https://github.com/pbek/QOwnNotes/issues/1510))
