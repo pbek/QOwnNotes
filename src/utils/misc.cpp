@@ -1332,9 +1332,9 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     QString screenResolution;
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    QScreen* screen = qApp->primaryScreen();
-    screenResolution = QString::number(screen->geometry().width())
-                        + "x" + QString::number(screen->geometry().height());
+    QScreen* primaryScreen = qApp->primaryScreen();
+    screenResolution = QString::number(primaryScreen->geometry().width())
+                        + "x" + QString::number(primaryScreen->geometry().height());
 #else
     screenResolution =
             QString::number(
@@ -1347,10 +1347,11 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     output += prepareDebugInformationLine(QStringLiteral("Primary screen resolution"),
                                           screenResolution, withGitHubLineBreaks);
 
-    QStringList screenResolutions;
     QList<QScreen *> screens = qApp->screens();
 
     if (screens.count() > 1) {
+        QStringList screenResolutions;
+
         Q_FOREACH(QScreen *screen, screens) {
             screenResolutions.append(QString::number(screen->geometry().width())
                                      + "x" + QString::number(screen->geometry().height()));
