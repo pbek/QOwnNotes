@@ -45,6 +45,14 @@
 #include <QTextDocument>
 #include <QStringBuilder>
 
+#ifndef INTEGRATION_TESTS
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+#include <QScreen>
+#else
+#include <QGuiApplication>
+#endif
+#endif
+
 #ifdef Q_OS_WIN
 #include <windows.h>
 #endif
@@ -1320,6 +1328,25 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     output += prepareDebugInformationLine(QStringLiteral("Locale (interface)"),
                                           settings.value(QStringLiteral("interfaceLanguage"))
                                                   .toString(), withGitHubLineBreaks);
+#ifndef INTEGRATION_TESTS
+    QString screenResolution;
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    QScreen* screen = qApp->primaryScreen();
+    screenResolution = QString::number(screen->geometry().width())
+                        + "x" + QString::number(screen->geometry().height());
+#else
+    screenResolution =
+            QString::number(
+                    QGuiApplication::primaryScreen()->geometry().width()) + "x"
+                    + QString::number(
+                    QGuiApplication::primaryScreen()->geometry().height());
+
+#endif
+
+    output += prepareDebugInformationLine(QStringLiteral("Screen resolution"),
+                                          screenResolution, withGitHubLineBreaks);
+#endif
 
     output += prepareDebugInformationLine(QStringLiteral("Icon theme"),
                                           QIcon::themeName(), withGitHubLineBreaks);
