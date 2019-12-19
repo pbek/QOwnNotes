@@ -1344,8 +1344,22 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
 
 #endif
 
-    output += prepareDebugInformationLine(QStringLiteral("Screen resolution"),
+    output += prepareDebugInformationLine(QStringLiteral("Primary screen resolution"),
                                           screenResolution, withGitHubLineBreaks);
+
+    QStringList screenResolutions;
+    QList<QScreen *> screens = qApp->screens();
+
+    if (screens.count() > 1) {
+        Q_FOREACH(QScreen *screen, screens) {
+            screenResolutions.append(QString::number(screen->geometry().width())
+                                     + "x" + QString::number(screen->geometry().height()));
+        }
+
+        output += prepareDebugInformationLine(
+                QStringLiteral("Screen resolution(s)"),
+                screenResolutions.join(QStringLiteral(", ")), withGitHubLineBreaks);
+    }
 #endif
 
     output += prepareDebugInformationLine(QStringLiteral("Icon theme"),

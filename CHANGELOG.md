@@ -6,7 +6,7 @@
   styles are used (for [#1516](https://github.com/pbek/QOwnNotes/issues/1516))
 - fixed unnecessary note folder reload when the current note is tagged by
   double clicking a tag or using the *Note tags panel*
-- the screen resolution is now shown in the *Debug settings*
+- the screen resolutions are now shown in the *Debug settings*
 - fixed a possible highlighting crash and css class and id highlighting
   (for [#57](https://github.com/pbek/qmarkdowntextedit/pull/57), thank you @Waqar144)
 - added more Catalan, Swedish, Bosnian, Greek, Hebrew, Danish, Croatian, Romanian,
