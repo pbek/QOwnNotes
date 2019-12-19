@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 19.12.12
+- improved text un-indentation of list elements (for [#1455](https://github.com/pbek/QOwnNotes/issues/1455))
+- improved dark mode code block highlighting in the preview if editor highlighting
+  styles are used (for [#1516](https://github.com/pbek/QOwnNotes/issues/1516))
+- fixed unnecessary note folder reload when the current note is tagged by
+  double clicking a tag or using the *Note tags panel*
+- the screen resolution is now shown in the *Debug settings*
+- fixed a possible highlighting crash and css class and id highlighting
+  (for [#57](https://github.com/pbek/qmarkdowntextedit/pull/57), thank you @Waqar144)
+
 ## 19.12.11
 - fixed note tagging (got broken in 19.12.9, for [#1510](https://github.com/pbek/QOwnNotes/issues/1510))
 - improved text indentation of selected text blocks (for [#1455](https://github.com/pbek/QOwnNotes/issues/1455))
