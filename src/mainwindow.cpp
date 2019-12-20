@@ -8310,8 +8310,8 @@ void MainWindow::on_tagTreeWidget_itemSelectionChanged() {
 
     if (count <= 1) {
         if (count == 1) {
-           on_tagTreeWidget_currentItemChanged(ui->tagTreeWidget->selectedItems().first(),
-                                                Q_NULLPTR);
+//           on_tagTreeWidget_currentItemChanged(ui->tagTreeWidget->selectedItems().first(),
+//                                                Q_NULLPTR);
         }
         return;
     }
@@ -9836,7 +9836,7 @@ void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged() {
     //if no items selected or only one selected
     if (ui->noteSubFolderTreeWidget->selectedItems().count() <= 1) {
         if (items.count() == 1) {
-            on_noteSubFolderTreeWidget_currentItemChanged(items.first(), Q_NULLPTR);
+            //on_noteSubFolderTreeWidget_currentItemChanged(items.first(), Q_NULLPTR);
         }
         return;
     }
