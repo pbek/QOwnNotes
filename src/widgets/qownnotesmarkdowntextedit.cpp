@@ -113,6 +113,8 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::H6);
     setFormatStyle(MarkdownHighlighter::HighlighterState::HorizontalRuler);
     setFormatStyle(MarkdownHighlighter::HighlighterState::List);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CheckBoxChecked);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CheckBoxUnChecked);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Bold);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Italic);
     setFormatStyle(MarkdownHighlighter::HighlighterState::BlockQuote);
