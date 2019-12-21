@@ -11,6 +11,8 @@
   if total byte size is not transmitted by the web server
 - you can now remove multiple indent-character inside of text when indenting with spaces
   (for [#1455](https://github.com/pbek/QOwnNotes/issues/1455))
+- fixed a problem with showing correct notes if no sub-folder was selected
+  (for [#1520](https://github.com/pbek/QOwnNotes/pull/1520), thank you @Waqar144)
 
 ## 19.12.13
 - fixed build error on older Qt versions
