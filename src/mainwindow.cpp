@@ -5419,8 +5419,12 @@ void MainWindow::filterNotesByNoteSubFolders() {
     //get all the folder ids
     QList<int> selectedNoteSubFolderIds;
     selectedNoteSubFolderIds.reserve(selectedItems.count());
-    Q_FOREACH(QTreeWidgetItem *i, selectedItems) {
-        selectedNoteSubFolderIds << i->data(0, Qt::UserRole).toInt();
+    if (selectedItems.count() > 1) {
+        Q_FOREACH(QTreeWidgetItem *i, selectedItems) {
+            selectedNoteSubFolderIds << i->data(0, Qt::UserRole).toInt();
+        }
+    } else {
+        selectedNoteSubFolderIds << NoteSubFolder::activeNoteSubFolderId();
     }
 
     QList<int> noteSubFolderIds;
@@ -5457,7 +5461,6 @@ void MainWindow::filterNotesByNoteSubFolders() {
         if (!noteIdList.contains((*it)->data(0, Qt::UserRole).toInt())) {
             (*it)->setHidden(true);
         }
-
         ++it;
     }
 }
