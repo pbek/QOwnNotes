@@ -115,13 +115,30 @@ QStringList Utils::Schema::Settings::getSchemaKeys(const QString& schema) const 
  * @param defaultValue
  * @return
  */
-QVariant Utils::Schema::Settings::getSchemaValue(const QString& key, const QVariant& defaultValue) const {
-    const QString& schema = currentSchemaKey();
-    if (_defaultSchemaSubkeys.contains(schema)) {
-        return _defaultSchemaSettings.value(schema + '/' + key, defaultValue);
-    } else {
-        return QSettings().value(schema + '/' + key, defaultValue);
+QVariant Utils::Schema::Settings::getSchemaValue(const QString& key, const QVariant& defaultValue, QString schemaKey) const {
+    const bool schemaNotSet = schemaKey.isEmpty();
+
+    if (schemaNotSet) {
+        schemaKey = currentSchemaKey();
     }
+
+    const bool isDefaultSchema = _defaultSchemaSubkeys.contains(schemaKey);
+
+    QVariant value = isDefaultSchema ?
+                     _defaultSchemaSettings.value(schemaKey + QStringLiteral("/") + key, defaultValue) :
+                     QSettings().value(schemaKey + QStringLiteral("/") + key, defaultValue);
+
+    if (!value.isValid() && schemaNotSet) {
+        QString fallbackSchemaKey = isDefaultSchema ?
+                         _defaultSchemaSettings.value(schemaKey + QStringLiteral("/FallbackSchema")).toString() :
+                         QSettings().value(schemaKey + QStringLiteral("/FallbackSchema")).toString();
+
+        if (!fallbackSchemaKey.isEmpty()) {
+            value = getSchemaValue(key, defaultValue, fallbackSchemaKey);
+        }
+    }
+
+    return value;
 }
 
 /**

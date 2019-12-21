@@ -43,7 +43,8 @@ namespace Utils {
             QStringList getSchemaKeys(const QString& schema) const;
 
             QVariant getSchemaValue(const QString& key,
-                                    const QVariant& defaultValue = QVariant()) const;
+                                    const QVariant& defaultValue = QVariant(),
+                                    QString schemaKey = QString()) const;
             QColor getForegroundColor(int index) const;
             QColor getBackgroundColor(int index) const;
 
