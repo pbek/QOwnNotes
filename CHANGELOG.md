@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 19.12.14
+- checked and unckecked **checkboxes** are now **highlighted** in the note editor
+  (for [#1519](https://github.com/pbek/QOwnNotes/issues/1519))
+- the *Issue assistant dialog* is now scrollable to make it easier to enter issues
+  on low resolution screens (for [#1515](https://github.com/pbek/QOwnNotes/issues/1515))
+- made some performance improvements when changing the current note item
+  (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
+- fixed total byte display while downloading dictionaries in the *Dictionary manager dialog*
+  if total byte size is not transmitted by the web server
+- you can now remove multiple indent-character inside of text when indenting with spaces
+  (for [#1455](https://github.com/pbek/QOwnNotes/issues/1455))
+
 ## 19.12.13
 - fixed build error on older Qt versions
 
