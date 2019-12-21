@@ -210,6 +210,8 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Code (other)"), MarkdownHighlighter::CodeOther);
 
     addTextTreeWidgetItem(tr("List item"), MarkdownHighlighter::List);
+    addTextTreeWidgetItem(tr("Checkbox unchecked"), MarkdownHighlighter::CheckBoxUnChecked);
+    addTextTreeWidgetItem(tr("Checkbox checked"), MarkdownHighlighter::CheckBoxChecked);
     addTextTreeWidgetItem(tr("Header, level 1"), MarkdownHighlighter::H1);
     addTextTreeWidgetItem(tr("Header, level 2"), MarkdownHighlighter::H2);
     addTextTreeWidgetItem(tr("Header, level 3"), MarkdownHighlighter::H3);
