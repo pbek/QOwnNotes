@@ -691,7 +691,7 @@
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="271"/>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="369"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="378"/>
       <source>File error</source>
       <translation type="unfinished">File error</translation>
     </message>
@@ -703,7 +703,7 @@
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="370"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="379"/>
       <source>Could not remove dictionary file:
 %1</source>
       <translation type="unfinished">Could not remove dictionary file:
@@ -1100,7 +1100,7 @@
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="658"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="660"/>
       <source>Export schema</source>
       <translation>Export schema</translation>
     </message>
@@ -1126,7 +1126,7 @@
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="698"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="700"/>
       <source>Import schema</source>
       <translation>Import schema</translation>
     </message>
@@ -1186,12 +1186,12 @@
       <translation>Kusgan ang teskto</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="223"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="225"/>
       <source>(HTML) Comment</source>
       <translation>(HTML) komentaryo</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Header, level 1</source>
       <translation>Header, lebel 1</translation>
     </message>
@@ -1256,100 +1256,110 @@
       <translation>I lista ang item</translation>
     </message>
     <message>
+      <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
+      <source>Checkbox unchecked</source>
+      <translation type="unfinished">Checkbox unchecked</translation>
+    </message>
+    <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
+      <source>Checkbox checked</source>
+      <translation type="unfinished">Checkbox checked</translation>
+    </message>
+    <message>
+      <location filename="../widgets/fontcolorwidget.cpp" line="216"/>
       <source>Header, level 2</source>
       <translation>Header, lebel 2</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="217"/>
       <source>Header, level 3</source>
       <translation>Header, lebel 3</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="216"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Header, level 4</source>
       <translation>Header, lebel 4</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="217"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="219"/>
       <source>Header, level 5</source>
       <translation>Header, lebel 5</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
       <source>Header, level 6</source>
       <translation>Header, lebel 6</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="221"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="223"/>
       <source>Block quote</source>
       <translation>Aribahan ang quote</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="222"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="224"/>
       <source>Table</source>
       <translation>Lamisa</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="224"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="226"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
       <translation>Masked syntax</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="229"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="231"/>
       <source>Broken link</source>
       <translation>Gibungkag nga link</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="219"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="221"/>
       <source>Horizontal rule</source>
       <translation>Pinahigda na mando</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="227"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="229"/>
       <source>Current line background color</source>
       <translation>Sa pagkakaron ang linya sa kolor sa background</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="230"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="232"/>
       <source>Trailing space</source>
       <translation>Ang wanang sa pagsakay</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="239"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="241"/>
       <source>This item will be used to preset colors for the other items</source>
       <translation>Kining item ka gamiton para ipakita sa mga kolor sa oban mga item</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="488"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="490"/>
       <source>Copy color schema</source>
       <translation>Kopyaha ang kolor sa kanunay</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="489"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="491"/>
       <source>Color schema name</source>
       <translation>Kolor sa pangalan sa kanunay</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="491"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="493"/>
       <source>Copy</source>
       <comment>as noun</comment>
       <translation>Copyaha</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="609"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="611"/>
       <source>Remove schema</source>
       <translation>Tanggala ang sa kanunay</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="610"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="612"/>
       <source>Remove current schema? This cannot be undone!</source>
       <translation>Tanggala sa pagkakaron ang sakna? dili ni siya mahuman!</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="657"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="697"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="659"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="699"/>
       <source>INI files</source>
       <translation>INI sa mga file</translation>
     </message>
@@ -1762,7 +1772,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
-      <location filename="../mainwindow.cpp" line="8064"/>
+      <location filename="../mainwindow.cpp" line="8074"/>
       <source>Add a tag to the current note</source>
       <translation>Pagdugang og tag sa kasamtangan nga nota</translation>
     </message>
@@ -1878,13 +1888,13 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1420"/>
-      <location filename="../mainwindow.cpp" line="9650"/>
+      <location filename="../mainwindow.cpp" line="9660"/>
       <source>Select &amp;all notes</source>
       <translation>Pili &amp;tanan nga mga notahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1429"/>
-      <location filename="../mainwindow.cpp" line="6114"/>
+      <location filename="../mainwindow.cpp" line="6118"/>
       <source>Insert &amp;link</source>
       <translation>Musingit &amp;dugtong</translation>
     </message>
@@ -1939,7 +1949,7 @@
       <translation>Pangita og mag buhat sa notahan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8065"/>
+      <location filename="../mainwindow.cpp" line="8075"/>
       <source>Add a tag to the selected notes</source>
       <translation>Pagdugang og usa ka tag sa pinili nga mga nota</translation>
     </message>
@@ -1950,7 +1960,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="869"/>
-      <location filename="../mainwindow.cpp" line="6161"/>
+      <location filename="../mainwindow.cpp" line="6165"/>
       <source>Export</source>
       <translation>Eksport</translation>
     </message>
@@ -1961,7 +1971,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="907"/>
-      <location filename="../mainwindow.cpp" line="6143"/>
+      <location filename="../mainwindow.cpp" line="6147"/>
       <source>Print</source>
       <translation>Printa</translation>
     </message>
@@ -2334,7 +2344,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2219"/>
-      <location filename="../mainwindow.cpp" line="10709"/>
+      <location filename="../mainwindow.cpp" line="10719"/>
       <source>Remove current workspace</source>
       <translation>Tang-tangon ang pagkakaron nga workspace</translation>
     </message>
@@ -2376,7 +2386,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2293"/>
-      <location filename="../mainwindow.cpp" line="6121"/>
+      <location filename="../mainwindow.cpp" line="6125"/>
       <source>Insert block &amp;quote</source>
       <translation>Sapawan ang block &amp;quote</translation>
     </message>
@@ -2403,7 +2413,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2340"/>
-      <location filename="../mainwindow.cpp" line="9626"/>
+      <location filename="../mainwindow.cpp" line="9636"/>
       <source>Open note in different window</source>
       <translation>Ablihan ang lain lain nga note sa window</translation>
     </message>
@@ -2424,7 +2434,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2380"/>
-      <location filename="../mainwindow.cpp" line="9634"/>
+      <location filename="../mainwindow.cpp" line="9644"/>
       <source>Show note git versions</source>
       <translation>Ipakita ang notahan sa mga git bersyon</translation>
     </message>
@@ -2507,7 +2517,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2542"/>
-      <location filename="../mainwindow.cpp" line="11539"/>
+      <location filename="../mainwindow.cpp" line="11563"/>
       <source>Automatically detect</source>
       <translation>Awtomatik nga namatikdan</translation>
     </message>
@@ -2652,10 +2662,10 @@ Restore current note?</source>
       <translation>Sa pagkakaron na tangtang ang notahan sa gawas sa aplikasyon! ibalik sa pagkakaron ang notahan?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5025"/>
-      <location filename="../mainwindow.cpp" line="5049"/>
-      <location filename="../mainwindow.cpp" line="6585"/>
-      <location filename="../mainwindow.cpp" line="9716"/>
+      <location filename="../mainwindow.cpp" line="5026"/>
+      <location filename="../mainwindow.cpp" line="5050"/>
+      <location filename="../mainwindow.cpp" line="6589"/>
+      <location filename="../mainwindow.cpp" line="9726"/>
       <source>&amp;Cancel</source>
       <translation>tangtangngon</translation>
     </message>
@@ -2761,7 +2771,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4207"/>
-      <location filename="../mainwindow.cpp" line="9919"/>
+      <location filename="../mainwindow.cpp" line="9929"/>
       <source>Remove selected folders</source>
       <translation>Tanggalon ang mga napili nga polder</translation>
     </message>
@@ -2793,7 +2803,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4291"/>
-      <location filename="../mainwindow.cpp" line="8797"/>
+      <location filename="../mainwindow.cpp" line="8807"/>
       <source>Move selected notes</source>
       <translation>Ibalhin ang gipili nga notes</translation>
     </message>
@@ -2807,7 +2817,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4392"/>
-      <location filename="../mainwindow.cpp" line="8898"/>
+      <location filename="../mainwindow.cpp" line="8908"/>
       <source>Copy selected notes</source>
       <translation>Kopyaha ang gipili nga mga notahan</translation>
     </message>
@@ -2821,7 +2831,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4420"/>
-      <location filename="../mainwindow.cpp" line="4566"/>
+      <location filename="../mainwindow.cpp" line="4567"/>
       <source>Done</source>
       <translation>Nahumana</translation>
     </message>
@@ -2847,42 +2857,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4704"/>
+      <location filename="../mainwindow.cpp" line="4705"/>
       <source>Restart application</source>
       <translation>Otrohon ang aplikasyon</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4710"/>
+      <location filename="../mainwindow.cpp" line="4711"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
       <translation>Kinahanglan na otrohon nimo ang aplikasyon nga mano mano sa mga pagsulay sa kuha sa epekto.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4715"/>
+      <location filename="../mainwindow.cpp" line="4716"/>
       <source>You may need to restart the application to let the changes take effect.</source>
       <translation>Kinahanglan otrohon ang aplikasyon para mabag o ang epekto.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4717"/>
+      <location filename="../mainwindow.cpp" line="4718"/>
       <source>Restart</source>
       <translation>I-restart</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4933"/>
+      <location filename="../mainwindow.cpp" line="4934"/>
       <source>PDF files</source>
       <translation>Mga PDF file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5020"/>
+      <location filename="../mainwindow.cpp" line="5021"/>
       <source>Todo lists disabled!</source>
       <translation>Wala’y lista ang mga lista ni Todo!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5021"/>
+      <location filename="../mainwindow.cpp" line="5022"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Gipugngan mo ang mga lista sa todo. &lt;br/&gt; Palihug susihon ang imong pagsulud sa &lt;strong&gt; Todo &lt;/strong&gt; sa mga setting!</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5260"/>
+      <location filename="../mainwindow.cpp" line="5261"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation type="unfinished">
         <numerusform>Giwagtang %n nagkasumpaki nga kopya sa database</numerusform>
@@ -2890,99 +2900,99 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5773"/>
+      <location filename="../mainwindow.cpp" line="5777"/>
       <source>Note was not found</source>
       <translation>Wala makita ang nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5774"/>
+      <location filename="../mainwindow.cpp" line="5778"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Ang nota wala makita, paghimo og bag-ong nota &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5928"/>
+      <location filename="../mainwindow.cpp" line="5932"/>
       <source>Note folders</source>
       <translation type="unfinished">Note folders</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6050"/>
+      <location filename="../mainwindow.cpp" line="6054"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
       <translation>Pahibalo sa mga bersyon sa pagkakaron nga puno imong ownCloud server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6065"/>
+      <location filename="../mainwindow.cpp" line="6069"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
       <translation>Basura ng mga nota sa pagkakaron puno gikan sa imong ownCloud server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6131"/>
+      <location filename="../mainwindow.cpp" line="6135"/>
       <source>Copy code block</source>
       <translation>Kopyaha ang block code</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6150"/>
+      <location filename="../mainwindow.cpp" line="6154"/>
       <source>Print selected text</source>
       <translation>I-print ang gipili nga teksto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6156"/>
+      <location filename="../mainwindow.cpp" line="6160"/>
       <source>Print selected text (preview)</source>
       <translation>I-ang gipili nga teksto (ibalik)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6172"/>
+      <location filename="../mainwindow.cpp" line="6176"/>
       <source>Export selected text as PDF</source>
       <translation>Eksport sa gipili nga teksto isip PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6178"/>
+      <location filename="../mainwindow.cpp" line="6182"/>
       <source>Export selected text as PDF (preview)</source>
       <translation>Eksport ang gipili nga teksto isip PDF (ibalik)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6581"/>
+      <location filename="../mainwindow.cpp" line="6585"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation>Imong notahan kay ma descrypted og mabalik kung gi yano sa pag balik. taguan sa imong otok nga ang unencrypted note kay posibli ma synced sa imong server og sensitib nga teksto nga makita!&lt;br /&gt;ganahan baka ma descrypt imong note?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6673"/>
+      <location filename="../mainwindow.cpp" line="6677"/>
       <source>Markdown files</source>
       <translation>Nagpaubos ang mga file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6728"/>
+      <location filename="../mainwindow.cpp" line="6732"/>
       <source>Bookmarked note position at slot %1</source>
       <translation>Tatak sa talaan nga posisyon og puwesto%1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6744"/>
+      <location filename="../mainwindow.cpp" line="6748"/>
       <source>Jumped to bookmark position at slot %1</source>
       <translation>Milukso sa tatak nga posisyon sa puwesto %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6965"/>
-      <location filename="../mainwindow.cpp" line="7035"/>
+      <location filename="../mainwindow.cpp" line="6969"/>
+      <location filename="../mainwindow.cpp" line="7039"/>
       <source>Inserting image</source>
       <translation>Pagsal-ot og larawan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6970"/>
-      <location filename="../mainwindow.cpp" line="7039"/>
+      <location filename="../mainwindow.cpp" line="6974"/>
+      <location filename="../mainwindow.cpp" line="7043"/>
       <source>Done inserting image</source>
       <translation>Humana og sal ot</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6972"/>
+      <location filename="../mainwindow.cpp" line="6976"/>
       <source>Inserting attachment</source>
       <translation>Isapaw sa pataban</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6977"/>
+      <location filename="../mainwindow.cpp" line="6981"/>
       <source>Done inserting attachment</source>
       <translation>Nahimo nga pagsul ot sa kasuod</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6989"/>
+      <location filename="../mainwindow.cpp" line="6993"/>
       <source>Copied %n note(s) to %1</source>
       <translation>
         <numerusform>Gicopya %n mga nota sa %1</numerusform>
@@ -2990,7 +3000,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6998"/>
+      <location filename="../mainwindow.cpp" line="7002"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation>
         <numerusform>Napakyas sa kopya note(s) (lagmit na human ang existing)</numerusform>
@@ -2998,7 +3008,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7008"/>
+      <location filename="../mainwindow.cpp" line="7012"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
         <numerusform>Laktawi ang gi copya sa %n note(s) (walay pag osos og text file o dili mabasa)</numerusform>
@@ -3006,183 +3016,183 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7022"/>
+      <location filename="../mainwindow.cpp" line="7026"/>
       <source>Saving temporary image</source>
       <translation>Pagluwas sa temporaryo sa larawan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7042"/>
+      <location filename="../mainwindow.cpp" line="7046"/>
       <source>Temporary file can't be opened</source>
       <translation>Temporaryo nga file nga dili ma abri</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7083"/>
+      <location filename="../mainwindow.cpp" line="7087"/>
       <source>Downloading %1</source>
       <translation>Pag-download %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7270"/>
+      <location filename="../mainwindow.cpp" line="7274"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
       <translation>I-reset font sa gidak-on sa %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8109"/>
+      <location filename="../mainwindow.cpp" line="8119"/>
       <source>Remove tag '%1' from the current note</source>
       <translation>Kuhaa ang tag '%1' gikan sa kasamtangan nga nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8111"/>
+      <location filename="../mainwindow.cpp" line="8121"/>
       <source>Remove tag '%1' from the selected notes</source>
       <translation>Kuhaa ang tag '%1' gikan sa pinili nga nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8337"/>
+      <location filename="../mainwindow.cpp" line="8347"/>
       <source>Rename tag</source>
       <translation>Usbon ang ngalan sa tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8338"/>
+      <location filename="../mainwindow.cpp" line="8348"/>
       <source>Assign color</source>
       <translation>I-assign ang kolor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8339"/>
+      <location filename="../mainwindow.cpp" line="8349"/>
       <source>Disable color</source>
       <translation>Disable ang kolor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8343"/>
+      <location filename="../mainwindow.cpp" line="8353"/>
       <source>&amp;Move tags to…</source>
       <translation>&amp;Pagbalhin sa mga tag…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8551"/>
+      <location filename="../mainwindow.cpp" line="8561"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
       <translation>Mobalhin sa gamut</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9058"/>
+      <location filename="../mainwindow.cpp" line="9068"/>
       <source>An url was opened at the current cursor position</source>
       <translation>Usa ka url nga abri sa kasamtangan sa cursor posisyon</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9159"/>
+      <location filename="../mainwindow.cpp" line="9169"/>
       <source>No equation was found in front of the cursor</source>
       <translation>Walay equation nga makita sa atubangan sa cursor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9176"/>
+      <location filename="../mainwindow.cpp" line="9186"/>
       <source>Result for equation: %1 = %2</source>
       <translation>Resulta sa equation: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9277"/>
+      <location filename="../mainwindow.cpp" line="9287"/>
       <source>The scripting engine was reloaded</source>
       <translation>Ang pagsulat sa makina ay reloaded</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9312"/>
+      <location filename="../mainwindow.cpp" line="9322"/>
       <source>HTML files</source>
       <translation>HTML na mga file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9512"/>
-      <location filename="../mainwindow.cpp" line="9700"/>
+      <location filename="../mainwindow.cpp" line="9522"/>
+      <location filename="../mainwindow.cpp" line="9710"/>
       <source>Rename note</source>
       <translation>Usba ang pangalan sa tala</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9513"/>
+      <location filename="../mainwindow.cpp" line="9523"/>
       <source>Allows you to rename the filename of the note</source>
       <translation>Nagtugot nimo nga makausab sa panglan sa kini nga filename para sa nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9527"/>
+      <location filename="../mainwindow.cpp" line="9537"/>
       <source>&amp;Move notes to…</source>
       <translation>&amp;Pagbalhin sa mga nota sa…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9528"/>
+      <location filename="../mainwindow.cpp" line="9538"/>
       <source>&amp;Copy notes to…</source>
       <translation>&amp;Kopya nga mga sulat sa…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9566"/>
+      <location filename="../mainwindow.cpp" line="9576"/>
       <source>Jump to the note's sub-folder</source>
       <translation type="unfinished">Jump to the note's sub-folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9570"/>
+      <location filename="../mainwindow.cpp" line="9580"/>
       <source>Move notes to subfolder…</source>
       <translation>Pagbalhin mga nota sa subfolder…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9574"/>
+      <location filename="../mainwindow.cpp" line="9584"/>
       <source>Copy notes to subfolder…</source>
       <translation>Kopyaha ang mga nota sa subfolder…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9582"/>
+      <location filename="../mainwindow.cpp" line="9592"/>
       <source>&amp;Tag selected notes with…</source>
       <translation>&amp;Tag gipili nga mga nota uban sa…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9605"/>
+      <location filename="../mainwindow.cpp" line="9615"/>
       <source>&amp;Remove tag from selected notes…</source>
       <translation>&amp;Kuhaa ang tag gikan sa piniling mga nota…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9700"/>
+      <location filename="../mainwindow.cpp" line="9710"/>
       <source>Name:</source>
       <translation>Ngalan:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9711"/>
+      <location filename="../mainwindow.cpp" line="9721"/>
       <source>Note renaming not enabled!</source>
       <translation>Ang nota kay nagpabiling di makahimo!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9918"/>
+      <location filename="../mainwindow.cpp" line="9928"/>
       <source>Rename subfolder</source>
       <translation>Usba ang pangalan sa folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10491"/>
+      <location filename="../mainwindow.cpp" line="10501"/>
       <source>Create new workspace</source>
       <translation>paghimo ug bag-ong lugar sa trabahuan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10491"/>
-      <location filename="../mainwindow.cpp" line="10747"/>
+      <location filename="../mainwindow.cpp" line="10501"/>
+      <location filename="../mainwindow.cpp" line="10757"/>
       <source>Workspace name:</source>
       <translation>Pangalan sa lugar nga trabahuan:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10611"/>
+      <location filename="../mainwindow.cpp" line="10621"/>
       <source>full</source>
       <comment>full workspace</comment>
       <translation>puno</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10618"/>
+      <location filename="../mainwindow.cpp" line="10628"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
       <translation>gamay</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10710"/>
+      <location filename="../mainwindow.cpp" line="10720"/>
       <source>Remove the current workspace?</source>
       <translation>Tang-tangon sa kasamtang nga workspace?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10747"/>
+      <location filename="../mainwindow.cpp" line="10757"/>
       <source>Rename workspace</source>
       <translation>Ilisan ang pangalan sa workspace</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="10884"/>
+      <location filename="../mainwindow.cpp" line="10894"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation>
@@ -3191,32 +3201,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11151"/>
+      <location filename="../mainwindow.cpp" line="11161"/>
       <source>Disallow all note editing</source>
       <translation>Itugot ang tanang pag-usab sa sulat</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11297"/>
+      <location filename="../mainwindow.cpp" line="11321"/>
       <source>Select text files to import</source>
       <translation>Pagpili sa mga file sa text aron i-import</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11326"/>
+      <location filename="../mainwindow.cpp" line="11350"/>
       <source>Importing: %1</source>
       <translation>Pag-import: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11389"/>
+      <location filename="../mainwindow.cpp" line="11413"/>
       <source>Note headline '%1' was copied to the clipboard</source>
       <translation>Mubo nga sulat ang headline nga '%1' gikopya sa clipboard</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11480"/>
+      <location filename="../mainwindow.cpp" line="11504"/>
       <source>Leave full-screen mode</source>
       <translation>Biyai ang full-screen mode</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8083"/>
+      <location filename="../mainwindow.cpp" line="8093"/>
       <source>%n notes selected</source>
       <translation>
         <numerusform>%n nota nga gipili</numerusform>
@@ -3225,7 +3235,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2425"/>
-      <location filename="../mainwindow.cpp" line="11152"/>
+      <location filename="../mainwindow.cpp" line="11162"/>
       <source>Allow all note editing</source>
       <translation>Tugoti ang tanan nga pag-usab sa sulat</translation>
     </message>
@@ -3235,12 +3245,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>&amp;tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4507"/>
+      <location filename="../mainwindow.cpp" line="4508"/>
       <source>Remove tag from selected notes</source>
       <translation>Tang-tangon ang tag gikan sa napili nga mga nota</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4508"/>
+      <location filename="../mainwindow.cpp" line="4509"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
         <numerusform>Tang-tangon ang tag &lt;strong&gt;%1&lt;/strong&gt;gekan sa %n mga napili nga note(s)?</numerusform>
@@ -3248,7 +3258,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4567"/>
+      <location filename="../mainwindow.cpp" line="4568"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt;kay natangtang gikan sa %n nota(s)</numerusform>
@@ -3256,95 +3266,95 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4611"/>
+      <location filename="../mainwindow.cpp" line="4612"/>
       <source>Current notes folder: </source>
       <translation>Kasamtangan nga mga nota: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4613"/>
+      <location filename="../mainwindow.cpp" line="4614"/>
       <source>Set the notes folder. Current notes folder: </source>
       <translation>Itakda ang folder sa nota. kasamtangang polder sa nota: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4809"/>
+      <location filename="../mainwindow.cpp" line="4810"/>
       <source>Print note</source>
       <translation>Printahon ang note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4877"/>
+      <location filename="../mainwindow.cpp" line="4878"/>
       <source>Letter</source>
       <translation>Sulat</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4906"/>
+      <location filename="../mainwindow.cpp" line="4907"/>
       <source>Portrait</source>
       <translation>Portrait</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4906"/>
+      <location filename="../mainwindow.cpp" line="4907"/>
       <source>Landscape</source>
       <translation>Talan-awon</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4911"/>
+      <location filename="../mainwindow.cpp" line="4912"/>
       <source>Orientation</source>
       <translation>Orientasyon</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4911"/>
+      <location filename="../mainwindow.cpp" line="4912"/>
       <source>Orientation:</source>
       <translation>Orientasyon:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4934"/>
+      <location filename="../mainwindow.cpp" line="4935"/>
       <source>Export current note as PDF</source>
       <translation>Pagbaligya sa kasamtangan nga nota ingon sa PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5045"/>
+      <location filename="../mainwindow.cpp" line="5046"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Wala ka mo pili ug bisag unsa nga buhaton sa listahan.&lt;br /&gt; Palihug ug susi sa imong &lt;strong&gt;Todo&lt;/strong&gt;pagsumpo sa mga kahimtangan!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5910"/>
+      <location filename="../mainwindow.cpp" line="5914"/>
       <source>Open QOwnNotes</source>
       <translation>Ablihan ang QOwnNotes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5611"/>
-      <location filename="../mainwindow.cpp" line="5961"/>
-      <location filename="../mainwindow.cpp" line="9508"/>
-      <location filename="../mainwindow.cpp" line="9916"/>
+      <location filename="../mainwindow.cpp" line="5615"/>
+      <location filename="../mainwindow.cpp" line="5965"/>
+      <location filename="../mainwindow.cpp" line="9518"/>
+      <location filename="../mainwindow.cpp" line="9926"/>
       <source>New note</source>
       <translation>Bag-ong nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5977"/>
+      <location filename="../mainwindow.cpp" line="5981"/>
       <source>Recent notes</source>
       <translation>Bag-o lang nga nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5994"/>
+      <location filename="../mainwindow.cpp" line="5998"/>
       <source>Show todo lists</source>
       <translation>Ipakita ang tanang listahan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6006"/>
+      <location filename="../mainwindow.cpp" line="6010"/>
       <source>Recent tasks</source>
       <translation>Bag-o lang nga tahas</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6027"/>
+      <location filename="../mainwindow.cpp" line="6031"/>
       <source>Quit</source>
       <translation>Muondang</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7431"/>
+      <location filename="../mainwindow.cpp" line="7435"/>
       <source>show notes from all note subfolders (%1)</source>
       <translation>ipakita ang nota gekan sa tanang mga subfolder nga nota (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7450"/>
+      <location filename="../mainwindow.cpp" line="7454"/>
       <source>show notes in note root folder (%1)</source>
       <translation>ipakita ang mga nota nga naa sa root polder (%1)</translation>
     </message>
@@ -3352,36 +3362,36 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="684"/>
       <location filename="../mainwindow.cpp" line="1902"/>
-      <location filename="../mainwindow.cpp" line="7458"/>
+      <location filename="../mainwindow.cpp" line="7462"/>
       <source>Note folder</source>
       <translation>Polder sa nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8684"/>
-      <location filename="../mainwindow.cpp" line="8745"/>
+      <location filename="../mainwindow.cpp" line="8694"/>
+      <location filename="../mainwindow.cpp" line="8755"/>
       <source>Copy to note folder</source>
       <translation>Kopyahon sa nota nga polder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8685"/>
-      <location filename="../mainwindow.cpp" line="8746"/>
+      <location filename="../mainwindow.cpp" line="8695"/>
+      <location filename="../mainwindow.cpp" line="8756"/>
       <source>Move to note folder</source>
       <translation>Ibalhin nga nota sa folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8686"/>
-      <location filename="../mainwindow.cpp" line="8747"/>
+      <location filename="../mainwindow.cpp" line="8696"/>
+      <location filename="../mainwindow.cpp" line="8757"/>
       <source>Copy to this subfolder</source>
       <translation>Kopyahon kini sa nga subfolder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8687"/>
-      <location filename="../mainwindow.cpp" line="8748"/>
+      <location filename="../mainwindow.cpp" line="8697"/>
+      <location filename="../mainwindow.cpp" line="8758"/>
       <source>Move to this subfolder</source>
       <translation>Kopyahon sa kini nga subfolder</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8791"/>
+      <location filename="../mainwindow.cpp" line="8801"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Ibalhin %n ang napili nga nota(s) sa nota nga subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3389,13 +3399,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4718"/>
-      <location filename="../mainwindow.cpp" line="11311"/>
+      <location filename="../mainwindow.cpp" line="4719"/>
+      <location filename="../mainwindow.cpp" line="11335"/>
       <source>Cancel</source>
       <translation>Tangtangon</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8872"/>
+      <location filename="../mainwindow.cpp" line="8882"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation>
         <numerusform>%n nota(s) kay nabalhin sa laing subfolder nga nota "%2"</numerusform>
@@ -3403,7 +3413,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8892"/>
+      <location filename="../mainwindow.cpp" line="8902"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Kopyahon %n ang napili nga nota(s) sa subfolder nga nota &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3411,7 +3421,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8957"/>
+      <location filename="../mainwindow.cpp" line="8967"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation>
         <numerusform>%n nota(s) kay na kopya sa subfolder nga nota "%2"</numerusform>
@@ -3419,57 +3429,57 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9624"/>
+      <location filename="../mainwindow.cpp" line="9634"/>
       <source>Open note in external editor</source>
       <translation>Abrihon ang nota sa gawas nga editor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9628"/>
+      <location filename="../mainwindow.cpp" line="9638"/>
       <source>Show note in file manager</source>
       <translation>Ipakita ang nota sa file manager</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9712"/>
+      <location filename="../mainwindow.cpp" line="9722"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
       <translation>Kung gusto nimo otrohon ang pangalan sa nota kay imong mahimo nga pilianan para mag tugot sa filename nga malain gekan sa uloha.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9917"/>
+      <location filename="../mainwindow.cpp" line="9927"/>
       <source>New subfolder</source>
       <translation>Bag-ong subfolder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9921"/>
+      <location filename="../mainwindow.cpp" line="9931"/>
       <source>Show folder in file manager</source>
       <translation>Ipakita ang folder sa file manager</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9966"/>
+      <location filename="../mainwindow.cpp" line="9976"/>
       <source>Create a new folder</source>
       <translation>Paghimo ug bag-ong polder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9966"/>
+      <location filename="../mainwindow.cpp" line="9976"/>
       <source>Folder name:</source>
       <translation>Pangalan sa polder:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7388"/>
+      <location filename="../mainwindow.cpp" line="7392"/>
       <source>show all untagged notes (%1)</source>
       <translation>ipakita ang tanang nota nga naka untagged (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7391"/>
+      <location filename="../mainwindow.cpp" line="7395"/>
       <source>Untagged notes</source>
       <translation>Nota nga wala ma-tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9313"/>
+      <location filename="../mainwindow.cpp" line="9323"/>
       <source>Export current note as HTML file</source>
       <translation>Pagpagawas sa kasamtangang nota isip usa ka HTML file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4886"/>
+      <location filename="../mainwindow.cpp" line="4887"/>
       <source>Page size</source>
       <translation>Gidak-on sa pahina</translation>
     </message>
@@ -3479,27 +3489,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>paghunong sa toolbar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4886"/>
+      <location filename="../mainwindow.cpp" line="4887"/>
       <source>Page size:</source>
       <translation>Gidak-on sa pahina:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5002"/>
+      <location filename="../mainwindow.cpp" line="5003"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation>QOwnNotes kay mag track anonymous sa paggamit sa data, nga makatabang para mag desisyon kung onsa ang mga bahin sa QOwnNotes para ma bag-o para sa sunod ug pangita ug pag-ayo sa bugs. pwedi nimong I-disable ang kinaiya sa kana nga mga kahimtang.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5006"/>
+      <location filename="../mainwindow.cpp" line="5007"/>
       <source>&amp;Ok</source>
       <translation>&amp;ok</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9517"/>
+      <location filename="../mainwindow.cpp" line="9527"/>
       <source>&amp;Remove notes</source>
       <translation>&amp;kuhaa ang mga nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6114"/>
+      <location filename="../mainwindow.cpp" line="6118"/>
       <source>&amp;Link selected text</source>
       <translation>&amp;link sa napiling teksto</translation>
     </message>
@@ -3515,7 +3525,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2628"/>
-      <location filename="../mainwindow.cpp" line="5549"/>
+      <location filename="../mainwindow.cpp" line="5553"/>
       <source>Stored current note to disk</source>
       <translation>Napondo nga kasamtangan sa nota sa disk</translation>
     </message>
@@ -3538,58 +3548,58 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7361"/>
+      <location filename="../mainwindow.cpp" line="7365"/>
       <source>show all notes (%1)</source>
       <translation>ipakita ang tanang mga nota (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7364"/>
-      <location filename="../mainwindow.cpp" line="7434"/>
+      <location filename="../mainwindow.cpp" line="7368"/>
+      <location filename="../mainwindow.cpp" line="7438"/>
       <source>All notes</source>
       <translation>Tanang mga nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8329"/>
+      <location filename="../mainwindow.cpp" line="8339"/>
       <source>&amp;Add tag</source>
       <translation>&amp;mag puno og tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8376"/>
+      <location filename="../mainwindow.cpp" line="8386"/>
       <source>Tag could not be created!</source>
       <translation>Tag ang dili mabuhat!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8552"/>
+      <location filename="../mainwindow.cpp" line="8562"/>
       <source>Move to this tag</source>
       <translation>Ibalhin kini sa tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8589"/>
+      <location filename="../mainwindow.cpp" line="8599"/>
       <source>Tag this</source>
       <translation>Tag kini</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8613"/>
+      <location filename="../mainwindow.cpp" line="8623"/>
       <source>Cannot move tag '%1' to this tag</source>
       <translation>Dili ma balhin ang tag '%1' niini nga tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8629"/>
+      <location filename="../mainwindow.cpp" line="8639"/>
       <source>Moved tag '%1' to new tag</source>
       <translation>Ibalhon ang tag '%1' sa bag-o nga tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7636"/>
+      <location filename="../mainwindow.cpp" line="7640"/>
       <source>show all notes tagged with '%1' (%2)</source>
       <translation>ipakita tanang mga nota nga na tag uban sa '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8340"/>
+      <location filename="../mainwindow.cpp" line="8350"/>
       <source>&amp;Remove tags</source>
       <translation>tang-tangon mga tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5044"/>
+      <location filename="../mainwindow.cpp" line="5045"/>
       <source>No selected todo lists!</source>
       <translation>Walay napili nga tanan nga mga lista!</translation>
     </message>
@@ -3715,7 +3725,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2629"/>
-      <location filename="../mainwindow.cpp" line="5550"/>
+      <location filename="../mainwindow.cpp" line="5554"/>
       <source>Current note could not be stored to disk</source>
       <translation>Ang kasamtangan nga note kay dili mahimo nga mabutang sa disk</translation>
     </message>
@@ -3748,7 +3758,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4491"/>
+      <location filename="../mainwindow.cpp" line="4492"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation type="unfinished">
         <numerusform>%n note(s) nga na-tag uban sa "%2"</numerusform>
@@ -3756,7 +3766,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5259"/>
+      <location filename="../mainwindow.cpp" line="5260"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Nakaplag &lt;strong&gt;%n&lt;/strong&gt; nga panghitabo sa &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
@@ -3764,67 +3774,67 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5611"/>
+      <location filename="../mainwindow.cpp" line="5615"/>
       <source>Note headline</source>
       <translation>Ulohan sa note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6120"/>
+      <location filename="../mainwindow.cpp" line="6124"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
       <translation>Block &amp;quote pinili nga nga teksto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7095"/>
+      <location filename="../mainwindow.cpp" line="7099"/>
       <source>Downloading images finished</source>
       <translation>Nahuman na ang pag-download sa mga larawan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7243"/>
+      <location filename="../mainwindow.cpp" line="7247"/>
       <source>Increased font size to %1 pt</source>
       <translation>Pagpadako sa font sa %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7260"/>
+      <location filename="../mainwindow.cpp" line="7264"/>
       <source>Decreased font size to %1 pt</source>
       <translation>Pagpagamay sa font sa %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5007"/>
-      <location filename="../mainwindow.cpp" line="5024"/>
-      <location filename="../mainwindow.cpp" line="5048"/>
-      <location filename="../mainwindow.cpp" line="9715"/>
+      <location filename="../mainwindow.cpp" line="5008"/>
+      <location filename="../mainwindow.cpp" line="5025"/>
+      <location filename="../mainwindow.cpp" line="5049"/>
+      <location filename="../mainwindow.cpp" line="9725"/>
       <source>Open &amp;settings</source>
       <translation>Open &amp; settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1532"/>
-      <location filename="../mainwindow.cpp" line="11465"/>
+      <location filename="../mainwindow.cpp" line="11489"/>
       <source>leave</source>
       <translation>mohawa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6524"/>
+      <location filename="../mainwindow.cpp" line="6528"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation>Palihug ibutang ang imong &lt;strong&gt;password&lt;/strong&gt; aron ma-encrypt ang note.&lt;br /&gt;Hinumdomi nga kinahanglan mong &lt;strong&gt;hinumdoman&lt;/strong&gt; ang imong password aron mabasa nimo ang sulod sa note&lt;br /&gt; ug ikaw &lt;strong&gt;lamang&lt;/strong&gt; ang makahimo ana &lt;strong&gt;sa QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6580"/>
+      <location filename="../mainwindow.cpp" line="6584"/>
       <source>Decrypt note and store it as plain text</source>
       <translation>I-decrypt ang nota ug itipig kini isip usa ka yana nga teksto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6585"/>
+      <location filename="../mainwindow.cpp" line="6589"/>
       <source>&amp;Decrypt</source>
       <translation>&amp;Decrypt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6611"/>
+      <location filename="../mainwindow.cpp" line="6615"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation>&lt;br /&gt;Mahimo nimong mausab ang imong ge-encrypt nga nota.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6674"/>
+      <location filename="../mainwindow.cpp" line="6678"/>
       <source>Export current note as Markdown file</source>
       <translation>Pagpagawas ug kasamtangan nga nota isip usa ka Markdown file</translation>
     </message>
@@ -4283,27 +4293,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
   <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="570"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="572"/>
       <source>No suggestions for %1</source>
       <translation>Walay mga sugyot alang sa %1</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="581"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="583"/>
       <source>Ignore</source>
       <translation>Dili manumbaling</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="582"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="584"/>
       <source>Add to Dictionary</source>
       <translation>Pagdugang sa Diksyonaryo</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="638"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="640"/>
       <source>Note editing disabled</source>
       <translation>Ang note-edit sa pahibalo dili mahimo</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="639"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="641"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
       <translation>Ang nota sa pag-edit sa karon wala’y kapugong, gusto ba nimo tugutan pag-usab?</translation>
     </message>
