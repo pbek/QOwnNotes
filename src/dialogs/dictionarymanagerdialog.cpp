@@ -302,10 +302,19 @@ void DictionaryManagerDialog::on_downloadCancelButton_clicked() {
  */
 void DictionaryManagerDialog::downloadProgress(
         qint64 bytesReceived, qint64 bytesTotal) {
+    QString text = Utils::Misc::toHumanReadableByteSize(bytesReceived);
+
+    // bytesTotal can be set to -1 if not available
+    if (bytesTotal > -1) {
+        text += QStringLiteral(" / ") + Utils::Misc::toHumanReadableByteSize(bytesTotal);
+    } else {
+        // set to 4 MB
+        bytesTotal = 4194304;
+    }
+
     ui->downloadProgressBar->setMaximum(static_cast <int>(bytesTotal));
     ui->downloadProgressBar->setValue(static_cast <int>(bytesReceived));
-    ui->downloadSizeLabel->setText(Utils::Misc::toHumanReadableByteSize(bytesReceived) + QStringLiteral(" / ")
-                                   + Utils::Misc::toHumanReadableByteSize(bytesTotal));
+    ui->downloadSizeLabel->setText(text);
 }
 
 void DictionaryManagerDialog::loadLocalDictionaries() {
