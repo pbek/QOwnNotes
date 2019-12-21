@@ -159,56 +159,125 @@
        <property name="bottomMargin">
         <number>0</number>
        </property>
-       <item row="7" column="1">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
        <item row="1" column="1">
-        <widget class="QGroupBox" name="titleGroupBox">
-         <property name="title">
-          <string notr="true">Title</string>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
          </property>
-         <layout class="QGridLayout" name="gridLayout_8">
-          <item row="1" column="0">
-           <widget class="QLineEdit" name="titleLineEdit"/>
-          </item>
-          <item row="1" column="1">
-           <widget class="QPushButton" name="searchIssueButton">
-            <property name="text">
-             <string notr="true">Find issues</string>
-            </property>
-            <property name="icon">
-             <iconset theme="edit-find" resource="../breeze-qownnotes.qrc">
-              <normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</iconset>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0" colspan="2">
-           <widget class="QLabel" name="subHeadlineLabel_2">
-            <property name="text">
-             <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please state clearly and concisely what the issue is about and check if something similar was already posted by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Find issues&lt;/span&gt; button.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
-            </property>
-            <property name="openExternalLinks">
-             <bool>true</bool>
-            </property>
-            <property name="textInteractionFlags">
-             <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>884</width>
+            <height>1149</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="titleGroupBox">
+             <property name="title">
+              <string notr="true">Title</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="1" column="0">
+               <widget class="QLineEdit" name="titleLineEdit"/>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="searchIssueButton">
+                <property name="text">
+                 <string notr="true">Find issues</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="edit-find" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" colspan="2">
+               <widget class="QLabel" name="subHeadlineLabel_2">
+                <property name="text">
+                 <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please state clearly and concisely what the issue is about and check if something similar was already posted by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Find issues&lt;/span&gt; button.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+                <property name="openExternalLinks">
+                 <bool>true</bool>
+                </property>
+                <property name="textInteractionFlags">
+                 <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="questionGroupBox">
+             <property name="title">
+              <string notr="true">State your general question</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QOwnNotesMarkdownTextEdit" name="questionPlainTextEdit"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="expectedBehaviourGroupBox">
+             <property name="title">
+              <string notr="true">Expected behaviour</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QOwnNotesMarkdownTextEdit" name="expectedBehaviourPlainTextEdit"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="actualBehaviourGroupBox">
+             <property name="title">
+              <string notr="true">Actual behaviour</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QOwnNotesMarkdownTextEdit" name="actualBehaviourPlainTextEdit"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="stepsGroupBox">
+             <property name="title">
+              <string notr="true">Steps to reproduce</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QOwnNotesMarkdownTextEdit" name="stepsPlainTextEdit"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </item>
        <item row="0" column="1">
@@ -235,54 +304,6 @@
              </property>
             </item>
            </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QGroupBox" name="expectedBehaviourGroupBox">
-         <property name="title">
-          <string notr="true">Expected behaviour</string>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QOwnNotesMarkdownTextEdit" name="expectedBehaviourPlainTextEdit"/>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QGroupBox" name="questionGroupBox">
-         <property name="title">
-          <string notr="true">State your general question</string>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QOwnNotesMarkdownTextEdit" name="questionPlainTextEdit"/>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QGroupBox" name="stepsGroupBox">
-         <property name="title">
-          <string notr="true">Steps to reproduce</string>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_7">
-          <item>
-           <widget class="QOwnNotesMarkdownTextEdit" name="stepsPlainTextEdit"/>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QGroupBox" name="actualBehaviourGroupBox">
-         <property name="title">
-          <string notr="true">Actual behaviour</string>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <widget class="QOwnNotesMarkdownTextEdit" name="actualBehaviourPlainTextEdit"/>
           </item>
          </layout>
         </widget>
@@ -496,8 +517,8 @@
   <tabstop>cancelButton</tabstop>
  </tabstops>
  <resources>
-  <include location="../images.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../images.qrc"/>
  </resources>
  <connections/>
 </ui>
