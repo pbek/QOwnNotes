@@ -1,7 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.12.15
-- added YAML highlighting support (for [#58](https://github.com/pbek/qmarkdowntextedit/pull/58), thank you @Waqar144)
+- added YAML and INI highlighting support (for [#58](https://github.com/pbek/qmarkdowntextedit/pull/58)
+  and [#59](https://github.com/pbek/qmarkdowntextedit/pull/59), thank you @Waqar144)
 - added more keywords to the BASH highlighting support
 
 ## 19.12.14
