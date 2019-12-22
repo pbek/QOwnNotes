@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.12.15
+- added YAML highlighting support (for [#58](https://github.com/pbek/qmarkdowntextedit/pull/58), thank you @Waqar144)
+
 ## 19.12.14
 - checked and unckecked **checkboxes** are now **highlighted** in the note editor
   (for [#1519](https://github.com/pbek/QOwnNotes/issues/1519))
