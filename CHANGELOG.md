@@ -2,6 +2,7 @@
 
 ## 19.12.15
 - added YAML highlighting support (for [#58](https://github.com/pbek/qmarkdowntextedit/pull/58), thank you @Waqar144)
+- added more keywords to the BASH highlighting support
 
 ## 19.12.14
 - checked and unckecked **checkboxes** are now **highlighted** in the note editor
