@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.12.16
+- added a **new editor color schema** *Nord* by @salopst
+  (for [#1522](https://github.com/pbek/QOwnNotes/issues/1522))
+- added more keywords to the BASH highlighting support
+
 ## 19.12.15
 - added YAML and INI highlighting support (for [#58](https://github.com/pbek/qmarkdowntextedit/pull/58)
   and [#59](https://github.com/pbek/qmarkdowntextedit/pull/59), thank you @Waqar144)
