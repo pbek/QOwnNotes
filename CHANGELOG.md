@@ -7,6 +7,8 @@
 - added a **new editor color schema** *Nord* by @salopst
   (for [#1522](https://github.com/pbek/QOwnNotes/issues/1522))
 - added more keywords to the BASH highlighting support
+- added more Spanish, Catalan, Brazilian Portuguese, Italian, German translation
+  (thank you richarson, MGuerra, mlimacarlos, mlocati, rakekniven)
 
 ## 19.12.15
 - added YAML and INI highlighting support (for [#58](https://github.com/pbek/qmarkdowntextedit/pull/58)
