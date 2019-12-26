@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 19.12.16
+- code block backgrounds are now rendered over the full width of the editor
+  (for [#1480](https://github.com/pbek/QOwnNotes/issues/1480), thank you @Waqar144)
+    - the *Dark* color schema now also has a background color by default
 - added a **new editor color schema** *Nord* by @salopst
   (for [#1522](https://github.com/pbek/QOwnNotes/issues/1522))
 - added more keywords to the BASH highlighting support
