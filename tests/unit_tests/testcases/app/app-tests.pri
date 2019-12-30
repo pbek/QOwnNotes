@@ -32,12 +32,14 @@ HEADERS  += \
     $$APP_SRC_DIR/entities/script.h \
     $$APP_SRC_DIR/helpers/htmlentities.h \
     $$APP_SRC_DIR/helpers/clientproxy.h \
+    $$APP_SRC_DIR/helpers/codetohtmlconverter.h \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.h \
     $$APP_SRC_DIR/libraries/hoedown/*.h \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.h \
     $$APP_SRC_DIR/libraries/botan/botanwrapper.h \
     $$APP_SRC_DIR/libraries/versionnumber/versionnumber.h \
-    $$APP_SRC_DIR/libraries/qmarkdowntextedit/markdownhighlighter.h
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/markdownhighlighter.h \
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/qownlanguagedata.h
 
 SOURCES += \
     $$PWD/test_*.cpp \
@@ -66,12 +68,14 @@ SOURCES += \
     $$APP_SRC_DIR/entities/script.cpp \
     $$APP_SRC_DIR/helpers/htmlentities.cpp \
     $$APP_SRC_DIR/helpers/clientproxy.cpp \
+    $$APP_SRC_DIR/helpers/codetohtmlconverter.cpp \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.cpp \
     $$APP_SRC_DIR/libraries/hoedown/*.c \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.cpp \
     $$APP_SRC_DIR/libraries/botan/botanwrapper.cpp \
     $$APP_SRC_DIR/libraries/versionnumber/versionnumber.cpp \
-    $$APP_SRC_DIR/libraries/qmarkdowntextedit/markdownhighlighter.cpp
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/markdownhighlighter.cpp \
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/qownlanguagedata.cpp
 
 include($$APP_SRC_DIR/libraries/botan/botan.pri)
 
