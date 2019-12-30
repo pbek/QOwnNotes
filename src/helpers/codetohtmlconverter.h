@@ -2,7 +2,8 @@
 #define CODETOHTMLCONVERTER_H
 
 #include <QString>
-
+#include <QMultiHash>
+#include <QHash>
 
 class CodeToHtmlConverter
 {

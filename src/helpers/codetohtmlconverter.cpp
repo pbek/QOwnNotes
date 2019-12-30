@@ -1,7 +1,6 @@
 #include "codetohtmlconverter.h"
-#include <QMultiHash>
 #include <QDebug>
-#include "qownlanguagedata.h"
+#include "libraries/qmarkdowntextedit/qownlanguagedata.h"
 
 QHash<QString, CodeToHtmlConverter::Lang> CodeToHtmlConverter::_langStringToEnum;
 
@@ -119,9 +118,9 @@ QString CodeToHtmlConverter::process()
 //        isCSS = true;
 //        loadCSSData(types, keywords, builtin, literals, others);
 //        break;
-//    case CodeTypeScript:
-//        loadTypescriptData(types, keywords, builtin, literals, others);
-//        break;
+    case CodeTypeScript:
+        loadTypescriptData(types, keywords, builtin, literals, others);
+        break;
 //    case CodeYAML:
 //        isYAML = true;
 //        comment = '#';
