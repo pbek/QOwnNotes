@@ -98,15 +98,17 @@ rndr_blockcode(hoedown_buffer *ob, const hoedown_buffer *text, const hoedown_buf
 	if (ob->size) hoedown_buffer_putc(ob, '\n');
 
 	if (lang) {
-		HOEDOWN_BUFPUTSL(ob, "<pre><code class=\"language-");
-		escape_html(ob, lang->data, lang->size);
+        HOEDOWN_BUFPUTSL(ob, "<pre><code class=\"language-");
+        escape_html(ob, lang->data, lang->size);
 		HOEDOWN_BUFPUTSL(ob, "\">");
 	} else {
 		HOEDOWN_BUFPUTSL(ob, "<pre><code>");
 	}
-
+    //QwnNotes specific
+    //Waqar144: We have to disable this for syntax highlighting to work
 	if (text)
-		escape_html(ob, text->data, text->size);
+        hoedown_buffer_put(ob, text->data, text->size);
+        //escape_html(ob, text->data, text->size);
 
 	HOEDOWN_BUFPUTSL(ob, "</code></pre>\n");
 }
