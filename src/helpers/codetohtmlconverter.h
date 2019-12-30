@@ -56,6 +56,7 @@ private:
     int highlightNumericLit(const QString &input, QString &output, int i);
     int highlightWord(int i, const QMultiHash<char, QLatin1String> &data,
          const QString &text, QString &output, Format f);
+    QString xmlHighlighter(const QString &text);
 
     static QHash<QString, Lang> _langStringToEnum;
 

@@ -2140,6 +2140,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                     " border-radius: 5px; color: %2; }").arg(
             codeBackgroundColor, codeForegroundColor);
 
+    //TODO: We should probably make a stylesheet for this
     codeStyleSheet += QStringLiteral(" .code-comment { color: #75715E; font-style: italic;}");
     codeStyleSheet += QStringLiteral(" .code-string { color: #E6DB74;}");
     codeStyleSheet += QStringLiteral(" .code-literal { color: #AE81FF;}");

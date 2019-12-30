@@ -113,9 +113,8 @@ QString CodeToHtmlConverter::process()
     case CodeJSON :
         loadJSONData(types, keywords, builtin, literals, others);
         break;
-//    case CodeXML :
-//        xmlHighlighter(text);
-//        return;
+    case CodeXML :
+        return xmlHighlighter(_input);
 //    case CodeCSS :
 //        isCSS = true;
 //        loadCSSData(types, keywords, builtin, literals, others);
@@ -359,6 +358,86 @@ QString CodeToHtmlConverter::escape(QChar c)
         return "&#47;";
     }
     return c;
+}
+
+QString CodeToHtmlConverter::xmlHighlighter(const QString &text) {
+    if (text.isEmpty()) return "";
+    const auto textLen = text.length();
+    QString output = QLatin1String("");
+
+    for (int i = 0; i < textLen; ++i) {
+        if (text[i] == QLatin1Char('<') && text[i+1] != QLatin1Char('!')) {
+
+            int found = text.indexOf(QLatin1Char('>'), i);
+            if (found > 0) {
+                output += escape(text.at(i));
+                ++i;
+                if (text[i] == QLatin1Char('/')) {
+                    output += escape(text.at(i));
+                    ++i;
+                }
+                QString tag = text.mid(i, found - i);
+                bool hasEqual = false;
+                int equalPos = -1;
+                if (tag.contains(QChar('='))) {
+                    hasEqual = true;
+                    equalPos = text.indexOf(QChar('='), i);
+                }
+                if (hasEqual) {
+                    int spacePos = text.indexOf(QChar(' '), i);
+                    output += setFormat(text.mid(i, spacePos - i), Format::Keyword);
+
+                    //add the space
+                    output += escape(text.at(spacePos));
+                    i = spacePos + 1;
+
+                    //highlight everything from space to equal
+                    output += setFormat(text.mid(i, equalPos - i), Format::Builtin);
+                    //set i to equal
+                    i = equalPos;
+                }
+                else {
+                    output += setFormat(text.mid(i, found - i), Format::Keyword);
+                    i = found;
+                }
+                output += escape(text.at(i));
+            }
+        }
+
+        else if (text[i] == QLatin1Char('=')) {
+            int lastSpace = text.lastIndexOf(QLatin1Char(' '), i);
+            if (lastSpace == i-1) {
+                lastSpace = text.lastIndexOf(QLatin1Char(' '), i-2);
+            }
+            if (lastSpace > 0) {
+                output += setFormat(text.mid(lastSpace, i - lastSpace), Format::Builtin);
+                output += escape(text.at(i));
+            }
+        }
+
+        else if (text[i] == QLatin1Char('\"') || text[i] == QLatin1Char('\'')) {
+            //find the next end of string
+            int next = text.indexOf(text.at(i), i + 1);
+            bool isEndline = false;
+            //if not found
+            if (next == -1) {
+                //search for endline
+                next = text.indexOf("\n", i);
+                isEndline = true;
+            }
+            //extract it
+            //next + 1 because we have to include the ' or "
+            QString str = text.mid(i, (next + 1) - i);
+            output += setFormat(str, Format::String);
+            if (isEndline)
+                output += "\n";
+            i = next;
+        }
+        else {
+            output += escape(text.at(i));
+        }
+    }
+    return output;
 }
 
 QString CodeToHtmlConverter::escapeString(const QString &s)
