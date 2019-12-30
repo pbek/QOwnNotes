@@ -192,6 +192,8 @@ set(SOURCE_FILES
     helpers/LanguageCache.h
     helpers/qownspellchecker.cpp
     helpers/qownspellchecker.h
+    helpers/codetohtmlconverter.cpp
+    helpers/codetohtmlconverter.h
     api/noteapi.cpp
     api/noteapi.h
     api/tagapi.cpp
@@ -216,6 +218,8 @@ set(SOURCE_FILES
     libraries/hoedown/stack.h
     libraries/hoedown/version.c
     libraries/hoedown/version.h
+    libraries/qmarkdowntextedit/qownlanguagedata.cpp
+    libraries/qmarkdowntextedit/qownlanguagedata.h
     libraries/qmarkdowntextedit/markdownhighlighter.cpp
     libraries/qmarkdowntextedit/markdownhighlighter.h
     libraries/qmarkdowntextedit/qmarkdowntextedit.cpp
