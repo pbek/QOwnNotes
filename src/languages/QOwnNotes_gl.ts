@@ -1258,12 +1258,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Checkbox unchecked</source>
-      <translation type="unfinished">Checkbox unchecked</translation>
+      <translation>Caixa de verificación desmarcada</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>Checkbox checked</source>
-      <translation type="unfinished">Checkbox checked</translation>
+      <translation>Marca de verificación marcada</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="216"/>
@@ -4001,9 +4001,9 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+      <translation>
+        <numerusform>Queres eliminar o ficheiro seleccionado &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Eliminas &lt;strong&gt;%n&lt;/strong&gt; os ficheiros seleccionados?</numerusform>
       </translation>
     </message>
   </context>
@@ -4052,9 +4052,9 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+      <translation>
+        <numerusform>Queres eliminar o ficheiro seleccionado &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Eliminas &lt;strong&gt;%n&lt;/strong&gt; os ficheiros seleccionados?</numerusform>
       </translation>
     </message>
   </context>
@@ -4225,9 +4225,9 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2723"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Detectouse un cambio da ruta de notas. ¿Quere substituír todas as ocorrencias de &lt;strong&gt;%1 &lt;/strong&gt; ligazóns con &lt;strong&gt;%2 &lt;/strong&gt; e ligazóns co nome de ficheiro &lt;strong&gt;%3 &lt;/strong&gt; con &lt;strong&gt;%4 &lt;/strong&gt; &gt; en &lt;strong&gt; %n &lt;/strong&gt; ficheiro de nota?</numerusform>
+        <numerusform>Detectouse un cambio da ruta de notas. ¿Quere substituír todas as ocorrencias de &lt;strong&gt;%1 &lt;/strong&gt; ligazóns con &lt;strong&gt;%2 &lt;/strong&gt; e ligazóns co nome de ficheiro &lt;strong&gt;%3 &lt;/strong&gt; con &lt;strong&gt;%4 &lt;/strong&gt; &gt; en &lt;strong&gt;%n &lt;/strong&gt; ficheiros de nota?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -5408,7 +5408,7 @@ Simplemente comproba se obtén conflitos de sincronización e establece un valor
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Aínda necesitará o &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; propio cliente de sincronización ownCloud &lt;/span&gt; &lt;/a&gt; (ou outro cliente de sincronización de escritorio) para sincronizar as túas notas! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>

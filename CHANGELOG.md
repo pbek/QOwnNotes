@@ -8,6 +8,9 @@
   (for [#1526](https://github.com/pbek/QOwnNotes/issues/1526), thank you @Waqar144)
    - most of the languages already work except YAML (doesn't work fully yet),
      INI (doesn't work fully yet) and CSS
+- added more Hausa, Russian, Cebuano, Hungarian, Icelandic, Croatian, Czech,
+  Danish, Finnish, Galician, Greek, Dutch, Albanian, Basque, Bosnian, Bulgarian
+  translation (thank you Fabijenna, unchase)
 
 ## 19.12.16
 - code block backgrounds are now rendered over the full width of the editor
