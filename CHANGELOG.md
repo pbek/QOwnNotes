@@ -1,8 +1,9 @@
 # QOwnNotes Changelog
 
 ## 19.12.17
-- did some highlighting fixes and improvements (for [#64](https://github.com/pbek/qmarkdowntextedit/pull/64)
-  and [#65](https://github.com/pbek/qmarkdowntextedit/pull/65), thank you @Waqar144)
+- did some highlighting fixes and improvements (for [#1523](https://github.com/pbek/QOwnNotes/issues/1523),
+  [#64](https://github.com/pbek/qmarkdowntextedit/pull/64) and
+  [#65](https://github.com/pbek/qmarkdowntextedit/pull/65), thank you @Waqar144)
 
 ## 19.12.16
 - code block backgrounds are now rendered over the full width of the editor
