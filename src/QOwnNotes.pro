@@ -81,6 +81,7 @@ INCLUDEPATH += $$PWD/libraries
 SOURCES += main.cpp\
     dialogs/attachmentdialog.cpp \
     entities/cloudconnection.cpp \
+    helpers/codetohtmlconverter.cpp \
     helpers/qownspellchecker.cpp \
         mainwindow.cpp \
     libraries/diff_match_patch/diff_match_patch.cpp \
@@ -172,6 +173,7 @@ HEADERS  += mainwindow.h \
     dialogs/attachmentdialog.h \
     entities/cloudconnection.h \
     helpers/LanguageCache.h \
+    helpers/codetohtmlconverter.h \
     helpers/qownspellchecker.h \
     version.h \
     libraries/diff_match_patch/diff_match_patch.h \
