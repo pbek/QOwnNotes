@@ -25,6 +25,7 @@
 #include <QTemporaryFile>
 #include <utils/gui.h>
 #include <utils/schema.h>
+#include "helpers/codetohtmlconverter.h"
 
 
 Note::Note() {
@@ -2021,6 +2022,47 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         str = preScriptResult;
     }
 
+    /*CODE HIGHLIGHTING*/
+    int cbCount = str.count("```");
+    if (cbCount % 2 != 0) --cbCount;
+
+    //divide by two to get actual number of code blocks
+    cbCount /= 2;
+
+    if (cbCount >= 1) {
+        int fblock = str.indexOf("```", 0);
+        int currentCbPos = fblock;
+        for (int i = 0; i < cbCount; ++i) {
+            //find endline
+            int endline = str.indexOf("\n", currentCbPos);
+            QString lang = str.mid(currentCbPos +3, endline - (currentCbPos + 3));
+            //move start pos to after the endline
+            currentCbPos = endline + 1;
+            //find the codeBlock end
+            int next = str.indexOf("```", currentCbPos);
+            //extract the codeBlock
+            QString codeBlock = str.mid(currentCbPos, next - currentCbPos);
+
+            QString highlightedCodeBlock;
+            if (!(codeBlock.isEmpty() && lang.isEmpty())) {
+                CodeToHtmlConverter c(codeBlock, lang);
+                highlightedCodeBlock = c.process();
+                str.replace(currentCbPos, next - currentCbPos, highlightedCodeBlock);
+                //recalculate next because string has now changed
+                next = str.indexOf("```", currentCbPos);
+            }
+            //QString highlightedCodeBlock = CodeToHtml(codeBlock, lang);
+            //str.replace(currentCbPos, next, highlightedCodeBlock);
+
+            //move next pos to after the backticks
+            next += 3;
+            //find the start of the next code block
+            currentCbPos = str.indexOf("```", next);
+        }
+    }
+    str.replace(QChar('\u0000'), QString(""));
+//    qWarning () << str;
+
     unsigned char *sequence = (unsigned char *) qstrdup(
             str.toUtf8().constData());
     qint64 length = strlen((char *) sequence);
@@ -2097,6 +2139,15 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                     " line-height: 1.45em; background-color: %1;"
                     " border-radius: 5px; color: %2; }").arg(
             codeBackgroundColor, codeForegroundColor);
+
+    //TODO: We should probably make a stylesheet for this
+    codeStyleSheet += QStringLiteral(" .code-comment { color: #75715E; font-style: italic;}");
+    codeStyleSheet += QStringLiteral(" .code-string { color: #E6DB74;}");
+    codeStyleSheet += QStringLiteral(" .code-literal { color: #AE81FF;}");
+    codeStyleSheet += QStringLiteral(" .code-type { color: #66D9EF;}");
+    codeStyleSheet += QStringLiteral(" .code-builtin { color: #A6E22E;}");
+    codeStyleSheet += QStringLiteral(" .code-keyword { color: #F92672;}");
+    codeStyleSheet += QStringLiteral(" .code-other { color: #F92672;}");
 
     // correct the strikeout tag
     result.replace(QRegularExpression(QStringLiteral("<del>([^<]+)<\\/del>")), QStringLiteral("<s>\\1</s>"));
