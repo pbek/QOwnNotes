@@ -24,9 +24,21 @@ You will find the authors in the *Script repository*.
 
 #### Output from the debug section in the settings dialog
 
+<details><summary>Expand</summary>
+
+<!-- Replace this with the output -->
+
+</details>
+
 #### Relevant log output in the Log panel
 
 <!-- You have to enable enable the Log panel in the Windows menu! -->
 <!-- Please also enable debug output in the options of panel. -->
 <!-- Alternatively you can also turn on a log file in the settings. -->
 
+<details><summary>Expand</summary>
+
+```
+Output goes here
+```
+</details>
