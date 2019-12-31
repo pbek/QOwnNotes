@@ -611,6 +611,10 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
             QRegularExpression::CaseInsensitiveOption |
             QRegularExpression::DotMatchesEverythingOption), QStringLiteral("\n##### \\1\n"));
     text.replace(QRegularExpression(
+            QStringLiteral("<h6.*?>(.+?)<\\/h6>"),
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), QStringLiteral("\n###### \\1\n"));
+    text.replace(QRegularExpression(
             QStringLiteral("<li.*?>(.+?)<\\/li>"),
             QRegularExpression::CaseInsensitiveOption |
             QRegularExpression::DotMatchesEverythingOption), QStringLiteral("- \\1"));
