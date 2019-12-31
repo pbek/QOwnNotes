@@ -54,10 +54,10 @@ private:
     QString setFormat(const QStringRef str, Format format) const;
     void initCodeLangs() const Q_DECL_NOTHROW;
 
-    int highlightNumericLit(const QStringRef input, QString &output, int i) const;
+    int highlightNumericLit(QString &output, int i) const;
     int highlightComment(QString &output, int i, bool isSingleLine = true) const;
     int highlightWord(int i, const QMultiHash<char, QLatin1String> &data,
-         const QStringRef text, QString &output, Format f) const;
+                      QString &output, Format f) const;
     QString xmlHighlighter(const QStringRef text) const;
 
     static QHash<QString, Lang> _langStringToEnum;

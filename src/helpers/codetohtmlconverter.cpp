@@ -159,7 +159,7 @@ QString CodeToHtmlConverter::process() const
                     output += QChar('\n');
                 i = next;
             } else if (_input.at(i).isDigit()) {
-                i = highlightNumericLit(_input, output, i);
+                i = highlightNumericLit(output, i);
                 output += escape(_input.at(i));
             } else if (comment.isNull() && _input.at(i) == QChar('/')) {
                 if(_input.at(i + 1) == QChar('/')) {
@@ -177,31 +177,31 @@ QString CodeToHtmlConverter::process() const
             }
             else if(_input.at(i).isLetter()) {
                 int pos = i;
-                i = highlightWord(i, types, _input, output, Format::Type);
+                i = highlightWord(i, types, output, Format::Type);
                 if (!_input.at(i).isLetter()) {
                     output += escape(_input.at(i));
                     continue;
                 }
 
-                i = highlightWord(i, keywords, _input, output, Format::Keyword);
+                i = highlightWord(i, keywords, output, Format::Keyword);
                 if (!_input.at(i).isLetter()) {
                     output += escape(_input.at(i));
                     continue;
                 }
 
-                i = highlightWord(i, literals, _input, output, Format::Literal);
+                i = highlightWord(i, literals, output, Format::Literal);
                 if (!_input.at(i).isLetter()) {
                     output += escape(_input.at(i));
                     continue;
                 }
 
-                i = highlightWord(i, builtin, _input, output, Format::Builtin);
+                i = highlightWord(i, builtin, output, Format::Builtin);
                 if (!_input.at(i).isLetter()) {
                     output += escape(_input.at(i));
                     continue;
                 }
 
-                i = highlightWord(i, others, _input, output, Format::Other);
+                i = highlightWord(i, others, output, Format::Other);
                 if (!_input.at(i).isLetter()) {
                     output += escape(_input.at(i));
                     continue;
@@ -228,13 +228,13 @@ QString CodeToHtmlConverter::process() const
     return output;
 }
 
-int CodeToHtmlConverter::highlightNumericLit(const QStringRef input, QString &output, int i) const
+int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
 {
     bool isPreAllowed = false;
     if (i == 0) isPreAllowed = true;
     else {
         //these values are allowed before a number
-        switch(input.at(i - 1).toLatin1()) {
+        switch(_input.at(i - 1).toLatin1()) {
         case '[':
         case '(':
         case '{':
@@ -254,34 +254,34 @@ int CodeToHtmlConverter::highlightNumericLit(const QStringRef input, QString &ou
     }
 
     if (!isPreAllowed) {
-        output += escape(input.at(i));
+        output += escape(_input.at(i));
         return ++i;
     }
 
     int start = i;
 
-    if ((i+1) >= input.length()) {
-        output += setFormat(input.mid(i, 1), Format::Literal);
+    if ((i+1) >= _input.length()) {
+        output += setFormat(_input.mid(i, 1), Format::Literal);
         return ++i;
     }
 
     ++i;
     //hex numbers highlighting (only if there's a preceding zero)
-    if (input.at(i) == QChar('x') && input.at(i - 1) == QChar('0'))
+    if (_input.at(i) == QChar('x') && _input.at(i - 1) == QChar('0'))
         ++i;
 
-    while (i < input.length()) {
-        if (!input.at(i).isNumber() && input.at(i) != QChar('.')) break;
+    while (i < _input.length()) {
+        if (!_input.at(i).isNumber() && _input.at(i) != QChar('.')) break;
         ++i;
     }
 
     i--;
 
     bool isPostAllowed = false;
-    if (i+1 == input.length()) isPostAllowed = true;
+    if (i+1 == _input.length()) isPostAllowed = true;
     else {
         //these values are allowed after a number
-        switch(input.at(i + 1).toLatin1()) {
+        switch(_input.at(i + 1).toLatin1()) {
         case ']':
         case ')':
         case '}':
@@ -312,7 +312,7 @@ int CodeToHtmlConverter::highlightNumericLit(const QStringRef input, QString &ou
     }
     if (isPostAllowed) {
         int end = ++i;
-        output += setFormat(input.mid(start, end - start), Format::Literal);
+        output += setFormat(_input.mid(start, end - start), Format::Literal);
     }
     return i;
 }
@@ -339,22 +339,22 @@ int CodeToHtmlConverter::highlightComment(QString &output, int i, bool isSingleL
 }
 
 int CodeToHtmlConverter::highlightWord(int i, const QMultiHash<char, QLatin1String> &data,
-                                       const QStringRef text, QString &output, CodeToHtmlConverter::Format f) const
+                                       QString &output, CodeToHtmlConverter::Format f) const
 {
     QList<QLatin1String> wordList;
     // check if we are at the beginning OR if this is the start of a word
     // AND the current char is present in the data structure
-    if ( ( i == 0 || !text[i-1].isLetter()) && data.contains(text[i].toLatin1())) {
-        wordList = data.values(text[i].toLatin1());
+    if ( ( i == 0 || !_input[i-1].isLetter()) && data.contains(_input[i].toLatin1())) {
+        wordList = data.values(_input[i].toLatin1());
 #if QT_VERSION >= 0x050700
         for(const QLatin1String &word : qAsConst(wordList)) {
 #else
         for(const QLatin1String &word : wordList) {
 #endif
-            if (word == text.mid(i, word.size())) {
+            if (word == _input.mid(i, word.size())) {
                 //check if we are at the end of text OR if we have a complete word
-                if ( i + word.size() == text.length() || !text.at(i + word.size()).isLetter()) {
-                    output += setFormat(text.mid(i, word.size()), f);
+                if ( i + word.size() == _input.length() || !_input.at(i + word.size()).isLetter()) {
+                    output += setFormat(_input.mid(i, word.size()), f);
                     i += word.size();
                 }
             }
