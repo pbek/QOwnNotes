@@ -439,8 +439,7 @@ QString CodeToHtmlConverter::xmlHighlighter(const QString &text) {
     return output;
 }
 
-QString CodeToHtmlConverter::escapeString(const QString &s)
-{
+QString CodeToHtmlConverter::escapeString(const QString &s) {
     QString ret = "";
     for (int i = 0; i < s.length(); ++i) {
         ret += escape(s.at(i));
@@ -448,22 +447,23 @@ QString CodeToHtmlConverter::escapeString(const QString &s)
     return ret;
 }
 
-QString CodeToHtmlConverter::setFormat(const QString &str, CodeToHtmlConverter::Format format)
-{
+QString CodeToHtmlConverter::setFormat(const QString &str, CodeToHtmlConverter::Format format) {
     switch(format) {
-    case Type:
-        return typeTagBegin + escapeString(str) + spanEnd;
-    case Keyword:
-        return keywordTagBegin + escapeString(str) + spanEnd;
-    case Literal:
-        return literalTagBegin + escapeString(str) + spanEnd;
-    case String:
-        return stringTagBegin + escapeString(str) + spanEnd;
-    case Builtin:
-        return builtinTagBegin + escapeString(str) + spanEnd;
-    case Other:
-        return otherTagBegin + escapeString(str) + spanEnd;
-    case Comment:
-        return commentTagBegin + escapeString(str) + spanEnd;
+        case Type:
+            return typeTagBegin + escapeString(str) + spanEnd;
+        case Keyword:
+            return keywordTagBegin + escapeString(str) + spanEnd;
+        case Literal:
+            return literalTagBegin + escapeString(str) + spanEnd;
+        case String:
+            return stringTagBegin + escapeString(str) + spanEnd;
+        case Builtin:
+            return builtinTagBegin + escapeString(str) + spanEnd;
+        case Other:
+            return otherTagBegin + escapeString(str) + spanEnd;
+        case Comment:
+            return commentTagBegin + escapeString(str) + spanEnd;
     }
+
+    return str;
 }
