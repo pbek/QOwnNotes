@@ -138,9 +138,6 @@ QString CodeToHtmlConverter::process()
             //this can be \n, \t, a space
             if (_input[i] == ' ') {
                 output += ' ';
-            } else if (_input.at(i) == '<' || _input.at(i) == '>' ||
-                     _input.at(i) == '&') {
-                output += escape(_input.at(i));
             } else if (_input.at(i) == '\'' || _input.at(i) == '"') {
                 //find the next end of string
                 int next = _input.indexOf(_input.at(i), i + 1);
@@ -161,7 +158,7 @@ QString CodeToHtmlConverter::process()
             } else if (_input.at(i).isDigit()) {
                 i = highlightNumericLit(_input, output, i);
                 output += escape(_input.at(i));
-            } else if (_input.at(i) == QChar('/')) {
+            } else if (comment.isNull() && _input.at(i) == QChar('/')) {
                 if(_input.at(i + 1) == QChar('/')) {
                     int endline = _input.indexOf(QChar('\n'), i);
 
@@ -171,6 +168,12 @@ QString CodeToHtmlConverter::process()
                     i = endline;
                     continue;
                 }
+            } else if (_input.at(i) == comment) {
+                int endlinePos = _input.indexOf(QChar('\n'), i);
+                output += setFormat(_input.mid(i, endlinePos - i), Format::Comment);
+                i = endlinePos;
+                //escape the endline
+                output += escape(_input.at(endlinePos));
             } else if (_input.at(i) == '<' || _input.at(i) == '>' ||
                        _input.at(i) == '&') {
                   output += escape(_input.at(i));
