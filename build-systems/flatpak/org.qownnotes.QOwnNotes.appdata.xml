@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2019 Patrizio Bekerle <patrizio@bekerle.com> -->
+<!-- Copyright 2014-2020 Patrizio Bekerle <patrizio@bekerle.com> -->
 <component type="desktop-application">
   <id>org.qownnotes.QOwnNotes</id>
   <metadata_license>FSFAP</metadata_license>
