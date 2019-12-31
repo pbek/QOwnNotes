@@ -163,20 +163,14 @@ QString CodeToHtmlConverter::process() const
                 output += escape(_input.at(i));
             } else if (comment.isNull() && _input.at(i) == QChar('/')) {
                 if(_input.at(i + 1) == QChar('/')) {
-                    int endline = _input.indexOf(QChar('\n'), i);
-
-                    QStringRef s = _input.mid(i, endline - i);
-                    output += setFormat(s, Format::Comment);
-                    i = endline;
-                    output += escape(_input.at(i));
-                    continue;
+                    i = highlightComment(output, i);
+                }
+                //Multiline comment i.e /* */
+                else if (_input.at(i + 1) == QChar('*')) {
+                    i = highlightComment(output, i, false);
                 }
             } else if (_input.at(i) == comment) {
-                int endlinePos = _input.indexOf(QChar('\n'), i);
-                output += setFormat(_input.mid(i, endlinePos - i), Format::Comment);
-                i = endlinePos;
-                //escape the endline
-                output += escape(_input.at(endlinePos));
+                i = highlightComment(output, i);
             } else if (_input.at(i) == QChar('<') || _input.at(i) == QChar('>') ||
                        _input.at(i) == QChar('&')) {
                   output += escape(_input.at(i));
@@ -320,6 +314,27 @@ int CodeToHtmlConverter::highlightNumericLit(const QStringRef input, QString &ou
         int end = ++i;
         output += setFormat(input.mid(start, end - start), Format::Literal);
     }
+    return i;
+}
+
+int CodeToHtmlConverter::highlightComment(QString &output, int i, bool isSingleLine) const
+{
+    int endPos = -1;
+    if (isSingleLine) {
+        endPos = _input.indexOf(QChar('\n'), i);
+    } else {
+        endPos = _input.indexOf(QLatin1String("*/"), i);
+        if (endPos == -1) {
+            endPos = _input.length();
+        } else {
+            endPos += 2;
+        }
+    }
+    output += setFormat(_input.mid(i, endPos - i), Format::Comment);
+    i = endPos;
+    //escape the endline
+    output += escape(_input.at(endPos));
+
     return i;
 }
 
