@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 20.0.0
+## 20.1.0
 - brought more variation in the headline colors of the `Light` and `Dark` schemes
 - added missing headline 6 highlighting in the note editor
 - attempted to fix SuSE builds
