@@ -2023,25 +2023,25 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     }
 
     /*CODE HIGHLIGHTING*/
-    int cbCount = str.count("```");
+    int cbCount = str.count(QLatin1String("```"));
     if (cbCount % 2 != 0) --cbCount;
 
     //divide by two to get actual number of code blocks
     cbCount /= 2;
 
     if (cbCount >= 1) {
-        int fblock = str.indexOf("```", 0);
+        int fblock = str.indexOf(QLatin1String("```"), 0);
         int currentCbPos = fblock;
         for (int i = 0; i < cbCount; ++i) {
             //find endline
-            int endline = str.indexOf("\n", currentCbPos);
+            int endline = str.indexOf(QChar('\n'), currentCbPos);
             QString lang = str.mid(currentCbPos +3, endline - (currentCbPos + 3));
             //move start pos to after the endline
             currentCbPos = endline + 1;
             //find the codeBlock end
-            int next = str.indexOf("```", currentCbPos);
+            int next = str.indexOf(QLatin1String("```"), currentCbPos);
             //extract the codeBlock
-            QString codeBlock = str.mid(currentCbPos, next - currentCbPos);
+            QStringRef codeBlock = str.midRef(currentCbPos, next - currentCbPos);
 
             QString highlightedCodeBlock;
             if (!(codeBlock.isEmpty() && lang.isEmpty())) {
@@ -2049,19 +2049,15 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                 highlightedCodeBlock = c.process();
                 str.replace(currentCbPos, next - currentCbPos, highlightedCodeBlock);
                 //recalculate next because string has now changed
-                next = str.indexOf("```", currentCbPos);
+                next = str.indexOf(QLatin1String("```"), currentCbPos);
             }
-            //QString highlightedCodeBlock = CodeToHtml(codeBlock, lang);
-            //str.replace(currentCbPos, next, highlightedCodeBlock);
-
             //move next pos to after the backticks
             next += 3;
             //find the start of the next code block
-            currentCbPos = str.indexOf("```", next);
+            currentCbPos = str.indexOf(QLatin1String("```"), next);
         }
     }
-    str.replace(QChar('\u0000'), QString(""));
-//    qWarning () << str;
+    str.replace(QChar('\u0000'), QLatin1String(""));
 
     unsigned char *sequence = (unsigned char *) qstrdup(
             str.toUtf8().constData());

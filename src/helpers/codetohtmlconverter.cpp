@@ -1,10 +1,11 @@
 #include "codetohtmlconverter.h"
 #include <QDebug>
 #include "libraries/qmarkdowntextedit/qownlanguagedata.h"
+#include <QStringBuilder>
 
 QHash<QString, CodeToHtmlConverter::Lang> CodeToHtmlConverter::_langStringToEnum;
 
-CodeToHtmlConverter::CodeToHtmlConverter(const QString &input, const QString &lang)
+CodeToHtmlConverter::CodeToHtmlConverter(const QStringRef input, const QString &lang) Q_DECL_NOTHROW
     : _input(input), _lang(lang)
 {
     if (_langStringToEnum.isEmpty())
@@ -13,7 +14,7 @@ CodeToHtmlConverter::CodeToHtmlConverter(const QString &input, const QString &la
     currentLang = _langStringToEnum.value(_lang);
 }
 
-void CodeToHtmlConverter::initCodeLangs()
+void CodeToHtmlConverter::initCodeLangs() const Q_DECL_NOTHROW
 {
     CodeToHtmlConverter::_langStringToEnum =
             QHash<QString, CodeToHtmlConverter::Lang> {
@@ -49,10 +50,10 @@ void CodeToHtmlConverter::initCodeLangs()
 
 }
 
-QString CodeToHtmlConverter::process()
+QString CodeToHtmlConverter::process() const
 {
     if (_input.isEmpty()) {
-        return _input;
+        return QLatin1String("");
     }
 
     QMultiHash<char, QLatin1String> keywords{};
@@ -132,28 +133,30 @@ QString CodeToHtmlConverter::process()
     }
 
     const auto textLen = _input.length();
+    //reserve extra space
+    output.reserve(_input.size() + 100);
 
     for (int i = 0; i < textLen; ++i) {
       //  while (i < textLen && !_input.at(i).isLetter()) {
             //this can be \n, \t, a space
-            if (_input[i] == ' ') {
-                output += ' ';
-            } else if (_input.at(i) == '\'' || _input.at(i) == '"') {
+            if (_input[i] == QChar(' ')) {
+                output += (QChar(' '));
+            } else if (_input.at(i) == QChar('\'') || _input.at(i) == QChar('"')) {
                 //find the next end of string
                 int next = _input.indexOf(_input.at(i), i + 1);
                 bool isEndline = false;
                 //if not found
                 if (next == -1) {
                     //search for endline
-                    next = _input.indexOf("\n", i);
+                    next = _input.indexOf(QChar('\n'), i);
                     isEndline = true;
                 }
                 //extract it
                 //next + 1 because we have to include the ' or "
-                QString str = _input.mid(i, (next + 1) - i);
+                QStringRef str = _input.mid(i, (next + 1) - i);
                 output += setFormat(str, Format::String);
                 if (isEndline)
-                    output += "\n";
+                    output += QChar('\n');
                 i = next;
             } else if (_input.at(i).isDigit()) {
                 i = highlightNumericLit(_input, output, i);
@@ -162,10 +165,10 @@ QString CodeToHtmlConverter::process()
                 if(_input.at(i + 1) == QChar('/')) {
                     int endline = _input.indexOf(QChar('\n'), i);
 
-                    QString s = _input.mid(i, endline - i);
-                    output += setFormat(s, Format::Comment) + '\n';
-
+                    QStringRef s = _input.mid(i, endline - i);
+                    output += setFormat(s, Format::Comment);
                     i = endline;
+                    output += escape(_input.at(i));
                     continue;
                 }
             } else if (_input.at(i) == comment) {
@@ -174,8 +177,8 @@ QString CodeToHtmlConverter::process()
                 i = endlinePos;
                 //escape the endline
                 output += escape(_input.at(endlinePos));
-            } else if (_input.at(i) == '<' || _input.at(i) == '>' ||
-                       _input.at(i) == '&') {
+            } else if (_input.at(i) == QChar('<') || _input.at(i) == QChar('>') ||
+                       _input.at(i) == QChar('&')) {
                   output += escape(_input.at(i));
             }
             else if(_input.at(i).isLetter()) {
@@ -226,10 +229,12 @@ QString CodeToHtmlConverter::process()
                 output += _input.at(i);
             }
     }
+    //release extra memory
+    output.squeeze();
     return output;
 }
 
-int CodeToHtmlConverter::highlightNumericLit(const QString &input, QString &output, int i)
+int CodeToHtmlConverter::highlightNumericLit(const QStringRef input, QString &output, int i) const
 {
     bool isPreAllowed = false;
     if (i == 0) isPreAllowed = true;
@@ -319,7 +324,7 @@ int CodeToHtmlConverter::highlightNumericLit(const QString &input, QString &outp
 }
 
 int CodeToHtmlConverter::highlightWord(int i, const QMultiHash<char, QLatin1String> &data,
-                                       const QString &text, QString &output, CodeToHtmlConverter::Format f)
+                                       const QStringRef text, QString &output, CodeToHtmlConverter::Format f) const
 {
     QList<QLatin1String> wordList;
     // check if we are at the beginning OR if this is the start of a word
@@ -331,7 +336,7 @@ int CodeToHtmlConverter::highlightWord(int i, const QMultiHash<char, QLatin1Stri
 #else
         for(const QLatin1String &word : wordList) {
 #endif
-            if (word == text.midRef(i, word.size())) {
+            if (word == text.mid(i, word.size())) {
                 //check if we are at the end of text OR if we have a complete word
                 if ( i + word.size() == text.length() || !text.at(i + word.size()).isLetter()) {
                     output += setFormat(text.mid(i, word.size()), f);
@@ -343,27 +348,27 @@ int CodeToHtmlConverter::highlightWord(int i, const QMultiHash<char, QLatin1Stri
     return i;
 }
 
-QString CodeToHtmlConverter::escape(QChar c)
+QString CodeToHtmlConverter::escape(QChar c) const
 {
     switch (c.toLatin1()) {
     case '\'':
-        return "&#39;";
+        return QStringLiteral("&#39;");
     case '"':
-        return "&quot;";
+        return QStringLiteral("&quot;");
     case '&':
-        return "&amp;";
+        return QStringLiteral("&amp;");
     case '<':
-        return "&lt;";
+        return QStringLiteral("&lt;");
     case '>':
-        return "&gt;";
+        return QStringLiteral("&gt;");
     case '/':
-        return "&#47;";
+        return QStringLiteral("&#47;");
     }
     return c;
 }
 
-QString CodeToHtmlConverter::xmlHighlighter(const QString &text) {
-    if (text.isEmpty()) return "";
+QString CodeToHtmlConverter::xmlHighlighter(const QStringRef text) const {
+    if (text.isEmpty()) return QLatin1String("");
     const auto textLen = text.length();
     QString output = QLatin1String("");
 
@@ -378,7 +383,7 @@ QString CodeToHtmlConverter::xmlHighlighter(const QString &text) {
                     output += escape(text.at(i));
                     ++i;
                 }
-                QString tag = text.mid(i, found - i);
+                QStringRef tag = text.mid(i, found - i);
                 bool hasEqual = false;
                 int equalPos = -1;
                 if (tag.contains(QChar('='))) {
@@ -424,15 +429,15 @@ QString CodeToHtmlConverter::xmlHighlighter(const QString &text) {
             //if not found
             if (next == -1) {
                 //search for endline
-                next = text.indexOf("\n", i);
+                next = text.indexOf(QChar('\n'), i);
                 isEndline = true;
             }
             //extract it
             //next + 1 because we have to include the ' or "
-            QString str = text.mid(i, (next + 1) - i);
+            QStringRef str = text.mid(i, (next + 1) - i);
             output += setFormat(str, Format::String);
             if (isEndline)
-                output += "\n";
+                output += QChar('\n');
             i = next;
         }
         else {
@@ -442,31 +447,32 @@ QString CodeToHtmlConverter::xmlHighlighter(const QString &text) {
     return output;
 }
 
-QString CodeToHtmlConverter::escapeString(const QString &s)
+QString CodeToHtmlConverter::escapeString(const QStringRef s) const
 {
-    QString ret = "";
+    QString ret = QLatin1String("");
+    ret.reserve(s.length());
     for (int i = 0; i < s.length(); ++i) {
         ret += escape(s.at(i));
     }
     return ret;
 }
 
-QString CodeToHtmlConverter::setFormat(const QString &str, CodeToHtmlConverter::Format format)
+QString CodeToHtmlConverter::setFormat(const QStringRef str, CodeToHtmlConverter::Format format) const
 {
     switch(format) {
     case Type:
-        return typeTagBegin + escapeString(str) + spanEnd;
+        return typeTagBegin % escapeString(str) % spanEnd;
     case Keyword:
-        return keywordTagBegin + escapeString(str) + spanEnd;
+        return keywordTagBegin % escapeString(str) % spanEnd;
     case Literal:
-        return literalTagBegin + escapeString(str) + spanEnd;
+        return literalTagBegin % escapeString(str) % spanEnd;
     case String:
-        return stringTagBegin + escapeString(str) + spanEnd;
+        return stringTagBegin % escapeString(str) % spanEnd;
     case Builtin:
-        return builtinTagBegin + escapeString(str) + spanEnd;
+        return builtinTagBegin % escapeString(str) % spanEnd;
     case Other:
-        return otherTagBegin + escapeString(str) + spanEnd;
+        return otherTagBegin % escapeString(str) % spanEnd;
     case Comment:
-        return commentTagBegin + escapeString(str) + spanEnd;
+        return commentTagBegin % escapeString(str) % spanEnd;
     }
 }

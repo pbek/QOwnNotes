@@ -41,34 +41,34 @@ public:
         CodeINI
     };
 public:
-    CodeToHtmlConverter(const QString &input, const QString &lang);
-    QString process();
+    CodeToHtmlConverter(const QStringRef input, const QString &lang) Q_DECL_NOTHROW;
+    QString process() const;
 
 private:
-    QString _input;
+    QStringRef _input;
     QString _lang;
     Lang currentLang;
 
-    QString escape(QChar c);
-    QString escapeString(const QString &s);
-    QString setFormat(const QString &str, Format format);
-    void initCodeLangs();
+    QString escape(QChar c) const;
+    QString escapeString(const QStringRef s) const;
+    QString setFormat(const QStringRef str, Format format) const;
+    void initCodeLangs() const Q_DECL_NOTHROW;
 
-    int highlightNumericLit(const QString &input, QString &output, int i);
+    int highlightNumericLit(const QStringRef input, QString &output, int i) const;
     int highlightWord(int i, const QMultiHash<char, QLatin1String> &data,
-         const QString &text, QString &output, Format f);
-    QString xmlHighlighter(const QString &text);
+         const QStringRef text, QString &output, Format f) const;
+    QString xmlHighlighter(const QStringRef text) const;
 
     static QHash<QString, Lang> _langStringToEnum;
 
-    const QString keywordTagBegin = "<span class=\"code-keyword\">";
-    const QString typeTagBegin = "<span class=\"code-type\">";
-    const QString literalTagBegin = "<span class=\"code-literal\">";
-    const QString commentTagBegin = "<span class=\"code-comment\">";
-    const QString builtinTagBegin = "<span class=\"code-builtin\">";
-    const QString otherTagBegin = "<span class=\"code-other\">";
-    const QString stringTagBegin = "<span class=\"code-string\">";
-    const QString spanEnd = "</span>";
+    const QString keywordTagBegin = QStringLiteral("<span class=\"code-keyword\">");
+    const QString typeTagBegin = QStringLiteral("<span class=\"code-type\">");
+    const QString literalTagBegin = QStringLiteral("<span class=\"code-literal\">");
+    const QString commentTagBegin = QStringLiteral("<span class=\"code-comment\">");
+    const QString builtinTagBegin = QStringLiteral("<span class=\"code-builtin\">");
+    const QString otherTagBegin = QStringLiteral("<span class=\"code-other\">");
+    const QString stringTagBegin = QStringLiteral("<span class=\"code-string\">");
+    const QString spanEnd = QStringLiteral("</span>");
 };
 
 #endif // CODETOHTMLCONVERTER_H
