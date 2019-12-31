@@ -2,7 +2,7 @@
 
 ## 20.0.0
 - brought more variation in the headline colors of the `Light` and `Dark` schemes
-- added missing headline 6 highlighting
+- added missing headline 6 highlighting in the note editor
 
 ## 19.12.17
 - did some highlighting fixes and improvements (for [#1523](https://github.com/pbek/QOwnNotes/issues/1523),
