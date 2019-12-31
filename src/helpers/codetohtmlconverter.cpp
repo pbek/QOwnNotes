@@ -137,91 +137,89 @@ QString CodeToHtmlConverter::process() const
     output.reserve(_input.size() + 100);
 
     for (int i = 0; i < textLen; ++i) {
-      //  while (i < textLen && !_input.at(i).isLetter()) {
-            //this can be \n, \t, a space
-            if (_input[i] == QChar(' ')) {
-                output += (QChar(' '));
-            } else if (_input.at(i) == QChar('\'') || _input.at(i) == QChar('"')) {
-                //find the next end of string
-                int next = _input.indexOf(_input.at(i), i + 1);
-                bool isEndline = false;
-                //if not found
-                if (next == -1) {
-                    //search for endline
-                    next = _input.indexOf(QChar('\n'), i);
-                    isEndline = true;
-                }
-                //extract it
-                //next + 1 because we have to include the ' or "
-                QStringRef str = _input.mid(i, (next + 1) - i);
-                output += setFormat(str, Format::String);
-                if (isEndline)
-                    output += QChar('\n');
-                i = next;
-            } else if (_input.at(i).isDigit()) {
-                i = highlightNumericLit(output, i);
-                output += escape(_input.at(i));
-            } else if (comment.isNull() && _input.at(i) == QChar('/')) {
-                if(_input.at(i + 1) == QChar('/')) {
-                    i = highlightComment(output, i);
-                }
-                //Multiline comment i.e /* */
-                else if (_input.at(i + 1) == QChar('*')) {
-                    i = highlightComment(output, i, false);
-                }
-            } else if (_input.at(i) == comment) {
+        if (_input[i] == QChar(' ')) {
+            output += (QChar(' '));
+        } else if (_input.at(i) == QChar('\'') || _input.at(i) == QChar('"')) {
+            //find the next end of string
+            int next = _input.indexOf(_input.at(i), i + 1);
+            bool isEndline = false;
+            //if not found
+            if (next == -1) {
+                //search for endline
+                next = _input.indexOf(QChar('\n'), i);
+                isEndline = true;
+            }
+            //extract it
+            //next + 1 because we have to include the ' or "
+            QStringRef str = _input.mid(i, (next + 1) - i);
+            output += setFormat(str, Format::String);
+            if (isEndline)
+                output += QChar('\n');
+            i = next;
+        } else if (_input.at(i).isDigit()) {
+            i = highlightNumericLit(output, i);
+            output += escape(_input.at(i));
+        } else if (comment.isNull() && _input.at(i) == QChar('/')) {
+            if(_input.at(i + 1) == QChar('/')) {
                 i = highlightComment(output, i);
-            } else if (_input.at(i) == QChar('<') || _input.at(i) == QChar('>') ||
-                       _input.at(i) == QChar('&')) {
-                  output += escape(_input.at(i));
             }
-            else if(_input.at(i).isLetter()) {
-                int pos = i;
-                i = highlightWord(i, types, output, Format::Type);
-                if (!_input.at(i).isLetter()) {
-                    output += escape(_input.at(i));
-                    continue;
-                }
-
-                i = highlightWord(i, keywords, output, Format::Keyword);
-                if (!_input.at(i).isLetter()) {
-                    output += escape(_input.at(i));
-                    continue;
-                }
-
-                i = highlightWord(i, literals, output, Format::Literal);
-                if (!_input.at(i).isLetter()) {
-                    output += escape(_input.at(i));
-                    continue;
-                }
-
-                i = highlightWord(i, builtin, output, Format::Builtin);
-                if (!_input.at(i).isLetter()) {
-                    output += escape(_input.at(i));
-                    continue;
-                }
-
-                i = highlightWord(i, others, output, Format::Other);
-                if (!_input.at(i).isLetter()) {
-                    output += escape(_input.at(i));
-                    continue;
-                }
-
-                if (pos == i) {
-                    int cnt = i;
-                    while (cnt < textLen) {
-                        if (!_input[cnt].isLetter())
-                            break;
-                        output += _input.at(cnt);
-                        ++cnt;
-                    }
-                    i = cnt;
-                    output += escape(_input.at(i));
-                }
+            //Multiline comment i.e /* */
+            else if (_input.at(i + 1) == QChar('*')) {
+                i = highlightComment(output, i, false);
             }
-            else {
-                output += _input.at(i);
+        } else if (_input.at(i) == comment) {
+            i = highlightComment(output, i);
+        } else if (_input.at(i) == QChar('<') || _input.at(i) == QChar('>') ||
+                   _input.at(i) == QChar('&')) {
+            output += escape(_input.at(i));
+        }
+        else if(_input.at(i).isLetter()) {
+            int pos = i;
+            i = highlightWord(i, types, output, Format::Type);
+            if (!_input.at(i).isLetter()) {
+                output += escape(_input.at(i));
+                continue;
             }
+
+            i = highlightWord(i, keywords, output, Format::Keyword);
+            if (!_input.at(i).isLetter()) {
+                output += escape(_input.at(i));
+                continue;
+            }
+
+            i = highlightWord(i, literals, output, Format::Literal);
+            if (!_input.at(i).isLetter()) {
+                output += escape(_input.at(i));
+                continue;
+            }
+
+            i = highlightWord(i, builtin, output, Format::Builtin);
+            if (!_input.at(i).isLetter()) {
+                output += escape(_input.at(i));
+                continue;
+            }
+
+            i = highlightWord(i, others, output, Format::Other);
+            if (!_input.at(i).isLetter()) {
+                output += escape(_input.at(i));
+                continue;
+            }
+
+            if (pos == i) {
+                int cnt = i;
+                while (cnt < textLen) {
+                    if (!_input[cnt].isLetter())
+                        break;
+                    output += _input.at(cnt);
+                    ++cnt;
+                }
+                i = cnt;
+                output += escape(_input.at(i));
+            }
+        }
+        else {
+            output += _input.at(i);
+        }
     }
     //release extra memory
     output.squeeze();
