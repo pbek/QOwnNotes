@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2019 Patrizio Bekerle -- http://www.bekerle.com
+ * Copyright (c) 2014-2020 Patrizio Bekerle -- <patrizio@bekerle.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -610,6 +610,10 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
             QStringLiteral("<h5.*?>(.+?)<\\/h5>"),
             QRegularExpression::CaseInsensitiveOption |
             QRegularExpression::DotMatchesEverythingOption), QStringLiteral("\n##### \\1\n"));
+    text.replace(QRegularExpression(
+            QStringLiteral("<h6.*?>(.+?)<\\/h6>"),
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), QStringLiteral("\n###### \\1\n"));
     text.replace(QRegularExpression(
             QStringLiteral("<li.*?>(.+?)<\\/li>"),
             QRegularExpression::CaseInsensitiveOption |

@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.1.0
+- brought more variation in the headline colors of the `Light` and `Dark` schemes
+- added missing headline 6 highlighting in the note editor
+- attempted to fix SuSE builds
+- attempted to fix builds for older Qt versions
+
 ## 19.12.17
 - did some highlighting fixes and improvements (for [#1523](https://github.com/pbek/QOwnNotes/issues/1523),
   [#64](https://github.com/pbek/qmarkdowntextedit/pull/64) and

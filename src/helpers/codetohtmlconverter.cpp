@@ -137,7 +137,7 @@ QString CodeToHtmlConverter::process() const
     output.reserve(_input.size() + 100);
 
     for (int i = 0; i < textLen; ++i) {
-        if (_input[i] == QChar(' ')) {
+        if (_input.at(i) == QChar(' ')) {
             output += (QChar(' '));
         } else if (_input.at(i) == QChar('\'') || _input.at(i) == QChar('"')) {
             i = highlightStringLiterals(_input.at(i), output, i);
@@ -195,7 +195,7 @@ QString CodeToHtmlConverter::process() const
             if (pos == i) {
                 int cnt = i;
                 while (cnt < textLen) {
-                    if (!_input[cnt].isLetter())
+                    if (!_input.at(cnt).isLetter())
                         break;
                     output += _input.at(cnt);
                     ++cnt;
@@ -429,8 +429,8 @@ int CodeToHtmlConverter::highlightWord(int i, const QMultiHash<char, QLatin1Stri
     QList<QLatin1String> wordList;
     // check if we are at the beginning OR if this is the start of a word
     // AND the current char is present in the data structure
-    if ( ( i == 0 || !_input[i-1].isLetter()) && data.contains(_input[i].toLatin1())) {
-        wordList = data.values(_input[i].toLatin1());
+    if ( ( i == 0 || !_input.at(i-1).isLetter()) && data.contains(_input.at(i).toLatin1())) {
+        wordList = data.values(_input.at(i).toLatin1());
 #if QT_VERSION >= 0x050700
         for(const QLatin1String &word : qAsConst(wordList)) {
 #else
@@ -473,13 +473,13 @@ QString CodeToHtmlConverter::xmlHighlighter(const QStringRef text) const {
     QString output = QLatin1String("");
 
     for (int i = 0; i < textLen; ++i) {
-        if (text[i] == QLatin1Char('<') && text[i+1] != QLatin1Char('!')) {
+        if (text.at(i) == QLatin1Char('<') && text.at(i+1) != QLatin1Char('!')) {
 
             int found = text.indexOf(QLatin1Char('>'), i);
             if (found > 0) {
                 output += escape(text.at(i));
                 ++i;
-                if (text[i] == QLatin1Char('/')) {
+                if (text.at(i) == QLatin1Char('/')) {
                     output += escape(text.at(i));
                     ++i;
                 }
@@ -511,7 +511,7 @@ QString CodeToHtmlConverter::xmlHighlighter(const QStringRef text) const {
             }
         }
 
-        else if (text[i] == QLatin1Char('=')) {
+        else if (text.at(i) == QLatin1Char('=')) {
             int lastSpace = text.lastIndexOf(QLatin1Char(' '), i);
             if (lastSpace == i-1) {
                 lastSpace = text.lastIndexOf(QLatin1Char(' '), i-2);
@@ -522,7 +522,7 @@ QString CodeToHtmlConverter::xmlHighlighter(const QStringRef text) const {
             }
         }
 
-        else if (text[i] == QLatin1Char('\"') || text[i] == QLatin1Char('\'')) {
+        else if (text.at(i) == QLatin1Char('\"') || text.at(i) == QLatin1Char('\'')) {
             //find the next end of string
             int next = text.indexOf(text.at(i), i + 1);
             bool isEndline = false;
@@ -575,4 +575,6 @@ QString CodeToHtmlConverter::setFormat(const QStringRef str, CodeToHtmlConverter
     case Comment:
         return commentTagBegin % escapeString(str) % spanEnd;
     }
+
+    return str.toString();
 }
