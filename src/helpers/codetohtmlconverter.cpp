@@ -140,22 +140,9 @@ QString CodeToHtmlConverter::process() const
         if (_input[i] == QChar(' ')) {
             output += (QChar(' '));
         } else if (_input.at(i) == QChar('\'') || _input.at(i) == QChar('"')) {
-            //find the next end of string
-            int next = _input.indexOf(_input.at(i), i + 1);
-            bool isEndline = false;
-            //if not found
-            if (next == -1) {
-                //search for endline
-                next = _input.indexOf(QChar('\n'), i);
-                isEndline = true;
-            }
-            //extract it
-            //next + 1 because we have to include the ' or "
-            QStringRef str = _input.mid(i, (next + 1) - i);
-            output += setFormat(str, Format::String);
-            if (isEndline)
-                output += QChar('\n');
-            i = next;
+            i = highlightStringLiterals(_input.at(i), output, i);
+            //escape text at i, otherwise it gets skipped and won't be present in output
+            output += escape(_input.at(i));
         } else if (_input.at(i).isDigit()) {
             i = highlightNumericLit(output, i);
             output += escape(_input.at(i));
@@ -312,6 +299,106 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
         int end = ++i;
         output += setFormat(_input.mid(start, end - start), Format::Literal);
     }
+    return i;
+}
+
+int CodeToHtmlConverter::highlightStringLiterals(QChar strType, QString &output, int i) const {
+    //setFormat(i, 1,  _formats[CodeString]);
+    int start = i;
+    ++i;
+
+    while (i < _input.length()) {
+        //look for string end
+        //make sure it's not an escape seq
+        if (_input.at(i) == strType && _input.at(i-1) != '\\') {
+            ++i;
+            break;
+        }
+        //look for escape sequence
+        if (_input.at(i) == '\\' && (i+1) < _input.length()) {
+            int len = 0;
+            switch(_input.at(i+1).toLatin1()) {
+            case 'a':
+            case 'b':
+            case 'e':
+            case 'f':
+            case 'n':
+            case 'r':
+            case 't':
+            case 'v':
+            case '\'':
+            case '"':
+            case '\\':
+            case '\?':
+                //2 because we have to highlight \ as well as the following char
+                len = 2;
+                break;
+            //octal esc sequence \123
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            {
+                if (i + 4 <= _input.length()) {
+                    bool isCurrentOctal = true;
+                    if (!isOctal(_input.at(i+2).toLatin1())) {
+                        isCurrentOctal = false;
+                        break;
+                    }
+                    if (!isOctal(_input.at(i+3).toLatin1())) {
+                        isCurrentOctal = false;
+                        break;
+                    }
+                    len = isCurrentOctal ? 4 : 0;
+                }
+                break;
+            }
+            //hex numbers \xFA
+            case 'x':
+            {
+                if (i + 3 <= _input.length()) {
+                    bool isCurrentHex = true;
+                    if (!isHex(_input.at(i+2).toLatin1())) {
+                        isCurrentHex = false;
+                        break;
+                    }
+                    if (!isHex(_input.at(i+3).toLatin1())) {
+                        isCurrentHex = false;
+                        break;
+                    }
+                    len = isCurrentHex ? 4 : 0;
+                }
+                break;
+            }
+            //TODO: implement unicode code point escaping
+            default:
+                break;
+            }
+
+            //if len is zero, that means this wasn't an esc seq
+            //increment i so that we skip this backslash
+            if (len == 0) {
+                ++i;
+                continue;
+            }
+
+            //first highlight everything till this point as string
+            output += setFormat(_input.mid(start, i - start), Format::String);
+            //then highlight the escape sequence
+            output += setFormat(_input.mid(i, len), Format::Literal);
+            i += len;
+            //set start to current pos
+            start = i;
+            continue;
+        }
+        //setFormat(i, 1,  _formats[CodeString]);
+        ++i;
+    }
+    output += setFormat(_input.mid(start, i - start), Format::String);
     return i;
 }
 

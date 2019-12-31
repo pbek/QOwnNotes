@@ -55,10 +55,28 @@ private:
     void initCodeLangs() const Q_DECL_NOTHROW;
 
     int highlightNumericLit(QString &output, int i) const;
+    int highlightStringLiterals(QChar strType, QString &output, int i) const;
     int highlightComment(QString &output, int i, bool isSingleLine = true) const;
     int highlightWord(int i, const QMultiHash<char, QLatin1String> &data,
                       QString &output, Format f) const;
     QString xmlHighlighter(const QStringRef text) const;
+
+    /**
+     * @brief returns true if c is octal
+     */
+    inline bool isOctal(const char c) const {
+        return (c >= '0' && c <= '7');
+    }
+
+    /**
+     * @brief returns true if c is hex
+     */
+    inline bool isHex(const char c) const {
+        return (
+            (c >= '0' && c <= '9') ||
+            (c >= 'a' && c <= 'f') ||
+            (c >= 'A' && c <= 'F'));
+    }
 
     static QHash<QString, Lang> _langStringToEnum;
 
