@@ -28,13 +28,15 @@
 #include "helpers/codetohtmlconverter.h"
 
 
-Note::Note() {
-    this->id = 0;
-    this->noteSubFolderId = 0;
-    this->shareId = 0;
-    this->sharePermissions = 0;
-    this->hasDirtyData = false;
-    this->fileSize = 0;
+Note::Note()
+{
+    id = 0;
+    noteSubFolderId = 0;
+    shareId = 0;
+    sharePermissions = 0;
+    hasDirtyData = false;
+    fileSize = 0;
+    cryptoKey = 0;
 }
 
 int Note::getId() const {
@@ -1934,17 +1936,17 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     // we want to show quotes in the html, so we don't translate them into
     // `<q>` tags
     // HOEDOWN_EXT_MATH and HOEDOWN_EXT_MATH_EXPLICIT don't seem to do anything
-    auto extensions = (hoedown_extensions) ((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
-            HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE);
+    auto extensions = static_cast<hoedown_extensions>(((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
+            HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE));
 
     QSettings settings;
-    if (!settings.value("MainWindow/noteTextView.underline", true).toBool()) {
-        extensions = (hoedown_extensions) (extensions & ~HOEDOWN_EXT_UNDERLINE);
+    if (!settings.value(QStringLiteral("MainWindow/noteTextView.underline"), true).toBool()) {
+        extensions = static_cast<hoedown_extensions>(extensions & ~HOEDOWN_EXT_UNDERLINE);
     }
 
     hoedown_document *document = hoedown_document_new(renderer, extensions, 32);
 
-    QString windowsSlash = "";
+    QString windowsSlash = QLatin1String("");
 
 #ifdef Q_OS_WIN32
     // we need another slash for Windows
@@ -1952,7 +1954,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
 #endif
 
     // remove frontmatter from markdown text
-    if (str.startsWith(QStringLiteral("---"))) {
+    if (str.startsWith(QLatin1String("---"))) {
         str.remove(QRegularExpression(QStringLiteral(R"(^---\n.+?\n---\n)"), QRegularExpression::DotMatchesEverythingOption));
     }
 
@@ -2023,49 +2025,45 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     }
 
     /*CODE HIGHLIGHTING*/
-    int cbCount = str.count("```");
+    int cbCount = str.count(QLatin1String("```"));
     if (cbCount % 2 != 0) --cbCount;
 
     //divide by two to get actual number of code blocks
     cbCount /= 2;
 
     if (cbCount >= 1) {
-        int fblock = str.indexOf("```", 0);
+        int fblock = str.indexOf(QLatin1String("```"), 0);
         int currentCbPos = fblock;
         for (int i = 0; i < cbCount; ++i) {
             //find endline
-            int endline = str.indexOf("\n", currentCbPos);
+            int endline = str.indexOf(QChar('\n'), currentCbPos);
             QString lang = str.mid(currentCbPos +3, endline - (currentCbPos + 3));
             //move start pos to after the endline
             currentCbPos = endline + 1;
             //find the codeBlock end
-            int next = str.indexOf("```", currentCbPos);
+            int next = str.indexOf(QLatin1String("```"), currentCbPos);
             //extract the codeBlock
-            QString codeBlock = str.mid(currentCbPos, next - currentCbPos);
+            QStringRef codeBlock = str.midRef(currentCbPos, next - currentCbPos);
 
             QString highlightedCodeBlock;
             if (!(codeBlock.isEmpty() && lang.isEmpty())) {
                 CodeToHtmlConverter c(codeBlock, lang);
                 highlightedCodeBlock = c.process();
+                //take care of the null char
+                highlightedCodeBlock.replace(QChar('\u0000'), QLatin1String(""));
                 str.replace(currentCbPos, next - currentCbPos, highlightedCodeBlock);
                 //recalculate next because string has now changed
-                next = str.indexOf("```", currentCbPos);
+                next = str.indexOf(QLatin1String("```"), currentCbPos);
             }
-            //QString highlightedCodeBlock = CodeToHtml(codeBlock, lang);
-            //str.replace(currentCbPos, next, highlightedCodeBlock);
-
             //move next pos to after the backticks
             next += 3;
             //find the start of the next code block
-            currentCbPos = str.indexOf("```", next);
+            currentCbPos = str.indexOf(QLatin1String("```"), next);
         }
     }
-    str.replace(QChar('\u0000'), QString(""));
-//    qWarning () << str;
 
-    unsigned char *sequence = (unsigned char *) qstrdup(
-            str.toUtf8().constData());
-    qint64 length = strlen((char *) sequence);
+    uint8_t *sequence = reinterpret_cast<uint8_t *>(qstrdup(str.toUtf8().constData()));
+    size_t length = strlen(reinterpret_cast<char *>(sequence));
 
     // return an empty string if the note is empty
     if (length == 0) {
@@ -2078,7 +2076,9 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     hoedown_document_render(document, html, sequence, length);
 
     // get markdown html
-    QString result = QString::fromUtf8((char *) html->data, html->size);
+    QString result = QString::fromUtf8(
+                        reinterpret_cast<char*>(html->data),
+                        static_cast<int>(html->size));
 
 //    qDebug() << __func__ << " - 'result': " << result;
 
@@ -2111,7 +2111,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
             .toString();
 
     // set the stylesheet for the <code> blocks
-    QString codeStyleSheet = "";
+    QString codeStyleSheet = QLatin1String("");
     if (!fontString.isEmpty()) {
         // set the note text view font
         QFont font;
@@ -2160,7 +2160,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                 .toString();
 
         // create export stylesheet
-        QString exportStyleSheet = "";
+        QString exportStyleSheet = QLatin1String("");
         if (!bodyFontString.isEmpty()) {
             QFont bodyFont;
             bodyFont.fromString(bodyFontString);
@@ -2185,7 +2185,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     } else {
         QString schemaStyles = settings.value("MainWindow/noteTextView.useEditorStyles", true).toBool() ?
-                    Utils::Schema::getSchemaStyles() : "";
+                    Utils::Schema::getSchemaStyles() : QLatin1String("");
 
         // for preview
         result = QStringLiteral("<html><head><style>"
@@ -2221,7 +2221,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                     QRegularExpression(QStringLiteral(R"(<img src="file:\/\/)") +
                                        QRegularExpression::escape(windowsSlash +
                                                                   fileName) +
-                                       "\""),
+                                       QStringLiteral("\"")),
                     QStringLiteral("<img src=\"file://%2\"").arg(windowsSlash +
                                                           fileName));
         } else {
@@ -2317,10 +2317,7 @@ QString Note::generateTextForLink(QString text) {
  * Generates a qint64 hash from a QString
  */
 qint64 Note::qint64Hash(const QString &str) {
-    QByteArray hash = QCryptographicHash::hash(
-            QByteArray::fromRawData((const char *) str.utf16(),
-                                    str.length() * 2),
-            QCryptographicHash::Md5);
+    QByteArray hash = QCryptographicHash::hash(str.toUtf8(), QCryptographicHash::Md5);
     Q_ASSERT(hash.size() == 16);
     QDataStream stream(hash);
     qint64 a, b;
@@ -2447,7 +2444,7 @@ bool Note::canDecryptNoteText() {
             botanWrapper.setSalt(BOTAN_SALT);
             decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
         }
-        catch (Botan::Exception) {
+        catch (Botan::Exception&) {
             return false;
         }
 
@@ -2496,7 +2493,7 @@ QString Note::getDecryptedNoteText() const {
             botanWrapper.setSalt(BOTAN_SALT);
             decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
         }
-        catch (Botan::Exception) {
+        catch (Botan::Exception&) {
         }
 
         // fallback to SimpleCrypt

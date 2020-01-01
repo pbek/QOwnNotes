@@ -27,6 +27,12 @@ private Q_SLOTS:
     void testNoteEncryption();
     void testNoteDecryption();
     void testNoteDecryptionFail();
+    void testNoteToMarkdownHtml();
+    void testCodeToHtmlConversionPython();
+    void testCodeToHtmlConversionHashComment();
+    void testCodeToHtmlConversionSingleLineComment();
+    void testCodeToHtmlConversionMultiLineComment();
+    void testCodeToHtmlNumericLiterals();
 };
 
 #endif // TESTNOTES_H
