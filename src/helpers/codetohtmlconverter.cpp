@@ -145,7 +145,8 @@ QString CodeToHtmlConverter::process() const
             output += escape(_input.at(i));
         } else if (_input.at(i).isDigit()) {
             i = highlightNumericLit(output, i);
-            output += escape(_input.at(i));
+            if (i < textLen)
+                output += escape(_input.at(i));
         } else if (comment.isNull() && _input.at(i) == QChar('/')) {
             if(_input.at(i + 1) == QChar('/')) {
                 i = highlightComment(output, i);
