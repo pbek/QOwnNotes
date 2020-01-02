@@ -7,6 +7,7 @@
   (for [#1530](https://github.com/pbek/QOwnNotes/issues/1530))
 - fixed possible crash for inline code blocks in preview highlighter
   (for [#1532](https://github.com/pbek/QOwnNotes/issues/1532), thank you @Waqar144)
+- added more Persian, Hausa, Punjabi, Uzbek, Lithuanian translation (thank you Fabijenna)
 
 ## 20.1.0
 - brought more variation in the headline colors of the `Light` and `Dark` schemes
