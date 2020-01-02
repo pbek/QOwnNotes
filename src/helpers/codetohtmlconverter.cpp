@@ -142,7 +142,8 @@ QString CodeToHtmlConverter::process() const
         } else if (_input.at(i) == QChar('\'') || _input.at(i) == QChar('"')) {
             i = highlightStringLiterals(_input.at(i), output, i);
             //escape text at i, otherwise it gets skipped and won't be present in output
-            output += escape(_input.at(i));
+            if (i < textLen )
+                output += escape(_input.at(i));
         } else if (_input.at(i).isDigit()) {
             i = highlightNumericLit(output, i);
             if (i < textLen)
@@ -164,31 +165,31 @@ QString CodeToHtmlConverter::process() const
         else if(_input.at(i).isLetter()) {
             int pos = i;
             i = highlightWord(i, types, output, Format::Type);
-            if (!_input.at(i).isLetter()) {
+            if (i < textLen && !_input.at(i).isLetter()) {
                 output += escape(_input.at(i));
                 continue;
             }
 
             i = highlightWord(i, keywords, output, Format::Keyword);
-            if (!_input.at(i).isLetter()) {
+            if (i < textLen && !_input.at(i).isLetter()) {
                 output += escape(_input.at(i));
                 continue;
             }
 
             i = highlightWord(i, literals, output, Format::Literal);
-            if (!_input.at(i).isLetter()) {
+            if (i < textLen && !_input.at(i).isLetter()) {
                 output += escape(_input.at(i));
                 continue;
             }
 
             i = highlightWord(i, builtin, output, Format::Builtin);
-            if (!_input.at(i).isLetter()) {
+            if (i < textLen && !_input.at(i).isLetter()) {
                 output += escape(_input.at(i));
                 continue;
             }
 
             i = highlightWord(i, others, output, Format::Other);
-            if (!_input.at(i).isLetter()) {
+            if (i < textLen && !_input.at(i).isLetter()) {
                 output += escape(_input.at(i));
                 continue;
             }
@@ -408,6 +409,8 @@ int CodeToHtmlConverter::highlightComment(QString &output, int i, bool isSingleL
     int endPos = -1;
     if (isSingleLine) {
         endPos = _input.indexOf(QChar('\n'), i);
+        if (endPos == -1)
+            endPos = _input.length();
     } else {
         endPos = _input.indexOf(QLatin1String("*/"), i);
         if (endPos == -1) {
@@ -419,7 +422,8 @@ int CodeToHtmlConverter::highlightComment(QString &output, int i, bool isSingleL
     output += setFormat(_input.mid(i, endPos - i), Format::Comment);
     i = endPos;
     //escape the endline
-    output += escape(_input.at(endPos));
+    if (endPos < _input.length())
+        output += escape(_input.at(endPos));
 
     return i;
 }
