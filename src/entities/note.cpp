@@ -2038,7 +2038,15 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
             //find endline
             int endline = str.indexOf(QChar('\n'), currentCbPos);
             QString lang = str.mid(currentCbPos +3, endline - (currentCbPos + 3));
+            //in case someone decides to put ``` code ``` on the same line
+            if (lang.contains(QLatin1String("```"))) {
+                //reset the endline to ``, the third backtick will be taken care of below
+                endline = currentCbPos + 2;
+                //empty the lang
+                lang = QLatin1String("");
+            }
             //move start pos to after the endline
+
             currentCbPos = endline + 1;
             //find the codeBlock end
             int next = str.indexOf(QLatin1String("```"), currentCbPos);
