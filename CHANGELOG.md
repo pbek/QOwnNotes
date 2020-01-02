@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 20.1.1
+- added more preview syntax highlighter fixes and improvements
+  (for [#1528](https://github.com/pbek/QOwnNotes/pull/1528), thank you @Waqar144)
+- attempted to add support for the Synology CalDAV server
+  (for [#1530](https://github.com/pbek/QOwnNotes/issues/1530))
+- fixed possible crash for inline code blocks in preview highlighter
+  (for [#1532](https://github.com/pbek/QOwnNotes/issues/1532), thank you @Waqar144)
+
 ## 20.1.0
 - brought more variation in the headline colors of the `Light` and `Dark` schemes
 - added missing headline 6 highlighting in the note editor
