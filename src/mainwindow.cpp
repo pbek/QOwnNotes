@@ -2619,7 +2619,7 @@ void MainWindow::notesWereModified(const QString &str) {
                 Q_UNUSED(blocker)
 
                 const QString text = this->ui->noteTextEdit->toPlainText();
-                note.storeNewText(text);
+                note.storeNewText(std::move(text));
 
                 // store note to disk again
                 const bool noteWasStored = note.storeNoteTextFileToDisk();
@@ -5098,7 +5098,7 @@ void MainWindow::on_noteTextEdit_textChanged() {
     // store the note to the database if the note text differs from the one
     // on the disk or the note was already modified but not stored to disk
     if ((text != noteTextFromDisk || currentNote.getHasDirtyData())) {
-        this->currentNote.storeNewText(text);
+        this->currentNote.storeNewText(std::move(text));
         this->currentNote.refetch();
         this->currentNoteLastEdited = QDateTime::currentDateTime();
         _noteViewNeedsUpdate = true;
@@ -7894,7 +7894,7 @@ void MainWindow::handleScriptingNoteTagging(Note note, const QString& tagName,
     }
 
     // return if note could not be stored
-    if (!note.storeNewText(noteText)) {
+    if (!note.storeNewText(std::move(noteText))) {
         return;
     }
 
@@ -8000,7 +8000,7 @@ void MainWindow::handleScriptingNotesTagRenaming(const QString& oldTagName,
                 continue;
             }
 
-            note.storeNewText(noteText);
+            note.storeNewText(std::move(noteText));
         }
 
     storeUpdatedNotesToDisk();
@@ -10250,8 +10250,9 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     previousNote.refetch();
     const QString noteLink = previousNote.getNoteUrlForLinkingTo(currentNote);
     QString previousNoteText = previousNote.getNoteText();
+    previousNoteText.reserve(3 + noteLink.size() + 1);
     previousNoteText += QStringLiteral("\n\n<") + noteLink + QStringLiteral(">");
-    previousNote.storeNewText(previousNoteText);
+    previousNote.storeNewText(std::move(previousNoteText));
 
     // add the previously removed text
     textEdit = activeNoteTextEdit();
