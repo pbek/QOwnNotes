@@ -6,10 +6,10 @@
 - the `Export generated raw HTML` preview context menu item now exports the html
   generated to be viewed in the preview and not the already transformed html inside
   the `QTextBrowser` widget (for [#1526](https://github.com/pbek/QOwnNotes/issues/1526))
-- added vex code block highlighting support (for [#1529](https://github.com/pbek/QOwnNotes/pull/1529), thank you @Waqar144)
+- added vex code block highlighting support (for [#1529](https://github.com/pbek/QOwnNotes/issues/1529), thank you @Waqar144)
 - added tagger script code block highlighting support (for [#68](https://github.com/pbek/qmarkdowntextedit/pull/68), thank you @Gremious)
 - added support for solving equations in lists (for [#1539](https://github.com/pbek/QOwnNotes/issues/1539))
-- fixed some `'` preview problems in code blocks (for [#1540](https://github.com/pbek/QOwnNotes/pull/1540), thank you @Waqar144)
+- fixed some `'` preview problems in code blocks (for [#1540](https://github.com/pbek/QOwnNotes/issues/1540), thank you @Waqar144)
 
 ## 20.1.1
 - added more preview syntax highlighter fixes and improvements
