@@ -9157,6 +9157,9 @@ bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
     // replace "," with "." to allow "," as coma
     equation.replace(QLatin1Char(','), QLatin1Char('.'));
 
+    // remove leading list characters
+    equation.remove(QRegularExpression(R"(^\s*[\-*+] )"));
+
     // match all characters and basic operations like +, -, * and /
     QRegularExpressionMatch match =
             QRegularExpression(QStringLiteral(R"(([\d\.,+\-*\/\(\)\s]+)\s*=)"))
