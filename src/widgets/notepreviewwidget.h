@@ -34,6 +34,7 @@ public:
 protected:
     QTextEditSearchWidget *_searchWidget;
     QWidget *_searchFrame;
+    QString _html;
 
     void resizeEvent(QResizeEvent* event) override;
     bool eventFilter(QObject *obj, QEvent *event) override;

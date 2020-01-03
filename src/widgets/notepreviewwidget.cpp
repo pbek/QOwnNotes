@@ -165,8 +165,9 @@ void NotePreviewWidget::animateGif(const QString &text) {
 
 void NotePreviewWidget::setHtml(const QString &text) {
     animateGif(text);
+    _html = Utils::Misc::parseTaskList(text, true);
 
-    QTextBrowser::setHtml(Utils::Misc::parseTaskList(text, true));
+    QTextBrowser::setHtml(_html);
 }
 
 /**
@@ -297,7 +298,7 @@ void NotePreviewWidget::exportAsHTMLFile() {
             }
             QTextStream out(&file);
             out.setCodec("UTF-8");
-            out << toHtml();
+            out << _html;
             file.flush();
             file.close();
             Utils::Misc::openFolderSelect(fileName);
