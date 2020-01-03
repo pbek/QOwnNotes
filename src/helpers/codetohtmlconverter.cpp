@@ -308,11 +308,13 @@ int CodeToHtmlConverter::highlightStringLiterals(QChar strType, QString &output,
     //setFormat(i, 1,  _formats[CodeString]);
     int start = i;
     ++i;
+    bool foundEnd = false;
 
     while (i < _input.length()) {
         //look for string end
         //make sure it's not an escape seq
         if (_input.at(i) == strType && _input.at(i-1) != '\\') {
+            foundEnd = true;
             ++i;
             break;
         }
@@ -400,6 +402,8 @@ int CodeToHtmlConverter::highlightStringLiterals(QChar strType, QString &output,
         //setFormat(i, 1,  _formats[CodeString]);
         ++i;
     }
+    if (!foundEnd)
+        --i;
     output += setFormat(_input.mid(start, i - start), Format::String);
     return i;
 }
