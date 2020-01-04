@@ -40,7 +40,6 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
     spellchecker = nullptr;
     languageFilter = new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
     wordTokenizer = new Sonnet::WordTokenizer();
-    codeBlock = 0; // for ```
 
     commentHighlightingOn = true;
     codeHighlightingOn = true;
@@ -96,7 +95,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     // skip spell checking empty blocks and blocks with just "spaces"
     // the rest of the highlighting needs to be done e.g. for code blocks with empty lines
     if (spellchecker != nullptr) {
-        if (!(text.isEmpty()) && spellchecker->isActive()) {
+        if (!text.isEmpty() && spellchecker->isActive()) {
             highlightSpellChecking(text);
         }
     }
@@ -108,10 +107,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
     if (!text.isEmpty()) {
 
         const QString &next = currentBlock().next().text();
-        const bool isHeading =
-                text.startsWith(QLatin1String("# ")) || text.startsWith(QLatin1String("## ")) ||
-                text.startsWith(QLatin1String("### ")) || text.startsWith(QLatin1String("#### ")) ||
-                text.startsWith(QLatin1String("##### ")) || text.startsWith(QLatin1String("###### "));
+        const bool isHeading = text.at(0) == QChar('#');
         const bool isHeadWithUnderline =
                 text.startsWith(QLatin1String("===")) || text.startsWith(QLatin1String("---"));
         const bool nextHasUnderLine =
@@ -248,21 +244,13 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         return;
     }
     if (!spellchecker->isValid()) {
-        qDebug () << "[Sonnet]Spellchecker invalid!";
+        qWarning () << "[Sonnet]Spellchecker invalid!";
         return;
     }
-    //headline || subheadline
-    if (text.contains(QStringLiteral("====")) || text.contains(QStringLiteral("----")) ) {
+    if (currentBlockState() == HighlighterState::HeadlineEnd ||
+        currentBlockState() == HighlighterState::CodeBlock ||
+        currentBlockState() >= HighlighterState::CodeCpp)
         return;
-    }
-    //if it's a code block, don't spell check
-    if (text.contains(QStringLiteral("```"))) {
-        ++codeBlock;
-        return;
-    }
-    if (codeBlock % 2 != 0) {
-        return;
-    }
 
 
     //use our own settings, as KDE users might face issues with Autodetection
