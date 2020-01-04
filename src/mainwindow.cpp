@@ -4020,7 +4020,8 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
  * Starts the parsing for the navigation widget
  */
 void MainWindow::startNavigationParser() {
-    ui->navigationWidget->parse(activeNoteTextEdit()->document());
+    if (ui->navigationWidget->isVisible())
+        ui->navigationWidget->parse(activeNoteTextEdit()->document());
 }
 
 /**
@@ -10884,6 +10885,8 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
  * Updates the line number label
  */
 void MainWindow::noteEditCursorPositionChanged() {
+    if (!_noteEditLineNumberLabel->isVisible())
+        return;
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QTextCursor cursor = textEdit->textCursor();
     QString selectedText = cursor.selectedText();
