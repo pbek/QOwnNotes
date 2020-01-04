@@ -108,10 +108,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
     if (!text.isEmpty()) {
 
         const QString &next = currentBlock().next().text();
-        const bool isHeading =
-                text.startsWith(QLatin1String("# ")) || text.startsWith(QLatin1String("## ")) ||
-                text.startsWith(QLatin1String("### ")) || text.startsWith(QLatin1String("#### ")) ||
-                text.startsWith(QLatin1String("##### ")) || text.startsWith(QLatin1String("###### "));
+        const bool isHeading = text.at(0) == QChar('#');
         const bool isHeadWithUnderline =
                 text.startsWith(QLatin1String("===")) || text.startsWith(QLatin1String("---"));
         const bool nextHasUnderLine =
