@@ -57,7 +57,6 @@ private:
     Sonnet::WordTokenizer *wordTokenizer;
     Sonnet::LanguageFilter *languageFilter;
     QOwnSpellChecker *spellchecker;
-    int codeBlock;
     Note _currentNote;
     bool commentHighlightingOn;
     bool codeHighlightingOn;
