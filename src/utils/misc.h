@@ -45,6 +45,9 @@ namespace Utils {
         bool startDetachedProcess(const QString& executablePath,
                                   const QStringList& parameters = QStringList(),
                                   QString workingDirectory = "");
+        bool openFilesWithApplication(const QString& executablePath,
+                                      const QStringList& files = QStringList(),
+                                      QString workingDirectory = "");
         QString shorten(QString text, int length, const QString& sequence = QStringLiteral("..."));
         QString cycleTextCase(const QString& text);
         QString toSentenceCase(const QString& text);

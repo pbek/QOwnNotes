@@ -365,6 +365,34 @@ bool Utils::Misc::startDetachedProcess(const QString& executablePath,
 }
 
 /**
+ * Opens files via an executable
+ *
+ * @param executablePath the path of the executable
+ * @param files a list of file strings
+ * @param workingDirectory the directory to run the executable from
+ * @return true on success, false otherwise
+ */
+bool Utils::Misc::openFilesWithApplication(const QString& executablePath,
+                                       const QStringList& files,
+                                       QString workingDirectory) {
+#ifdef Q_OS_MAC
+    QProcess process;
+
+    if (workingDirectory.isEmpty()) {
+        workingDirectory = QCoreApplication::applicationDirPath();
+    }
+
+    // start executablePath detached with parameters
+    return process.startDetached(
+            QStringLiteral("open"),
+            QStringList() << "-a" << executablePath << files,
+            workingDirectory);
+#else
+    return startDetachedProcess(executablePath, files, workingDirectory);
+#endif
+}
+
+/**
  * Starts an executable synchronous with parameters
  *
  * @param executablePath the path of the executable

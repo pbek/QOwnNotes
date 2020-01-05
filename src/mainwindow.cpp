@@ -6664,7 +6664,7 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered() {
         qDebug() << __func__ << " - 'path': " << path;
 
         // open note file in external editor
-        Utils::Misc::startDetachedProcess(externalEditorPath, QStringList({path}));
+        Utils::Misc::openFilesWithApplication(externalEditorPath, QStringList({path}));
     }
 }
 
