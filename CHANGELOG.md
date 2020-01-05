@@ -3,6 +3,7 @@
 ## 20.1.3
 - fixed opening of notes in external editor under macOS if non-default application
   was chosen (for [#1543](https://github.com/pbek/QOwnNotes/issues/1543))
+- did more optimizations for note editing (for [#1545](https://github.com/pbek/QOwnNotes/pull/1545), thank you @Waqar144)
 
 ## 20.1.2
 - again attempted to add support for the Synology CalDAV server
