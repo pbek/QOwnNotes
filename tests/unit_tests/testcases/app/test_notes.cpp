@@ -174,11 +174,24 @@ void TestNotes::testCodeToHtmlConversionSingleLineComment()
 void TestNotes::testCodeToHtmlConversionMultiLineComment()
 {
     QString comment = QStringLiteral("/*hello my qownnotes blah blah single line*/\n");
-    CodeToHtmlConverter c1(comment.midRef(0, comment.length()), QStringLiteral("cpp"));
-    QString outputMultiLineComment = c1.process();
-    QString expectedOutputMultiLineComment = QStringLiteral("<span class=\"code-comment\">&#47;*hello my qownnotes blah blah single line*&#47;</span>\n");
+    QString commentTrueMultiLine = QStringLiteral("/*hello my \nqownnotes blah \nblah single line*/\n");
+    QString commentTrueMultiLineNoEnd = QStringLiteral("/*hello my \nqownnotes blah \nblah single line\n");
 
-    QVERIFY(outputMultiLineComment == expectedOutputMultiLineComment);
+    CodeToHtmlConverter c1(comment.midRef(0, comment.length()), QStringLiteral("cpp"));
+    CodeToHtmlConverter c2(commentTrueMultiLine.midRef(0, commentTrueMultiLine.length()), QStringLiteral("cpp"));
+    CodeToHtmlConverter c3(commentTrueMultiLineNoEnd.midRef(0, commentTrueMultiLineNoEnd.length()), QStringLiteral("cpp"));
+
+    QString outputMultiLineComment = c1.process();
+    QString outputTrueMultiLine = c2.process();
+    QString outputTrueMultiLineNoEnd = c3.process();
+
+    QString expectedMultiLineComment = QStringLiteral("<span class=\"code-comment\">&#47;*hello my qownnotes blah blah single line*&#47;</span>\n");
+    QString expectedTrueMultiLine = QStringLiteral("<span class=\"code-comment\">&#47;*hello my \nqownnotes blah \nblah single line*&#47;</span>\n");
+    QString expectedTrueMultiLineNoEnd = QStringLiteral("<span class=\"code-comment\">&#47;*hello my \nqownnotes blah \nblah single line</span>\n");
+
+    QVERIFY(outputMultiLineComment == expectedMultiLineComment);
+    QVERIFY(outputTrueMultiLine == expectedTrueMultiLine);
+    QVERIFY(outputTrueMultiLineNoEnd == expectedTrueMultiLineNoEnd);
 }
 
 void TestNotes::testCodeToHtmlNumericLiterals()
