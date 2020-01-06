@@ -5086,6 +5086,11 @@ void MainWindow::openTodoDialog(const QString& taskUid) {
  * Triggers if the text in the note text edit was modified
  */
 void MainWindow::on_noteTextEdit_textChanged() {
+    // this also triggers when formatting is applied / syntax highlighting changes!
+//    noteTextEditTextWasUpdated();
+}
+
+void MainWindow::noteTextEditTextWasUpdated() {
     Note note = this->currentNote;
     note.updateNoteTextFromDisk();
 
@@ -6636,9 +6641,10 @@ void MainWindow::on_actionEdit_encrypted_note_triggered() {
  * Puts the encrypted text back to the note text edit
  */
 void MainWindow::on_encryptedNoteTextEdit_textChanged() {
-    if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText())) {
-        handleNoteTextChanged();
-    }
+    // this also triggers when formatting is applied / syntax highlighting changes!
+//    if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText())) {
+//        handleNoteTextChanged();
+//    }
 }
 
 /**
@@ -11652,4 +11658,25 @@ void MainWindow::on_actionManage_dictionaries_triggered() {
 
     // shows a restart application notification
     showRestartNotificationIfNeeded();
+}
+
+void MainWindow::on_noteTextEdit_modificationChanged(bool arg1) {
+    if (!arg1) {
+        return;
+    }
+
+    ui->noteTextEdit->document()->setModified(false);
+    noteTextEditTextWasUpdated();
+}
+
+void MainWindow::on_encryptedNoteTextEdit_modificationChanged(bool arg1) {
+    if (!arg1) {
+        return;
+    }
+
+    ui->encryptedNoteTextEdit->document()->setModified(false);
+
+    if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText())) {
+        handleNoteTextChanged();
+    }
 }

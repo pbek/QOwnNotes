@@ -8,6 +8,7 @@
   [#70](https://github.com/pbek/qmarkdowntextedit/pull/70) and
   [#71](https://github.com/pbek/qmarkdowntextedit/pull/71), thank you @Waqar144)
 - improved Fastmail CalDav server support (for [#1544](https://github.com/pbek/QOwnNotes/issues/1544))
+- improved note store triggering mechanism
 
 ## 20.1.2
 - again attempted to add support for the Synology CalDAV server

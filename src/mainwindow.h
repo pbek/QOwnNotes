@@ -601,6 +601,10 @@ private slots:
 
     void on_actionManage_dictionaries_triggered();
 
+    void on_noteTextEdit_modificationChanged(bool arg1);
+
+    void on_encryptedNoteTextEdit_modificationChanged(bool arg1);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -1023,4 +1027,6 @@ private:
     void loadSpellingBackends();
 
     QTextDocument *getDocumentForPreviewExport();
+
+    void noteTextEditTextWasUpdated();
 };
