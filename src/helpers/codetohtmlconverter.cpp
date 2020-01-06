@@ -416,8 +416,8 @@ int CodeToHtmlConverter::highlightComment(QString &output, int i, bool isSingleL
     } else {
         endPos = _input.indexOf(QLatin1String("*/"), i);
         if (endPos == -1) {
-            //-1, otherwise we ruin the codeblock end and backticks will be visible in rendered html
-            endPos = _input.length() - 1;
+            //look for the last endline
+            endPos = _input.lastIndexOf(QLatin1Char('\n'));
         } else {
             endPos += 2;
         }
