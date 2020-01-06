@@ -1475,7 +1475,7 @@ bool Note::updateNoteTextFromDisk() {
     file.close();
 
     // strangely it sometimes gets null
-    if (this->noteText.isNull()) this->noteText =QLatin1String("");
+    if (this->noteText.isNull()) this->noteText = QLatin1String("");
 
     return true;
 }
