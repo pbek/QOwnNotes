@@ -83,16 +83,21 @@ SOURCES += main.cpp\
     entities/cloudconnection.cpp \
     helpers/codetohtmlconverter.cpp \
     helpers/qownspellchecker.cpp \
+#    libraries/md4c/md2html/cmdline.c \
+    libraries/md4c/md2html/entity.c \
+#    libraries/md4c/md2html/md2html.c \
+    libraries/md4c/md2html/render_html.c \
+    libraries/md4c/md4c/md4c.c \
         mainwindow.cpp \
     libraries/diff_match_patch/diff_match_patch.cpp \
-    libraries/hoedown/html.c \
-    libraries/hoedown/autolink.c \
-    libraries/hoedown/buffer.c \
-    libraries/hoedown/document.c \
-    libraries/hoedown/escape.c \
-    libraries/hoedown/html_blocks.c \
-    libraries/hoedown/stack.c \
-    libraries/hoedown/version.c \
+#    libraries/hoedown/html.c \
+#    libraries/hoedown/autolink.c \
+#    libraries/hoedown/buffer.c \
+#    libraries/hoedown/document.c \
+#    libraries/hoedown/escape.c \
+#    libraries/hoedown/html_blocks.c \
+#    libraries/hoedown/stack.c \
+#    libraries/hoedown/version.c \
     libraries/simplecrypt/simplecrypt.cpp \
     libraries/versionnumber/versionnumber.cpp \
     libraries/botan/botanwrapper.cpp \
@@ -175,15 +180,19 @@ HEADERS  += mainwindow.h \
     helpers/LanguageCache.h \
     helpers/codetohtmlconverter.h \
     helpers/qownspellchecker.h \
+#    libraries/md4c/md2html/cmdline.h \
+    libraries/md4c/md2html/entity.h \
+    libraries/md4c/md2html/render_html.h \
+    libraries/md4c/md4c/md4c.h \
     version.h \
     libraries/diff_match_patch/diff_match_patch.h \
-    libraries/hoedown/html.h \
-    libraries/hoedown/autolink.h \
-    libraries/hoedown/buffer.h \
-    libraries/hoedown/document.h \
-    libraries/hoedown/escape.h \
-    libraries/hoedown/stack.h \
-    libraries/hoedown/version.h \
+#    libraries/hoedown/html.h \
+#    libraries/hoedown/autolink.h \
+#    libraries/hoedown/buffer.h \
+#    libraries/hoedown/document.h \
+#    libraries/hoedown/escape.h \
+#    libraries/hoedown/stack.h \
+#    libraries/hoedown/version.h \
     libraries/simplecrypt/simplecrypt.h \
     libraries/versionnumber/versionnumber.h \
     libraries/botan/botanwrapper.h \
