@@ -113,6 +113,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
         const bool nextHasUnderLine =
                 next.startsWith(QLatin1String("===")) || next.startsWith(QLatin1String("---"));
         const bool isCodeBlock = previousBlockState() == CodeBlock ||
+                previousBlockState() == CodeBlockComment ||
                 previousBlockState() >= HighlighterState::CodeCpp ||
                 text.startsWith(QLatin1String("```"));
 
@@ -139,6 +140,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
     }
     if (codeHighlightingOn) {
         if (previousBlockState() == HighlighterState::CodeBlock ||
+            previousBlockState() == CodeBlockComment ||
             previousBlockState() == HighlighterState::CodeBlockEnd ||
             previousBlockState() >= HighlighterState::CodeCpp ||
             text.startsWith(QLatin1String("```"))) {
@@ -292,7 +294,7 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
             QStringRef word = wordTokenizer->next();
 
             //if the word has _ at the end, word tokenizer misses that, so cut it off
-            if (word.endsWith('_')) {
+            if (word.endsWith(QLatin1Char('_'))) {
 #if QT_VERSION >= 0x050800
                 word.chop(1);
 #elif QT_VERSION >= 0x050600
