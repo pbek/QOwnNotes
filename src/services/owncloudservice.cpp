@@ -629,7 +629,7 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
     auto *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader,
-                QStringLiteral("application/x-www-form-urlencoded"));
+                QStringLiteral("application/xml"));
     r.setRawHeader(QByteArray("Depth"), QByteArray("1"));
     auto *buffer = new QBuffer(dataToSend);
 
@@ -691,7 +691,7 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName,
     auto *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader,
-                QStringLiteral("application/x-www-form-urlencoded"));
+                QStringLiteral("application/xml"));
     auto *buffer = new QBuffer(dataToSend);
 
     QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
@@ -1919,7 +1919,7 @@ void OwnCloudService::settingsGetFileList(
     auto dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader,
-                QStringLiteral("application/x-www-form-urlencoded"));
+                QStringLiteral("application/xml"));
     auto *buffer = new QBuffer(dataToSend);
 
     // try to ensure the network is accessible
