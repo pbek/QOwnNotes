@@ -80,11 +80,7 @@ QVector<Node> NavigationWidget::parseDocument(QTextDocument *document) {
             continue;
         }
 
-        text.remove(QRegularExpression("^#+"))
-                .remove(QRegularExpression("#+$"))
-                .remove(QRegularExpression("^\\s+"))
-                .remove(QRegularExpression("^=+$"))
-                .remove(QRegularExpression("^-+$"));
+        text.remove(QRegularExpression(QStringLiteral("^#+\\s+")));
 
         if (text.isEmpty()) {
             continue;
