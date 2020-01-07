@@ -34,7 +34,7 @@ HEADERS  += \
     $$APP_SRC_DIR/helpers/clientproxy.h \
     $$APP_SRC_DIR/helpers/codetohtmlconverter.h \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.h \
-    $$APP_SRC_DIR/libraries/hoedown/*.h \
+#    $$APP_SRC_DIR/libraries/hoedown/*.h \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.h \
     $$APP_SRC_DIR/libraries/botan/botanwrapper.h \
     $$APP_SRC_DIR/libraries/versionnumber/versionnumber.h \
@@ -70,7 +70,7 @@ SOURCES += \
     $$APP_SRC_DIR/helpers/clientproxy.cpp \
     $$APP_SRC_DIR/helpers/codetohtmlconverter.cpp \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.cpp \
-    $$APP_SRC_DIR/libraries/hoedown/*.c \
+#    $$APP_SRC_DIR/libraries/hoedown/*.c \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.cpp \
     $$APP_SRC_DIR/libraries/botan/botanwrapper.cpp \
     $$APP_SRC_DIR/libraries/versionnumber/versionnumber.cpp \

@@ -110,21 +110,21 @@ void TestNotes::testNoteToMarkdownHtml()
     note.createFromFile( file );
 
     QString html = note.toMarkdownHtml("", 980, true);
-    QString expectedHtml = QStringLiteral("<html><head><meta charset=\"utf-8\"/><style>h1 "
-                                          "{ margin: 5px 0 20px 0; }h2, h3 { margin: 10px 0 15px 0; }"
+    QString expectedHtml = QStringLiteral("<html><head><meta charset=\"utf-8\"/><style>h1 { "
+                                          "margin: 5px 0 20px 0; }h2, h3 { margin: 10px 0 15px 0; }"
                                           "img { max-width: 100%; }pre { background-color: #f1f1f1; "
                                           "border-radius: 5px; padding: 10px; }pre > code { padding: 0; }"
-                                          "table {border-spacing: 0; border-style: solid; "
-                                          "border-width: 1px; border-collapse: collapse; margin-top: 0.5em;}"
-                                          "th, td {padding: 2px 5px;}a { color: #FF9137; "
-                                          "text-decoration: none; } code { padding: 3px; overflow: auto;"
-                                          " line-height: 1.45em; background-color: #f1f1f1; "
-                                          "border-radius: 5px; color: #000000; } .code-comment { c"
-                                          "olor: #75715E; font-style: italic;} .code-string "
-                                          "{ color: #E6DB74;} .code-literal { color: #AE81FF;} .code-type "
-                                          "{ color: #66D9EF;} .code-builtin { color: #A6E22E;} "
-                                          ".code-keyword { color: #F92672;} .code-other { color: #F92672;}  "
-                                          "</style></head><body class=\"export\"><h1 id=\"toc_0\">MyTestNote</h1>\n\n<p>Some text</p>\n</body></html>");
+                                          "table {border-spacing: 0; border-style: solid; border-width: 1px;"
+                                          " border-collapse: collapse; margin-top: 0.5em;}th, td "
+                                          "{padding: 2px 5px;}a { color: #FF9137; text-decoration: none; }"
+                                          " code { padding: 3px; overflow: auto; line-height: 1.45em; "
+                                          "background-color: #f1f1f1; border-radius: 5px; color: #000000; }"
+                                          " .code-comment { color: #75715E; font-style: italic;} "
+                                          ".code-string { color: #E6DB74;} .code-literal { color: #AE81FF;}"
+                                          " .code-type { color: #66D9EF;} .code-builtin { color: #A6E22E;}"
+                                          " .code-keyword { color: #F92672;} .code-other { color: #F92672;}"
+                                          "  </style></head><body class=\"export\">"
+                                          "<h1>MyTestNote</h1>\n<p>Some text</p>\n</body></html>");
 
     QVERIFY(html == expectedHtml);
 }
