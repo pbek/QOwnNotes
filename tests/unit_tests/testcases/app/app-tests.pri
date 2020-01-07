@@ -78,6 +78,7 @@ SOURCES += \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/qownlanguagedata.cpp
 
 include($$APP_SRC_DIR/libraries/botan/botan.pri)
+include($$APP_SRC_DIR/libraries/md4c/md4c.pri)
 
 #OTHER_FILES += \
 #    connections.xml
