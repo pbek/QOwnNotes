@@ -16,6 +16,7 @@
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 #include "navigationwidget.h"
 #include <QRegularExpression>
+#include <QtConcurrent/QtConcurrent>
 
 
 NavigationWidget::NavigationWidget(QWidget *parent)
@@ -26,6 +27,9 @@ NavigationWidget::NavigationWidget(QWidget *parent)
             SIGNAL(currentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)),
             this,
             SLOT(onCurrentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)));
+
+    parseFutureWatcher = new QFutureWatcher<QVector<Node>>(this);
+    connect(parseFutureWatcher, SIGNAL(finished()), this, SLOT(onParseCompleted()));
 }
 
 /**
@@ -41,7 +45,7 @@ void NavigationWidget::setDocument(QTextDocument *document) {
  */
 void NavigationWidget::onCurrentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
-    Q_UNUSED(previous);
+    Q_UNUSED(previous)
 
     if (current == nullptr) {
         return;
@@ -58,25 +62,17 @@ void NavigationWidget::parse(QTextDocument *document) {
     Q_UNUSED(blocker)
 
     setDocument(document);
-    clear();
-    _lastHeadingItemList.clear();
 
+    QFuture<QVector<Node>> future = QtConcurrent::run(this, &NavigationWidget::parseDocument, document);
+    this->parseFutureWatcher->setFuture(future);
+}
+
+QVector<Node> NavigationWidget::parseDocument(QTextDocument *document) {
+    QVector<Node> nodes;
     for (int i = 0; i < document->blockCount(); i++) {
         QTextBlock block = document->findBlockByNumber(i);
         int elementType = block.userState();
         QString text = block.text();
-
-        // check for unrecognized headlines, like `# Header [link](http://url)`
-//        if (text.startsWith("#") && elementType != -1) {
-//            QRegularExpressionMatch match =
-//                    QRegularExpression("^(#+)").match(text);
-//
-//            if (match.hasMatch()) {
-//                // override the element type
-//                elementType = MarkdownHighlighter::H1 +
-//                        match.captured(1).count() - 1;
-//            }
-//        }
 
         // ignore all non headline types
         if ((elementType < MarkdownHighlighter::H1) ||
@@ -84,21 +80,37 @@ void NavigationWidget::parse(QTextDocument *document) {
             continue;
         }
 
-        text.remove(QRegularExpression("^#+"))
-                .remove(QRegularExpression("#+$"))
-                .remove(QRegularExpression("^\\s+"))
-                .remove(QRegularExpression("^=+$"))
-                .remove(QRegularExpression("^-+$"));
+        text.remove(QRegularExpression(QStringLiteral("^#+\\s+")));
 
         if (text.isEmpty()) {
             continue;
         }
 
+        Node node = {text, block.position(), elementType};
+        nodes.append(node);
+    }
+    return nodes;
+}
+
+void NavigationWidget::onParseCompleted()
+{
+    QVector<Node> nodes = this->parseFutureWatcher->result();
+    if (navigationTreeNodes == nodes)
+        return;
+
+    clear();
+    _lastHeadingItemList.clear();
+
+    for (int i = 0; i < nodes.length(); ++i) {
+        Node node = nodes.at(i);
+        int elementType = node.elementType;
+        int pos = node.pos;
+        QString text = node.text;
+
         auto *item = new QTreeWidgetItem();
         item->setText(0, text);
-        item->setData(0, Qt::UserRole, block.position());
-        item->setToolTip(0, tr("headline %1").arg(
-                elementType - MarkdownHighlighter::H1 + 1));
+        item->setData(0, Qt::UserRole, pos);
+        item->setToolTip(0, tr("headline %1").arg(elementType - MarkdownHighlighter::H1 + 1));
 
         // attempt to find a suitable parent item for the element type
         QTreeWidgetItem *lastHigherItem = findSuitableParentItem(elementType);
@@ -115,7 +127,6 @@ void NavigationWidget::parse(QTextDocument *document) {
 
         _lastHeadingItemList[elementType] = item;
     }
-
     expandAll();
 }
 
