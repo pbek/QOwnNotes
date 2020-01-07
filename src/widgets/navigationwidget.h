@@ -16,6 +16,19 @@
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
 #include <QTextDocument>
+#include <QFutureWatcher>
+
+struct Node{
+    QString text;
+    int pos;
+    int elementType;
+
+    bool operator==(const Node &node) const {
+        return text == node.text &&
+                pos == node.pos &&
+                elementType == node.elementType;
+    }
+};
 
 class NavigationWidget : public QTreeWidget
 {
@@ -25,16 +38,22 @@ public:
     explicit NavigationWidget(QWidget *parent = 0);
     void parse(QTextDocument *document);
     void setDocument(QTextDocument *document);
+    QVector<Node> parseDocument(QTextDocument *document);
 
 private slots:
     void onCurrentItemChanged(
             QTreeWidgetItem *current, QTreeWidgetItem *previous);
+    void onParseCompleted();
+
 signals:
     void positionClicked(int position);
 
 private:
+
     QTextDocument *_document;
-    QMap<int, QTreeWidgetItem *> _lastHeadingItemList;
+    QHash<int, QTreeWidgetItem *> _lastHeadingItemList;
+    QFutureWatcher<QVector<Node>> *parseFutureWatcher;
+    QVector<Node> navigationTreeNodes;
 
     QTreeWidgetItem *findSuitableParentItem(int elementType);
 };
