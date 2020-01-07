@@ -373,7 +373,7 @@ QString Utils::Schema::getSchemaStyles() {
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Link, QStringLiteral("a"));
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Bold, QStringLiteral("b, strong"));
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Italic, QStringLiteral("i, em"));
-    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::CodeBlock, QStringLiteral("code, pre > code"));
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::CodeBlock, QStringLiteral("code, pre > code, pre"));
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::InlineCodeBlock, QStringLiteral("p > code, li > code"));
 
     return schemaStyles;

@@ -2138,7 +2138,9 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     QString codeBackgroundColor = darkModeColors ? QStringLiteral("#444444") : QStringLiteral("#f1f1f1");
 
     // do some more code formatting
+    // the "pre" styles are for the full-width code block background color
     codeStyleSheet += QString(
+                    "pre { display: block; background-color: %1 } "
                     "code { padding: 3px; overflow: auto;"
                     " line-height: 1.45em; background-color: %1;"
                     " border-radius: 5px; color: %2; }").arg(
