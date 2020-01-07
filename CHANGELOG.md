@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 20.1.4
+- fixed highlighting of comments in code blocks (for [#1547](https://github.com/pbek/QOwnNotes/issues/1547), thank you @Waqar144)
+- improved the preview highlighting (for [#1551](https://github.com/pbek/QOwnNotes/pull/1551), thank you @Waqar144)
+- fixed inline code being interpreted as code block (for [#73](https://github.com/pbek/qmarkdowntextedit/pull/73), thank you @Waqar144)
+- code blocks now can have a full-width background color in the preview (for [#1526](https://github.com/pbek/QOwnNotes/issues/1526))
+- increased performance of navigation parsing panel (for [#1553](https://github.com/pbek/QOwnNotes/pull/1553), thank you @Waqar144)
+- fixed broken two-line headline highlighting while typing (for [#1552](https://github.com/pbek/QOwnNotes/issues/1552), thank you @Waqar144)
+
 ## 20.1.3
 - fixed opening of notes in external editor under macOS if non-default application
   was chosen (for [#1543](https://github.com/pbek/QOwnNotes/issues/1543))
