@@ -352,12 +352,12 @@ bool NoteSubFolder::store() {
                               ":modified)");
     }
 
-    QDateTime modified = QDateTime::currentDateTime();
+    QDateTime currentDateTime = QDateTime::currentDateTime();
 
     query.bindValue(":name", name);
     query.bindValue(":parent_id", parentId);
     query.bindValue(":file_last_modified", fileLastModified);
-    query.bindValue(":modified", modified);
+    query.bindValue(":modified", currentDateTime);
 
     // on error
     if (!query.exec()) {
@@ -367,7 +367,7 @@ bool NoteSubFolder::store() {
         id = query.lastInsertId().toInt();
     }
 
-    modified = modified;
+    modified = currentDateTime;
     return true;
 }
 
