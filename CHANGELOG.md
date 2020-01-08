@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.1.5
+- added a **new editor color schema** *Two Dark* by @ScottKillen (for [#1557](https://github.com/pbek/QOwnNotes/issues/1557))
+- attempted to fix AppImage and fixed macOS build
+- code block keyword styles now also match editor styles (for [#1462](https://github.com/pbek/QOwnNotes/issues/1462))
+
 ## 20.1.4
 - fixed highlighting of comments in code blocks (for [#1547](https://github.com/pbek/QOwnNotes/issues/1547), thank you @Waqar144)
 - improved the preview highlighting (for [#1551](https://github.com/pbek/QOwnNotes/pull/1551), thank you @Waqar144)
