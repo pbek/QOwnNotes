@@ -202,22 +202,9 @@ set(SOURCE_FILES
     api/scriptapi.h
     libraries/diff_match_patch/diff_match_patch.cpp
     libraries/diff_match_patch/diff_match_patch.h
-    libraries/hoedown/autolink.c
-    libraries/hoedown/autolink.h
-    libraries/hoedown/buffer.c
-    libraries/hoedown/buffer.h
-    libraries/hoedown/document.c
-    libraries/hoedown/document.h
-    libraries/hoedown/escape.c
-    libraries/hoedown/escape.h
-    libraries/hoedown/html.c
-    libraries/hoedown/html.h
-    libraries/hoedown/html_blocks.c
-    libraries/hoedown/html_smartypants.c
-    libraries/hoedown/stack.c
-    libraries/hoedown/stack.h
-    libraries/hoedown/version.c
-    libraries/hoedown/version.h
+    libraries/md4c/md4c/md4c.c
+    libraries/md4c/md2html/render_html.c
+    libraries/md4c/md2html/entity.c
     libraries/qmarkdowntextedit/qownlanguagedata.cpp
     libraries/qmarkdowntextedit/qownlanguagedata.h
     libraries/qmarkdowntextedit/markdownhighlighter.cpp
