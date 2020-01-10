@@ -130,6 +130,9 @@ QString CodeToHtmlConverter::process() const
 //    case CodeINI:
 //        iniHighlighter(text);
 //        return;
+    default:
+        output += escapeString(_input);
+        return output;
     }
 
     const auto textLen = _input.length();
