@@ -1940,8 +1940,6 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         //extensions = static_cast<hoedown_extensions>(extensions & ~HOEDOWN_EXT_UNDERLINE);
     }
 
-    //hoedown_document *document = hoedown_document_new(renderer, extensions, 32);
-
     QString windowsSlash = QLatin1String("");
 
 #ifdef Q_OS_WIN32
@@ -2034,12 +2032,12 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
             //find endline
             int endline = str.indexOf(QChar('\n'), currentCbPos);
             QString lang = str.mid(currentCbPos +3, endline - (currentCbPos + 3));
-            //in case someone decides to put ``` code ``` on the same line
+            //we skip it because it is inline code and not codeBlock
             if (lang.contains(QLatin1String("```"))) {
-                //reset the endline to ``, the third backtick will be taken care of below
-                endline = currentCbPos + 2;
-                //empty the lang
-                lang = QLatin1String("");
+                int nextEnd = str.indexOf(QLatin1String("```"), currentCbPos + 3);
+                nextEnd += 3;
+                currentCbPos = str.indexOf(QLatin1String("```"), nextEnd);
+                continue;
             }
             //move start pos to after the endline
 
@@ -2066,7 +2064,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         }
     }
 
-    char *data = qstrdup(str.toUtf8().constData());
+    const char *data = qstrdup(str.toUtf8().constData());
     size_t length = strlen(data);
 
     // return an empty string if the note is empty
@@ -2090,25 +2088,6 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     } else {
         qWarning() << "MD4C Failure!";
     }
-
-    //hoedown_buffer *html = hoedown_buffer_new(length);
-
-    // render markdown html
-    //hoedown_document_render(document, html, sequence, length);
-
-    // get markdown html
-//    QString result = QString::fromUtf8(
-//                        reinterpret_cast<char*>(html->data),
-//                        static_cast<int>(html->size));
-
-//    qDebug() << __func__ << " - 'result': " << result;
-
-    /* Cleanup */
-//    free(sequence);
-//    hoedown_buffer_free(html);
-
-//    hoedown_document_free(document);
-//    hoedown_html_renderer_free(renderer);
 
     // transform remote preview image tags
     Utils::Misc::transformRemotePreviewImages(result);
@@ -2156,6 +2135,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
 
     // do some more code formatting
     codeStyleSheet += QString(
+                    "pre { display: block; background-color: %1 } "
                     "code { padding: 3px; overflow: auto;"
                     " line-height: 1.45em; background-color: %1;"
                     " border-radius: 5px; color: %2; }").arg(
