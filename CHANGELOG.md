@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.1.6
+- fixed a numeric literal codeblock highlighting problem (for [#1559](https://github.com/pbek/QOwnNotes/issues/1559), thank you @Waqar144)
+
 ## 20.1.5
 - added a **new editor color schema** *Two Dark* by @ScottKillen (for [#1557](https://github.com/pbek/QOwnNotes/issues/1557))
 - attempted to fix AppImage and fixed macOS build
