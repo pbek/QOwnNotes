@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 20.1.6
-- fixed a numeric literal codeblock highlighting problem (for [#1559](https://github.com/pbek/QOwnNotes/issues/1559), thank you @Waqar144)
+- fixed a numeric literal code block highlighting problem (for [#1559](https://github.com/pbek/QOwnNotes/issues/1559), thank you @Waqar144)
 - fixed multiple multiline comments in same code block causing freezes (for [#1561](https://github.com/pbek/QOwnNotes/issues/1561), thank you @Waqar144)
 
 ## 20.1.5
