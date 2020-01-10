@@ -6,6 +6,7 @@
 - fixed multiple multiline comments in same code block causing freezes (for [#1561](https://github.com/pbek/QOwnNotes/issues/1561), thank you @Waqar144)
 - the markdown to html library [MD4C](https://github.com/mity/md4c) was integrated
   to be used in the preview instead of hoedown (for [#1567](https://github.com/pbek/QOwnNotes/issues/1567), thank you @Waqar144)
+- added full css highlighting and partial YAML highlighting to the preview (for [#1570](https://github.com/pbek/QOwnNotes/pull/1570), thank you @Waqar144)
 - again attempted to fix AppImage build
 - added more Hindi, Arabic, French, Estonian, Hausa, Swedish, Slovak, Slovenian,
   Romanian, Polish, Norwegian, Serbian (Cyrillic), Russian, Irish, Latvian
