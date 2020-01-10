@@ -1934,10 +1934,15 @@ void captureHtmlFragment (const MD_CHAR* data, MD_SIZE data_size, void* userData
 QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                                  int maxImageWidth,
                                  bool forExport, bool base64Images) {
+    //MD4C flags
+    unsigned flags = MD_DIALECT_GITHUB | MD_FLAG_WIKILINKS |
+                     MD_FLAG_LATEXMATHSPANS | MD_FLAG_PERMISSIVEATXHEADERS | MD_FLAG_UNDERLINE;
+    //we parse the task lists ourselves
+    flags &= ~MD_FLAG_TASKLISTS;
 
     QSettings settings;
     if (!settings.value(QStringLiteral("MainWindow/noteTextView.underline"), true).toBool()) {
-        //extensions = static_cast<hoedown_extensions>(extensions & ~HOEDOWN_EXT_UNDERLINE);
+        flags &= ~MD_FLAG_UNDERLINE;
     }
 
     QString windowsSlash = QLatin1String("");
@@ -2071,10 +2076,6 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     if (length == 0) {
         return QLatin1String("");
     }
-
-    unsigned flags = MD_DIALECT_GITHUB | MD_FLAG_WIKILINKS |
-                     MD_FLAG_LATEXMATHSPANS | MD_FLAG_PERMISSIVEATXHEADERS;
-    flags &= ~MD_FLAG_TASKLISTS;
 
     QByteArray array;
     int renderResult = md_render_html(data, MD_SIZE(length),
