@@ -4,6 +4,8 @@
 - fixed four spaces code blocks (for [#1558](https://github.com/pbek/QOwnNotes/issues/1558), thank you @Waqar144)
 - fixed a numeric literal code block highlighting problem (for [#1559](https://github.com/pbek/QOwnNotes/issues/1559), thank you @Waqar144)
 - fixed multiple multiline comments in same code block causing freezes (for [#1561](https://github.com/pbek/QOwnNotes/issues/1561), thank you @Waqar144)
+- the markdown to html library [MD4C](https://github.com/mity/md4c) was integrated
+  to be used in the preview instead of hoedown (for [#1567](https://github.com/pbek/QOwnNotes/issues/1567), thank you @Waqar144)
 - again attempted to fix AppImage build
 - added more Hindi, Arabic, French, Estonian, Hausa, Swedish, Slovak, Slovenian,
   Romanian, Polish, Norwegian, Serbian (Cyrillic), Russian, Irish, Latvian
