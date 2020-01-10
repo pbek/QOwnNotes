@@ -187,35 +187,68 @@ void TestNotes::testCodeToHtmlNumericLiterals()
     QString a2 = "(123)";
     QString a3 = "[123]";
     QString bad = "a123";
+    QString bad1 = "123a";
+    QString bad2 = "12a3";
+    QString bad3 = "a123b";
+    QString bad4 = "12pxa";
     QString a5 = "0x123";
+    QString a6 = "12px\n";
+    QString a7 = "12em\n";
 
     CodeToHtmlConverter c1(a.midRef(0, a.length()), QStringLiteral("c"));
     CodeToHtmlConverter c2(a1.midRef(0, a1.length()), QStringLiteral("c"));
     CodeToHtmlConverter c3(a2.midRef(0, a2.length()), QStringLiteral("c"));
     CodeToHtmlConverter c4(a3.midRef(0, a3.length()), QStringLiteral("c"));
+
     CodeToHtmlConverter c5(bad.midRef(0, bad.length()), QStringLiteral("c"));
-    CodeToHtmlConverter c6(a5.midRef(0, a5.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c6(bad1.midRef(0, bad1.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c7(bad2.midRef(0, bad2.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c8(bad3.midRef(0, bad3.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c13(bad4.midRef(0, bad4.length()), QStringLiteral("css"));
+
+    CodeToHtmlConverter c9(a5.midRef(0, a5.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c10(a6.midRef(0, a6.length()), QStringLiteral("css"));
+    CodeToHtmlConverter c11(a7.midRef(0, a7.length()), QStringLiteral("css"));
+
 
     QString ar = c1.process();
     QString a1r = c2.process();
     QString a2r = c3.process();
     QString a3r = c4.process();
-    QString badr = c5.process();
-    QString a5r = c6.process();
+    QString badResult = c5.process();
+    QString badResult1 = c6.process();
+    QString badResult2 = c7.process();
+    QString badResult3 = c8.process();
+    QString badResult4 = c13.process();
+    QString a5r = c9.process();
+    QString a6r = c10.process();
+    QString a7r = c11.process();
 
     QString e = "<span class=\"code-literal\">123</span>";
     QString e1 = "<span class=\"code-literal\">123</span>+<span class=\"code-literal\">321</span>";
     QString e2 = "(<span class=\"code-literal\">123</span>)";
     QString e3 = "[<span class=\"code-literal\">123</span>]";
-    QString eBad = "a123";
+    QString expectedBad = "a123";
+    QString expectedBad1 = "123a";
+    QString expectedBad2 = "12a3";
+    QString expectedBad3 = "a123b";
+    QString expectedBad4 = "12pxa";
     QString e5 = "<span class=\"code-literal\">0x123</span>";
+    QString e6 = "<span class=\"code-literal\">12</span><span class=\"code-keyword\">px</span>\n";
+    QString e7 = "<span class=\"code-literal\">12</span><span class=\"code-keyword\">em</span>\n";
 
     QVERIFY(ar == e);
     QVERIFY(a1r == e1);
     QVERIFY(a2r == e2);
     QVERIFY(a3r == e3);
-//    QVERIFY(badr == eBad);
+    QVERIFY(badResult == expectedBad);
+    QVERIFY(badResult1 == expectedBad1);
+    QVERIFY(badResult2 == expectedBad2);
+    QVERIFY(badResult3 == expectedBad3);
+    QVERIFY(badResult4 == expectedBad4);
     QVERIFY(a5r == e5);
+    QVERIFY(a6r == e6);
+    QVERIFY(a7r == e7);
 }
 
 //QTEST_MAIN(TestNotes)
