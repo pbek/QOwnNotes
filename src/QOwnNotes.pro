@@ -88,6 +88,9 @@ SOURCES += main.cpp\
     libraries/simplecrypt/simplecrypt.cpp \
     libraries/versionnumber/versionnumber.cpp \
     libraries/botan/botanwrapper.cpp \
+    libraries/md4c/md4c/md4c.c \
+    libraries/md4c/md2html/render_html.c \
+    libraries/md4c/md2html/entity.c \
     dialogs/aboutdialog.cpp \
     dialogs/linkdialog.cpp \
     dialogs/notediffdialog.cpp \
@@ -172,6 +175,9 @@ HEADERS  += mainwindow.h \
     libraries/simplecrypt/simplecrypt.h \
     libraries/versionnumber/versionnumber.h \
     libraries/botan/botanwrapper.h \
+    libraries/md4c/md4c/md4c.h \
+    libraries/md4c/md2html/render_html.h \
+    libraries/md4c/md2html/entity.h \
     entities/notehistory.h \
     entities/note.h \
     entities/trashitem.h \
