@@ -201,7 +201,8 @@ QString CodeToHtmlConverter::process() const
                     ++cnt;
                 }
                 i = cnt;
-                output += escape(_input.at(i));
+                if (i < textLen)
+                    output += escape(_input.at(i));
             }
         }
         else {
@@ -241,7 +242,7 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
 
     if (!isPreAllowed) {
         output += escape(_input.at(i));
-        return ++i;
+        return i;
     }
 
     int start = i;
@@ -290,7 +291,15 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
             break;
         case 'p':
             if (currentLang == CodeCSS && _input.at(i+2) == QChar('x'))
-                isPostAllowed = true;
+                if ( (i+3 < _input.length()) &&
+                    (_input.at(i+3) == QChar(';') || _input.at(i+3) == QChar('\n')) )
+                    isPostAllowed = true;
+            break;
+        case 'e':
+            if (currentLang == CodeCSS && _input.at(i+2) == QChar('m'))
+                if ( (i+3 < _input.length()) &&
+                    (_input.at(i+3) == QChar(';') || _input.at(i+3) == QChar('\n')) )
+                    isPostAllowed = true;
             break;
         // for 100u, 1.0F
         case 'u':
@@ -640,7 +649,8 @@ QString CodeToHtmlConverter::cssHighlighter(const QMultiHash<char, QLatin1String
                     ++cnt;
                 }
                 i = cnt;
-                output += escape(_input.at(i));
+                if (i < textLen)
+                    output += escape(_input.at(i));
             }
         }
         else {
