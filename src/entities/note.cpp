@@ -13,7 +13,8 @@
 #include <QUrl>
 #include <QCryptographicHash>
 #include "libraries/simplecrypt/simplecrypt.h"
-#include "libraries/hoedown/html.h"
+#include "libraries/md4c/md4c/md4c.h"
+#include "libraries/md4c/md2html/render_html.h"
 #include "libraries/botan/botanwrapper.h"
 #include "libraries/botan/botan.h"
 #include "tag.h"
@@ -1345,7 +1346,7 @@ bool Note::handleNoteTextFileName() {
     if (name.isEmpty()) {
         return false;
     }
-    
+
     // check if we have a frontmatter
     if (name == QStringLiteral("---") && noteTextLinesCount > 1) {
         bool foundEnd = false;
@@ -1475,7 +1476,7 @@ bool Note::updateNoteTextFromDisk() {
     file.close();
 
     // strangely it sometimes gets null
-    if (this->noteText.isNull()) this->noteText = QLatin1String("");
+    if (this->noteText.isNull()) this->noteText =QLatin1String("");
 
     return true;
 }
@@ -1912,6 +1913,14 @@ QString Note::toMarkdownHtml(const QString &notesPath, int maxImageWidth,
     return _noteTextHtml;
 }
 
+void captureHtmlFragment (const MD_CHAR* data, MD_SIZE data_size, void* userData) {
+  QByteArray* array = static_cast<QByteArray*>(userData);
+
+  if (data_size > 0) {
+    array->append(data, int(data_size));
+  }
+}
+
 /**
  * Converts a markdown string for a note to html
  *
@@ -1925,21 +1934,13 @@ QString Note::toMarkdownHtml(const QString &notesPath, int maxImageWidth,
 QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                                  int maxImageWidth,
                                  bool forExport, bool base64Images) {
-    hoedown_renderer *renderer =
-            hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 32);
-
-    // we want to show quotes in the html, so we don't translate them into
-    // `<q>` tags
-    // HOEDOWN_EXT_MATH and HOEDOWN_EXT_MATH_EXPLICIT don't seem to do anything
-    auto extensions = static_cast<hoedown_extensions>(((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
-            HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE));
 
     QSettings settings;
     if (!settings.value(QStringLiteral("MainWindow/noteTextView.underline"), true).toBool()) {
-        extensions = static_cast<hoedown_extensions>(extensions & ~HOEDOWN_EXT_UNDERLINE);
+        //extensions = static_cast<hoedown_extensions>(extensions & ~HOEDOWN_EXT_UNDERLINE);
     }
 
-    hoedown_document *document = hoedown_document_new(renderer, extensions, 32);
+    //hoedown_document *document = hoedown_document_new(renderer, extensions, 32);
 
     QString windowsSlash = QLatin1String("");
 
@@ -2034,12 +2035,11 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
             int endline = str.indexOf(QChar('\n'), currentCbPos);
             QString lang = str.mid(currentCbPos +3, endline - (currentCbPos + 3));
             //in case someone decides to put ``` code ``` on the same line
-            //we skip it because it is inline code and not codeBlock
             if (lang.contains(QLatin1String("```"))) {
-                int nextEnd = str.indexOf(QLatin1String("```"), currentCbPos + 3);
-                nextEnd += 3;
-                currentCbPos = str.indexOf(QLatin1String("```"), nextEnd);
-                continue;
+                //reset the endline to ``, the third backtick will be taken care of below
+                endline = currentCbPos + 2;
+                //empty the lang
+                lang = QLatin1String("");
             }
             //move start pos to after the endline
 
@@ -2066,32 +2066,49 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         }
     }
 
-    uint8_t *sequence = reinterpret_cast<uint8_t *>(qstrdup(str.toUtf8().constData()));
-    size_t length = strlen(reinterpret_cast<char *>(sequence));
+    char *data = qstrdup(str.toUtf8().constData());
+    size_t length = strlen(data);
 
     // return an empty string if the note is empty
     if (length == 0) {
         return QLatin1String("");
     }
 
-    hoedown_buffer *html = hoedown_buffer_new(length);
+    QByteArray array;
+    int renderResult = md_render_html(data, MD_SIZE(length),
+                                      &captureHtmlFragment,
+                                      &array,
+                                      MD_DIALECT_GITHUB |
+                                      MD_FLAG_WIKILINKS |
+                                      MD_FLAG_LATEXMATHSPANS |
+                                      MD_FLAG_PERMISSIVEATXHEADERS,
+                                      0);
+
+    QString result;
+    if (renderResult == 0) {
+        result = QString::fromUtf8(array);
+    } else {
+        qWarning() << "MD4C Failure!";
+    }
+
+    //hoedown_buffer *html = hoedown_buffer_new(length);
 
     // render markdown html
-    hoedown_document_render(document, html, sequence, length);
+    //hoedown_document_render(document, html, sequence, length);
 
     // get markdown html
-    QString result = QString::fromUtf8(
-                        reinterpret_cast<char*>(html->data),
-                        static_cast<int>(html->size));
+//    QString result = QString::fromUtf8(
+//                        reinterpret_cast<char*>(html->data),
+//                        static_cast<int>(html->size));
 
 //    qDebug() << __func__ << " - 'result': " << result;
 
     /* Cleanup */
-    free(sequence);
-    hoedown_buffer_free(html);
+//    free(sequence);
+//    hoedown_buffer_free(html);
 
-    hoedown_document_free(document);
-    hoedown_html_renderer_free(renderer);
+//    hoedown_document_free(document);
+//    hoedown_html_renderer_free(renderer);
 
     // transform remote preview image tags
     Utils::Misc::transformRemotePreviewImages(result);
@@ -2138,9 +2155,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     QString codeBackgroundColor = darkModeColors ? QStringLiteral("#444444") : QStringLiteral("#f1f1f1");
 
     // do some more code formatting
-    // the "pre" styles are for the full-width code block background color
     codeStyleSheet += QString(
-                    "pre { display: block; background-color: %1 } "
                     "code { padding: 3px; overflow: auto;"
                     " line-height: 1.45em; background-color: %1;"
                     " border-radius: 5px; color: %2; }").arg(
