@@ -306,6 +306,11 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
         int end = ++i;
         output += setFormat(_input.mid(start, end - start), Format::Literal);
     }
+    //this is not a number, add this to the output but no formatting
+    //no escaping necessary as we know these are only numbers
+    else {
+        output += _input.mid(start, i);
+    }
 
     return i;
 }
