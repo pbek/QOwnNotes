@@ -121,11 +121,9 @@ QString CodeToHtmlConverter::process() const
     case CodeTypeScript:
         loadTypescriptData(types, keywords, builtin, literals, others);
         break;
-//    case CodeYAML:
-//        isYAML = true;
-//        comment = '#';
-//        loadYAMLData(types, keywords, builtin, literals, others);
-//        break;
+    case CodeYAML:
+        loadYAMLData(types, keywords, builtin, literals, others);
+        return ymlHighlighter();
 //    case CodeINI:
 //        iniHighlighter(text);
 //        return;
@@ -576,6 +574,10 @@ QString CodeToHtmlConverter::xmlHighlighter() const {
     return output;
 }
 
+/**
+ * @brief CSS highlighter
+ * @return
+ */
 QString CodeToHtmlConverter::cssHighlighter(const QMultiHash<char, QLatin1String> &types,
                                             const QMultiHash<char, QLatin1String> &keywords) const {
     if (_input.isEmpty())
@@ -646,6 +648,63 @@ QString CodeToHtmlConverter::cssHighlighter(const QMultiHash<char, QLatin1String
         }
     }
     //release extra memory
+    output.squeeze();
+    return output;
+}
+
+/**
+ * @brief YAML highlighter
+ * @return
+ */
+QString CodeToHtmlConverter::ymlHighlighter() const {
+    if (_input.isEmpty()) return QLatin1String("");
+    const auto textLen = _input.length();
+
+    QString output = QLatin1String("");
+    output.reserve(textLen + 100);
+
+    for (int i = 0; i < textLen; ++i) {
+        //we found a string literal
+        if (_input.at(i) == QChar('"') || _input.at(i) == QChar('\'')) {
+            i = highlightStringLiterals(_input.at(i), output, i);
+        } else if (_input.at(i) == QChar('#')) {
+            i = highlightComment(output, i);
+        } else {
+            int colon = _input.indexOf(QChar(':'), i);
+            if (colon > 0) {
+                //move i to the beginning of the word
+                int cursor = i;
+                while(cursor < textLen && !_input.at(cursor).isLetter())
+                    ++cursor;
+                //add this to output
+                output += escapeString(_input.mid(i, cursor - i));
+                i = cursor;
+
+                output += setFormat(_input.mid(i, colon - i), Format::Keyword);
+                i = colon;
+                int endLine = _input.indexOf(QChar('\n'), i);
+                if (endLine > 0) {
+                    QStringRef line = _input.mid(i, endLine - i);
+                    if (line.contains(QChar('#'))) {
+                        int hashPos = _input.indexOf(QChar('#'), i);
+                        //first add everything till the # into output
+                        output += _input.mid(i, hashPos - i);
+                        //advance i
+                        i = hashPos;
+                        //then add the comment
+                        output += setFormat(_input.mid(i, endLine - i), Format::Comment);
+                        i = endLine;
+                    }
+
+                    if (i != endLine)
+                        output += escapeString(_input.mid(i, endLine - i));
+                    i = endLine;
+                }
+            }
+            output += escape(_input.at(i));
+        }
+    }
+
     output.squeeze();
     return output;
 }
