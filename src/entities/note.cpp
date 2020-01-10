@@ -2072,14 +2072,15 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         return QLatin1String("");
     }
 
+    unsigned flags = MD_DIALECT_GITHUB | MD_FLAG_WIKILINKS |
+                     MD_FLAG_LATEXMATHSPANS | MD_FLAG_PERMISSIVEATXHEADERS;
+    flags &= ~MD_FLAG_TASKLISTS;
+
     QByteArray array;
     int renderResult = md_render_html(data, MD_SIZE(length),
                                       &captureHtmlFragment,
                                       &array,
-                                      MD_DIALECT_GITHUB |
-                                      MD_FLAG_WIKILINKS |
-                                      MD_FLAG_LATEXMATHSPANS |
-                                      MD_FLAG_PERMISSIVEATXHEADERS,
+                                      flags,
                                       0);
 
     QString result;
