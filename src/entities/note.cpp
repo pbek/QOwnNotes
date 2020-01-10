@@ -13,7 +13,8 @@
 #include <QUrl>
 #include <QCryptographicHash>
 #include "libraries/simplecrypt/simplecrypt.h"
-#include "libraries/hoedown/html.h"
+#include "libraries/md4c/md4c/md4c.h"
+#include "libraries/md4c/md2html/render_html.h"
 #include "libraries/botan/botanwrapper.h"
 #include "libraries/botan/botan.h"
 #include "tag.h"
@@ -1345,7 +1346,7 @@ bool Note::handleNoteTextFileName() {
     if (name.isEmpty()) {
         return false;
     }
-    
+
     // check if we have a frontmatter
     if (name == QStringLiteral("---") && noteTextLinesCount > 1) {
         bool foundEnd = false;
@@ -1475,7 +1476,7 @@ bool Note::updateNoteTextFromDisk() {
     file.close();
 
     // strangely it sometimes gets null
-    if (this->noteText.isNull()) this->noteText = QLatin1String("");
+    if (this->noteText.isNull()) this->noteText =QLatin1String("");
 
     return true;
 }
@@ -1912,6 +1913,14 @@ QString Note::toMarkdownHtml(const QString &notesPath, int maxImageWidth,
     return _noteTextHtml;
 }
 
+void captureHtmlFragment (const MD_CHAR* data, MD_SIZE data_size, void* userData) {
+  QByteArray* array = static_cast<QByteArray*>(userData);
+
+  if (data_size > 0) {
+    array->append(data, int(data_size));
+  }
+}
+
 /**
  * Converts a markdown string for a note to html
  *
@@ -1925,21 +1934,11 @@ QString Note::toMarkdownHtml(const QString &notesPath, int maxImageWidth,
 QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                                  int maxImageWidth,
                                  bool forExport, bool base64Images) {
-    hoedown_renderer *renderer =
-            hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 32);
-
-    // we want to show quotes in the html, so we don't translate them into
-    // `<q>` tags
-    // HOEDOWN_EXT_MATH and HOEDOWN_EXT_MATH_EXPLICIT don't seem to do anything
-    auto extensions = static_cast<hoedown_extensions>(((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
-            HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE));
 
     QSettings settings;
     if (!settings.value(QStringLiteral("MainWindow/noteTextView.underline"), true).toBool()) {
-        extensions = static_cast<hoedown_extensions>(extensions & ~HOEDOWN_EXT_UNDERLINE);
+        //extensions = static_cast<hoedown_extensions>(extensions & ~HOEDOWN_EXT_UNDERLINE);
     }
-
-    hoedown_document *document = hoedown_document_new(renderer, extensions, 32);
 
     QString windowsSlash = QLatin1String("");
 
@@ -2033,7 +2032,6 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
             //find endline
             int endline = str.indexOf(QChar('\n'), currentCbPos);
             QString lang = str.mid(currentCbPos +3, endline - (currentCbPos + 3));
-            //in case someone decides to put ``` code ``` on the same line
             //we skip it because it is inline code and not codeBlock
             if (lang.contains(QLatin1String("```"))) {
                 int nextEnd = str.indexOf(QLatin1String("```"), currentCbPos + 3);
@@ -2066,32 +2064,31 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         }
     }
 
-    uint8_t *sequence = reinterpret_cast<uint8_t *>(qstrdup(str.toUtf8().constData()));
-    size_t length = strlen(reinterpret_cast<char *>(sequence));
+    const char *data = qstrdup(str.toUtf8().constData());
+    size_t length = strlen(data);
 
     // return an empty string if the note is empty
     if (length == 0) {
         return QLatin1String("");
     }
 
-    hoedown_buffer *html = hoedown_buffer_new(length);
+    unsigned flags = MD_DIALECT_GITHUB | MD_FLAG_WIKILINKS |
+                     MD_FLAG_LATEXMATHSPANS | MD_FLAG_PERMISSIVEATXHEADERS;
+    flags &= ~MD_FLAG_TASKLISTS;
 
-    // render markdown html
-    hoedown_document_render(document, html, sequence, length);
+    QByteArray array;
+    int renderResult = md_render_html(data, MD_SIZE(length),
+                                      &captureHtmlFragment,
+                                      &array,
+                                      flags,
+                                      0);
 
-    // get markdown html
-    QString result = QString::fromUtf8(
-                        reinterpret_cast<char*>(html->data),
-                        static_cast<int>(html->size));
-
-//    qDebug() << __func__ << " - 'result': " << result;
-
-    /* Cleanup */
-    free(sequence);
-    hoedown_buffer_free(html);
-
-    hoedown_document_free(document);
-    hoedown_html_renderer_free(renderer);
+    QString result;
+    if (renderResult == 0) {
+        result = QString::fromUtf8(array);
+    } else {
+        qWarning() << "MD4C Failure!";
+    }
 
     // transform remote preview image tags
     Utils::Misc::transformRemotePreviewImages(result);
