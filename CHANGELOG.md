@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.1.7
+- fixed trailing spaces not being highlighted (for [#1569](https://github.com/pbek/QOwnNotes/issues/1569), thank you @Waqar144)
+
 ## 20.1.6
 - fixed four spaces code blocks (for [#1558](https://github.com/pbek/QOwnNotes/issues/1558), thank you @Waqar144)
 - fixed a numeric literal code block highlighting problem (for [#1559](https://github.com/pbek/QOwnNotes/issues/1559), thank you @Waqar144)
