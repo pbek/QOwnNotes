@@ -59,7 +59,9 @@ private:
     int highlightComment(QString &output, int i, bool isSingleLine = true) const;
     int highlightWord(int i, const QMultiHash<char, QLatin1String> &data,
                       QString &output, Format f) const;
-    QString xmlHighlighter(const QStringRef text) const;
+    QString xmlHighlighter() const;
+    QString cssHighlighter(const QMultiHash<char, QLatin1String> &types,
+                           const QMultiHash<char, QLatin1String> &keywords) const;
 
     /**
      * @brief returns true if c is octal
