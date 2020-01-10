@@ -110,7 +110,7 @@ void TestNotes::testNoteToMarkdownHtml()
     note.createFromFile(file);
 
     QString html = note.toMarkdownHtml("", 980, true);
-    QString expectedBody = QStringLiteral("<h1 id=\"toc_0\">MyTestNote</h1>\n\n<p>Some text</p>");
+    QString expectedBody = QStringLiteral("<h1>MyTestNote</h1>\n<p>Some text</p>");
 
     QVERIFY(html.contains(expectedBody));
 }
