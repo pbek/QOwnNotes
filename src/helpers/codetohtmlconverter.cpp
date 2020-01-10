@@ -222,6 +222,7 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
     else {
         //these values are allowed before a number
         switch(_input.at(i - 1).toLatin1()) {
+        case '\n':
         case '[':
         case '(':
         case '{':
@@ -253,15 +254,18 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
     }
 
     ++i;
+
     //hex numbers highlighting (only if there's a preceding zero)
     if (_input.at(i) == QChar('x') && _input.at(i - 1) == QChar('0'))
         ++i;
 
+    //unroll till we find a non number
     while (i < _input.length()) {
         if (!_input.at(i).isNumber() && _input.at(i) != QChar('.')) break;
         ++i;
     }
 
+    //decrement to go back to the last number in sequence
     i--;
 
     bool isPostAllowed = false;
@@ -269,6 +273,7 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
     else {
         //these values are allowed after a number
         switch(_input.at(i + 1).toLatin1()) {
+        case '\n':
         case ']':
         case ')':
         case '}':
@@ -301,6 +306,7 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
         int end = ++i;
         output += setFormat(_input.mid(start, end - start), Format::Literal);
     }
+
     return i;
 }
 
