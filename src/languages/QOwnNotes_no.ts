@@ -1258,12 +1258,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Checkbox unchecked</source>
-      <translation type="unfinished">Checkbox unchecked</translation>
+      <translation>Avkrysningsruten ikke merket</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>Checkbox checked</source>
-      <translation type="unfinished">Checkbox checked</translation>
+      <translation>Merk av for avkrysningsruten</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="216"/>
@@ -5896,17 +5896,17 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5023"/>
       <source>Tabs and Indents</source>
-      <translation type="unfinished">Tabs and Indents</translation>
+      <translation>Faner og innrykk</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5031"/>
       <source>Use tab character instead of spaces</source>
-      <translation type="unfinished">Use tab character instead of spaces</translation>
+      <translation>Bruk fanetegn i stedet for mellomrom</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5038"/>
       <source>Indent:</source>
-      <translation type="unfinished">Indent:</translation>
+      <translation>Innrykk:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5281"/>

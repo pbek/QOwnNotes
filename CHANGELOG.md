@@ -5,6 +5,9 @@
 - fixed a numeric literal code block highlighting problem (for [#1559](https://github.com/pbek/QOwnNotes/issues/1559), thank you @Waqar144)
 - fixed multiple multiline comments in same code block causing freezes (for [#1561](https://github.com/pbek/QOwnNotes/issues/1561), thank you @Waqar144)
 - again attempted to fix AppImage build
+- added more Hindi, Arabic, French, Estonian, Hausa, Swedish, Slovak, Slovenian,
+  Romanian, Polish, Norwegian, Serbian (Cyrillic), Russian, Irish, Latvian
+  translation (thank you Fabijenna)
 
 ## 20.1.5
 - added a **new editor color schema** *Two Dark* by @ScottKillen (for [#1557](https://github.com/pbek/QOwnNotes/issues/1557))

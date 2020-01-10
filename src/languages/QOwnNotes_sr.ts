@@ -1263,12 +1263,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Checkbox unchecked</source>
-      <translation type="unfinished">Checkbox unchecked</translation>
+      <translation>Avkrysningsruten ikke merket</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>Checkbox checked</source>
-      <translation type="unfinished">Checkbox checked</translation>
+      <translation>Merk av for avkrysningsruten</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="216"/>
@@ -4038,10 +4038,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+      <translation>
+        <numerusform>Vil du slette &lt;strong&gt;%n &lt;/strong&gt; valgt fil?</numerusform>
+        <numerusform>Vil du slette &lt;strong&gt;%n&lt;/strong&gt; valgte filer?</numerusform>
+        <numerusform>Vil du slette &lt;strong&gt;%n&lt;/strong&gt; valgte filer?</numerusform>
       </translation>
     </message>
   </context>
@@ -4090,10 +4090,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+      <translation>
+        <numerusform>Vil du slette &lt;strong&gt;%n &lt;/strong&gt; valgt fil?</numerusform>
+        <numerusform>Vil du slette &lt;strong&gt;%n&lt;/strong&gt; valgte filer?</numerusform>
+        <numerusform>Vil du slette &lt;strong&gt;%n&lt;/strong&gt; valgte filer?</numerusform>
       </translation>
     </message>
   </context>
