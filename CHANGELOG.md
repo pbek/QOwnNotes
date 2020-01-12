@@ -2,7 +2,7 @@
 
 ## 20.1.7
 - fixed trailing spaces not being highlighted (for [#1569](https://github.com/pbek/QOwnNotes/issues/1569), thank you @Waqar144)
-- fixed numeric highlighter (for [#1571](https://github.com/pbek/QOwnNotes/pull/1571), thank you @Waqar144)
+- fixed numeric highlighter and added more improvements (for [#1571](https://github.com/pbek/QOwnNotes/pull/1571), thank you @Waqar144)
 - added underline option to preview for MD4C (for [#1567](https://github.com/pbek/QOwnNotes/issues/1567), thank you @Waqar144)
 
 ## 20.1.6
