@@ -7,6 +7,8 @@
 - added the main menu entry `Reload note folder` also to the context menu in the
   note sub-folder panel (for [#1574](https://github.com/pbek/QOwnNotes/issues/1574)
 - fixed highlighting of ordered lists (for [#1573](https://github.com/pbek/QOwnNotes/issues/1573)
+- added more Portuguese, Filipino, Kurdish, Japanese, Urdu (Pakistan), Turkish,
+  Hebrew translation (thank you Fabijenna)
 
 ## 20.1.6
 - fixed four spaces code blocks (for [#1558](https://github.com/pbek/QOwnNotes/issues/1558), thank you @Waqar144)
