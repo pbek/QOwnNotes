@@ -4,6 +4,8 @@
 - fixed trailing spaces not being highlighted (for [#1569](https://github.com/pbek/QOwnNotes/issues/1569), thank you @Waqar144)
 - fixed numeric highlighter and added more improvements (for [#1571](https://github.com/pbek/QOwnNotes/pull/1571), thank you @Waqar144)
 - added underline option to preview for MD4C (for [#1567](https://github.com/pbek/QOwnNotes/issues/1567), thank you @Waqar144)
+- added the main menu entry `Reload note folder` also to the context menu in the
+  note folder panel (for [#1574](https://github.com/pbek/QOwnNotes/issues/1574)
 
 ## 20.1.6
 - fixed four spaces code blocks (for [#1558](https://github.com/pbek/QOwnNotes/issues/1558), thank you @Waqar144)

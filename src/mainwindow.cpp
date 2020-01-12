@@ -9939,6 +9939,7 @@ void MainWindow::openNoteSubFolderContextMenu(
     QAction *removeAction = menu.addAction(tr("Remove selected folders"));
     QAction *showInFileManagerAction = menu.addAction(
             tr("Show folder in file manager"));
+    menu.addAction(ui->action_Reload_note_folder);
 
     QAction *selectedItem = menu.exec(globalPos);
     if (selectedItem) {
