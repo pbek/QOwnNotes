@@ -396,20 +396,20 @@ void Utils::Gui::copyCodeBlockText(const QTextBlock& initialBlock) {
         block = block.previous();
 
         if (!block.isValid()) {
+
             break;
         }
 
-        if (block.userState() != 
-            MarkdownHighlighter::HighlighterState::CodeBlock) {
+        if (block.userState() != MarkdownHighlighter::HighlighterState::CodeBlock &&
+            block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockComment &&
+            block.userState() < MarkdownHighlighter::HighlighterState::CodeCpp) {
             break;
         }
-
         codeBlockTextList.prepend(block.text());
     }
 
     // check the next blocks if we are not at the CodeBlockEnd
-    if (initialBlock.userState() !=
-        MarkdownHighlighter::HighlighterState::CodeBlockEnd) {
+    if (initialBlock.userState() != MarkdownHighlighter::HighlighterState::CodeBlockEnd) {
         block = initialBlock;
 
         while(true) {
@@ -419,10 +419,10 @@ void Utils::Gui::copyCodeBlockText(const QTextBlock& initialBlock) {
                 break;
             }
 
-            if (block.userState() !=
-                MarkdownHighlighter::HighlighterState::CodeBlock &&
-                    block.userState() !=
-                    MarkdownHighlighter::HighlighterState::CodeBlockEnd) {
+            if (block.userState() != MarkdownHighlighter::HighlighterState::CodeBlock &&
+                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockComment &&
+                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockEnd &&
+                block.userState() < MarkdownHighlighter::HighlighterState::CodeCpp) {
                 break;
             }
 
@@ -430,11 +430,14 @@ void Utils::Gui::copyCodeBlockText(const QTextBlock& initialBlock) {
         }
     }
 
-    codeBlockTextList.removeFirst();
-    codeBlockTextList.removeLast();
-
+    if (!codeBlockTextList.isEmpty()) {
+        if (codeBlockTextList.first().startsWith(QLatin1String("```")))
+            codeBlockTextList.removeFirst();
+        if (!codeBlockTextList.isEmpty() && codeBlockTextList.last().startsWith(QLatin1String("```")))
+            codeBlockTextList.removeLast();
+    }
     QClipboard *clipboard = QApplication::clipboard();
-    clipboard->setText(codeBlockTextList.join(QStringLiteral("\n") + QStringLiteral("\n")));
+    clipboard->setText(codeBlockTextList.join(QStringLiteral("\n")));
 }
 
 /**

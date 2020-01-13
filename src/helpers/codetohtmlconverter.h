@@ -38,7 +38,8 @@ public:
         CodeCSS,
         CodeTypeScript,
         CodeYAML,
-        CodeINI
+        CodeINI,
+        CodeVex
     };
 public:
     CodeToHtmlConverter(const QStringRef input, const QString &lang) Q_DECL_NOTHROW;
@@ -63,6 +64,7 @@ private:
     QString cssHighlighter(const QMultiHash<char, QLatin1String> &types,
                            const QMultiHash<char, QLatin1String> &keywords) const;
     QString ymlHighlighter() const;
+    QString iniHighlighter() const;
 
     /**
      * @brief returns true if c is octal

@@ -107,6 +107,9 @@ QString CodeToHtmlConverter::process() const
     case CodeV :
         loadVData(types, keywords, builtin, literals, others);
         break;
+    case CodeVex:
+        loadVEXData(types, keywords, builtin, literals, others);
+        break;
     case CodeSQL :
         loadSQLData(types, keywords, builtin, literals, others);
         break;
@@ -124,9 +127,8 @@ QString CodeToHtmlConverter::process() const
     case CodeYAML:
         loadYAMLData(types, keywords, builtin, literals, others);
         return ymlHighlighter();
-//    case CodeINI:
-//        iniHighlighter(text);
-//        return;
+    case CodeINI:
+        return iniHighlighter();
     default:
         output += escapeString(_input);
         return output;
@@ -137,27 +139,27 @@ QString CodeToHtmlConverter::process() const
     output.reserve(_input.size() + 100);
 
     for (int i = 0; i < textLen; ++i) {
-        if (_input.at(i) == QChar(' ')) {
-            output += (QChar(' '));
-        } else if (_input.at(i) == QChar('\'') || _input.at(i) == QChar('"')) {
+        if (_input.at(i) == QLatin1Char(' ')) {
+            output += (QLatin1Char(' '));
+        } else if (_input.at(i) == QLatin1Char('\'') || _input.at(i) == QLatin1Char('"')) {
             i = highlightStringLiterals(_input.at(i), output, i);
             //escape text at i, otherwise it gets skipped and won't be present in output
             if (i < textLen )
                 output += escape(_input.at(i));
         } else if (_input.at(i).isDigit()) {
             i = highlightNumericLit(output, i);
-        } else if (comment.isNull() && _input.at(i) == QChar('/')) {
-            if(_input.at(i + 1) == QChar('/')) {
+        } else if (comment.isNull() && _input.at(i) == QLatin1Char('/')) {
+            if(_input.at(i + 1) == QLatin1Char('/')) {
                 i = highlightComment(output, i);
             }
             //Multiline comment i.e /* */
-            else if (_input.at(i + 1) == QChar('*')) {
+            else if (_input.at(i + 1) == QLatin1Char('*')) {
                 i = highlightComment(output, i, false);
             }
         } else if (_input.at(i) == comment) {
             i = highlightComment(output, i);
-        } else if (_input.at(i) == QChar('<') || _input.at(i) == QChar('>') ||
-                   _input.at(i) == QChar('&')) {
+        } else if (_input.at(i) == QLatin1Char('<') || _input.at(i) == QLatin1Char('>') ||
+                   _input.at(i) == QLatin1Char('&')) {
             output += escape(_input.at(i));
         }
         else if(_input.at(i).isLetter()) {
@@ -237,6 +239,10 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
         case '>':
             isPreAllowed = true;
             break;
+        case ':':
+            if (currentLang == CodeCSS) {
+                isPreAllowed = true;
+            }
         }
     }
 
@@ -255,12 +261,12 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
     ++i;
 
     //hex numbers highlighting (only if there's a preceding zero)
-    if (_input.at(i) == QChar('x') && _input.at(i - 1) == QChar('0'))
+    if (_input.at(i) == QLatin1Char('x') && _input.at(i - 1) == QLatin1Char('0'))
         ++i;
 
     //unroll till we find a non number
     while (i < _input.length()) {
-        if (!_input.at(i).isNumber() && _input.at(i) != QChar('.')) break;
+        if (!_input.at(i).isNumber() && _input.at(i) != QLatin1Char('.')) break;
         ++i;
     }
 
@@ -290,15 +296,15 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
             isPostAllowed = true;
             break;
         case 'p':
-            if (currentLang == CodeCSS && _input.at(i+2) == QChar('x'))
+            if (currentLang == CodeCSS && _input.at(i+2) == QLatin1Char('x'))
                 if ( (i+3 < _input.length()) &&
-                    (_input.at(i+3) == QChar(';') || _input.at(i+3) == QChar('\n')) )
+                    (_input.at(i+3) == QLatin1Char(';') || _input.at(i+3) == QLatin1Char('\n')) )
                     isPostAllowed = true;
             break;
         case 'e':
-            if (currentLang == CodeCSS && _input.at(i+2) == QChar('m'))
+            if (currentLang == CodeCSS && _input.at(i+2) == QLatin1Char('m'))
                 if ( (i+3 < _input.length()) &&
-                    (_input.at(i+3) == QChar(';') || _input.at(i+3) == QChar('\n')) )
+                    (_input.at(i+3) == QLatin1Char(';') || _input.at(i+3) == QLatin1Char('\n')) )
                     isPostAllowed = true;
             break;
         // for 100u, 1.0F
@@ -333,7 +339,6 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
 }
 
 int CodeToHtmlConverter::highlightStringLiterals(QChar strType, QString &output, int i) const {
-    //setFormat(i, 1,  _formats[CodeString]);
     int start = i;
     ++i;
     bool foundEnd = false;
@@ -427,7 +432,6 @@ int CodeToHtmlConverter::highlightStringLiterals(QChar strType, QString &output,
             start = i;
             continue;
         }
-        //setFormat(i, 1,  _formats[CodeString]);
         ++i;
     }
     if (!foundEnd)
@@ -440,7 +444,7 @@ int CodeToHtmlConverter::highlightComment(QString &output, int i, bool isSingleL
 {
     int endPos = -1;
     if (isSingleLine) {
-        endPos = _input.indexOf(QChar('\n'), i);
+        endPos = _input.indexOf(QLatin1Char('\n'), i);
     } else {
         endPos = _input.indexOf(QLatin1String("*/"), i);
         if (endPos == -1) {
@@ -522,12 +526,12 @@ QString CodeToHtmlConverter::xmlHighlighter() const {
                 QStringRef tag = _input.mid(i, found - i);
                 bool hasEqual = false;
                 int equalPos = -1;
-                if (tag.contains(QChar('='))) {
+                if (tag.contains(QLatin1Char('='))) {
                     hasEqual = true;
-                    equalPos = _input.indexOf(QChar('='), i);
+                    equalPos = _input.indexOf(QLatin1Char('='), i);
                 }
                 if (hasEqual) {
-                    int spacePos = _input.indexOf(QChar(' '), i);
+                    int spacePos = _input.indexOf(QLatin1Char(' '), i);
                     output += setFormat(_input.mid(i, spacePos - i), Format::Keyword);
 
                     //add the space
@@ -565,7 +569,7 @@ QString CodeToHtmlConverter::xmlHighlighter() const {
             //if not found
             if (next == -1) {
                 //search for endline
-                next = _input.indexOf(QChar('\n'), i);
+                next = _input.indexOf(QLatin1Char('\n'), i);
                 isEndline = true;
             }
             //extract it
@@ -573,7 +577,7 @@ QString CodeToHtmlConverter::xmlHighlighter() const {
             QStringRef str = _input.mid(i, (next + 1) - i);
             output += setFormat(str, Format::String);
             if (isEndline)
-                output += QChar('\n');
+                output += QLatin1Char('\n');
             i = next;
         }
         else {
@@ -597,34 +601,37 @@ QString CodeToHtmlConverter::cssHighlighter(const QMultiHash<char, QLatin1String
     output.reserve(textLen + 100);
 
     for (int i = 0; i < textLen; ++i) {
-        if (_input.at(i) == QChar(' ')) {
-            output += (QChar(' '));
-        } else if (_input.at(i) == QChar('.') || _input.at(i) == QChar('#')) {
-            if (_input.at(i+1).isSpace() || _input.at(i+1).isNumber()) continue;
-            int bracketOpen = _input.indexOf(QChar('{'), i);
+        if (_input.at(i) == QLatin1Char(' ')) {
+            output += (QLatin1Char(' '));
+        } else if (_input.at(i) == QLatin1Char('.') || _input.at(i) == QLatin1Char('#')) {
+            if (_input.at(i+1).isSpace() || _input.at(i+1).isNumber()) {
+                output += _input.at(i);
+                continue;
+            }
+            int bracketOpen = _input.indexOf(QLatin1Char('{'), i);
             if (bracketOpen < 0) {
-                bracketOpen = _input.indexOf(QChar('\n'), i);
+                bracketOpen = _input.indexOf(QLatin1Char('\n'), i);
             }
             output += setFormat(_input.mid(i, bracketOpen - i), Format::Keyword);
             i = bracketOpen;
             output += _input.at(i);
-        }  else if (_input.at(i) == QChar('\'') || _input.at(i) == QChar('"')) {
+        }  else if (_input.at(i) == QLatin1Char('\'') || _input.at(i) == QLatin1Char('"')) {
             i = highlightStringLiterals(_input.at(i), output, i);
             //escape text at i, otherwise it gets skipped and won't be present in output
             if (i < textLen )
                 output += escape(_input.at(i));
         } else if (_input.at(i).isDigit()) {
             i = highlightNumericLit(output, i);
-        } else if (_input.at(i) == QChar('/')) {
-            if(_input.at(i + 1) == QChar('/')) {
+        } else if (_input.at(i) == QLatin1Char('/')) {
+            if(_input.at(i + 1) == QLatin1Char('/')) {
                 i = highlightComment(output, i);
             }
             //Multiline comment i.e /* */
-            else if (_input.at(i + 1) == QChar('*')) {
+            else if (_input.at(i + 1) == QLatin1Char('*')) {
                 i = highlightComment(output, i, false);
             }
-        } else if (_input.at(i) == QChar('<') || _input.at(i) == QChar('>') ||
-                   _input.at(i) == QChar('&')) {
+        } else if (_input.at(i) == QLatin1Char('<') || _input.at(i) == QLatin1Char('>') ||
+                   _input.at(i) == QLatin1Char('&')) {
             output += escape(_input.at(i));
         } else if(_input.at(i).isLetter()) {
             int pos = i;
@@ -675,12 +682,12 @@ QString CodeToHtmlConverter::ymlHighlighter() const {
 
     for (int i = 0; i < textLen; ++i) {
         //we found a string literal
-        if (_input.at(i) == QChar('"') || _input.at(i) == QChar('\'')) {
+        if (_input.at(i) == QLatin1Char('"') || _input.at(i) == QLatin1Char('\'')) {
             i = highlightStringLiterals(_input.at(i), output, i);
-        } else if (_input.at(i) == QChar('#')) {
+        } else if (_input.at(i) == QLatin1Char('#')) {
             i = highlightComment(output, i);
         } else {
-            int colon = _input.indexOf(QChar(':'), i);
+            int colon = _input.indexOf(QLatin1Char(':'), i);
             if (colon > 0) {
                 //move i to the beginning of the word
                 int cursor = i;
@@ -692,11 +699,11 @@ QString CodeToHtmlConverter::ymlHighlighter() const {
 
                 output += setFormat(_input.mid(i, colon - i), Format::Keyword);
                 i = colon;
-                int endLine = _input.indexOf(QChar('\n'), i);
+                int endLine = _input.indexOf(QLatin1Char('\n'), i);
                 if (endLine > 0) {
                     QStringRef line = _input.mid(i, endLine - i);
-                    if (line.contains(QChar('#'))) {
-                        int hashPos = _input.indexOf(QChar('#'), i);
+                    if (line.contains(QLatin1Char('#'))) {
+                        int hashPos = _input.indexOf(QLatin1Char('#'), i);
                         //first add everything till the # into output
                         output += _input.mid(i, hashPos - i);
                         //advance i
@@ -715,6 +722,53 @@ QString CodeToHtmlConverter::ymlHighlighter() const {
         }
     }
 
+    output.squeeze();
+    return output;
+}
+
+QString CodeToHtmlConverter::iniHighlighter() const {
+    if (_input.isEmpty())
+        return QLatin1String("");
+    const auto textLen = _input.length();
+    QString output;
+    output.reserve(_input.size() + 100);
+
+    for (int i = 0; i < textLen; ++i) {
+        //start of a [section]
+        if (_input.at(i) == QChar('[')) {
+            int sectionEnd = _input.indexOf(QChar(']'), i);
+            if (sectionEnd == -1)
+                sectionEnd = _input.indexOf(QLatin1Char('\n'), i);
+            else
+                ++sectionEnd;
+            output += setFormat(_input.mid(i, sectionEnd - i), Format::Type);
+            i = sectionEnd;
+            output += escape(_input.at(i));
+            if (i >= textLen) break;
+        }
+
+        //comment ';'
+        else if (_input.at(i) == QLatin1Char(';')) {
+            int end = _input.indexOf(QLatin1Char('\n'), i);
+            output += setFormat(_input.mid(i, end - i), Format::Comment);
+            i = end - 1;
+            if (i >= textLen) break;
+        }
+
+        //key-val
+        else if ( i == 0 ||
+                 (_input.at(i) == QLatin1Char('\n') && i + 1 < textLen && _input.at(i+1).isLetter())) {
+            int equalsPos = _input.indexOf(QLatin1Char('='), i);
+            if (equalsPos == -1)
+                equalsPos = _input.indexOf(QLatin1Char('\n'), i);
+            output += setFormat(_input.mid(i, equalsPos - i), Format::Keyword);
+            i = equalsPos;
+            output += escape(_input.at(i));
+            if (i >= textLen) break;
+        } else {
+            output += escape(_input.at(i));
+        }
+    }
     output.squeeze();
     return output;
 }
