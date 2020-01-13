@@ -508,6 +508,11 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
     const int mousePos = cursorAtMouse.position();
 
     QTextCursor cursor = textCursor();
+    if (cursor.block().userState() == MarkdownHighlighter::HighlighterState::CodeBlock ||
+        cursor.block().userState() == MarkdownHighlighter::HighlighterState::CodeBlockComment ||
+        cursor.block().userState() >= MarkdownHighlighter::HighlighterState::CodeCpp) {
+        return false;
+    }
     // Check if the user clicked a selected word
     const bool selectedWordClicked = cursor.hasSelection()
                                      && mousePos >= cursor.selectionStart()
