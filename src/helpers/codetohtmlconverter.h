@@ -38,7 +38,8 @@ public:
         CodeCSS,
         CodeTypeScript,
         CodeYAML,
-        CodeINI
+        CodeINI,
+        CodeVex
     };
 public:
     CodeToHtmlConverter(const QStringRef input, const QString &lang) Q_DECL_NOTHROW;

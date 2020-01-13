@@ -107,6 +107,9 @@ QString CodeToHtmlConverter::process() const
     case CodeV :
         loadVData(types, keywords, builtin, literals, others);
         break;
+    case CodeVex:
+        loadVEXData(types, keywords, builtin, literals, others);
+        break;
     case CodeSQL :
         loadSQLData(types, keywords, builtin, literals, others);
         break;
