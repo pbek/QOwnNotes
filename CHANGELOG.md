@@ -4,6 +4,7 @@
 - added preview code block highlighting for INI and VEX language (for [#1529](https://github.com/pbek/QOwnNotes/issues/1529), thank you @Waqar144)
 - fixed numerical code block highlighting and preview issues (for [#1575](https://github.com/pbek/QOwnNotes/issues/1575), thank you @Waqar144)
 - enable `Copy code block` menu entry for code blocks with language suffix (for [#1578](https://github.com/pbek/QOwnNotes/issues/1578), thank you @Waqar144)
+- added more Irish, Portuguese, Korean translation (thank you Fabijenna)
 
 ## 20.1.7
 - fixed trailing spaces not being highlighted (for [#1569](https://github.com/pbek/QOwnNotes/issues/1569), thank you @Waqar144)
@@ -423,7 +424,7 @@
 - bracket auto-closing in combination with "undo" was improved
   (for [#24](https://github.com/pbek/qmarkdowntextedit/pull/24), thank you @Waqar144)
 - added more Latvian, Punjabi, Indonesian, Macedonian, Albanian, Lithuanian,
-  Catalan, Serbian (Cyrillic), Maori, Galician, Slovak, Slovenian, Romanian,
+  Catalan, Serbian (Cyrillic), Galician, Slovak, Slovenian, Romanian,
   Norwegian, Swedish, French, Spanish, Russian, Bulgarian, Greek, Hungarian,
   Icelandic, Croatian, Kurdish, Czech, Danish, Basque, Estonian, Dutch, Finnish,
   Bosnian, German translation (thank you Fabijenna, zmni, MGuerra, Jeeps,

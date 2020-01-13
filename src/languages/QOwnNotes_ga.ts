@@ -985,7 +985,7 @@
         <numerusform>%n lines filtered.</numerusform>
         <numerusform>%n lines filtered.</numerusform>
         <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
+        <numerusform>%n línte scagtha.</numerusform>
       </translation>
     </message>
     <message>
@@ -1036,7 +1036,7 @@
         <numerusform>%n lines indented.</numerusform>
         <numerusform>%n lines indented.</numerusform>
         <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
+        <numerusform>%n línte dínn.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1048,7 +1048,7 @@
         <numerusform>%n lines %1ed %2 time.</numerusform>
         <numerusform>%n lines %1ed %2 time.</numerusform>
         <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+        <numerusform>%n línte %1ed %2 am.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1059,7 +1059,7 @@
         <numerusform>%n lines yanked.</numerusform>
         <numerusform>%n lines yanked.</numerusform>
         <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
+        <numerusform>%n línte luchtaithe.</numerusform>
       </translation>
     </message>
     <message>
@@ -1672,7 +1672,7 @@
         <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
         <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
         <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Athchóirigh &lt;strong&gt;%n/strong&gt; nóta roghnaithe?</numerusform>
       </translation>
     </message>
     <message>
@@ -1688,7 +1688,7 @@
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+        <numerusform>Rinneadh nóta (strong) &lt;strong&gt;%n&lt;/strong&gt;a athchóiriú</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1699,7 +1699,7 @@
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; nóta roghnaithe?</numerusform>
       </translation>
     </message>
     <message>
@@ -1715,7 +1715,7 @@
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+        <numerusform>Baineadh nóta &lt;strong&gt;%n&lt;/strong&gt; as</numerusform>
       </translation>
     </message>
   </context>
@@ -1923,7 +1923,7 @@
       <location filename="../mainwindow.ui" line="1429"/>
       <location filename="../mainwindow.cpp" line="6118"/>
       <source>Insert &amp;link</source>
-      <translation type="unfinished">Insert &amp;link</translation>
+      <translation>Cuir isteach &amp;nasc</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1432"/>
@@ -2964,7 +2964,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; aon téarma de &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -3067,7 +3067,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         <numerusform>Copied %n note(s) to %1</numerusform>
         <numerusform>Copied %n note(s) to %1</numerusform>
         <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+        <numerusform>Cóipeáil %n nóta (í) go %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3078,7 +3078,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+        <numerusform>Theip ar chóipeáil %n nóta (nóta is dócha)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3089,7 +3089,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+        <numerusform>Scipeáil cóipeála de %n nóta (nó aon chomhad marcála nó téacs nó níl sé inléite)</numerusform>
       </translation>
     </message>
     <message>
@@ -3277,7 +3277,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         <numerusform>%n chars</numerusform>
         <numerusform>%n chars</numerusform>
         <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+        <numerusform>%n carachtair</numerusform>
       </translation>
     </message>
     <message>
@@ -3313,7 +3313,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         <numerusform>%n notes selected</numerusform>
         <numerusform>%n notes selected</numerusform>
         <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+        <numerusform>%n nótaí roghnaithe</numerusform>
       </translation>
     </message>
     <message>
@@ -3325,7 +3325,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
     <message>
       <location filename="../mainwindow.ui" line="1203"/>
       <source>&amp;Tag</source>
-      <translation type="unfinished">&amp;Tag</translation>
+      <translation>&amp;Clib</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4508"/>
@@ -3340,7 +3340,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+        <numerusform>Bain an chlib &lt;strong&gt;%1&lt;/strong&gt; ó %n nóta roghnaithe?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3351,7 +3351,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+        <numerusform>Baineadh clib &lt;strong&gt;%1&lt;/strong&gt; as %n nóta</numerusform>
       </translation>
     </message>
     <message>
@@ -6004,12 +6004,12 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4634"/>
       <source>Exporting</source>
-      <translation type="unfinished">Exporting</translation>
+      <translation>Onnmhairiú</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4640"/>
       <source>Use internal export styling for the PDF export and printing of the preview</source>
-      <translation type="unfinished">Use internal export styling for the PDF export and printing of the preview</translation>
+      <translation>Bain úsáid as styling onnmhairithe inmheánaigh le haghaidh onnmhairiú PDF agus priontáil an réamhamhairc</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5013"/>
@@ -6019,12 +6019,12 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5023"/>
       <source>Tabs and Indents</source>
-      <translation type="unfinished">Tabs and Indents</translation>
+      <translation>Tabs agus Indents</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5031"/>
       <source>Use tab character instead of spaces</source>
-      <translation type="unfinished">Use tab character instead of spaces</translation>
+      <translation>Úsáid carachtar cluaisín in ionad spásanna</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5038"/>
@@ -6822,7 +6822,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4197"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Is féidir leat &lt;span style = "font-weight: 600;"&gt; an téacs seo&lt;/span&gt; (nó codanna den téacs seo) a chóipeáil agus a ghreamú i stíl &lt;span "font-weight: 600;"&gt; &lt;/span&gt; a eisiúint ar &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; leathanach saincheisteanna QOwnNotes &lt;/a&gt; má tá &lt;span style=" font-weight:600;"&gt; ceisteanna nó trioblóidí &lt;/span&gt; le QOwnNotes. Tá na sonraí atá ró-íogair i bhfolach san fhaisnéis seo. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4281"/>
@@ -6902,7 +6902,7 @@ Teachtaireacht earráide ceangail:</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2048"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+      <translation>Ná húsáid é seo le do thoil sa lorgaire eisiúna, déan cóip dhíreach den téacs faisnéise dífhabhtaithe.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2055"/>
@@ -7323,19 +7323,19 @@ Fanfaidh do nótaí slán!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
       <source>large</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">large</translation>
+      <translation>mór</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="235"/>
       <source>medium</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">medium</translation>
+      <translation>mheán</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="236"/>
       <source>small</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">small</translation>
+      <translation>beag</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="237"/>
