@@ -127,9 +127,8 @@ QString CodeToHtmlConverter::process() const
     case CodeYAML:
         loadYAMLData(types, keywords, builtin, literals, others);
         return ymlHighlighter();
-//    case CodeINI:
-//        iniHighlighter(text);
-//        return;
+    case CodeINI:
+        return iniHighlighter();
     default:
         output += escapeString(_input);
         return output;
@@ -723,6 +722,53 @@ QString CodeToHtmlConverter::ymlHighlighter() const {
         }
     }
 
+    output.squeeze();
+    return output;
+}
+
+QString CodeToHtmlConverter::iniHighlighter() const {
+    if (_input.isEmpty())
+        return QLatin1String("");
+    const auto textLen = _input.length();
+    QString output;
+    output.reserve(_input.size() + 100);
+
+    for (int i = 0; i < textLen; ++i) {
+        //start of a [section]
+        if (_input.at(i) == QChar('[')) {
+            int sectionEnd = _input.indexOf(QChar(']'), i);
+            if (sectionEnd == -1)
+                sectionEnd = _input.indexOf(QLatin1Char('\n'), i);
+            else
+                ++sectionEnd;
+            output += setFormat(_input.mid(i, sectionEnd - i), Format::Type);
+            i = sectionEnd;
+            output += escape(_input.at(i));
+            if (i >= textLen) break;
+        }
+
+        //comment ';'
+        else if (_input.at(i) == QLatin1Char(';')) {
+            int end = _input.indexOf(QLatin1Char('\n'), i);
+            output += setFormat(_input.mid(i, end - i), Format::Comment);
+            i = end - 1;
+            if (i >= textLen) break;
+        }
+
+        //key-val
+        else if ( i == 0 ||
+                 (_input.at(i) == QLatin1Char('\n') && i + 1 < textLen && _input.at(i+1).isLetter())) {
+            int equalsPos = _input.indexOf(QLatin1Char('='), i);
+            if (equalsPos == -1)
+                equalsPos = _input.indexOf(QLatin1Char('\n'), i);
+            output += setFormat(_input.mid(i, equalsPos - i), Format::Keyword);
+            i = equalsPos;
+            output += escape(_input.at(i));
+            if (i >= textLen) break;
+        } else {
+            output += escape(_input.at(i));
+        }
+    }
     output.squeeze();
     return output;
 }
