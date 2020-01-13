@@ -6145,6 +6145,8 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
     const int userState = currentTextBlock.userState();
     copyCodeBlockAction->setEnabled(
             userState == MarkdownHighlighter::HighlighterState::CodeBlock ||
+            userState == MarkdownHighlighter::HighlighterState::CodeBlockComment ||
+            userState >= MarkdownHighlighter::HighlighterState::CodeCpp ||
             userState == MarkdownHighlighter::HighlighterState::CodeBlockEnd);
 
     menu->addSeparator();
