@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.1.8
+- added preview code block highlighting for INI and VEX language (for [#1529](https://github.com/pbek/QOwnNotes/issues/1529), thank you @Waqar144)
+- fixed numerical code block highlighting and preview issues (for [#1575](https://github.com/pbek/QOwnNotes/issues/1575), thank you @Waqar144)
+- enable `Copy code block` menu entry for code blocks with language suffix (for [#1578](https://github.com/pbek/QOwnNotes/issues/1578), thank you @Waqar144)
+
 ## 20.1.7
 - fixed trailing spaces not being highlighted (for [#1569](https://github.com/pbek/QOwnNotes/issues/1569), thank you @Waqar144)
 - fixed numeric highlighter and added more improvements (for [#1571](https://github.com/pbek/QOwnNotes/pull/1571), thank you @Waqar144)
