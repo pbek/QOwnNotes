@@ -237,6 +237,10 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
         case '>':
             isPreAllowed = true;
             break;
+        case ':':
+            if (currentLang == CodeCSS) {
+                isPreAllowed = true;
+            }
         }
     }
 
