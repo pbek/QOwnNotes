@@ -28,11 +28,19 @@ private Q_SLOTS:
     void testNoteDecryption();
     void testNoteDecryptionFail();
     void testNoteToMarkdownHtml();
+
+    /* Preview Syntax Highlighter Tests */
+
     void testCodeToHtmlConversionPython();
     void testCodeToHtmlConversionHashComment();
     void testCodeToHtmlConversionSingleLineComment();
     void testCodeToHtmlConversionMultiLineComment();
     void testCodeToHtmlNumericLiterals();
+    void testCodeToHtmlNumericEquations();
+    void testCodeToHtmlStringLiterals();
+    void testOctal();
+    void testHex();
+    void testHTMLescape();
 };
 
 #endif // TESTNOTES_H
