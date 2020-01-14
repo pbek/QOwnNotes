@@ -268,4 +268,112 @@ void TestNotes::testCodeToHtmlNumericLiterals()
     QVERIFY(a7r == e7);
 }
 
+void TestNotes::testCodeToHtmlStringLiterals()
+{
+    QString s = "\"hello\"";
+    /*single char escapes */
+    QString sa = "\"hell\\a\"";
+    QString sb = "\"hell\\b\"";
+    QString se = "\"hell\\e\"";
+    QString sf = "\"hell\\f\"";
+    QString sn = "\"hell\\n\"";
+    QString sr = "\"hell\\r\"";
+    QString st = "\"hell\\t\"";
+    QString sv = "\"hell\\v\"";
+    QString sslash = "\" hell\\\\ \"";
+    QString squote = "\" hell \\\" \"";
+    QString sq = "\"hell\\?\"";
+
+    /* octal escapes */
+    QString o1 = "\"Waqar\\256\"";
+    QString ofail1 = "\"Waqar\\183\"";
+    QString ofail2 = "\"Waqar\\1234\"";
+
+    /* hex escapes */
+    QString h1 = "\"Waqar\\x1b\"";
+    QString hfail = "\"Waqar\\x123\"";
+
+    CodeToHtmlConverter c1(s.midRef(0, s.length()), QStringLiteral("c"));
+    /*single char escapes expect */
+    CodeToHtmlConverter c2(sa.midRef(0, sa.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c3(sb.midRef(0, sb.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c4(se.midRef(0, se.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c5(sf.midRef(0, sf.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c6(sn.midRef(0, sn.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c7(sr.midRef(0, sr.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c8(st.midRef(0, st.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c9(sv.midRef(0, sv.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c10(sslash.midRef(0, sslash.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c11(sq.midRef(0, sq.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c12(squote.midRef(0, squote.length()), QStringLiteral("c"));
+    /*octal expect*/
+    CodeToHtmlConverter c13(o1.midRef(0, o1.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c14(ofail1.midRef(0, ofail1.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c15(ofail2.midRef(0, ofail2.length()), QStringLiteral("c"));
+    /*hex expect*/
+    CodeToHtmlConverter c16(h1.midRef(0, h1.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c17(hfail.midRef(0, hfail.length()), QStringLiteral("c"));
+
+
+    QString sR = c1.process();
+    QString saR = c2.process();
+    QString sbR = c3.process();
+    QString seR = c4.process();
+    QString sfR = c5.process();
+    QString snR = c6.process();
+    QString srR = c7.process();
+    QString stR = c8.process();
+    QString svR = c9.process();
+    QString sslashR = c10.process();
+    QString sqR = c11.process();
+    QString squoteR = c12.process();
+
+    QString octal = c13.process();
+    QString octalFail1 = c14.process();
+    QString octalFail2 = c15.process();
+
+    QString hR = c16.process();
+    QString hfailR = c17.process();
+
+    QString e = QStringLiteral("<span class=\"code-string\">&quot;hello&quot;</span>");
+    QString esa = QStringLiteral("<span class=\"code-string\">&quot;hell</span><span class=\"code-literal\">\\a</span><span class=\"code-string\">&quot;</span>");
+    QString esb = QStringLiteral("<span class=\"code-string\">&quot;hell</span><span class=\"code-literal\">\\b</span><span class=\"code-string\">&quot;</span>");
+    QString ese = QStringLiteral("<span class=\"code-string\">&quot;hell</span><span class=\"code-literal\">\\e</span><span class=\"code-string\">&quot;</span>");
+    QString esf = QStringLiteral("<span class=\"code-string\">&quot;hell</span><span class=\"code-literal\">\\f</span><span class=\"code-string\">&quot;</span>");
+    QString esn = QStringLiteral("<span class=\"code-string\">&quot;hell</span><span class=\"code-literal\">\\n</span><span class=\"code-string\">&quot;</span>");
+    QString esr = QStringLiteral("<span class=\"code-string\">&quot;hell</span><span class=\"code-literal\">\\r</span><span class=\"code-string\">&quot;</span>");
+    QString est = QStringLiteral("<span class=\"code-string\">&quot;hell</span><span class=\"code-literal\">\\t</span><span class=\"code-string\">&quot;</span>");
+    QString esv = QStringLiteral("<span class=\"code-string\">&quot;hell</span><span class=\"code-literal\">\\v</span><span class=\"code-string\">&quot;</span>");
+    QString esslash = QStringLiteral("<span class=\"code-string\">&quot; hell</span><span class=\"code-literal\">\\\\</span><span class=\"code-string\"> &quot;</span>");
+    QString esq = QStringLiteral("<span class=\"code-string\">&quot;hell</span><span class=\"code-literal\">\\?</span><span class=\"code-string\">&quot;</span>");
+    QString esquote = QStringLiteral("<span class=\"code-string\">&quot; hell </span><span class=\"code-literal\">\\&quot;</span><span class=\"code-string\"> &quot;</span>");
+
+    QString eOctal = QStringLiteral("<span class=\"code-string\">&quot;Waqar</span><span class=\"code-literal\">\\256</span><span class=\"code-string\">&quot;</span>");
+    QString eOctalFail1 = QStringLiteral("<span class=\"code-string\">&quot;Waqar\\183&quot;</span>");
+    QString eOctalFail2 = QStringLiteral("<span class=\"code-string\">&quot;Waqar</span><span class=\"code-literal\">\\123</span><span class=\"code-string\">4&quot;</span>");
+
+    QString eh = QStringLiteral("<span class=\"code-string\">&quot;Waqar</span><span class=\"code-literal\">\\x1b</span><span class=\"code-string\">&quot;</span>");
+    QString ehFail = QStringLiteral("<span class=\"code-string\">&quot;Waqar</span><span class=\"code-literal\">\\x12</span><span class=\"code-string\">3&quot;</span>");
+
+    QVERIFY(sR == e);
+    QVERIFY(saR == esa);
+    QVERIFY(sbR == esb);
+    QVERIFY(seR == ese);
+    QVERIFY(sfR == esf);
+    QVERIFY(snR == esn);
+    QVERIFY(srR == esr);
+    QVERIFY(stR == est);
+    QVERIFY(svR == esv);
+    QVERIFY(sslashR == esslash);
+    QVERIFY(sqR == esq);
+    QVERIFY(squoteR == esquote);
+
+    QVERIFY(octal == eOctal);
+    QVERIFY(octalFail1 == eOctalFail1);
+    QVERIFY(octalFail2 == eOctalFail2);
+
+    QVERIFY(hR == eh);
+    QVERIFY(hfailR == ehFail);
+}
+
 //QTEST_MAIN(TestNotes)
