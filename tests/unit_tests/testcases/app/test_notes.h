@@ -37,6 +37,9 @@ private Q_SLOTS:
     void testCodeToHtmlConversionMultiLineComment();
     void testCodeToHtmlNumericLiterals();
     void testCodeToHtmlStringLiterals();
+    void testOctal();
+    void testHex();
+    void testHTMLescape();
 };
 
 #endif // TESTNOTES_H
