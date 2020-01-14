@@ -155,6 +155,8 @@ QString CodeToHtmlConverter::process() const
             //Multiline comment i.e /* */
             else if (_input.at(i + 1) == QLatin1Char('*')) {
                 i = highlightComment(output, i, false);
+            } else {
+                output += escape(_input.at(i));
             }
         } else if (_input.at(i) == comment) {
             i = highlightComment(output, i);
@@ -243,6 +245,7 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
             if (currentLang == CodeCSS) {
                 isPreAllowed = true;
             }
+            break;
         }
     }
 
