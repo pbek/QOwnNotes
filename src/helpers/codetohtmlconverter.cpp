@@ -43,6 +43,7 @@ void CodeToHtmlConverter::initCodeLangs() const Q_DECL_NOTHROW
         {QLatin1String("ts"),          CodeToHtmlConverter::CodeTypeScript},
         {QLatin1String("typescript"),  CodeToHtmlConverter::CodeTypeScript},
         {QLatin1String("v"),           CodeToHtmlConverter::CodeV},
+        {QLatin1String("vex"),         CodeToHtmlConverter::CodeVex},
         {QLatin1String("xml"),         CodeToHtmlConverter::CodeXML},
         {QLatin1String("yml"),         CodeToHtmlConverter::CodeYAML},
         {QLatin1String("yaml"),        CodeToHtmlConverter::CodeYAML}
@@ -56,11 +57,11 @@ QString CodeToHtmlConverter::process() const
         return QLatin1String("");
     }
 
-    QMultiHash<char, QLatin1String> keywords{};
-    QMultiHash<char, QLatin1String> others{};
-    QMultiHash<char, QLatin1String> types{};
-    QMultiHash<char, QLatin1String> builtin{};
-    QMultiHash<char, QLatin1String> literals{};
+    LangData keywords{};
+    LangData others{};
+    LangData types{};
+    LangData builtin{};
+    LangData literals{};
 
     QChar comment;
     QString output = QLatin1String("");
@@ -463,8 +464,8 @@ int CodeToHtmlConverter::highlightComment(QString &output, int i, bool isSingleL
     return i;
 }
 
-int CodeToHtmlConverter::highlightWord(int i, const QMultiHash<char, QLatin1String> &data,
-                                       QString &output, CodeToHtmlConverter::Format f) const {
+int CodeToHtmlConverter::highlightWord(int i, const LangData &data, QString &output,
+                                       CodeToHtmlConverter::Format f) const {
     if (data.isEmpty())
         return i;
     // check if we are at the beginning OR if this is the start of a word
@@ -587,8 +588,8 @@ QString CodeToHtmlConverter::xmlHighlighter() const {
  * @brief CSS highlighter
  * @return
  */
-QString CodeToHtmlConverter::cssHighlighter(const QMultiHash<char, QLatin1String> &types,
-                                            const QMultiHash<char, QLatin1String> &keywords) const {
+QString CodeToHtmlConverter::cssHighlighter(const LangData &types,
+                                            const LangData &keywords) const {
     if (_input.isEmpty())
         return QLatin1String("");
     const auto textLen = _input.length();

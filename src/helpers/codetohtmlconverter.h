@@ -5,6 +5,8 @@
 #include <QMultiHash>
 #include <QHash>
 
+typedef QMultiHash<char, QLatin1String> LangData ;
+
 class CodeToHtmlConverter
 {
 /* ENUMS */
@@ -58,11 +60,11 @@ private:
     int highlightNumericLit(QString &output, int i) const;
     int highlightStringLiterals(QChar strType, QString &output, int i) const;
     int highlightComment(QString &output, int i, bool isSingleLine = true) const;
-    int highlightWord(int i, const QMultiHash<char, QLatin1String> &data,
+    int highlightWord(int i, const LangData &data,
                       QString &output, Format f) const;
     QString xmlHighlighter() const;
-    QString cssHighlighter(const QMultiHash<char, QLatin1String> &types,
-                           const QMultiHash<char, QLatin1String> &keywords) const;
+    QString cssHighlighter(const LangData &types,
+                           const LangData &keywords) const;
     QString ymlHighlighter() const;
     QString iniHighlighter() const;
 
