@@ -43,6 +43,7 @@ void CodeToHtmlConverter::initCodeLangs() const Q_DECL_NOTHROW
         {QLatin1String("ts"),          CodeToHtmlConverter::CodeTypeScript},
         {QLatin1String("typescript"),  CodeToHtmlConverter::CodeTypeScript},
         {QLatin1String("v"),           CodeToHtmlConverter::CodeV},
+        {QLatin1String("vex"),         CodeToHtmlConverter::CodeVex},
         {QLatin1String("xml"),         CodeToHtmlConverter::CodeXML},
         {QLatin1String("yml"),         CodeToHtmlConverter::CodeYAML},
         {QLatin1String("yaml"),        CodeToHtmlConverter::CodeYAML}
@@ -56,16 +57,13 @@ QString CodeToHtmlConverter::process() const
         return QLatin1String("");
     }
 
-    QMultiHash<char, QLatin1String> keywords{};
-    QMultiHash<char, QLatin1String> others{};
-    QMultiHash<char, QLatin1String> types{};
-    QMultiHash<char, QLatin1String> builtin{};
-    QMultiHash<char, QLatin1String> literals{};
+    LangData keywords{};
+    LangData others{};
+    LangData types{};
+    LangData builtin{};
+    LangData literals{};
 
     QChar comment;
-
-    QList<QLatin1String> wordList;
-
     QString output = QLatin1String("");
 
     switch(currentLang) {
@@ -155,6 +153,8 @@ QString CodeToHtmlConverter::process() const
             //Multiline comment i.e /* */
             else if (_input.at(i + 1) == QLatin1Char('*')) {
                 i = highlightComment(output, i, false);
+            } else {
+                output += escape(_input.at(i));
             }
         } else if (_input.at(i) == comment) {
             i = highlightComment(output, i);
@@ -243,6 +243,7 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
             if (currentLang == CodeCSS) {
                 isPreAllowed = true;
             }
+            break;
         }
     }
 
@@ -463,19 +464,15 @@ int CodeToHtmlConverter::highlightComment(QString &output, int i, bool isSingleL
     return i;
 }
 
-int CodeToHtmlConverter::highlightWord(int i, const QMultiHash<char, QLatin1String> &data,
-                                       QString &output, CodeToHtmlConverter::Format f) const
-{
-    QList<QLatin1String> wordList;
+int CodeToHtmlConverter::highlightWord(int i, const LangData &data, QString &output,
+                                       CodeToHtmlConverter::Format f) const {
+    if (data.isEmpty())
+        return i;
     // check if we are at the beginning OR if this is the start of a word
     // AND the current char is present in the data structure
     if ( ( i == 0 || !_input.at(i-1).isLetter()) && data.contains(_input.at(i).toLatin1())) {
-        wordList = data.values(_input.at(i).toLatin1());
-#if QT_VERSION >= 0x050700
-        for(const QLatin1String &word : qAsConst(wordList)) {
-#else
-        for(const QLatin1String &word : wordList) {
-#endif
+        const auto wordList = data.values(_input.at(i).toLatin1());
+        for(const auto &word : wordList) {
             if (word == _input.mid(i, word.size())) {
                 //check if we are at the end of text OR if we have a complete word
                 if ( i + word.size() == _input.length() || !_input.at(i + word.size()).isLetter()) {
@@ -591,8 +588,8 @@ QString CodeToHtmlConverter::xmlHighlighter() const {
  * @brief CSS highlighter
  * @return
  */
-QString CodeToHtmlConverter::cssHighlighter(const QMultiHash<char, QLatin1String> &types,
-                                            const QMultiHash<char, QLatin1String> &keywords) const {
+QString CodeToHtmlConverter::cssHighlighter(const LangData &types,
+                                            const LangData &keywords) const {
     if (_input.isEmpty())
         return QLatin1String("");
     const auto textLen = _input.length();
@@ -623,13 +620,12 @@ QString CodeToHtmlConverter::cssHighlighter(const QMultiHash<char, QLatin1String
         } else if (_input.at(i).isDigit()) {
             i = highlightNumericLit(output, i);
         } else if (_input.at(i) == QLatin1Char('/')) {
-            if(_input.at(i + 1) == QLatin1Char('/')) {
+            if(_input.at(i + 1) == QLatin1Char('/'))
                 i = highlightComment(output, i);
-            }
-            //Multiline comment i.e /* */
-            else if (_input.at(i + 1) == QLatin1Char('*')) {
+            else if (_input.at(i + 1) == QLatin1Char('*'))
                 i = highlightComment(output, i, false);
-            }
+            else
+                output += escape(_input.at(i));
         } else if (_input.at(i) == QLatin1Char('<') || _input.at(i) == QLatin1Char('>') ||
                    _input.at(i) == QLatin1Char('&')) {
             output += escape(_input.at(i));
