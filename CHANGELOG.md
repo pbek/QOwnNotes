@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.1.9
+- fixed some small preview issues (for [#1582](https://github.com/pbek/QOwnNotes/pull/1582), thank you @Waqar144)
+
 ## 20.1.8
 - added preview code block highlighting for INI and VEX language (for [#1529](https://github.com/pbek/QOwnNotes/issues/1529), thank you @Waqar144)
 - fixed numerical code block highlighting and preview issues (for [#1575](https://github.com/pbek/QOwnNotes/issues/1575), thank you @Waqar144)
