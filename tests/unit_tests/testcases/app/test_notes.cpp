@@ -268,6 +268,59 @@ void TestNotes::testCodeToHtmlNumericLiterals()
     QVERIFY(a7r == e7);
 }
 
+void TestNotes::testCodeToHtmlNumericEquations()
+{
+    QString a1 = "123+321";
+    QString a2 = "123-321";
+    QString a3 = "123/321";
+    QString a4 = "123*321";
+    QString a5 = "123%321";
+    QString a6 = "a<<1";
+    QString a7 = "b>>2";
+    QString a8 = "100>>200";
+    QString a9 = "[(1+2-3)+4/5] array[5] list{3}";
+
+    CodeToHtmlConverter c1(a1.midRef(0, a1.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c2(a2.midRef(0, a2.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c3(a3.midRef(0, a3.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c4(a4.midRef(0, a4.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c5(a5.midRef(0, a5.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c6(a6.midRef(0, a6.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c7(a7.midRef(0, a7.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c8(a8.midRef(0, a8.length()), QStringLiteral("c"));
+    CodeToHtmlConverter c9(a9.midRef(0, a9.length()), QStringLiteral("c"));
+
+    QString a1r = c1.process();
+    QString a2r = c2.process();
+    QString a3r = c3.process();
+    QString a4r = c4.process();
+    QString a5r = c5.process();
+    QString a6r = c6.process();
+    QString a7r = c7.process();
+    QString a8r = c8.process();
+    QString a9r = c9.process();
+
+    QString e1 = "<span class=\"code-literal\">123</span>+<span class=\"code-literal\">321</span>";
+    QString e2 = "<span class=\"code-literal\">123</span>-<span class=\"code-literal\">321</span>";
+    QString e3 = "<span class=\"code-literal\">123</span>&#47;<span class=\"code-literal\">321</span>";
+    QString e4 = "<span class=\"code-literal\">123</span>*<span class=\"code-literal\">321</span>";
+    QString e5 = "<span class=\"code-literal\">123</span>%<span class=\"code-literal\">321</span>";
+    QString e6 = "a&lt;&lt;<span class=\"code-literal\">1</span>";
+    QString e7 = "b&gt;&gt;<span class=\"code-literal\">2</span>";
+    QString e8 = "<span class=\"code-literal\">100</span>&gt;&gt;<span class=\"code-literal\">200</span>";
+    QString e9 = "[(<span class=\"code-literal\">1</span>+<span class=\"code-literal\">2</span>-<span class=\"code-literal\">3</span>)+<span class=\"code-literal\">4</span>&#47;<span class=\"code-literal\">5</span>] <span class=\"code-builtin\">array</span>[<span class=\"code-literal\">5</span>] <span class=\"code-builtin\">list</span>{<span class=\"code-literal\">3</span>}";
+
+    QVERIFY(a1r == e1);
+    QVERIFY(a2r == e2);
+    QVERIFY(a3r == e3);
+    QVERIFY(a4r == e4);
+    QVERIFY(a5r == e5);
+    QVERIFY(a6r == e6);
+    QVERIFY(a7r == e7);
+    QVERIFY(a8r == e8);
+    QVERIFY(a9r == e9);
+}
+
 void TestNotes::testCodeToHtmlStringLiterals()
 {
     QString s = "\"hello\"";
