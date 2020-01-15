@@ -115,10 +115,9 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
                 text.startsWith(QLatin1String("===")) || text.startsWith(QLatin1String("---"));
         const bool nextHasUnderLine =
                 next.startsWith(QLatin1String("===")) || next.startsWith(QLatin1String("---"));
-        const bool isCodeBlock = previousBlockState() == CodeBlock ||
-                previousBlockState() == CodeBlockComment ||
-                previousBlockState() >= HighlighterState::CodeCpp ||
-                text.startsWith(QLatin1String("```"));
+        const bool isCodeBlock = MarkdownHighlighter::isCodeBlock(previousBlockState()) ||
+                                text.startsWith(QLatin1String("```")) ||
+                                text.startsWith(QLatin1String("~~~"));
 
         if (!isCodeBlock) {
             highlightAdditionalRules(_highlightingRulesPre, text);
@@ -142,12 +141,9 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
         highlightCommentBlock(text);
     }
     if (codeHighlightingOn) {
-        if (previousBlockState() == HighlighterState::CodeBlock ||
-            previousBlockState() == CodeBlockComment ||
-            previousBlockState() == HighlighterState::CodeBlockEnd ||
-            previousBlockState() >= HighlighterState::CodeCpp ||
-            text.startsWith(QLatin1String("```"))) {
-            highlightCodeBlock(text);
+        if (MarkdownHighlighter::isCodeBlock(previousBlockState()) ||
+            text.startsWith(QLatin1String("```")) || text.startsWith(QLatin1String("~~~"))) {
+            highlightCodeFence(text);
         }
     }
 
