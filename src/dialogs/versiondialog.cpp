@@ -6,6 +6,8 @@
 #include <QJSValue>
 #include <QJSValueIterator>
 #include <utils/misc.h>
+#include "mainwindow.h"
+#include <QSplitter>
 
 VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
                              QWidget *parent) :

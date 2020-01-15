@@ -1,12 +1,7 @@
 #ifndef TODODIALOG_H
 #define TODODIALOG_H
 
-#include <QDialog>
-#include <QListWidgetItem>
-#include <QSplitter>
-
 #include "entities/calendaritem.h"
-#include "mainwindow.h"
 #include "masterdialog.h"
 
 namespace Ui {
@@ -14,6 +9,8 @@ class TodoDialog;
 }
 
 class MainWindow;
+class QSplitter;
+class QListWidgetItem;
 
 class TodoDialog : public MasterDialog
 {

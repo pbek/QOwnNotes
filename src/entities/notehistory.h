@@ -1,9 +1,10 @@
 #ifndef NOTEHISTORY_H
 #define NOTEHISTORY_H
 
-#include <QPlainTextEdit>
 #include <QDataStream>
-#include "note.h"
+
+class Note;
+class QPlainTextEdit;
 
 
 class NoteHistoryItem

@@ -1,4 +1,5 @@
 #include "graphicsview.h"
+#include <QResizeEvent>
 
 GraphicsView::GraphicsView(QWidget *parent) : QGraphicsView(parent) {
 }

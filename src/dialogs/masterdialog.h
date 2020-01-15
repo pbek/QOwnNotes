@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QDialog>
-#include <QKeyEvent>
+class QKeyEvent;
 
 class MasterDialog : public QDialog
 {

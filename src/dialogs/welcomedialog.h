@@ -1,9 +1,7 @@
 #pragma once
 
 #include "masterdialog.h"
-#include <QDialog>
-#include <QSettings>
-#include <QResizeEvent>
+class QSettings;
 
 namespace Ui {
 class WelcomeDialog;

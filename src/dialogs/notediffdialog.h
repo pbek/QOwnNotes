@@ -1,14 +1,15 @@
 #ifndef NOTEDIFFDIALOG_H
 #define NOTEDIFFDIALOG_H
 
-#include <QDialog>
-#include <QAbstractButton>
-#include <QCheckBox>
 #include "masterdialog.h"
 
 namespace Ui {
 class NoteDiffDialog;
 }
+
+class QButtonGroup;
+class QCheckBox;
+class QAbstractButton;
 
 class NoteDiffDialog : public MasterDialog
 {

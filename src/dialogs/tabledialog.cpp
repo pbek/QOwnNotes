@@ -4,6 +4,7 @@
 #include <mainwindow.h>
 #include "libraries/qtcsv/src/include/reader.h"
 #include "filedialog.h"
+#include "widgets/qownnotesmarkdowntextedit.h"
 
 
 TableDialog::TableDialog(QWidget *parent) :

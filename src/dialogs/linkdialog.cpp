@@ -13,6 +13,7 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <utils/misc.h>
+#include <entities/note.h>
 
 LinkDialog::LinkDialog(const QString &dialogTitle, QWidget *parent) :
         MasterDialog(parent),

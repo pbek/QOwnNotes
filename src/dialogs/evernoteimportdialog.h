@@ -1,14 +1,14 @@
 #pragma once
 
-#include <QDialog>
-#include <QXmlQuery>
-#include <entities/note.h>
-#include <QtWidgets/QTreeWidgetItem>
 #include "masterdialog.h"
 
 namespace Ui {
 class EvernoteImportDialog;
 }
+
+class Note;
+class QXmlQuery;
+class QTreeWidgetItem;
 
 class EvernoteImportDialog : public MasterDialog
 {

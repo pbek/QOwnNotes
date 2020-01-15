@@ -1,13 +1,14 @@
 #pragma once
 
-#include <entities/note.h>
-#include <QRubberBand>
-#include <QTemporaryFile>
 #include "masterdialog.h"
 
 namespace Ui {
 class ImageDialog;
 }
+
+class QRubberBand;
+class QTemporaryFile;
+class QFile;
 
 class ImageDialog : public MasterDialog
 {

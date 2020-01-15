@@ -3,8 +3,11 @@
 #include "ui_imagedialog.h"
 #include <QClipboard>
 #include <QSettings>
+#include <QRubberBand>
+#include <QTemporaryFile>
 #include <utility>
 #include <utils/misc.h>
+#include <QDebug>
 
 ImageDialog::ImageDialog(QWidget *parent) :
     MasterDialog(parent),

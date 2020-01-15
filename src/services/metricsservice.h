@@ -4,7 +4,8 @@
 #define PIWIK_TRACKER_DEBUG 1
 
 #include <QObject>
-#include <libraries/piwiktracker/piwiktracker.h>
+
+class PiwikTracker;
 
 class MetricsService : public QObject
 {

@@ -5,10 +5,13 @@
 #include <QTreeWidgetItem>
 #include <QGraphicsPixmapItem>
 #include <QtWidgets/QMessageBox>
+#include <QDir>
+#include <QFileInfo>
 #include <utils/gui.h>
 #include <mainwindow.h>
 #include "orphanedimagesdialog.h"
 #include "ui_orphanedimagesdialog.h"
+#include "widgets/qownnotesmarkdowntextedit.h"
 
 OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent) :
         MasterDialog(parent),

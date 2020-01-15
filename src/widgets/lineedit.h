@@ -14,8 +14,9 @@
 #pragma once
 
 #include <QWidget>
-#include <QEvent>
 #include <QLineEdit>
+
+class QEvent;
 
 class LineEdit : public QLineEdit
 {

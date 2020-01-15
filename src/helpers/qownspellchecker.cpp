@@ -14,12 +14,10 @@
  */
 
 #include "qownspellchecker.h"
-#include "utils/misc.h"
 #include <QSettings>
 #include <QDebug>
-#include <QDir>
 
-QOwnSpellChecker::QOwnSpellChecker(QObject *parent) : QObject(parent) {
+QOwnSpellChecker::QOwnSpellChecker() {
     spellchecker = new Sonnet::Speller();
     QSettings settings;
     active = settings.value(QStringLiteral("checkSpelling"), true).toBool();

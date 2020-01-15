@@ -1,4 +1,4 @@
-
+#include <mainwindow.h>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPlainTextEdit>

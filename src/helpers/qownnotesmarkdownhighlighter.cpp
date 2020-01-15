@@ -20,6 +20,9 @@
 #include <QRegularExpressionMatch>
 #include <entities/note.h>
 #include "qownnotesmarkdownhighlighter.h"
+#include "libraries/sonnet/src/core/tokenizer_p.h"
+#include "libraries/sonnet/src/core/languagefilter_p.h"
+#include "qownspellchecker.h"
 
 /**
  * Markdown syntax highlighting
@@ -52,7 +55,7 @@ QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter()
 }
 
 
-void QOwnNotesMarkdownHighlighter::updateCurrentNote(const Note &_note) {
+void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *_note) {
         _currentNote = _note;
 }
 
@@ -177,7 +180,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text)
 
         if (match.hasMatch()) {
             QString fileName = match.captured(1);
-            Note note = _currentNote.fetchByRelativeFileName(fileName);
+            Note note = _currentNote->fetchByRelativeFileName(fileName);
 
             // if the note exists we don't need to do anything
             if (note.isFetched()) {
@@ -189,7 +192,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text)
 
             if (match.hasMatch()) {
                 QString fileName = match.captured(1);
-                Note note = _currentNote.fetchByRelativeFileName(fileName);
+                Note note = _currentNote->fetchByRelativeFileName(fileName);
 
                 // if the note exists we don't need to do anything
                 if (note.isFetched()) {

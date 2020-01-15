@@ -1,9 +1,3 @@
-#include "mainwindow.h"
-#include "services/owncloudservice.h"
-#include "dialogs/settingsdialog.h"
-#include "dialogs/trashdialog.h"
-#include "dialogs/serverbookmarksimportdialog.h"
-#include "dialogs/versiondialog.h"
 #include <QSettings>
 #include <QDebug>
 #include <QUrlQuery>
@@ -14,19 +8,32 @@
 #include <QBuffer>
 #include <QEventLoop>
 #include <QTimer>
-#include <utils/misc.h>
 #include <QJSEngine>
 #include <QJSValueIterator>
 #include <QCoreApplication>
+#include <QStringBuilder>
 #include <QXmlQuery>
+#include <QNetworkAccessManager>
+#include <QAuthenticator>
+#include <QNetworkReply>
 #include <QXmlResultItems>
+
+#include "mainwindow.h"
+#include "services/owncloudservice.h"
+#include "dialogs/settingsdialog.h"
+#include "dialogs/trashdialog.h"
+#include "dialogs/serverbookmarksimportdialog.h"
+#include "dialogs/versiondialog.h"
+#include "dialogs/tododialog.h"
+#include "dialogs/sharedialog.h"
+#include <utils/misc.h>
 #include "libraries/versionnumber/versionnumber.h"
 #include "entities/calendaritem.h"
+#include "entities/notesubfolder.h"
 #include "cryptoservice.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <utils/gui.h>
-#include <QStringBuilder>
 
 const QString OwnCloudService::rootPath =
         QStringLiteral("/index.php/apps/qownnotesapi/api/v1/");

@@ -45,12 +45,15 @@
 #include <QUuid>
 #include <QTextLength>
 #include <QAbstractEventDispatcher>
+#include <QDockWidget>
+
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
 #include "services/databaseservice.h"
 #include "dialogs/tododialog.h"
 #include "libraries/diff_match_patch/diff_match_patch.h"
+#include "libraries/fakevim/fakevim/fakevimhandler.h"
 #include "dialogs/notediffdialog.h"
 #include "build_number.h"
 #include "version.h"
@@ -102,6 +105,12 @@
 #include <utility>
 #include <QScreen>
 #include "libraries/sonnet/src/core/speller.h"
+#include "services/updateservice.h"
+#include "services/websocketserverservice.h"
+#include "dialogs/orphanedimagesdialog.h"
+#include "dialogs/orphanedattachmentsdialog.h"
+#include "dialogs/issueassistantdialog.h"
+#include "helpers/qownnotesmarkdownhighlighter.h"
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
@@ -3987,7 +3996,7 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
     }
     if (!updateNoteTextViewOnly) {
         dynamic_cast<QOwnNotesMarkdownHighlighter*>(
-                    ui->noteTextEdit->highlighter())->updateCurrentNote(*note);
+                    ui->noteTextEdit->highlighter())->updateCurrentNote(note);
         ui->noteTextEdit->setText(note->getNoteText());
     }
 

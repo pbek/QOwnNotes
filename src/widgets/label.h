@@ -13,7 +13,6 @@
 
 #pragma once
 
-#include <QWidget>
 #include <QLabel>
 
 class Label : public QLabel

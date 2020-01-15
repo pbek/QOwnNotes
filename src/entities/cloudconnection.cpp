@@ -1,6 +1,7 @@
 #include "cloudconnection.h"
 #include "notefolder.h"
 #include <QDebug>
+#include <QUrl>
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlRecord>

@@ -6,6 +6,7 @@
 #include <QDialogButtonBox>
 #include <entities/trashitem.h>
 #include <utils/gui.h>
+#include <QSplitter>
 
 class LocalTrashTreeWidgetItem : public QTreeWidgetItem {
 public:

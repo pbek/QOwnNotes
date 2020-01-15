@@ -1,8 +1,9 @@
 #pragma once
 
 #include <QSqlQuery>
-#include <QStringList>
-#include "notesubfolder.h"
+
+class NoteSubFolder;
+class QJsonObject;
 
 class NoteFolder
 {

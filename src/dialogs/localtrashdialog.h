@@ -1,15 +1,16 @@
 #pragma once
 
-#include "mainwindow.h"
 #include "masterdialog.h"
-
-#include <QAbstractButton>
-#include <QDialog>
-#include <QSplitter>
 
 namespace Ui {
 class LocalTrashDialog;
 }
+
+class MainWindow;
+class QTreeWidgetItem;
+class QSplitter;
+class QStringList;
+class QAbstractButton;
 
 class LocalTrashDialog : public MasterDialog
 {

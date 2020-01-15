@@ -3,6 +3,7 @@
 #include <utils/misc.h>
 #include <QDebug>
 #include <QtWidgets/QMessageBox>
+#include <QSettings>
 
 LayoutWidget::LayoutWidget(QWidget *parent) :
     QWidget(parent),

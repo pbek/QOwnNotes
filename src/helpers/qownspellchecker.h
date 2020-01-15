@@ -16,18 +16,13 @@
 #ifndef QOWNSPELLCHECKER_H
 #define QOWNSPELLCHECKER_H
 
-#include <QObject>
-#include <QTextCursor>
-#include <QTextBlockUserData>
-
 #include <libraries/sonnet/src/core/speller.h>
 #include "LanguageCache.h"
 
-class QOwnSpellChecker: public QObject
+class QOwnSpellChecker
 {
-    Q_OBJECT
 public:
-    explicit QOwnSpellChecker(QObject *parent = 0);
+    explicit QOwnSpellChecker();
     ~QOwnSpellChecker();
 
     /**
@@ -132,9 +127,6 @@ private:
     bool active;
     bool autoDetect;
     QString language;
-
-signals:
-    void activeChanged(bool state);
 };
 
 #endif // QOWNSPELLCHECKER_H

@@ -3,8 +3,6 @@
 
 #include "masterdialog.h"
 
-#include <QDialog>
-
 namespace Ui {
 class AboutDialog;
 }

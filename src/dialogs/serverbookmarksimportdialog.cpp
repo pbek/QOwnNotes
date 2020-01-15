@@ -2,6 +2,9 @@
 #include <QJsonArray>
 #include "serverbookmarksimportdialog.h"
 #include "ui_serverbookmarksimportdialog.h"
+#include "services/websocketserverservice.h"
+#include <mainwindow.h>
+#include <QDebug>
 
 ServerBookmarksImportDialog::ServerBookmarksImportDialog(
         const QJSValue &bookmarks, QWidget *parent) :

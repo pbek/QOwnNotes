@@ -14,6 +14,11 @@
 
 #include "websocketserverservice.h"
 #include "metricsservice.h"
+#include "entities/notefolder.h"
+#include "entities/tag.h"
+#include "entities/bookmark.h"
+#include "widgets/qownnotesmarkdowntextedit.h"
+#include "dialogs/websockettokendialog.h"
 #include <QtWebSockets>
 #include <utils/misc.h>
 #ifndef INTEGRATION_TESTS

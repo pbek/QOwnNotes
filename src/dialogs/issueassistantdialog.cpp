@@ -9,6 +9,7 @@
 #include "ui_issueassistantdialog.h"
 #include "settingsdialog.h"
 #include "services/metricsservice.h"
+#include "mainwindow.h"
 
 IssueAssistantDialog::IssueAssistantDialog(QWidget *parent) :
         MasterDialog(parent),
