@@ -1,8 +1,8 @@
 #pragma once
 
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
+#include "helpers/qownnotesmarkdownhighlighter.h"
 class MainWindow;
-class QOwnNotesMarkdownHighlighter;
 class QOwnSpellChecker;
 
 #define QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING "/* BEGIN FONT SIZE OVERRIDE STYLESHEET */"
