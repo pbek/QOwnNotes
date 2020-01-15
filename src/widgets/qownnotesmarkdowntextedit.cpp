@@ -11,7 +11,6 @@
 #include <QMenu>
 #include "mainwindow.h"
 #include "qownnotesmarkdowntextedit.h"
-#include <helpers/qownnotesmarkdownhighlighter.h>
 #include "helpers/qownspellchecker.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)

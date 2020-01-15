@@ -1917,11 +1917,56 @@ QString Note::toMarkdownHtml(const QString &notesPath, int maxImageWidth,
 }
 
 void captureHtmlFragment (const MD_CHAR* data, MD_SIZE data_size, void* userData) {
-  QByteArray* array = static_cast<QByteArray*>(userData);
+    QByteArray* array = static_cast<QByteArray*>(userData);
 
-  if (data_size > 0) {
-    array->append(data, int(data_size));
-  }
+    if (data_size > 0) {
+        array->append(data, int(data_size));
+    }
+}
+
+/**
+ * @brief Converts code blocks to highlighted code
+ */
+void highlightCode(QString &str, const QString &type, int cbCount) {
+    if (cbCount >= 1) {
+        int fblock = str.indexOf(type, 0);
+        int currentCbPos = fblock;
+        for (int i = 0; i < cbCount; ++i) {
+            //find endline
+            int endline = str.indexOf(QChar('\n'), currentCbPos);
+            QString lang = str.mid(currentCbPos +3, endline - (currentCbPos + 3));
+            //we skip it because it is inline code and not codeBlock
+            if (lang.contains(type)) {
+                int nextEnd = str.indexOf(type, currentCbPos + 3);
+                nextEnd += 3;
+                currentCbPos = str.indexOf(type, nextEnd);
+                continue;
+            }
+            //move start pos to after the endline
+
+            currentCbPos = endline + 1;
+            //find the codeBlock end
+            int next = str.indexOf(type, currentCbPos);
+            //extract the codeBlock
+            const QStringRef codeBlock = str.midRef(currentCbPos, next - currentCbPos);
+
+            QString highlightedCodeBlock;
+            if (!(codeBlock.isEmpty() && lang.isEmpty())) {
+                CodeToHtmlConverter c(codeBlock, lang);
+                highlightedCodeBlock = c.process();
+                //take care of the null char
+                highlightedCodeBlock.replace(QChar('\u0000'), QLatin1String(""));
+                str.replace(currentCbPos, next - currentCbPos, highlightedCodeBlock);
+                //recalculate next because string has now changed
+                next = str.indexOf(type, currentCbPos);
+            }
+            //move next pos to after the backticks
+            next += 3;
+            //find the start of the next code block
+            currentCbPos = str.indexOf(type, next);
+        }
+    }
+
 }
 
 /**
@@ -2030,47 +2075,15 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     int cbCount = str.count(QLatin1String("```"));
     if (cbCount % 2 != 0) --cbCount;
 
+    int cbTildeCount = str.count(QLatin1String("~~~"));
+    if (cbTildeCount % 2 != 0) --cbCount;
+
     //divide by two to get actual number of code blocks
     cbCount /= 2;
+    cbTildeCount /= 2;
 
-    if (cbCount >= 1) {
-        int fblock = str.indexOf(QLatin1String("```"), 0);
-        int currentCbPos = fblock;
-        for (int i = 0; i < cbCount; ++i) {
-            //find endline
-            int endline = str.indexOf(QChar('\n'), currentCbPos);
-            QString lang = str.mid(currentCbPos +3, endline - (currentCbPos + 3));
-            //we skip it because it is inline code and not codeBlock
-            if (lang.contains(QLatin1String("```"))) {
-                int nextEnd = str.indexOf(QLatin1String("```"), currentCbPos + 3);
-                nextEnd += 3;
-                currentCbPos = str.indexOf(QLatin1String("```"), nextEnd);
-                continue;
-            }
-            //move start pos to after the endline
-
-            currentCbPos = endline + 1;
-            //find the codeBlock end
-            int next = str.indexOf(QLatin1String("```"), currentCbPos);
-            //extract the codeBlock
-            const QStringRef codeBlock = str.midRef(currentCbPos, next - currentCbPos);
-
-            QString highlightedCodeBlock;
-            if (!(codeBlock.isEmpty() && lang.isEmpty())) {
-                CodeToHtmlConverter c(codeBlock, lang);
-                highlightedCodeBlock = c.process();
-                //take care of the null char
-                highlightedCodeBlock.replace(QChar('\u0000'), QLatin1String(""));
-                str.replace(currentCbPos, next - currentCbPos, highlightedCodeBlock);
-                //recalculate next because string has now changed
-                next = str.indexOf(QLatin1String("```"), currentCbPos);
-            }
-            //move next pos to after the backticks
-            next += 3;
-            //find the start of the next code block
-            currentCbPos = str.indexOf(QLatin1String("```"), next);
-        }
-    }
+    highlightCode(str, QStringLiteral("```"), cbCount);
+    highlightCode(str, QStringLiteral("~~~"), cbTildeCount);
 
     const char *data = qstrdup(str.toUtf8().constData());
     size_t length = strlen(data);
