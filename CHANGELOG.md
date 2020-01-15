@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 20.1.9
+- added support for tilde code fence highlighting (for [#1580](https://github.com/pbek/QOwnNotes/issues/1580), thank you @Waqar144)
+    - the preview also works correctly now
+    - keep in mind that you can't fence tripple-tick code blocks with tilde-fences and vice versa
 - fixed some small preview issues (for [#1582](https://github.com/pbek/QOwnNotes/pull/1582), thank you @Waqar144)
 
 ## 20.1.8
