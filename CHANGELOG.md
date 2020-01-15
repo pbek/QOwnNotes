@@ -3,7 +3,7 @@
 ## 20.1.9
 - added support for tilde code fence highlighting (for [#1580](https://github.com/pbek/QOwnNotes/issues/1580), thank you @Waqar144)
     - the preview also works correctly now
-    - you can also fence tripple-tick code blocks with tilde-fences and vice versa
+    - you can also fence triple-tick code blocks with tilde-fences and vice versa
 - fixed some small preview issues (for [#1582](https://github.com/pbek/QOwnNotes/pull/1582), thank you @Waqar144)
 - added more Hebrew, Urdu (Pakistan), Spanish translation (thank you Fabijenna, DixTheDev)
 
