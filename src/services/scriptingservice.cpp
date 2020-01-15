@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QQmlContext>
 #include <QQmlComponent>
+#include <QQmlEngine>
 #include <QFileInfo>
 #include <QMimeData>
 #include <entities/script.h>
@@ -20,9 +21,15 @@
 #include <QSettings>
 #include <api/scriptapi.h>
 #include <QStringBuilder>
+#include <QAction>
+#include <QFileDialog>
+#include "entities/notesubfolder.h"
+#include "api/tagapi.h"
+#include "api/noteapi.h"
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
+#include "widgets/qownnotesmarkdowntextedit.h"
 #include <QMessageBox>
 #include <QInputDialog>
 #endif

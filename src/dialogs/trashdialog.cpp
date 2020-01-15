@@ -7,6 +7,8 @@
 #include <QJSValueIterator>
 #include <utils/misc.h>
 #include <utils/gui.h>
+#include <QSplitter>
+#include "mainwindow.h"
 
 TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
                          QWidget *parent) :

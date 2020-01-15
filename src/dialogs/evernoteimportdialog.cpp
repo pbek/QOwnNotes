@@ -6,6 +6,8 @@
 #include <QTemporaryFile>
 #include <utils/misc.h>
 #include <entities/tag.h>
+#include <entities/note.h>
+#include <entities/notesubfolder.h>
 #include <QCryptographicHash>
 #include "evernoteimportdialog.h"
 #include "ui_evernoteimportdialog.h"

@@ -1,7 +1,9 @@
 #pragma once
 
 #include <QString>
-#include <QToolBar>
+#include <QStringList>
+class QToolBar;
+class QMainWindow;
 
 /**
  *  This class holds a string definition of toolbars and actions

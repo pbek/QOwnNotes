@@ -1,7 +1,6 @@
 #ifndef TAGADDDIALOG_H
 #define TAGADDDIALOG_H
 
-#include <QDialog>
 #include "masterdialog.h"
 
 namespace Ui {

@@ -15,15 +15,10 @@
 #pragma once
 
 #include <QString>
-#include <QUrl>
-#include <QFile>
-#include <QByteArray>
 #include <QPrinter>
 #include <QDataStream>
-#include <QStringList>
-#include <QMap>
-#include <QSqlDatabase>
-#include "entities/bookmark.h"
+
+class QFile;
 
 /*  Miscellaneous functions that can be useful */
 

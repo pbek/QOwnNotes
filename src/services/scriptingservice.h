@@ -1,18 +1,16 @@
 #pragma once
 
 #include <QObject>
-#include <QQmlEngine>
-#include <QQmlComponent>
-#include <QFile>
 #include <entities/script.h>
-#include <entities/notefolder.h>
-#include <entities/note.h>
-#include <QMimeData>
 #include <QVariant>
-#include <QHash>
 #include <QMap>
-#include <api/noteapi.h>
 #include <QMessageBox>
+
+class QQmlComponent;
+class QQmlEngine;
+class NoteApi;
+class Note;
+class QMimeData;
 
 #define PERSISTENT_VARIABLE_SETTINGS_PREFIX "PersistentScripting"
 

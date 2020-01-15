@@ -14,13 +14,12 @@
 
 #pragma once
 
-#include <QtCore/QObject>
-#include <QtCore/QList>
-#include <dialogs/websockettokendialog.h>
+#include <QObject>
 
-QT_FORWARD_DECLARE_CLASS(QWebSocketServer)
-QT_FORWARD_DECLARE_CLASS(QWebSocket)
-QT_FORWARD_DECLARE_CLASS(QString)
+class QWebSocketServer;
+class QWebSocket;
+class QString;
+class WebSocketTokenDialog;
 
 class WebSocketServerService : public QObject
 {

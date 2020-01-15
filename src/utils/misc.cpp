@@ -31,7 +31,10 @@
 #include <services/databaseservice.h>
 #include <entities/note.h>
 #include <entities/notefolder.h>
+#include <entities/notesubfolder.h>
 #include <entities/script.h>
+#include <entities/calendaritem.h>
+#include <entities/cloudconnection.h>
 #include <QtGui/QIcon>
 #include <services/updateservice.h>
 #include "build_number.h"
@@ -44,6 +47,7 @@
 #include <QUuid>
 #include <QTextDocument>
 #include <QStringBuilder>
+#include "libraries/sonnet/src/core/speller.h"
 
 #ifndef INTEGRATION_TESTS
 #include <QScreen>

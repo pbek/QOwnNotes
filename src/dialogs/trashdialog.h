@@ -1,17 +1,16 @@
 #ifndef TRASHDIALOG_H
 #define TRASHDIALOG_H
 
-#include "mainwindow.h"
 #include "masterdialog.h"
-
-#include <QAbstractButton>
-#include <QDialog>
-#include <QSplitter>
-#include <QJSValue>
 
 namespace Ui {
 class TrashDialog;
 }
+
+class MainWindow;
+class QAbstractButton;
+class QJSValue;
+class QSplitter;
 
 class TrashDialog : public MasterDialog
 {

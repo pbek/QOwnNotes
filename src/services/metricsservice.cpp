@@ -3,6 +3,7 @@
 #include "version.h"
 #include "release.h"
 #include <QSettings>
+#include <libraries/piwiktracker/piwiktracker.h>
 
 MetricsService::MetricsService(QObject *parent) : QObject(parent)
 {

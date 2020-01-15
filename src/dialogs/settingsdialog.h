@@ -1,25 +1,29 @@
 #ifndef SETTINGSDIALOG_H
 #define SETTINGSDIALOG_H
 
-#include <QAbstractButton>
-#include <QDialog>
-#include <QLabel>
-#include <QListWidget>
-#include <QTreeWidgetItem>
-#include <QStatusBar>
-#include <QSplitter>
 #include <entities/cloudconnection.h>
 #include <entities/notefolder.h>
 #include <entities/script.h>
-#include <services/owncloudservice.h>
-#include <QCheckBox>
-#include <QtCore/QSettings>
-#include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
+
 #include "masterdialog.h"
 
 namespace Ui {
     class SettingsDialog;
 }
+
+class QAbstractButton;
+class QListWidgetItem;
+class QListWidget;
+class QKeySequenceWidget;
+class QTreeWidgetItem;
+class QLineEdit;
+class QStatusBar;
+class QButtonGroup;
+class Script;
+class QCheckBox;
+class NoteFolder;
+class QSplitter;
+class CloudConnection;
 
 struct CalDAVCalendarData;
 

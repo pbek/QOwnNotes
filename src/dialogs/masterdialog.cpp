@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <QGuiApplication>
 #include <QScreen>
+#include <QKeyEvent>
 #include "masterdialog.h"
 #include "services/metricsservice.h"
 

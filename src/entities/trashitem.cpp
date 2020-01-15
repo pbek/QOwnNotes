@@ -3,6 +3,7 @@
 #include <QSettings>
 #include <QDir>
 #include <QSqlError>
+#include "note.h"
 #include "notefolder.h"
 #include "notesubfolder.h"
 #include <utils/misc.h>

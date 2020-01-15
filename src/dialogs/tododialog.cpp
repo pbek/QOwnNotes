@@ -7,8 +7,12 @@
 #include <QKeyEvent>
 #include <QShortcut>
 #include <QMenu>
+#include <QSplitter>
 #include <services/metricsservice.h>
 #include <utils/gui.h>
+#include <mainwindow.h>
+#include <QDebug>
+#include <QListWidgetItem>
 
 TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
                        QWidget *parent) :

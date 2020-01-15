@@ -13,8 +13,8 @@
 
 #pragma once
 
-#include <QWidget>
 #include <QComboBox>
+class QWidget;
 
 class ComboBox : public QComboBox
 {

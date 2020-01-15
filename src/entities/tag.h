@@ -3,7 +3,10 @@
 #include <QSqlQuery>
 #include <QList>
 #include <QColor>
-#include "note.h"
+
+class Note;
+class NoteSubFolder;
+
 
 class Tag {
 public:

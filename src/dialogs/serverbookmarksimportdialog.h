@@ -1,14 +1,13 @@
 #pragma once
 
-#include <QDialog>
-#include <QJSValue>
 #include <QJsonObject>
-#include <mainwindow.h>
 #include "masterdialog.h"
 
 namespace Ui {
 class ServerBookmarksImportDialog;
 }
+
+class QJSValue;
 
 class ServerBookmarksImportDialog : public MasterDialog
 {

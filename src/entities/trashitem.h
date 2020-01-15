@@ -4,8 +4,9 @@
 #include <QSqlQuery>
 #include <QFile>
 #include <QUrl>
-#include "notesubfolder.h"
-#include "note.h"
+
+class Note;
+class NoteSubFolder;
 
 
 class TrashItem {

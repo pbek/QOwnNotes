@@ -15,8 +15,8 @@
 #pragma once
 
 #include <QFrame>
-#include <QTreeWidgetItem>
-#include <QSettings>
+
+class QTreeWidgetItem;
 
 namespace Ui {
 class FontColorWidget;

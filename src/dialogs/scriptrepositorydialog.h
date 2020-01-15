@@ -2,14 +2,15 @@
 
 #include "masterdialog.h"
 #include <entities/script.h>
-#include <QNetworkReply>
-#include <QNetworkAccessManager>
-#include <QSplitter>
-#include <QTreeWidgetItem>
 
 namespace Ui {
 class ScriptRepositoryDialog;
 }
+
+class QSplitter;
+class QNetworkReply;
+class QNetworkAccessManager;
+class QTreeWidgetItem;
 
 class ScriptRepositoryDialog : public MasterDialog
 {

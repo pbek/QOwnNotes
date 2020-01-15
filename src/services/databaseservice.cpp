@@ -14,6 +14,7 @@
 #include <utils/misc.h>
 #include <entities/cloudconnection.h>
 #include <entities/tag.h>
+#include "mainwindow.h"
 
 DatabaseService::DatabaseService() = default;
 

@@ -6,8 +6,9 @@
 #include <QFile>
 #include <QUrl>
 #include <QRegularExpression>
-#include "notesubfolder.h"
-#include "bookmark.h"
+
+class Bookmark;
+class NoteSubFolder;
 
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
 #define NOTE_TEXT_ENCRYPTION_POST_STRING "-- END ENCRYPTED TEXT -->"

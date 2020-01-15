@@ -1,9 +1,8 @@
 #pragma once
 
-#include <QDialog>
-#include <QTreeWidgetItem>
-#include <QEvent>
 #include "masterdialog.h"
+
+class QTreeWidgetItem;
 
 namespace Ui {
 class OrphanedImagesDialog;

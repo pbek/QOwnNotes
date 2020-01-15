@@ -4,7 +4,8 @@
 #include <QStringList>
 #include <QQmlListProperty>
 #include "entities/note.h"
-#include "tagapi.h"
+
+class TagApi;
 
 class NoteApi : public QObject, public Note {
     Q_OBJECT

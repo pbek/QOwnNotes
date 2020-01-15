@@ -10,8 +10,11 @@
 #include <QtCore/QMimeDatabase>
 #include <QtCore/QMimeType>
 #include <utils/misc.h>
+#include "widgets/qownnotesmarkdowntextedit.h"
 #include "orphanedattachmentsdialog.h"
 #include "ui_orphanedattachmentsdialog.h"
+#include <QDir>
+#include <QFileInfo>
 
 OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent) :
         MasterDialog(parent),

@@ -1,10 +1,16 @@
+#include <QObject>
+#include <QTextEdit>
 
-#include <QtWidgets/QMainWindow>
-#include <QtWidgets/QTextEdit>
-#include <QtGui/QTextBlock>
-#include <QtWidgets/QMessageBox>
-#include <libraries/fakevim/fakevim/fakevimhandler.h>
-#include <mainwindow.h>
+class MainWindow;
+class QWidget;
+class QTextDocument;
+class QTextCursor;
+
+namespace FakeVim {
+namespace Internal{
+class ExCommand;
+}
+}
 
 class FakeVimProxy : public QObject
 {

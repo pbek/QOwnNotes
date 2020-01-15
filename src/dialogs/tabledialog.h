@@ -1,12 +1,12 @@
 #pragma once
 
-#include <QDialog>
-#include <QTableWidget>
 #include "masterdialog.h"
 
 namespace Ui {
 class TableDialog;
 }
+
+class QTableWidgetItem;
 
 class TableDialog : public MasterDialog
 {

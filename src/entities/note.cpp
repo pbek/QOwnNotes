@@ -19,6 +19,8 @@
 #include "libraries/botan/botan.h"
 #include "tag.h"
 #include "notesubfolder.h"
+#include "notefolder.h"
+#include "api/noteapi.h"
 #include "trashitem.h"
 #include <utils/misc.h>
 #include <services/scriptingservice.h>
@@ -27,6 +29,7 @@
 #include <utils/gui.h>
 #include <utils/schema.h>
 #include "helpers/codetohtmlconverter.h"
+#include "entities/bookmark.h"
 
 
 Note::Note()

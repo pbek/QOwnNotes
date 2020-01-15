@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <utils/misc.h>
 #include "logwidget.h"
+#include "mainwindow.h"
 
 #ifndef INTEGRATION_TESTS
 #include "ui_logwidget.h"

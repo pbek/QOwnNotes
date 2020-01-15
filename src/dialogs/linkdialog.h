@@ -1,12 +1,12 @@
 #pragma once
 
-#include <QDialog>
-#include <entities/note.h>
 #include "masterdialog.h"
 
 namespace Ui {
 class LinkDialog;
 }
+
+class Note;
 
 class LinkDialog : public MasterDialog
 {

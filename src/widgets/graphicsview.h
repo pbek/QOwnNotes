@@ -1,7 +1,8 @@
 #pragma once
 
 #include <QGraphicsView>
-#include <QResizeEvent>
+
+class QResizeEvent;
 
 class GraphicsView : public QGraphicsView
 {

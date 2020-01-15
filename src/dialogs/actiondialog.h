@@ -1,9 +1,8 @@
 #pragma once
 
-#include <QDialog>
-#include <QMenuBar>
-#include <QEvent>
-#include <QTreeWidgetItem>
+class QTreeWidgetItem;
+class QMenuBar;
+class QMenu;
 #include "masterdialog.h"
 
 namespace Ui {

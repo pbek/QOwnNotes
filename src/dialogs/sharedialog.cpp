@@ -3,6 +3,7 @@
 #include <utils/misc.h>
 #include "sharedialog.h"
 #include "ui_sharedialog.h"
+#include <QDebug>
 
 ShareDialog::ShareDialog(Note note, QWidget *parent) :
         MasterDialog(parent),

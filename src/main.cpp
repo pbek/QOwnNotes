@@ -5,6 +5,9 @@
 #include <QSettings>
 #include <QStyleFactory>
 #include <QTranslator>
+#include <QMessageBox>
+#include <QFileDialog>
+#include "entities/notefolder.h"
 #include <services/metricsservice.h>
 #include <widgets/logwidget.h>
 #include <services/databaseservice.h>

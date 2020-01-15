@@ -15,38 +15,12 @@
 #pragma once
 
 #include <QMainWindow>
-#include <QListWidgetItem>
+
 #include <QFileSystemWatcher>
-#include <QHash>
-#include <QFileDialog>
-#include <QEvent>
 #include <QSystemTrayIcon>
-#include <QTextEdit>
-#include <QFile>
-#include <QToolBar>
-#include <QTreeWidgetItem>
-#include <QShortcut>
 #include <entities/note.h>
-#include <entities/notefolder.h>
-#include <entities/tag.h>
-#include <services/scriptingservice.h>
-#include <QScrollArea>
-#include <QDockWidget>
-#include <QComboBox>
-#include <dialogs/actiondialog.h>
-#include <dialogs/tododialog.h>
-#include <dialogs/settingsdialog.h>
-#include <QPrinter>
 #include <widgets/logwidget.h>
-#include <dialogs/orphanedimagesdialog.h>
-#include <dialogs/orphanedattachmentsdialog.h>
-#include <dialogs/issueassistantdialog.h>
 #include "entities/notehistory.h"
-#include "dialogs/notediffdialog.h"
-#include "services/updateservice.h"
-#include "widgets/qownnotesmarkdowntextedit.h"
-#include <libraries/fakevim/fakevim/fakevimhandler.h>
-#include "services/websocketserverservice.h"
 
 #define SORT_ALPHABETICAL 0
 #define SORT_BY_LAST_CHANGE 1
@@ -57,6 +31,42 @@ namespace Ui {
 class MainWindow;
 }
 
+class QMimeData;
+class QActionGroup;
+class QListWidgetItem;
+class QFileSystemWatcher;
+class QFileDialog;
+class QEvent;
+class QSystemTrayIcon;
+class QPlainTextEdit;
+class QTextEdit;
+class QTextDocument;
+class QLabel;
+class QPushButton;
+class QFile;
+class QToolBar;
+class QTreeWidget;
+class QTreeWidgetItem;
+class QShortcut;
+class Note;
+class NoteFolder;
+class Tag;
+class ScriptingService;
+class QScrollArea;
+class QDockWidget;
+class QComboBox;
+class ActionDialog;
+class TodoDialog;
+class QPrinter;
+class LogWidget;
+class OrphanedImagesDialog;
+class OrphanedAttachmentsDialog;
+class IssueAssistantDialog;
+class NoteHistory;
+class NoteDiffDialog;
+class UpdateService;
+class FakeVimHandler;
+class WebSocketServerService;
 class QOwnNotesMarkdownTextEdit;
 
 // forward declaration because of "xxx does not name a type"

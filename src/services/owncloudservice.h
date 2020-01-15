@@ -1,14 +1,6 @@
 #pragma once
 
-#include <QNetworkAccessManager>
-#include <QAuthenticator>
-#include <QNetworkReply>
 #include <QObject>
-#include <QXmlQuery>
-#include <dialogs/sharedialog.h>
-#include "mainwindow.h"
-#include "dialogs/settingsdialog.h"
-#include "dialogs/tododialog.h"
 
 #define QOWNNOTESAPI_MIN_VERSION "0.4.2"
 
@@ -25,6 +17,15 @@ struct CalDAVCalendarData {
 class SettingsDialog;
 class MainWindow;
 class TodoDialog;
+class CalendarItem;
+class Note;
+class ShareDialog;
+class QNetworkReply;
+class QNetworkAccessManager;
+class QNetworkRequest;
+class QAuthenticator;
+class QXmlQuery;
+class QString;
 
 class OwnCloudService : public QObject {
 Q_OBJECT

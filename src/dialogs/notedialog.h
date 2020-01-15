@@ -1,13 +1,13 @@
 #ifndef NOTEDIALOG_H
 #define NOTEDIALOG_H
 
-#include <QDialog>
 #include "masterdialog.h"
-#include <entities/note.h>
 
 namespace Ui {
 class NoteDialog;
 }
+
+class Note;
 
 class NoteDialog : public MasterDialog
 {

@@ -1,9 +1,11 @@
 #include "toolbarcontainer.h"
 #include <QMenu>
 #include <QMainWindow>
+#include <QToolBar>
 #include <QDebug>
 #include <QSettings>
 #include <mainwindow.h>
+#include <QComboBox>
 #include <QWidgetAction>
 
 ToolbarContainer::ToolbarContainer(QToolBar *toolbar)

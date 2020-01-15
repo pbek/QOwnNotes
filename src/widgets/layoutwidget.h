@@ -2,11 +2,12 @@
 #define LAYOUTWIDGET_H
 
 #include <QWidget>
-#include <QSettings>
 
 namespace Ui {
 class LayoutWidget;
 }
+
+class QSettings;
 
 class LayoutWidget : public QWidget
 {

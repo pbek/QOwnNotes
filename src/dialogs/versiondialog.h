@@ -1,13 +1,13 @@
 #ifndef VERSIONDIALOG_H
 #define VERSIONDIALOG_H
 
-#include "mainwindow.h"
+
 #include "masterdialog.h"
 
-#include <QAbstractButton>
-#include <QDialog>
-#include <QSplitter>
-#include <QJSValue>
+class MainWindow;
+class QAbstractButton;
+class QJSValue;
+class QSplitter;
 
 namespace Ui {
 class VersionDialog;

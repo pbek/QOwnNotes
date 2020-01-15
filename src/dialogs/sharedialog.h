@@ -1,7 +1,6 @@
 #ifndef SHAREDIALOG_H
 #define SHAREDIALOG_H
 
-#include <QDialog>
 #include <entities/note.h>
 #include "masterdialog.h"
 

@@ -1,6 +1,7 @@
 #include "actiondialog.h"
-#include <QDebug>
-#include <QKeyEvent>
+//#include <QDebug>
+#include <QMenuBar>
+#include <QTreeWidgetItem>
 #include <utils/gui.h>
 #include "ui_actiondialog.h"
 

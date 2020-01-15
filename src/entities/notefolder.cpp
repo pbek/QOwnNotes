@@ -11,7 +11,7 @@
 #include <services/owncloudservice.h>
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonDocument>
-
+#include <QJsonObject>
 
 NoteFolder::NoteFolder() : name(""),
                            localPath(""),

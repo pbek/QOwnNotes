@@ -1,15 +1,15 @@
 #ifndef UPDATEDIALOG_H
 #define UPDATEDIALOG_H
 
-#include <QAbstractButton>
-#include <QDialog>
-#include <QNetworkAccessManager>
-#include <QFile>
 #include "masterdialog.h"
 
 namespace Ui {
 class UpdateDialog;
 }
+
+class QAbstractButton;
+class QNetworkReply;
+class QNetworkAccessManager;
 
 class UpdateDialog : public MasterDialog
 {
