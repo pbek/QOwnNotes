@@ -382,7 +382,7 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     }
 
     //check for code blocks
-    if (!text.contains(QStringLiteral("```"))) {
+    if (!(text.contains(QStringLiteral("```")) || text.contains(QStringLiteral("~~~")))) {
         h->setCodeHighlighting(false);
     }
 
