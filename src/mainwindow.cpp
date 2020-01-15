@@ -6152,11 +6152,7 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
             QStringLiteral("edit-copy"), QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/edit-copy.svg"))));
     const QTextBlock &currentTextBlock = noteTextEdit->cursorForPosition(pos).block();
     const int userState = currentTextBlock.userState();
-    copyCodeBlockAction->setEnabled(
-            userState == MarkdownHighlighter::HighlighterState::CodeBlock ||
-            userState == MarkdownHighlighter::HighlighterState::CodeBlockComment ||
-            userState >= MarkdownHighlighter::HighlighterState::CodeCpp ||
-            userState == MarkdownHighlighter::HighlighterState::CodeBlockEnd);
+    copyCodeBlockAction->setEnabled(MarkdownHighlighter::isCodeBlock(userState));
 
     menu->addSeparator();
 

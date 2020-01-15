@@ -30,7 +30,8 @@ private Q_SLOTS:
     void testNoteToMarkdownHtml();
 
     /* Preview Syntax Highlighter Tests */
-
+    void testMarkdownTildeCodeFenceToHtml();
+    void testMarkdownBacktickCodeFenceToHtml();
     void testCodeToHtmlConversionPython();
     void testCodeToHtmlConversionHashComment();
     void testCodeToHtmlConversionSingleLineComment();
