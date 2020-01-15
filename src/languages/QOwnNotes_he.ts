@@ -939,11 +939,11 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
+      <translation>
+        <numerusform>קו %n הועבר.</numerusform>
+        <numerusform>%n קווים עברו.</numerusform>
+        <numerusform>%n קווים עברו.</numerusform>
+        <numerusform>%n קווים עברו.</numerusform>
       </translation>
     </message>
     <message>

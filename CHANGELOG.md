@@ -5,6 +5,7 @@
     - the preview also works correctly now
     - you can also fence tripple-tick code blocks with tilde-fences and vice versa
 - fixed some small preview issues (for [#1582](https://github.com/pbek/QOwnNotes/pull/1582), thank you @Waqar144)
+- added more Hebrew, Urdu (Pakistan), Spanish translation (thank you Fabijenna, DixTheDev)
 
 ## 20.1.8
 - added preview code block highlighting for INI and VEX language (for [#1529](https://github.com/pbek/QOwnNotes/issues/1529), thank you @Waqar144)

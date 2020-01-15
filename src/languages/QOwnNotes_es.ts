@@ -4001,7 +4001,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
-        <numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; archivo seleccionado?</numerusform>
+        <numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; archivo(s) seleccionado(s)?</numerusform>
         <numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; archivos seleccionados?</numerusform>
       </translation>
     </message>
@@ -5878,7 +5878,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4634"/>
       <source>Exporting</source>
-      <translation>Exportar</translation>
+      <translation>Exportando</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4640"/>
