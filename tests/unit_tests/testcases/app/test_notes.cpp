@@ -115,6 +115,46 @@ void TestNotes::testNoteToMarkdownHtml()
     QVERIFY(html.contains(expectedBody));
 }
 
+void TestNotes::testMarkdownTildeCodeFenceToHtml()
+{
+    QString code = QStringLiteral("# Tilde Code Fence\n");
+    code += QStringLiteral("~~~cpp\n");
+    code += QStringLiteral("#include<iostream>\n");
+    code += QStringLiteral("using namespace std;\n");
+    code += QStringLiteral("int main() {\n");
+    code += QStringLiteral("std::cout<<\"hello\"\n");
+    code += QStringLiteral("return 0;\n");
+    code += QStringLiteral("}\n");
+    code += QStringLiteral("~~~\n");
+
+    Note note;
+    note.setNoteText(code);
+    QString result = note.toMarkdownHtml("", 980, true);
+    QString expected = QStringLiteral("<h1>Tilde Code Fence</h1>\n<pre><code class=\"language-cpp\">#<span class=\"code-other\">include</span>&lt;iostream&gt;\n<span class=\"code-keyword\">using</span> <span class=\"code-keyword\">namespace</span> <span class=\"code-builtin\">std</span>;\n<span class=\"code-type\">int</span> <span class=\"code-builtin\">main</span>() {\n<span class=\"code-builtin\">std</span>::<span class=\"code-builtin\">cout</span>&lt;&lt;<span class=\"code-string\">&quot;hello&quot;</span>\n<span class=\"code-keyword\">return</span> <span class=\"code-literal\">0</span>;\n}</code></pre>");
+
+    QVERIFY(result.contains(expected));
+}
+
+void TestNotes::testMarkdownBacktickCodeFenceToHtml()
+{
+    QString code = QStringLiteral("# Backtick Code Fence\n");
+    code += QStringLiteral("```cpp\n");
+    code += QStringLiteral("#include<iostream>\n");
+    code += QStringLiteral("using namespace std;\n");
+    code += QStringLiteral("int main() {\n");
+    code += QStringLiteral("std::cout<<\"hello\"\n");
+    code += QStringLiteral("return 0;\n");
+    code += QStringLiteral("}\n");
+    code += QStringLiteral("```\n");
+
+    Note note;
+    note.setNoteText(code);
+    QString result = note.toMarkdownHtml("", 980, true);
+    QString expected = QStringLiteral("<h1>Backtick Code Fence</h1>\n<pre><code class=\"language-cpp\">#<span class=\"code-other\">include</span>&lt;iostream&gt;\n<span class=\"code-keyword\">using</span> <span class=\"code-keyword\">namespace</span> <span class=\"code-builtin\">std</span>;\n<span class=\"code-type\">int</span> <span class=\"code-builtin\">main</span>() {\n<span class=\"code-builtin\">std</span>::<span class=\"code-builtin\">cout</span>&lt;&lt;<span class=\"code-string\">&quot;hello&quot;</span>\n<span class=\"code-keyword\">return</span> <span class=\"code-literal\">0</span>;\n}</code></pre>");
+
+    QVERIFY(result.contains(expected));
+}
+
 void TestNotes::testCodeToHtmlConversionPython()
 {
     QString pythonCode = "import hello\n"
