@@ -500,6 +500,10 @@ QString CodeToHtmlConverter::escape(QChar c) const
         return QStringLiteral("&gt;");
     case '/':
         return QStringLiteral("&#47;");
+    case '~':
+        return QStringLiteral("&#126;");
+    case '`':
+        return QStringLiteral("&#96;");
     }
     return c;
 }
