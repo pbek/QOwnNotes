@@ -15,6 +15,7 @@
 #pragma once
 
 #include <QString>
+#include <QStringList>
 #include <QPrinter>
 #include <QDataStream>
 
