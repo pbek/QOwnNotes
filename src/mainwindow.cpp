@@ -3145,7 +3145,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
  * Asks to remove conflicted copies of the notes.sqlite database
  */
 void MainWindow::removeConflictedNotesDatabaseCopies() {
-    const QStringList filter{"notes (conflicted copy *).sqlite"};
+    const QStringList filter{"notes (*conflicted copy *).sqlite"};
     QDirIterator it(NoteFolder::currentLocalPath(), filter, QDir::AllEntries |
         QDir::NoSymLinks | QDir::NoDotAndDotDot);
     auto files = QStringList();
