@@ -5,6 +5,7 @@
   in the *General settings* (for [#1588](https://github.com/pbek/QOwnNotes/issues/1588))
 - the mechanism to remove conflicted copies of the `notes.sqlite` database is
   now also compatible with Dropbox (for [#1589](https://github.com/pbek/QOwnNotes/issues/1589))
+- added more Arabic, Irish, Hebrew translation (thank you Fabijenna)
 
 ## 20.1.9
 - added support for tilde code fence highlighting (for [#1580](https://github.com/pbek/QOwnNotes/issues/1580), thank you @Waqar144)
