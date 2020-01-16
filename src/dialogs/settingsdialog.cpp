@@ -648,6 +648,8 @@ void SettingsDialog::storeSettings() {
                       ui->useUNIXNewlineCheckBox->isChecked());
     settings.setValue("restoreCursorPosition",
                       ui->restoreCursorPositionCheckBox->isChecked());
+    settings.setValue("restoreLastNoteAtStartup",
+                      ui->restoreLastNoteAtStartupCheckBox->isChecked());
     settings.setValue("noteSaveIntervalTime",
                       ui->noteSaveIntervalTime->value());
     settings.setValue("defaultNoteFileExtension",
@@ -1023,6 +1025,8 @@ void SettingsDialog::readSettings() {
     ui->restoreCursorPositionCheckBox->setChecked(
             settings.value("restoreCursorPosition",
                            restoreCursorPositionDefault).toBool());
+    ui->restoreLastNoteAtStartupCheckBox->setChecked(
+            settings.value("restoreLastNoteAtStartup", true).toBool());
     ui->noteSaveIntervalTime->setValue(
             settings.value("noteSaveIntervalTime", 10).toInt());
     ui->noteTextViewRTLCheckBox->setChecked(

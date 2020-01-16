@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.1.10
+- it is now possible to disable the opening of the last accessed note at startup
+  in the *General settings* (for [#1588](https://github.com/pbek/QOwnNotes/issues/1588))
+
 ## 20.1.9
 - added support for tilde code fence highlighting (for [#1580](https://github.com/pbek/QOwnNotes/issues/1580), thank you @Waqar144)
     - the preview also works correctly now

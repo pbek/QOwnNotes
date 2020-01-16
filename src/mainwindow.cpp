@@ -507,11 +507,13 @@ MainWindow::MainWindow(QWidget *parent) :
     // restore the note history of the current note folder
     noteHistory.restoreForCurrentNoteFolder();
 
-    // try to restore the last note before the app was quit
-    // if that fails jump to the first note
-    // we do that with a timer, because otherwise the scrollbar will not be
-    // restored correctly, because the maximum position of the scrollbar is 0
-    QTimer::singleShot(250, this, SLOT(restoreActiveNoteHistoryItem()));
+    if (settings.value("restoreLastNoteAtStartup", true).toBool()) {
+        // try to restore the last note before the app was quit
+        // if that fails jump to the first note
+        // we do that with a timer, because otherwise the scrollbar will not be
+        // restored correctly, because the maximum position of the scrollbar is 0
+        QTimer::singleShot(250, this, SLOT(restoreActiveNoteHistoryItem()));
+    }
 
     // wait some time for the tagTree to get visible, if selected, and apply last
     // selected tag search
