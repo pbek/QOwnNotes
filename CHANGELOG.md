@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.1.11
+- fixed an infinite loop in the preview with complex markdown tables (for [#1592](https://github.com/pbek/QOwnNotes/issues/1592), thank you @mity)
+
 ## 20.1.10
 - it is now possible to disable the opening of the last accessed note at startup
   in the *General settings* (for [#1588](https://github.com/pbek/QOwnNotes/issues/1588))
