@@ -282,6 +282,8 @@ private slots:
 
     void on_copyDebugInfoButton_clicked();
 
+    void on_ownCloudServerAppPasswordPageButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

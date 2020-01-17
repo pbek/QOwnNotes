@@ -337,6 +337,10 @@ void SettingsDialog::replaceOwnCloudText() const {
             ui->ownCloudServerAppPageButton->text(), true));
     ui->ownCloudServerAppPageButton->setToolTip(Utils::Misc::replaceOwnCloudText(
             ui->ownCloudServerAppPageButton->toolTip()));
+    ui->ownCloudServerAppPasswordPageButton->setText(Utils::Misc::replaceOwnCloudText(
+            ui->ownCloudServerAppPasswordPageButton->text(), true));
+    ui->ownCloudServerAppPasswordPageButton->setToolTip(Utils::Misc::replaceOwnCloudText(
+            ui->ownCloudServerAppPasswordPageButton->toolTip()));
     ui->connectButton->setText(Utils::Misc::replaceOwnCloudText(
             ui->connectButton->text(), true));
     ui->connectButton->setToolTip(Utils::Misc::replaceOwnCloudText(
@@ -3994,4 +3998,9 @@ void SettingsDialog::on_copyDebugInfoButton_clicked() {
     Utils::Gui::information(this, tr("Debug information"),
                              tr("The debug information was copied to the clipboard."),
                             "debug-clipboard");
+}
+
+void SettingsDialog::on_ownCloudServerAppPasswordPageButton_clicked() {
+    QDesktopServices::openUrl(
+            QUrl(ui->serverUrlEdit->text() + "/index.php/settings/user/security"));
 }

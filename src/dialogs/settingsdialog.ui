@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>7</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -920,6 +920,26 @@
                    </widget>
                   </item>
                   <item>
+                   <widget class="QPushButton" name="ownCloudServerAppPasswordPageButton">
+                    <property name="minimumSize">
+                     <size>
+                      <width>400</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="toolTip">
+                     <string>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</string>
+                    </property>
+                    <property name="text">
+                     <string>Open your ownCloud server App Password page</string>
+                    </property>
+                    <property name="icon">
+                     <iconset theme="text-html" resource="../breeze-qownnotes.qrc">
+                      <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
                    <spacer name="verticalSpacer_3">
                     <property name="orientation">
                      <enum>Qt::Vertical</enum>
@@ -1021,6 +1041,73 @@
                       </widget>
                      </item>
                     </layout>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="ownCloudServerUrlLabel_2">
+                    <property name="text">
+                     <string>Connection name:</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLineEdit" name="cloudServerConnectionNameLineEdit">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>300</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="ownCloudServerUrlLabel">
+                    <property name="text">
+                     <string>ownCloud server url:</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLineEdit" name="serverUrlEdit">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>300</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string notr="true">https://your.owncloud.server</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
                    </widget>
                   </item>
                   <item row="5" column="0">
@@ -1264,73 +1351,6 @@
                    <widget class="QLabel" name="check8Label">
                     <property name="text">
                      <string>notes path found on server</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="4" column="0">
-                   <widget class="QLabel" name="ownCloudServerUrlLabel">
-                    <property name="text">
-                     <string>ownCloud server url:</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="4" column="1">
-                   <widget class="QLineEdit" name="serverUrlEdit">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>300</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="toolTip">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="placeholderText">
-                     <string notr="true">https://your.owncloud.server</string>
-                    </property>
-                    <property name="clearButtonEnabled">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="3" column="0">
-                   <widget class="QLabel" name="ownCloudServerUrlLabel_2">
-                    <property name="text">
-                     <string>Connection name:</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="3" column="1">
-                   <widget class="QLineEdit" name="cloudServerConnectionNameLineEdit">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>300</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="clearButtonEnabled">
-                     <bool>true</bool>
                     </property>
                    </widget>
                   </item>
@@ -6192,8 +6212,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
