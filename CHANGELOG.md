@@ -4,6 +4,13 @@
 - fixed an infinite loop in the preview with complex markdown tables (for [#1592](https://github.com/pbek/QOwnNotes/issues/1592), thank you @mity)
 - there now is a button to open the *App Password* page of your Nextcloud / ownCloud
   server to create a new app password for the application in the *Nextcloud / ownCloud settings*
+- added more Catalan, Arabic, Irish, Ukrainian, Urdu (Pakistan), Uzbek, Vietnamese,
+  Portuguese, Albanian, Hebrew, Basque, Bosnian, Bulgarian, Cebuano, Croatian,
+  Czech, Danish, Dutch, Estonian, Finnish, French, Greek, Hausa, Hindi, Hungarian,
+  Icelandic, Japanese, Korean, Latvian, Lithuanian, Macedonian, Norwegian, Persian,
+  Polish, Punjabi, Romanian, Russian, Serbian (Cyrillic), Slovak, Slovenian,
+  Spanish, Swedish, Turkish, Italian, German translation (thank you MGuerra,
+  Fabijenna, mlocati, rakekniven)
 
 ## 20.1.10
 - it is now possible to disable the opening of the last accessed note at startup
