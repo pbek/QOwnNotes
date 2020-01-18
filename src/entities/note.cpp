@@ -2085,16 +2085,13 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     highlightCode(str, QStringLiteral("```"), cbCount);
     highlightCode(str, QStringLiteral("~~~"), cbTildeCount);
 
-    const char *data = qstrdup(str.toUtf8().constData());
-    size_t length = strlen(data);
-
-    // return an empty string if the note is empty
-    if (length == 0) {
+    auto data = str.toUtf8();
+    if (data.size() == 0) {
         return QLatin1String("");
     }
 
     QByteArray array;
-    int renderResult = md_render_html(data, MD_SIZE(length),
+    int renderResult = md_render_html(data.data(), MD_SIZE(data.size()),
                                       &captureHtmlFragment,
                                       &array,
                                       flags,
@@ -2105,6 +2102,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         result = QString::fromUtf8(array);
     } else {
         qWarning() << "MD4C Failure!";
+        return QString();
     }
 
     // transform remote preview image tags
