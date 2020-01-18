@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.1.12
+- fixed a memory leak in the preview (for [#1594](https://github.com/pbek/QOwnNotes/pull/1594), thank you @Waqar144)
+
 ## 20.1.11
 - fixed an infinite loop in the preview with complex markdown tables (for [#1592](https://github.com/pbek/QOwnNotes/issues/1592), thank you @mity)
 - there now is a button to open the *App Password* page of your Nextcloud / ownCloud
