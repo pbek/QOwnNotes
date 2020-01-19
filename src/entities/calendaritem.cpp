@@ -48,6 +48,10 @@ QString CalendarItem::getUid() const {
     return this->uid;
 }
 
+QString CalendarItem::getRelatedUid() const {
+    return this->relatedUid;
+}
+
 QString CalendarItem::getDescription() {
     return this->description;
 }
@@ -102,6 +106,10 @@ void CalendarItem::setICSData(QString text) {
 
 void CalendarItem::setUid(QString text) {
     this->uid = text;
+}
+
+void CalendarItem::setRelatedUid(QString text) {
+    this->relatedUid = text;
 }
 
 void CalendarItem::setCreated(QDateTime dateTime) {

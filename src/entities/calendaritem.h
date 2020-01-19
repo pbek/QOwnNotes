@@ -40,6 +40,7 @@ public:
     void setDescription(QString text);
     bool updateWithICSData(QString icsData);
     QString getUid() const;
+    QString getRelatedUid() const;
     static CalendarItem fetchByUid(QString uid);
     int getPriority();
     QString generateNewICSData();
@@ -56,6 +57,7 @@ public:
     static CalendarItem createNewTodoItem(QString summary, QString calendar);
     void setUrl(QUrl url);
     void setUid(QString text);
+    void setRelatedUid(QString text);
     void setModified(QDateTime dateTime);
     void setCreated(QDateTime dateTime);
     void setCompleted(bool value);
@@ -80,6 +82,7 @@ private:
     QString description;
     QString calendar;
     QString uid;
+    QString relatedUid;
     QString icsData;
     QString etag;
     QString lastModifiedString;
