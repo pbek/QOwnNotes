@@ -2,6 +2,7 @@
 #define TODODIALOG_H
 
 #include "entities/calendaritem.h"
+#include <QTreeWidgetItem>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -36,20 +37,20 @@ public slots:
 private slots:
     void on_TodoDialog_finished(int result);
     void on_todoListSelector_currentIndexChanged(const QString &arg1);
-    void on_todoList_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
     void on_prioritySlider_valueChanged(int value);
     void on_showCompletedItemsCheckBox_clicked();
     void on_saveButton_clicked();
     void on_todoItemLoadingProgressBar_valueChanged(int value);
     void on_newItemEdit_returnPressed();
     void on_removeButton_clicked();
-    void on_todoList_itemChanged(QListWidgetItem *item);
     void on_reminderCheckBox_clicked();
     void on_summaryEdit_returnPressed();
     void on_newItemEdit_textChanged(const QString &arg1);
     void onSaveAndInsertButtonClicked();
     void onImportAsNoteButtonClicked();
     void clearCacheAndReloadTodoList();
+    void on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+    void on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
 
 private:
     Ui::TodoDialog *ui;
@@ -59,11 +60,11 @@ private:
     CalendarItem lastCreatedCalendarItem;
     QString _jumpToCalendarItemUid;
     bool _setFocusToDescriptionEdit;
-    int firstVisibleTodoListRow;
+    QTreeWidgetItem* firstVisibleTodoItemTreeItem;
     void setupMainSplitter();
     void storeSettings();
     void loadTodoListData();
-    int findTodoItemRowByUID(const QString& uid);
+    QTreeWidgetItem* findTodoItemTreeWidgetItemByUID(const QString& uid);
     void resetEditFrameControls();
     void setupUi();
     void updateCurrentCalendarItemWithFormData();

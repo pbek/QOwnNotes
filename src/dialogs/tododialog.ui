@@ -254,8 +254,15 @@
         <property name="bottomMargin">
          <number>0</number>
         </property>
-        <item row="2" column="0">
-         <widget class="QListWidget" name="todoList"/>
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="newItemEdit">
+          <property name="placeholderText">
+           <string>Search or create todo item</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
         <item row="5" column="0">
          <widget class="QFrame" name="frame">
@@ -296,13 +303,6 @@
           </layout>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QComboBox" name="todoListSelector">
-          <property name="toolTip">
-           <string>select your todo list</string>
-          </property>
-         </widget>
-        </item>
         <item row="3" column="0">
          <widget class="QProgressBar" name="todoItemLoadingProgressBar">
           <property name="toolTip">
@@ -313,13 +313,22 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="0">
-         <widget class="QLineEdit" name="newItemEdit">
-          <property name="placeholderText">
-           <string>Search or create todo item</string>
-          </property>
-          <property name="clearButtonEnabled">
-           <bool>true</bool>
+        <item row="2" column="0">
+         <widget class="QTreeWidget" name="todoItemTreeWidget">
+          <attribute name="headerVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="todoListSelector">
+          <property name="toolTip">
+           <string>select your todo list</string>
           </property>
          </widget>
         </item>
@@ -339,7 +348,7 @@
  </customwidgets>
  <tabstops>
   <tabstop>newItemEdit</tabstop>
-  <tabstop>todoList</tabstop>
+  <tabstop>todoItemTreeWidget</tabstop>
   <tabstop>summaryEdit</tabstop>
   <tabstop>prioritySlider</tabstop>
   <tabstop>reminderDateTimeEdit</tabstop>
