@@ -722,6 +722,11 @@ bool DatabaseService::setupTables() {
         version = 31;
     }
 
+    if (version < 32) {
+        queryDisk.exec(QStringLiteral("ALTER TABLE calendarItem ADD related_uid VARCHAR(255)"));
+        version = 32;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"), QString::number(version));
     }

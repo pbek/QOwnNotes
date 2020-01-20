@@ -292,6 +292,7 @@ bool CalendarItem::fillFromQuery(QSqlQuery query) {
     this->completed = query.value("completed").toInt() == 1;
     this->priority = query.value("priority").toInt();
     this->uid = query.value("uid").toString();
+    this->relatedUid = query.value("related_uid").toString();
     this->calendar = query.value("calendar").toString();
     this->icsData = query.value("ics_data").toString();
     this->etag = query.value("etag").toString();
@@ -520,7 +521,7 @@ bool CalendarItem::store() {
                         "description = :description, "
                         "has_dirty_data = :has_dirty_data, "
                         "completed = :completed, "
-                        "calendar = :calendar, uid = :uid, "
+                        "calendar = :calendar, uid = :uid, related_uid = :related_uid, "
                         "ics_data = :ics_data, etag = :etag, "
                         "last_modified_string = :last_modified_string, "
                         "alarm_date = :alarm_date, priority = :priority, "
@@ -532,12 +533,12 @@ bool CalendarItem::store() {
     else {
         query.prepare(
                 "INSERT INTO calendarItem "
-                        "(summary, url, description, calendar, uid, ics_data, "
+                        "(summary, url, description, calendar, uid, related_uid, ics_data, "
                         "etag, last_modified_string, has_dirty_data, completed, "
                         "alarm_date, priority, created, modified, "
                         "completed_date, sort_priority) "
                         "VALUES (:summary, :url, :description, :calendar, :uid,"
-                        " :ics_data, :etag, :last_modified_string, "
+                        " :related_uid, :ics_data, :etag, :last_modified_string, "
                         ":has_dirty_data, :completed, :alarm_date, :priority, "
                         ":created, :modified, :completed_date, "
                         ":sort_priority)");
@@ -550,6 +551,7 @@ bool CalendarItem::store() {
     query.bindValue(":completed", this->completed ? 1 : 0);
     query.bindValue(":calendar", this->calendar);
     query.bindValue(":uid", this->uid);
+    query.bindValue(":related_uid", this->relatedUid);
     query.bindValue(":ics_data", this->icsData);
     query.bindValue(":etag", this->etag);
     query.bindValue(":last_modified_string", this->lastModifiedString);
@@ -589,6 +591,7 @@ QString CalendarItem::generateNewICSData() {
     icsDataHash["SUMMARY"] = summary;
     icsDataHash["DESCRIPTION"] = description;
     icsDataHash["UID"] = uid;
+    icsDataHash["RELATED-TO"] = relatedUid;
     icsDataHash["PRIORITY"] = QString::number(priority);
     icsDataHash["PERCENT-COMPLETE"] = QString::number(completed ? 100 : 0);
     icsDataHash["STATUS"] = completed ? "COMPLETED" : "NEEDS-ACTION";
@@ -754,6 +757,7 @@ bool CalendarItem::updateWithICSData(QString icsData) {
     }
 
     uid = icsDataHash.contains("UID") ? icsDataHash["UID"] : QString();
+    relatedUid = icsDataHash.contains("RELATED-TO") ? icsDataHash["RELATED-TO"] : QString();
     description = icsDataHash.contains("DESCRIPTION") ?
                   icsDataHash["DESCRIPTION"] : QString();
     priority = icsDataHash.contains("PRIORITY") ?
