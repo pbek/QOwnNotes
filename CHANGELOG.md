@@ -5,6 +5,8 @@
 - you can now browse and modify your **todo list** items in a tree instead of a list
   if you are using **sub-tasks** (for [#1596](https://github.com/pbek/QOwnNotes/issues/1596))
     - the creation of sub-tasks is not yet supported in the application
+    - keep in mind that sub-tasks of completed tasks or sub-tasks will not be
+      shown if you don't show completed items
 - added more Chinese Simplified, Uzbek, Dutch, German, Norwegian, Persian, Polish,
   Portuguese, Punjabi, Romanian, Swedish, Serbian (Cyrillic), Slovak, Slovenian,
   Turkish, Ukrainian, Urdu (Pakistan), Albanian, Arabic, Basque, Bengali, Bosnian,
