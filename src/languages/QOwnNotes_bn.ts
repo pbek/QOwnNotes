@@ -5851,12 +5851,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation type="unfinished">Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+      <translation>অ্যাপ্লিকেশনটির জন্য একটি নতুন অ্যাপ্লিকেশন পাসওয়ার্ড তৈরি করতে আপনার ওয়েব ব্রাউজারে আপনার নিজস্ব ক্লাউড সার্ভার অ্যাপ্লিকেশন পাসওয়ার্ড পৃষ্ঠাটি খুলুন</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="934"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation type="unfinished">Open your ownCloud server App Password page</translation>
+      <translation>আপনার নিজস্ব ক্লাউড সার্ভার অ্যাপ্লিকেশন পাসওয়ার্ড পৃষ্ঠা খুলুন</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2668"/>

@@ -5851,12 +5851,12 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation type="unfinished">Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+      <translation>Åbner din ownCloud-server-app-adgangskodeside i din webbrowser for at oprette en ny app-adgangskode til applikationen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="934"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation type="unfinished">Open your ownCloud server App Password page</translation>
+      <translation>Åbn din ownCloud-server-app-adgangskodeside</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2668"/>

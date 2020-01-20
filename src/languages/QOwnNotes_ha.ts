@@ -5849,12 +5849,12 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation type="unfinished">Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+      <translation>Yana buɗe shafin ownCloud da lambar sirri a cikin mai amfani da yanar gizonku don ƙirƙirar sabuwar kalmar sirri don aikace-aikacen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="934"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation type="unfinished">Open your ownCloud server App Password page</translation>
+      <translation>Bude shafin ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2668"/>

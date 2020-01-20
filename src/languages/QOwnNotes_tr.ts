@@ -5851,12 +5851,12 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation type="unfinished">Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+      <translation>Uygulama için yeni bir uygulama şifresi oluşturmak üzere web tarayıcınızda ownCloud sunucusu Uygulama Şifresi sayfanızı açar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="934"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation type="unfinished">Open your ownCloud server App Password page</translation>
+      <translation>OwnCloud sunucusu Uygulama Şifresi sayfanızı açın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2668"/>

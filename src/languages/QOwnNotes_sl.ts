@@ -5933,12 +5933,12 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation type="unfinished">Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+      <translation>Odpre svojo stran gesla za aplikacijo strežnika ownCloud v spletnem brskalniku in ustvari novo geslo za aplikacijo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="934"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation type="unfinished">Open your ownCloud server App Password page</translation>
+      <translation>Odprite stran z geslom za aplikacijo ownCloud za strežnik</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2668"/>

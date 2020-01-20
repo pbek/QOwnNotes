@@ -5892,12 +5892,12 @@ Samo se testirajte ako dobijete sukobe u sinkronizaciji i postavite veću vrijed
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation type="unfinished">Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+      <translation>Otvara svoju vlastitu stranicu Lozinka aplikacije za poslužiteljCloud u vašem web pretraživaču kako biste stvorili novu lozinku za aplikaciju</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="934"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation type="unfinished">Open your ownCloud server App Password page</translation>
+      <translation>Otvorite svoju stranicu Lozinka aplikacije za ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2668"/>

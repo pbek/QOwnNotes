@@ -2,9 +2,16 @@
 
 ## 20.1.12
 - fixed a memory leak in the preview (for [#1594](https://github.com/pbek/QOwnNotes/pull/1594), thank you @Waqar144)
-- you can now browse and modify your todo list items in a tree instead of a list
-  if you are using sub-tasks (for [#1596](https://github.com/pbek/QOwnNotes/issues/1596))
+- you can now browse and modify your **todo list** items in a tree instead of a list
+  if you are using **sub-tasks** (for [#1596](https://github.com/pbek/QOwnNotes/issues/1596))
     - the creation of sub-tasks is not yet supported in the application
+- added more Chinese Simplified, Uzbek, Dutch, German, Norwegian, Persian, Polish,
+  Portuguese, Punjabi, Romanian, Swedish, Serbian (Cyrillic), Slovak, Slovenian,
+  Turkish, Ukrainian, Urdu (Pakistan), Albanian, Arabic, Basque, Bengali, Bosnian,
+  Bulgarian, Croatian, Kurdish, Czech, Danish, Estonian, Finnish, French, Greek,
+  Hausa, Hebrew, Hungarian, Icelandic, Irish, Japanese, Korean, Latvian, Lithuanian,
+  Macedonian, Russian, Spanish, Italian translation (thank you Fabijenna, rakekniven,
+  unchase, richarson, mlocati)
 
 ## 20.1.11
 - fixed an infinite loop in the preview with complex markdown tables (for [#1592](https://github.com/pbek/QOwnNotes/issues/1592), thank you @mity)

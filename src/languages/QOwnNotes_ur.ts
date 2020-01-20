@@ -5887,12 +5887,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation type="unfinished">Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+      <translation>ایپلی کیشن کے لئے ایک نیا ایپ پاس ورڈ بنانے کے ل your آپ کے ویب براؤزر میں آپ کے '# ڈاؤن کلڈ' سرور ایپ پاس ورڈ کا صفحہ کھولتا ہے</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="934"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation type="unfinished">Open your ownCloud server App Password page</translation>
+      <translation>اپنا 'خود کلود' سرور ایپ پاس ورڈ کا صفحہ کھولیں</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2668"/>
