@@ -10,6 +10,7 @@
     - em and strong highlighting in complex cases
     - inline code spans can now handle complex cases, e.g ``` ``inline  ` code`` ```
     - strike through support
+    - Commonmark compliant indented code blocks
 
 ## 20.1.12
 - fixed a memory leak in the preview (for [#1594](https://github.com/pbek/QOwnNotes/pull/1594), thank you @Waqar144)
