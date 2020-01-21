@@ -4,6 +4,12 @@
 - fixed not detected external note changes of the current note if the event for
   the change in the current note comes after the event that the note folder was
   modified (for [#1597](https://github.com/pbek/QOwnNotes/issues/1597))
+- lots of improvements for the markdown highlighting were made
+  (for [#1598](https://github.com/pbek/QOwnNotes/issues/1598), thank you @Waqar144)
+    - support for overlapping formats such as bold + italic, code + italic, etc.
+    - em and strong highlighting in complex cases
+    - inline code spans can now handle complex cases, e.g ``` ``inline  ` code`` ```
+    - strike through support
 
 ## 20.1.12
 - fixed a memory leak in the preview (for [#1594](https://github.com/pbek/QOwnNotes/pull/1594), thank you @Waqar144)
