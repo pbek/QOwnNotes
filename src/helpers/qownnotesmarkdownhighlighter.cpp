@@ -87,7 +87,6 @@ void QOwnNotesMarkdownHighlighter::setCodeHighlighting(bool state)
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
-    //updateCurrentNote();
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
 
@@ -107,42 +106,42 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
 }
 
 void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
-    if (!text.isEmpty()) {
+    const bool isCodeBlock = MarkdownHighlighter::isCodeBlock(previousBlockState()) ||
+                            text.startsWith(QLatin1String("```")) ||
+                            text.startsWith(QLatin1String("~~~"));
+    const QString &next = currentBlock().next().text();
+    const bool isHeading = text.at(0) == QChar('#');
+    const bool isSetextHeading = (next.startsWith(QLatin1String("===")) ||
+                                  next.startsWith(QLatin1String("---"))) &&
+                                  !text.isEmpty();
+    const bool isSetextHeadingUnderline = (text.startsWith(QLatin1String("===")) ||
+                                  text.startsWith(QLatin1String("---"))) &&
+                                  !currentBlock().previous().text().isEmpty();
+    const bool isBlockHeading = isHeading || isSetextHeading || isSetextHeadingUnderline;
 
-        const QString &next = currentBlock().next().text();
-        const bool isHeading = text.at(0) == QChar('#');
-        const bool isHeadWithUnderline =
-                text.startsWith(QLatin1String("===")) || text.startsWith(QLatin1String("---"));
-        const bool nextHasUnderLine =
-                next.startsWith(QLatin1String("===")) || next.startsWith(QLatin1String("---"));
-        const bool isCodeBlock = MarkdownHighlighter::isCodeBlock(previousBlockState()) ||
-                                text.startsWith(QLatin1String("```")) ||
-                                text.startsWith(QLatin1String("~~~"));
-
-        if (!isCodeBlock) {
+    if (!text.isEmpty() && !isCodeBlock) {
+        if (!isSetextHeading && !isSetextHeadingUnderline)
             highlightAdditionalRules(_highlightingRulesPre, text);
 
-            // needs to be called after the horizontal ruler highlighting
-            if (isHeading || isHeadWithUnderline || nextHasUnderLine) {
-                highlightHeadline(text);
-            }
+        // needs to be called after the horizontal ruler highlighting
+        if (isBlockHeading)
+            highlightHeadline(text);
 
-            highlightAdditionalRules(_highlightingRulesAfter, text);
+        highlightAdditionalRules(_highlightingRulesAfter, text);
 
-            // highlight broken note links
-            if (text.contains(QLatin1String("note://")) || text.contains(QLatin1String(".md"))) {
-                highlightBrokenNotesLink(text);
-            }
+        highlightInlineRules(text);
+
+        // highlight broken note links
+        if (text.contains(QLatin1String("note://")) || text.contains(QLatin1String(".md"))) {
+            highlightBrokenNotesLink(text);
         }
-
     }
 
-    if (commentHighlightingOn) {
+    if (!isBlockHeading && commentHighlightingOn)
         highlightCommentBlock(text);
-    }
+
     if (codeHighlightingOn) {
-        if (MarkdownHighlighter::isCodeBlock(previousBlockState()) ||
-            text.startsWith(QLatin1String("```")) || text.startsWith(QLatin1String("~~~"))) {
+        if (isCodeBlock) {
             highlightCodeFence(text);
         }
     }
