@@ -12,6 +12,7 @@
     - strike through support
     - Commonmark compliant indented code blocks
 - fixed broken note folder and script moving via drag and drop on macOS
+- added more Chinese Simplified, Chinese Traditional, Hindi translation (thank you Fabijenna)
 
 ## 20.1.12
 - fixed a memory leak in the preview (for [#1594](https://github.com/pbek/QOwnNotes/pull/1594), thank you @Waqar144)

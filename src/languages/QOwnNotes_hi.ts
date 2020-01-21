@@ -510,17 +510,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
       <source>Norwegian (Bokmål)</source>
-      <translation type="unfinished">Norwegian (Bokmål)</translation>
+      <translation>नॉर्वेजियन (बोकमाल)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="92"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+      <translation>नॉर्वेजियन (Nynorsk)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="93"/>
       <source>Occitan</source>
-      <translation type="unfinished">Occitan</translation>
+      <translation>ओसीटान</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
@@ -590,7 +590,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
       <source>Swahili</source>
-      <translation type="unfinished">Swahili</translation>
+      <translation>स्वाहिली</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="114"/>
@@ -904,7 +904,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3719"/>
       <source>%1All</source>
-      <translation type="unfinished">%1All</translation>
+      <translation>%1 सभी</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3733"/>
@@ -939,9 +939,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
+      <translation>
+        <numerusform>%n पंक्ति चली गई।</numerusform>
+        <numerusform>%n रेखाएँ स्थानांतरित हो गईं।</numerusform>
       </translation>
     </message>
     <message>
@@ -977,9 +977,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
+      <translation>
+        <numerusform>%n लाइनें फ़िल्टर की गईं।</numerusform>
+        <numerusform>%n लाइनें फ़िल्टर की गईं।</numerusform>
       </translation>
     </message>
     <message>
@@ -1025,18 +1025,18 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
       <source>%n lines indented.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
+      <translation>
+        <numerusform>%n लाइनें इंडेंट की गईं।</numerusform>
+        <numerusform>%n लाइनें इंडेंट की गईं।</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
-      <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+      <translation>
+        <numerusform>%n लाइन्स %1ed %2 समय।</numerusform>
+        <numerusform>%n लाइन्स %1ed %2 समय।</numerusform>
       </translation>
     </message>
     <message numerus="yes">

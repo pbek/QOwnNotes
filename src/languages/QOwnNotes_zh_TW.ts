@@ -23,79 +23,79 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="14"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>夾帶檔案</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="20"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>圖片文件名或網址</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="26"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>文件或URL的路徑</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="36"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>選擇檔案</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="46"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>圖片鏈接的標題</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="49"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>標題</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="94"/>
       <source>Cancel download</source>
-      <translation type="unfinished">Cancel download</translation>
+      <translation>取消下載</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="117"/>
       <source>Download URL</source>
       <comment>The URL will be downloaded</comment>
-      <translation type="unfinished">Download URL</translation>
+      <translation>下載網址</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="43"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>選擇欲插入的檔案</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="140"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>下載錯誤</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="141"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>下載時發生錯誤：
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="169"/>
       <location filename="../dialogs/attachmentdialog.cpp" line="193"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>檔案錯誤</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="170"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation type="unfinished">Could not open temporary file:
+      <translation>無法開啟暫存檔：
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="194"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>無法儲存已下載的檔案：
 %1</translation>
     </message>
   </context>
@@ -104,103 +104,103 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="14"/>
       <source>Dictionary manager</source>
-      <translation type="unfinished">Dictionary manager</translation>
+      <translation>字典管理器</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="61"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>取消</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="89"/>
       <source>Download dictionary</source>
-      <translation type="unfinished">Download dictionary</translation>
+      <translation>下載字典</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="107"/>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="165"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>標題</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="115"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>輸入您的關鍵字</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="118"/>
       <source>Find dictionary</source>
-      <translation type="unfinished">Find dictionary</translation>
+      <translation>查找字典</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="137"/>
       <source>Downloaded dictionaries</source>
-      <translation type="unfinished">Downloaded dictionaries</translation>
+      <translation>下載字典</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
       <source>If checked only the downloaded dictionaries will be used</source>
-      <translation type="unfinished">If checked only the downloaded dictionaries will be used</translation>
+      <translation>如果選中，則僅使用下載的詞典</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="176"/>
       <source>Disable external dictionaries</source>
-      <translation type="unfinished">Disable external dictionaries</translation>
+      <translation>禁用外部詞典</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="183"/>
       <source>Delete selected dictionaries</source>
-      <translation type="unfinished">Delete selected dictionaries</translation>
+      <translation>刪除所選字典</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="47"/>
       <source>English (British)</source>
-      <translation type="unfinished">English (British)</translation>
+      <translation>英語（英國）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
       <source>English (American)</source>
-      <translation type="unfinished">English (American)</translation>
+      <translation>英語（美國）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="59"/>
       <source>German (Austrian)</source>
-      <translation type="unfinished">German (Austrian)</translation>
+      <translation>德語（奧地利）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="61"/>
       <source>German (German)</source>
-      <translation type="unfinished">German (German)</translation>
+      <translation>德語（德語）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
       <source>German (Swiss)</source>
-      <translation type="unfinished">German (Swiss)</translation>
+      <translation>德文（瑞士）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
       <source>French</source>
-      <translation type="unfinished">French</translation>
+      <translation>法文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="111"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>西班牙文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
       <source>Russian</source>
-      <translation type="unfinished">Russian</translation>
+      <translation>俄文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
       <source>Polish</source>
-      <translation type="unfinished">Polish</translation>
+      <translation>波蘭文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="73"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>義大利文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
@@ -225,17 +225,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>丹麥文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>瑞典文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>捷克文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
@@ -255,7 +255,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
       <source>Arabic</source>
-      <translation type="unfinished">Arabic</translation>
+      <translation>阿拉伯文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
@@ -270,7 +270,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>巴斯克</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
@@ -280,12 +280,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>保加利亞語</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>孟加拉文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
@@ -295,7 +295,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>加泰隆尼亞文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
@@ -310,12 +310,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>克羅地亞語</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="44"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>荷蘭文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
@@ -365,7 +365,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="57"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>加里斯亞文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
@@ -385,7 +385,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>希臘文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
@@ -410,7 +410,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="70"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>匈牙利文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
@@ -440,274 +440,274 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
       <source>Komi (Russia)</source>
-      <translation type="unfinished">Komi (Russia)</translation>
+      <translation>科米（俄羅斯）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>朝鮮的</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
       <source>Kurdish (Turkey)</source>
-      <translation type="unfinished">Kurdish (Turkey)</translation>
+      <translation>庫爾德文（土耳其）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
       <source>Lao</source>
-      <translation type="unfinished">Lao</translation>
+      <translation>老撾</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
       <source>Latgalian</source>
-      <translation type="unfinished">Latgalian</translation>
+      <translation>Latgalian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>拉丁</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>立陶宛</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>拉脫維亞</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>低德語/低撒克遜人</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>盧森堡語（Letzeburgesch）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>馬其頓</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>馬拉雅拉姆語</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>蒙</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
       <source>Nepali</source>
-      <translation type="unfinished">Nepali</translation>
+      <translation>尼泊爾</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
       <source>Norwegian (Bokmål)</source>
-      <translation type="unfinished">Norwegian (Bokmål)</translation>
+      <translation>挪威文（Bokmål）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="92"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+      <translation>挪威文（尼諾斯克）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="93"/>
       <source>Occitan</source>
-      <translation type="unfinished">Occitan</translation>
+      <translation>奧克</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Papiamentu</source>
-      <translation type="unfinished">Papiamentu</translation>
+      <translation>Papiamentu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="95"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>波斯語</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>羅馬尼亞</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
       <source>Romansh</source>
-      <translation type="unfinished">Romansh</translation>
+      <translation>羅曼什</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Russian Medical Dictionary</source>
-      <translation type="unfinished">Russian Medical Dictionary</translation>
+      <translation>俄語醫學詞典</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation type="unfinished">Rusyn / Ruthene (Slovakia)</translation>
+      <translation>Rusyn / Ruthene（斯洛伐克）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
       <source>Serbian (Cyrillic)</source>
-      <translation type="unfinished">Serbian (Cyrillic)</translation>
+      <translation>塞爾維亞文（西里爾文）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
       <source>Serbian (Latin)</source>
-      <translation type="unfinished">Serbian (Latin)</translation>
+      <translation>塞爾維亞文（拉丁文）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>紹納語</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Sindhi</source>
-      <translation type="unfinished">Sindhi</translation>
+      <translation>信德</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="108"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>僧伽羅語</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>斯洛伐克</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="110"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>斯洛文尼亞</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
       <source>Swahili</source>
-      <translation type="unfinished">Swahili</translation>
+      <translation>斯瓦希裡</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="114"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>他加祿語</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Tajik</source>
-      <translation type="unfinished">Tajik</translation>
+      <translation>塔吉克</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="116"/>
       <source>Tatar (Russia)</source>
-      <translation type="unfinished">Tatar (Russia)</translation>
+      <translation>塔塔爾（俄羅斯）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
       <source>Telugu</source>
-      <translation type="unfinished">Telugu</translation>
+      <translation>泰盧固語</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
       <source>Thai</source>
-      <translation type="unfinished">Thai</translation>
+      <translation>泰國</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>土耳其文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
       <source>Turkmen</source>
-      <translation type="unfinished">Turkmen</translation>
+      <translation>土庫曼</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
       <source>Udmurt (Russia)</source>
-      <translation type="unfinished">Udmurt (Russia)</translation>
+      <translation>烏德穆特（俄羅斯）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>烏克蘭文</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>烏爾都語</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="124"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>烏茲別克</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Venda</source>
-      <translation type="unfinished">Venda</translation>
+      <translation>文達語</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="126"/>
       <source>Venetian</source>
-      <translation type="unfinished">Venetian</translation>
+      <translation>威尼斯</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>越南</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="128"/>
       <source>Welsh</source>
-      <translation type="unfinished">Welsh</translation>
+      <translation>威爾士</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>科薩</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="130"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>祖魯</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="256"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>下載錯誤</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="257"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>下載時發生錯誤：
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="271"/>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="378"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>檔案錯誤</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="272"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>無法儲存已下載的檔案：
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="379"/>
       <source>Could not remove dictionary file:
 %1</source>
-      <translation type="unfinished">Could not remove dictionary file:
-%1</translation>
+      <translation>無法刪除字典文件：
+％1</translation>
     </message>
   </context>
   <context>
@@ -1213,12 +1213,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Code (keyword)</source>
-      <translation type="unfinished">Code (keyword)</translation>
+      <translation>代碼（關鍵字）</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Code (type)</source>
-      <translation type="unfinished">Code (type)</translation>
+      <translation>Code (type)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
@@ -1404,32 +1404,32 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>圖片鏈接的標題</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="59"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>標題</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="20"/>
       <source>Select image file</source>
-      <translation type="unfinished">Select image file</translation>
+      <translation>選擇圖像文件</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="78"/>
       <source>Image files</source>
-      <translation type="unfinished">Image files</translation>
+      <translation>圖檔</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="79"/>
       <source>Any files</source>
-      <translation type="unfinished">Any files</translation>
+      <translation>任何檔案</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="85"/>
       <source>Select image to insert</source>
-      <translation type="unfinished">Select image to insert</translation>
+      <translation>選擇要插入的圖像</translation>
     </message>
   </context>
   <context>
@@ -1540,12 +1540,12 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="83"/>
       <source>Select local file or directory to link to</source>
-      <translation type="unfinished">Select local file or directory to link to</translation>
+      <translation>選擇要鏈接到的本地文件或目錄</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>筆記</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
@@ -1587,7 +1587,7 @@
       <location filename="../dialogs/linkdialog.cpp" line="254"/>
       <location filename="../dialogs/linkdialog.cpp" line="302"/>
       <source>Select directory to link to</source>
-      <translation type="unfinished">Select directory to link to</translation>
+      <translation>選擇要鏈接的目錄</translation>
     </message>
   </context>
   <context>
@@ -1600,7 +1600,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>查找筆記名稱</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="81"/>
@@ -2014,12 +2014,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1083"/>
       <source>Languages</source>
-      <translation type="unfinished">Languages</translation>
+      <translation>語言能力</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1088"/>
       <source>Spelling backend</source>
-      <translation type="unfinished">Spelling backend</translation>
+      <translation>拼寫後端</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1113"/>
@@ -2298,7 +2298,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2105"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>在標籤面板下顯示筆記列表</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2123"/>
@@ -2326,7 +2326,7 @@
       <location filename="../mainwindow.ui" line="2183"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
-      <translation type="unfinished">Open the Riot room</translation>
+      <translation>打開防暴室</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2210"/>
@@ -2483,39 +2483,39 @@
     <message>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>激活上下文菜單</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2503"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>從服務器導入書籤</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2508"/>
       <location filename="../mainwindow.ui" line="2511"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>切換全屏模式</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2522"/>
       <source>Typewriter mode</source>
-      <translation type="unfinished">Typewriter mode</translation>
+      <translation>打字機模式</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2534"/>
       <source>Check spelling</source>
-      <translation type="unfinished">Check spelling</translation>
+      <translation>檢查拼寫</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2542"/>
       <location filename="../mainwindow.cpp" line="11586"/>
       <source>Automatically detect</source>
-      <translation type="unfinished">Automatically detect</translation>
+      <translation>自動檢測</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2547"/>
       <source>Manage dictionaries</source>
-      <translation type="unfinished">Manage dictionaries</translation>
+      <translation>管理字典</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1883"/>
@@ -2676,23 +2676,23 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2960"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>中止</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2960"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>正在載入記事…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3165"/>
       <source>Delete conflicted database copies</source>
-      <translation type="unfinished">Delete conflicted database copies</translation>
+      <translation>刪除衝突的數據庫副本</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3190"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>刪除了％n個衝突的數據庫副本</numerusform>
       </translation>
     </message>
     <message>
@@ -2870,18 +2870,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5033"/>
       <source>Todo lists disabled!</source>
-      <translation type="unfinished">Todo lists disabled!</translation>
+      <translation>待辦事項列表已禁用！</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5034"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>您已禁用待辦事項列表。&lt;br /&gt;請檢查設置中的&lt;strong&gt; Todo &lt;/ strong&gt;配置！</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5278"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>發現&lt;strong&gt;％1 &lt;/ strong&gt;的任何項的&lt;strong&gt;％n &lt;/ strong&gt;個發生</numerusform>
       </translation>
     </message>
     <message>
@@ -2897,7 +2897,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5949"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>筆記資料夾</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6071"/>
@@ -3103,7 +3103,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9595"/>
       <source>Jump to the note's sub-folder</source>
-      <translation type="unfinished">Jump to the note's sub-folder</translation>
+      <translation>跳到筆記的子文件夾</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9599"/>
@@ -3204,7 +3204,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11527"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>退出全屏模式</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8109"/>
@@ -3664,7 +3664,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1546"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>離開無干擾模式</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2063"/>
@@ -3725,8 +3725,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3167"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>繼續自動刪除&lt;strong&gt;％n &lt;/ strong&gt;衝突的數據庫副本，這可能會阻止您自己的ownCloud同步過程？</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3739,8 +3739,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5277"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>找到&lt;strong&gt;％1 &lt;/ strong&gt;的&lt;strong&gt;％n &lt;/ strong&gt;個事件</numerusform>
       </translation>
     </message>
     <message>
@@ -3873,27 +3873,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="238"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>複製圖檔路徑</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="242"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>複製鏈接地址</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="245"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>導出生成的原始HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>HTML檔</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="279"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>將預覽導出為原始HTML文件</translation>
     </message>
   </context>
   <context>
@@ -3966,8 +3966,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="144"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+      <translation>
+        <numerusform>刪除&lt;strong&gt;％n &lt;/ strong&gt;個選定的文件？</numerusform>
       </translation>
     </message>
   </context>
@@ -4016,8 +4016,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="126"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+      <translation>
+        <numerusform>刪除&lt;strong&gt;％n &lt;/ strong&gt;個選定的文件？</numerusform>
       </translation>
     </message>
   </context>
@@ -4117,12 +4117,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1954"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>沒有書籤</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1955"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>在服務器上找不到書籤。</translation>
     </message>
   </context>
   <context>
@@ -4183,13 +4183,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="2795"/>
       <source>Note file path changed</source>
-      <translation type="unfinished">Note file path changed</translation>
+      <translation>筆記文件路徑已更改</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2796"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>檢測到音符路徑已更改。 您是否希望將所有出現的&lt;strong&gt;％1 &lt;/ strong&gt;鏈接替換為&lt;strong&gt;％2 &lt;/ strong&gt;，並將文件名&lt;strong&gt;％3 &lt;/ strong&gt;鏈接替換為&lt;strong&gt;％4 &lt;/ strong &gt;在&lt;strong&gt;％n &lt;/ strong&gt;筆記文件中？</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -4223,37 +4223,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>命令失敗！</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="75"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
+      <translation>命令&lt;code&gt;％1 &lt;/ code&gt;失敗！</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3953"/>
       <source>New connection</source>
-      <translation type="unfinished">New connection</translation>
+      <translation>新連接</translation>
     </message>
     <message>
       <location filename="../entities/cloudconnection.cpp" line="280"/>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>默認</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="219"/>
       <source>Note folder not found!</source>
-      <translation type="unfinished">Note folder not found!</translation>
+      <translation>找不到記事文件夾！</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="220"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation type="unfinished">Your note folder was not found any more! Do you want to select a new one?</translation>
+      <translation>找不到您的記事文件夾！ 您要選擇一個新的嗎？</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="226"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>請選擇資料夾作為您筆記的棲身之地</translation>
     </message>
   </context>
   <context>
@@ -4261,17 +4261,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="581"/>
       <source>No suggestions for %1</source>
-      <translation type="unfinished">No suggestions for %1</translation>
+      <translation>沒有％1的建議</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="592"/>
       <source>Ignore</source>
-      <translation type="unfinished">Ignore</translation>
+      <translation>忽視</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="593"/>
       <source>Add to Dictionary</source>
-      <translation type="unfinished">Add to Dictionary</translation>
+      <translation>添加到字典</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="649"/>
@@ -4281,7 +4281,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="650"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>筆記編輯當前處於禁用狀態，是否要再次允許？</translation>
     </message>
   </context>
   <context>
@@ -4294,32 +4294,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation type="unfinished">Advanced search / replace text</translation>
+      <translation>高級搜索/替換文字</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation type="unfinished">Close search</translation>
+      <translation>關閉搜尋</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation type="unfinished">Find in text</translation>
+      <translation>在文字中查找</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Search forward</source>
-      <translation type="unfinished">Search forward</translation>
+      <translation>向前搜索</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation type="unfinished">Search backward</translation>
+      <translation>向後搜索</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation type="unfinished">Replace with</translation>
+      <translation>用。。。來代替</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
@@ -4344,7 +4344,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation type="unfinished">Replace one text occurrence</translation>
+      <translation>替換一個文本出現</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -4354,12 +4354,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation type="unfinished">Replace all text occurrences</translation>
+      <translation>替換所有出現的文字</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation type="unfinished">Replace all</translation>
+      <translation>全部替換</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
@@ -4676,18 +4676,18 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>導入書籤</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>已導入％m個書籤的％v個</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="82"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>在服務器上找到了&lt;strong&gt;％n個書籤&lt;/ strong&gt;</numerusform>
       </translation>
     </message>
   </context>
@@ -5368,24 +5368,24 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;您仍然需要&lt;a href="https://owncloud.org/"&gt; &lt;span style =“ font-weight：600”&gt; ownCloud同步客戶端&lt;/ span&gt; &lt;/a&gt;（或其他桌面同步客戶端）同步您的筆記！&lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1011"/>
       <source>Select a connection to edit</source>
-      <translation type="unfinished">Select a connection to edit</translation>
+      <translation>選擇要編輯的連接</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1018"/>
       <location filename="../dialogs/settingsdialog.ui" line="1021"/>
       <source>Add connection</source>
-      <translation type="unfinished">Add connection</translation>
+      <translation>添加連接</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1032"/>
       <location filename="../dialogs/settingsdialog.ui" line="1035"/>
       <source>Remove connection</source>
-      <translation type="unfinished">Remove connection</translation>
+      <translation>刪除連接</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1116"/>
@@ -5422,22 +5422,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1049"/>
       <source>Connection name:</source>
-      <translation type="unfinished">Connection name:</translation>
+      <translation>連接名稱：</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1743"/>
       <source>Todo settings</source>
-      <translation type="unfinished">Todo settings</translation>
+      <translation>待辦事項設置</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1749"/>
       <source>Enable todo calendar support</source>
-      <translation type="unfinished">Enable todo calendar support</translation>
+      <translation>啟用待辦事項日曆支持</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1934"/>
       <source>Which cloud connection do you want to use?</source>
-      <translation type="unfinished">Which cloud connection do you want to use?</translation>
+      <translation>您要使用哪個雲連接？</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1946"/>
@@ -5467,12 +5467,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2151"/>
       <source>Bosnian</source>
-      <translation type="unfinished">Bosnian</translation>
+      <translation>波斯尼亞人</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2162"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>保加利亞語</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2173"/>
@@ -5492,12 +5492,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2228"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>巴斯克</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2261"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>愛沙尼亞語</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2272"/>
@@ -5512,7 +5512,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2305"/>
       <source>Irish</source>
-      <translation type="unfinished">Irish</translation>
+      <translation>愛爾蘭人</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2316"/>
@@ -5527,12 +5527,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2338"/>
       <source>Hausa</source>
-      <translation type="unfinished">Hausa</translation>
+      <translation>豪薩</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2349"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>希伯來語</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2360"/>
@@ -5547,32 +5547,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2393"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>冰島的</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2415"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>朝鮮的</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2426"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>庫爾德</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2437"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>拉脫維亞</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2448"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>立陶宛</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2459"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>馬其頓</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2481"/>
@@ -5582,42 +5582,42 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2525"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>烏茲別克</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2569"/>
       <source>Punjabi</source>
-      <translation type="unfinished">Punjabi</translation>
+      <translation>旁遮普語</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2514"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>波斯語</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2580"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>羅馬尼亞</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2602"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>塞爾維亞</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2613"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>塞爾維亞...</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2624"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>斯洛伐克</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2635"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>斯洛文尼亞</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2646"/>
@@ -5657,12 +5657,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2798"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation type="unfinished">You might also want to choose another editor color schema in the editor settings in dark mode.</translation>
+      <translation>您可能還想在暗模式下的編輯器設置中選擇其他編輯器配色方案。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2901"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>啟用黑暗模式圖標主題</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2831"/>
@@ -5687,7 +5687,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2891"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>強制系統圖標主題</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2997"/>
@@ -5707,7 +5707,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3832"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation type="unfinished">Use legacy way to link to notes, images and attachments</translation>
+      <translation>使用舊方法鏈接到便箋，圖像和附件</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3809"/>
@@ -5776,7 +5776,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4625"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>忽略代碼字體大小以允許縮放</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4641"/>
@@ -5806,92 +5806,92 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
       <source>Cloud connection:</source>
-      <translation type="unfinished">Cloud connection:</translation>
+      <translation>雲連接：</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation type="unfinished">Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+      <translation>在您的網絡瀏覽器中打開您自己的Cloud server應用程序密碼頁面，以為該應用程序創建新的應用程序密碼</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="934"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation type="unfinished">Open your ownCloud server App Password page</translation>
+      <translation>打開您自己的Cloud Server應用程序密碼頁面</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2668"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>越南</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3869"/>
       <source>Disable this if you want to launch the application without opening a note</source>
-      <translation type="unfinished">Disable this if you want to launch the application without opening a note</translation>
+      <translation>如果要啟動應用程序而不打開註釋，請禁用此功能</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3872"/>
       <source>Open last accessed note at application startup</source>
-      <translation type="unfinished">Open last accessed note at application startup</translation>
+      <translation>在應用程序啟動時打開上次訪問的筆記</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4280"/>
       <source>This is the best way to open an issue</source>
-      <translation type="unfinished">This is the best way to open an issue</translation>
+      <translation>這是打開問題的最好方法</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4294"/>
       <source>Please use this in the issue tracker</source>
-      <translation type="unfinished">Please use this in the issue tracker</translation>
+      <translation>請在問題跟踪器中使用它</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4297"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+      <translation>&amp;將調試信息複製到剪貼板</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4308"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation type="unfinished">Please don't use this in the issue tracker</translation>
+      <translation>請不要在問題跟踪器中使用它</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4654"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation type="unfinished">Use editor highlighting styles also for the preview</translation>
+      <translation>將編輯器突出顯示樣式也用於預覽</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4664"/>
       <source>Exporting</source>
-      <translation type="unfinished">Exporting</translation>
+      <translation>出口</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4670"/>
       <source>Use internal export styling for the PDF export and printing of the preview</source>
-      <translation type="unfinished">Use internal export styling for the PDF export and printing of the preview</translation>
+      <translation>使用內部導出樣式進行PDF導出和預覽打印</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5043"/>
       <source>Disable cursor blinking</source>
-      <translation type="unfinished">Disable cursor blinking</translation>
+      <translation>禁用光標閃爍</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5053"/>
       <source>Tabs and Indents</source>
-      <translation type="unfinished">Tabs and Indents</translation>
+      <translation>製表符和縮進</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5061"/>
       <source>Use tab character instead of spaces</source>
-      <translation type="unfinished">Use tab character instead of spaces</translation>
+      <translation>使用製表符而不是空格</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5068"/>
       <source>Indent:</source>
-      <translation type="unfinished">Indent:</translation>
+      <translation>縮進：</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5311"/>
       <source>Show the number of matches in each note</source>
-      <translation type="unfinished">Show the number of matches in each note</translation>
+      <translation>顯示每個音符中的匹配數</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5466"/>
@@ -5916,12 +5916,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5581"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-      <translation type="unfinished">Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</translation>
+      <translation>代替筆記列表，使用帶有所有子文件夾的筆記樹（如果已為筆記文件夾打開了它們）</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5752"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation type="unfinished">Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</translation>
+      <translation>可以在&lt;i&gt; Window / Panels &lt;/ i&gt;主菜單中打開和關閉面板，還可以為不同的面板配置配置不同的&lt;i&gt; Workspaces &lt;/ i&gt;。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5829"/>
@@ -5976,7 +5976,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5925"/>
       <source>Show security token</source>
-      <translation type="unfinished">Show security token</translation>
+      <translation>顯示安全令牌</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5961"/>
@@ -6759,7 +6759,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2065"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+      <translation>請不要在問題跟踪器中使用它，而是將調試信息文本直接複製到問題中。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2072"/>
@@ -6860,7 +6860,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3999"/>
       <source>The debug information was copied to the clipboard.</source>
-      <translation type="unfinished">The debug information was copied to the clipboard.</translation>
+      <translation>調試信息已復製到剪貼板。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2640"/>
@@ -7102,7 +7102,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="73"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>允許註釋編輯</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
@@ -7180,37 +7180,37 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
       <source>large</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">large</translation>
+      <translation>大</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="235"/>
       <source>medium</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">medium</translation>
+      <translation>介質</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="236"/>
       <source>small</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">small</translation>
+      <translation>小</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="237"/>
       <source>variant 0</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 0</translation>
+      <translation>變體 0</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="238"/>
       <source>variant 1</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 1</translation>
+      <translation>變體 1</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="239"/>
       <source>variant 2</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 2</translation>
+      <translation>變體 2</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
@@ -7252,19 +7252,19 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="325"/>
       <source>%1 (%2) [%3]</source>
       <comment>dictionary name; %1 = language name, %2 = country name and %3 = language variant name</comment>
-      <translation type="unfinished">%1 (%2) [%3]</translation>
+      <translation>%1 (%2) [%3]</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="328"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = country name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="331"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7307,7 +7307,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation type="unfinished">Select table layout or enter text:</translation>
+      <translation>選擇表格佈局或輸入文本：</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -7664,7 +7664,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>查找筆記名稱</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="28"/>
@@ -7962,22 +7962,22 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>安全令牌</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</translation>
+      <translation>要讓您的QOwnNotes瀏覽器擴展訪問您的筆記，請將此安全令牌粘貼到瀏覽器擴展的設置中：</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>生成新令牌</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation type="unfinished">Copy token</translation>
+      <translation>複製令牌</translation>
     </message>
   </context>
   <context>
@@ -7991,7 +7991,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation type="unfinished">plain-text file markdown note taking with ownCloud integration</translation>
+      <translation>純文本文件降價筆記，具有ownCloud集成</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
