@@ -2263,10 +2263,8 @@ void SettingsDialog::setupNoteFolderPage() {
     // populate the note folder list
     if (noteFoldersCount > 0) {
         Q_FOREACH(NoteFolder noteFolder, noteFolders) {
-                QListWidgetItem *item =
-                        new QListWidgetItem(noteFolder.getName());
-                item->setData(Qt::UserRole,
-                              noteFolder.getId());
+                auto *item = new QListWidgetItem(noteFolder.getName());
+                item->setData(Qt::UserRole, noteFolder.getId());
                 ui->noteFolderListWidget->addItem(item);
             }
 
