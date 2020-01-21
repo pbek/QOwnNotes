@@ -110,7 +110,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
                             text.startsWith(QLatin1String("```")) ||
                             text.startsWith(QLatin1String("~~~"));
     const QString &next = currentBlock().next().text();
-    const bool isHeading = text.at(0) == QChar('#');
+    const bool isHeading = !text.isEmpty() && text.at(0) == QChar('#');
     const bool isSetextHeading = (next.startsWith(QLatin1String("===")) ||
                                   next.startsWith(QLatin1String("---"))) &&
                                   !text.isEmpty();
