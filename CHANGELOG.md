@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.1.13
+- fixed not detected external note changes of the current note if the event for
+  the change in the current note comes after the event that the note folder was
+  modified (for [#1597](https://github.com/pbek/QOwnNotes/issues/1597))
+
 ## 20.1.12
 - fixed a memory leak in the preview (for [#1594](https://github.com/pbek/QOwnNotes/pull/1594), thank you @Waqar144)
 - you can now browse and modify your **todo list** items in a tree instead of a list
