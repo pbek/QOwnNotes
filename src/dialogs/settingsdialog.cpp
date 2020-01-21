@@ -166,6 +166,11 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     // we don't need app instance settings on OS X
     ui->appInstanceGroupBox->setVisible(false);
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(false);
+
+    // Qt::TargetMoveAction seems to be broken on macOS, the item vanishes after dropping
+    // Qt::CopyAction seens to be the only action that works
+    ui->noteFolderListWidget->setDefaultDropAction(Qt::CopyAction);
+    ui->scriptListWidget->setDefaultDropAction(Qt::CopyAction);
 #endif
 
     // disable the shortcut page if there is no main window yet
