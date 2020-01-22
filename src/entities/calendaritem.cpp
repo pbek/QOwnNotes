@@ -591,7 +591,6 @@ QString CalendarItem::generateNewICSData() {
     icsDataHash["SUMMARY"] = summary;
     icsDataHash["DESCRIPTION"] = description;
     icsDataHash["UID"] = uid;
-    icsDataHash["RELATED-TO"] = relatedUid;
     icsDataHash["PRIORITY"] = QString::number(priority);
     icsDataHash["PERCENT-COMPLETE"] = QString::number(completed ? 100 : 0);
     icsDataHash["STATUS"] = completed ? "COMPLETED" : "NEEDS-ACTION";
@@ -600,6 +599,10 @@ QString CalendarItem::generateNewICSData() {
 //            modified.toUTC().toString(ICS_DATETIME_FORMAT);
     icsDataHash["CREATED"] = created.toString(ICS_DATETIME_FORMAT);
     icsDataHash["LAST-MODIFIED"] = modified.toString(ICS_DATETIME_FORMAT);
+
+    if (!relatedUid.isEmpty()) {
+        icsDataHash["RELATED-TO"] = relatedUid;
+    }
 
     if (completed) {
 //        icsDataHash["COMPLETED"] =
@@ -1054,11 +1057,12 @@ QString CalendarItem::decodeICSDataLine(QString line) {
 }
 
 CalendarItem CalendarItem::createNewTodoItem(
-        QString summary, QString calendar) {
+        QString summary, QString calendar, QString relatedUid) {
     QString uuidString = Utils::Misc::createUuidString();
     CalendarItem calItem;
     calItem.setSummary(summary);
     calItem.setCalendar(calendar);
+    calItem.setRelatedUid(relatedUid);
     calItem.setUrl(QUrl(getCurrentCalendarUrl() + "qownnotes-" + uuidString
                         + ".ics"));
     calItem.setICSData("BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:ownCloud Calendar"

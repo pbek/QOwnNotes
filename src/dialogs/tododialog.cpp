@@ -12,6 +12,7 @@
 #include <utils/gui.h>
 #include <mainwindow.h>
 #include <QDebug>
+#include <QInputDialog>
 
 TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
                        QWidget *parent) :
@@ -534,10 +535,10 @@ void TodoDialog::on_todoItemLoadingProgressBar_valueChanged(int value) {
     todoItemLoadingProgressBarHideIfOnMaximum();
 }
 
-void TodoDialog::on_newItemEdit_returnPressed() {
+void TodoDialog::createNewTodoItem(const QString &name, const QString &relatedUid)
+{
     CalendarItem calItem = CalendarItem::createNewTodoItem(
-            ui->newItemEdit->text(),
-            ui->todoListSelector->currentText());
+            name, ui->todoListSelector->currentText(), relatedUid);
     lastCreatedCalendarItem = calItem;
 
     // set the focus to the description edit after we loaded the tasks
@@ -548,12 +549,15 @@ void TodoDialog::on_newItemEdit_returnPressed() {
     // post the calendar item to the server
     ownCloud->postCalendarItemToServer(calItem, this);
 
-//    if ( calItem.isFetched() )
-//    {
-//        qDebug() << __func__ << " - 'calItem': " << calItem;
-//        reloadTodoListItems();
-//    }
+    //    if ( calItem.isFetched() )
+    //    {
+    //        qDebug() << __func__ << " - 'calItem': " << calItem;
+    //        reloadTodoListItems();
+    //    }
+}
 
+void TodoDialog::on_newItemEdit_returnPressed() {
+    createNewTodoItem(ui->newItemEdit->text());
     ui->newItemEdit->clear();
 }
 
@@ -828,5 +832,27 @@ void TodoDialog::on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int co
 
         // post the calendar item to the server
         ownCloud->postCalendarItemToServer(calItem, this);
+    }
+}
+
+void TodoDialog::on_todoItemTreeWidget_customContextMenuRequested(const QPoint &pos) {
+    const QPoint globalPos = ui->todoItemTreeWidget->mapToGlobal(pos);
+    auto *menu = new QMenu();
+
+    QAction *newTaskAction = menu->addAction(tr("Create sub-task"));
+    QTreeWidgetItem *item = ui->todoItemTreeWidget->currentItem();
+
+    QAction *selectedItem = menu->exec(globalPos);
+    if (selectedItem) {
+        if (selectedItem == newTaskAction) {
+            bool ok;
+            QString name = QInputDialog::getText(this, tr("Create new sub-task"),
+                                                 tr("Name:"), QLineEdit::Normal,
+                                                 tr("New sub-task"), &ok);
+
+            if (ok) {
+                createNewTodoItem(name, item->data(0, Qt::UserRole).toString());
+            }
+        }
     }
 }

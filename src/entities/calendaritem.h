@@ -54,7 +54,7 @@ public:
     void setETag(QString text);
     static QList<QUrl> fetchAllUrlsByCalendar(QString calendar);
     void setCalendar(QString text);
-    static CalendarItem createNewTodoItem(QString summary, QString calendar);
+    static CalendarItem createNewTodoItem(QString summary, QString calendar, QString relatedUid = "");
     void setUrl(QUrl url);
     void setUid(QString text);
     void setRelatedUid(QString text);

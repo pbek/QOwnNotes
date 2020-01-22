@@ -51,6 +51,7 @@ private slots:
     void clearCacheAndReloadTodoList();
     void on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
+    void on_todoItemTreeWidget_customContextMenuRequested(const QPoint &pos);
 
 private:
     Ui::TodoDialog *ui;
@@ -70,6 +71,7 @@ private:
     void updateCurrentCalendarItemWithFormData();
     void searchForSearchLineTextInNoteTextEdit();
     void searchInDescriptionTextEdit(QString &str);
+    void createNewTodoItem(const QString &name = "", const QString &relatedUid = "");
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event);
