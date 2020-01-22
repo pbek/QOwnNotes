@@ -6,6 +6,8 @@
 - more improvements for the markdown highlighting were made
   (for [#1598](https://github.com/pbek/QOwnNotes/issues/1598), thank you @Waqar144)
 - fixed four spaces code blocks again (for [#1558](https://github.com/pbek/QOwnNotes/issues/1558), thank you @Waqar144)
+- added more Chinese Simplified, Chinese Traditional, Indonesian, Hindi, Kurdish,
+  Filipino translation (thank you Fabijenna)
 
 ## 20.1.13
 - fixed not detected external note changes of the current note if the event for
