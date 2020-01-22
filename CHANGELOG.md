@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 20.1.14
+- you can now also **create sub-tasks** in the **Todo list dialog** by right-clicking
+  on a todo-item (for [#1596](https://github.com/pbek/QOwnNotes/issues/1596))
+- more improvements for the markdown highlighting were made
+  (for [#1598](https://github.com/pbek/QOwnNotes/issues/1598), thank you @Waqar144)
+- fixed four spaces code blocks again (for [#1558](https://github.com/pbek/QOwnNotes/issues/1558), thank you @Waqar144)
+
 ## 20.1.13
 - fixed not detected external note changes of the current note if the event for
   the change in the current note comes after the event that the note folder was
