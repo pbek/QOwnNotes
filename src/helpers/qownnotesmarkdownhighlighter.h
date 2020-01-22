@@ -47,11 +47,8 @@ public:
 
 protected:
     void highlightBlock(const QString &text) Q_DECL_OVERRIDE;
-    void highlightMarkdown(const QString& text);
     void highlightBrokenNotesLink(const QString& text);
 
-    //Unset Misspelled formatting
-    void unsetMisspelled(int start, int count);
     //Set the format of a word as misspelled i.e., red wavy underline
     void setMisspelled(const int start, const int count);
     void highlightSpellChecking(const QString &text);

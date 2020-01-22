@@ -87,12 +87,19 @@ void QOwnNotesMarkdownHighlighter::setCodeHighlighting(bool state)
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
+    if (currentBlockState() == HeadlineEnd) {
+        currentBlock().previous().setUserState(NoState);
+        addDirtyBlock(currentBlock().previous());
+    }
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
 
     //do the markdown highlighting before the spellcheck highlighting
     //if we do it afterwards, it overwrites the spellcheck highlighting
-    highlightMarkdown(text);
+    MarkdownHighlighter::highlightMarkdown(text);
+    if (text.contains(QLatin1String("note://")) || text.contains(QLatin1String(".md"))) {
+        highlightBrokenNotesLink(text);
+    }
 
     // skip spell checking empty blocks and blocks with just "spaces"
     // the rest of the highlighting needs to be done e.g. for code blocks with empty lines
@@ -103,51 +110,6 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     }
 
     _highlightingFinished = true;
-}
-
-void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
-    const bool isCodeBlock = MarkdownHighlighter::isCodeBlock(previousBlockState()) ||
-                            text.startsWith(QLatin1String("```")) ||
-                            text.startsWith(QLatin1String("~~~"));
-    const QString &next = currentBlock().next().text();
-    const bool isHeading = !text.isEmpty() && text.at(0) == QChar('#');
-    const bool isSetextHeading = (next.startsWith(QLatin1String("===")) ||
-                                  next.startsWith(QLatin1String("---"))) &&
-                                  !text.isEmpty();
-    const bool isSetextHeadingUnderline = (text.startsWith(QLatin1String("===")) ||
-                                  text.startsWith(QLatin1String("---"))) &&
-                                  !currentBlock().previous().text().isEmpty();
-    const bool isBlockHeading = isHeading || isSetextHeading || isSetextHeadingUnderline;
-
-    if (!text.isEmpty() && !isCodeBlock) {
-        if (!isSetextHeading && !isSetextHeadingUnderline)
-            highlightAdditionalRules(_highlightingRulesPre, text);
-
-        // needs to be called after the horizontal ruler highlighting
-        if (isBlockHeading)
-            highlightHeadline(text);
-
-        highlightAdditionalRules(_highlightingRulesAfter, text);
-
-        highlightInlineRules(text);
-
-        // highlight broken note links
-        if (text.contains(QLatin1String("note://")) || text.contains(QLatin1String(".md"))) {
-            highlightBrokenNotesLink(text);
-        }
-    }
-
-    if (!isBlockHeading && commentHighlightingOn)
-        highlightCommentBlock(text);
-
-    if (codeHighlightingOn) {
-        if (isCodeBlock) {
-            highlightCodeFence(text);
-        }
-    }
-
-    highlightFrontmatterBlock(text);
-
 }
 
 /**
@@ -217,20 +179,6 @@ void QOwnNotesMarkdownHighlighter::setMisspelled(const int start, const int coun
     format.setFontUnderline(true);
     format.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
     format.setUnderlineColor(Qt::red);
-    setFormat(start, count, format);
-}
-
-void QOwnNotesMarkdownHighlighter::unsetMisspelled(int start, int count) {
-    //keep the existing format
-    QTextCharFormat format = QSyntaxHighlighter::format(start+1);
-
-    //turn off the spell-check underline if it is turned on.
-    //Note: Don't use - format.fontUnderline() - to check whether
-    //font underlining is on. It is often off but the lines are appearing
-    //so we just check whether it has spellcheck underline.
-    if(format.underlineStyle() == QTextCharFormat::SpellCheckUnderline) {
-        format.setFontUnderline(false);
-    }
     setFormat(start, count, format);
 }
 
