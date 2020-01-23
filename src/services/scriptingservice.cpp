@@ -991,6 +991,24 @@ void ScriptingService::noteTextEditSelectCurrentLine() {
 }
 
 /**
+ * Select the current word in the note text edit
+ */
+void ScriptingService::noteTextEditSelectCurrentWord() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            QStringLiteral("scripting/") % QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
+        QTextCursor c = textEdit->textCursor();
+        c.select(QTextCursor::WordUnderCursor);
+        textEdit->setTextCursor(c);
+    }
+#endif
+}
+
+/**
  * Sets the currently selected text in the note text edit
  *
  * @param start
