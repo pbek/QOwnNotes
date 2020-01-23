@@ -7640,22 +7640,22 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="842"/>
       <source>Create sub-task</source>
-      <translation type="unfinished">Create sub-task</translation>
+      <translation>Создать подзадачу</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="849"/>
       <source>Create new sub-task</source>
-      <translation type="unfinished">Create new sub-task</translation>
+      <translation>Создать новую подзадачу</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="850"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Имя:</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="851"/>
       <source>New sub-task</source>
-      <translation type="unfinished">New sub-task</translation>
+      <translation>Новая подзадача</translation>
     </message>
   </context>
   <context>

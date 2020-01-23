@@ -7559,22 +7559,22 @@ Ba za a sake yin wannan ba!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="842"/>
       <source>Create sub-task</source>
-      <translation type="unfinished">Create sub-task</translation>
+      <translation>Subirƙiri sub-aiki</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="849"/>
       <source>Create new sub-task</source>
-      <translation type="unfinished">Create new sub-task</translation>
+      <translation>Newirƙiri sabon aikin-ƙasa</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="850"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Suna:</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="851"/>
       <source>New sub-task</source>
-      <translation type="unfinished">New sub-task</translation>
+      <translation>Sabon aiki</translation>
     </message>
   </context>
   <context>

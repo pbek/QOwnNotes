@@ -7557,22 +7557,22 @@ Detta kan inte göras ogjort!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="842"/>
       <source>Create sub-task</source>
-      <translation type="unfinished">Create sub-task</translation>
+      <translation>Skapa deluppgift</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="849"/>
       <source>Create new sub-task</source>
-      <translation type="unfinished">Create new sub-task</translation>
+      <translation>Skapa en ny deluppgift</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="850"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Namn:</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="851"/>
       <source>New sub-task</source>
-      <translation type="unfinished">New sub-task</translation>
+      <translation>Ny deluppgift</translation>
     </message>
   </context>
   <context>

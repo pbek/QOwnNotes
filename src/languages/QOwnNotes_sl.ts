@@ -7643,22 +7643,22 @@ To ni mogoče razveljaviti!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="842"/>
       <source>Create sub-task</source>
-      <translation type="unfinished">Create sub-task</translation>
+      <translation>Ustvari podnalogo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="849"/>
       <source>Create new sub-task</source>
-      <translation type="unfinished">Create new sub-task</translation>
+      <translation>Ustvari novo pod nalogo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="850"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Ime:</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="851"/>
       <source>New sub-task</source>
-      <translation type="unfinished">New sub-task</translation>
+      <translation>Nova pod-naloga</translation>
     </message>
   </context>
   <context>

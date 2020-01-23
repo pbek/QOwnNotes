@@ -7558,22 +7558,22 @@ Non sarà possibile annullare l'operazione!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="842"/>
       <source>Create sub-task</source>
-      <translation type="unfinished">Create sub-task</translation>
+      <translation>Crea sotto-attività</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="849"/>
       <source>Create new sub-task</source>
-      <translation type="unfinished">Create new sub-task</translation>
+      <translation>Crea nuova sotto-attività</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="850"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Nome:</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="851"/>
       <source>New sub-task</source>
-      <translation type="unfinished">New sub-task</translation>
+      <translation>Nuova sotto-attività</translation>
     </message>
   </context>
   <context>

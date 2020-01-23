@@ -7,7 +7,16 @@
   thank you @Waqar144)
 - there now is a new scripting command `script.noteTextEditSelectCurrentWord()`
   to select the current word in the note text edit (for [#1603](https://github.com/pbek/QOwnNotes/pull/1603), thank you @jfx2006)
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#select-the-current-word-in-the-note-text-edit)
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#select-the-current-word-in-the-note-text-edit)
+- added more Cebuano, Italian, Chinese Simplified, Slovak, Chinese Traditional,
+  Slovenian, Croatian, Spanish, Czech, Swedish, Danish, Ukrainian, Dutch,
+  Urdu (Pakistan), Uzbek, Estonian, Vietnamese, Finnish, French, Greek, Hausa,
+  Hindi, Hungarian, Icelandic, Indonesian, Irish, Japanese, Korean, Kurdish,
+  Latvian, Lithuanian, Macedonian, Norwegian, Persian, Albanian, Polish, Basque,
+  Portuguese, Bosnian, Punjabi, Bulgarian, Romanian, Serbian (Cyrillic), Russian,
+  German, Catalan translation (thank you Fabijenna, mlocati, unchase, rakekniven,
+  MGuerra, tiwi90)
 
 ## 20.1.14
 - you can now also **create sub-tasks** in the **Todo list dialog** by right-clicking

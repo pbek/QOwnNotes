@@ -1213,32 +1213,32 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Code (keyword)</source>
-      <translation type="unfinished">Code (keyword)</translation>
+      <translation>Mã (từ khóa)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Code (type)</source>
-      <translation type="unfinished">Code (type)</translation>
+      <translation>Mã (loại)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Code (comment)</source>
-      <translation type="unfinished">Code (comment)</translation>
+      <translation>Mã (bình luận)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Code (string)</source>
-      <translation type="unfinished">Code (string)</translation>
+      <translation>Mã (chuỗi)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Code (built in)</source>
-      <translation type="unfinished">Code (built in)</translation>
+      <translation>Mã (tích hợp)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Code (num literal)</source>
-      <translation type="unfinished">Code (num literal)</translation>
+      <translation>Mã (số bằng chữ)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
@@ -7535,7 +7535,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="851"/>
       <source>New sub-task</source>
-      <translation type="unfinished">New sub-task</translation>
+      <translation>Nhiệm vụ phụ mới</translation>
     </message>
   </context>
   <context>

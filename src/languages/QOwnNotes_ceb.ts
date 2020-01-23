@@ -5846,12 +5846,12 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation type="unfinished">Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+      <translation>Gibuksan ang imong kaugalingon nga panid sa Server sa App Password sa imong webbrowser aron makahimo usa ka bag-ong password sa app alang sa aplikasyon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="934"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation type="unfinished">Open your ownCloud server App Password page</translation>
+      <translation>Ablihi ang imong kaugalingon nga panid sa liga sa App Password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2668"/>
@@ -5871,27 +5871,27 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4280"/>
       <source>This is the best way to open an issue</source>
-      <translation type="unfinished">This is the best way to open an issue</translation>
+      <translation>Kini ang pinakamaayo nga paagi aron maablihan ang usa ka isyu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4294"/>
       <source>Please use this in the issue tracker</source>
-      <translation type="unfinished">Please use this in the issue tracker</translation>
+      <translation>Palihug gamita kini sa isyu sa tracker</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4297"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+      <translation>&amp;Kopyaha ang impormasyon sa debug sa clipboard</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4308"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation type="unfinished">Please don't use this in the issue tracker</translation>
+      <translation>Palihug ayaw gamita kini sa isyu sa tracker</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4654"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation type="unfinished">Use editor highlighting styles also for the preview</translation>
+      <translation>Paggamit usab nga mga estilo nga nagpasiugda sa editor alang sa pag-preview</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4664"/>
@@ -5911,12 +5911,12 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5053"/>
       <source>Tabs and Indents</source>
-      <translation type="unfinished">Tabs and Indents</translation>
+      <translation>Mga Tab ug Indents</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5061"/>
       <source>Use tab character instead of spaces</source>
-      <translation type="unfinished">Use tab character instead of spaces</translation>
+      <translation>Paggamit karakter nga tab imbis nga mga luna</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5068"/>
@@ -5956,7 +5956,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5752"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation type="unfinished">Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</translation>
+      <translation>Ang mga panel mahimo nga ma-on ug i-off sa &lt;i&gt; Window / Panels &lt;/i&gt; ang main menu ug mahimo ka usab makatag-an sa lainlain nga &lt;i&gt; Mga Lugar sa trabaho &lt;/i&gt; alang sa lainlaing mga pag-configure sa panel.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5829"/>
@@ -7275,13 +7275,13 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="249"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yo, old russian</translation>
+      <translation>tigulang nga russian</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="250"/>
       <source>extended</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">extended</translation>
+      <translation>gipadako</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="325"/>
@@ -7299,7 +7299,7 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="331"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7342,7 +7342,7 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation type="unfinished">Select table layout or enter text:</translation>
+      <translation>Pilia ang layout sa lamesa o pagsulud sa teksto:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -7556,22 +7556,22 @@ Kini dili mahimong dili mahuman!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="842"/>
       <source>Create sub-task</source>
-      <translation type="unfinished">Create sub-task</translation>
+      <translation>Paghimo sub-buluhaton</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="849"/>
       <source>Create new sub-task</source>
-      <translation type="unfinished">Create new sub-task</translation>
+      <translation>Paghimo bag-ong sub-buluhaton</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="850"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Ngalan:</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="851"/>
       <source>New sub-task</source>
-      <translation type="unfinished">New sub-task</translation>
+      <translation>Bag-ong sub-buluhaton</translation>
     </message>
   </context>
   <context>
