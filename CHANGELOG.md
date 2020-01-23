@@ -1,7 +1,12 @@
 # QOwnNotes Changelog
 
+## 20.1.15
+- fixed stacked code block highlighting and improved non-fenced code block highlighting
+  (for [#1558](https://github.com/pbek/QOwnNotes/issues/1558), [#1602](https://github.com/pbek/QOwnNotes/issues/1602),
+  [#1601](https://github.com/pbek/QOwnNotes/pull/1601) and [#1598](https://github.com/pbek/QOwnNotes/issues/1598),
+  thank you @Waqar144)
 - there now is a new scripting command `script.noteTextEditSelectCurrentWord()`
-  to select the current word in the note text edit
+  to select the current word in the note text edit (for [#1603](https://github.com/pbek/QOwnNotes/pull/1603), thank you @jfx2006)
     - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#select-the-current-word-in-the-note-text-edit)
 
 ## 20.1.14
