@@ -63,6 +63,7 @@ public:
     Q_INVOKABLE QString noteTextEditSelectedText();
     Q_INVOKABLE void noteTextEditSelectAll();
     Q_INVOKABLE void noteTextEditSelectCurrentLine();
+    Q_INVOKABLE void noteTextEditSelectCurrentWord();
     Q_INVOKABLE void noteTextEditSetSelection(int start, int end);
     Q_INVOKABLE int noteTextEditSelectionStart();
     Q_INVOKABLE int noteTextEditSelectionEnd();

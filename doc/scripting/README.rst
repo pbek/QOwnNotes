@@ -528,6 +528,27 @@ Usage in QML
 
     script.noteTextEditSelectCurrentLine();
 
+Select the current word in the note text edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Selects the current line in the note text edit
+     */
+    void ScriptingService::noteTextEditSelectCurrentWord();
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    script.noteTextEditSelectCurrentWord();
+
+
 Set the currently selected text in the note text edit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
