@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 20.1.16
+- you now can set a custom editor width in the `Window / Editor width` menu
+  (for [#1604](https://github.com/pbek/QOwnNotes/issues/1604))
+- all search results in the note text edit are now highlighted while searching
+  (for [#1512](https://github.com/pbek/QOwnNotes/issues/1512))
+  - the speed of the search was slightly improved
+  - you can now do regular expressions searches also case insensitive
+
 ## 20.1.15
 - fixed stacked code block highlighting and improved non-fenced code block highlighting
   (for [#1558](https://github.com/pbek/QOwnNotes/issues/1558), [#1602](https://github.com/pbek/QOwnNotes/issues/1602),
