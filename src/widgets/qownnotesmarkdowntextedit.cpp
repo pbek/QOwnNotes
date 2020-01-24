@@ -313,6 +313,9 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
                 case Wide:
                     characterAmount = 100;
                     break;
+                case Custom:
+                    characterAmount = settings.value(QStringLiteral("DistractionFreeMode/editorWidthCustom"), 80).toInt();
+                    break;
                 default:
                 case Narrow:
                     characterAmount = 60;

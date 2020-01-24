@@ -1129,6 +1129,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionEditorWidthMedium"/>
      <addaction name="actionEditorWidthWide"/>
      <addaction name="actionEditorWidthFull"/>
+     <addaction name="actionEditorWidthCustom"/>
     </widget>
     <widget class="QMenu" name="menuWorkspaces">
      <property name="title">
@@ -2547,6 +2548,17 @@ p, li { white-space: pre-wrap; }
     <string>Manage dictionaries</string>
    </property>
   </action>
+  <action name="actionEditorWidthCustom">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Custom</string>
+   </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2595,9 +2607,9 @@ p, li { white-space: pre-wrap; }
   <tabstop>noteTextView</tabstop>
  </tabstops>
  <resources>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

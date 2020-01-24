@@ -16,7 +16,8 @@ public:
         Narrow = 1,
         Medium,
         Wide,
-        Full
+        Full,
+        Custom
     };
     Q_ENUMS(EditorWidthMode)
 

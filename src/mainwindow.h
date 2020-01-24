@@ -615,6 +615,8 @@ private slots:
 
     void on_encryptedNoteTextEdit_modificationChanged(bool arg1);
 
+    void on_actionEditorWidthCustom_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

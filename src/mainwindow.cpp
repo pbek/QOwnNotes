@@ -430,6 +430,7 @@ MainWindow::MainWindow(QWidget *parent) :
     dfmEditorWidthActionGroup->addAction(ui->actionEditorWidthMedium);
     dfmEditorWidthActionGroup->addAction(ui->actionEditorWidthWide);
     dfmEditorWidthActionGroup->addAction(ui->actionEditorWidthFull);
+    dfmEditorWidthActionGroup->addAction(ui->actionEditorWidthCustom);
     dfmEditorWidthActionGroup->setExclusive(true);
 
     connect(dfmEditorWidthActionGroup, &QActionGroup::triggered,
@@ -2222,6 +2223,9 @@ void MainWindow::readSettings() {
             break;
         case QOwnNotesMarkdownTextEdit::Full:
             ui->actionEditorWidthFull->setChecked(true);
+            break;
+        case QOwnNotesMarkdownTextEdit::Custom:
+            ui->actionEditorWidthCustom->setChecked(true);
             break;
         default:
         case QOwnNotesMarkdownTextEdit::Narrow:
@@ -11687,5 +11691,18 @@ void MainWindow::on_encryptedNoteTextEdit_modificationChanged(bool arg1) {
 
     if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText())) {
         handleNoteTextChanged();
+    }
+}
+
+void MainWindow::on_actionEditorWidthCustom_triggered() {
+    QSettings settings;
+    bool ok;
+    int characters = QInputDialog::getInt(
+                this, tr("Custom editor width"), tr("Characters:"),
+                settings.value("DistractionFreeMode/editorWidthCustom", 80).toInt(),
+                20, 10000, 1, &ok);
+
+    if (ok) {
+        settings.setValue("DistractionFreeMode/editorWidthCustom", characters);
     }
 }
