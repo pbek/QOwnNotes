@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.1.17
+- on Windows the application will now automatically be shown if the the update
+  dialog is triggered, because otherwise Windows seems to quit the application
+  when the update dialog is closed while the application is hidden
+  (for [#1514](https://github.com/pbek/QOwnNotes/issues/1514))
+
 ## 20.1.16
 - you now can set a custom editor width in the `Window / Editor width` menu
   (for [#1604](https://github.com/pbek/QOwnNotes/issues/1604))

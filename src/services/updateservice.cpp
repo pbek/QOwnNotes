@@ -209,6 +209,14 @@ void UpdateService::onResult(QNetworkReply *reply) {
             // set the current release version string
             _currentReleaseVersionString = releaseVersionString;
 
+#ifdef Q_OS_WIN32
+            // on Windows the application quits if the update dialog is closed
+            // while the application is hidden
+            if (mainWindow->isHidden()) {
+                mainWindow->show();
+            }
+#endif
+
             // open the update dialog
             _updateDialog = new UpdateDialog(
                     Q_NULLPTR, changesHtml, releaseUrl,
