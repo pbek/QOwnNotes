@@ -5,14 +5,19 @@
   dialog is triggered, because otherwise Windows seems to quit the application
   when the update dialog is closed while the application is hidden
   (for [#1514](https://github.com/pbek/QOwnNotes/issues/1514))
+- highlighting of markdown lists (ordered/unordered/checked/unchecked) have been
+  re-written (for [#1598](https://github.com/pbek/QOwnNotes/issues/1598), thank you @Waqar144)
+    - list parsing is much faster now
+    - ordered lists can optionally have a `)` instead of a `.` as the character
+      after the number, both these lists will be completed if you press <kbd>Enter</kbd>
 
 ## 20.1.16
 - you now can set a custom editor width in the `Window / Editor width` menu
   (for [#1604](https://github.com/pbek/QOwnNotes/issues/1604))
 - all search results in the note text edit are now highlighted while searching
   (for [#1512](https://github.com/pbek/QOwnNotes/issues/1512))
-  - the speed of the search was slightly improved
-  - you can now do regular expressions searches also case insensitive
+    - the speed of the search was slightly improved
+    - you can now do regular expressions searches also case insensitive
 
 ## 20.1.15
 - fixed stacked code block highlighting and improved non-fenced code block highlighting
