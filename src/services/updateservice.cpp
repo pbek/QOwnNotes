@@ -52,7 +52,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 
     // check if we want to fake the version number to trigger an update
     if (settings.value("Debug/fakeOldVersionNumber").toBool()) {
-        version = "17.5.0";
+        version = "20.1.15";
         isDebug = true;
     }
 
