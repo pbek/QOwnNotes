@@ -10,6 +10,14 @@
     - list parsing is much faster now
     - ordered lists can optionally have a `)` instead of a `.` as the character
       after the number, both these lists will be completed if you press <kbd>Enter</kbd>
+- added more Russian, Bengali, Indonesian, Irish, Italian, Japanese, Korean,
+  Kurdish, Latvian, Lithuanian, Macedonian, Norwegian, Persian, Polish, Bosnian,
+  Portuguese, Bulgarian, Punjabi, Chinese Simplified, Romanian, Chinese Traditional,
+  Serbian (Cyrillic), Slovak, Slovenian, Spanish, Swedish, Croatian, Czech, Danish,
+  Dutch, Estonian, Albanian, Filipino, Arabic, Finnish, Basque, Hausa, Hindi,
+  Hungarian, Icelandic, Catalan, French, Greek, Brazilian Portuguese, German
+  translation (thank you unchase, Fabijenna, MGuerra, primokorn, athrouss,
+  mlimacarlos, rakekniven, tiwi90)
 
 ## 20.1.16
 - you now can set a custom editor width in the `Window / Editor width` menu
