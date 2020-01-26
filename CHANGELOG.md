@@ -701,8 +701,8 @@
       to its graphical representation for the preview
     - there is an example call in
       [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/preview-styling.qml)
-  - for more information please take a look at the
-    [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#prenotetomarkdownhtmlhook)
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#prenotetomarkdownhtmlhook)
 - fixed a highlighting problem for checkbox link lists like `- [ ] [QOwnNotes](https://www.qownnotes.org)`
 - fixed a possible crash when logging occurs on application exit
 - added **Macedonian** and **Bosnian translation** (a big thank you to Fabijenna)
@@ -1111,11 +1111,11 @@
 ## 19.9.1
 - fixed a problem with **updating the current note even if it didn't change** after the
   settings of the note text edit were updated (for [#1275](https://github.com/pbek/QOwnNotes/issues/1275))
-  - this happened for example after the settings dialog was closed and could have
-    led to overwriting of notes
+    - this happened for example after the settings dialog was closed and could have
+      led to overwriting of notes
 - fixed a problem with **un-selecting the current note in the note list** after the
   note list was reloaded (for [#1275](https://github.com/pbek/QOwnNotes/issues/1275))
-  - this happened for example after the settings dialog was closed
+    - this happened for example after the settings dialog was closed
 - when inserting a markdown table with the table dialog now two newline characters
   will be added in front of the table to make sure that a proper table is inserted
   (for [#78](https://github.com/pbek/QOwnNotes/issues/78))
@@ -1134,7 +1134,7 @@
 ## 19.8.8
 - there now is a **full-screen mode** that can be toggled with <kbd>F11</kbd>
   (for [#1271](https://github.com/pbek/QOwnNotes/issues/1271))
-  - the shortcut is <kbd>⌘</kbd> + <kbd>F11</kbd> on macOS
+    - the shortcut is <kbd>⌘</kbd> + <kbd>F11</kbd> on macOS
 - added support for **automatic numbering and indentation of ordered lists**
   (for [#1148](https://github.com/pbek/QOwnNotes/issues/1148))
     - if you press <kbd>Enter</kbd> after `1. a list item` you will get a `2. ` in the next line 
@@ -1432,10 +1432,10 @@
     - you can also change the security token later in the *Browser extension* settings
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.5.3
-  - you are now able to enter a **security token** to communicate with QOwnNotes 
-  - added a lot of translation
-  - you now can **import all browser bookmarks** (for [#8](https://github.com/qownnotes/web-companion/issues/8))
-  - fixed a bookmark filtering problem
+    - you are now able to enter a **security token** to communicate with QOwnNotes 
+    - added a lot of translation
+    - you now can **import all browser bookmarks** (for [#8](https://github.com/qownnotes/web-companion/issues/8))
+    - fixed a bookmark filtering problem
 - added a new editor color schema *Solarized Light* by @fairplay
   (for [#1208](https://github.com/pbek/QOwnNotes/issues/1208))
 - improved Mojave dark mode support for macOS 
@@ -1698,8 +1698,8 @@
 - the websocket api for **listing bookmarks** will now try to **merge bookmarks**
   if they were found multiple times in your bookmark notes for the
   [Web Companion browser extension](https://github.com/qownnotes/web-companion)
-  - creating new bookmarks will trigger a reply to the browser extension with a
-    success message 
+    - creating new bookmarks will trigger a reply to the browser extension with a
+      success message 
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.1.11
     - added support to show a success message from QOwnNotes if bookmarks were created
@@ -3038,8 +3038,8 @@
 - for headlines a whitespace after the last `#` is now mandatory
 - you can now use the new scripting function `script.jumpToNoteSubFolder()`
   to jump to a note-subfolder in scripts (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
-  - for more information please take a look at the
-    [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#jumping-to-a-note-subfolder)
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#jumping-to-a-note-subfolder)
 - added more Catalan, Italian, Spanish, Brazilian Portuguese and French translation
   (thank you MGuerra, mlocati, richarson, mlimacarlos and bepolymathe)
 
@@ -3130,8 +3130,8 @@
 - added some more information to the *External git log command* settings
 - you can now use the new scripting function `script.getApplicationSettingsVariable()`
   to load application settings variables in scripts
-  - for more information please take a look at the
-    [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#loading-application-settings-variables)
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#loading-application-settings-variables)
 - added more French, Catalan, Portuguese, Hungarian and Dutch translation
   (thank you bepolymathe, MGuerra, manuelarodsilva and Fabijenna)
 
@@ -3464,8 +3464,8 @@
 - you can now use the new scripting functions `script.setPersistentVariable()`
   and `script.getPersistentVariable()` to store and load persistent variables in 
   scripts (for [#677](https://github.com/pbek/QOwnNotes/issues/677))
-  - for more information please take a look at the
-    [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#storing-and-loading-persistent-variables)
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#storing-and-loading-persistent-variables)
 - added more French and Swedish translation (thank you bepolymathe and druus)
 
 ## 17.08.4
@@ -3692,19 +3692,19 @@
   fixed (for [#605](https://github.com/pbek/QOwnNotes/issues/605))
 - the MainWindow is now exposed for scripting as variable `mainWindow`
   (for [#604](https://github.com/pbek/QOwnNotes/issues/604))
-  - you can use `mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true)`
-    to force a reload of the note list
-  - for more information please take a look at the
-    [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#mainwindow)
+    - you can use `mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true)`
+      to force a reload of the note list
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#mainwindow)
 - added more Italian translation (thank you mlocati)
 
 ## 17.06.2
 - there are now new properties for notes in the scripting engine `fileCreated`
   and `fileLastModified` (for [#599](https://github.com/pbek/QOwnNotes/issues/599))
-  - you can use the methods from [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
-    to work with these date properties
-  - for more information please take a look at the
-    [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#note)
+    - you can use the methods from [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+      to work with these date properties
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#note)
 - when posting a script to the *Script repository* you can now define which 
   platforms are supported by the script with the new `platforms` parameter
   (for [Script repository issue #3](https://github.com/qownnotes/scripts/issues/3))
@@ -5214,9 +5214,9 @@
   other notes there now a dialog will be opened to ask if you want to
   rename the urls to the note in all found notes
   (for [#313](https://github.com/pbek/QOwnNotes/issues/313))
-  - this works if the note was renamed by modifying the first line of
-    the note or (if you turned that on) by changing the note name in
-    the note list
+    - this works if the note was renamed by modifying the first line of
+      the note or (if you turned that on) by changing the note name in
+      the note list
 - added more Spanish translation (thank you richarson)
 
 ## 16.09.2
@@ -5416,9 +5416,9 @@
 - there now is a new shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd>
   to **split the current note** into two notes at the current cursor position
   (for [#290](https://github.com/pbek/QOwnNotes/issues/290))
-  - the name of the current note plus the current timestamp will be
-    used as name for the new note
-  - the new note will be tagged with the same tags as the old note
+    - the name of the current note plus the current timestamp will be
+      used as name for the new note
+        - the new note will be tagged with the same tags as the old note
 - note subfolders are now turned off by default when a new note folder 
   is created
 - fixed a build problem with MSVC19 (thank you @rwiesenfarth)
@@ -5442,8 +5442,8 @@
 - there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + 
   <kbd>M</kbd> to **hide the main menu bar** 
   (for [#287](https://github.com/pbek/QOwnNotes/issues/287))
-  - if the menu bar is hidden a new button will be added to the window 
-    toolbar to show the main menu bar again
+    - if the menu bar is hidden a new button will be added to the window 
+      toolbar to show the main menu bar again
 - fixed an UI glitch under OS X where the `add tag` button stuck to 
   the right corner
 - added more Spanish and Hungarian translation (thank you richarson 
@@ -5479,8 +5479,8 @@
 - some dynamically set shortcuts are now set at the right time
   so they don't show up as custom shortcuts
   (for [#194](https://github.com/pbek/QOwnNotes/issues/194))
-  - the note edit context menu shortcuts now also load the custom
-    shortcut settings
+    - the note edit context menu shortcuts now also load the custom
+      shortcut settings
 - changed some icons in the font settings
 - the `Add tag` button now sicks to the right of the note edit pane
   (for jd6661 on the IRC channel) 
@@ -6247,8 +6247,8 @@
 ## 16.05.3
 - QOwnNotes will now be built from a **source archive** (like it should be) in 
   the AUR and in the Gentoo overlay (and not from git repositories)
-  - visit [Building QOwnNotes](https://www.qownnotes.org/installation#building) 
-  for more information on building QOwnNotes and source archives
+    - visit [Building QOwnNotes](https://www.qownnotes.org/installation#building) 
+    for more information on building QOwnNotes and source archives
 - the text is now also selected in the text replace dialog
 - added more Japanese translation (thank you piyo)
 
@@ -6705,9 +6705,9 @@
 - added more Hungarian translation (thank you Fabijenna)
 - you can now **paste html** in notes with <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + 
   <kbd>V</kbd> (for [#112](https://github.com/pbek/QOwnNotes/issues/112))
-  - html tags like `strong`, `b`, `em`, `i`, `a`, `h1`, `h2`, `h3`, `h4`, 
-    `h5`, `br` will be translated to markdown
-  - images from `img` tags will be downloaded and inserted as markdown images
+    - html tags like `strong`, `b`, `em`, `i`, `a`, `h1`, `h2`, `h3`, `h4`, 
+      `h5`, `br` will be translated to markdown
+    - images from `img` tags will be downloaded and inserted as markdown images
 
 ## 1.1.5
 - added more German, Hungarian and Dutch translation (thank you Fabijenna)
@@ -6824,7 +6824,7 @@
 ## 1.0.4
 - added a button to insert a markdown code block at the current cursor position
   (for [#82](https://github.com/pbek/QOwnNotes/issues/82))
-  - you can use 'Ctrl + Shift + C` as shortcut
+    - you can use 'Ctrl + Shift + C` as shortcut
 - fixed a display problem with the update notification button under Windows
   (for [#90](https://github.com/pbek/QOwnNotes/issues/90))
 - added more German translation
@@ -6841,7 +6841,7 @@
 
 ## 1.0.2
 - you can now set a note bookmark with `Ctrl + ⇧ + 0..9` on slot 0..9
-  - use `Ctrl + 0..9` jump to the bookmark on slot 0..9
+    - use `Ctrl + 0..9` jump to the bookmark on slot 0..9
 - fixed a markdown highlighting problem with certain characters like `»` and `·`
   (for [#73](https://github.com/pbek/QOwnNotes/issues/73))
 - added more German and Russian translation (thank you @calis2002 and @elnull)
@@ -6889,9 +6889,9 @@
   managing `qownnotes` until now)
 - QOwnNotes now uses default **freedesktop theme icons**
   (for [#39](https://github.com/pbek/QOwnNotes/issues/39))
-  - if the operating system hasn't a theme set (like for Windows and OS X)
-    there is a bundled fallback theme with Breeze icons that will be used 
-  - this allows the usage of QOwnNotes with **dark system themes**
+    - if the operating system hasn't a theme set (like for Windows and OS X)
+      there is a bundled fallback theme with Breeze icons that will be used 
+    - this allows the usage of QOwnNotes with **dark system themes**
 
 ## 0.96
 - fixed the debug output in the *Debug* settings tab
