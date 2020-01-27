@@ -836,11 +836,16 @@ void TodoDialog::on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int co
 }
 
 void TodoDialog::on_todoItemTreeWidget_customContextMenuRequested(const QPoint &pos) {
+    QTreeWidgetItem *item = ui->todoItemTreeWidget->currentItem();
+
+    if (item == nullptr) {
+        return;
+    }
+
     const QPoint globalPos = ui->todoItemTreeWidget->mapToGlobal(pos);
     auto *menu = new QMenu();
 
     QAction *newTaskAction = menu->addAction(tr("Create sub-task"));
-    QTreeWidgetItem *item = ui->todoItemTreeWidget->currentItem();
 
     QAction *selectedItem = menu->exec(globalPos);
     if (selectedItem) {
