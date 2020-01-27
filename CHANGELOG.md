@@ -5,7 +5,7 @@
   (for [#93](https://github.com/pbek/qmarkdowntextedit/pull/93), thank you @Waqar144)
 - fixed checking of checkboxes in checkbox lists in the preview
   (for [#1607](https://github.com/pbek/QOwnNotes/issues/1607), thank you @Waqar144)
-- fixed displaying of context menu in the task list of the todo list dialog
+- fixed displaying of the context menu in the task list of the todo list dialog
   if no task is present (for [#1609](https://github.com/pbek/QOwnNotes/issues/1609))
 
 ## 20.1.17
