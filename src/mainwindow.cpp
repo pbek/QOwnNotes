@@ -1765,7 +1765,7 @@ void MainWindow::changeNoteFolder(const int noteFolderId, const bool forceChange
         settings.setValue(
                 QStringLiteral("notesPath"),
                 Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
-                                  folderName));
+                                  std::move(folderName)));
 
         // we have to unset the current note otherwise it might show up after
         // switching to another note folder
@@ -3366,7 +3366,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
         settings.setValue(
                 QStringLiteral("notesPath"),
                 Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
-                                  dir));
+                                  std::move(dir)));
 
         // update the current folder tooltip
         updateCurrentFolderTooltip();
@@ -7074,7 +7074,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
  */
 void MainWindow::insertHtml(QString html) {
     // convert html tags to markdown
-    html = Utils::Misc::htmlToMarkdown(html);
+    html = Utils::Misc::htmlToMarkdown(std::move(html));
 
     // match image tags
     QRegularExpression re(QStringLiteral("<img.+?src=[\"'](.+?)[\"'].*?>"),
@@ -7121,7 +7121,7 @@ void MainWindow::insertHtml(QString html) {
     html.remove(QRegularExpression(QStringLiteral("<.+?>")));
 
     // unescape some html special characters
-    html = Utils::Misc::unescapeHtml(html).trimmed();
+    html = Utils::Misc::unescapeHtml(std::move(html)).trimmed();
 
     QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();

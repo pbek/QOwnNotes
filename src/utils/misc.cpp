@@ -156,33 +156,33 @@ void Utils::Misc::openFolderSelect(const QString& absolutePath)
                     output == QStringLiteral("nautilus-folder-handler.desktop")) {
             proc.startDetached(
                     QStringLiteral("nautilus"),
-                    QStringList() << "--no-desktop"
-                    << QDir::toNativeSeparators(path));
+                    QStringList{ "--no-desktop",
+                     QDir::toNativeSeparators(path)});
         } else if (output == QStringLiteral("caja-folder-handler.desktop")) {
             proc.startDetached(
                     QStringLiteral("caja"),
-                    QStringList() << "--no-desktop"
-                    << QDir::toNativeSeparators(path));
+                    QStringList{ "--no-desktop",
+                     QDir::toNativeSeparators(path)});
         } else if (output == QStringLiteral("nemo.desktop")) {
             proc.startDetached(
-                    "nemo",
-                    QStringList() << "--no-desktop"
-                    << QDir::toNativeSeparators(path));
+                    QStringLiteral("nemo"),
+                    QStringList{ "--no-desktop",
+                     QDir::toNativeSeparators(path)});
         } else if (output == QStringLiteral("konqueror.desktop") ||
                    output == QStringLiteral("kfmclient_dir.desktop")) {
             proc.startDetached(
                     QStringLiteral("konqueror"),
-                    QStringList() << "--select"
-                    << QDir::toNativeSeparators(path));
+                    QStringList{ "--select",
+                     QDir::toNativeSeparators(path)});
         } else {
-            openPath(path.left(path.lastIndexOf(QStringLiteral("/"))));
+            openPath(path.left(path.lastIndexOf(QLatin1Char('/'))));
         }
     } else {
         // if the item to select doesn't exist, try to open its parent
-        openPath(path.left(path.lastIndexOf(QStringLiteral("/"))));
+        openPath(path.left(path.lastIndexOf(QLatin1Char('/'))));
     }
 #else
-    openPath(path.left(path.lastIndexOf("/")));
+    openPath(path.left(path.lastIndexOf(QLatin1Char('/'))));
 #endif
 }
 
@@ -253,16 +253,19 @@ QString Utils::Misc::shorten(QString text, int length, const QString& sequence) 
  * Cycles text through lowercase, uppercase, start case, and sentence case
  */
 QString Utils::Misc::cycleTextCase(const QString& text) {
-    QString asLower = text.toLower();
-    QString asUpper = text.toUpper();
+    if (text.isEmpty())
+        return text;
+
+    const QString asLower = text.toLower();
+    const QString asUpper = text.toUpper();
 
     // OK no matter what
     if (text == asLower) {
         return asUpper;
     }
 
-    QString asStart = toStartCase(text);
-    QString asSentence = toSentenceCase(text);
+    const QString asStart = toStartCase(text);
+    const QString asSentence = toSentenceCase(text);
 
     if (text == asUpper) {
         if (asUpper == asStart) {
@@ -308,7 +311,7 @@ QString Utils::Misc::toSentenceCase(const QString& text) {
 
     QStringList sentences = text.toLower().split(sentenceSplitter);
 
-    for (QString & sentence : sentences) {
+    for (QString& sentence : sentences) {
         if (sentence.length() > 0) {
             sentence = sentence.left(1).toUpper() +
                     sentence.right(sentence.length() - 1);
@@ -328,7 +331,7 @@ QString Utils::Misc::toStartCase(const QString& text) {
 
     QStringList words = text.toLower().split(wordSplitter);
 
-    for (QString & word : words) {
+    for (QString& word : words) {
         if (word.length() > 0) {
             word = word.at(0).toUpper() % word.right(word.length() - 1);
         }
@@ -429,7 +432,7 @@ QByteArray Utils::Misc::startSynchronousProcess(
         return QByteArray();
     }
 
-    QByteArray result = process.readAll();
+    const QByteArray result = process.readAll();
     return result;
 }
 
@@ -804,7 +807,7 @@ void Utils::Misc::needRestart() {
  */
 void Utils::Misc::restartApplication() {
     QStringList parameters = QApplication::arguments();
-    QString appPath = parameters.takeFirst();
+    const QString appPath = parameters.takeFirst();
 
     // we don't want to have our settings cleared again after a restart
     parameters.removeOne(QStringLiteral("--clear-settings"));
@@ -892,7 +895,7 @@ bool Utils::Misc::downloadUrlToFile(const QUrl &url, QFile *file) {
  */
 QString Utils::Misc::genericCSS() {
     QSettings settings;
-    bool darkModeColors = settings.value(QStringLiteral("darkModeColors")).toBool();
+    const bool darkModeColors = settings.value(QStringLiteral("darkModeColors")).toBool();
     QString color = darkModeColors ? QStringLiteral("#ffd694") : QStringLiteral("#fc7600");
     QString cssStyles = QStringLiteral("a {color: ") % color %  QStringLiteral("}");
 
@@ -961,13 +964,13 @@ int Utils::Misc::getDefaultSearchEngineId() {
  * @return
  */
 QList<int> Utils::Misc::getSearchEnginesIds() {
-    QList<int> list;
-    list << SearchEngines::DuckDuckGo << SearchEngines::Google
-         << SearchEngines::Bing << SearchEngines::Yahoo
-         << SearchEngines::GoogleScholar << SearchEngines::Yandex
-         << SearchEngines::AskDotCom << SearchEngines::Qwant
-         << SearchEngines::Startpage;
-    return list;
+    return QList<int> {
+         SearchEngines::DuckDuckGo, SearchEngines::Google,
+         SearchEngines::Bing, SearchEngines::Yahoo,
+         SearchEngines::GoogleScholar, SearchEngines::Yandex,
+         SearchEngines::AskDotCom, SearchEngines::Qwant,
+         SearchEngines::Startpage
+    };
 }
 
 /**
@@ -991,12 +994,14 @@ void Utils::Misc::presetDisableAutomaticUpdateDialog() {
 // Write all available Attributes from QPrinter into stream
 ///////////////////////////////////////////////////////////////////////////////
 
-template <typename t> void  writeStreamElement(QDataStream &os, t param) {
-    int i = static_cast<int>(param);
+template <typename T>
+void  writeStreamElement(QDataStream &os, const T param) {
+    const int i = static_cast<int>(param);
     os << i;
 }
 
-template <> void writeStreamElement<QString>(QDataStream &os, QString s) {
+template <>
+void writeStreamElement<QString>(QDataStream &os, const QString s) {
     os << s;
 }
 
@@ -1040,13 +1045,15 @@ QDataStream& Utils::Misc::dataStreamWrite(QDataStream &os,
 // Read all available Attributes from stream into QPrinter
 ///////////////////////////////////////////////////////////////////////////////
 
-template <typename t> t readStreamElement(QDataStream &is) {
+template <typename T>
+T readStreamElement(QDataStream &is) {
     int i;
     is >> i;
-    return static_cast<t>(i);
+    return static_cast<T>(i);
 }
 
-template <> QString readStreamElement<QString>(QDataStream &is) {
+template <>
+QString readStreamElement<QString>(QDataStream &is) {
     QString s;
     is >> s;
     return s;
@@ -1146,7 +1153,7 @@ bool Utils::Misc::useInternalExportStylingForPreview() {
  * @return
  */
 bool Utils::Misc::isSocketServerEnabled() {
-    QSettings settings;
+    const QSettings settings;
     return settings.value(QStringLiteral("enableSocketServer"), true).toBool();
 }
 
@@ -1156,8 +1163,8 @@ bool Utils::Misc::isSocketServerEnabled() {
  * @return
  */
 bool Utils::Misc::isDarkModeIconTheme() {
-    QSettings settings;
-    bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
+    const QSettings settings;
+    const bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
     return settings.value(QStringLiteral("darkModeIconTheme"), darkMode).toBool();
 }
 
@@ -1167,7 +1174,7 @@ bool Utils::Misc::isDarkModeIconTheme() {
  * @return
  */
 bool Utils::Misc::doAutomaticNoteFolderDatabaseClosing() {
-    QSettings settings;
+    const QSettings settings;
     return settings.value(QStringLiteral("automaticNoteFolderDatabaseClosing")).toBool();
 }
 
@@ -1177,7 +1184,7 @@ bool Utils::Misc::doAutomaticNoteFolderDatabaseClosing() {
  * @return
  */
 bool Utils::Misc::isNoteListPreview() {
-    QSettings settings;
+    const QSettings settings;
     return settings.value(QStringLiteral("noteListPreview")).toBool();
 }
 
@@ -1197,9 +1204,9 @@ bool Utils::Misc::isEnableNoteTree() {
  * @return
  */
 QString Utils::Misc::indentCharacters() {
-    QSettings settings;
+    const QSettings settings;
     return settings.value("Editor/useTabIndent").toBool() ?
-                "\t" :
+                QStringLiteral("\t") :
                 QStringLiteral(" ").repeated(indentSize());
 }
 
@@ -1209,7 +1216,7 @@ QString Utils::Misc::indentCharacters() {
  * @return
  */
 int Utils::Misc::indentSize() {
-    QSettings settings;
+    const QSettings settings;
     return settings.value("Editor/indentSize", 4).toInt();
 }
 
@@ -1270,7 +1277,7 @@ void Utils::Misc::printInfo(const QString& text) {
 QString Utils::Misc::toHumanReadableByteSize(qint64 size)
 {
     double num = size;
-    QStringList list = {"KB", "MB", "GB", "TB"};
+    const QStringList list = {"KB", "MB", "GB", "TB"};
 
     QStringListIterator i(list);
     QString unit(QStringLiteral("bytes"));
@@ -1292,7 +1299,7 @@ QString Utils::Misc::prepareDebugInformationLine(
         const QString &headline, QString data, bool withGitHubLineBreaks,
         const QString& typeText) {
     // add two spaces if we don't want GitHub line breaks
-    QString spaces = withGitHubLineBreaks ? QString() : QStringLiteral("  ");
+    const QString spaces = withGitHubLineBreaks ? QString() : QStringLiteral("  ");
 
     if (data.contains(QStringLiteral("\n"))) {
         data = QStringLiteral("\n```\n") % data.trimmed() % QStringLiteral("\n```");
@@ -1311,7 +1318,7 @@ QString Utils::Misc::prepareDebugInformationLine(
 }
 
 QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
-    QSettings settings;
+    const QSettings settings;
     QString output;
 
     output += QStringLiteral("QOwnNotes Debug Information\n");
@@ -1633,17 +1640,16 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
  * @return
  */
 bool Utils::Misc::regExpInListMatches(const QString& text, const QStringList &regExpList) {
-    Q_FOREACH(QString regExp, regExpList) {
-            regExp = regExp.trimmed();
-
-            if (regExp.isEmpty()) {
-                continue;
-            }
-
-            if (QRegularExpression(regExp).match(text).hasMatch()) {
-                return true;
-            }
+    for (const QString &regExp : regExpList) {
+        const QString &trimmed = regExp.trimmed();
+        if (trimmed.isEmpty()) {
+            continue;
         }
+
+        if (QRegularExpression(trimmed).match(text).hasMatch()) {
+            return true;
+        }
+    }
 
     return false;
 }
@@ -1662,7 +1668,7 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html) {
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
-        QString imageTag = match.captured(0);
+        const QString imageTag = match.captured(0);
 
         QString inlineImageTag = ownCloud->nextcloudPreviewImageTagToInlineImageTag(
                 imageTag);
@@ -1709,10 +1715,10 @@ QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag) {
         return imageTag;
     }
 
-    QString url = match.captured(1);
-    QByteArray data = downloadUrl(url);
-    QMimeDatabase db;
-    auto type = db.mimeTypeForData(data);
+    const QString url = match.captured(1);
+    const QByteArray data = downloadUrl(url);
+    const QMimeDatabase db;
+    const auto type = db.mimeTypeForData(data);
 
     // for now we do no caching, because we don't know when to invalidate the cache
     const QString replace = QStringLiteral("data:") % type.name() % QStringLiteral(";base64,") % data.toBase64();
@@ -1722,7 +1728,7 @@ QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag) {
 }
 
 QString Utils::Misc::createUuidString() {
-    QUuid uuid = QUuid::createUuid();
+    const QUuid uuid = QUuid::createUuid();
     QString uuidString = uuid.toString();
     uuidString.replace(QStringLiteral("{"), QString()).replace(QStringLiteral("}"), QString());
 
@@ -1735,7 +1741,7 @@ QString Utils::Misc::createUuidString() {
  * @return
  */
 QString Utils::Misc::localDictionariesPath() {
-    QString path = Utils::Misc::appDataPath() % QStringLiteral("/dicts");
+    const QString path = Utils::Misc::appDataPath() % QStringLiteral("/dicts");
     QDir dir;
 
     // create path if it doesn't exist yet

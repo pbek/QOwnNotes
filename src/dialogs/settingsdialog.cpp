@@ -3017,7 +3017,7 @@ void SettingsDialog::on_addCustomNoteFileExtensionButton_clicked() {
     }
 
     // make sure the file extension doesn't start with a point
-    fileExtension = Utils::Misc::removeIfStartsWith(fileExtension, ".");
+    fileExtension = Utils::Misc::removeIfStartsWith(std::move(fileExtension), ".");
 
     QListWidgetItem *item = addCustomNoteFileExtension(fileExtension);
 

@@ -1488,10 +1488,10 @@ QString Note::getFullFilePathForFile(const QString& fileName) {
     QSettings settings;
 
     // prepend the portable data path if we are in portable mode
-    QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
+    const QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
             settings.value(QStringLiteral("notesPath")).toString());
 
-    return Utils::Misc::removeIfEndsWith(notesPath, QStringLiteral("/")) +
+    return Utils::Misc::removeIfEndsWith(std::move(notesPath), QStringLiteral("/")) +
             Utils::Misc::dirSeparator() + fileName;
 }
 
@@ -3218,7 +3218,7 @@ QString Note::getNotePreviewText(bool asHtml, int lines) const {
     }
 
     if (asHtml) {
-        noteText = Utils::Misc::htmlspecialchars(noteText);
+        noteText = Utils::Misc::htmlspecialchars(std::move(noteText));
         noteText.replace(QStringLiteral("\n"), QStringLiteral("<br>"));
     }
 

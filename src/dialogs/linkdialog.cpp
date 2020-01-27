@@ -190,7 +190,7 @@ QString LinkDialog::getTitleForUrl(const QUrl& url) {
     QString title = match.captured(1);
 
     // decode HTML entities
-    title = Utils::Misc::unescapeHtml(title);
+    title = Utils::Misc::unescapeHtml(std::move(title));
 
     // replace some other characters we don't want
     title.replace(QStringLiteral("["), QStringLiteral("("))

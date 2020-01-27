@@ -140,14 +140,14 @@ QString NoteSubFolder::pathData() const {
  */
 NoteSubFolder NoteSubFolder::fetchByPathData(QString pathData,
                                              const QString& separator) {
-    pathData = Utils::Misc::removeIfStartsWith(pathData, separator);
+    pathData = Utils::Misc::removeIfStartsWith(std::move(pathData), separator);
     QStringList pathList = pathData.split(separator);
     NoteSubFolder noteSubFolder;
     QStringListIterator itr(pathList);
 
     // loop through all names to fetch the deepest note sub folder
     while (itr.hasNext()) {
-        QString name = itr.next();
+        const QString name = itr.next();
         noteSubFolder = NoteSubFolder::fetchByNameAndParentId(
                 name, noteSubFolder.getId());
         if (!noteSubFolder.isFetched()) {

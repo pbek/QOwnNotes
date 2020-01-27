@@ -342,7 +342,7 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
 
     if (applicationDirPath.endsWith(appPathPart)) {
         applicationsPath = Utils::Misc::removeIfEndsWith(
-                    applicationDirPath, appPathPart);
+                    std::move(applicationDirPath), appPathPart);
     }
 
     if (Utils::Gui::question(

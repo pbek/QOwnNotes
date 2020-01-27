@@ -170,7 +170,7 @@ void WebSocketServerService::processMessage(const QString &message) {
                         MainWindow::CreateNewNoteOption::UseNameAsHeadline));
 
         if (contentTypeIsHTML) {
-            mainWindow->insertHtml(text);
+            mainWindow->insertHtml(std::move(text));
         }
 #endif
     } else if (type == "getBookmarks") {
