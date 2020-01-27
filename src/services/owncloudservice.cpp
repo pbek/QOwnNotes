@@ -1705,7 +1705,7 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
         }
 
         // remove the note path from the path
-        path = Utils::Misc::removeIfStartsWith(path, serverNotesPath);
+        path = Utils::Misc::removeIfStartsWith(std::move(path), serverNotesPath);
 
         QFileInfo fileInfo(path);
         QString fileName = fileInfo.fileName();

@@ -336,14 +336,14 @@ QString NoteFolder::currentRemotePath(bool addTrailingSlash) {
     }
 
     // add a leading "/"
-    remotePath = Utils::Misc::prependIfDoesNotStartWith(remotePath, QStringLiteral("/"));
+    remotePath = Utils::Misc::prependIfDoesNotStartWith(std::move(remotePath), QStringLiteral("/"));
 
     if (addTrailingSlash) {
         // add a trailing "/"
-        remotePath = Utils::Misc::appendIfDoesNotEndWith(remotePath, QStringLiteral("/"));
+        remotePath = Utils::Misc::appendIfDoesNotEndWith(std::move(remotePath), QStringLiteral("/"));
     } else {
         // remove a trailing "/"
-        remotePath = Utils::Misc::removeIfEndsWith(remotePath, QStringLiteral("/"));
+        remotePath = Utils::Misc::removeIfEndsWith(std::move(remotePath), QStringLiteral("/"));
     }
 
     return remotePath;
@@ -369,8 +369,8 @@ QString NoteFolder::currentLocalPath() {
                 settings.value(QStringLiteral("notesPath")).toString());
     }
 
-    path = Utils::Misc::removeIfEndsWith(path, QDir::separator());
-    path = Utils::Misc::removeIfEndsWith(path, Utils::Misc::dirSeparator());
+    path = Utils::Misc::removeIfEndsWith(std::move(path), QDir::separator());
+    path = Utils::Misc::removeIfEndsWith(std::move(path), Utils::Misc::dirSeparator());
 
     return path;
 }
@@ -453,8 +453,8 @@ QString NoteFolder::suggestRemotePath() {
  * Removes a leading or trailing slash from the remote path
  */
 QString NoteFolder::fixRemotePath() {
-    remotePath = Utils::Misc::removeIfStartsWith(remotePath, QStringLiteral("/"));
-    remotePath = Utils::Misc::removeIfEndsWith(remotePath, QStringLiteral("/"));
+    remotePath = Utils::Misc::removeIfStartsWith(std::move(remotePath), QStringLiteral("/"));
+    remotePath = Utils::Misc::removeIfEndsWith(std::move(remotePath), QStringLiteral("/"));
     return remotePath;
 }
 

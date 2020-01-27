@@ -41,7 +41,7 @@ HEADERS  += \
     $$APP_SRC_DIR/libraries/botan/botanwrapper.h \
     $$APP_SRC_DIR/libraries/versionnumber/versionnumber.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/markdownhighlighter.h \
-    $$APP_SRC_DIR/libraries/qmarkdowntextedit/qownlanguagedata.h
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/qownlanguagedata.h \
 
 SOURCES += \
     $$PWD/test_*.cpp \
@@ -79,7 +79,7 @@ SOURCES += \
     $$APP_SRC_DIR/libraries/botan/botanwrapper.cpp \
     $$APP_SRC_DIR/libraries/versionnumber/versionnumber.cpp \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/markdownhighlighter.cpp \
-    $$APP_SRC_DIR/libraries/qmarkdowntextedit/qownlanguagedata.cpp
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/qownlanguagedata.cpp \
 
 include($$APP_SRC_DIR/libraries/botan/botan.pri)
 
