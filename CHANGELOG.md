@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 20.1.18
-- added Cmake and make languages to code block syntax highlighter
+- added Cmake and make languages to the code block syntax highlighter
   (for [#93](https://github.com/pbek/qmarkdowntextedit/pull/93), thank you @Waqar144)
 - fixed checking of checkboxes in checkbox lists in the preview
   (for [#1607](https://github.com/pbek/QOwnNotes/issues/1607), thank you @Waqar144)
