@@ -36,6 +36,10 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         options |= MarkdownHighlighter::HighlightingOption
         ::FullyHighlightedBlockQuote;
     }
+    if (settings.value(QStringLiteral("MainWindow/noteTextView.underline")).toBool()) {
+        options |= MarkdownHighlighter::HighlightingOption
+        ::Underline;
+    }
 
     // set the highlighting options
     _highlighter->setHighlightingOptions(options);
