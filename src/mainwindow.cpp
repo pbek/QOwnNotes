@@ -4001,7 +4001,7 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
     }
     if (!updateNoteTextViewOnly) {
         dynamic_cast<QOwnNotesMarkdownHighlighter*>(
-                    ui->noteTextEdit->highlighter())->updateCurrentNote(note);
+                    ui->noteTextEdit->highlighter())->updateCurrentNote(*note);
         ui->noteTextEdit->setText(note->getNoteText());
     }
 
