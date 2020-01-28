@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.1.19
+- fixed a possible crash in the broken link highlighting
+  (for [#1611](https://github.com/pbek/QOwnNotes/issues/1611), thank you @Waqar144)
+
 ## 20.1.18
 - added Cmake and make languages to the code block syntax highlighter
   (for [#93](https://github.com/pbek/qmarkdowntextedit/pull/93), thank you @Waqar144)
