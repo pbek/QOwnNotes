@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 20.1.19
-- fixed a possible crash in the broken link highlighter
+- fixed a possible crash in the broken-link highlighter
   (for [#1611](https://github.com/pbek/QOwnNotes/issues/1611), thank you @Waqar144)
 - enabled underline rendering in the note text edit
   (for [#1613](https://github.com/pbek/QOwnNotes/pull/1613), thank you @Waqar144)
