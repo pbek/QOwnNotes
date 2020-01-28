@@ -55,8 +55,8 @@ QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter()
 }
 
 
-void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *_note) {
-        _currentNote = _note;
+void QOwnNotesMarkdownHighlighter::updateCurrentNote(const Note _note) {
+        _currentNote = std::move(_note);
 }
 
 void QOwnNotesMarkdownHighlighter::setSpellChecker(QOwnSpellChecker *spellChecker)
@@ -137,7 +137,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text)
 
         if (match.hasMatch()) {
             QString fileName = match.captured(1);
-            Note note = _currentNote->fetchByRelativeFileName(fileName);
+            Note note = _currentNote.fetchByRelativeFileName(fileName);
 
             // if the note exists we don't need to do anything
             if (note.isFetched()) {
@@ -149,7 +149,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text)
 
             if (match.hasMatch()) {
                 QString fileName = match.captured(1);
-                Note note = _currentNote->fetchByRelativeFileName(fileName);
+                Note note = _currentNote.fetchByRelativeFileName(fileName);
 
                 // if the note exists we don't need to do anything
                 if (note.isFetched()) {

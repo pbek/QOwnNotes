@@ -17,6 +17,7 @@
 #pragma once
 
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+#include <entities/note.h>
 
 QT_BEGIN_NAMESPACE
 class QTextDocument;
@@ -28,7 +29,6 @@ class WordTokenizer;
 class LanguageFilter;
 }
 class QOwnSpellChecker;
-class Note;
 
 class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter
 {
@@ -40,7 +40,7 @@ public:
                                  HighlightingOption::None);
     ~QOwnNotesMarkdownHighlighter() Q_DECL_OVERRIDE;
 
-    void updateCurrentNote(Note *note);
+    void updateCurrentNote(const Note note);
     void setCommentHighlighting(bool);
     void setCodeHighlighting(bool);
     void setSpellChecker(QOwnSpellChecker*);
@@ -57,7 +57,7 @@ private:
     Sonnet::WordTokenizer *wordTokenizer;
     Sonnet::LanguageFilter *languageFilter;
     QOwnSpellChecker *spellchecker;
-    Note *_currentNote;
+    Note _currentNote;
     bool commentHighlightingOn;
     bool codeHighlightingOn;
 };
