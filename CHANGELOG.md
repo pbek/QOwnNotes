@@ -5,6 +5,7 @@
   (for [#1611](https://github.com/pbek/QOwnNotes/issues/1611), thank you @Waqar144)
 - enabled underline rendering in the note text edit
   (for [#1613](https://github.com/pbek/QOwnNotes/pull/1613), thank you @Waqar144)
+- added more Russian translation (thank you mikhail-khokhlov)
 
 ## 20.1.18
 - added Cmake and make languages to the code block syntax highlighter

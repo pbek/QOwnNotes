@@ -2547,7 +2547,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2556"/>
       <source>Custom</source>
-      <translation type="unfinished">Custom</translation>
+      <translation>Персонализация</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2559"/>
@@ -3293,7 +3293,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11701"/>
       <source>Custom editor width</source>
-      <translation type="unfinished">Custom editor width</translation>
+      <translation>Пользовательская ширина редактора</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11701"/>
