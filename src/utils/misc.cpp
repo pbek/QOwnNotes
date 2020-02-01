@@ -1659,7 +1659,8 @@ bool Utils::Misc::regExpInListMatches(const QString& text, const QStringList &re
  *
  * @param html
  */
-void Utils::Misc::transformNextcloudPreviewImages(QString &html) {
+void Utils::Misc::transformNextcloudPreviewImages(QString &html,
+        int maxImageWidth, ExternalImageHash *externalImageHash) {
     OwnCloudService *ownCloud = OwnCloudService::instance();
 
     QRegularExpression re(QStringLiteral(R"(<img src=\"(\/core\/preview\?fileId=.+#mimetype=[\w\d%]+&.+)\" alt=\".+\"\/?>)"),
@@ -1669,9 +1670,23 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html) {
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         const QString imageTag = match.captured(0);
+        QString inlineImageTag;
+        int imageWidth;
+        ExternalImageHashItem hashItem;
 
-        QString inlineImageTag = ownCloud->nextcloudPreviewImageTagToInlineImageTag(
-                imageTag);
+        if (externalImageHash->contains(imageTag)) {
+            hashItem = externalImageHash->value(imageTag);
+            inlineImageTag = hashItem.imageTag;
+            imageWidth = hashItem.imageWidth;
+        } else {
+            inlineImageTag = ownCloud->nextcloudPreviewImageTagToInlineImageTag(imageTag, imageWidth);
+            hashItem.imageTag = inlineImageTag;
+            hashItem.imageWidth = imageWidth;
+            externalImageHash->insert(imageTag, hashItem);
+        }
+
+        imageWidth = std::min(maxImageWidth, imageWidth);
+        inlineImageTag.replace("/>", QString("width=\"%1\"/>").arg(QString::number(imageWidth)));
 
         html.replace(imageTag, inlineImageTag);
     }
@@ -1682,7 +1697,8 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html) {
  *
  * @param html
  */
-void Utils::Misc::transformRemotePreviewImages(QString &html) {
+void Utils::Misc::transformRemotePreviewImages(QString &html, int maxImageWidth,
+        ExternalImageHash *externalImageHash) {
     QRegularExpression re(QStringLiteral(R"(<img src=\"(https?:\/\/.+)\".*\/?>)"),
                           QRegularExpression::CaseInsensitiveOption | QRegularExpression::MultilineOption | QRegularExpression::InvertedGreedinessOption);
     QRegularExpressionMatchIterator i = re.globalMatch(html);
@@ -1690,8 +1706,23 @@ void Utils::Misc::transformRemotePreviewImages(QString &html) {
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString imageTag = match.captured(0);
+        QString inlineImageTag;
+        int imageWidth;
+        ExternalImageHashItem hashItem;
 
-        QString inlineImageTag = remotePreviewImageTagToInlineImageTag(imageTag);
+        if (externalImageHash->contains(imageTag)) {
+            hashItem = externalImageHash->value(imageTag);
+            inlineImageTag = hashItem.imageTag;
+            imageWidth = hashItem.imageWidth;
+        } else {
+            inlineImageTag = remotePreviewImageTagToInlineImageTag(imageTag, imageWidth);
+            hashItem.imageTag = inlineImageTag;
+            hashItem.imageWidth = imageWidth;
+            externalImageHash->insert(imageTag, hashItem);
+        }
+
+        imageWidth = std::min(maxImageWidth, imageWidth);
+        inlineImageTag.replace(">", QString("width=\"%1\">").arg(QString::number(imageWidth)));
         html.replace(imageTag, inlineImageTag);
     }
 }
@@ -1703,7 +1734,7 @@ void Utils::Misc::transformRemotePreviewImages(QString &html) {
  * @param imageSuffix
  * @return
  */
-QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag) {
+QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag, int &imageWidth) {
     imageTag.replace(QStringLiteral("&amp;"), QStringLiteral("&"));
 
     QRegularExpression re(QStringLiteral(R"(<img src=\"(https?:\/\/.+)\")"),
@@ -1717,6 +1748,8 @@ QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag) {
 
     const QString url = match.captured(1);
     const QByteArray data = downloadUrl(url);
+    auto image = QImage::fromData(data);
+    imageWidth = image.width();
     const QMimeDatabase db;
     const auto type = db.mimeTypeForData(data);
 

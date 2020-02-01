@@ -3520,6 +3520,9 @@ void MainWindow::setCurrentNote(Note note,
     // create a hash of the text of the current note to be able if it was
     // modified outside of QOwnNotes
     updateCurrentNoteTextHash();
+
+    // clear external image cache
+    Note::externalImageHash()->clear();
 }
 
 /**

@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 20.2.0
+- remote images and Nextcloud text images are now cached after being downloaded
+  for the preview until another note was be selected (for [#1244](https://github.com/pbek/QOwnNotes/issues/1244))
+    - this improves writing speed because the images now don't need to be
+      downloaded again every time the preview is refreshed
+- remote images and Nextcloud text images are now (like local images) resized in
+  the preview if the width of the preview panel is smaller than the image width
+  (for [#1597](https://github.com/pbek/QOwnNotes/issues/1597))
+
 ## 20.1.19
 - fixed a possible crash in the broken-note-link highlighter
   (for [#1611](https://github.com/pbek/QOwnNotes/issues/1611), thank you @Waqar144)

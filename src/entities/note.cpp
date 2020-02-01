@@ -28,6 +28,7 @@
 #include <QTemporaryFile>
 #include <utils/gui.h>
 #include <utils/schema.h>
+#include <services/owncloudservice.h>
 #include "helpers/codetohtmlconverter.h"
 #include "entities/bookmark.h"
 
@@ -2106,10 +2107,12 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     }
 
     // transform remote preview image tags
-    Utils::Misc::transformRemotePreviewImages(result);
+    Utils::Misc::transformRemotePreviewImages(result, maxImageWidth, externalImageHash());
 
-    // transform Nextcloud preview image tags
-    Utils::Misc::transformNextcloudPreviewImages(result);
+    if (OwnCloudService::isOwnCloudSupportEnabled()) {
+        // transform Nextcloud preview image tags
+        Utils::Misc::transformNextcloudPreviewImages(result, maxImageWidth, externalImageHash());
+    }
 
     // transform images without "file://" urls to file-urls
     // Note: this is currently handled above in markdown
@@ -2287,6 +2290,22 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
 
 //    qDebug() << __func__ << " - 'result': " << result;
     return result;
+}
+
+/**
+ * Returns the global external image hash instance
+ */
+Utils::Misc::ExternalImageHash *Note::externalImageHash() {
+    auto *instance = qApp->property("externalImageHash").value<Utils::Misc::ExternalImageHash *>();
+
+    if (instance == nullptr) {
+        instance = new Utils::Misc::ExternalImageHash;
+
+        qApp->setProperty("externalImageHash",
+                          QVariant::fromValue<Utils::Misc::ExternalImageHash *>(instance));
+    }
+
+    return instance;
 }
 
 bool Note::isFetched() const {

@@ -6,6 +6,7 @@
 #include <QFile>
 #include <QUrl>
 #include <QRegularExpression>
+#include <utils/misc.h>
 
 class Bookmark;
 class NoteSubFolder;
@@ -309,6 +310,8 @@ public:
     bool updateRelativeMediaFileLinks();
 
     bool updateRelativeAttachmentFileLinks();
+
+    static Utils::Misc::ExternalImageHash *externalImageHash();
 
 protected:
     int id;

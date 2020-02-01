@@ -2023,7 +2023,7 @@ QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
  * @param imageSuffix
  * @return
  */
-QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(QString imageTag) {
+QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(QString imageTag, int &imageWidth) {
     imageTag.replace(QStringLiteral("&amp;"), QStringLiteral("&"));
 //    qDebug() << __func__ << " - 'imageTag': " << imageTag;
 
@@ -2040,6 +2040,8 @@ QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(QString imageT
     QString alt = match.captured(7);
 
     QByteArray data = downloadNextcloudPreviewImage(path);
+    auto image = QImage::fromData(data);
+    imageWidth = image.width();
 
     // for now we do no caching, because we don't know when to invalidate the cache
     QString inlineImageTag = QStringLiteral(R"(<img class="remote-img" src="data:)") % mimeType % QStringLiteral(";base64,") +

@@ -22,6 +22,18 @@
 class QFile;
 
 /*  Miscellaneous functions that can be useful */
+namespace Utils {
+    namespace Misc {
+        struct ExternalImageHashItem {
+            QString imageTag;
+            int imageWidth;
+        };
+
+        typedef QHash<QString, ExternalImageHashItem> ExternalImageHash;
+    }
+}
+
+Q_DECLARE_METATYPE(Utils::Misc::ExternalImageHash*)
 
 namespace Utils {
     namespace Misc {
@@ -30,7 +42,6 @@ namespace Utils {
             QString searchUrl;
             int id;
         };
-
 
         void openPath(const QString& absolutePath);
         void openFolderSelect(const QString& absolutePath);
@@ -98,9 +109,9 @@ namespace Utils {
         QString generateDebugInformation(bool withGitHubLineBreaks = true);
         bool regExpInListMatches(const QString& text, const QStringList &regExpList);
         bool isDarkModeIconTheme();
-        void transformNextcloudPreviewImages(QString &html);
-        void transformRemotePreviewImages(QString &html);
-        QString remotePreviewImageTagToInlineImageTag(QString imageTag);
+        void transformNextcloudPreviewImages(QString &html, int maxImageWidth, ExternalImageHash *externalImageHash);
+        void transformRemotePreviewImages(QString &html, int maxImageWidth, ExternalImageHash *externalImageHash);
+        QString remotePreviewImageTagToInlineImageTag(QString imageTag, int &imageWidth);
         QString createUuidString();
         QString localDictionariesPath();
     }  // namespace Misc

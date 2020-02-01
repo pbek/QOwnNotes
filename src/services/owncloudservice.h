@@ -85,7 +85,7 @@ public:
 
     void startAppVersionTest();
 
-    QString nextcloudPreviewImageTagToInlineImageTag(QString imageTag);
+    QString nextcloudPreviewImageTagToInlineImageTag(QString imageTag, int &imageWidth);
 
 private:
     QString serverUrl;
