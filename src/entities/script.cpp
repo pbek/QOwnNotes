@@ -31,12 +31,12 @@ const QString Script::ScriptRepositoryRawContentUrlPrefix =
         QStringLiteral("https://raw.githubusercontent.com/qownnotes/scripts/master/");
 
 
-Script::Script() : id(0), name(""), scriptPath(""),
-                   priority(0), enabled(true)
+Script::Script() : id{0}, name(QLatin1String("")), scriptPath(QLatin1String("")),
+                   priority{0}, enabled{true}
 {
 }
 
-int Script::getId() {
+int Script::getId() const {
     return this->id;
 }
 
@@ -47,7 +47,7 @@ int Script::getId() {
  *
  * @return
  */
-QString Script::getScriptPath() {
+QString Script::getScriptPath() const {
     return this->scriptPath;
 }
 
@@ -56,28 +56,28 @@ QString Script::getScriptPath() {
  *
  * @return
  */
-QString Script::getScriptDirPath() {
+QString Script::getScriptDirPath() const {
     QFileInfo info(scriptPath);
     return info.canonicalPath();
 }
 
-QString Script::getName() {
+QString Script::getName() const {
     return this->name;
 }
 
-QString Script::getIdentifier() {
+QString Script::getIdentifier() const {
     return this->identifier;
 }
 
-int Script::getPriority() {
+int Script::getPriority() const {
     return this->priority;
 }
 
-bool Script::getEnabled() {
+bool Script::getEnabled() const {
     return this->enabled;
 }
 
-bool Script::isEnabled() {
+bool Script::isEnabled() const {
     return getEnabled();
 }
 
@@ -230,7 +230,7 @@ bool Script::refetch() {
     return fillFromId(id);
 }
 
-bool Script::scriptPathExists() {
+bool Script::scriptPathExists() const {
     QFile file(scriptPath);
     return file.exists() && !scriptPath.isEmpty();
 }
@@ -242,7 +242,7 @@ bool Script::scriptPathExists() {
  *
  * @return
  */
-bool Script::remove() {
+bool Script::remove() const {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
     QString path;
@@ -369,12 +369,12 @@ bool Script::store() {
 /**
  * Checks if the current script still exists in the database
  */
-bool Script::exists() {
+bool Script::exists() const {
     Script script = Script::fetch(this->id);
     return script.id > 0;
 }
 
-bool Script::isFetched() {
+bool Script::isFetched() const {
     return (this->id > 0);
 }
 
@@ -383,7 +383,7 @@ bool Script::isFetched() {
  *
  * @return
  */
-QJsonObject Script::getInfoJsonObject() {
+QJsonObject Script::getInfoJsonObject() const {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(infoJson.toUtf8());
     return jsonResponse.object();
 }
@@ -393,7 +393,7 @@ QJsonObject Script::getInfoJsonObject() {
  *
  * @return
  */
-ScriptInfoJson Script::getScriptInfoJson() {
+ScriptInfoJson Script::getScriptInfoJson() const {
     return ScriptInfoJson(getInfoJsonObject());
 }
 
@@ -402,7 +402,7 @@ ScriptInfoJson Script::getScriptInfoJson() {
  *
  * @return
  */
-QJsonObject Script::getSettingsVariablesJsonObject() {
+QJsonObject Script::getSettingsVariablesJsonObject() const {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(
             settingsVariablesJson.toUtf8());
     return jsonResponse.object();
@@ -413,7 +413,7 @@ QJsonObject Script::getSettingsVariablesJsonObject() {
  *
  * @return
  */
-QString Script::getSettingsVariablesJson() {
+QString Script::getSettingsVariablesJson() const {
     return settingsVariablesJson;
 }
 
@@ -437,7 +437,7 @@ QString Script::globalScriptRepositoryPath() {
  *
  * @return
  */
-QString Script::scriptRepositoryPath(bool removeRecursively) {
+QString Script::scriptRepositoryPath(bool removeRecursively) const {
     if (identifier.isEmpty()) {
         return QString();
     }
@@ -460,7 +460,7 @@ QString Script::scriptRepositoryPath(bool removeRecursively) {
  *
  * @return
  */
-bool Script::isScriptFromRepository() {
+bool Script::isScriptFromRepository() const {
     return !identifier.isEmpty() || !infoJson.isEmpty();
 }
 
@@ -469,7 +469,7 @@ bool Script::isScriptFromRepository() {
  *
  * @return
  */
-QUrl Script::remoteScriptUrl() {
+QUrl Script::remoteScriptUrl() const {
     QJsonObject jsonObject = getInfoJsonObject();
     QString scriptName = jsonObject.value(QStringLiteral("script")).toString();
 
@@ -485,7 +485,7 @@ QUrl Script::remoteScriptUrl() {
  *
  * @return
  */
-QUrl Script::remoteFileUrl(const QString& fileName) {
+QUrl Script::remoteFileUrl(const QString& fileName) const {
     if (fileName.isEmpty()) {
         return QUrl();
     }
@@ -500,7 +500,7 @@ QUrl Script::remoteFileUrl(const QString& fileName) {
  *
  * @return
  */
-QList<QUrl> Script::remoteFileUrls() {
+QList<QUrl> Script::remoteFileUrls() const {
     QList<QUrl> urlList;
     ScriptInfoJson infoJson = getScriptInfoJson();
     QString scriptName = infoJson.script;
@@ -612,6 +612,6 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
  *
  * @return
  */
-QUrl Script::repositoryInfoJsonUrl() {
+QUrl Script::repositoryInfoJsonUrl() const {
     return ScriptRepositoryRawContentUrlPrefix + getIdentifier() + QStringLiteral("/info.json");
 }
