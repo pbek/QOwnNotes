@@ -137,11 +137,11 @@ public:
 
     QString getDecryptedNoteText() const;
 
-    bool hasEncryptedNoteText();
+    bool hasEncryptedNoteText() const;
 
     void setCryptoPassword(const QString& password);
 
-    bool canDecryptNoteText();
+    bool canDecryptNoteText() const;
 
     static bool expireCryptoKeys();
 
@@ -336,13 +336,12 @@ protected:
 
     QRegularExpression getEncryptedNoteTextRegularExpression() const;
     QString getEncryptedNoteText() const;
-signals:
-
-public slots:
 
     static const QString getNoteURL(const QString &baseName);
 
     static const QString getNoteURLFromFileName(const QString &fileName);
 };
+
+Q_DECLARE_TYPEINFO(Note, Q_MOVABLE_TYPE);
 
 #endif // NOTE_H
