@@ -1716,7 +1716,7 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
 
         // fetch the note sub folder of the note
         NoteSubFolder noteSubFolder =
-                NoteSubFolder::fetchByPathData(fileParentPath, QStringLiteral("/"));
+                NoteSubFolder::fetchByPathData(std::move(fileParentPath), QStringLiteral("/"));
 
         // fetch the note
         Note note = Note::fetchByFileName(fileName, noteSubFolder.getId());

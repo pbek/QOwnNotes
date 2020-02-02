@@ -2454,14 +2454,14 @@ QString Note::getEncryptedNoteText() const {
 /**
  * Returns encrypted note text if it is encrypted
  */
-bool Note::hasEncryptedNoteText() {
+bool Note::hasEncryptedNoteText() const {
     return !getEncryptedNoteText().isEmpty();
 }
 
 /**
  * Checks if note text can be decrypted
  */
-bool Note::canDecryptNoteText() {
+bool Note::canDecryptNoteText() const {
     QString encryptedNoteText = getEncryptedNoteText();
 
     if (encryptedNoteText.isEmpty()) {
