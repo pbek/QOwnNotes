@@ -142,7 +142,9 @@ protected:
     QColor _color;
     QString name;
 
-    QString colorFieldName();
+    QString colorFieldName() const;
 
     static bool removeNoteLinkById(const int id);
 };
+
+Q_DECLARE_TYPEINFO(Tag, Q_MOVABLE_TYPE);
