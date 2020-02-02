@@ -653,7 +653,8 @@ QList<Note> Tag::fetchAllLinkedNotes() const {
         for (int r = 0; query.next(); r++) {
             QString fileName = query.value(QStringLiteral("note_file_name")).toString();
             QString noteSubFolderPath = query.value(QStringLiteral("note_sub_folder_path")).toString();
-            auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPath, QStringLiteral("/"));
+            auto noteSubFolder = NoteSubFolder::fetchByPathData(std::move(noteSubFolderPath),
+                                                                QStringLiteral("/"));
             auto note = Note::fetchByName(fileName, noteSubFolder.getId());
 
             noteList << note;
@@ -981,7 +982,7 @@ void Tag::removeBrokenLinks() {
                     QStringLiteral("note_sub_folder_path")).toString();
 
             NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(
-                    noteSubFolderPath, QStringLiteral("/"));
+                    std::move(noteSubFolderPath), QStringLiteral("/"));
             Note note = Note::fetchByName(noteFileName, noteSubFolder.getId());
 
             // remove note tag link if note doesn't exist

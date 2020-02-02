@@ -11,7 +11,7 @@
 
 class NoteSubFolder {
 public:
-    explicit NoteSubFolder();
+    NoteSubFolder();
 
     int getId() const;
 
@@ -49,7 +49,7 @@ public:
 
     void setParentId(int parentId);
 
-    QString relativePath(QString separator = "") const;
+    QString relativePath(QString separator = QLatin1String("")) const;
 
     QString fullPath() const;
 
@@ -104,8 +104,6 @@ protected:
     QDateTime fileLastModified;
     QDateTime created;
     QDateTime modified;
-
-signals:
-
-public slots:
 };
+
+Q_DECLARE_TYPEINFO(NoteSubFolder, Q_MOVABLE_TYPE);

@@ -3300,7 +3300,7 @@ bool MainWindow::jumpToNoteHistoryItem(const NoteHistoryItem& historyItem) {
     Q_FOREACH(QTreeWidgetItem *item, items) {
         if (isCurrentNoteTreeEnabled) {
             QString pathData = historyItem.getNoteSubFolderPathData();
-            auto noteSubFolder = NoteSubFolder::fetchByPathData(pathData);
+            auto noteSubFolder = NoteSubFolder::fetchByPathData(std::move(pathData));
             int parentId = item->parent()->data(0, Qt::UserRole).toInt();
 
             if (parentId != noteSubFolder.getId()) {
