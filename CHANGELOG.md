@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.2.1
+- improved the space padding of the automatic markdown table formatter
+  (for [#1052](https://github.com/pbek/QOwnNotes/issues/1052))
+- fixed highlighting of list items that start with tabulator characters and
+  checkboxes that don't have a space in the brackets (for [#1615](https://github.com/pbek/QOwnNotes/issues/1615), thank you @Waqar144)
+
 ## 20.2.0
 - remote images and Nextcloud text images are now cached after being downloaded
   for the preview until another note was be selected (for [#1244](https://github.com/pbek/QOwnNotes/issues/1244))
