@@ -453,7 +453,7 @@ void Utils::Gui::copyCodeBlockText(const QTextBlock& initialBlock) {
 bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
     QTextCursor initialCursor = textEdit->textCursor();
     QTextCursor cursor = initialCursor;
-    cursor.movePosition(QTextCursor::EndOfLine);
+    cursor.movePosition(QTextCursor::EndOfBlock);
     int endPosition = cursor.position();
     QTextBlock initialBlock = cursor.block();
     QTextBlock block = initialBlock;
@@ -525,7 +525,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
                 break;
             }
 
-            const QString &text = lineTextList.at(col);
+            const QString &text = lineTextList.at(col).trimmed();
             maxTextLength = std::max(text.count(), maxTextLength);
         }
 
@@ -547,15 +547,16 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
             }
 
             // check if text is a headline separator
-            if (maxTextLength > 2 &&
-                headlineSeparatorRegExp.match(text.trimmed()).hasMatch()) {
+            if (headlineSeparatorRegExp.match(text.trimmed()).hasMatch()) {
                 // justify the headline separator text
-                justifiedText = QStringLiteral(" ") + text.trimmed().leftJustified(
-                        maxTextLength - 2, '-') + QStringLiteral(" ");
+                justifiedText = QStringLiteral(" ") +
+                        QStringLiteral("-").repeated(maxTextLength) +
+                        QStringLiteral(" ");
             } else {
                 // justify the text
-                justifiedText = text.leftJustified(maxTextLength);
-
+                justifiedText = QStringLiteral(" ") +
+                        text.trimmed().leftJustified(maxTextLength) +
+                        QStringLiteral(" ");
             }
 
             // update the tableTextList
