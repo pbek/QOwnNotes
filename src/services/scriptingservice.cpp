@@ -983,8 +983,8 @@ void ScriptingService::noteTextEditSelectCurrentLine() {
     if (mainWindow != Q_NULLPTR) {
         QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
-        c.movePosition(QTextCursor::StartOfLine);
-        c.movePosition(QTextCursor::EndOfLine, QTextCursor::KeepAnchor);
+        c.movePosition(QTextCursor::StartOfBlock);
+        c.movePosition(QTextCursor::EndOfBlock, QTextCursor::KeepAnchor);
         textEdit->setTextCursor(c);
     }
 #endif

@@ -9048,7 +9048,7 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
     c.setPosition(position);
 
     // select the text of the headline
-    c.movePosition(QTextCursor::EndOfLine, QTextCursor::KeepAnchor);
+    c.movePosition(QTextCursor::EndOfBlock, QTextCursor::KeepAnchor);
 
     textEdit->setTextCursor(c);
 
@@ -9170,7 +9170,7 @@ bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
     QTextCursor c = textEdit->textCursor();
 
     // get the text from the current cursor to the start of the line
-    c.movePosition(QTextCursor::StartOfLine, QTextCursor::KeepAnchor);
+    c.movePosition(QTextCursor::StartOfBlock, QTextCursor::KeepAnchor);
     QString text = c.selectedText();
     qDebug() << __func__ << " - 'text': " << text;
 
