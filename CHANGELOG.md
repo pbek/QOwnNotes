@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 20.2.2
+- automatic closing of brackets (and other characters) will now happen even if
+  you are in the middle of the line (for [#96](https://github.com/pbek/qmarkdowntextedit/pull/96), thank you @Waqar144)
+    - automatic removal of brackets (and other characters) for closing characters
+      for example `]` or `)` now works (previously automatic removal only
+      happened if the character was an opening character)
+- fixed Go lang highlighting and improved makefile highlighting
+  (for [#97](https://github.com/pbek/qmarkdowntextedit/pull/97), thank you @Waqar144)
+
 ## 20.2.1
 - improved the space padding of the automatic markdown table formatter
   (for [#1052](https://github.com/pbek/QOwnNotes/issues/1052))
