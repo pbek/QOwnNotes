@@ -8,6 +8,7 @@
       happened if the character was an opening character)
 - fixed Go lang highlighting and improved makefile highlighting
   (for [#97](https://github.com/pbek/qmarkdowntextedit/pull/97), thank you @Waqar144)
+- improved comment block highlighting (for [#99](https://github.com/pbek/qmarkdowntextedit/pull/99), thank you @Waqar144)
 
 ## 20.2.1
 - improved the space padding of the automatic markdown table formatter
