@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.2.3
+- improved Setext-style headers highlighting with leading spaces
+  (for [#101](https://github.com/pbek/qmarkdowntextedit/issues/101), thank you @Waqar144)
+- allowed CMake and Make highlighting in the preview
+  (for [#1617](https://github.com/pbek/QOwnNotes/pull/1617), thank you @Waqar144)
+ 
 ## 20.2.2
 - automatic closing of brackets (and other characters) will now happen even if
   you are in the middle of the line (for [#96](https://github.com/pbek/qmarkdowntextedit/pull/96), thank you @Waqar144)
