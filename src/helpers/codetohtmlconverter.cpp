@@ -18,35 +18,37 @@ void CodeToHtmlConverter::initCodeLangs() const Q_DECL_NOTHROW
 {
     CodeToHtmlConverter::_langStringToEnum =
             QHash<QString, CodeToHtmlConverter::Lang> {
-        {QLatin1String("bash"),        CodeToHtmlConverter::CodeBash},
-        {QLatin1String("c"),           CodeToHtmlConverter::CodeC},
-        {QLatin1String("cpp"),         CodeToHtmlConverter::CodeCpp},
-        {QLatin1String("cxx"),         CodeToHtmlConverter::CodeCpp},
-        {QLatin1String("c++"),         CodeToHtmlConverter::CodeCpp},
-        {QLatin1String("c#"),          CodeToHtmlConverter::CodeCSharp},
-        {QLatin1String("csharp"),      CodeToHtmlConverter::CodeCSharp},
-        {QLatin1String("css"),         CodeToHtmlConverter::CodeCSS},
-        {QLatin1String("go"),          CodeToHtmlConverter::CodeCSharp},
-        {QLatin1String("html"),        CodeToHtmlConverter::CodeXML},
-        {QLatin1String("ini"),         CodeToHtmlConverter::CodeINI},
-        {QLatin1String("java"),        CodeToHtmlConverter::CodeJava},
-        {QLatin1String("javascript"),  CodeToHtmlConverter::CodeJava},
-        {QLatin1String("js"),          CodeToHtmlConverter::CodeJs},
-        {QLatin1String("json"),        CodeToHtmlConverter::CodeJSON},
-        {QLatin1String("php"),         CodeToHtmlConverter::CodePHP},
-        {QLatin1String("py"),          CodeToHtmlConverter::CodePython},
-        {QLatin1String("python"),      CodeToHtmlConverter::CodePython},
-        {QLatin1String("qml"),         CodeToHtmlConverter::CodeQML},
-        {QLatin1String("rust"),        CodeToHtmlConverter::CodeRust},
-        {QLatin1String("sh"),          CodeToHtmlConverter::CodeBash},
-        {QLatin1String("sql"),         CodeToHtmlConverter::CodeSQL},
-        {QLatin1String("ts"),          CodeToHtmlConverter::CodeTypeScript},
-        {QLatin1String("typescript"),  CodeToHtmlConverter::CodeTypeScript},
-        {QLatin1String("v"),           CodeToHtmlConverter::CodeV},
-        {QLatin1String("vex"),         CodeToHtmlConverter::CodeVex},
-        {QLatin1String("xml"),         CodeToHtmlConverter::CodeXML},
-        {QLatin1String("yml"),         CodeToHtmlConverter::CodeYAML},
-        {QLatin1String("yaml"),        CodeToHtmlConverter::CodeYAML}
+        {QStringLiteral("bash"),        CodeToHtmlConverter::CodeBash},
+        {QStringLiteral("c"),           CodeToHtmlConverter::CodeC},
+        {QStringLiteral("cpp"),         CodeToHtmlConverter::CodeCpp},
+        {QStringLiteral("cxx"),         CodeToHtmlConverter::CodeCpp},
+        {QStringLiteral("c++"),         CodeToHtmlConverter::CodeCpp},
+        {QStringLiteral("c#"),          CodeToHtmlConverter::CodeCSharp},
+        {QStringLiteral("cmake"),       CodeToHtmlConverter::CodeCMake},
+        {QStringLiteral("csharp"),      CodeToHtmlConverter::CodeCSharp},
+        {QStringLiteral("css"),         CodeToHtmlConverter::CodeCSS},
+        {QStringLiteral("go"),          CodeToHtmlConverter::CodeGo},
+        {QStringLiteral("html"),        CodeToHtmlConverter::CodeXML},
+        {QStringLiteral("ini"),         CodeToHtmlConverter::CodeINI},
+        {QStringLiteral("java"),        CodeToHtmlConverter::CodeJava},
+        {QStringLiteral("javascript"),  CodeToHtmlConverter::CodeJava},
+        {QStringLiteral("js"),          CodeToHtmlConverter::CodeJs},
+        {QStringLiteral("json"),        CodeToHtmlConverter::CodeJSON},
+        {QStringLiteral("make"),        CodeToHtmlConverter::CodeMake},
+        {QStringLiteral("php"),         CodeToHtmlConverter::CodePHP},
+        {QStringLiteral("py"),          CodeToHtmlConverter::CodePython},
+        {QStringLiteral("python"),      CodeToHtmlConverter::CodePython},
+        {QStringLiteral("qml"),         CodeToHtmlConverter::CodeQML},
+        {QStringLiteral("rust"),        CodeToHtmlConverter::CodeRust},
+        {QStringLiteral("sh"),          CodeToHtmlConverter::CodeBash},
+        {QStringLiteral("sql"),         CodeToHtmlConverter::CodeSQL},
+        {QStringLiteral("ts"),          CodeToHtmlConverter::CodeTypeScript},
+        {QStringLiteral("typescript"),  CodeToHtmlConverter::CodeTypeScript},
+        {QStringLiteral("v"),           CodeToHtmlConverter::CodeV},
+        {QStringLiteral("vex"),         CodeToHtmlConverter::CodeVex},
+        {QStringLiteral("xml"),         CodeToHtmlConverter::CodeXML},
+        {QStringLiteral("yml"),         CodeToHtmlConverter::CodeYAML},
+        {QStringLiteral("yaml"),        CodeToHtmlConverter::CodeYAML}
     };
 
 }
@@ -127,6 +129,14 @@ QString CodeToHtmlConverter::process() const
         return ymlHighlighter();
     case CodeINI:
         return iniHighlighter();
+    case CodeMake :
+        loadMakeData(types, keywords, builtin, literals, others);
+        comment = QLatin1Char('#');
+        break;
+    case CodeCMake :
+        loadCMakeData(types, keywords, builtin, literals, others);
+        comment = QLatin1Char('#');
+        break;
     default:
         output += escapeString(_input);
         return output;
@@ -147,22 +157,19 @@ QString CodeToHtmlConverter::process() const
         } else if (_input.at(i).isDigit()) {
             i = highlightNumericLit(output, i);
         } else if (comment.isNull() && _input.at(i) == QLatin1Char('/')) {
-            if(_input.at(i + 1) == QLatin1Char('/')) {
+            if (_input.at(i + 1) == QLatin1Char('/'))
                 i = highlightComment(output, i);
-            }
             //Multiline comment i.e /* */
-            else if (_input.at(i + 1) == QLatin1Char('*')) {
+            else if (_input.at(i + 1) == QLatin1Char('*'))
                 i = highlightComment(output, i, false);
-            } else {
+            else
                 output += escape(_input.at(i));
-            }
         } else if (_input.at(i) == comment) {
             i = highlightComment(output, i);
         } else if (_input.at(i) == QLatin1Char('<') || _input.at(i) == QLatin1Char('>') ||
                    _input.at(i) == QLatin1Char('&')) {
             output += escape(_input.at(i));
-        }
-        else if(_input.at(i).isLetter()) {
+        } else if(_input.at(i).isLetter()) {
             int pos = i;
             i = highlightWord(i, types, output, Format::Type);
             if (i < textLen && !_input.at(i).isLetter()) {
@@ -321,7 +328,7 @@ int CodeToHtmlConverter::highlightNumericLit(QString &output, int i) const
         }
     }
     if (isPostAllowed) {
-        int end = ++i;
+        const int end = ++i;
         output += setFormat(_input.mid(start, end - start), Format::Literal);
         return --i;
     }
@@ -382,15 +389,11 @@ int CodeToHtmlConverter::highlightStringLiterals(QChar strType, QString &output,
             case '7':
             {
                 if (i + 4 <= _input.length()) {
-                    bool isCurrentOctal = true;
-                    if (!isOctal(_input.at(i+2).toLatin1())) {
-                        isCurrentOctal = false;
+                    const bool isCurrentOctal =
+                            (isOctal(_input.at(i+2).toLatin1()) && isOctal(_input.at(i+3).toLatin1())) ?
+                                true : false;
+                    if (!isCurrentOctal)
                         break;
-                    }
-                    if (!isOctal(_input.at(i+3).toLatin1())) {
-                        isCurrentOctal = false;
-                        break;
-                    }
                     len = isCurrentOctal ? 4 : 0;
                 }
                 break;
@@ -399,15 +402,11 @@ int CodeToHtmlConverter::highlightStringLiterals(QChar strType, QString &output,
             case 'x':
             {
                 if (i + 3 <= _input.length()) {
-                    bool isCurrentHex = true;
-                    if (!isHex(_input.at(i+2).toLatin1())) {
-                        isCurrentHex = false;
+                    const bool isCurrentHex =
+                            (isHex(_input.at(i+2).toLatin1()) && isHex(_input.at(i+3).toLatin1())) ?
+                                true : false;
+                    if (!isCurrentHex)
                         break;
-                    }
-                    if (!isHex(_input.at(i+3).toLatin1())) {
-                        isCurrentHex = false;
-                        break;
-                    }
                     len = isCurrentHex ? 4 : 0;
                 }
                 break;
