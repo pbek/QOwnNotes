@@ -24,15 +24,17 @@ void CodeToHtmlConverter::initCodeLangs() const Q_DECL_NOTHROW
         {QLatin1String("cxx"),         CodeToHtmlConverter::CodeCpp},
         {QLatin1String("c++"),         CodeToHtmlConverter::CodeCpp},
         {QLatin1String("c#"),          CodeToHtmlConverter::CodeCSharp},
+        {QLatin1String("cmake"),       CodeToHtmlConverter::CodeCMake},
         {QLatin1String("csharp"),      CodeToHtmlConverter::CodeCSharp},
         {QLatin1String("css"),         CodeToHtmlConverter::CodeCSS},
-        {QLatin1String("go"),          CodeToHtmlConverter::CodeCSharp},
+        {QLatin1String("go"),          CodeToHtmlConverter::CodeGo},
         {QLatin1String("html"),        CodeToHtmlConverter::CodeXML},
         {QLatin1String("ini"),         CodeToHtmlConverter::CodeINI},
         {QLatin1String("java"),        CodeToHtmlConverter::CodeJava},
         {QLatin1String("javascript"),  CodeToHtmlConverter::CodeJava},
         {QLatin1String("js"),          CodeToHtmlConverter::CodeJs},
         {QLatin1String("json"),        CodeToHtmlConverter::CodeJSON},
+        {QLatin1String("make"),        CodeToHtmlConverter::CodeMake},
         {QLatin1String("php"),         CodeToHtmlConverter::CodePHP},
         {QLatin1String("py"),          CodeToHtmlConverter::CodePython},
         {QLatin1String("python"),      CodeToHtmlConverter::CodePython},
@@ -127,6 +129,14 @@ QString CodeToHtmlConverter::process() const
         return ymlHighlighter();
     case CodeINI:
         return iniHighlighter();
+    case CodeMake :
+        loadMakeData(types, keywords, builtin, literals, others);
+        comment = QLatin1Char('#');
+        break;
+    case CodeCMake :
+        loadCMakeData(types, keywords, builtin, literals, others);
+        comment = QLatin1Char('#');
+        break;
     default:
         output += escapeString(_input);
         return output;

@@ -41,7 +41,9 @@ public:
         CodeTypeScript,
         CodeYAML,
         CodeINI,
-        CodeVex
+        CodeVex,
+        CodeCMake,
+        CodeMake
     };
 public:
     CodeToHtmlConverter(const QStringRef input, const QString &lang) Q_DECL_NOTHROW;

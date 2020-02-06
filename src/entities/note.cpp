@@ -1786,8 +1786,7 @@ bool Note::fileWriteable() const{
 // checks if the current note still exists in the database
 //
 bool Note::exists() const {
-    Note note = Note::fetch(this->id);
-    return note.id > 0;
+    return Note::fetch(this->id).id > 0;
 }
 
 //
