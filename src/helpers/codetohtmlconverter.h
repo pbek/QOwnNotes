@@ -50,8 +50,8 @@ public:
     QString process() const;
 
 private:
-    QStringRef _input;
-    QString _lang;
+    const QStringRef _input;
+    const QString _lang;
     Lang currentLang;
 
     QString escape(QChar c) const;
@@ -73,14 +73,14 @@ private:
     /**
      * @brief returns true if c is octal
      */
-    inline bool isOctal(const char c) const {
+    static inline bool isOctal(const char c) {
         return (c >= '0' && c <= '7');
     }
 
     /**
      * @brief returns true if c is hex
      */
-    inline bool isHex(const char c) const {
+    static inline bool isHex(const char c) {
         return (
             (c >= '0' && c <= '9') ||
             (c >= 'a' && c <= 'f') ||
