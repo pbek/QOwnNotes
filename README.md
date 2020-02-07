@@ -45,6 +45,8 @@ To access your ownCloud notes from your **mobile device** you may want to get th
 
 On Android you could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
 
+On iOS I heard [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) works well (syncing notes via WebDAV).
+
 ## Screenshot
 
 ![Screenhot](screenshots/screenshot.png)
