@@ -47,56 +47,44 @@ public:
     };
 public:
     CodeToHtmlConverter(const QStringRef input, const QString &lang) Q_DECL_NOTHROW;
-    QString process() const;
+    Q_REQUIRED_RESULT QString process() const;
 
 private:
     const QStringRef _input;
     const QString _lang;
-    Lang currentLang;
+    Lang _currentLang;
 
-    QString escape(QChar c) const;
-    QString escapeString(const QStringRef s) const;
-    QString setFormat(const QStringRef str, Format format) const;
-    void initCodeLangs() const Q_DECL_NOTHROW;
+    Q_REQUIRED_RESULT static QString escape(QChar c);
+    Q_REQUIRED_RESULT static QString escapeString(const QStringRef s);
+    Q_REQUIRED_RESULT static QString setFormat(const QStringRef str, Format format);
+    static void initCodeLangs() Q_DECL_NOTHROW;
 
-    int highlightNumericLit(QString &output, int i) const;
-    int highlightStringLiterals(QChar strType, QString &output, int i) const;
-    int highlightComment(QString &output, int i, bool isSingleLine = true) const;
-    int highlightWord(int i, const LangData &data,
-                      QString &output, Format f) const;
-    QString xmlHighlighter() const;
-    QString cssHighlighter(const LangData &types,
-                           const LangData &keywords) const;
-    QString ymlHighlighter() const;
-    QString iniHighlighter() const;
+    Q_REQUIRED_RESULT int highlightNumericLit(QString &output, int i) const;
+    Q_REQUIRED_RESULT int highlightStringLiterals(QChar strType, QString &output, int i) const;
+    Q_REQUIRED_RESULT int highlightComment(QString &output, int i, bool isSingleLine = true) const;
+    Q_REQUIRED_RESULT int highlightWord(int i, const LangData &data, QString &output, Format f) const;
+    Q_REQUIRED_RESULT QString xmlHighlighter() const;
+    Q_REQUIRED_RESULT QString cssHighlighter(const LangData &types, const LangData &keywords) const;
+    Q_REQUIRED_RESULT QString ymlHighlighter() const;
+    Q_REQUIRED_RESULT QString iniHighlighter() const;
 
     /**
      * @brief returns true if c is octal
      */
-    static inline bool isOctal(const char c) {
+    Q_REQUIRED_RESULT static inline bool isOctal(const char c) {
         return (c >= '0' && c <= '7');
     }
 
     /**
      * @brief returns true if c is hex
      */
-    static inline bool isHex(const char c) {
-        return (
-            (c >= '0' && c <= '9') ||
-            (c >= 'a' && c <= 'f') ||
-            (c >= 'A' && c <= 'F'));
+    Q_REQUIRED_RESULT static inline bool isHex(const char c) {
+        return ((c >= '0' && c <= '9') ||
+                (c >= 'a' && c <= 'f') ||
+                (c >= 'A' && c <= 'F'));
     }
 
     static QHash<QString, Lang> _langStringToEnum;
-
-    const QString keywordTagBegin = QStringLiteral("<span class=\"code-keyword\">");
-    const QString typeTagBegin = QStringLiteral("<span class=\"code-type\">");
-    const QString literalTagBegin = QStringLiteral("<span class=\"code-literal\">");
-    const QString commentTagBegin = QStringLiteral("<span class=\"code-comment\">");
-    const QString builtinTagBegin = QStringLiteral("<span class=\"code-builtin\">");
-    const QString otherTagBegin = QStringLiteral("<span class=\"code-other\">");
-    const QString stringTagBegin = QStringLiteral("<span class=\"code-string\">");
-    const QString spanEnd = QStringLiteral("</span>");
 };
 
 #endif // CODETOHTMLCONVERTER_H
