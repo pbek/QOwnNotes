@@ -5,7 +5,9 @@
   (for [#101](https://github.com/pbek/qmarkdowntextedit/issues/101), thank you @Waqar144)
 - allowed CMake and Make highlighting in the preview
   (for [#1617](https://github.com/pbek/QOwnNotes/pull/1617), thank you @Waqar144)
- 
+- fixed tilde style code blocks in preview when the number of tildes blocks were odd
+  (for [#1620](https://github.com/pbek/QOwnNotes/pull/1620), thank you @Waqar144)
+
 ## 20.2.2
 - automatic closing of brackets (and other characters) will now happen even if
   you are in the middle of the line (for [#96](https://github.com/pbek/qmarkdowntextedit/pull/96), thank you @Waqar144)
