@@ -13,7 +13,7 @@
  */
 
 NoteHistoryItem::NoteHistoryItem(Note *note, QPlainTextEdit *textEdit) :
-    _noteName(""), _noteSubFolderPathData("")
+    _noteName(QLatin1String("")), _noteSubFolderPathData(QLatin1String(""))
 {
     _cursorPosition = 0;
     _relativeScrollBarPosition = 0;
@@ -382,7 +382,7 @@ void NoteHistory::restoreForCurrentNoteFolder() {
     clear();
 
     // restore the note history of the new note folder
-    QVariantList noteHistoryVariantItems = settings.value(
+    const QVariantList noteHistoryVariantItems = settings.value(
             QStringLiteral("NoteHistory-") + QString::number(currentNoteFolderId)).toList();
 
     if (noteHistoryVariantItems.count() == 0) {
@@ -390,15 +390,15 @@ void NoteHistory::restoreForCurrentNoteFolder() {
     }
 
     int maxIndex = -1;
-    Q_FOREACH(const QVariant &item, noteHistoryVariantItems) {
-            // check if the NoteHistoryItem could be de-serialized
-            if (item.isValid()) {
-                NoteHistoryItem noteHistoryItem =
-                        item.value<NoteHistoryItem>();
-                addNoteHistoryItem(noteHistoryItem);
-                maxIndex++;
-            }
+    for (const QVariant &item : noteHistoryVariantItems) {
+        // check if the NoteHistoryItem could be de-serialized
+        if (item.isValid()) {
+            NoteHistoryItem noteHistoryItem =
+                    item.value<NoteHistoryItem>();
+            addNoteHistoryItem(noteHistoryItem);
+            maxIndex++;
         }
+    }
 
     int newCurrentIndex = settings.value("NoteHistoryCurrentIndex-" +
                                       QString::number(currentNoteFolderId)).toInt();
@@ -451,7 +451,8 @@ void NoteHistory::addNoteHistoryItem(const NoteHistoryItem& item) {
  * @return
  */
 QDataStream &operator<<(QDataStream &out, const NoteHistory &history) {
-    Q_FOREACH(NoteHistoryItem item, history.getNoteHistoryItems()) {
+    const auto noteHistoryItems = history.getNoteHistoryItems();
+    for (const NoteHistoryItem &item : noteHistoryItems) {
         out << item;
     }
 

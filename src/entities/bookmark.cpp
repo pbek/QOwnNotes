@@ -28,7 +28,7 @@ Bookmark::Bookmark(QString url, QString name, QStringList tagList,
 };
 
 
-QJsonObject Bookmark::jsonObject() {
+QJsonObject Bookmark::jsonObject() const {
     QJsonObject bookmarkObject;
     bookmarkObject.insert("name", QJsonValue::fromVariant(name));
     bookmarkObject.insert("url", QJsonValue::fromVariant(url));
@@ -130,17 +130,18 @@ QList<Bookmark> Bookmark::parseBookmarks(const QString& text, bool withBasicUrls
  *
  * @return
  */
-QString Bookmark::bookmarksWebServiceJsonText(QList<Bookmark> bookmarks) {
+QString Bookmark::bookmarksWebServiceJsonText(const QList<Bookmark>& bookmarks) {
     QJsonArray bookmarkObjectList;
     QJsonArray noteFolderObjectList;
 
-    Q_FOREACH(Bookmark bookmark, bookmarks) {
-            bookmarkObjectList.push_back(bookmark.jsonObject());
-        }
+    for (const Bookmark &bookmark : bookmarks) {
+        bookmarkObjectList.push_back(bookmark.jsonObject());
+    }
 
-    Q_FOREACH(NoteFolder noteFolder, NoteFolder::fetchAll()) {
-            noteFolderObjectList.push_back(noteFolder.jsonObject());
-        }
+    const auto noteFolders = NoteFolder::fetchAll();
+    for (const NoteFolder &noteFolder : noteFolders) {
+        noteFolderObjectList.push_back(noteFolder.jsonObject());
+    }
 
     QJsonObject bookmarkResultObject;
     bookmarkResultObject.insert("type", QJsonValue::fromVariant("bookmarks"));
@@ -170,7 +171,7 @@ QString Bookmark::parsedBookmarksWebServiceJsonText(
 /**
  * Merges the current bookmark into a list of bookmarks
  */
-void Bookmark::mergeInList(QList<Bookmark> &bookmarks) {
+void Bookmark::mergeInList(QList<Bookmark> &bookmarks)  {
     int i = bookmarks.indexOf(*this);
 
     if (i == -1) {
@@ -215,9 +216,9 @@ void Bookmark::merge(Bookmark &bookmark) {
 /**
  * Merges a list of bookmarks into another
  */
-void Bookmark::mergeListInList(QList<Bookmark> &sourceBookmarks,
+void Bookmark::mergeListInList(const QList<Bookmark> &sourceBookmarks,
                                QList<Bookmark> &destinationBookmarks) {
-    Q_FOREACH(Bookmark bookmark, sourceBookmarks) {
-            bookmark.mergeInList(destinationBookmarks);
-        }
+    for (Bookmark bookmark : sourceBookmarks) {
+        bookmark.mergeInList(destinationBookmarks);
+    }
 }

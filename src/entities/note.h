@@ -111,7 +111,7 @@ public:
 
     bool refetch();
 
-    bool fillFromQuery(const QSqlQuery& query);
+    void fillFromQuery(const QSqlQuery& query);
 
     bool fillByFileName(const QString &fileName, int noteSubFolderId = -1);
 
@@ -314,25 +314,25 @@ public:
     static Utils::Misc::ExternalImageHash *externalImageHash();
 
 protected:
-    int id;
     QString name;
     QString fileName;
-    qint64 fileSize;
-    int noteSubFolderId;
+    QString _noteTextHtml;
+    QString _noteTextHtmlConversionHash;
     QString noteText;
     QString decryptedNoteText;
-    bool hasDirtyData;
+    QString cryptoPassword;
+    QString shareUrl;
     QDateTime fileCreated;
     QDateTime fileLastModified;
     QDateTime created;
     QDateTime modified;
+    qint64 fileSize;
     qint64 cryptoKey;
-    QString cryptoPassword;
-    QString shareUrl;
+    int id;
+    int noteSubFolderId;
     int shareId;
     unsigned int sharePermissions;
-    QString _noteTextHtml;
-    QString _noteTextHtmlConversionHash;
+    bool hasDirtyData;
 
     QRegularExpression getEncryptedNoteTextRegularExpression() const;
     QString getEncryptedNoteText() const;

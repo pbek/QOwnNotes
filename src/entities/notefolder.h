@@ -8,7 +8,7 @@ class QJsonObject;
 class NoteFolder
 {
 public:
-    explicit NoteFolder();
+    NoteFolder();
 
     friend QDebug operator<<(QDebug dbg, const NoteFolder &noteFolder);
 
@@ -66,14 +66,14 @@ public:
     static bool isCurrentNoteTreeEnabled();
 
 private:
-    int id;
     QString name;
     QString localPath;
-    int cloudConnectionId;
     QString remotePath;
+    QString activeNoteSubFolderData;
+    int id;
+    int cloudConnectionId;
     int priority;
     int activeTagId;
-    QString activeNoteSubFolderData;
     bool showSubfolders;
     bool useGit;
 };
