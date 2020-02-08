@@ -31,6 +31,15 @@ namespace Utils {
 
         typedef QHash<QString, ExternalImageHashItem> ExternalImageHash;
     }
+
+    // this adds const to non-const objects (like cxx-17 std::as_const)
+    // always use it with cxx-11 range-for when the container being iterated over is
+    // a temporary or non-const
+    template <typename T>
+    Q_DECL_CONSTEXPR typename std::add_const<T>::type &asConst(T &t) noexcept { return t; }
+    // prevent rvalue arguments:
+    template <typename T>
+    void asConst(const T &&) = delete;
 }
 
 Q_DECLARE_METATYPE(Utils::Misc::ExternalImageHash*)
