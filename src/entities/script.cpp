@@ -502,18 +502,19 @@ QUrl Script::remoteFileUrl(const QString& fileName) const {
  */
 QList<QUrl> Script::remoteFileUrls() const {
     QList<QUrl> urlList;
-    ScriptInfoJson infoJson = getScriptInfoJson();
+    const ScriptInfoJson infoJson = getScriptInfoJson();
     QString scriptName = infoJson.script;
 
     if (!scriptName.isEmpty()) {
         urlList << remoteFileUrl(scriptName);
     }
 
-    foreach( QString fileName, infoJson.resources ) {
-            if (!fileName.isEmpty()) {
-                urlList << remoteFileUrl(fileName);
-            }
+    const auto &infoJsonResources = infoJson.resources;
+    for (const QString &fileName : infoJsonResources) {
+        if (!fileName.isEmpty()) {
+            urlList << remoteFileUrl(fileName);
         }
+    }
 
     return urlList;
 }
@@ -545,33 +546,33 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
     description = jsonObject.value(QStringLiteral("description")).toString();
     description = description.replace(QStringLiteral("\n"), QStringLiteral("<br>"));
     script = jsonObject.value(QStringLiteral("script")).toString();
-    QJsonArray authors = jsonObject.value(QStringLiteral("authors")).toArray();
-    QJsonArray platforms = jsonObject.value(QStringLiteral("platforms")).toArray();
+    const QJsonArray authors = jsonObject.value(QStringLiteral("authors")).toArray();
+    const QJsonArray platforms = jsonObject.value(QStringLiteral("platforms")).toArray();
 
     // generate the author list
     richAuthorList.clear();
-    foreach(const QJsonValue &value, authors) {
-            QString author = value.toString().trimmed();
+    for (const QJsonValue &value : authors) {
+        QString author = value.toString().trimmed();
 
-            // create links to GitHub
-            if (author.startsWith(QStringLiteral("@"))) {
-                author = author.remove(0, 1);
-                author = QStringLiteral("<a href='https://github.com/") + author +
-                        QStringLiteral("'>") + author + QStringLiteral("</a>");
-            }
-
-            richAuthorList << author;
+        // create links to GitHub
+        if (author.startsWith(QStringLiteral("@"))) {
+            author = author.remove(0, 1);
+            author = QStringLiteral("<a href='https://github.com/") + author +
+                    QStringLiteral("'>") + author + QStringLiteral("</a>");
         }
+
+        richAuthorList << author;
+    }
     richAuthorText = richAuthorList.join(QStringLiteral(", "));
 
     // generate the platform list
     platformList.clear();
     richPlatformList.clear();
-    foreach(const QJsonValue &value, platforms) {
-            QString platform = value.toString().trimmed();
-            platformList << platform;
-        }
-    if (platformList.count() == 0) {
+    for (const QJsonValue &value : platforms) {
+        const QString platform = value.toString().trimmed();
+        platformList << platform;
+    }
+    if (platformList.isEmpty()) {
         platformList << "linux" << "macos" << "windows";
     }
     QHash<QString, QString> platformHash;
@@ -592,15 +593,15 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
     richPlatformText = richPlatformList.join(QStringLiteral(", "));
 
     // get the resources file names
-    QJsonArray resourcesArray = jsonObject.value(QStringLiteral("resources")).toArray();
+    const QJsonArray resourcesArray = jsonObject.value(QStringLiteral("resources")).toArray();
     resources.clear();
-    foreach(const QJsonValue &value, resourcesArray) {
-            QString fileName = value.toString().trimmed();
+    for (const QJsonValue &value : resourcesArray) {
+        const QString fileName = value.toString().trimmed();
 
-            if (!fileName.isEmpty()) {
-                resources << fileName;
-            }
+        if (!fileName.isEmpty()) {
+            resources << fileName;
         }
+    }
 
     // check if app version is supported
     appVersionSupported = VersionNumber(VERSION) >=

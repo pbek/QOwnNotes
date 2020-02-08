@@ -295,7 +295,8 @@ QList<int> CloudConnection::fetchUsedCloudConnectionsIds() {
     // we want to prevent duplicates
     QSet<int> idList;
 
-    Q_FOREACH(NoteFolder noteFolder, NoteFolder::fetchAll()) {
+    const auto noteFolders = NoteFolder::fetchAll();
+    for (NoteFolder noteFolder : noteFolders) {
         idList << noteFolder.getCloudConnectionId();
     }
 
