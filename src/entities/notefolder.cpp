@@ -13,9 +13,10 @@
 #include <QtCore/QJsonDocument>
 #include <QJsonObject>
 
-NoteFolder::NoteFolder() : name(""),
-                           localPath(""),
-                           remotePath("") {
+NoteFolder::NoteFolder()
+    : name(QLatin1String("")),
+      localPath(QLatin1String("")),
+      remotePath(QLatin1String("")) {
     id = 0;
     cloudConnectionId = 1;
     priority = 0;
@@ -106,7 +107,7 @@ void NoteFolder::resetActiveNoteSubFolder() {
 
 bool NoteFolder::create(const QString& name, const QString& localPath,
                         int cloudConnectionId, const QString& remotePath) {
-    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("INSERT INTO noteFolder ( name, local_path, "
@@ -121,10 +122,8 @@ bool NoteFolder::create(const QString& name, const QString& localPath,
 }
 
 NoteFolder NoteFolder::fetch(int id) {
-    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
-
-    NoteFolder noteFolder;
 
     query.prepare(QStringLiteral("SELECT * FROM noteFolder WHERE id = :id"));
     query.bindValue(QStringLiteral(":id"), id);
@@ -132,14 +131,16 @@ NoteFolder NoteFolder::fetch(int id) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
+        NoteFolder noteFolder;
         noteFolder.fillFromQuery(query);
+        return noteFolder;
     }
 
-    return noteFolder;
+    return NoteFolder();
 }
 
 int NoteFolder::countAll() {
-    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("SELECT COUNT(*) AS cnt FROM noteFolder"));
@@ -154,12 +155,12 @@ int NoteFolder::countAll() {
 }
 
 bool NoteFolder::localPathExists() const {
-    QDir folder(localPath);
+    const QDir folder(localPath);
     return folder.exists() && !localPath.isEmpty();
 }
 
 bool NoteFolder::remove() {
-    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("DELETE FROM noteFolder WHERE id = :id"));
@@ -204,7 +205,7 @@ bool NoteFolder::fillFromQuery(const QSqlQuery& query) {
 }
 
 QList<NoteFolder> NoteFolder::fetchAll() {
-    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     QList<NoteFolder> noteFolderList;
@@ -214,8 +215,7 @@ QList<NoteFolder> NoteFolder::fetchAll() {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            NoteFolder noteFolder = noteFolderFromQuery(query);
-            noteFolderList.append(noteFolder);
+            noteFolderList.append(noteFolderFromQuery(query));
         }
     }
 
@@ -226,7 +226,7 @@ QList<NoteFolder> NoteFolder::fetchAll() {
  * Inserts or updates a NoteFolder object in the database
  */
 bool NoteFolder::store() {
-    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     if (this->id > 0) {
@@ -280,8 +280,7 @@ bool NoteFolder::store() {
  * Checks if the current noteFolder still exists in the database
  */
 bool NoteFolder::exists() const {
-    NoteFolder noteFolder = NoteFolder::fetch(this->id);
-    return noteFolder.id > 0;
+    return NoteFolder::fetch(this->id).id > 0;
 }
 
 bool NoteFolder::isFetched() const {
@@ -313,7 +312,7 @@ bool NoteFolder::isCurrent() const {
  * Returns the id of the current note folder in the settings
  */
 int NoteFolder::currentNoteFolderId() {
-    QSettings settings;
+    const QSettings settings;
     return settings.value(QStringLiteral("currentNoteFolderId")).toInt();
 }
 
@@ -329,7 +328,7 @@ NoteFolder NoteFolder::currentNoteFolder() {
  */
 QString NoteFolder::currentRemotePath(bool addTrailingSlash) {
     QString remotePath;
-    NoteFolder noteFolder = currentNoteFolder();
+    const NoteFolder noteFolder = currentNoteFolder();
 
     if (noteFolder.isFetched()) {
         remotePath = noteFolder.getRemotePath();
@@ -353,8 +352,8 @@ QString NoteFolder::currentRemotePath(bool addTrailingSlash) {
  * Fetches the current local path
  */
 QString NoteFolder::currentLocalPath() {
-    QString path = "";
-    NoteFolder noteFolder = currentNoteFolder();
+    QString path = QLatin1String("");
+    const NoteFolder noteFolder = currentNoteFolder();
 
     if (noteFolder.isFetched()) {
         path = noteFolder.getLocalPath();
@@ -362,7 +361,7 @@ QString NoteFolder::currentLocalPath() {
 
     // load notesPath as fallback
     if (path.isEmpty()) {
-        QSettings settings;
+        const QSettings settings;
 
         // prepend the portable data path if we are in portable mode
         path = Utils::Misc::prependPortableDataPathIfNeeded(
@@ -382,8 +381,7 @@ QString NoteFolder::currentLocalPath() {
 QString NoteFolder::currentRootFolderName(bool fullPath) {
     QString path = currentLocalPath();
     return fullPath ? path
-                    : path.remove(0, path.lastIndexOf(
-                    Utils::Misc::dirSeparator())+1);
+                    : path.remove(0, path.lastIndexOf(Utils::Misc::dirSeparator()) + 1);
 }
 
 /**
@@ -411,7 +409,7 @@ QString NoteFolder::currentAttachmentsPath() {
  * Checks if there are note subfolders in the current note folder
  */
 bool NoteFolder::isCurrentHasSubfolders() {
-    NoteFolder noteFolder = currentNoteFolder();
+    const NoteFolder noteFolder = currentNoteFolder();
     return noteFolder.isFetched() ? noteFolder.isShowSubfolders() : false;
 }
 
@@ -433,13 +431,13 @@ bool NoteFolder::isCurrentNoteTreeEnabled() {
  * Suggests a remote path from an old localOwnCloudPath
  */
 QString NoteFolder::suggestRemotePath() {
-    QSettings settings;
-    QString localOwnCloudPath = settings.value(
+    const QSettings settings;
+    const QString localOwnCloudPath = settings.value(
             QStringLiteral("ownCloud/localOwnCloudPath")).toString();
 
     // get remote path from local ownCloud path
     if (!localOwnCloudPath.isEmpty()) {
-        remotePath = QString(localPath);
+        remotePath = localPath;
         remotePath.remove(localOwnCloudPath);
         fixRemotePath();
     } else {
@@ -465,7 +463,7 @@ bool NoteFolder::migrateToNoteFolders() {
     QSettings settings;
 
     // prepend the portable data path if we are in portable mode
-    QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
+    const QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
         settings.value(QStringLiteral("notesPath")).toString());
 
     if (countAll() > 0) {
@@ -494,22 +492,22 @@ bool NoteFolder::migrateToNoteFolders() {
         }
     }
 
-    QStringList recentNoteFolders =
+    const QStringList recentNoteFolders =
             settings.value(QStringLiteral("recentNoteFolders")).toStringList();
 
     // create recent note folders as NoteFolder
     if (!recentNoteFolders.empty()) {
-        Q_FOREACH(const QString &recentNoteFolderPath, recentNoteFolders) {
-                if (notesPath != recentNoteFolderPath) {
-                    NoteFolder noteFolder;
-                    noteFolder.setName(recentNoteFolderPath);
-                    noteFolder.setLocalPath(recentNoteFolderPath);
-                    noteFolder.setCloudConnectionId(1);
-                    noteFolder.suggestRemotePath();
-                    noteFolder.setPriority(priority++);
-                    noteFolder.store();
-                }
+        for (const QString &recentNoteFolderPath : recentNoteFolders) {
+            if (notesPath != recentNoteFolderPath) {
+                NoteFolder noteFolder;
+                noteFolder.setName(recentNoteFolderPath);
+                noteFolder.setLocalPath(recentNoteFolderPath);
+                noteFolder.setCloudConnectionId(1);
+                noteFolder.suggestRemotePath();
+                noteFolder.setPriority(priority++);
+                noteFolder.store();
             }
+        }
     }
 
     return priority > 0;
@@ -529,11 +527,11 @@ QJsonObject NoteFolder::jsonObject() const {
  */
 QString NoteFolder::noteFoldersWebServiceJsonText() {
     QJsonArray objectList;
-    QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
+    const QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
 
-    Q_FOREACH(const NoteFolder &noteFolder, noteFolders) {
-            objectList.push_back(noteFolder.jsonObject());
-        }
+    for (const NoteFolder &noteFolder : noteFolders) {
+        objectList.push_back(noteFolder.jsonObject());
+    }
 
     QJsonObject resultObject;
     resultObject.insert(QStringLiteral("type"), QJsonValue::fromVariant(QStringLiteral("noteFolders")));
@@ -541,7 +539,7 @@ QString NoteFolder::noteFoldersWebServiceJsonText() {
     resultObject.insert(QStringLiteral("noteFolderName"),
                                 NoteFolder::currentNoteFolder().getName());
 
-    QJsonDocument doc(resultObject);
+    const QJsonDocument doc(resultObject);
 
     return doc.toJson(QJsonDocument::Compact);
 }
@@ -553,7 +551,8 @@ QString NoteFolder::noteFoldersWebServiceJsonText() {
  * @return
  */
 bool NoteFolder::isPathNoteFolder(const QString &path) {
-    Q_FOREACH(const NoteFolder &noteFolder, fetchAll()) {
+    const auto noteFolderList = fetchAll();
+    for (const NoteFolder &noteFolder : noteFolderList) {
         if (path == noteFolder.getLocalPath()) {
             return true;
         }
