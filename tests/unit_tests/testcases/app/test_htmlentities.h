@@ -4,16 +4,15 @@
 #include <QObject>
 #include "helpers/htmlentities.h"
 
-class TestHTMLEntities : public QObject
-{
+class TestHTMLEntities : public QObject {
     Q_OBJECT
 
-private:
+   private:
     HTMLEntities htmlEntities;
 
-private Q_SLOTS:
+   private Q_SLOTS:
     void initTestCase();
     void testEntities();
 };
 
-#endif // TESTHTMLENTITIES_H
+#endif    // TESTHTMLENTITIES_H

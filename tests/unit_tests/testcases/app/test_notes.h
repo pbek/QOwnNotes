@@ -6,16 +6,15 @@
 #include <QObject>
 #include "entities/note.h"
 
-class TestNotes : public QObject
-{
+class TestNotes : public QObject {
     Q_OBJECT
-private:
+   private:
     QString notesPath;
     QString noteFile;
     QString noteName;
     QString noteFileName;
 
-private Q_SLOTS:
+   private Q_SLOTS:
     void initTestCase();
     void cleanupTestCase();
     void testNoteCreating();
@@ -39,4 +38,4 @@ private Q_SLOTS:
     void testHTMLescape();
 };
 
-#endif // TESTNOTES_H
+#endif    // TESTNOTES_H

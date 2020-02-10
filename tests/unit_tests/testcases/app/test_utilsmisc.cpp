@@ -5,45 +5,37 @@
 
 using namespace Utils::Misc;
 
-void TestUtilsMisc::initTestCase()
-{
+void TestUtilsMisc::initTestCase() {}
 
-}
-
-void TestUtilsMisc::testRemoveIfStartsWith()
-{
+void TestUtilsMisc::testRemoveIfStartsWith() {
     QString s = QStringLiteral("--*--testString");
     QString result = removeIfStartsWith(s, QStringLiteral("--*--"));
     QString expected = QStringLiteral("testString");
     QVERIFY(result == expected);
 }
 
-void TestUtilsMisc::testRemoveIfEndsWith()
-{
+void TestUtilsMisc::testRemoveIfEndsWith() {
     QString s = QStringLiteral("testString--*--");
     QString result = removeIfEndsWith(s, QStringLiteral("--*--"));
     QString expected = QStringLiteral("testString");
     QVERIFY(result == expected);
 }
 
-void TestUtilsMisc::testPrependIfDoesNotStartWith()
-{
+void TestUtilsMisc::testPrependIfDoesNotStartWith() {
     QString s = QStringLiteral("testString");
     QString result = prependIfDoesNotStartWith(s, QStringLiteral("--*--"));
     QString expected = QStringLiteral("--*--testString");
     QVERIFY(result == expected);
 }
 
-void TestUtilsMisc::testAppendIfDoesNotEndWith()
-{
+void TestUtilsMisc::testAppendIfDoesNotEndWith() {
     QString s = QStringLiteral("testString");
     QString result = appendIfDoesNotEndWith(s, QStringLiteral("--*--"));
     QString expected = QStringLiteral("testString--*--");
     QVERIFY(result == expected);
 }
 
-void TestUtilsMisc::testStartDetachedProcess()
-{
+void TestUtilsMisc::testStartDetachedProcess() {
 #ifdef Q_OS_UNIX
     auto result = startDetachedProcess("pwd", {});
     QVERIFY2(result == true, "Failed to start detached process");
@@ -52,61 +44,58 @@ void TestUtilsMisc::testStartDetachedProcess()
 #endif
 }
 
-void TestUtilsMisc::testShorten()
-{
+void TestUtilsMisc::testShorten() {
     QString s = QStringLiteral("A Long test string with lots of words");
     const auto result = shorten(s, 10);
     QString expected = QStringLiteral("A Long ...");
     QVERIFY(result == expected);
 }
 
-void TestUtilsMisc::testCycleTextCase()
-{
-    //test empty string
+void TestUtilsMisc::testCycleTextCase() {
+    // test empty string
     QString s = "";
     QString result = cycleTextCase(s);
     QString expected = "";
     QVERIFY(result == expected);
 
-    //lower
+    // lower
     s = "lower case sentence";
     result = cycleTextCase(s);
     expected = "LOWER CASE SENTENCE";
     QVERIFY(result == expected);
 
-    //upper
+    // upper
     s = "LOWER CASE SENTENCE";
     result = cycleTextCase(s);
     expected = "Lower Case Sentence";
     QVERIFY(result == expected);
 
-    //start case
+    // start case
     s = "Lower Case Sentence";
     result = cycleTextCase(s);
     expected = "Lower case sentence";
     QVERIFY(result == expected);
 
-    //sentence case
+    // sentence case
     s = "Lower case sentence";
     result = cycleTextCase(s);
     expected = "lower case sentence";
     QVERIFY(result == expected);
 
-    //random 1
+    // random 1
     s = "LOWER CASE Sentence";
     result = cycleTextCase(s);
     expected = "lower case sentence";
     QVERIFY(result == expected);
 
-    //random 2
+    // random 2
     s = "lower CASE Sentence";
     result = cycleTextCase(s);
     expected = "lower case sentence";
     QVERIFY(result == expected);
 }
 
-void TestUtilsMisc::testHtmlToMarkdown()
-{
+void TestUtilsMisc::testHtmlToMarkdown() {
     QString html = "<head><meta charset=\"utf-8\"></head>";
     html += "<script>script</script>";
     html += "<style>style</style>";
@@ -120,20 +109,26 @@ void TestUtilsMisc::testHtmlToMarkdown()
     html += "<i>hello</i>";
 
     QString result = htmlToMarkdown(html);
-    QString expected = "\n# Heading *italic*\n\n## Heading **italic**\n\n### Heading *italic*\n<h4>Heading *italic*</h4\n##### Heading *italic*\n\n###### Heading *italic*\n\n```\nhello\n```\n*hello*";
+    QString expected =
+        "\n# Heading *italic*\n\n## Heading **italic**\n\n### Heading "
+        "*italic*\n<h4>Heading *italic*</h4\n##### Heading *italic*\n\n###### "
+        "Heading *italic*\n\n```\nhello\n```\n*hello*";
     QVERIFY(result == expected);
 }
 
-void TestUtilsMisc::testParseTaskList()
-{
+void TestUtilsMisc::testParseTaskList() {
     QString t1 = "<li> [ ] task 1</li>";
     QString r1 = parseTaskList(t1, true);
-    QString expec = "<li> <a class=\"task-list-item-checkbox\" href=\"checkbox://_0\">&#9744;</a> task 1</li>";
+    QString expec =
+        "<li> <a class=\"task-list-item-checkbox\" "
+        "href=\"checkbox://_0\">&#9744;</a> task 1</li>";
     QVERIFY(r1 == expec);
 
     QString t2 = "<li> [x] task 2</li>";
     QString r2 = parseTaskList(t2, true);
-    expec = "<li> <a class=\"task-list-item-checkbox\" href=\"checkbox://_0\">&#9745;</a> task 2</li>";
+    expec =
+        "<li> <a class=\"task-list-item-checkbox\" "
+        "href=\"checkbox://_0\">&#9745;</a> task 2</li>";
     QVERIFY(r2 == expec);
 
     QString t3 = "<li> [x] task 3</li>";
@@ -147,30 +142,23 @@ void TestUtilsMisc::testParseTaskList()
     QVERIFY(r4 == expec);
 }
 
-void TestUtilsMisc::testUnescapeHtml()
-{
+void TestUtilsMisc::testUnescapeHtml() {
     QString html = "<h1>hello</h1>\n<p>hello</p>";
     QString result = unescapeHtml(html);
     QString expected = "hello\n\n\nhello";
     QVERIFY(result == expected);
-
 }
 
-void TestUtilsMisc::testHtmlSpecialChars()
-{
+void TestUtilsMisc::testHtmlSpecialChars() {
     QString str = "& \" \' < >";
     QString result = htmlspecialchars(str);
     QString expected = "&amp; &quot; &apos; &lt; &gt;";
     QVERIFY(result == expected);
 }
 
-void TestUtilsMisc::testToHumanReadableByteSize()
-{
+void TestUtilsMisc::testToHumanReadableByteSize() {
     qint64 bytes = 8712492;
     QString result = toHumanReadableByteSize(bytes);
     QString expected = "8.31 MB";
     QVERIFY(result == expected);
 }
-
-
-

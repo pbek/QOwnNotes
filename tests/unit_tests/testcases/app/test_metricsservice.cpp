@@ -1,21 +1,18 @@
+#include "test_metricsservice.h"
 #include <QtTest>
 #include "services/metricsservice.h"
-#include "test_metricsservice.h"
 
-
-void TestMetricsService::initTestCase()
-{
+void TestMetricsService::initTestCase() {
     MetricsService::createInstance(this);
 }
 
-void TestMetricsService::testSendEvent()
-{
-    MetricsService::instance()->sendEventIfEnabled("test/event", "test", "event");
+void TestMetricsService::testSendEvent() {
+    MetricsService::instance()->sendEventIfEnabled("test/event", "test",
+                                                   "event");
     QVERIFY(true);
 }
 
-void TestMetricsService::testSendVisit()
-{
+void TestMetricsService::testSendVisit() {
     MetricsService::instance()->sendVisitIfEnabled("test/visit", "TestScreen");
     QVERIFY(true);
 }

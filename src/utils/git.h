@@ -14,8 +14,8 @@
 
 #pragma once
 
-#include <QString>
 #include <QProcess>
+#include <QString>
 
 /*  Git functions that can be useful */
 

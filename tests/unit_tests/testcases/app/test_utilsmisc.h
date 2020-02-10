@@ -3,11 +3,9 @@
 
 #include <QObject>
 
-
-class TestUtilsMisc : public QObject
-{
+class TestUtilsMisc : public QObject {
     Q_OBJECT
-private Q_SLOTS:
+   private Q_SLOTS:
     void initTestCase();
     void testRemoveIfStartsWith();
     void testRemoveIfEndsWith();
@@ -23,4 +21,4 @@ private Q_SLOTS:
     void testToHumanReadableByteSize();
 };
 
-#endif // TESTUTILSMISC_H
+#endif    // TESTUTILSMISC_H

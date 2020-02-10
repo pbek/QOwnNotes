@@ -37,3 +37,7 @@ $FMT -i src/dialogs/*.cpp
 $FMT -i src/dialogs/*.h
 $FMT -i src/api/*.cpp
 $FMT -i src/api/*.h
+
+$FMT -i tests/unit_tests/*.cpp
+$FMT -i tests/unit_tests/testcases/app/*.cpp
+$FMT -i tests/unit_tests/testcases/app/*.h
