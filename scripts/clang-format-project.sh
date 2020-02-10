@@ -1,5 +1,8 @@
 #!/bin/bash
 #
+# A tool to run clang-format on the entire project
+#
+# Some inspirations were taken from https://github.com/eklitzke/clang-format-all
 
 # Variable that will hold the name of the clang-format command
 FMT=""
