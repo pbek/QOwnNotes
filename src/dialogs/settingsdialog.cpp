@@ -1,58 +1,58 @@
+#include <QtNetwork/qnetworkproxy.h>
+#include <QAction>
+#include <QButtonGroup>
 #include <QClipboard>
-#include <QSettings>
-#include <QFileDialog>
 #include <QDebug>
 #include <QDesktopServices>
-#include <QFontDialog>
-#include <QMessageBox>
-#include <QMenu>
-#include <QAction>
-#include <QTextBrowser>
-#include <QInputDialog>
+#include <QFileDialog>
 #include <QFontDatabase>
+#include <QFontDialog>
+#include <QInputDialog>
 #include <QKeySequence>
 #include <QKeySequenceEdit>
-#include <QtNetwork/qnetworkproxy.h>
+#include <QMenu>
+#include <QMessageBox>
 #include <QProcess>
-#include <QStyleFactory>
-#include <QButtonGroup>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include <QToolBar>
-#include <QStatusBar>
+#include <QSettings>
 #include <QSplitter>
+#include <QStatusBar>
+#include <QStyleFactory>
+#include <QTextBrowser>
+#include <QToolBar>
 
-#include <utility>
-#include "services/owncloudservice.h"
-#include "services/databaseservice.h"
-#include "dialogs/settingsdialog.h"
-#include "dialogs/websockettokendialog.h"
-#include "entities/calendaritem.h"
-#include "ui_settingsdialog.h"
-#include "build_number.h"
-#include "version.h"
-#include "release.h"
-#include "services/updateservice.h"
-#include <services/metricsservice.h>
-#include "helpers/clientproxy.h"
-#include "filedialog.h"
-#include "scriptrepositorydialog.h"
-#include <services/cryptoservice.h>
-#include <utils/gui.h>
 #include <entities/cloudconnection.h>
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
 #include <entities/script.h>
+#include <helpers/toolbarcontainer.h>
+#include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
+#include <services/cryptoservice.h>
+#include <services/metricsservice.h>
 #include <services/scriptingservice.h>
 #include <services/websocketserverservice.h>
+#include <utils/gui.h>
 #include <utils/misc.h>
-#include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
-#include <helpers/toolbarcontainer.h>
 #include <widgets/scriptsettingwidget.h>
+#include <utility>
+#include "build_number.h"
+#include "dialogs/settingsdialog.h"
+#include "dialogs/websockettokendialog.h"
+#include "entities/calendaritem.h"
+#include "filedialog.h"
+#include "helpers/clientproxy.h"
 #include "mainwindow.h"
+#include "release.h"
+#include "scriptrepositorydialog.h"
+#include "services/databaseservice.h"
+#include "services/owncloudservice.h"
+#include "services/updateservice.h"
+#include "ui_settingsdialog.h"
+#include "version.h"
 
-SettingsDialog::SettingsDialog(int page, QWidget *parent) :
-        MasterDialog(parent), ui(new Ui::SettingsDialog) {
+SettingsDialog::SettingsDialog(int page, QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
 
     bool fromWelcomeDialog = parent->objectName() == "WelcomeDialog";
@@ -64,43 +64,44 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     if (mainWindow != Q_NULLPTR) {
         resize(mainWindow->width(), mainWindow->height());
     } else {
-        // we must not use resize(1, 1) because XFCE really resizes the window to 1x1
+        // we must not use resize(1, 1) because XFCE really resizes the window
+        // to 1x1
         resize(800, 600);
     }
 
-    QList<QWidget*> pageWidgets;
+    QList<QWidget *> pageWidgets;
 
     // get a list of every settings page in the correct order
     for (int index = 0; index < ui->settingsStackedWidget->count(); index++) {
         pageWidgets.append(ui->settingsStackedWidget->widget(index));
     }
 
-    Q_FOREACH(QWidget* pageWidget, pageWidgets) {
-            // make sure the margin of every page is 0
-            QLayout *layout = pageWidget->layout();
-            layout->setMargin(0);
+    Q_FOREACH (QWidget *pageWidget, pageWidgets) {
+        // make sure the margin of every page is 0
+        QLayout *layout = pageWidget->layout();
+        layout->setMargin(0);
 
-            // inject a scroll area to make each page scrollable
-            auto *scrollArea = new QScrollArea(
-                    ui->settingsStackedWidget);
-            scrollArea->setWidget(pageWidget);
-            scrollArea->setWidgetResizable(true);
-            scrollArea->setFrameShape(QFrame::NoFrame);
-            ui->settingsStackedWidget->addWidget(scrollArea);
-        }
+        // inject a scroll area to make each page scrollable
+        auto *scrollArea = new QScrollArea(ui->settingsStackedWidget);
+        scrollArea->setWidget(pageWidget);
+        scrollArea->setWidgetResizable(true);
+        scrollArea->setFrameShape(QFrame::NoFrame);
+        ui->settingsStackedWidget->addWidget(scrollArea);
+    }
 
     ui->connectionTestLabel->hide();
     ui->darkModeInfoLabel->hide();
     ui->connectButton->setDefault(true);
     ui->noteSaveIntervalTime->setToolTip(
-            ui->noteSaveIntervalTimeLabel->toolTip());
+        ui->noteSaveIntervalTimeLabel->toolTip());
     ui->removeCustomNoteFileExtensionButton->setDisabled(true);
     ui->calDavCalendarGroupBox->hide();
     _newScriptName = tr("New script");
 
 #ifdef Q_OS_WIN32
-    QString downloadText = tr("You can download your git client here: <a "
-            "href=\"%url\">Git for Windows</a>");
+    QString downloadText =
+        tr("You can download your git client here: <a "
+           "href=\"%url\">Git for Windows</a>");
     downloadText.replace("%url", "https://git-scm.com/download/win");
     ui->gitDownloadLabel->setText(downloadText);
 #else
@@ -110,19 +111,19 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     _noteNotificationButtonGroup = new QButtonGroup(this);
     _noteNotificationButtonGroup->addButton(
-            ui->notifyAllExternalModificationsCheckBox);
+        ui->notifyAllExternalModificationsCheckBox);
     _noteNotificationButtonGroup->addButton(
-            ui->ignoreAllExternalModificationsCheckBox);
+        ui->ignoreAllExternalModificationsCheckBox);
     _noteNotificationButtonGroup->addButton(
-            ui->acceptAllExternalModificationsCheckBox);
+        ui->acceptAllExternalModificationsCheckBox);
 
     // create a hidden checkbox so we can un-check above checkboxes
     _noteNotificationNoneCheckBox = new QCheckBox(this);
     _noteNotificationNoneCheckBox->setHidden(true);
     _noteNotificationButtonGroup->addButton(_noteNotificationNoneCheckBox);
     connect(_noteNotificationButtonGroup,
-            SIGNAL(buttonPressed(QAbstractButton*)),
-            this, SLOT(noteNotificationButtonGroupPressed(QAbstractButton*)));
+            SIGNAL(buttonPressed(QAbstractButton *)), this,
+            SLOT(noteNotificationButtonGroupPressed(QAbstractButton *)));
 
     for (int i = 0; i <= 8; i++) {
         setOKLabelData(i, "unknown", SettingsDialog::Unknown);
@@ -167,8 +168,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->appInstanceGroupBox->setVisible(false);
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(false);
 
-    // Qt::TargetMoveAction seems to be broken on macOS, the item vanishes after dropping
-    // Qt::CopyAction seens to be the only action that works
+    // Qt::TargetMoveAction seems to be broken on macOS, the item vanishes after
+    // dropping Qt::CopyAction seens to be the only action that works
     ui->noteFolderListWidget->setDefaultDropAction(Qt::CopyAction);
     ui->scriptListWidget->setDefaultDropAction(Qt::CopyAction);
 #endif
@@ -191,83 +192,85 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->toolbarEditor->setTargetWindow(MainWindow::instance());
     ui->toolbarEditor->setCustomToolbarRemovalOnly(true);
 
-    QStringList disabledToolbarNames(
-            QStringList() << "windowToolbar" << "customActionsToolbar");
+    QStringList disabledToolbarNames(QStringList() << "windowToolbar"
+                                                   << "customActionsToolbar");
     ui->toolbarEditor->setDisabledToolbarNames(disabledToolbarNames);
 
     QStringList disabledMenuNames(QStringList() << "noteFoldersMenu");
     ui->toolbarEditor->setDisabledMenuNames(disabledMenuNames);
 
-//    QStringList disabledMenuActionNames(QStringList() << "");
-//    ui->toolbarEditor->setDisabledMenuActionNames(disabledMenuActionNames);
+    //    QStringList disabledMenuActionNames(QStringList() << "");
+    //    ui->toolbarEditor->setDisabledMenuActionNames(disabledMenuActionNames);
 
     ui->toolbarEditor->updateBars();
 
     // show the log file path
-    ui->logFileLabel->setText(QDir::toNativeSeparators(
-            Utils::Misc::logFilePath()));
+    ui->logFileLabel->setText(
+        QDir::toNativeSeparators(Utils::Misc::logFilePath()));
 
     // replace the "ownCloud" text by "ownCloud / NextCloud"
     replaceOwnCloudText();
 
     // declare that we need to restart the application if certain settings
     // are changed
-    connect(ui->languageListWidget, SIGNAL(itemSelectionChanged()),
-            this, SLOT(needRestart()));
-    connect(ui->internalIconThemeCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->systemIconThemeCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->darkModeTrayIconCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->darkModeIconThemeCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->darkModeColorsCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->darkModeCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->allowOnlyOneAppInstanceCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->showSystemTrayCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->startHiddenCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
+    connect(ui->languageListWidget, SIGNAL(itemSelectionChanged()), this,
+            SLOT(needRestart()));
+    connect(ui->internalIconThemeCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->systemIconThemeCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->darkModeTrayIconCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->darkModeIconThemeCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->darkModeColorsCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->darkModeCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->allowOnlyOneAppInstanceCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->showSystemTrayCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->startHiddenCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
     connect(ui->fullyHighlightedBlockquotesCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
-    connect(ui->noteEditCentralWidgetCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->noteListPreviewCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->vimModeCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-    connect(ui->disableCursorBlinkingCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
+    connect(ui->noteEditCentralWidgetCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->noteListPreviewCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->vimModeCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->disableCursorBlinkingCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
     connect(ui->ignoreNoteSubFoldersLineEdit, SIGNAL(textChanged(QString)),
             this, SLOT(needRestart()));
-    connect(ui->enableSocketServerCheckBox, SIGNAL(toggled(bool)),
-            this, SLOT(needRestart()));
-//    connect(ui->layoutWidget, SIGNAL(settingsStored()),
-//            this, SLOT(needRestart()));
+    connect(ui->enableSocketServerCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    //    connect(ui->layoutWidget, SIGNAL(settingsStored()),
+    //            this, SLOT(needRestart()));
 
     // connect the panel sort radio buttons
     connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
             ui->notesPanelOrderGroupBox, SLOT(setEnabled(bool)));
-    connect(ui->noteSubfoldersPanelShowRootFolderNameCheckBox, SIGNAL(toggled(bool)),
-            ui->noteSubfoldersPanelShowFullPathCheckBox, SLOT(setEnabled(bool)));
-    connect(ui->noteSubfoldersPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
-            ui->noteSubfoldersPanelOrderGroupBox, SLOT(setEnabled(bool)));
+    connect(ui->noteSubfoldersPanelShowRootFolderNameCheckBox,
+            SIGNAL(toggled(bool)), ui->noteSubfoldersPanelShowFullPathCheckBox,
+            SLOT(setEnabled(bool)));
+    connect(ui->noteSubfoldersPanelSortAlphabeticalRadioButton,
+            SIGNAL(toggled(bool)), ui->noteSubfoldersPanelOrderGroupBox,
+            SLOT(setEnabled(bool)));
     connect(ui->tagsPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
             ui->tagsPanelOrderGroupBox, SLOT(setEnabled(bool)));
 
     // handle cloud connection storing
     connect(ui->cloudServerConnectionNameLineEdit, SIGNAL(textChanged(QString)),
             this, SLOT(storeSelectedCloudConnection()));
-    connect(ui->serverUrlEdit, SIGNAL(textChanged(QString)),
-            this, SLOT(storeSelectedCloudConnection()));
-    connect(ui->userNameEdit, SIGNAL(textChanged(QString)),
-            this, SLOT(storeSelectedCloudConnection()));
-    connect(ui->passwordEdit, SIGNAL(textChanged(QString)),
-            this, SLOT(storeSelectedCloudConnection()));
+    connect(ui->serverUrlEdit, SIGNAL(textChanged(QString)), this,
+            SLOT(storeSelectedCloudConnection()));
+    connect(ui->userNameEdit, SIGNAL(textChanged(QString)), this,
+            SLOT(storeSelectedCloudConnection()));
+    connect(ui->passwordEdit, SIGNAL(textChanged(QString)), this,
+            SLOT(storeSelectedCloudConnection()));
 
     // setup the search engine combo-box
     initSearchEngineComboBox();
@@ -285,21 +288,22 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     if (!ui->noteListPreviewCheckBox->text().contains("(experimental)")) {
         ui->noteListPreviewCheckBox->setText(
-                ui->noteListPreviewCheckBox->text() + " (experimental)");
+            ui->noteListPreviewCheckBox->text() + " (experimental)");
     }
 
     if (!ui->enableNoteTreeCheckBox->text().contains("work in progress")) {
-        ui->enableNoteTreeCheckBox->setText(
-                    ui->enableNoteTreeCheckBox->text() + " (work in progress)");
+        ui->enableNoteTreeCheckBox->setText(ui->enableNoteTreeCheckBox->text() +
+                                            " (work in progress)");
     }
 
     ui->webCompannionLabel->setText(ui->webCompannionLabel->text().arg(
-            "https://github.com/qownnotes/web-companion",
-            "https://chrome.google.com/webstore/detail/qownnotes-web-companion/"
-            "pkgkfnampapjbopomdpnkckbjdnpkbkp",
-            "https://addons.mozilla.org/firefox/addon/qownnotes-web-companion"));
+        "https://github.com/qownnotes/web-companion",
+        "https://chrome.google.com/webstore/detail/qownnotes-web-companion/"
+        "pkgkfnampapjbopomdpnkckbjdnpkbkp",
+        "https://addons.mozilla.org/firefox/addon/qownnotes-web-companion"));
     ui->bookmarkTagLabel->setText(ui->bookmarkTagLabel->text().arg(
-            "https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension"));
+        "https://www.qownnotes.org/Knowledge-base/"
+        "QOwnNotes-Web-Companion-browser-extension"));
 
 #ifndef Q_OS_LINUX
     ui->systemIconThemeCheckBox->setHidden(true);
@@ -324,65 +328,67 @@ void SettingsDialog::replaceOwnCloudText() const {
     //
     // ownCloud settings
     //
-    ui->ownCloudSupportGroupBox->setTitle(Utils::Misc::replaceOwnCloudText(
-            ui->ownCloudSupportGroupBox->title()));
-    ui->ownCloudSupportCheckBox->setText(Utils::Misc::replaceOwnCloudText(
-            ui->ownCloudSupportCheckBox->text()));
-    ui->userNameEdit->setPlaceholderText(Utils::Misc::replaceOwnCloudText(
-            ui->userNameEdit->placeholderText()));
-    ui->passwordEdit->setPlaceholderText(Utils::Misc::replaceOwnCloudText(
-            ui->passwordEdit->placeholderText()));
-    ui->ownCloudGroupBox->setTitle(Utils::Misc::replaceOwnCloudText(
-            ui->ownCloudGroupBox->title()));
+    ui->ownCloudSupportGroupBox->setTitle(
+        Utils::Misc::replaceOwnCloudText(ui->ownCloudSupportGroupBox->title()));
+    ui->ownCloudSupportCheckBox->setText(
+        Utils::Misc::replaceOwnCloudText(ui->ownCloudSupportCheckBox->text()));
+    ui->userNameEdit->setPlaceholderText(
+        Utils::Misc::replaceOwnCloudText(ui->userNameEdit->placeholderText()));
+    ui->passwordEdit->setPlaceholderText(
+        Utils::Misc::replaceOwnCloudText(ui->passwordEdit->placeholderText()));
+    ui->ownCloudGroupBox->setTitle(
+        Utils::Misc::replaceOwnCloudText(ui->ownCloudGroupBox->title()));
     ui->ownCloudServerUrlLabel->setText(Utils::Misc::replaceOwnCloudText(
-            ui->ownCloudServerUrlLabel->text(), true));
-    ui->check2Label->setText(Utils::Misc::replaceOwnCloudText(
-            ui->check2Label->text()));
+        ui->ownCloudServerUrlLabel->text(), true));
+    ui->check2Label->setText(
+        Utils::Misc::replaceOwnCloudText(ui->check2Label->text()));
     ui->ownCloudServerAppPageButton->setText(Utils::Misc::replaceOwnCloudText(
-            ui->ownCloudServerAppPageButton->text(), true));
-    ui->ownCloudServerAppPageButton->setToolTip(Utils::Misc::replaceOwnCloudText(
+        ui->ownCloudServerAppPageButton->text(), true));
+    ui->ownCloudServerAppPageButton->setToolTip(
+        Utils::Misc::replaceOwnCloudText(
             ui->ownCloudServerAppPageButton->toolTip()));
-    ui->ownCloudServerAppPasswordPageButton->setText(Utils::Misc::replaceOwnCloudText(
+    ui->ownCloudServerAppPasswordPageButton->setText(
+        Utils::Misc::replaceOwnCloudText(
             ui->ownCloudServerAppPasswordPageButton->text(), true));
-    ui->ownCloudServerAppPasswordPageButton->setToolTip(Utils::Misc::replaceOwnCloudText(
+    ui->ownCloudServerAppPasswordPageButton->setToolTip(
+        Utils::Misc::replaceOwnCloudText(
             ui->ownCloudServerAppPasswordPageButton->toolTip()));
-    ui->connectButton->setText(Utils::Misc::replaceOwnCloudText(
-            ui->connectButton->text(), true));
-    ui->connectButton->setToolTip(Utils::Misc::replaceOwnCloudText(
-            ui->connectButton->toolTip()));
-    ui->installInfoTextLabel1->setText(Utils::Misc::replaceOwnCloudText(
-            ui->installInfoTextLabel1->text()));
-    ui->installInfoTextLabel2->setText(Utils::Misc::replaceOwnCloudText(
-            ui->installInfoTextLabel2->text()));
-    ui->installInfoTextLabel3->setText(Utils::Misc::replaceOwnCloudText(
-            ui->installInfoTextLabel3->text()));
+    ui->connectButton->setText(
+        Utils::Misc::replaceOwnCloudText(ui->connectButton->text(), true));
+    ui->connectButton->setToolTip(
+        Utils::Misc::replaceOwnCloudText(ui->connectButton->toolTip()));
+    ui->installInfoTextLabel1->setText(
+        Utils::Misc::replaceOwnCloudText(ui->installInfoTextLabel1->text()));
+    ui->installInfoTextLabel2->setText(
+        Utils::Misc::replaceOwnCloudText(ui->installInfoTextLabel2->text()));
+    ui->installInfoTextLabel3->setText(
+        Utils::Misc::replaceOwnCloudText(ui->installInfoTextLabel3->text()));
 
-    QTreeWidgetItem *item = ui->settingsTreeWidget->topLevelItem(
-            OwnCloudPage);
+    QTreeWidgetItem *item = ui->settingsTreeWidget->topLevelItem(OwnCloudPage);
     item->setText(0, Utils::Misc::replaceOwnCloudText(item->text(0)));
 
     // note folder settings
     ui->noteFolderRemotePathLabel->setText(Utils::Misc::replaceOwnCloudText(
-            ui->noteFolderRemotePathLabel->text()));
+        ui->noteFolderRemotePathLabel->text()));
     ui->noteFolderRemotePathListLabel->setText(Utils::Misc::replaceOwnCloudText(
-            ui->noteFolderRemotePathListLabel->text()));
-    ui->useOwnCloudPathButton->setText(Utils::Misc::replaceOwnCloudText(
-            ui->useOwnCloudPathButton->text()));
+        ui->noteFolderRemotePathListLabel->text()));
+    ui->useOwnCloudPathButton->setText(
+        Utils::Misc::replaceOwnCloudText(ui->useOwnCloudPathButton->text()));
     ui->noteFolderRemotePathButton->setToolTip(Utils::Misc::replaceOwnCloudText(
-            ui->noteFolderRemotePathButton->toolTip()));
+        ui->noteFolderRemotePathButton->toolTip()));
     ui->noteFolderRemotePathLineEdit->setToolTip(
-            Utils::Misc::replaceOwnCloudText(
-                    ui->noteFolderRemotePathLineEdit->toolTip()));
+        Utils::Misc::replaceOwnCloudText(
+            ui->noteFolderRemotePathLineEdit->toolTip()));
 
     // general settings
     ui->allowDifferentNoteFileNameCheckBox->setToolTip(
-            Utils::Misc::replaceOwnCloudText(
-                    ui->allowDifferentNoteFileNameCheckBox->toolTip()));
+        Utils::Misc::replaceOwnCloudText(
+            ui->allowDifferentNoteFileNameCheckBox->toolTip()));
 
     // task settings
     ui->defaultOwnCloudCalendarRadioButton->setText(
-            Utils::Misc::replaceOwnCloudText(
-                    ui->defaultOwnCloudCalendarRadioButton->text()));
+        Utils::Misc::replaceOwnCloudText(
+            ui->defaultOwnCloudCalendarRadioButton->text()));
 }
 
 /**
@@ -392,7 +398,7 @@ void SettingsDialog::replaceOwnCloudText() const {
  * @param button
  */
 void SettingsDialog::noteNotificationButtonGroupPressed(
-        QAbstractButton *button) {
+    QAbstractButton *button) {
     if (button->isChecked()) {
         QTimer::singleShot(100, this,
                            SLOT(noteNotificationNoneCheckBoxCheck()));
@@ -420,9 +426,7 @@ void SettingsDialog::setCurrentPage(int page) {
     }
 }
 
-SettingsDialog::~SettingsDialog() {
-    delete ui;
-}
+SettingsDialog::~SettingsDialog() { delete ui; }
 
 /**
  * Initializes the portable mode page
@@ -431,37 +435,41 @@ void SettingsDialog::initPortableModePage() {
     bool isInPortableMode = Utils::Misc::isInPortableMode();
     QString status = isInPortableMode ? tr("enabled") : tr("disabled");
 
-    QString text =
-            "<p>" + tr("Portable mode is currently:") + " <strong>" + status +
-            "</strong></p>";
+    QString text = "<p>" + tr("Portable mode is currently:") + " <strong>" +
+                   status + "</strong></p>";
 
     text += tr("In portable mode") + ":<ul><li>" +
             tr("the internal sqlite database and the settings will be stored "
-                       "inside a <code>Data</code> folder at the binary's "
-                       "location") + "</li><li>" +
-            tr("the settings will be stored in an ini file") + "</li><li>" +
+               "inside a <code>Data</code> folder at the binary's "
+               "location") +
+            "</li><li>" + tr("the settings will be stored in an ini file") +
+            "</li><li>" +
             tr("the note folders, script paths and path to an external editor "
-                       "will be automatically stored relative to the "
-                       "<code>Data</code> folder so that the correct note "
-                       "folders, scripts and external editor will be loaded "
-                       "regardless where your QOwnNotes installation is "
-                       "currently located") + "</li></ul>";
+               "will be automatically stored relative to the "
+               "<code>Data</code> folder so that the correct note "
+               "folders, scripts and external editor will be loaded "
+               "regardless where your QOwnNotes installation is "
+               "currently located") +
+            "</li></ul>";
 
     if (!isInPortableMode) {
-        text += "<p>" + tr("It will be activated if you run QOwnNotes with "
-                                   "the parameter <code>--portable</code>.") +
+        text += "<p>" +
+                tr("It will be activated if you run QOwnNotes with "
+                   "the parameter <code>--portable</code>.") +
                 "</p>";
 
 #ifdef Q_OS_WIN32
-        text += "<p>" + tr("You will find a <code>QOwnNotesPortable.bat</code> "
-                           "in your release path to start QOwnNotes in "
-                           "portable mode.") + "</p>";
+        text += "<p>" +
+                tr("You will find a <code>QOwnNotesPortable.bat</code> "
+                   "in your release path to start QOwnNotes in "
+                   "portable mode.") +
+                "</p>";
 #endif
     }
 
     // inject some generic CSS styles
     ui->portableModeInfoTextBrowser->document()->setDefaultStyleSheet(
-            Utils::Misc::genericCSS());
+        Utils::Misc::genericCSS());
 
     ui->portableModeInfoTextBrowser->setHtml(text);
 }
@@ -484,29 +492,29 @@ void SettingsDialog::setupProxyPage() {
     ui->userLineEdit->setEnabled(true);
     ui->passwordLineEdit->setEnabled(true);
     ui->authWidgets->setEnabled(ui->authRequiredcheckBox->isChecked());
-    connect(ui->authRequiredcheckBox, SIGNAL(toggled(bool)),
-            ui->authWidgets, SLOT(setEnabled(bool)));
+    connect(ui->authRequiredcheckBox, SIGNAL(toggled(bool)), ui->authWidgets,
+            SLOT(setEnabled(bool)));
 
     connect(ui->manualProxyRadioButton, SIGNAL(toggled(bool)),
             ui->manualSettings, SLOT(setEnabled(bool)));
-    connect(ui->manualProxyRadioButton, SIGNAL(toggled(bool)),
-            ui->typeComboBox, SLOT(setEnabled(bool)));
+    connect(ui->manualProxyRadioButton, SIGNAL(toggled(bool)), ui->typeComboBox,
+            SLOT(setEnabled(bool)));
 
     // proxy
-//    connect(ui->typeComboBox, SIGNAL(currentIndexChanged(int)),
-//            SLOT(storeProxySettings()));
-//    connect(ui->proxyButtonGroup, SIGNAL(buttonClicked(int)),
-//            SLOT(storeProxySettings()));
-//    connect(ui->hostLineEdit, SIGNAL(editingFinished()),
-//            SLOT(storeProxySettings()));
-//    connect(ui->userLineEdit, SIGNAL(editingFinished()),
-//            SLOT(storeProxySettings()));
-//    connect(ui->passwordLineEdit, SIGNAL(editingFinished()),
-//            SLOT(storeProxySettings()));
-//    connect(ui->portSpinBox, SIGNAL(editingFinished()),
-//            SLOT(storeProxySettings()));
-//    connect(ui->authRequiredcheckBox, SIGNAL(toggled(bool)),
-//            SLOT(storeProxySettings()));
+    //    connect(ui->typeComboBox, SIGNAL(currentIndexChanged(int)),
+    //            SLOT(storeProxySettings()));
+    //    connect(ui->proxyButtonGroup, SIGNAL(buttonClicked(int)),
+    //            SLOT(storeProxySettings()));
+    //    connect(ui->hostLineEdit, SIGNAL(editingFinished()),
+    //            SLOT(storeProxySettings()));
+    //    connect(ui->userLineEdit, SIGNAL(editingFinished()),
+    //            SLOT(storeProxySettings()));
+    //    connect(ui->passwordLineEdit, SIGNAL(editingFinished()),
+    //            SLOT(storeProxySettings()));
+    //    connect(ui->portSpinBox, SIGNAL(editingFinished()),
+    //            SLOT(storeProxySettings()));
+    //    connect(ui->authRequiredcheckBox, SIGNAL(toggled(bool)),
+    //            SLOT(storeProxySettings()));
 }
 
 /**
@@ -516,8 +524,8 @@ void SettingsDialog::loadProxySettings() {
     QSettings settings;
 
     // load current proxy settings
-    int type = settings.value("networking/proxyType",
-                              QNetworkProxy::NoProxy).toInt();
+    int type =
+        settings.value("networking/proxyType", QNetworkProxy::NoProxy).toInt();
     switch (type) {
         case QNetworkProxy::NoProxy:
             ui->noProxyRadioButton->setChecked(true);
@@ -535,15 +543,15 @@ void SettingsDialog::loadProxySettings() {
     }
 
     ui->hostLineEdit->setText(
-            settings.value("networking/proxyHostName").toString());
+        settings.value("networking/proxyHostName").toString());
     ui->portSpinBox->setValue(
-            settings.value("networking/proxyPort", 8080).toInt());
+        settings.value("networking/proxyPort", 8080).toInt());
     ui->authRequiredcheckBox->setChecked(
-            settings.value("networking/proxyNeedsAuth").toBool());
+        settings.value("networking/proxyNeedsAuth").toBool());
     ui->userLineEdit->setText(
-            settings.value("networking/proxyUser").toString());
+        settings.value("networking/proxyUser").toString());
     ui->passwordLineEdit->setText(CryptoService::instance()->decryptToString(
-            settings.value("networking/proxyPassword").toString()));
+        settings.value("networking/proxyPassword").toString()));
 }
 
 /**
@@ -558,17 +566,15 @@ void SettingsDialog::storeProxySettings() {
     } else if (ui->systemProxyRadioButton->isChecked()) {
         proxyType = QNetworkProxy::DefaultProxy;
     } else if (ui->manualProxyRadioButton->isChecked()) {
-        proxyType = ui->typeComboBox->itemData(
-                ui->typeComboBox->currentIndex()).toInt();
+        proxyType = ui->typeComboBox->itemData(ui->typeComboBox->currentIndex())
+                        .toInt();
 
-        settings.setValue(
-                "networking/proxyNeedsAuth",
-                ui->authRequiredcheckBox->isChecked());
+        settings.setValue("networking/proxyNeedsAuth",
+                          ui->authRequiredcheckBox->isChecked());
         settings.setValue("networking/proxyUser", ui->userLineEdit->text());
-        settings.setValue(
-                "networking/proxyPassword",
-                CryptoService::instance()->encryptToString(
-                        ui->passwordLineEdit->text()));
+        settings.setValue("networking/proxyPassword",
+                          CryptoService::instance()->encryptToString(
+                              ui->passwordLineEdit->text()));
         settings.setValue("networking/proxyHostName", ui->hostLineEdit->text());
         settings.setValue("networking/proxyPort", ui->portSpinBox->value());
     }
@@ -586,7 +592,8 @@ void SettingsDialog::storeProxySettings() {
  */
 void SettingsDialog::startConnectionTest() {
     ui->connectionTestLabel->hide();
-    OwnCloudService *ownCloud = OwnCloudService::instance(true, _selectedCloudConnection.getId());
+    OwnCloudService *ownCloud =
+        OwnCloudService::instance(true, _selectedCloudConnection.getId());
     ownCloud->settingsConnectionTest(this);
 }
 
@@ -618,7 +625,8 @@ void SettingsDialog::storeSelectedCloudConnection() {
         }
     }
 
-    _selectedCloudConnection.setName(ui->cloudServerConnectionNameLineEdit->text());
+    _selectedCloudConnection.setName(
+        ui->cloudServerConnectionNameLineEdit->text());
     _selectedCloudConnection.setServerUrl(url);
     _selectedCloudConnection.setUsername(ui->userNameEdit->text());
     _selectedCloudConnection.setPassword(ui->passwordEdit->text());
@@ -646,9 +654,9 @@ void SettingsDialog::storeSettings() {
                       ui->ignoreAllExternalModificationsCheckBox->isChecked());
     settings.setValue("acceptAllExternalModifications",
                       ui->acceptAllExternalModificationsCheckBox->isChecked());
-    settings.setValue("ignoreAllExternalNoteFolderChanges",
-                      ui->ignoreAllExternalNoteFolderChangesCheckBox
-                              ->isChecked());
+    settings.setValue(
+        "ignoreAllExternalNoteFolderChanges",
+        ui->ignoreAllExternalNoteFolderChangesCheckBox->isChecked());
     settings.setValue("allowDifferentNoteFileName",
                       ui->allowDifferentNoteFileNameCheckBox->isChecked());
     settings.setValue("newNoteAskHeadline",
@@ -661,9 +669,9 @@ void SettingsDialog::storeSettings() {
                       ui->restoreLastNoteAtStartupCheckBox->isChecked());
     settings.setValue("noteSaveIntervalTime",
                       ui->noteSaveIntervalTime->value());
-    settings.setValue("defaultNoteFileExtension",
-                      getSelectedListWidgetValue(
-                              ui->defaultNoteFileExtensionListWidget));
+    settings.setValue(
+        "defaultNoteFileExtension",
+        getSelectedListWidgetValue(ui->defaultNoteFileExtensionListWidget));
     settings.setValue("localTrash/supportEnabled",
                       ui->localTrashEnabledCheckBox->isChecked());
     settings.setValue("localTrash/autoCleanupEnabled",
@@ -677,11 +685,12 @@ void SettingsDialog::storeSettings() {
     // portable mode
     settings.setValue("externalEditorPath",
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
-                              ui->externalEditorPathLineEdit->text()));
+                          ui->externalEditorPathLineEdit->text()));
 
     settings.setValue("overrideInterfaceFontSize",
                       ui->overrideInterfaceFontSizeGroupBox->isChecked());
-    settings.setValue("interfaceFontSize", ui->interfaceFontSizeSpinBox->value());
+    settings.setValue("interfaceFontSize",
+                      ui->interfaceFontSizeSpinBox->value());
     settings.setValue("itemHeight", ui->itemHeightSpinBox->value());
     settings.setValue("MainWindow/mainToolBar.iconSize",
                       ui->toolbarIconSizeSpinBox->value());
@@ -719,19 +728,16 @@ void SettingsDialog::storeSettings() {
                       ui->highlightCurrentLineCheckBox->isChecked());
     settings.setValue("Editor/editorWidthInDFMOnly",
                       ui->editorWidthInDFMOnlyCheckBox->isChecked());
-    settings.setValue("Editor/vimMode",
-                      ui->vimModeCheckBox->isChecked());
+    settings.setValue("Editor/vimMode", ui->vimModeCheckBox->isChecked());
     settings.setValue("Editor/disableCursorBlinking",
                       ui->disableCursorBlinkingCheckBox->isChecked());
     settings.setValue("Editor/useTabIndent",
                       ui->useTabIndentCheckBox->isChecked());
-    settings.setValue("Editor/indentSize",
-                      ui->indentSizeSpinBox->value());
+    settings.setValue("Editor/indentSize", ui->indentSizeSpinBox->value());
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
-            ui->appMetricsCheckBox->isChecked()) {
-        MetricsService::instance()->sendVisit(
-                "settings/app-metrics-disabled");
+        ui->appMetricsCheckBox->isChecked()) {
+        MetricsService::instance()->sendVisit("settings/app-metrics-disabled");
     }
 
     settings.setValue("appMetrics/disableTracking",
@@ -740,7 +746,7 @@ void SettingsDialog::storeSettings() {
     if (!settings.value("appMetrics/disableAppHeartbeat").toBool() &&
         ui->appHeartbeatCheckBox->isChecked()) {
         MetricsService::instance()->sendVisit(
-                "settings/app-heartbeat-disabled");
+            "settings/app-heartbeat-disabled");
     }
 
     settings.setValue("appMetrics/disableAppHeartbeat",
@@ -749,8 +755,7 @@ void SettingsDialog::storeSettings() {
     settings.setValue("darkModeColors",
                       ui->darkModeColorsCheckBox->isChecked());
 
-    settings.setValue("darkMode",
-                      ui->darkModeCheckBox->isChecked());
+    settings.setValue("darkMode", ui->darkModeCheckBox->isChecked());
 
     settings.setValue("darkModeTrayIcon",
                       ui->darkModeTrayIconCheckBox->isChecked());
@@ -800,15 +805,16 @@ void SettingsDialog::storeSettings() {
     }
 
     settings.setValue("ownCloud/todoCalendarBackend", todoCalendarBackend);
-    settings.setValue("ownCloud/todoCalendarCloudConnectionId",
-                      ui->calendarCloudConnectionComboBox->currentData().toInt());
+    settings.setValue(
+        "ownCloud/todoCalendarCloudConnectionId",
+        ui->calendarCloudConnectionComboBox->currentData().toInt());
     settings.setValue("ownCloud/todoCalendarCalDAVServerUrl",
                       ui->calDavServerUrlEdit->text());
     settings.setValue("ownCloud/todoCalendarCalDAVUsername",
                       ui->calDavUsernameEdit->text());
     settings.setValue("ownCloud/todoCalendarCalDAVPassword",
                       CryptoService::instance()->encryptToString(
-                              ui->calDavPasswordEdit->text()));
+                          ui->calDavPasswordEdit->text()));
 
     settings.setValue("networking/ignoreSSLErrors",
                       ui->ignoreSSLErrorsCheckBox->isChecked());
@@ -853,7 +859,7 @@ void SettingsDialog::storeSettings() {
     // store git settings
     settings.setValue("gitExecutablePath",
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
-                              ui->gitPathLineEdit->text()));
+                          ui->gitPathLineEdit->text()));
     settings.setValue("gitCommitInterval", ui->gitCommitIntervalTime->value());
     settings.setValue("gitLogCommand", ui->gitLogCommandLineEdit->text());
 
@@ -872,15 +878,14 @@ void SettingsDialog::storeSettings() {
     settings.setValue("cursorWidth", ui->cursorWidthSpinBox->value());
 
     settings.setValue("SearchEngineId",
-                    ui->searchEngineSelectionComboBox->currentData().toInt());
+                      ui->searchEngineSelectionComboBox->currentData().toInt());
 
     settings.setValue("ShowSystemTray",
                       ui->showSystemTrayCheckBox->isChecked());
-    settings.setValue("StartHidden",
-                      ui->startHiddenCheckBox->isChecked());
-    settings.setValue("automaticNoteFolderDatabaseClosing",
-                      ui->automaticNoteFolderDatabaseClosingCheckBox->
-                              isChecked());
+    settings.setValue("StartHidden", ui->startHiddenCheckBox->isChecked());
+    settings.setValue(
+        "automaticNoteFolderDatabaseClosing",
+        ui->automaticNoteFolderDatabaseClosingCheckBox->isChecked());
     settings.setValue("legacyLinking", ui->legacyLinkingCheckBox->isChecked());
 
     settings.setValue("webSocketServerService/port",
@@ -897,72 +902,73 @@ void SettingsDialog::storeSettings() {
 void SettingsDialog::storePanelSettings() {
     QSettings settings;
     // Notes Panel Options
-    ui->notesPanelSortAlphabeticalRadioButton->isChecked() ?
-                settings.setValue("notesPanelSort", SORT_ALPHABETICAL) :
-                settings.setValue("notesPanelSort", SORT_BY_LAST_CHANGE);
-    ui->notesPanelOrderDescendingRadioButton->isChecked() ?
-                settings.setValue("notesPanelOrder", ORDER_DESCENDING) :
-                settings.setValue("notesPanelOrder", ORDER_ASCENDING);
+    ui->notesPanelSortAlphabeticalRadioButton->isChecked()
+        ? settings.setValue("notesPanelSort", SORT_ALPHABETICAL)
+        : settings.setValue("notesPanelSort", SORT_BY_LAST_CHANGE);
+    ui->notesPanelOrderDescendingRadioButton->isChecked()
+        ? settings.setValue("notesPanelOrder", ORDER_DESCENDING)
+        : settings.setValue("notesPanelOrder", ORDER_ASCENDING);
 
     // Note Subfolders Panel Options
     settings.setValue("noteSubfoldersPanelHideSearch",
                       ui->noteSubfoldersPanelHideSearchCheckBox->isChecked());
 
-    settings.setValue("noteSubfoldersPanelDisplayAsFullTree",
-                      ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox
-                              ->isChecked());
+    settings.setValue(
+        "noteSubfoldersPanelDisplayAsFullTree",
+        ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->isChecked());
 
-    settings.setValue("noteSubfoldersPanelShowRootFolderName",
-                      ui->noteSubfoldersPanelShowRootFolderNameCheckBox
-                              ->isChecked());
+    settings.setValue(
+        "noteSubfoldersPanelShowRootFolderName",
+        ui->noteSubfoldersPanelShowRootFolderNameCheckBox->isChecked());
 
-    settings.setValue("noteSubfoldersPanelShowNotesRecursively",
-                      ui->noteSubfoldersPanelShowNotesRecursivelyCheckBox
-                              ->isChecked());
+    settings.setValue(
+        "noteSubfoldersPanelShowNotesRecursively",
+        ui->noteSubfoldersPanelShowNotesRecursivelyCheckBox->isChecked());
 
-    settings.setValue("disableSavedSearchesAutoCompletion",
-                      ui->disableSavedSearchesAutoCompletionCheckBox
-                      ->isChecked());
+    settings.setValue(
+        "disableSavedSearchesAutoCompletion",
+        ui->disableSavedSearchesAutoCompletionCheckBox->isChecked());
 
     settings.setValue("showMatches", ui->showMatchesCheckBox->isChecked());
 
     settings.setValue("noteSubfoldersPanelShowFullPath",
                       ui->noteSubfoldersPanelShowFullPathCheckBox->isChecked());
 
-    ui->noteSubfoldersPanelSortAlphabeticalRadioButton->isChecked() ?
-                settings.setValue("noteSubfoldersPanelSort", SORT_ALPHABETICAL) :
-                settings.setValue("noteSubfoldersPanelSort", SORT_BY_LAST_CHANGE);
+    ui->noteSubfoldersPanelSortAlphabeticalRadioButton->isChecked()
+        ? settings.setValue("noteSubfoldersPanelSort", SORT_ALPHABETICAL)
+        : settings.setValue("noteSubfoldersPanelSort", SORT_BY_LAST_CHANGE);
 
-    ui->noteSubfoldersPanelOrderDescendingRadioButton->isChecked() ?
-                settings.setValue("noteSubfoldersPanelOrder", ORDER_DESCENDING) :
-                settings.setValue("noteSubfoldersPanelOrder", ORDER_ASCENDING);
+    ui->noteSubfoldersPanelOrderDescendingRadioButton->isChecked()
+        ? settings.setValue("noteSubfoldersPanelOrder", ORDER_DESCENDING)
+        : settings.setValue("noteSubfoldersPanelOrder", ORDER_ASCENDING);
 
     const QSignalBlocker blocker(ui->ignoreNoteSubFoldersLineEdit);
     settings.setValue("ignoreNoteSubFolders",
-            ui->ignoreNoteSubFoldersLineEdit->text());
+                      ui->ignoreNoteSubFoldersLineEdit->text());
 
     // Tags Panel Options
-    settings.setValue("tagsPanelHideSearch", ui->tagsPanelHideSearchCheckBox
-            ->isChecked());
+    settings.setValue("tagsPanelHideSearch",
+                      ui->tagsPanelHideSearchCheckBox->isChecked());
 
     settings.setValue("taggingShowNotesRecursively",
                       ui->taggingShowNotesRecursivelyCheckBox->isChecked());
     settings.setValue("noteListPreview",
                       ui->noteListPreviewCheckBox->isChecked());
 
-    ui->tagsPanelSortAlphabeticalRadioButton->isChecked() ?
-                settings.setValue("tagsPanelSort", SORT_ALPHABETICAL) :
-                settings.setValue("tagsPanelSort", SORT_BY_LAST_CHANGE);
+    ui->tagsPanelSortAlphabeticalRadioButton->isChecked()
+        ? settings.setValue("tagsPanelSort", SORT_ALPHABETICAL)
+        : settings.setValue("tagsPanelSort", SORT_BY_LAST_CHANGE);
 
-    ui->tagsPanelOrderDescendingRadioButton->isChecked() ?
-                settings.setValue("tagsPanelOrder", ORDER_DESCENDING) :
-                settings.setValue("tagsPanelOrder", ORDER_ASCENDING);
+    ui->tagsPanelOrderDescendingRadioButton->isChecked()
+        ? settings.setValue("tagsPanelOrder", ORDER_DESCENDING)
+        : settings.setValue("tagsPanelOrder", ORDER_ASCENDING);
 
     // Navigation Panel Options
     settings.setValue("navigationPanelHideSearch",
-            ui->navigationPanelHideSearchCheckBox->isChecked());
+                      ui->navigationPanelHideSearchCheckBox->isChecked());
 
-    settings.setValue("enableNoteTree", ui->enableNoteTreeCheckBox->isChecked());
+    settings.setValue("enableNoteTree",
+                      ui->enableNoteTreeCheckBox->isChecked());
 }
 
 /**
@@ -983,46 +989,46 @@ void SettingsDialog::storeFontSettings() {
 void SettingsDialog::readSettings() {
     QSettings settings;
     ui->ownCloudSupportCheckBox->setChecked(
-            OwnCloudService::isOwnCloudSupportEnabled());
+        OwnCloudService::isOwnCloudSupportEnabled());
     on_ownCloudSupportCheckBox_toggled();
     ui->todoCalendarSupportCheckBox->setChecked(
-                OwnCloudService::isTodoCalendarSupportEnabled());
+        OwnCloudService::isTodoCalendarSupportEnabled());
     on_todoCalendarSupportCheckBox_toggled();
     ui->serverUrlEdit->setText(_selectedCloudConnection.getServerUrl());
     ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
     ui->timeFormatLineEdit->setText(
-            settings.value("insertTimeFormat").toString());
+        settings.value("insertTimeFormat").toString());
 
     // prepend the portable data path if we are in portable mode
     ui->externalEditorPathLineEdit->setText(
-            Utils::Misc::prependPortableDataPathIfNeeded(
-                    settings.value("externalEditorPath").toString(), true));
+        Utils::Misc::prependPortableDataPathIfNeeded(
+            settings.value("externalEditorPath").toString(), true));
 
     ui->disableAutomaticUpdateDialogCheckBox->setChecked(
-            settings.value("disableAutomaticUpdateDialog").toBool());
+        settings.value("disableAutomaticUpdateDialog").toBool());
     ui->notifyAllExternalModificationsCheckBox->setChecked(
-            settings.value("notifyAllExternalModifications").toBool());
+        settings.value("notifyAllExternalModifications").toBool());
     ui->ignoreAllExternalModificationsCheckBox->setChecked(
-            settings.value("ignoreAllExternalModifications").toBool());
+        settings.value("ignoreAllExternalModifications").toBool());
     ui->acceptAllExternalModificationsCheckBox->setChecked(
-            settings.value("acceptAllExternalModifications").toBool());
+        settings.value("acceptAllExternalModifications").toBool());
     ui->ignoreAllExternalNoteFolderChangesCheckBox->setChecked(
-            settings.value("ignoreAllExternalNoteFolderChanges").toBool());
+        settings.value("ignoreAllExternalNoteFolderChanges").toBool());
     ui->allowDifferentNoteFileNameCheckBox->setChecked(
-            settings.value("allowDifferentNoteFileName").toBool());
+        settings.value("allowDifferentNoteFileName").toBool());
     ui->newNoteAskHeadlineCheckBox->setChecked(
-            settings.value("newNoteAskHeadline").toBool());
+        settings.value("newNoteAskHeadline").toBool());
     ui->useUNIXNewlineCheckBox->setChecked(
-            settings.value("useUNIXNewline").toBool());
+        settings.value("useUNIXNewline").toBool());
     ui->localTrashEnabledCheckBox->setChecked(
-            settings.value("localTrash/supportEnabled", true).toBool());
+        settings.value("localTrash/supportEnabled", true).toBool());
     ui->localTrashClearCheckBox->setChecked(
-            settings.value("localTrash/autoCleanupEnabled", true).toBool());
+        settings.value("localTrash/autoCleanupEnabled", true).toBool());
     ui->localTrashClearTimeSpinBox->setValue(
-            settings.value("localTrash/autoCleanupDays", 30).toInt());
+        settings.value("localTrash/autoCleanupDays", 30).toInt());
     ui->enableSocketServerCheckBox->setChecked(
-            Utils::Misc::isSocketServerEnabled());
+        Utils::Misc::isSocketServerEnabled());
     on_enableSocketServerCheckBox_toggled();
 
 #ifdef Q_OS_MAC
@@ -1032,63 +1038,66 @@ void SettingsDialog::readSettings() {
 #endif
 
     ui->restoreCursorPositionCheckBox->setChecked(
-            settings.value("restoreCursorPosition",
-                           restoreCursorPositionDefault).toBool());
+        settings.value("restoreCursorPosition", restoreCursorPositionDefault)
+            .toBool());
     ui->restoreLastNoteAtStartupCheckBox->setChecked(
-            settings.value("restoreLastNoteAtStartup", true).toBool());
+        settings.value("restoreLastNoteAtStartup", true).toBool());
     ui->noteSaveIntervalTime->setValue(
-            settings.value("noteSaveIntervalTime", 10).toInt());
+        settings.value("noteSaveIntervalTime", 10).toInt());
     ui->noteTextViewRTLCheckBox->setChecked(
-            settings.value("MainWindow/noteTextView.rtl").toBool());
+        settings.value("MainWindow/noteTextView.rtl").toBool());
     ui->noteTextViewIgnoreCodeFontSizeCheckBox->setChecked(
-            settings.value("MainWindow/noteTextView.ignoreCodeFontSize", true).toBool());
+        settings.value("MainWindow/noteTextView.ignoreCodeFontSize", true)
+            .toBool());
     ui->noteTextViewUnderlineCheckBox->setChecked(
-            settings.value("MainWindow/noteTextView.underline", true).toBool());
+        settings.value("MainWindow/noteTextView.underline", true).toBool());
     ui->noteTextViewUseEditorStylesCheckBox->setChecked(
-                settings.value("MainWindow/noteTextView.useEditorStyles", true).toBool());
+        settings.value("MainWindow/noteTextView.useEditorStyles", true)
+            .toBool());
     ui->useInternalExportStylingCheckBox->setChecked(
-                Utils::Misc::useInternalExportStylingForPreview());
+        Utils::Misc::useInternalExportStylingForPreview());
     ui->oldVersionNumberCheckBox->setChecked(
-            settings.value("Debug/fakeOldVersionNumber").toBool());
+        settings.value("Debug/fakeOldVersionNumber").toBool());
     ui->fileLoggingCheckBox->setChecked(
-            settings.value("Debug/fileLogging").toBool());
+        settings.value("Debug/fileLogging").toBool());
     on_fileLoggingCheckBox_toggled(ui->fileLoggingCheckBox->isChecked());
     ui->autoBracketClosingCheckBox->setChecked(
-            settings.value("Editor/autoBracketClosing", true).toBool());
+        settings.value("Editor/autoBracketClosing", true).toBool());
     ui->autoBracketRemovalCheckBox->setChecked(
-            settings.value("Editor/autoBracketRemoval", true).toBool());
+        settings.value("Editor/autoBracketRemoval", true).toBool());
     ui->highlightCurrentLineCheckBox->setChecked(
-            settings.value("Editor/highlightCurrentLine", true).toBool());
+        settings.value("Editor/highlightCurrentLine", true).toBool());
     ui->editorWidthInDFMOnlyCheckBox->setChecked(
-            settings.value("Editor/editorWidthInDFMOnly", true).toBool());
+        settings.value("Editor/editorWidthInDFMOnly", true).toBool());
     ui->vimModeCheckBox->setChecked(settings.value("Editor/vimMode").toBool());
-    ui->disableCursorBlinkingCheckBox->setChecked(settings.value(
-            "Editor/disableCursorBlinking").toBool());
-    ui->useTabIndentCheckBox->setChecked(settings.value("Editor/useTabIndent").toBool());
+    ui->disableCursorBlinkingCheckBox->setChecked(
+        settings.value("Editor/disableCursorBlinking").toBool());
+    ui->useTabIndentCheckBox->setChecked(
+        settings.value("Editor/useTabIndent").toBool());
     ui->indentSizeSpinBox->setValue(Utils::Misc::indentSize());
     ui->markdownHighlightingCheckBox->setChecked(
-            settings.value("markdownHighlightingEnabled", true).toBool());
+        settings.value("markdownHighlightingEnabled", true).toBool());
     ui->fullyHighlightedBlockquotesCheckBox->setChecked(
-            settings.value("fullyHighlightedBlockquotes").toBool());
+        settings.value("fullyHighlightedBlockquotes").toBool());
     ui->noteEditCentralWidgetCheckBox->setChecked(
-            settings.value("noteEditIsCentralWidget", true).toBool());
-    ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(
-            "allowOnlyOneAppInstance").toBool());
-    ui->closeTodoListAfterSaveCheckBox->setChecked(settings.value(
-            "closeTodoListAfterSave").toBool());
+        settings.value("noteEditIsCentralWidget", true).toBool());
+    ui->allowOnlyOneAppInstanceCheckBox->setChecked(
+        settings.value("allowOnlyOneAppInstance").toBool());
+    ui->closeTodoListAfterSaveCheckBox->setChecked(
+        settings.value("closeTodoListAfterSave").toBool());
     ui->toolbarIconSizeSpinBox->setValue(
-                 settings.value("MainWindow/mainToolBar.iconSize").toInt());
+        settings.value("MainWindow/mainToolBar.iconSize").toInt());
 
     const QSignalBlocker overrideInterfaceFontSizeGroupBoxBlocker(
-            ui->overrideInterfaceFontSizeGroupBox);
+        ui->overrideInterfaceFontSizeGroupBox);
     Q_UNUSED(overrideInterfaceFontSizeGroupBoxBlocker)
     const QSignalBlocker interfaceFontSizeSpinBoxBlocker(
-            ui->interfaceFontSizeSpinBox);
+        ui->interfaceFontSizeSpinBox);
     Q_UNUSED(interfaceFontSizeSpinBoxBlocker)
     ui->overrideInterfaceFontSizeGroupBox->setChecked(
-            settings.value("overrideInterfaceFontSize", false).toBool());
+        settings.value("overrideInterfaceFontSize", false).toBool());
     ui->interfaceFontSizeSpinBox->setValue(
-            settings.value("interfaceFontSize", 11).toInt());
+        settings.value("interfaceFontSize", 11).toInt());
 
     QTreeWidget treeWidget(this);
     auto *treeWidgetItem = new QTreeWidgetItem();
@@ -1096,52 +1105,52 @@ void SettingsDialog::readSettings() {
     int height = treeWidget.visualItemRect(treeWidgetItem).height();
 
     ui->itemHeightSpinBox->setValue(
-                 settings.value("itemHeight", height).toInt());
+        settings.value("itemHeight", height).toInt());
 
     selectListWidgetValue(ui->languageListWidget,
                           settings.value("interfaceLanguage").toString());
 
     const QSignalBlocker blocker(ui->appMetricsCheckBox);
     Q_UNUSED(blocker)
-    ui->appMetricsCheckBox->setChecked(settings.value(
-            "appMetrics/disableTracking").toBool());
+    ui->appMetricsCheckBox->setChecked(
+        settings.value("appMetrics/disableTracking").toBool());
 
-    ui->appHeartbeatCheckBox->setChecked(settings.value(
-            "appMetrics/disableAppHeartbeat").toBool());
+    ui->appHeartbeatCheckBox->setChecked(
+        settings.value("appMetrics/disableAppHeartbeat").toBool());
 
-    ui->darkModeColorsCheckBox->setChecked(settings.value(
-            "darkModeColors").toBool());
+    ui->darkModeColorsCheckBox->setChecked(
+        settings.value("darkModeColors").toBool());
 
     const QSignalBlocker darkModeCheckBoxBlocker(ui->darkModeCheckBox);
     Q_UNUSED(darkModeCheckBoxBlocker)
-    ui->darkModeCheckBox->setChecked(settings.value(
-            "darkMode").toBool());
+    ui->darkModeCheckBox->setChecked(settings.value("darkMode").toBool());
 
-    ui->darkModeTrayIconCheckBox->setChecked(settings.value(
-            "darkModeTrayIcon").toBool());
+    ui->darkModeTrayIconCheckBox->setChecked(
+        settings.value("darkModeTrayIcon").toBool());
 
-    ui->darkModeIconThemeCheckBox->setChecked(Utils::Misc::isDarkModeIconTheme());
+    ui->darkModeIconThemeCheckBox->setChecked(
+        Utils::Misc::isDarkModeIconTheme());
 
-    ui->internalIconThemeCheckBox->setChecked(settings.value(
-            "internalIconTheme").toBool());
+    ui->internalIconThemeCheckBox->setChecked(
+        settings.value("internalIconTheme").toBool());
 
-    ui->systemIconThemeCheckBox->setChecked(settings.value(
-            "systemIconTheme").toBool());
+    ui->systemIconThemeCheckBox->setChecked(
+        settings.value("systemIconTheme").toBool());
 
     // toggle the dark mode colors check box with the dark mode checkbox
     handleDarkModeCheckBoxToggled();
 
     noteTextEditFont.fromString(
-            settings.value("MainWindow/noteTextEdit.font").toString());
+        settings.value("MainWindow/noteTextEdit.font").toString());
     setFontLabel(ui->noteTextEditFontLabel, noteTextEditFont);
 
     noteTextEditCodeFont.fromString(
-            settings.value("MainWindow/noteTextEdit.code.font").toString());
+        settings.value("MainWindow/noteTextEdit.code.font").toString());
     setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
 
     // load note text view font
-    QString fontString = settings.value("MainWindow/noteTextView.font")
-            .toString();
+    QString fontString =
+        settings.value("MainWindow/noteTextView.font").toString();
 
     // store the current font if there isn't any set yet
     if (fontString.isEmpty()) {
@@ -1154,10 +1163,8 @@ void SettingsDialog::readSettings() {
     noteTextViewFont.fromString(fontString);
     setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
 
-
     // load note text view code font
-    fontString = settings.value("MainWindow/noteTextView.code.font")
-            .toString();
+    fontString = settings.value("MainWindow/noteTextView.code.font").toString();
 
     // set a default note text view code font
     if (fontString.isEmpty()) {
@@ -1184,8 +1191,10 @@ void SettingsDialog::readSettings() {
     const QSignalBlocker blocker5(ui->calDavCalendarRadioButton);
     Q_UNUSED(blocker5)
 
-    switch (settings.value("ownCloud/todoCalendarBackend",
-                           OwnCloudService::DefaultOwnCloudCalendar).toInt()) {
+    switch (settings
+                .value("ownCloud/todoCalendarBackend",
+                       OwnCloudService::DefaultOwnCloudCalendar)
+                .toInt()) {
         case OwnCloudService::CalendarPlus:
             ui->calendarPlusRadioButton->setChecked(true);
             break;
@@ -1204,20 +1213,20 @@ void SettingsDialog::readSettings() {
     const QSignalBlocker blocker6(this->ui->ignoreNonTodoCalendarsCheckBox);
     Q_UNUSED(blocker6)
 
-    ui->ignoreNonTodoCalendarsCheckBox->setChecked(settings.value(
-            "ownCloud/ignoreNonTodoCalendars", true).toBool());
+    ui->ignoreNonTodoCalendarsCheckBox->setChecked(
+        settings.value("ownCloud/ignoreNonTodoCalendars", true).toBool());
 
-    ui->calDavServerUrlEdit->setText(settings.value(
-            "ownCloud/todoCalendarCalDAVServerUrl").toString());
-    ui->calDavUsernameEdit->setText(settings.value(
-            "ownCloud/todoCalendarCalDAVUsername").toString());
+    ui->calDavServerUrlEdit->setText(
+        settings.value("ownCloud/todoCalendarCalDAVServerUrl").toString());
+    ui->calDavUsernameEdit->setText(
+        settings.value("ownCloud/todoCalendarCalDAVUsername").toString());
     ui->calDavPasswordEdit->setText(CryptoService::instance()->decryptToString(
-            settings.value("ownCloud/todoCalendarCalDAVPassword").toString()));
+        settings.value("ownCloud/todoCalendarCalDAVPassword").toString()));
 
-    QStringList todoCalendarUrlList = settings.value(
-            "ownCloud/todoCalendarUrlList").toStringList();
-    QStringList todoCalendarDisplayNameList = settings.value(
-            "ownCloud/todoCalendarDisplayNameList").toStringList();
+    QStringList todoCalendarUrlList =
+        settings.value("ownCloud/todoCalendarUrlList").toStringList();
+    QStringList todoCalendarDisplayNameList =
+        settings.value("ownCloud/todoCalendarDisplayNameList").toStringList();
     int todoCalendarUrlListCount = todoCalendarUrlList.count();
     int todoCalendarDisplayNameListCount = todoCalendarDisplayNameList.count();
 
@@ -1251,7 +1260,7 @@ void SettingsDialog::readSettings() {
                           Note::defaultNoteFileExtension());
 
     bool ignoreSSLErrors =
-            settings.value("networking/ignoreSSLErrors", true).toBool();
+        settings.value("networking/ignoreSSLErrors", true).toBool();
     ui->ignoreSSLErrorsCheckBox->setChecked(ignoreSSLErrors);
     ui->letsEncryptInfoLabel->setVisible(ignoreSSLErrors);
 
@@ -1263,21 +1272,20 @@ void SettingsDialog::readSettings() {
 
     // load image scaling settings
     bool scaleImageDown = settings.value("imageScaleDown", false).toBool();
-    ui->maximumImageHeightSpinBox->setValue(settings.value(
-            "imageScaleDownMaximumHeight", 1024).toInt());
-    ui->maximumImageWidthSpinBox->setValue(settings.value(
-            "imageScaleDownMaximumWidth", 1024).toInt());
+    ui->maximumImageHeightSpinBox->setValue(
+        settings.value("imageScaleDownMaximumHeight", 1024).toInt());
+    ui->maximumImageWidthSpinBox->setValue(
+        settings.value("imageScaleDownMaximumWidth", 1024).toInt());
     ui->imageScaleDownCheckBox->setChecked(scaleImageDown);
     ui->imageScalingFrame->setVisible(scaleImageDown);
 
     // load git settings
-    ui->gitPathLineEdit->setText(
-            Utils::Misc::prependPortableDataPathIfNeeded(
-                    settings.value("gitExecutablePath").toString(), true));
+    ui->gitPathLineEdit->setText(Utils::Misc::prependPortableDataPathIfNeeded(
+        settings.value("gitExecutablePath").toString(), true));
     ui->gitCommitIntervalTime->setValue(
-            settings.value("gitCommitInterval", 30).toInt());
+        settings.value("gitCommitInterval", 30).toInt());
     ui->gitLogCommandLineEdit->setText(
-            settings.value("gitLogCommand").toString());
+        settings.value("gitLogCommand").toString());
 
     // read panel settings
     readPanelSettings();
@@ -1288,8 +1296,7 @@ void SettingsDialog::readSettings() {
     initCloudConnectionComboBox();
 
     // set the cursor width spinbox value
-    ui->cursorWidthSpinBox->setValue(
-            settings.value("cursorWidth", 1).toInt());
+    ui->cursorWidthSpinBox->setValue(settings.value("cursorWidth", 1).toInt());
 
     const QSignalBlocker blocker8(this->ui->showSystemTrayCheckBox);
     Q_UNUSED(blocker8)
@@ -1302,14 +1309,16 @@ void SettingsDialog::readSettings() {
     }
 
     ui->automaticNoteFolderDatabaseClosingCheckBox->setChecked(
-            Utils::Misc::doAutomaticNoteFolderDatabaseClosing());
-    ui->legacyLinkingCheckBox->setChecked(settings.value("legacyLinking").toBool());
+        Utils::Misc::doAutomaticNoteFolderDatabaseClosing());
+    ui->legacyLinkingCheckBox->setChecked(
+        settings.value("legacyLinking").toBool());
 
     ui->webSocketServerServicePortSpinBox->setValue(
-            WebSocketServerService::getSettingsPort());
-    ui->bookmarksTagLineEdit->setText(WebSocketServerService::getBookmarksTag());
+        WebSocketServerService::getSettingsPort());
+    ui->bookmarksTagLineEdit->setText(
+        WebSocketServerService::getBookmarksTag());
     ui->bookmarksNoteNameLineEdit->setText(
-            WebSocketServerService::getBookmarksNoteName());
+        WebSocketServerService::getBookmarksNoteName());
 }
 
 /**
@@ -1321,24 +1330,26 @@ void SettingsDialog::initSearchEngineComboBox() const {
     // Iterates over the search engines and adds them
     // to the combobox
     QHash<int, Utils::Misc::SearchEngine> searchEngines =
-            Utils::Misc::getSearchEnginesHashMap();
+        Utils::Misc::getSearchEnginesHashMap();
 
     ui->searchEngineSelectionComboBox->clear();
 
-    Q_FOREACH(int id, Utils::Misc::getSearchEnginesIds()) {
-            Utils::Misc::SearchEngine searchEngine = searchEngines[id];
-            ui->searchEngineSelectionComboBox->addItem(searchEngine.name,
-                                                       QString::number(id));
-        }
+    Q_FOREACH (int id, Utils::Misc::getSearchEnginesIds()) {
+        Utils::Misc::SearchEngine searchEngine = searchEngines[id];
+        ui->searchEngineSelectionComboBox->addItem(searchEngine.name,
+                                                   QString::number(id));
+    }
 
     // Sets the current selected item to the search engine
     // selected previously
     // while also handling the case in which the saved key has
     // been removed from the hash table
-    int savedEngineId = settings.value(
-            "SearchEngineId", Utils::Misc::getDefaultSearchEngineId()).toInt();
+    int savedEngineId =
+        settings
+            .value("SearchEngineId", Utils::Misc::getDefaultSearchEngineId())
+            .toInt();
     int savedEngineIndex = ui->searchEngineSelectionComboBox->findData(
-                QVariant(savedEngineId).toString());
+        QVariant(savedEngineId).toString());
     savedEngineIndex = (savedEngineIndex == -1) ? 0 : savedEngineIndex;
     ui->searchEngineSelectionComboBox->setCurrentIndex(savedEngineIndex);
 }
@@ -1353,9 +1364,9 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
     ui->interfaceStyleComboBox->clear();
     ui->interfaceStyleComboBox->addItem(tr("Automatic (needs restart)"));
 
-    Q_FOREACH(QString style, QStyleFactory::keys()) {
-            ui->interfaceStyleComboBox->addItem(style);
-        }
+    Q_FOREACH (QString style, QStyleFactory::keys()) {
+        ui->interfaceStyleComboBox->addItem(style);
+    }
 
     QSettings settings;
     QString interfaceStyle = settings.value("interfaceStyle").toString();
@@ -1374,37 +1385,36 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
 void SettingsDialog::readPanelSettings() {
     QSettings settings;
     // Notes Panel Options
-    if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_ALPHABETICAL) {
+    if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() ==
+        SORT_ALPHABETICAL) {
         ui->notesPanelSortAlphabeticalRadioButton->setChecked(true);
         ui->notesPanelOrderGroupBox->setEnabled(true);
     } else {
         ui->notesPanelSortByLastChangeRadioButton->setChecked(true);
         ui->notesPanelOrderGroupBox->setEnabled(false);
     }
-    settings.value("notesPanelOrder").toInt() == ORDER_DESCENDING ?
-                ui->notesPanelOrderDescendingRadioButton->setChecked(true) :
-                ui->notesPanelOrderAscendingRadioButton->setChecked(true);
+    settings.value("notesPanelOrder").toInt() == ORDER_DESCENDING
+        ? ui->notesPanelOrderDescendingRadioButton->setChecked(true)
+        : ui->notesPanelOrderAscendingRadioButton->setChecked(true);
 
     // Note Subfoldes Panel Options
     ui->noteSubfoldersPanelHideSearchCheckBox->setChecked(
-                settings.value("noteSubfoldersPanelHideSearch").toBool());
+        settings.value("noteSubfoldersPanelHideSearch").toBool());
 
     ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->setChecked(
-                settings.value("noteSubfoldersPanelDisplayAsFullTree", true)
-                        .toBool());
+        settings.value("noteSubfoldersPanelDisplayAsFullTree", true).toBool());
 
     ui->noteSubfoldersPanelShowNotesRecursivelyCheckBox->setChecked(
-            settings.value("noteSubfoldersPanelShowNotesRecursively"
-            ).toBool());
+        settings.value("noteSubfoldersPanelShowNotesRecursively").toBool());
 
     ui->disableSavedSearchesAutoCompletionCheckBox->setChecked(
-            settings.value("disableSavedSearchesAutoCompletion").toBool());
+        settings.value("disableSavedSearchesAutoCompletion").toBool());
 
     ui->showMatchesCheckBox->setChecked(
-            settings.value("showMatches", true).toBool());
+        settings.value("showMatches", true).toBool());
 
-    if (settings.value(
-            "noteSubfoldersPanelShowRootFolderName", true).toBool()) {
+    if (settings.value("noteSubfoldersPanelShowRootFolderName", true)
+            .toBool()) {
         ui->noteSubfoldersPanelShowRootFolderNameCheckBox->setChecked(true);
         ui->noteSubfoldersPanelShowFullPathCheckBox->setEnabled(true);
     } else {
@@ -1413,10 +1423,10 @@ void SettingsDialog::readPanelSettings() {
     }
 
     ui->noteSubfoldersPanelShowFullPathCheckBox->setChecked(
-                settings.value("noteSubfoldersPanelShowFullPath").toBool());
+        settings.value("noteSubfoldersPanelShowFullPath").toBool());
 
-    if (settings.value(
-            "noteSubfoldersPanelSort").toInt() == SORT_ALPHABETICAL) {
+    if (settings.value("noteSubfoldersPanelSort").toInt() ==
+        SORT_ALPHABETICAL) {
         ui->noteSubfoldersPanelSortAlphabeticalRadioButton->setChecked(true);
         ui->noteSubfoldersPanelOrderGroupBox->setEnabled(true);
     } else {
@@ -1424,16 +1434,16 @@ void SettingsDialog::readPanelSettings() {
         ui->noteSubfoldersPanelOrderGroupBox->setEnabled(false);
     }
 
-    settings.value("noteSubfoldersPanelOrder").toInt() == ORDER_DESCENDING ?
-        ui->noteSubfoldersPanelOrderDescendingRadioButton->setChecked(true) :
-        ui->noteSubfoldersPanelOrderAscendingRadioButton->setChecked(true);
+    settings.value("noteSubfoldersPanelOrder").toInt() == ORDER_DESCENDING
+        ? ui->noteSubfoldersPanelOrderDescendingRadioButton->setChecked(true)
+        : ui->noteSubfoldersPanelOrderAscendingRadioButton->setChecked(true);
 
     // Tags Panel Options
-    ui->tagsPanelHideSearchCheckBox->setChecked(settings.value(
-            "tagsPanelHideSearch").toBool());
+    ui->tagsPanelHideSearchCheckBox->setChecked(
+        settings.value("tagsPanelHideSearch").toBool());
 
-    ui->taggingShowNotesRecursivelyCheckBox->setChecked(settings.value(
-            "taggingShowNotesRecursively").toBool());
+    ui->taggingShowNotesRecursivelyCheckBox->setChecked(
+        settings.value("taggingShowNotesRecursively").toBool());
     ui->noteListPreviewCheckBox->setChecked(Utils::Misc::isNoteListPreview());
 
     if (settings.value("tagsPanelSort").toInt() == SORT_ALPHABETICAL) {
@@ -1444,16 +1454,17 @@ void SettingsDialog::readPanelSettings() {
         ui->tagsPanelOrderGroupBox->setEnabled(false);
     }
 
-    settings.value("tagsPanelOrder").toInt() == ORDER_DESCENDING ?
-                ui->tagsPanelOrderDescendingRadioButton->setChecked(true) :
-                ui->tagsPanelOrderAscendingRadioButton->setChecked(true);
+    settings.value("tagsPanelOrder").toInt() == ORDER_DESCENDING
+        ? ui->tagsPanelOrderDescendingRadioButton->setChecked(true)
+        : ui->tagsPanelOrderAscendingRadioButton->setChecked(true);
 
-    ui->ignoreNoteSubFoldersLineEdit->setText(settings.value(
-            "ignoreNoteSubFolders", IGNORED_NOTE_SUBFOLDERS_DEFAULT).toString());
+    ui->ignoreNoteSubFoldersLineEdit->setText(
+        settings.value("ignoreNoteSubFolders", IGNORED_NOTE_SUBFOLDERS_DEFAULT)
+            .toString());
 
     // Navigation Panel Options
-    ui->navigationPanelHideSearchCheckBox->setChecked(settings.value(
-            "navigationPanelHideSearch").toBool());
+    ui->navigationPanelHideSearchCheckBox->setChecked(
+        settings.value("navigationPanelHideSearch").toBool());
 
     ui->enableNoteTreeCheckBox->setChecked(Utils::Misc::isEnableNoteTree());
 }
@@ -1472,77 +1483,73 @@ void SettingsDialog::loadShortcutSettings() {
     bool darkMode = settings.value("darkMode").toBool();
 
     QPalette palette;
-    QColor shortcutButtonActiveColor = darkMode ?
-                                       Qt::white :
-                                       palette.color(QPalette::ButtonText);
-    QColor shortcutButtonInactiveColor = darkMode ?
-                                         Qt::darkGray :
-                                         palette.color(QPalette::Mid);
+    QColor shortcutButtonActiveColor =
+        darkMode ? Qt::white : palette.color(QPalette::ButtonText);
+    QColor shortcutButtonInactiveColor =
+        darkMode ? Qt::darkGray : palette.color(QPalette::Mid);
 
-    QList<QMenu*> menus = mainWindow->menuList();
+    QList<QMenu *> menus = mainWindow->menuList();
     ui->shortcutSearchLineEdit->clear();
     ui->shortcutTreeWidget->clear();
     ui->shortcutTreeWidget->setColumnCount(2);
 
     // shortcuts on toolbars and note folders don't work yet
-    auto disabledMenuNames = QStringList() << "menuToolbars" << "noteFoldersMenu";
+    auto disabledMenuNames = QStringList() << "menuToolbars"
+                                           << "noteFoldersMenu";
 
     // loop through all menus
-    foreach(QMenu* menu, menus) {
-            if (disabledMenuNames.contains(menu->objectName())) {
+    foreach (QMenu *menu, menus) {
+        if (disabledMenuNames.contains(menu->objectName())) {
+            continue;
+        }
+
+        auto *menuItem = new QTreeWidgetItem();
+        int actionCount = 0;
+
+        // loop through all actions of the menu
+        foreach (QAction *action, menu->actions()) {
+            // we don't need empty objects
+            if (action->objectName().isEmpty()) {
                 continue;
             }
 
-            auto *menuItem = new QTreeWidgetItem();
-            int actionCount = 0;
+            // create the tree widget item
+            auto *actionItem = new QTreeWidgetItem();
+            actionItem->setText(0, action->text().remove("&"));
+            actionItem->setToolTip(0, action->objectName());
+            actionItem->setData(1, Qt::UserRole, action->objectName());
+            menuItem->addChild(actionItem);
 
-            // loop through all actions of the menu
-            foreach(QAction* action, menu->actions()) {
-                    // we don't need empty objects
-                    if (action->objectName().isEmpty()) {
-                        continue;
-                    }
+            // create the key widget
+            auto *keyWidget = new QKeySequenceWidget();
+            keyWidget->setFixedWidth(300);
+            keyWidget->setClearButtonIcon(QIcon::fromTheme(
+                "edit-clear", QIcon(":/icons/breeze-qownnotes/16x16/"
+                                    "edit-clear.svg")));
+            keyWidget->setNoneText(tr("Undefined key"));
+            keyWidget->setShortcutButtonActiveColor(shortcutButtonActiveColor);
+            keyWidget->setShortcutButtonInactiveColor(
+                shortcutButtonInactiveColor);
+            keyWidget->setToolTip(tr("Assign a new key"),
+                                  tr("Reset to default key"));
+            keyWidget->setDefaultKeySequence(action->data().toString());
+            keyWidget->setKeySequence(action->shortcut());
 
-                    // create the tree widget item
-                    auto *actionItem = new QTreeWidgetItem();
-                    actionItem->setText(0, action->text().remove("&"));
-                    actionItem->setToolTip(0, action->objectName());
-                    actionItem->setData(1, Qt::UserRole, action->objectName());
-                    menuItem->addChild(actionItem);
+            connect(
+                keyWidget, &QKeySequenceWidget::keySequenceAccepted, this,
+                [this, action]() { keySequenceEvent(action->objectName()); });
 
-                    // create the key widget
-                    auto *keyWidget = new QKeySequenceWidget();
-                    keyWidget->setFixedWidth(300);
-                    keyWidget->setClearButtonIcon(QIcon::fromTheme(
-                            "edit-clear",
-                            QIcon(":/icons/breeze-qownnotes/16x16/"
-                                          "edit-clear.svg")));
-                    keyWidget->setNoneText(tr("Undefined key"));
-                    keyWidget->setShortcutButtonActiveColor(
-                            shortcutButtonActiveColor);
-                    keyWidget->setShortcutButtonInactiveColor(
-                            shortcutButtonInactiveColor);
-                    keyWidget->setToolTip(tr("Assign a new key"),
-                                          tr("Reset to default key"));
-                    keyWidget->setDefaultKeySequence(action->data().toString());
-                    keyWidget->setKeySequence(action->shortcut());
+            ui->shortcutTreeWidget->setItemWidget(actionItem, 1, keyWidget);
 
-                    connect(keyWidget, &QKeySequenceWidget::keySequenceAccepted, this, [this, action](){
-                        keySequenceEvent(action->objectName());
-                    });
+            actionCount++;
+        }
 
-                    ui->shortcutTreeWidget->setItemWidget(
-                            actionItem, 1, keyWidget);
-
-                    actionCount++;
-            }
-
-            if (actionCount > 0) {
-                menuItem->setText(0, menu->title().remove("&"));
-                menuItem->setToolTip(0, menu->objectName());
-                ui->shortcutTreeWidget->addTopLevelItem(menuItem);
-                menuItem->setExpanded(true);
-            }
+        if (actionCount > 0) {
+            menuItem->setText(0, menu->title().remove("&"));
+            menuItem->setToolTip(0, menu->objectName());
+            ui->shortcutTreeWidget->addTopLevelItem(menuItem);
+            menuItem->setExpanded(true);
+        }
     }
 
     ui->shortcutTreeWidget->resizeColumnToContents(0);
@@ -1553,7 +1560,7 @@ void SettingsDialog::loadShortcutSettings() {
  *
  * @param objectName
  */
-void SettingsDialog::keySequenceEvent(const QString& objectName) {
+void SettingsDialog::keySequenceEvent(const QString &objectName) {
     QKeySequenceWidget *keySequenceWidget = findKeySequenceWidget(objectName);
 
     if (keySequenceWidget == Q_NULLPTR) {
@@ -1581,7 +1588,7 @@ void SettingsDialog::keySequenceEvent(const QString& objectName) {
             }
 
             auto keyWidget = static_cast<QKeySequenceWidget *>(
-                    ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
+                ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
 
             if (keyWidget == Q_NULLPTR) {
                 continue;
@@ -1596,13 +1603,12 @@ void SettingsDialog::keySequenceEvent(const QString& objectName) {
                         this, tr("Shortcut already assigned"),
                         tr("The shortcut <strong>%1</strong> is already "
                            "assigned to <strong>%2</strong>! Do you want to "
-                           "jump to the shortcut?").arg(
-                                eventKeySequence.toString(),
-                                shortcutItem->text(0)),
+                           "jump to the shortcut?")
+                            .arg(eventKeySequence.toString(),
+                                 shortcutItem->text(0)),
                         "settings-shortcut-already-assigned",
                         QMessageBox::Yes | QMessageBox::Cancel,
-                        QMessageBox::Yes) ==
-                    QMessageBox::Yes) {
+                        QMessageBox::Yes) == QMessageBox::Yes) {
                     ui->shortcutTreeWidget->scrollToItem(shortcutItem);
                     ui->shortcutTreeWidget->clearSelection();
                     shortcutItem->setSelected(true);
@@ -1618,7 +1624,8 @@ void SettingsDialog::keySequenceEvent(const QString& objectName) {
  * Finds a QKeySequenceWidget in the shortcutTreeWidget by the objectName
  * of the assigned menu action
  */
-QKeySequenceWidget *SettingsDialog::findKeySequenceWidget(const QString& objectName) {
+QKeySequenceWidget *SettingsDialog::findKeySequenceWidget(
+    const QString &objectName) {
     // loop all top level tree widget items (menus)
     for (int i = 0; i < ui->shortcutTreeWidget->topLevelItemCount(); i++) {
         QTreeWidgetItem *menuItem = ui->shortcutTreeWidget->topLevelItem(i);
@@ -1630,8 +1637,8 @@ QKeySequenceWidget *SettingsDialog::findKeySequenceWidget(const QString& objectN
             QString name = shortcutItem->data(1, Qt::UserRole).toString();
 
             if (name == objectName) {
-                return static_cast <QKeySequenceWidget *>(
-                        ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
+                return static_cast<QKeySequenceWidget *>(
+                    ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
             }
         }
     }
@@ -1653,7 +1660,7 @@ void SettingsDialog::storeShortcutSettings() {
         for (int j = 0; j < menuItem->childCount(); j++) {
             QTreeWidgetItem *shortcutItem = menuItem->child(j);
             auto *keyWidget = static_cast<QKeySequenceWidget *>(
-                    ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
+                ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
 
             if (keyWidget == Q_NULLPTR) {
                 continue;
@@ -1662,7 +1669,7 @@ void SettingsDialog::storeShortcutSettings() {
             QKeySequence keySequence = keyWidget->keySequence();
             QKeySequence defaultKeySequence = keyWidget->defaultKeySequence();
             QString actionObjectName =
-                    shortcutItem->data(1, Qt::UserRole).toString();
+                shortcutItem->data(1, Qt::UserRole).toString();
 
             QString settingsKey = "Shortcuts/MainWindow-" + actionObjectName;
 
@@ -1679,38 +1686,38 @@ void SettingsDialog::storeShortcutSettings() {
 /**
  * Selects a value in a list widget, that is hidden in the whatsThis parameter
  */
-void SettingsDialog::selectListWidgetValue(QListWidget* listWidget,
-                                           const QString& value) {
+void SettingsDialog::selectListWidgetValue(QListWidget *listWidget,
+                                           const QString &value) {
     // get all items from the list widget
-    QList<QListWidgetItem *> items = listWidget->findItems(
-                    QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
+    QList<QListWidgetItem *> items =
+        listWidget->findItems(QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
     // select the right item in the selector
-    Q_FOREACH(QListWidgetItem *item, items) {
-            if (item->whatsThis() == value) {
-                const QSignalBlocker blocker(listWidget);
-                Q_UNUSED(blocker)
+    Q_FOREACH (QListWidgetItem *item, items) {
+        if (item->whatsThis() == value) {
+            const QSignalBlocker blocker(listWidget);
+            Q_UNUSED(blocker)
 
-                item->setSelected(true);
-                break;
-            }
+            item->setSelected(true);
+            break;
         }
+    }
 }
 
 /**
  * Checks if a value, that is hidden in the whatsThis parameter exists in a
  * list widget
  */
-bool SettingsDialog::listWidgetValueExists(QListWidget* listWidget,
-                                           const QString& value) {
+bool SettingsDialog::listWidgetValueExists(QListWidget *listWidget,
+                                           const QString &value) {
     // get all items from the list widget
-    QList<QListWidgetItem *> items = listWidget->findItems(
-                    QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
+    QList<QListWidgetItem *> items =
+        listWidget->findItems(QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
     // checks if the value exists
-    Q_FOREACH(QListWidgetItem *item, items) {
-            if (item->whatsThis() == value) {
-                return true;
-            }
+    Q_FOREACH (QListWidgetItem *item, items) {
+        if (item->whatsThis() == value) {
+            return true;
         }
+    }
 
     return false;
 }
@@ -1719,8 +1726,8 @@ bool SettingsDialog::listWidgetValueExists(QListWidget* listWidget,
  * Returns the selected value in list widget, that is hidden in
  * the whatsThis parameter
  */
-QString SettingsDialog::getSelectedListWidgetValue(QListWidget* listWidget) {
-    QList<QListWidgetItem*> items = listWidget->selectedItems();
+QString SettingsDialog::getSelectedListWidgetValue(QListWidget *listWidget) {
+    QList<QListWidgetItem *> items = listWidget->selectedItems();
 
     if (items.count() >= 1) {
         return items.first()->whatsThis();
@@ -1729,9 +1736,9 @@ QString SettingsDialog::getSelectedListWidgetValue(QListWidget* listWidget) {
     return QString();
 }
 
-void SettingsDialog::setFontLabel(QLineEdit *label, const QFont& font) {
-    label->setText(
-            font.family() + " (" + QString::number(font.pointSize()) + ")");
+void SettingsDialog::setFontLabel(QLineEdit *label, const QFont &font) {
+    label->setText(font.family() + " (" + QString::number(font.pointSize()) +
+                   ")");
     label->setFont(font);
 }
 
@@ -1740,7 +1747,7 @@ void SettingsDialog::outputSettings() {
     storeOwncloudDebugData();
 
     QString output = Utils::Misc::generateDebugInformation(
-            ui->gitHubLineBreaksCheckBox->isChecked());
+        ui->gitHubLineBreaksCheckBox->isChecked());
 
     ui->debugInfoTextEdit->setPlainText(output);
 }
@@ -1753,8 +1760,7 @@ void SettingsDialog::outputSettings() {
  * @param appVersion
  * @param serverVersion
  */
-void SettingsDialog::connectTestCallback(bool appIsValid,
-                                         QString appVersion,
+void SettingsDialog::connectTestCallback(bool appIsValid, QString appVersion,
                                          QString serverVersion,
                                          QString notesPathExistsText,
                                          QString connectionErrorMessage) {
@@ -1770,9 +1776,9 @@ void SettingsDialog::connectTestCallback(bool appIsValid,
     if (appIsValid) {
         ui->connectionTestLabel->setStyleSheet("color: green;");
         ui->connectionTestLabel->setText(
-                tr("The connection was made successfully!\n"
-                   "Server version: %1\nQOwnNotesAPI version: %2")
-                    .arg(serverVersion, appVersion));
+            tr("The connection was made successfully!\n"
+               "Server version: %1\nQOwnNotesAPI version: %2")
+                .arg(serverVersion, appVersion));
     } else {
         // hide password
         if (!ui->passwordEdit->text().isEmpty()) {
@@ -1781,11 +1787,11 @@ void SettingsDialog::connectTestCallback(bool appIsValid,
 
         ui->connectionTestLabel->setStyleSheet("color: red;");
         ui->connectionTestLabel->setText(
-                Utils::Misc::replaceOwnCloudText(
-                        tr("There was an error connecting to the ownCloud Server!\n"
-                        "You also need to have the QOwnNotesAPI app installed "
-                        "and enabled!\n\nConnection error message: ")) +
-                connectionErrorMessage);
+            Utils::Misc::replaceOwnCloudText(
+                tr("There was an error connecting to the ownCloud Server!\n"
+                   "You also need to have the QOwnNotesAPI app installed "
+                   "and enabled!\n\nConnection error message: ")) +
+            connectionErrorMessage);
     }
 
     ui->connectionTestLabel->adjustSize();
@@ -1798,7 +1804,7 @@ void SettingsDialog::connectTestCallback(bool appIsValid,
  * @param text
  * @param color
  */
-void SettingsDialog::setOKLabelData(int number, const QString& text,
+void SettingsDialog::setOKLabelData(int number, const QString &text,
                                     OKLabelStatus status) {
     QLabel *label;
 
@@ -1850,12 +1856,12 @@ void SettingsDialog::setOKLabelData(int number, const QString& text,
     label->setStyleSheet("color: " + color);
 }
 
-void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData>& items,
-                                             bool forceReadCheckedState) {
+void SettingsDialog::refreshTodoCalendarList(
+    const QList<CalDAVCalendarData> &items, bool forceReadCheckedState) {
     // we want to read the checked state from the settings if the
     // tasks calendar list was not empty
-    bool readCheckedState = forceReadCheckedState ? true :
-                            ui->todoCalendarListWidget->count() > 0;
+    bool readCheckedState =
+        forceReadCheckedState ? true : ui->todoCalendarListWidget->count() > 0;
 
     // clear the tasks calendar list
     ui->todoCalendarListWidget->clear();
@@ -1865,12 +1871,12 @@ void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData>& it
     }
 
     QSettings settings;
-    QStringList todoCalendarEnabledList = settings.value(
-            "ownCloud/todoCalendarEnabledList").toStringList();
+    QStringList todoCalendarEnabledList =
+        settings.value("ownCloud/todoCalendarEnabledList").toStringList();
 
-    QUrl serverUrl(ui->calDavCalendarRadioButton->isChecked() ?
-                   ui->calDavServerUrlEdit->text() :
-                   ui->serverUrlEdit->text());
+    QUrl serverUrl(ui->calDavCalendarRadioButton->isChecked()
+                       ? ui->calDavServerUrlEdit->text()
+                       : ui->serverUrlEdit->text());
 
     // return if server url isn't valid
     if (!serverUrl.isValid()) {
@@ -1881,8 +1887,9 @@ void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData>& it
     QString serverUrlPath = serverUrl.path();
     if (!serverUrlPath.isEmpty()) {
         // remove the path from the end because we already got it in the url
-        serverUrlText.replace(QRegularExpression(
-                QRegularExpression::escape(serverUrlPath) + "$"), "");
+        serverUrlText.replace(
+            QRegularExpression(QRegularExpression::escape(serverUrlPath) + "$"),
+            "");
     }
 
     QListIterator<CalDAVCalendarData> itr(items);
@@ -1923,10 +1930,11 @@ void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData>& it
         auto *item = new QListWidgetItem(name);
 
         // eventually check if item was checked
-        Qt::CheckState checkedState = readCheckedState
-                                      ? (todoCalendarEnabledList.contains(name)
-                                         ? Qt::Checked : Qt::Unchecked)
-                                      : Qt::Checked;
+        Qt::CheckState checkedState =
+            readCheckedState
+                ? (todoCalendarEnabledList.contains(name) ? Qt::Checked
+                                                          : Qt::Unchecked)
+                : Qt::Checked;
         item->setCheckState(checkedState);
 
         item->setFlags(Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled |
@@ -1935,7 +1943,6 @@ void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData>& it
         ui->todoCalendarListWidget->addItem(item);
     }
 }
-
 
 /* * * * * * * * * * * * * * * *
  *
@@ -1951,7 +1958,7 @@ void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button) {
 
 void SettingsDialog::on_ownCloudServerAppPageButton_clicked() {
     QDesktopServices::openUrl(
-            QUrl(ui->serverUrlEdit->text() + "/index.php/settings/apps"));
+        QUrl(ui->serverUrlEdit->text() + "/index.php/settings/apps"));
 }
 
 void SettingsDialog::on_noteTextEditButton_clicked() {
@@ -1972,12 +1979,11 @@ void SettingsDialog::on_noteTextEditButton_clicked() {
     }
 }
 
-void SettingsDialog::on_noteTextEditCodeButton_clicked()
-{
+void SettingsDialog::on_noteTextEditCodeButton_clicked() {
     bool ok;
-    QFont font = Utils::Gui::fontDialogGetFont(
-            &ok, noteTextEditCodeFont, this,
-            QString(), QFontDialog::MonospacedFonts);
+    QFont font =
+        Utils::Gui::fontDialogGetFont(&ok, noteTextEditCodeFont, this,
+                                      QString(), QFontDialog::MonospacedFonts);
     if (ok) {
         noteTextEditCodeFont = font;
         setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
@@ -1999,12 +2005,11 @@ void SettingsDialog::on_noteTextViewButton_clicked() {
     }
 }
 
-void SettingsDialog::on_noteTextViewCodeButton_clicked()
-{
+void SettingsDialog::on_noteTextViewCodeButton_clicked() {
     bool ok;
-    QFont font = Utils::Gui::fontDialogGetFont(
-            &ok, noteTextViewCodeFont, this,
-            QString(), QFontDialog::MonospacedFonts);
+    QFont font =
+        Utils::Gui::fontDialogGetFont(&ok, noteTextViewCodeFont, this,
+                                      QString(), QFontDialog::MonospacedFonts);
     if (ok) {
         noteTextViewCodeFont = font;
         setFontLabel(ui->noteTextViewCodeFontLabel, noteTextViewCodeFont);
@@ -2032,14 +2037,14 @@ void SettingsDialog::reloadCalendarList() {
 }
 
 void SettingsDialog::on_defaultOwnCloudCalendarRadioButton_toggled(
-        bool checked) {
+    bool checked) {
     if (checked) {
         on_reloadCalendarListButton_clicked();
     }
 }
 
 void SettingsDialog::on_legacyOwnCloudCalendarRadioButton_toggled(
-        bool checked) {
+    bool checked) {
     if (checked) {
         on_reloadCalendarListButton_clicked();
     }
@@ -2049,15 +2054,14 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
     if (QMessageBox::information(
             this, tr("Database"),
             tr("Do you really want to clear the local database? "
-                       "This will also remove your configured note "
-                       "folders and your cached todo items!"),
-            tr("Clear &database"), tr("&Cancel"), QString(),
-            1) == 0) {
+               "This will also remove your configured note "
+               "folders and your cached todo items!"),
+            tr("Clear &database"), tr("&Cancel"), QString(), 1) == 0) {
         DatabaseService::reinitializeDiskDatabase();
         NoteFolder::migrateToNoteFolders();
 
         Utils::Gui::information(this, tr("Database"),
-                                 tr("The Database was reinitialized."),
+                                tr("The Database was reinitialized."),
                                 "database-reinitialized");
     }
 }
@@ -2066,10 +2070,11 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
  * @brief Stores the debug information to a markdown file
  */
 void SettingsDialog::on_saveDebugInfoButton_clicked() {
-    Utils::Gui::information(this, tr("Debug information"),
-                             tr("Please don't use this in the issue tracker, "
-                                "copy the debug information text directly into the issue."),
-                            "debug-save");
+    Utils::Gui::information(
+        this, tr("Debug information"),
+        tr("Please don't use this in the issue tracker, "
+           "copy the debug information text directly into the issue."),
+        "debug-save");
 
     FileDialog dialog("SaveDebugInfo");
     dialog.setFileMode(QFileDialog::AnyFile);
@@ -2100,14 +2105,12 @@ void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked) {
     if (checked) {
         int reply;
         reply = QMessageBox::question(
-                this,
-                tr("Disable usage tracking"),
-                tr("Anonymous usage data helps to decide what parts of "
-                        "QOwnNotes to improve next and to find and fix bugs."
-                        "<br />Please disable it only if you really can't live"
-                        " with it.<br /><br />Really disable usage tracking?"),
-                QMessageBox::Yes | QMessageBox::No,
-                QMessageBox::No);
+            this, tr("Disable usage tracking"),
+            tr("Anonymous usage data helps to decide what parts of "
+               "QOwnNotes to improve next and to find and fix bugs."
+               "<br />Please disable it only if you really can't live"
+               " with it.<br /><br />Really disable usage tracking?"),
+            QMessageBox::Yes | QMessageBox::No, QMessageBox::No);
         if (reply == QMessageBox::No) {
             const QSignalBlocker blocker(ui->appMetricsCheckBox);
             Q_UNUSED(blocker)
@@ -2123,10 +2126,9 @@ void SettingsDialog::on_clearAppDataAndExitButton_clicked() {
     if (QMessageBox::information(
             this, tr("Clear app data and exit"),
             tr("Do you really want to clear all settings, remove the "
-                       "database and exit QOwnNotes?\n\n"
-                       "Your notes will stay intact!"),
-            tr("Clear and &exit"), tr("&Cancel"), QString(),
-            1) == 0) {
+               "database and exit QOwnNotes?\n\n"
+               "Your notes will stay intact!"),
+            tr("Clear and &exit"), tr("&Cancel"), QString(), 1) == 0) {
         QSettings settings;
         settings.clear();
         DatabaseService::removeDiskDatabase();
@@ -2221,7 +2223,8 @@ void SettingsDialog::on_setExternalEditorPathToolButton_clicked() {
     }
 
     QStringList mimeTypeFilters;
-    mimeTypeFilters << "application/x-executable" << "application/octet-stream";
+    mimeTypeFilters << "application/x-executable"
+                    << "application/octet-stream";
 
     FileDialog dialog("ExternalEditor");
 
@@ -2245,7 +2248,7 @@ void SettingsDialog::on_setExternalEditorPathToolButton_clicked() {
             return;
         }
 
-        const QString& filePath(fileNames.at(0));
+        const QString &filePath(fileNames.at(0));
         ui->externalEditorPathLineEdit->setText(filePath);
     }
 }
@@ -2267,11 +2270,11 @@ void SettingsDialog::setupNoteFolderPage() {
 
     // populate the note folder list
     if (noteFoldersCount > 0) {
-        Q_FOREACH(NoteFolder noteFolder, noteFolders) {
-                auto *item = new QListWidgetItem(noteFolder.getName());
-                item->setData(Qt::UserRole, noteFolder.getId());
-                ui->noteFolderListWidget->addItem(item);
-            }
+        Q_FOREACH (NoteFolder noteFolder, noteFolders) {
+            auto *item = new QListWidgetItem(noteFolder.getName());
+            item->setData(Qt::UserRole, noteFolder.getId());
+            ui->noteFolderListWidget->addItem(item);
+        }
 
         // set the current row
         ui->noteFolderListWidget->setCurrentRow(0);
@@ -2282,15 +2285,15 @@ void SettingsDialog::setupNoteFolderPage() {
 
     // set local path placeholder text
     ui->noteFolderLocalPathLineEdit->setPlaceholderText(
-            Utils::Misc::defaultNotesPath());
+        Utils::Misc::defaultNotesPath());
 
     noteFolderRemotePathTreeStatusBar = new QStatusBar(this);
     ui->noteFolderRemotePathTreeWidgetFrame->layout()->addWidget(
-            noteFolderRemotePathTreeStatusBar);
+        noteFolderRemotePathTreeStatusBar);
 }
 
 void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
-        QListWidgetItem *current, QListWidgetItem *previous) {
+    QListWidgetItem *current, QListWidgetItem *previous) {
     Q_UNUSED(previous)
 
     setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
@@ -2300,20 +2303,21 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
     if (_selectedNoteFolder.isFetched()) {
         ui->noteFolderNameLineEdit->setText(_selectedNoteFolder.getName());
         ui->noteFolderLocalPathLineEdit->setText(
-                _selectedNoteFolder.getLocalPath());
+            _selectedNoteFolder.getLocalPath());
         ui->noteFolderRemotePathLineEdit->setText(
-                _selectedNoteFolder.getRemotePath());
+            _selectedNoteFolder.getRemotePath());
         ui->noteFolderShowSubfoldersCheckBox->setChecked(
-                _selectedNoteFolder.isShowSubfolders());
+            _selectedNoteFolder.isShowSubfolders());
         ui->noteFolderGitCommitCheckBox->setChecked(
-                _selectedNoteFolder.isUseGit());
-        Utils::Gui::setComboBoxIndexByUserData(ui->noteFolderCloudConnectionComboBox,
-                                               _selectedNoteFolder.getCloudConnectionId());
+            _selectedNoteFolder.isUseGit());
+        Utils::Gui::setComboBoxIndexByUserData(
+            ui->noteFolderCloudConnectionComboBox,
+            _selectedNoteFolder.getCloudConnectionId());
 
         const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
         Q_UNUSED(blocker)
         ui->noteFolderActiveCheckBox->setChecked(
-                _selectedNoteFolder.isCurrent());
+            _selectedNoteFolder.isCurrent());
     }
 }
 
@@ -2336,7 +2340,7 @@ void SettingsDialog::on_noteFolderAddButton_clicked() {
 
         // set the current row
         ui->noteFolderListWidget->setCurrentRow(
-                ui->noteFolderListWidget->count() - 1);
+            ui->noteFolderListWidget->count() - 1);
 
         // enable the remove button
         ui->noteFolderRemoveButton->setEnabled(true);
@@ -2350,30 +2354,28 @@ void SettingsDialog::on_noteFolderAddButton_clicked() {
 /**
  * Removes the current note folder
  */
-void SettingsDialog::on_noteFolderRemoveButton_clicked()
-{
+void SettingsDialog::on_noteFolderRemoveButton_clicked() {
     if (ui->noteFolderListWidget->count() < 2) {
         return;
     }
 
     if (Utils::Gui::question(
-            this,
-            tr("Remove note folder"),
+            this, tr("Remove note folder"),
             tr("Remove the current note folder <strong>%1</strong>?")
-                    .arg(_selectedNoteFolder.getName()),
+                .arg(_selectedNoteFolder.getName()),
             "remove-note-folder") == QMessageBox::Yes) {
         bool wasCurrent = _selectedNoteFolder.isCurrent();
 
         QSettings settings;
 
         // remove saved searches
-        QString settingsKey = "savedSearches/noteFolder-"
-                              + QString::number(_selectedNoteFolder.getId());
+        QString settingsKey = "savedSearches/noteFolder-" +
+                              QString::number(_selectedNoteFolder.getId());
         settings.remove(settingsKey);
 
         // remove tree widget expand state setting
         settingsKey = NoteSubFolder::treeWidgetExpandStateSettingsKey(
-                _selectedNoteFolder.getId());
+            _selectedNoteFolder.getId());
         settings.remove(settingsKey);
 
         // remove the note folder from the database
@@ -2381,11 +2383,11 @@ void SettingsDialog::on_noteFolderRemoveButton_clicked()
 
         // remove the list item
         ui->noteFolderListWidget->takeItem(
-                ui->noteFolderListWidget->currentRow());
+            ui->noteFolderListWidget->currentRow());
 
         // disable the remove button if there is only one item left
         ui->noteFolderRemoveButton->setEnabled(
-                ui->noteFolderListWidget->count() > 1);
+            ui->noteFolderListWidget->count() > 1);
 
         // if the removed note folder was the current folder we set the first
         // note folder as new current one
@@ -2401,8 +2403,7 @@ void SettingsDialog::on_noteFolderRemoveButton_clicked()
 /**
  * Updates the name of the current note folder edit
  */
-void SettingsDialog::on_noteFolderNameLineEdit_editingFinished()
-{
+void SettingsDialog::on_noteFolderNameLineEdit_editingFinished() {
     QString text = ui->noteFolderNameLineEdit->text().remove("\n").trimmed();
     text.truncate(50);
     _selectedNoteFolder.setName(text);
@@ -2414,8 +2415,7 @@ void SettingsDialog::on_noteFolderNameLineEdit_editingFinished()
 /**
  * Updates the remote path of the current note folder edit
  */
-void SettingsDialog::on_noteFolderRemotePathLineEdit_editingFinished()
-{
+void SettingsDialog::on_noteFolderRemotePathLineEdit_editingFinished() {
     QString text = ui->noteFolderRemotePathLineEdit->text();
     _selectedNoteFolder.setRemotePath(text);
     QString remotePath = _selectedNoteFolder.fixRemotePath();
@@ -2430,13 +2430,11 @@ void SettingsDialog::on_noteFolderRemotePathLineEdit_editingFinished()
     }
 }
 
-void SettingsDialog::on_noteFolderLocalPathButton_clicked()
-{
+void SettingsDialog::on_noteFolderLocalPathButton_clicked() {
     QString dir = QFileDialog::getExistingDirectory(
-            this,
-            tr("Please select the folder where your notes will get stored to"),
-            _selectedNoteFolder.getLocalPath(),
-            QFileDialog::ShowDirsOnly);
+        this,
+        tr("Please select the folder where your notes will get stored to"),
+        _selectedNoteFolder.getLocalPath(), QFileDialog::ShowDirsOnly);
 
     QDir d = QDir(dir);
 
@@ -2450,8 +2448,7 @@ void SettingsDialog::on_noteFolderLocalPathButton_clicked()
 /**
  * Sets the current note folder as active note folder
  */
-void SettingsDialog::on_noteFolderActiveCheckBox_stateChanged(int arg1)
-{
+void SettingsDialog::on_noteFolderActiveCheckBox_stateChanged(int arg1) {
     Q_UNUSED(arg1)
 
     if (!ui->noteFolderActiveCheckBox->isChecked()) {
@@ -2464,17 +2461,17 @@ void SettingsDialog::on_noteFolderActiveCheckBox_stateChanged(int arg1)
     }
 }
 
-void SettingsDialog::on_noteFolderRemotePathButton_clicked()
-{
+void SettingsDialog::on_noteFolderRemotePathButton_clicked() {
     // store ownCloud settings
     storeSettings();
 
     setNoteFolderRemotePathTreeWidgetFrameVisibility(true);
 
     noteFolderRemotePathTreeStatusBar->showMessage(
-            tr("Loading folders from server"));
+        tr("Loading folders from server"));
 
-    OwnCloudService *ownCloud = OwnCloudService::instance(true, _selectedNoteFolder.getCloudConnectionId());
+    OwnCloudService *ownCloud = OwnCloudService::instance(
+        true, _selectedNoteFolder.getCloudConnectionId());
     ownCloud->settingsGetFileList(this, "");
 }
 
@@ -2486,28 +2483,28 @@ void SettingsDialog::on_noteFolderRemotePathButton_clicked()
 void SettingsDialog::setNoteFolderRemotePathList(QStringList pathList) {
     if (pathList.count() <= 1) {
         noteFolderRemotePathTreeStatusBar->showMessage(
-                tr("No more folders were found in the current folder"), 1000);
+            tr("No more folders were found in the current folder"), 1000);
     } else {
         noteFolderRemotePathTreeStatusBar->clearMessage();
     }
 
-    Q_FOREACH(QString path, pathList) {
-            if (!path.isEmpty()) {
-                addPathToNoteFolderRemotePathTreeWidget(nullptr, path);
-            }
+    Q_FOREACH (QString path, pathList) {
+        if (!path.isEmpty()) {
+            addPathToNoteFolderRemotePathTreeWidget(nullptr, path);
         }
+    }
 }
 
 void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
-        QTreeWidgetItem *parent, const QString& path) {
+    QTreeWidgetItem *parent, const QString &path) {
     if (path.isEmpty()) {
         return;
     }
 
     QStringList pathPartList = path.split("/");
     QString pathPart = pathPartList.takeFirst();
-    QTreeWidgetItem *item = findNoteFolderRemotePathTreeWidgetItem(
-            parent, pathPart);
+    QTreeWidgetItem *item =
+        findNoteFolderRemotePathTreeWidgetItem(parent, pathPart);
 
     const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
     Q_UNUSED(blocker)
@@ -2529,13 +2526,12 @@ void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
 }
 
 QTreeWidgetItem *SettingsDialog::findNoteFolderRemotePathTreeWidgetItem(
-        QTreeWidgetItem *parent, const QString& text) {
+    QTreeWidgetItem *parent, const QString &text) {
     if (parent == nullptr) {
         for (int i = 0;
-            i < ui->noteFolderRemotePathTreeWidget->topLevelItemCount();
-            i++) {
+             i < ui->noteFolderRemotePathTreeWidget->topLevelItemCount(); i++) {
             QTreeWidgetItem *item =
-                    ui->noteFolderRemotePathTreeWidget->topLevelItem(i);
+                ui->noteFolderRemotePathTreeWidget->topLevelItem(i);
             if (item->text(0) == text) {
                 return item;
             }
@@ -2553,21 +2549,23 @@ QTreeWidgetItem *SettingsDialog::findNoteFolderRemotePathTreeWidgetItem(
 }
 
 void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
 
     QString folderName =
-            generatePathFromCurrentNoteFolderRemotePathItem(current);
+        generatePathFromCurrentNoteFolderRemotePathItem(current);
     noteFolderRemotePathTreeStatusBar->showMessage(
-            tr("Loading folders in '%1' from server").arg(current->text(0)));
+        tr("Loading folders in '%1' from server").arg(current->text(0)));
 
     OwnCloudService *ownCloud = OwnCloudService::instance(true);
     ownCloud->settingsGetFileList(this, folderName);
 }
 
-void SettingsDialog::on_noteFolderCloudConnectionComboBox_currentIndexChanged(int index) {
+void SettingsDialog::on_noteFolderCloudConnectionComboBox_currentIndexChanged(
+    int index) {
     Q_UNUSED(index)
-    _selectedNoteFolder.setCloudConnectionId(ui->noteFolderCloudConnectionComboBox->currentData().toInt());
+    _selectedNoteFolder.setCloudConnectionId(
+        ui->noteFolderCloudConnectionComboBox->currentData().toInt());
     _selectedNoteFolder.store();
 }
 
@@ -2579,7 +2577,7 @@ void SettingsDialog::on_useOwnCloudPathButton_clicked() {
 
     ui->noteFolderRemotePathLineEdit->clear();
     ui->noteFolderRemotePathLineEdit->setText(
-            generatePathFromCurrentNoteFolderRemotePathItem(item));
+        generatePathFromCurrentNoteFolderRemotePathItem(item));
     setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
     on_noteFolderRemotePathLineEdit_editingFinished();
 }
@@ -2588,22 +2586,22 @@ void SettingsDialog::on_useOwnCloudPathButton_clicked() {
  * Recursively generates the path string from the tree widget items
  */
 QString SettingsDialog::generatePathFromCurrentNoteFolderRemotePathItem(
-        QTreeWidgetItem *item) {
+    QTreeWidgetItem *item) {
     if (item == nullptr) {
         return QString();
     }
 
     QTreeWidgetItem *parent = item->parent();
     if (parent != nullptr) {
-        return generatePathFromCurrentNoteFolderRemotePathItem(parent)
-               + QStringLiteral("/") + item->text(0);
+        return generatePathFromCurrentNoteFolderRemotePathItem(parent) +
+               QStringLiteral("/") + item->text(0);
     }
 
     return item->text(0);
 }
 
 void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
-        bool visible) {
+    bool visible) {
     ui->noteFolderRemotePathTreeWidgetFrame->setVisible(visible);
     ui->noteFolderVerticalSpacerFrame->setVisible(!visible);
 
@@ -2621,42 +2619,43 @@ void SettingsDialog::setupScriptingPage() {
 
     QString issueUrl = "https://github.com/pbek/QOwnNotes/issues";
     QString documentationUrl =
-            "https://docs.qownnotes.org/en/develop/scripting/README.html";
+        "https://docs.qownnotes.org/en/develop/scripting/README.html";
     ui->scriptInfoLabel->setText(
-            tr("Take a look at the <a href=\"%1\">Scripting documentation</a> "
-                       "to get started fast.").arg(documentationUrl) + "<br>" +
-                    tr("If you need access to a certain functionality in "
-                               "QOwnNotes please open an issue on the "
-                               "<a href=\"%1\"> QOwnNotes issue page</a>.").arg(
-                            issueUrl));
+        tr("Take a look at the <a href=\"%1\">Scripting documentation</a> "
+           "to get started fast.")
+            .arg(documentationUrl) +
+        "<br>" +
+        tr("If you need access to a certain functionality in "
+           "QOwnNotes please open an issue on the "
+           "<a href=\"%1\"> QOwnNotes issue page</a>.")
+            .arg(issueUrl));
 
     /*
      * Setup the "add script" button menu
      */
     auto *addScriptMenu = new QMenu(this);
 
-    QAction *searchScriptAction = addScriptMenu->addAction(
-            tr("Search script repository"));
+    QAction *searchScriptAction =
+        addScriptMenu->addAction(tr("Search script repository"));
     searchScriptAction->setIcon(QIcon::fromTheme(
-            "edit-find",
-            QIcon(":icons/breeze-qownnotes/16x16/edit-find.svg")));
-    searchScriptAction->setToolTip(tr("Find a script in the script "
-                                              "repository"));
-    connect(searchScriptAction, SIGNAL(triggered()),
-            this, SLOT(searchScriptInRepository()));
+        "edit-find", QIcon(":icons/breeze-qownnotes/16x16/edit-find.svg")));
+    searchScriptAction->setToolTip(
+        tr("Find a script in the script "
+           "repository"));
+    connect(searchScriptAction, SIGNAL(triggered()), this,
+            SLOT(searchScriptInRepository()));
 
-    QAction *updateScriptAction = addScriptMenu->addAction(
-            tr("Check for script updates"));
+    QAction *updateScriptAction =
+        addScriptMenu->addAction(tr("Check for script updates"));
     updateScriptAction->setIcon(QIcon::fromTheme(
-            "svn-update",
-            QIcon(":icons/breeze-qownnotes/16x16/svn-update.svg")));
-    connect(updateScriptAction, SIGNAL(triggered()),
-            this, SLOT(checkForScriptUpdates()));
+        "svn-update", QIcon(":icons/breeze-qownnotes/16x16/svn-update.svg")));
+    connect(updateScriptAction, SIGNAL(triggered()), this,
+            SLOT(checkForScriptUpdates()));
 
     QAction *addAction = addScriptMenu->addAction(tr("Add local script"));
     addAction->setIcon(QIcon::fromTheme(
-            "document-new",
-            QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
+        "document-new",
+        QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
     addAction->setToolTip(tr("Add an existing, local script"));
     connect(addAction, SIGNAL(triggered()), this, SLOT(addLocalScript()));
 
@@ -2673,15 +2672,14 @@ void SettingsDialog::reloadScriptList() const {
 
     // populate the script list
     if (scriptsCount > 0) {
-        Q_FOREACH(Script script, scripts) {
-                auto *item = new QListWidgetItem(script.getName());
-                item->setData(Qt::UserRole,
-                              script.getId());
-                item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
-                item->setCheckState(
-                        script.getEnabled() ? Qt::Checked : Qt::Unchecked);
-                ui->scriptListWidget->addItem(item);
-            }
+        Q_FOREACH (Script script, scripts) {
+            auto *item = new QListWidgetItem(script.getName());
+            item->setData(Qt::UserRole, script.getId());
+            item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+            item->setCheckState(script.getEnabled() ? Qt::Checked
+                                                    : Qt::Unchecked);
+            ui->scriptListWidget->addItem(item);
+        }
 
         // set the current row
         ui->scriptListWidget->setCurrentRow(0);
@@ -2711,8 +2709,7 @@ void SettingsDialog::addLocalScript() {
         ui->scriptListWidget->addItem(item);
 
         // set the current row
-        ui->scriptListWidget->setCurrentRow(
-                ui->scriptListWidget->count() - 1);
+        ui->scriptListWidget->setCurrentRow(ui->scriptListWidget->count() - 1);
 
         // enable the remove button
         ui->scriptRemoveButton->setEnabled(true);
@@ -2735,17 +2732,15 @@ void SettingsDialog::on_scriptRemoveButton_clicked() {
     }
 
     if (Utils::Gui::question(
-            this,
-            tr("Remove script"),
+            this, tr("Remove script"),
             tr("Remove the current script <strong>%1</strong>?")
-                    .arg(_selectedScript.getName()),
+                .arg(_selectedScript.getName()),
             "remove-script") == QMessageBox::Yes) {
         // remove the script from the database
         _selectedScript.remove();
 
         // remove the list item
-        ui->scriptListWidget->takeItem(
-                ui->scriptListWidget->currentRow());
+        ui->scriptListWidget->takeItem(ui->scriptListWidget->currentRow());
 
         bool scriptsAvailable = ui->scriptListWidget->count() > 0;
         // disable the remove button if there is only no item left
@@ -2833,7 +2828,7 @@ void SettingsDialog::on_scriptPathButton_clicked() {
  * Loads the current script in the UI when the current item changed
  */
 void SettingsDialog::on_scriptListWidget_currentItemChanged(
-        QListWidgetItem *current, QListWidgetItem *previous) {
+    QListWidgetItem *current, QListWidgetItem *previous) {
     Q_UNUSED(current)
     Q_UNUSED(previous)
 
@@ -2855,8 +2850,8 @@ void SettingsDialog::reloadCurrentScriptPage() {
     int scriptId = item->data(Qt::UserRole).toInt();
     _selectedScript = Script::fetch(scriptId);
     if (_selectedScript.isFetched()) {
-        ui->scriptNameLabel->setText(
-                "<b>" + _selectedScript.getName() + "</b>");
+        ui->scriptNameLabel->setText("<b>" + _selectedScript.getName() +
+                                     "</b>");
         ui->scriptPathLineEdit->setText(_selectedScript.getScriptPath());
         ui->scriptEditFrame->setEnabled(true);
 
@@ -2876,16 +2871,17 @@ void SettingsDialog::reloadCurrentScriptPage() {
             ui->scriptDescriptionLabel->setText(infoJson.description);
             ui->scriptAuthorsLabel->setText(infoJson.richAuthorText);
             ui->scriptRepositoryLinkLabel->setText(
-                    "<a href=\"https://github.com/qownnotes/scripts/tree/"
-                            "master/" + infoJson.identifier + "\">" +
-                            tr("Open repository") + "</a>");
+                "<a href=\"https://github.com/qownnotes/scripts/tree/"
+                "master/" +
+                infoJson.identifier + "\">" + tr("Open repository") + "</a>");
         } else {
             ui->scriptNameLineEdit->setText(_selectedScript.getName());
         }
 
         // get the registered script settings variables
-        QList<QVariant> variables = ScriptingService::instance()
-                ->getSettingsVariables(_selectedScript.getId());
+        QList<QVariant> variables =
+            ScriptingService::instance()->getSettingsVariables(
+                _selectedScript.getId());
 
         bool hasScriptSettings = variables.count() > 0;
         ui->scriptSettingsFrame->setVisible(hasScriptSettings);
@@ -2893,24 +2889,21 @@ void SettingsDialog::reloadCurrentScriptPage() {
         if (hasScriptSettings) {
             // remove the current ScriptSettingWidget widgets in the
             // scriptSettingsFrame
-            QList<ScriptSettingWidget *> widgets = ui->scriptSettingsFrame
-                    ->findChildren<ScriptSettingWidget *>();
-            Q_FOREACH(ScriptSettingWidget *widget, widgets) {
-                    delete widget;
-                }
+            QList<ScriptSettingWidget *> widgets =
+                ui->scriptSettingsFrame->findChildren<ScriptSettingWidget *>();
+            Q_FOREACH (ScriptSettingWidget *widget, widgets) { delete widget; }
 
             foreach (QVariant variable, variables) {
-                    QMap<QString, QVariant> varMap = variable.toMap();
+                QMap<QString, QVariant> varMap = variable.toMap();
 
-                    // populate the variable UI
-                    ScriptSettingWidget *scriptSettingWidget =
-                            new ScriptSettingWidget(this, _selectedScript,
-                                                    varMap);
+                // populate the variable UI
+                ScriptSettingWidget *scriptSettingWidget =
+                    new ScriptSettingWidget(this, _selectedScript, varMap);
 
-//                    QString name = varMap["name"].toString();
+                //                    QString name = varMap["name"].toString();
 
-                    ui->scriptSettingsFrame->layout()->addWidget(
-                            scriptSettingWidget);
+                ui->scriptSettingsFrame->layout()->addWidget(
+                    scriptSettingWidget);
             }
         }
 
@@ -2935,15 +2928,14 @@ void SettingsDialog::validateCurrentScript() {
         // check the script validity if the path is not empty
         if (!path.isEmpty()) {
             QString errorMessage;
-            bool result = ScriptingService::validateScript(
-                    _selectedScript, errorMessage);
-            QString validationText = result ?
-                                     tr("Your script seems to be valid") :
-                                     tr("There were script errors:\n%1")
-                                             .arg(errorMessage);
+            bool result =
+                ScriptingService::validateScript(_selectedScript, errorMessage);
+            QString validationText =
+                result ? tr("Your script seems to be valid")
+                       : tr("There were script errors:\n%1").arg(errorMessage);
             ui->scriptValidationLabel->setText(validationText);
             ui->scriptValidationLabel->setStyleSheet(
-                    QString("color: %1;").arg(result ? "green" : "red"));
+                QString("color: %1;").arg(result ? "green" : "red"));
         }
     }
 }
@@ -3008,16 +3000,16 @@ void SettingsDialog::on_addCustomNoteFileExtensionButton_clicked() {
     bool ok;
     QString fileExtension;
     fileExtension = QInputDialog::getText(
-            this, tr("File extension"),
-            tr("Enter your custom file extension:"), QLineEdit::Normal,
-            fileExtension, &ok);
+        this, tr("File extension"), tr("Enter your custom file extension:"),
+        QLineEdit::Normal, fileExtension, &ok);
 
     if (!ok) {
         return;
     }
 
     // make sure the file extension doesn't start with a point
-    fileExtension = Utils::Misc::removeIfStartsWith(std::move(fileExtension), ".");
+    fileExtension =
+        Utils::Misc::removeIfStartsWith(std::move(fileExtension), ".");
 
     QListWidgetItem *item = addCustomNoteFileExtension(fileExtension);
 
@@ -3030,7 +3022,7 @@ void SettingsDialog::on_addCustomNoteFileExtensionButton_clicked() {
  * Adds a custom note file extension
  */
 QListWidgetItem *SettingsDialog::addCustomNoteFileExtension(
-        const QString &fileExtension) {
+    const QString &fileExtension) {
     if (listWidgetValueExists(ui->defaultNoteFileExtensionListWidget,
                               fileExtension)) {
         return Q_NULLPTR;
@@ -3048,14 +3040,14 @@ QListWidgetItem *SettingsDialog::addCustomNoteFileExtension(
  * Removes a custom file extension
  */
 void SettingsDialog::on_removeCustomNoteFileExtensionButton_clicked() {
-    delete(ui->defaultNoteFileExtensionListWidget->currentItem());
+    delete (ui->defaultNoteFileExtensionListWidget->currentItem());
 }
 
 /**
  * Updates a custom file extension
  */
 void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemChanged(
-        QListWidgetItem *item) {
+    QListWidgetItem *item) {
     // make sure the file extension doesn't start with a point
     QString fileExtension = Utils::Misc::removeIfStartsWith(item->text(), ".");
 
@@ -3070,7 +3062,7 @@ void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemChanged(
  * Disables the remove custom file extension button for the first two rows
  */
 void SettingsDialog::on_defaultNoteFileExtensionListWidget_currentRowChanged(
-        int currentRow) {
+    int currentRow) {
     ui->removeCustomNoteFileExtensionButton->setEnabled(currentRow > 1);
 }
 
@@ -3081,7 +3073,8 @@ void SettingsDialog::on_darkModeCheckBox_toggled() {
 /**
  * Toggles the dark mode colors check box with the dark mode checkbox
  */
-void SettingsDialog::handleDarkModeCheckBoxToggled(bool updateCheckBoxes, bool updateSchema) {
+void SettingsDialog::handleDarkModeCheckBoxToggled(bool updateCheckBoxes,
+                                                   bool updateSchema) {
     bool checked = ui->darkModeCheckBox->isChecked();
 
     ui->darkModeColorsCheckBox->setEnabled(!checked);
@@ -3126,53 +3119,50 @@ void SettingsDialog::on_gitHubLineBreaksCheckBox_toggled(bool checked) {
  * @param arg1
  */
 void SettingsDialog::on_shortcutSearchLineEdit_textChanged(
-        const QString &arg1) {
+    const QString &arg1) {
     // get all items
-    QList<QTreeWidgetItem*> allItems = ui->shortcutTreeWidget->
-            findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
+    QList<QTreeWidgetItem *> allItems = ui->shortcutTreeWidget->findItems(
+        QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
     if (arg1.count() >= 1) {
         // search for items in the description
-        QList<QTreeWidgetItem*> foundItems = ui->shortcutTreeWidget->
-                findItems(arg1, Qt::MatchContains | Qt::MatchRecursive);
+        QList<QTreeWidgetItem *> foundItems = ui->shortcutTreeWidget->findItems(
+            arg1, Qt::MatchContains | Qt::MatchRecursive);
 
         // hide all not found items
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                bool foundKeySequence = false;
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            bool foundKeySequence = false;
 
-                auto *keyWidget = static_cast<QKeySequenceWidget *>(
-                        ui->shortcutTreeWidget->itemWidget(item, 1));
+            auto *keyWidget = static_cast<QKeySequenceWidget *>(
+                ui->shortcutTreeWidget->itemWidget(item, 1));
 
-                // search in the shortcut text
-                if (keyWidget != Q_NULLPTR) {
-                    QKeySequence keySequence = keyWidget->keySequence();
-                    foundKeySequence = keySequence.toString().contains(
-                            arg1, Qt::CaseInsensitive);
-                }
-
-                item->setHidden(!foundItems.contains(item) &&
-                                        !foundKeySequence);
+            // search in the shortcut text
+            if (keyWidget != Q_NULLPTR) {
+                QKeySequence keySequence = keyWidget->keySequence();
+                foundKeySequence =
+                    keySequence.toString().contains(arg1, Qt::CaseInsensitive);
             }
+
+            item->setHidden(!foundItems.contains(item) && !foundKeySequence);
+        }
 
         // show items again that have visible children so that they are
         // really shown
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                if (Utils::Gui::isOneTreeWidgetItemChildVisible(item)) {
-                    item->setHidden(false);
-                    item->setExpanded(true);
-                }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            if (Utils::Gui::isOneTreeWidgetItemChildVisible(item)) {
+                item->setHidden(false);
+                item->setExpanded(true);
             }
+        }
     } else {
         // show all items otherwise
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                item->setHidden(false);
-            }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) { item->setHidden(false); }
     }
 }
 
 void SettingsDialog::on_settingsTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
     const int currentIndex = current->whatsThis(0).toInt();
 
@@ -3202,17 +3192,20 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
     }
 
     // turn off the tasks page if no ownCloud settings are available
-//    QTreeWidgetItem *todoItem = findSettingsTreeWidgetItemByPage(TodoPage);
-//    if (todoItem != Q_NULLPTR) {
-//        if (OwnCloudService::hasOwnCloudSettings()) {
-//            todoItem->setDisabled(false);
-//            todoItem->setToolTip(0, "");
-//        } else {
-//            todoItem->setDisabled(true);
-//            todoItem->setToolTip(0, tr("Please make sure the connection to "
-//                                               "your ownCloud server works."));
-//        }
-//    }
+    //    QTreeWidgetItem *todoItem =
+    //    findSettingsTreeWidgetItemByPage(TodoPage); if (todoItem != Q_NULLPTR)
+    //    {
+    //        if (OwnCloudService::hasOwnCloudSettings()) {
+    //            todoItem->setDisabled(false);
+    //            todoItem->setToolTip(0, "");
+    //        } else {
+    //            todoItem->setDisabled(true);
+    //            todoItem->setToolTip(0, tr("Please make sure the connection to
+    //            "
+    //                                               "your ownCloud server
+    //                                               works."));
+    //        }
+    //    }
 }
 
 /**
@@ -3223,17 +3216,17 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
  */
 QTreeWidgetItem *SettingsDialog::findSettingsTreeWidgetItemByPage(int page) {
     // search for items
-    QList<QTreeWidgetItem*> allItems = ui->settingsTreeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+    QList<QTreeWidgetItem *> allItems = ui->settingsTreeWidget->findItems(
+        "", Qt::MatchContains | Qt::MatchRecursive);
 
     // hide all not found items
-    Q_FOREACH(QTreeWidgetItem *item, allItems) {
-            int id = item->whatsThis(0).toInt();
+    Q_FOREACH (QTreeWidgetItem *item, allItems) {
+        int id = item->whatsThis(0).toInt();
 
-            if (id == page) {
-                return item;
-            }
+        if (id == page) {
+            return item;
         }
+    }
 
     return Q_NULLPTR;
 }
@@ -3253,8 +3246,8 @@ void SettingsDialog::initMainSplitter() {
 
     // restore tag frame splitter state
     QSettings settings;
-    QByteArray state = settings.value(
-            "SettingsDialog/mainSplitterState").toByteArray();
+    QByteArray state =
+        settings.value("SettingsDialog/mainSplitterState").toByteArray();
     _mainSplitter->restoreState(state);
 }
 
@@ -3314,7 +3307,7 @@ void SettingsDialog::on_emptyCalendarCachePushButton_clicked() {
     CalendarItem::removeAll();
 
     Utils::Gui::information(this, tr("Calendar cache emptied"),
-                             tr("Your calendar cache was emptied."),
+                            tr("Your calendar cache was emptied."),
                             "calendar-cache-emptied");
 }
 
@@ -3354,29 +3347,29 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
     QStringList toolbarObjectNames = ui->toolbarEditor->toolbarObjectNames();
 
     QList<ToolbarContainer> toolbarContainers;
-    foreach(QToolBar* toolbar, mainWindow->findChildren<QToolBar*>()) {
-            QString name = toolbar->objectName();
+    foreach (QToolBar *toolbar, mainWindow->findChildren<QToolBar *>()) {
+        QString name = toolbar->objectName();
 
-            // don't store the custom actions toolbar and toolbars that are
-            // not in the toolbar edit widget any more (for some reason they
-            // are still found by findChildren)
-            if (name == "customActionsToolbar" ||
-                    !toolbarObjectNames.contains(name)) {
-                continue;
-            }
-
-            toolbarContainers.append(toolbar);
-
-            // update the icon size
-            ToolbarContainer::updateIconSize(toolbar);
+        // don't store the custom actions toolbar and toolbars that are
+        // not in the toolbar edit widget any more (for some reason they
+        // are still found by findChildren)
+        if (name == "customActionsToolbar" ||
+            !toolbarObjectNames.contains(name)) {
+            continue;
         }
+
+        toolbarContainers.append(toolbar);
+
+        // update the icon size
+        ToolbarContainer::updateIconSize(toolbar);
+    }
 
     QSettings settings;
 
     // remove the current toolbars
-//    settings.beginGroup("toolbar");
-//    settings.remove("");
-//    settings.endGroup();
+    //    settings.beginGroup("toolbar");
+    //    settings.remove("");
+    //    settings.endGroup();
 
     settings.beginWriteArray("toolbar", toolbarContainers.size());
 
@@ -3394,11 +3387,10 @@ void SettingsDialog::on_resetToolbarPushButton_clicked() {
     if (QMessageBox::information(
             this, tr("Reset toolbars and exit"),
             tr("Do you really want to reset all toolbars? "
-                       "The application will be closed in the process, the "
-                       "default toolbars will be restored when you start it "
-                       "again."),
-            tr("Reset and &exit"), tr("&Cancel"), "",
-            1) == 0) {
+               "The application will be closed in the process, the "
+               "default toolbars will be restored when you start it "
+               "again."),
+            tr("Reset and &exit"), tr("&Cancel"), "", 1) == 0) {
         QSettings settings;
 
         // remove all settings in the group
@@ -3426,79 +3418,77 @@ void SettingsDialog::on_imageScaleDownCheckBox_toggled(bool checked) {
  * @param arg1
  */
 void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
-    QList<QTreeWidgetItem*> allItems = ui->settingsTreeWidget->
-            findItems(QString(), Qt::MatchContains | Qt::MatchRecursive);
+    QList<QTreeWidgetItem *> allItems = ui->settingsTreeWidget->findItems(
+        QString(), Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
     if (arg1.count() >= 1) {
         QList<int> pageIndexList;
 
         // search in the tree widget items themselves
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                if (item->text(0).contains(arg1, Qt::CaseInsensitive)) {
-                    int pageIndex = item->whatsThis(0).toInt();
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            if (item->text(0).contains(arg1, Qt::CaseInsensitive)) {
+                int pageIndex = item->whatsThis(0).toInt();
 
-                    if (!pageIndexList.contains(pageIndex)) {
-                        pageIndexList << pageIndex;
-                    }
+                if (!pageIndexList.contains(pageIndex)) {
+                    pageIndexList << pageIndex;
                 }
             }
+        }
 
         // search in all labels
-        Q_FOREACH(QLabel *widget, findChildren<QLabel *>()) {
-                if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
-                    addToSearchIndexList(widget, pageIndexList);
-                }
+        Q_FOREACH (QLabel *widget, findChildren<QLabel *>()) {
+            if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
+                addToSearchIndexList(widget, pageIndexList);
             }
+        }
 
         // search in all push buttons
-        Q_FOREACH(QPushButton *widget, findChildren<QPushButton *>()) {
-                if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
-                    addToSearchIndexList(widget, pageIndexList);
-                }
+        Q_FOREACH (QPushButton *widget, findChildren<QPushButton *>()) {
+            if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
+                addToSearchIndexList(widget, pageIndexList);
             }
+        }
 
         // search in all checkboxes
-        Q_FOREACH(QCheckBox *widget, findChildren<QCheckBox *>()) {
-                if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
-                    addToSearchIndexList(widget, pageIndexList);
-                }
+        Q_FOREACH (QCheckBox *widget, findChildren<QCheckBox *>()) {
+            if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
+                addToSearchIndexList(widget, pageIndexList);
             }
+        }
 
         // search in all radio buttons
-        Q_FOREACH(QRadioButton *widget, findChildren<QRadioButton *>()) {
-                if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
-                    addToSearchIndexList(widget, pageIndexList);
-                }
+        Q_FOREACH (QRadioButton *widget, findChildren<QRadioButton *>()) {
+            if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
+                addToSearchIndexList(widget, pageIndexList);
             }
+        }
 
         // search in all group boxes
-        Q_FOREACH(QGroupBox *widget, findChildren<QGroupBox *>()) {
-                if (widget->title().contains(arg1, Qt::CaseInsensitive)) {
-                    addToSearchIndexList(widget, pageIndexList);
-                }
+        Q_FOREACH (QGroupBox *widget, findChildren<QGroupBox *>()) {
+            if (widget->title().contains(arg1, Qt::CaseInsensitive)) {
+                addToSearchIndexList(widget, pageIndexList);
             }
+        }
 
         // show and hide items according of if index was found in pageIndexList
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                // get stored index of list widget item
-                int pageIndex = item->whatsThis(0).toInt();
-                item->setHidden(!pageIndexList.contains(pageIndex));
-            }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            // get stored index of list widget item
+            int pageIndex = item->whatsThis(0).toInt();
+            item->setHidden(!pageIndexList.contains(pageIndex));
+        }
 
         // show items again that have visible children so that they are
         // really shown
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                if (Utils::Gui::isOneTreeWidgetItemChildVisible(item)) {
-                    item->setHidden(false);
-                    item->setExpanded(true);
-                }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            if (Utils::Gui::isOneTreeWidgetItemChildVisible(item)) {
+                item->setHidden(false);
+                item->setExpanded(true);
             }
+        }
     } else {
         // show all items otherwise
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                item->setHidden(false);
-            }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) { item->setHidden(false); }
     }
 }
 
@@ -3526,7 +3516,7 @@ void SettingsDialog::addToSearchIndexList(QWidget *widget,
  * @return
  */
 int SettingsDialog::findSettingsPageIndexOfWidget(QWidget *widget) {
-    QWidget *parent = qobject_cast<QWidget*>(widget->parent());
+    QWidget *parent = qobject_cast<QWidget *>(widget->parent());
 
     if (parent == Q_NULLPTR) {
         return -1;
@@ -3558,18 +3548,17 @@ void SettingsDialog::on_clearLogFileButton_clicked() {
     // remove the log file
     removeLogFile();
 
-    Utils::Gui::information(
-            this, tr("Log file cleared"),
-            tr("The log file <strong>%1</strong> was cleared"".").arg(
-                    Utils::Misc::logFilePath()), "log-file-cleared");
+    Utils::Gui::information(this, tr("Log file cleared"),
+                            tr("The log file <strong>%1</strong> was cleared"
+                               ".")
+                                .arg(Utils::Misc::logFilePath()),
+                            "log-file-cleared");
 }
 
 /**
  * Declares that we need a restart
  */
-void SettingsDialog::needRestart() {
-    Utils::Misc::needRestart();
-}
+void SettingsDialog::needRestart() { Utils::Misc::needRestart(); }
 
 void SettingsDialog::on_ownCloudSupportCheckBox_toggled() {
     bool checked = ui->ownCloudSupportCheckBox->isChecked();
@@ -3626,7 +3615,7 @@ void SettingsDialog::searchScriptInRepository(bool checkForUpdates) {
     auto *dialog = new ScriptRepositoryDialog(this, checkForUpdates);
     dialog->exec();
     Script lastInstalledScript = dialog->getLastInstalledScript();
-    delete(dialog);
+    delete (dialog);
 
     // reload the script list
     reloadScriptList();
@@ -3634,7 +3623,7 @@ void SettingsDialog::searchScriptInRepository(bool checkForUpdates) {
     // select the last installed script
     if (lastInstalledScript.isFetched()) {
         auto item = Utils::Gui::getListWidgetItemWithUserData(
-                ui->scriptListWidget, lastInstalledScript.getId());
+            ui->scriptListWidget, lastInstalledScript.getId());
         ui->scriptListWidget->setCurrentItem(item);
     }
 
@@ -3648,9 +3637,7 @@ void SettingsDialog::searchScriptInRepository(bool checkForUpdates) {
 /**
  * Opens a dialog to check for script updates
  */
-void SettingsDialog::checkForScriptUpdates() {
-    searchScriptInRepository(true);
-}
+void SettingsDialog::checkForScriptUpdates() { searchScriptInRepository(true); }
 
 /**
  * Saves the enabled state of all items and reload the current script page to
@@ -3666,7 +3653,7 @@ void SettingsDialog::on_scriptListWidget_itemChanged(QListWidgetItem *item) {
 }
 
 void SettingsDialog::on_interfaceStyleComboBox_currentTextChanged(
-        const QString &arg1) {
+    const QString &arg1) {
     QApplication::setStyle(arg1);
 
     // if the interface style was set to automatic we need a restart
@@ -3685,8 +3672,7 @@ void SettingsDialog::on_cursorWidthResetButton_clicked() {
 /**
  * Also enable the single instance feature if the system tray icon is turned on
  */
-void SettingsDialog::on_showSystemTrayCheckBox_toggled(bool checked)
-{
+void SettingsDialog::on_showSystemTrayCheckBox_toggled(bool checked) {
     // we don't need to do that on macOS
 #ifndef Q_OS_MAC
     if (checked) {
@@ -3708,7 +3694,7 @@ void SettingsDialog::on_resetMessageBoxesButton_clicked() {
     if (QMessageBox::question(
             this, tr("Reset message boxes"),
             tr("Do you really want to reset the overrides of all message "
-                       "boxes?")) == QMessageBox::Yes) {
+               "boxes?")) == QMessageBox::Yes) {
         QSettings settings;
 
         // remove all settings in the group
@@ -3756,14 +3742,14 @@ void SettingsDialog::on_exportSettingsButton_clicked() {
             exportSettings.clear();
 
             exportSettings.setValue("SettingsExport/platform",
-                    QString(PLATFORM));
+                                    QString(PLATFORM));
 
             QSettings settings;
 
             const QStringList keys = settings.allKeys();
-            Q_FOREACH(QString key, keys) {
-                    exportSettings.setValue(key, settings.value(key));
-                }
+            Q_FOREACH (QString key, keys) {
+                exportSettings.setValue(key, settings.value(key));
+            }
         }
     }
 }
@@ -3779,15 +3765,16 @@ void SettingsDialog::on_importSettingsButton_clicked() {
                       "scripts you were using. "
                       "You also will need to adjust some settings, especially "
                       "across platforms, but your notes will stay intact!") +
-                              "\n\n";
+                   "\n\n";
     bool singleApplication = qApp->property("singleApplication").toBool();
 
-    text += singleApplication ?
-            tr("The application will be quit after the import.") :
-            tr("The application will be restarted after the import.");
+    text += singleApplication
+                ? tr("The application will be quit after the import.")
+                : tr("The application will be restarted after the import.");
 
-    if (QMessageBox::question(this, title, text, QMessageBox::Yes |
-    QMessageBox::No, QMessageBox::No) == QMessageBox::No) {
+    if (QMessageBox::question(this, title, text,
+                              QMessageBox::Yes | QMessageBox::No,
+                              QMessageBox::No) == QMessageBox::No) {
         return;
     }
 
@@ -3810,10 +3797,10 @@ void SettingsDialog::on_importSettingsButton_clicked() {
 
     const QStringList keys = importSettings.allKeys();
 
-    Q_FOREACH(QString key, keys) {
-            QVariant value = importSettings.value(key);
-            settings.setValue(key, value);
-        }
+    Q_FOREACH (QString key, keys) {
+        QVariant value = importSettings.value(key);
+        settings.setValue(key, value);
+    }
 
     // make sure no settings get written after quitting
     qApp->setProperty("clearAppDataAndExit", true);
@@ -3857,7 +3844,8 @@ void SettingsDialog::on_overrideInterfaceFontSizeGroupBox_toggled(bool arg1) {
 }
 
 void SettingsDialog::on_webSocketServerServicePortResetButton_clicked() {
-    ui->webSocketServerServicePortSpinBox->setValue(WebSocketServerService::getDefaultPort());
+    ui->webSocketServerServicePortSpinBox->setValue(
+        WebSocketServerService::getDefaultPort());
 }
 
 void SettingsDialog::on_enableSocketServerCheckBox_toggled() {
@@ -3888,7 +3876,7 @@ void SettingsDialog::on_systemIconThemeCheckBox_toggled(bool checked) {
 void SettingsDialog::on_webSocketTokenButton_clicked() {
     auto webSocketTokenDialog = new WebSocketTokenDialog();
     webSocketTokenDialog->exec();
-    delete(webSocketTokenDialog);
+    delete (webSocketTokenDialog);
 }
 
 void SettingsDialog::initCloudConnectionComboBox(int selectedId) {
@@ -3908,10 +3896,13 @@ void SettingsDialog::initCloudConnectionComboBox(int selectedId) {
         selectedId = NoteFolder::currentNoteFolder().getCloudConnectionId();
     }
 
-    Q_FOREACH(CloudConnection cloudConnection, CloudConnection::fetchAll()) {
-        ui->cloudConnectionComboBox->addItem(cloudConnection.getName(), cloudConnection.getId());
-        ui->noteFolderCloudConnectionComboBox->addItem(cloudConnection.getName(), cloudConnection.getId());
-        ui->calendarCloudConnectionComboBox->addItem(cloudConnection.getName(), cloudConnection.getId());
+    Q_FOREACH (CloudConnection cloudConnection, CloudConnection::fetchAll()) {
+        ui->cloudConnectionComboBox->addItem(cloudConnection.getName(),
+                                             cloudConnection.getId());
+        ui->noteFolderCloudConnectionComboBox->addItem(
+            cloudConnection.getName(), cloudConnection.getId());
+        ui->calendarCloudConnectionComboBox->addItem(cloudConnection.getName(),
+                                                     cloudConnection.getId());
 
         if (cloudConnection.getId() == selectedId) {
             currentIndex = index;
@@ -3923,10 +3914,12 @@ void SettingsDialog::initCloudConnectionComboBox(int selectedId) {
     ui->cloudConnectionComboBox->setCurrentIndex(currentIndex);
     on_cloudConnectionComboBox_currentIndexChanged(currentIndex);
 
-    Utils::Gui::setComboBoxIndexByUserData(ui->noteFolderCloudConnectionComboBox,
-                                           _selectedNoteFolder.getCloudConnectionId());
-    Utils::Gui::setComboBoxIndexByUserData(ui->calendarCloudConnectionComboBox,
-                                           CloudConnection::currentTodoCalendarCloudConnection().getId());
+    Utils::Gui::setComboBoxIndexByUserData(
+        ui->noteFolderCloudConnectionComboBox,
+        _selectedNoteFolder.getCloudConnectionId());
+    Utils::Gui::setComboBoxIndexByUserData(
+        ui->calendarCloudConnectionComboBox,
+        CloudConnection::currentTodoCalendarCloudConnection().getId());
 }
 
 void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
@@ -3943,11 +3936,13 @@ void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
     const QSignalBlocker blocker4(ui->passwordEdit);
     Q_UNUSED(blocker4)
 
-    ui->cloudServerConnectionNameLineEdit->setText(_selectedCloudConnection.getName());
+    ui->cloudServerConnectionNameLineEdit->setText(
+        _selectedCloudConnection.getName());
     ui->serverUrlEdit->setText(_selectedCloudConnection.getServerUrl());
     ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
-    ui->cloudConnectionRemoveButton->setDisabled(CloudConnection::fetchUsedCloudConnectionsIds().contains(id));
+    ui->cloudConnectionRemoveButton->setDisabled(
+        CloudConnection::fetchUsedCloudConnectionsIds().contains(id));
 }
 
 void SettingsDialog::on_cloudConnectionAddButton_clicked() {
@@ -3968,7 +3963,8 @@ void SettingsDialog::on_cloudConnectionRemoveButton_clicked() {
     }
 
     // check if cloud connection is in use
-    if (CloudConnection::fetchUsedCloudConnectionsIds().contains(_selectedCloudConnection.getId())) {
+    if (CloudConnection::fetchUsedCloudConnectionsIds().contains(
+            _selectedCloudConnection.getId())) {
         ui->cloudConnectionRemoveButton->setDisabled(true);
         return;
     }
@@ -3977,11 +3973,13 @@ void SettingsDialog::on_cloudConnectionRemoveButton_clicked() {
     initCloudConnectionComboBox();
 }
 
-void SettingsDialog::on_calendarCloudConnectionComboBox_currentIndexChanged(int index) {
+void SettingsDialog::on_calendarCloudConnectionComboBox_currentIndexChanged(
+    int index) {
     Q_UNUSED(index)
     QSettings settings;
-    settings.setValue("ownCloud/todoCalendarCloudConnectionId",
-                      ui->calendarCloudConnectionComboBox->currentData().toInt());
+    settings.setValue(
+        "ownCloud/todoCalendarCloudConnectionId",
+        ui->calendarCloudConnectionComboBox->currentData().toInt());
     on_reloadCalendarListButton_clicked();
 }
 
@@ -3998,12 +3996,13 @@ void SettingsDialog::on_copyDebugInfoButton_clicked() {
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(ui->debugInfoTextEdit->toPlainText());
 
-    Utils::Gui::information(this, tr("Debug information"),
-                             tr("The debug information was copied to the clipboard."),
-                            "debug-clipboard");
+    Utils::Gui::information(
+        this, tr("Debug information"),
+        tr("The debug information was copied to the clipboard."),
+        "debug-clipboard");
 }
 
 void SettingsDialog::on_ownCloudServerAppPasswordPageButton_clicked() {
     QDesktopServices::openUrl(
-            QUrl(ui->serverUrlEdit->text() + "/index.php/settings/user/security"));
+        QUrl(ui->serverUrlEdit->text() + "/index.php/settings/user/security"));
 }

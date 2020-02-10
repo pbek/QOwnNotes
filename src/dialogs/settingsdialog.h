@@ -8,7 +8,7 @@
 #include "masterdialog.h"
 
 namespace Ui {
-    class SettingsDialog;
+class SettingsDialog;
 }
 
 class QAbstractButton;
@@ -28,9 +28,9 @@ class CloudConnection;
 struct CalDAVCalendarData;
 
 class SettingsDialog : public MasterDialog {
-Q_OBJECT
+    Q_OBJECT
 
-public:
+   public:
     enum OKLabelStatus {
         Unknown,
         Warning,
@@ -61,19 +61,17 @@ public:
         WebCompanionPage
     };
 
-    explicit SettingsDialog(int page = 0,
-                            QWidget *parent = 0);
+    explicit SettingsDialog(int page = 0, QWidget *parent = 0);
 
     ~SettingsDialog();
 
     void connectTestCallback(bool appIsValid, QString appVersion,
-                             QString serverVersion,
-                             QString notesPathExistsText,
+                             QString serverVersion, QString notesPathExistsText,
                              QString connectionErrorMessage);
 
-    void setOKLabelData(int number, const QString& text, OKLabelStatus status);
+    void setOKLabelData(int number, const QString &text, OKLabelStatus status);
 
-    void refreshTodoCalendarList(const QList<CalDAVCalendarData>& items,
+    void refreshTodoCalendarList(const QList<CalDAVCalendarData> &items,
                                  bool forceReadCheckedState = false);
 
     void setNoteFolderRemotePathList(QStringList pathList);
@@ -82,10 +80,10 @@ public:
 
     void readSettings();
 
-protected:
+   protected:
     void closeEvent(QCloseEvent *event);
 
-private slots:
+   private slots:
 
     void on_connectButton_clicked();
 
@@ -127,7 +125,8 @@ private slots:
 
     void on_ignoreSSLErrorsCheckBox_toggled(bool checked);
 
-    void on_noteFolderListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
+    void on_noteFolderListWidget_currentItemChanged(QListWidgetItem *current,
+                                                    QListWidgetItem *previous);
 
     void on_noteFolderAddButton_clicked();
 
@@ -144,7 +143,7 @@ private slots:
     void on_noteFolderRemotePathButton_clicked();
 
     void on_noteFolderRemotePathTreeWidget_currentItemChanged(
-            QTreeWidgetItem *current, QTreeWidgetItem *previous);
+        QTreeWidgetItem *current, QTreeWidgetItem *previous);
 
     void on_useOwnCloudPathButton_clicked();
 
@@ -154,8 +153,8 @@ private slots:
 
     void on_scriptPathButton_clicked();
 
-    void on_scriptListWidget_currentItemChanged(
-            QListWidgetItem *current, QListWidgetItem *previous);
+    void on_scriptListWidget_currentItemChanged(QListWidgetItem *current,
+                                                QListWidgetItem *previous);
 
     void on_scriptNameLineEdit_editingFinished();
 
@@ -167,9 +166,11 @@ private slots:
 
     void on_removeCustomNoteFileExtensionButton_clicked();
 
-    void on_defaultNoteFileExtensionListWidget_itemChanged(QListWidgetItem *item);
+    void on_defaultNoteFileExtensionListWidget_itemChanged(
+        QListWidgetItem *item);
 
-    void on_defaultNoteFileExtensionListWidget_currentRowChanged(int currentRow);
+    void on_defaultNoteFileExtensionListWidget_currentRowChanged(
+        int currentRow);
 
     void on_darkModeCheckBox_toggled();
 
@@ -242,7 +243,7 @@ private slots:
 
     void on_localTrashClearCheckBox_toggled(bool checked);
 
-    void keySequenceEvent(const QString& objectName);
+    void keySequenceEvent(const QString &objectName);
 
     void on_exportSettingsButton_clicked();
 
@@ -284,8 +285,7 @@ private slots:
 
     void on_ownCloudServerAppPasswordPageButton_clicked();
 
-private:
-
+   private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
     QFont noteTextEditFont;
@@ -310,13 +310,15 @@ private:
 
     void startConnectionTest();
 
-    void setFontLabel(QLineEdit *label, const QFont& font);
+    void setFontLabel(QLineEdit *label, const QFont &font);
 
     void outputSettings();
 
-    static void selectListWidgetValue(QListWidget *listWidget, const QString& value);
+    static void selectListWidgetValue(QListWidget *listWidget,
+                                      const QString &value);
 
-    static bool listWidgetValueExists(QListWidget* listWidget, const QString& value);
+    static bool listWidgetValueExists(QListWidget *listWidget,
+                                      const QString &value);
 
     static QString getSelectedListWidgetValue(QListWidget *listWidget);
 
@@ -327,13 +329,13 @@ private:
     void setupNoteFolderPage();
 
     QTreeWidgetItem *findNoteFolderRemotePathTreeWidgetItem(
-            QTreeWidgetItem *parent, const QString& text);
+        QTreeWidgetItem *parent, const QString &text);
 
     void addPathToNoteFolderRemotePathTreeWidget(QTreeWidgetItem *parent,
-                                                 const QString& path);
+                                                 const QString &path);
 
     QString generatePathFromCurrentNoteFolderRemotePathItem(
-            QTreeWidgetItem *item);
+        QTreeWidgetItem *item);
 
     void setNoteFolderRemotePathTreeWidgetFrameVisibility(bool visi);
 
@@ -343,8 +345,7 @@ private:
 
     void validateCurrentScript();
 
-    QListWidgetItem *addCustomNoteFileExtension(
-            const QString &fileExtension);
+    QListWidgetItem *addCustomNoteFileExtension(const QString &fileExtension);
 
     void loadShortcutSettings();
 
@@ -384,13 +385,14 @@ private:
 
     void initSearchEngineComboBox() const;
 
-    QKeySequenceWidget *findKeySequenceWidget(const QString& objectName);
+    QKeySequenceWidget *findKeySequenceWidget(const QString &objectName);
 
     void storeOwncloudDebugData() const;
 
     void initCloudConnectionComboBox(int selectedId = -1);
 
-    void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false, bool updateSchema = false);
+    void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false,
+                                       bool updateSchema = false);
 };
 
-#endif // SETTINGSDIALOG_H
+#endif    // SETTINGSDIALOG_H

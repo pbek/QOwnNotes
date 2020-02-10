@@ -1,31 +1,29 @@
 #pragma once
 
-#include "masterdialog.h"
-#include <QNetworkReply>
 #include <QNetworkAccessManager>
+#include <QNetworkReply>
 #include <QSplitter>
 #include <QTreeWidgetItem>
+#include "masterdialog.h"
 
 namespace Ui {
 class DictionaryManagerDialog;
 }
 
-class DictionaryManagerDialog : public MasterDialog
-{
+class DictionaryManagerDialog : public MasterDialog {
     Q_OBJECT
 
-    struct Dictionary
-    {
+    struct Dictionary {
         QString name;
         QString pathPart;
         QString fileNamePart;
     };
 
-public:
+   public:
     explicit DictionaryManagerDialog(QWidget *parent = nullptr);
     ~DictionaryManagerDialog();
 
-private slots:
+   private slots:
     void slotReplyFinished(QNetworkReply *);
 
     void on_downloadButton_clicked();
@@ -42,11 +40,12 @@ private slots:
 
     void on_searchDictionaryEdit_textChanged(const QString &arg1);
 
-    void on_remoteDictionaryTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+    void on_remoteDictionaryTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
+                                                         int column);
 
     void on_disableExternalDictionariesCheckBox_toggled(bool checked);
 
-private:
+   private:
     Ui::DictionaryManagerDialog *ui;
     QNetworkAccessManager *_networkManager;
     QSplitter *_mainSplitter;
@@ -55,7 +54,8 @@ private:
     void setupMainSplitter();
 
     void storeSettings();
-    void addDictionaryItem(const QString &name, const QString &pathPart, QString fileNamePart = QString());
+    void addDictionaryItem(const QString &name, const QString &pathPart,
+                           QString fileNamePart = QString());
     void downloadFile(const QString &url);
     void loadLocalDictionaries();
     QString getDictionaryName(const QString &fileNamePart);

@@ -15,9 +15,7 @@
 #include <entities/script.h>
 #include <services/scriptingservice.h>
 
-ScriptListWidget::ScriptListWidget(QWidget *parent) {
-    Q_UNUSED(parent);
-}
+ScriptListWidget::ScriptListWidget(QWidget *parent) { Q_UNUSED(parent); }
 
 void ScriptListWidget::dropEvent(QDropEvent *e) {
     // finish the move event

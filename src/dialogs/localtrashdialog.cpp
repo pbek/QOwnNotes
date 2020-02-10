@@ -1,33 +1,33 @@
 #include "localtrashdialog.h"
-#include "ui_localtrashdialog.h"
-#include <QSettings>
-#include <QDebug>
-#include <QPushButton>
-#include <QDialogButtonBox>
 #include <entities/trashitem.h>
 #include <utils/gui.h>
+#include <QDebug>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QSettings>
 #include <QSplitter>
+#include "ui_localtrashdialog.h"
 
 class LocalTrashTreeWidgetItem : public QTreeWidgetItem {
-public:
-    LocalTrashTreeWidgetItem(QTreeWidget* parent):QTreeWidgetItem(parent){}
-private:
-    bool operator<(const QTreeWidgetItem &other)const {
+   public:
+    LocalTrashTreeWidgetItem(QTreeWidget *parent) : QTreeWidgetItem(parent) {}
+
+   private:
+    bool operator<(const QTreeWidgetItem &other) const {
         int column = treeWidget()->sortColumn();
 
         // allow sorting for the date column
         if (column == 1) {
             return data(column, Qt::UserRole).toInt() <
-                    other.data(column, Qt::UserRole).toInt();
+                   other.data(column, Qt::UserRole).toInt();
         }
 
         return text(column).toLower() < other.text(column).toLower();
     }
 };
 
-LocalTrashDialog::LocalTrashDialog(MainWindow *mainWindow, QWidget *parent) :
-        MasterDialog(parent),
-        ui(new Ui::LocalTrashDialog) {
+LocalTrashDialog::LocalTrashDialog(MainWindow *mainWindow, QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::LocalTrashDialog) {
     this->mainWindow = mainWindow;
     ui->setupUi(this);
 
@@ -43,30 +43,28 @@ LocalTrashDialog::LocalTrashDialog(MainWindow *mainWindow, QWidget *parent) :
     button->setToolTip(tr("Restore selected notes"));
     button->setProperty("ActionRole", Restore);
     button->setDefault(false);
-    button->setIcon(
-            QIcon::fromTheme(
-                    "view-restore",
-                    QIcon(":/icons/breeze-qownnotes/16x16/view-restore.svg")));
+    button->setIcon(QIcon::fromTheme(
+        "view-restore",
+        QIcon(":/icons/breeze-qownnotes/16x16/view-restore.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("Remove"), this);
     button->setToolTip(tr("Remove selected notes"));
     button->setProperty("ActionRole", Remove);
     button->setDefault(false);
-    button->setIcon(
-            QIcon::fromTheme(
-                    "edit-delete",
-                    QIcon(":/icons/breeze-qownnotes/16x16/edit-delete.svg")));
+    button->setIcon(QIcon::fromTheme(
+        "edit-delete",
+        QIcon(":/icons/breeze-qownnotes/16x16/edit-delete.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
-//    button = new QPushButton(tr("Cancel"));
-//    button->setProperty("ActionRole", Cancel);
-//    button->setIcon(
-//            QIcon::fromTheme(
-//                    "dialog-cancel",
-//                    QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
-//    button->setDefault(true);
-//    ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
+    //    button = new QPushButton(tr("Cancel"));
+    //    button->setProperty("ActionRole", Cancel);
+    //    button->setIcon(
+    //            QIcon::fromTheme(
+    //                    "dialog-cancel",
+    //                    QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
+    //    button->setDefault(true);
+    //    ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     connect(this->ui->buttonBox, SIGNAL(clicked(QAbstractButton *)),
             SLOT(dialogButtonClicked(QAbstractButton *)));
@@ -95,18 +93,19 @@ void LocalTrashDialog::loadTrashedNotes() {
         item->setData(1, Qt::UserRole,
                       trashItem.getCreated().toMSecsSinceEpoch());
 
-        QString toolTipText = tr("File will be restored to: %1").arg(
-                trashItem.restorationFilePath());
+        QString toolTipText = tr("File will be restored to: %1")
+                                  .arg(trashItem.restorationFilePath());
 
         // mark missing items if file is missing
         if (!trashItem.fileExists()) {
-            item->setIcon(0,
-                    QIcon::fromTheme(
+            item->setIcon(
+                0,
+                QIcon::fromTheme(
                     "edit-delete",
                     QIcon(":/icons/breeze-qownnotes/16x16/edit-delete.svg")));
             toolTipText = tr("File <strong>%1</strong> isn't readable and can't"
-                                     " be restored!").arg(
-                    trashItem.fullFilePath());
+                             " be restored!")
+                              .arg(trashItem.fullFilePath());
         }
 
         item->setToolTip(0, toolTipText);
@@ -140,9 +139,7 @@ void LocalTrashDialog::storeSettings() {
     settings.setValue("localTrashSplitterSizes", trashSplitter->saveState());
 }
 
-LocalTrashDialog::~LocalTrashDialog() {
-    delete ui;
-}
+LocalTrashDialog::~LocalTrashDialog() { delete ui; }
 
 void LocalTrashDialog::dialogButtonClicked(QAbstractButton *button) {
     int actionRole = button->property("ActionRole").toInt();
@@ -171,7 +168,7 @@ void LocalTrashDialog::dialogButtonClicked(QAbstractButton *button) {
  * @param previous
  */
 void LocalTrashDialog::on_trashTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
     int trashItemId = current->data(0, Qt::UserRole).toInt();
     TrashItem trashItem = TrashItem::fetch(trashItemId);
@@ -190,35 +187,33 @@ void LocalTrashDialog::restoreSelectedTrashItems() {
         return;
     }
 
-    if (Utils::Gui::question(
-            this,
-            tr("Restore selected notes"),
-            tr("Restore <strong>%n</strong> selected note(s)?", "",
-               selectedItemsCount), "local-trash-restore-notes") ==
-            QMessageBox::Yes) {
+    if (Utils::Gui::question(this, tr("Restore selected notes"),
+                             tr("Restore <strong>%n</strong> selected note(s)?",
+                                "", selectedItemsCount),
+                             "local-trash-restore-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(ui->trashTreeWidget);
         Q_UNUSED(blocker)
 
         int restoreCount = 0;
-        Q_FOREACH(QTreeWidgetItem *item,
-                  ui->trashTreeWidget->selectedItems()) {
-                int id = item->data(0, Qt::UserRole).toInt();
-                TrashItem trashItem = TrashItem::fetch(id);
-                bool wasRestored = trashItem.restoreFile();
-                if (wasRestored) {
-                    qDebug() << "Restored note " << trashItem.getFileName();
-                    restoreCount++;
-                } else {
-                    qDebug() << "Note " << trashItem.getFileName() << " "
+        Q_FOREACH (QTreeWidgetItem *item,
+                   ui->trashTreeWidget->selectedItems()) {
+            int id = item->data(0, Qt::UserRole).toInt();
+            TrashItem trashItem = TrashItem::fetch(id);
+            bool wasRestored = trashItem.restoreFile();
+            if (wasRestored) {
+                qDebug() << "Restored note " << trashItem.getFileName();
+                restoreCount++;
+            } else {
+                qDebug() << "Note " << trashItem.getFileName()
+                         << " "
                             "couldn't be restored!";
-                }
             }
+        }
 
         Utils::Gui::information(
-                this,
-                tr("Notes restored"),
-                tr("<strong>%n</strong> note(s) were restored", "",
-                   restoreCount), "local-trash-notes-restored");
+            this, tr("Notes restored"),
+            tr("<strong>%n</strong> note(s) were restored", "", restoreCount),
+            "local-trash-notes-restored");
 
         if (restoreCount > 0) {
             loadTrashedNotes();
@@ -236,35 +231,33 @@ void LocalTrashDialog::removeSelectedTrashItems() {
         return;
     }
 
-    if (Utils::Gui::question(
-            this,
-            tr("Remove selected notes"),
-            tr("Remove <strong>%n</strong> selected note(s)?", "",
-               selectedItemsCount), "local-trash-remove-notes") ==
-            QMessageBox::Yes) {
+    if (Utils::Gui::question(this, tr("Remove selected notes"),
+                             tr("Remove <strong>%n</strong> selected note(s)?",
+                                "", selectedItemsCount),
+                             "local-trash-remove-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(ui->trashTreeWidget);
         Q_UNUSED(blocker)
 
         int removeCount = 0;
-        Q_FOREACH(QTreeWidgetItem *item,
-                  ui->trashTreeWidget->selectedItems()) {
-                int id = item->data(0, Qt::UserRole).toInt();
-                TrashItem trashItem = TrashItem::fetch(id);
-                bool wasRestored = trashItem.remove(true);
-                if (wasRestored) {
-                    qDebug() << "Removed note " << trashItem.getFileName();
-                    removeCount++;
-                } else {
-                    qDebug() << "Note " << trashItem.getFileName() << " "
+        Q_FOREACH (QTreeWidgetItem *item,
+                   ui->trashTreeWidget->selectedItems()) {
+            int id = item->data(0, Qt::UserRole).toInt();
+            TrashItem trashItem = TrashItem::fetch(id);
+            bool wasRestored = trashItem.remove(true);
+            if (wasRestored) {
+                qDebug() << "Removed note " << trashItem.getFileName();
+                removeCount++;
+            } else {
+                qDebug() << "Note " << trashItem.getFileName()
+                         << " "
                             "couldn't be removed!";
-                }
             }
+        }
 
         Utils::Gui::information(
-                this,
-                tr("Notes removed"),
-                tr("<strong>%n</strong> note(s) were removed", "",
-                   removeCount), "local-trash-notes-removed");
+            this, tr("Notes removed"),
+            tr("<strong>%n</strong> note(s) were removed", "", removeCount),
+            "local-trash-notes-removed");
 
         if (removeCount > 0) {
             loadTrashedNotes();

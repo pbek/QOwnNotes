@@ -12,24 +12,23 @@ class QAbstractButton;
 class QJSValue;
 class QSplitter;
 
-class TrashDialog : public MasterDialog
-{
+class TrashDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit TrashDialog(QJSValue notes, MainWindow *mainWindow,
                          QWidget *parent = 0);
     ~TrashDialog();
 
-private slots:
+   private slots:
     void storeSettings();
     void on_trashListWidget_currentRowChanged(int currentRow);
     void dialogButtonClicked(QAbstractButton *button);
     void on_searchLineEdit_textChanged(const QString &arg1);
 
-private:
+   private:
     enum ButtonRole {
-        Unset,  // nothing was selected
+        Unset,    // nothing was selected
         Download,
         RestoreOnServer,
         Cancel
@@ -43,4 +42,4 @@ private:
     void setupMainSplitter();
 };
 
-#endif // TRASHDIALOG_H
+#endif    // TRASHDIALOG_H

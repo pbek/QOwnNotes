@@ -1,37 +1,36 @@
-#include <utility>
 #include "scriptingservice.h"
-#include <QCoreApplication>
-#include <QDebug>
-#include <QQmlContext>
-#include <QQmlComponent>
-#include <QQmlEngine>
-#include <QFileInfo>
-#include <QMimeData>
-#include <entities/script.h>
-#include <utils/misc.h>
+#include <api/scriptapi.h>
 #include <entities/notefolder.h>
+#include <entities/script.h>
 #include <services/metricsservice.h>
+#include <utils/misc.h>
 #include <widgets/logwidget.h>
-#include <QTimer>
-#include <QVariant>
+#include <QAction>
 #include <QApplication>
 #include <QClipboard>
+#include <QCoreApplication>
+#include <QDebug>
+#include <QFileDialog>
+#include <QFileInfo>
 #include <QMimeData>
+#include <QQmlComponent>
+#include <QQmlContext>
+#include <QQmlEngine>
 #include <QRegularExpression>
 #include <QSettings>
-#include <api/scriptapi.h>
 #include <QStringBuilder>
-#include <QAction>
-#include <QFileDialog>
-#include "entities/notesubfolder.h"
-#include "api/tagapi.h"
+#include <QTimer>
+#include <QVariant>
+#include <utility>
 #include "api/noteapi.h"
+#include "api/tagapi.h"
+#include "entities/notesubfolder.h"
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
-#include "widgets/qownnotesmarkdowntextedit.h"
-#include <QMessageBox>
 #include <QInputDialog>
+#include <QMessageBox>
+#include "widgets/qownnotesmarkdowntextedit.h"
 #endif
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
@@ -39,7 +38,8 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine->rootContext()->setContextProperty(QStringLiteral("script"), this);
 #ifndef INTEGRATION_TESTS
     _engine->rootContext()->setContextProperty(
-            QStringLiteral("mainWindow"), qApp->property("mainWindow").value<MainWindow *>());
+        QStringLiteral("mainWindow"),
+        qApp->property("mainWindow").value<MainWindow *>());
 #endif
 
     // deprecated
@@ -54,11 +54,10 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     int scriptCount = Script::countAll();
     if (scriptCount > 0) {
         MetricsService::instance()->sendEventIfEnabled(
-                QStringLiteral("script/init"),
-                QStringLiteral("script"),
-                QStringLiteral("script count"),
-                QString::number(scriptCount) % QStringLiteral(" scripts"),
-                scriptCount);
+            QStringLiteral("script/init"), QStringLiteral("script"),
+            QStringLiteral("script count"),
+            QString::number(scriptCount) % QStringLiteral(" scripts"),
+            scriptCount);
     }
 }
 
@@ -66,9 +65,9 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
  * Fetches the global instance of the class
  * The instance will be created if it doesn't exist.
  */
-ScriptingService * ScriptingService::instance() {
+ScriptingService *ScriptingService::instance() {
     ScriptingService *scriptingService =
-            qApp->property("scriptingService").value<ScriptingService *>();
+        qApp->property("scriptingService").value<ScriptingService *>();
 
     if (scriptingService == nullptr) {
         scriptingService = createInstance(nullptr);
@@ -80,12 +79,12 @@ ScriptingService * ScriptingService::instance() {
 /**
  * Creates a global instance of the class
  */
-ScriptingService * ScriptingService::createInstance(QObject *parent) {
+ScriptingService *ScriptingService::createInstance(QObject *parent) {
     ScriptingService *scriptingService = new ScriptingService(parent);
 
     qApp->setProperty(
-            "scriptingService",
-            QVariant::fromValue<ScriptingService *>(scriptingService));
+        "scriptingService",
+        QVariant::fromValue<ScriptingService *>(scriptingService));
 
     return scriptingService;
 }
@@ -93,9 +92,7 @@ ScriptingService * ScriptingService::createInstance(QObject *parent) {
 /**
  * Returns the engine
  */
-QQmlEngine* ScriptingService::engine() const {
-    return _engine;
-}
+QQmlEngine *ScriptingService::engine() const { return _engine; }
 
 /**
  * Initializes a component from a script
@@ -123,9 +120,8 @@ void ScriptingService::initComponent(Script script) {
         _scriptComponents[key] = scriptComponent;
 
         // set the script directory path of the script
-        object->setProperty(
-                "scriptDirPath",
-                QDir::toNativeSeparators(script.getScriptDirPath()));
+        object->setProperty("scriptDirPath", QDir::toNativeSeparators(
+                                                 script.getScriptDirPath()));
 
         // register the script settings variables
         QList<QVariant> list = registerSettingsVariables(object, script);
@@ -138,9 +134,10 @@ void ScriptingService::initComponent(Script script) {
             QMetaObject::invokeMethod(object, "init");
         }
 
-        if (methodExistsForObject(object, QStringLiteral("onNoteStored(QVariant)"))) {
-            QObject::connect(this, SIGNAL(noteStored(QVariant)),
-                             object, SLOT(onNoteStored(QVariant)));
+        if (methodExistsForObject(object,
+                                  QStringLiteral("onNoteStored(QVariant)"))) {
+            QObject::connect(this, SIGNAL(noteStored(QVariant)), object,
+                             SLOT(onNoteStored(QVariant)));
         }
     } else {
         qWarning() << "script errors: " << component->errors();
@@ -153,10 +150,11 @@ void ScriptingService::initComponent(Script script) {
  * @param object
  * @param script
  */
-QList<QVariant> ScriptingService::registerSettingsVariables(
-        QObject *object, Script script) {
+QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object,
+                                                            Script script) {
     // registerSettingsVariables will override the settingsVariables property
-    if (methodExistsForObject(object, QStringLiteral("registerSettingsVariables()"))) {
+    if (methodExistsForObject(object,
+                              QStringLiteral("registerSettingsVariables()"))) {
         QVariant variables;
         QMetaObject::invokeMethod(object, "registerSettingsVariables");
     }
@@ -171,36 +169,36 @@ QList<QVariant> ScriptingService::registerSettingsVariables(
 
         // set the properties in the script
         foreach (QVariant variable, list) {
-                QMap<QString, QVariant> variableMap = variable.toMap();
-                QString type = variableMap[QStringLiteral("type")].toString();
-                QString identifier = variableMap["identifier"].toString();
+            QMap<QString, QVariant> variableMap = variable.toMap();
+            QString type = variableMap[QStringLiteral("type")].toString();
+            QString identifier = variableMap["identifier"].toString();
 
-                if (type == QStringLiteral("integer")) {
-                    int value = jsonObject.value(identifier).toInt();
+            if (type == QStringLiteral("integer")) {
+                int value = jsonObject.value(identifier).toInt();
 
-                    if (jsonObject.value(identifier).isUndefined()) {
-                        value = variableMap[QStringLiteral("default")].toInt();
-                    }
-
-                    object->setProperty(identifier.toUtf8(), value);
-                } else if (type == QStringLiteral("boolean")) {
-                    bool value = jsonObject.value(identifier).toBool();
-
-                    if (jsonObject.value(identifier).isUndefined()) {
-                        value = variableMap[QStringLiteral("default")].toBool();
-                    }
-
-                    object->setProperty(identifier.toUtf8(), value);
-                } else {
-                    QString value = jsonObject.value(identifier).toString();
-
-                    if (jsonObject.value(identifier).isUndefined()) {
-                        value = variableMap[QStringLiteral("default")].toString();
-                    }
-
-                    object->setProperty(identifier.toUtf8(), value);
+                if (jsonObject.value(identifier).isUndefined()) {
+                    value = variableMap[QStringLiteral("default")].toInt();
                 }
+
+                object->setProperty(identifier.toUtf8(), value);
+            } else if (type == QStringLiteral("boolean")) {
+                bool value = jsonObject.value(identifier).toBool();
+
+                if (jsonObject.value(identifier).isUndefined()) {
+                    value = variableMap[QStringLiteral("default")].toBool();
+                }
+
+                object->setProperty(identifier.toUtf8(), value);
+            } else {
+                QString value = jsonObject.value(identifier).toString();
+
+                if (jsonObject.value(identifier).isUndefined()) {
+                    value = variableMap[QStringLiteral("default")].toString();
+                }
+
+                object->setProperty(identifier.toUtf8(), value);
             }
+        }
     } else {
         Q_UNUSED(script)
     }
@@ -226,8 +224,8 @@ void ScriptingService::reloadScriptComponents() {
     while (i.hasNext()) {
         i.next();
         ScriptComponent scriptComponent = i.value();
-        delete(scriptComponent.object);
-        delete(scriptComponent.component);
+        delete (scriptComponent.object);
+        delete (scriptComponent.component);
     }
 
     // clear the component cache
@@ -243,8 +241,7 @@ void ScriptingService::reloadScriptComponents() {
 /**
  * Checks if the script can be used in a component
  */
-bool ScriptingService::validateScript(Script script,
-                                      QString &errorMessage) {
+bool ScriptingService::validateScript(Script script, QString &errorMessage) {
     const QString path = script.getScriptPath();
     QFile file(path);
 
@@ -268,9 +265,9 @@ bool ScriptingService::validateScript(Script script,
         errorMessage = component->errorString();
     }
 
-    delete(object);
-    delete(component);
-    delete(engine);
+    delete (object);
+    delete (component);
+    delete (engine);
     return result;
 }
 
@@ -283,19 +280,17 @@ void ScriptingService::initComponents() {
     _settingsVariables.clear();
     QList<Script> scripts = Script::fetchAll();
 
-    Q_FOREACH(Script script, scripts) {
-            if (script.isEnabled()) {
-                initComponent(script);
-            }
+    Q_FOREACH (Script script, scripts) {
+        if (script.isEnabled()) {
+            initComponent(script);
         }
+    }
 }
 
 /**
  * Reloads the engine
  */
-void ScriptingService::reloadEngine() {
-    reloadScriptComponents();
-}
+void ScriptingService::reloadEngine() { reloadScriptComponents(); }
 
 /**
  * Returns the registered script variables
@@ -314,7 +309,7 @@ QList<QVariant> ScriptingService::getSettingsVariables(int scriptId) {
  */
 void ScriptingService::reloadScriptingEngine() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     QTimer::singleShot(500, this, SLOT(reloadEngine()));
 }
@@ -323,9 +318,9 @@ void ScriptingService::reloadScriptingEngine() {
  * Checks if a method exists for an object
  */
 bool ScriptingService::methodExistsForObject(QObject *object,
-                                             const QString& method) const {
-    return object->metaObject()->indexOfMethod(method.toStdString().c_str())
-           > -1;
+                                             const QString &method) const {
+    return object->metaObject()->indexOfMethod(method.toStdString().c_str()) >
+           -1;
 }
 
 /**
@@ -343,16 +338,13 @@ void ScriptingService::outputMethodsOfObject(QObject *object) {
  * Calls the insertMediaHook function for an object
  */
 QString ScriptingService::callInsertMediaHookForObject(
-        QObject *object,
-        QFile *file,
-        const QString& markdownText) {
-    if (methodExistsForObject(object,
-                              QStringLiteral("insertMediaHook(QVariant,QVariant)"))) {
+    QObject *object, QFile *file, const QString &markdownText) {
+    if (methodExistsForObject(
+            object, QStringLiteral("insertMediaHook(QVariant,QVariant)"))) {
         QVariant newMarkdownText;
-        QMetaObject::invokeMethod(object, "insertMediaHook",
-                                  Q_RETURN_ARG(QVariant, newMarkdownText),
-                                  Q_ARG(QVariant, file->fileName()),
-                                  Q_ARG(QVariant, markdownText));
+        QMetaObject::invokeMethod(
+            object, "insertMediaHook", Q_RETURN_ARG(QVariant, newMarkdownText),
+            Q_ARG(QVariant, file->fileName()), Q_ARG(QVariant, markdownText));
         return newMarkdownText.toString();
     }
 
@@ -392,9 +384,10 @@ QString ScriptingService::callInsertMediaHook(QFile *file,
  * @param newTagName tag name to be renamed to if action = "rename"
  * @return QString or QStringList (if action = "list") inside a QVariant
  */
-QVariant ScriptingService::callNoteTaggingHook(const Note &note, const QString& action,
-                                               const QString& tagName,
-                                               const QString& newTagName) {
+QVariant ScriptingService::callNoteTaggingHook(const Note &note,
+                                               const QString &action,
+                                               const QString &tagName,
+                                               const QString &newTagName) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
     NoteApi *noteApi = NoteApi::fromNote(note);
 
@@ -405,15 +398,15 @@ QVariant ScriptingService::callNoteTaggingHook(const Note &note, const QString& 
 
         if (methodExistsForObject(
                 scriptComponent.object,
-                QStringLiteral("noteTaggingHook(QVariant,QVariant,QVariant,QVariant)"))) {
-            QMetaObject::invokeMethod(scriptComponent.object,
-                                      "noteTaggingHook",
-                                      Q_RETURN_ARG(QVariant, result),
-                                      Q_ARG(QVariant, QVariant::fromValue(
-                                              static_cast<QObject*>(noteApi))),
-                                      Q_ARG(QVariant, action),
-                                      Q_ARG(QVariant, tagName),
-                                      Q_ARG(QVariant, newTagName));
+                QStringLiteral(
+                    "noteTaggingHook(QVariant,QVariant,QVariant,QVariant)"))) {
+            QMetaObject::invokeMethod(
+                scriptComponent.object, "noteTaggingHook",
+                Q_RETURN_ARG(QVariant, result),
+                Q_ARG(QVariant,
+                      QVariant::fromValue(static_cast<QObject *>(noteApi))),
+                Q_ARG(QVariant, action), Q_ARG(QVariant, tagName),
+                Q_ARG(QVariant, newTagName));
 
             if (!result.isNull()) {
                 return result;
@@ -429,7 +422,8 @@ QVariant ScriptingService::callNoteTaggingHook(const Note &note, const QString& 
  * @return true if a function was found
  */
 bool ScriptingService::noteTaggingHookExists() const {
-    return methodExists(QStringLiteral("noteTaggingHook(QVariant,QVariant,QVariant,QVariant)"));
+    return methodExists(
+        QStringLiteral("noteTaggingHook(QVariant,QVariant,QVariant,QVariant)"));
 }
 
 /**
@@ -444,7 +438,7 @@ bool ScriptingService::handleNoteNameHookExists() const {
  * Checks if a method exists in a script
  * @return true if method was found
  */
-bool ScriptingService::methodExists(const QString& methodName)  const {
+bool ScriptingService::methodExists(const QString &methodName) const {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
@@ -474,9 +468,8 @@ QStringList ScriptingService::callAutocompletionHook() const {
         ScriptComponent scriptComponent = i.value();
         QVariant result;
 
-        if (methodExistsForObject(
-                scriptComponent.object,
-                QStringLiteral("autocompletionHook()"))) {
+        if (methodExistsForObject(scriptComponent.object,
+                                  QStringLiteral("autocompletionHook()"))) {
             QMetaObject::invokeMethod(scriptComponent.object,
                                       "autocompletionHook",
                                       Q_RETURN_ARG(QVariant, result));
@@ -495,8 +488,7 @@ QStringList ScriptingService::callAutocompletionHook() const {
  * Calls the insertingFromMimeDataHook function for an object
  */
 QString ScriptingService::callInsertingFromMimeDataHookForObject(
-        QObject *object,
-        const QMimeData *mimeData) {
+    QObject *object, const QMimeData *mimeData) {
     if (methodExistsForObject(
             object,
             QStringLiteral("insertingFromMimeDataHook(QVariant,QVariant)"))) {
@@ -517,7 +509,7 @@ QString ScriptingService::callInsertingFromMimeDataHookForObject(
  * `Ctrl + Shift + V`
  */
 QString ScriptingService::callInsertingFromMimeDataHook(
-        const QMimeData *mimeData) {
+    const QMimeData *mimeData) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
@@ -525,7 +517,7 @@ QString ScriptingService::callInsertingFromMimeDataHook(
         ScriptComponent scriptComponent = i.value();
 
         QString text = callInsertingFromMimeDataHookForObject(
-                scriptComponent.object, mimeData);
+            scriptComponent.object, mimeData);
         if (!text.isEmpty()) {
             return text;
         }
@@ -541,19 +533,17 @@ QString ScriptingService::callInsertingFromMimeDataHook(
  * in the settings
  */
 QString ScriptingService::callHandleNoteTextFileNameHookForObject(
-        QObject *object,
-        Note *note) {
+    QObject *object, Note *note) {
     if (methodExistsForObject(
-            object,
-            QStringLiteral("handleNoteTextFileNameHook(QVariant)"))) {
+            object, QStringLiteral("handleNoteTextFileNameHook(QVariant)"))) {
         auto *noteApi = new NoteApi();
         noteApi->fetch(note->getId());
 
         QVariant text;
-        QMetaObject::invokeMethod(object, "handleNoteTextFileNameHook",
-                                  Q_RETURN_ARG(QVariant, text),
-                                  Q_ARG(QVariant, QVariant::fromValue(
-                                          static_cast<QObject*>(noteApi))));
+        QMetaObject::invokeMethod(
+            object, "handleNoteTextFileNameHook", Q_RETURN_ARG(QVariant, text),
+            Q_ARG(QVariant,
+                  QVariant::fromValue(static_cast<QObject *>(noteApi))));
         return text.toString();
     }
 
@@ -563,8 +553,7 @@ QString ScriptingService::callHandleNoteTextFileNameHookForObject(
 /**
  * Calls the handleNoteTextFileNameHook function for all script components
  */
-QString ScriptingService::callHandleNoteTextFileNameHook(
-        Note *note) {
+QString ScriptingService::callHandleNoteTextFileNameHook(Note *note) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
@@ -572,7 +561,7 @@ QString ScriptingService::callHandleNoteTextFileNameHook(
         ScriptComponent scriptComponent = i.value();
 
         QString text = callHandleNoteTextFileNameHookForObject(
-                scriptComponent.object, note);
+            scriptComponent.object, note);
         if (!text.isEmpty()) {
             return text;
         }
@@ -581,17 +570,14 @@ QString ScriptingService::callHandleNoteTextFileNameHook(
     return QString();
 }
 
-
 /**
  * Calls the handleNewNoteHeadlineHook function for an object
  * This function is called when new note gets created
  */
 QString ScriptingService::callHandleNewNoteHeadlineHookForObject(
-        QObject *object, const QString& headline) {
+    QObject *object, const QString &headline) {
     if (methodExistsForObject(
-            object,
-            QStringLiteral("handleNewNoteHeadlineHook(QVariant)"))) {
-
+            object, QStringLiteral("handleNewNoteHeadlineHook(QVariant)"))) {
         QVariant text;
         QMetaObject::invokeMethod(object, "handleNewNoteHeadlineHook",
                                   Q_RETURN_ARG(QVariant, text),
@@ -613,13 +599,15 @@ void ScriptingService::callHandleNoteOpenedHook(Note *note) {
         ScriptComponent scriptComponent = i.value();
         QObject *object = scriptComponent.object;
 
-        if (methodExistsForObject(object, QStringLiteral("noteOpenedHook(QVariant)"))) {
+        if (methodExistsForObject(object,
+                                  QStringLiteral("noteOpenedHook(QVariant)"))) {
             auto *noteApi = new NoteApi();
             noteApi->fetch(note->getId());
 
-            QMetaObject::invokeMethod(object, "noteOpenedHook",
-                                      Q_ARG(QVariant, QVariant::fromValue(
-                                              static_cast<QObject*>(noteApi))));
+            QMetaObject::invokeMethod(
+                object, "noteOpenedHook",
+                Q_ARG(QVariant,
+                      QVariant::fromValue(static_cast<QObject *>(noteApi))));
         }
     }
 }
@@ -635,15 +623,16 @@ QString ScriptingService::callHandleNoteNameHook(Note *note) {
         ScriptComponent scriptComponent = i.value();
         QObject *object = scriptComponent.object;
 
-        if (methodExistsForObject(object, QStringLiteral("handleNoteNameHook(QVariant)"))) {
+        if (methodExistsForObject(
+                object, QStringLiteral("handleNoteNameHook(QVariant)"))) {
             auto *noteApi = new NoteApi();
             noteApi->fetch(note->getId());
 
             QVariant text;
-            QMetaObject::invokeMethod(object, "handleNoteNameHook",
-                                      Q_RETURN_ARG(QVariant, text),
-                                      Q_ARG(QVariant, QVariant::fromValue(
-                                              static_cast<QObject*>(noteApi))));
+            QMetaObject::invokeMethod(
+                object, "handleNoteNameHook", Q_RETURN_ARG(QVariant, text),
+                Q_ARG(QVariant,
+                      QVariant::fromValue(static_cast<QObject *>(noteApi))));
             return text.toString();
         }
     }
@@ -654,7 +643,8 @@ QString ScriptingService::callHandleNoteNameHook(Note *note) {
 /**
  * Calls the handleNewNoteHeadlineHook function for all script components
  */
-QString ScriptingService::callHandleNewNoteHeadlineHook(const QString& headline) {
+QString ScriptingService::callHandleNewNoteHeadlineHook(
+    const QString &headline) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
@@ -662,7 +652,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHook(const QString& headline)
         ScriptComponent scriptComponent = i.value();
 
         QString text = callHandleNewNoteHeadlineHookForObject(
-                scriptComponent.object, headline);
+            scriptComponent.object, headline);
         if (!text.isEmpty()) {
             return text;
         }
@@ -675,7 +665,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHook(const QString& headline)
  * Calls the noteToMarkdownHtmlHook function for an object
  */
 QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
-        QObject *object, Note *note, const QString& html) {
+    QObject *object, Note *note, const QString &html) {
     if (methodExistsForObject(
             object,
             QStringLiteral("noteToMarkdownHtmlHook(QVariant,QVariant)"))) {
@@ -683,11 +673,11 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
         noteApi->fetch(note->getId());
 
         QVariant text;
-        QMetaObject::invokeMethod(object, "noteToMarkdownHtmlHook",
-                                  Q_RETURN_ARG(QVariant, text),
-                                  Q_ARG(QVariant, QVariant::fromValue(
-                                          static_cast<QObject*>(noteApi))),
-                                  Q_ARG(QVariant, html));
+        QMetaObject::invokeMethod(
+            object, "noteToMarkdownHtmlHook", Q_RETURN_ARG(QVariant, text),
+            Q_ARG(QVariant,
+                  QVariant::fromValue(static_cast<QObject *>(noteApi))),
+            Q_ARG(QVariant, html));
         return text.toString();
     }
 
@@ -698,8 +688,8 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
  * Calls the noteToMarkdownHtmlHook function for all script components
  * This function is called when the markdown html of a note is generated
  */
-QString ScriptingService::callNoteToMarkdownHtmlHook(
-        Note *note, const QString& html) {
+QString ScriptingService::callNoteToMarkdownHtmlHook(Note *note,
+                                                     const QString &html) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
     QString resultHtml = html;
 
@@ -708,7 +698,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(
         ScriptComponent scriptComponent = i.value();
 
         QString text = callNoteToMarkdownHtmlHookForObject(
-                scriptComponent.object, note, resultHtml);
+            scriptComponent.object, note, resultHtml);
 
         if (!text.isEmpty()) {
             resultHtml = text;
@@ -723,7 +713,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(
  * This function is called before the markdown html of a note is generated
  */
 QString ScriptingService::callPreNoteToMarkdownHtmlHook(
-        Note *note, const QString& markdown) {
+    Note *note, const QString &markdown) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
     QString resultMarkdown = markdown;
 
@@ -732,20 +722,22 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(
         ScriptComponent scriptComponent = i.value();
 
         QString text = callNoteToMarkdownHtmlHookForObject(
-                    scriptComponent.object, note, resultMarkdown);
+            scriptComponent.object, note, resultMarkdown);
 
         if (methodExistsForObject(
-                    scriptComponent.object,
-                    QStringLiteral("preNoteToMarkdownHtmlHook(QVariant,QVariant)"))) {
+                scriptComponent.object,
+                QStringLiteral(
+                    "preNoteToMarkdownHtmlHook(QVariant,QVariant)"))) {
             auto *noteApi = new NoteApi();
             noteApi->fetch(note->getId());
 
             QVariant resultText;
-            QMetaObject::invokeMethod(scriptComponent.object, "preNoteToMarkdownHtmlHook",
-                                      Q_RETURN_ARG(QVariant, resultText),
-                                      Q_ARG(QVariant, QVariant::fromValue(
-                                                static_cast<QObject*>(noteApi))),
-                                      Q_ARG(QVariant, resultMarkdown));
+            QMetaObject::invokeMethod(
+                scriptComponent.object, "preNoteToMarkdownHtmlHook",
+                Q_RETURN_ARG(QVariant, resultText),
+                Q_ARG(QVariant,
+                      QVariant::fromValue(static_cast<QObject *>(noteApi))),
+                Q_ARG(QVariant, resultMarkdown));
             QString text = resultText.toString();
 
             if (!text.isEmpty()) {
@@ -767,16 +759,18 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(
  * demanded
  * @return
  */
-QString ScriptingService::callEncryptionHookForObject(
-        QObject *object, const QString& text, const QString& password, bool decrypt) {
+QString ScriptingService::callEncryptionHookForObject(QObject *object,
+                                                      const QString &text,
+                                                      const QString &password,
+                                                      bool decrypt) {
     if (methodExistsForObject(
-            object, QStringLiteral("encryptionHook(QVariant,QVariant,QVariant)"))) {
+            object,
+            QStringLiteral("encryptionHook(QVariant,QVariant,QVariant)"))) {
         QVariant result;
-        QMetaObject::invokeMethod(object, "encryptionHook",
-                                  Q_RETURN_ARG(QVariant, result),
-                                  Q_ARG(QVariant, text),
-                                  Q_ARG(QVariant, password),
-                                  Q_ARG(QVariant, decrypt));
+        QMetaObject::invokeMethod(
+            object, "encryptionHook", Q_RETURN_ARG(QVariant, result),
+            Q_ARG(QVariant, text), Q_ARG(QVariant, password),
+            Q_ARG(QVariant, decrypt));
         return result.toString();
     }
 
@@ -793,7 +787,8 @@ QString ScriptingService::callEncryptionHookForObject(
  * demanded
  * @return
  */
-QString ScriptingService::callEncryptionHook(const QString& text, const QString& password,
+QString ScriptingService::callEncryptionHook(const QString &text,
+                                             const QString &password,
                                              bool decrypt) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
@@ -822,13 +817,15 @@ void ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
         ScriptComponent scriptComponent = i.value();
         QObject *object = scriptComponent.object;
 
-        if (methodExistsForObject(object, QStringLiteral("noteDoubleClickedHook(QVariant)"))) {
+        if (methodExistsForObject(
+                object, QStringLiteral("noteDoubleClickedHook(QVariant)"))) {
             auto *noteApi = new NoteApi();
             noteApi->fetch(note->getId());
 
-            QMetaObject::invokeMethod(object, "noteDoubleClickedHook",
-                                      Q_ARG(QVariant, QVariant::fromValue(
-                                              static_cast<QObject*>(noteApi))));
+            QMetaObject::invokeMethod(
+                object, "noteDoubleClickedHook",
+                Q_ARG(QVariant,
+                      QVariant::fromValue(static_cast<QObject *>(noteApi))));
         }
     }
 }
@@ -839,10 +836,10 @@ void ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
  * @param parameters a list of parameter strings
  * @return true on success, false otherwise
  */
-bool ScriptingService::startDetachedProcess(const QString& executablePath,
-                                            const QStringList& parameters) {
+bool ScriptingService::startDetachedProcess(const QString &executablePath,
+                                            const QStringList &parameters) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     return Utils::Misc::startDetachedProcess(executablePath, parameters);
 }
@@ -856,12 +853,13 @@ bool ScriptingService::startDetachedProcess(const QString& executablePath,
  * @return the text that was returned by the process
  */
 QByteArray ScriptingService::startSynchronousProcess(
-        const QString& executablePath, QStringList parameters, QByteArray data) const {
+    const QString &executablePath, QStringList parameters,
+    QByteArray data) const {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     return Utils::Misc::startSynchronousProcess(
-            executablePath, std::move(parameters), std::move(data));
+        executablePath, std::move(parameters), std::move(data));
 }
 
 /**
@@ -885,7 +883,7 @@ void ScriptingService::onCurrentNoteChanged(Note *note) {
 /**
  * Calls the customActionInvoked function in all scripts
  */
-void ScriptingService::onCustomActionInvoked(const QString& identifier) {
+void ScriptingService::onCustomActionInvoked(const QString &identifier) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
@@ -899,9 +897,10 @@ void ScriptingService::onCustomActionInvoked(const QString& identifier) {
 /**
  * Calls the customActionInvoked function for an object
  */
-void ScriptingService::callCustomActionInvokedForObject(QObject *object,
-                                                        const QString& identifier) {
-    if (methodExistsForObject(object, QStringLiteral("customActionInvoked(QVariant)"))) {
+void ScriptingService::callCustomActionInvokedForObject(
+    QObject *object, const QString &identifier) {
+    if (methodExistsForObject(
+            object, QStringLiteral("customActionInvoked(QVariant)"))) {
         QMetaObject::invokeMethod(object, "customActionInvoked",
                                   Q_ARG(QVariant, identifier));
     }
@@ -912,9 +911,9 @@ void ScriptingService::callCustomActionInvokedForObject(QObject *object,
  *
  * @return {NoteApi} the the current note
  */
-NoteApi* ScriptingService::currentNote() const {
+NoteApi *ScriptingService::currentNote() const {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     return _currentNoteApi;
 }
@@ -924,9 +923,9 @@ NoteApi* ScriptingService::currentNote() const {
  *
  * @param text
  */
-void ScriptingService::noteTextEditWrite(const QString& text) {
+void ScriptingService::noteTextEditWrite(const QString &text) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
@@ -945,12 +944,12 @@ void ScriptingService::noteTextEditWrite(const QString& text) {
  */
 QString ScriptingService::noteTextEditSelectedText() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    return mainWindow != Q_NULLPTR ?
-           mainWindow->selectedNoteTextEditText() : QString();
+    return mainWindow != Q_NULLPTR ? mainWindow->selectedNoteTextEditText()
+                                   : QString();
 #else
     return QString();
 #endif
@@ -961,7 +960,7 @@ QString ScriptingService::noteTextEditSelectedText() {
  */
 void ScriptingService::noteTextEditSelectAll() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
@@ -976,12 +975,12 @@ void ScriptingService::noteTextEditSelectAll() {
  */
 void ScriptingService::noteTextEditSelectCurrentLine() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
-        QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
+        QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
         c.movePosition(QTextCursor::StartOfBlock);
         c.movePosition(QTextCursor::EndOfBlock, QTextCursor::KeepAnchor);
@@ -995,12 +994,12 @@ void ScriptingService::noteTextEditSelectCurrentLine() {
  */
 void ScriptingService::noteTextEditSelectCurrentWord() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
-        QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
+        QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
         c.select(QTextCursor::WordUnderCursor);
         textEdit->setTextCursor(c);
@@ -1016,12 +1015,12 @@ void ScriptingService::noteTextEditSelectCurrentWord() {
  */
 void ScriptingService::noteTextEditSetSelection(int start, int end) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
-        QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
+        QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
 
         start = std::max(start, 0);
@@ -1042,12 +1041,12 @@ void ScriptingService::noteTextEditSetSelection(int start, int end) {
  */
 int ScriptingService::noteTextEditSelectionStart() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
-        QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
+        QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         return textEdit->textCursor().selectionStart();
     }
 #endif
@@ -1060,12 +1059,12 @@ int ScriptingService::noteTextEditSelectionStart() {
  */
 int ScriptingService::noteTextEditSelectionEnd() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
-        QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
+        QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         return textEdit->textCursor().selectionEnd();
     }
 #endif
@@ -1083,12 +1082,13 @@ int ScriptingService::noteTextEditSelectionEnd() {
  */
 QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
-    return mainWindow != Q_NULLPTR ?
-           mainWindow->noteTextEditCurrentWord(withPreviousCharacters) : QString();
+    return mainWindow != Q_NULLPTR
+               ? mainWindow->noteTextEditCurrentWord(withPreviousCharacters)
+               : QString();
 #else
     Q_UNUSED(withPreviousCharacters)
     return QString();
@@ -1100,9 +1100,9 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters) {
  *
  * @param tagName
  */
-void ScriptingService::tagCurrentNote(const QString& tagName) {
+void ScriptingService::tagCurrentNote(const QString &tagName) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
@@ -1121,7 +1121,7 @@ void ScriptingService::tagCurrentNote(const QString& tagName) {
  */
 void ScriptingService::log(QString text) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
@@ -1140,9 +1140,9 @@ void ScriptingService::log(QString text) {
  * @param url
  * @return {QString} the content of the downloaded url
  */
-QString ScriptingService::downloadUrlToString(const QUrl& url) {
+QString ScriptingService::downloadUrlToString(const QUrl &url) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     return Utils::Misc::downloadUrl(url);
 }
@@ -1152,28 +1152,32 @@ QString ScriptingService::downloadUrlToString(const QUrl& url) {
  * url or the markdown image text of the media relative to the current note
  *
  * @param {QString} url
- * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
+ * @param {bool} returnUrlOnly if true only the media url will be returned
+ * (default false)
  * @return {QString} the media markdown or url
  */
-QString ScriptingService::downloadUrlToMedia(const QUrl &url, bool returnUrlOnly) {
+QString ScriptingService::downloadUrlToMedia(const QUrl &url,
+                                             bool returnUrlOnly) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     return _currentNote->downloadUrlToMedia(url, returnUrlOnly);
 }
 
 /**
  * QML wrapper to insert a media file into the media folder and returning
- * the media url or the markdown image text of the media relative to the current note
+ * the media url or the markdown image text of the media relative to the current
+ * note
  *
  * @param {QString} mediaFilePath
- * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
+ * @param {bool} returnUrlOnly if true only the media url will be returned
+ * (default false)
  * @return {QString} the media markdown or url
  */
-QString ScriptingService::insertMediaFile(const QString& mediaFilePath,
+QString ScriptingService::insertMediaFile(const QString &mediaFilePath,
                                           bool returnUrlOnly) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     auto *mediaFile = new QFile(mediaFilePath);
 
@@ -1193,7 +1197,7 @@ void ScriptingService::regenerateNotePreview() const {
 
     if (mainWindow != Q_NULLPTR) {
         MetricsService::instance()->sendVisitIfEnabled(
-                QStringLiteral("scripting/") % QString(__func__));
+            QStringLiteral("scripting/") % QString(__func__));
 
         mainWindow->regenerateNotePreview();
     }
@@ -1217,10 +1221,10 @@ void ScriptingService::regenerateNotePreview() const {
  * @param useInNoteListContextMenu if true use the action in the note list
  *                                 context menu (default: false)
  */
-void ScriptingService::registerCustomAction(const QString& identifier,
-                                            const QString& menuText,
-                                            const QString& buttonText,
-                                            const QString& icon,
+void ScriptingService::registerCustomAction(const QString &identifier,
+                                            const QString &menuText,
+                                            const QString &buttonText,
+                                            const QString &icon,
                                             bool useInNoteEditContextMenu,
                                             bool hideButtonInToolbar,
                                             bool useInNoteListContextMenu) {
@@ -1229,12 +1233,11 @@ void ScriptingService::registerCustomAction(const QString& identifier,
 
     if (mainWindow != Q_NULLPTR) {
         MetricsService::instance()->sendVisitIfEnabled(
-                QStringLiteral("scripting/") % QString(__func__));
+            QStringLiteral("scripting/") % QString(__func__));
 
-        mainWindow->addCustomAction(identifier, menuText, buttonText, icon,
-                                    useInNoteEditContextMenu,
-                                    hideButtonInToolbar,
-                                    useInNoteListContextMenu);
+        mainWindow->addCustomAction(
+            identifier, menuText, buttonText, icon, useInNoteEditContextMenu,
+            hideButtonInToolbar, useInNoteListContextMenu);
     }
 #else
     Q_UNUSED(identifier)
@@ -1253,13 +1256,14 @@ void ScriptingService::registerCustomAction(const QString& identifier,
  * @param identifier the identifier of the label
  * @param text the text shown in the label (optional)
  */
-void ScriptingService::registerLabel(const QString& identifier, const QString& text) {
+void ScriptingService::registerLabel(const QString &identifier,
+                                     const QString &text) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow != Q_NULLPTR) {
         MetricsService::instance()->sendVisitIfEnabled(
-                QStringLiteral("scripting/") % QString(__func__));
+            QStringLiteral("scripting/") % QString(__func__));
 
         mainWindow->addScriptingLabel(identifier, text);
     }
@@ -1275,13 +1279,14 @@ void ScriptingService::registerLabel(const QString& identifier, const QString& t
  * @param identifier the identifier of the label
  * @param text the text shown in the label
  */
-void ScriptingService::setLabelText(const QString& identifier, const QString& text) {
+void ScriptingService::setLabelText(const QString &identifier,
+                                    const QString &text) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow != Q_NULLPTR) {
         MetricsService::instance()->sendVisitIfEnabled(
-                QStringLiteral("scripting/") % QString(__func__));
+            QStringLiteral("scripting/") % QString(__func__));
 
         mainWindow->setScriptingLabelText(identifier, text);
     }
@@ -1302,15 +1307,17 @@ void ScriptingService::createNote(QString text) {
 
     if (mainWindow != Q_NULLPTR) {
         MetricsService::instance()->sendVisitIfEnabled(
-                QStringLiteral("scripting/") % QString(__func__));
+            QStringLiteral("scripting/") % QString(__func__));
 
         // create a temporary name for the note
-        QString name = QStringLiteral("Note ") % Utils::Misc::createUuidString();
+        QString name =
+            QStringLiteral("Note ") % Utils::Misc::createUuidString();
 
         // create the new note and move the cursor to the end
         mainWindow->createNewNote(
-                name, std::move(text), MainWindow::CreateNewNoteOptions(
-                        MainWindow::CreateNewNoteOption::CursorAtEnd));
+            name, std::move(text),
+            MainWindow::CreateNewNoteOptions(
+                MainWindow::CreateNewNoteOption::CursorAtEnd));
     }
 #else
     Q_UNUSED(text)
@@ -1324,7 +1331,7 @@ void ScriptingService::createNote(QString text) {
  */
 QString ScriptingService::clipboard(bool asHtml) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     QClipboard *clipboard = QApplication::clipboard();
     const QMimeData *mimeData = clipboard->mimeData(QClipboard::Clipboard);
@@ -1336,7 +1343,7 @@ QString ScriptingService::clipboard(bool asHtml) {
  */
 void ScriptingService::encryptionDisablePassword() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     qApp->setProperty("encryptionPasswordDisabled", true);
 }
@@ -1346,7 +1353,7 @@ void ScriptingService::encryptionDisablePassword() {
  */
 bool ScriptingService::platformIsLinux() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifdef Q_OS_LINUX
     return true;
@@ -1360,7 +1367,7 @@ bool ScriptingService::platformIsLinux() {
  */
 bool ScriptingService::platformIsOSX() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifdef Q_OS_MAC
     return true;
@@ -1374,7 +1381,7 @@ bool ScriptingService::platformIsOSX() {
  */
 bool ScriptingService::platformIsWindows() {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifdef Q_OS_WIN
     return true;
@@ -1388,23 +1395,27 @@ bool ScriptingService::platformIsWindows() {
  *
  * @param stylesheet
  */
-void ScriptingService::addStyleSheet(const QString& stylesheet) {
+void ScriptingService::addStyleSheet(const QString &stylesheet) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
-    qApp->setStyleSheet(qApp->styleSheet() % QStringLiteral("\n/* BEGIN CUSTOM STYLESHEET */\n")
-                        % stylesheet % QStringLiteral("\n/* END CUSTOM STYLESHEET */"));
+    qApp->setStyleSheet(qApp->styleSheet() %
+                        QStringLiteral("\n/* BEGIN CUSTOM STYLESHEET */\n") %
+                        stylesheet %
+                        QStringLiteral("\n/* END CUSTOM STYLESHEET */"));
 }
 
 /**
  * Clears all custom stylesheets
  */
 void ScriptingService::clearCustomStyleSheets() {
-    QRegularExpression regExp(
-            QRegularExpression::escape(QStringLiteral("/* BEGIN CUSTOM STYLESHEET */")) % ".+" +
-                    QRegularExpression::escape(QStringLiteral("/* END CUSTOM STYLESHEET */")),
-            QRegularExpression::DotMatchesEverythingOption |
-    QRegularExpression::MultilineOption);
+    QRegularExpression regExp(QRegularExpression::escape(QStringLiteral(
+                                  "/* BEGIN CUSTOM STYLESHEET */")) %
+                                      ".+" +
+                                  QRegularExpression::escape(QStringLiteral(
+                                      "/* END CUSTOM STYLESHEET */")),
+                              QRegularExpression::DotMatchesEverythingOption |
+                                  QRegularExpression::MultilineOption);
     qApp->setStyleSheet(qApp->styleSheet().remove(regExp));
 }
 
@@ -1415,10 +1426,10 @@ void ScriptingService::clearCustomStyleSheets() {
  * @param noteSubFolderId integer id of the note subfolder
  * @return NoteApi*
  */
-NoteApi* ScriptingService::fetchNoteByFileName(const QString &fileName,
+NoteApi *ScriptingService::fetchNoteByFileName(const QString &fileName,
                                                int noteSubFolderId) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     return NoteApi::fromNote(Note::fetchByFileName(fileName, noteSubFolderId));
 }
@@ -1429,9 +1440,9 @@ NoteApi* ScriptingService::fetchNoteByFileName(const QString &fileName,
  * @param id int the id of the note
  * @return NoteApi*
  */
-NoteApi* ScriptingService::fetchNoteById(int id) {
+NoteApi *ScriptingService::fetchNoteById(int id) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     auto *note = new NoteApi();
     note->fetch(id);
@@ -1450,7 +1461,7 @@ bool ScriptingService::noteExistsByFileName(const QString &fileName,
                                             int ignoreNoteId,
                                             int noteSubFolderId) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     Note note = Note::fetchByFileName(fileName, noteSubFolderId);
 
@@ -1468,9 +1479,9 @@ bool ScriptingService::noteExistsByFileName(const QString &fileName,
  * @param text string text to put into the clipboard
  * @param asHtml bool if true the text will be set as html mime data
  */
-void ScriptingService::setClipboardText(const QString& text, bool asHtml) {
+void ScriptingService::setClipboardText(const QString &text, bool asHtml) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     QClipboard *clipboard = QApplication::clipboard();
 
@@ -1490,7 +1501,7 @@ void ScriptingService::setClipboardText(const QString& text, bool asHtml) {
  */
 void ScriptingService::setCurrentNote(NoteApi *note) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
@@ -1508,9 +1519,10 @@ void ScriptingService::setCurrentNote(NoteApi *note) {
  * @param text
  * @param title (optional)
  */
-void ScriptingService::informationMessageBox(const QString& text, const QString& title) {
+void ScriptingService::informationMessageBox(const QString &text,
+                                             const QString &title) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
@@ -1535,18 +1547,18 @@ void ScriptingService::informationMessageBox(const QString& text, const QString&
  * @param defaultButton default button that will be selected (optional)
  * @return id of pressed button
  */
-int ScriptingService::questionMessageBox(
-        const QString& text, const QString& title, int buttons, int defaultButton) {
+int ScriptingService::questionMessageBox(const QString &text,
+                                         const QString &title, int buttons,
+                                         int defaultButton) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
-        return QMessageBox::question(mainWindow, title, text,
-                                     QMessageBox::StandardButtons(buttons),
-                                     QMessageBox::StandardButton(
-                                             defaultButton));
+        return QMessageBox::question(
+            mainWindow, title, text, QMessageBox::StandardButtons(buttons),
+            QMessageBox::StandardButton(defaultButton));
     }
 #else
     Q_UNUSED(text)
@@ -1566,11 +1578,11 @@ int ScriptingService::questionMessageBox(
  * @param filter (optional)
  * @return QString
  */
-QString ScriptingService::getOpenFileName(const QString& caption,
-                                          const QString& dir,
-                                          const QString& filter) {
+QString ScriptingService::getOpenFileName(const QString &caption,
+                                          const QString &dir,
+                                          const QString &filter) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
@@ -1594,11 +1606,11 @@ QString ScriptingService::getOpenFileName(const QString& caption,
  * @param filter (optional)
  * @return QString
  */
-QString ScriptingService::getSaveFileName(const QString& caption,
-                                          const QString& dir,
-                                          const QString& filter) {
+QString ScriptingService::getSaveFileName(const QString &caption,
+                                          const QString &dir,
+                                          const QString &filter) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
@@ -1624,7 +1636,7 @@ QString ScriptingService::getSaveFileName(const QString& caption,
  * @param path
  * @return
  */
-QString ScriptingService::toNativeDirSeparators(const QString& path) {
+QString ScriptingService::toNativeDirSeparators(const QString &path) {
     return QDir::toNativeSeparators(path);
 }
 
@@ -1636,7 +1648,7 @@ QString ScriptingService::toNativeDirSeparators(const QString& path) {
  * @param path
  * @return
  */
-QString ScriptingService::fromNativeDirSeparators(const QString& path) {
+QString ScriptingService::fromNativeDirSeparators(const QString &path) {
     return QDir::fromNativeSeparators(path);
 }
 
@@ -1645,9 +1657,7 @@ QString ScriptingService::fromNativeDirSeparators(const QString& path) {
  *
  * @return
  */
-QString ScriptingService::dirSeparator() {
-    return QDir::separator();
-}
+QString ScriptingService::dirSeparator() { return QDir::separator(); }
 
 /**
  * Returns a list of the paths of all selected notes
@@ -1660,16 +1670,16 @@ QString ScriptingService::dirSeparator() {
 QStringList ScriptingService::selectedNotesPaths() {
     QStringList selectedNotePaths;
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow != Q_NULLPTR) {
-        Q_FOREACH(Note note, mainWindow->selectedNotes()) {
-                selectedNotePaths << QDir::toNativeSeparators(
-                        note.fullNoteFilePath() );
-            }
+        Q_FOREACH (Note note, mainWindow->selectedNotes()) {
+            selectedNotePaths
+                << QDir::toNativeSeparators(note.fullNoteFilePath());
+        }
     }
 #endif
 
@@ -1687,15 +1697,15 @@ QStringList ScriptingService::selectedNotesPaths() {
 QList<int> ScriptingService::selectedNotesIds() const {
     QList<int> selectedNotesIds;
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow != Q_NULLPTR) {
-        Q_FOREACH(Note note, mainWindow->selectedNotes()) {
-                selectedNotesIds << note.getId();
-            }
+        Q_FOREACH (Note note, mainWindow->selectedNotes()) {
+            selectedNotesIds << note.getId();
+        }
     }
 #endif
 
@@ -1710,7 +1720,8 @@ QList<int> ScriptingService::selectedNotesIds() const {
  *
  * @return {QList<int>} list of note ids
  */
-QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(const QString &text) const {
+QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(
+    const QString &text) const {
     QList<int> noteIds = Note::fetchAllIdsByNoteTextPart(text);
     return noteIds;
 }
@@ -1722,18 +1733,20 @@ QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(const QString &text) con
  * @param label {QString} label text of the dialog
  * @param items {QStringList} list of items to select
  * @param current {int} index of the item that should be selected (default: 0)
- * @param editable {bool} if true the text in the dialog can be edited (default: false)
+ * @param editable {bool} if true the text in the dialog can be edited (default:
+ * false)
  * @return {QString} text of the selected item
  */
-QString ScriptingService::inputDialogGetItem(
-        const QString &title, const QString &label, const QStringList &items,
-        int current, bool editable) {
+QString ScriptingService::inputDialogGetItem(const QString &title,
+                                             const QString &label,
+                                             const QStringList &items,
+                                             int current, bool editable) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
-    return QInputDialog::getItem(
-            Q_NULLPTR, title, label, items, current, editable);
+    return QInputDialog::getItem(Q_NULLPTR, title, label, items, current,
+                                 editable);
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)
@@ -1752,14 +1765,15 @@ QString ScriptingService::inputDialogGetItem(
  * @param text {QString} text in the dialog (optional)
  * @return
  */
-QString ScriptingService::inputDialogGetText(
-        const QString &title, const QString &label, const QString &text) {
+QString ScriptingService::inputDialogGetText(const QString &title,
+                                             const QString &label,
+                                             const QString &text) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
-    return QInputDialog::getText(Q_NULLPTR, title, label,
-                                 QLineEdit::Normal, text);
+    return QInputDialog::getText(Q_NULLPTR, title, label, QLineEdit::Normal,
+                                 text);
 #else
     Q_UNUSED(title)
     Q_UNUSED(label)
@@ -1771,7 +1785,8 @@ QString ScriptingService::inputDialogGetText(
 /**
  * Stores a persistent variable
  * These variables are accessible globally over all scripts
- * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
+ * Please use a meaningful prefix in your key like
+ * "PersistentVariablesTest/myVar"
  *
  * @param key {QString}
  * @param value {QVariant}
@@ -1779,10 +1794,11 @@ QString ScriptingService::inputDialogGetText(
 void ScriptingService::setPersistentVariable(const QString &key,
                                              const QVariant &value) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     QSettings settings;
-    settings.setValue(QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) % QStringLiteral("/") % key,
+    settings.setValue(QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) %
+                          QStringLiteral("/") % key,
                       value);
 }
 
@@ -1791,29 +1807,31 @@ void ScriptingService::setPersistentVariable(const QString &key,
  * These variables are accessible globally over all scripts
  *
  * @param key {QString}
- * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
+ * @param defaultValue {QVariant} return value if the setting doesn't exist
+ * (optional)
  * @return
  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
                                                  const QVariant &defaultValue) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     QSettings settings;
-    return settings.value(
-            QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) % QStringLiteral("/") % key,
-            defaultValue);
+    return settings.value(QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) %
+                              QStringLiteral("/") % key,
+                          defaultValue);
 }
 
 /**
  * Loads an application settings variable
  *
  * @param key {QString}
- * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
+ * @param defaultValue {QVariant} return value if the setting doesn't exist
+ * (optional)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(
-        const QString &key, const QVariant &defaultValue) {
+    const QString &key, const QVariant &defaultValue) {
     QSettings settings;
     return settings.value(key, defaultValue);
 }
@@ -1821,14 +1839,15 @@ QVariant ScriptingService::getApplicationSettingsVariable(
 /**
  * Jumps to a note subfolder
  *
- * @param noteSubFolderPath {QString} path of the subfolder, relative to the note folder
+ * @param noteSubFolderPath {QString} path of the subfolder, relative to the
+ * note folder
  * @param separator {QString} separator between parts of the path, default "/"
  * @return true if jump was successful
  */
 bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
                                            const QString &separator) {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
@@ -1836,8 +1855,8 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
         return false;
     }
 
-    NoteSubFolder folder = NoteSubFolder::fetchByPathData(noteSubFolderPath,
-                                                          separator);
+    NoteSubFolder folder =
+        NoteSubFolder::fetchByPathData(noteSubFolderPath, separator);
 
     if (!folder.isFetched()) {
         return false;
@@ -1860,7 +1879,7 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
  */
 QStringList ScriptingService::searchTagsByName(const QString &name) const {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
     QStringList tags = Tag::searchAllNamesByName(name);
     return tags;
@@ -1873,14 +1892,12 @@ QStringList ScriptingService::searchTagsByName(const QString &name) const {
  * @param data
  * @return
  */
-bool ScriptingService::writeToFile(const QString &filePath, const QString &data) const
-{
-    if (filePath.isEmpty())
-        return false;
+bool ScriptingService::writeToFile(const QString &filePath,
+                                   const QString &data) const {
+    if (filePath.isEmpty()) return false;
 
     QFile file(filePath);
-    if (!file.open(QFile::WriteOnly | QFile::Truncate))
-        return false;
+    if (!file.open(QFile::WriteOnly | QFile::Truncate)) return false;
 
     QTextStream out(&file);
     out.setCodec("UTF-8");
@@ -1896,10 +1913,10 @@ bool ScriptingService::writeToFile(const QString &filePath, const QString &data)
  * @param checked {QString} only trigger the action if checked-state is
  *                          different than this parameter (can be 0 or 1)
  */
-void ScriptingService::triggerMenuAction(const QString& objectName,
-        const QString& checked) const {
+void ScriptingService::triggerMenuAction(const QString &objectName,
+                                         const QString &checked) const {
     MetricsService::instance()->sendVisitIfEnabled(
-            QStringLiteral("scripting/") % QString(__func__));
+        QStringLiteral("scripting/") % QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();

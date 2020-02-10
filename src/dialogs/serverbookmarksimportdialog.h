@@ -9,19 +9,18 @@ class ServerBookmarksImportDialog;
 
 class QJSValue;
 
-class ServerBookmarksImportDialog : public MasterDialog
-{
+class ServerBookmarksImportDialog : public MasterDialog {
     Q_OBJECT
 
-public:
-    explicit ServerBookmarksImportDialog(
-            const QJSValue &bookmarks, QWidget *parent = 0);
+   public:
+    explicit ServerBookmarksImportDialog(const QJSValue &bookmarks,
+                                         QWidget *parent = 0);
     ~ServerBookmarksImportDialog();
 
-private slots:
+   private slots:
     void on_importButton_clicked();
 
-private:
+   private:
     Ui::ServerBookmarksImportDialog *ui;
     QJsonObject jsonObject;
 };

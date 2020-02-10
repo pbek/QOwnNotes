@@ -16,11 +16,11 @@ struct ToolbarContainer {
     QStringList actions;
 
     ToolbarContainer() {}
-    ToolbarContainer(const QString &name, const QString &title, const QStringList &actions):
-        name(name), title(title), actions(actions)
-    {}
-    ToolbarContainer(QToolBar* toolbar);
-    QToolBar *create(QMainWindow* w) const;
+    ToolbarContainer(const QString &name, const QString &title,
+                     const QStringList &actions)
+        : name(name), title(title), actions(actions) {}
+    ToolbarContainer(QToolBar *toolbar);
+    QToolBar *create(QMainWindow *w) const;
 
     void updateToolbar();
 

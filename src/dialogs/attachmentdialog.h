@@ -9,11 +9,10 @@ namespace Ui {
 class AttachmentDialog;
 }
 
-class AttachmentDialog : public MasterDialog
-{
+class AttachmentDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit AttachmentDialog(QWidget *parent = nullptr);
     ~AttachmentDialog();
 
@@ -21,10 +20,10 @@ public:
 
     QString getTitle();
 
-public slots:
+   public slots:
     void accept();
 
-private slots:
+   private slots:
     void on_openButton_clicked();
 
     void on_fileEdit_textChanged(const QString &arg1);
@@ -35,7 +34,7 @@ private slots:
 
     void slotReplyFinished(QNetworkReply *reply);
 
-private:
+   private:
     Ui::AttachmentDialog *ui;
     QNetworkAccessManager *_networkManager;
     bool _accept = false;

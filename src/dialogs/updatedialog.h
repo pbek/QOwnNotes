@@ -11,29 +11,29 @@ class QAbstractButton;
 class QNetworkReply;
 class QNetworkAccessManager;
 
-class UpdateDialog : public MasterDialog
-{
+class UpdateDialog : public MasterDialog {
     Q_OBJECT
 
-public:
-    explicit UpdateDialog(
-            QWidget *parent = nullptr, QString changesHtml = QString(),
-            QString releaseUrl = QString(), QString releaseVersionString = QString(),
-            int releaseBuildNumber = 0);
+   public:
+    explicit UpdateDialog(QWidget *parent = nullptr,
+                          QString changesHtml = QString(),
+                          QString releaseUrl = QString(),
+                          QString releaseVersionString = QString(),
+                          int releaseBuildNumber = 0);
     ~UpdateDialog();
     static bool isUpdateDialogOpen();
     int exec();
 
-public slots:
+   public slots:
     void show();
 
-private slots:
+   private slots:
     void dialogButtonClicked(QAbstractButton *button);
     void setIsUpdateDialogOpen(bool isOpen);
     void releaseDownloadProgress(qint64 bytesReceived, qint64 bytesTotal);
     void slotReplyFinished(QNetworkReply *reply);
 
-private:
+   private:
     Ui::UpdateDialog *ui;
     QString releaseUrl;
     QString releaseVersionString;
@@ -41,7 +41,7 @@ private:
     QPushButton *_updateButton;
 
     enum ButtonRole {
-        Unset,  // nothing was selected
+        Unset,    // nothing was selected
         Update,
         Download,
         Skip,
@@ -51,11 +51,11 @@ private:
 
     void closeEvent(QCloseEvent *event);
 
-    bool initializeUpdateProcess(const QString& filePath);
+    bool initializeUpdateProcess(const QString &filePath);
 
-    bool initializeWindowsUpdateProcess(const QString& filePath);
+    bool initializeWindowsUpdateProcess(const QString &filePath);
 
     bool initializeMacOSUpdateProcess(QString releaseUrl);
 };
 
-#endif // UPDATEDIALOG_H
+#endif    // UPDATEDIALOG_H

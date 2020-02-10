@@ -7,17 +7,16 @@ namespace Ui {
 class TagAddDialog;
 }
 
-class TagAddDialog : public MasterDialog
-{
+class TagAddDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit TagAddDialog(QWidget *parent = 0);
     ~TagAddDialog();
     QString name();
 
-private:
+   private:
     Ui::TagAddDialog *ui;
 };
 
-#endif // TAGADDDIALOG_H
+#endif    // TAGADDDIALOG_H

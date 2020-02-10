@@ -1,14 +1,13 @@
 #include "entities/trashitem.h"
+#include <services/databaseservice.h>
+#include <utils/misc.h>
 #include <QDebug>
-#include <QSettings>
 #include <QDir>
+#include <QSettings>
 #include <QSqlError>
 #include "note.h"
 #include "notefolder.h"
 #include "notesubfolder.h"
-#include <utils/misc.h>
-#include <services/databaseservice.h>
-
 
 TrashItem::TrashItem() {
     this->id = 0;
@@ -16,21 +15,13 @@ TrashItem::TrashItem() {
     this->fileSize = 0;
 }
 
-int TrashItem::getId() {
-    return this->id;
-}
+int TrashItem::getId() { return this->id; }
 
-QDateTime TrashItem::getCreated() {
-    return this->created;
-}
+QDateTime TrashItem::getCreated() { return this->created; }
 
-qint64 TrashItem::getFileSize() {
-    return this->fileSize;
-}
+qint64 TrashItem::getFileSize() { return this->fileSize; }
 
-QString TrashItem::getFileName() {
-    return this->fileName;
-}
+QString TrashItem::getFileName() { return this->fileName; }
 
 NoteSubFolder TrashItem::getNoteSubFolder() {
     return NoteSubFolder::fetch(this->noteSubFolderId);
@@ -39,7 +30,6 @@ NoteSubFolder TrashItem::getNoteSubFolder() {
 void TrashItem::setNoteSubFolder(const NoteSubFolder &noteSubFolder) {
     this->noteSubFolderPathData = noteSubFolder.pathData();
 }
-
 
 TrashItem TrashItem::fetch(int id) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
@@ -88,7 +78,7 @@ bool TrashItem::remove(bool withFile) {
  */
 QString TrashItem::fullFilePath() {
     return NoteFolder::currentTrashPath() + QDir::separator() +
-            QString::number(getId());
+           QString::number(getId());
 }
 
 /**
@@ -119,9 +109,7 @@ QString TrashItem::loadFileFromDisk() {
  * @param note
  * @return
  */
-bool TrashItem::add(Note note) {
-    return add(&note);
-}
+bool TrashItem::add(Note note) { return add(&note); }
 
 /**
  * Add a note to the trash
@@ -167,8 +155,8 @@ bool TrashItem::doTrashing() {
     }
 
     QFile file(_fullNoteFilePath);
-    QString destinationFileName = destinationPath + QDir::separator() +
-                                  QString::number( this->getId() );
+    QString destinationFileName =
+        destinationPath + QDir::separator() + QString::number(this->getId());
 
     qDebug() << __func__ << " - 'destinationFileName': " << destinationFileName;
 
@@ -212,33 +200,29 @@ QString TrashItem::restorationFilePath() {
 
     QFile file(filePath);
     // prepend the current timestamp if the file already exists
-    if ( file.exists() ) {
+    if (file.exists()) {
         filePath = folderPath + QDir::separator() +
-                   QString::number(
-                           QDateTime::currentMSecsSinceEpoch() / 1000) + "_" +
-                   fileName;
+                   QString::number(QDateTime::currentMSecsSinceEpoch() / 1000) +
+                   "_" + fileName;
     }
 
     file.setFileName(filePath);
     // if the file still exists use a random number
-    if ( file.exists() ) {
-        filePath = folderPath + QDir::separator() +
-                   QString::number(qrand()) + "_" +
-                   fileName;
+    if (file.exists()) {
+        filePath = folderPath + QDir::separator() + QString::number(qrand()) +
+                   "_" + fileName;
     }
 
     file.setFileName(filePath);
     // if the file still exists quit
-    if ( file.exists() ) {
+    if (file.exists()) {
         return QString();
     }
 
     return filePath;
 }
 
-void TrashItem::setNote(Note note) {
-    setNote(&note);
-}
+void TrashItem::setNote(Note note) { setNote(&note); }
 
 void TrashItem::setNote(Note *note) {
     noteSubFolderPathData = note->noteSubFolderPathData();
@@ -247,13 +231,13 @@ void TrashItem::setNote(Note *note) {
     _fullNoteFilePath = note->fullNoteFilePath();
 }
 
-TrashItem TrashItem::trashItemFromQuery(const QSqlQuery& query) {
+TrashItem TrashItem::trashItemFromQuery(const QSqlQuery &query) {
     TrashItem trashItem;
     trashItem.fillFromQuery(query);
     return trashItem;
 }
 
-bool TrashItem::fillFromQuery(const QSqlQuery& query) {
+bool TrashItem::fillFromQuery(const QSqlQuery &query) {
     id = query.value("id").toInt();
     fileName = query.value("file_name").toString();
     noteSubFolderPathData = query.value("note_sub_folder_path_data").toString();
@@ -310,8 +294,9 @@ QList<TrashItem> TrashItem::fetchAllExpired() {
     QList<TrashItem> trashItemList;
     int days = settings.value("localTrash/autoCleanupDays", 30).toInt();
     QDateTime dateTime = QDateTime::currentDateTime().addDays(-1 * days);
-    QString sql = "SELECT * FROM trashItem WHERE created < :created "
-            "ORDER BY created DESC";
+    QString sql =
+        "SELECT * FROM trashItem WHERE created < :created "
+        "ORDER BY created DESC";
 
     query.prepare(sql);
     query.bindValue(":created", dateTime);
@@ -341,19 +326,21 @@ bool TrashItem::store() {
     }
 
     if (id > 0) {
-        query.prepare("UPDATE trashItem SET "
-                              "file_name = :file_name,"
-                              "file_size = :file_size,"
-                              "note_sub_folder_path_data = "
-                              ":note_sub_folder_path_data "
-                              "WHERE id = :id");
+        query.prepare(
+            "UPDATE trashItem SET "
+            "file_name = :file_name,"
+            "file_size = :file_size,"
+            "note_sub_folder_path_data = "
+            ":note_sub_folder_path_data "
+            "WHERE id = :id");
         query.bindValue(":id", id);
     } else {
-        query.prepare("INSERT INTO trashItem"
-                              "(file_name, file_size,"
-                              "note_sub_folder_path_data) "
-                              "VALUES (:file_name, :file_size,"
-                              ":note_sub_folder_path_data)");
+        query.prepare(
+            "INSERT INTO trashItem"
+            "(file_name, file_size,"
+            "note_sub_folder_path_data) "
+            "VALUES (:file_name, :file_size,"
+            ":note_sub_folder_path_data)");
     }
 
     query.bindValue(":file_name", fileName);
@@ -365,7 +352,7 @@ bool TrashItem::store() {
         qWarning() << __func__ << ": " << query.lastError();
         DatabaseService::closeDatabaseConnection(db, query);
         return false;
-    } else if (id == 0) {  // on insert
+    } else if (id == 0) {    // on insert
         id = query.lastInsertId().toInt();
 
         // to get the created date
@@ -399,9 +386,7 @@ QString TrashItem::relativeNoteFilePath(QString separator) {
 /**
  * Returns the path-data of the trashItem subfolder file
  */
-QString TrashItem::getNoteSubFolderPathData() {
-    return noteSubFolderPathData;
-}
+QString TrashItem::getNoteSubFolderPathData() { return noteSubFolderPathData; }
 
 //
 // deletes all notes in the database
@@ -463,9 +448,7 @@ bool TrashItem::fillFromId(int id) {
 //
 // reloads the current TrashItem (by fileName)
 //
-bool TrashItem::refetch() {
-    return fillFromId(id);
-}
+bool TrashItem::refetch() { return fillFromId(id); }
 
 /**
  * Returns the base name of the trashItem file name
@@ -496,9 +479,7 @@ bool TrashItem::removeFile() {
     return false;
 }
 
-bool TrashItem::isFetched() {
-    return (this->id > 0);
-}
+bool TrashItem::isFetched() { return (this->id > 0); }
 
 /**
  * Counts all trash items
@@ -536,7 +517,7 @@ bool TrashItem::expireItems() {
     QSettings settings;
 
     if (!TrashItem::isLocalTrashEnabled() ||
-            !settings.value("localTrash/autoCleanupEnabled", true).toBool()) {
+        !settings.value("localTrash/autoCleanupEnabled", true).toBool()) {
         return false;
     }
 
@@ -552,13 +533,13 @@ bool TrashItem::expireItems() {
     return true;
 }
 
-
 QDebug operator<<(QDebug dbg, const TrashItem &trashItem) {
-    NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(trashItem.noteSubFolderPathData);
-    dbg.nospace() << "TrashItem: <id>" << trashItem.id <<
-        " <fileName>" << trashItem.fileName <<
-        " <noteSubFolderId>" << trashItem.noteSubFolderId <<
-        " <_fullNoteFilePath>" << trashItem._fullNoteFilePath <<
-        " <relativePath>" << noteSubFolder.relativePath();
+    NoteSubFolder noteSubFolder =
+        NoteSubFolder::fetchByPathData(trashItem.noteSubFolderPathData);
+    dbg.nospace() << "TrashItem: <id>" << trashItem.id << " <fileName>"
+                  << trashItem.fileName << " <noteSubFolderId>"
+                  << trashItem.noteSubFolderId << " <_fullNoteFilePath>"
+                  << trashItem._fullNoteFilePath << " <relativePath>"
+                  << noteSubFolder.relativePath();
     return dbg.space();
 }

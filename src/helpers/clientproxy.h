@@ -1,40 +1,39 @@
 #pragma once
 
-#include <QObject>
 #include <QNetworkProxy>
+#include <QObject>
 #include <QRunnable>
 #include <QUrl>
-
 
 /**
  * @brief The ClientProxy class
  */
-class ClientProxy : public QObject
-{
+class ClientProxy : public QObject {
     Q_OBJECT
-public:
+   public:
     explicit ClientProxy(QObject *parent = 0);
 
     static bool isUsingSystemDefault();
-    static void lookupSystemProxyAsync(
-            const QUrl &url, QObject *dst, const char *slot);
+    static void lookupSystemProxyAsync(const QUrl &url, QObject *dst,
+                                       const char *slot);
     static QNetworkProxy proxyFromSettings();
 
-public slots:
+   public slots:
     void setupQtProxyFromSettings();
 
-private:
-    const char* proxyTypeToCStr(QNetworkProxy::ProxyType type);
+   private:
+    const char *proxyTypeToCStr(QNetworkProxy::ProxyType type);
 };
 
 class SystemProxyRunnable : public QObject, public QRunnable {
     Q_OBJECT
-public:
+   public:
     SystemProxyRunnable(QUrl url);
     void run();
-signals:
+   signals:
     void systemProxyLookedUp(const QNetworkProxy &url);
-private:
+
+   private:
     QUrl _url;
 };
 

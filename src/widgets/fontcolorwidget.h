@@ -22,27 +22,27 @@ namespace Ui {
 class FontColorWidget;
 }
 
-class FontColorWidget : public QFrame
-{
+class FontColorWidget : public QFrame {
     Q_OBJECT
 
-public:
+   public:
     explicit FontColorWidget(QWidget *parent = nullptr);
     ~FontColorWidget();
 
     void updateAllTextItems();
 
-public slots:
+   public slots:
     bool selectFirstLightSchema();
 
     bool selectFirstDarkSchema();
 
-private slots:
+   private slots:
     void on_foregroundColorButton_clicked();
 
     void on_colorSchemeComboBox_currentIndexChanged(int index);
 
-    void on_textTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+    void on_textTreeWidget_currentItemChanged(QTreeWidgetItem *current,
+                                              QTreeWidgetItem *previous);
 
     void on_copySchemeButton_clicked();
 
@@ -70,13 +70,13 @@ private slots:
 
     void needRestart();
 
-private:
+   private:
     Ui::FontColorWidget *ui;
     QStringList _defaultSchemaKeys;
     QString _currentSchemaKey;
     bool _currentSchemaIsDefault;
 
-    void addTextTreeWidgetItem(const QString& text, int index);
+    void addTextTreeWidgetItem(const QString &text, int index);
 
     void initTextTreeWidgetItems();
 
@@ -84,9 +84,11 @@ private:
 
     void updateSchemeEditFrame();
 
-    void setSchemaValue(const QString& key, const QVariant& value, QString schemaKey = QString());
+    void setSchemaValue(const QString &key, const QVariant &value,
+                        QString schemaKey = QString());
 
-    QString textSettingsKey(const QString& key, QTreeWidgetItem *item = Q_NULLPTR);
+    QString textSettingsKey(const QString &key,
+                            QTreeWidgetItem *item = Q_NULLPTR);
 
     void updateTextItem(QTreeWidgetItem *item = Q_NULLPTR);
 
@@ -98,7 +100,7 @@ private:
 
     void updateTextItems(int index);
 
-    void storeCheckBoxState(const QString& name, bool checked);
+    void storeCheckBoxState(const QString &name, bool checked);
 
     void selectLastSchema();
 

@@ -7,27 +7,24 @@ namespace Ui {
 class PasswordDialog;
 }
 
-class PasswordDialog : public MasterDialog
-{
+class PasswordDialog : public MasterDialog {
     Q_OBJECT
 
-public:
-    explicit PasswordDialog(
-            QWidget *parent = nullptr,
-            QString labelText = QString(),
-            bool doubleEnterPassword = false);
+   public:
+    explicit PasswordDialog(QWidget *parent = nullptr,
+                            QString labelText = QString(),
+                            bool doubleEnterPassword = false);
     ~PasswordDialog();
     QString password();
 
-private slots:
+   private slots:
     bool checkIfPasswordsAreEqual();
     void on_passwordLineEdit_textChanged(const QString &arg1);
     void on_passwordLineEdit2_textChanged(const QString &arg1);
 
-private:
+   private:
     Ui::PasswordDialog *ui;
     bool _doubleEnterPassword;
-
 };
 
-#endif // PASSWORDDIALOG_H
+#endif    // PASSWORDDIALOG_H

@@ -8,17 +8,16 @@
 
 #define ICS_DATETIME_FORMAT "yyyyMMddThhmmss"
 
-class CalendarItem
-{
-public:
+class CalendarItem {
+   public:
     explicit CalendarItem();
 
     int getId();
     bool getHasDirtyData();
-    static bool addCalendarItem( QString name, QString fileName, QString text );
-    static CalendarItem fetch( int id );
+    static bool addCalendarItem(QString name, QString fileName, QString text);
+    static CalendarItem fetch(int id);
     static QList<CalendarItem> search(QString text);
-    static CalendarItem calendarItemFromQuery( QSqlQuery query );
+    static CalendarItem calendarItemFromQuery(QSqlQuery query);
     bool store();
     friend QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem);
     bool fileExists();
@@ -29,7 +28,9 @@ public:
     bool isFetched();
     bool isCompleted();
     static CalendarItem fetchByUrlAndCalendar(QString url, QString calendar);
-    static bool addCalendarItemForRequest(QString calendar, QUrl url, QString etag, QString lastModifiedString);
+    static bool addCalendarItemForRequest(QString calendar, QUrl url,
+                                          QString etag,
+                                          QString lastModifiedString);
     static QList<CalendarItem> fetchAllByCalendar(QString calendar);
     static bool deleteAllByCalendar(QString calendar);
     QString getUrl();
@@ -54,7 +55,8 @@ public:
     void setETag(QString text);
     static QList<QUrl> fetchAllUrlsByCalendar(QString calendar);
     void setCalendar(QString text);
-    static CalendarItem createNewTodoItem(QString summary, QString calendar, QString relatedUid = "");
+    static CalendarItem createNewTodoItem(QString summary, QString calendar,
+                                          QString relatedUid = "");
     void setUrl(QUrl url);
     void setUid(QString text);
     void setRelatedUid(QString text);
@@ -75,7 +77,7 @@ public:
     static bool removeAll();
     static int countAll();
 
-private:
+   private:
     int id;
     QString summary;
     QString url;
@@ -97,7 +99,8 @@ private:
     QHash<QString, QString> icsDataHash;
     QStringList icsDataKeyList;
     static QString decodeICSDataLine(QString line);
-    static QString findFreeHashKey(QHash<QString, QString> *hash, QString key, int number = 0 );
+    static QString findFreeHashKey(QHash<QString, QString> *hash, QString key,
+                                   int number = 0);
     void generateICSDataHash();
     void updateICSDataKeyListFromHash();
     void updateSortPriority();
@@ -106,4 +109,4 @@ private:
     bool addVALARMBlockToICS();
 };
 
-#endif // CALENDAR_ITEM_H
+#endif    // CALENDAR_ITEM_H

@@ -1,44 +1,44 @@
-#include <QFont>
-#include <QSettings>
-#include <QDebug>
-#include <QRegularExpression>
-#include <QMimeData>
-#include <QFontDatabase>
-#include "entities/notefolder.h"
-#include <utils/schema.h>
+#include "qownnotesmarkdowntextedit.h"
 #include <utils/gui.h>
 #include <utils/misc.h>
+#include <utils/schema.h>
+#include <QDebug>
+#include <QFont>
+#include <QFontDatabase>
 #include <QMenu>
-#include "mainwindow.h"
-#include "qownnotesmarkdowntextedit.h"
+#include <QMimeData>
+#include <QRegularExpression>
+#include <QSettings>
+#include "entities/notefolder.h"
 #include "helpers/qownspellchecker.h"
+#include "mainwindow.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
-        : QMarkdownTextEdit(parent, false) {
+    : QMarkdownTextEdit(parent, false) {
     mainWindow = Q_NULLPTR;
 
     spellchecker = nullptr;
 
     _highlighter = new QOwnNotesMarkdownHighlighter(document());
 
-
     setStyles();
     updateSettings();
 
-    connect(this, SIGNAL(cursorPositionChanged()),
-            this, SLOT(highlightCurrentLine()));
+    connect(this, SIGNAL(cursorPositionChanged()), this,
+            SLOT(highlightCurrentLine()));
     highlightCurrentLine();
 
     QSettings settings;
     MarkdownHighlighter::HighlightingOptions options;
 
-    if (settings.value(QStringLiteral("fullyHighlightedBlockquotes")).toBool()) {
-        options |= MarkdownHighlighter::HighlightingOption
-        ::FullyHighlightedBlockQuote;
+    if (settings.value(QStringLiteral("fullyHighlightedBlockquotes"))
+            .toBool()) {
+        options |= MarkdownHighlighter::HighlightingOption ::
+            FullyHighlightedBlockQuote;
     }
-    if (settings.value(QStringLiteral("MainWindow/noteTextView.underline")).toBool()) {
-        options |= MarkdownHighlighter::HighlightingOption
-        ::Underline;
+    if (settings.value(QStringLiteral("MainWindow/noteTextView.underline"))
+            .toBool()) {
+        options |= MarkdownHighlighter::HighlightingOption ::Underline;
     }
 
     // set the highlighting options
@@ -50,9 +50,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     }
 }
 
-QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit()
-{
-}
+QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit() {}
 
 /**
  * Sets the format style
@@ -61,7 +59,7 @@ QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit()
  * @param styles
  */
 void QOwnNotesMarkdownTextEdit::setFormatStyle(
-        MarkdownHighlighter::HighlighterState index) {
+    MarkdownHighlighter::HighlighterState index) {
     QTextCharFormat format;
     Utils::Schema::schemaSettings->setFormatStyle(index, format);
     _highlighter->setTextFormat(index, format);
@@ -69,25 +67,33 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(
 
 /**
  * Overrides the font size style if overrideInterfaceFontSize was set to prevent
- * Utils::Gui::updateInterfaceFontSize from overriding the default text size on Windows 10
+ * Utils::Gui::updateInterfaceFontSize from overriding the default text size on
+ * Windows 10
  *
  * @param fontSize
  */
 void QOwnNotesMarkdownTextEdit::overrideFontSizeStyle(int fontSize) {
     QSettings settings;
-    bool overrideInterfaceFontSize = settings.value(
-            "overrideInterfaceFontSize", false).toBool();
+    bool overrideInterfaceFontSize =
+        settings.value("overrideInterfaceFontSize", false).toBool();
 
     // remove old style
     QString stylesheet = styleSheet().remove(QRegularExpression(
-            QRegularExpression::escape(QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING) +
-            ".*" + QRegularExpression::escape(QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_POST_STRING)));
+        QRegularExpression::escape(
+            QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING) +
+        ".*" +
+        QRegularExpression::escape(
+            QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_POST_STRING)));
 
     if (overrideInterfaceFontSize) {
         // using pt is important here, px didn't work properly
-        stylesheet += QString(QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING) +
-                "QOwnNotesMarkdownTextEdit {font-size: " + QString::number(fontSize) +
-                "pt;}" + QString(QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_POST_STRING);
+        stylesheet +=
+            QString(
+                QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING) +
+            "QOwnNotesMarkdownTextEdit {font-size: " +
+            QString::number(fontSize) + "pt;}" +
+            QString(
+                QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_POST_STRING);
     }
 
     setStyleSheet(stylesheet);
@@ -107,7 +113,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     const int tabStop = 4;
     QFontMetrics metrics(font);
 
-#if QT_VERSION < QT_VERSION_CHECK(5,11,0)
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
     setTabStopWidth(tabStop * metrics.width(' '));
 #else
     setTabStopDistance(tabStop * metrics.horizontalAdvance(' '));
@@ -153,7 +159,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
         // this color will be used for mouse and keyboard selections too
         setStyleSheet(styleSheet() +
                       "QWidget {selection-color: #ffffff;"
-                              "selection-background-color: #3399ff}");
+                      "selection-background-color: #3399ff}");
     }
 #endif
 }
@@ -168,8 +174,9 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
     bool doSetStyles = false;
 
     // modify the text edit default font
-    QString fontString = settings.value(
-            QStringLiteral("MainWindow/noteTextEdit.font")).toString();
+    QString fontString =
+        settings.value(QStringLiteral("MainWindow/noteTextEdit.font"))
+            .toString();
     if (!fontString.isEmpty()) {
         font.fromString(fontString);
 
@@ -192,7 +199,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
             default:
                 QPlainTextEdit textEdit;
                 int newFontSize = textEdit.font().pointSize();
-                if ( fontSize != newFontSize ) {
+                if (fontSize != newFontSize) {
                     fontSize = newFontSize;
                     doSetStyles = true;
                 }
@@ -203,11 +210,14 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
         }
 
         // store the font settings
-        settings.setValue(QStringLiteral("MainWindow/noteTextEdit.font"), font.toString());
+        settings.setValue(QStringLiteral("MainWindow/noteTextEdit.font"),
+                          font.toString());
     }
 
     // modify the text edit code font
-    fontString = settings.value(QStringLiteral("MainWindow/noteTextEdit.code.font")).toString();
+    fontString =
+        settings.value(QStringLiteral("MainWindow/noteTextEdit.code.font"))
+            .toString();
     if (!fontString.isEmpty()) {
         font.fromString(fontString);
 
@@ -230,7 +240,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
             default:
                 QPlainTextEdit textEdit;
                 int newCodeFontSize = textEdit.font().pointSize();
-                if ( codeFontSize != newCodeFontSize ) {
+                if (codeFontSize != newCodeFontSize) {
                     codeFontSize = newCodeFontSize;
                     doSetStyles = true;
                 }
@@ -241,7 +251,8 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
         }
 
         // store the font settings
-        settings.setValue(QStringLiteral("MainWindow/noteTextEdit.code.font"), font.toString());
+        settings.setValue(QStringLiteral("MainWindow/noteTextEdit.code.font"),
+                          font.toString());
     }
 
     if (doSetStyles) {
@@ -262,8 +273,8 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
  * supports that handler
  */
 void QOwnNotesMarkdownTextEdit::openUrl(QString urlString) {
-    qDebug() << "QOwnNotesMarkdownTextEdit " << __func__ << " - 'urlString': "
-        << urlString;
+    qDebug() << "QOwnNotesMarkdownTextEdit " << __func__
+             << " - 'urlString': " << urlString;
 
     QString notesPath = NoteFolder::currentLocalPath();
     QString windowsSlash = QString();
@@ -274,14 +285,15 @@ void QOwnNotesMarkdownTextEdit::openUrl(QString urlString) {
 #endif
 
     // parse for relative file urls and make them absolute
-    urlString.replace(QRegularExpression(QStringLiteral("^file:[\\/]{2}([^\\/].+)$")),
-                      QStringLiteral("file://") + windowsSlash +
-                      notesPath + QStringLiteral("/\\1"));
+    urlString.replace(
+        QRegularExpression(QStringLiteral("^file:[\\/]{2}([^\\/].+)$")),
+        QStringLiteral("file://") + windowsSlash + notesPath +
+            QStringLiteral("/\\1"));
 
     QMarkdownTextEdit::openUrl(urlString);
 }
 
-//void QOwnNotesMarkdownTextEdit::setViewportMargins(
+// void QOwnNotesMarkdownTextEdit::setViewportMargins(
 //        int left, int top, int right, int bottom) {
 //    QMarkdownTextEdit::setViewportMargins(left, top, right, bottom);
 //}
@@ -292,9 +304,11 @@ void QOwnNotesMarkdownTextEdit::openUrl(QString urlString) {
 void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
     QSettings settings;
     bool isInDistractionFreeMode =
-            settings.value(QStringLiteral("DistractionFreeMode/isEnabled")).toBool();
+        settings.value(QStringLiteral("DistractionFreeMode/isEnabled"))
+            .toBool();
     bool editorWidthInDFMOnly =
-            settings.value(QStringLiteral("Editor/editorWidthInDFMOnly"), true).toBool();
+        settings.value(QStringLiteral("Editor/editorWidthInDFMOnly"), true)
+            .toBool();
 
     if (isInDistractionFreeMode || !editorWidthInDFMOnly) {
         int margin = 0;
@@ -304,7 +318,9 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
         }
 
         int editorWidthMode =
-                settings.value(QStringLiteral("DistractionFreeMode/editorWidthMode")).toInt();
+            settings
+                .value(QStringLiteral("DistractionFreeMode/editorWidthMode"))
+                .toInt();
 
         if (editorWidthMode != Full) {
             QFontMetrics metrics(font());
@@ -318,7 +334,12 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
                     characterAmount = 100;
                     break;
                 case Custom:
-                    characterAmount = settings.value(QStringLiteral("DistractionFreeMode/editorWidthCustom"), 80).toInt();
+                    characterAmount =
+                        settings
+                            .value(QStringLiteral(
+                                       "DistractionFreeMode/editorWidthCustom"),
+                                   80)
+                            .toInt();
                     break;
                 default:
                 case Narrow:
@@ -326,13 +347,14 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
                     break;
             }
 
-            // set the size of characterAmount times the size of "O" characters
-#if QT_VERSION < QT_VERSION_CHECK(5,11,0)
-            int proposedEditorWidth = metrics.width(
-                            QString("O").repeated(characterAmount));
+                // set the size of characterAmount times the size of "O"
+                // characters
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+            int proposedEditorWidth =
+                metrics.width(QString("O").repeated(characterAmount));
 #else
             int proposedEditorWidth = metrics.horizontalAdvance(
-                            QStringLiteral("O").repeated(characterAmount));
+                QStringLiteral("O").repeated(characterAmount));
 #endif
 
             // apply a factor to correct the faulty calculated margin
@@ -361,9 +383,10 @@ QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 #endif
 }
 
-void QOwnNotesMarkdownTextEdit::enableSpellChecker(QOwnNotesMarkdownHighlighter *h) {
+void QOwnNotesMarkdownTextEdit::enableSpellChecker(
+    QOwnNotesMarkdownHighlighter *h) {
     if (!h) {
-        h = dynamic_cast<QOwnNotesMarkdownHighlighter*>(_highlighter);
+        h = dynamic_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
     }
     spellchecker = new QOwnSpellChecker;
     h->setSpellChecker(spellchecker);
@@ -371,36 +394,39 @@ void QOwnNotesMarkdownTextEdit::enableSpellChecker(QOwnNotesMarkdownHighlighter 
 
 void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     QSettings settings;
-    bool highlightingEnabled = settings.value(QStringLiteral("markdownHighlightingEnabled"),
-                                              true).toBool();
+    bool highlightingEnabled =
+        settings.value(QStringLiteral("markdownHighlightingEnabled"), true)
+            .toBool();
     if (!highlightingEnabled) {
         QMarkdownTextEdit::setText(text);
         return;
     }
-    QOwnNotesMarkdownHighlighter *h = dynamic_cast<QOwnNotesMarkdownHighlighter*>(_highlighter);
+    QOwnNotesMarkdownHighlighter *h =
+        dynamic_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
 
     if (!spellchecker) {
         enableSpellChecker(h);
     }
 
-    //check for comment block
+    // check for comment block
     if (!text.contains(QStringLiteral("<!--"))) {
         h->setCommentHighlighting(false);
     }
 
-    //check for code blocks
-    if (!(text.contains(QStringLiteral("```")) || text.contains(QStringLiteral("~~~")))) {
+    // check for code blocks
+    if (!(text.contains(QStringLiteral("```")) ||
+          text.contains(QStringLiteral("~~~")))) {
         h->setCodeHighlighting(false);
     }
 
     QMarkdownTextEdit::setText(text);
 
-    //after we are done we turn everything back on
+    // after we are done we turn everything back on
     h->setCodeHighlighting(true);
     h->setCommentHighlighting(true);
 }
 
-void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent* event) {
+void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent *event) {
     emit resize(event);
     QMarkdownTextEdit::resizeEvent(event);
 }
@@ -415,7 +441,7 @@ void QOwnNotesMarkdownTextEdit::setMainWindow(MainWindow *mainWindow) {
 /**
  * Handles pasting from clipboard
  */
-void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData * source) {
+void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData *source) {
     // if there is text in the clipboard do the normal pasting process
     if (source->hasText()) {
         QMarkdownTextEdit::insertFromMimeData(source);
@@ -437,23 +463,28 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     QSettings settings;
     QMarkdownTextEdit::AutoTextOptions options;
 
-    if (settings.value(QStringLiteral("Editor/autoBracketClosing"), true).toBool()) {
+    if (settings.value(QStringLiteral("Editor/autoBracketClosing"), true)
+            .toBool()) {
         options |= QMarkdownTextEdit::AutoTextOption::BracketClosing;
     }
 
-    if (settings.value(QStringLiteral("Editor/autoBracketRemoval"), true).toBool()) {
+    if (settings.value(QStringLiteral("Editor/autoBracketRemoval"), true)
+            .toBool()) {
         options |= QMarkdownTextEdit::AutoTextOption::BracketRemoval;
     }
 
     setAutoTextOptions(options);
 
     if (spellchecker) {
-        //spell check active/inactive
-        bool spellcheckerActive = settings.value(QStringLiteral("checkSpelling"), true).toBool();
+        // spell check active/inactive
+        bool spellcheckerActive =
+            settings.value(QStringLiteral("checkSpelling"), true).toBool();
         spellchecker->setActive(spellcheckerActive);
 
-
-        QString lang = settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
+        QString lang = settings
+                           .value(QStringLiteral("spellCheckLanguage"),
+                                  QStringLiteral("auto"))
+                           .toString();
         if (lang == QStringLiteral("auto")) {
             spellchecker->setAutoDetect(true);
         } else {
@@ -464,10 +495,10 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
 
     // highlighting is always disabled for logTextEdit
     if (objectName() != QStringLiteral("logTextEdit")) {
-
         // enable or disable markdown highlighting
-        bool highlightingEnabled = settings.value(QStringLiteral("markdownHighlightingEnabled"),
-                                                  true).toBool();
+        bool highlightingEnabled =
+            settings.value(QStringLiteral("markdownHighlightingEnabled"), true)
+                .toBool();
 
         setHighlightingEnabled(highlightingEnabled);
 
@@ -478,17 +509,18 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         }
     }
 
-    _centerCursor = settings.value(QStringLiteral("Editor/centerCursor")).toBool();
+    _centerCursor =
+        settings.value(QStringLiteral("Editor/centerCursor")).toBool();
     QMarkdownTextEdit::updateSettings();
 }
 
 /**
  * Highlights the current line if enabled in the settings
  */
-void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
-{
+void QOwnNotesMarkdownTextEdit::highlightCurrentLine() {
     QSettings settings;
-    if (!settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool()) {
+    if (!settings.value(QStringLiteral("Editor/highlightCurrentLine"), true)
+             .toBool()) {
         return;
     }
 
@@ -498,14 +530,13 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
     QTextEdit::ExtraSelection selection = QTextEdit::ExtraSelection();
 
     QColor lineColor = Utils::Schema::schemaSettings->getBackgroundColor(
-            MarkdownHighlighter::HighlighterState::
-            CurrentLineBackgroundColor);
+        MarkdownHighlighter::HighlighterState::CurrentLineBackgroundColor);
 
     selection.format.setBackground(lineColor);
     selection.format.setProperty(QTextFormat::FullWidthSelection, true);
     selection.cursor = textCursor();
-//        selection.cursor.clearSelection();
-//        selection.cursor.select(QTextCursor::BlockUnderCursor);
+    //        selection.cursor.clearSelection();
+    //        selection.cursor.select(QTextCursor::BlockUnderCursor);
     extraSelections.append(selection);
 
     // be aware that extra selections, like for global searching, gets
@@ -514,20 +545,23 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
 }
 
 bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
-    //obtain the cursor at current mouse position
+    // obtain the cursor at current mouse position
     QTextCursor cursorAtMouse = cursorForPosition(event->pos());
     const int mousePos = cursorAtMouse.position();
 
     QTextCursor cursor = textCursor();
-    if (cursor.block().userState() == MarkdownHighlighter::HighlighterState::CodeBlock ||
-        cursor.block().userState() == MarkdownHighlighter::HighlighterState::CodeBlockComment ||
-        cursor.block().userState() >= MarkdownHighlighter::HighlighterState::CodeCpp) {
+    if (cursor.block().userState() ==
+            MarkdownHighlighter::HighlighterState::CodeBlock ||
+        cursor.block().userState() ==
+            MarkdownHighlighter::HighlighterState::CodeBlockComment ||
+        cursor.block().userState() >=
+            MarkdownHighlighter::HighlighterState::CodeCpp) {
         return false;
     }
     // Check if the user clicked a selected word
-    const bool selectedWordClicked = cursor.hasSelection()
-                                     && mousePos >= cursor.selectionStart()
-                                     && mousePos <= cursor.selectionEnd();
+    const bool selectedWordClicked = cursor.hasSelection() &&
+                                     mousePos >= cursor.selectionStart() &&
+                                     mousePos <= cursor.selectionEnd();
 
     // Get the word under the (mouse-)cursor and see if it is misspelled.
     // Don't include apostrophes at the start/end of the word in the selection.
@@ -537,35 +571,38 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
     QString selectedWord = wordSelectCursor.selectedText();
 
     bool isMouseCursorInsideWord = true;
-    if ( (mousePos < wordSelectCursor.selectionStart()
-         || mousePos >= wordSelectCursor.selectionEnd())
-         && (selectedWord.length() > 1) ) {
+    if ((mousePos < wordSelectCursor.selectionStart() ||
+         mousePos >= wordSelectCursor.selectionEnd()) &&
+        (selectedWord.length() > 1)) {
         isMouseCursorInsideWord = false;
     }
 
-    // Clear the selection again, we re-select it below (without the apostrophes).
-    wordSelectCursor.setPosition(wordSelectCursor.position() - selectedWord.size());
-    if (selectedWord.startsWith(QLatin1Char('\'')) || selectedWord.startsWith(QLatin1Char('\"'))) {
+    // Clear the selection again, we re-select it below (without the
+    // apostrophes).
+    wordSelectCursor.setPosition(wordSelectCursor.position() -
+                                 selectedWord.size());
+    if (selectedWord.startsWith(QLatin1Char('\'')) ||
+        selectedWord.startsWith(QLatin1Char('\"'))) {
         selectedWord = selectedWord.right(selectedWord.size() - 1);
-        wordSelectCursor.movePosition(QTextCursor::NextCharacter, QTextCursor::MoveAnchor);
+        wordSelectCursor.movePosition(QTextCursor::NextCharacter,
+                                      QTextCursor::MoveAnchor);
     }
-    if (selectedWord.endsWith(QLatin1Char('\'')) || selectedWord.endsWith(QLatin1Char('\"'))) {
+    if (selectedWord.endsWith(QLatin1Char('\'')) ||
+        selectedWord.endsWith(QLatin1Char('\"'))) {
         selectedWord.chop(1);
     }
 
     wordSelectCursor.movePosition(QTextCursor::NextCharacter,
                                   QTextCursor::KeepAnchor, selectedWord.size());
 
-    const bool wordIsMisspelled = isMouseCursorInsideWord
-                                  && spellchecker
-                                  && spellchecker->isActive()
-                                  && !selectedWord.isEmpty()
-                                  && spellchecker->isWordMisspelled(selectedWord);
+    const bool wordIsMisspelled =
+        isMouseCursorInsideWord && spellchecker && spellchecker->isActive() &&
+        !selectedWord.isEmpty() && spellchecker->isWordMisspelled(selectedWord);
 
     if (!selectedWordClicked) {
         // If the user clicked on a misspelled word, select that word.
         if (wordIsMisspelled) {
-                setTextCursor(wordSelectCursor);
+            setTextCursor(wordSelectCursor);
         }
         // If the user clicked somewhere else, move the cursor there.
         else {
@@ -580,16 +617,19 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
         return false;
     }
 
-    //create the suggesstion menu
+    // create the suggesstion menu
     QMenu menu;
-    //Add the suggestions to the menu
-    const QStringList reps = spellchecker->suggestionsForWord(selectedWord, cursor, 8);
+    // Add the suggestions to the menu
+    const QStringList reps =
+        spellchecker->suggestionsForWord(selectedWord, cursor, 8);
     if (reps.isEmpty()) {
-        QAction *suggestionsAction = menu.addAction(tr("No suggestions for %1").arg(selectedWord));
+        QAction *suggestionsAction =
+            menu.addAction(tr("No suggestions for %1").arg(selectedWord));
         suggestionsAction->setEnabled(false);
     } else {
         QStringList::const_iterator end(reps.constEnd());
-        for (QStringList::const_iterator it = reps.constBegin(); it != end; ++it) {
+        for (QStringList::const_iterator it = reps.constBegin(); it != end;
+             ++it) {
             menu.addAction(*it);
         }
     }
@@ -598,7 +638,7 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
     const QPoint &pos = event->globalPos();
     QAction *ignoreAction = menu.addAction(tr("Ignore"));
     QAction *addToDictAction = menu.addAction(tr("Add to Dictionary"));
-    //Execute the popup inline
+    // Execute the popup inline
     const QAction *selectedAction = menu.exec(pos);
 
     if (selectedAction) {
@@ -623,7 +663,6 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
     return true;
 }
 
-
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::ContextMenu && spellchecker) {
         if (spellchecker->isActive())
@@ -632,30 +671,33 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
-        if (objectName() == QStringLiteral("encryptedNoteTextEdit")
-            || objectName() == QStringLiteral("noteTextEdit") ) {
+        if (objectName() == QStringLiteral("encryptedNoteTextEdit") ||
+            objectName() == QStringLiteral("noteTextEdit")) {
             // deactivating the search widget has priority
-            if ((keyEvent->key() == Qt::Key_Escape) && _searchWidget->isVisible()) {
+            if ((keyEvent->key() == Qt::Key_Escape) &&
+                _searchWidget->isVisible()) {
                 _searchWidget->deactivate();
                 return true;
             } else if (!Utils::Misc::isNoteEditingAllowed()) {
-                auto keys = QList<int>() << Qt::Key_Return << Qt::Key_Enter <<
-                        Qt::Key_Space << Qt::Key_Backspace << Qt::Key_Delete <<
-                        Qt::Key_Tab << Qt::Key_Backtab << Qt::Key_Minus <<
-                        Qt::Key_ParenLeft << Qt::Key_BraceLeft <<
-                        Qt::Key_BracketLeft << Qt::Key_Plus << Qt::Key_Comma <<
-                        Qt::Key_Period;
+                auto keys = QList<int>()
+                            << Qt::Key_Return << Qt::Key_Enter << Qt::Key_Space
+                            << Qt::Key_Backspace << Qt::Key_Delete
+                            << Qt::Key_Tab << Qt::Key_Backtab << Qt::Key_Minus
+                            << Qt::Key_ParenLeft << Qt::Key_BraceLeft
+                            << Qt::Key_BracketLeft << Qt::Key_Plus
+                            << Qt::Key_Comma << Qt::Key_Period;
 
                 // show notification if user tries to edit a note while
                 // note editing is turned off
                 if ((keyEvent->key() < 128 || keys.contains(keyEvent->key())) &&
-                        keyEvent->modifiers().testFlag(Qt::NoModifier) &&
-                        isReadOnly()) {
+                    keyEvent->modifiers().testFlag(Qt::NoModifier) &&
+                    isReadOnly()) {
                     if (Utils::Gui::question(
-                            this,
-                            tr("Note editing disabled"),
-                            tr("Note editing is currently disabled, do you want to "
-                               "allow again?"), QStringLiteral("readonly-mode-allow")) ==
+                            this, tr("Note editing disabled"),
+                            tr("Note editing is currently disabled, do you "
+                               "want to "
+                               "allow again?"),
+                            QStringLiteral("readonly-mode-allow")) ==
                         QMessageBox::Yes) {
                         if (mainWindow != Q_NULLPTR) {
                             mainWindow->allowNoteEditing();
@@ -666,12 +708,13 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                 }
             } else {
                 // disable note editing if escape key was pressed
-                if (keyEvent->key() == Qt::Key_Escape && mainWindow != Q_NULLPTR) {
+                if (keyEvent->key() == Qt::Key_Escape &&
+                    mainWindow != Q_NULLPTR) {
                     mainWindow->disallowNoteEditing();
 
                     return true;
                 } else if ((keyEvent->key() == Qt::Key_Tab) ||
-                         (keyEvent->key() == Qt::Key_Backtab)) {
+                           (keyEvent->key() == Qt::Key_Backtab)) {
                     // handle entered tab and reverse tab keys
                     return handleTabEntered(keyEvent->key() == Qt::Key_Backtab,
                                             Utils::Misc::indentCharacters());

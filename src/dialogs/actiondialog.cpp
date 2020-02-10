@@ -1,13 +1,12 @@
 #include "actiondialog.h"
 //#include <QDebug>
+#include <utils/gui.h>
 #include <QMenuBar>
 #include <QTreeWidgetItem>
-#include <utils/gui.h>
 #include "ui_actiondialog.h"
 
-ActionDialog::ActionDialog(QMenuBar* menuBar, QWidget *parent) :
-        MasterDialog(parent),
-    ui(new Ui::ActionDialog) {
+ActionDialog::ActionDialog(QMenuBar *menuBar, QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::ActionDialog) {
     _menuBar = menuBar;
     ui->setupUi(this);
     refreshUi();
@@ -22,12 +21,10 @@ void ActionDialog::refreshUi() {
     ui->actionTreeWidget->clear();
     ui->actionTreeWidget->installEventFilter(this);
 
-    QList<QMenu *> menuList = _menuBar->findChildren<QMenu *>(
-            QString(), Qt::FindDirectChildrenOnly);
+    QList<QMenu *> menuList =
+        _menuBar->findChildren<QMenu *>(QString(), Qt::FindDirectChildrenOnly);
 
-    Q_FOREACH(QMenu *menu, menuList) {
-            buildActionTreeForMenu(menu);
-        }
+    Q_FOREACH (QMenu *menu, menuList) { buildActionTreeForMenu(menu); }
 
     ui->actionTreeWidget->setRootIsDecorated(false);
     ui->actionTreeWidget->expandAll();
@@ -60,46 +57,42 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu,
     }
 
     // search for sub-menus in the menu
-    QList<QMenu *> menuList = menu->findChildren<QMenu *>(
-            QString(), Qt::FindDirectChildrenOnly);
+    QList<QMenu *> menuList =
+        menu->findChildren<QMenu *>(QString(), Qt::FindDirectChildrenOnly);
 
     // build the tree for that sub-menu
-    Q_FOREACH(QMenu *subMenu, menuList) {
-            buildActionTreeForMenu(subMenu, menuItem);
-        }
+    Q_FOREACH (QMenu *subMenu, menuList) {
+        buildActionTreeForMenu(subMenu, menuItem);
+    }
 
     // add all actions to the tree widget item
-    Q_FOREACH(QAction *action, menu->actions()) {
-            QString text = action->text().remove("&");
-            QString actionName = action->objectName();
+    Q_FOREACH (QAction *action, menu->actions()) {
+        QString text = action->text().remove("&");
+        QString actionName = action->objectName();
 
-            if (text.isEmpty() || actionName.isEmpty()
-                || !action->isVisible()) {
-                continue;
-            }
-
-            auto *item = new QTreeWidgetItem();
-            item->setData(0, Qt::UserRole, actionName);
-            item->setText(0, text);
-            item->setToolTip(0, action->toolTip());
-            item->setIcon(0, action->icon());
-
-            QKeySequence shortcut = action->shortcut();
-
-            // add the shortcut in the 2nd column
-            if (!shortcut.isEmpty()) {
-                item->setText(1, shortcut.toString(QKeySequence::NativeText));
-                item->setForeground(1, QColor(Qt::gray));
-            }
-
-            menuItem->addChild(item);
+        if (text.isEmpty() || actionName.isEmpty() || !action->isVisible()) {
+            continue;
         }
+
+        auto *item = new QTreeWidgetItem();
+        item->setData(0, Qt::UserRole, actionName);
+        item->setText(0, text);
+        item->setToolTip(0, action->toolTip());
+        item->setIcon(0, action->icon());
+
+        QKeySequence shortcut = action->shortcut();
+
+        // add the shortcut in the 2nd column
+        if (!shortcut.isEmpty()) {
+            item->setText(1, shortcut.toString(QKeySequence::NativeText));
+            item->setForeground(1, QColor(Qt::gray));
+        }
+
+        menuItem->addChild(item);
+    }
 }
 
-ActionDialog::~ActionDialog()
-{
-    delete ui;
-}
+ActionDialog::~ActionDialog() { delete ui; }
 
 /**
  * Triggers an double clicked action
@@ -107,8 +100,8 @@ ActionDialog::~ActionDialog()
  * @param item
  * @param column
  */
-void ActionDialog::on_actionTreeWidget_itemDoubleClicked(
-        QTreeWidgetItem *item, int column) {
+void ActionDialog::on_actionTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
+                                                         int column) {
     Q_UNUSED(column);
 
     if (item == Q_NULLPTR) {
@@ -123,8 +116,8 @@ void ActionDialog::on_actionTreeWidget_itemDoubleClicked(
 
     // search for actions in the parent of the menu bar
     // for some reasons not all actions are children of the menu bar
-    QList<QAction *> actionList = _menuBar->parent()->findChildren<QAction *>
-            (objectName);
+    QList<QAction *> actionList =
+        _menuBar->parent()->findChildren<QAction *>(objectName);
 
     // close the dialog
     close();
@@ -143,11 +136,11 @@ void ActionDialog::on_actionTreeWidget_itemDoubleClicked(
 void ActionDialog::on_actionLineEdit_textChanged(const QString &arg1) {
     // search for the text
     Utils::Gui::searchForTextInTreeWidget(
-            ui->actionTreeWidget, arg1,
-            Utils::Gui::TreeWidgetSearchFlags(
-                    Utils::Gui::TreeWidgetSearchFlag::TooltipSearch |
-                    Utils::Gui::TreeWidgetSearchFlag::AllColumnsSearch |
-                    Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
+        ui->actionTreeWidget, arg1,
+        Utils::Gui::TreeWidgetSearchFlags(
+            Utils::Gui::TreeWidgetSearchFlag::TooltipSearch |
+            Utils::Gui::TreeWidgetSearchFlag::AllColumnsSearch |
+            Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
 }
 
 /**
@@ -173,8 +166,8 @@ bool ActionDialog::eventFilter(QObject *obj, QEvent *event) {
         } else if (obj == ui->actionTreeWidget) {
             // trigger the action if return was pressed in the tree widget
             if (keyEvent->key() == Qt::Key_Return) {
-                on_actionTreeWidget_itemDoubleClicked
-                        (ui->actionTreeWidget->currentItem(), 0);
+                on_actionTreeWidget_itemDoubleClicked(
+                    ui->actionTreeWidget->currentItem(), 0);
                 return true;
             }
 

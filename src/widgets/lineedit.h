@@ -13,18 +13,17 @@
 
 #pragma once
 
-#include <QWidget>
 #include <QLineEdit>
+#include <QWidget>
 
 class QEvent;
 
-class LineEdit : public QLineEdit
-{
-Q_OBJECT
+class LineEdit : public QLineEdit {
+    Q_OBJECT
 
-public:
+   public:
     explicit LineEdit(QWidget *parent = nullptr);
 
-protected:
+   protected:
     bool eventFilter(QObject *obj, QEvent *event);
 };

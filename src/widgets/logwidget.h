@@ -14,18 +14,17 @@
 
 #pragma once
 
-#include <QFrame>
 #include <QEvent>
+#include <QFrame>
 
 namespace Ui {
 class LogWidget;
 }
 
-class LogWidget : public QFrame
-{
+class LogWidget : public QFrame {
     Q_OBJECT
 
-public:
+   public:
     enum LogType {
         DebugLogType,
         InfoLogType,
@@ -40,17 +39,16 @@ public:
     ~LogWidget();
     static LogWidget *instance();
     static LogWidget *createInstance(QWidget *parent);
-    static void logMessageOutput(
-            QtMsgType type,
-            const QMessageLogContext &context,
-            const QString &msg);
+    static void logMessageOutput(QtMsgType type,
+                                 const QMessageLogContext &context,
+                                 const QString &msg);
     bool eventFilter(QObject *obj, QEvent *event);
     QString getLogText();
 
-public slots:
+   public slots:
     void log(LogWidget::LogType logType, const QString &text);
 
-private slots:
+   private slots:
     void storeSettings() const;
 
     void on_clearButton_clicked();
@@ -59,10 +57,10 @@ private slots:
 
     void onDestroyed(QObject *obj = Q_NULLPTR);
 
-private:
+   private:
     Ui::LogWidget *ui;
 
     static QString logTypeText(LogType logType);
 
-    static void logToFileIfAllowed(LogType logType, const QString& msg);
+    static void logToFileIfAllowed(LogType logType, const QString &msg);
 };

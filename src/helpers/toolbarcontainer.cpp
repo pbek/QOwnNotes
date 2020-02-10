@@ -1,16 +1,16 @@
 #include "toolbarcontainer.h"
-#include <QMenu>
-#include <QMainWindow>
-#include <QToolBar>
-#include <QDebug>
-#include <QSettings>
 #include <mainwindow.h>
 #include <QComboBox>
+#include <QDebug>
+#include <QMainWindow>
+#include <QMenu>
+#include <QSettings>
+#include <QToolBar>
 #include <QWidgetAction>
 
 ToolbarContainer::ToolbarContainer(QToolBar *toolbar)
     : name(toolbar->objectName()), title(toolbar->windowTitle()) {
-    foreach(QAction* a, toolbar->actions())
+    foreach (QAction *a, toolbar->actions())
         actions.push_back(a->objectName());
 }
 
@@ -20,15 +20,15 @@ QToolBar *ToolbarContainer::create(QMainWindow *w) const {
 
     w->addToolBar(Qt::TopToolBarArea, toolbar);
 
-    foreach(const QString&item, actions)     {
-        if ( item.isEmpty() ) {
+    foreach (const QString &item, actions) {
+        if (item.isEmpty()) {
             toolbar->addSeparator();
         } else {
-            QAction* act = w->findChild<QAction*>(item);
+            QAction *act = w->findChild<QAction *>(item);
 
             if (!act) {
-                QMenu *menu = w->findChild<QMenu*>(item);
-                if ( menu ) {
+                QMenu *menu = w->findChild<QMenu *>(item);
+                if (menu) {
                     act = menu->menuAction();
                 }
             }
@@ -52,7 +52,7 @@ bool ToolbarContainer::toolbarFound() {
         return false;
     }
 
-    auto* toolbar = mainWindow->findChild<QToolBar*>(name);
+    auto *toolbar = mainWindow->findChild<QToolBar *>(name);
     return toolbar != Q_NULLPTR;
 }
 
@@ -62,33 +62,34 @@ void ToolbarContainer::updateToolbar() {
         return;
     }
 
-    auto* toolbar = mainWindow->findChild<QToolBar*>(name);
+    auto *toolbar = mainWindow->findChild<QToolBar *>(name);
     if (toolbar == Q_NULLPTR) {
         return;
     }
 
     toolbar->clear();
 
-    foreach(const QString &item, actions)     {
-        if ( item.isEmpty() ) {
+    foreach (const QString &item, actions) {
+        if (item.isEmpty()) {
             toolbar->addSeparator();
         } else {
             // TODO(pbek): we will enable that again later
             if (false) {
-//            if (item == "actionWorkspaceComboBox") {
-                qDebug() << __func__ << " - 'actionWorkspaceComboBox': " << item;
+                //            if (item == "actionWorkspaceComboBox") {
+                qDebug() << __func__
+                         << " - 'actionWorkspaceComboBox': " << item;
 
                 // TODO(pbek): for some reason we can't find the combobox
                 auto *workspaceComboBox =
-                        mainWindow->findChild<QComboBox*>("workspaceComboBox");
+                    mainWindow->findChild<QComboBox *>("workspaceComboBox");
 
-                qDebug() << __func__ << " - 'workspaceComboBox': "
-                         << workspaceComboBox;
+                qDebug() << __func__
+                         << " - 'workspaceComboBox': " << workspaceComboBox;
 
-                auto* widgetAction = mainWindow->findChild<QWidgetAction*>(item);
+                auto *widgetAction =
+                    mainWindow->findChild<QWidgetAction *>(item);
 
                 qDebug() << __func__ << " - 'widgetAction': " << widgetAction;
-
 
                 if (widgetAction == Q_NULLPTR) {
                     widgetAction = new QWidgetAction(mainWindow);
@@ -99,11 +100,11 @@ void ToolbarContainer::updateToolbar() {
                 widgetAction->setDefaultWidget(workspaceComboBox);
                 toolbar->addAction(widgetAction);
             } else {
-                auto* action = mainWindow->findChild<QAction*>(item);
+                auto *action = mainWindow->findChild<QAction *>(item);
 
                 if (!action) {
-                    auto *menu = mainWindow->findChild<QMenu*>(item);
-                    if ( menu ) {
+                    auto *menu = mainWindow->findChild<QMenu *>(item);
+                    if (menu) {
                         action = menu->menuAction();
                     }
                 }
@@ -127,8 +128,8 @@ void ToolbarContainer::updateToolbar() {
  */
 void ToolbarContainer::updateIconSize(QToolBar *toolbar) {
     QSettings settings;
-    int toolBarIconSize = settings.value(
-            "MainWindow/mainToolBar.iconSize").toInt();
+    int toolBarIconSize =
+        settings.value("MainWindow/mainToolBar.iconSize").toInt();
     QSize size(toolBarIconSize, toolBarIconSize);
     toolbar->setIconSize(size);
 }

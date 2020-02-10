@@ -14,15 +14,15 @@
 
 #pragma once
 
-#include <QSqlQuery>
-#include <QList>
 #include <QJsonObject>
-#include <QUrl>
+#include <QList>
+#include <QSqlQuery>
 #include <QStringList>
+#include <QUrl>
 #include <QtCore/QDir>
 
 class ScriptInfoJson {
-public:
+   public:
     explicit ScriptInfoJson(const QJsonObject& jsonObject);
 
     QString name;
@@ -41,9 +41,8 @@ public:
     bool appVersionSupported;
 };
 
-class Script
-{
-public:
+class Script {
+   public:
     static const QString ScriptRepositoryRawContentUrlPrefix;
 
     explicit Script();
@@ -53,7 +52,7 @@ public:
     static Script fetch(int id);
     static Script scriptFromQuery(const QSqlQuery& query);
     bool store();
-    friend QDebug operator<<(QDebug dbg, const Script &script);
+    friend QDebug operator<<(QDebug dbg, const Script& script);
     bool exists() const;
     bool fillFromQuery(const QSqlQuery& query);
     bool remove() const;
@@ -62,7 +61,7 @@ public:
     QString getName() const;
     QString getScriptPath() const;
     int getPriority() const;
-    void setName(const QString &text);
+    void setName(const QString& text);
     void setScriptPath(QString text);
     void setPriority(int value);
     static int countAll();
@@ -80,11 +79,11 @@ public:
     bool isScriptFromRepository() const;
     QUrl remoteScriptUrl() const;
     QUrl remoteFileUrl(const QString& fileName) const;
-    static bool scriptFromRepositoryExists(const QString &identifier);
+    static bool scriptFromRepositoryExists(const QString& identifier);
     void setSettingsVariablesJson(QString json);
     QString getSettingsVariablesJson() const;
     QJsonObject getSettingsVariablesJsonObject() const;
-    void setSettingsVariablesJson(const QJsonObject &jsonObject);
+    void setSettingsVariablesJson(const QJsonObject& jsonObject);
     QString getScriptDirPath() const;
     QList<QUrl> remoteFileUrls() const;
     ScriptInfoJson getScriptInfoJson() const;
@@ -93,7 +92,7 @@ public:
     bool fillFromId(int id);
     QUrl repositoryInfoJsonUrl() const;
 
-private:
+   private:
     int id;
     QString name;
     QString identifier;

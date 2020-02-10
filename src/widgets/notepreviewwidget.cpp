@@ -12,26 +12,24 @@
  */
 
 #include "notepreviewwidget.h"
-#include "utils/misc.h"
-#include <QLayout>
-#include <QDebug>
-#include <QRegExp>
-#include <QMovie>
+#include <dialogs/filedialog.h>
 #include <QAction>
 #include <QApplication>
-#include <QMenu>
 #include <QClipboard>
+#include <QDebug>
+#include <QLayout>
+#include <QMenu>
+#include <QMovie>
 #include <QProxyStyle>
-#include <dialogs/filedialog.h>
+#include <QRegExp>
+#include "utils/misc.h"
 
-class NoDottedOutlineForLinksStyle: public QProxyStyle {
-public:
-    int styleHint(StyleHint hint,
-                  const QStyleOption *option,
+class NoDottedOutlineForLinksStyle : public QProxyStyle {
+   public:
+    int styleHint(StyleHint hint, const QStyleOption *option,
                   const QWidget *widget,
                   QStyleHintReturn *returnData) const Q_DECL_OVERRIDE {
-        if (hint == SH_TextControl_FocusIndicatorTextCharFormat)
-            return 0;
+        if (hint == SH_TextControl_FocusIndicatorTextCharFormat) return 0;
         return QProxyStyle::styleHint(hint, option, widget, returnData);
     }
 };
@@ -57,7 +55,7 @@ NotePreviewWidget::NotePreviewWidget(QWidget *parent) : QTextBrowser(parent) {
     setStyle(proxyStyle);
 }
 
-void NotePreviewWidget::resizeEvent(QResizeEvent* event) {
+void NotePreviewWidget::resizeEvent(QResizeEvent *event) {
     emit resize(event->size(), event->oldSize());
 
     // we need this, otherwise the preview is always blank
@@ -65,7 +63,7 @@ void NotePreviewWidget::resizeEvent(QResizeEvent* event) {
 }
 
 bool NotePreviewWidget::eventFilter(QObject *obj, QEvent *event) {
-//    qDebug() << event->type();
+    //    qDebug() << event->type();
     if (event->type() == QEvent::KeyPress) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
@@ -77,13 +75,13 @@ bool NotePreviewWidget::eventFilter(QObject *obj, QEvent *event) {
         if ((keyEvent->key() == Qt::Key_Escape) && _searchWidget->isVisible()) {
             _searchWidget->deactivate();
             return true;
-        }  else if ((keyEvent->key() == Qt::Key_F) &&
+        } else if ((keyEvent->key() == Qt::Key_F) &&
                    keyEvent->modifiers().testFlag(Qt::ControlModifier)) {
             _searchWidget->activate();
             return true;
         } else if ((keyEvent->key() == Qt::Key_F3)) {
             _searchWidget->doSearch(
-                    !keyEvent->modifiers().testFlag(Qt::ShiftModifier));
+                !keyEvent->modifiers().testFlag(Qt::ShiftModifier));
             return true;
         }
 
@@ -99,17 +97,16 @@ bool NotePreviewWidget::eventFilter(QObject *obj, QEvent *event) {
  * @return Urls to gif files
  */
 QStringList NotePreviewWidget::extractGifUrls(const QString &text) const {
-    static QRegExp regex(R"(<img[^>]+src=\"(file:\/\/\/[^\"]+\.gif)\")", Qt::CaseInsensitive);
+    static QRegExp regex(R"(<img[^>]+src=\"(file:\/\/\/[^\"]+\.gif)\")",
+                         Qt::CaseInsensitive);
 
     QStringList urls;
     int pos = 0;
     while (true) {
         pos = regex.indexIn(text, pos);
-        if (pos == -1)
-            break;
+        if (pos == -1) break;
         QString url = regex.cap(1);
-        if (!urls.contains(url))
-            urls.append(url);
+        if (!urls.contains(url)) urls.append(url);
         pos += regex.matchedLength();
     }
 
@@ -122,12 +119,11 @@ QStringList NotePreviewWidget::extractGifUrls(const QString &text) const {
  */
 void NotePreviewWidget::animateGif(const QString &text) {
     // clear resources
-    if (QTextDocument* doc = document())
-        doc->clear();
+    if (QTextDocument *doc = document()) doc->clear();
 
     QStringList urls = extractGifUrls(text);
 
-    for (QMovie* &movie : _movies) {
+    for (QMovie *&movie : _movies) {
         QString url = movie->property("URL").toString();
         if (urls.contains(url))
             urls.removeAll(url);
@@ -139,7 +135,7 @@ void NotePreviewWidget::animateGif(const QString &text) {
     _movies.removeAll(nullptr);
 
     for (const QString &url : urls) {
-        auto* movie = new QMovie(this);
+        auto *movie = new QMovie(this);
         movie->setFileName(QUrl(url).toLocalFile());
         movie->setCacheMode(QMovie::CacheNone);
 
@@ -151,10 +147,10 @@ void NotePreviewWidget::animateGif(const QString &text) {
         movie->setProperty("URL", url);
         _movies.append(movie);
 
-        connect(movie, &QMovie::frameChanged,
-                this, [this, url, movie](int) {
+        connect(movie, &QMovie::frameChanged, this, [this, url, movie](int) {
             if (auto doc = document()) {
-                doc->addResource(QTextDocument::ImageResource, url, movie->currentPixmap());
+                doc->addResource(QTextDocument::ImageResource, url,
+                                 movie->currentPixmap());
                 doc->markContentsDirty(0, doc->characterCount());
             }
         });
@@ -242,7 +238,8 @@ void NotePreviewWidget::contextMenuEvent(QContextMenuEvent *event) {
         copyLinkLocationAction = menu->addAction(tr("Copy link location"));
     }
 
-    auto *htmlFileExportAction = menu->addAction(tr("Export generated raw HTML"));
+    auto *htmlFileExportAction =
+        menu->addAction(tr("Export generated raw HTML"));
 
     QAction *selectedItem = menu->exec(globalPos);
 

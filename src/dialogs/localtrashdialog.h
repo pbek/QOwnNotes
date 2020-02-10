@@ -12,23 +12,23 @@ class QSplitter;
 class QStringList;
 class QAbstractButton;
 
-class LocalTrashDialog : public MasterDialog
-{
+class LocalTrashDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit LocalTrashDialog(MainWindow *mainWindow, QWidget *parent = 0);
     ~LocalTrashDialog();
 
-private slots:
+   private slots:
     void storeSettings();
     void dialogButtonClicked(QAbstractButton *button);
-    void on_trashTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+    void on_trashTreeWidget_currentItemChanged(QTreeWidgetItem *current,
+                                               QTreeWidgetItem *previous);
     void on_searchLineEdit_textChanged(const QString &arg1);
 
-private:
+   private:
     enum ButtonRole {
-        Unset,  // nothing was selected
+        Unset,    // nothing was selected
         Restore,
         Remove,
         Cancel

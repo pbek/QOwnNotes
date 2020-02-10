@@ -9,7 +9,7 @@ class TagApi : public QObject, public Tag {
     Q_PROPERTY(QString name READ getName WRITE setName)
     Q_PROPERTY(int parentId READ getParentId WRITE setParentId)
 
-public:
+   public:
     TagApi *fetch(int id);
 
     TagApi *fetchByName(const QString &name, int parentId = 0);

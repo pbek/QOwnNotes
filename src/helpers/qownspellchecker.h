@@ -19,9 +19,8 @@
 #include <libraries/sonnet/src/core/speller.h>
 #include "LanguageCache.h"
 
-class QOwnSpellChecker
-{
-public:
+class QOwnSpellChecker {
+   public:
     explicit QOwnSpellChecker();
     ~QOwnSpellChecker();
 
@@ -45,7 +44,7 @@ public:
      * @param word the word to be checked
      * @return true if the given word is misspelled.
      */
-    inline bool isWordMisspelled(const QString &word){
+    inline bool isWordMisspelled(const QString &word) {
         return spellchecker->isMisspelled(word);
     }
 
@@ -66,14 +65,16 @@ public:
      * If the word is not misspelled, the list will be empty.
      *
      * @param word the misspelled word
-     * @param cursor the cursor pointing to the beginning of that word. This is used
-     *               to determine the language to use, when AutoDetectLanguage is enabled.
+     * @param cursor the cursor pointing to the beginning of that word. This is
+     * used to determine the language to use, when AutoDetectLanguage is
+     * enabled.
      * @param max at most this many suggestions will be returned. If this is
      *            -1, as many suggestions as the spell backend supports will
      *            be returned.
      * @return a list of suggested replacements for the word
      */
-    QStringList suggestionsForWord(const QString &word, const QTextCursor &cursor, int max);
+    QStringList suggestionsForWord(const QString &word,
+                                   const QTextCursor &cursor, int max);
 
     /**
      * @short Enable/Disable spell checking.
@@ -111,7 +112,7 @@ public:
      */
     void ignoreWord(const QString &word);
 
-   /**
+    /**
      *
      * @return true if spellchecker supports current language
      */
@@ -122,11 +123,11 @@ public:
     void setAutoDetect(bool autoDetect);
     bool isAutoDetectOn() const;
 
-private:
+   private:
     Sonnet::Speller *spellchecker;
     bool active;
     bool autoDetect;
     QString language;
 };
 
-#endif // QOWNSPELLCHECKER_H
+#endif    // QOWNSPELLCHECKER_H

@@ -1,17 +1,16 @@
 #pragma once
 
-#include "masterdialog.h"
 #include <QDialog>
+#include "masterdialog.h"
 
 namespace Ui {
 class IssueAssistantDialog;
 }
 
-class IssueAssistantDialog : public MasterDialog
-{
+class IssueAssistantDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     enum IssueAssistantPages {
         IssuePage,
         LogOutputPage,
@@ -28,7 +27,7 @@ public:
     explicit IssueAssistantDialog(QWidget *parent = nullptr);
     ~IssueAssistantDialog();
 
-private slots:
+   private slots:
     void on_nextButton_clicked();
 
     void on_backButton_clicked();
@@ -51,7 +50,7 @@ private slots:
 
     void on_newIssueButton_clicked();
 
-private:
+   private:
     Ui::IssueAssistantDialog *ui;
 
     void refreshLogOutput() const;

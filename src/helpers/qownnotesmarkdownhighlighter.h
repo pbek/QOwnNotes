@@ -13,11 +13,10 @@
  * QPlainTextEdit markdown highlighter
  */
 
-
 #pragma once
 
-#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 #include <entities/note.h>
+#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 
 QT_BEGIN_NAMESPACE
 class QTextDocument;
@@ -27,33 +26,32 @@ QT_END_NAMESPACE
 namespace Sonnet {
 class WordTokenizer;
 class LanguageFilter;
-}
+}    // namespace Sonnet
 class QOwnSpellChecker;
 
-class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter
-{
-Q_OBJECT
+class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
+    Q_OBJECT
 
-public:
-    QOwnNotesMarkdownHighlighter(QTextDocument *parent = 0,
-                                 HighlightingOptions highlightingOptions =
-                                 HighlightingOption::None);
+   public:
+    QOwnNotesMarkdownHighlighter(
+        QTextDocument *parent = 0,
+        HighlightingOptions highlightingOptions = HighlightingOption::None);
     ~QOwnNotesMarkdownHighlighter() Q_DECL_OVERRIDE;
 
     void updateCurrentNote(const Note note);
     void setCommentHighlighting(bool);
     void setCodeHighlighting(bool);
-    void setSpellChecker(QOwnSpellChecker*);
+    void setSpellChecker(QOwnSpellChecker *);
 
-protected:
+   protected:
     void highlightBlock(const QString &text) Q_DECL_OVERRIDE;
-    void highlightBrokenNotesLink(const QString& text);
+    void highlightBrokenNotesLink(const QString &text);
 
-    //Set the format of a word as misspelled i.e., red wavy underline
+    // Set the format of a word as misspelled i.e., red wavy underline
     void setMisspelled(const int start, const int count);
     void highlightSpellChecking(const QString &text);
 
-private:
+   private:
     Sonnet::WordTokenizer *wordTokenizer;
     Sonnet::LanguageFilter *languageFilter;
     QOwnSpellChecker *spellchecker;

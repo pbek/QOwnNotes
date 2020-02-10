@@ -1,9 +1,8 @@
 #include "notetreewidgetitem.h"
 #include "ui_notetreewidgetitem.h"
 
-NoteTreeWidgetItem::NoteTreeWidgetItem(const Note &note, QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::NoteTreeWidgetItem) {
+NoteTreeWidgetItem::NoteTreeWidgetItem(const Note &note, QWidget *parent)
+    : QWidget(parent), ui(new Ui::NoteTreeWidgetItem) {
     ui->setupUi(this);
     updateUserInterface(note);
 }
@@ -19,6 +18,4 @@ void NoteTreeWidgetItem::updateUserInterface(const Note &note) const {
     ui->textLabel->setStyleSheet(QStringLiteral("* {color: gray}"));
 }
 
-NoteTreeWidgetItem::~NoteTreeWidgetItem() {
-    delete ui;
-}
+NoteTreeWidgetItem::~NoteTreeWidgetItem() { delete ui; }

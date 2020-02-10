@@ -16,7 +16,6 @@
 
 #include <QObject>
 
-class ScriptApi : public QObject
-{
+class ScriptApi : public QObject {
     Q_OBJECT
 };

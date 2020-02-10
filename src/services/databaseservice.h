@@ -5,11 +5,8 @@
 #include <QString>
 #include <QtSql/QSqlDatabase>
 
-
-class DatabaseService
-{
-
-public:
+class DatabaseService {
+   public:
     DatabaseService();
     static bool createConnection();
     static bool setupTables();
@@ -23,12 +20,13 @@ public:
     static bool setupNoteFolderTables();
     static QString getDiskDatabasePath();
     static QSqlDatabase getNoteFolderDatabase();
-    static void closeDatabaseConnection(const QSqlDatabase &db, QSqlQuery &query);
+    static void closeDatabaseConnection(const QSqlDatabase& db,
+                                        QSqlQuery& query);
 
-private:
+   private:
     static QString getNoteFolderDatabasePath();
     static bool createMemoryConnection();
     static bool createDiskConnection();
 };
 
-#endif // DATABASESERVICE_H
+#endif    // DATABASESERVICE_H

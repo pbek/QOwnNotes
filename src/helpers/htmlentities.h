@@ -4,17 +4,14 @@
 #include <QMap>
 #include <QString>
 
-
-
-class HTMLEntities
-{
-private:
+class HTMLEntities {
+   private:
     QMap<QString, QString> entityMap;
     void setupEntityMap();
 
-public:
+   public:
     HTMLEntities();
-    QString decodeHtmlEntities( QString text );
+    QString decodeHtmlEntities(QString text);
 };
 
-#endif // HTMLENTITIES_H
+#endif    // HTMLENTITIES_H

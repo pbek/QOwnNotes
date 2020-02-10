@@ -11,25 +11,21 @@
  * for more details.
  */
 
-#include <QTextBlock>
-#include <QDebug>
-#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 #include "navigationwidget.h"
+#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+#include <QDebug>
 #include <QRegularExpression>
+#include <QTextBlock>
 #include <QtConcurrent/QtConcurrent>
 
-
-NavigationWidget::NavigationWidget(QWidget *parent)
-    : QTreeWidget(parent) {
-
+NavigationWidget::NavigationWidget(QWidget *parent) : QTreeWidget(parent) {
     QObject::connect(
-            this,
-            SIGNAL(currentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)),
-            this,
-            SLOT(onCurrentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)));
+        this, SIGNAL(currentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)),
+        this, SLOT(onCurrentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)));
 
     parseFutureWatcher = new QFutureWatcher<QVector<Node>>(this);
-    connect(parseFutureWatcher, SIGNAL(finished()), this, SLOT(onParseCompleted()));
+    connect(parseFutureWatcher, SIGNAL(finished()), this,
+            SLOT(onParseCompleted()));
 }
 
 /**
@@ -43,8 +39,8 @@ void NavigationWidget::setDocument(QTextDocument *document) {
  * Emits the positionClicked signal to jump to the clicked navigation item's
  * position
  */
-void NavigationWidget::onCurrentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+void NavigationWidget::onCurrentItemChanged(QTreeWidgetItem *current,
+                                            QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
 
     if (current == nullptr) {
@@ -63,7 +59,8 @@ void NavigationWidget::parse(QTextDocument *document) {
 
     setDocument(document);
 
-    QFuture<QVector<Node>> future = QtConcurrent::run(this, &NavigationWidget::parseDocument, document);
+    QFuture<QVector<Node>> future =
+        QtConcurrent::run(this, &NavigationWidget::parseDocument, document);
     this->parseFutureWatcher->setFuture(future);
 }
 
@@ -76,7 +73,7 @@ QVector<Node> NavigationWidget::parseDocument(QTextDocument *document) {
 
         // ignore all non headline types
         if ((elementType < MarkdownHighlighter::H1) ||
-                (elementType > MarkdownHighlighter::H6)) {
+            (elementType > MarkdownHighlighter::H6)) {
             continue;
         }
 
@@ -92,11 +89,9 @@ QVector<Node> NavigationWidget::parseDocument(QTextDocument *document) {
     return nodes;
 }
 
-void NavigationWidget::onParseCompleted()
-{
+void NavigationWidget::onParseCompleted() {
     QVector<Node> nodes = this->parseFutureWatcher->result();
-    if (navigationTreeNodes == nodes)
-        return;
+    if (navigationTreeNodes == nodes) return;
 
     clear();
     _lastHeadingItemList.clear();
@@ -110,7 +105,9 @@ void NavigationWidget::onParseCompleted()
         auto *item = new QTreeWidgetItem();
         item->setText(0, text);
         item->setData(0, Qt::UserRole, pos);
-        item->setToolTip(0, tr("headline %1").arg(elementType - MarkdownHighlighter::H1 + 1));
+        item->setToolTip(
+            0,
+            tr("headline %1").arg(elementType - MarkdownHighlighter::H1 + 1));
 
         // attempt to find a suitable parent item for the element type
         QTreeWidgetItem *lastHigherItem = findSuitableParentItem(elementType);
@@ -133,11 +130,12 @@ void NavigationWidget::onParseCompleted()
 /**
  * Attempts to find a suitable parent item for the element type
  */
-QTreeWidgetItem * NavigationWidget::findSuitableParentItem(int elementType) {
+QTreeWidgetItem *NavigationWidget::findSuitableParentItem(int elementType) {
     elementType--;
     QTreeWidgetItem *lastHigherItem = _lastHeadingItemList[elementType];
 
     return ((lastHigherItem == nullptr) &&
-            (elementType > MarkdownHighlighter::H1)) ?
-           findSuitableParentItem(elementType) : lastHigherItem;
+            (elementType > MarkdownHighlighter::H1))
+               ? findSuitableParentItem(elementType)
+               : lastHigherItem;
 }

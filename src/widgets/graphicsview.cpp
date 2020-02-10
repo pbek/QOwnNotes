@@ -1,8 +1,7 @@
 #include "graphicsview.h"
 #include <QResizeEvent>
 
-GraphicsView::GraphicsView(QWidget *parent) : QGraphicsView(parent) {
-}
+GraphicsView::GraphicsView(QWidget *parent) : QGraphicsView(parent) {}
 
 void GraphicsView::scrollContentsBy(int dx, int dy) {
     QGraphicsView::scrollContentsBy(dx, dy);

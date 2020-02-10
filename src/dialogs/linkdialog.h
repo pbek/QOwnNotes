@@ -8,12 +8,12 @@ class LinkDialog;
 
 class Note;
 
-class LinkDialog : public MasterDialog
-{
+class LinkDialog : public MasterDialog {
     Q_OBJECT
 
-public:
-    explicit LinkDialog(const QString &dialogTitle = QString(), QWidget *parent = nullptr);
+   public:
+    explicit LinkDialog(const QString &dialogTitle = QString(),
+                        QWidget *parent = nullptr);
     ~LinkDialog();
 
     QString getSelectedNoteName() const;
@@ -22,15 +22,16 @@ public:
     QString getLinkName() const;
     void setLinkName(const QString &text);
     QString getLinkDescription() const;
-    QString getTitleForUrl(const QUrl& url);
+    QString getTitleForUrl(const QUrl &url);
 
-private slots:
+   private slots:
     void on_searchLineEdit_textChanged(const QString &arg1);
     void on_notesListWidget_doubleClicked(const QModelIndex &index);
     void on_urlEdit_textChanged(const QString &arg1);
     void addFileUrl();
     void addDirectoryUrl();
-private:
+
+   private:
     Ui::LinkDialog *ui;
     int firstVisibleNoteListRow;
     bool eventFilter(QObject *obj, QEvent *event);

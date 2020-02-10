@@ -7,7 +7,8 @@
 // we set a user agent to prevent troubles with some ownCloud / Nextcloud
 // server hosting providers
 // see: https://github.com/pbek/QOwnNotes/issues/541
-#define OWNCLOUD_SERVICE_USER_AGENT "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
+#define OWNCLOUD_SERVICE_USER_AGENT \
+    "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
 
 struct CalDAVCalendarData {
     QString url;
@@ -28,9 +29,9 @@ class QXmlQuery;
 class QString;
 
 class OwnCloudService : public QObject {
-Q_OBJECT
+    Q_OBJECT
 
-public:
+   public:
     enum CalendarBackend {
         LegacyOwnCloudCalendar = 0,
         CalendarPlus,
@@ -39,16 +40,17 @@ public:
     };
     Q_ENUMS(CalendarBackend)
 
-    explicit OwnCloudService(int cloudConnectionId = -1, QObject *parent = nullptr);
+    explicit OwnCloudService(int cloudConnectionId = -1,
+                             QObject *parent = nullptr);
 
     void settingsConnectionTest(SettingsDialog *dialog);
 
-    void loadVersions(const QString& fileName, MainWindow *mainWindow);
+    void loadVersions(const QString &fileName, MainWindow *mainWindow);
 
     void loadTrash(MainWindow *mainWindow);
 
-    void restoreTrashedNoteOnServer(const QString& fileName,
-                                    int timestamp, MainWindow *mainWindow);
+    void restoreTrashedNoteOnServer(const QString &fileName, int timestamp,
+                                    MainWindow *mainWindow);
 
     void settingsGetCalendarList(SettingsDialog *dialog);
 
@@ -63,19 +65,21 @@ public:
 
     void settingsGetFileList(SettingsDialog *dialog, QString path);
 
-    static bool hasOwnCloudSettings(bool withEnabledCheck = true, bool ignoreTableWarning = false);
+    static bool hasOwnCloudSettings(bool withEnabledCheck = true,
+                                    bool ignoreTableWarning = false);
 
     void shareNote(const Note &note, ShareDialog *dialog);
 
     void setPermissionsOnSharedNote(const Note &note, ShareDialog *dialog);
 
-    void fetchShares(const QString& path = QString());
+    void fetchShares(const QString &path = QString());
 
     void fetchBookmarks();
 
     void removeNoteShare(const Note &note, ShareDialog *dialog);
 
-    static OwnCloudService *instance(bool reset = false, int cloudConnectionId = -1);
+    static OwnCloudService *instance(bool reset = false,
+                                     int cloudConnectionId = -1);
 
     static bool isOwnCloudSupportEnabled();
 
@@ -85,9 +89,10 @@ public:
 
     void startAppVersionTest();
 
-    QString nextcloudPreviewImageTagToInlineImageTag(QString imageTag, int &imageWidth);
+    QString nextcloudPreviewImageTagToInlineImageTag(QString imageTag,
+                                                     int &imageWidth);
 
-private:
+   private:
     QString serverUrl;
     QString todoCalendarServerUrl;
     QString serverUrlPath;
@@ -137,12 +142,12 @@ private:
 
     void loadDirectory(QString &data);
 
-    void showOwnCloudServerErrorMessage(
-            const QString& message = QString(), bool withSettingsButton = true);
+    void showOwnCloudServerErrorMessage(const QString &message = QString(),
+                                        bool withSettingsButton = true);
 
-    void showOwnCloudMessage(
-            QString headline = QString(), QString message = QString(),
-            bool withSettingsButton = true);
+    void showOwnCloudMessage(QString headline = QString(),
+                             QString message = QString(),
+                             bool withSettingsButton = true);
 
     void updateNoteShareStatusFromShare(QString &data);
 
@@ -153,7 +158,8 @@ private:
     void updateNoteShareStatus(QXmlQuery &query,
                                bool updateShareDialog = false);
 
-    void handleUpdateNoteShareReply(const QString &urlPart, const QString &data);
+    void handleUpdateNoteShareReply(const QString &urlPart,
+                                    const QString &data);
 
     static void checkAppVersion(QNetworkReply *reply);
 
@@ -161,9 +167,9 @@ private:
 
     QByteArray downloadNextcloudPreviewImage(const QString &path);
 
-signals:
+   signals:
 
-private slots:
+   private slots:
 
     void slotAuthenticationRequired(QNetworkReply *reply,
                                     QAuthenticator *authenticator);

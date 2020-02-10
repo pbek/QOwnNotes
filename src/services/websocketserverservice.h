@@ -21,12 +21,11 @@ class QWebSocket;
 class QString;
 class WebSocketTokenDialog;
 
-class WebSocketServerService : public QObject
-{
-Q_OBJECT
-public:
+class WebSocketServerService : public QObject {
+    Q_OBJECT
+   public:
     explicit WebSocketServerService(quint16 port = 0,
-            QObject *parent = nullptr);
+                                    QObject *parent = nullptr);
     ~WebSocketServerService() override;
 
     quint16 getPort();
@@ -43,16 +42,16 @@ public:
 
     static QString getBookmarksNoteName();
 
-    QString flashMessageJsonText(const QString& message);
+    QString flashMessageJsonText(const QString &message);
 
     static QJsonArray createBookmarks(const QJsonObject &jsonObject);
 
-private slots:
+   private slots:
     void onNewConnection();
     void processMessage(const QString &message);
     void socketDisconnected();
 
-private:
+   private:
     QWebSocketServer *m_pWebSocketServer;
     QList<QWebSocket *> m_clients;
     quint16 m_port;

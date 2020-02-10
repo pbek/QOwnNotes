@@ -12,14 +12,13 @@
  *
  */
 
+#include "git.h"
+#include <entities/notefolder.h>
 #include <QDebug>
 #include <QProcess>
-#include <entities/notefolder.h>
 #include <QtCore/QSettings>
-#include "git.h"
-#include "misc.h"
 #include "gui.h"
-
+#include "misc.h"
 
 /**
  * Checks if the current note folder uses git
@@ -39,7 +38,7 @@ void Utils::Git::commitCurrentNoteFolder() {
         return;
     }
 
-    auto *process = new QProcess();
+    auto* process = new QProcess();
     process->setWorkingDirectory(NoteFolder::currentLocalPath());
 
     if (!executeGitCommand("init", process) ||
@@ -48,7 +47,7 @@ void Utils::Git::commitCurrentNoteFolder() {
         !executeGitCommand("commit -m \"QOwnNotes commit\"", process)) {
     }
 
-    delete(process);
+    delete (process);
 }
 
 /**
@@ -58,7 +57,7 @@ void Utils::Git::commitCurrentNoteFolder() {
  * @param process
  * @return
  */
-bool Utils::Git::executeCommand(const QString& command, QProcess *process,
+bool Utils::Git::executeCommand(const QString& command, QProcess* process,
                                 bool withErrorDialog) {
     if (process == Q_NULLPTR) {
         process = new QProcess();
@@ -71,19 +70,19 @@ bool Utils::Git::executeCommand(const QString& command, QProcess *process,
 
         if (withErrorDialog) {
             Utils::Gui::warning(
-                    Q_NULLPTR, QObject::tr("Command failed!"),
-                    QObject::tr("The command <code>%1</code> failed!").arg(
-                            command), "command-failed");
+                Q_NULLPTR, QObject::tr("Command failed!"),
+                QObject::tr("The command <code>%1</code> failed!").arg(command),
+                "command-failed");
         }
 
         return false;
     }
 
-//    QByteArray result = process->readAll();
+    //    QByteArray result = process->readAll();
 
-//    if (!result.isEmpty()) {
-//    qDebug() << "Result message by '" + command + "': " + result;
-//    }
+    //    if (!result.isEmpty()) {
+    //    qDebug() << "Result message by '" + command + "': " + result;
+    //    }
 
     QByteArray errorMessage = process->readAllStandardError();
 
@@ -101,8 +100,8 @@ bool Utils::Git::executeCommand(const QString& command, QProcess *process,
  * @param process
  * @return
  */
-bool Utils::Git::executeGitCommand(const QString& arguments, QProcess *process,
-        bool withErrorDialog) {
+bool Utils::Git::executeGitCommand(const QString& arguments, QProcess* process,
+                                   bool withErrorDialog) {
     return executeCommand("\"" + gitCommand() + "\" " + arguments, process,
                           withErrorDialog);
 }

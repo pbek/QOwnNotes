@@ -1,21 +1,20 @@
-#include <QDebug>
-#include <QKeyEvent>
-#include <entities/notefolder.h>
+#include "orphanedimagesdialog.h"
 #include <entities/note.h>
-#include <QTreeWidgetItem>
-#include <QGraphicsPixmapItem>
-#include <QtWidgets/QMessageBox>
+#include <entities/notefolder.h>
+#include <mainwindow.h>
+#include <utils/gui.h>
+#include <QDebug>
 #include <QDir>
 #include <QFileInfo>
-#include <utils/gui.h>
-#include <mainwindow.h>
-#include "orphanedimagesdialog.h"
+#include <QGraphicsPixmapItem>
+#include <QKeyEvent>
+#include <QTreeWidgetItem>
+#include <QtWidgets/QMessageBox>
 #include "ui_orphanedimagesdialog.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 
-OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent) :
-        MasterDialog(parent),
-    ui(new Ui::OrphanedImagesDialog) {
+OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::OrphanedImagesDialog) {
     ui->setupUi(this);
     ui->fileTreeWidget->installEventFilter(this);
 
@@ -26,8 +25,8 @@ OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent) :
         return;
     }
 
-    QStringList orphanedFiles = mediaDir.entryList(
-            QStringList("*"), QDir::Files, QDir::Time);
+    QStringList orphanedFiles =
+        mediaDir.entryList(QStringList("*"), QDir::Files, QDir::Time);
     orphanedFiles.removeDuplicates();
 
     QList<Note> noteList = Note::fetchAll();
@@ -36,52 +35,50 @@ OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent) :
     ui->progressBar->setMaximum(noteListCount);
     ui->progressBar->show();
 
-    Q_FOREACH(Note note, noteList) {
-            QStringList mediaFileList = note.getMediaFileList();
+    Q_FOREACH (Note note, noteList) {
+        QStringList mediaFileList = note.getMediaFileList();
 
-            // remove all found images from the orphaned files list
-            Q_FOREACH(QString fileName, mediaFileList) {
-                orphanedFiles.removeAll(fileName);
-            }
-
-            ui->progressBar->setValue(ui->progressBar->value() + 1);
+        // remove all found images from the orphaned files list
+        Q_FOREACH (QString fileName, mediaFileList) {
+            orphanedFiles.removeAll(fileName);
         }
+
+        ui->progressBar->setValue(ui->progressBar->value() + 1);
+    }
 
     ui->progressBar->hide();
 
-    Q_FOREACH(QString fileName, orphanedFiles) {
-            QTreeWidgetItem *item = new QTreeWidgetItem();
-            item->setText(0, fileName);
-            item->setData(0, Qt::UserRole, fileName);
+    Q_FOREACH (QString fileName, orphanedFiles) {
+        QTreeWidgetItem *item = new QTreeWidgetItem();
+        item->setText(0, fileName);
+        item->setData(0, Qt::UserRole, fileName);
 
-            QString filePath = getFilePath(item);
-            QFileInfo info(filePath);
-            item->setToolTip(0, tr("Last modified at %1").arg(
-                    info.lastModified().toString()));
+        QString filePath = getFilePath(item);
+        QFileInfo info(filePath);
+        item->setToolTip(
+            0, tr("Last modified at %1").arg(info.lastModified().toString()));
 
-            ui->fileTreeWidget->addTopLevelItem(item);
-        }
+        ui->fileTreeWidget->addTopLevelItem(item);
+    }
 
     // jump to the first item
     if (orphanedFiles.count() > 0) {
-        QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
-                                         Qt::NoModifier);
+        QKeyEvent *event =
+            new QKeyEvent(QEvent::KeyPress, Qt::Key_Home, Qt::NoModifier);
         QApplication::postEvent(ui->fileTreeWidget, event);
     }
 }
 
-OrphanedImagesDialog::~OrphanedImagesDialog() {
-    delete ui;
-}
+OrphanedImagesDialog::~OrphanedImagesDialog() { delete ui; }
 
 /**
  * Shows the currently selected image
- * 
+ *
  * @param current
  * @param previous
  */
 void OrphanedImagesDialog::on_fileTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
 
     auto *scene = new QGraphicsScene(this);
@@ -120,23 +117,21 @@ void OrphanedImagesDialog::on_deleteButton_clicked() {
         return;
     }
 
-    if (Utils::Gui::question(
-            this,
-            tr("Delete selected files"),
-            tr("Delete <strong>%n</strong> selected file(s)?",
-               "", selectedItemsCount),
-            "delete-files") != QMessageBox::Yes) {
+    if (Utils::Gui::question(this, tr("Delete selected files"),
+                             tr("Delete <strong>%n</strong> selected file(s)?",
+                                "", selectedItemsCount),
+                             "delete-files") != QMessageBox::Yes) {
         return;
     }
 
     // delete all selected files
-    Q_FOREACH(QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
-            QString filePath = getFilePath(item);
-            bool removed = QFile::remove(filePath);
+    Q_FOREACH (QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
+        QString filePath = getFilePath(item);
+        bool removed = QFile::remove(filePath);
 
-            if (removed) {
-                delete item;
-            }
+        if (removed) {
+            delete item;
+        }
     }
 }
 
@@ -154,7 +149,7 @@ bool OrphanedImagesDialog::eventFilter(QObject *obj, QEvent *event) {
         if (obj == ui->fileTreeWidget) {
             // delete the currently selected images
             if ((keyEvent->key() == Qt::Key_Delete) ||
-                       (keyEvent->key() == Qt::Key_Backspace)) {
+                (keyEvent->key() == Qt::Key_Backspace)) {
                 on_deleteButton_clicked();
                 return true;
             }
@@ -185,13 +180,14 @@ void OrphanedImagesDialog::on_insertButton_clicked() {
     Note note = mainWindow->getCurrentNote();
 
     // insert all selected images
-    Q_FOREACH(QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
-            QString filePath = getFilePath(item);
-            QFileInfo fileInfo(filePath);
-            QString mediaUrlString = note.mediaUrlStringForFileName(fileInfo.fileName());
-            QString imageLink = "![" + fileInfo.baseName() + "](" +
-                             mediaUrlString + ")\n";
-            textEdit->insertPlainText(imageLink);
-            delete item;
+    Q_FOREACH (QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
+        QString filePath = getFilePath(item);
+        QFileInfo fileInfo(filePath);
+        QString mediaUrlString =
+            note.mediaUrlStringForFileName(fileInfo.fileName());
+        QString imageLink =
+            "![" + fileInfo.baseName() + "](" + mediaUrlString + ")\n";
+        textEdit->insertPlainText(imageLink);
+        delete item;
     }
 }

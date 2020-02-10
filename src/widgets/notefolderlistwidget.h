@@ -13,14 +13,13 @@
 
 #pragma once
 
-#include <QListWidget>
 #include <QDropEvent>
+#include <QListWidget>
 
-class NoteFolderListWidget : public QListWidget
-{
-public:
+class NoteFolderListWidget : public QListWidget {
+   public:
     explicit NoteFolderListWidget(QWidget *parent = Q_NULLPTR);
 
-protected:
+   protected:
     void dropEvent(QDropEvent *e);
 };

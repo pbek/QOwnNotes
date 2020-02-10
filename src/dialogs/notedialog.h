@@ -9,17 +9,16 @@ class NoteDialog;
 
 class Note;
 
-class NoteDialog : public MasterDialog
-{
+class NoteDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit NoteDialog(QWidget *parent = 0);
     ~NoteDialog();
     void setNote(Note note);
 
-private:
+   private:
     Ui::NoteDialog *ui;
 };
 
-#endif // NOTEDIALOG_H
+#endif    // NOTEDIALOG_H

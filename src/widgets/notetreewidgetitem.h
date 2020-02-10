@@ -1,25 +1,23 @@
 #ifndef NOTETREEWIDGETITEM_H
 #define NOTETREEWIDGETITEM_H
 
-#include <QWidget>
 #include <entities/note.h>
+#include <QWidget>
 
 namespace Ui {
 class NoteTreeWidgetItem;
 }
 
-class NoteTreeWidgetItem : public QWidget
-{
+class NoteTreeWidgetItem : public QWidget {
     Q_OBJECT
 
-public:
+   public:
     explicit NoteTreeWidgetItem(const Note &note, QWidget *parent = 0);
     void updateUserInterface(const Note &note) const;
     ~NoteTreeWidgetItem();
 
-private:
+   private:
     Ui::NoteTreeWidgetItem *ui;
-
 };
 
-#endif // NOTETREEWIDGETITEM_H
+#endif    // NOTETREEWIDGETITEM_H

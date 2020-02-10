@@ -1,15 +1,14 @@
 #include "scriptsettingwidget.h"
+#include <dialogs/filedialog.h>
+#include <QDebug>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <limits>
 #include "ui_scriptsettingwidget.h"
-#include <QDebug>
-#include <QJsonObject>
-#include <QJsonDocument>
-#include <dialogs/filedialog.h>
 
 ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
-                                         QMap<QString, QVariant> variableMap) :
-    QWidget(parent),
-    ui(new Ui::ScriptSettingWidget) {
+                                         QMap<QString, QVariant> variableMap)
+    : QWidget(parent), ui(new Ui::ScriptSettingWidget) {
     ui->setupUi(this);
 
     _variableMap = variableMap;
@@ -56,8 +55,8 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
 
         if (text.isEmpty()) {
             // fallback if no text was set
-            ui->booleanCheckBox->setText(description.isEmpty() ?
-                                         name : description);
+            ui->booleanCheckBox->setText(description.isEmpty() ? name
+                                                               : description);
             ui->descriptionLabel->hide();
         } else {
             ui->booleanCheckBox->setText(text);
@@ -123,16 +122,14 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
     }
 }
 
-ScriptSettingWidget::~ScriptSettingWidget() {
-    delete ui;
-}
+ScriptSettingWidget::~ScriptSettingWidget() { delete ui; }
 
 /**
  * Stores a setting variable
  *
  * @param value
  */
-void ScriptSettingWidget::storeSettingsVariable(const QJsonValue& value) {
+void ScriptSettingWidget::storeSettingsVariable(const QJsonValue &value) {
     // we need to fetch the data again so we are not overwriting data of other
     // ScriptSettingWidget instances
     _script.refetch();
@@ -186,8 +183,8 @@ void ScriptSettingWidget::on_filePathButton_clicked() {
     QString identifier = _variableMap["identifier"].toString();
     QString description = _variableMap["description"].toString();
 
-    FileDialog dialog("ScriptSettingsFile-" + _script.getIdentifier() +
-                              "-" + identifier);
+    FileDialog dialog("ScriptSettingsFile-" + _script.getIdentifier() + "-" +
+                      identifier);
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setWindowTitle(tr("Please select a file"));
@@ -211,8 +208,7 @@ void ScriptSettingWidget::on_booleanCheckBox_toggled(bool checked) {
     storeSettingsVariable(checked);
 }
 
-void ScriptSettingWidget::on_selectionComboBox_currentIndexChanged(int index)
-{
+void ScriptSettingWidget::on_selectionComboBox_currentIndexChanged(int index) {
     Q_UNUSED(index);
     storeSettingsVariable(ui->selectionComboBox->currentData().toString());
 }

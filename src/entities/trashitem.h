@@ -1,16 +1,15 @@
 #pragma once
 
 #include <QDateTime>
-#include <QSqlQuery>
 #include <QFile>
+#include <QSqlQuery>
 #include <QUrl>
 
 class Note;
 class NoteSubFolder;
 
-
 class TrashItem {
-public:
+   public:
     explicit TrashItem();
 
     int getId();
@@ -31,7 +30,7 @@ public:
 
     bool refetch();
 
-    bool fillFromQuery(const QSqlQuery& query);
+    bool fillFromQuery(const QSqlQuery &query);
 
     bool removeFile();
 
@@ -55,7 +54,7 @@ public:
 
     qint64 getFileSize();
 
-    static TrashItem trashItemFromQuery(const QSqlQuery& query);
+    static TrashItem trashItemFromQuery(const QSqlQuery &query);
 
     static bool deleteAll();
 
@@ -87,7 +86,7 @@ public:
 
     static QList<TrashItem> fetchAllExpired();
 
-protected:
+   protected:
     int id;
     QString fileName;
     qint64 fileSize;

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "masterdialog.h"
 #include <entities/script.h>
+#include "masterdialog.h"
 
 namespace Ui {
 class ScriptRepositoryDialog;
@@ -12,18 +12,17 @@ class QNetworkReply;
 class QNetworkAccessManager;
 class QTreeWidgetItem;
 
-class ScriptRepositoryDialog : public MasterDialog
-{
+class ScriptRepositoryDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit ScriptRepositoryDialog(QWidget *parent = 0,
                                     bool checkForUpdates = false);
     ~ScriptRepositoryDialog();
 
     Script getLastInstalledScript();
 
-private slots:
+   private slots:
     void on_searchScriptEdit_returnPressed();
 
     void slotReplyFinished(QNetworkReply *);
@@ -39,7 +38,7 @@ private slots:
 
     void on_loadMoreScriptsButton_clicked();
 
-private:
+   private:
     Ui::ScriptRepositoryDialog *ui;
     QNetworkAccessManager *_networkManager;
     QString _codeSearchUrl;

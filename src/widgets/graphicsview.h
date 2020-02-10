@@ -4,18 +4,17 @@
 
 class QResizeEvent;
 
-class GraphicsView : public QGraphicsView
-{
+class GraphicsView : public QGraphicsView {
     Q_OBJECT
-public:
+   public:
     explicit GraphicsView(QWidget *parent = nullptr);
 
-protected:
+   protected:
     void scrollContentsBy(int dx, int dy) override;
 
     void resizeEvent(QResizeEvent *event) override;
 
-Q_SIGNALS:
+   Q_SIGNALS:
     void scrolledContentsBy(int dx, int dy);
 
     void resizedBy(int dw, int dh);

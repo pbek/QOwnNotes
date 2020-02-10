@@ -1,18 +1,17 @@
 #include "versiondialog.h"
-#include "ui_versiondialog.h"
-#include <QSettings>
+#include <utils/misc.h>
 #include <QDebug>
-#include <QPushButton>
 #include <QJSValue>
 #include <QJSValueIterator>
-#include <utils/misc.h>
-#include "mainwindow.h"
+#include <QPushButton>
+#include <QSettings>
 #include <QSplitter>
+#include "mainwindow.h"
+#include "ui_versiondialog.h"
 
 VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
-                             QWidget *parent) :
-        MasterDialog(parent),
-        ui(new Ui::VersionDialog) {
+                             QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::VersionDialog) {
     this->mainWindow = mainWindow;
     ui->setupUi(this);
     setWindowTitle(Utils::Misc::replaceOwnCloudText(windowTitle()));
@@ -29,18 +28,16 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
     button = new QPushButton(tr("&Restore selected version"));
     button->setProperty("ActionRole", Restore);
     button->setDefault(false);
-    button->setIcon(
-            QIcon::fromTheme(
-                    "edit-download",
-                    QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
+    button->setIcon(QIcon::fromTheme(
+        "edit-download",
+        QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Cancel"));
     button->setProperty("ActionRole", Cancel);
-    button->setIcon(
-            QIcon::fromTheme(
-                    "dialog-cancel",
-                    QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
+    button->setIcon(QIcon::fromTheme(
+        "dialog-cancel",
+        QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
     button->setDefault(true);
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
@@ -65,8 +62,8 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
     // iterate over the versions
     while (versionsIterator.hasNext()) {
         versionsIterator.next();
-        QJSValue property = versionsIterator.value()
-                .property("humanReadableTimestamp");
+        QJSValue property =
+            versionsIterator.value().property("humanReadableTimestamp");
 
         if (property.isUndefined()) {
             continue;
@@ -79,7 +76,7 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
         }
 
         diffHtml = "<style>" + Utils::Misc::genericCSS() + "</style>" +
-            versionsIterator.value().property("diffHtml").toString();
+                   versionsIterator.value().property("diffHtml").toString();
         diffHtml.replace("\\n", "&para;<br />");
         diffHtml.replace("\n", "<br />");
 
@@ -109,13 +106,10 @@ void VersionDialog::setupMainSplitter() {
 void VersionDialog::storeSettings() {
     // store the splitter sizes
     QSettings settings;
-    settings.setValue("versionSplitterSizes",
-                      versionSplitter->saveState());
+    settings.setValue("versionSplitterSizes", versionSplitter->saveState());
 }
 
-VersionDialog::~VersionDialog() {
-    delete ui;
-}
+VersionDialog::~VersionDialog() { delete ui; }
 
 void VersionDialog::on_versionListWidget_currentRowChanged(int currentRow) {
     ui->diffBrowser->setHtml(diffList->value(currentRow));
@@ -127,7 +121,7 @@ void VersionDialog::dialogButtonClicked(QAbstractButton *button) {
 
     if (actionRole == Restore) {
         mainWindow->setCurrentNoteText(
-                dataList->value(ui->versionListWidget->currentRow()));
+            dataList->value(ui->versionListWidget->currentRow()));
     }
 
     this->close();

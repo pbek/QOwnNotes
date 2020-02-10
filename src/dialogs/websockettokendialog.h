@@ -7,25 +7,24 @@ namespace Ui {
 class WebSocketTokenDialog;
 }
 
-class WebSocketTokenDialog : public QDialog
-{
+class WebSocketTokenDialog : public QDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit WebSocketTokenDialog(QWidget *parent = 0);
     ~WebSocketTokenDialog();
 
-private slots:
+   private slots:
     void on_copyButton_clicked();
 
     void on_generateButton_clicked();
 
     void on_buttonBox_accepted();
 
-private:
+   private:
     Ui::WebSocketTokenDialog *ui;
 
     QString generateToken() const;
 };
 
-#endif // WEBSOCKETTOKENDIALOG_H
+#endif    // WEBSOCKETTOKENDIALOG_H

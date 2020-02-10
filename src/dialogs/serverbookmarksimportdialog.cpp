@@ -1,15 +1,14 @@
-#include <QtQml/QJSValueIterator>
-#include <QJsonArray>
 #include "serverbookmarksimportdialog.h"
-#include "ui_serverbookmarksimportdialog.h"
-#include "services/websocketserverservice.h"
 #include <mainwindow.h>
 #include <QDebug>
+#include <QJsonArray>
+#include <QtQml/QJSValueIterator>
+#include "services/websocketserverservice.h"
+#include "ui_serverbookmarksimportdialog.h"
 
 ServerBookmarksImportDialog::ServerBookmarksImportDialog(
-        const QJSValue &bookmarks, QWidget *parent) :
-        MasterDialog(parent),
-        ui(new Ui::ServerBookmarksImportDialog) {
+    const QJSValue &bookmarks, QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::ServerBookmarksImportDialog) {
     ui->setupUi(this);
     ui->infoLabel->clear();
 
@@ -41,21 +40,23 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
         }
 
         title = bookmarksIterator.value().property("title").toString();
-        description = bookmarksIterator.value().property("description")
-                .toString().remove("#");
-        tags = bookmarksIterator.value().property("tags").toVariant()
-                .toStringList();
+        description = bookmarksIterator.value()
+                          .property("description")
+                          .toString()
+                          .remove("#");
+        tags = bookmarksIterator.value()
+                   .property("tags")
+                   .toVariant()
+                   .toStringList();
 
-        Q_FOREACH(QString tag, tags) {
-                description.prepend("#" + tag.replace(" ", "-") + " ");
+        Q_FOREACH (QString tag, tags) {
+            description.prepend("#" + tag.replace(" ", "-") + " ");
         }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-        QJsonObject data {
-                {"name", title},
-                {"url", url},
-                {"description", description.trimmed()}
-        };
+        QJsonObject data{{"name", title},
+                         {"url", url},
+                         {"description", description.trimmed()}};
 #else
         QJsonObject data;
         data.insert("name", title);
@@ -68,10 +69,7 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
     }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    jsonObject = QJsonObject{
-            {"type", "newBookmarks"},
-            {"data", bookmarkList}
-    };
+    jsonObject = QJsonObject{{"type", "newBookmarks"}, {"data", bookmarkList}};
 #else
     jsonObject = QJsonObject();
     jsonObject.insert("type", "newBookmarks");
@@ -79,17 +77,16 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
 #endif
 
     ui->progressBar->setMaximum(bookmarksCount);
-    ui->infoLabel->setText(tr("<strong>%n bookmarks</strong> found on server", "",
-                              bookmarksCount));
+    ui->infoLabel->setText(tr("<strong>%n bookmarks</strong> found on server",
+                              "", bookmarksCount));
     ui->importButton->setEnabled(bookmarksCount > 0);
     ui->progressBar->setEnabled(bookmarksCount > 0);
 }
 
-ServerBookmarksImportDialog::~ServerBookmarksImportDialog() {
-    delete ui;
-}
+ServerBookmarksImportDialog::~ServerBookmarksImportDialog() { delete ui; }
 
 void ServerBookmarksImportDialog::on_importButton_clicked() {
-    QJsonArray bookmarkList = WebSocketServerService::createBookmarks(jsonObject);
+    QJsonArray bookmarkList =
+        WebSocketServerService::createBookmarks(jsonObject);
     ui->progressBar->setValue(bookmarkList.count());
 }

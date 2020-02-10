@@ -5,9 +5,8 @@
 class NoteSubFolder;
 class QJsonObject;
 
-class NoteFolder
-{
-public:
+class NoteFolder {
+   public:
     NoteFolder();
 
     friend QDebug operator<<(QDebug dbg, const NoteFolder &noteFolder);
@@ -15,7 +14,7 @@ public:
     int getId() const;
     bool store();
     bool exists() const;
-    bool fillFromQuery(const QSqlQuery& query);
+    bool fillFromQuery(const QSqlQuery &query);
     bool remove();
     bool isFetched() const;
     QString getName() const;
@@ -44,10 +43,10 @@ public:
     void setUseGit(bool value);
     QJsonObject jsonObject() const;
 
-    static bool create(const QString& name, const QString& localPath,
-                       int cloudConnectionId, const QString& remotePath);
+    static bool create(const QString &name, const QString &localPath,
+                       int cloudConnectionId, const QString &remotePath);
     static NoteFolder fetch(int id);
-    static NoteFolder noteFolderFromQuery(const QSqlQuery& query);
+    static NoteFolder noteFolderFromQuery(const QSqlQuery &query);
     static QList<NoteFolder> fetchAll();
     static int countAll();
     static bool migrateToNoteFolders();
@@ -65,7 +64,7 @@ public:
     static bool isPathNoteFolder(const QString &path);
     static bool isCurrentNoteTreeEnabled();
 
-private:
+   private:
     QString name;
     QString localPath;
     QString remotePath;

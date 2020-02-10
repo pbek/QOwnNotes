@@ -11,35 +11,35 @@ class QButtonGroup;
 class QCheckBox;
 class QAbstractButton;
 
-class NoteDiffDialog : public MasterDialog
-{
+class NoteDiffDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     enum ButtonRole {
-        Unset,  // nothing was selected
+        Unset,    // nothing was selected
         Overwrite,
         Reload,
         Ignore,
         Cancel
     };
 
-    explicit NoteDiffDialog(QWidget *parent = nullptr, const QString& html = QString());
+    explicit NoteDiffDialog(QWidget *parent = nullptr,
+                            const QString &html = QString());
     ~NoteDiffDialog();
     int resultActionRole();
 
-private slots:
-    void dialogButtonClicked( QAbstractButton *button );
+   private slots:
+    void dialogButtonClicked(QAbstractButton *button);
 
     void notificationButtonGroupPressed(QAbstractButton *button);
 
     void notificationNoneCheckBoxCheck();
 
-private:
+   private:
     Ui::NoteDiffDialog *ui;
     int actionRole;
     QButtonGroup *_notificationButtonGroup;
     QCheckBox *_notificationNoneCheckBox;
 };
 
-#endif // NOTEDIFFDIALOG_H
+#endif    // NOTEDIFFDIALOG_H

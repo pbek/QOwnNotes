@@ -1,23 +1,21 @@
-#include "entities/calendaritem.h"
-#include "services/owncloudservice.h"
 #include "dialogs/tododialog.h"
-#include "ui_tododialog.h"
-#include <QSettings>
-#include <QMessageBox>
-#include <QKeyEvent>
-#include <QShortcut>
-#include <QMenu>
-#include <QSplitter>
+#include <mainwindow.h>
 #include <services/metricsservice.h>
 #include <utils/gui.h>
-#include <mainwindow.h>
 #include <QDebug>
 #include <QInputDialog>
+#include <QKeyEvent>
+#include <QMenu>
+#include <QMessageBox>
+#include <QSettings>
+#include <QShortcut>
+#include <QSplitter>
+#include "entities/calendaritem.h"
+#include "services/owncloudservice.h"
+#include "ui_tododialog.h"
 
-TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
-                       QWidget *parent) :
-        MasterDialog(parent),
-        ui(new Ui::TodoDialog) {
+TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid, QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::TodoDialog) {
     _mainWindow = mainWindow;
     ui->setupUi(this);
     setupUi();
@@ -26,7 +24,7 @@ TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
     ui->descriptionEdit->initSearchFrame(ui->descriptionEditSearchFrame);
 
     QString selectedText =
-            _mainWindow->activeNoteTextEdit()->textCursor().selectedText();
+        _mainWindow->activeNoteTextEdit()->textCursor().selectedText();
 
     // insert the selected note text in the new item edit
     if (!selectedText.isEmpty()) {
@@ -70,9 +68,7 @@ void TodoDialog::jumpToTask(QString taskUid) {
     }
 }
 
-TodoDialog::~TodoDialog() {
-    delete ui;
-}
+TodoDialog::~TodoDialog() { delete ui; }
 
 void TodoDialog::setupUi() {
     setupMainSplitter();
@@ -86,37 +82,38 @@ void TodoDialog::setupUi() {
 
     // adding shortcuts, that weren't working when defined in the ui file
     auto *shortcut = new QShortcut(QKeySequence("Ctrl+S"), this);
-    QObject::connect(shortcut, SIGNAL(activated()),
-                     this, SLOT(on_saveButton_clicked()));
+    QObject::connect(shortcut, SIGNAL(activated()), this,
+                     SLOT(on_saveButton_clicked()));
     shortcut = new QShortcut(QKeySequence("Ctrl+I"), this);
-    QObject::connect(shortcut, SIGNAL(activated()),
-                     this, SLOT(onSaveAndInsertButtonClicked()));
+    QObject::connect(shortcut, SIGNAL(activated()), this,
+                     SLOT(onSaveAndInsertButtonClicked()));
     shortcut = new QShortcut(QKeySequence("Ctrl+R"), this);
-    QObject::connect(shortcut, SIGNAL(activated()),
-                     this, SLOT(on_removeButton_clicked()));
+    QObject::connect(shortcut, SIGNAL(activated()), this,
+                     SLOT(on_removeButton_clicked()));
 
     /*
      * setup the note button menu
      */
     auto *noteMenu = new QMenu(this);
 
-    QAction *insertAction = noteMenu->addAction(
-            tr("Save and insert into note"));
+    QAction *insertAction =
+        noteMenu->addAction(tr("Save and insert into note"));
     insertAction->setIcon(QIcon::fromTheme(
-            "document-save",
-            QIcon(":icons/breeze-qownnotes/16x16/document-save.svg")));
-    insertAction->setToolTip(tr("Save the current todo item and insert a link"
-                                        " to it into the current note"));
-    connect(insertAction, SIGNAL(triggered()),
-            this, SLOT(onSaveAndInsertButtonClicked()));
+        "document-save",
+        QIcon(":icons/breeze-qownnotes/16x16/document-save.svg")));
+    insertAction->setToolTip(
+        tr("Save the current todo item and insert a link"
+           " to it into the current note"));
+    connect(insertAction, SIGNAL(triggered()), this,
+            SLOT(onSaveAndInsertButtonClicked()));
 
     QAction *importAction = noteMenu->addAction(tr("Import as note"));
     importAction->setIcon(QIcon::fromTheme(
-            "document-import",
-            QIcon(":icons/breeze-qownnotes/16x16/document-import.svg")));
+        "document-import",
+        QIcon(":icons/breeze-qownnotes/16x16/document-import.svg")));
     importAction->setToolTip(tr("Import the current todo item as new note"));
-    connect(importAction, SIGNAL(triggered()),
-            this, SLOT(onImportAsNoteButtonClicked()));
+    connect(importAction, SIGNAL(triggered()), this,
+            SLOT(onImportAsNoteButtonClicked()));
 
     ui->noteButton->setMenu(noteMenu);
 
@@ -127,21 +124,20 @@ void TodoDialog::setupUi() {
 
     QAction *reloadAction = reloadMenu->addAction(tr("Reload from server"));
     reloadAction->setIcon(QIcon::fromTheme(
-            "view-refresh",
-            QIcon(":icons/breeze-qownnotes/16x16/view-refresh.svg")));
+        "view-refresh",
+        QIcon(":icons/breeze-qownnotes/16x16/view-refresh.svg")));
     reloadAction->setToolTip(tr("Reload tasks from server"));
-    connect(reloadAction, SIGNAL(triggered()),
-            this, SLOT(reloadTodoList()));
+    connect(reloadAction, SIGNAL(triggered()), this, SLOT(reloadTodoList()));
 
-    QAction *clearCacheAction = reloadMenu->addAction(
-            tr("Clear cache and reload"));
+    QAction *clearCacheAction =
+        reloadMenu->addAction(tr("Clear cache and reload"));
     clearCacheAction->setIcon(QIcon::fromTheme(
-            "trash-empty",
-            QIcon(":icons/breeze-qownnotes/16x16/trash-empty.svg")));
-    clearCacheAction->setToolTip(tr("Clear calendar cache and reload tasks "
-                                            "from server"));
-    connect(clearCacheAction, SIGNAL(triggered()),
-            this, SLOT(clearCacheAndReloadTodoList()));
+        "trash-empty", QIcon(":icons/breeze-qownnotes/16x16/trash-empty.svg")));
+    clearCacheAction->setToolTip(
+        tr("Clear calendar cache and reload tasks "
+           "from server"));
+    connect(clearCacheAction, SIGNAL(triggered()), this,
+            SLOT(clearCacheAndReloadTodoList()));
 
     ui->reloadTodoListButton->setMenu(reloadMenu);
 }
@@ -161,7 +157,7 @@ void TodoDialog::refreshUi() {
         Q_UNUSED(blocker)
 
         bool showCompletedItems =
-                settings.value("TodoDialog/showCompletedItems").toBool();
+            settings.value("TodoDialog/showCompletedItems").toBool();
         ui->showCompletedItemsCheckBox->setChecked(showCompletedItems);
     }
 
@@ -195,7 +191,7 @@ void TodoDialog::setupMainSplitter() {
     // restore splitter sizes
     QSettings settings;
     QByteArray state =
-            settings.value("TodoDialog/mainSplitterState").toByteArray();
+        settings.value("TodoDialog/mainSplitterState").toByteArray();
     this->mainSplitter->restoreState(state);
 
     ui->gridLayout->layout()->addWidget(this->mainSplitter);
@@ -211,7 +207,7 @@ void TodoDialog::loadTodoListData() {
     QSettings settings;
     ui->todoListSelector->clear();
     ui->todoListSelector->addItems(
-            settings.value("ownCloud/todoCalendarEnabledList").toStringList());
+        settings.value("ownCloud/todoCalendarEnabledList").toStringList());
 }
 
 /**
@@ -236,16 +232,13 @@ void TodoDialog::clearCacheAndReloadTodoList() {
  * Reloads the task list from the SQLite database
  */
 void TodoDialog::reloadTodoListItems() {
-    QList<CalendarItem> calendarItemList = CalendarItem::fetchAllByCalendar(
-            ui->todoListSelector->currentText());
+    QList<CalendarItem> calendarItemList =
+        CalendarItem::fetchAllByCalendar(ui->todoListSelector->currentText());
 
     int itemCount = calendarItemList.count();
     MetricsService::instance()->sendEventIfEnabled(
-            "todo/list/loaded",
-            "todo",
-            "todo list loaded",
-            QString::number(itemCount) + " todo items",
-            itemCount);
+        "todo/list/loaded", "todo", "todo list loaded",
+        QString::number(itemCount) + " todo items", itemCount);
 
     {
         const QSignalBlocker blocker(ui->todoItemTreeWidget);
@@ -280,14 +273,11 @@ void TodoDialog::reloadTodoListItems() {
             item->setText(0, calItem.getSummary());
             item->setData(0, Qt::UserRole, uid);
             item->setData(0, Qt::UserRole + 1, relatedUid);
-            item->setCheckState(0,
-                    calItem.isCompleted() ? Qt::Checked : Qt::Unchecked);
-            item->setFlags(
-                    Qt::ItemIsDragEnabled |
-                    Qt::ItemIsDropEnabled |
-                    Qt::ItemIsEnabled |
-                    Qt::ItemIsUserCheckable |
-                    Qt::ItemIsSelectable);
+            item->setCheckState(
+                0, calItem.isCompleted() ? Qt::Checked : Qt::Unchecked);
+            item->setFlags(Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled |
+                           Qt::ItemIsEnabled | Qt::ItemIsUserCheckable |
+                           Qt::ItemIsSelectable);
 
             if (relatedUid.isEmpty()) {
                 ui->todoItemTreeWidget->addTopLevelItem(item);
@@ -299,9 +289,10 @@ void TodoDialog::reloadTodoListItems() {
         // decorate the root only if there are sub-items
         ui->todoItemTreeWidget->setRootIsDecorated(subItems.count() > 0);
 
-        // add calendar sub-items to the todoItemTreeWidget as long as all levels are filled
+        // add calendar sub-items to the todoItemTreeWidget as long as all
+        // levels are filled
         int depth = 0;
-        while(subItems.count() > 0 && depth++ < 20) {
+        while (subItems.count() > 0 && depth++ < 20) {
             QListIterator<QTreeWidgetItem *> itemItr(subItems);
 
             while (itemItr.hasNext()) {
@@ -312,7 +303,8 @@ void TodoDialog::reloadTodoListItems() {
                     continue;
                 }
 
-                auto parentItem = Utils::Gui::getTreeWidgetItemWithUserData(ui->todoItemTreeWidget, relatedUid);
+                auto parentItem = Utils::Gui::getTreeWidgetItemWithUserData(
+                    ui->todoItemTreeWidget, relatedUid);
 
                 if (parentItem != nullptr) {
                     parentItem->addChild(item);
@@ -352,7 +344,8 @@ void TodoDialog::jumpToTodoListItem() {
 
         // try to find a possible last created calendar item
         if ((item == nullptr) && lastCreatedCalendarItem.isFetched()) {
-            item = findTodoItemTreeWidgetItemByUID(lastCreatedCalendarItem.getUid());
+            item = findTodoItemTreeWidgetItemByUID(
+                lastCreatedCalendarItem.getUid());
 
             // clear the last created calendar item if we found it in the list
             if (item != nullptr) {
@@ -362,7 +355,8 @@ void TodoDialog::jumpToTodoListItem() {
 
         if (item == nullptr) {
             // try to find the currently selected calendar item
-            item = findTodoItemTreeWidgetItemByUID(currentCalendarItem.getUid());
+            item =
+                findTodoItemTreeWidgetItemByUID(currentCalendarItem.getUid());
         }
 
         if (item != nullptr) {
@@ -395,10 +389,13 @@ void TodoDialog::resetEditFrameControls() {
 /**
  * @brief Searches a task item by uid in the task list
  * @param uid
- * @return Returns the tree widget item of the task item in the task tree, returns null if not found
+ * @return Returns the tree widget item of the task item in the task tree,
+ * returns null if not found
  */
-QTreeWidgetItem* TodoDialog::findTodoItemTreeWidgetItemByUID(const QString& uid) {
-    return Utils::Gui::getTreeWidgetItemWithUserData(ui->todoItemTreeWidget, uid);
+QTreeWidgetItem *TodoDialog::findTodoItemTreeWidgetItemByUID(
+    const QString &uid) {
+    return Utils::Gui::getTreeWidgetItemWithUserData(ui->todoItemTreeWidget,
+                                                     uid);
 }
 
 void TodoDialog::storeSettings() {
@@ -427,9 +424,9 @@ void TodoDialog::updateCurrentCalendarItemWithFormData() {
     currentCalendarItem.setSummary(ui->summaryEdit->text());
     currentCalendarItem.setDescription(ui->descriptionEdit->toPlainText());
     currentCalendarItem.setModified(QDateTime::currentDateTime());
-    currentCalendarItem.setAlarmDate(
-            ui->reminderCheckBox->isChecked() ?
-            ui->reminderDateTimeEdit->dateTime() : QDateTime());
+    currentCalendarItem.setAlarmDate(ui->reminderCheckBox->isChecked()
+                                         ? ui->reminderDateTimeEdit->dateTime()
+                                         : QDateTime());
     currentCalendarItem.store();
 }
 
@@ -524,7 +521,7 @@ void TodoDialog::todoItemLoadingProgressBarSetMaximum(int value) {
 
 void TodoDialog::todoItemLoadingProgressBarHideIfOnMaximum() {
     if (ui->todoItemLoadingProgressBar->value() >=
-            ui->todoItemLoadingProgressBar->maximum()) {
+        ui->todoItemLoadingProgressBar->maximum()) {
         ui->todoItemLoadingProgressBar->hide();
     }
 }
@@ -535,10 +532,10 @@ void TodoDialog::on_todoItemLoadingProgressBar_valueChanged(int value) {
     todoItemLoadingProgressBarHideIfOnMaximum();
 }
 
-void TodoDialog::createNewTodoItem(const QString &name, const QString &relatedUid)
-{
+void TodoDialog::createNewTodoItem(const QString &name,
+                                   const QString &relatedUid) {
     CalendarItem calItem = CalendarItem::createNewTodoItem(
-            name, ui->todoListSelector->currentText(), relatedUid);
+        name, ui->todoListSelector->currentText(), relatedUid);
     lastCreatedCalendarItem = calItem;
 
     // set the focus to the description edit after we loaded the tasks
@@ -566,14 +563,15 @@ void TodoDialog::on_newItemEdit_returnPressed() {
  */
 void TodoDialog::on_removeButton_clicked() {
     if (Utils::Gui::question(
-                this, tr("Remove todo item"),
-                tr("Remove the selected todo item?\nThis cannot be undone!"),
-                "remove-todo-items") == QMessageBox::Yes) {
+            this, tr("Remove todo item"),
+            tr("Remove the selected todo item?\nThis cannot be undone!"),
+            "remove-todo-items") == QMessageBox::Yes) {
         CalendarItem calItem = currentCalendarItem;
 
         // remove the calendar item from the list widget
         // (this will update the currentCalendarItem)
-        ui->todoItemTreeWidget->removeItemWidget(ui->todoItemTreeWidget->currentItem(), 0);
+        ui->todoItemTreeWidget->removeItemWidget(
+            ui->todoItemTreeWidget->currentItem(), 0);
 
         // remove the calendar item from the database
         calItem.remove();
@@ -585,10 +583,9 @@ void TodoDialog::on_removeButton_clicked() {
     }
 }
 
-
 /**
-* @brief Determines whether to show or hide the reminder date time edit
-*/
+ * @brief Determines whether to show or hide the reminder date time edit
+ */
 void TodoDialog::on_reminderCheckBox_clicked() {
     if (ui->reminderCheckBox->isChecked()) {
         QDateTime alarmDate = currentCalendarItem.getAlarmDate();
@@ -617,33 +614,32 @@ void TodoDialog::on_summaryEdit_returnPressed() {
 
 void TodoDialog::on_newItemEdit_textChanged(const QString &arg1) {
     // get all items
-    QList<QTreeWidgetItem*> allItems = ui->todoItemTreeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+    QList<QTreeWidgetItem *> allItems = ui->todoItemTreeWidget->findItems(
+        "", Qt::MatchContains | Qt::MatchRecursive);
 
     // search todo item if at least 2 characters were entered
     if (arg1.count() >= 2) {
         QList<QString> uidList = CalendarItem::searchAsUidList(
-                arg1, ui->todoListSelector->currentText());
+            arg1, ui->todoListSelector->currentText());
 
         // hide all not found items
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                bool show = uidList.indexOf(item->data(0, Qt::UserRole).toString()) > -1;
-                item->setHidden(!show);
-            }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            bool show =
+                uidList.indexOf(item->data(0, Qt::UserRole).toString()) > -1;
+            item->setHidden(!show);
+        }
 
         // show items again that have visible children so that they are
         // really shown
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                if (Utils::Gui::isOneTreeWidgetItemChildVisible(item)) {
-                    item->setHidden(false);
-                    item->setExpanded(true);
-                }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            if (Utils::Gui::isOneTreeWidgetItemChildVisible(item)) {
+                item->setHidden(false);
+                item->setExpanded(true);
             }
+        }
     } else {
         // show all items otherwise
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                item->setHidden(false);
-            }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) { item->setHidden(false); }
     }
 
     // let's highlight the text from the search line edit
@@ -690,12 +686,13 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
             // set focus to the task list if Key_Down or Key_Tab
             // were pressed in the new item edit
             if ((keyEvent->key() == Qt::Key_Down) ||
-                    (keyEvent->key() == Qt::Key_Tab)) {
+                (keyEvent->key() == Qt::Key_Tab)) {
                 // choose another selected item if current item is invisible
                 auto *item = ui->todoItemTreeWidget->currentItem();
                 if ((item != nullptr) && item->isHidden() &&
                     (firstVisibleTodoItemTreeItem != nullptr)) {
-                    ui->todoItemTreeWidget->setCurrentItem(firstVisibleTodoItemTreeItem);
+                    ui->todoItemTreeWidget->setCurrentItem(
+                        firstVisibleTodoItemTreeItem);
                 }
 
                 // give the keyboard focus to the task list widget
@@ -736,18 +733,18 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
  * Saves the current note and inserts a link to it in the current note of the
  * main window
  */
-void TodoDialog::onSaveAndInsertButtonClicked()
-{
+void TodoDialog::onSaveAndInsertButtonClicked() {
     on_saveButton_clicked();
 
     QString selectedText =
-            _mainWindow->activeNoteTextEdit()->textCursor().selectedText();
+        _mainWindow->activeNoteTextEdit()->textCursor().selectedText();
 
     QString taskUrl = "task://" + currentCalendarItem.getUid();
 
     // insert a link to the task in the current note
-    QString summaryText = selectedText.isEmpty() ?
-                          currentCalendarItem.getSummary() : selectedText;
+    QString summaryText = selectedText.isEmpty()
+                              ? currentCalendarItem.getSummary()
+                              : selectedText;
     QString insertText = "[" + summaryText + "](" + taskUrl + ")";
 
     _mainWindow->activeNoteTextEdit()->textCursor().insertText(insertText);
@@ -762,7 +759,9 @@ void TodoDialog::onImportAsNoteButtonClicked() {
     QString text = ui->descriptionEdit->toPlainText();
 
     // create a new note with the task text
-    _mainWindow->createNewNote(name, text, MainWindow::CreateNewNoteOptions(
+    _mainWindow->createNewNote(
+        name, text,
+        MainWindow::CreateNewNoteOptions(
             MainWindow::CreateNewNoteOption::UseNameAsHeadline));
 }
 
@@ -772,7 +771,7 @@ void TodoDialog::onImportAsNoteButtonClicked() {
  * @param previous
  */
 void TodoDialog::on_todoItemTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
 
     // in case all items were removed
@@ -817,7 +816,8 @@ void TodoDialog::on_todoItemTreeWidget_currentItemChanged(
  * @param item
  * @param column
  */
-void TodoDialog::on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int column) {
+void TodoDialog::on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item,
+                                                   int column) {
     Q_UNUSED(column)
 
     QString uid = item->data(0, Qt::UserRole).toString();
@@ -835,7 +835,8 @@ void TodoDialog::on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int co
     }
 }
 
-void TodoDialog::on_todoItemTreeWidget_customContextMenuRequested(const QPoint &pos) {
+void TodoDialog::on_todoItemTreeWidget_customContextMenuRequested(
+    const QPoint &pos) {
     QTreeWidgetItem *item = ui->todoItemTreeWidget->currentItem();
 
     if (item == nullptr) {
@@ -851,9 +852,9 @@ void TodoDialog::on_todoItemTreeWidget_customContextMenuRequested(const QPoint &
     if (selectedItem) {
         if (selectedItem == newTaskAction) {
             bool ok;
-            QString name = QInputDialog::getText(this, tr("Create new sub-task"),
-                                                 tr("Name:"), QLineEdit::Normal,
-                                                 tr("New sub-task"), &ok);
+            QString name = QInputDialog::getText(
+                this, tr("Create new sub-task"), tr("Name:"), QLineEdit::Normal,
+                tr("New sub-task"), &ok);
 
             if (ok) {
                 createNewTodoItem(name, item->data(0, Qt::UserRole).toString());

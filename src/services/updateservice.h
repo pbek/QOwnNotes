@@ -1,8 +1,8 @@
 #ifndef UPDATESERVICE_H
 #define UPDATESERVICE_H
 
-#include <qnetworkreply.h>
 #include <dialogs/updatedialog.h>
+#include <qnetworkreply.h>
 
 class MainWindow;
 
@@ -23,30 +23,26 @@ class MainWindow;
 #endif
 
 class UpdateService : public QObject {
-Q_OBJECT
+    Q_OBJECT
 
-public:
-    enum UpdateMode {
-        AppStart = 1,
-        Manual,
-        Periodic
-    };
+   public:
+    enum UpdateMode { AppStart = 1, Manual, Periodic };
     Q_ENUMS(UpdateMode)
 
     explicit UpdateService(QObject *parent = 0);
 
-    void checkForUpdates(
-            MainWindow *mainWindow, UpdateMode updateMode = AppStart);
+    void checkForUpdates(MainWindow *mainWindow,
+                         UpdateMode updateMode = AppStart);
 
-private:
+   private:
     MainWindow *mainWindow;
     UpdateMode updateMode;
     UpdateDialog *_updateDialog;
     QString _currentReleaseVersionString;
 
-private slots:
+   private slots:
 
     void onResult(QNetworkReply *reply);
 };
 
-#endif // UPDATESERVICE_H
+#endif    // UPDATESERVICE_H

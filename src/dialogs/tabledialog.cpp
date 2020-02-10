@@ -1,15 +1,13 @@
 #include "tabledialog.h"
-#include "ui_tabledialog.h"
-#include <QDebug>
 #include <mainwindow.h>
-#include "libraries/qtcsv/src/include/reader.h"
+#include <QDebug>
 #include "filedialog.h"
+#include "libraries/qtcsv/src/include/reader.h"
+#include "ui_tabledialog.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 
-
-TableDialog::TableDialog(QWidget *parent) :
-        MasterDialog(parent),
-    ui(new Ui::TableDialog) {
+TableDialog::TableDialog(QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::TableDialog) {
     ui->setupUi(this);
 
     // ignore the return key so we can better edit text in the table
@@ -21,9 +19,7 @@ TableDialog::TableDialog(QWidget *parent) :
     ui->csvFileTextEdit->setVisible(false);
 }
 
-TableDialog::~TableDialog() {
-    delete ui;
-}
+TableDialog::~TableDialog() { delete ui; }
 
 /**
  * Updates the row and column spin boxes with the selection
@@ -39,8 +35,8 @@ void TableDialog::on_createTableWidget_itemSelectionChanged() {
     */
 
     updateMaxItems();
-    QTableWidgetSelectionRange range = ui->createTableWidget->
-            selectedRanges().first();
+    QTableWidgetSelectionRange range =
+        ui->createTableWidget->selectedRanges().first();
 
     ui->rowSpinBox->setValue(std::max(_maxRows, range.rowCount()));
     ui->columnSpinBox->setValue(std::max(_maxColumns, range.columnCount()));
@@ -92,8 +88,8 @@ void TableDialog::importCSV() {
 
     // read data from file
     QList<QStringList> readData = QtCSV::Reader::readToList(
-            filePath, ui->separatorComboBox->currentText(),
-            ui->textDelimiterComboBox->currentText());
+        filePath, ui->separatorComboBox->currentText(),
+        ui->textDelimiterComboBox->currentText());
 
     // loop through all rows
     for (int row = 0; row < readData.size(); ++row) {
@@ -120,8 +116,7 @@ void TableDialog::importCSV() {
  * Creates the markdown table
  */
 void TableDialog::createMarkdownTable() {
-    if ((ui->rowSpinBox->value() == 0) ||
-        (ui->columnSpinBox->value() == 0)) {
+    if ((ui->rowSpinBox->value() == 0) || (ui->columnSpinBox->value() == 0)) {
         return;
     }
 
@@ -129,15 +124,18 @@ void TableDialog::createMarkdownTable() {
     QString text = QStringLiteral("\n\n");
     int colWidth = ui->columnWidthSpinBox->value();
     QString space = QString(" ").repeated(colWidth);
-    QString headline = QString("-").repeated(
-            ui->separatorColumnWidthSpinBox->value());
+    QString headline =
+        QString("-").repeated(ui->separatorColumnWidthSpinBox->value());
 
     for (int row = 0; row < ui->rowSpinBox->value(); row++) {
         // add all columns of the row
         for (int col = 0; col < ui->columnSpinBox->value(); col++) {
             auto item = ui->createTableWidget->item(row, col);
             QString itemText = item != nullptr ? item->text() : QString();
-            text += QStringLiteral("|") + (itemText.isEmpty() ? space : itemText.leftJustified(colWidth, ' '));
+            text +=
+                QStringLiteral("|") +
+                (itemText.isEmpty() ? space
+                                    : itemText.leftJustified(colWidth, ' '));
         }
 
         text += QStringLiteral("|\n");

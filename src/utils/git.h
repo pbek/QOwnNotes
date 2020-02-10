@@ -14,19 +14,21 @@
 
 #pragma once
 
-/*  Miscellaneous functions that can be useful */
+#include <QString>
+#include <QProcess>
+
+/*  Git functions that can be useful */
 
 namespace Utils {
-    namespace Git {
-        void commitCurrentNoteFolder();
-        bool executeCommand(const QString& command, QProcess *process = Q_NULLPTR,
-                            bool withErrorDialog = false);
-        bool executeGitCommand(const QString& arguments,
-                               QProcess *process = Q_NULLPTR,
-                               bool withErrorDialog = true);
-        QString gitCommand();
-        void showLog(const QString& filePath);
-        bool hasLogCommand();
-        bool isCurrentNoteFolderUseGit();
-    }
-}
+namespace Git {
+void commitCurrentNoteFolder();
+bool executeCommand(const QString& command, QProcess* process = Q_NULLPTR,
+                    bool withErrorDialog = false);
+bool executeGitCommand(const QString& arguments, QProcess* process = Q_NULLPTR,
+                       bool withErrorDialog = true);
+QString gitCommand();
+void showLog(const QString& filePath);
+bool hasLogCommand();
+bool isCurrentNoteFolderUseGit();
+}    // namespace Git
+}    // namespace Utils

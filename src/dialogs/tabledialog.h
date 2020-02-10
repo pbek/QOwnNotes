@@ -8,15 +8,14 @@ class TableDialog;
 
 class QTableWidgetItem;
 
-class TableDialog : public MasterDialog
-{
+class TableDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit TableDialog(QWidget *parent = 0);
     ~TableDialog();
 
-private slots:
+   private slots:
     void on_createTableWidget_itemSelectionChanged();
 
     void on_buttonBox_accepted();
@@ -27,11 +26,8 @@ private slots:
 
     void on_createTableWidget_itemChanged(QTableWidgetItem *item);
 
-private:
-    enum Tab {
-        CreateTab,
-        ImportTab
-    };
+   private:
+    enum Tab { CreateTab, ImportTab };
 
     Ui::TableDialog *ui;
     int _maxColumns = 0;

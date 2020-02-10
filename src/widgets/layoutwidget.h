@@ -9,14 +9,13 @@ class LayoutWidget;
 
 class QSettings;
 
-class LayoutWidget : public QWidget
-{
+class LayoutWidget : public QWidget {
     Q_OBJECT
-Q_SIGNALS:
+   Q_SIGNALS:
     void settingsStored();
 
-public:
-    explicit LayoutWidget(QWidget *parent = 0);
+   public:
+    explicit LayoutWidget(QWidget* parent = 0);
     ~LayoutWidget();
 
     void resizeLayoutImage() const;
@@ -25,17 +24,17 @@ public:
 
     void storeSettings();
 
-private slots:
+   private slots:
     void on_layoutComboBox_currentIndexChanged(int index);
 
     void resizeEvent(QResizeEvent* event);
 
     void on_useLayoutPushButton_clicked();
 
-private:
-    Ui::LayoutWidget *ui;
+   private:
+    Ui::LayoutWidget* ui;
 
-    QSettings *_layoutSettings;
+    QSettings* _layoutSettings;
 
     bool _manualSettingsStoring;
 
@@ -48,4 +47,4 @@ private:
     static QString getLayoutDescription(const QString& layoutIdentifier);
 };
 
-#endif // LAYOUTWIDGET_H
+#endif    // LAYOUTWIDGET_H

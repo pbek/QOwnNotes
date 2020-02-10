@@ -13,32 +13,31 @@
  */
 
 #include "script.h"
-#include <QDebug>
-#include <QSqlDatabase>
-#include <QSqlQuery>
-#include <QSqlRecord>
-#include <QSqlError>
-#include <QDir>
-#include <QJsonDocument>
-#include <utils/misc.h>
-#include <QtCore/QJsonArray>
+#include <libraries/versionnumber/versionnumber.h>
 #include <services/metricsservice.h>
 #include <services/updateservice.h>
-#include <libraries/versionnumber/versionnumber.h>
+#include <utils/misc.h>
 #include <version.h>
+#include <QDebug>
+#include <QDir>
+#include <QJsonDocument>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QSqlQuery>
+#include <QSqlRecord>
+#include <QtCore/QJsonArray>
 
-const QString Script::ScriptRepositoryRawContentUrlPrefix =
-        QStringLiteral("https://raw.githubusercontent.com/qownnotes/scripts/master/");
+const QString Script::ScriptRepositoryRawContentUrlPrefix = QStringLiteral(
+    "https://raw.githubusercontent.com/qownnotes/scripts/master/");
 
+Script::Script()
+    : id{0},
+      name(QLatin1String("")),
+      scriptPath(QLatin1String("")),
+      priority{0},
+      enabled{true} {}
 
-Script::Script() : id{0}, name(QLatin1String("")), scriptPath(QLatin1String("")),
-                   priority{0}, enabled{true}
-{
-}
-
-int Script::getId() const {
-    return this->id;
-}
+int Script::getId() const { return this->id; }
 
 /**
  * Returns the script path
@@ -47,9 +46,7 @@ int Script::getId() const {
  *
  * @return
  */
-QString Script::getScriptPath() const {
-    return this->scriptPath;
-}
+QString Script::getScriptPath() const { return this->scriptPath; }
 
 /**
  * Returns the directory of the script
@@ -61,29 +58,17 @@ QString Script::getScriptDirPath() const {
     return info.canonicalPath();
 }
 
-QString Script::getName() const {
-    return this->name;
-}
+QString Script::getName() const { return this->name; }
 
-QString Script::getIdentifier() const {
-    return this->identifier;
-}
+QString Script::getIdentifier() const { return this->identifier; }
 
-int Script::getPriority() const {
-    return this->priority;
-}
+int Script::getPriority() const { return this->priority; }
 
-bool Script::getEnabled() const {
-    return this->enabled;
-}
+bool Script::getEnabled() const { return this->enabled; }
 
-bool Script::isEnabled() const {
-    return getEnabled();
-}
+bool Script::isEnabled() const { return getEnabled(); }
 
-void Script::setName(const QString &text) {
-    this->name = text;
-}
+void Script::setName(const QString &text) { this->name = text; }
 
 void Script::setIdentifier(QString identifier) {
     this->identifier = std::move(identifier);
@@ -102,31 +87,26 @@ void Script::setSettingsVariablesJson(const QJsonObject &jsonObject) {
     this->settingsVariablesJson = document.toJson();
 }
 
-void Script::setScriptPath(QString text) {
-    this->scriptPath = std::move(text);
-}
+void Script::setScriptPath(QString text) { this->scriptPath = std::move(text); }
 
-void Script::setPriority(int value) {
-    this->priority = value;
-}
+void Script::setPriority(int value) { this->priority = value; }
 
-void Script::setEnabled(bool value) {
-    this->enabled = value;
-}
+void Script::setEnabled(bool value) { this->enabled = value; }
 
-bool Script::create(const QString& name, QString scriptPath) {
+bool Script::create(const QString &name, QString scriptPath) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
-    query.prepare(QStringLiteral("INSERT INTO script ( name, script_path ) "
-                          "VALUES ( :name, :scriptPath )"));
+    query.prepare(
+        QStringLiteral("INSERT INTO script ( name, script_path ) "
+                       "VALUES ( :name, :scriptPath )"));
     query.bindValue(QStringLiteral(":name"), name);
 
     // make the path relative to the portable data path if we are in
     // portable mode
     query.bindValue(QStringLiteral(":scriptPath"),
                     Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
-                            std::move(scriptPath)));
+                        std::move(scriptPath)));
 
     return query.exec();
 }
@@ -175,7 +155,8 @@ int Script::countEnabled() {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
-    query.prepare(QStringLiteral("SELECT COUNT(*) AS cnt FROM script WHERE enabled = 1"));
+    query.prepare(
+        QStringLiteral("SELECT COUNT(*) AS cnt FROM script WHERE enabled = 1"));
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -203,13 +184,14 @@ bool Script::scriptFromRepositoryExists(const QString &identifier) {
  * @param identifier
  * @return
  */
-Script Script::fetchByIdentifier(const QString& identifier) {
+Script Script::fetchByIdentifier(const QString &identifier) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     Script script;
 
-    query.prepare(QStringLiteral("SELECT * FROM script WHERE identifier = :identifier"));
+    query.prepare(
+        QStringLiteral("SELECT * FROM script WHERE identifier = :identifier"));
     query.bindValue(QStringLiteral(":identifier"), identifier);
 
     if (!query.exec()) {
@@ -226,9 +208,7 @@ Script Script::fetchByIdentifier(const QString& identifier) {
  *
  * @return
  */
-bool Script::refetch() {
-    return fillFromId(id);
-}
+bool Script::refetch() { return fillFromId(id); }
 
 bool Script::scriptPathExists() const {
     QFile file(scriptPath);
@@ -266,32 +246,32 @@ bool Script::remove() const {
             dir.removeRecursively();
 
             MetricsService::instance()->sendVisitIfEnabled(
-                    QStringLiteral("script-repository/remove/") + identifier);
+                QStringLiteral("script-repository/remove/") + identifier);
         }
 
         return true;
     }
 }
 
-Script Script::scriptFromQuery(const QSqlQuery& query) {
+Script Script::scriptFromQuery(const QSqlQuery &query) {
     Script script;
     script.fillFromQuery(query);
     return script;
 }
 
-bool Script::fillFromQuery(const QSqlQuery& query) {
+bool Script::fillFromQuery(const QSqlQuery &query) {
     this->id = query.value(QStringLiteral("id")).toInt();
     this->name = query.value(QStringLiteral("name")).toString();
     this->identifier = query.value(QStringLiteral("identifier")).toString();
     this->infoJson = query.value(QStringLiteral("info_json")).toString();
     this->settingsVariablesJson =
-            query.value(QStringLiteral("settings_variables_json")).toString();
+        query.value(QStringLiteral("settings_variables_json")).toString();
     this->priority = query.value(QStringLiteral("priority")).toInt();
     this->enabled = query.value(QStringLiteral("enabled")).toBool();
 
     // prepend the portable data path if we are in portable mode
     this->scriptPath = Utils::Misc::prependPortableDataPathIfNeeded(
-            query.value(QStringLiteral("script_path")).toString(), true);
+        query.value(QStringLiteral("script_path")).toString(), true);
 
     return true;
 }
@@ -302,8 +282,8 @@ QList<Script> Script::fetchAll(bool enabledOnly) {
 
     QList<Script> scriptList;
     query.prepare(
-            QStringLiteral("SELECT * FROM script %1 ORDER BY priority ASC, id ASC")
-                    .arg(enabledOnly ? QStringLiteral("WHERE enabled = 1") : ""));
+        QStringLiteral("SELECT * FROM script %1 ORDER BY priority ASC, id ASC")
+            .arg(enabledOnly ? QStringLiteral("WHERE enabled = 1") : ""));
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -325,20 +305,20 @@ bool Script::store() {
     QSqlQuery query(db);
 
     if (this->id > 0) {
-        query.prepare(
-                QStringLiteral("UPDATE script SET name = :name, script_path = :scriptPath, "
-                        "priority = :priority, enabled = :enabled, "
-                        "identifier = :identifier, info_json = :info_json, "
-                        "settings_variables_json = :settings_variables_json "
-                        "WHERE id = :id"));
+        query.prepare(QStringLiteral(
+            "UPDATE script SET name = :name, script_path = :scriptPath, "
+            "priority = :priority, enabled = :enabled, "
+            "identifier = :identifier, info_json = :info_json, "
+            "settings_variables_json = :settings_variables_json "
+            "WHERE id = :id"));
         query.bindValue(":id", this->id);
     } else {
-        query.prepare(
-                QStringLiteral("INSERT INTO script (name, script_path, "
-                        "priority, enabled, identifier, info_json,"
-                        "settings_variables_json) VALUES "
-                        "(:name, :scriptPath, :priority, :enabled, "
-                        ":identifier, :info_json, :settings_variables_json)"));
+        query.prepare(QStringLiteral(
+            "INSERT INTO script (name, script_path, "
+            "priority, enabled, identifier, info_json,"
+            "settings_variables_json) VALUES "
+            "(:name, :scriptPath, :priority, :enabled, "
+            ":identifier, :info_json, :settings_variables_json)"));
     }
 
     query.bindValue(QStringLiteral(":name"), this->name);
@@ -346,13 +326,14 @@ bool Script::store() {
     query.bindValue(QStringLiteral(":enabled"), this->enabled);
     query.bindValue(QStringLiteral(":identifier"), this->identifier);
     query.bindValue(QStringLiteral(":info_json"), this->infoJson);
-    query.bindValue(QStringLiteral(":settings_variables_json"), this->settingsVariablesJson);
+    query.bindValue(QStringLiteral(":settings_variables_json"),
+                    this->settingsVariablesJson);
 
     // make the path relative to the portable data path if we are in
     // portable mode
     query.bindValue(QStringLiteral(":scriptPath"),
                     Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
-                            this->scriptPath));
+                        this->scriptPath));
 
     if (!query.exec()) {
         // on error
@@ -374,9 +355,7 @@ bool Script::exists() const {
     return script.id > 0;
 }
 
-bool Script::isFetched() const {
-    return (this->id > 0);
-}
+bool Script::isFetched() const { return (this->id > 0); }
 
 /**
  * Returns the json object of the infoJson field
@@ -403,8 +382,8 @@ ScriptInfoJson Script::getScriptInfoJson() const {
  * @return
  */
 QJsonObject Script::getSettingsVariablesJsonObject() const {
-    QJsonDocument jsonResponse = QJsonDocument::fromJson(
-            settingsVariablesJson.toUtf8());
+    QJsonDocument jsonResponse =
+        QJsonDocument::fromJson(settingsVariablesJson.toUtf8());
     return jsonResponse.object();
 }
 
@@ -442,7 +421,8 @@ QString Script::scriptRepositoryPath(bool removeRecursively) const {
         return QString();
     }
 
-    QString path = globalScriptRepositoryPath() + QStringLiteral("/") + identifier;
+    QString path =
+        globalScriptRepositoryPath() + QStringLiteral("/") + identifier;
     QDir dir(path);
 
     // remove the old files in the script path
@@ -485,13 +465,15 @@ QUrl Script::remoteScriptUrl() const {
  *
  * @return
  */
-QUrl Script::remoteFileUrl(const QString& fileName) const {
+QUrl Script::remoteFileUrl(const QString &fileName) const {
     if (fileName.isEmpty()) {
         return QUrl();
     }
 
-    return QUrl(QStringLiteral("https://raw.githubusercontent.com/qownnotes/scripts/master/")
-           + identifier + QStringLiteral("/") + fileName);
+    return QUrl(
+        QStringLiteral(
+            "https://raw.githubusercontent.com/qownnotes/scripts/master/") +
+        identifier + QStringLiteral("/") + fileName);
 }
 
 /**
@@ -519,13 +501,10 @@ QList<QUrl> Script::remoteFileUrls() const {
     return urlList;
 }
 
-
-
 QDebug operator<<(QDebug dbg, const Script &script) {
-    dbg.nospace() << "Script: <id>" << script.id << " <name>" <<
-            script.name << " <scriptPath>" << script.scriptPath <<
-            " <enabled>" << script.enabled <<
-            " <priority>" << script.priority;
+    dbg.nospace() << "Script: <id>" << script.id << " <name>" << script.name
+                  << " <scriptPath>" << script.scriptPath << " <enabled>"
+                  << script.enabled << " <priority>" << script.priority;
     return dbg.space();
 }
 
@@ -534,7 +513,7 @@ QDebug operator<<(QDebug dbg, const Script &script) {
  *
  * @param jsonObject
  */
-ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
+ScriptInfoJson::ScriptInfoJson(const QJsonObject &jsonObject) {
     if (jsonObject.isEmpty()) {
         return;
     }
@@ -542,12 +521,16 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
     name = jsonObject.value(QStringLiteral("name")).toString();
     identifier = jsonObject.value(QStringLiteral("identifier")).toString();
     version = jsonObject.value(QStringLiteral("version")).toString();
-    minAppVersion = jsonObject.value(QStringLiteral("minAppVersion")).toString();
+    minAppVersion =
+        jsonObject.value(QStringLiteral("minAppVersion")).toString();
     description = jsonObject.value(QStringLiteral("description")).toString();
-    description = description.replace(QStringLiteral("\n"), QStringLiteral("<br>"));
+    description =
+        description.replace(QStringLiteral("\n"), QStringLiteral("<br>"));
     script = jsonObject.value(QStringLiteral("script")).toString();
-    const QJsonArray authors = jsonObject.value(QStringLiteral("authors")).toArray();
-    const QJsonArray platforms = jsonObject.value(QStringLiteral("platforms")).toArray();
+    const QJsonArray authors =
+        jsonObject.value(QStringLiteral("authors")).toArray();
+    const QJsonArray platforms =
+        jsonObject.value(QStringLiteral("platforms")).toArray();
 
     // generate the author list
     richAuthorList.clear();
@@ -558,7 +541,7 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
         if (author.startsWith(QStringLiteral("@"))) {
             author = author.remove(0, 1);
             author = QStringLiteral("<a href='https://github.com/") + author +
-                    QStringLiteral("'>") + author + QStringLiteral("</a>");
+                     QStringLiteral("'>") + author + QStringLiteral("</a>");
         }
 
         richAuthorList << author;
@@ -573,18 +556,19 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
         platformList << platform;
     }
     if (platformList.isEmpty()) {
-        platformList << "linux" << "macos" << "windows";
+        platformList << "linux"
+                     << "macos"
+                     << "windows";
     }
     QHash<QString, QString> platformHash;
     platformHash[QStringLiteral("linux")] = QStringLiteral("Linux");
     platformHash[QStringLiteral("macos")] = QStringLiteral("macOS");
     platformHash[QStringLiteral("windows")] = QStringLiteral("Windows");
-    foreach(QString platform, platformList) {
-            if (platformHash.contains(platform)) {
-                richPlatformList << platformHash[platform];
-            }
-
+    foreach (QString platform, platformList) {
+        if (platformHash.contains(platform)) {
+            richPlatformList << platformHash[platform];
         }
+    }
     QString currentPlatform = QString(PLATFORM);
     if (currentPlatform == QStringLiteral("macosx")) {
         currentPlatform = QStringLiteral("macos");
@@ -593,7 +577,8 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
     richPlatformText = richPlatformList.join(QStringLiteral(", "));
 
     // get the resources file names
-    const QJsonArray resourcesArray = jsonObject.value(QStringLiteral("resources")).toArray();
+    const QJsonArray resourcesArray =
+        jsonObject.value(QStringLiteral("resources")).toArray();
     resources.clear();
     for (const QJsonValue &value : resourcesArray) {
         const QString fileName = value.toString().trimmed();
@@ -604,8 +589,8 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
     }
 
     // check if app version is supported
-    appVersionSupported = VersionNumber(VERSION) >=
-            VersionNumber(minAppVersion);
+    appVersionSupported =
+        VersionNumber(VERSION) >= VersionNumber(minAppVersion);
 }
 
 /**
@@ -614,5 +599,6 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
  * @return
  */
 QUrl Script::repositoryInfoJsonUrl() const {
-    return ScriptRepositoryRawContentUrlPrefix + getIdentifier() + QStringLiteral("/info.json");
+    return ScriptRepositoryRawContentUrlPrefix + getIdentifier() +
+           QStringLiteral("/info.json");
 }

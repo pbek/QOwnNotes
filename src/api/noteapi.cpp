@@ -1,7 +1,7 @@
-#include <utility>
-#include <entities/tag.h>
-#include <entities/notefolder.h>
 #include "noteapi.h"
+#include <entities/notefolder.h>
+#include <entities/tag.h>
+#include <utility>
 #include "tagapi.h"
 
 NoteApi* NoteApi::fetch(int _id) {
@@ -22,13 +22,13 @@ NoteApi* NoteApi::fetch(int _id) {
     return this;
 }
 
-NoteApi* NoteApi::fromNote(const Note &note) {
-    auto *noteApi = new NoteApi();
+NoteApi* NoteApi::fromNote(const Note& note) {
+    auto* noteApi = new NoteApi();
     noteApi->fetch(note.getId());
     return noteApi;
 }
 
-//NoteApi NoteApi::fromNote(Note note) {
+// NoteApi NoteApi::fromNote(Note note) {
 //    NoteApi noteApi;
 //    noteApi.fetch(note.getId());
 //    return noteApi;
@@ -126,12 +126,12 @@ bool NoteApi::removeTag(QString tagName) {
  */
 QQmlListProperty<NoteApi> NoteApi::fetchAll(int limit, int offset) {
     QList<int> noteIds = Note::fetchAllIds(limit, offset);
-    QList<NoteApi *> notes;
+    QList<NoteApi*> notes;
 
-    Q_FOREACH(int noteId, noteIds) {
-            NoteApi *note = NoteApi::fetch(noteId);
-            notes.append(note);
-        }
+    Q_FOREACH (int noteId, noteIds) {
+        NoteApi* note = NoteApi::fetch(noteId);
+        notes.append(note);
+    }
 
     return {this, notes};
 }

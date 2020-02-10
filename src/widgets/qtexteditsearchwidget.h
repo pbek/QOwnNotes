@@ -14,23 +14,18 @@
 
 #pragma once
 
-#include <QWidget>
 #include <QTextEdit>
+#include <QWidget>
 
 namespace Ui {
 class QTextEditSearchWidget;
 }
 
-class QTextEditSearchWidget : public QWidget
-{
+class QTextEditSearchWidget : public QWidget {
     Q_OBJECT
 
-public:
-    enum SearchMode {
-        PlainTextMode,
-        WholeWordsMode,
-        RegularExpressionMode
-    };
+   public:
+    enum SearchMode { PlainTextMode, WholeWordsMode, RegularExpressionMode };
 
     explicit QTextEditSearchWidget(QTextEdit *parent = 0);
     bool doSearch(bool searchDown = true, bool allowRestartAtTop = true);
@@ -38,15 +33,15 @@ public:
     ~QTextEditSearchWidget();
     void setReplaceEnabled(bool enabled);
 
-private:
+   private:
     Ui::QTextEditSearchWidget *ui;
 
-protected:
+   protected:
     QTextEdit *_textEdit;
     bool _darkMode;
     bool eventFilter(QObject *obj, QEvent *event);
 
-public slots:
+   public slots:
     void activate();
     void deactivate();
     void doSearchDown();
@@ -56,6 +51,6 @@ public slots:
     bool doReplace(bool forAll = false);
     void doReplaceAll();
 
-protected slots:
+   protected slots:
     void searchLineEditTextChanged(const QString &arg1);
 };

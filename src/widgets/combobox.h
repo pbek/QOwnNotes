@@ -16,19 +16,17 @@
 #include <QComboBox>
 class QWidget;
 
-class ComboBox : public QComboBox
-{
-Q_OBJECT
+class ComboBox : public QComboBox {
+    Q_OBJECT
 
-public:
+   public:
     explicit ComboBox(QWidget *parent = Q_NULLPTR);
 
-protected:
-
-private slots:
+   protected:
+   private slots:
     void onFocusChanged(QWidget *old, QWidget *now);
 
-signals:
+   signals:
     void focusIn();
     void focusOut();
 };

@@ -1,17 +1,16 @@
-#include "filedialog.h"
 #include "imagedialog.h"
-#include "ui_imagedialog.h"
+#include <utils/misc.h>
 #include <QClipboard>
-#include <QSettings>
+#include <QDebug>
 #include <QRubberBand>
+#include <QSettings>
 #include <QTemporaryFile>
 #include <utility>
-#include <utils/misc.h>
-#include <QDebug>
+#include "filedialog.h"
+#include "ui_imagedialog.h"
 
-ImageDialog::ImageDialog(QWidget *parent) :
-    MasterDialog(parent),
-    ui(new Ui::ImageDialog) {
+ImageDialog::ImageDialog(QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::ImageDialog) {
     _imageFile = nullptr;
     _tempFile = nullptr;
     _rubberBand = nullptr;
@@ -22,12 +21,13 @@ ImageDialog::ImageDialog(QWidget *parent) :
     ui->toolFrame->hide();
 
     QSettings settings;
-    ui->disableCopyingCheckBox->setChecked(settings.value("ImageDialog/disableCopying").toBool());
+    ui->disableCopyingCheckBox->setChecked(
+        settings.value("ImageDialog/disableCopying").toBool());
 
     QClipboard *clipboard = QApplication::clipboard();
     QPixmap pixmap = clipboard->pixmap();
 
-    if (!pixmap.isNull()) { // set image from clipboard
+    if (!pixmap.isNull()) {    // set image from clipboard
         ui->fileEdit->setDisabled(true);
         ui->disableCopyingCheckBox->setChecked(false);
         ui->disableCopyingCheckBox->setDisabled(true);
@@ -42,15 +42,16 @@ ImageDialog::ImageDialog(QWidget *parent) :
         }
     }
 
-    connect(ui->graphicsView, SIGNAL(scrolledContentsBy(int, int)),
-            this, SLOT(scrolledGraphicsViewContentsBy(int, int)));
-    connect(ui->graphicsView, SIGNAL(resizedBy(int, int)),
-            this, SLOT(resizedGraphicsViewBy(int, int)));
+    connect(ui->graphicsView, SIGNAL(scrolledContentsBy(int, int)), this,
+            SLOT(scrolledGraphicsViewContentsBy(int, int)));
+    connect(ui->graphicsView, SIGNAL(resizedBy(int, int)), this,
+            SLOT(resizedGraphicsViewBy(int, int)));
 }
 
 ImageDialog::~ImageDialog() {
     QSettings settings;
-    settings.setValue("ImageDialog/disableCopying", ui->disableCopyingCheckBox->isChecked());
+    settings.setValue("ImageDialog/disableCopying",
+                      ui->disableCopyingCheckBox->isChecked());
 
     delete _imageFile;
     delete _tempFile;
@@ -61,21 +62,19 @@ bool ImageDialog::isDisableCopying() {
     return ui->disableCopyingCheckBox->isChecked();
 }
 
-QFile *ImageDialog::getImageFile() {
-    return _imageFile;
-}
+QFile *ImageDialog::getImageFile() { return _imageFile; }
 
 QString ImageDialog::getFilePathOrUrl() {
     return ui->fileEdit->text().trimmed();
 }
 
-QString ImageDialog::getImageTitle() {
-    return ui->titleEdit->text();
-}
+QString ImageDialog::getImageTitle() { return ui->titleEdit->text(); }
 
 void ImageDialog::on_openButton_clicked() {
     QStringList nameFilters;
-    nameFilters << tr("Image files") + " (*.jpg *.jpeg *.png *.gif *.svg *.bmp *.pbm *.pgm *.ppm *.xbm *.xpm)"
+    nameFilters << tr("Image files") +
+                       " (*.jpg *.jpeg *.png *.gif *.svg *.bmp *.pbm *.pgm "
+                       "*.ppm *.xbm *.xpm)"
                 << tr("Any files") + " (*)";
 
     FileDialog dialog("InsertImage");
@@ -97,7 +96,7 @@ void ImageDialog::on_openButton_clicked() {
     }
 }
 
-void ImageDialog::setPixmap(const QPixmap& pixmap, bool updateBase) {
+void ImageDialog::setPixmap(const QPixmap &pixmap, bool updateBase) {
     if (pixmap.isNull()) {
         return;
     }
@@ -127,11 +126,11 @@ void ImageDialog::setPixmap(const QPixmap& pixmap, bool updateBase) {
 void ImageDialog::on_buttonBox_accepted() {
     // if the image was manipulated or from the clipboard we will store it into
     // a temporary file
-    if (ui->fileEdit->text().trimmed().isEmpty() || _imageWasCropped || _imageWasDownloaded ||
+    if (ui->fileEdit->text().trimmed().isEmpty() || _imageWasCropped ||
+        _imageWasDownloaded ||
         ui->widthSpinBox->value() != _basePixmap.width()) {
-
         _tempFile = new QTemporaryFile(QDir::tempPath() + QDir::separator() +
-            "qownnotes-media-XXXXXX.png");
+                                       "qownnotes-media-XXXXXX.png");
 
         if (_tempFile->open()) {
             // save temporary png image
@@ -144,11 +143,11 @@ void ImageDialog::on_buttonBox_accepted() {
 }
 
 void ImageDialog::on_widthSpinBox_valueChanged(int arg1) {
-    double factor = (double) arg1 / _basePixmap.width();
+    double factor = (double)arg1 / _basePixmap.width();
 
     const QSignalBlocker blocker(ui->widthScaleHorizontalSlider);
     Q_UNUSED(blocker)
-    ui->widthScaleHorizontalSlider->setValue((int) (factor * 10));
+    ui->widthScaleHorizontalSlider->setValue((int)(factor * 10));
     updateWidthScaleLabelValue();
 
     QPixmap pixmap = _basePixmap.scaledToWidth(arg1, Qt::SmoothTransformation);
@@ -156,14 +155,14 @@ void ImageDialog::on_widthSpinBox_valueChanged(int arg1) {
 }
 
 void ImageDialog::updateWidthScaleLabelValue() const {
-    double factor = (double) ui->widthScaleHorizontalSlider->value() / 10;
+    double factor = (double)ui->widthScaleHorizontalSlider->value() / 10;
     ui->widthScaleLabel->setText(QString::number(factor) + "x");
 }
 
 void ImageDialog::on_widthScaleHorizontalSlider_valueChanged(int value) {
     updateWidthScaleLabelValue();
 
-    int width = (int) (_basePixmap.width() * value / 10);
+    int width = (int)(_basePixmap.width() * value / 10);
     ui->widthSpinBox->setValue(width);
 }
 
@@ -212,10 +211,10 @@ void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
     setPixmap(QPixmap(pathOrUrl), true);
 }
 
-
 void ImageDialog::on_disableCopyingCheckBox_toggled(bool checked) {
     ui->scaleFrame->setDisabled(checked);
-    ui->graphicsView->setDragMode(checked ? QGraphicsView::NoDrag : QGraphicsView::RubberBandDrag);
+    ui->graphicsView->setDragMode(checked ? QGraphicsView::NoDrag
+                                          : QGraphicsView::RubberBandDrag);
 
     if (checked) {
         // reset scaling
@@ -223,19 +222,22 @@ void ImageDialog::on_disableCopyingCheckBox_toggled(bool checked) {
     }
 }
 
-void ImageDialog::on_graphicsView_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint)
-{
-    if (viewportRect.isEmpty()) { // dragging has stopped
+void ImageDialog::on_graphicsView_rubberBandChanged(
+    const QRect &viewportRect, const QPointF &fromScenePoint,
+    const QPointF &toScenePoint) {
+    if (viewportRect.isEmpty()) {    // dragging has stopped
         _rubberBand = new QRubberBand(QRubberBand::Rectangle, ui->graphicsView);
 
         QMargins margin = ui->graphicsView->contentsMargins();
 
-        // we need to adapt the rubberband by the content margins of the graphics view
-        _lastRubberBandViewportRect.adjust(margin.left(), margin.top(), margin.left(), margin.top());
+        // we need to adapt the rubberband by the content margins of the
+        // graphics view
+        _lastRubberBandViewportRect.adjust(margin.left(), margin.top(),
+                                           margin.left(), margin.top());
 
         _rubberBand->setGeometry(_lastRubberBandViewportRect);
         _rubberBand->show();
-    } else { // currently dragging
+    } else {    // currently dragging
         // close rubber band from previous dragging
         if (_rubberBand != Q_NULLPTR && _rubberBand->isVisible()) {
             _rubberBand->close();
@@ -261,7 +263,8 @@ void ImageDialog::on_graphicsView_rubberBandChanged(const QRect &viewportRect, c
         }
 
         // swap coordinates if the drag was "reversed"
-        if (fromScenePointI.x() > toScenePointI.x() && fromScenePointI.y() > toScenePointI.y()) {
+        if (fromScenePointI.x() > toScenePointI.x() &&
+            fromScenePointI.y() > toScenePointI.y()) {
             _rubberBandSceneRect = QRect(toScenePointI, fromScenePointI);
         } else {
             _rubberBandSceneRect = QRect(fromScenePointI, toScenePointI);
@@ -302,7 +305,8 @@ void ImageDialog::resizedGraphicsViewBy(int dw, int dh) {
 
     // move rubberband if graphics view was resized
     // TODO: does not work in all cases
-//    _rubberBand->move(_rubberBand->x() + dw / 2, _rubberBand->y() + dh / 2);
+    //    _rubberBand->move(_rubberBand->x() + dw / 2, _rubberBand->y() + dh /
+    //    2);
     Q_UNUSED(dw)
     Q_UNUSED(dh)
 

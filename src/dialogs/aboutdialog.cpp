@@ -1,16 +1,15 @@
 #include "aboutdialog.h"
-#include "ui_aboutdialog.h"
-#include "build_number.h"
-#include "version.h"
-#include "release.h"
-#include <QFile>
-#include <QDate>
-#include <QTextStream>
 #include <utils/misc.h>
+#include <QDate>
+#include <QFile>
+#include <QTextStream>
+#include "build_number.h"
+#include "release.h"
+#include "ui_aboutdialog.h"
+#include "version.h"
 
-AboutDialog::AboutDialog(QWidget *parent) :
-        MasterDialog(parent),
-        ui(new Ui::AboutDialog) {
+AboutDialog::AboutDialog(QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::AboutDialog) {
     ui->setupUi(this);
 
     // load the about.html
@@ -34,7 +33,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
         html.replace("CURRENT_YEAR", QString::number(date.year()));
 
         ui->textBrowser->document()->setDefaultStyleSheet(
-                Utils::Misc::genericCSS());
+            Utils::Misc::genericCSS());
 
         // put the html to the text browser in the about dialog
         ui->textBrowser->setHtml(html);
@@ -42,6 +41,4 @@ AboutDialog::AboutDialog(QWidget *parent) :
     }
 }
 
-AboutDialog::~AboutDialog() {
-    delete ui;
-}
+AboutDialog::~AboutDialog() { delete ui; }

@@ -13,14 +13,13 @@
 
 #pragma once
 
-#include <QListWidget>
 #include <QDropEvent>
+#include <QListWidget>
 
-class ScriptListWidget : public QListWidget
-{
-public:
+class ScriptListWidget : public QListWidget {
+   public:
     explicit ScriptListWidget(QWidget *parent = Q_NULLPTR);
 
-protected:
+   protected:
     void dropEvent(QDropEvent *e);
 };

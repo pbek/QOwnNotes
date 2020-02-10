@@ -1,8 +1,8 @@
 #ifndef TODODIALOG_H
 #define TODODIALOG_H
 
-#include "entities/calendaritem.h"
 #include <QTreeWidgetItem>
+#include "entities/calendaritem.h"
 #include "masterdialog.h"
 
 namespace Ui {
@@ -13,13 +13,12 @@ class MainWindow;
 class QSplitter;
 class QListWidgetItem;
 
-class TodoDialog : public MasterDialog
-{
+class TodoDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit TodoDialog(MainWindow *mainWindow, QString taskUid = QString(),
-                            QWidget *parent = nullptr);
+                        QWidget *parent = nullptr);
     ~TodoDialog();
 
     void reloadTodoListItems();
@@ -31,10 +30,10 @@ public:
     void jumpToTask(QString taskUid);
     void refreshUi();
 
-public slots:
+   public slots:
     void reloadTodoList();
 
-private slots:
+   private slots:
     void on_TodoDialog_finished(int result);
     void on_todoListSelector_currentIndexChanged(const QString &arg1);
     void on_prioritySlider_valueChanged(int value);
@@ -49,11 +48,12 @@ private slots:
     void onSaveAndInsertButtonClicked();
     void onImportAsNoteButtonClicked();
     void clearCacheAndReloadTodoList();
-    void on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+    void on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *current,
+                                                  QTreeWidgetItem *previous);
     void on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
     void on_todoItemTreeWidget_customContextMenuRequested(const QPoint &pos);
 
-private:
+   private:
     Ui::TodoDialog *ui;
     MainWindow *_mainWindow;
     QSplitter *mainSplitter;
@@ -61,22 +61,23 @@ private:
     CalendarItem lastCreatedCalendarItem;
     QString _jumpToCalendarItemUid;
     bool _setFocusToDescriptionEdit;
-    QTreeWidgetItem* firstVisibleTodoItemTreeItem;
+    QTreeWidgetItem *firstVisibleTodoItemTreeItem;
     void setupMainSplitter();
     void storeSettings();
     void loadTodoListData();
-    QTreeWidgetItem* findTodoItemTreeWidgetItemByUID(const QString& uid);
+    QTreeWidgetItem *findTodoItemTreeWidgetItemByUID(const QString &uid);
     void resetEditFrameControls();
     void setupUi();
     void updateCurrentCalendarItemWithFormData();
     void searchForSearchLineTextInNoteTextEdit();
     void searchInDescriptionTextEdit(QString &str);
-    void createNewTodoItem(const QString &name = "", const QString &relatedUid = "");
+    void createNewTodoItem(const QString &name = "",
+                           const QString &relatedUid = "");
 
-protected:
+   protected:
     bool eventFilter(QObject *obj, QEvent *event);
 
     void jumpToTodoListItem();
 };
 
-#endif // TODODIALOG_H
+#endif    // TODODIALOG_H

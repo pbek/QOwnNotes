@@ -13,33 +13,31 @@
  */
 
 #include "qtexteditsearchwidget.h"
-#include "ui_qtexteditsearchwidget.h"
+#include <QDebug>
 #include <QEvent>
 #include <QKeyEvent>
-#include <QDebug>
+#include "ui_qtexteditsearchwidget.h"
 
-QTextEditSearchWidget::QTextEditSearchWidget(QTextEdit *parent) :
-    QWidget(parent),
-    ui(new Ui::QTextEditSearchWidget)
-{
+QTextEditSearchWidget::QTextEditSearchWidget(QTextEdit *parent)
+    : QWidget(parent), ui(new Ui::QTextEditSearchWidget) {
     ui->setupUi(this);
     _textEdit = parent;
     hide();
 
-    QObject::connect(ui->closeButton, SIGNAL(clicked()),
-                     this, SLOT(deactivate()));
-    QObject::connect(ui->searchLineEdit, SIGNAL(textChanged(QString)),
-                     this, SLOT(searchLineEditTextChanged(QString)));
-    QObject::connect(ui->searchDownButton, SIGNAL(clicked()),
-                     this, SLOT(doSearchDown()));
-    QObject::connect(ui->searchUpButton, SIGNAL(clicked()),
-                     this, SLOT(doSearchUp()));
-    QObject::connect(ui->replaceToggleButton, SIGNAL(toggled(bool)),
-                     this, SLOT(setReplaceMode(bool)));
-    QObject::connect(ui->replaceButton, SIGNAL(clicked()),
-                     this, SLOT(doReplace()));
-    QObject::connect(ui->replaceAllButton, SIGNAL(clicked()),
-                     this, SLOT(doReplaceAll()));
+    QObject::connect(ui->closeButton, SIGNAL(clicked()), this,
+                     SLOT(deactivate()));
+    QObject::connect(ui->searchLineEdit, SIGNAL(textChanged(QString)), this,
+                     SLOT(searchLineEditTextChanged(QString)));
+    QObject::connect(ui->searchDownButton, SIGNAL(clicked()), this,
+                     SLOT(doSearchDown()));
+    QObject::connect(ui->searchUpButton, SIGNAL(clicked()), this,
+                     SLOT(doSearchUp()));
+    QObject::connect(ui->replaceToggleButton, SIGNAL(toggled(bool)), this,
+                     SLOT(setReplaceMode(bool)));
+    QObject::connect(ui->replaceButton, SIGNAL(clicked()), this,
+                     SLOT(doReplace()));
+    QObject::connect(ui->replaceAllButton, SIGNAL(clicked()), this,
+                     SLOT(doReplaceAll()));
 
     installEventFilter(this);
     ui->searchLineEdit->installEventFilter(this);
@@ -60,9 +58,7 @@ QTextEditSearchWidget::QTextEditSearchWidget(QTextEdit *parent) :
 #endif
 }
 
-QTextEditSearchWidget::~QTextEditSearchWidget() {
-    delete ui;
-}
+QTextEditSearchWidget::~QTextEditSearchWidget() { delete ui; }
 
 void QTextEditSearchWidget::setReplaceEnabled(bool enabled) {
     ui->replaceToggleButton->setVisible(enabled);
@@ -118,12 +114,12 @@ bool QTextEditSearchWidget::eventFilter(QObject *obj, QEvent *event) {
             deactivate();
             return true;
         } else if ((keyEvent->modifiers().testFlag(Qt::ShiftModifier) &&
-                  (keyEvent->key() == Qt::Key_Return)) ||
-                 (keyEvent->key() == Qt::Key_Up)) {
+                    (keyEvent->key() == Qt::Key_Return)) ||
+                   (keyEvent->key() == Qt::Key_Up)) {
             doSearchUp();
             return true;
         } else if ((keyEvent->key() == Qt::Key_Return) ||
-                 (keyEvent->key() == Qt::Key_Down)) {
+                   (keyEvent->key() == Qt::Key_Down)) {
             doSearchDown();
             return true;
         } else if (keyEvent->key() == Qt::Key_F3) {
@@ -131,10 +127,11 @@ bool QTextEditSearchWidget::eventFilter(QObject *obj, QEvent *event) {
             return true;
         }
 
-//        if ((obj == ui->replaceLineEdit) && (keyEvent->key() == Qt::Key_Tab)
-//                && ui->replaceToggleButton->isChecked()) {
-//            ui->replaceLineEdit->setFocus();
-//        }
+        //        if ((obj == ui->replaceLineEdit) && (keyEvent->key() ==
+        //        Qt::Key_Tab)
+        //                && ui->replaceToggleButton->isChecked()) {
+        //            ui->replaceLineEdit->setFocus();
+        //        }
 
         return false;
     }
@@ -147,13 +144,9 @@ void QTextEditSearchWidget::searchLineEditTextChanged(const QString &arg1) {
     doSearchDown();
 }
 
-void QTextEditSearchWidget::doSearchUp() {
-    doSearch(false);
-}
+void QTextEditSearchWidget::doSearchUp() { doSearch(false); }
 
-void QTextEditSearchWidget::doSearchDown() {
-    doSearch(true);
-}
+void QTextEditSearchWidget::doSearchDown() { doSearch(true); }
 
 bool QTextEditSearchWidget::doReplace(bool forAll) {
     if (_textEdit->isReadOnly()) {
@@ -170,7 +163,7 @@ bool QTextEditSearchWidget::doReplace(bool forAll) {
     if (searchMode == RegularExpressionMode) {
         QString text = c.selectedText();
         text.replace(QRegularExpression(ui->searchLineEdit->text()),
-                             ui->replaceLineEdit->text());
+                     ui->replaceLineEdit->text());
         c.insertText(text);
     } else {
         c.insertText(ui->replaceLineEdit->text());
@@ -198,7 +191,8 @@ void QTextEditSearchWidget::doReplaceAll() {
     _textEdit->moveCursor(QTextCursor::Start);
 
     // replace until everything to the bottom is replaced
-    while (doSearch(true, false) && doReplace(true)) {}
+    while (doSearch(true, false) && doReplace(true)) {
+    }
 }
 
 /**
@@ -215,9 +209,8 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
 
     int searchMode = ui->modeComboBox->currentIndex();
 
-    QFlags<QTextDocument::FindFlag> options = searchDown ?
-                                              QTextDocument::FindFlag(0)
-                                                         : QTextDocument::FindBackward;
+    QFlags<QTextDocument::FindFlag> options =
+        searchDown ? QTextDocument::FindFlag(0) : QTextDocument::FindBackward;
     if (searchMode == WholeWordsMode) {
         options |= QTextDocument::FindWholeWords;
     }
@@ -239,16 +232,16 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
 
     // start at the top (or bottom) if not found
     if (!found && allowRestartAtTop) {
-        _textEdit->moveCursor(
-                searchDown ? QTextCursor::Start : QTextCursor::End);
+        _textEdit->moveCursor(searchDown ? QTextCursor::Start
+                                         : QTextCursor::End);
         found = _textEdit->find(text, options);
     }
 
     QRect rect = _textEdit->cursorRect();
     QMargins margins = _textEdit->layout()->contentsMargins();
     int searchWidgetHotArea = _textEdit->height() - this->height();
-    int marginBottom = (rect.y() > searchWidgetHotArea) ? (this->height() + 10)
-                                                        : 0;
+    int marginBottom =
+        (rect.y() > searchWidgetHotArea) ? (this->height() + 10) : 0;
 
     // move the search box a bit up if we would block the search result
     if (margins.bottom() != marginBottom) {
@@ -268,6 +261,4 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
     return found;
 }
 
-void QTextEditSearchWidget::setDarkMode(bool enabled) {
-    _darkMode = enabled;
-}
+void QTextEditSearchWidget::setDarkMode(bool enabled) { _darkMode = enabled; }

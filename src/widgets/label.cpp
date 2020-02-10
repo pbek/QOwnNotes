@@ -11,8 +11,8 @@
  * for more details.
  */
 
-#include <utils/misc.h>
 #include "label.h"
+#include <utils/misc.h>
 
 Label::Label(QWidget *parent, Qt::WindowFlags f) {
     Q_UNUSED(parent);
@@ -23,7 +23,7 @@ Label::Label(const QString &text, QWidget *parent, Qt::WindowFlags f) {
     Q_UNUSED(text);
     Q_UNUSED(parent);
     Q_UNUSED(f);
-//    QLabel::QLabel(injectCSS(text), parent, f);
+    //    QLabel::QLabel(injectCSS(text), parent, f);
 }
 
 /**
@@ -31,9 +31,7 @@ Label::Label(const QString &text, QWidget *parent, Qt::WindowFlags f) {
  *
  * @param text
  */
-void Label::setText(const QString &text) {
-    QLabel::setText(injectCSS(text));
-}
+void Label::setText(const QString &text) { QLabel::setText(injectCSS(text)); }
 
 /**
  * Injects CSS styles into the text
@@ -41,7 +39,7 @@ void Label::setText(const QString &text) {
  * @param text
  * @return
  */
-QString Label::injectCSS(const QString& text) {
-//    text = text.remove("<html>").remove("</html>").remove("<head/>");
+QString Label::injectCSS(const QString &text) {
+    //    text = text.remove("<html>").remove("</html>").remove("<head/>");
     return "<style>" + Utils::Misc::genericCSS() + "</style>" + text;
 }

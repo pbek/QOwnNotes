@@ -1,11 +1,10 @@
+#include "websockettokendialog.h"
 #include <QtCore/QSettings>
 #include <QtGui/QClipboard>
-#include "websockettokendialog.h"
 #include "ui_websockettokendialog.h"
 
-WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::WebSocketTokenDialog) {
+WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
+    : QDialog(parent), ui(new Ui::WebSocketTokenDialog) {
     ui->setupUi(this);
 
     QSettings settings;
@@ -20,12 +19,12 @@ WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent) :
 }
 
 QString WebSocketTokenDialog::generateToken() const {
-    const QString possibleCharacters("ABCDEFGHKLMNPQRSTUVWXYZabcdefghkmnpqrstuvwxyz23456789");
+    const QString possibleCharacters(
+        "ABCDEFGHKLMNPQRSTUVWXYZabcdefghkmnpqrstuvwxyz23456789");
     const int randomStringLength = 8;
 
     QString randomString;
-    for(int i=0; i<randomStringLength; ++i)
-    {
+    for (int i = 0; i < randomStringLength; ++i) {
         int index = qrand() % possibleCharacters.length();
         QChar nextChar = possibleCharacters.at(index);
         randomString.append(nextChar);
@@ -33,9 +32,7 @@ QString WebSocketTokenDialog::generateToken() const {
     return randomString;
 }
 
-WebSocketTokenDialog::~WebSocketTokenDialog() {
-    delete ui;
-}
+WebSocketTokenDialog::~WebSocketTokenDialog() { delete ui; }
 
 void WebSocketTokenDialog::on_copyButton_clicked() {
     QClipboard *clipboard = QApplication::clipboard();
@@ -52,5 +49,6 @@ void WebSocketTokenDialog::on_generateButton_clicked() {
 
 void WebSocketTokenDialog::on_buttonBox_accepted() {
     QSettings settings;
-    settings.setValue("webSocketServerService/token", ui->tokenLineEdit->text());
+    settings.setValue("webSocketServerService/token",
+                      ui->tokenLineEdit->text());
 }

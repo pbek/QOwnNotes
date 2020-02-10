@@ -13,16 +13,15 @@
 
 #pragma once
 
-#include <QTextBrowser>
-#include <QResizeEvent>
-#include <QPoint>
 #include <widgets/qtexteditsearchwidget.h>
+#include <QPoint>
+#include <QResizeEvent>
+#include <QTextBrowser>
 
-class NotePreviewWidget : public QTextBrowser
-{
+class NotePreviewWidget : public QTextBrowser {
     Q_OBJECT
 
-public:
+   public:
     explicit NotePreviewWidget(QWidget *parent = nullptr);
     void initSearchFrame(QWidget *searchFrame, bool darkMode = false);
     QTextEditSearchWidget *searchWidget();
@@ -31,12 +30,12 @@ public:
 
     void exportAsHTMLFile();
 
-protected:
+   protected:
     QTextEditSearchWidget *_searchWidget;
     QWidget *_searchFrame;
     QString _html;
 
-    void resizeEvent(QResizeEvent* event) override;
+    void resizeEvent(QResizeEvent *event) override;
     bool eventFilter(QObject *obj, QEvent *event) override;
 
     QStringList extractGifUrls(const QString &text) const;
@@ -44,12 +43,12 @@ protected:
 
     void contextMenuEvent(QContextMenuEvent *event) override;
 
-public slots:
+   public slots:
     void hide();
 
-signals:
+   signals:
     void resize(QSize size, QSize oldSize);
 
-private:
-    QList<QMovie*> _movies;
+   private:
+    QList<QMovie *> _movies;
 };

@@ -1,24 +1,23 @@
-#include <QDebug>
-#include <QKeyEvent>
-#include <entities/notefolder.h>
-#include <entities/note.h>
-#include <QTreeWidgetItem>
-#include <QGraphicsPixmapItem>
-#include <QtWidgets/QMessageBox>
-#include <utils/gui.h>
-#include <mainwindow.h>
-#include <QtCore/QMimeDatabase>
-#include <QtCore/QMimeType>
-#include <utils/misc.h>
-#include "widgets/qownnotesmarkdowntextedit.h"
 #include "orphanedattachmentsdialog.h"
-#include "ui_orphanedattachmentsdialog.h"
+#include <entities/note.h>
+#include <entities/notefolder.h>
+#include <mainwindow.h>
+#include <utils/gui.h>
+#include <utils/misc.h>
+#include <QDebug>
 #include <QDir>
 #include <QFileInfo>
+#include <QGraphicsPixmapItem>
+#include <QKeyEvent>
+#include <QTreeWidgetItem>
+#include <QtCore/QMimeDatabase>
+#include <QtCore/QMimeType>
+#include <QtWidgets/QMessageBox>
+#include "ui_orphanedattachmentsdialog.h"
+#include "widgets/qownnotesmarkdowntextedit.h"
 
-OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent) :
-        MasterDialog(parent),
-    ui(new Ui::OrphanedAttachmentsDialog) {
+OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::OrphanedAttachmentsDialog) {
     ui->setupUi(this);
     ui->infoFrame->setEnabled(false);
     ui->fileTreeWidget->installEventFilter(this);
@@ -30,8 +29,8 @@ OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent) :
         return;
     }
 
-    QStringList orphanedFiles = attachmentsDir.entryList(
-            QStringList("*"), QDir::Files, QDir::Time);
+    QStringList orphanedFiles =
+        attachmentsDir.entryList(QStringList("*"), QDir::Files, QDir::Time);
     orphanedFiles.removeDuplicates();
 
     QList<Note> noteList = Note::fetchAll();
@@ -40,52 +39,50 @@ OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent) :
     ui->progressBar->setMaximum(noteListCount);
     ui->progressBar->show();
 
-    Q_FOREACH(Note note, noteList) {
-            QStringList attachmentsFileList = note.getAttachmentsFileList();
+    Q_FOREACH (Note note, noteList) {
+        QStringList attachmentsFileList = note.getAttachmentsFileList();
 
-            // remove all found attachments from the orphaned files list
-            Q_FOREACH(QString fileName, attachmentsFileList) {
-                orphanedFiles.removeAll(fileName);
-            }
-
-            ui->progressBar->setValue(ui->progressBar->value() + 1);
+        // remove all found attachments from the orphaned files list
+        Q_FOREACH (QString fileName, attachmentsFileList) {
+            orphanedFiles.removeAll(fileName);
         }
+
+        ui->progressBar->setValue(ui->progressBar->value() + 1);
+    }
 
     ui->progressBar->hide();
 
-    Q_FOREACH(QString fileName, orphanedFiles) {
-            QTreeWidgetItem *item = new QTreeWidgetItem();
-            item->setText(0, fileName);
-            item->setData(0, Qt::UserRole, fileName);
+    Q_FOREACH (QString fileName, orphanedFiles) {
+        QTreeWidgetItem *item = new QTreeWidgetItem();
+        item->setText(0, fileName);
+        item->setData(0, Qt::UserRole, fileName);
 
-            QString filePath = getFilePath(item);
-            QFileInfo info(filePath);
-            item->setToolTip(0, tr("Last modified at %1").arg(
-                    info.lastModified().toString()));
+        QString filePath = getFilePath(item);
+        QFileInfo info(filePath);
+        item->setToolTip(
+            0, tr("Last modified at %1").arg(info.lastModified().toString()));
 
-            ui->fileTreeWidget->addTopLevelItem(item);
-        }
+        ui->fileTreeWidget->addTopLevelItem(item);
+    }
 
     // jump to the first item
     if (orphanedFiles.count() > 0) {
-        QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
-                                         Qt::NoModifier);
+        QKeyEvent *event =
+            new QKeyEvent(QEvent::KeyPress, Qt::Key_Home, Qt::NoModifier);
         QApplication::postEvent(ui->fileTreeWidget, event);
     }
 }
 
-OrphanedAttachmentsDialog::~OrphanedAttachmentsDialog() {
-    delete ui;
-}
+OrphanedAttachmentsDialog::~OrphanedAttachmentsDialog() { delete ui; }
 
 /**
  * Shows the currently selected attachment
- * 
+ *
  * @param current
  * @param previous
  */
 void OrphanedAttachmentsDialog::on_fileTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
 
     if (current == nullptr) {
@@ -105,8 +102,8 @@ void OrphanedAttachmentsDialog::on_fileTreeWidget_currentItemChanged(
     ui->typeLabel->setText(type.comment());
 
     QFileInfo fileInfo(filePath);
-    QString fileSizeText = Utils::Misc::toHumanReadableByteSize(
-            fileInfo.size());
+    QString fileSizeText =
+        Utils::Misc::toHumanReadableByteSize(fileInfo.size());
     ui->sizeLabel->setText(fileSizeText);
 
     ui->infoFrame->setEnabled(true);
@@ -123,7 +120,8 @@ QString OrphanedAttachmentsDialog::getFilePath(QTreeWidgetItem *item) {
         return QString();
     }
 
-    QString fileName = NoteFolder::currentAttachmentsPath() + QDir::separator() +
+    QString fileName = NoteFolder::currentAttachmentsPath() +
+                       QDir::separator() +
                        item->data(0, Qt::UserRole).toString();
     return fileName;
 }
@@ -138,23 +136,21 @@ void OrphanedAttachmentsDialog::on_deleteButton_clicked() {
         return;
     }
 
-    if (Utils::Gui::question(
-            this,
-            tr("Delete selected files"),
-            tr("Delete <strong>%n</strong> selected file(s)?",
-               "", selectedItemsCount),
-            "delete-files") != QMessageBox::Yes) {
+    if (Utils::Gui::question(this, tr("Delete selected files"),
+                             tr("Delete <strong>%n</strong> selected file(s)?",
+                                "", selectedItemsCount),
+                             "delete-files") != QMessageBox::Yes) {
         return;
     }
 
     // delete all selected files
-    Q_FOREACH(QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
-            QString filePath = getFilePath(item);
-            bool removed = QFile::remove(filePath);
+    Q_FOREACH (QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
+        QString filePath = getFilePath(item);
+        bool removed = QFile::remove(filePath);
 
-            if (removed) {
-                delete item;
-            }
+        if (removed) {
+            delete item;
+        }
     }
 }
 
@@ -172,7 +168,7 @@ bool OrphanedAttachmentsDialog::eventFilter(QObject *obj, QEvent *event) {
         if (obj == ui->fileTreeWidget) {
             // delete the currently selected attachments
             if ((keyEvent->key() == Qt::Key_Delete) ||
-                       (keyEvent->key() == Qt::Key_Backspace)) {
+                (keyEvent->key() == Qt::Key_Backspace)) {
                 on_deleteButton_clicked();
                 return true;
             }
@@ -203,14 +199,15 @@ void OrphanedAttachmentsDialog::on_insertButton_clicked() {
     Note note = mainWindow->getCurrentNote();
 
     // insert all selected attachments
-    Q_FOREACH(QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
-            QString filePath = getFilePath(item);
-            QFileInfo fileInfo(filePath);
-            QString attachmentsUrlString = note.attachmentUrlStringForFileName(fileInfo.fileName());
-            QString attachmentLink = "[" + fileInfo.baseName() + "](" +
-                             attachmentsUrlString + ")\n";
-            textEdit->insertPlainText(attachmentLink);
-            delete item;
+    Q_FOREACH (QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
+        QString filePath = getFilePath(item);
+        QFileInfo fileInfo(filePath);
+        QString attachmentsUrlString =
+            note.attachmentUrlStringForFileName(fileInfo.fileName());
+        QString attachmentLink =
+            "[" + fileInfo.baseName() + "](" + attachmentsUrlString + ")\n";
+        textEdit->insertPlainText(attachmentLink);
+        delete item;
     }
 }
 

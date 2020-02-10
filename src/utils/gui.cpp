@@ -13,18 +13,17 @@
  */
 
 #include "gui.h"
+#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+#include <QApplication>
+#include <QCheckBox>
+#include <QClipboard>
 #include <QDebug>
 #include <QDialogButtonBox>
-#include <QCheckBox>
+#include <QMessageBox>
 #include <QPushButton>
 #include <QSettings>
-#include <QApplication>
-#include <QMessageBox>
 #include <QTextBlock>
 #include <QTextCursor>
-#include <QClipboard>
-#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
-
 
 /**
  * Checks if there is at least one child that is visible
@@ -44,7 +43,7 @@ bool Utils::Gui::isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item) {
  * Searches for text in items of a tree widget
  */
 void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
-                                           const QString& text,
+                                           const QString &text,
                                            TreeWidgetSearchFlags searchFlags) {
     QStringList searchList;
 
@@ -55,63 +54,61 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
     }
 
     // get all items
-    QList<QTreeWidgetItem*> allItems = treeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+    QList<QTreeWidgetItem *> allItems =
+        treeWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
     if (text.count() >= 1) {
-        int searchColumnCount = searchFlags &
-                TreeWidgetSearchFlag::AllColumnsSearch ?
-                                treeWidget->columnCount() : 1;
+        int searchColumnCount =
+            searchFlags & TreeWidgetSearchFlag::AllColumnsSearch
+                ? treeWidget->columnCount()
+                : 1;
 
         // hide all not found items
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                bool show = false;
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            bool show = false;
 
-                // look in all columns that we want to search
-                for (int index = 0; index < searchColumnCount; index++) {
-                    bool loopShow = true;
+            // look in all columns that we want to search
+            for (int index = 0; index < searchColumnCount; index++) {
+                bool loopShow = true;
 
-                    foreach(QString searchText, searchList) {
-                            // search for text in the columns
-                            bool loopShow2 = item->text(index).contains(
-                                    searchText, Qt::CaseInsensitive);
+                foreach (QString searchText, searchList) {
+                    // search for text in the columns
+                    bool loopShow2 = item->text(index).contains(
+                        searchText, Qt::CaseInsensitive);
 
-                            // also show the item if the text was found in the tooltip
-                            if (searchFlags &
-                                TreeWidgetSearchFlag::TooltipSearch) {
-                                loopShow2 |= item->toolTip(index).contains(
-                                        searchText, Qt::CaseInsensitive);
-                            }
-
-                            loopShow &= loopShow2;
+                    // also show the item if the text was found in the tooltip
+                    if (searchFlags & TreeWidgetSearchFlag::TooltipSearch) {
+                        loopShow2 |= item->toolTip(index).contains(
+                            searchText, Qt::CaseInsensitive);
                     }
 
-                    show |= loopShow;
+                    loopShow &= loopShow2;
                 }
 
-                // also show the item if an integer id is greater than 0
-                if (searchFlags & TreeWidgetSearchFlag::IntCheck) {
-                    int id = item->data(0, Qt::UserRole).toInt();
-                    show |= id <= 0;
-                }
-
-                item->setHidden(!show);
+                show |= loopShow;
             }
+
+            // also show the item if an integer id is greater than 0
+            if (searchFlags & TreeWidgetSearchFlag::IntCheck) {
+                int id = item->data(0, Qt::UserRole).toInt();
+                show |= id <= 0;
+            }
+
+            item->setHidden(!show);
+        }
 
         // show items again that have visible children so that they are
         // really shown
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                if (isOneTreeWidgetItemChildVisible(item)) {
-                    item->setHidden(false);
-                    item->setExpanded(true);
-                }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) {
+            if (isOneTreeWidgetItemChildVisible(item)) {
+                item->setHidden(false);
+                item->setExpanded(true);
             }
+        }
     } else {
         // show all items otherwise
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                item->setHidden(false);
-            }
+        Q_FOREACH (QTreeWidgetItem *item, allItems) { item->setHidden(false); }
     }
 }
 
@@ -119,24 +116,22 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
  * Searches for text in items of a list widget
  */
 void Utils::Gui::searchForTextInListWidget(QListWidget *listWidget,
-                                           const QString& text) {
-    QList<QListWidgetItem*> allItems = listWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+                                           const QString &text) {
+    QList<QListWidgetItem *> allItems =
+        listWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
     if (text.count() >= 1) {
-        QList<QListWidgetItem*> items = listWidget->
-                findItems(text, Qt::MatchContains | Qt::MatchRecursive);
+        QList<QListWidgetItem *> items =
+            listWidget->findItems(text, Qt::MatchContains | Qt::MatchRecursive);
 
         // hide all not found items
-        Q_FOREACH(QListWidgetItem *item, allItems) {
+        Q_FOREACH (QListWidgetItem *item, allItems) {
             item->setHidden(!items.contains(item));
         }
     } else {
         // show all items otherwise
-        Q_FOREACH(QListWidgetItem *item, allItems) {
-            item->setHidden(false);
-        }
+        Q_FOREACH (QListWidgetItem *item, allItems) { item->setHidden(false); }
     }
 }
 
@@ -144,12 +139,15 @@ void Utils::Gui::searchForTextInListWidget(QListWidget *listWidget,
  * Checks if a variant exists as user data in a tree widget
  */
 bool Utils::Gui::userDataInTreeWidgetExists(QTreeWidget *treeWidget,
-                                            const QVariant& userData, int column) {
-    return getTreeWidgetItemWithUserData(treeWidget, userData, column) != Q_NULLPTR;
+                                            const QVariant &userData,
+                                            int column) {
+    return getTreeWidgetItemWithUserData(treeWidget, userData, column) !=
+           Q_NULLPTR;
 }
 
 /**
- * Returns the tree widget item of a tree widget with that has a certain user data
+ * Returns the tree widget item of a tree widget with that has a certain user
+ * data
  *
  * @param treeWidget
  * @param userData
@@ -157,31 +155,31 @@ bool Utils::Gui::userDataInTreeWidgetExists(QTreeWidget *treeWidget,
  * @return
  */
 QTreeWidgetItem *Utils::Gui::getTreeWidgetItemWithUserData(
-        QTreeWidget *treeWidget, const QVariant &userData, int column) {
+    QTreeWidget *treeWidget, const QVariant &userData, int column) {
     // get all items
-    QList<QTreeWidgetItem*> allItems = treeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+    QList<QTreeWidgetItem *> allItems =
+        treeWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
 
-    Q_FOREACH(QTreeWidgetItem *item, allItems) {
-            if (userData == item->data(column, Qt::UserRole)) {
-                return item;
-            }
+    Q_FOREACH (QTreeWidgetItem *item, allItems) {
+        if (userData == item->data(column, Qt::UserRole)) {
+            return item;
         }
+    }
 
     return Q_NULLPTR;
 }
 
 QListWidgetItem *Utils::Gui::getListWidgetItemWithUserData(
-        QListWidget *listWidget, const QVariant &userData) {
+    QListWidget *listWidget, const QVariant &userData) {
     // get all items
-    QList<QListWidgetItem*> allItems = listWidget->
-            findItems("", Qt::MatchContains);
+    QList<QListWidgetItem *> allItems =
+        listWidget->findItems("", Qt::MatchContains);
 
-    Q_FOREACH(QListWidgetItem *item, allItems) {
-            if (userData == item->data(Qt::UserRole)) {
-                return item;
-            }
+    Q_FOREACH (QListWidgetItem *item, allItems) {
+        if (userData == item->data(Qt::UserRole)) {
+            return item;
         }
+    }
 
     return Q_NULLPTR;
 }
@@ -192,19 +190,19 @@ QListWidgetItem *Utils::Gui::getListWidgetItemWithUserData(
  * @param treeWidget
  * @param column
  */
-void Utils::Gui::resetBoldStateOfAllTreeWidgetItems(
-        QTreeWidget *treeWidget, int column) {
+void Utils::Gui::resetBoldStateOfAllTreeWidgetItems(QTreeWidget *treeWidget,
+                                                    int column) {
     // get all items
-    QList<QTreeWidgetItem*> allItems = treeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+    QList<QTreeWidgetItem *> allItems =
+        treeWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
 
-    Q_FOREACH(QTreeWidgetItem *item, allItems) {
-            auto font = item->font(column);
-            if (font.bold()) {
-                font.setBold(false);
-                item->setFont(column, font);
-            }
+    Q_FOREACH (QTreeWidgetItem *item, allItems) {
+        auto font = item->font(column);
+        if (font.bold()) {
+            font.setBold(false);
+            item->setFont(column, font);
         }
+    }
 }
 
 /**
@@ -220,11 +218,9 @@ void Utils::Gui::resetBoldStateOfAllTreeWidgetItems(
  * @return
  */
 QMessageBox::StandardButton Utils::Gui::information(
-        QWidget *parent, const QString &title, const QString& text,
-        const QString &identifier,
-        QMessageBox::StandardButtons buttons,
-        QMessageBox::StandardButton defaultButton)
-{
+    QWidget *parent, const QString &title, const QString &text,
+    const QString &identifier, QMessageBox::StandardButtons buttons,
+    QMessageBox::StandardButton defaultButton) {
     return showMessageBox(parent, QMessageBox::Icon::Information, title, text,
                           identifier, buttons, defaultButton);
 }
@@ -242,10 +238,9 @@ QMessageBox::StandardButton Utils::Gui::information(
  * @return
  */
 QMessageBox::StandardButton Utils::Gui::question(
-        QWidget *parent, const QString &title, const QString &text,
-        const QString &identifier,
-        QMessageBox::StandardButtons buttons,
-        QMessageBox::StandardButton defaultButton) {
+    QWidget *parent, const QString &title, const QString &text,
+    const QString &identifier, QMessageBox::StandardButtons buttons,
+    QMessageBox::StandardButton defaultButton) {
     return showMessageBox(parent, QMessageBox::Icon::Question, title, text,
                           identifier, buttons, defaultButton);
 }
@@ -263,10 +258,9 @@ QMessageBox::StandardButton Utils::Gui::question(
  * @return
  */
 QMessageBox::StandardButton Utils::Gui::warning(
-        QWidget *parent, const QString &title, const QString &text,
-        const QString &identifier,
-        QMessageBox::StandardButtons buttons,
-        QMessageBox::StandardButton defaultButton) {
+    QWidget *parent, const QString &title, const QString &text,
+    const QString &identifier, QMessageBox::StandardButtons buttons,
+    QMessageBox::StandardButton defaultButton) {
     return showMessageBox(parent, QMessageBox::Icon::Warning, title, text,
                           identifier, buttons, defaultButton);
 }
@@ -283,16 +277,15 @@ QMessageBox::StandardButton Utils::Gui::warning(
  * @param defaultButton
  * @return
  */
-QMessageBox::StandardButton
-Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
-                           const QString &title, const QString &text,
-                           const QString &identifier,
-                           QMessageBox::StandardButtons buttons,
-                           QMessageBox::StandardButton defaultButton) {
+QMessageBox::StandardButton Utils::Gui::showMessageBox(
+    QWidget *parent, QMessageBox::Icon icon, const QString &title,
+    const QString &text, const QString &identifier,
+    QMessageBox::StandardButtons buttons,
+    QMessageBox::StandardButton defaultButton) {
     QSettings settings;
     const QString settingsKey = "MessageBoxOverride/" + identifier;
     auto overrideButton = static_cast<QMessageBox::StandardButton>(
-            settings.value(settingsKey, QMessageBox::NoButton).toInt());
+        settings.value(settingsKey, QMessageBox::NoButton).toInt());
 
     // check if we want to override the message box
     if (overrideButton != QMessageBox::NoButton) {
@@ -300,28 +293,26 @@ Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
     }
 
     QMessageBox msgBox(icon, title, text, QMessageBox::NoButton, parent);
-    auto *buttonBox = msgBox.findChild<QDialogButtonBox*>();
+    auto *buttonBox = msgBox.findChild<QDialogButtonBox *>();
     Q_ASSERT(buttonBox != nullptr);
-    auto *checkBox = new QCheckBox(
-            icon == QMessageBox::Icon::Question ?
-            QObject::tr("Don't ask again!") : QObject::tr("Don't show again!"),
-            parent);
+    auto *checkBox = new QCheckBox(icon == QMessageBox::Icon::Question
+                                       ? QObject::tr("Don't ask again!")
+                                       : QObject::tr("Don't show again!"),
+                                   parent);
 
     uint mask = QMessageBox::FirstButton;
     while (mask <= QMessageBox::LastButton) {
         auto sb = static_cast<uint>(buttons & mask);
         mask <<= 1;
-        if (!sb)
-            continue;
+        if (!sb) continue;
         QPushButton *button = msgBox.addButton((QMessageBox::StandardButton)sb);
 
         // choose the first accept role as the default
-        if (msgBox.defaultButton())
-            continue;
+        if (msgBox.defaultButton()) continue;
         if ((defaultButton == QMessageBox::NoButton &&
-                buttonBox->buttonRole(button) == QDialogButtonBox::AcceptRole)
-            || (defaultButton != QMessageBox::NoButton &&
-                sb == uint(defaultButton)))
+             buttonBox->buttonRole(button) == QDialogButtonBox::AcceptRole) ||
+            (defaultButton != QMessageBox::NoButton &&
+             sb == uint(defaultButton)))
             msgBox.setDefaultButton(button);
     }
 
@@ -329,8 +320,7 @@ Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
     // this would lead to accidentally checking the checkbox
     msgBox.setCheckBox(checkBox);
 
-    if (msgBox.exec() == -1)
-        return QMessageBox::Cancel;
+    if (msgBox.exec() == -1) return QMessageBox::Cancel;
 
     auto result = msgBox.standardButton(msgBox.clickedButton());
 
@@ -348,11 +338,11 @@ Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
 bool Utils::Gui::isMessageBoxPresent() {
     QWidgetList topWidgets = QApplication::topLevelWidgets();
     foreach (QWidget *w, topWidgets) {
-            if (auto *mb = dynamic_cast<QMessageBox *>(w)) {
-                Q_UNUSED(mb)
-                return true;
-            }
+        if (auto *mb = dynamic_cast<QMessageBox *>(w)) {
+            Q_UNUSED(mb)
+            return true;
         }
+    }
 
     return false;
 }
@@ -368,9 +358,8 @@ bool Utils::Gui::isMessageBoxPresent() {
  * @return
  */
 QFont Utils::Gui::fontDialogGetFont(bool *ok, const QFont &initial,
-        QWidget *parent, const QString &title,
-        QFontDialog::FontDialogOptions options) {
-
+                                    QWidget *parent, const QString &title,
+                                    QFontDialog::FontDialogOptions options) {
 #ifdef Q_OS_MAC
     // there was a bug in Qt 5.11.2 with the native dialog
     // see: https://github.com/pbek/QOwnNotes/issues/1033
@@ -385,26 +374,30 @@ QFont Utils::Gui::fontDialogGetFont(bool *ok, const QFont &initial,
  *
  * @param initialBlock
  */
-void Utils::Gui::copyCodeBlockText(const QTextBlock& initialBlock) {
+void Utils::Gui::copyCodeBlockText(const QTextBlock &initialBlock) {
     QTextBlock block = initialBlock;
     QString codeBlockText = block.text();
     QStringList codeBlockTextList;
     codeBlockTextList << codeBlockText;
 
     // check the previous blocks
-    while(true) {
+    while (true) {
         block = block.previous();
 
         if (!block.isValid()) {
-
             break;
         }
 
-        if (block.userState() != MarkdownHighlighter::HighlighterState::CodeBlock &&
-            block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockComment &&
-            block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockTilde &&
-            block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockTildeComment &&
-            block.userState() < MarkdownHighlighter::HighlighterState::CodeCpp) {
+        if (block.userState() !=
+                MarkdownHighlighter::HighlighterState::CodeBlock &&
+            block.userState() !=
+                MarkdownHighlighter::HighlighterState::CodeBlockComment &&
+            block.userState() !=
+                MarkdownHighlighter::HighlighterState::CodeBlockTilde &&
+            block.userState() !=
+                MarkdownHighlighter::HighlighterState::CodeBlockTildeComment &&
+            block.userState() <
+                MarkdownHighlighter::HighlighterState::CodeCpp) {
             break;
         }
         codeBlockTextList.prepend(block.text());
@@ -414,20 +407,27 @@ void Utils::Gui::copyCodeBlockText(const QTextBlock& initialBlock) {
     if (!MarkdownHighlighter::isCodeBlockEnd(initialBlock.userState())) {
         block = initialBlock;
 
-        while(true) {
+        while (true) {
             block = block.next();
 
             if (!block.isValid()) {
                 break;
             }
 
-            if (block.userState() != MarkdownHighlighter::HighlighterState::CodeBlock &&
-                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockComment &&
-                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockEnd &&
-                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockTilde &&
-                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockTildeComment &&
-                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockTildeEnd &&
-                block.userState() < MarkdownHighlighter::HighlighterState::CodeCpp) {
+            if (block.userState() !=
+                    MarkdownHighlighter::HighlighterState::CodeBlock &&
+                block.userState() !=
+                    MarkdownHighlighter::HighlighterState::CodeBlockComment &&
+                block.userState() !=
+                    MarkdownHighlighter::HighlighterState::CodeBlockEnd &&
+                block.userState() !=
+                    MarkdownHighlighter::HighlighterState::CodeBlockTilde &&
+                block.userState() != MarkdownHighlighter::HighlighterState::
+                                         CodeBlockTildeComment &&
+                block.userState() !=
+                    MarkdownHighlighter::HighlighterState::CodeBlockTildeEnd &&
+                block.userState() <
+                    MarkdownHighlighter::HighlighterState::CodeCpp) {
                 break;
             }
 
@@ -436,9 +436,12 @@ void Utils::Gui::copyCodeBlockText(const QTextBlock& initialBlock) {
     }
 
     if (!codeBlockTextList.isEmpty()) {
-        if (codeBlockTextList.first().startsWith(QLatin1String("```")) || codeBlockTextList.first().startsWith(QLatin1String("~~~")))
+        if (codeBlockTextList.first().startsWith(QLatin1String("```")) ||
+            codeBlockTextList.first().startsWith(QLatin1String("~~~")))
             codeBlockTextList.removeFirst();
-        if (!codeBlockTextList.isEmpty() && (codeBlockTextList.last().startsWith(QLatin1String("```")) || codeBlockTextList.last().startsWith(QLatin1String("~~~"))))
+        if (!codeBlockTextList.isEmpty() &&
+            (codeBlockTextList.last().startsWith(QLatin1String("```")) ||
+             codeBlockTextList.last().startsWith(QLatin1String("~~~"))))
             codeBlockTextList.removeLast();
     }
     QClipboard *clipboard = QApplication::clipboard();
@@ -464,14 +467,14 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
     }
 
     QString tableText = block.text();
-    QList <QStringList> tableTextList;
+    QList<QStringList> tableTextList;
     tableTextList << tableText.split(QStringLiteral("|"));
     int startPosition = block.position();
     int maxColumns = 0;
     bool tableWasModified = false;
 
     // check the previous blocks
-    while(true) {
+    while (true) {
         block = block.previous();
 
         if (!block.isValid()) {
@@ -483,7 +486,8 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
             break;
         }
 
-        const QStringList &stringList = prevBlockText.split(QStringLiteral("|"));
+        const QStringList &stringList =
+            prevBlockText.split(QStringLiteral("|"));
         tableTextList.prepend(stringList);
         startPosition = block.position();
         maxColumns = std::max(maxColumns, stringList.count());
@@ -491,7 +495,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
 
     // check the next blocks
     block = initialBlock;
-    while(true) {
+    while (true) {
         block = block.next();
 
         if (!block.isValid()) {
@@ -503,7 +507,8 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
             break;
         }
 
-        const QStringList &stringList = nextBlockText.split(QStringLiteral("|"));
+        const QStringList &stringList =
+            nextBlockText.split(QStringLiteral("|"));
         tableTextList.append(stringList);
         endPosition = block.position() + nextBlockText.count();
         maxColumns = std::max(maxColumns, stringList.count());
@@ -513,7 +518,8 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
     QString justifiedText;
 
     // justify text in tableTextList
-    // we can skip the first column in the list since it is bound to have no text
+    // we can skip the first column in the list since it is bound to have no
+    // text
     const int lineCount = tableTextList.count();
     for (int col = 1; col < maxColumns; col++) {
         // find the maximum text length
@@ -550,13 +556,13 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
             if (headlineSeparatorRegExp.match(text.trimmed()).hasMatch()) {
                 // justify the headline separator text
                 justifiedText = QStringLiteral(" ") +
-                        QStringLiteral("-").repeated(maxTextLength) +
-                        QStringLiteral(" ");
+                                QStringLiteral("-").repeated(maxTextLength) +
+                                QStringLiteral(" ");
             } else {
                 // justify the text
                 justifiedText = QStringLiteral(" ") +
-                        text.trimmed().leftJustified(maxTextLength) +
-                        QStringLiteral(" ");
+                                text.trimmed().leftJustified(maxTextLength) +
+                                QStringLiteral(" ");
             }
 
             // update the tableTextList
@@ -595,25 +601,34 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
 }
 
 /**
- * Updates the interface font size from the interface font size override settings
+ * Updates the interface font size from the interface font size override
+ * settings
  */
 void Utils::Gui::updateInterfaceFontSize(int fontSize) {
     QSettings settings;
-    bool overrideInterfaceFontSize = settings.value(
-            QStringLiteral("overrideInterfaceFontSize"), false).toBool();
+    bool overrideInterfaceFontSize =
+        settings.value(QStringLiteral("overrideInterfaceFontSize"), false)
+            .toBool();
 
     // remove old style
     QString stylesheet = qApp->styleSheet().remove(QRegularExpression(
-            QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
-            QStringLiteral(".*") + QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING)));
+        QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
+        QStringLiteral(".*") +
+        QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING)));
 
     if (overrideInterfaceFontSize) {
-        int interfaceFontSize = fontSize != -1 ?
-                fontSize : settings.value(QStringLiteral("interfaceFontSize"), 11).toInt();
+        int interfaceFontSize =
+            fontSize != -1
+                ? fontSize
+                : settings.value(QStringLiteral("interfaceFontSize"), 11)
+                      .toInt();
 
-        stylesheet += QStringLiteral("\n") + QString(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
-                QStringLiteral("QWidget {font-size: ") + QString::number(interfaceFontSize) +
-                QStringLiteral("px;}") + QString(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING);
+        stylesheet += QStringLiteral("\n") +
+                      QString(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
+                      QStringLiteral("QWidget {font-size: ") +
+                      QString::number(interfaceFontSize) +
+                      QStringLiteral("px;}") +
+                      QString(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING);
     }
 
     qApp->setStyleSheet(stylesheet);
@@ -622,7 +637,8 @@ void Utils::Gui::updateInterfaceFontSize(int fontSize) {
 /**
  * Sets the current index of a combo box by user data
  */
-void Utils::Gui::setComboBoxIndexByUserData(QComboBox *comboBox, const QVariant &userData) {
+void Utils::Gui::setComboBoxIndexByUserData(QComboBox *comboBox,
+                                            const QVariant &userData) {
     const int index = comboBox->findData(userData);
     comboBox->setCurrentIndex(index);
 }

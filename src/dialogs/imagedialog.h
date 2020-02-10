@@ -10,11 +10,10 @@ class QRubberBand;
 class QTemporaryFile;
 class QFile;
 
-class ImageDialog : public MasterDialog
-{
+class ImageDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit ImageDialog(QWidget *parent = nullptr);
 
     ~ImageDialog() override;
@@ -27,7 +26,7 @@ public:
 
     QString getFilePathOrUrl();
 
-private slots:
+   private slots:
     void on_openButton_clicked();
 
     void on_buttonBox_accepted();
@@ -40,14 +39,17 @@ private slots:
 
     void on_disableCopyingCheckBox_toggled(bool checked);
 
-    void on_graphicsView_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint);
+    void on_graphicsView_rubberBandChanged(const QRect &viewportRect,
+                                           const QPointF &fromScenePoint,
+                                           const QPointF &toScenePoint);
 
     void on_cropButton_clicked();
 
     void scrolledGraphicsViewContentsBy(int dx, int dy);
 
     void resizedGraphicsViewBy(int dw, int dh);
-private:
+
+   private:
     Ui::ImageDialog *ui;
     QPixmap _basePixmap;
     QPixmap _pixmap;
@@ -59,7 +61,7 @@ private:
     QRect _rubberBandSceneRect;
     QRect _lastRubberBandViewportRect;
 
-    void setPixmap(const QPixmap& pixmap, bool updateBase = false);
+    void setPixmap(const QPixmap &pixmap, bool updateBase = false);
 
     void updateWidthScaleLabelValue() const;
 };

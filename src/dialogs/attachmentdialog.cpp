@@ -1,16 +1,15 @@
 #include "attachmentdialog.h"
-#include "filedialog.h"
-#include "utils/misc.h"
-#include "ui_attachmentdialog.h"
 #include <QClipboard>
 #include <QDebug>
 #include <QMessageBox>
 #include <QMimeDatabase>
 #include <QTemporaryFile>
+#include "filedialog.h"
+#include "ui_attachmentdialog.h"
+#include "utils/misc.h"
 
-AttachmentDialog::AttachmentDialog(QWidget *parent) :
-    MasterDialog(parent),
-    ui(new Ui::AttachmentDialog) {
+AttachmentDialog::AttachmentDialog(QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::AttachmentDialog) {
     ui->setupUi(this);
     ui->fileEdit->setFocus();
     ui->downloadButton->hide();
@@ -18,8 +17,8 @@ AttachmentDialog::AttachmentDialog(QWidget *parent) :
     ui->infoFrame->hide();
 
     _networkManager = new QNetworkAccessManager(this);
-    QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)),
-                     this, SLOT(slotReplyFinished(QNetworkReply *)));
+    QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)), this,
+                     SLOT(slotReplyFinished(QNetworkReply *)));
 
     QClipboard *clipboard = QApplication::clipboard();
     QString text = clipboard->text();
@@ -32,9 +31,7 @@ AttachmentDialog::AttachmentDialog(QWidget *parent) :
     }
 }
 
-AttachmentDialog::~AttachmentDialog() {
-    delete ui;
-}
+AttachmentDialog::~AttachmentDialog() { delete ui; }
 
 void AttachmentDialog::on_openButton_clicked() {
     FileDialog dialog("InsertAttachment");
@@ -73,8 +70,9 @@ void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
         QMimeDatabase db;
         QMimeType type = db.mimeTypeForFile(arg1);
 
-        ui->infoLabel->setText(Utils::Misc::toHumanReadableByteSize(fileInfo.size()) +
-                               " - " + type.comment());
+        ui->infoLabel->setText(
+            Utils::Misc::toHumanReadableByteSize(fileInfo.size()) + " - " +
+            type.comment());
     }
 }
 
@@ -88,31 +86,30 @@ void AttachmentDialog::on_downloadButton_clicked() {
     QNetworkRequest networkRequest(url);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    networkRequest.setAttribute(
-            QNetworkRequest::FollowRedirectsAttribute, true);
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
+                                true);
 #endif
 
     // try to ensure the network is accessible
-    _networkManager->setNetworkAccessible(
-            QNetworkAccessManager::Accessible);
+    _networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 
     QNetworkReply *reply = _networkManager->get(networkRequest);
 
-    connect(reply, SIGNAL(downloadProgress(qint64, qint64)),
-            this, SLOT(downloadProgress(qint64, qint64)));
-    connect(ui->downloadCancelButton, SIGNAL(clicked()),
-            reply, SLOT(abort()));
+    connect(reply, SIGNAL(downloadProgress(qint64, qint64)), this,
+            SLOT(downloadProgress(qint64, qint64)));
+    connect(ui->downloadCancelButton, SIGNAL(clicked()), reply, SLOT(abort()));
 }
 
 /**
  * Shows the download progress
  */
-void AttachmentDialog::downloadProgress(
-        qint64 bytesReceived, qint64 bytesTotal) {
-    ui->downloadProgressBar->setMaximum(static_cast <int>(bytesTotal));
-    ui->downloadProgressBar->setValue(static_cast <int>(bytesReceived));
-    ui->downloadSizeLabel->setText(Utils::Misc::toHumanReadableByteSize(bytesReceived) + " / "
-                                   + Utils::Misc::toHumanReadableByteSize(bytesTotal));
+void AttachmentDialog::downloadProgress(qint64 bytesReceived,
+                                        qint64 bytesTotal) {
+    ui->downloadProgressBar->setMaximum(static_cast<int>(bytesTotal));
+    ui->downloadProgressBar->setValue(static_cast<int>(bytesReceived));
+    ui->downloadSizeLabel->setText(
+        Utils::Misc::toHumanReadableByteSize(bytesReceived) + " / " +
+        Utils::Misc::toHumanReadableByteSize(bytesTotal));
 }
 
 /**
@@ -134,11 +131,11 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
     qDebug() << __func__ << " - 'data.size': " << data.size();
 
     if (reply->error() != QNetworkReply::NoError &&
-            reply->error() != QNetworkReply::OperationCanceledError) {
+        reply->error() != QNetworkReply::OperationCanceledError) {
         _accept = false;
         QMessageBox::critical(
-                    nullptr, tr("Download error"),
-                tr("Error while downloading:\n%1").arg(reply->errorString()));
+            nullptr, tr("Download error"),
+            tr("Error while downloading:\n%1").arg(reply->errorString()));
 
         qWarning() << QString("Network error: %1").arg(reply->errorString());
 
@@ -157,18 +154,17 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
         }
     }
 
-    auto *tempFile = new QTemporaryFile(
-            QDir::tempPath() + "/QOwnNotes-XXXXXX." + suffix);
+    auto *tempFile =
+        new QTemporaryFile(QDir::tempPath() + "/QOwnNotes-XXXXXX." + suffix);
 
     // we want to keep the file to be used in the update process
     tempFile->setAutoRemove(false);
 
     // get a temporary file
     if (!tempFile->open()) {
-        QMessageBox::critical(
-                    nullptr, tr("File error"),
-                    tr("Could not open temporary file:\n%1")
-                    .arg(tempFile->errorString()));
+        QMessageBox::critical(nullptr, tr("File error"),
+                              tr("Could not open temporary file:\n%1")
+                                  .arg(tempFile->errorString()));
         return;
     }
 
@@ -190,9 +186,8 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
 
     if (!file.open(QIODevice::WriteOnly)) {
         QMessageBox::critical(
-                    nullptr, tr("File error"),
-                tr("Could not store downloaded file:\n%1")
-                        .arg(file.errorString()));
+            nullptr, tr("File error"),
+            tr("Could not store downloaded file:\n%1").arg(file.errorString()));
         return;
     }
 
@@ -216,16 +211,11 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
     }
 }
 
-QFile* AttachmentDialog::getFile() {
-    return new QFile(ui->fileEdit->text());
-}
+QFile *AttachmentDialog::getFile() { return new QFile(ui->fileEdit->text()); }
 
-QString AttachmentDialog::getTitle() {
-    return ui->titleEdit->text();
-}
+QString AttachmentDialog::getTitle() { return ui->titleEdit->text(); }
 
-void AttachmentDialog::accept()
-{
+void AttachmentDialog::accept() {
     if (QUrl(ui->fileEdit->text()).scheme().startsWith("http")) {
         _accept = true;
         on_downloadButton_clicked();

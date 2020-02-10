@@ -1,63 +1,62 @@
-#include <QSettings>
+#include <QAuthenticator>
+#include <QBuffer>
+#include <QCoreApplication>
 #include <QDebug>
-#include <QUrlQuery>
 #include <QDir>
-#include <QMessageBox>
 #include <QDomDocument>
 #include <QDomNodeList>
-#include <QBuffer>
 #include <QEventLoop>
-#include <QTimer>
 #include <QJSEngine>
 #include <QJSValueIterator>
-#include <QCoreApplication>
-#include <QStringBuilder>
-#include <QXmlQuery>
+#include <QMessageBox>
 #include <QNetworkAccessManager>
-#include <QAuthenticator>
 #include <QNetworkReply>
+#include <QSettings>
+#include <QStringBuilder>
+#include <QTimer>
+#include <QUrlQuery>
+#include <QXmlQuery>
 #include <QXmlResultItems>
 
-#include "mainwindow.h"
-#include "services/owncloudservice.h"
-#include "dialogs/settingsdialog.h"
-#include "dialogs/trashdialog.h"
-#include "dialogs/serverbookmarksimportdialog.h"
-#include "dialogs/versiondialog.h"
-#include "dialogs/tododialog.h"
-#include "dialogs/sharedialog.h"
+#include <utils/gui.h>
 #include <utils/misc.h>
-#include "libraries/versionnumber/versionnumber.h"
-#include "entities/calendaritem.h"
-#include "entities/notesubfolder.h"
-#include "cryptoservice.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include <utils/gui.h>
+#include "cryptoservice.h"
+#include "dialogs/serverbookmarksimportdialog.h"
+#include "dialogs/settingsdialog.h"
+#include "dialogs/sharedialog.h"
+#include "dialogs/tododialog.h"
+#include "dialogs/trashdialog.h"
+#include "dialogs/versiondialog.h"
+#include "entities/calendaritem.h"
+#include "entities/notesubfolder.h"
+#include "libraries/versionnumber/versionnumber.h"
+#include "mainwindow.h"
+#include "services/owncloudservice.h"
 
 const QString OwnCloudService::rootPath =
-        QStringLiteral("/index.php/apps/qownnotesapi/api/v1/");
+    QStringLiteral("/index.php/apps/qownnotesapi/api/v1/");
 const QString OwnCloudService::format = QStringLiteral("json");
 const QString NS_DAV(QStringLiteral("DAV:"));
 
 OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent)
-        : QObject(parent) {
+    : QObject(parent) {
     networkManager = new QNetworkAccessManager(this);
     calendarNetworkManager = new QNetworkAccessManager(this);
 
-    QObject::connect(networkManager,
-                     SIGNAL(authenticationRequired(QNetworkReply *,
-                                                   QAuthenticator *)),
-                     this, SLOT(slotAuthenticationRequired(QNetworkReply *,
-                                                     QAuthenticator *)));
-    QObject::connect(networkManager, SIGNAL(finished(QNetworkReply *)),
-                     this, SLOT(slotReplyFinished(QNetworkReply *)));
+    QObject::connect(
+        networkManager,
+        SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
+        SLOT(slotAuthenticationRequired(QNetworkReply *, QAuthenticator *)));
+    QObject::connect(networkManager, SIGNAL(finished(QNetworkReply *)), this,
+                     SLOT(slotReplyFinished(QNetworkReply *)));
 
-    QObject::connect(calendarNetworkManager,
-                     SIGNAL(authenticationRequired(QNetworkReply *,
-                                                   QAuthenticator *)), this,
-                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply *,
-                                                            QAuthenticator *)));
+    QObject::connect(
+        calendarNetworkManager,
+        SIGNAL(authenticationRequired(QNetworkReply *, QAuthenticator *)), this,
+        SLOT(slotCalendarAuthenticationRequired(QNetworkReply *,
+                                                QAuthenticator *)));
     QObject::connect(calendarNetworkManager, SIGNAL(finished(QNetworkReply *)),
                      this, SLOT(slotReplyFinished(QNetworkReply *)));
 
@@ -95,12 +94,18 @@ bool OwnCloudService::isTodoCalendarSupportEnabled() {
  */
 bool OwnCloudService::isTodoSupportEnabled() {
     QSettings settings;
-    int calendarBackend = settings.value(
-            QStringLiteral("ownCloud/todoCalendarBackend"), DefaultOwnCloudCalendar).toInt();
+    int calendarBackend =
+        settings
+            .value(QStringLiteral("ownCloud/todoCalendarBackend"),
+                   DefaultOwnCloudCalendar)
+            .toInt();
 
     if (calendarBackend == CalDAVCalendar) {
-        QString todoCalendarServerUrl = settings.value(
-                QStringLiteral("ownCloud/todoCalendarCalDAVServerUrl")).toString().trimmed();
+        QString todoCalendarServerUrl =
+            settings
+                .value(QStringLiteral("ownCloud/todoCalendarCalDAVServerUrl"))
+                .toString()
+                .trimmed();
         return !todoCalendarServerUrl.isEmpty();
     } else {
         return isOwnCloudSupportEnabled();
@@ -109,9 +114,9 @@ bool OwnCloudService::isTodoSupportEnabled() {
 
 void OwnCloudService::readSettings(int cloudConnectionId) {
     QSettings settings;
-    CloudConnection cloudConnection = cloudConnectionId != -1 ?
-                CloudConnection::fetch(cloudConnectionId) :
-                CloudConnection::currentCloudConnection();
+    CloudConnection cloudConnection =
+        cloudConnectionId != -1 ? CloudConnection::fetch(cloudConnectionId)
+                                : CloudConnection::currentCloudConnection();
 
     qDebug() << "cloudConnection: " << cloudConnection;
 
@@ -128,12 +133,15 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
     ownCloudTestPath = QStringLiteral("/ocs/v1.php");
     restoreTrashedNotePath = rootPath % QStringLiteral("note/restore_trashed");
     webdavPath = QStringLiteral("/remote.php/webdav");
-//    sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
+    //    sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
     sharePath = QStringLiteral("/ocs/v2.php/apps/files_sharing/api/v1/shares");
     bookmarkPath = QStringLiteral("/apps/bookmarks/public/rest/v2/bookmark");
 
-    int calendarBackend = settings.value(
-            QStringLiteral("ownCloud/todoCalendarBackend"), DefaultOwnCloudCalendar).toInt();
+    int calendarBackend =
+        settings
+            .value(QStringLiteral("ownCloud/todoCalendarBackend"),
+                   DefaultOwnCloudCalendar)
+            .toInt();
     QString calendarBackendString;
 
     switch (calendarBackend) {
@@ -152,46 +160,61 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
     }
 
     CloudConnection todoCalendarCloudConnection =
-            CloudConnection::currentTodoCalendarCloudConnection();
+        CloudConnection::currentTodoCalendarCloudConnection();
 
-    QString calendarPath =
-            QStringLiteral("/remote.php/") % calendarBackendString % QStringLiteral("/calendars/") % todoCalendarCloudConnection.getUsername();
-    todoCalendarServerUrl = todoCalendarCloudConnection.getServerUrl().isEmpty() ?
-                QString() : todoCalendarCloudConnection.getServerUrl() % calendarPath;
-    todoCalendarServerUrlWithoutPath = todoCalendarCloudConnection.getServerUrlWithoutPath();
-    todoCalendarServerUrlPath = todoCalendarCloudConnection.getServerUrlPath() % calendarPath;
+    QString calendarPath = QStringLiteral("/remote.php/") %
+                           calendarBackendString %
+                           QStringLiteral("/calendars/") %
+                           todoCalendarCloudConnection.getUsername();
+    todoCalendarServerUrl =
+        todoCalendarCloudConnection.getServerUrl().isEmpty()
+            ? QString()
+            : todoCalendarCloudConnection.getServerUrl() % calendarPath;
+    todoCalendarServerUrlWithoutPath =
+        todoCalendarCloudConnection.getServerUrlWithoutPath();
+    todoCalendarServerUrlPath =
+        todoCalendarCloudConnection.getServerUrlPath() % calendarPath;
     todoCalendarUsername = todoCalendarCloudConnection.getUsername();
     todoCalendarPassword = todoCalendarCloudConnection.getPassword();
 
     // if we are using a custom CalDAV server set the settings for it
     if (calendarBackend == OwnCloudService::CalDAVCalendar) {
-        todoCalendarServerUrl = settings.value(
-                QStringLiteral("ownCloud/todoCalendarCalDAVServerUrl")).toString().trimmed();
+        todoCalendarServerUrl =
+            settings
+                .value(QStringLiteral("ownCloud/todoCalendarCalDAVServerUrl"))
+                .toString()
+                .trimmed();
         todoCalendarServerUrlPath = QUrl(todoCalendarServerUrl).path();
-        todoCalendarUsername = settings.value(
-                QStringLiteral("ownCloud/todoCalendarCalDAVUsername")).toString();
+        todoCalendarUsername =
+            settings
+                .value(QStringLiteral("ownCloud/todoCalendarCalDAVUsername"))
+                .toString();
         todoCalendarPassword = CryptoService::instance()->decryptToString(
-                settings.value(QStringLiteral("ownCloud/todoCalendarCalDAVPassword"))
-                        .toString());
+            settings
+                .value(QStringLiteral("ownCloud/todoCalendarCalDAVPassword"))
+                .toString());
 
         todoCalendarServerUrlWithoutPath = todoCalendarServerUrl;
         if (!todoCalendarServerUrlPath.isEmpty()) {
             // remove the path from the calendar server url
-            todoCalendarServerUrlWithoutPath.replace(QRegularExpression(
-                    QRegularExpression::escape(
-                            todoCalendarServerUrlPath) % QStringLiteral("$")), QString());
+            todoCalendarServerUrlWithoutPath.replace(
+                QRegularExpression(
+                    QRegularExpression::escape(todoCalendarServerUrlPath) %
+                    QStringLiteral("$")),
+                QString());
         }
     }
 }
 
 void OwnCloudService::slotAuthenticationRequired(
-        QNetworkReply *reply, QAuthenticator *authenticator) {
+    QNetworkReply *reply, QAuthenticator *authenticator) {
     Q_UNUSED(authenticator)
     qWarning() << "Username and/or password incorrect";
 
 #ifndef INTEGRATION_TESTS
     if (settingsDialog != Q_NULLPTR) {
-        settingsDialog->setOKLabelData(3, QStringLiteral("incorrect"), SettingsDialog::Failure);
+        settingsDialog->setOKLabelData(3, QStringLiteral("incorrect"),
+                                       SettingsDialog::Failure);
         settingsDialog->setOKLabelData(4, QStringLiteral("not connected"),
                                        SettingsDialog::Failure);
     }
@@ -201,14 +224,14 @@ void OwnCloudService::slotAuthenticationRequired(
 }
 
 void OwnCloudService::slotCalendarAuthenticationRequired(
-        QNetworkReply *reply, QAuthenticator *authenticator) {
+    QNetworkReply *reply, QAuthenticator *authenticator) {
     Q_UNUSED(authenticator)
     qWarning() << "Calendar username and/or password incorrect";
 
     if (!Utils::Gui::isMessageBoxPresent()) {
         QMessageBox::warning(
-                nullptr, tr("Username / password error"),
-                tr("Your calendar username or password is incorrect!"));
+            nullptr, tr("Username / password error"),
+            tr("Your calendar username or password is incorrect!"));
     }
 
     reply->abort();
@@ -231,7 +254,8 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
         // for error codes see
         // http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
         qWarning() << "QNetworkReply error " + QString::number(reply->error()) +
-                " from url " + url.toString() + ": " << reply->errorString();
+                          " from url " + url.toString() + ": "
+                   << reply->errorString();
     }
 
     // this should only be called from the settings dialog
@@ -249,7 +273,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
     } else {
         QByteArray arr = reply->readAll();
         QString data = QString(arr);
-//        qDebug() << __func__ << " - 'data': " << data;
+        //        qDebug() << __func__ << " - 'data': " << data;
 
         if (urlPath.endsWith(versionListPath)) {
             qDebug() << "Reply from version list";
@@ -267,8 +291,10 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             qDebug() << "Reply from capabilities page";
 
             if (data.startsWith(QStringLiteral("<?xml version="))) {
-                settingsDialog->setOKLabelData(3, QStringLiteral("ok"), SettingsDialog::OK);
-                settingsDialog->setOKLabelData(1, QStringLiteral("ok"), SettingsDialog::OK);
+                settingsDialog->setOKLabelData(3, QStringLiteral("ok"),
+                                               SettingsDialog::OK);
+                settingsDialog->setOKLabelData(1, QStringLiteral("ok"),
+                                               SettingsDialog::OK);
             } else {
                 settingsDialog->setOKLabelData(3, QStringLiteral("not correct"),
                                                SettingsDialog::Failure);
@@ -277,44 +303,45 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             qDebug() << "Reply from ownCloud test page";
 
             if (data.startsWith(QStringLiteral("<?xml version="))) {
-                settingsDialog->setOKLabelData(2, QStringLiteral("ok"), SettingsDialog::OK);
-                settingsDialog->setOKLabelData(1, QStringLiteral("ok"), SettingsDialog::OK);
+                settingsDialog->setOKLabelData(2, QStringLiteral("ok"),
+                                               SettingsDialog::OK);
+                settingsDialog->setOKLabelData(1, QStringLiteral("ok"),
+                                               SettingsDialog::OK);
             } else {
-                settingsDialog->setOKLabelData(2, QStringLiteral("not detected"),
-                                               SettingsDialog::Failure);
+                settingsDialog->setOKLabelData(
+                    2, QStringLiteral("not detected"), SettingsDialog::Failure);
             }
         } else if (urlPath.endsWith(restoreTrashedNotePath)) {
             qDebug() << "Reply from ownCloud restore trashed note page";
             // qDebug() << data;
         } else if (!todoCalendarServerUrlPath.isEmpty() &&
-                urlPath.endsWith(todoCalendarServerUrlPath)) {
+                   urlPath.endsWith(todoCalendarServerUrlPath)) {
             qDebug() << "Reply from ownCloud calendar page" << data;
 
             QList<CalDAVCalendarData> calendarDataList =
-                    parseCalendarData(data);
+                parseCalendarData(data);
 
-//#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-//            qInfo() << "calendarDataList: " << calendarDataList;
-//#else
-//            qDebug() << "calendarDataList: " << calendarDataList;
-//#endif
+            //#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+            //            qInfo() << "calendarDataList: " << calendarDataList;
+            //#else
+            //            qDebug() << "calendarDataList: " << calendarDataList;
+            //#endif
 
             if (settingsDialog != Q_NULLPTR) {
                 settingsDialog->refreshTodoCalendarList(calendarDataList);
             }
         } else if (!todoCalendarServerUrlPath.isEmpty() &&
-                urlPath.startsWith(todoCalendarServerUrlPath)) {
+                   urlPath.startsWith(todoCalendarServerUrlPath)) {
             // check if we have a reply from a calendar item request
             if (urlPath.endsWith(QStringLiteral(".ics"))) {
                 qDebug() << "Reply from ownCloud calendar item ics page";
                 // qDebug() << data;
 
                 // a workaround for a ownCloud error message
-                if (data.indexOf(
-                        QStringLiteral("<s:message>Unable to generate a URL for the named"
-                                " route \"tasksplus.page.index\" as such route"
-                                " does not exist.</s:message>")) >
-                    20) {
+                if (data.indexOf(QStringLiteral(
+                        "<s:message>Unable to generate a URL for the named"
+                        " route \"tasksplus.page.index\" as such route"
+                        " does not exist.</s:message>")) > 20) {
                     data = QString();
                 }
 
@@ -333,7 +360,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                 // fetch the calendar item, that was already stored
                 // by loadTodoItems()
                 CalendarItem calItem = CalendarItem::fetchByUrlAndCalendar(
-                        url.toString(), calendarName);
+                    url.toString(), calendarName);
                 if (calItem.isFetched()) {
                     // update the item with the ics data
                     bool wasUpdated = calItem.updateWithICSData(data);
@@ -347,12 +374,13 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                         todoDialog->reloadTodoListItems();
                     }
 
-//                    qDebug() << __func__ << " - 'calItem': " << calItem;
+                    //                    qDebug() << __func__ << " - 'calItem':
+                    //                    " << calItem;
                 }
             } else {
                 // this should be the reply of a calendar item list request
                 qDebug() << "Reply from ownCloud calendar todo list page";
-//                qDebug() << data;
+                //                qDebug() << data;
 
                 // load the task items
                 loadTodoItems(data);
@@ -381,7 +409,8 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             qDebug() << "Reply from main server url";
 
             if (!data.isEmpty()) {
-                settingsDialog->setOKLabelData(1, QStringLiteral("ok"), SettingsDialog::OK);
+                settingsDialog->setOKLabelData(1, QStringLiteral("ok"),
+                                               SettingsDialog::OK);
             } else {
                 settingsDialog->setOKLabelData(1, QStringLiteral("not found"),
                                                SettingsDialog::Failure);
@@ -405,18 +434,25 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
 
     QString notesPathExistsText = QStringLiteral("unknown");
 #ifndef INTEGRATION_TESTS
-    bool appIsValid = result.property(0).property(QStringLiteral("versioning")).toBool();
+    bool appIsValid =
+        result.property(0).property(QStringLiteral("versioning")).toBool();
 #endif
-    QString appVersion = result.property(0).property(QStringLiteral("app_version"))
-            .toVariant().toString();
-    QString serverVersion = result.property(0).property(QStringLiteral("server_version"))
-            .toVariant().toString();
+    QString appVersion = result.property(0)
+                             .property(QStringLiteral("app_version"))
+                             .toVariant()
+                             .toString();
+    QString serverVersion = result.property(0)
+                                .property(QStringLiteral("server_version"))
+                                .toVariant()
+                                .toString();
 
 #ifndef INTEGRATION_TESTS
     // reset to "unknown" in case we can't test if versions
     // and trash app are enabled
-    settingsDialog->setOKLabelData(6, QStringLiteral("unknown"), SettingsDialog::Unknown);
-    settingsDialog->setOKLabelData(7, QStringLiteral("unknown"), SettingsDialog::Unknown);
+    settingsDialog->setOKLabelData(6, QStringLiteral("unknown"),
+                                   SettingsDialog::Unknown);
+    settingsDialog->setOKLabelData(7, QStringLiteral("unknown"),
+                                   SettingsDialog::Unknown);
 
     if (!serverVersion.isEmpty()) {
         VersionNumber serverAppVersion = VersionNumber(appVersion);
@@ -424,28 +460,36 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
 
         if (minAppVersion > serverAppVersion) {
             settingsDialog->setOKLabelData(4,
-                                           QStringLiteral("version ") % appVersion % QStringLiteral(" too low"),
+                                           QStringLiteral("version ") %
+                                               appVersion %
+                                               QStringLiteral(" too low"),
                                            SettingsDialog::Warning);
         } else {
-            settingsDialog->setOKLabelData(4, QStringLiteral("ok"), SettingsDialog::OK);
+            settingsDialog->setOKLabelData(4, QStringLiteral("ok"),
+                                           SettingsDialog::OK);
         }
 
         // check if versions and trash app are enabled after QOwnNotesAPI v0.3.1
         if (serverAppVersion >= VersionNumber(QStringLiteral("0.3.1"))) {
-            bool versionsAppEnabled = result.property(0).property(
-                    QStringLiteral("versions_app")).toBool();
-            bool trashAppEnabled = result.property(0).property(
-                    QStringLiteral("trash_app")).toBool();
+            bool versionsAppEnabled =
+                result.property(0)
+                    .property(QStringLiteral("versions_app"))
+                    .toBool();
+            bool trashAppEnabled = result.property(0)
+                                       .property(QStringLiteral("trash_app"))
+                                       .toBool();
 
             if (versionsAppEnabled) {
-                settingsDialog->setOKLabelData(6, QStringLiteral("ok"), SettingsDialog::OK);
+                settingsDialog->setOKLabelData(6, QStringLiteral("ok"),
+                                               SettingsDialog::OK);
             } else {
                 settingsDialog->setOKLabelData(6, QStringLiteral("not enabled"),
                                                SettingsDialog::Failure);
             }
 
             if (trashAppEnabled) {
-                settingsDialog->setOKLabelData(7, QStringLiteral("ok"), SettingsDialog::OK);
+                settingsDialog->setOKLabelData(7, QStringLiteral("ok"),
+                                               SettingsDialog::OK);
             } else {
                 settingsDialog->setOKLabelData(7, QStringLiteral("not enabled"),
                                                SettingsDialog::Failure);
@@ -454,12 +498,16 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
 
         // check if notes path was found after QOwnNotesAPI v0.4.
         if (serverAppVersion >= VersionNumber(QStringLiteral("0.4.1"))) {
-            bool notesPathExists = result.property(0).property(
-                    QStringLiteral("notes_path_exists")).toBool();
-            notesPathExistsText = notesPathExists ? QStringLiteral("yes") : QStringLiteral("not found");
+            bool notesPathExists =
+                result.property(0)
+                    .property(QStringLiteral("notes_path_exists"))
+                    .toBool();
+            notesPathExistsText = notesPathExists ? QStringLiteral("yes")
+                                                  : QStringLiteral("not found");
 
             if (notesPathExists) {
-                settingsDialog->setOKLabelData(8, QStringLiteral("ok"), SettingsDialog::OK);
+                settingsDialog->setOKLabelData(8, QStringLiteral("ok"),
+                                               SettingsDialog::OK);
             } else {
                 settingsDialog->setOKLabelData(8, QStringLiteral("not found"),
                                                SettingsDialog::Failure);
@@ -471,9 +519,9 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
     }
 
     // call callback in settings dialog
-    settingsDialog->connectTestCallback(
-            appIsValid, appVersion, serverVersion, notesPathExistsText,
-            reply->errorString());
+    settingsDialog->connectTestCallback(appIsValid, appVersion, serverVersion,
+                                        notesPathExistsText,
+                                        reply->errorString());
 #endif
 
     reply->deleteLater();
@@ -481,8 +529,8 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
 
 /**
  * Checks the api app version from the reply of startAppVersionTest()
- * 
- * @param reply 
+ *
+ * @param reply
  */
 void OwnCloudService::checkAppVersion(QNetworkReply *reply) {
     QString data = QString(reply->readAll());
@@ -494,8 +542,10 @@ void OwnCloudService::checkAppVersion(QNetworkReply *reply) {
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
 
-    QString appVersion = result.property(0).property(QStringLiteral("app_version"))
-            .toVariant().toString();
+    QString appVersion = result.property(0)
+                             .property(QStringLiteral("app_version"))
+                             .toVariant()
+                             .toString();
 
     if (appVersion.isEmpty()) {
         return;
@@ -514,10 +564,11 @@ void OwnCloudService::checkAppVersion(QNetworkReply *reply) {
         }
 
         QMessageBox::warning(
-                mainWindow, tr("API app version too low"),
-                tr("Please consider updating your QOwnNotesAPI app on your "
-                           "server, your app version %1 is too low and may "
-                           "cause troubles in QOwnNotes.").arg(appVersion));
+            mainWindow, tr("API app version too low"),
+            tr("Please consider updating your QOwnNotesAPI app on your "
+               "server, your app version %1 is too low and may "
+               "cause troubles in QOwnNotes.")
+                .arg(appVersion));
     }
 #endif
 
@@ -597,7 +648,8 @@ void OwnCloudService::startAppVersionTest() {
  */
 void OwnCloudService::ignoreSslErrorsIfAllowed(QNetworkReply *reply) {
     QSettings settings;
-    if (settings.value(QStringLiteral("networking/ignoreSSLErrors"), true).toBool()) {
+    if (settings.value(QStringLiteral("networking/ignoreSSLErrors"), true)
+            .toBool()) {
         QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
                          SLOT(ignoreSslErrors()));
     }
@@ -623,8 +675,9 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
     addCalendarAuthHeader(&r);
 
     // build the request body
-    QString body = QStringLiteral("<d:propfind xmlns:d=\"DAV:\" "
-            "xmlns:cs=\"http://sabredav.org/ns\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
+    QString body = QStringLiteral(
+        "<d:propfind xmlns:d=\"DAV:\" "
+        "xmlns:cs=\"http://sabredav.org/ns\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
             <d:prop> \
                <d:resourcetype /> \
                <d:displayname /> \
@@ -640,8 +693,8 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
     r.setRawHeader(QByteArray("Depth"), QByteArray("1"));
     auto *buffer = new QBuffer(dataToSend);
 
-    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
-            r, "PROPFIND", buffer);
+    QNetworkReply *reply =
+        calendarNetworkManager->sendCustomRequest(r, "PROPFIND", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -654,8 +707,9 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName,
     this->calendarName = calendarName;
 
     QSettings settings;
-    QStringList todoCalendarEnabledList = settings.value(
-            QStringLiteral("ownCloud/todoCalendarEnabledList")).toStringList();
+    QStringList todoCalendarEnabledList =
+        settings.value(QStringLiteral("ownCloud/todoCalendarEnabledList"))
+            .toStringList();
     int index = todoCalendarEnabledList.indexOf(calendarName);
 
     // return if we did't find the calendar, this should not happen
@@ -663,16 +717,19 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName,
         return;
     }
 
-    QStringList todoCalendarEnabledUrlList = settings.value(
-            QStringLiteral("ownCloud/todoCalendarEnabledUrlList")).toStringList();
+    QStringList todoCalendarEnabledUrlList =
+        settings.value(QStringLiteral("ownCloud/todoCalendarEnabledUrlList"))
+            .toStringList();
 
     // return if there are to few items in the url list
     if (todoCalendarEnabledUrlList.size() < todoCalendarEnabledList.size()) {
         return;
     }
 
-    QString calendarUrl = settings.value(
-            QStringLiteral("ownCloud/todoCalendarEnabledUrlList")).toStringList().at(index);
+    QString calendarUrl =
+        settings.value(QStringLiteral("ownCloud/todoCalendarEnabledUrlList"))
+            .toStringList()
+            .at(index);
 
     QUrl url(calendarUrl);
     QNetworkRequest r(url);
@@ -682,8 +739,9 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName,
     r.setRawHeader(QByteArray("DEPTH"), QByteArray("1"));
 
     // build the request body, we only want VTODO items
-    QString body = QStringLiteral("<c:calendar-query xmlns:d=\"DAV:\" "
-            "xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
+    QString body = QStringLiteral(
+        "<c:calendar-query xmlns:d=\"DAV:\" "
+        "xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
             <d:prop> \
                 <d:getetag /> \
                 <d:getlastmodified /> \
@@ -701,8 +759,8 @@ void OwnCloudService::todoGetTodoList(const QString &calendarName,
                 QStringLiteral("application/xml"));
     auto *buffer = new QBuffer(dataToSend);
 
-    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
-            r, "REPORT", buffer);
+    QNetworkReply *reply =
+        calendarNetworkManager->sendCustomRequest(r, "REPORT", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -715,14 +773,15 @@ void OwnCloudService::shareNote(const Note &note, ShareDialog *dialog) {
 
     // return if no settings are set
     if (!hasOwnCloudSettings()) {
-        showOwnCloudMessage(QString(), QStringLiteral("You need to setup your ownCloud server "
-                "to share notes"));
+        showOwnCloudMessage(
+            QString(), QStringLiteral("You need to setup your ownCloud server "
+                                      "to share notes"));
         return;
     }
 
     QUrl url(serverUrl % sharePath);
     QString path = NoteFolder::currentRemotePath() +
-            note.relativeNoteFilePath(QStringLiteral("/"));
+                   note.relativeNoteFilePath(QStringLiteral("/"));
 
     QByteArray postData;
     // set to public link
@@ -747,7 +806,8 @@ void OwnCloudService::shareNote(const Note &note, ShareDialog *dialog) {
 /**
  * Allow note editing on a shared note on Nextcloud
  */
-void OwnCloudService::setPermissionsOnSharedNote(const Note &note, ShareDialog *dialog) {
+void OwnCloudService::setPermissionsOnSharedNote(const Note &note,
+                                                 ShareDialog *dialog) {
     this->shareDialog = dialog;
     qDebug() << __func__ << " - 'note': " << note;
 
@@ -757,13 +817,17 @@ void OwnCloudService::setPermissionsOnSharedNote(const Note &note, ShareDialog *
         return;
     }
 
-    QUrl url(serverUrl % sharePath % QStringLiteral("/") % QString::number(note.getShareId()) % QStringLiteral("?format=xml"));
+    QUrl url(serverUrl % sharePath % QStringLiteral("/") %
+             QString::number(note.getShareId()) %
+             QStringLiteral("?format=xml"));
     QString path = NoteFolder::currentRemotePath() +
-            note.relativeNoteFilePath(QStringLiteral("/"));
+                   note.relativeNoteFilePath(QStringLiteral("/"));
 
     QUrlQuery params;
-    params.addQueryItem(QStringLiteral("permissions"), QString::number(note.getSharePermissions()));
-    params.addQueryItem(QStringLiteral("cid"), QString::number(note.getShareId()));
+    params.addQueryItem(QStringLiteral("permissions"),
+                        QString::number(note.getSharePermissions()));
+    params.addQueryItem(QStringLiteral("cid"),
+                        QString::number(note.getShareId()));
 
     qDebug() << __func__ << " - 'url': " << url;
     qDebug() << __func__ << " - 'params': " << params.query();
@@ -789,12 +853,14 @@ void OwnCloudService::removeNoteShare(const Note &note, ShareDialog *dialog) {
 
     // return if no settings are set
     if (!hasOwnCloudSettings()) {
-        showOwnCloudMessage(QString(), QStringLiteral("You need to setup your ownCloud server "
-                "to remove a note share"));
+        showOwnCloudMessage(
+            QString(), QStringLiteral("You need to setup your ownCloud server "
+                                      "to remove a note share"));
         return;
     }
 
-    QUrl url(serverUrl % sharePath % QStringLiteral("/") % QString::number(note.getShareId()));
+    QUrl url(serverUrl % sharePath % QStringLiteral("/") %
+             QString::number(note.getShareId()));
 
     qDebug() << __func__ << " - 'url': " << url;
 
@@ -814,7 +880,7 @@ void OwnCloudService::removeNoteShare(const Note &note, ShareDialog *dialog) {
  * To fetch the shares of all notes we have to fetch all shares from the
  * account and search for our note folder
  */
-void OwnCloudService::fetchShares(const QString& path) {
+void OwnCloudService::fetchShares(const QString &path) {
     // return if no settings are set
     if (!hasOwnCloudSettings()) {
         return;
@@ -874,23 +940,25 @@ void OwnCloudService::removeCalendarItem(CalendarItem calItem,
     QNetworkRequest r(url);
     addCalendarAuthHeader(&r);
 
-    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
-            r, "DELETE");
+    QNetworkReply *reply =
+        calendarNetworkManager->sendCustomRequest(r, "DELETE");
     ignoreSslErrorsIfAllowed(reply);
 }
 
 /**
  * @brief Restores a note on the server
  */
-void OwnCloudService::restoreTrashedNoteOnServer(const QString& fileName,
+void OwnCloudService::restoreTrashedNoteOnServer(const QString &fileName,
                                                  int timestamp,
                                                  MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl % restoreTrashedNotePath);
     QString serverNotesPath = Utils::Misc::appendIfDoesNotEndWith(
-            NoteFolder::currentRemotePath() +
-            NoteSubFolder::activeNoteSubFolder().relativePath(QStringLiteral("/")), QStringLiteral("/"));
+        NoteFolder::currentRemotePath() +
+            NoteSubFolder::activeNoteSubFolder().relativePath(
+                QStringLiteral("/")),
+        QStringLiteral("/"));
 
     url.setUserName(userName);
     url.setPassword(password);
@@ -916,7 +984,8 @@ void OwnCloudService::restoreTrashedNoteOnServer(const QString& fileName,
 /**
  * @brief OwnCloudService::loadVersions
  */
-void OwnCloudService::loadVersions(const QString& fileName, MainWindow *mainWindow) {
+void OwnCloudService::loadVersions(const QString &fileName,
+                                   MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl % versionListPath);
@@ -948,7 +1017,8 @@ void OwnCloudService::loadTrash(MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl % trashListPath);
-    QString serverNotesPath = NoteFolder::currentRemotePath() +
+    QString serverNotesPath =
+        NoteFolder::currentRemotePath() +
         NoteSubFolder::activeNoteSubFolder().relativePath(QStringLiteral("/"));
 
     url.setUserName(userName);
@@ -959,7 +1029,7 @@ void OwnCloudService::loadTrash(MainWindow *mainWindow) {
     q.addQueryItem(QStringLiteral("dir"), serverNotesPath);
 
     QStringList customNoteFileExtensionList =
-            Note::customNoteFileExtensionList();
+        Note::customNoteFileExtensionList();
 
     // add the custom note extensions
     if (customNoteFileExtensionList.count() > 0) {
@@ -1003,7 +1073,7 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
 void OwnCloudService::addCalendarAuthHeader(QNetworkRequest *r) {
     if (r) {
         QString concatenated =
-                todoCalendarUsername % QStringLiteral(":") % todoCalendarPassword;
+            todoCalendarUsername % QStringLiteral(":") % todoCalendarPassword;
         QByteArray data = concatenated.toLocal8Bit().toBase64();
         QString headerData = QStringLiteral("Basic ") % data;
         r->setRawHeader("Authorization", headerData.toLocal8Bit());
@@ -1017,14 +1087,15 @@ void OwnCloudService::addCalendarAuthHeader(QNetworkRequest *r) {
 /**
  * Checks if ownCloud settings are set
  */
-bool OwnCloudService::hasOwnCloudSettings(bool withEnabledCheck, bool ignoreTableWarning) {
+bool OwnCloudService::hasOwnCloudSettings(bool withEnabledCheck,
+                                          bool ignoreTableWarning) {
     if (withEnabledCheck && !isOwnCloudSupportEnabled()) {
         return false;
     }
 
     QSettings settings;
-    CloudConnection cloudConnection = CloudConnection::currentCloudConnection(
-            ignoreTableWarning);
+    CloudConnection cloudConnection =
+        CloudConnection::currentCloudConnection(ignoreTableWarning);
 
     QString serverUrl = cloudConnection.getServerUrl();
     QString userName = cloudConnection.getUsername();
@@ -1036,15 +1107,17 @@ bool OwnCloudService::hasOwnCloudSettings(bool withEnabledCheck, bool ignoreTabl
 /**
  * Shows a message dialog with a ownCloud server error
  */
-void OwnCloudService::showOwnCloudServerErrorMessage(
-        const QString& message, bool withSettingsButton) {
+void OwnCloudService::showOwnCloudServerErrorMessage(const QString &message,
+                                                     bool withSettingsButton) {
     QString headline = Utils::Misc::replaceOwnCloudText(
-            tr("ownCloud server connection error"));
-    QString text = message.isEmpty() ?
-            QStringLiteral("Cannot connect to your ownCloud server! "
-            "Please check your ownCloud configuration.") :
-            tr("ownCloud server error: <strong>%1</strong><br />"
-            "Please check your ownCloud configuration.").arg(message);
+        tr("ownCloud server connection error"));
+    QString text = message.isEmpty()
+                       ? QStringLiteral(
+                             "Cannot connect to your ownCloud server! "
+                             "Please check your ownCloud configuration.")
+                       : tr("ownCloud server error: <strong>%1</strong><br />"
+                            "Please check your ownCloud configuration.")
+                             .arg(message);
 
     text = Utils::Misc::replaceOwnCloudText(text);
 
@@ -1054,15 +1127,15 @@ void OwnCloudService::showOwnCloudServerErrorMessage(
 /**
  * Shows a ownCloud message dialog
  */
-void OwnCloudService::showOwnCloudMessage(
-        QString headline, QString message, bool withSettingsButton) {
+void OwnCloudService::showOwnCloudMessage(QString headline, QString message,
+                                          bool withSettingsButton) {
     if (headline.isEmpty()) {
         headline = Utils::Misc::replaceOwnCloudText(QStringLiteral("ownCloud"));
     }
 
     if (message.isEmpty()) {
         message = Utils::Misc::replaceOwnCloudText(
-                tr("You need to setup your ownCloud server!"));
+            tr("You need to setup your ownCloud server!"));
     }
 
     // don't show an actual message box if there already is one present on
@@ -1073,10 +1146,9 @@ void OwnCloudService::showOwnCloudMessage(
     }
 
     if (withSettingsButton) {
-        if (QMessageBox::warning(
-                nullptr, headline, message,
-                tr("Open &settings"), tr("&Cancel"),
-                QString(), 0, 1) == 0) {
+        if (QMessageBox::warning(nullptr, headline, message,
+                                 tr("Open &settings"), tr("&Cancel"), QString(),
+                                 0, 1) == 0) {
 #ifndef INTEGRATION_TESTS
             MainWindow *mainWindow = MainWindow::instance();
 
@@ -1094,7 +1166,8 @@ void OwnCloudService::showOwnCloudMessage(
  * Returns the global OwnCloudService instance
  */
 OwnCloudService *OwnCloudService::instance(bool reset, int cloudConnectionId) {
-    auto *instance = qApp->property("ownCloudService").value<OwnCloudService *>();
+    auto *instance =
+        qApp->property("ownCloudService").value<OwnCloudService *>();
 
     // we should not need the reset, let's test without it
     /*
@@ -1128,8 +1201,8 @@ OwnCloudService *OwnCloudService::instance(bool reset, int cloudConnectionId) {
 void OwnCloudService::handleVersionsLoading(QString data) {
 #ifndef INTEGRATION_TESTS
     mainWindow->enableShowVersionsButton();
-    mainWindow->showStatusBarMessage(
-            tr("Done with loading note versions"), 2000);
+    mainWindow->showStatusBarMessage(tr("Done with loading note versions"),
+                                     2000);
 #endif
 
     // check if we get any data at all
@@ -1147,8 +1220,10 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     // get the information if versioning is available
     // we are casting to QVariant first because otherwise we might get a
     // "undefined" string if "message" is not set
-    QString message = result.property(0).property(QStringLiteral("message")).toVariant()
-            .toString();
+    QString message = result.property(0)
+                          .property(QStringLiteral("message"))
+                          .toVariant()
+                          .toString();
 
     // check if we got an error message
     if (!message.isEmpty()) {
@@ -1157,20 +1232,23 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     }
 
     // get the filename to check if everything is all right
-    QString fileName = result.property(0).property(QStringLiteral("file_name")).toVariant()
-            .toString();
+    QString fileName = result.property(0)
+                           .property(QStringLiteral("file_name"))
+                           .toVariant()
+                           .toString();
 
     // get the versions
     QJSValue versions = result.property(0).property(QStringLiteral("versions"));
     QJSValueIterator versionsIterator(versions);
 
-    // check if we got no useful data, we also need to do this to prevent crashes
+    // check if we got no useful data, we also need to do this to prevent
+    // crashes
     if (fileName.isEmpty() || !versionsIterator.hasNext() ||
-            versions.toString().isEmpty()) {
+        versions.toString().isEmpty()) {
         QMessageBox::information(
-                nullptr, tr("No versions found"),
-                tr("There are no versions for this note or the note wasn't "
-                           "found on the server."));
+            nullptr, tr("No versions found"),
+            tr("There are no versions for this note or the note wasn't "
+               "found on the server."));
         return;
     }
 
@@ -1189,8 +1267,8 @@ void OwnCloudService::handleVersionsLoading(QString data) {
 void OwnCloudService::handleTrashedLoading(QString data) {
 #ifndef INTEGRATION_TESTS
     mainWindow->enableShowTrashButton();
-    mainWindow->showStatusBarMessage(
-            tr("Done with loading trashed notes"), 2000);
+    mainWindow->showStatusBarMessage(tr("Done with loading trashed notes"),
+                                     2000);
 #endif
 
     // check if we get any data at all
@@ -1208,8 +1286,10 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     // get a possible error messages
     // we are casting to QVariant first because otherwise we might get a
     // "undefined" string if "message" is not set
-    QString message = result.property(0).property(QStringLiteral("message")).toVariant()
-            .toString();
+    QString message = result.property(0)
+                          .property(QStringLiteral("message"))
+                          .toVariant()
+                          .toString();
 
     // check if we got an error message
     if (!message.isEmpty()) {
@@ -1218,7 +1298,8 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     }
 
     // get the directory to check if everything is all right
-    QString directory = result.property(0).property(QStringLiteral("directory")).toString();
+    QString directory =
+        result.property(0).property(QStringLiteral("directory")).toString();
 
     // check if we got no useful data
     if (directory.isEmpty()) {
@@ -1233,7 +1314,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     if (notes.toString().isEmpty()) {
         QMessageBox::information(0, tr("No trashed notes"),
                                  tr("No trashed notes were found on the "
-                                            "server."));
+                                    "server."));
         return;
     }
 
@@ -1254,9 +1335,8 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
 
     // check if there was nothing returned at all from the CalDAV server
     if (data.isEmpty()) {
-        QMessageBox::critical(
-                nullptr, tr("Error while loading todo lists!"),
-                tr("Your CalDAV server didn't reply anything!"));
+        QMessageBox::critical(nullptr, tr("Error while loading todo lists!"),
+                              tr("Your CalDAV server didn't reply anything!"));
 
         return resultList;
     }
@@ -1266,7 +1346,8 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
 
     doc.setContent(data, true);
 
-    QDomNodeList errorNodes = doc.elementsByTagNameNS(NS_DAV, QStringLiteral("error"));
+    QDomNodeList errorNodes =
+        doc.elementsByTagNameNS(NS_DAV, QStringLiteral("error"));
 
     // check if there was an error returned by the CalDAV server
     for (int i = 0; i < errorNodes.length(); ++i) {
@@ -1281,10 +1362,10 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
                     QString typeString = typeNode.toElement().tagName();
                     if (typeString == QStringLiteral("message")) {
                         QMessageBox::critical(
-                                0, tr("Error while loading todo lists!"),
-                                tr("Error message from your "
-                                           "CalDAV server: <strong>%1</strong>")
-                                        .arg(typeNode.toElement().text()));
+                            0, tr("Error while loading todo lists!"),
+                            tr("Error message from your "
+                               "CalDAV server: <strong>%1</strong>")
+                                .arg(typeNode.toElement().text()));
 
                         return resultList;
                     }
@@ -1294,17 +1375,19 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
     }
 
     QSettings settings;
-    bool ignoreNonTodoCalendars = settings.value(
-            QStringLiteral("ownCloud/ignoreNonTodoCalendars"), true).toBool();
+    bool ignoreNonTodoCalendars =
+        settings.value(QStringLiteral("ownCloud/ignoreNonTodoCalendars"), true)
+            .toBool();
 
     // loop all response blocks
-    QDomNodeList responseNodes = doc.elementsByTagNameNS(NS_DAV, QStringLiteral("response"));
+    QDomNodeList responseNodes =
+        doc.elementsByTagNameNS(NS_DAV, QStringLiteral("response"));
     for (int i = 0; i < responseNodes.length(); ++i) {
         QDomNode responseNode = responseNodes.at(i);
         if (responseNode.isElement()) {
             QDomElement elem = responseNode.toElement();
-            QDomNodeList resourceTypeNodes =
-                    elem.elementsByTagNameNS(NS_DAV, QStringLiteral("resourcetype"));
+            QDomNodeList resourceTypeNodes = elem.elementsByTagNameNS(
+                NS_DAV, QStringLiteral("resourcetype"));
             if (resourceTypeNodes.length()) {
                 QDomNodeList typeNodes = resourceTypeNodes.at(0).childNodes();
                 for (int j = 0; j < typeNodes.length(); ++j) {
@@ -1318,27 +1401,25 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
 
                     // check if the calendar is a VTODO calendar
                     if (ignoreNonTodoCalendars) {
-                        QDomNodeList componentSetNodes =
-                                elem.elementsByTagName(
-                                        QStringLiteral("supported-calendar-component-set"));
+                        QDomNodeList componentSetNodes = elem.elementsByTagName(
+                            QStringLiteral("supported-calendar-component-set"));
                         bool isTodoCalendar = false;
                         if (componentSetNodes.length()) {
-                            for (int k = 0;
-                                 k < componentSetNodes.length();
+                            for (int k = 0; k < componentSetNodes.length();
                                  ++k) {
                                 QDomNodeList componentSets =
-                                        componentSetNodes.at(k).childNodes();
+                                    componentSetNodes.at(k).childNodes();
 
                                 if (componentSets.length()) {
-                                    for (int l = 0;
-                                         l < componentSets.length();
+                                    for (int l = 0; l < componentSets.length();
                                          ++l) {
                                         QDomNode componentSet =
-                                                componentSets.at(l);
+                                            componentSets.at(l);
                                         QString componentSetString =
-                                                componentSet.toElement()
-                                                        .attribute(QStringLiteral("name"));
-                                        if (componentSetString == QStringLiteral("VTODO")) {
+                                            componentSet.toElement().attribute(
+                                                QStringLiteral("name"));
+                                        if (componentSetString ==
+                                            QStringLiteral("VTODO")) {
                                             isTodoCalendar = true;
                                         }
                                     }
@@ -1355,10 +1436,9 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
                     CalDAVCalendarData calendarData = CalDAVCalendarData();
                     // add the href to our result list
                     QDomNodeList hrefNodes = elem.elementsByTagNameNS(
-                            NS_DAV, QStringLiteral("href"));
+                        NS_DAV, QStringLiteral("href"));
                     if (hrefNodes.length()) {
-                        const QString href = hrefNodes.at(
-                                0).toElement().text();
+                        const QString href = hrefNodes.at(0).toElement().text();
 
                         if (href.isEmpty()) {
                             continue;
@@ -1367,11 +1447,11 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
                         calendarData.url = href;
                     }
 
-                    QDomNodeList displayNameNodes =
-                            elem.elementsByTagNameNS(NS_DAV, QStringLiteral("displayname"));
+                    QDomNodeList displayNameNodes = elem.elementsByTagNameNS(
+                        NS_DAV, QStringLiteral("displayname"));
                     if (displayNameNodes.length()) {
-                        const QString displayName = displayNameNodes.at(
-                                0).toElement().text();
+                        const QString displayName =
+                            displayNameNodes.at(0).toElement().text();
                         calendarData.displayName = displayName;
                     }
 
@@ -1394,9 +1474,10 @@ void OwnCloudService::loadTodoItems(QString &data) {
 
     // fetch all urls that are currently in the calendar
     QList<QUrl> calendarItemUrlRemoveList =
-            CalendarItem::fetchAllUrlsByCalendar(calendarName);
+        CalendarItem::fetchAllUrlsByCalendar(calendarName);
 
-    QDomNodeList responseNodes = doc.elementsByTagNameNS(NS_DAV, QStringLiteral("response"));
+    QDomNodeList responseNodes =
+        doc.elementsByTagNameNS(NS_DAV, QStringLiteral("response"));
     int responseNodesCount = responseNodes.length();
     int requestCount = 0;
 
@@ -1417,8 +1498,8 @@ void OwnCloudService::loadTodoItems(QString &data) {
             QDomElement elem = responseNode.toElement();
 
             // check if we have an url
-            QDomNodeList urlPartNodes = elem.elementsByTagNameNS(NS_DAV,
-                                                                 QStringLiteral("href"));
+            QDomNodeList urlPartNodes =
+                elem.elementsByTagNameNS(NS_DAV, QStringLiteral("href"));
             if (urlPartNodes.length()) {
                 QString urlPart = urlPartNodes.at(0).toElement().text();
 
@@ -1427,27 +1508,28 @@ void OwnCloudService::loadTodoItems(QString &data) {
                 }
 
                 QUrl calendarItemUrl =
-                        QUrl(todoCalendarServerUrlWithoutPath % urlPart);
+                    QUrl(todoCalendarServerUrlWithoutPath % urlPart);
 
                 // check if we have an etag
-                QDomNodeList etagNodes = elem.elementsByTagNameNS(NS_DAV,
-                                                                  QStringLiteral("getetag"));
+                QDomNodeList etagNodes =
+                    elem.elementsByTagNameNS(NS_DAV, QStringLiteral("getetag"));
                 if (etagNodes.length()) {
                     QString etag = etagNodes.at(0).toElement().text();
                     etag.replace(QStringLiteral("\""), QString());
-//                    qDebug() << __func__ << " - 'etag': " << etag;
+                    //                    qDebug() << __func__ << " - 'etag': "
+                    //                    << etag;
 
                     // check if we have a last modified date
                     QDomNodeList lastModifiedNodes = elem.elementsByTagNameNS(
-                            NS_DAV, QStringLiteral("getlastmodified"));
+                        NS_DAV, QStringLiteral("getlastmodified"));
                     if (lastModifiedNodes.length()) {
-                        const QString lastModified = lastModifiedNodes.at(
-                                0).toElement().text();
+                        const QString lastModified =
+                            lastModifiedNodes.at(0).toElement().text();
                         bool fetchItem = false;
 
                         // try to fetch the calendar item by url
-                        CalendarItem calItem = CalendarItem::fetchByUrl(
-                                calendarItemUrl);
+                        CalendarItem calItem =
+                            CalendarItem::fetchByUrl(calendarItemUrl);
                         if (calItem.isFetched()) {
                             // check if calendar item was modified
                             if (calItem.getETag() != etag) {
@@ -1463,8 +1545,8 @@ void OwnCloudService::loadTodoItems(QString &data) {
                             // calendar item was not found
                             // create calendar item for fetching
                             CalendarItem::addCalendarItemForRequest(
-                                    calendarName, calendarItemUrl, etag,
-                                    lastModified);
+                                calendarName, calendarItemUrl, etag,
+                                lastModified);
                             fetchItem = true;
                         }
 
@@ -1473,7 +1555,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
                         if (calendarItemUrlRemoveList.contains(
                                 calendarItemUrl)) {
                             calendarItemUrlRemoveList.removeAll(
-                                    calendarItemUrl);
+                                calendarItemUrl);
                         }
 
                         // fetch the calendar item
@@ -1482,7 +1564,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
                             addCalendarAuthHeader(&r);
 
                             QNetworkReply *reply =
-                                    calendarNetworkManager->get(r);
+                                calendarNetworkManager->get(r);
                             ignoreSslErrorsIfAllowed(reply);
 
                             requestCount++;
@@ -1548,10 +1630,10 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
         return;
     }
 
-//    qDebug() << __func__ << " - 'data': " << data;
+    //    qDebug() << __func__ << " - 'data': " << data;
 
-    QRegularExpression re(
-            QRegularExpression::escape(sharePath) % QStringLiteral("\\/(\\d+)$"));
+    QRegularExpression re(QRegularExpression::escape(sharePath) %
+                          QStringLiteral("\\/(\\d+)$"));
 
     QRegularExpressionMatch match = re.match(urlPart);
     int shareId = match.hasMatch() ? match.captured(1).toInt() : 0;
@@ -1591,7 +1673,8 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
 
     qDebug() << __func__ << " - 'permissions': " << permissions;
 
-    // if permissions are empty we assume there was not "ocs/data", which means the share was deleted
+    // if permissions are empty we assume there was not "ocs/data", which means
+    // the share was deleted
     if (permissions.trimmed().isEmpty()) {
         note.setShareUrl(QString());
         note.setShareId(0);
@@ -1705,7 +1788,8 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
         }
 
         // remove the note path from the path
-        path = Utils::Misc::removeIfStartsWith(std::move(path), serverNotesPath);
+        path =
+            Utils::Misc::removeIfStartsWith(std::move(path), serverNotesPath);
 
         QFileInfo fileInfo(path);
         QString fileName = fileInfo.fileName();
@@ -1715,12 +1799,12 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
         }
 
         // fetch the note sub folder of the note
-        NoteSubFolder noteSubFolder =
-                NoteSubFolder::fetchByPathData(std::move(fileParentPath), QStringLiteral("/"));
+        NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(
+            std::move(fileParentPath), QStringLiteral("/"));
 
         // fetch the note
         Note note = Note::fetchByFileName(fileName, noteSubFolder.getId());
-//        qDebug() << __func__ << " - 'note': " << note;
+        //        qDebug() << __func__ << " - 'note': " << note;
 
         // store the share url for the note
         if (note.isFetched()) {
@@ -1765,7 +1849,8 @@ void OwnCloudService::loadDirectory(QString &data) {
     }
 
     QStringList pathList;
-    QDomNodeList responseNodes = doc.elementsByTagNameNS(NS_DAV, QStringLiteral("response"));
+    QDomNodeList responseNodes =
+        doc.elementsByTagNameNS(NS_DAV, QStringLiteral("response"));
 
     for (int i = 0; i < responseNodes.count(); i++) {
         QDomNode responseNode = responseNodes.at(i);
@@ -1773,8 +1858,8 @@ void OwnCloudService::loadDirectory(QString &data) {
             QDomElement elem = responseNode.toElement();
 
             bool isFolder = false;
-            QDomNodeList resourceTypeNodes =
-                    elem.elementsByTagNameNS(NS_DAV, QStringLiteral("resourcetype"));
+            QDomNodeList resourceTypeNodes = elem.elementsByTagNameNS(
+                NS_DAV, QStringLiteral("resourcetype"));
             if (resourceTypeNodes.length()) {
                 QDomNodeList typeNodes = resourceTypeNodes.at(0).childNodes();
                 for (int j = 0; j < typeNodes.length(); ++j) {
@@ -1793,21 +1878,21 @@ void OwnCloudService::loadDirectory(QString &data) {
             }
 
             // check if we have an url
-            QDomNodeList urlPartNodes = elem.elementsByTagNameNS(NS_DAV,
-                                                                 QStringLiteral("href"));
+            QDomNodeList urlPartNodes =
+                elem.elementsByTagNameNS(NS_DAV, QStringLiteral("href"));
             if (urlPartNodes.length()) {
                 QString urlPart = urlPartNodes.at(0).toElement().text();
 
-                QRegularExpression re(
-                    QRegularExpression::escape(webdavPath) % QStringLiteral("\\/(.+)\\/$"));
+                QRegularExpression re(QRegularExpression::escape(webdavPath) %
+                                      QStringLiteral("\\/(.+)\\/$"));
 
                 QRegularExpressionMatch match = re.match(urlPart);
                 QString folderString =
-                        match.hasMatch() ? match.captured(1) : QString();
+                    match.hasMatch() ? match.captured(1) : QString();
 
                 if (!folderString.isEmpty()) {
-                    pathList << QUrl::fromPercentEncoding(
-                            folderString.toUtf8());
+                    pathList
+                        << QUrl::fromPercentEncoding(folderString.toUtf8());
                 }
             }
         }
@@ -1847,7 +1932,7 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
     auto *buffer = new QBuffer(dataToSend);
 
     QNetworkReply *reply =
-            calendarNetworkManager->sendCustomRequest(r, "PUT", buffer);
+        calendarNetworkManager->sendCustomRequest(r, "PUT", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -1877,8 +1962,7 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
     timer.start(5000);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    r.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
-                                true);
+    r.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
 #endif
 
     QNetworkReply *reply = manager->get(r);
@@ -1898,7 +1982,7 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
     }
 
     reply->deleteLater();
-    delete(manager);
+    delete (manager);
 
     // if false: timer elapsed, no reply from network request
     return result;
@@ -1908,8 +1992,8 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
  * Gets the file list from the ownCloud server
  * for the settings dialog
  */
-void OwnCloudService::settingsGetFileList(
-        SettingsDialog *dialog, QString path) {
+void OwnCloudService::settingsGetFileList(SettingsDialog *dialog,
+                                          QString path) {
     settingsDialog = dialog;
 
     QUrl url(serverUrl % webdavPath % QStringLiteral("/") % path);
@@ -1917,11 +2001,12 @@ void OwnCloudService::settingsGetFileList(
     addAuthHeader(&r);
 
     // build the request body
-    QString body = QStringLiteral("<?xml version=\"1.0\"?>"
-            "<a:propfind xmlns:a=\"DAV:\">"
-                "<a:prop><a:resourcetype />"
-                "</a:prop>"
-            "</a:propfind>");
+    QString body = QStringLiteral(
+        "<?xml version=\"1.0\"?>"
+        "<a:propfind xmlns:a=\"DAV:\">"
+        "<a:prop><a:resourcetype />"
+        "</a:prop>"
+        "</a:propfind>");
 
     auto dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
@@ -1932,8 +2017,8 @@ void OwnCloudService::settingsGetFileList(
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 
-    QNetworkReply *reply = networkManager->sendCustomRequest(
-            r, "PROPFIND", buffer);
+    QNetworkReply *reply =
+        networkManager->sendCustomRequest(r, "PROPFIND", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -1947,7 +2032,6 @@ void OwnCloudService::handleImportBookmarksReply(QString &data) {
     QJSValue result = engine.evaluate(data);
 
     QJSValue bookmarks = result.property(0).property(QStringLiteral("data"));
-
 
     // check if we got no useful data
     if (bookmarks.toString().isEmpty()) {
@@ -1968,15 +2052,15 @@ void OwnCloudService::handleImportBookmarksReply(QString &data) {
  * @param url
  * @return {QByteArray} the content of the downloaded url
  */
-QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
+QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString &path) {
     auto *manager = new QNetworkAccessManager(this);
     QEventLoop loop;
     QTimer timer;
 
     timer.setSingleShot(true);
     QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
-    QObject::connect(manager, SIGNAL(finished(QNetworkReply *)),
-                     &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply *)), &loop,
+                     SLOT(quit()));
 
     // 10 sec timeout for the request
     timer.start(10000);
@@ -1999,8 +2083,8 @@ QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
 
     // if we didn't get a timeout let us return the content
     if (timer.isActive()) {
-        int statusCode = reply->attribute(
-                QNetworkRequest::HttpStatusCodeAttribute).toInt();
+        int statusCode =
+            reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
 
         // only get the data if the status code was "success"
         // see: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
@@ -2011,7 +2095,7 @@ QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
     }
 
     reply->deleteLater();
-    delete(manager);
+    delete (manager);
 
     return data;
 }
@@ -2023,12 +2107,15 @@ QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
  * @param imageSuffix
  * @return
  */
-QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(QString imageTag, int &imageWidth) {
+QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(
+    QString imageTag, int &imageWidth) {
     imageTag.replace(QStringLiteral("&amp;"), QStringLiteral("&"));
-//    qDebug() << __func__ << " - 'imageTag': " << imageTag;
+    //    qDebug() << __func__ << " - 'imageTag': " << imageTag;
 
-    QRegularExpression re(QStringLiteral(R"(<img src=\"(\/core\/preview\?fileId=(\d+)&x=(\d+)&y=(\d+)&a=(\w+)#mimetype=([\w\d%]+)&.+)\" alt=\"(.+)\"\/?>)"),
-            QRegularExpression::CaseInsensitiveOption);
+    QRegularExpression re(
+        QStringLiteral(
+            R"(<img src=\"(\/core\/preview\?fileId=(\d+)&x=(\d+)&y=(\d+)&a=(\w+)#mimetype=([\w\d%]+)&.+)\" alt=\"(.+)\"\/?>)"),
+        QRegularExpression::CaseInsensitiveOption);
 
     QRegularExpressionMatch match = re.match(imageTag);
     if (!match.hasMatch()) {
@@ -2043,9 +2130,13 @@ QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(QString imageT
     auto image = QImage::fromData(data);
     imageWidth = image.width();
 
-    // for now we do no caching, because we don't know when to invalidate the cache
-    QString inlineImageTag = QStringLiteral(R"(<img class="remote-img" src="data:)") % mimeType % QStringLiteral(";base64,") +
-            data.toBase64() % QStringLiteral("\" alt=\"") % alt % QStringLiteral("\"/>");
+    // for now we do no caching, because we don't know when to invalidate the
+    // cache
+    QString inlineImageTag =
+        QStringLiteral(R"(<img class="remote-img" src="data:)") % mimeType %
+            QStringLiteral(";base64,") +
+        data.toBase64() % QStringLiteral("\" alt=\"") % alt %
+            QStringLiteral("\"/>");
 
     return inlineImageTag;
 }

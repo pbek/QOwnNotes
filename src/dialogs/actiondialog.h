@@ -9,24 +9,24 @@ namespace Ui {
 class ActionDialog;
 }
 
-class ActionDialog : public MasterDialog
-{
+class ActionDialog : public MasterDialog {
     Q_OBJECT
 
-public:
+   public:
     explicit ActionDialog(QMenuBar *menuBar, QWidget *parent = 0);
     ~ActionDialog();
     void refreshUi();
 
-private slots:
-    void on_actionTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+   private slots:
+    void on_actionTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
+                                               int column);
 
     void on_actionLineEdit_textChanged(const QString &arg1);
 
-protected:
+   protected:
     bool eventFilter(QObject *obj, QEvent *event);
 
-private:
+   private:
     Ui::ActionDialog *ui;
     QMenuBar *_menuBar;
 

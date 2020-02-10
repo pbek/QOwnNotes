@@ -14,70 +14,70 @@
 
 #pragma once
 
+#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+#include <QSettings>
 #include <QString>
 #include <QStringList>
-#include <QSettings>
-#include <QVariant>
 #include <QTextCharFormat>
-#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+#include <QVariant>
 
 namespace Utils {
 
-    namespace Schema {
-        /**
-         * @brief The Settings class
-         *
-         * This exists to centralize schema settings access, reducing redundant
-         * work whenever possible.
-         */
-        class Settings {
-        public:
-            Settings();
+namespace Schema {
+/**
+ * @brief The Settings class
+ *
+ * This exists to centralize schema settings access, reducing redundant
+ * work whenever possible.
+ */
+class Settings {
+   public:
+    Settings();
 
-            const QStringList& defaultSchemaKeys() const;
-            const QSettings& defaultSchemaSettings() const;
+    const QStringList& defaultSchemaKeys() const;
+    const QSettings& defaultSchemaSettings() const;
 
-            QString currentSchemaKey() const;
-            bool currentSchemaIsDefault() const;
+    QString currentSchemaKey() const;
+    bool currentSchemaIsDefault() const;
 
-            QStringList getSchemaKeys(const QString& schema) const;
+    QStringList getSchemaKeys(const QString& schema) const;
 
-            QVariant getSchemaValue(const QString& key,
-                                    const QVariant& defaultValue = QVariant(),
-                                    QString schemaKey = QString()) const;
-            QColor getForegroundColor(int index) const;
-            QColor getBackgroundColor(int index) const;
+    QVariant getSchemaValue(const QString& key,
+                            const QVariant& defaultValue = QVariant(),
+                            QString schemaKey = QString()) const;
+    QColor getForegroundColor(int index) const;
+    QColor getBackgroundColor(int index) const;
 
-            void setFormatStyle(MarkdownHighlighter::HighlighterState index,
-                                QTextCharFormat &format) const;
+    void setFormatStyle(MarkdownHighlighter::HighlighterState index,
+                        QTextCharFormat& format) const;
 
-            QFont getEditorTextFont() const;
-            QFont getEditorFixedFont() const;
-            QFont getEditorFont(int index) const;
+    QFont getEditorTextFont() const;
+    QFont getEditorFixedFont() const;
+    QFont getEditorFont(int index) const;
 
-            void adaptFontSize(int index, QFont &font) const;
+    void adaptFontSize(int index, QFont& font) const;
 
-        private:
-            const QSettings _defaultSchemaSettings;
-            QMap<QString, int> _defaultSchemaSubkeys;
-            QStringList _defaultSchemaKeysList;
-            QVector<QStringList> _defaultSchemaSubkeylists;
-            mutable QFont _defaultTextEditFont;
-            mutable bool _defaultFontSet;
-        };
+   private:
+    const QSettings _defaultSchemaSettings;
+    QMap<QString, int> _defaultSchemaSubkeys;
+    QStringList _defaultSchemaKeysList;
+    QVector<QStringList> _defaultSchemaSubkeylists;
+    mutable QFont _defaultTextEditFont;
+    mutable bool _defaultFontSet;
+};
 
-        extern Settings* schemaSettings;
-        const int TextPresetIndex = -1;
+extern Settings* schemaSettings;
+const int TextPresetIndex = -1;
 
-        QString textSettingsKey(const QString& key, int index);
+QString textSettingsKey(const QString& key, int index);
 
-        QString encodeCssTextCharFormat(const QTextCharFormat &format);
+QString encodeCssTextCharFormat(const QTextCharFormat& format);
 
-        QString encodeCssStyleForState(MarkdownHighlighter::HighlighterState index,
-                                           const QString &htmlTag);
+QString encodeCssStyleForState(MarkdownHighlighter::HighlighterState index,
+                               const QString& htmlTag);
 
-        QString encodeCssFont(const QFont &refFont);
+QString encodeCssFont(const QFont& refFont);
 
-        QString getSchemaStyles();
-    }
-}
+QString getSchemaStyles();
+}    // namespace Schema
+}    // namespace Utils

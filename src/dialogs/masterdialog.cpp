@@ -1,9 +1,9 @@
-#include <QSettings>
+#include "masterdialog.h"
 #include <QApplication>
 #include <QGuiApplication>
-#include <QScreen>
 #include <QKeyEvent>
-#include "masterdialog.h"
+#include <QScreen>
+#include <QSettings>
 #include "services/metricsservice.h"
 
 MasterDialog::MasterDialog(QWidget *parent) : QDialog(parent) {
@@ -11,7 +11,7 @@ MasterDialog::MasterDialog(QWidget *parent) : QDialog(parent) {
 }
 
 void MasterDialog::closeEvent(QCloseEvent *event) {
-//    storeGeometrySettings();
+    //    storeGeometrySettings();
     QDialog::closeEvent(event);
 }
 
@@ -70,18 +70,19 @@ void MasterDialog::handleOpenDialog() {
     // restore the geometry of the dialog
     QSettings settings;
     QByteArray geometryData =
-            settings.value(getGeometrySettingKey()).toByteArray();
+        settings.value(getGeometrySettingKey()).toByteArray();
 
     // restore the geometry if there is some data
     if (geometryData.length() > 0) {
         restoreGeometry(geometryData);
     } else {
-        const QRect screenGeometry = QGuiApplication::primaryScreen()->availableGeometry();
+        const QRect screenGeometry =
+            QGuiApplication::primaryScreen()->availableGeometry();
 
         // maximize the dialog window if it looks like that it doesn't fit on
         // the current screen
         if (((window()->width() + 150) > screenGeometry.width()) ||
-                ((window()->height() + 150) > screenGeometry.height())) {
+            ((window()->height() + 150) > screenGeometry.height())) {
             setWindowState(windowState() ^ Qt::WindowMaximized);
         }
     }
@@ -95,8 +96,8 @@ void MasterDialog::setIgnoreReturnKey(bool ignore) {
 }
 
 void MasterDialog::keyPressEvent(QKeyEvent *keyEvent) {
-    if (_ignoreReturnKey &&
-            (keyEvent->key() == Qt::Key_Enter || keyEvent->key() == Qt::Key_Return)) {
+    if (_ignoreReturnKey && (keyEvent->key() == Qt::Key_Enter ||
+                             keyEvent->key() == Qt::Key_Return)) {
         return;
     }
 

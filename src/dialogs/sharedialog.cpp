@@ -1,13 +1,12 @@
+#include "sharedialog.h"
 #include <services/owncloudservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
-#include "sharedialog.h"
-#include "ui_sharedialog.h"
 #include <QDebug>
+#include "ui_sharedialog.h"
 
-ShareDialog::ShareDialog(Note note, QWidget *parent) :
-        MasterDialog(parent),
-    ui(new Ui::ShareDialog) {
+ShareDialog::ShareDialog(Note note, QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::ShareDialog) {
     ui->setupUi(this);
     this->note = note;
 
@@ -15,9 +14,7 @@ ShareDialog::ShareDialog(Note note, QWidget *parent) :
     updateDialog();
 }
 
-ShareDialog::~ShareDialog() {
-    delete ui;
-}
+ShareDialog::~ShareDialog() { delete ui; }
 
 /**
  * Updates the share link checkbox and link url line edit
@@ -36,10 +33,10 @@ void ShareDialog::updateDialog() {
     ui->linkCheckBox->setChecked(note.isShared());
     ui->linkUrlLineEdit->setVisible(note.isShared());
     ui->linkUrlLineEdit->setText(note.getShareUrl());
-    ui->infoLabel1->setText(Utils::Misc::replaceOwnCloudText(
-            ui->infoLabel1->text()));
-    ui->linkCheckBox->setText(Utils::Misc::replaceOwnCloudText(
-            ui->linkCheckBox->text()));
+    ui->infoLabel1->setText(
+        Utils::Misc::replaceOwnCloudText(ui->infoLabel1->text()));
+    ui->linkCheckBox->setText(
+        Utils::Misc::replaceOwnCloudText(ui->linkCheckBox->text()));
     ui->editCheckBox->setVisible(note.isShared());
     ui->editCheckBox->setChecked(note.isShareEditAllowed());
 }
@@ -61,12 +58,13 @@ void ShareDialog::on_linkCheckBox_toggled(bool checked) {
         ownCloud->shareNote(note, this);
 
         Utils::Gui::information(
-                this, QString(),
-                Utils::Misc::replaceOwnCloudText(
-                        tr("Keep in mind that you still have to sync your "
-                           "notes with your server by using the ownCloud "
-                           "desktop sync tool to be able to share notes with "
-                           "others!")), "share-sync-information");
+            this, QString(),
+            Utils::Misc::replaceOwnCloudText(
+                tr("Keep in mind that you still have to sync your "
+                   "notes with your server by using the ownCloud "
+                   "desktop sync tool to be able to share notes with "
+                   "others!")),
+            "share-sync-information");
     } else {
         // remove the share
         ownCloud->removeNoteShare(note, this);

@@ -1,16 +1,16 @@
 #pragma once
 
 #include <QDateTime>
-#include <QSqlQuery>
 #include <QDebug>
 #include <QDir>
+#include <QSqlQuery>
 
 // note sub-folders that should be ignored by default
 // regular expression, separated by ";"
 #define IGNORED_NOTE_SUBFOLDERS_DEFAULT "^\\."
 
 class NoteSubFolder {
-public:
+   public:
     NoteSubFolder();
 
     int getId() const;
@@ -27,7 +27,7 @@ public:
 
     bool store();
 
-    friend QDebug operator<<(QDebug dbg, const NoteSubFolder &note);
+    friend QDebug operator<<(QDebug dbg, const NoteSubFolder& note);
 
     static bool deleteAll();
 
@@ -55,8 +55,9 @@ public:
 
     NoteSubFolder getParent() const;
 
-    static QList<NoteSubFolder> fetchAllByParentId(int parentId,
-            const QString& sortBy = QStringLiteral("file_last_modified DESC"));
+    static QList<NoteSubFolder> fetchAllByParentId(
+        int parentId,
+        const QString& sortBy = QStringLiteral("file_last_modified DESC"));
 
     static QList<int> fetchIdsRecursivelyByParentId(int parentId);
 
@@ -72,10 +73,11 @@ public:
 
     QString pathData() const;
 
-    static NoteSubFolder fetchByPathData(QString pathData,
-                                         const QString& separator = QStringLiteral("\n"));
+    static NoteSubFolder fetchByPathData(
+        QString pathData, const QString& separator = QStringLiteral("\n"));
 
-    static NoteSubFolder fetchByNameAndParentId(const QString& name, int parentId);
+    static NoteSubFolder fetchByNameAndParentId(const QString& name,
+                                                int parentId);
 
     void saveTreeWidgetExpandState(bool expanded) const;
 
@@ -97,7 +99,7 @@ public:
 
     int depth() const;
 
-protected:
+   protected:
     int id;
     int parentId;
     QString name;

@@ -3,19 +3,18 @@
 #include <QDialog>
 class QKeyEvent;
 
-class MasterDialog : public QDialog
-{
-public:
+class MasterDialog : public QDialog {
+   public:
     explicit MasterDialog(QWidget *parent = nullptr);
 
-public Q_SLOTS:
+   public Q_SLOTS:
     virtual int exec() override;
 
     virtual void show();
 
     virtual void open() override;
 
-protected:
+   protected:
     bool _ignoreReturnKey = false;
 
     void resizeEvent(QResizeEvent *event) override;
@@ -32,6 +31,6 @@ protected:
 
     virtual void keyPressEvent(QKeyEvent *keyEvent) override;
 
-public:
+   public:
     void setIgnoreReturnKey(bool ignore);
 };

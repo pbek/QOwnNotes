@@ -2,7 +2,7 @@
 #include <QDebug>
 #include <QSettings>
 
-FileDialog::FileDialog(const QString &name) {
+FileDialog::FileDialog(const QString& name) {
     if (!name.isEmpty()) {
         setObjectName(QStringLiteral("FileDialog-") + name);
         _generalSettingsKey = QStringLiteral("FileDialog/LastPath");
@@ -20,7 +20,7 @@ FileDialog::FileDialog(const QString &name) {
 
         fileInfo = QFileInfo(path);
 
-//        qDebug() << __func__ << " - 'path': " << path;
+        //        qDebug() << __func__ << " - 'path': " << path;
 
         // if there are still problems with the directory path use the home
         // directory
@@ -31,10 +31,10 @@ FileDialog::FileDialog(const QString &name) {
         setDirectory(path);
 
         // store the directory for the next time the dialog opens
-        connect(this, SIGNAL(fileSelected(QString)),
-                this, SLOT(storeDirectory(QString)));
-        connect(this, SIGNAL(filesSelected(QStringList)),
-                this, SLOT(storeDirectory(QStringList)));
+        connect(this, SIGNAL(fileSelected(QString)), this,
+                SLOT(storeDirectory(QString)));
+        connect(this, SIGNAL(filesSelected(QStringList)), this,
+                SLOT(storeDirectory(QStringList)));
     }
 }
 
