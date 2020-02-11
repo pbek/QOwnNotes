@@ -7297,7 +7297,7 @@ void MainWindow::insertHtml(QString html) {
         }
     }
 
-    showStatusBarMessage(tr("Downloading images finished"));
+    showStatusBarMessage(tr("Downloading images finished"), 3000);
 
     // remove all html tags
     html.remove(QRegularExpression(QStringLiteral("<.+?>")));
