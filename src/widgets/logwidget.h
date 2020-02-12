@@ -43,7 +43,7 @@ class LogWidget : public QFrame {
                                  const QMessageLogContext &context,
                                  const QString &msg);
     bool eventFilter(QObject *obj, QEvent *event);
-    QString getLogText();
+    QString getLogText() const;
 
    public slots:
     void log(LogWidget::LogType logType, const QString &text);
