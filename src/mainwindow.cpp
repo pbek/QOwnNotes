@@ -2432,10 +2432,6 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     _gitCommitInterval =
         settings.value(QStringLiteral("gitCommitInterval"), 30).toInt();
 
-    // set the note text edit font
-    ui->noteTextEdit->setStyles();
-    ui->encryptedNoteTextEdit->setStyles();
-
     // load note text view font
     QString fontString =
         settings.value(QStringLiteral("MainWindow/noteTextView.font"))
