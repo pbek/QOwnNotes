@@ -21,8 +21,10 @@
 
 class QOwnSpellChecker {
    public:
-    explicit QOwnSpellChecker();
+    QOwnSpellChecker();
     ~QOwnSpellChecker();
+
+    static QOwnSpellChecker* instance();
 
     /**
      * Returns the current language used for spell checking.
@@ -124,6 +126,7 @@ class QOwnSpellChecker {
     bool isAutoDetectOn() const;
 
    private:
+    static QOwnSpellChecker* qonSpellchecker;
     Sonnet::Speller *spellchecker;
     bool active;
     bool autoDetect;

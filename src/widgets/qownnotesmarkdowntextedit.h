@@ -21,7 +21,6 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     Q_ENUMS(FontModificationMode)
 
     explicit QOwnNotesMarkdownTextEdit(QWidget *parent = nullptr);
-    ~QOwnNotesMarkdownTextEdit();
 
     void setStyles();
     void openUrl(QString urlString);
@@ -32,6 +31,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void updateSettings();
     QMargins viewportMargins();
     void setText(const QString &text);
+    void setSpellcheckingEnabled(bool enabled);
     void enableSpellChecker(QOwnNotesMarkdownHighlighter *h = nullptr);
 
    protected:
@@ -47,7 +47,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 
    private:
     MainWindow *mainWindow;
-    QOwnSpellChecker *spellchecker;
+    bool _spellCheckerEnabled = true;
 
     void setFormatStyle(MarkdownHighlighter::HighlighterState index);
 
