@@ -3,12 +3,14 @@
  */
 
 #include "bookmark.h"
+
 #include <QDebug>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QRegularExpression>
 #include <QRegularExpressionMatchIterator>
 #include <utility>
+
 #include "notefolder.h"
 
 Bookmark::Bookmark() {

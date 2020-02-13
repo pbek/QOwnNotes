@@ -12,7 +12,9 @@
  */
 
 #include "navigationwidget.h"
+
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+
 #include <QDebug>
 #include <QRegularExpression>
 #include <QTextBlock>

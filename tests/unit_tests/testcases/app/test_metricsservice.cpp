@@ -1,5 +1,7 @@
 #include "test_metricsservice.h"
+
 #include <QtTest>
+
 #include "services/metricsservice.h"
 
 void TestMetricsService::initTestCase() {

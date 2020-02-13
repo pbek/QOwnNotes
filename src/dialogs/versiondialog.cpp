@@ -1,11 +1,14 @@
 #include "versiondialog.h"
+
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QJSValue>
 #include <QJSValueIterator>
 #include <QPushButton>
 #include <QSettings>
 #include <QSplitter>
+
 #include "mainwindow.h"
 #include "ui_versiondialog.h"
 

@@ -1,6 +1,8 @@
 #include "calendaritem.h"
+
 #include <services/owncloudservice.h>
 #include <utils/misc.h>
+
 #include <QApplication>
 #include <QDebug>
 #include <QMessageBox>

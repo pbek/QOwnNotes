@@ -1,4 +1,5 @@
 #include "notediffdialog.h"
+
 #include <QAbstractButton>
 #include <QButtonGroup>
 #include <QDebug>
@@ -6,6 +7,7 @@
 #include <QPushButton>
 #include <QSettings>
 #include <QTimer>
+
 #include "ui_notediffdialog.h"
 
 NoteDiffDialog::NoteDiffDialog(QWidget *parent, const QString &html)

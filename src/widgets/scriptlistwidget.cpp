@@ -12,6 +12,7 @@
  */
 
 #include "scriptlistwidget.h"
+
 #include <entities/script.h>
 #include <services/scriptingservice.h>
 

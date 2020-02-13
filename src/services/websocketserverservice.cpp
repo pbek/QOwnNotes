@@ -13,8 +13,11 @@
  */
 
 #include "websocketserverservice.h"
+
 #include <utils/misc.h>
+
 #include <QtWebSockets>
+
 #include "dialogs/websockettokendialog.h"
 #include "entities/bookmark.h"
 #include "entities/notefolder.h"

@@ -17,6 +17,7 @@
 #define QOWNSPELLCHECKER_H
 
 #include <libraries/sonnet/src/core/speller.h>
+
 #include "LanguageCache.h"
 
 class QOwnSpellChecker {
@@ -24,7 +25,7 @@ class QOwnSpellChecker {
     QOwnSpellChecker();
     ~QOwnSpellChecker();
 
-    static QOwnSpellChecker* instance();
+    static QOwnSpellChecker *instance();
 
     /**
      * Returns the current language used for spell checking.
@@ -126,7 +127,7 @@ class QOwnSpellChecker {
     bool isAutoDetectOn() const;
 
    private:
-    static QOwnSpellChecker* qonSpellchecker;
+    static QOwnSpellChecker *qonSpellchecker;
     Sonnet::Speller *spellchecker;
     bool active;
     bool autoDetect;

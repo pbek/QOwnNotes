@@ -1,4 +1,20 @@
+#include "dialogs/settingsdialog.h"
+
 #include <QtNetwork/qnetworkproxy.h>
+#include <entities/cloudconnection.h>
+#include <entities/notefolder.h>
+#include <entities/notesubfolder.h>
+#include <entities/script.h>
+#include <helpers/toolbarcontainer.h>
+#include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
+#include <services/cryptoservice.h>
+#include <services/metricsservice.h>
+#include <services/scriptingservice.h>
+#include <services/websocketserverservice.h>
+#include <utils/gui.h>
+#include <utils/misc.h>
+#include <widgets/scriptsettingwidget.h>
+
 #include <QAction>
 #include <QButtonGroup>
 #include <QClipboard>
@@ -21,23 +37,9 @@
 #include <QStyleFactory>
 #include <QTextBrowser>
 #include <QToolBar>
-
-#include <entities/cloudconnection.h>
-#include <entities/notefolder.h>
-#include <entities/notesubfolder.h>
-#include <entities/script.h>
-#include <helpers/toolbarcontainer.h>
-#include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
-#include <services/cryptoservice.h>
-#include <services/metricsservice.h>
-#include <services/scriptingservice.h>
-#include <services/websocketserverservice.h>
-#include <utils/gui.h>
-#include <utils/misc.h>
-#include <widgets/scriptsettingwidget.h>
 #include <utility>
+
 #include "build_number.h"
-#include "dialogs/settingsdialog.h"
 #include "dialogs/websockettokendialog.h"
 #include "entities/calendaritem.h"
 #include "filedialog.h"

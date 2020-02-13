@@ -1,7 +1,9 @@
 #include "dialogs/tododialog.h"
+
 #include <mainwindow.h>
 #include <services/metricsservice.h>
 #include <utils/gui.h>
+
 #include <QDebug>
 #include <QInputDialog>
 #include <QKeyEvent>
@@ -10,6 +12,7 @@
 #include <QSettings>
 #include <QShortcut>
 #include <QSplitter>
+
 #include "entities/calendaritem.h"
 #include "services/owncloudservice.h"
 #include "ui_tododialog.h"

@@ -1,8 +1,10 @@
 #include "scriptrepositorydialog.h"
+
 #include <libraries/versionnumber/versionnumber.h>
 #include <services/metricsservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QJsonDocument>
 #include <QNetworkAccessManager>
@@ -18,6 +20,7 @@
 #include <QtNetwork/QNetworkRequest>
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QSplitter>
+
 #include "ui_scriptrepositorydialog.h"
 
 ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent,

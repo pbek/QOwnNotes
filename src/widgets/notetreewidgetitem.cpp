@@ -1,4 +1,5 @@
 #include "notetreewidgetitem.h"
+
 #include "ui_notetreewidgetitem.h"
 
 NoteTreeWidgetItem::NoteTreeWidgetItem(const Note &note, QWidget *parent)

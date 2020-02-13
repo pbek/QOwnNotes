@@ -12,6 +12,7 @@
  */
 
 #include "lineedit.h"
+
 #include <QKeyEvent>
 
 LineEdit::LineEdit(QWidget *parent) : QLineEdit(parent) {

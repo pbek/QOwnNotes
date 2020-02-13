@@ -13,9 +13,11 @@
  */
 
 #include "fontcolorwidget.h"
+
 #include <dialogs/filedialog.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
+
 #include <QColorDialog>
 #include <QDebug>
 #include <QDesktopServices>
@@ -27,6 +29,7 @@
 #include <QTextEdit>
 #include <QTreeWidgetItem>
 #include <QUuid>
+
 #include "ui_fontcolorwidget.h"
 #include "utils/schema.h"
 

@@ -12,6 +12,7 @@
  */
 
 #include "combobox.h"
+
 #include <QApplication>
 #include <QDebug>
 

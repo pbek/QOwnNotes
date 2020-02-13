@@ -1,3 +1,8 @@
+#include "services/owncloudservice.h"
+
+#include <utils/gui.h>
+#include <utils/misc.h>
+
 #include <QAuthenticator>
 #include <QBuffer>
 #include <QCoreApplication>
@@ -11,6 +16,8 @@
 #include <QMessageBox>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
 #include <QSettings>
 #include <QStringBuilder>
 #include <QTimer>
@@ -18,10 +25,6 @@
 #include <QXmlQuery>
 #include <QXmlResultItems>
 
-#include <utils/gui.h>
-#include <utils/misc.h>
-#include <QRegularExpression>
-#include <QRegularExpressionMatch>
 #include "cryptoservice.h"
 #include "dialogs/serverbookmarksimportdialog.h"
 #include "dialogs/settingsdialog.h"
@@ -33,7 +36,6 @@
 #include "entities/notesubfolder.h"
 #include "libraries/versionnumber/versionnumber.h"
 #include "mainwindow.h"
-#include "services/owncloudservice.h"
 
 const QString OwnCloudService::rootPath =
     QStringLiteral("/index.php/apps/qownnotesapi/api/v1/");

@@ -1,8 +1,11 @@
 #include "layoutwidget.h"
+
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QSettings>
 #include <QtWidgets/QMessageBox>
+
 #include "ui_layoutwidget.h"
 
 LayoutWidget::LayoutWidget(QWidget *parent)

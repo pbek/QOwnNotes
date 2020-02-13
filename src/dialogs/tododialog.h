@@ -2,6 +2,7 @@
 #define TODODIALOG_H
 
 #include <QTreeWidgetItem>
+
 #include "entities/calendaritem.h"
 #include "masterdialog.h"
 

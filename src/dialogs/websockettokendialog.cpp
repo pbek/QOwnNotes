@@ -1,6 +1,8 @@
 #include "websockettokendialog.h"
+
 #include <QtCore/QSettings>
 #include <QtGui/QClipboard>
+
 #include "ui_websockettokendialog.h"
 
 WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)

@@ -1,8 +1,10 @@
 #include "clientproxy.h"
+
 #include <QSettings>
 #include <QThreadPool>
 #include <QUrl>
 #include <utility>
+
 #include "services/cryptoservice.h"
 
 ClientProxy::ClientProxy(QObject *parent) : QObject(parent) {}

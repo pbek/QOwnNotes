@@ -13,6 +13,7 @@
  */
 
 #include "schema.h"
+
 #include <QColorDialog>
 #include <QDebug>
 #include <QFontDatabase>

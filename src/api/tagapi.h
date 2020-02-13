@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QObject>
+
 #include "entities/tag.h"
 
 class TagApi : public QObject, public Tag {

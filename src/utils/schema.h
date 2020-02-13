@@ -15,6 +15,7 @@
 #pragma once
 
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+
 #include <QSettings>
 #include <QString>
 #include <QStringList>

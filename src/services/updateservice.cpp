@@ -1,4 +1,5 @@
 #include "services/updateservice.h"
+
 #include <QApplication>
 #include <QJSEngine>
 #include <QLibraryInfo>
@@ -10,6 +11,7 @@
 #include <QSettings>
 #include <QUrl>
 #include <QUrlQuery>
+
 #include "build_number.h"
 #include "dialogs/updatedialog.h"
 #include "mainwindow.h"

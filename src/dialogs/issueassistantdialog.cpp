@@ -1,10 +1,13 @@
 #include "issueassistantdialog.h"
+
 #include <utils/gui.h>
 #include <utils/misc.h>
+
 #include <QClipboard>
 #include <QDesktopServices>
 #include <QFileDialog>
 #include <QSettings>
+
 #include "QDebug"
 #include "mainwindow.h"
 #include "services/metricsservice.h"

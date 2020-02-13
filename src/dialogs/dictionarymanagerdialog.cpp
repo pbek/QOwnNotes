@@ -1,6 +1,8 @@
 #include "dictionarymanagerdialog.h"
+
 #include <utils/gui.h>
 #include <utils/misc.h>
+
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
@@ -10,6 +12,7 @@
 #include <QRegularExpressionMatch>
 #include <QSettings>
 #include <QSplitter>
+
 #include "ui_dictionarymanagerdialog.h"
 
 DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent)

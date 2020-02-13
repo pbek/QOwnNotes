@@ -1,10 +1,13 @@
 #include "notehistory.h"
+
 #include <entities/notefolder.h>
+
 #include <QDebug>
 #include <QPlainTextEdit>
 #include <QScrollBar>
 #include <QSettings>
 #include <utility>
+
 #include "note.h"
 #include "notesubfolder.h"
 

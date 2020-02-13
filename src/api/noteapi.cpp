@@ -1,7 +1,10 @@
 #include "noteapi.h"
+
 #include <entities/notefolder.h>
 #include <entities/tag.h>
+
 #include <utility>
+
 #include "tagapi.h"
 
 NoteApi* NoteApi::fetch(int _id) {

@@ -1,12 +1,15 @@
 #include "trashdialog.h"
+
 #include <utils/gui.h>
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QJSValue>
 #include <QJSValueIterator>
 #include <QPushButton>
 #include <QSettings>
 #include <QSplitter>
+
 #include "mainwindow.h"
 #include "ui_trashdialog.h"
 

@@ -1,6 +1,8 @@
 #include "notefolder.h"
+
 #include <services/owncloudservice.h>
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QDir>
 #include <QJsonObject>
@@ -11,6 +13,7 @@
 #include <QSqlRecord>
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonDocument>
+
 #include "notesubfolder.h"
 
 NoteFolder::NoteFolder()

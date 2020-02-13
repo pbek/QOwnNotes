@@ -1,7 +1,9 @@
 #include "test_notes.h"
+
 #include <QCoreApplication>
 #include <QString>
 #include <QtTest>
+
 #include "helpers/codetohtmlconverter.h"
 #include "services/databaseservice.h"
 

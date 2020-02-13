@@ -1,6 +1,9 @@
 #include "tabledialog.h"
+
 #include <mainwindow.h>
+
 #include <QDebug>
+
 #include "filedialog.h"
 #include "libraries/qtcsv/src/include/reader.h"
 #include "ui_tabledialog.h"

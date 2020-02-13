@@ -1,8 +1,10 @@
 #include "services/databaseservice.h"
+
 #include <entities/cloudconnection.h>
 #include <entities/notefolder.h>
 #include <entities/tag.h>
 #include <utils/misc.h>
+
 #include <QApplication>
 #include <QDebug>
 #include <QDir>
@@ -12,6 +14,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QStandardPaths>
+
 #include "entities/calendaritem.h"
 #include "mainwindow.h"
 #include "owncloudservice.h"

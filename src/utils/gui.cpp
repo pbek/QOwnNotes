@@ -13,7 +13,9 @@
  */
 
 #include "gui.h"
+
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+
 #include <QApplication>
 #include <QCheckBox>
 #include <QClipboard>

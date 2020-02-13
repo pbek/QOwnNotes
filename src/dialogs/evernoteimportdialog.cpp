@@ -1,8 +1,10 @@
 #include "evernoteimportdialog.h"
+
 #include <entities/note.h>
 #include <entities/notesubfolder.h>
 #include <entities/tag.h>
 #include <utils/misc.h>
+
 #include <QCryptographicHash>
 #include <QDebug>
 #include <QFileDialog>
@@ -14,6 +16,7 @@
 #include <QXmlQuery>
 #include <QXmlResultItems>
 #include <utility>
+
 #include "filedialog.h"
 #include "ui_evernoteimportdialog.h"
 

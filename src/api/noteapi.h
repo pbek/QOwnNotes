@@ -3,6 +3,7 @@
 #include <QObject>
 #include <QQmlListProperty>
 #include <QStringList>
+
 #include "entities/note.h"
 
 class TagApi;

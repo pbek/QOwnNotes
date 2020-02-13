@@ -1,8 +1,11 @@
 #include "sharedialog.h"
+
 #include <services/owncloudservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
+
 #include <QDebug>
+
 #include "ui_sharedialog.h"
 
 ShareDialog::ShareDialog(Note note, QWidget *parent)

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "masterdialog.h"
-
 #include <QFile>
 #include <QNetworkReply>
+
+#include "masterdialog.h"
 
 namespace Ui {
 class AttachmentDialog;

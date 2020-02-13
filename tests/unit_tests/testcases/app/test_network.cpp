@@ -1,6 +1,8 @@
 #include "test_network.h"
+
 #include <QUrl>
 #include <QtTest>
+
 #include "utils/misc.h"
 
 void TestNetwork::initTestCase() {}

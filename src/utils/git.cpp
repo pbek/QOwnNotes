@@ -13,10 +13,13 @@
  */
 
 #include "git.h"
+
 #include <entities/notefolder.h>
+
 #include <QDebug>
 #include <QProcess>
 #include <QtCore/QSettings>
+
 #include "gui.h"
 #include "misc.h"
 

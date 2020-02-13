@@ -14,10 +14,11 @@
  */
 
 #include "qownspellchecker.h"
+
 #include <QDebug>
 #include <QSettings>
 
-QOwnSpellChecker* QOwnSpellChecker::qonSpellchecker = nullptr;
+QOwnSpellChecker *QOwnSpellChecker::qonSpellchecker = nullptr;
 
 QOwnSpellChecker::QOwnSpellChecker() {
     spellchecker = new Sonnet::Speller();
@@ -42,10 +43,8 @@ QOwnSpellChecker::QOwnSpellChecker() {
 
 QOwnSpellChecker::~QOwnSpellChecker() { delete spellchecker; }
 
-QOwnSpellChecker* QOwnSpellChecker::instance()
-{
-    if (!qonSpellchecker)
-        qonSpellchecker = new QOwnSpellChecker;
+QOwnSpellChecker *QOwnSpellChecker::instance() {
+    if (!qonSpellchecker) qonSpellchecker = new QOwnSpellChecker;
     return qonSpellchecker;
 }
 

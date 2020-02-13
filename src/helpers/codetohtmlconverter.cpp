@@ -1,6 +1,8 @@
 #include "codetohtmlconverter.h"
+
 #include <QDebug>
 #include <QStringBuilder>
+
 #include "libraries/qmarkdowntextedit/qownlanguagedata.h"
 
 QHash<QString, CodeToHtmlConverter::Lang>

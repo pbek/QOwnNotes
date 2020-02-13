@@ -13,11 +13,13 @@
  */
 
 #include "script.h"
+
 #include <libraries/versionnumber/versionnumber.h>
 #include <services/metricsservice.h>
 #include <services/updateservice.h>
 #include <utils/misc.h>
 #include <version.h>
+
 #include <QDebug>
 #include <QDir>
 #include <QJsonDocument>

@@ -2,6 +2,7 @@
 #include <libraries/fakevim/fakevim/fakevimactions.h>
 #include <libraries/fakevim/fakevim/fakevimhandler.h>
 #include <mainwindow.h>
+
 #include <QtCore/QTemporaryFile>
 #include <QtCore/QTextStream>
 #include <QtGui/QTextBlock>

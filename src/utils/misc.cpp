@@ -13,6 +13,7 @@
  */
 
 #include "misc.h"
+
 #include <entities/calendaritem.h>
 #include <entities/cloudconnection.h>
 #include <entities/note.h>
@@ -22,6 +23,7 @@
 #include <services/databaseservice.h>
 #include <services/owncloudservice.h>
 #include <services/updateservice.h>
+
 #include <QApplication>
 #include <QCoreApplication>
 #include <QDebug>
@@ -44,6 +46,7 @@
 #include <QUuid>
 #include <QtGui/QIcon>
 #include <utility>
+
 #include "build_number.h"
 #include "libraries/sonnet/src/core/speller.h"
 #include "release.h"

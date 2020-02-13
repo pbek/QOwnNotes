@@ -2,6 +2,7 @@
 #define TESTHTMLENTITIES_H
 
 #include <QObject>
+
 #include "helpers/htmlentities.h"
 
 class TestHTMLEntities : public QObject {

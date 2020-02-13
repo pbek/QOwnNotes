@@ -1,5 +1,7 @@
 #include "logwidget.h"
+
 #include <utils/misc.h>
+
 #include <QDateTime>
 #include <QDebug>
 #include <QFile>
@@ -7,6 +9,7 @@
 #include <QMenu>
 #include <QScrollBar>
 #include <QSettings>
+
 #include "mainwindow.h"
 
 #ifndef INTEGRATION_TESTS
@@ -25,7 +28,8 @@ LogWidget::LogWidget(QWidget *parent)
 
     ui->setupUi(this);
 
-    connect(ui->logTextEdit, &QOwnNotesMarkdownTextEdit::destroyed, this, &LogWidget::onDestroyed);
+    connect(ui->logTextEdit, &QOwnNotesMarkdownTextEdit::destroyed, this,
+            &LogWidget::onDestroyed);
 
     ui->buttonFrame->hide();
     const QSettings settings;
@@ -52,16 +56,24 @@ LogWidget::LogWidget(QWidget *parent)
     ui->statusCheckBox->setChecked(
         settings.value(QStringLiteral("LogWidget/statusLog"), true).toBool());
     ui->scriptingCheckBox->setChecked(
-        settings.value(QStringLiteral("LogWidget/scriptingLog"), true).toBool());
+        settings.value(QStringLiteral("LogWidget/scriptingLog"), true)
+            .toBool());
 
     // store the settings if the dialog is closed or the checkboxes are clicked
-    connect(ui->debugCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
-    connect(ui->infoCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
-    connect(ui->warningCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
-    connect(ui->criticalCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
-    connect(ui->fatalCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
-    connect(ui->statusCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
-    connect(ui->scriptingCheckBox, &QCheckBox::clicked, this, &LogWidget::storeSettings);
+    connect(ui->debugCheckBox, &QCheckBox::clicked, this,
+            &LogWidget::storeSettings);
+    connect(ui->infoCheckBox, &QCheckBox::clicked, this,
+            &LogWidget::storeSettings);
+    connect(ui->warningCheckBox, &QCheckBox::clicked, this,
+            &LogWidget::storeSettings);
+    connect(ui->criticalCheckBox, &QCheckBox::clicked, this,
+            &LogWidget::storeSettings);
+    connect(ui->fatalCheckBox, &QCheckBox::clicked, this,
+            &LogWidget::storeSettings);
+    connect(ui->statusCheckBox, &QCheckBox::clicked, this,
+            &LogWidget::storeSettings);
+    connect(ui->scriptingCheckBox, &QCheckBox::clicked, this,
+            &LogWidget::storeSettings);
 
     ui->logTextEdit->installEventFilter(this);
     ui->buttonFrame->installEventFilter(this);
@@ -91,13 +103,18 @@ QString LogWidget::getLogText() const {
 void LogWidget::storeSettings() const {
 #ifndef INTEGRATION_TESTS
     QSettings settings;
-    settings.setValue(QStringLiteral("LogWidget/debugLog"), ui->debugCheckBox->isChecked());
-    settings.setValue(QStringLiteral("LogWidget/infoLog"), ui->infoCheckBox->isChecked());
-    settings.setValue(QStringLiteral("LogWidget/warningLog"), ui->warningCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/debugLog"),
+                      ui->debugCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/infoLog"),
+                      ui->infoCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/warningLog"),
+                      ui->warningCheckBox->isChecked());
     settings.setValue(QStringLiteral("LogWidget/criticalLog"),
                       ui->criticalCheckBox->isChecked());
-    settings.setValue(QStringLiteral("LogWidget/fatalLog"), ui->fatalCheckBox->isChecked());
-    settings.setValue(QStringLiteral("LogWidget/statusLog"), ui->statusCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/fatalLog"),
+                      ui->fatalCheckBox->isChecked());
+    settings.setValue(QStringLiteral("LogWidget/statusLog"),
+                      ui->statusCheckBox->isChecked());
     settings.setValue(QStringLiteral("LogWidget/scriptingLog"),
                       ui->scriptingCheckBox->isChecked());
 #endif
@@ -110,9 +127,11 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
     // ignore "libpng sRGB profile", "QXcbConnection: XCB error: 8" and
     // "QFileSystemWatcher::removePaths" warnings
     if (logType == WarningLogType &&
-        (text.contains(QLatin1String("libpng warning: iCCP: known incorrect sRGB profile")) ||
+        (text.contains(QLatin1String(
+             "libpng warning: iCCP: known incorrect sRGB profile")) ||
          text.contains(QLatin1String("QXcbConnection: XCB error:")) ||
-         text.contains(QLatin1String("QFileSystemWatcher::removePaths: list is empty")))) {
+         text.contains(QLatin1String(
+             "QFileSystemWatcher::removePaths: list is empty")))) {
         return;
     }
 
@@ -200,8 +219,8 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
     //    "); text.append("\n");
 
     const QString html = QString("<div style=\"color: %1\">[%2] [%3] %4</div>")
-                       .arg(color.name(), dateTime.toString("hh:mm:ss"), type,
-                            text.toHtmlEscaped());
+                             .arg(color.name(), dateTime.toString("hh:mm:ss"),
+                                  type, text.toHtmlEscaped());
 
     QScrollBar *scrollBar = ui->logTextEdit->verticalScrollBar();
 
@@ -377,7 +396,8 @@ void LogWidget::logToFileIfAllowed(LogType logType, const QString &msg) {
             QString typeStr = logTypeText(logType);
             QString text =
                 QString("[%1] [%2]: %3\n")
-                    .arg(dateTime.toString(QStringLiteral("MMM dd hh:mm:ss")).remove("."),
+                    .arg(dateTime.toString(QStringLiteral("MMM dd hh:mm:ss"))
+                             .remove("."),
                          typeStr, msg);
             out << text;
             logFile.close();

@@ -14,6 +14,7 @@
 #pragma once
 
 #include <widgets/qtexteditsearchwidget.h>
+
 #include <QPoint>
 #include <QResizeEvent>
 #include <QTextBrowser>

@@ -1,9 +1,11 @@
 #include "orphanedattachmentsdialog.h"
+
 #include <entities/note.h>
 #include <entities/notefolder.h>
 #include <mainwindow.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QDir>
 #include <QFileInfo>
@@ -13,6 +15,7 @@
 #include <QtCore/QMimeDatabase>
 #include <QtCore/QMimeType>
 #include <QtWidgets/QMessageBox>
+
 #include "ui_orphanedattachmentsdialog.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 

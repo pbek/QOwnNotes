@@ -1,6 +1,8 @@
 #include "tag.h"
+
 #include <services/databaseservice.h>
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QSettings>
 #include <QSqlDatabase>
@@ -9,6 +11,7 @@
 #include <QSqlRecord>
 #include <QStringBuilder>
 #include <algorithm>
+
 #include "note.h"
 #include "notefolder.h"
 #include "notesubfolder.h"

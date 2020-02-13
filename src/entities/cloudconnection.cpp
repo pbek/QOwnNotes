@@ -1,6 +1,8 @@
 #include "cloudconnection.h"
+
 #include <services/cryptoservice.h>
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QRegularExpression>
 #include <QSettings>
@@ -10,6 +12,7 @@
 #include <QSqlRecord>
 #include <QUrl>
 #include <utility>
+
 #include "notefolder.h"
 
 CloudConnection::CloudConnection()

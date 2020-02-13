@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QJsonObject>
+
 #include "masterdialog.h"
 
 namespace Ui {

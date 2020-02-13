@@ -1,11 +1,14 @@
 #include "entities/notesubfolder.h"
+
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QDir>
 #include <QSettings>
 #include <QSqlError>
 #include <QSqlRecord>
 #include <utility>
+
 #include "note.h"
 #include "notefolder.h"
 #include "tag.h"

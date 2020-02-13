@@ -1,11 +1,14 @@
 #include "localtrashdialog.h"
+
 #include <entities/trashitem.h>
 #include <utils/gui.h>
+
 #include <QDebug>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QSettings>
 #include <QSplitter>
+
 #include "ui_localtrashdialog.h"
 
 class LocalTrashTreeWidgetItem : public QTreeWidgetItem {

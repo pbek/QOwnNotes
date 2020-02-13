@@ -1,7 +1,8 @@
 #include "test_utilsmisc.h"
-#include "utils/misc.h"
 
 #include <QTest>
+
+#include "utils/misc.h"
 
 using namespace Utils::Misc;
 

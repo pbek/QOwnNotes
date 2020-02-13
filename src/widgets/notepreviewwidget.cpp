@@ -12,7 +12,9 @@
  */
 
 #include "notepreviewwidget.h"
+
 #include <dialogs/filedialog.h>
+
 #include <QAction>
 #include <QApplication>
 #include <QClipboard>
@@ -22,6 +24,7 @@
 #include <QMovie>
 #include <QProxyStyle>
 #include <QRegExp>
+
 #include "utils/misc.h"
 
 class NoDottedOutlineForLinksStyle : public QProxyStyle {

@@ -1,9 +1,11 @@
 #include "masterdialog.h"
+
 #include <QApplication>
 #include <QGuiApplication>
 #include <QKeyEvent>
 #include <QScreen>
 #include <QSettings>
+
 #include "services/metricsservice.h"
 
 MasterDialog::MasterDialog(QWidget *parent) : QDialog(parent) {

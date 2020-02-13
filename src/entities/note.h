@@ -2,6 +2,7 @@
 #define NOTE_H
 
 #include <utils/misc.h>
+
 #include <QDateTime>
 #include <QFile>
 #include <QRegularExpression>

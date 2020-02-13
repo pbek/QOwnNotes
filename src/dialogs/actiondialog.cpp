@@ -1,8 +1,10 @@
 #include "actiondialog.h"
 //#include <QDebug>
 #include <utils/gui.h>
+
 #include <QMenuBar>
 #include <QTreeWidgetItem>
+
 #include "ui_actiondialog.h"
 
 ActionDialog::ActionDialog(QMenuBar *menuBar, QWidget *parent)

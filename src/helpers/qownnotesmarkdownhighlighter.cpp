@@ -14,12 +14,15 @@
  */
 
 #include "qownnotesmarkdownhighlighter.h"
+
 #include <entities/note.h>
+
 #include <QApplication>
 #include <QDebug>
 #include <QObject>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
+
 #include "libraries/sonnet/src/core/languagefilter_p.h"
 #include "libraries/sonnet/src/core/tokenizer_p.h"
 #include "qownspellchecker.h"
@@ -36,7 +39,6 @@
 QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
     QTextDocument *parent, HighlightingOptions highlightingOptions)
     : MarkdownHighlighter(parent, highlightingOptions) {
-
     spellchecker = nullptr;
     languageFilter = nullptr;
     wordTokenizer = nullptr;
@@ -46,19 +48,17 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
 }
 
 QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter() {
-    if (languageFilter != nullptr)
-        delete languageFilter;
-    if (wordTokenizer != nullptr)
-        delete wordTokenizer;
-    if (spellchecker)
-        delete spellchecker;
+    if (languageFilter != nullptr) delete languageFilter;
+    if (wordTokenizer != nullptr) delete wordTokenizer;
+    if (spellchecker) delete spellchecker;
 }
 
 void QOwnNotesMarkdownHighlighter::updateCurrentNote(const Note _note) {
     _currentNote = std::move(_note);
 }
 
-void QOwnNotesMarkdownHighlighter::setSpellChecker(QOwnSpellChecker* spellChecker) {
+void QOwnNotesMarkdownHighlighter::setSpellChecker(
+    QOwnSpellChecker *spellChecker) {
     spellchecker = spellChecker;
     languageFilter =
         new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());

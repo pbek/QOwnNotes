@@ -2,6 +2,7 @@
 #define NOTETREEWIDGETITEM_H
 
 #include <entities/note.h>
+
 #include <QWidget>
 
 namespace Ui {

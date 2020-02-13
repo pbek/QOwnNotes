@@ -1,6 +1,8 @@
 #include "linkdialog.h"
+
 #include <entities/note.h>
 #include <utils/misc.h>
+
 #include <QClipboard>
 #include <QDebug>
 #include <QFileDialog>
@@ -13,6 +15,7 @@
 #include <QRegularExpressionMatch>
 #include <QSettings>
 #include <QTimer>
+
 #include "ui_linkdialog.h"
 
 LinkDialog::LinkDialog(const QString &dialogTitle, QWidget *parent)

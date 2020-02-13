@@ -4,6 +4,7 @@
 #include <QNetworkReply>
 #include <QSplitter>
 #include <QTreeWidgetItem>
+
 #include "masterdialog.h"
 
 namespace Ui {

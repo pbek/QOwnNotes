@@ -2,6 +2,7 @@
 #define SCRIPTSETTINGWIDGET_H
 
 #include <entities/script.h>
+
 #include <QJsonValue>
 #include <QMap>
 #include <QVariant>

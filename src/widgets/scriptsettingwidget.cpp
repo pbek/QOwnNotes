@@ -1,9 +1,12 @@
 #include "scriptsettingwidget.h"
+
 #include <dialogs/filedialog.h>
+
 #include <QDebug>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <limits>
+
 #include "ui_scriptsettingwidget.h"
 
 ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,

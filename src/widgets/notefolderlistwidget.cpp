@@ -12,6 +12,7 @@
  */
 
 #include "notefolderlistwidget.h"
+
 #include <entities/notefolder.h>
 
 NoteFolderListWidget::NoteFolderListWidget(QWidget *parent) {

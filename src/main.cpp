@@ -3,6 +3,7 @@
 #include <utils/misc.h>
 #include <utils/schema.h>
 #include <widgets/logwidget.h>
+
 #include <QApplication>
 #include <QFileDialog>
 #include <QMessageBox>
@@ -10,6 +11,7 @@
 #include <QStyleFactory>
 #include <QTranslator>
 #include <QtGui>
+
 #include "dialogs/welcomedialog.h"
 #include "entities/notefolder.h"
 #include "libraries/singleapplication/singleapplication.h"

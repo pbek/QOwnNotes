@@ -13,39 +13,6 @@
  */
 
 #include "mainwindow.h"
-#include <QAbstractEventDispatcher>
-#include <QActionGroup>
-#include <QClipboard>
-#include <QCompleter>
-#include <QCoreApplication>
-#include <QDebug>
-#include <QDesktopServices>
-#include <QDesktopWidget>
-#include <QDir>
-#include <QDirIterator>
-#include <QDockWidget>
-#include <QFile>
-#include <QInputDialog>
-#include <QJSEngine>
-#include <QKeyEvent>
-#include <QListWidgetItem>
-#include <QMessageBox>
-#include <QMimeData>
-#include <QPageSetupDialog>
-#include <QPrintDialog>
-#include <QPrinter>
-#include <QProcess>
-#include <QScrollBar>
-#include <QSettings>
-#include <QShortcut>
-#include <QSystemTrayIcon>
-#include <QTemporaryFile>
-#include <QTextBlock>
-#include <QTextDocumentFragment>
-#include <QTextLength>
-#include <QTimer>
-#include <QTreeWidgetItem>
-#include <QUuid>
 
 #include <dialogs/actiondialog.h>
 #include <dialogs/attachmentdialog.h>
@@ -74,7 +41,30 @@
 #include <utils/schema.h>
 #include <widgets/logwidget.h>
 #include <widgets/notetreewidgetitem.h>
+
+#include <QAbstractEventDispatcher>
+#include <QActionGroup>
+#include <QClipboard>
 #include <QColorDialog>
+#include <QCompleter>
+#include <QCoreApplication>
+#include <QDebug>
+#include <QDesktopServices>
+#include <QDesktopWidget>
+#include <QDir>
+#include <QDirIterator>
+#include <QDockWidget>
+#include <QFile>
+#include <QInputDialog>
+#include <QJSEngine>
+#include <QKeyEvent>
+#include <QListWidgetItem>
+#include <QMessageBox>
+#include <QMimeData>
+#include <QPageSetupDialog>
+#include <QPrintDialog>
+#include <QPrinter>
+#include <QProcess>
 #include <QProgressDialog>
 #include <QQmlApplicationEngine>
 #include <QQmlComponent>
@@ -84,9 +74,21 @@
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
 #include <QScreen>
+#include <QScrollBar>
+#include <QSettings>
+#include <QShortcut>
+#include <QSystemTrayIcon>
+#include <QTemporaryFile>
+#include <QTextBlock>
+#include <QTextDocumentFragment>
+#include <QTextLength>
+#include <QTimer>
+#include <QTreeWidgetItem>
+#include <QUuid>
 #include <QWidgetAction>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 #include <utility>
+
 #include "build_number.h"
 #include "dialogs/aboutdialog.h"
 #include "dialogs/issueassistantdialog.h"
@@ -1937,7 +1939,8 @@ void MainWindow::createSystemTrayIcon() {
  */
 QIcon MainWindow::getSystemTrayIcon() {
     const QSettings settings;
-    const bool darkModeIcon = settings.value(QStringLiteral("darkModeTrayIcon"), false).toBool();
+    const bool darkModeIcon =
+        settings.value(QStringLiteral("darkModeTrayIcon"), false).toBool();
     const QString file = darkModeIcon ? QStringLiteral(":/images/icon-dark.png")
                                       : QStringLiteral(":/images/icon.png");
     return QIcon(file);

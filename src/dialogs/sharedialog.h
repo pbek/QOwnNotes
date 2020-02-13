@@ -2,6 +2,7 @@
 #define SHAREDIALOG_H
 
 #include <entities/note.h>
+
 #include "masterdialog.h"
 
 namespace Ui {

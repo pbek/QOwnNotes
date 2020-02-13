@@ -1,5 +1,7 @@
 #include "passworddialog.h"
+
 #include <QPushButton>
+
 #include "ui_passworddialog.h"
 
 PasswordDialog::PasswordDialog(QWidget *parent, QString labelText,

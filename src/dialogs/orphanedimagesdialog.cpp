@@ -1,8 +1,10 @@
 #include "orphanedimagesdialog.h"
+
 #include <entities/note.h>
 #include <entities/notefolder.h>
 #include <mainwindow.h>
 #include <utils/gui.h>
+
 #include <QDebug>
 #include <QDir>
 #include <QFileInfo>
@@ -10,6 +12,7 @@
 #include <QKeyEvent>
 #include <QTreeWidgetItem>
 #include <QtWidgets/QMessageBox>
+
 #include "ui_orphanedimagesdialog.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 

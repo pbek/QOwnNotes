@@ -1,6 +1,7 @@
 #pragma once
 
 #include <entities/script.h>
+
 #include <QMap>
 #include <QMessageBox>
 #include <QObject>

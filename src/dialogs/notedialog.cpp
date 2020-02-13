@@ -1,5 +1,7 @@
 #include "notedialog.h"
+
 #include <entities/note.h>
+
 #include "ui_notedialog.h"
 
 NoteDialog::NoteDialog(QWidget *parent)

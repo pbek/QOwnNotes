@@ -1,8 +1,10 @@
 #include "updatedialog.h"
+
 #include <release.h>
 #include <services/metricsservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QDesktopServices>
 #include <QDir>
@@ -13,6 +15,7 @@
 #include <QSettings>
 #include <QTemporaryFile>
 #include <QUrl>
+
 #include "ui_updatedialog.h"
 
 UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,

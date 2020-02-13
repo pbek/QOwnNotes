@@ -1,4 +1,5 @@
 #include "tagapi.h"
+
 #include <utility>
 
 TagApi* TagApi::fetch(int Id) {

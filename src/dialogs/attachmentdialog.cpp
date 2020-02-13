@@ -1,9 +1,11 @@
 #include "attachmentdialog.h"
+
 #include <QClipboard>
 #include <QDebug>
 #include <QMessageBox>
 #include <QMimeDatabase>
 #include <QTemporaryFile>
+
 #include "filedialog.h"
 #include "ui_attachmentdialog.h"
 #include "utils/misc.h"

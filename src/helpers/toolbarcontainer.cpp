@@ -1,5 +1,7 @@
 #include "toolbarcontainer.h"
+
 #include <mainwindow.h>
+
 #include <QComboBox>
 #include <QDebug>
 #include <QMainWindow>

@@ -1,4 +1,5 @@
 #include "test_htmlentities.h"
+
 #include <QCoreApplication>
 #include <QString>
 #include <QtTest>

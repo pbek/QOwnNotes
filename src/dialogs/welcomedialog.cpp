@@ -1,9 +1,12 @@
 #include "welcomedialog.h"
+
 #include <utils/misc.h>
+
 #include <QFileDialog>
 #include <QGraphicsScene>
 #include <QMessageBox>
 #include <QSettings>
+
 #include "QDebug"
 #include "services/metricsservice.h"
 #include "settingsdialog.h"

@@ -1,4 +1,5 @@
 #include "cryptoservice.h"
+
 #include <QCoreApplication>
 #include <QDebug>
 #include <QSettings>

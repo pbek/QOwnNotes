@@ -1,6 +1,7 @@
 #pragma once
 
 #include <entities/script.h>
+
 #include "masterdialog.h"
 
 namespace Ui {

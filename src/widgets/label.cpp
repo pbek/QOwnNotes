@@ -12,6 +12,7 @@
  */
 
 #include "label.h"
+
 #include <utils/misc.h>
 
 Label::Label(QWidget *parent, Qt::WindowFlags f) {

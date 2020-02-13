@@ -1,10 +1,12 @@
 #include "scriptingservice.h"
+
 #include <api/scriptapi.h>
 #include <entities/notefolder.h>
 #include <entities/script.h>
 #include <services/metricsservice.h>
 #include <utils/misc.h>
 #include <widgets/logwidget.h>
+
 #include <QAction>
 #include <QApplication>
 #include <QClipboard>
@@ -22,14 +24,17 @@
 #include <QTimer>
 #include <QVariant>
 #include <utility>
+
 #include "api/noteapi.h"
 #include "api/tagapi.h"
 #include "entities/notesubfolder.h"
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
+
 #include <QInputDialog>
 #include <QMessageBox>
+
 #include "widgets/qownnotesmarkdowntextedit.h"
 #endif
 

@@ -1,7 +1,9 @@
 #include "qownnotesmarkdowntextedit.h"
+
 #include <utils/gui.h>
 #include <utils/misc.h>
 #include <utils/schema.h>
+
 #include <QDebug>
 #include <QFont>
 #include <QFontDatabase>
@@ -9,6 +11,7 @@
 #include <QMimeData>
 #include <QRegularExpression>
 #include <QSettings>
+
 #include "entities/notefolder.h"
 #include "helpers/qownspellchecker.h"
 #include "mainwindow.h"
@@ -22,8 +25,8 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     setStyles();
     updateSettings();
 
-    connect(this, &QOwnNotesMarkdownTextEdit::cursorPositionChanged,
-            this, &QOwnNotesMarkdownTextEdit::highlightCurrentLine);
+    connect(this, &QOwnNotesMarkdownTextEdit::cursorPositionChanged, this,
+            &QOwnNotesMarkdownTextEdit::highlightCurrentLine);
     highlightCurrentLine();
 
     QSettings settings;
@@ -400,7 +403,6 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     QOwnNotesMarkdownHighlighter *h =
         dynamic_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
 
-
     if (_spellCheckerEnabled) {
         enableSpellChecker(h);
     }
@@ -423,8 +425,7 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     h->setCommentHighlighting(true);
 }
 
-void QOwnNotesMarkdownTextEdit::setSpellcheckingEnabled(bool enabled)
-{
+void QOwnNotesMarkdownTextEdit::setSpellcheckingEnabled(bool enabled) {
     _spellCheckerEnabled = enabled;
 }
 

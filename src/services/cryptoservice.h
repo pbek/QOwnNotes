@@ -4,6 +4,7 @@
 #define PIWIK_TRACKER_DEBUG 1
 
 #include <libraries/simplecrypt/simplecrypt.h>
+
 #include <QObject>
 
 class CryptoService : public QObject {

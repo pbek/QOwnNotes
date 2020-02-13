@@ -14,12 +14,13 @@
 
 #pragma once
 
-#include <QMainWindow>
-
 #include <entities/note.h>
 #include <widgets/logwidget.h>
+
 #include <QFileSystemWatcher>
+#include <QMainWindow>
 #include <QSystemTrayIcon>
+
 #include "entities/notehistory.h"
 
 #define SORT_ALPHABETICAL 0

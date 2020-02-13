@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <QTest>
 #include <iostream>
+
 #include "release.h"
 #include "testcases/app/test_htmlentities.h"
 #include "testcases/app/test_metricsservice.h"

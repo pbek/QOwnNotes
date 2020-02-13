@@ -41,7 +41,7 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
     void updateCurrentNote(const Note note);
     void setCommentHighlighting(bool);
     void setCodeHighlighting(bool);
-    void setSpellChecker(QOwnSpellChecker*);
+    void setSpellChecker(QOwnSpellChecker *);
 
    protected:
     void highlightBlock(const QString &text) Q_DECL_OVERRIDE;
@@ -54,7 +54,7 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
    private:
     Sonnet::WordTokenizer *wordTokenizer;
     Sonnet::LanguageFilter *languageFilter;
-    QOwnSpellChecker* spellchecker;
+    QOwnSpellChecker *spellchecker;
     Note _currentNote;
     bool commentHighlightingOn;
     bool codeHighlightingOn;

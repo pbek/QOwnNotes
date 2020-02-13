@@ -1,7 +1,10 @@
 #include "metricsservice.h"
+
 #include <libraries/piwiktracker/piwiktracker.h>
+
 #include <QSettings>
 #include <utility>
+
 #include "release.h"
 #include "version.h"
 

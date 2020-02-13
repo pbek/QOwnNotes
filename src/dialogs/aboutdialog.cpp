@@ -1,8 +1,11 @@
 #include "aboutdialog.h"
+
 #include <utils/misc.h>
+
 #include <QDate>
 #include <QFile>
 #include <QTextStream>
+
 #include "build_number.h"
 #include "release.h"
 #include "ui_aboutdialog.h"

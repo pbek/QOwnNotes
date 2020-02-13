@@ -1,11 +1,14 @@
 #include "imagedialog.h"
+
 #include <utils/misc.h>
+
 #include <QClipboard>
 #include <QDebug>
 #include <QRubberBand>
 #include <QSettings>
 #include <QTemporaryFile>
 #include <utility>
+
 #include "filedialog.h"
 #include "ui_imagedialog.h"
 

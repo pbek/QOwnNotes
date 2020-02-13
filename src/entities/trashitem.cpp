@@ -1,10 +1,13 @@
 #include "entities/trashitem.h"
+
 #include <services/databaseservice.h>
 #include <utils/misc.h>
+
 #include <QDebug>
 #include <QDir>
 #include <QSettings>
 #include <QSqlError>
+
 #include "note.h"
 #include "notefolder.h"
 #include "notesubfolder.h"

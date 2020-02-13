@@ -1,9 +1,11 @@
 #include "entities/note.h"
+
 #include <services/owncloudservice.h>
 #include <services/scriptingservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
 #include <utils/schema.h>
+
 #include <QApplication>
 #include <QCryptographicHash>
 #include <QDebug>
@@ -19,6 +21,7 @@
 #include <QTemporaryFile>
 #include <QUrl>
 #include <utility>
+
 #include "api/noteapi.h"
 #include "entities/bookmark.h"
 #include "helpers/codetohtmlconverter.h"
@@ -2073,8 +2076,8 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
     // were crashes with regular expressions running wild
     // TODO: In theory we could convert relative note links in the html (and not
     // in the markdown) to prevent troubles with code blocks
-    i = QRegularExpression(QStringLiteral(
-                               R"(\[(.+?)\]\((((?!\w+:\/\/)[^<>]){1,500}?)\))"))
+    i = QRegularExpression(
+            QStringLiteral(R"(\[(.+?)\]\((((?!\w+:\/\/)[^<>]){1,500}?)\))"))
             .globalMatch(str);
 
     while (i.hasNext()) {
