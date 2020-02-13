@@ -3268,10 +3268,10 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
         if (Utils::Misc::isSameFile(
                 file, DatabaseService::getNoteFolderDatabasePath())) {
             showStatusBarMessage(
-                tr(QFile::remove(file)
-                       ? "Removed duplicate conflicted database: %1"
-                       : "Could not remove duplicate conflicted database: %1")
-                    .arg(file),
+                QFile::remove(file)
+                    ? tr("Removed duplicate conflicted database: %1").arg(file)
+                    : tr("Could not remove duplicate conflicted database: %1")
+                          .arg(file),
                 4000);
         } else {
             files << file;
