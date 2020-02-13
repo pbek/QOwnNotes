@@ -17,15 +17,13 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     : QMarkdownTextEdit(parent, false) {
     mainWindow = Q_NULLPTR;
 
-    spellchecker = nullptr;
-
     _highlighter = new QOwnNotesMarkdownHighlighter(document());
 
     setStyles();
     updateSettings();
 
-    connect(this, SIGNAL(cursorPositionChanged()), this,
-            SLOT(highlightCurrentLine()));
+    connect(this, &QOwnNotesMarkdownTextEdit::cursorPositionChanged,
+            this, &QOwnNotesMarkdownTextEdit::highlightCurrentLine);
     highlightCurrentLine();
 
     QSettings settings;
@@ -49,8 +47,6 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         _highlighter->initHighlightingRules();
     }
 }
-
-QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit() {}
 
 /**
  * Sets the format style
@@ -388,8 +384,8 @@ void QOwnNotesMarkdownTextEdit::enableSpellChecker(
     if (!h) {
         h = dynamic_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
     }
-    spellchecker = new QOwnSpellChecker;
-    h->setSpellChecker(spellchecker);
+
+    h->setSpellChecker(QOwnSpellChecker::instance());
 }
 
 void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
@@ -404,7 +400,8 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     QOwnNotesMarkdownHighlighter *h =
         dynamic_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
 
-    if (!spellchecker) {
+
+    if (_spellCheckerEnabled) {
         enableSpellChecker(h);
     }
 
@@ -424,6 +421,11 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     // after we are done we turn everything back on
     h->setCodeHighlighting(true);
     h->setCommentHighlighting(true);
+}
+
+void QOwnNotesMarkdownTextEdit::setSpellcheckingEnabled(bool enabled)
+{
+    _spellCheckerEnabled = enabled;
 }
 
 void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent *event) {
@@ -475,6 +477,7 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
 
     setAutoTextOptions(options);
 
+    auto spellchecker = QOwnSpellChecker::instance();
     if (spellchecker) {
         // spell check active/inactive
         bool spellcheckerActive =
@@ -595,6 +598,7 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
     wordSelectCursor.movePosition(QTextCursor::NextCharacter,
                                   QTextCursor::KeepAnchor, selectedWord.size());
 
+    auto spellchecker = QOwnSpellChecker::instance();
     const bool wordIsMisspelled =
         isMouseCursorInsideWord && spellchecker && spellchecker->isActive() &&
         !selectedWord.isEmpty() && spellchecker->isWordMisspelled(selectedWord);
@@ -664,6 +668,7 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
 }
 
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
+    auto spellchecker = QOwnSpellChecker::instance();
     if (event->type() == QEvent::ContextMenu && spellchecker) {
         if (spellchecker->isActive())
             return onContextMenuEvent(static_cast<QContextMenuEvent *>(event));

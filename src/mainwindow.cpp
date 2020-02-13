@@ -1936,15 +1936,11 @@ void MainWindow::createSystemTrayIcon() {
  * @return
  */
 QIcon MainWindow::getSystemTrayIcon() {
-    QSettings settings;
-    QString fileName = QStringLiteral(":/images/icon");
-
-    if (settings.value(QStringLiteral("darkModeTrayIcon")).toBool()) {
-        fileName += QStringLiteral("-dark");
-    }
-
-    fileName += QStringLiteral(".png");
-    return QIcon(fileName);
+    const QSettings settings;
+    const bool darkModeIcon = settings.value(QStringLiteral("darkModeTrayIcon"), false).toBool();
+    const QString file = darkModeIcon ? QStringLiteral(":/images/icon-dark.png")
+                                      : QStringLiteral(":/images/icon.png");
+    return QIcon(file);
 }
 
 /**
@@ -2435,10 +2431,6 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     // set the git commit interval time
     _gitCommitInterval =
         settings.value(QStringLiteral("gitCommitInterval"), 30).toInt();
-
-    // set the note text edit font
-    ui->noteTextEdit->setStyles();
-    ui->encryptedNoteTextEdit->setStyles();
 
     // load note text view font
     QString fontString =

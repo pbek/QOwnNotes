@@ -36,30 +36,33 @@
 QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
     QTextDocument *parent, HighlightingOptions highlightingOptions)
     : MarkdownHighlighter(parent, highlightingOptions) {
-    Q_UNUSED(parent)
-    Q_UNUSED(highlightingOptions)
 
     spellchecker = nullptr;
-    languageFilter =
-        new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
-    wordTokenizer = new Sonnet::WordTokenizer();
+    languageFilter = nullptr;
+    wordTokenizer = nullptr;
 
     commentHighlightingOn = true;
     codeHighlightingOn = true;
 }
 
 QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter() {
-    delete languageFilter;
-    delete wordTokenizer;
+    if (languageFilter != nullptr)
+        delete languageFilter;
+    if (wordTokenizer != nullptr)
+        delete wordTokenizer;
+    if (spellchecker)
+        delete spellchecker;
 }
 
 void QOwnNotesMarkdownHighlighter::updateCurrentNote(const Note _note) {
     _currentNote = std::move(_note);
 }
 
-void QOwnNotesMarkdownHighlighter::setSpellChecker(
-    QOwnSpellChecker *spellChecker) {
+void QOwnNotesMarkdownHighlighter::setSpellChecker(QOwnSpellChecker* spellChecker) {
     spellchecker = spellChecker;
+    languageFilter =
+        new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
+    wordTokenizer = new Sonnet::WordTokenizer();
 }
 
 void QOwnNotesMarkdownHighlighter::setCommentHighlighting(bool state) {
