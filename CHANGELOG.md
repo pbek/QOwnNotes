@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.2.4
+- conflicted copies of the note folder database `notes.sqlite` are now
+  immediately deleted if they are not different to the current `notes.sqlite`
+  (for [#1625](https://github.com/pbek/QOwnNotes/issues/1625))
+
 ## 20.2.3
 - improved Setext-style headers highlighting with leading spaces
   (for [#101](https://github.com/pbek/qmarkdowntextedit/issues/101), thank you @Waqar144)

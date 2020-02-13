@@ -1939,3 +1939,31 @@ QString Utils::Misc::localDictionariesPath() {
     dir.mkpath(path);
     return path;
 }
+
+/**
+ * Generates a SHA1 signature for a file
+ *
+ * @return
+ */
+QByteArray Utils::Misc::generateFileSha1Signature(const QString &path) {
+    QCryptographicHash hash(QCryptographicHash::Sha1);
+    QFile file(path);
+
+    if (file.open(QIODevice::ReadOnly)) {
+        hash.addData(file.readAll());
+    } else {
+        return QByteArray();
+    }
+
+    // retrieve the SHA1 signature of the file
+    return hash.result();
+}
+
+/**
+ * Checks if two files are the same
+ *
+ * @return
+ */
+bool Utils::Misc::isSameFile(const QString &path1, const QString &path2) {
+    return generateFileSha1Signature(path1) == generateFileSha1Signature(path2);
+}

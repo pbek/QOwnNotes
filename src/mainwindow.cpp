@@ -3251,9 +3251,28 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
     QDirIterator it(NoteFolder::currentLocalPath(), filter,
                     QDir::AllEntries | QDir::NoSymLinks | QDir::NoDotAndDotDot);
     auto files = QStringList();
+    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+    Q_UNUSED(blocker)
+
+    // we try to fix problems with the blocker
+    directoryWatcherWorkaround(true);
 
     while (it.hasNext()) {
-        files << it.next();
+        const QString &file = it.next();
+
+        // check if conflicted database copy is the same as the current note
+        // folder database
+        if (Utils::Misc::isSameFile(
+                file, DatabaseService::getNoteFolderDatabasePath())) {
+            showStatusBarMessage(
+                tr(QFile::remove(file)
+                       ? "Removed duplicate conflicted database: %1"
+                       : "Could not remove duplicate conflicted database: %1")
+                    .arg(file),
+                4000);
+        } else {
+            files << file;
+        }
     }
 
     int count = files.count();
@@ -3275,12 +3294,6 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
         QMessageBox::Yes) {
         return;
     }
-
-    const QSignalBlocker blocker(this->noteDirectoryWatcher);
-    Q_UNUSED(blocker)
-
-    // we try to fix problems with the blocker
-    directoryWatcherWorkaround(true);
 
     count = 0;
 

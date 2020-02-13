@@ -22,11 +22,12 @@ class DatabaseService {
     static QSqlDatabase getNoteFolderDatabase();
     static void closeDatabaseConnection(const QSqlDatabase& db,
                                         QSqlQuery& query);
+    static QString getNoteFolderDatabasePath();
 
    private:
-    static QString getNoteFolderDatabasePath();
     static bool createMemoryConnection();
     static bool createDiskConnection();
+    static bool mergeNoteFolderDatabase(QString path);
 };
 
 #endif    // DATABASESERVICE_H

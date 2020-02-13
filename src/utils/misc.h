@@ -128,6 +128,8 @@ QString remotePreviewImageTagToInlineImageTag(QString imageTag,
                                               int &imageWidth);
 QString createUuidString();
 QString localDictionariesPath();
+QByteArray generateFileSha1Signature(const QString &path);
+bool isSameFile(const QString &path1, const QString &path2);
 }    // namespace Misc
 }    // namespace Utils
 

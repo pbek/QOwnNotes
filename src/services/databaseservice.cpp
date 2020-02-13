@@ -835,3 +835,28 @@ QString DatabaseService::getAppData(const QString& name,
 
     return QString();
 }
+
+/**
+ * WIP
+ *
+ * @param path
+ * @return
+ */
+bool DatabaseService::mergeNoteFolderDatabase(QString path) {
+    QSqlDatabase mergeDB = QSqlDatabase::addDatabase(
+        QStringLiteral("QSQLITE"), QStringLiteral("note_folder_merge"));
+    mergeDB.setDatabaseName(path);
+
+    if (!mergeDB.open()) {
+        QMessageBox::critical(
+            nullptr, QWidget::tr("Cannot open database"),
+            QWidget::tr("Unable to establish a database connection with "
+                        "note folder database to merge '%1'.\nAre the folder "
+                        "and the file writeable?")
+                .arg(path),
+            QMessageBox::Ok);
+        return false;
+    }
+
+    return true;
+}
