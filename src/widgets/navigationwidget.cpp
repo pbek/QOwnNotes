@@ -18,9 +18,12 @@
 #include <QDebug>
 #include <QRegularExpression>
 #include <QTextBlock>
+#include <QTextDocument>
+#include <QTreeWidgetItem>
 #include <QtConcurrent/QtConcurrent>
 
-NavigationWidget::NavigationWidget(QWidget *parent) : QTreeWidget(parent) {
+NavigationWidget::NavigationWidget(QWidget *parent)
+    : QTreeWidget(parent), _document(nullptr) {
     QObject::connect(this, &NavigationWidget::currentItemChanged, this,
                      &NavigationWidget::onCurrentItemChanged);
 
@@ -65,54 +68,48 @@ void NavigationWidget::parse(const QTextDocument *document) {
     setDocument(document);
 
     const QFuture<QVector<Node>> future =
-        QtConcurrent::run(this, &NavigationWidget::parseDocument, document);
+        QtConcurrent::run(&NavigationWidget::parseDocument, document);
     this->_parseFutureWatcher->setFuture(future);
 }
 
 QVector<Node> NavigationWidget::parseDocument(
-    const QTextDocument *document) const {
+    const QTextDocument *const document) {
     QVector<Node> nodes;
-    for (int i = 0; i < document->blockCount(); i++) {
+    for (int i = 0; i < document->blockCount(); ++i) {
         const QTextBlock &block = document->findBlockByNumber(i);
         const int elementType = block.userState();
-        QString text = block.text();
 
         // ignore all non headline types
         if ((elementType < MarkdownHighlighter::H1) ||
             (elementType > MarkdownHighlighter::H6)) {
             continue;
         }
-
-        text.remove(QRegularExpression(QStringLiteral("^#+\\s+")));
+        QString text =
+            block.text().remove(QRegularExpression(QStringLiteral("^#+\\s+")));
 
         if (text.isEmpty()) {
             continue;
         }
 
-        const Node node = {text, block.position(), elementType};
-        nodes.append(node);
+        nodes.append({std::move(text), block.position(), elementType});
     }
     return nodes;
 }
 
 void NavigationWidget::onParseCompleted() {
-    const QVector<Node> nodes = this->_parseFutureWatcher->result();
-    if (_navigationTreeNodes == nodes)
-        return;
-    else
-        _navigationTreeNodes = nodes;
+    QVector<Node> nodes = this->_parseFutureWatcher->result();
+    if (_navigationTreeNodes == nodes) return;
+    _navigationTreeNodes = std::move(nodes);
 
     clear();
     _lastHeadingItemList.clear();
 
-    for (int i = 0; i < nodes.length(); ++i) {
-        const Node &node = nodes.at(i);
+    for (const auto &node : _navigationTreeNodes) {
         const int elementType = node.elementType;
         const int pos = node.pos;
-        const QString text = node.text;
 
         auto *item = new QTreeWidgetItem();
-        item->setText(0, text);
+        item->setText(0, node.text);
         item->setData(0, Qt::UserRole, pos);
         item->setToolTip(
             0,
@@ -139,7 +136,8 @@ void NavigationWidget::onParseCompleted() {
 /**
  * Attempts to find a suitable parent item for the element type
  */
-QTreeWidgetItem *NavigationWidget::findSuitableParentItem(int elementType) const {
+QTreeWidgetItem *NavigationWidget::findSuitableParentItem(
+    int elementType) const {
     --elementType;
     auto lastHigherItem = _lastHeadingItemList.value(elementType);
 
