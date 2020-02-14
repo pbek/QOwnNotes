@@ -21,19 +21,22 @@
 #include <QtConcurrent/QtConcurrent>
 
 NavigationWidget::NavigationWidget(QWidget *parent) : QTreeWidget(parent) {
-    QObject::connect(
-        this, SIGNAL(currentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)),
-        this, SLOT(onCurrentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)));
+    QObject::connect(this, &NavigationWidget::currentItemChanged, this,
+                     &NavigationWidget::onCurrentItemChanged);
 
-    parseFutureWatcher = new QFutureWatcher<QVector<Node>>(this);
-    connect(parseFutureWatcher, SIGNAL(finished()), this,
-            SLOT(onParseCompleted()));
+    _parseFutureWatcher = new QFutureWatcher<QVector<Node>>(this);
+    connect(_parseFutureWatcher, &QFutureWatcher<QVector<Node>>::finished, this,
+            &NavigationWidget::onParseCompleted);
+}
+
+NavigationWidget::~NavigationWidget() {
+    this->_parseFutureWatcher->waitForFinished();
 }
 
 /**
  * Sets a document to parse
  */
-void NavigationWidget::setDocument(QTextDocument *document) {
+void NavigationWidget::setDocument(const QTextDocument *document) {
     _document = document;
 }
 
@@ -55,22 +58,23 @@ void NavigationWidget::onCurrentItemChanged(QTreeWidgetItem *current,
 /**
  * Parses a text document and builds the navigation tree for it
  */
-void NavigationWidget::parse(QTextDocument *document) {
+void NavigationWidget::parse(const QTextDocument *document) {
     const QSignalBlocker blocker(this);
     Q_UNUSED(blocker)
 
     setDocument(document);
 
-    QFuture<QVector<Node>> future =
+    const QFuture<QVector<Node>> future =
         QtConcurrent::run(this, &NavigationWidget::parseDocument, document);
-    this->parseFutureWatcher->setFuture(future);
+    this->_parseFutureWatcher->setFuture(future);
 }
 
-QVector<Node> NavigationWidget::parseDocument(QTextDocument *document) {
+QVector<Node> NavigationWidget::parseDocument(
+    const QTextDocument *document) const {
     QVector<Node> nodes;
     for (int i = 0; i < document->blockCount(); i++) {
-        QTextBlock block = document->findBlockByNumber(i);
-        int elementType = block.userState();
+        const QTextBlock &block = document->findBlockByNumber(i);
+        const int elementType = block.userState();
         QString text = block.text();
 
         // ignore all non headline types
@@ -85,24 +89,27 @@ QVector<Node> NavigationWidget::parseDocument(QTextDocument *document) {
             continue;
         }
 
-        Node node = {text, block.position(), elementType};
+        const Node node = {text, block.position(), elementType};
         nodes.append(node);
     }
     return nodes;
 }
 
 void NavigationWidget::onParseCompleted() {
-    QVector<Node> nodes = this->parseFutureWatcher->result();
-    if (navigationTreeNodes == nodes) return;
+    const QVector<Node> nodes = this->_parseFutureWatcher->result();
+    if (_navigationTreeNodes == nodes)
+        return;
+    else
+        _navigationTreeNodes = nodes;
 
     clear();
     _lastHeadingItemList.clear();
 
     for (int i = 0; i < nodes.length(); ++i) {
-        Node node = nodes.at(i);
-        int elementType = node.elementType;
-        int pos = node.pos;
-        QString text = node.text;
+        const Node &node = nodes.at(i);
+        const int elementType = node.elementType;
+        const int pos = node.pos;
+        const QString text = node.text;
 
         auto *item = new QTreeWidgetItem();
         item->setText(0, text);
@@ -132,12 +139,11 @@ void NavigationWidget::onParseCompleted() {
 /**
  * Attempts to find a suitable parent item for the element type
  */
-QTreeWidgetItem *NavigationWidget::findSuitableParentItem(int elementType) {
-    elementType--;
-    QTreeWidgetItem *lastHigherItem = _lastHeadingItemList[elementType];
+QTreeWidgetItem *NavigationWidget::findSuitableParentItem(int elementType) const {
+    --elementType;
+    auto lastHigherItem = _lastHeadingItemList.value(elementType);
 
-    return ((lastHigherItem == nullptr) &&
-            (elementType > MarkdownHighlighter::H1))
+    return (lastHigherItem == nullptr && elementType > MarkdownHighlighter::H1)
                ? findSuitableParentItem(elementType)
                : lastHigherItem;
 }
