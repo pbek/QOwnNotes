@@ -13,7 +13,7 @@
 #include "mainwindow.h"
 #include "ui_trashdialog.h"
 
-TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
+TrashDialog::TrashDialog(const QJSValue &notes, MainWindow *mainWindow,
                          QWidget *parent)
     : MasterDialog(parent), ui(new Ui::TrashDialog) {
     this->mainWindow = mainWindow;
@@ -37,7 +37,7 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
     button->setProperty("ActionRole", RestoreOnServer);
     button->setDefault(false);
     button->setIcon(QIcon::fromTheme(
-        "view-restore",
+        QStringLiteral("view-restore"),
         QIcon(":/icons/breeze-qownnotes/16x16/view-restore.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
@@ -51,14 +51,14 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
     button->setProperty("ActionRole", Download);
     button->setDefault(false);
     button->setIcon(QIcon::fromTheme(
-        "edit-download",
+        QStringLiteral("edit-download"),
         QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Cancel"));
     button->setProperty("ActionRole", Cancel);
     button->setIcon(QIcon::fromTheme(
-        "dialog-cancel",
+        QStringLiteral("dialog-cancel"),
         QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
     button->setDefault(true);
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
@@ -82,7 +82,7 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
     while (notesIterator.hasNext()) {
         notesIterator.next();
 
-        QJSValue property = notesIterator.value().property("noteName");
+        QJSValue property = notesIterator.value().property(QStringLiteral("noteName"));
 
         if (property.isUndefined()) {
             continue;
@@ -94,11 +94,11 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
             continue;
         }
 
-        dateString = notesIterator.value().property("dateString").toString();
-        data = notesIterator.value().property("data").toString();
-        timestamp = notesIterator.value().property("timestamp").toInt();
+        dateString = notesIterator.value().property(QStringLiteral("dateString")).toString();
+        data = notesIterator.value().property(QStringLiteral("data")).toString();
+        timestamp = notesIterator.value().property(QStringLiteral("timestamp")).toInt();
         QString fileName =
-            notesIterator.value().property("fileName").toString();
+            notesIterator.value().property(QStringLiteral("fileName")).toString();
 
         auto *item = new QListWidgetItem();
         item->setText(itemName);
@@ -123,7 +123,7 @@ void TrashDialog::setupMainSplitter() {
 
     // restore splitter sizes
     QSettings settings;
-    QByteArray state = settings.value("trashSplitterSizes").toByteArray();
+    QByteArray state = settings.value(QStringLiteral("trashSplitterSizes")).toByteArray();
     trashSplitter->restoreState(state);
 
     ui->gridLayout->layout()->addWidget(trashSplitter);
@@ -133,7 +133,7 @@ void TrashDialog::setupMainSplitter() {
 void TrashDialog::storeSettings() {
     // store the splitter sizes
     QSettings settings;
-    settings.setValue("trashSplitterSizes", trashSplitter->saveState());
+    settings.setValue(QStringLiteral("trashSplitterSizes"), trashSplitter->saveState());
 }
 
 TrashDialog::~TrashDialog() { delete ui; }

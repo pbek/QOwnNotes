@@ -515,7 +515,8 @@ MainWindow::MainWindow(QWidget *parent)
     // restore the note history of the current note folder
     noteHistory.restoreForCurrentNoteFolder();
 
-    if (settings.value("restoreLastNoteAtStartup", true).toBool()) {
+    if (settings.value(QStringLiteral("restoreLastNoteAtStartup"), true)
+            .toBool()) {
         // try to restore the last note before the app was quit
         // if that fails jump to the first note
         // we do that with a timer, because otherwise the scrollbar will not be
@@ -587,7 +588,7 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
 /**
  * Attempts to check the api app version
  */
-void MainWindow::startAppVersionTest() const {
+void MainWindow::startAppVersionTest() {
     if (!OwnCloudService::hasOwnCloudSettings()) {
         return;
     }
@@ -1125,7 +1126,7 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
     int currentIndex = 0;
 
     for (int i = 0; i < workspaces.count(); i++) {
-        const QString uuid = workspaces.at(i);
+        const QString &uuid = workspaces.at(i);
 
         if (uuid == currentUuid) {
             currentIndex = i;
@@ -1790,7 +1791,7 @@ void MainWindow::changeNoteFolder(const int noteFolderId,
         return;
     }
 
-    const QString folderName = noteFolder.getLocalPath();
+    QString folderName = noteFolder.getLocalPath();
     const QString oldPath = this->notesPath;
 
     // reload notes if notes folder was changed
@@ -1867,7 +1868,7 @@ void MainWindow::storeRecentNoteFolder(const QString &addFolderName,
     recentNoteFolders.removeAll(removeFolderName);
 
     // remove empty paths
-    recentNoteFolders.removeAll("");
+    recentNoteFolders.removeAll(QLatin1String(""));
 
     if (addFolderName != removeFolderName) {
         recentNoteFolders.prepend(addFolderName);
@@ -2726,7 +2727,7 @@ void MainWindow::notesWereModified(const QString &str) {
                 const QSignalBlocker blocker(this->noteDirectoryWatcher);
                 Q_UNUSED(blocker)
 
-                const QString text = this->ui->noteTextEdit->toPlainText();
+                QString text = this->ui->noteTextEdit->toPlainText();
                 note.storeNewText(std::move(text));
 
                 // store note to disk again
@@ -3011,13 +3012,12 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         const QStringList filenames =
             QStringList({"Markdown Showcase.md", "Markdown Cheatsheet.md",
                          "Welcome to QOwnNotes.md"});
-        QString filename;
-        QString destinationFile;
 
         // copy note files to the notes path
         for (int i = 0; i < filenames.size(); ++i) {
-            filename = filenames.at(i);
-            destinationFile = this->notesPath + QDir::separator() + filename;
+            const QString &filename = filenames.at(i);
+            const QString destinationFile =
+                this->notesPath + QDir::separator() + filename;
             QFile sourceFile(QStringLiteral(":/demonotes/") + filename);
             sourceFile.copy(destinationFile);
             // set read/write permissions for the owner and user
@@ -4017,8 +4017,8 @@ void MainWindow::searchInNoteTextEdit(QString str) {
         if (queryStrings.count() > 0) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
             const QRegularExpression regExp(
-                QLatin1String("(") + queryStrings.join(QLatin1String("|")) +
-                    QLatin1String(")"),
+                QLatin1Char('(') + queryStrings.join(QLatin1String("|")) +
+                    QLatin1Char(')'),
                 QRegularExpression::CaseInsensitiveOption);
 #else
             const QRegExp regExp(QLatin1String("(") +
@@ -4061,7 +4061,7 @@ void MainWindow::searchInNoteTextEdit(QString str) {
  * highlights all occurrences of the search line text in the note text edit
  */
 void MainWindow::searchForSearchLineTextInNoteTextEdit() {
-    const QString searchString = ui->searchLineEdit->text();
+    QString searchString = ui->searchLineEdit->text();
     searchInNoteTextEdit(std::move(searchString));
 }
 
@@ -4132,7 +4132,7 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
         return;
     }
     if (!updateNoteTextViewOnly) {
-        dynamic_cast<QOwnNotesMarkdownHighlighter *>(
+        qobject_cast<QOwnNotesMarkdownHighlighter *>(
             ui->noteTextEdit->highlighter())
             ->updateCurrentNote(*note);
         ui->noteTextEdit->setText(note->getNoteText());
@@ -5261,7 +5261,7 @@ void MainWindow::noteTextEditTextWasUpdated() {
     // managed to sneak some "special" line feeds in
     const QString noteTextFromDisk =
         Utils::Misc::transformLineFeeds(note.getNoteText());
-    const QString text =
+    QString text =
         Utils::Misc::transformLineFeeds(ui->noteTextEdit->toPlainText());
 
     // store the note to the database if the note text differs from the one
@@ -7924,7 +7924,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
  * @param tag
  */
 void MainWindow::handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
-                                              const Tag &tag) const {
+                                              const Tag &tag) {
     if (item == Q_NULLPTR) {
         return;
     }
@@ -8139,7 +8139,7 @@ void MainWindow::handleScriptingNoteTagging(Note note, const QString &tagName,
                                             bool doRemove,
                                             bool triggerPostMethods) {
     const QString oldNoteText = note.getNoteText();
-    const QString noteText =
+    QString noteText =
         ScriptingService::instance()
             ->callNoteTaggingHook(
                 note,
@@ -8252,7 +8252,7 @@ void MainWindow::handleScriptingNotesTagRenaming(const QString &oldTagName,
     const auto notes = Note::fetchAll();
     for (Note note : notes) {
         const QString oldNoteText = note.getNoteText();
-        const QString noteText =
+        QString noteText =
             ScriptingService::instance()
                 ->callNoteTaggingHook(note, QStringLiteral("rename"),
                                       oldTagName, newTagName)
@@ -9442,7 +9442,7 @@ bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
     equation.replace(QLatin1Char(','), QLatin1Char('.'));
 
     // remove leading list characters
-    equation.remove(QRegularExpression(R"(^\s*[\-*+] )"));
+    equation.remove(QRegularExpression(QStringLiteral(R"(^\s*[\-*+] )")));
 
     // match all characters and basic operations like +, -, * and /
     QRegularExpressionMatch match =
@@ -9791,8 +9791,6 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
         openNoteSubFolderContextMenu(globalPos, ui->noteTreeWidget);
     } else if (item->data(0, Qt::UserRole + 1).toInt() == NoteType) {
         openNotesContextMenu(globalPos);
-    } else {
-        openNoteSubFolderContextMenu(globalPos, ui->noteTreeWidget);
     }
 }
 
@@ -10417,7 +10415,7 @@ void MainWindow::on_actionStrike_out_text_triggered() {
  * @param setDefaultShortcut
  */
 void MainWindow::initShortcuts() {
-    QList<QMenu *> menus = menuList();
+    const QList<QMenu *> menus = menuList();
     QSettings settings;
 
     // we also have to clear the shortcuts directly, just removing the
@@ -10430,7 +10428,7 @@ void MainWindow::initShortcuts() {
     _menuShortcuts.clear();
 
 #ifndef Q_OS_MAC
-    bool menuBarIsVisible = !ui->menuBar->isHidden();
+    const bool menuBarIsVisible = !ui->menuBar->isHidden();
     qDebug() << __func__ << " - 'menuBarIsVisible': " << menuBarIsVisible;
 #endif
 
@@ -10533,7 +10531,7 @@ void MainWindow::on_actionShow_menu_bar_triggered(bool checked) {
  * Splits the current note into two notes at the current cursor position
  */
 void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
-    const QString name = currentNote.getName();
+    QString name = currentNote.getName();
     const QList<Tag> tags = Tag::fetchAllOfNote(currentNote);
 
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
@@ -11058,7 +11056,7 @@ void MainWindow::on_actionRemove_current_workspace_triggered() {
 
     // remove all settings in the group
     settings.beginGroup(QStringLiteral("workspace-") + uuid);
-    settings.remove("");
+    settings.remove(QLatin1String(""));
     settings.endGroup();
 
     // update the menu and combo box
@@ -11439,9 +11437,8 @@ void MainWindow::on_actionScript_settings_triggered() {
 Qt::SortOrder MainWindow::toQtOrder(int order) {
     if (order == ORDER_ASCENDING) {
         return Qt::AscendingOrder;
-    } else {
-        return Qt::DescendingOrder;
     }
+    return Qt::DescendingOrder;
 }
 
 void MainWindow::updatePanelsSortOrder() {
@@ -12021,10 +12018,14 @@ void MainWindow::on_actionEditorWidthCustom_triggered() {
     bool ok;
     int characters = QInputDialog::getInt(
         this, tr("Custom editor width"), tr("Characters:"),
-        settings.value("DistractionFreeMode/editorWidthCustom", 80).toInt(), 20,
-        10000, 1, &ok);
+        settings
+            .value(QStringLiteral("DistractionFreeMode/editorWidthCustom"), 80)
+            .toInt(),
+        20, 10000, 1, &ok);
 
     if (ok) {
-        settings.setValue("DistractionFreeMode/editorWidthCustom", characters);
+        settings.setValue(
+            QStringLiteral("DistractionFreeMode/editorWidthCustom"),
+            characters);
     }
 }

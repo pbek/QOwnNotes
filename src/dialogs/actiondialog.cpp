@@ -43,7 +43,7 @@ void ActionDialog::refreshUi() {
  */
 void ActionDialog::buildActionTreeForMenu(QMenu *menu,
                                           QTreeWidgetItem *parentItem) {
-    QString menuText = menu->title().remove("&");
+    QString menuText = menu->title().remove(QStringLiteral("&"));
 
     if (menuText.isEmpty()) {
         return;
@@ -69,7 +69,7 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu,
 
     // add all actions to the tree widget item
     Q_FOREACH (QAction *action, menu->actions()) {
-        QString text = action->text().remove("&");
+        QString text = action->text().remove(QStringLiteral("&"));
         QString actionName = action->objectName();
 
         if (text.isEmpty() || actionName.isEmpty() || !action->isVisible()) {

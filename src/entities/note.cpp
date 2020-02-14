@@ -2106,10 +2106,10 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
     }
 
     /*CODE HIGHLIGHTING*/
-    int cbCount = str.count(QLatin1String("```"));
+    int cbCount = str.count(QStringLiteral("```"));
     if (cbCount % 2 != 0) --cbCount;
 
-    int cbTildeCount = str.count(QLatin1String("~~~"));
+    int cbTildeCount = str.count(QStringLiteral("~~~"));
     if (cbTildeCount % 2 != 0) --cbTildeCount;
 
     // divide by two to get actual number of code blocks
@@ -2172,7 +2172,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
         font.fromString(fontString);
 
         // add the font for the code block
-        codeStyleSheet = QString("pre, code { %1; }")
+        codeStyleSheet = QStringLiteral("pre, code { %1; }")
                              .arg(Utils::Schema::encodeCssFont(font));
 
         // ignore code font size to allow zooming (#1202)
@@ -2235,7 +2235,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
             QFont bodyFont;
             bodyFont.fromString(bodyFontString);
 
-            exportStyleSheet = QString("body { %1; }")
+            exportStyleSheet = QStringLiteral("body { %1; }")
                                    .arg(Utils::Schema::encodeCssFont(bodyFont));
         }
 
@@ -2260,7 +2260,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     } else {
         const QString schemaStyles =
-            settings.value("MainWindow/noteTextView.useEditorStyles", true)
+            settings.value(QStringLiteral("MainWindow/noteTextView.useEditorStyles"), true)
                     .toBool()
                 ? Utils::Schema::getSchemaStyles()
                 : QLatin1String("");
@@ -2437,7 +2437,7 @@ QString Note::encryptNoteText() {
     // keep the first two lines unencrypted
     noteText = noteTextLines.at(0) + QStringLiteral("\n") +
                noteTextLines.at(1) + QStringLiteral("\n\n") +
-               QString(NOTE_TEXT_ENCRYPTION_PRE_STRING) + QStringLiteral("\n");
+               QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) + QStringLiteral("\n");
 
     // remove the first two lines for encryption
     noteTextLines.removeFirst();
@@ -2477,7 +2477,7 @@ QString Note::encryptNoteText() {
 
     // add the encrypted text to the new note text
     noteText += encryptedText + QStringLiteral("\n") +
-                QString(NOTE_TEXT_ENCRYPTION_POST_STRING);
+                QStringLiteral(NOTE_TEXT_ENCRYPTION_POST_STRING);
 
     // store note
     store();
@@ -2750,10 +2750,10 @@ QList<int> Note::findLinkedNoteIds() const {
         const QString noteText = note.getNoteText();
 
         // search for links to the relative file path in note
-        if (noteText.contains(QLatin1String("<") + relativeFilePath +
-                              QLatin1String(">")) ||
-            noteText.contains(QLatin1String("](") + relativeFilePath +
-                              QLatin1String(")"))) {
+        if (noteText.contains(QStringLiteral("<") + relativeFilePath +
+                              QStringLiteral(">")) ||
+            noteText.contains(QStringLiteral("](") + relativeFilePath +
+                              QStringLiteral(")"))) {
             noteIdList.append(note.getId());
         }
     }
@@ -2894,7 +2894,7 @@ void Note::handleNoteMoving(const Note &oldNote) const {
                         " in <strong>%n</strong> note file(s)?",
                         "", noteCount)
                 .arg(oldUrl, newUrl, oldNote.getFileName(), fileName),
-            "note-replace-links") == QMessageBox::Yes) {
+            QStringLiteral("note-replace-links")) == QMessageBox::Yes) {
         // replace the urls in all found notes
         for (const int noteId : noteIdList) {
             Note note = Note::fetch(noteId);
@@ -3156,7 +3156,7 @@ QString Note::importMediaFromBase64(QString &data, const QString &imageSuffix) {
     // create a temporary file for the image
     QTemporaryFile *tempFile =
         new QTemporaryFile(QDir::tempPath() + QDir::separator() +
-                           QLatin1String("media-XXXXXX.") + imageSuffix);
+                           QStringLiteral("media-XXXXXX.") + imageSuffix);
 
     if (!tempFile->open()) {
         delete tempFile;

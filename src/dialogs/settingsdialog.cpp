@@ -57,7 +57,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
 
-    bool fromWelcomeDialog = parent->objectName() == "WelcomeDialog";
+    bool fromWelcomeDialog = parent->objectName() == QLatin1String("WelcomeDialog");
 
     MainWindow *mainWindow = MainWindow::instance();
 
@@ -128,12 +128,12 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             SLOT(noteNotificationButtonGroupPressed(QAbstractButton *)));
 
     for (int i = 0; i <= 8; i++) {
-        setOKLabelData(i, "unknown", SettingsDialog::Unknown);
+        setOKLabelData(i, QStringLiteral("unknown"), SettingsDialog::Unknown);
     }
 
     // add the QOwnNotesAPI minimum version number to the info text
     QString html = ui->installInfoTextLabel1->text();
-    html.replace("QOWNNOTESAPI_MIN_VERSION", QOWNNOTESAPI_MIN_VERSION);
+    html.replace(QLatin1String("QOWNNOTESAPI_MIN_VERSION"), QOWNNOTESAPI_MIN_VERSION);
     ui->installInfoTextLabel1->setText(html);
 
     // do the network proxy tab setup
@@ -194,11 +194,11 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->toolbarEditor->setTargetWindow(MainWindow::instance());
     ui->toolbarEditor->setCustomToolbarRemovalOnly(true);
 
-    QStringList disabledToolbarNames(QStringList() << "windowToolbar"
-                                                   << "customActionsToolbar");
+    QStringList disabledToolbarNames(QStringList() << QStringLiteral("windowToolbar")
+                                                   << QStringLiteral("customActionsToolbar"));
     ui->toolbarEditor->setDisabledToolbarNames(disabledToolbarNames);
 
-    QStringList disabledMenuNames(QStringList() << "noteFoldersMenu");
+    QStringList disabledMenuNames(QStringList() << QStringLiteral("noteFoldersMenu"));
     ui->toolbarEditor->setDisabledMenuNames(disabledMenuNames);
 
     //    QStringList disabledMenuActionNames(QStringList() << "");
@@ -288,12 +288,12 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
         ui->leftSideFrame->setVisible(false);
     }
 
-    if (!ui->noteListPreviewCheckBox->text().contains("(experimental)")) {
+    if (!ui->noteListPreviewCheckBox->text().contains(QLatin1String("(experimental)"))) {
         ui->noteListPreviewCheckBox->setText(
             ui->noteListPreviewCheckBox->text() + " (experimental)");
     }
 
-    if (!ui->enableNoteTreeCheckBox->text().contains("work in progress")) {
+    if (!ui->enableNoteTreeCheckBox->text().contains(QLatin1String("work in progress"))) {
         ui->enableNoteTreeCheckBox->setText(ui->enableNoteTreeCheckBox->text() +
                                             " (work in progress)");
     }
@@ -527,7 +527,7 @@ void SettingsDialog::loadProxySettings() {
 
     // load current proxy settings
     int type =
-        settings.value("networking/proxyType", QNetworkProxy::NoProxy).toInt();
+        settings.value(QStringLiteral("networking/proxyType"), QNetworkProxy::NoProxy).toInt();
     switch (type) {
         case QNetworkProxy::NoProxy:
             ui->noProxyRadioButton->setChecked(true);
@@ -545,15 +545,15 @@ void SettingsDialog::loadProxySettings() {
     }
 
     ui->hostLineEdit->setText(
-        settings.value("networking/proxyHostName").toString());
+        settings.value(QStringLiteral("networking/proxyHostName")).toString());
     ui->portSpinBox->setValue(
-        settings.value("networking/proxyPort", 8080).toInt());
+        settings.value(QStringLiteral("networking/proxyPort"), 8080).toInt());
     ui->authRequiredcheckBox->setChecked(
-        settings.value("networking/proxyNeedsAuth").toBool());
+        settings.value(QStringLiteral("networking/proxyNeedsAuth")).toBool());
     ui->userLineEdit->setText(
-        settings.value("networking/proxyUser").toString());
+        settings.value(QStringLiteral("networking/proxyUser")).toString());
     ui->passwordLineEdit->setText(CryptoService::instance()->decryptToString(
-        settings.value("networking/proxyPassword").toString()));
+        settings.value(QStringLiteral("networking/proxyPassword")).toString()));
 }
 
 /**
@@ -571,17 +571,17 @@ void SettingsDialog::storeProxySettings() {
         proxyType = ui->typeComboBox->itemData(ui->typeComboBox->currentIndex())
                         .toInt();
 
-        settings.setValue("networking/proxyNeedsAuth",
+        settings.setValue(QStringLiteral("networking/proxyNeedsAuth"),
                           ui->authRequiredcheckBox->isChecked());
-        settings.setValue("networking/proxyUser", ui->userLineEdit->text());
-        settings.setValue("networking/proxyPassword",
+        settings.setValue(QStringLiteral("networking/proxyUser"), ui->userLineEdit->text());
+        settings.setValue(QStringLiteral("networking/proxyPassword"),
                           CryptoService::instance()->encryptToString(
                               ui->passwordLineEdit->text()));
-        settings.setValue("networking/proxyHostName", ui->hostLineEdit->text());
-        settings.setValue("networking/proxyPort", ui->portSpinBox->value());
+        settings.setValue(QStringLiteral("networking/proxyHostName"), ui->hostLineEdit->text());
+        settings.setValue(QStringLiteral("networking/proxyPort"), ui->portSpinBox->value());
     }
 
-    settings.setValue("networking/proxyType", proxyType);
+    settings.setValue(QStringLiteral("networking/proxyType"), proxyType);
 
     ClientProxy proxy;
 
@@ -614,7 +614,7 @@ void SettingsDialog::storeSelectedCloudConnection() {
     bool updateComboBox = false;
 
     // remove trailing "/" of the server url
-    if (url.endsWith("/")) {
+    if (url.endsWith(QLatin1String("/"))) {
         url.chop(1);
     }
 
@@ -643,132 +643,132 @@ void SettingsDialog::storeSettings() {
     QSettings settings;
     storeSelectedCloudConnection();
 
-    settings.setValue("ownCloud/supportEnabled",
+    settings.setValue(QStringLiteral("ownCloud/supportEnabled"),
                       ui->ownCloudSupportCheckBox->isChecked());
-    settings.setValue("todoCalendarSupport",
+    settings.setValue(QStringLiteral("todoCalendarSupport"),
                       ui->todoCalendarSupportCheckBox->isChecked());
-    settings.setValue("insertTimeFormat", ui->timeFormatLineEdit->text());
-    settings.setValue("disableAutomaticUpdateDialog",
+    settings.setValue(QStringLiteral("insertTimeFormat"), ui->timeFormatLineEdit->text());
+    settings.setValue(QStringLiteral("disableAutomaticUpdateDialog"),
                       ui->disableAutomaticUpdateDialogCheckBox->isChecked());
-    settings.setValue("notifyAllExternalModifications",
+    settings.setValue(QStringLiteral("notifyAllExternalModifications"),
                       ui->notifyAllExternalModificationsCheckBox->isChecked());
-    settings.setValue("ignoreAllExternalModifications",
+    settings.setValue(QStringLiteral("ignoreAllExternalModifications"),
                       ui->ignoreAllExternalModificationsCheckBox->isChecked());
-    settings.setValue("acceptAllExternalModifications",
+    settings.setValue(QStringLiteral("acceptAllExternalModifications"),
                       ui->acceptAllExternalModificationsCheckBox->isChecked());
     settings.setValue(
-        "ignoreAllExternalNoteFolderChanges",
+        QStringLiteral("ignoreAllExternalNoteFolderChanges"),
         ui->ignoreAllExternalNoteFolderChangesCheckBox->isChecked());
-    settings.setValue("allowDifferentNoteFileName",
+    settings.setValue(QStringLiteral("allowDifferentNoteFileName"),
                       ui->allowDifferentNoteFileNameCheckBox->isChecked());
-    settings.setValue("newNoteAskHeadline",
+    settings.setValue(QStringLiteral("newNoteAskHeadline"),
                       ui->newNoteAskHeadlineCheckBox->isChecked());
-    settings.setValue("useUNIXNewline",
+    settings.setValue(QStringLiteral("useUNIXNewline"),
                       ui->useUNIXNewlineCheckBox->isChecked());
-    settings.setValue("restoreCursorPosition",
+    settings.setValue(QStringLiteral("restoreCursorPosition"),
                       ui->restoreCursorPositionCheckBox->isChecked());
-    settings.setValue("restoreLastNoteAtStartup",
+    settings.setValue(QStringLiteral("restoreLastNoteAtStartup"),
                       ui->restoreLastNoteAtStartupCheckBox->isChecked());
-    settings.setValue("noteSaveIntervalTime",
+    settings.setValue(QStringLiteral("noteSaveIntervalTime"),
                       ui->noteSaveIntervalTime->value());
     settings.setValue(
-        "defaultNoteFileExtension",
+        QStringLiteral("defaultNoteFileExtension"),
         getSelectedListWidgetValue(ui->defaultNoteFileExtensionListWidget));
-    settings.setValue("localTrash/supportEnabled",
+    settings.setValue(QStringLiteral("localTrash/supportEnabled"),
                       ui->localTrashEnabledCheckBox->isChecked());
-    settings.setValue("localTrash/autoCleanupEnabled",
+    settings.setValue(QStringLiteral("localTrash/autoCleanupEnabled"),
                       ui->localTrashClearCheckBox->isChecked());
-    settings.setValue("localTrash/autoCleanupDays",
+    settings.setValue(QStringLiteral("localTrash/autoCleanupDays"),
                       ui->localTrashClearTimeSpinBox->value());
-    settings.setValue("enableSocketServer",
+    settings.setValue(QStringLiteral("enableSocketServer"),
                       ui->enableSocketServerCheckBox->isChecked());
 
     // make the path relative to the portable data path if we are in
     // portable mode
-    settings.setValue("externalEditorPath",
+    settings.setValue(QStringLiteral("externalEditorPath"),
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                           ui->externalEditorPathLineEdit->text()));
 
-    settings.setValue("overrideInterfaceFontSize",
+    settings.setValue(QStringLiteral("overrideInterfaceFontSize"),
                       ui->overrideInterfaceFontSizeGroupBox->isChecked());
-    settings.setValue("interfaceFontSize",
+    settings.setValue(QStringLiteral("interfaceFontSize"),
                       ui->interfaceFontSizeSpinBox->value());
-    settings.setValue("itemHeight", ui->itemHeightSpinBox->value());
-    settings.setValue("MainWindow/mainToolBar.iconSize",
+    settings.setValue(QStringLiteral("itemHeight"), ui->itemHeightSpinBox->value());
+    settings.setValue(QStringLiteral("MainWindow/mainToolBar.iconSize"),
                       ui->toolbarIconSizeSpinBox->value());
-    settings.setValue("allowOnlyOneAppInstance",
+    settings.setValue(QStringLiteral("allowOnlyOneAppInstance"),
                       ui->allowOnlyOneAppInstanceCheckBox->isChecked());
-    settings.setValue("closeTodoListAfterSave",
+    settings.setValue(QStringLiteral("closeTodoListAfterSave"),
                       ui->closeTodoListAfterSaveCheckBox->isChecked());
-    settings.setValue("interfaceLanguage",
+    settings.setValue(QStringLiteral("interfaceLanguage"),
                       getSelectedListWidgetValue(ui->languageListWidget));
-    settings.setValue("markdownHighlightingEnabled",
+    settings.setValue(QStringLiteral("markdownHighlightingEnabled"),
                       ui->markdownHighlightingCheckBox->isChecked());
-    settings.setValue("fullyHighlightedBlockquotes",
+    settings.setValue(QStringLiteral("fullyHighlightedBlockquotes"),
                       ui->fullyHighlightedBlockquotesCheckBox->isChecked());
-    settings.setValue("noteEditIsCentralWidget",
+    settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
                       ui->noteEditCentralWidgetCheckBox->isChecked());
-    settings.setValue("MainWindow/noteTextView.rtl",
+    settings.setValue(QStringLiteral("MainWindow/noteTextView.rtl"),
                       ui->noteTextViewRTLCheckBox->isChecked());
-    settings.setValue("MainWindow/noteTextView.ignoreCodeFontSize",
+    settings.setValue(QStringLiteral("MainWindow/noteTextView.ignoreCodeFontSize"),
                       ui->noteTextViewIgnoreCodeFontSizeCheckBox->isChecked());
-    settings.setValue("MainWindow/noteTextView.underline",
+    settings.setValue(QStringLiteral("MainWindow/noteTextView.underline"),
                       ui->noteTextViewUnderlineCheckBox->isChecked());
-    settings.setValue("MainWindow/noteTextView.useEditorStyles",
+    settings.setValue(QStringLiteral("MainWindow/noteTextView.useEditorStyles"),
                       ui->noteTextViewUseEditorStylesCheckBox->isChecked());
-    settings.setValue("MainWindow/noteTextView.useInternalExportStyling",
+    settings.setValue(QStringLiteral("MainWindow/noteTextView.useInternalExportStyling"),
                       ui->useInternalExportStylingCheckBox->isChecked());
-    settings.setValue("Debug/fakeOldVersionNumber",
+    settings.setValue(QStringLiteral("Debug/fakeOldVersionNumber"),
                       ui->oldVersionNumberCheckBox->isChecked());
-    settings.setValue("Debug/fileLogging",
+    settings.setValue(QStringLiteral("Debug/fileLogging"),
                       ui->fileLoggingCheckBox->isChecked());
-    settings.setValue("Editor/autoBracketClosing",
+    settings.setValue(QStringLiteral("Editor/autoBracketClosing"),
                       ui->autoBracketClosingCheckBox->isChecked());
-    settings.setValue("Editor/autoBracketRemoval",
+    settings.setValue(QStringLiteral("Editor/autoBracketRemoval"),
                       ui->autoBracketRemovalCheckBox->isChecked());
-    settings.setValue("Editor/highlightCurrentLine",
+    settings.setValue(QStringLiteral("Editor/highlightCurrentLine"),
                       ui->highlightCurrentLineCheckBox->isChecked());
-    settings.setValue("Editor/editorWidthInDFMOnly",
+    settings.setValue(QStringLiteral("Editor/editorWidthInDFMOnly"),
                       ui->editorWidthInDFMOnlyCheckBox->isChecked());
-    settings.setValue("Editor/vimMode", ui->vimModeCheckBox->isChecked());
-    settings.setValue("Editor/disableCursorBlinking",
+    settings.setValue(QStringLiteral("Editor/vimMode"), ui->vimModeCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/disableCursorBlinking"),
                       ui->disableCursorBlinkingCheckBox->isChecked());
-    settings.setValue("Editor/useTabIndent",
+    settings.setValue(QStringLiteral("Editor/useTabIndent"),
                       ui->useTabIndentCheckBox->isChecked());
-    settings.setValue("Editor/indentSize", ui->indentSizeSpinBox->value());
+    settings.setValue(QStringLiteral("Editor/indentSize"), ui->indentSizeSpinBox->value());
 
-    if (!settings.value("appMetrics/disableTracking").toBool() &&
+    if (!settings.value(QStringLiteral("appMetrics/disableTracking")).toBool() &&
         ui->appMetricsCheckBox->isChecked()) {
-        MetricsService::instance()->sendVisit("settings/app-metrics-disabled");
+        MetricsService::instance()->sendVisit(QStringLiteral("settings/app-metrics-disabled"));
     }
 
-    settings.setValue("appMetrics/disableTracking",
+    settings.setValue(QStringLiteral("appMetrics/disableTracking"),
                       ui->appMetricsCheckBox->isChecked());
 
-    if (!settings.value("appMetrics/disableAppHeartbeat").toBool() &&
+    if (!settings.value(QStringLiteral("appMetrics/disableAppHeartbeat")).toBool() &&
         ui->appHeartbeatCheckBox->isChecked()) {
         MetricsService::instance()->sendVisit(
-            "settings/app-heartbeat-disabled");
+            QStringLiteral("settings/app-heartbeat-disabled"));
     }
 
-    settings.setValue("appMetrics/disableAppHeartbeat",
+    settings.setValue(QStringLiteral("appMetrics/disableAppHeartbeat"),
                       ui->appHeartbeatCheckBox->isChecked());
 
-    settings.setValue("darkModeColors",
+    settings.setValue(QStringLiteral("darkModeColors"),
                       ui->darkModeColorsCheckBox->isChecked());
 
-    settings.setValue("darkMode", ui->darkModeCheckBox->isChecked());
+    settings.setValue(QStringLiteral("darkMode"), ui->darkModeCheckBox->isChecked());
 
-    settings.setValue("darkModeTrayIcon",
+    settings.setValue(QStringLiteral("darkModeTrayIcon"),
                       ui->darkModeTrayIconCheckBox->isChecked());
 
-    settings.setValue("darkModeIconTheme",
+    settings.setValue(QStringLiteral("darkModeIconTheme"),
                       ui->darkModeIconThemeCheckBox->isChecked());
 
-    settings.setValue("internalIconTheme",
+    settings.setValue(QStringLiteral("internalIconTheme"),
                       ui->internalIconThemeCheckBox->isChecked());
 
-    settings.setValue("systemIconTheme",
+    settings.setValue(QStringLiteral("systemIconTheme"),
                       ui->systemIconThemeCheckBox->isChecked());
 
     QStringList todoCalendarUrlList;
@@ -788,12 +788,12 @@ void SettingsDialog::storeSettings() {
     }
 
     // store the tasks calendar data to the settings
-    settings.setValue("ownCloud/todoCalendarUrlList", todoCalendarUrlList);
-    settings.setValue("ownCloud/todoCalendarDisplayNameList",
+    settings.setValue(QStringLiteral("ownCloud/todoCalendarUrlList"), todoCalendarUrlList);
+    settings.setValue(QStringLiteral("ownCloud/todoCalendarDisplayNameList"),
                       todoCalendarDisplayNameList);
-    settings.setValue("ownCloud/todoCalendarEnabledList",
+    settings.setValue(QStringLiteral("ownCloud/todoCalendarEnabledList"),
                       todoCalendarEnabledList);
-    settings.setValue("ownCloud/todoCalendarEnabledUrlList",
+    settings.setValue(QStringLiteral("ownCloud/todoCalendarEnabledUrlList"),
                       todoCalendarEnabledUrlList);
 
     int todoCalendarBackend = OwnCloudService::DefaultOwnCloudCalendar;
@@ -806,19 +806,19 @@ void SettingsDialog::storeSettings() {
         todoCalendarBackend = OwnCloudService::LegacyOwnCloudCalendar;
     }
 
-    settings.setValue("ownCloud/todoCalendarBackend", todoCalendarBackend);
+    settings.setValue(QStringLiteral("ownCloud/todoCalendarBackend"), todoCalendarBackend);
     settings.setValue(
-        "ownCloud/todoCalendarCloudConnectionId",
+        QStringLiteral("ownCloud/todoCalendarCloudConnectionId"),
         ui->calendarCloudConnectionComboBox->currentData().toInt());
-    settings.setValue("ownCloud/todoCalendarCalDAVServerUrl",
+    settings.setValue(QStringLiteral("ownCloud/todoCalendarCalDAVServerUrl"),
                       ui->calDavServerUrlEdit->text());
-    settings.setValue("ownCloud/todoCalendarCalDAVUsername",
+    settings.setValue(QStringLiteral("ownCloud/todoCalendarCalDAVUsername"),
                       ui->calDavUsernameEdit->text());
-    settings.setValue("ownCloud/todoCalendarCalDAVPassword",
+    settings.setValue(QStringLiteral("ownCloud/todoCalendarCalDAVPassword"),
                       CryptoService::instance()->encryptToString(
                           ui->calDavPasswordEdit->text()));
 
-    settings.setValue("networking/ignoreSSLErrors",
+    settings.setValue(QStringLiteral("networking/ignoreSSLErrors"),
                       ui->ignoreSSLErrorsCheckBox->isChecked());
 
     // store the custom note file extensions
@@ -829,7 +829,7 @@ void SettingsDialog::storeSettings() {
         customNoteFileExtensionList.append(item->whatsThis());
     }
     customNoteFileExtensionList.removeDuplicates();
-    settings.setValue("customNoteFileExtensionList",
+    settings.setValue(QStringLiteral("customNoteFileExtensionList"),
                       customNoteFileExtensionList);
 
     // store the font settings
@@ -851,50 +851,50 @@ void SettingsDialog::storeSettings() {
     storeScriptListEnabledState();
 
     // store image scaling settings
-    settings.setValue("imageScaleDown",
+    settings.setValue(QStringLiteral("imageScaleDown"),
                       ui->imageScaleDownCheckBox->isChecked());
-    settings.setValue("imageScaleDownMaximumHeight",
+    settings.setValue(QStringLiteral("imageScaleDownMaximumHeight"),
                       ui->maximumImageHeightSpinBox->value());
-    settings.setValue("imageScaleDownMaximumWidth",
+    settings.setValue(QStringLiteral("imageScaleDownMaximumWidth"),
                       ui->maximumImageWidthSpinBox->value());
 
     // store git settings
-    settings.setValue("gitExecutablePath",
+    settings.setValue(QStringLiteral("gitExecutablePath"),
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                           ui->gitPathLineEdit->text()));
-    settings.setValue("gitCommitInterval", ui->gitCommitIntervalTime->value());
-    settings.setValue("gitLogCommand", ui->gitLogCommandLineEdit->text());
+    settings.setValue(QStringLiteral("gitCommitInterval"), ui->gitCommitIntervalTime->value());
+    settings.setValue(QStringLiteral("gitLogCommand"), ui->gitLogCommandLineEdit->text());
 
     // store Panels settings
     storePanelSettings();
 
     // store the interface style settings
     if (ui->interfaceStyleComboBox->currentIndex() > 0) {
-        settings.setValue("interfaceStyle",
+        settings.setValue(QStringLiteral("interfaceStyle"),
                           ui->interfaceStyleComboBox->currentText());
     } else {
-        settings.remove("interfaceStyle");
+        settings.remove(QStringLiteral("interfaceStyle"));
     }
 
     // store the cursor width
-    settings.setValue("cursorWidth", ui->cursorWidthSpinBox->value());
+    settings.setValue(QStringLiteral("cursorWidth"), ui->cursorWidthSpinBox->value());
 
-    settings.setValue("SearchEngineId",
+    settings.setValue(QStringLiteral("SearchEngineId"),
                       ui->searchEngineSelectionComboBox->currentData().toInt());
 
-    settings.setValue("ShowSystemTray",
+    settings.setValue(QStringLiteral("ShowSystemTray"),
                       ui->showSystemTrayCheckBox->isChecked());
-    settings.setValue("StartHidden", ui->startHiddenCheckBox->isChecked());
+    settings.setValue(QStringLiteral("StartHidden"), ui->startHiddenCheckBox->isChecked());
     settings.setValue(
-        "automaticNoteFolderDatabaseClosing",
+        QStringLiteral("automaticNoteFolderDatabaseClosing"),
         ui->automaticNoteFolderDatabaseClosingCheckBox->isChecked());
-    settings.setValue("legacyLinking", ui->legacyLinkingCheckBox->isChecked());
+    settings.setValue(QStringLiteral("legacyLinking"), ui->legacyLinkingCheckBox->isChecked());
 
-    settings.setValue("webSocketServerService/port",
+    settings.setValue(QStringLiteral("webSocketServerService/port"),
                       ui->webSocketServerServicePortSpinBox->value());
-    settings.setValue("webSocketServerService/bookmarksTag",
+    settings.setValue(QStringLiteral("webSocketServerService/bookmarksTag"),
                       ui->bookmarksTagLineEdit->text());
-    settings.setValue("webSocketServerService/bookmarksNoteName",
+    settings.setValue(QStringLiteral("webSocketServerService/bookmarksNoteName"),
                       ui->bookmarksNoteNameLineEdit->text());
 }
 
@@ -905,71 +905,71 @@ void SettingsDialog::storePanelSettings() {
     QSettings settings;
     // Notes Panel Options
     ui->notesPanelSortAlphabeticalRadioButton->isChecked()
-        ? settings.setValue("notesPanelSort", SORT_ALPHABETICAL)
-        : settings.setValue("notesPanelSort", SORT_BY_LAST_CHANGE);
+        ? settings.setValue(QStringLiteral("notesPanelSort"), SORT_ALPHABETICAL)
+        : settings.setValue(QStringLiteral("notesPanelSort"), SORT_BY_LAST_CHANGE);
     ui->notesPanelOrderDescendingRadioButton->isChecked()
-        ? settings.setValue("notesPanelOrder", ORDER_DESCENDING)
-        : settings.setValue("notesPanelOrder", ORDER_ASCENDING);
+        ? settings.setValue(QStringLiteral("notesPanelOrder"), ORDER_DESCENDING)
+        : settings.setValue(QStringLiteral("notesPanelOrder"), ORDER_ASCENDING);
 
     // Note Subfolders Panel Options
-    settings.setValue("noteSubfoldersPanelHideSearch",
+    settings.setValue(QStringLiteral("noteSubfoldersPanelHideSearch"),
                       ui->noteSubfoldersPanelHideSearchCheckBox->isChecked());
 
     settings.setValue(
-        "noteSubfoldersPanelDisplayAsFullTree",
+        QStringLiteral("noteSubfoldersPanelDisplayAsFullTree"),
         ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->isChecked());
 
     settings.setValue(
-        "noteSubfoldersPanelShowRootFolderName",
+        QStringLiteral("noteSubfoldersPanelShowRootFolderName"),
         ui->noteSubfoldersPanelShowRootFolderNameCheckBox->isChecked());
 
     settings.setValue(
-        "noteSubfoldersPanelShowNotesRecursively",
+        QStringLiteral("noteSubfoldersPanelShowNotesRecursively"),
         ui->noteSubfoldersPanelShowNotesRecursivelyCheckBox->isChecked());
 
     settings.setValue(
-        "disableSavedSearchesAutoCompletion",
+        QStringLiteral("disableSavedSearchesAutoCompletion"),
         ui->disableSavedSearchesAutoCompletionCheckBox->isChecked());
 
-    settings.setValue("showMatches", ui->showMatchesCheckBox->isChecked());
+    settings.setValue(QStringLiteral("showMatches"), ui->showMatchesCheckBox->isChecked());
 
-    settings.setValue("noteSubfoldersPanelShowFullPath",
+    settings.setValue(QStringLiteral("noteSubfoldersPanelShowFullPath"),
                       ui->noteSubfoldersPanelShowFullPathCheckBox->isChecked());
 
     ui->noteSubfoldersPanelSortAlphabeticalRadioButton->isChecked()
-        ? settings.setValue("noteSubfoldersPanelSort", SORT_ALPHABETICAL)
-        : settings.setValue("noteSubfoldersPanelSort", SORT_BY_LAST_CHANGE);
+        ? settings.setValue(QStringLiteral("noteSubfoldersPanelSort"), SORT_ALPHABETICAL)
+        : settings.setValue(QStringLiteral("noteSubfoldersPanelSort"), SORT_BY_LAST_CHANGE);
 
     ui->noteSubfoldersPanelOrderDescendingRadioButton->isChecked()
-        ? settings.setValue("noteSubfoldersPanelOrder", ORDER_DESCENDING)
-        : settings.setValue("noteSubfoldersPanelOrder", ORDER_ASCENDING);
+        ? settings.setValue(QStringLiteral("noteSubfoldersPanelOrder"), ORDER_DESCENDING)
+        : settings.setValue(QStringLiteral("noteSubfoldersPanelOrder"), ORDER_ASCENDING);
 
     const QSignalBlocker blocker(ui->ignoreNoteSubFoldersLineEdit);
-    settings.setValue("ignoreNoteSubFolders",
+    settings.setValue(QStringLiteral("ignoreNoteSubFolders"),
                       ui->ignoreNoteSubFoldersLineEdit->text());
 
     // Tags Panel Options
-    settings.setValue("tagsPanelHideSearch",
+    settings.setValue(QStringLiteral("tagsPanelHideSearch"),
                       ui->tagsPanelHideSearchCheckBox->isChecked());
 
-    settings.setValue("taggingShowNotesRecursively",
+    settings.setValue(QStringLiteral("taggingShowNotesRecursively"),
                       ui->taggingShowNotesRecursivelyCheckBox->isChecked());
-    settings.setValue("noteListPreview",
+    settings.setValue(QStringLiteral("noteListPreview"),
                       ui->noteListPreviewCheckBox->isChecked());
 
     ui->tagsPanelSortAlphabeticalRadioButton->isChecked()
-        ? settings.setValue("tagsPanelSort", SORT_ALPHABETICAL)
-        : settings.setValue("tagsPanelSort", SORT_BY_LAST_CHANGE);
+        ? settings.setValue(QStringLiteral("tagsPanelSort"), SORT_ALPHABETICAL)
+        : settings.setValue(QStringLiteral("tagsPanelSort"), SORT_BY_LAST_CHANGE);
 
     ui->tagsPanelOrderDescendingRadioButton->isChecked()
-        ? settings.setValue("tagsPanelOrder", ORDER_DESCENDING)
-        : settings.setValue("tagsPanelOrder", ORDER_ASCENDING);
+        ? settings.setValue(QStringLiteral("tagsPanelOrder"), ORDER_DESCENDING)
+        : settings.setValue(QStringLiteral("tagsPanelOrder"), ORDER_ASCENDING);
 
     // Navigation Panel Options
-    settings.setValue("navigationPanelHideSearch",
+    settings.setValue(QStringLiteral("navigationPanelHideSearch"),
                       ui->navigationPanelHideSearchCheckBox->isChecked());
 
-    settings.setValue("enableNoteTree",
+    settings.setValue(QStringLiteral("enableNoteTree"),
                       ui->enableNoteTreeCheckBox->isChecked());
 }
 
@@ -978,13 +978,13 @@ void SettingsDialog::storePanelSettings() {
  */
 void SettingsDialog::storeFontSettings() {
     QSettings settings;
-    settings.setValue("MainWindow/noteTextEdit.font",
+    settings.setValue(QStringLiteral("MainWindow/noteTextEdit.font"),
                       noteTextEditFont.toString());
-    settings.setValue("MainWindow/noteTextEdit.code.font",
+    settings.setValue(QStringLiteral("MainWindow/noteTextEdit.code.font"),
                       noteTextEditCodeFont.toString());
-    settings.setValue("MainWindow/noteTextView.font",
+    settings.setValue(QStringLiteral("MainWindow/noteTextView.font"),
                       noteTextViewFont.toString());
-    settings.setValue("MainWindow/noteTextView.code.font",
+    settings.setValue(QStringLiteral("MainWindow/noteTextView.code.font"),
                       noteTextViewCodeFont.toString());
 }
 
@@ -1000,35 +1000,35 @@ void SettingsDialog::readSettings() {
     ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
     ui->timeFormatLineEdit->setText(
-        settings.value("insertTimeFormat").toString());
+        settings.value(QStringLiteral("insertTimeFormat")).toString());
 
     // prepend the portable data path if we are in portable mode
     ui->externalEditorPathLineEdit->setText(
         Utils::Misc::prependPortableDataPathIfNeeded(
-            settings.value("externalEditorPath").toString(), true));
+            settings.value(QStringLiteral("externalEditorPath")).toString(), true));
 
     ui->disableAutomaticUpdateDialogCheckBox->setChecked(
-        settings.value("disableAutomaticUpdateDialog").toBool());
+        settings.value(QStringLiteral("disableAutomaticUpdateDialog")).toBool());
     ui->notifyAllExternalModificationsCheckBox->setChecked(
-        settings.value("notifyAllExternalModifications").toBool());
+        settings.value(QStringLiteral("notifyAllExternalModifications")).toBool());
     ui->ignoreAllExternalModificationsCheckBox->setChecked(
-        settings.value("ignoreAllExternalModifications").toBool());
+        settings.value(QStringLiteral("ignoreAllExternalModifications")).toBool());
     ui->acceptAllExternalModificationsCheckBox->setChecked(
-        settings.value("acceptAllExternalModifications").toBool());
+        settings.value(QStringLiteral("acceptAllExternalModifications")).toBool());
     ui->ignoreAllExternalNoteFolderChangesCheckBox->setChecked(
-        settings.value("ignoreAllExternalNoteFolderChanges").toBool());
+        settings.value(QStringLiteral("ignoreAllExternalNoteFolderChanges")).toBool());
     ui->allowDifferentNoteFileNameCheckBox->setChecked(
-        settings.value("allowDifferentNoteFileName").toBool());
+        settings.value(QStringLiteral("allowDifferentNoteFileName")).toBool());
     ui->newNoteAskHeadlineCheckBox->setChecked(
-        settings.value("newNoteAskHeadline").toBool());
+        settings.value(QStringLiteral("newNoteAskHeadline")).toBool());
     ui->useUNIXNewlineCheckBox->setChecked(
-        settings.value("useUNIXNewline").toBool());
+        settings.value(QStringLiteral("useUNIXNewline")).toBool());
     ui->localTrashEnabledCheckBox->setChecked(
-        settings.value("localTrash/supportEnabled", true).toBool());
+        settings.value(QStringLiteral("localTrash/supportEnabled"), true).toBool());
     ui->localTrashClearCheckBox->setChecked(
-        settings.value("localTrash/autoCleanupEnabled", true).toBool());
+        settings.value(QStringLiteral("localTrash/autoCleanupEnabled"), true).toBool());
     ui->localTrashClearTimeSpinBox->setValue(
-        settings.value("localTrash/autoCleanupDays", 30).toInt());
+        settings.value(QStringLiteral("localTrash/autoCleanupDays"), 30).toInt());
     ui->enableSocketServerCheckBox->setChecked(
         Utils::Misc::isSocketServerEnabled());
     on_enableSocketServerCheckBox_toggled();
@@ -1040,55 +1040,55 @@ void SettingsDialog::readSettings() {
 #endif
 
     ui->restoreCursorPositionCheckBox->setChecked(
-        settings.value("restoreCursorPosition", restoreCursorPositionDefault)
+        settings.value(QStringLiteral("restoreCursorPosition"), restoreCursorPositionDefault)
             .toBool());
     ui->restoreLastNoteAtStartupCheckBox->setChecked(
-        settings.value("restoreLastNoteAtStartup", true).toBool());
+        settings.value(QStringLiteral("restoreLastNoteAtStartup"), true).toBool());
     ui->noteSaveIntervalTime->setValue(
-        settings.value("noteSaveIntervalTime", 10).toInt());
+        settings.value(QStringLiteral("noteSaveIntervalTime"), 10).toInt());
     ui->noteTextViewRTLCheckBox->setChecked(
-        settings.value("MainWindow/noteTextView.rtl").toBool());
+        settings.value(QStringLiteral("MainWindow/noteTextView.rtl")).toBool());
     ui->noteTextViewIgnoreCodeFontSizeCheckBox->setChecked(
-        settings.value("MainWindow/noteTextView.ignoreCodeFontSize", true)
+        settings.value(QStringLiteral("MainWindow/noteTextView.ignoreCodeFontSize"), true)
             .toBool());
     ui->noteTextViewUnderlineCheckBox->setChecked(
-        settings.value("MainWindow/noteTextView.underline", true).toBool());
+        settings.value(QStringLiteral("MainWindow/noteTextView.underline"), true).toBool());
     ui->noteTextViewUseEditorStylesCheckBox->setChecked(
-        settings.value("MainWindow/noteTextView.useEditorStyles", true)
+        settings.value(QStringLiteral("MainWindow/noteTextView.useEditorStyles"), true)
             .toBool());
     ui->useInternalExportStylingCheckBox->setChecked(
         Utils::Misc::useInternalExportStylingForPreview());
     ui->oldVersionNumberCheckBox->setChecked(
-        settings.value("Debug/fakeOldVersionNumber").toBool());
+        settings.value(QStringLiteral("Debug/fakeOldVersionNumber")).toBool());
     ui->fileLoggingCheckBox->setChecked(
-        settings.value("Debug/fileLogging").toBool());
+        settings.value(QStringLiteral("Debug/fileLogging")).toBool());
     on_fileLoggingCheckBox_toggled(ui->fileLoggingCheckBox->isChecked());
     ui->autoBracketClosingCheckBox->setChecked(
-        settings.value("Editor/autoBracketClosing", true).toBool());
+        settings.value(QStringLiteral("Editor/autoBracketClosing"), true).toBool());
     ui->autoBracketRemovalCheckBox->setChecked(
-        settings.value("Editor/autoBracketRemoval", true).toBool());
+        settings.value(QStringLiteral("Editor/autoBracketRemoval"), true).toBool());
     ui->highlightCurrentLineCheckBox->setChecked(
-        settings.value("Editor/highlightCurrentLine", true).toBool());
+        settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool());
     ui->editorWidthInDFMOnlyCheckBox->setChecked(
-        settings.value("Editor/editorWidthInDFMOnly", true).toBool());
-    ui->vimModeCheckBox->setChecked(settings.value("Editor/vimMode").toBool());
+        settings.value(QStringLiteral("Editor/editorWidthInDFMOnly"), true).toBool());
+    ui->vimModeCheckBox->setChecked(settings.value(QStringLiteral("Editor/vimMode")).toBool());
     ui->disableCursorBlinkingCheckBox->setChecked(
-        settings.value("Editor/disableCursorBlinking").toBool());
+        settings.value(QStringLiteral("Editor/disableCursorBlinking")).toBool());
     ui->useTabIndentCheckBox->setChecked(
-        settings.value("Editor/useTabIndent").toBool());
+        settings.value(QStringLiteral("Editor/useTabIndent")).toBool());
     ui->indentSizeSpinBox->setValue(Utils::Misc::indentSize());
     ui->markdownHighlightingCheckBox->setChecked(
-        settings.value("markdownHighlightingEnabled", true).toBool());
+        settings.value(QStringLiteral("markdownHighlightingEnabled"), true).toBool());
     ui->fullyHighlightedBlockquotesCheckBox->setChecked(
-        settings.value("fullyHighlightedBlockquotes").toBool());
+        settings.value(QStringLiteral("fullyHighlightedBlockquotes")).toBool());
     ui->noteEditCentralWidgetCheckBox->setChecked(
-        settings.value("noteEditIsCentralWidget", true).toBool());
+        settings.value(QStringLiteral("noteEditIsCentralWidget"), true).toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(
-        settings.value("allowOnlyOneAppInstance").toBool());
+        settings.value(QStringLiteral("allowOnlyOneAppInstance")).toBool());
     ui->closeTodoListAfterSaveCheckBox->setChecked(
-        settings.value("closeTodoListAfterSave").toBool());
+        settings.value(QStringLiteral("closeTodoListAfterSave")).toBool());
     ui->toolbarIconSizeSpinBox->setValue(
-        settings.value("MainWindow/mainToolBar.iconSize").toInt());
+        settings.value(QStringLiteral("MainWindow/mainToolBar.iconSize")).toInt());
 
     const QSignalBlocker overrideInterfaceFontSizeGroupBoxBlocker(
         ui->overrideInterfaceFontSizeGroupBox);
@@ -1097,9 +1097,9 @@ void SettingsDialog::readSettings() {
         ui->interfaceFontSizeSpinBox);
     Q_UNUSED(interfaceFontSizeSpinBoxBlocker)
     ui->overrideInterfaceFontSizeGroupBox->setChecked(
-        settings.value("overrideInterfaceFontSize", false).toBool());
+        settings.value(QStringLiteral("overrideInterfaceFontSize"), false).toBool());
     ui->interfaceFontSizeSpinBox->setValue(
-        settings.value("interfaceFontSize", 11).toInt());
+        settings.value(QStringLiteral("interfaceFontSize"), 11).toInt());
 
     QTreeWidget treeWidget(this);
     auto *treeWidgetItem = new QTreeWidgetItem();
@@ -1107,58 +1107,58 @@ void SettingsDialog::readSettings() {
     int height = treeWidget.visualItemRect(treeWidgetItem).height();
 
     ui->itemHeightSpinBox->setValue(
-        settings.value("itemHeight", height).toInt());
+        settings.value(QStringLiteral("itemHeight"), height).toInt());
 
     selectListWidgetValue(ui->languageListWidget,
-                          settings.value("interfaceLanguage").toString());
+                          settings.value(QStringLiteral("interfaceLanguage")).toString());
 
     const QSignalBlocker blocker(ui->appMetricsCheckBox);
     Q_UNUSED(blocker)
     ui->appMetricsCheckBox->setChecked(
-        settings.value("appMetrics/disableTracking").toBool());
+        settings.value(QStringLiteral("appMetrics/disableTracking")).toBool());
 
     ui->appHeartbeatCheckBox->setChecked(
-        settings.value("appMetrics/disableAppHeartbeat").toBool());
+        settings.value(QStringLiteral("appMetrics/disableAppHeartbeat")).toBool());
 
     ui->darkModeColorsCheckBox->setChecked(
-        settings.value("darkModeColors").toBool());
+        settings.value(QStringLiteral("darkModeColors")).toBool());
 
     const QSignalBlocker darkModeCheckBoxBlocker(ui->darkModeCheckBox);
     Q_UNUSED(darkModeCheckBoxBlocker)
-    ui->darkModeCheckBox->setChecked(settings.value("darkMode").toBool());
+    ui->darkModeCheckBox->setChecked(settings.value(QStringLiteral("darkMode")).toBool());
 
     ui->darkModeTrayIconCheckBox->setChecked(
-        settings.value("darkModeTrayIcon").toBool());
+        settings.value(QStringLiteral("darkModeTrayIcon")).toBool());
 
     ui->darkModeIconThemeCheckBox->setChecked(
         Utils::Misc::isDarkModeIconTheme());
 
     ui->internalIconThemeCheckBox->setChecked(
-        settings.value("internalIconTheme").toBool());
+        settings.value(QStringLiteral("internalIconTheme")).toBool());
 
     ui->systemIconThemeCheckBox->setChecked(
-        settings.value("systemIconTheme").toBool());
+        settings.value(QStringLiteral("systemIconTheme")).toBool());
 
     // toggle the dark mode colors check box with the dark mode checkbox
     handleDarkModeCheckBoxToggled();
 
     noteTextEditFont.fromString(
-        settings.value("MainWindow/noteTextEdit.font").toString());
+        settings.value(QStringLiteral("MainWindow/noteTextEdit.font")).toString());
     setFontLabel(ui->noteTextEditFontLabel, noteTextEditFont);
 
     noteTextEditCodeFont.fromString(
-        settings.value("MainWindow/noteTextEdit.code.font").toString());
+        settings.value(QStringLiteral("MainWindow/noteTextEdit.code.font")).toString());
     setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
 
     // load note text view font
     QString fontString =
-        settings.value("MainWindow/noteTextView.font").toString();
+        settings.value(QStringLiteral("MainWindow/noteTextView.font")).toString();
 
     // store the current font if there isn't any set yet
     if (fontString.isEmpty()) {
         auto *textEdit = new QTextEdit();
         fontString = textEdit->font().toString();
-        settings.setValue("MainWindow/noteTextView.font", fontString);
+        settings.setValue(QStringLiteral("MainWindow/noteTextView.font"), fontString);
         delete textEdit;
     }
 
@@ -1166,7 +1166,7 @@ void SettingsDialog::readSettings() {
     setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
 
     // load note text view code font
-    fontString = settings.value("MainWindow/noteTextView.code.font").toString();
+    fontString = settings.value(QStringLiteral("MainWindow/noteTextView.code.font")).toString();
 
     // set a default note text view code font
     if (fontString.isEmpty()) {
@@ -1174,7 +1174,7 @@ void SettingsDialog::readSettings() {
         on_noteTextViewCodeResetButton_clicked();
 
         fontString = noteTextViewCodeFont.toString();
-        settings.setValue("MainWindow/noteTextView.code.font", fontString);
+        settings.setValue(QStringLiteral("MainWindow/noteTextView.code.font"), fontString);
     } else {
         noteTextViewCodeFont.fromString(fontString);
     }
@@ -1194,7 +1194,7 @@ void SettingsDialog::readSettings() {
     Q_UNUSED(blocker5)
 
     switch (settings
-                .value("ownCloud/todoCalendarBackend",
+                .value(QStringLiteral("ownCloud/todoCalendarBackend"),
                        OwnCloudService::DefaultOwnCloudCalendar)
                 .toInt()) {
         case OwnCloudService::CalendarPlus:
@@ -1216,19 +1216,19 @@ void SettingsDialog::readSettings() {
     Q_UNUSED(blocker6)
 
     ui->ignoreNonTodoCalendarsCheckBox->setChecked(
-        settings.value("ownCloud/ignoreNonTodoCalendars", true).toBool());
+        settings.value(QStringLiteral("ownCloud/ignoreNonTodoCalendars"), true).toBool());
 
     ui->calDavServerUrlEdit->setText(
-        settings.value("ownCloud/todoCalendarCalDAVServerUrl").toString());
+        settings.value(QStringLiteral("ownCloud/todoCalendarCalDAVServerUrl")).toString());
     ui->calDavUsernameEdit->setText(
-        settings.value("ownCloud/todoCalendarCalDAVUsername").toString());
+        settings.value(QStringLiteral("ownCloud/todoCalendarCalDAVUsername")).toString());
     ui->calDavPasswordEdit->setText(CryptoService::instance()->decryptToString(
-        settings.value("ownCloud/todoCalendarCalDAVPassword").toString()));
+        settings.value(QStringLiteral("ownCloud/todoCalendarCalDAVPassword")).toString()));
 
     QStringList todoCalendarUrlList =
-        settings.value("ownCloud/todoCalendarUrlList").toStringList();
+        settings.value(QStringLiteral("ownCloud/todoCalendarUrlList")).toStringList();
     QStringList todoCalendarDisplayNameList =
-        settings.value("ownCloud/todoCalendarDisplayNameList").toStringList();
+        settings.value(QStringLiteral("ownCloud/todoCalendarDisplayNameList")).toStringList();
     int todoCalendarUrlListCount = todoCalendarUrlList.count();
     int todoCalendarDisplayNameListCount = todoCalendarDisplayNameList.count();
 
@@ -1262,7 +1262,7 @@ void SettingsDialog::readSettings() {
                           Note::defaultNoteFileExtension());
 
     bool ignoreSSLErrors =
-        settings.value("networking/ignoreSSLErrors", true).toBool();
+        settings.value(QStringLiteral("networking/ignoreSSLErrors"), true).toBool();
     ui->ignoreSSLErrorsCheckBox->setChecked(ignoreSSLErrors);
     ui->letsEncryptInfoLabel->setVisible(ignoreSSLErrors);
 
@@ -1273,21 +1273,21 @@ void SettingsDialog::readSettings() {
     loadShortcutSettings();
 
     // load image scaling settings
-    bool scaleImageDown = settings.value("imageScaleDown", false).toBool();
+    bool scaleImageDown = settings.value(QStringLiteral("imageScaleDown"), false).toBool();
     ui->maximumImageHeightSpinBox->setValue(
-        settings.value("imageScaleDownMaximumHeight", 1024).toInt());
+        settings.value(QStringLiteral("imageScaleDownMaximumHeight"), 1024).toInt());
     ui->maximumImageWidthSpinBox->setValue(
-        settings.value("imageScaleDownMaximumWidth", 1024).toInt());
+        settings.value(QStringLiteral("imageScaleDownMaximumWidth"), 1024).toInt());
     ui->imageScaleDownCheckBox->setChecked(scaleImageDown);
     ui->imageScalingFrame->setVisible(scaleImageDown);
 
     // load git settings
     ui->gitPathLineEdit->setText(Utils::Misc::prependPortableDataPathIfNeeded(
-        settings.value("gitExecutablePath").toString(), true));
+        settings.value(QStringLiteral("gitExecutablePath")).toString(), true));
     ui->gitCommitIntervalTime->setValue(
-        settings.value("gitCommitInterval", 30).toInt());
+        settings.value(QStringLiteral("gitCommitInterval"), 30).toInt());
     ui->gitLogCommandLineEdit->setText(
-        settings.value("gitLogCommand").toString());
+        settings.value(QStringLiteral("gitLogCommand")).toString());
 
     // read panel settings
     readPanelSettings();
@@ -1298,14 +1298,14 @@ void SettingsDialog::readSettings() {
     initCloudConnectionComboBox();
 
     // set the cursor width spinbox value
-    ui->cursorWidthSpinBox->setValue(settings.value("cursorWidth", 1).toInt());
+    ui->cursorWidthSpinBox->setValue(settings.value(QStringLiteral("cursorWidth"), 1).toInt());
 
     const QSignalBlocker blocker8(this->ui->showSystemTrayCheckBox);
     Q_UNUSED(blocker8)
-    bool showSystemTray = settings.value("ShowSystemTray").toBool();
+    bool showSystemTray = settings.value(QStringLiteral("ShowSystemTray")).toBool();
     ui->showSystemTrayCheckBox->setChecked(showSystemTray);
     ui->startHiddenCheckBox->setEnabled(showSystemTray);
-    ui->startHiddenCheckBox->setChecked(settings.value("StartHidden").toBool());
+    ui->startHiddenCheckBox->setChecked(settings.value(QStringLiteral("StartHidden")).toBool());
     if (!showSystemTray) {
         ui->startHiddenCheckBox->setChecked(false);
     }
@@ -1313,7 +1313,7 @@ void SettingsDialog::readSettings() {
     ui->automaticNoteFolderDatabaseClosingCheckBox->setChecked(
         Utils::Misc::doAutomaticNoteFolderDatabaseClosing());
     ui->legacyLinkingCheckBox->setChecked(
-        settings.value("legacyLinking").toBool());
+        settings.value(QStringLiteral("legacyLinking")).toBool());
 
     ui->webSocketServerServicePortSpinBox->setValue(
         WebSocketServerService::getSettingsPort());
@@ -1348,7 +1348,7 @@ void SettingsDialog::initSearchEngineComboBox() const {
     // been removed from the hash table
     int savedEngineId =
         settings
-            .value("SearchEngineId", Utils::Misc::getDefaultSearchEngineId())
+            .value(QStringLiteral("SearchEngineId"), Utils::Misc::getDefaultSearchEngineId())
             .toInt();
     int savedEngineIndex = ui->searchEngineSelectionComboBox->findData(
         QVariant(savedEngineId).toString());
@@ -1371,7 +1371,7 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
     }
 
     QSettings settings;
-    QString interfaceStyle = settings.value("interfaceStyle").toString();
+    QString interfaceStyle = settings.value(QStringLiteral("interfaceStyle")).toString();
 
     if (!interfaceStyle.isEmpty()) {
         ui->interfaceStyleComboBox->setCurrentText(interfaceStyle);
@@ -1387,7 +1387,7 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
 void SettingsDialog::readPanelSettings() {
     QSettings settings;
     // Notes Panel Options
-    if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() ==
+    if (settings.value(QStringLiteral("notesPanelSort"), SORT_BY_LAST_CHANGE).toInt() ==
         SORT_ALPHABETICAL) {
         ui->notesPanelSortAlphabeticalRadioButton->setChecked(true);
         ui->notesPanelOrderGroupBox->setEnabled(true);
@@ -1395,27 +1395,27 @@ void SettingsDialog::readPanelSettings() {
         ui->notesPanelSortByLastChangeRadioButton->setChecked(true);
         ui->notesPanelOrderGroupBox->setEnabled(false);
     }
-    settings.value("notesPanelOrder").toInt() == ORDER_DESCENDING
+    settings.value(QStringLiteral("notesPanelOrder")).toInt() == ORDER_DESCENDING
         ? ui->notesPanelOrderDescendingRadioButton->setChecked(true)
         : ui->notesPanelOrderAscendingRadioButton->setChecked(true);
 
     // Note Subfoldes Panel Options
     ui->noteSubfoldersPanelHideSearchCheckBox->setChecked(
-        settings.value("noteSubfoldersPanelHideSearch").toBool());
+        settings.value(QStringLiteral("noteSubfoldersPanelHideSearch")).toBool());
 
     ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->setChecked(
-        settings.value("noteSubfoldersPanelDisplayAsFullTree", true).toBool());
+        settings.value(QStringLiteral("noteSubfoldersPanelDisplayAsFullTree"), true).toBool());
 
     ui->noteSubfoldersPanelShowNotesRecursivelyCheckBox->setChecked(
-        settings.value("noteSubfoldersPanelShowNotesRecursively").toBool());
+        settings.value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively")).toBool());
 
     ui->disableSavedSearchesAutoCompletionCheckBox->setChecked(
-        settings.value("disableSavedSearchesAutoCompletion").toBool());
+        settings.value(QStringLiteral("disableSavedSearchesAutoCompletion")).toBool());
 
     ui->showMatchesCheckBox->setChecked(
-        settings.value("showMatches", true).toBool());
+        settings.value(QStringLiteral("showMatches"), true).toBool());
 
-    if (settings.value("noteSubfoldersPanelShowRootFolderName", true)
+    if (settings.value(QStringLiteral("noteSubfoldersPanelShowRootFolderName"), true)
             .toBool()) {
         ui->noteSubfoldersPanelShowRootFolderNameCheckBox->setChecked(true);
         ui->noteSubfoldersPanelShowFullPathCheckBox->setEnabled(true);
@@ -1425,9 +1425,9 @@ void SettingsDialog::readPanelSettings() {
     }
 
     ui->noteSubfoldersPanelShowFullPathCheckBox->setChecked(
-        settings.value("noteSubfoldersPanelShowFullPath").toBool());
+        settings.value(QStringLiteral("noteSubfoldersPanelShowFullPath")).toBool());
 
-    if (settings.value("noteSubfoldersPanelSort").toInt() ==
+    if (settings.value(QStringLiteral("noteSubfoldersPanelSort")).toInt() ==
         SORT_ALPHABETICAL) {
         ui->noteSubfoldersPanelSortAlphabeticalRadioButton->setChecked(true);
         ui->noteSubfoldersPanelOrderGroupBox->setEnabled(true);
@@ -1436,19 +1436,19 @@ void SettingsDialog::readPanelSettings() {
         ui->noteSubfoldersPanelOrderGroupBox->setEnabled(false);
     }
 
-    settings.value("noteSubfoldersPanelOrder").toInt() == ORDER_DESCENDING
+    settings.value(QStringLiteral("noteSubfoldersPanelOrder")).toInt() == ORDER_DESCENDING
         ? ui->noteSubfoldersPanelOrderDescendingRadioButton->setChecked(true)
         : ui->noteSubfoldersPanelOrderAscendingRadioButton->setChecked(true);
 
     // Tags Panel Options
     ui->tagsPanelHideSearchCheckBox->setChecked(
-        settings.value("tagsPanelHideSearch").toBool());
+        settings.value(QStringLiteral("tagsPanelHideSearch")).toBool());
 
     ui->taggingShowNotesRecursivelyCheckBox->setChecked(
-        settings.value("taggingShowNotesRecursively").toBool());
+        settings.value(QStringLiteral("taggingShowNotesRecursively")).toBool());
     ui->noteListPreviewCheckBox->setChecked(Utils::Misc::isNoteListPreview());
 
-    if (settings.value("tagsPanelSort").toInt() == SORT_ALPHABETICAL) {
+    if (settings.value(QStringLiteral("tagsPanelSort")).toInt() == SORT_ALPHABETICAL) {
         ui->tagsPanelSortAlphabeticalRadioButton->setChecked(true);
         ui->tagsPanelOrderGroupBox->setEnabled(true);
     } else {
@@ -1456,17 +1456,17 @@ void SettingsDialog::readPanelSettings() {
         ui->tagsPanelOrderGroupBox->setEnabled(false);
     }
 
-    settings.value("tagsPanelOrder").toInt() == ORDER_DESCENDING
+    settings.value(QStringLiteral("tagsPanelOrder")).toInt() == ORDER_DESCENDING
         ? ui->tagsPanelOrderDescendingRadioButton->setChecked(true)
         : ui->tagsPanelOrderAscendingRadioButton->setChecked(true);
 
     ui->ignoreNoteSubFoldersLineEdit->setText(
-        settings.value("ignoreNoteSubFolders", IGNORED_NOTE_SUBFOLDERS_DEFAULT)
+        settings.value(QStringLiteral("ignoreNoteSubFolders"), IGNORED_NOTE_SUBFOLDERS_DEFAULT)
             .toString());
 
     // Navigation Panel Options
     ui->navigationPanelHideSearchCheckBox->setChecked(
-        settings.value("navigationPanelHideSearch").toBool());
+        settings.value(QStringLiteral("navigationPanelHideSearch")).toBool());
 
     ui->enableNoteTreeCheckBox->setChecked(Utils::Misc::isEnableNoteTree());
 }
@@ -1482,7 +1482,7 @@ void SettingsDialog::loadShortcutSettings() {
     }
 
     QSettings settings;
-    bool darkMode = settings.value("darkMode").toBool();
+    bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
 
     QPalette palette;
     QColor shortcutButtonActiveColor =
@@ -1496,8 +1496,8 @@ void SettingsDialog::loadShortcutSettings() {
     ui->shortcutTreeWidget->setColumnCount(2);
 
     // shortcuts on toolbars and note folders don't work yet
-    auto disabledMenuNames = QStringList() << "menuToolbars"
-                                           << "noteFoldersMenu";
+    auto disabledMenuNames = QStringList() << QStringLiteral("menuToolbars")
+                                           << QStringLiteral("noteFoldersMenu");
 
     // loop through all menus
     foreach (QMenu *menu, menus) {
@@ -1517,7 +1517,7 @@ void SettingsDialog::loadShortcutSettings() {
 
             // create the tree widget item
             auto *actionItem = new QTreeWidgetItem();
-            actionItem->setText(0, action->text().remove("&"));
+            actionItem->setText(0, action->text().remove(QStringLiteral("&")));
             actionItem->setToolTip(0, action->objectName());
             actionItem->setData(1, Qt::UserRole, action->objectName());
             menuItem->addChild(actionItem);
@@ -1526,7 +1526,7 @@ void SettingsDialog::loadShortcutSettings() {
             auto *keyWidget = new QKeySequenceWidget();
             keyWidget->setFixedWidth(300);
             keyWidget->setClearButtonIcon(QIcon::fromTheme(
-                "edit-clear", QIcon(":/icons/breeze-qownnotes/16x16/"
+                QStringLiteral("edit-clear"), QIcon(":/icons/breeze-qownnotes/16x16/"
                                     "edit-clear.svg")));
             keyWidget->setNoneText(tr("Undefined key"));
             keyWidget->setShortcutButtonActiveColor(shortcutButtonActiveColor);
@@ -1547,7 +1547,7 @@ void SettingsDialog::loadShortcutSettings() {
         }
 
         if (actionCount > 0) {
-            menuItem->setText(0, menu->title().remove("&"));
+            menuItem->setText(0, menu->title().remove(QStringLiteral("&")));
             menuItem->setToolTip(0, menu->objectName());
             ui->shortcutTreeWidget->addTopLevelItem(menuItem);
             menuItem->setExpanded(true);
@@ -1608,7 +1608,7 @@ void SettingsDialog::keySequenceEvent(const QString &objectName) {
                            "jump to the shortcut?")
                             .arg(eventKeySequence.toString(),
                                  shortcutItem->text(0)),
-                        "settings-shortcut-already-assigned",
+                        QStringLiteral("settings-shortcut-already-assigned"),
                         QMessageBox::Yes | QMessageBox::Cancel,
                         QMessageBox::Yes) == QMessageBox::Yes) {
                     ui->shortcutTreeWidget->scrollToItem(shortcutItem);
@@ -1692,7 +1692,7 @@ void SettingsDialog::selectListWidgetValue(QListWidget *listWidget,
                                            const QString &value) {
     // get all items from the list widget
     QList<QListWidgetItem *> items =
-        listWidget->findItems(QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
+        listWidget->findItems(QStringLiteral("*"), Qt::MatchWrap | Qt::MatchWildcard);
     // select the right item in the selector
     Q_FOREACH (QListWidgetItem *item, items) {
         if (item->whatsThis() == value) {
@@ -1713,7 +1713,7 @@ bool SettingsDialog::listWidgetValueExists(QListWidget *listWidget,
                                            const QString &value) {
     // get all items from the list widget
     QList<QListWidgetItem *> items =
-        listWidget->findItems(QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
+        listWidget->findItems(QStringLiteral("*"), Qt::MatchWrap | Qt::MatchWildcard);
     // checks if the value exists
     Q_FOREACH (QListWidgetItem *item, items) {
         if (item->whatsThis() == value) {
@@ -1776,7 +1776,7 @@ void SettingsDialog::connectTestCallback(bool appIsValid, QString appVersion,
     storeOwncloudDebugData();
 
     if (appIsValid) {
-        ui->connectionTestLabel->setStyleSheet("color: green;");
+        ui->connectionTestLabel->setStyleSheet(QStringLiteral("color: green;"));
         ui->connectionTestLabel->setText(
             tr("The connection was made successfully!\n"
                "Server version: %1\nQOwnNotesAPI version: %2")
@@ -1784,10 +1784,10 @@ void SettingsDialog::connectTestCallback(bool appIsValid, QString appVersion,
     } else {
         // hide password
         if (!ui->passwordEdit->text().isEmpty()) {
-            connectionErrorMessage.replace(ui->passwordEdit->text(), "***");
+            connectionErrorMessage.replace(ui->passwordEdit->text(), QLatin1String("***"));
         }
 
-        ui->connectionTestLabel->setStyleSheet("color: red;");
+        ui->connectionTestLabel->setStyleSheet(QStringLiteral("color: red;"));
         ui->connectionTestLabel->setText(
             Utils::Misc::replaceOwnCloudText(
                 tr("There was an error connecting to the ownCloud Server!\n"
@@ -1839,19 +1839,19 @@ void SettingsDialog::setOKLabelData(int number, const QString &text,
     QString color;
     switch (status) {
         case Unknown:
-            color = "gray";
+            color = QLatin1String("gray");
             break;
         case OK:
-            color = "green";
+            color = QLatin1String("green");
             break;
         case Warning:
-            color = "orange";
+            color = QLatin1String("orange");
             break;
         case Failure:
-            color = "red";
+            color = QLatin1String("red");
             break;
         default:
-            color = "white";
+            color = QLatin1String("white");
     }
 
     label->setText(text);
@@ -1874,7 +1874,7 @@ void SettingsDialog::refreshTodoCalendarList(
 
     QSettings settings;
     QStringList todoCalendarEnabledList =
-        settings.value("ownCloud/todoCalendarEnabledList").toStringList();
+        settings.value(QStringLiteral("ownCloud/todoCalendarEnabledList")).toStringList();
 
     QUrl serverUrl(ui->calDavCalendarRadioButton->isChecked()
                        ? ui->calDavServerUrlEdit->text()
@@ -1891,7 +1891,7 @@ void SettingsDialog::refreshTodoCalendarList(
         // remove the path from the end because we already got it in the url
         serverUrlText.replace(
             QRegularExpression(QRegularExpression::escape(serverUrlPath) + "$"),
-            "");
+            QLatin1String(""));
     }
 
     QListIterator<CalDAVCalendarData> itr(items);
@@ -1906,7 +1906,7 @@ void SettingsDialog::refreshTodoCalendarList(
         }
 
         // get the hash out of the url part
-        QRegularExpression regex(R"(\/([^\/]*)\/$)");
+        QRegularExpression regex(QStringLiteral(R"(\/([^\/]*)\/$)"));
         QRegularExpressionMatch match = regex.match(url);
         QString hash = match.captured(1);
 
@@ -1914,12 +1914,12 @@ void SettingsDialog::refreshTodoCalendarList(
         hash = QUrl::fromPercentEncoding(hash.toUtf8());
 
         // skip the contact birthdays calendar
-        if (hash == "contact_birthdays") {
+        if (hash == QLatin1String("contact_birthdays")) {
             continue;
         }
 
         // skip the Calendar Plus birthday calendar
-        if (hash.startsWith("bdaycpltocal_")) {
+        if (hash.startsWith(QLatin1String("bdaycpltocal_"))) {
             continue;
         }
 
@@ -2064,7 +2064,7 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
 
         Utils::Gui::information(this, tr("Database"),
                                 tr("The Database was reinitialized."),
-                                "database-reinitialized");
+                                QStringLiteral("database-reinitialized"));
     }
 }
 
@@ -2076,14 +2076,14 @@ void SettingsDialog::on_saveDebugInfoButton_clicked() {
         this, tr("Debug information"),
         tr("Please don't use this in the issue tracker, "
            "copy the debug information text directly into the issue."),
-        "debug-save");
+        QStringLiteral("debug-save"));
 
-    FileDialog dialog("SaveDebugInfo");
+    FileDialog dialog(QStringLiteral("SaveDebugInfo"));
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setNameFilter(tr("Markdown files") + " (*.md)");
     dialog.setWindowTitle(tr("Save debug information"));
-    dialog.selectFile("QOwnNotes Debug Information.md");
+    dialog.selectFile(QStringLiteral("QOwnNotes Debug Information.md"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
@@ -2225,10 +2225,10 @@ void SettingsDialog::on_setExternalEditorPathToolButton_clicked() {
     }
 
     QStringList mimeTypeFilters;
-    mimeTypeFilters << "application/x-executable"
-                    << "application/octet-stream";
+    mimeTypeFilters << QStringLiteral("application/x-executable")
+                    << QStringLiteral("application/octet-stream");
 
-    FileDialog dialog("ExternalEditor");
+    FileDialog dialog(QStringLiteral("ExternalEditor"));
 
     if (!dirPath.isEmpty()) {
         dialog.setDirectory(dirPath);
@@ -2365,7 +2365,7 @@ void SettingsDialog::on_noteFolderRemoveButton_clicked() {
             this, tr("Remove note folder"),
             tr("Remove the current note folder <strong>%1</strong>?")
                 .arg(_selectedNoteFolder.getName()),
-            "remove-note-folder") == QMessageBox::Yes) {
+            QStringLiteral("remove-note-folder")) == QMessageBox::Yes) {
         bool wasCurrent = _selectedNoteFolder.isCurrent();
 
         QSettings settings;
@@ -2406,7 +2406,7 @@ void SettingsDialog::on_noteFolderRemoveButton_clicked() {
  * Updates the name of the current note folder edit
  */
 void SettingsDialog::on_noteFolderNameLineEdit_editingFinished() {
-    QString text = ui->noteFolderNameLineEdit->text().remove("\n").trimmed();
+    QString text = ui->noteFolderNameLineEdit->text().remove(QStringLiteral("\n")).trimmed();
     text.truncate(50);
     _selectedNoteFolder.setName(text);
     _selectedNoteFolder.store();
@@ -2474,7 +2474,7 @@ void SettingsDialog::on_noteFolderRemotePathButton_clicked() {
 
     OwnCloudService *ownCloud = OwnCloudService::instance(
         true, _selectedNoteFolder.getCloudConnectionId());
-    ownCloud->settingsGetFileList(this, "");
+    ownCloud->settingsGetFileList(this, QLatin1String(""));
 }
 
 /**
@@ -2503,7 +2503,7 @@ void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
         return;
     }
 
-    QStringList pathPartList = path.split("/");
+    QStringList pathPartList = path.split(QStringLiteral("/"));
     QString pathPart = pathPartList.takeFirst();
     QTreeWidgetItem *item =
         findNoteFolderRemotePathTreeWidgetItem(parent, pathPart);
@@ -2523,7 +2523,7 @@ void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
     }
 
     if (pathPartList.count() > 0) {
-        addPathToNoteFolderRemotePathTreeWidget(item, pathPartList.join("/"));
+        addPathToNoteFolderRemotePathTreeWidget(item, pathPartList.join(QStringLiteral("/")));
     }
 }
 
@@ -2619,9 +2619,9 @@ void SettingsDialog::setupScriptingPage() {
     // reload the script list
     reloadScriptList();
 
-    QString issueUrl = "https://github.com/pbek/QOwnNotes/issues";
+    QString issueUrl = QStringLiteral("https://github.com/pbek/QOwnNotes/issues");
     QString documentationUrl =
-        "https://docs.qownnotes.org/en/develop/scripting/README.html";
+        QStringLiteral("https://docs.qownnotes.org/en/develop/scripting/README.html");
     ui->scriptInfoLabel->setText(
         tr("Take a look at the <a href=\"%1\">Scripting documentation</a> "
            "to get started fast.")
@@ -2640,7 +2640,7 @@ void SettingsDialog::setupScriptingPage() {
     QAction *searchScriptAction =
         addScriptMenu->addAction(tr("Search script repository"));
     searchScriptAction->setIcon(QIcon::fromTheme(
-        "edit-find", QIcon(":icons/breeze-qownnotes/16x16/edit-find.svg")));
+        QStringLiteral("edit-find"), QIcon(":icons/breeze-qownnotes/16x16/edit-find.svg")));
     searchScriptAction->setToolTip(
         tr("Find a script in the script "
            "repository"));
@@ -2650,13 +2650,13 @@ void SettingsDialog::setupScriptingPage() {
     QAction *updateScriptAction =
         addScriptMenu->addAction(tr("Check for script updates"));
     updateScriptAction->setIcon(QIcon::fromTheme(
-        "svn-update", QIcon(":icons/breeze-qownnotes/16x16/svn-update.svg")));
+        QStringLiteral("svn-update"), QIcon(":icons/breeze-qownnotes/16x16/svn-update.svg")));
     connect(updateScriptAction, SIGNAL(triggered()), this,
             SLOT(checkForScriptUpdates()));
 
     QAction *addAction = addScriptMenu->addAction(tr("Add local script"));
     addAction->setIcon(QIcon::fromTheme(
-        "document-new",
+        QStringLiteral("document-new"),
         QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
     addAction->setToolTip(tr("Add an existing, local script"));
     connect(addAction, SIGNAL(triggered()), this, SLOT(addLocalScript()));
@@ -2737,7 +2737,7 @@ void SettingsDialog::on_scriptRemoveButton_clicked() {
             this, tr("Remove script"),
             tr("Remove the current script <strong>%1</strong>?")
                 .arg(_selectedScript.getName()),
-            "remove-script") == QMessageBox::Yes) {
+            QStringLiteral("remove-script")) == QMessageBox::Yes) {
         // remove the script from the database
         _selectedScript.remove();
 
@@ -2773,7 +2773,7 @@ void SettingsDialog::on_scriptPathButton_clicked() {
         dirPath = Utils::Misc::portableDataPath();
     }
 
-    FileDialog dialog("ScriptPath");
+    FileDialog dialog(QStringLiteral("ScriptPath"));
 
     if (!dirPath.isEmpty()) {
         dialog.setDirectory(dirPath);
@@ -2937,7 +2937,7 @@ void SettingsDialog::validateCurrentScript() {
                        : tr("There were script errors:\n%1").arg(errorMessage);
             ui->scriptValidationLabel->setText(validationText);
             ui->scriptValidationLabel->setStyleSheet(
-                QString("color: %1;").arg(result ? "green" : "red"));
+                QStringLiteral("color: %1;").arg(result ? "green" : "red"));
         }
     }
 }
@@ -3011,7 +3011,7 @@ void SettingsDialog::on_addCustomNoteFileExtensionButton_clicked() {
 
     // make sure the file extension doesn't start with a point
     fileExtension =
-        Utils::Misc::removeIfStartsWith(std::move(fileExtension), ".");
+        Utils::Misc::removeIfStartsWith(std::move(fileExtension), QStringLiteral("."));
 
     QListWidgetItem *item = addCustomNoteFileExtension(fileExtension);
 
@@ -3051,7 +3051,7 @@ void SettingsDialog::on_removeCustomNoteFileExtensionButton_clicked() {
 void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemChanged(
     QListWidgetItem *item) {
     // make sure the file extension doesn't start with a point
-    QString fileExtension = Utils::Misc::removeIfStartsWith(item->text(), ".");
+    QString fileExtension = Utils::Misc::removeIfStartsWith(item->text(), QStringLiteral("."));
 
     if (fileExtension != item->text()) {
         item->setText(fileExtension);
@@ -3219,7 +3219,7 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
 QTreeWidgetItem *SettingsDialog::findSettingsTreeWidgetItemByPage(int page) {
     // search for items
     QList<QTreeWidgetItem *> allItems = ui->settingsTreeWidget->findItems(
-        "", Qt::MatchContains | Qt::MatchRecursive);
+        QLatin1String(""), Qt::MatchContains | Qt::MatchRecursive);
 
     // hide all not found items
     Q_FOREACH (QTreeWidgetItem *item, allItems) {
@@ -3239,7 +3239,7 @@ QTreeWidgetItem *SettingsDialog::findSettingsTreeWidgetItemByPage(int page) {
 void SettingsDialog::initMainSplitter() {
     _mainSplitter = new QSplitter(this);
     _mainSplitter->setOrientation(Qt::Horizontal);
-    ui->leftSideFrame->setStyleSheet("#leftSideFrame {margin-right: 5px;}");
+    ui->leftSideFrame->setStyleSheet(QStringLiteral("#leftSideFrame {margin-right: 5px;}"));
 
     _mainSplitter->addWidget(ui->leftSideFrame);
     _mainSplitter->addWidget(ui->settingsFrame);
@@ -3249,7 +3249,7 @@ void SettingsDialog::initMainSplitter() {
     // restore tag frame splitter state
     QSettings settings;
     QByteArray state =
-        settings.value("SettingsDialog/mainSplitterState").toByteArray();
+        settings.value(QStringLiteral("SettingsDialog/mainSplitterState")).toByteArray();
     _mainSplitter->restoreState(state);
 }
 
@@ -3271,10 +3271,10 @@ void SettingsDialog::closeEvent(QCloseEvent *event) {
  */
 void SettingsDialog::storeOwncloudDebugData() const {
     QSettings settings;
-    settings.setValue("ownCloudInfo/appIsValid", appIsValid);
-    settings.setValue("ownCloudInfo/notesPathExistsText", notesPathExistsText);
-    settings.setValue("ownCloudInfo/serverVersion", serverVersion);
-    settings.setValue("ownCloudInfo/connectionErrorMessage",
+    settings.setValue(QStringLiteral("ownCloudInfo/appIsValid"), appIsValid);
+    settings.setValue(QStringLiteral("ownCloudInfo/notesPathExistsText"), notesPathExistsText);
+    settings.setValue(QStringLiteral("ownCloudInfo/serverVersion"), serverVersion);
+    settings.setValue(QStringLiteral("ownCloudInfo/connectionErrorMessage"),
                       connectionErrorMessage);
 }
 
@@ -3283,7 +3283,7 @@ void SettingsDialog::storeOwncloudDebugData() const {
  */
 void SettingsDialog::storeSplitterSettings() {
     QSettings settings;
-    settings.setValue("SettingsDialog/mainSplitterState",
+    settings.setValue(QStringLiteral("SettingsDialog/mainSplitterState"),
                       _mainSplitter->saveState());
 }
 
@@ -3310,7 +3310,7 @@ void SettingsDialog::on_emptyCalendarCachePushButton_clicked() {
 
     Utils::Gui::information(this, tr("Calendar cache emptied"),
                             tr("Your calendar cache was emptied."),
-                            "calendar-cache-emptied");
+                            QStringLiteral("calendar-cache-emptied"));
 }
 
 /**
@@ -3334,7 +3334,7 @@ void SettingsDialog::on_toolbarIconSizeResetButton_clicked() {
 
 void SettingsDialog::on_ignoreNonTodoCalendarsCheckBox_toggled(bool checked) {
     QSettings settings;
-    settings.setValue("ownCloud/ignoreNonTodoCalendars", checked);
+    settings.setValue(QStringLiteral("ownCloud/ignoreNonTodoCalendars"), checked);
 }
 
 void SettingsDialog::on_applyToolbarButton_clicked() {
@@ -3355,7 +3355,7 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
         // don't store the custom actions toolbar and toolbars that are
         // not in the toolbar edit widget any more (for some reason they
         // are still found by findChildren)
-        if (name == "customActionsToolbar" ||
+        if (name == QLatin1String("customActionsToolbar") ||
             !toolbarObjectNames.contains(name)) {
             continue;
         }
@@ -3373,13 +3373,13 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
     //    settings.remove("");
     //    settings.endGroup();
 
-    settings.beginWriteArray("toolbar", toolbarContainers.size());
+    settings.beginWriteArray(QStringLiteral("toolbar"), toolbarContainers.size());
 
     for (int i = 0; i < toolbarContainers.size(); i++) {
         settings.setArrayIndex(i);
-        settings.setValue("name", toolbarContainers[i].name);
-        settings.setValue("title", toolbarContainers[i].title);
-        settings.setValue("items", toolbarContainers[i].actions);
+        settings.setValue(QStringLiteral("name"), toolbarContainers[i].name);
+        settings.setValue(QStringLiteral("title"), toolbarContainers[i].title);
+        settings.setValue(QStringLiteral("items"), toolbarContainers[i].actions);
     }
 
     settings.endArray();
@@ -3392,12 +3392,12 @@ void SettingsDialog::on_resetToolbarPushButton_clicked() {
                "The application will be closed in the process, the "
                "default toolbars will be restored when you start it "
                "again."),
-            tr("Reset and &exit"), tr("&Cancel"), "", 1) == 0) {
+            tr("Reset and &exit"), tr("&Cancel"), QLatin1String(""), 1) == 0) {
         QSettings settings;
 
         // remove all settings in the group
-        settings.beginGroup("toolbar");
-        settings.remove("");
+        settings.beginGroup(QStringLiteral("toolbar"));
+        settings.remove(QLatin1String(""));
         settings.endGroup();
 
         qApp->quit();
@@ -3525,7 +3525,7 @@ int SettingsDialog::findSettingsPageIndexOfWidget(QWidget *widget) {
     }
 
     // check if the parent is our settings stacked widget
-    if (parent->objectName() == "settingsStackedWidget") {
+    if (parent->objectName() == QLatin1String("settingsStackedWidget")) {
         // get the index of the object in the settings stacked widget
         return ui->settingsStackedWidget->indexOf(widget);
     }
@@ -3554,7 +3554,7 @@ void SettingsDialog::on_clearLogFileButton_clicked() {
                             tr("The log file <strong>%1</strong> was cleared"
                                ".")
                                 .arg(Utils::Misc::logFilePath()),
-                            "log-file-cleared");
+                            QStringLiteral("log-file-cleared"));
 }
 
 /**
@@ -3582,7 +3582,7 @@ void SettingsDialog::on_setGitPathToolButton_clicked() {
 #ifdef Q_OS_WIN
         path = "git.exe";
 #else
-        path = "/usr/bin/git";
+        path = QLatin1String("/usr/bin/git");
 #endif
     }
 
@@ -3593,7 +3593,7 @@ void SettingsDialog::on_setGitPathToolButton_clicked() {
     QStringList filters = QStringList() << tr("All files") + " (*)";
 #endif
 
-    FileDialog dialog("GitExecutable");
+    FileDialog dialog(QStringLiteral("GitExecutable"));
     dialog.setFileMode(QFileDialog::ExistingFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setNameFilters(filters);
@@ -3700,8 +3700,8 @@ void SettingsDialog::on_resetMessageBoxesButton_clicked() {
         QSettings settings;
 
         // remove all settings in the group
-        settings.beginGroup("MessageBoxOverride");
-        settings.remove("");
+        settings.beginGroup(QStringLiteral("MessageBoxOverride"));
+        settings.remove(QLatin1String(""));
         settings.endGroup();
     }
 }
@@ -3722,12 +3722,12 @@ void SettingsDialog::on_localTrashClearCheckBox_toggled(bool checked) {
  * Export settings
  */
 void SettingsDialog::on_exportSettingsButton_clicked() {
-    FileDialog dialog("SettingsExport");
+    FileDialog dialog(QStringLiteral("SettingsExport"));
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setNameFilter(tr("INI files") + " (*.ini)");
     dialog.setWindowTitle(tr("Export settings"));
-    dialog.selectFile("QOwnNotes-settings.ini");
+    dialog.selectFile(QStringLiteral("QOwnNotes-settings.ini"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
@@ -3743,8 +3743,8 @@ void SettingsDialog::on_exportSettingsButton_clicked() {
             // clear the settings in case the settings file already existed
             exportSettings.clear();
 
-            exportSettings.setValue("SettingsExport/platform",
-                                    QString(PLATFORM));
+            exportSettings.setValue(QStringLiteral("SettingsExport/platform"),
+                                    QStringLiteral(PLATFORM));
 
             QSettings settings;
 
@@ -3780,7 +3780,7 @@ void SettingsDialog::on_importSettingsButton_clicked() {
         return;
     }
 
-    FileDialog dialog("SettingsExport");
+    FileDialog dialog(QStringLiteral("SettingsExport"));
     dialog.setFileMode(QFileDialog::ExistingFiles);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setNameFilter(tr("INI files") + " (*.ini)");
@@ -3835,13 +3835,13 @@ void SettingsDialog::on_ignoreNoteSubFoldersResetButton_clicked() {
 
 void SettingsDialog::on_interfaceFontSizeSpinBox_valueChanged(int arg1) {
     QSettings settings;
-    settings.setValue("interfaceFontSize", arg1);
+    settings.setValue(QStringLiteral("interfaceFontSize"), arg1);
     Utils::Gui::updateInterfaceFontSize(arg1);
 }
 
 void SettingsDialog::on_overrideInterfaceFontSizeGroupBox_toggled(bool arg1) {
     QSettings settings;
-    settings.setValue("overrideInterfaceFontSize", arg1);
+    settings.setValue(QStringLiteral("overrideInterfaceFontSize"), arg1);
     Utils::Gui::updateInterfaceFontSize();
 }
 
@@ -3980,7 +3980,7 @@ void SettingsDialog::on_calendarCloudConnectionComboBox_currentIndexChanged(
     Q_UNUSED(index)
     QSettings settings;
     settings.setValue(
-        "ownCloud/todoCalendarCloudConnectionId",
+        QStringLiteral("ownCloud/todoCalendarCloudConnectionId"),
         ui->calendarCloudConnectionComboBox->currentData().toInt());
     on_reloadCalendarListButton_clicked();
 }
@@ -4001,7 +4001,7 @@ void SettingsDialog::on_copyDebugInfoButton_clicked() {
     Utils::Gui::information(
         this, tr("Debug information"),
         tr("The debug information was copied to the clipboard."),
-        "debug-clipboard");
+        QStringLiteral("debug-clipboard"));
 }
 
 void SettingsDialog::on_ownCloudServerAppPasswordPageButton_clicked() {

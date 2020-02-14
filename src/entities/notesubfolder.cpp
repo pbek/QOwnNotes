@@ -325,7 +325,7 @@ bool NoteSubFolder::store() {
             "file_last_modified = :file_last_modified,"
             "modified = :modified "
             "WHERE id = :id");
-        query.bindValue(":id", id);
+        query.bindValue(QStringLiteral(":id"), id);
     } else {
         query.prepare(
             "INSERT INTO noteSubFolder"
@@ -337,10 +337,10 @@ bool NoteSubFolder::store() {
 
     const QDateTime currentDateTime = QDateTime::currentDateTime();
 
-    query.bindValue(":name", name);
-    query.bindValue(":parent_id", parentId);
-    query.bindValue(":file_last_modified", fileLastModified);
-    query.bindValue(":modified", currentDateTime);
+    query.bindValue(QStringLiteral(":name"), name);
+    query.bindValue(QStringLiteral(":parent_id"), parentId);
+    query.bindValue(QStringLiteral(":file_last_modified"), fileLastModified);
+    query.bindValue(QStringLiteral(":modified"), currentDateTime);
 
     // on error
     if (!query.exec()) {
@@ -411,7 +411,7 @@ int NoteSubFolder::countAllParentId(int parentId) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        return query.value("cnt").toInt();
+        return query.value(QStringLiteral("cnt")).toInt();
     }
 
     return 0;

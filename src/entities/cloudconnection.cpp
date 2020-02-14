@@ -70,31 +70,31 @@ CloudConnection CloudConnection::currentCloudConnection(
 CloudConnection CloudConnection::currentTodoCalendarCloudConnection() {
     QSettings settings;
     const int id = settings
-                       .value("ownCloud/todoCalendarCloudConnectionId",
+                       .value(QStringLiteral("ownCloud/todoCalendarCloudConnectionId"),
                               firstCloudConnection().getId())
                        .toInt();
 
     return CloudConnection::fetch(id);
 }
 
-void CloudConnection::setName(QString text) { this->name = text.trimmed(); }
+void CloudConnection::setName(const QString &text) { this->name = text.trimmed(); }
 
-void CloudConnection::setServerUrl(QString text) {
+void CloudConnection::setServerUrl(const QString &text) {
     this->serverUrl = text.trimmed();
 }
 
-void CloudConnection::setUsername(QString text) {
+void CloudConnection::setUsername(const QString &text) {
     this->username = text.trimmed();
 }
 
-void CloudConnection::setPassword(QString text) {
+void CloudConnection::setPassword(const QString &text) {
     this->password = text.trimmed();
 }
 
 void CloudConnection::setPriority(int value) { this->priority = value; }
 
-bool CloudConnection::create(QString name, QString serverUrl, QString username,
-                             QString password) {
+bool CloudConnection::create(const QString &name, const QString &serverUrl, const QString &username,
+                             const QString &password) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
@@ -103,10 +103,10 @@ bool CloudConnection::create(QString name, QString serverUrl, QString username,
         "username, password ) "
         "VALUES ( :name, :serverUrl, :username, "
         ":password )");
-    query.bindValue(":name", name);
-    query.bindValue(":serverUrl", serverUrl);
-    query.bindValue(":username", username);
-    query.bindValue(":password",
+    query.bindValue(QStringLiteral(":name"), name);
+    query.bindValue(QStringLiteral(":serverUrl"), serverUrl);
+    query.bindValue(QStringLiteral(":username"), username);
+    query.bindValue(QStringLiteral(":password"),
                     CryptoService::instance()->encryptToString(password));
     return query.exec();
 }
@@ -117,8 +117,8 @@ CloudConnection CloudConnection::fetch(int id, bool ignoreTableWarning) {
 
     CloudConnection cloudConnection;
 
-    query.prepare("SELECT * FROM cloudConnection WHERE id = :id");
-    query.bindValue(":id", id);
+    query.prepare(QStringLiteral("SELECT * FROM cloudConnection WHERE id = :id"));
+    query.bindValue(QStringLiteral(":id"), id);
 
     if (!query.exec()) {
         if (!ignoreTableWarning) {
@@ -135,12 +135,12 @@ int CloudConnection::countAll() {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
-    query.prepare("SELECT COUNT(*) AS cnt FROM cloudConnection");
+    query.prepare(QStringLiteral("SELECT COUNT(*) AS cnt FROM cloudConnection"));
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        return query.value("cnt").toInt();
+        return query.value(QStringLiteral("cnt")).toInt();
     }
 
     return 0;
@@ -150,8 +150,8 @@ bool CloudConnection::remove() {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
-    query.prepare("DELETE FROM cloudConnection WHERE id = :id");
-    query.bindValue(":id", this->id);
+    query.prepare(QStringLiteral("DELETE FROM cloudConnection WHERE id = :id"));
+    query.bindValue(QStringLiteral(":id"), this->id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -169,13 +169,13 @@ CloudConnection CloudConnection::cloudConnectionFromQuery(
 }
 
 bool CloudConnection::fillFromQuery(const QSqlQuery& query) {
-    this->id = query.value("id").toInt();
-    this->name = query.value("name").toString();
-    this->serverUrl = query.value("server_url").toString();
-    this->username = query.value("username").toString();
+    this->id = query.value(QStringLiteral("id")).toInt();
+    this->name = query.value(QStringLiteral("name")).toString();
+    this->serverUrl = query.value(QStringLiteral("server_url")).toString();
+    this->username = query.value(QStringLiteral("username")).toString();
     this->password = CryptoService::instance()->decryptToString(
-        query.value("password").toString());
-    this->priority = query.value("priority").toInt();
+        query.value(QStringLiteral("password")).toString());
+    this->priority = query.value(QStringLiteral("priority")).toInt();
 
     return true;
 }
@@ -187,7 +187,7 @@ QList<CloudConnection> CloudConnection::fetchAll() {
     QList<CloudConnection> cloudConnectionList;
 
     query.prepare(
-        "SELECT * FROM cloudConnection ORDER BY priority ASC, id ASC");
+        QStringLiteral("SELECT * FROM cloudConnection ORDER BY priority ASC, id ASC"));
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
@@ -213,7 +213,7 @@ bool CloudConnection::store() {
             "username = :username, password = :password, "
             "priority = :priority WHERE "
             "id = :id");
-        query.bindValue(":id", this->id);
+        query.bindValue(QStringLiteral(":id"), this->id);
     } else {
         query.prepare(
             "INSERT INTO cloudConnection (name, server_url, username, "
@@ -222,12 +222,12 @@ bool CloudConnection::store() {
             ":password, :priority)");
     }
 
-    query.bindValue(":name", this->name);
-    query.bindValue(":serverUrl", this->serverUrl);
-    query.bindValue(":username", this->username);
-    query.bindValue(":password",
+    query.bindValue(QStringLiteral(":name"), this->name);
+    query.bindValue(QStringLiteral(":serverUrl"), this->serverUrl);
+    query.bindValue(QStringLiteral(":username"), this->username);
+    query.bindValue(QStringLiteral(":password"),
                     CryptoService::instance()->encryptToString(this->password));
-    query.bindValue(":priority", this->priority);
+    query.bindValue(QStringLiteral(":priority"), this->priority);
 
     if (!query.exec()) {
         // on error
@@ -267,10 +267,10 @@ bool CloudConnection::migrateToCloudConnections() {
     }
 
     QSettings settings;
-    const QString serverUrl = settings.value("ownCloud/serverUrl").toString();
-    const QString username = settings.value("ownCloud/userName").toString();
+    const QString serverUrl = settings.value(QStringLiteral("ownCloud/serverUrl")).toString();
+    const QString username = settings.value(QStringLiteral("ownCloud/userName")).toString();
     const QString password = CryptoService::instance()->decryptToString(
-        settings.value("ownCloud/password").toString());
+        settings.value(QStringLiteral("ownCloud/password")).toString());
 
     // create the default CloudConnection
     CloudConnection cloudConnection;
@@ -294,7 +294,7 @@ QList<int> CloudConnection::fetchUsedCloudConnectionsIds() {
     QSet<int> idList;
 
     const auto noteFolders = NoteFolder::fetchAll();
-    for (NoteFolder noteFolder : noteFolders) {
+    for (const NoteFolder &noteFolder : noteFolders) {
         idList << noteFolder.getCloudConnectionId();
     }
 

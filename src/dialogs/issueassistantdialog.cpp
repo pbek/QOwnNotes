@@ -50,7 +50,7 @@ IssueAssistantDialog::~IssueAssistantDialog() { delete ui; }
 
 void IssueAssistantDialog::on_nextButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled(
-        "issue-assistant-dialog/next");
+        QStringLiteral("issue-assistant-dialog/next"));
 
     int index = ui->stackedWidget->currentIndex();
     int maxIndex = ui->stackedWidget->count() - 1;
@@ -148,13 +148,13 @@ void IssueAssistantDialog::generateSubmitPageContent() const {
 
     switch (ui->issueTypeComboBox->currentIndex()) {
         case QuestionIssueType:
-            title = "[Q]";
+            title = QLatin1String("[Q]");
             break;
         case FeatureRequestIssueType:
-            title = "[F]";
+            title = QLatin1String("[F]");
             break;
         case ProblemIssueType:
-            title = "[I]";
+            title = QLatin1String("[I]");
             break;
         default:
             break;
@@ -205,7 +205,7 @@ void IssueAssistantDialog::generateSubmitPageContent() const {
 
 void IssueAssistantDialog::on_backButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled(
-        "issue-assistant-dialog/back");
+        QStringLiteral("issue-assistant-dialog/back"));
 
     int index = ui->stackedWidget->currentIndex();
 
@@ -241,7 +241,7 @@ void IssueAssistantDialog::on_refreshLogButton_clicked() { refreshLogOutput(); }
 
 void IssueAssistantDialog::on_postButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled(
-        "issue-assistant-dialog/post");
+        QStringLiteral("issue-assistant-dialog/post"));
 
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(ui->bodyPlainTextEdit->toPlainText());
@@ -270,9 +270,9 @@ void IssueAssistantDialog::on_searchIssueButton_clicked() {
 }
 
 void IssueAssistantDialog::on_newIssueButton_clicked() {
-    if (Utils::Gui::question(this, "Create new issue",
-                             "Reset this dialog and create a new issue?",
-                             "issue-dialog-new-issue") != QMessageBox::Yes) {
+    if (Utils::Gui::question(this, QStringLiteral("Create new issue"),
+                             QStringLiteral("Reset this dialog and create a new issue?"),
+                             QStringLiteral("issue-dialog-new-issue")) != QMessageBox::Yes) {
         return;
     }
 

@@ -12,7 +12,7 @@
 #include "mainwindow.h"
 #include "ui_versiondialog.h"
 
-VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
+VersionDialog::VersionDialog(const QJSValue &versions, MainWindow *mainWindow,
                              QWidget *parent)
     : MasterDialog(parent), ui(new Ui::VersionDialog) {
     this->mainWindow = mainWindow;
@@ -32,14 +32,14 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
     button->setProperty("ActionRole", Restore);
     button->setDefault(false);
     button->setIcon(QIcon::fromTheme(
-        "edit-download",
+        QStringLiteral("edit-download"),
         QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Cancel"));
     button->setProperty("ActionRole", Cancel);
     button->setIcon(QIcon::fromTheme(
-        "dialog-cancel",
+        QStringLiteral("dialog-cancel"),
         QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
     button->setDefault(true);
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
@@ -66,7 +66,7 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
     while (versionsIterator.hasNext()) {
         versionsIterator.next();
         QJSValue property =
-            versionsIterator.value().property("humanReadableTimestamp");
+            versionsIterator.value().property(QStringLiteral("humanReadableTimestamp"));
 
         if (property.isUndefined()) {
             continue;
@@ -79,13 +79,13 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
         }
 
         diffHtml = "<style>" + Utils::Misc::genericCSS() + "</style>" +
-                   versionsIterator.value().property("diffHtml").toString();
-        diffHtml.replace("\\n", "&para;<br />");
-        diffHtml.replace("\n", "<br />");
+                   versionsIterator.value().property(QStringLiteral("diffHtml")).toString();
+        diffHtml.replace(QLatin1String("\\n"), QLatin1String("&para;<br />"));
+        diffHtml.replace(QLatin1String("\n"), QLatin1String("<br />"));
 
         ui->versionListWidget->addItem(itemName);
         diffList->append(diffHtml);
-        dataList->append(versionsIterator.value().property("data").toString());
+        dataList->append(versionsIterator.value().property(QStringLiteral("data")).toString());
     }
 
     ui->versionListWidget->setCurrentRow(0);
@@ -100,7 +100,7 @@ void VersionDialog::setupMainSplitter() {
 
     // restore splitter sizes
     QSettings settings;
-    QByteArray state = settings.value("versionSplitterSizes").toByteArray();
+    QByteArray state = settings.value(QStringLiteral("versionSplitterSizes")).toByteArray();
     versionSplitter->restoreState(state);
 
     ui->gridLayout->addWidget(versionSplitter);
@@ -109,7 +109,7 @@ void VersionDialog::setupMainSplitter() {
 void VersionDialog::storeSettings() {
     // store the splitter sizes
     QSettings settings;
-    settings.setValue("versionSplitterSizes", versionSplitter->saveState());
+    settings.setValue(QStringLiteral("versionSplitterSizes"), versionSplitter->saveState());
 }
 
 VersionDialog::~VersionDialog() { delete ui; }

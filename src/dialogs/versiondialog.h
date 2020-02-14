@@ -16,7 +16,7 @@ class VersionDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit VersionDialog(QJSValue versions, MainWindow *mainWindow,
+    explicit VersionDialog(const QJSValue &versions, MainWindow *mainWindow,
                            QWidget *parent = 0);
     ~VersionDialog();
 

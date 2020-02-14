@@ -39,9 +39,9 @@ class ImageDialog : public MasterDialog {
 
     void on_disableCopyingCheckBox_toggled(bool checked);
 
-    void on_graphicsView_rubberBandChanged(const QRect &viewportRect,
-                                           const QPointF &fromScenePoint,
-                                           const QPointF &toScenePoint);
+    void on_graphicsView_rubberBandChanged(QRect viewportRect,
+                                           QPointF fromScenePoint,
+                                           QPointF toScenePoint);
 
     void on_cropButton_clicked();
 

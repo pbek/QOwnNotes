@@ -25,7 +25,7 @@ ImageDialog::ImageDialog(QWidget *parent)
 
     QSettings settings;
     ui->disableCopyingCheckBox->setChecked(
-        settings.value("ImageDialog/disableCopying").toBool());
+        settings.value(QStringLiteral("ImageDialog/disableCopying")).toBool());
 
     QClipboard *clipboard = QApplication::clipboard();
     QPixmap pixmap = clipboard->pixmap();
@@ -53,7 +53,7 @@ ImageDialog::ImageDialog(QWidget *parent)
 
 ImageDialog::~ImageDialog() {
     QSettings settings;
-    settings.setValue("ImageDialog/disableCopying",
+    settings.setValue(QStringLiteral("ImageDialog/disableCopying"),
                       ui->disableCopyingCheckBox->isChecked());
 
     delete _imageFile;
@@ -80,7 +80,7 @@ void ImageDialog::on_openButton_clicked() {
                        "*.ppm *.xbm *.xpm)"
                 << tr("Any files") + " (*)";
 
-    FileDialog dialog("InsertImage");
+    FileDialog dialog(QStringLiteral("InsertImage"));
     dialog.setFileMode(QFileDialog::ExistingFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setNameFilters(nameFilters);
@@ -178,7 +178,7 @@ void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
     }
 
     // download remote images
-    if (url.scheme().startsWith("http")) {
+    if (url.scheme().startsWith(QLatin1String("http"))) {
         QByteArray data = Utils::Misc::downloadUrl(url);
 
         if (data.size() == 0) {
@@ -200,7 +200,7 @@ void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
 
     _imageWasDownloaded = false;
 
-    if (url.scheme() == "file") {
+    if (url.scheme() == QLatin1String("file")) {
         pathOrUrl = url.toLocalFile();
     }
 
@@ -226,8 +226,8 @@ void ImageDialog::on_disableCopyingCheckBox_toggled(bool checked) {
 }
 
 void ImageDialog::on_graphicsView_rubberBandChanged(
-    const QRect &viewportRect, const QPointF &fromScenePoint,
-    const QPointF &toScenePoint) {
+    QRect viewportRect, QPointF fromScenePoint,
+    QPointF toScenePoint) {
     if (viewportRect.isEmpty()) {    // dragging has stopped
         _rubberBand = new QRubberBand(QRubberBand::Rectangle, ui->graphicsView);
 

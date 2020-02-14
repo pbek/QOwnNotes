@@ -292,7 +292,7 @@ void DictionaryManagerDialog::slotReplyFinished(QNetworkReply *reply) {
             nullptr, tr("Download error"),
             tr("Error while downloading:\n%1").arg(reply->errorString()));
 
-        qWarning() << QString("Network error: %1").arg(reply->errorString());
+        qWarning() << QStringLiteral("Network error: %1").arg(reply->errorString());
 
         return;
     }

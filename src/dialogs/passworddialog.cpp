@@ -4,7 +4,7 @@
 
 #include "ui_passworddialog.h"
 
-PasswordDialog::PasswordDialog(QWidget *parent, QString labelText,
+PasswordDialog::PasswordDialog(QWidget *parent, const QString &labelText,
                                bool doubleEnterPassword)
     : MasterDialog(parent), ui(new Ui::PasswordDialog) {
     _doubleEnterPassword = doubleEnterPassword;

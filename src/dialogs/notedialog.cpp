@@ -11,7 +11,7 @@ NoteDialog::NoteDialog(QWidget *parent)
     ui->textEdit->setReadOnly(true);
 }
 
-void NoteDialog::setNote(Note note) {
+void NoteDialog::setNote(const Note &note) {
     setWindowTitle(note.getName());
 
     // show the decrypted text if possible

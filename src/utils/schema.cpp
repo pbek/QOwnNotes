@@ -397,7 +397,7 @@ QFont Utils::Schema::Settings::getEditorFont(int index) const {
 
 QString Utils::Schema::getSchemaStyles() {
     // reset background color of code blocks
-    QString schemaStyles = "code {background-color: transparent;}";
+    QString schemaStyles = QStringLiteral("code {background-color: transparent;}");
 
     schemaStyles += encodeCssStyleForState(MarkdownHighlighter::NoState,
                                            QStringLiteral("body"));

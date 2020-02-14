@@ -30,7 +30,7 @@ WelcomeDialog::WelcomeDialog(QWidget *parent)
     // if note layout has already been set, we can finish settings in the first
     // step
     QSettings settings;
-    _allowFinishButton = settings.contains("workspace-initial/windowState");
+    _allowFinishButton = settings.contains(QStringLiteral("workspace-initial/windowState"));
     ui->finishButton->setEnabled(_allowFinishButton);
 
     ui->backButton->setEnabled(false);
@@ -45,13 +45,13 @@ WelcomeDialog::WelcomeDialog(QWidget *parent)
 WelcomeDialog::~WelcomeDialog() { delete ui; }
 
 void WelcomeDialog::on_cancelButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/cancel");
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/cancel"));
 
     done(QDialog::Rejected);
 }
 
 void WelcomeDialog::on_nextButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/next");
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/next"));
 
     int index = ui->stackedWidget->currentIndex();
     int maxIndex = ui->stackedWidget->count() - 1;
@@ -70,7 +70,7 @@ void WelcomeDialog::on_nextButton_clicked() {
 
     if (index == WelcomePages::MetricsPage) {
         QSettings settings;
-        settings.setValue("appMetrics/notificationShown", true);
+        settings.setValue(QStringLiteral("appMetrics/notificationShown"), true);
     }
 
     if (index == WelcomePages::LayoutPage) {
@@ -94,7 +94,7 @@ bool WelcomeDialog::handleNoteFolderSetup() {
         _allowFinishButton = true;
 
         Utils::Misc::printInfo(
-            QString("Note path '%1' exists.").arg(_notesPath));
+            QStringLiteral("Note path '%1' exists.").arg(_notesPath));
     } else {
         if (ui->createNoteFolderCheckBox->isChecked()) {
             Utils::Misc::printInfo(
@@ -111,7 +111,7 @@ bool WelcomeDialog::handleNoteFolderSetup() {
                     _allowFinishButton = true;
 
                     Utils::Misc::printInfo(
-                        QString("Note path '%1' was now created.")
+                        QStringLiteral("Note path '%1' was now created.")
                             .arg(_notesPath));
                 } else {
                     qWarning() << "Cannot create note path with mkpath!";
@@ -119,18 +119,18 @@ bool WelcomeDialog::handleNoteFolderSetup() {
                         tr("Cannot create note path! You have to create "
                            "the note folder manually!"));
                     MetricsService::instance()->sendVisitIfEnabled(
-                        "welcome-dialog/note-folder/cannot-create-mkpath");
+                        QStringLiteral("welcome-dialog/note-folder/cannot-create-mkpath"));
                 }
             } else {
                 qWarning() << "Cannot create note path!";
                 showNoteFolderErrorMessage(tr("Cannot create note path!"));
                 MetricsService::instance()->sendVisitIfEnabled(
-                    "welcome-dialog/note-folder/cannot-create");
+                    QStringLiteral("welcome-dialog/note-folder/cannot-create"));
             }
         } else {
             showNoteFolderErrorMessage(tr("This note path doesn't exist!"));
             MetricsService::instance()->sendVisitIfEnabled(
-                "welcome-dialog/note-folder/not-exist");
+                QStringLiteral("welcome-dialog/note-folder/not-exist"));
         }
     }
 
@@ -154,21 +154,21 @@ void WelcomeDialog::showNoteFolderErrorMessage(const QString &message) {
  */
 void WelcomeDialog::storeNoteFolderSettings() {
     MetricsService::instance()->sendVisitIfEnabled(
-        "welcome-dialog/note-folder/stored");
+        QStringLiteral("welcome-dialog/note-folder/stored"));
 
     QSettings settings;
 
     // make the path relative to the portable data path if we are in
     // portable mode
     settings.setValue(
-        "notesPath",
+        QStringLiteral("notesPath"),
         Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(_notesPath));
-    settings.setValue("showNoteSubFolders",
+    settings.setValue(QStringLiteral("showNoteSubFolders"),
                       ui->showNoteSubFoldersCheckBox->isChecked());
 }
 
 void WelcomeDialog::on_backButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/back");
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/back"));
 
     int index = ui->stackedWidget->currentIndex();
 
@@ -182,7 +182,7 @@ void WelcomeDialog::on_backButton_clicked() {
 }
 
 void WelcomeDialog::on_finishButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/finished");
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/finished"));
     if (ui->stackedWidget->currentIndex() == WelcomePages::NoteFolderPage) {
         if (!handleNoteFolderSetup()) return;
     } else {
@@ -194,7 +194,7 @@ void WelcomeDialog::on_finishButton_clicked() {
 
 void WelcomeDialog::on_noteFolderButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled(
-        "welcome-dialog/set-note-folder");
+        QStringLiteral("welcome-dialog/set-note-folder"));
 
     QString dir = QFileDialog::getExistingDirectory(
         this,
@@ -227,7 +227,7 @@ void WelcomeDialog::on_noteFolderButton_clicked() {
 
 void WelcomeDialog::on_ownCloudSettingsButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled(
-        "welcome-dialog/owncloud-settings");
+        QStringLiteral("welcome-dialog/owncloud-settings"));
 
     auto *dialog = new SettingsDialog(SettingsDialog::OwnCloudPage, this);
     dialog->exec();
@@ -235,13 +235,13 @@ void WelcomeDialog::on_ownCloudSettingsButton_clicked() {
 
 void WelcomeDialog::on_networkSettingsButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled(
-        "welcome-dialog/network-settings");
+        QStringLiteral("welcome-dialog/network-settings"));
 
     auto *dialog = new SettingsDialog(SettingsDialog::NetworkPage, this);
     dialog->exec();
 }
 
 void WelcomeDialog::closeEvent(QCloseEvent *event) {
-    MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/close");
+    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/close"));
     MasterDialog::closeEvent(event);
 }

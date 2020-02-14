@@ -39,7 +39,7 @@ void TableDialog::on_createTableWidget_itemSelectionChanged() {
 
     updateMaxItems();
     QTableWidgetSelectionRange range =
-        ui->createTableWidget->selectedRanges().first();
+        ui->createTableWidget->selectedRanges().constFirst();
 
     ui->rowSpinBox->setValue(std::max(_maxRows, range.rowCount()));
     ui->columnSpinBox->setValue(std::max(_maxColumns, range.columnCount()));
@@ -87,7 +87,7 @@ void TableDialog::importCSV() {
     }
 
     // start with two newlines to make sure that a proper table is inserted
-    QString text = "\n\n";
+    QString text = QStringLiteral("\n\n");
 
     // read data from file
     QList<QStringList> readData = QtCSV::Reader::readToList(
@@ -99,15 +99,15 @@ void TableDialog::importCSV() {
         QStringList data = readData.at(row);
 
         // add a table row
-        text += "| " + data.join(" | ") + " |\n";
+        text += "| " + data.join(QStringLiteral(" | ")) + " |\n";
 
         // add the headline separator if needed
         if ((row == 0) && ui->firstLineHeadlineCheckBox->isChecked()) {
             for (int col = 0; col < data.count(); col++) {
-                text += "| --- ";
+                text += QLatin1String("| --- ");
             }
 
-            text += "|\n";
+            text += QLatin1String("|\n");
         }
     }
 
@@ -126,9 +126,9 @@ void TableDialog::createMarkdownTable() {
     // start with two newlines to make sure that a proper table is inserted
     QString text = QStringLiteral("\n\n");
     int colWidth = ui->columnWidthSpinBox->value();
-    QString space = QString(" ").repeated(colWidth);
+    QString space = QStringLiteral(" ").repeated(colWidth);
     QString headline =
-        QString("-").repeated(ui->separatorColumnWidthSpinBox->value());
+        QStringLiteral("-").repeated(ui->separatorColumnWidthSpinBox->value());
 
     for (int row = 0; row < ui->rowSpinBox->value(); row++) {
         // add all columns of the row
@@ -174,7 +174,7 @@ void TableDialog::on_fileButton_clicked() {
     ui->csvFileTextEdit->clear();
     QStringList filters = QStringList() << tr("CSV files") + " (*.csv)"
                                         << tr("All files") + " (*)";
-    FileDialog dialog("CSVTableImport");
+    FileDialog dialog(QStringLiteral("CSVTableImport"));
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setNameFilters(filters);

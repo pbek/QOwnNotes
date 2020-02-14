@@ -40,8 +40,8 @@ TrashItem TrashItem::fetch(int id) {
 
     TrashItem trashItem;
 
-    query.prepare("SELECT * FROM trashItem WHERE id = :id");
-    query.bindValue(":id", id);
+    query.prepare(QStringLiteral("SELECT * FROM trashItem WHERE id = :id"));
+    query.bindValue(QStringLiteral(":id"), id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -59,8 +59,8 @@ bool TrashItem::remove(bool withFile) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
-    query.prepare("DELETE FROM trashItem WHERE id = :id");
-    query.bindValue(":id", this->id);
+    query.prepare(QStringLiteral("DELETE FROM trashItem WHERE id = :id"));
+    query.bindValue(QStringLiteral(":id"), this->id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -241,11 +241,11 @@ TrashItem TrashItem::trashItemFromQuery(const QSqlQuery &query) {
 }
 
 bool TrashItem::fillFromQuery(const QSqlQuery &query) {
-    id = query.value("id").toInt();
-    fileName = query.value("file_name").toString();
-    noteSubFolderPathData = query.value("note_sub_folder_path_data").toString();
-    fileSize = query.value("file_size").toLongLong();
-    created = query.value("created").toDateTime();
+    id = query.value(QStringLiteral("id")).toInt();
+    fileName = query.value(QStringLiteral("file_name")).toString();
+    noteSubFolderPathData = query.value(QStringLiteral("note_sub_folder_path_data")).toString();
+    fileSize = query.value(QStringLiteral("file_size")).toLongLong();
+    created = query.value(QStringLiteral("created")).toDateTime();
 
     return true;
 }
@@ -260,16 +260,16 @@ QList<TrashItem> TrashItem::fetchAll(int limit) {
     QSqlQuery query(db);
 
     QList<TrashItem> trashItemList;
-    QString sql = "SELECT * FROM trashItem ORDER BY created DESC";
+    QString sql = QStringLiteral("SELECT * FROM trashItem ORDER BY created DESC");
 
     if (limit >= 0) {
-        sql += " LIMIT :limit";
+        sql += QLatin1String(" LIMIT :limit");
     }
 
     query.prepare(sql);
 
     if (limit >= 0) {
-        query.bindValue(":limit", limit);
+        query.bindValue(QStringLiteral(":limit"), limit);
     }
 
     if (!query.exec()) {
@@ -295,14 +295,14 @@ QList<TrashItem> TrashItem::fetchAllExpired() {
     QSqlQuery query(db);
     QSettings settings;
     QList<TrashItem> trashItemList;
-    int days = settings.value("localTrash/autoCleanupDays", 30).toInt();
+    int days = settings.value(QStringLiteral("localTrash/autoCleanupDays"), 30).toInt();
     QDateTime dateTime = QDateTime::currentDateTime().addDays(-1 * days);
     QString sql =
         "SELECT * FROM trashItem WHERE created < :created "
         "ORDER BY created DESC";
 
     query.prepare(sql);
-    query.bindValue(":created", dateTime);
+    query.bindValue(QStringLiteral(":created"), dateTime);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -336,7 +336,7 @@ bool TrashItem::store() {
             "note_sub_folder_path_data = "
             ":note_sub_folder_path_data "
             "WHERE id = :id");
-        query.bindValue(":id", id);
+        query.bindValue(QStringLiteral(":id"), id);
     } else {
         query.prepare(
             "INSERT INTO trashItem"
@@ -346,9 +346,9 @@ bool TrashItem::store() {
             ":note_sub_folder_path_data)");
     }
 
-    query.bindValue(":file_name", fileName);
-    query.bindValue(":file_size", fileSize);
-    query.bindValue(":note_sub_folder_path_data", noteSubFolderPathData);
+    query.bindValue(QStringLiteral(":file_name"), fileName);
+    query.bindValue(QStringLiteral(":file_size"), fileSize);
+    query.bindValue(QStringLiteral(":note_sub_folder_path_data"), noteSubFolderPathData);
 
     // on error
     if (!query.exec()) {
@@ -399,7 +399,7 @@ bool TrashItem::deleteAll() {
     QSqlQuery query(db);
 
     // no truncate in sqlite
-    query.prepare("DELETE FROM trashItem");
+    query.prepare(QStringLiteral("DELETE FROM trashItem"));
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
         DatabaseService::closeDatabaseConnection(db, query);
@@ -433,8 +433,8 @@ bool TrashItem::fillFromId(int id) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
-    query.prepare("SELECT * FROM trashItem WHERE id = :id");
-    query.bindValue(":id", id);
+    query.prepare(QStringLiteral("SELECT * FROM trashItem WHERE id = :id"));
+    query.bindValue(QStringLiteral(":id"), id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -458,9 +458,9 @@ bool TrashItem::refetch() { return fillFromId(id); }
  */
 QString TrashItem::fileBaseName(bool withFullName) {
     if (withFullName) {
-        QStringList parts = fileName.split(".");
+        QStringList parts = fileName.split(QStringLiteral("."));
         parts.removeLast();
-        return parts.join(".");
+        return parts.join(QStringLiteral("."));
     } else {
         QFileInfo fileInfo;
         fileInfo.setFile(fileName);
@@ -491,12 +491,12 @@ int TrashItem::countAll() {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
-    query.prepare("SELECT COUNT(*) AS cnt FROM trashItem");
+    query.prepare(QStringLiteral("SELECT COUNT(*) AS cnt FROM trashItem"));
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        int result = query.value("cnt").toInt();
+        int result = query.value(QStringLiteral("cnt")).toInt();
         DatabaseService::closeDatabaseConnection(db, query);
 
         return result;
@@ -508,7 +508,7 @@ int TrashItem::countAll() {
 
 bool TrashItem::isLocalTrashEnabled() {
     QSettings settings;
-    return settings.value("localTrash/supportEnabled", true).toBool();
+    return settings.value(QStringLiteral("localTrash/supportEnabled"), true).toBool();
 }
 
 /**
@@ -520,7 +520,7 @@ bool TrashItem::expireItems() {
     QSettings settings;
 
     if (!TrashItem::isLocalTrashEnabled() ||
-        !settings.value("localTrash/autoCleanupEnabled", true).toBool()) {
+        !settings.value(QStringLiteral("localTrash/autoCleanupEnabled"), true).toBool()) {
         return false;
     }
 

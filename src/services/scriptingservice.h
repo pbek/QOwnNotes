@@ -39,7 +39,7 @@ class ScriptingService : public QObject {
     bool noteTaggingHookExists() const;
     bool handleNoteNameHookExists() const;
     bool methodExists(const QString &methodName) const;
-    static bool validateScript(Script script, QString &errorMessage);
+    static bool validateScript(const Script &script, QString &errorMessage);
     Q_INVOKABLE bool startDetachedProcess(const QString &executablePath,
                                           const QStringList &parameters);
     Q_INVOKABLE QByteArray startSynchronousProcess(
@@ -185,11 +185,11 @@ class ScriptingService : public QObject {
                                          const QString &markdownText);
     QString callNoteToMarkdownHtmlHookForObject(QObject *object, Note *note,
                                                 const QString &html);
-    void initComponent(Script script);
+    void initComponent(const Script &script);
     void outputMethodsOfObject(QObject *object);
     void reloadScriptComponents();
     void clearCustomStyleSheets();
-    QList<QVariant> registerSettingsVariables(QObject *object, Script script);
+    QList<QVariant> registerSettingsVariables(QObject *object, const Script &script);
 
    signals:
     void noteStored(QVariant note);

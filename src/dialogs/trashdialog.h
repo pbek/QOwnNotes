@@ -16,7 +16,7 @@ class TrashDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit TrashDialog(QJSValue notes, MainWindow *mainWindow,
+    explicit TrashDialog(const QJSValue &notes, MainWindow *mainWindow,
                          QWidget *parent = 0);
     ~TrashDialog();
 

@@ -839,7 +839,7 @@ bool Tag::store() {
     query.bindValue(QStringLiteral(":priority"), this->priority);
     query.bindValue(QStringLiteral(":parentId"), this->parentId);
     query.bindValue(QStringLiteral(":color"),
-                    _color.isValid() ? _color.name() : "");
+                    _color.isValid() ? _color.name() : QLatin1String(""));
 
     if (!query.exec()) {
         // on error

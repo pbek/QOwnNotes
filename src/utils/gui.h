@@ -63,20 +63,20 @@ QMessageBox::StandardButton showMessageBox(
 
 QMessageBox::StandardButton information(
     QWidget *parent, const QString &title, const QString &text,
-    const QString &identifier = "default",
+    const QString &identifier = QStringLiteral("default"),
     QMessageBox::StandardButtons buttons = QMessageBox::Ok,
     QMessageBox::StandardButton defaultButton = QMessageBox::Ok);
 
 QMessageBox::StandardButton question(
     QWidget *parent, const QString &title, const QString &text,
-    const QString &identifier = "default",
+    const QString &identifier = QStringLiteral("default"),
     QMessageBox::StandardButtons buttons =
         QMessageBox::StandardButtons(QMessageBox::Yes | QMessageBox::No),
     QMessageBox::StandardButton defaultButton = QMessageBox::NoButton);
 
 QMessageBox::StandardButton warning(
     QWidget *parent, const QString &title, const QString &text,
-    const QString &identifier = "default",
+    const QString &identifier = QStringLiteral("default"),
     QMessageBox::StandardButtons buttons =
         QMessageBox::StandardButtons(QMessageBox::Ok),
     QMessageBox::StandardButton defaultButton = QMessageBox::Ok);

@@ -285,7 +285,7 @@ QList<Script> Script::fetchAll(bool enabledOnly) {
     QList<Script> scriptList;
     query.prepare(
         QStringLiteral("SELECT * FROM script %1 ORDER BY priority ASC, id ASC")
-            .arg(enabledOnly ? QStringLiteral("WHERE enabled = 1") : ""));
+            .arg(enabledOnly ? QStringLiteral("WHERE enabled = 1") : QLatin1String("")));
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -313,7 +313,7 @@ bool Script::store() {
             "identifier = :identifier, info_json = :info_json, "
             "settings_variables_json = :settings_variables_json "
             "WHERE id = :id"));
-        query.bindValue(":id", this->id);
+        query.bindValue(QStringLiteral(":id"), this->id);
     } else {
         query.prepare(QStringLiteral(
             "INSERT INTO script (name, script_path, "
@@ -558,9 +558,9 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject &jsonObject) {
         platformList << platform;
     }
     if (platformList.isEmpty()) {
-        platformList << "linux"
-                     << "macos"
-                     << "windows";
+        platformList << QStringLiteral("linux")
+                     << QStringLiteral("macos")
+                     << QStringLiteral("windows");
     }
     QHash<QString, QString> platformHash;
     platformHash[QStringLiteral("linux")] = QStringLiteral("Linux");
@@ -571,7 +571,7 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject &jsonObject) {
             richPlatformList << platformHash[platform];
         }
     }
-    QString currentPlatform = QString(PLATFORM);
+    QString currentPlatform = QStringLiteral(PLATFORM);
     if (currentPlatform == QStringLiteral("macosx")) {
         currentPlatform = QStringLiteral("macos");
     }

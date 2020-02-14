@@ -102,7 +102,7 @@ QQmlEngine *ScriptingService::engine() const { return _engine; }
 /**
  * Initializes a component from a script
  */
-void ScriptingService::initComponent(Script script) {
+void ScriptingService::initComponent(const Script &script) {
     const QString path = script.getScriptPath();
     log(QStringLiteral("loading script file: ") % path);
     const QUrl fileUrl = QUrl::fromLocalFile(path);
@@ -156,7 +156,7 @@ void ScriptingService::initComponent(Script script) {
  * @param script
  */
 QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object,
-                                                            Script script) {
+                                                            const Script &script) {
     // registerSettingsVariables will override the settingsVariables property
     if (methodExistsForObject(object,
                               QStringLiteral("registerSettingsVariables()"))) {
@@ -176,7 +176,7 @@ QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object,
         foreach (QVariant variable, list) {
             QMap<QString, QVariant> variableMap = variable.toMap();
             QString type = variableMap[QStringLiteral("type")].toString();
-            QString identifier = variableMap["identifier"].toString();
+            QString identifier = variableMap[QStringLiteral("identifier")].toString();
 
             if (type == QStringLiteral("integer")) {
                 int value = jsonObject.value(identifier).toInt();
@@ -246,7 +246,7 @@ void ScriptingService::reloadScriptComponents() {
 /**
  * Checks if the script can be used in a component
  */
-bool ScriptingService::validateScript(Script script, QString &errorMessage) {
+bool ScriptingService::validateScript(const Script &script, QString &errorMessage) {
     const QString path = script.getScriptPath();
     QFile file(path);
 
@@ -726,8 +726,8 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(
         i.next();
         ScriptComponent scriptComponent = i.value();
 
-        QString text = callNoteToMarkdownHtmlHookForObject(
-            scriptComponent.object, note, resultMarkdown);
+//        QString text = callNoteToMarkdownHtmlHookForObject(
+//            scriptComponent.object, note, resultMarkdown);
 
         if (methodExistsForObject(
                 scriptComponent.object,
@@ -1132,7 +1132,7 @@ void ScriptingService::log(QString text) {
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow != Q_NULLPTR) {
-        emit(mainWindow->log(LogWidget::ScriptingLogType, std::move(text)));
+        emit mainWindow->log(LogWidget::ScriptingLogType, std::move(text));
     }
 #else
     Q_UNUSED(text)
@@ -1802,7 +1802,7 @@ void ScriptingService::setPersistentVariable(const QString &key,
         QStringLiteral("scripting/") % QString(__func__));
 
     QSettings settings;
-    settings.setValue(QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) %
+    settings.setValue(QStringLiteral(PERSISTENT_VARIABLE_SETTINGS_PREFIX) %
                           QStringLiteral("/") % key,
                       value);
 }
@@ -1822,7 +1822,7 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
         QStringLiteral("scripting/") % QString(__func__));
 
     QSettings settings;
-    return settings.value(QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) %
+    return settings.value(QStringLiteral(PERSISTENT_VARIABLE_SETTINGS_PREFIX) %
                               QStringLiteral("/") % key,
                           defaultValue);
 }

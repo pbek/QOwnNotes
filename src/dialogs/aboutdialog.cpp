@@ -16,7 +16,7 @@ AboutDialog::AboutDialog(QWidget *parent)
     ui->setupUi(this);
 
     // load the about.html
-    QFile f(":/html/about.html");
+    QFile f(QStringLiteral(":/html/about.html"));
     if (f.open(QFile::ReadOnly | QFile::Text)) {
         QTextStream istream(&f);
         QString html = istream.readAll();
@@ -24,16 +24,16 @@ AboutDialog::AboutDialog(QWidget *parent)
 
         QString release = qApp->property("release").toString();
         if (release.isEmpty()) {
-            release = "generic";
+            release = QLatin1String("generic");
         }
 
         // fill in the variables
-        html.replace("QT_VERSION_STR", QString(QT_VERSION_STR));
-        html.replace("BUILD_NUMBER", QString::number(BUILD));
-        html.replace("BUILD_DATE", __DATE__);
-        html.replace("VERSION", QString(VERSION));
-        html.replace("RELEASE", release);
-        html.replace("CURRENT_YEAR", QString::number(date.year()));
+        html.replace(QLatin1String("QT_VERSION_STR"), QStringLiteral(QT_VERSION_STR));
+        html.replace(QLatin1String("BUILD_NUMBER"), QString::number(BUILD));
+        html.replace(QLatin1String("BUILD_DATE"), __DATE__);
+        html.replace(QLatin1String("VERSION"), QStringLiteral(VERSION));
+        html.replace(QLatin1String("RELEASE"), release);
+        html.replace(QLatin1String("CURRENT_YEAR"), QString::number(date.year()));
 
         ui->textBrowser->document()->setDefaultStyleSheet(
             Utils::Misc::genericCSS());

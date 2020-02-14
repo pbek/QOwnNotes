@@ -19,9 +19,9 @@ LayoutWidget::~LayoutWidget() { delete ui; }
 
 void LayoutWidget::loadLayouts() {
     _layoutSettings =
-        new QSettings(":/configurations/layouts.ini", QSettings::IniFormat);
+        new QSettings(QStringLiteral(":/configurations/layouts.ini"), QSettings::IniFormat);
     auto layoutIdentifiers =
-        _layoutSettings->value("LayoutIdentifiers").toStringList();
+        _layoutSettings->value(QStringLiteral("LayoutIdentifiers")).toStringList();
 
     {
         const QSignalBlocker blocker(ui->layoutComboBox);
@@ -55,7 +55,7 @@ void LayoutWidget::updateCurrentLayout() {
 
     // adapt layoutGraphicsView background color
     QColor bg = ui->layoutGraphicsView->palette().window().color();
-    ui->layoutGraphicsView->setStyleSheet(QString("background-color:") +
+    ui->layoutGraphicsView->setStyleSheet(QStringLiteral("background-color:") +
                                           bg.name(QColor::HexArgb));
 
     QString filePath(":/images/layouts/" + screenshot);
@@ -90,30 +90,30 @@ void LayoutWidget::storeSettings() {
     QString layoutIdentifier = ui->layoutComboBox->currentData().toString();
     QString layoutSettingsPrefix = "Layout-" + layoutIdentifier + "/";
     QSettings settings;
-    QStringList workspaces = settings.value("workspaces").toStringList();
+    QStringList workspaces = settings.value(QStringLiteral("workspaces")).toStringList();
 
-    if (!workspaces.contains("initial")) {
-        workspaces << "initial";
-        settings.setValue("workspaces", workspaces);
+    if (!workspaces.contains(QStringLiteral("initial"))) {
+        workspaces << QStringLiteral("initial");
+        settings.setValue(QStringLiteral("workspaces"), workspaces);
     }
 
-    settings.setValue("initialLayoutIdentifier", layoutIdentifier);
-    settings.setValue("currentWorkspace", "initial");
-    settings.setValue("noteEditIsCentralWidget",
+    settings.setValue(QStringLiteral("initialLayoutIdentifier"), layoutIdentifier);
+    settings.setValue(QStringLiteral("currentWorkspace"), "initial");
+    settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
                       _layoutSettings->value(layoutSettingsPrefix +
                                              "noteEditIsCentralWidget"));
     settings.setValue(
-        "workspace-initial/windowState",
+        QStringLiteral("workspace-initial/windowState"),
         _layoutSettings->value(layoutSettingsPrefix + "windowState"));
-    settings.setValue("workspace-initial/name",
+    settings.setValue(QStringLiteral("workspace-initial/name"),
                       getLayoutName(layoutIdentifier));
-    settings.setValue("workspace-initial/noteSubFolderDockWidgetVisible",
+    settings.setValue(QStringLiteral("workspace-initial/noteSubFolderDockWidgetVisible"),
                       _layoutSettings->value(layoutSettingsPrefix +
                                              "noteSubFolderDockWidgetVisible"));
 
     // since a new layout is installed we later want to center and resize the
     // window
-    settings.setValue("initialWorkspace", true);
+    settings.setValue(QStringLiteral("initialWorkspace"), true);
 
     emit settingsStored();
 
@@ -139,13 +139,13 @@ void LayoutWidget::setManualSettingsStoring(bool enabled) {
 }
 
 QString LayoutWidget::getLayoutName(const QString &layoutIdentifier) {
-    if (layoutIdentifier == "minimal") {
+    if (layoutIdentifier == QLatin1String("minimal")) {
         return tr("Minimal", "Layout name");
-    } else if (layoutIdentifier == "full") {
+    } else if (layoutIdentifier == QLatin1String("full")) {
         return tr("Full", "Layout name");
-    } else if (layoutIdentifier == "full-vertical") {
+    } else if (layoutIdentifier == QLatin1String("full-vertical")) {
         return tr("Full vertical", "Layout name");
-    } else if (layoutIdentifier == "1col") {
+    } else if (layoutIdentifier == QLatin1String("1col")) {
         return tr("Single column", "Layout name");
     }
 
@@ -163,25 +163,25 @@ QString LayoutWidget::getLayoutDescription(const QString &layoutIdentifier) {
                  "resized automatically.",
                  "Layout description");
 
-    if (layoutIdentifier == "minimal") {
+    if (layoutIdentifier == QLatin1String("minimal")) {
         return tr("Just the note list on the left and the note edit panel "
                   "on the right are enabled by default.",
                   "Layout description") +
                centralWidgetAddText;
-    } else if (layoutIdentifier == "full") {
+    } else if (layoutIdentifier == QLatin1String("full")) {
         return tr("Most of the panels, like the note list on the left, the "
                   "tagging panels, the note edit panel in the center and the "
                   "preview panel on the right are enabled by default.",
                   "Layout description") +
                centralWidgetAddText;
-    } else if (layoutIdentifier == "full-vertical") {
+    } else if (layoutIdentifier == QLatin1String("full-vertical")) {
         return tr("Most of the panels, like the note list on the left, the "
                   "tagging panels, the note edit panel on the right and the "
                   "preview panel on top of the note edit panel are enabled by "
                   "default.",
                   "Layout description") +
                noCentralWidgetAddText;
-    } else if (layoutIdentifier == "1col") {
+    } else if (layoutIdentifier == QLatin1String("1col")) {
         return tr("Tiny one column layout with note search, note list and note "
                   "edit on top of each other.",
                   "Layout description") +

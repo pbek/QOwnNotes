@@ -47,7 +47,7 @@ LocalTrashDialog::LocalTrashDialog(MainWindow *mainWindow, QWidget *parent)
     button->setProperty("ActionRole", Restore);
     button->setDefault(false);
     button->setIcon(QIcon::fromTheme(
-        "view-restore",
+        QStringLiteral("view-restore"),
         QIcon(":/icons/breeze-qownnotes/16x16/view-restore.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
@@ -56,7 +56,7 @@ LocalTrashDialog::LocalTrashDialog(MainWindow *mainWindow, QWidget *parent)
     button->setProperty("ActionRole", Remove);
     button->setDefault(false);
     button->setIcon(QIcon::fromTheme(
-        "edit-delete",
+        QStringLiteral("edit-delete"),
         QIcon(":/icons/breeze-qownnotes/16x16/edit-delete.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
@@ -104,7 +104,7 @@ void LocalTrashDialog::loadTrashedNotes() {
             item->setIcon(
                 0,
                 QIcon::fromTheme(
-                    "edit-delete",
+                    QStringLiteral("edit-delete"),
                     QIcon(":/icons/breeze-qownnotes/16x16/edit-delete.svg")));
             toolTipText = tr("File <strong>%1</strong> isn't readable and can't"
                              " be restored!")
@@ -129,7 +129,7 @@ void LocalTrashDialog::setupMainSplitter() {
 
     // restore splitter sizes
     QSettings settings;
-    QByteArray state = settings.value("localTrashSplitterSizes").toByteArray();
+    QByteArray state = settings.value(QStringLiteral("localTrashSplitterSizes")).toByteArray();
     trashSplitter->restoreState(state);
 
     ui->gridLayout->layout()->addWidget(trashSplitter);
@@ -139,7 +139,7 @@ void LocalTrashDialog::setupMainSplitter() {
 void LocalTrashDialog::storeSettings() {
     // store the splitter sizes
     QSettings settings;
-    settings.setValue("localTrashSplitterSizes", trashSplitter->saveState());
+    settings.setValue(QStringLiteral("localTrashSplitterSizes"), trashSplitter->saveState());
 }
 
 LocalTrashDialog::~LocalTrashDialog() { delete ui; }
@@ -193,7 +193,7 @@ void LocalTrashDialog::restoreSelectedTrashItems() {
     if (Utils::Gui::question(this, tr("Restore selected notes"),
                              tr("Restore <strong>%n</strong> selected note(s)?",
                                 "", selectedItemsCount),
-                             "local-trash-restore-notes") == QMessageBox::Yes) {
+                             QStringLiteral("local-trash-restore-notes")) == QMessageBox::Yes) {
         const QSignalBlocker blocker(ui->trashTreeWidget);
         Q_UNUSED(blocker)
 
@@ -216,7 +216,7 @@ void LocalTrashDialog::restoreSelectedTrashItems() {
         Utils::Gui::information(
             this, tr("Notes restored"),
             tr("<strong>%n</strong> note(s) were restored", "", restoreCount),
-            "local-trash-notes-restored");
+            QStringLiteral("local-trash-notes-restored"));
 
         if (restoreCount > 0) {
             loadTrashedNotes();
@@ -237,7 +237,7 @@ void LocalTrashDialog::removeSelectedTrashItems() {
     if (Utils::Gui::question(this, tr("Remove selected notes"),
                              tr("Remove <strong>%n</strong> selected note(s)?",
                                 "", selectedItemsCount),
-                             "local-trash-remove-notes") == QMessageBox::Yes) {
+                             QStringLiteral("local-trash-remove-notes")) == QMessageBox::Yes) {
         const QSignalBlocker blocker(ui->trashTreeWidget);
         Q_UNUSED(blocker)
 
@@ -260,7 +260,7 @@ void LocalTrashDialog::removeSelectedTrashItems() {
         Utils::Gui::information(
             this, tr("Notes removed"),
             tr("<strong>%n</strong> note(s) were removed", "", removeCount),
-            "local-trash-notes-removed");
+            QStringLiteral("local-trash-notes-removed"));
 
         if (removeCount > 0) {
             loadTrashedNotes();

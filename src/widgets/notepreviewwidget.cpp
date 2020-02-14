@@ -137,7 +137,7 @@ void NotePreviewWidget::animateGif(const QString &text) {
     }
     _movies.removeAll(nullptr);
 
-    for (const QString &url : urls) {
+    for (const QString &url : Utils::asConst(urls)) {
         auto *movie = new QMovie(this);
         movie->setFileName(QUrl(url).toLocalFile());
         movie->setCacheMode(QMovie::CacheNone);
@@ -272,12 +272,12 @@ void NotePreviewWidget::contextMenuEvent(QContextMenuEvent *event) {
 }
 
 void NotePreviewWidget::exportAsHTMLFile() {
-    FileDialog dialog("PreviewHTMLFileExport");
+    FileDialog dialog(QStringLiteral("PreviewHTMLFileExport"));
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setNameFilter(tr("HTML files") + " (*.html)");
     dialog.setWindowTitle(tr("Export preview as raw HTML file"));
-    dialog.selectFile("preview.html");
+    dialog.selectFile(QStringLiteral("preview.html"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
