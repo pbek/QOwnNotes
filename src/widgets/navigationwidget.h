@@ -34,9 +34,11 @@ class NavigationWidget : public QTreeWidget {
 
    public:
     explicit NavigationWidget(QWidget *parent = 0);
-    void parse(QTextDocument *document);
-    void setDocument(QTextDocument *document);
-    QVector<Node> parseDocument(QTextDocument *document);
+    ~NavigationWidget();
+
+    void parse(const QTextDocument *document);
+    void setDocument(const QTextDocument *document);
+    QVector<Node> parseDocument(const QTextDocument *document) const;
 
    private slots:
     void onCurrentItemChanged(QTreeWidgetItem *current,
@@ -47,10 +49,10 @@ class NavigationWidget : public QTreeWidget {
     void positionClicked(int position);
 
    private:
-    QTextDocument *_document;
+    const QTextDocument *_document;
     QHash<int, QTreeWidgetItem *> _lastHeadingItemList;
-    QFutureWatcher<QVector<Node>> *parseFutureWatcher;
-    QVector<Node> navigationTreeNodes;
+    QFutureWatcher<QVector<Node>> *_parseFutureWatcher;
+    QVector<Node> _navigationTreeNodes;
 
-    QTreeWidgetItem *findSuitableParentItem(int elementType);
+    QTreeWidgetItem *findSuitableParentItem(int elementType) const;
 };
