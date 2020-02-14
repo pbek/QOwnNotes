@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.2.5
+- attempted to fix random crashes while editing notes on macOS
+  (for [#1626](https://github.com/pbek/QOwnNotes/issues/1626), thank you @Waqar144)
+
 ## 20.2.4
 - conflicted copies of the note folder database `notes.sqlite` are now
   immediately deleted if they are not different to the current `notes.sqlite`
