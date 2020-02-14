@@ -263,7 +263,7 @@ void LinkDialog::addDirectoryUrl() {
         directoryUrl = QUrl(QStringLiteral("file://") +
                             Utils::Misc::prependPortableDataPathIfNeeded(
                                 Utils::Misc::removeIfStartsWith(
-                                    directoryUrl.toLocalFile(), "/")));
+                                    directoryUrl.toLocalFile(), QStringLiteral("/"))));
     }
 
     directoryUrl = QFileDialog::getExistingDirectoryUrl(

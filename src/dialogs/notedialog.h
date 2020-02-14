@@ -15,7 +15,7 @@ class NoteDialog : public MasterDialog {
    public:
     explicit NoteDialog(QWidget *parent = 0);
     ~NoteDialog();
-    void setNote(Note note);
+    void setNote(const Note &note);
 
    private:
     Ui::NoteDialog *ui;

@@ -8,7 +8,7 @@
 
 #include "ui_sharedialog.h"
 
-ShareDialog::ShareDialog(Note note, QWidget *parent)
+ShareDialog::ShareDialog(const Note &note, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::ShareDialog) {
     ui->setupUi(this);
     this->note = note;
@@ -67,7 +67,7 @@ void ShareDialog::on_linkCheckBox_toggled(bool checked) {
                    "notes with your server by using the ownCloud "
                    "desktop sync tool to be able to share notes with "
                    "others!")),
-            "share-sync-information");
+            QStringLiteral("share-sync-information"));
     } else {
         // remove the share
         ownCloud->removeNoteShare(note, this);

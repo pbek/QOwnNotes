@@ -74,7 +74,7 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(
 void QOwnNotesMarkdownTextEdit::overrideFontSizeStyle(int fontSize) {
     QSettings settings;
     bool overrideInterfaceFontSize =
-        settings.value("overrideInterfaceFontSize", false).toBool();
+        settings.value(QStringLiteral("overrideInterfaceFontSize"), false).toBool();
 
     // remove old style
     QString stylesheet = styleSheet().remove(QRegularExpression(
@@ -87,11 +87,11 @@ void QOwnNotesMarkdownTextEdit::overrideFontSizeStyle(int fontSize) {
     if (overrideInterfaceFontSize) {
         // using pt is important here, px didn't work properly
         stylesheet +=
-            QString(
+            QStringLiteral(
                 QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING) +
             "QOwnNotesMarkdownTextEdit {font-size: " +
             QString::number(fontSize) + "pt;}" +
-            QString(
+            QStringLiteral(
                 QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_POST_STRING);
     }
 
@@ -385,7 +385,7 @@ QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 void QOwnNotesMarkdownTextEdit::enableSpellChecker(
     QOwnNotesMarkdownHighlighter *h) {
     if (!h) {
-        h = dynamic_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
+        h = qobject_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
     }
 
     h->setSpellChecker(QOwnSpellChecker::instance());
@@ -401,7 +401,7 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
         return;
     }
     QOwnNotesMarkdownHighlighter *h =
-        dynamic_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
+        qobject_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
 
     if (_spellCheckerEnabled) {
         enableSpellChecker(h);

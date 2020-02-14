@@ -13,7 +13,7 @@ class ShareDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit ShareDialog(Note note, QWidget *parent = 0);
+    explicit ShareDialog(const Note &note, QWidget *parent = 0);
     ~ShareDialog();
 
     void updateDialog();

@@ -7,8 +7,8 @@ class CloudConnection {
     explicit CloudConnection();
 
     int getId();
-    static bool create(QString name, QString serverUrl, QString username,
-                       QString password);
+    static bool create(const QString &name, const QString &serverUrl, const QString &username,
+                       const QString &password);
     static CloudConnection fetch(int id, bool ignoreTableWarning = false);
     static CloudConnection cloudConnectionFromQuery(const QSqlQuery& query);
     bool store();
@@ -24,11 +24,11 @@ class CloudConnection {
     QString getUsername();
     QString getPassword();
     int getPriority();
-    void setName(QString text);
-    void setServerUrl(QString text);
+    void setName(const QString &text);
+    void setServerUrl(const QString &text);
     void setPriority(int value);
-    void setUsername(QString text);
-    void setPassword(QString text);
+    void setUsername(const QString &text);
+    void setPassword(const QString &text);
     static int countAll();
     static bool migrateToCloudConnections();
     bool isCurrent();

@@ -112,7 +112,8 @@ class Tag {
         const QStringList &noteNameList);
 
     static QList<Tag> fetchAllByParentId(
-        const int parentId, const QString &sortBy = "created DESC");
+        const int parentId,
+        const QString &sortBy = QStringLiteral("created DESC"));
 
     static int countAllParentId(const int parentId);
 

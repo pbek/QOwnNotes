@@ -14,9 +14,10 @@
 #pragma once
 
 #include <QFutureWatcher>
-#include <QTextDocument>
 #include <QTreeWidget>
-#include <QTreeWidgetItem>
+
+class QTextDocument;
+class QTreeWidgetItem;
 
 struct Node {
     QString text;
@@ -38,7 +39,7 @@ class NavigationWidget : public QTreeWidget {
 
     void parse(const QTextDocument *document);
     void setDocument(const QTextDocument *document);
-    QVector<Node> parseDocument(const QTextDocument *document) const;
+    static QVector<Node> parseDocument(const QTextDocument *const document);
 
    private slots:
     void onCurrentItemChanged(QTreeWidgetItem *current,

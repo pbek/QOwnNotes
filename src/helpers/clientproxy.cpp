@@ -13,22 +13,22 @@ QNetworkProxy ClientProxy::proxyFromSettings() {
     QNetworkProxy proxy;
     QSettings settings;
     QString proxyHostName =
-        settings.value("networking/proxyHostName").toString();
+        settings.value(QStringLiteral("networking/proxyHostName")).toString();
 
     if (proxyHostName.isEmpty()) {
         return QNetworkProxy();
     }
 
-    int proxyPort = settings.value("networking/proxyPort").toInt();
-    int proxyNeedsAuth = settings.value("networking/proxyNeedsAuth").toBool();
+    int proxyPort = settings.value(QStringLiteral("networking/proxyPort")).toInt();
+    int proxyNeedsAuth = settings.value(QStringLiteral("networking/proxyNeedsAuth")).toBool();
 
     proxy.setHostName(proxyHostName);
     proxy.setPort(proxyPort);
 
     if (proxyNeedsAuth) {
-        QString proxyUser = settings.value("networking/proxyUser").toString();
+        QString proxyUser = settings.value(QStringLiteral("networking/proxyUser")).toString();
         QString proxyPassword =
-            settings.value("networking/proxyPassword").toString();
+            settings.value(QStringLiteral("networking/proxyPassword")).toString();
         proxy.setUser(proxyUser);
         proxy.setPassword(
             CryptoService::instance()->decryptToString(proxyPassword));
@@ -40,12 +40,12 @@ QNetworkProxy ClientProxy::proxyFromSettings() {
 bool ClientProxy::isUsingSystemDefault() {
     QSettings settings;
     int proxyType =
-        settings.value("networking/proxyType", QNetworkProxy::NoProxy).toInt();
+        settings.value(QStringLiteral("networking/proxyType"), QNetworkProxy::NoProxy).toInt();
     return proxyType == QNetworkProxy::DefaultProxy;
 }
 
 QString printQNetworkProxy(const QNetworkProxy &proxy) {
-    return QString("%1://%2:%3")
+    return QStringLiteral("%1://%2:%3")
         .arg(proxy.type())
         .arg(proxy.hostName())
         .arg(proxy.port());
@@ -54,7 +54,7 @@ QString printQNetworkProxy(const QNetworkProxy &proxy) {
 void ClientProxy::setupQtProxyFromSettings() {
     QSettings settings;
     int proxyType =
-        settings.value("networking/proxyType", QNetworkProxy::NoProxy).toInt();
+        settings.value(QStringLiteral("networking/proxyType"), QNetworkProxy::NoProxy).toInt();
     QNetworkProxy proxy = proxyFromSettings();
 
     switch (proxyType) {

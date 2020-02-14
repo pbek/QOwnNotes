@@ -33,7 +33,7 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent,
     QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)), this,
                      SLOT(slotReplyFinished(QNetworkReply *)));
 
-    _codeSearchUrl = "https://api.github.com/search/code";
+    _codeSearchUrl = QLatin1String("https://api.github.com/search/code");
     _rawContentUrlPrefix = Script::ScriptRepositoryRawContentUrlPrefix;
     _checkForUpdates = checkForUpdates;
     _searchString.clear();
@@ -179,12 +179,12 @@ void ScriptRepositoryDialog::slotReplyFinished(QNetworkReply *reply) {
 
     qDebug() << "Reply from " << urlPath;
 
-    if (urlPath.endsWith("/search/code")) {
+    if (urlPath.endsWith(QLatin1String("/search/code"))) {
         QByteArray arr = reply->readAll();
         qDebug() << "Reply from code search";
 
         parseCodeSearchReply(arr);
-    } else if (urlPath.startsWith("/qownnotes/scripts/master")) {
+    } else if (urlPath.startsWith(QLatin1String("/qownnotes/scripts/master"))) {
         QByteArray arr = reply->readAll();
         qDebug() << "Reply from info.qml request";
 
@@ -203,8 +203,8 @@ void ScriptRepositoryDialog::slotReplyFinished(QNetworkReply *reply) {
 void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(arr);
     QJsonObject jsonObject = jsonResponse.object();
-    _totalCount = jsonObject.value("total_count").toInt();
-    QJsonArray items = jsonObject.value("items").toArray();
+    _totalCount = jsonObject.value(QStringLiteral("total_count")).toInt();
+    QJsonArray items = jsonObject.value(QStringLiteral("items")).toArray();
     ui->loadMoreScriptsButton->setVisible(hasMoreItems());
 
     if (_page == 1) {
@@ -215,11 +215,11 @@ void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) {
 
     foreach (const QJsonValue &value, items) {
         QJsonObject obj = value.toObject();
-        QString path = obj["path"].toString();
+        QString path = obj[QStringLiteral("path")].toString();
         qDebug() << __func__ << " - 'path': " << path;
 
         QRegularExpressionMatch match =
-            QRegularExpression("(.+)\\/info\\.json").match(path);
+            QRegularExpression(QStringLiteral("(.+)\\/info\\.json")).match(path);
 
         if (!match.hasMatch()) {
             continue;
@@ -229,7 +229,7 @@ void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) {
         qDebug() << "Found script: " + identifier;
 
         // we are ignoring the example-script
-        if (identifier == "example-script") {
+        if (identifier == QLatin1String("example-script")) {
             continue;
         }
 
@@ -319,7 +319,7 @@ void ScriptRepositoryDialog::setupMainSplitter() {
     // restore splitter sizes
     QSettings settings;
     QByteArray state =
-        settings.value("ScriptRepositoryDialog/mainSplitterState")
+        settings.value(QStringLiteral("ScriptRepositoryDialog/mainSplitterState"))
             .toByteArray();
     _mainSplitter->restoreState(state);
 
@@ -331,7 +331,7 @@ void ScriptRepositoryDialog::setupMainSplitter() {
  */
 void ScriptRepositoryDialog::storeSettings() {
     QSettings settings;
-    settings.setValue("ScriptRepositoryDialog/mainSplitterState",
+    settings.setValue(QStringLiteral("ScriptRepositoryDialog/mainSplitterState"),
                       _mainSplitter->saveState());
 }
 
@@ -450,7 +450,7 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
         return;
     }
 
-    QString identifier = jsonObject.value("identifier").toString();
+    QString identifier = jsonObject.value(QStringLiteral("identifier")).toString();
 
     if (identifier.isEmpty()) {
         return;
@@ -544,7 +544,7 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
 
         Utils::Gui::information(this, tr("Install successful"),
                                 tr("The script was successfully installed!"),
-                                "script-install-successful");
+                                QStringLiteral("script-install-successful"));
 
         if (_checkForUpdates) {
             searchForUpdates();

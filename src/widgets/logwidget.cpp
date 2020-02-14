@@ -218,8 +218,8 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
     //    text.prepend("[" + dateTime.toString("hh:mm:ss") + "] [" + type + "]
     //    "); text.append("\n");
 
-    const QString html = QString("<div style=\"color: %1\">[%2] [%3] %4</div>")
-                             .arg(color.name(), dateTime.toString("hh:mm:ss"),
+    const QString html = QStringLiteral("<div style=\"color: %1\">[%2] [%3] %4</div>")
+                             .arg(color.name(), dateTime.toString(QStringLiteral("hh:mm:ss")),
                                   type, text.toHtmlEscaped());
 
     QScrollBar *scrollBar = ui->logTextEdit->verticalScrollBar();
@@ -395,9 +395,9 @@ void LogWidget::logToFileIfAllowed(LogType logType, const QString &msg) {
             QDateTime dateTime = QDateTime::currentDateTime();
             QString typeStr = logTypeText(logType);
             QString text =
-                QString("[%1] [%2]: %3\n")
+                QStringLiteral("[%1] [%2]: %3\n")
                     .arg(dateTime.toString(QStringLiteral("MMM dd hh:mm:ss"))
-                             .remove("."),
+                             .remove(QStringLiteral(".")),
                          typeStr, msg);
             out << text;
             logFile.close();
@@ -419,7 +419,7 @@ void LogWidget::on_clearButton_clicked() {
  *
  * @param pos
  */
-void LogWidget::on_logTextEdit_customContextMenuRequested(const QPoint &pos) {
+void LogWidget::on_logTextEdit_customContextMenuRequested(QPoint pos) {
 #ifndef INTEGRATION_TESTS
     QPoint globalPos = ui->logTextEdit->mapToGlobal(pos);
     QMenu *menu = ui->logTextEdit->createStandardContextMenu();

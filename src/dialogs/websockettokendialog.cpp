@@ -10,7 +10,7 @@ WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
     ui->setupUi(this);
 
     QSettings settings;
-    QString token = settings.value("webSocketServerService/token").toString();
+    QString token = settings.value(QStringLiteral("webSocketServerService/token")).toString();
 
     if (token.isEmpty()) {
         on_generateButton_clicked();
@@ -22,7 +22,7 @@ WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
 
 QString WebSocketTokenDialog::generateToken() const {
     const QString possibleCharacters(
-        "ABCDEFGHKLMNPQRSTUVWXYZabcdefghkmnpqrstuvwxyz23456789");
+        QStringLiteral("ABCDEFGHKLMNPQRSTUVWXYZabcdefghkmnpqrstuvwxyz23456789"));
     const int randomStringLength = 8;
 
     QString randomString;
@@ -44,13 +44,13 @@ void WebSocketTokenDialog::on_copyButton_clicked() {
 void WebSocketTokenDialog::on_generateButton_clicked() {
     QString token = generateToken();
     QSettings settings;
-    settings.setValue("webSocketServerService/token", token);
+    settings.setValue(QStringLiteral("webSocketServerService/token"), token);
     ui->tokenLineEdit->setText(token);
     on_copyButton_clicked();
 }
 
 void WebSocketTokenDialog::on_buttonBox_accepted() {
     QSettings settings;
-    settings.setValue("webSocketServerService/token",
+    settings.setValue(QStringLiteral("webSocketServerService/token"),
                       ui->tokenLineEdit->text());
 }

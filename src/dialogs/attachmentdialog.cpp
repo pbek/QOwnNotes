@@ -36,7 +36,7 @@ AttachmentDialog::AttachmentDialog(QWidget *parent)
 AttachmentDialog::~AttachmentDialog() { delete ui; }
 
 void AttachmentDialog::on_openButton_clicked() {
-    FileDialog dialog("InsertAttachment");
+    FileDialog dialog(QStringLiteral("InsertAttachment"));
     dialog.setFileMode(QFileDialog::ExistingFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setWindowTitle(tr("Select file to insert"));
@@ -61,9 +61,9 @@ void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
         return;
     }
 
-    ui->downloadButton->setVisible(url.scheme().startsWith("http"));
+    ui->downloadButton->setVisible(url.scheme().startsWith(QLatin1String("http")));
 
-    if (url.scheme() == "file") {
+    if (url.scheme() == QLatin1String("file")) {
         ui->fileEdit->setText(url.toLocalFile());
     } else if (url.scheme().isEmpty()) {
         ui->infoFrame->show();
@@ -139,7 +139,7 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
             nullptr, tr("Download error"),
             tr("Error while downloading:\n%1").arg(reply->errorString()));
 
-        qWarning() << QString("Network error: %1").arg(reply->errorString());
+        qWarning() << QStringLiteral("Network error: %1").arg(reply->errorString());
 
         return;
     }
@@ -218,7 +218,7 @@ QFile *AttachmentDialog::getFile() { return new QFile(ui->fileEdit->text()); }
 QString AttachmentDialog::getTitle() { return ui->titleEdit->text(); }
 
 void AttachmentDialog::accept() {
-    if (QUrl(ui->fileEdit->text()).scheme().startsWith("http")) {
+    if (QUrl(ui->fileEdit->text()).scheme().startsWith(QLatin1String("http"))) {
         _accept = true;
         on_downloadButton_clicked();
     } else {

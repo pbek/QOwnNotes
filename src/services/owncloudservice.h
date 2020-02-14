@@ -63,7 +63,7 @@ class OwnCloudService : public QObject {
 
     void removeCalendarItem(CalendarItem calItem, TodoDialog *dialog);
 
-    void settingsGetFileList(SettingsDialog *dialog, QString path);
+    void settingsGetFileList(SettingsDialog *dialog, const QString &path);
 
     static bool hasOwnCloudSettings(bool withEnabledCheck = true,
                                     bool ignoreTableWarning = false);

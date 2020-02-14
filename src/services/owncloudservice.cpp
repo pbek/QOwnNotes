@@ -1995,7 +1995,7 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
  * for the settings dialog
  */
 void OwnCloudService::settingsGetFileList(SettingsDialog *dialog,
-                                          QString path) {
+                                          const QString &path) {
     settingsDialog = dialog;
 
     QUrl url(serverUrl % webdavPath % QStringLiteral("/") % path);

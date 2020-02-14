@@ -16,9 +16,9 @@ class UpdateDialog : public MasterDialog {
 
    public:
     explicit UpdateDialog(QWidget *parent = nullptr,
-                          QString changesHtml = QString(),
-                          QString releaseUrl = QString(),
-                          QString releaseVersionString = QString(),
+                          const QString &changesHtml = QString(),
+                          const QString &releaseUrl = QString(),
+                          const QString &releaseVersionString = QString(),
                           int releaseBuildNumber = 0);
     ~UpdateDialog();
     static bool isUpdateDialogOpen();
@@ -55,7 +55,7 @@ class UpdateDialog : public MasterDialog {
 
     bool initializeWindowsUpdateProcess(const QString &filePath);
 
-    bool initializeMacOSUpdateProcess(QString releaseUrl);
+    bool initializeMacOSUpdateProcess(const QString &releaseUrl);
 };
 
 #endif    // UPDATEDIALOG_H

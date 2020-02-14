@@ -6,12 +6,12 @@
 
 CryptoService::CryptoService(QObject *parent) : QObject(parent) {
     QSettings settings;
-    qint64 cryptoKey = settings.value("cryptoKey").toUInt();
+    qint64 cryptoKey = settings.value(QStringLiteral("cryptoKey")).toUInt();
 
     // generate a key if we don't have one
     if (cryptoKey == 0) {
         cryptoKey = qrand();
-        settings.setValue("cryptoKey", cryptoKey);
+        settings.setValue(QStringLiteral("cryptoKey"), cryptoKey);
     }
 
     _simpleCrypt = new SimpleCrypt(static_cast<quint64>(cryptoKey));

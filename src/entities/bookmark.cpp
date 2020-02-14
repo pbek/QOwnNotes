@@ -30,10 +30,10 @@ Bookmark::Bookmark(QString url, QString name, QStringList tagList,
 
 QJsonObject Bookmark::jsonObject() const {
     QJsonObject bookmarkObject;
-    bookmarkObject.insert("name", QJsonValue::fromVariant(name));
-    bookmarkObject.insert("url", QJsonValue::fromVariant(url));
-    bookmarkObject.insert("tags", QJsonValue::fromVariant(tags));
-    bookmarkObject.insert("description", QJsonValue::fromVariant(description));
+    bookmarkObject.insert(QStringLiteral("name"), QJsonValue::fromVariant(name));
+    bookmarkObject.insert(QStringLiteral("url"), QJsonValue::fromVariant(url));
+    bookmarkObject.insert(QStringLiteral("tags"), QJsonValue::fromVariant(tags));
+    bookmarkObject.insert(QStringLiteral("description"), QJsonValue::fromVariant(description));
     return bookmarkObject;
 };
 
@@ -61,7 +61,7 @@ QList<Bookmark> Bookmark::parseBookmarks(const QString &text,
 
     // parse bookmark links like `- [name](http://link) #tag1 #tag2 the
     // description text` with optional tags and description
-    i = QRegularExpression(R"([-*] \[(.+?)\]\(([\w-]+://.+?)\)(.*)$)",
+    i = QRegularExpression(QStringLiteral(R"([-*] \[(.+?)\]\(([\w-]+://.+?)\)(.*)$)"),
                            QRegularExpression::MultilineOption)
             .globalMatch(text);
 
@@ -75,7 +75,7 @@ QList<Bookmark> Bookmark::parseBookmarks(const QString &text,
 
         if (!additionalText.isEmpty()) {
             QRegularExpressionMatchIterator addIterator =
-                QRegularExpression(R"(#([^\s#]+))").globalMatch(additionalText);
+                QRegularExpression(QStringLiteral(R"(#([^\s#]+))")).globalMatch(additionalText);
             while (addIterator.hasNext()) {
                 QRegularExpressionMatch addMatch = addIterator.next();
                 QString tag = addMatch.captured(1).trimmed();
@@ -90,8 +90,8 @@ QList<Bookmark> Bookmark::parseBookmarks(const QString &text,
             description = additionalText.trimmed();
         }
 
-        if (withBasicUrls && !tags.contains("current")) {
-            tags << "current";
+        if (withBasicUrls && !tags.contains(QStringLiteral("current"))) {
+            tags << QStringLiteral("current");
         }
 
         auto bookmark = Bookmark(url, name, tags, description);
@@ -100,7 +100,7 @@ QList<Bookmark> Bookmark::parseBookmarks(const QString &text,
 
     if (withBasicUrls) {
         // parse named links like [name](http://my.site.com)
-        i = QRegularExpression(R"(\[(.+?)\]\(([\w-]+://.+?)\))")
+        i = QRegularExpression(QStringLiteral(R"(\[(.+?)\]\(([\w-]+://.+?)\))"))
                 .globalMatch(text);
 
         while (i.hasNext()) {
@@ -108,12 +108,12 @@ QList<Bookmark> Bookmark::parseBookmarks(const QString &text,
             QString name = match.captured(1);
             QString url = match.captured(2);
 
-            auto bookmark = Bookmark(url, name, QStringList() << "current");
+            auto bookmark = Bookmark(url, name, QStringList() << QStringLiteral("current"));
             bookmark.mergeInList(bookmarks);
         }
 
         // parse links like <http://my.site.com>
-        i = QRegularExpression(R"(<([\w-]+://.+?)>)").globalMatch(text);
+        i = QRegularExpression(QStringLiteral(R"(<([\w-]+://.+?)>)")).globalMatch(text);
 
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
@@ -147,12 +147,12 @@ QString Bookmark::bookmarksWebServiceJsonText(
     }
 
     QJsonObject bookmarkResultObject;
-    bookmarkResultObject.insert("type", QJsonValue::fromVariant("bookmarks"));
-    bookmarkResultObject.insert("data", bookmarkObjectList);
-    bookmarkResultObject.insert("noteFolderName",
+    bookmarkResultObject.insert(QStringLiteral("type"), QJsonValue::fromVariant("bookmarks"));
+    bookmarkResultObject.insert(QStringLiteral("data"), bookmarkObjectList);
+    bookmarkResultObject.insert(QStringLiteral("noteFolderName"),
                                 NoteFolder::currentNoteFolder().getName());
-    bookmarkResultObject.insert("noteFolders", noteFolderObjectList);
-    bookmarkResultObject.insert("noteFolderId",
+    bookmarkResultObject.insert(QStringLiteral("noteFolders"), noteFolderObjectList);
+    bookmarkResultObject.insert(QStringLiteral("noteFolderId"),
                                 NoteFolder::currentNoteFolderId());
 
     QJsonDocument doc(bookmarkResultObject);
@@ -208,7 +208,7 @@ void Bookmark::merge(Bookmark &bookmark) {
 
     if (!description.contains(bookmark.description)) {
         if (!description.isEmpty()) {
-            description += ", ";
+            description += QLatin1String(", ");
         }
 
         description += bookmark.description;

@@ -29,7 +29,7 @@ OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent)
     }
 
     QStringList orphanedFiles =
-        mediaDir.entryList(QStringList("*"), QDir::Files, QDir::Time);
+        mediaDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
     orphanedFiles.removeDuplicates();
 
     QList<Note> noteList = Note::fetchAll();
@@ -123,7 +123,7 @@ void OrphanedImagesDialog::on_deleteButton_clicked() {
     if (Utils::Gui::question(this, tr("Delete selected files"),
                              tr("Delete <strong>%n</strong> selected file(s)?",
                                 "", selectedItemsCount),
-                             "delete-files") != QMessageBox::Yes) {
+                             QStringLiteral("delete-files")) != QMessageBox::Yes) {
         return;
     }
 

@@ -62,10 +62,10 @@ QString prependIfDoesNotStartWith(QString text, const QString &startString);
 QString appendIfDoesNotEndWith(QString text, const QString &endString);
 bool startDetachedProcess(const QString &executablePath,
                           const QStringList &parameters = QStringList(),
-                          QString workingDirectory = "");
+                          QString workingDirectory = QLatin1String(""));
 bool openFilesWithApplication(const QString &executablePath,
                               const QStringList &files = QStringList(),
-                              QString workingDirectory = "");
+                              QString workingDirectory = QLatin1String(""));
 QString shorten(QString text, int length,
                 const QString &sequence = QStringLiteral("..."));
 QString cycleTextCase(const QString &text);

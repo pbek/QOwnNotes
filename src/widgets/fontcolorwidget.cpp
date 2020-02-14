@@ -90,7 +90,7 @@ void FontColorWidget::initSchemaSelector() {
     QSettings settings;
     QString currentSchemaKey =
         settings
-            .value("Editor/CurrentSchemaKey", _defaultSchemaKeys.length() > 0
+            .value(QStringLiteral("Editor/CurrentSchemaKey"), _defaultSchemaKeys.length() > 0
                                                   ? _defaultSchemaKeys[0]
                                                   : QString())
             .toString();
@@ -114,10 +114,10 @@ void FontColorWidget::initSchemaSelector() {
     //
     // load the custom schemes
     //
-    QStringList schemes = settings.value("Editor/ColorSchemes").toStringList();
+    QStringList schemes = settings.value(QStringLiteral("Editor/ColorSchemes")).toStringList();
     Q_FOREACH (QString schemaKey, schemes) {
         settings.beginGroup(schemaKey);
-        QString name = settings.value("Name").toString();
+        QString name = settings.value(QStringLiteral("Name")).toString();
         ui->colorSchemeComboBox->addItem(name, schemaKey);
         settings.endGroup();
 
@@ -147,9 +147,9 @@ void FontColorWidget::on_foregroundColorButton_clicked() {
     }
 
     ui->foregroundColorButton->setStyleSheet(
-        QString("* {background: %1; border: none}").arg(color.name()));
+        QStringLiteral("* {background: %1; border: none}").arg(color.name()));
 
-    setSchemaValue(textSettingsKey("ForegroundColor"), color);
+    setSchemaValue(textSettingsKey(QStringLiteral("ForegroundColor")), color);
 
     // update the current or all text items, depending on the index
     updateTextItems(index);
@@ -168,9 +168,9 @@ void FontColorWidget::on_backgroundColorButton_clicked() {
     }
 
     ui->backgroundColorButton->setStyleSheet(
-        QString("* {background: %1; border: none}").arg(color.name()));
+        QStringLiteral("* {background: %1; border: none}").arg(color.name()));
 
-    setSchemaValue(textSettingsKey("BackgroundColor"), color);
+    setSchemaValue(textSettingsKey(QStringLiteral("BackgroundColor")), color);
 
     // update the current or all text items, depending on the index
     updateTextItems(index);
@@ -279,22 +279,22 @@ void FontColorWidget::updateSchemeEditFrame() {
 
     bool enabled =
         Utils::Schema::schemaSettings
-            ->getSchemaValue(textSettingsKey("ForegroundColorEnabled"))
+            ->getSchemaValue(textSettingsKey(QStringLiteral("ForegroundColorEnabled")))
             .toBool();
     updateForegroundColorCheckBox(enabled);
 
     QColor color = Utils::Schema::schemaSettings->getForegroundColor(index);
     ui->foregroundColorButton->setStyleSheet(
-        QString("* {background: %1; border: none;}").arg(color.name()));
+        QStringLiteral("* {background: %1; border: none;}").arg(color.name()));
 
     enabled = Utils::Schema::schemaSettings
-                  ->getSchemaValue(textSettingsKey("BackgroundColorEnabled"))
+                  ->getSchemaValue(textSettingsKey(QStringLiteral("BackgroundColorEnabled")))
                   .toBool();
     updateBackgroundColorCheckBox(enabled);
 
     color = Utils::Schema::schemaSettings->getBackgroundColor(index);
     ui->backgroundColorButton->setStyleSheet(
-        QString("* {background: %1; border: none;}").arg(color.name()));
+        QStringLiteral("* {background: %1; border: none;}").arg(color.name()));
 
     bool isCurrentLineBackgroundColorIndex =
         index ==
@@ -319,7 +319,7 @@ void FontColorWidget::updateSchemeEditFrame() {
 
         ui->boldCheckBox->setChecked(
             Utils::Schema::schemaSettings
-                ->getSchemaValue(textSettingsKey("Bold"))
+                ->getSchemaValue(textSettingsKey(QStringLiteral("Bold")))
                 .toBool());
 
         const QSignalBlocker blocker2(ui->italicCheckBox);
@@ -327,7 +327,7 @@ void FontColorWidget::updateSchemeEditFrame() {
 
         ui->italicCheckBox->setChecked(
             Utils::Schema::schemaSettings
-                ->getSchemaValue(textSettingsKey("Italic"))
+                ->getSchemaValue(textSettingsKey(QStringLiteral("Italic")))
                 .toBool());
 
         const QSignalBlocker blocker3(ui->underlineCheckBox);
@@ -335,7 +335,7 @@ void FontColorWidget::updateSchemeEditFrame() {
 
         ui->underlineCheckBox->setChecked(
             Utils::Schema::schemaSettings
-                ->getSchemaValue(textSettingsKey("Underline"))
+                ->getSchemaValue(textSettingsKey(QStringLiteral("Underline")))
                 .toBool());
 
         const QSignalBlocker blocker4(ui->fontSizeAdaptionSpinBox);
@@ -343,7 +343,7 @@ void FontColorWidget::updateSchemeEditFrame() {
 
         ui->fontSizeAdaptionSpinBox->setValue(
             Utils::Schema::schemaSettings
-                ->getSchemaValue(textSettingsKey("FontSizeAdaption"), 100)
+                ->getSchemaValue(textSettingsKey(QStringLiteral("FontSizeAdaption")), 100)
                 .toInt());
     }
 }
@@ -405,7 +405,7 @@ void FontColorWidget::on_colorSchemeComboBox_currentIndexChanged(int index) {
     ui->schemeEditFrame->setEnabled(!_currentSchemaIsDefault);
 
     QSettings settings;
-    settings.setValue("Editor/CurrentSchemaKey", _currentSchemaKey);
+    settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"), _currentSchemaKey);
 
     updateSchemeEditFrame();
 

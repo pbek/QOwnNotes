@@ -523,7 +523,7 @@ void EvernoteImportDialog::importNotes(const QString &data) {
                 QStringLiteral("\n```\n\\1\n```\n"));
 
             // add a linebreak instead of div-containers
-            content.replace(QRegularExpression("<\\/div>"),
+            content.replace(QRegularExpression(QStringLiteral("<\\/div>")),
                             QStringLiteral("\n"));
 
             // convert remaining special characters
@@ -543,11 +543,11 @@ void EvernoteImportDialog::importNotes(const QString &data) {
             }
 
             // remove all html tags
-            content.remove(QRegularExpression("<.+?>"));
+            content.remove(QRegularExpression(QStringLiteral("<.+?>")));
 
             // remove multiple \n
-            content.replace(QRegularExpression("\n\n+"), "\n\n");
-            content.replace(QRegularExpression("\n\n\\s+"), "\n\n");
+            content.replace(QRegularExpression(QStringLiteral("\n\n+")), QLatin1String("\n\n"));
+            content.replace(QRegularExpression(QStringLiteral("\n\n\\s+")), QLatin1String("\n\n"));
 
 #ifdef Q_OS_WIN32
             // removing or replacing some characters that are asking for
@@ -671,45 +671,45 @@ QTreeWidgetItem *EvernoteImportDialog::addMetaDataTreeWidgetItem(
 void EvernoteImportDialog::setupMetaDataTreeWidgetItems() {
     auto *basicAttributesItem =
         addMetaDataTreeWidgetItem(tr("Basic attributes"));
-    addMetaDataTreeWidgetItem(tr("Created date"), "created",
+    addMetaDataTreeWidgetItem(tr("Created date"), QStringLiteral("created"),
                               basicAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Updated date"), "updated",
+    addMetaDataTreeWidgetItem(tr("Updated date"), QStringLiteral("updated"),
                               basicAttributesItem);
 
     auto *noteAttributesItem = addMetaDataTreeWidgetItem(tr("Note attributes"));
     addMetaDataTreeWidgetItem(
-        tr("Subject date"), "note-attributes/subject-date", noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Latitude"), "note-attributes/latitude",
+        tr("Subject date"), QStringLiteral("note-attributes/subject-date"), noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Latitude"), QStringLiteral("note-attributes/latitude"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Longitude"), "note-attributes/longitude",
+    addMetaDataTreeWidgetItem(tr("Longitude"), QStringLiteral("note-attributes/longitude"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Altitude"), "note-attributes/altitude",
+    addMetaDataTreeWidgetItem(tr("Altitude"), QStringLiteral("note-attributes/altitude"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Author"), "note-attributes/author",
+    addMetaDataTreeWidgetItem(tr("Author"), QStringLiteral("note-attributes/author"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Source"), "note-attributes/source",
+    addMetaDataTreeWidgetItem(tr("Source"), QStringLiteral("note-attributes/source"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Source URL"), "note-attributes/source-url",
+    addMetaDataTreeWidgetItem(tr("Source URL"), QStringLiteral("note-attributes/source-url"),
                               noteAttributesItem);
     addMetaDataTreeWidgetItem(tr("Source application"),
-                              "note-attributes/source-application",
+                              QStringLiteral("note-attributes/source-application"),
                               noteAttributesItem);
     addMetaDataTreeWidgetItem(tr("Reminder order"),
-                              "note-attributes/reminder-order",
+                              QStringLiteral("note-attributes/reminder-order"),
                               noteAttributesItem);
     addMetaDataTreeWidgetItem(tr("Reminder time"),
-                              "note-attributes/reminder-time",
+                              QStringLiteral("note-attributes/reminder-time"),
                               noteAttributesItem);
     addMetaDataTreeWidgetItem(tr("Reminder done time"),
-                              "note-attributes/reminder-done-time",
+                              QStringLiteral("note-attributes/reminder-done-time"),
                               noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Place name"), "note-attributes/place-name",
+    addMetaDataTreeWidgetItem(tr("Place name"), QStringLiteral("note-attributes/place-name"),
                               noteAttributesItem);
     addMetaDataTreeWidgetItem(tr("Content class"),
-                              "note-attributes/content-class",
+                              QStringLiteral("note-attributes/content-class"),
                               noteAttributesItem);
     addMetaDataTreeWidgetItem(tr("Application data"),
-                              "note-attributes/application-data",
+                              QStringLiteral("note-attributes/application-data"),
                               noteAttributesItem);
 }
 

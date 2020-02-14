@@ -818,7 +818,7 @@ class MainWindow : public QMainWindow {
 
     static bool isValidNoteFile(QFile *file);
 
-    bool isInDistractionFreeMode();
+    static bool isInDistractionFreeMode();
 
     void removeSelectedTags();
 
@@ -928,7 +928,7 @@ class MainWindow : public QMainWindow {
 
     void initTreeWidgetItemHeight();
 
-    void updateTreeWidgetItemHeight(QTreeWidget *treeWidget, int height);
+    static void updateTreeWidgetItemHeight(QTreeWidget *treeWidget, int height);
 
     bool solveEquationInNoteTextEdit(double &returnValue);
 
@@ -940,13 +940,13 @@ class MainWindow : public QMainWindow {
 
     bool createNewWorkspace(QString name);
 
-    QString currentWorkspaceUuid();
+    static QString currentWorkspaceUuid();
 
     void storeCurrentWorkspace();
 
     void initWorkspaceComboBox();
 
-    QStringList getWorkspaceUuidList();
+    static QStringList getWorkspaceUuidList();
 
     void updateWindowToolbar();
 
@@ -960,8 +960,8 @@ class MainWindow : public QMainWindow {
 
     void assignColorToTagItem(QTreeWidgetItem *item);
 
-    void handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
-                                      const Tag &tag) const;
+    static void handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
+                                             const Tag &tag);
 
     void disableColorOfTagItem(QTreeWidgetItem *item);
 
@@ -979,7 +979,7 @@ class MainWindow : public QMainWindow {
 
     void storeTagTreeWidgetExpandState() const;
 
-    void startAppVersionTest() const;
+    static void startAppVersionTest();
 
     bool showNotesFromAllNoteSubFolders();
 
@@ -987,7 +987,7 @@ class MainWindow : public QMainWindow {
 
     bool insertAttachment(QFile *file, const QString &title = QString());
 
-    Qt::SortOrder toQtOrder(int order);
+    static Qt::SortOrder toQtOrder(int order);
 
     void updatePanelsSortOrder();
 
@@ -1010,7 +1010,7 @@ class MainWindow : public QMainWindow {
     void directoryWatcherWorkaround(bool isNotesDirectoryWasModifiedDisabled,
                                     bool alsoHandleNotesWereModified = false);
 
-    void setMenuEnabled(QMenu *menu, bool enabled);
+    static void setMenuEnabled(QMenu *menu, bool enabled);
 
     bool undoFormatting(const QString &formatter);
 

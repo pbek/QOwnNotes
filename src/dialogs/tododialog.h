@@ -18,7 +18,7 @@ class TodoDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit TodoDialog(MainWindow *mainWindow, QString taskUid = QString(),
+    explicit TodoDialog(MainWindow *mainWindow, const QString &taskUid = QString(),
                         QWidget *parent = nullptr);
     ~TodoDialog();
 
@@ -28,7 +28,7 @@ class TodoDialog : public MasterDialog {
     void todoItemLoadingProgressBarSetMaximum(int value);
     void todoItemLoadingProgressBarHide();
     void todoItemLoadingProgressBarHideIfOnMaximum();
-    void jumpToTask(QString taskUid);
+    void jumpToTask(const QString &taskUid);
     void refreshUi();
 
    public slots:
@@ -52,7 +52,7 @@ class TodoDialog : public MasterDialog {
     void on_todoItemTreeWidget_currentItemChanged(QTreeWidgetItem *current,
                                                   QTreeWidgetItem *previous);
     void on_todoItemTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
-    void on_todoItemTreeWidget_customContextMenuRequested(const QPoint &pos);
+    void on_todoItemTreeWidget_customContextMenuRequested(QPoint pos);
 
    private:
     Ui::TodoDialog *ui;
@@ -72,8 +72,8 @@ class TodoDialog : public MasterDialog {
     void updateCurrentCalendarItemWithFormData();
     void searchForSearchLineTextInNoteTextEdit();
     void searchInDescriptionTextEdit(QString &str);
-    void createNewTodoItem(const QString &name = "",
-                           const QString &relatedUid = "");
+    void createNewTodoItem(const QString &name = QLatin1String(""),
+                           const QString &relatedUid = QLatin1String(""));
 
    protected:
     bool eventFilter(QObject *obj, QEvent *event);

@@ -27,7 +27,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 
     QSettings settings;
     if (updateMode != Manual) {
-        settings.setValue("LastUpdateCheck", QDateTime::currentDateTime());
+        settings.setValue(QStringLiteral("LastUpdateCheck"), QDateTime::currentDateTime());
     }
 
     auto *manager = new QNetworkAccessManager(this);
@@ -45,30 +45,30 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
     // there were troubles with https by default on different platforms,
     // so we were using http until now
     QUrl url("https://www.qownnotes.org/api/v1/last_release/QOwnNotes/" +
-             QString(PLATFORM) + ".json");
+             QStringLiteral(PLATFORM) + ".json");
 
     QUrlQuery q;
     QString version(VERSION);
 
     // check if we want to fake the version number to trigger an update
-    if (settings.value("Debug/fakeOldVersionNumber").toBool()) {
-        version = "20.1.15";
+    if (settings.value(QStringLiteral("Debug/fakeOldVersionNumber")).toBool()) {
+        version = QLatin1String("20.1.15");
         isDebug = true;
     }
 
-    q.addQueryItem("b", QString::number(BUILD));
-    q.addQueryItem("v", version);
-    q.addQueryItem("d", QString(__DATE__) + " " + QString(__TIME__));
-    q.addQueryItem("um", QString::number(updateMode));
-    q.addQueryItem("debug", QString::number(isDebug));
+    q.addQueryItem(QStringLiteral("b"), QString::number(BUILD));
+    q.addQueryItem(QStringLiteral("v"), version);
+    q.addQueryItem(QStringLiteral("d"), QStringLiteral(__DATE__) + " " + QStringLiteral(__TIME__));
+    q.addQueryItem(QStringLiteral("um"), QString::number(updateMode));
+    q.addQueryItem(QStringLiteral("debug"), QString::number(isDebug));
 
-    if (!settings.value("appMetrics/disableTracking").toBool() ||
-        !settings.value("appMetrics/disableAppHeartbeat").toBool()) {
-        q.addQueryItem("cid", settings.value("PiwikClientId").toString());
+    if (!settings.value(QStringLiteral("appMetrics/disableTracking")).toBool() ||
+        !settings.value(QStringLiteral("appMetrics/disableAppHeartbeat")).toBool()) {
+        q.addQueryItem(QStringLiteral("cid"), settings.value(QStringLiteral("PiwikClientId")).toString());
     }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    q.addQueryItem("r", qApp->property("release").toString() + " (" +
+    q.addQueryItem(QStringLiteral("r"), qApp->property("release").toString() + " (" +
                             QSysInfo::buildCpuArchitecture() + ")");
 
     QString operatingSystem = QSysInfo::prettyProductName();
@@ -76,7 +76,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
         operatingSystem += " (" + QSysInfo::currentCpuArchitecture() + ")";
     }
 
-    q.addQueryItem("o", operatingSystem);
+    q.addQueryItem(QStringLiteral("o"), operatingSystem);
 #else
     q.addQueryItem("r", qApp->property("release").toString());
 #endif
@@ -124,12 +124,12 @@ void UpdateService::onResult(QNetworkReply *reply) {
     }
 
     // we have to add [], so the string can be parsed as JSON
-    QString data = QString("[") + allData + QString("]");
+    QString data = QStringLiteral("[") + allData + QStringLiteral("]");
 
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
 
-    if (result.property("0").isNull()) {
+    if (result.property(QStringLiteral("0")).isNull()) {
         qWarning() << __func__
                    << " - 'the data from the network request "
                       "could not be interpreted': "
@@ -146,29 +146,29 @@ void UpdateService::onResult(QNetworkReply *reply) {
     }
 
     // get the information if we should update our app
-    bool shouldUpdate = result.property("0").property("should_update").toBool();
+    bool shouldUpdate = result.property(QStringLiteral("0")).property(QStringLiteral("should_update")).toBool();
 
     // check if we should update our app
     if (shouldUpdate) {
         // get the release url
-        QString releaseUrl = result.property("0")
-                                 .property("release")
-                                 .property("assets")
-                                 .property("0")
-                                 .property("browser_download_url")
+        QString releaseUrl = result.property(QStringLiteral("0"))
+                                 .property(QStringLiteral("release"))
+                                 .property(QStringLiteral("assets"))
+                                 .property(QStringLiteral("0"))
+                                 .property(QStringLiteral("browser_download_url"))
                                  .toString();
 
         // get the release version string
         QString releaseVersionString =
-            result.property("0").property("release_version_string").toString();
+            result.property(QStringLiteral("0")).property(QStringLiteral("release_version_string")).toString();
 
         // get the release build number
         int releaseBuildNumber =
-            result.property("0").property("release_build_number").toInt();
+            result.property(QStringLiteral("0")).property(QStringLiteral("release_build_number")).toInt();
 
         // get the changes html
         QString changesHtml =
-            result.property("0").property("changes_html").toString();
+            result.property(QStringLiteral("0")).property(QStringLiteral("changes_html")).toString();
 
         // show the update available button
         mainWindow->showUpdateAvailableButton(releaseVersionString);
@@ -178,7 +178,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
         // do some more checks for non manual update requests
         if (updateMode != UpdateService::Manual) {
             QSettings settings;
-            QString skipVersion = settings.value("skipVersion").toString();
+            QString skipVersion = settings.value(QStringLiteral("skipVersion")).toString();
 
             // check if this version should be skipped
             if (releaseVersionString == skipVersion) {
@@ -198,7 +198,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
             // check if the update dialog was disabled
             if (showUpdateDialog) {
                 showUpdateDialog =
-                    !settings.value("disableAutomaticUpdateDialog").toBool();
+                    !settings.value(QStringLiteral("disableAutomaticUpdateDialog")).toBool();
             }
         }
 
@@ -243,7 +243,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
                 Q_NULLPTR, tr("No updates"),
                 tr("There are no updates available.<br /><strong>%1"
                    "</strong> is the latest version.")
-                    .arg(QString(VERSION)));
+                    .arg(QStringLiteral(VERSION)));
         }
     }
 }

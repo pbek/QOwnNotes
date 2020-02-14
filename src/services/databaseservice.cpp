@@ -723,7 +723,7 @@ bool DatabaseService::setupTables() {
         if (!settings.contains(QStringLiteral("tagsPanelSort"))) {
             settings.value(QStringLiteral("tagsPanelSort"), SORT_ALPHABETICAL);
         }
-        if (!settings.contains("tagsPanelOrder")) {
+        if (!settings.contains(QStringLiteral("tagsPanelOrder"))) {
             settings.value(QStringLiteral("tagsPanelOrder"), ORDER_ASCENDING);
         }
         version = 25;
@@ -845,7 +845,7 @@ QString DatabaseService::getAppData(const QString& name,
  * @param path
  * @return
  */
-bool DatabaseService::mergeNoteFolderDatabase(QString path) {
+bool DatabaseService::mergeNoteFolderDatabase(const QString &path) {
     QSqlDatabase mergeDB = QSqlDatabase::addDatabase(
         QStringLiteral("QSQLITE"), QStringLiteral("note_folder_merge"));
     mergeDB.setDatabaseName(path);

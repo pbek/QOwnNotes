@@ -42,5 +42,12 @@ void Label::setText(const QString &text) { QLabel::setText(injectCSS(text)); }
  */
 QString Label::injectCSS(const QString &text) {
     //    text = text.remove("<html>").remove("</html>").remove("<head/>");
-    return "<style>" + Utils::Misc::genericCSS() + "</style>" + text;
+    QString ret;
+    ret.reserve(text.size() + 15 + Utils::Misc::genericCSS().size() +
+                text.size());
+    ret.append(QStringLiteral("<style>"));
+    ret.append(Utils::Misc::genericCSS());
+    ret.append(QStringLiteral("</style>"));
+    ret.append(text);
+    return ret;
 }

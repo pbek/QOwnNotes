@@ -14,54 +14,55 @@ class CalendarItem {
 
     int getId();
     bool getHasDirtyData();
-    static bool addCalendarItem(QString name, QString fileName, QString text);
+    static bool addCalendarItem(const QString &name, const QString &fileName, const QString &text);
     static CalendarItem fetch(int id);
-    static QList<CalendarItem> search(QString text);
-    static CalendarItem calendarItemFromQuery(QSqlQuery query);
+    static QList<CalendarItem> search(const QString &text);
+    static CalendarItem calendarItemFromQuery(const QSqlQuery &query);
     bool store();
     friend QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem);
     bool fileExists();
     bool exists();
-    bool fillFromQuery(QSqlQuery query);
+    bool fillFromQuery(const QSqlQuery &query);
     bool fillByFileName(QString fileName);
     bool remove();
     bool isFetched();
     bool isCompleted();
-    static CalendarItem fetchByUrlAndCalendar(QString url, QString calendar);
-    static bool addCalendarItemForRequest(QString calendar, QUrl url,
-                                          QString etag,
-                                          QString lastModifiedString);
-    static QList<CalendarItem> fetchAllByCalendar(QString calendar);
-    static bool deleteAllByCalendar(QString calendar);
+    static CalendarItem fetchByUrlAndCalendar(const QString &url, const QString &calendar);
+    static bool addCalendarItemForRequest(const QString &calendar, const QUrl &url,
+                                          const QString &etag,
+                                          const QString &lastModifiedString);
+    static QList<CalendarItem> fetchAllByCalendar(const QString &calendar);
+    static bool deleteAllByCalendar(const QString &calendar);
     QString getUrl();
     QString getCalendar();
     QString getSummary();
     QString getDescription();
-    void setSummary(QString text);
-    void setDescription(QString text);
-    bool updateWithICSData(QString icsData);
+    void setSummary(const QString &text);
+    void setDescription(const QString &text);
+    bool updateWithICSData(const QString &icsData);
     QString getUid() const;
     QString getRelatedUid() const;
-    static CalendarItem fetchByUid(QString uid);
+    static CalendarItem fetchByUid(const QString &uid);
     int getPriority();
     QString generateNewICSData();
     QString getICSData();
     void setPriority(int value);
-    void setICSData(QString text);
+    void setICSData(const QString &text);
     QString getETag();
     QString getLastModifiedString();
-    static CalendarItem fetchByUrl(QUrl url);
-    void setLastModifiedString(QString text);
-    void setETag(QString text);
-    static QList<QUrl> fetchAllUrlsByCalendar(QString calendar);
-    void setCalendar(QString text);
-    static CalendarItem createNewTodoItem(QString summary, QString calendar,
-                                          QString relatedUid = "");
-    void setUrl(QUrl url);
-    void setUid(QString text);
-    void setRelatedUid(QString text);
-    void setModified(QDateTime dateTime);
-    void setCreated(QDateTime dateTime);
+    static CalendarItem fetchByUrl(const QUrl &url);
+    void setLastModifiedString(const QString &text);
+    void setETag(const QString &text);
+    static QList<QUrl> fetchAllUrlsByCalendar(const QString &calendar);
+    void setCalendar(const QString &text);
+    static CalendarItem createNewTodoItem(
+        const QString &summary, const QString &calendar,
+        const QString &relatedUid = QLatin1String(""));
+    void setUrl(const QUrl &url);
+    void setUid(const QString &text);
+    void setRelatedUid(const QString &text);
+    void setModified(const QDateTime &dateTime);
+    void setCreated(const QDateTime &dateTime);
     void setCompleted(bool value);
     void updateCompleted(bool value);
     static QList<CalendarItem> fetchAll();
@@ -69,10 +70,10 @@ class CalendarItem {
     QDateTime getAlarmDate();
     static int getCurrentCalendarIndex();
     static QString getCurrentCalendarUrl();
-    void setAlarmDate(QDateTime dateTime);
+    void setAlarmDate(const QDateTime &dateTime);
     static QList<CalendarItem> fetchAllForReminderAlert();
     static void alertTodoReminders();
-    static QList<QString> searchAsUidList(QString text, QString calendar);
+    static QList<QString> searchAsUidList(const QString &text, const QString &calendar);
     static QList<CalendarItem> fetchAllForSystemTray(int limit = 10);
     static bool removeAll();
     static int countAll();
@@ -104,8 +105,8 @@ class CalendarItem {
     void generateICSDataHash();
     void updateICSDataKeyListFromHash();
     void updateSortPriority();
-    QString getICSDataAttributeInBlock(QString block, QString attributeName);
-    bool removeICSDataBlock(QString block);
+    QString getICSDataAttributeInBlock(const QString &block, const QString &attributeName);
+    bool removeICSDataBlock(const QString &block);
     bool addVALARMBlockToICS();
 };
 

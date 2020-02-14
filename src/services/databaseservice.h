@@ -10,10 +10,12 @@ class DatabaseService {
     DatabaseService();
     static bool createConnection();
     static bool setupTables();
-    static QString getAppData(const QString& name,
-                              const QString& connectionName = QString("disk"));
-    static bool setAppData(const QString& name, const QString& value,
-                           const QString& connectionName = QString("disk"));
+    static QString getAppData(
+        const QString& name,
+        const QString& connectionName = QStringLiteral("disk"));
+    static bool setAppData(
+        const QString& name, const QString& value,
+        const QString& connectionName = QStringLiteral("disk"));
     static bool reinitializeDiskDatabase();
     static bool removeDiskDatabase();
     static bool createNoteFolderConnection();
@@ -27,7 +29,7 @@ class DatabaseService {
    private:
     static bool createMemoryConnection();
     static bool createDiskConnection();
-    static bool mergeNoteFolderDatabase(QString path);
+    static bool mergeNoteFolderDatabase(const QString &path);
 };
 
 #endif    // DATABASESERVICE_H

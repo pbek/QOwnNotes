@@ -53,7 +53,7 @@ class LogWidget : public QFrame {
 
     void on_clearButton_clicked();
 
-    void on_logTextEdit_customContextMenuRequested(const QPoint &pos);
+    void on_logTextEdit_customContextMenuRequested(QPoint pos);
 
     void onDestroyed(QObject *obj = Q_NULLPTR);
 

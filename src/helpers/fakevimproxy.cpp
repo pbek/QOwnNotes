@@ -204,9 +204,9 @@ void FakeVimProxy::indentRegion(int beginBlock, int endBlock, QChar typedChar) {
             int indent = firstNonSpace(previousLine);
             if (typedChar == '}')
                 indent = std::max(0, indent - indentSize);
-            else if (previousLine.endsWith("{"))
+            else if (previousLine.endsWith(QLatin1String("{")))
                 indent += indentSize;
-            const auto indentString = QString(" ").repeated(indent);
+            const auto indentString = QStringLiteral(" ").repeated(indent);
 
             QTextCursor cursor(block);
             cursor.beginEditBlock();
@@ -239,15 +239,15 @@ void FakeVimProxy::updateExtraSelections() {
 }
 
 bool FakeVimProxy::wantSaveAndQuit(const FakeVim::Internal::ExCommand &cmd) {
-    return cmd.cmd == "wq";
+    return cmd.cmd == QLatin1String("wq");
 }
 
 bool FakeVimProxy::wantSave(const FakeVim::Internal::ExCommand &cmd) {
-    return cmd.matches("w", "write") || cmd.matches("wa", "wall");
+    return cmd.matches(QStringLiteral("w"), QStringLiteral("write")) || cmd.matches(QStringLiteral("wa"), QStringLiteral("wall"));
 }
 
 bool FakeVimProxy::wantQuit(const FakeVim::Internal::ExCommand &cmd) {
-    return cmd.matches("q", "quit") || cmd.matches("qa", "qall");
+    return cmd.matches(QStringLiteral("q"), QStringLiteral("quit")) || cmd.matches(QStringLiteral("qa"), QStringLiteral("qall"));
 }
 
 void FakeVimProxy::cancel() { invalidate(); }
