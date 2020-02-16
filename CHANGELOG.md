@@ -1,12 +1,6 @@
 # QOwnNotes Changelog
 
 ## 20.2.5
-- if you accept the *Link dialog* while on the *Note tab* now a possible URL in
-  the *URL tab* will be removed so that your selected note will be inserted
-  instead of the URL
-- changed automatic note file naming schema in case of duplicate note file names
-  from appending a number like ` (1)` to just the number like ` 1` because of
-  problems with brackets in note links
 - fetching of remote note folders in the *Note folders settings* now should
   work properly with Nextcloud (for [#1631](https://github.com/pbek/QOwnNotes/issues/1631))
     - using different cloud connections now also works properly with the remote
@@ -20,6 +14,12 @@
 - added repositories for **openSUSE Leap 15.2**
     - please visit the [openSUSE installation page](https://www.qownnotes.org/installation#openSUSE)
       for instructions
+- if you accept the *Link dialog* while on the *Note tab* now a possible URL in
+  the *URL tab* will be removed so that your selected note will be inserted
+  instead of the URL
+- automatic note file naming schema in case of duplicate note file names was
+  changed from appending a number like ` (1)` to just the number like ` 1`
+  because of problems with brackets in note links
 - added more Russian, Catalan, Brazilian Portuguese, Croatian, Czech, Danish,
   Dutch, Estonian, Finnish, Greek, Hungarian, Irish, Japanese, Korean, Latvian,
   Lithuanian, Macedonian, Norwegian, Persian, Polish, Portuguese, Punjabi,
