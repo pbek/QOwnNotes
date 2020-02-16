@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 20.2.5
+- if you accept the *Link dialog* while on the *Note tab* now a possible URL in
+  the *URL tab* will be removed so that your selected note will be inserted
+  instead of the URL
 - attempted to fix random crashes while editing notes on macOS
   (for [#1626](https://github.com/pbek/QOwnNotes/issues/1626), thank you @Waqar144)
 

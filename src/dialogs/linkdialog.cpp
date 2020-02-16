@@ -9,10 +9,8 @@
 #include <QKeyEvent>
 #include <QMenu>
 #include <QNetworkAccessManager>
-#include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QRegularExpression>
-#include <QRegularExpressionMatch>
 #include <QSettings>
 #include <QTimer>
 
@@ -125,7 +123,7 @@ QString LinkDialog::getLinkDescription() const {
 bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
     if (obj == ui->searchLineEdit) {
         if (event->type() == QEvent::KeyPress) {
-            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+            auto *keyEvent = static_cast<QKeyEvent *>(event);
 
             // set focus to the notes list if Key_Down or Key_Tab were pressed
             // in the search line edit
@@ -148,7 +146,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
         return false;
     } else if (obj == ui->notesListWidget) {
         if (event->type() == QEvent::KeyPress) {
-            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+            auto *keyEvent = static_cast<QKeyEvent *>(event);
 
             // set focus to the note text edit if Key_Return or Key_Tab
             // were pressed in the notes list
@@ -260,10 +258,11 @@ void LinkDialog::addDirectoryUrl() {
             .toUrl();
 
     if (Utils::Misc::isInPortableMode()) {
-        directoryUrl = QUrl(QStringLiteral("file://") +
-                            Utils::Misc::prependPortableDataPathIfNeeded(
-                                Utils::Misc::removeIfStartsWith(
-                                    directoryUrl.toLocalFile(), QStringLiteral("/"))));
+        directoryUrl =
+            QUrl(QStringLiteral("file://") +
+                 Utils::Misc::prependPortableDataPathIfNeeded(
+                     Utils::Misc::removeIfStartsWith(directoryUrl.toLocalFile(),
+                                                     QStringLiteral("/"))));
     }
 
     directoryUrl = QFileDialog::getExistingDirectoryUrl(
@@ -326,4 +325,10 @@ void LinkDialog::setupFileUrlMenu() {
             SLOT(addDirectoryUrl()));
 
     ui->fileUrlButton->setMenu(addMenu);
+}
+
+void LinkDialog::on_buttonBox_accepted() {
+    if (ui->tabWidget->currentWidget() == ui->noteTab) {
+        ui->urlEdit->clear();
+    }
 }
