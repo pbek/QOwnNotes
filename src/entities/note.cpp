@@ -1399,8 +1399,8 @@ bool Note::handleNoteTextFileName() {
         // check if note with this filename already exists
         while (Note::fetchByFileName(fileName).exists()) {
             // find new filename for the note
-            name = nameBase + QStringLiteral(" (") +
-                   QString::number(++nameCount) + ")";
+            name = nameBase + QStringLiteral(" ") +
+                   QString::number(++nameCount);
             fileName = generateNoteFileNameFromName(name);
             qDebug() << __func__ << " - 'override fileName': " << fileName;
 
