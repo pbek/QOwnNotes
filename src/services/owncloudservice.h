@@ -115,7 +115,6 @@ class OwnCloudService : public QObject {
     QString capabilitiesPath;
     QString ownCloudTestPath;
     QString restoreTrashedNotePath;
-    QString webdavPath;
     QString sharePath;
     QString bookmarkPath;
     SettingsDialog *settingsDialog;
@@ -166,6 +165,10 @@ class OwnCloudService : public QObject {
     void handleImportBookmarksReply(QString &data);
 
     QByteArray downloadNextcloudPreviewImage(const QString &path);
+
+    void resetNetworkManagerCookieJar();
+
+    QString webdavPath();
 
    signals:
 

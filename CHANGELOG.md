@@ -7,6 +7,12 @@
 - changed automatic note file naming schema in case of duplicate note file names
   from appending a number like ` (1)` to just the number like ` 1` because of
   problems with brackets in note links
+- fetching of remote note folders in the *Note folders settings* now should
+  work properly with Nextcloud (for [#1631](https://github.com/pbek/QOwnNotes/issues/1631))
+    - using different cloud connections now also works properly with the remote
+      note folder selector
+    - switching to another cloud connection in the *Note folders settings* now
+      also triggers a reload of the remote note folder selector if it is visible
 - attempted to fix random crashes while editing notes on macOS
   (for [#1626](https://github.com/pbek/QOwnNotes/issues/1626), thank you @Waqar144)
 - added repositories for **openSUSE Leap 15.2**

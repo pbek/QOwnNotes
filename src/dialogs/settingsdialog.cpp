@@ -2559,7 +2559,8 @@ void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
     noteFolderRemotePathTreeStatusBar->showMessage(
         tr("Loading folders in '%1' from server").arg(current->text(0)));
 
-    OwnCloudService *ownCloud = OwnCloudService::instance(true);
+    OwnCloudService *ownCloud = OwnCloudService::instance(true,
+        _selectedNoteFolder.getCloudConnectionId());
     ownCloud->settingsGetFileList(this, folderName);
 }
 
@@ -2569,6 +2570,11 @@ void SettingsDialog::on_noteFolderCloudConnectionComboBox_currentIndexChanged(
     _selectedNoteFolder.setCloudConnectionId(
         ui->noteFolderCloudConnectionComboBox->currentData().toInt());
     _selectedNoteFolder.store();
+
+    // if there already were fetched remote folders then fetch them again
+    if (ui->noteFolderRemotePathTreeWidgetFrame->isVisible()) {
+        on_noteFolderRemotePathButton_clicked();
+    }
 }
 
 void SettingsDialog::on_useOwnCloudPathButton_clicked() {

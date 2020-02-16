@@ -24,6 +24,7 @@
 #include <QUrlQuery>
 #include <QXmlQuery>
 #include <QXmlResultItems>
+#include <QNetworkCookieJar>
 
 #include "cryptoservice.h"
 #include "dialogs/serverbookmarksimportdialog.h"
@@ -67,6 +68,10 @@ OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent)
     todoDialog = Q_NULLPTR;
     mainWindow = Q_NULLPTR;
     shareDialog = Q_NULLPTR;
+}
+
+void OwnCloudService::resetNetworkManagerCookieJar() {
+    networkManager->setCookieJar(new QNetworkCookieJar(this));
 }
 
 /**
@@ -134,7 +139,6 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
     capabilitiesPath = QStringLiteral("/ocs/v1.php/cloud/capabilities");
     ownCloudTestPath = QStringLiteral("/ocs/v1.php");
     restoreTrashedNotePath = rootPath % QStringLiteral("note/restore_trashed");
-    webdavPath = QStringLiteral("/remote.php/dav/files/") + userName;
     //    sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
     sharePath = QStringLiteral("/ocs/v2.php/apps/files_sharing/api/v1/shares");
     bookmarkPath = QStringLiteral("/apps/bookmarks/public/rest/v2/bookmark");
@@ -206,6 +210,10 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
                 QString());
         }
     }
+}
+
+QString OwnCloudService::webdavPath() {
+    return QStringLiteral("/remote.php/dav/files/") + userName;
 }
 
 void OwnCloudService::slotAuthenticationRequired(
@@ -387,7 +395,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                 // load the task items
                 loadTodoItems(data);
             }
-        } else if (urlPath.startsWith(serverUrlPath % webdavPath)) {
+        } else if (urlPath.startsWith(serverUrlPath % webdavPath())) {
             // this should be the reply of a calendar item list request
             qDebug() << "Reply from ownCloud webdav";
 
@@ -1171,7 +1179,8 @@ OwnCloudService *OwnCloudService::instance(bool reset, int cloudConnectionId) {
     auto *instance =
         qApp->property("ownCloudService").value<OwnCloudService *>();
 
-    // we should not need the reset, let's test without it
+    // OwnCloudService::settingsGetFileList would need the reset, but clearing
+    // the cookie jar also helped
     /*
     if (reset) {
         delete instance;
@@ -1187,6 +1196,10 @@ OwnCloudService *OwnCloudService::instance(bool reset, int cloudConnectionId) {
         qApp->setProperty("ownCloudService",
                           QVariant::fromValue<OwnCloudService *>(instance));
     } else {
+        if (reset) {
+            instance->resetNetworkManagerCookieJar();
+        }
+
         // we need to read the settings in case something has changed
         instance->readSettings(cloudConnectionId);
     }
@@ -1885,7 +1898,7 @@ void OwnCloudService::loadDirectory(QString &data) {
             if (urlPartNodes.length()) {
                 QString urlPart = urlPartNodes.at(0).toElement().text();
 
-                QRegularExpression re(QRegularExpression::escape(webdavPath) %
+                QRegularExpression re(QRegularExpression::escape(webdavPath()) %
                                       QStringLiteral("\\/(.+)\\/$"));
 
                 QRegularExpressionMatch match = re.match(urlPart);
@@ -1998,8 +2011,13 @@ void OwnCloudService::settingsGetFileList(SettingsDialog *dialog,
                                           const QString &path) {
     settingsDialog = dialog;
 
-    QUrl url(serverUrl % webdavPath % QStringLiteral("/") % path);
+    QUrl url(serverUrl % webdavPath() % QStringLiteral("/") % path);
     QNetworkRequest r(url);
+
+    // Keep in mind that we need to clear the cookie jar in
+    // OwnCloudService::instance or else we will get an error
+    // "CSRF check not passed." from Nextcloud
+    // Really resetting the instance in OwnCloudService::instance also helped
     addAuthHeader(&r);
 
     // build the request body
