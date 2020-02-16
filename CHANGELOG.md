@@ -9,6 +9,9 @@
   problems with brackets in note links
 - attempted to fix random crashes while editing notes on macOS
   (for [#1626](https://github.com/pbek/QOwnNotes/issues/1626), thank you @Waqar144)
+- added repositories for **openSUSE Leap 15.2**
+    - please visit the [openSUSE installation page](https://www.qownnotes.org/installation#openSUSE)
+      for instructions
 
 ## 20.2.4
 - conflicted copies of the note folder database `notes.sqlite` are now
