@@ -116,7 +116,7 @@ fi
 echo "Create new disk image"
 #Create the disk image
 rm -f ./$APP.dmg
-hdiutil create -srcfolder ./$TEMPDIR -format UDBZ ./$APP.dmg
+hdiutil create -srcfolder ./$TEMPDIR -ov -format UDBZ -fs HFS+ ./$APP.dmg
 if [ "$?" -ne "0" ]; then
     echo "Failed to create disk image"
     exit 1

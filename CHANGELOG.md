@@ -15,6 +15,8 @@
       also triggers a reload of the remote note folder selector if it is visible
 - attempted to fix random crashes while editing notes on macOS
   (for [#1626](https://github.com/pbek/QOwnNotes/issues/1626), thank you @Waqar144)
+- attempted to fix rare QOwnNotes disk image mount problems under macOS
+  (for [#1630](https://github.com/pbek/QOwnNotes/issues/1630))
 - added repositories for **openSUSE Leap 15.2**
     - please visit the [openSUSE installation page](https://www.qownnotes.org/installation#openSUSE)
       for instructions
