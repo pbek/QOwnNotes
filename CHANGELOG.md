@@ -20,6 +20,13 @@
 - added repositories for **openSUSE Leap 15.2**
     - please visit the [openSUSE installation page](https://www.qownnotes.org/installation#openSUSE)
       for instructions
+- added more Russian, Catalan, Brazilian Portuguese, Croatian, Czech, Danish,
+  Dutch, Estonian, Finnish, Greek, Hungarian, Irish, Japanese, Korean, Latvian,
+  Lithuanian, Macedonian, Norwegian, Persian, Polish, Portuguese, Punjabi,
+  Romanian, Serbian (Cyrillic), Slovak, Slovenian, Swedish, Turkish, Uzbek,
+  Albanian, Basque, Bosnian, Bulgarian, Chinese Simplified, Chinese Traditional,
+  Indonesian, French, German, Italian translation (thank you unchase, MGuerra,
+  mlimacarlos, Fabijenna, zmni, primokorn, rakekniven, mlocati)
 
 ## 20.2.4
 - conflicted copies of the note folder database `notes.sqlite` are now
