@@ -134,7 +134,7 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
     capabilitiesPath = QStringLiteral("/ocs/v1.php/cloud/capabilities");
     ownCloudTestPath = QStringLiteral("/ocs/v1.php");
     restoreTrashedNotePath = rootPath % QStringLiteral("note/restore_trashed");
-    webdavPath = QStringLiteral("/remote.php/webdav");
+    webdavPath = QStringLiteral("/remote.php/dav/files/") + userName;
     //    sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
     sharePath = QStringLiteral("/ocs/v2.php/apps/files_sharing/api/v1/shares");
     bookmarkPath = QStringLiteral("/apps/bookmarks/public/rest/v2/bookmark");
