@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## 20.2.6
+- more improvements to the link dialog were made
+  (for [#1632](https://github.com/pbek/QOwnNotes/issues/1632))
+    - entering of `]` characters in link name line edit is now disabled since
+      they would break the markdown link
+        - they also will be removed from the link name automatically if they
+          were part of the note file name 
+    - if one of the link characters `<>()` were found in the note url the legacy
+      way of linking will be used because otherwise the url would break the
+      markdown link
+- fixed fetching of todo calendar list in *Settings dialog* if cloud connection
+  was switched (for [#1631](https://github.com/pbek/QOwnNotes/issues/1631))
+
 ## 20.2.5
 - fetching of remote note folders in the *Note folders settings* now should
   work properly with Nextcloud (for [#1631](https://github.com/pbek/QOwnNotes/issues/1631))
