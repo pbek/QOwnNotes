@@ -72,6 +72,7 @@ OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent)
 
 void OwnCloudService::resetNetworkManagerCookieJar() {
     networkManager->setCookieJar(new QNetworkCookieJar(this));
+    calendarNetworkManager->setCookieJar(new QNetworkCookieJar(this));
 }
 
 /**
