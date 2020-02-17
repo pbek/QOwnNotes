@@ -20,6 +20,8 @@ LinkDialog::LinkDialog(const QString &dialogTitle, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::LinkDialog) {
     ui->setupUi(this);
     ui->urlEdit->setFocus();
+    // disallow ] characters, because they will break markdown links
+    ui->nameLineEdit->setValidator(new QRegExpValidator(QRegExp(R"([^\]]*)")));
     firstVisibleNoteListRow = 0;
 
     if (!dialogTitle.isEmpty()) {

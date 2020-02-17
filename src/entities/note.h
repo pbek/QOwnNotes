@@ -312,7 +312,8 @@ class Note {
 
     static Note fetchByRelativeFilePath(const QString &relativePath);
 
-    QString getNoteUrlForLinkingTo(const Note &note) const;
+    QString getNoteUrlForLinkingTo(const Note &note,
+                                   bool forceLegacy = false) const;
 
     QString mediaUrlStringForFileName(const QString &fileName) const;
 

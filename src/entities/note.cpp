@@ -1517,16 +1517,24 @@ QString Note::getFilePathRelativeToNote(const Note &note) const {
         .remove(QRegularExpression(QStringLiteral(R"(^\.\.\/)")));
 }
 
-QString Note::getNoteUrlForLinkingTo(const Note &note) const {
+QString Note::getNoteUrlForLinkingTo(const Note &note, bool forceLegacy) const {
     const QSettings settings;
     QString noteUrl;
 
-    if (settings.value(QStringLiteral("legacyLinking")).toBool()) {
+    if (forceLegacy ||
+        settings.value(QStringLiteral("legacyLinking")).toBool()) {
         const QString noteNameForLink =
             Note::generateTextForLink(note.getName());
         noteUrl = QStringLiteral("note://") + noteNameForLink;
     } else {
         noteUrl = getFilePathRelativeToNote(note);
+
+        // if one of the link characters `<>()` were found in the note url use
+        // the legacy way of linking because otherwise the "url" would break the
+        // markdown link
+        if (noteUrl.contains(QRegularExpression(R"([<>()])"))) {
+            noteUrl = getNoteUrlForLinkingTo(note, true);
+        }
     }
 
     return noteUrl;

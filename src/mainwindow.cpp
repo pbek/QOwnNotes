@@ -4911,13 +4911,16 @@ void MainWindow::handleTextNoteLinking() {
         const QString url = dialog->getURL();
         const QString linkName = dialog->getLinkName();
         const QString linkDescription = dialog->getLinkDescription();
-        QString noteName = dialog->getSelectedNoteName();
+        // remove ] characters, because they will break markdown links
+        QString noteName = dialog->getSelectedNoteName().remove("]");
 
         if ((!noteName.isEmpty()) || (!url.isEmpty())) {
+            QString newText;
             QString chosenLinkName = linkName.isEmpty()
                                          ? textEdit->textCursor().selectedText()
                                          : linkName;
-            QString newText;
+            // remove ] characters, because they will break markdown links
+            chosenLinkName.remove("]");
 
             // if user has entered an url
             if (!url.isEmpty()) {
