@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 20.2.7
+- some improvements to the todo list dialog were made
+    - if the todo items in a list will be reloaded from the server the current
+      text search will be applied again
+    - if the todo list is switched the current text search will be removed to
+      not confuse the user 
+- fixed removing of the 3rd `"` from `test "test""` with <kbd>Backspace</kbd>
+  (for [#1629](https://github.com/pbek/QOwnNotes/issues/1629), thank you @Waqar144)
+
 ## 20.2.6
 - more improvements to the link dialog were made
   (for [#1632](https://github.com/pbek/QOwnNotes/issues/1632))
