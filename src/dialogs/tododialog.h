@@ -45,7 +45,7 @@ class TodoDialog : public MasterDialog {
     void on_removeButton_clicked();
     void on_reminderCheckBox_clicked();
     void on_summaryEdit_returnPressed();
-    void on_newItemEdit_textChanged(const QString &arg1);
+    void on_newItemEdit_textChanged();
     void onSaveAndInsertButtonClicked();
     void onImportAsNoteButtonClicked();
     void clearCacheAndReloadTodoList();

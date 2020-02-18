@@ -326,6 +326,8 @@ void TodoDialog::reloadTodoListItems() {
         ui->descriptionEdit->setFocus();
         _setFocusToDescriptionEdit = false;
     }
+
+    on_newItemEdit_textChanged();
 }
 
 /**
@@ -441,6 +443,8 @@ void TodoDialog::on_TodoDialog_finished(int result) {
 
 void TodoDialog::on_todoListSelector_currentIndexChanged(const QString &arg1) {
     Q_UNUSED(arg1)
+
+    ui->newItemEdit->clear();
 
     // store the todoListSelectorSelectedItem
     storeSettings();
@@ -615,7 +619,9 @@ void TodoDialog::on_summaryEdit_returnPressed() {
     }
 }
 
-void TodoDialog::on_newItemEdit_textChanged(const QString &arg1) {
+void TodoDialog::on_newItemEdit_textChanged() {
+    const QString &arg1 = ui->newItemEdit->text();
+
     // get all items
     QList<QTreeWidgetItem *> allItems = ui->todoItemTreeWidget->findItems(
         QLatin1String(""), Qt::MatchContains | Qt::MatchRecursive);
