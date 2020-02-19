@@ -1981,7 +1981,7 @@ void MainWindow::loadNoteDirectoryList() {
         itemCount = Note::countAll();
     } else {
         // load all notes and add them to the note list widget
-        const QList<Note> noteList = Note::fetchAll();
+        const QVector<Note> noteList = Note::fetchAll();
         for (const Note &note : noteList) {
             addNoteToNoteTreeWidget(note);
         }
@@ -3197,10 +3197,18 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
     if (!hasNoteSubFolder) {
         // check for removed notes
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
         const QList<int> removedNoteIdList =
-            _buildNotesIndexBeforeNoteIdList.toSet()
+            QSet<int>(_buildNotesIndexBeforeNoteIdList.begin(),
+                      _buildNotesIndexBeforeNoteIdList.end())
+                .values();
+#else
+        const QList<int> removedNoteIdList =
+            _buildNotesIndexBeforeNoteIdList.toList()
+                .toSet()
                 .subtract(_buildNotesIndexAfterNoteIdList.toSet())
                 .toList();
+#endif
 
         // remove all missing notes
         for (const int noteId : removedNoteIdList) {
@@ -3212,10 +3220,18 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         }
 
         // check for removed note subfolders
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
         const QList<int> removedNoteSubFolderIdList =
-            _buildNotesIndexBeforeNoteSubFolderIdList.toSet()
+            QSet<int>(_buildNotesIndexBeforeNoteSubFolderIdList.begin(),
+                      _buildNotesIndexBeforeNoteSubFolderIdList.end())
+                .values();
+#else
+        const QList<int> removedNoteSubFolderIdList =
+            _buildNotesIndexBeforeNoteSubFolderIdList.toList()
+                .toSet()
                 .subtract(_buildNotesIndexAfterNoteSubFolderIdList.toSet())
                 .toList();
+#endif
 
         // remove all missing note subfolders
         for (const int _noteSubFolderId : removedNoteSubFolderIdList) {
@@ -3340,7 +3356,7 @@ void MainWindow::updateNoteDirectoryWatcher() {
     }
 
     if (hasSubfolders) {
-        const QList<NoteSubFolder> noteSubFolderList =
+        const QVector<NoteSubFolder> noteSubFolderList =
             NoteSubFolder::fetchAll();
         for (const NoteSubFolder &noteSubFolder : noteSubFolderList) {
             const QString path =
@@ -3356,7 +3372,7 @@ void MainWindow::updateNoteDirectoryWatcher() {
     }
 
     int count = 0;
-    const QList<Note> noteList = Note::fetchAll();
+    const QVector<Note> noteList = Note::fetchAll();
     for (const Note &note : noteList) {
 #ifdef Q_OS_LINUX
         // only add the last first 200 notes to the file watcher to
@@ -4486,8 +4502,8 @@ void MainWindow::moveSelectedNotesToFolder(const QString &destinationFolder) {
  *
  * @return
  */
-QList<Note> MainWindow::selectedNotes() {
-    QList<Note> selectedNotes;
+QVector<Note> MainWindow::selectedNotes() {
+    QVector<Note> selectedNotes;
 
     const auto selectedItems = ui->noteTreeWidget->selectedItems();
     for (QTreeWidgetItem *item : selectedItems) {
@@ -5384,7 +5400,7 @@ void MainWindow::filterNotesBySearchLineEditText() {
         // open search dialog
         doSearchInNote(searchText);
 
-        QList<int> noteIdList = Note::searchInNotes(
+        QVector<int> noteIdList = Note::searchInNotes(
             searchText,
             _showNotesFromAllNoteSubFolders ||
                 NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
@@ -5598,7 +5614,7 @@ void MainWindow::filterNotesByNoteSubFolders() {
     const auto selectedItems = ui->noteSubFolderTreeWidget->selectedItems();
 
     // get all the folder ids
-    QList<int> selectedNoteSubFolderIds;
+    QVector<int> selectedNoteSubFolderIds;
     selectedNoteSubFolderIds.reserve(selectedItems.count());
     if (selectedItems.count() > 1) {
         for (QTreeWidgetItem *i : selectedItems) {
@@ -5608,7 +5624,7 @@ void MainWindow::filterNotesByNoteSubFolders() {
         selectedNoteSubFolderIds << NoteSubFolder::activeNoteSubFolderId();
     }
 
-    QList<int> noteSubFolderIds;
+    QVector<int> noteSubFolderIds;
     noteSubFolderIds.reserve(selectedNoteSubFolderIds.count());
     // check if the notes should be viewed recursively
     if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
@@ -5623,11 +5639,12 @@ void MainWindow::filterNotesByNoteSubFolders() {
     qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
 
     // get the notes from the subfolders
-    QList<int> noteIdList;
+    QVector<int> noteIdList;
     noteIdList.reserve(noteSubFolderIds.count());
     for (int noteSubFolderId : Utils::asConst(noteSubFolderIds)) {
         // get all notes of a note sub folder
-        QList<Note> noteList = Note::fetchAllByNoteSubFolderId(noteSubFolderId);
+        QVector<Note> noteList =
+            Note::fetchAllByNoteSubFolderId(noteSubFolderId);
         noteIdList << Note::noteIdListFromNoteList(noteList);
     }
 
@@ -7542,8 +7559,8 @@ void MainWindow::reloadTagTree() {
 
     ui->tagTreeWidget->clear();
 
-    QList<int> noteSubFolderIds;
-    QList<int> noteIdList;
+    QVector<int> noteSubFolderIds;
+    QVector<int> noteIdList;
     int untaggedNoteCount = 0;
 
     const auto noteSubFolderWidgetItems =
@@ -7565,7 +7582,8 @@ void MainWindow::reloadTagTree() {
     // get the notes from the subfolders
     for (int noteSubFolderId : Utils::asConst(noteSubFolderIds)) {
         // get all notes of a note sub folder
-        QList<Note> noteList = Note::fetchAllByNoteSubFolderId(noteSubFolderId);
+        const QVector<Note> noteList =
+            Note::fetchAllByNoteSubFolderId(noteSubFolderId);
         untaggedNoteCount += Note::countAllNotTagged(noteSubFolderId);
         noteIdList << Note::noteIdListFromNoteList(noteList);
     }
@@ -7778,7 +7796,7 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
         if (isCurrentNoteTreeEnabled) {
             // load all notes of the subfolder and add them to the note list
             // widget
-            const QList<Note> noteList =
+            const QVector<Note> noteList =
                 Note::fetchAllByNoteSubFolderId(noteSubFolder.getId());
             for (const auto &note : noteList) {
                 addNoteToNoteTreeWidget(note, item);
@@ -8187,7 +8205,7 @@ void MainWindow::handleScriptingNotesTagUpdating() {
     // workaround when signal blocking doesn't work correctly
     directoryWatcherWorkaround(true, true);
 
-    const QList<Note> &notes = Note::fetchAll();
+    const QVector<Note> &notes = Note::fetchAll();
     for (const Note &note : notes) {
         const QStringList tagNameList =
             ScriptingService::instance()
@@ -8295,7 +8313,7 @@ void MainWindow::handleScriptingNotesTagRemoving(const QString &tagName,
         directoryWatcherWorkaround(true, true);
     }
 
-    const QList<Note> notes = Note::fetchAll();
+    const QVector<Note> &notes = Note::fetchAll();
     for (const Note &note : notes) {
         handleScriptingNoteTagging(note, tagName, true, false);
     }
@@ -8350,7 +8368,7 @@ void MainWindow::reloadCurrentNoteTags() {
             regenerateNotePreview();
         }
     } else {
-        const QList<Note> notes = selectedNotes();
+        const QVector<Note> notes = selectedNotes();
         tagList = Tag::fetchAllOfNotes(notes);
         const QString notesSelectedText =
             tr("%n notes selected", "", selectedNotesCount);
@@ -8416,7 +8434,7 @@ void MainWindow::highlightCurrentNoteTagsInTagTree() {
     if (currentNoteOnly) {
         tagList = Tag::fetchAllOfNote(currentNote);
     } else {
-        const QList<Note> &notes = selectedNotes();
+        const QVector<Note> &notes = selectedNotes();
         tagList = Tag::fetchAllOfNotes(notes);
     }
 
@@ -8924,7 +8942,7 @@ void MainWindow::tagSelectedNotesToTagId(int tagId) {
  */
 void MainWindow::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
                                                 int parentNoteSubFolderId) {
-    const QList<NoteSubFolder> noteSubFolderList =
+    const QVector<NoteSubFolder> noteSubFolderList =
         NoteSubFolder::fetchAllByParentId(parentNoteSubFolderId,
                                           QStringLiteral("name ASC"));
 

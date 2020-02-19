@@ -137,7 +137,7 @@ class Tag {
 
     static bool isTaggingShowNotesRecursively();
 
-    static QList<Tag> fetchAllOfNotes(const QList<Note> &notes);
+    static QList<Tag> fetchAllOfNotes(const QVector<Note> &notes);
 
    protected:
     int id;

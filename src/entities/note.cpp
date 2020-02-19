@@ -171,7 +171,7 @@ Note Note::fetch(int id) {
  * @return
  */
 Note Note::fetchByName(const QRegularExpression &regExp, int noteSubFolderId) {
-    const QList<Note> noteList =
+    const QVector<Note> noteList =
         noteSubFolderId == -1 ? fetchAll()
                               : fetchAllByNoteSubFolderId(noteSubFolderId);
 
@@ -559,11 +559,11 @@ void Note::fillFromQuery(const QSqlQuery &query) {
     modified = query.value(QStringLiteral("modified")).toDateTime();
 }
 
-QList<Note> Note::fetchAll(int limit) {
+QVector<Note> Note::fetchAll(int limit) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    QList<Note> noteList;
+    QVector<Note> noteList;
 
     const QString sql =
         limit >= 0 ? QStringLiteral(
@@ -590,11 +590,11 @@ QList<Note> Note::fetchAll(int limit) {
     return noteList;
 }
 
-QList<int> Note::fetchAllIds(int limit, int offset) {
+QVector<int> Note::fetchAllIds(int limit, int offset) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    QList<int> noteIdList;
+    QVector<int> noteIdList;
     QString sql = QStringLiteral("SELECT * FROM note ORDER BY id");
 
     if (limit >= 0) {
@@ -627,11 +627,11 @@ QList<int> Note::fetchAllIds(int limit, int offset) {
     return noteIdList;
 }
 
-QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
+QVector<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    QList<Note> noteList;
+    QVector<Note> noteList;
     const QString sql = QStringLiteral(
         "SELECT * FROM note WHERE note_sub_folder_id = "
         ":note_sub_folder_id ORDER BY file_last_modified DESC");
@@ -653,11 +653,11 @@ QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
 /**
  * Gets a list of note ids from a note list
  */
-QList<int> Note::noteIdListFromNoteList(const QList<Note> &noteList) {
-    QList<int> idList;
+QVector<int> Note::noteIdListFromNoteList(const QVector<Note> &noteList) {
+    QVector<int> idList;
     idList.reserve(noteList.size());
 
-    QList<Note>::const_iterator i;
+    QVector<Note>::const_iterator i;
     for (i = noteList.constBegin(); i != noteList.constEnd(); ++i) {
         idList.append((*i).getId());
     }
@@ -667,17 +667,17 @@ QList<int> Note::noteIdListFromNoteList(const QList<Note> &noteList) {
 /**
  * Returns all notes that are not tagged
  */
-QList<Note> Note::fetchAllNotTagged(int activeNoteSubFolderId) {
-    QList<Note> noteList;
+QVector<Note> Note::fetchAllNotTagged(int activeNoteSubFolderId) {
+    QVector<Note> noteList;
     if (activeNoteSubFolderId < 0) {
         noteList = Note::fetchAll();
     } else {
         noteList = Note::fetchAllByNoteSubFolderId(activeNoteSubFolderId);
     }
-    QList<Note> untaggedNoteList;
+    QVector<Note> untaggedNoteList;
     untaggedNoteList.reserve(noteList.size());
 
-    QList<Note>::const_iterator i;
+    QVector<Note>::const_iterator i;
     for (i = noteList.constBegin(); i != noteList.constEnd(); ++i) {
         const int tagCount = Tag::countAllOfNote(*i);
         if (tagCount == 0) untaggedNoteList.append(*i);
@@ -689,18 +689,15 @@ QList<Note> Note::fetchAllNotTagged(int activeNoteSubFolderId) {
  * Returns all notes names that are not tagged
  */
 QStringList Note::fetchAllNotTaggedNames() {
-    QList<Note> noteList = Note::fetchAll();
+    QVector<Note> noteList = Note::fetchAll();
     QStringList untaggedNoteFileNameList;
     untaggedNoteFileNameList.reserve(noteList.size());
 
-    QListIterator<Note> itr(noteList);
-
-    while (itr.hasNext()) {
-        Note note = itr.next();
-        int tagCount = Tag::countAllOfNote(note);
-        if (tagCount == 0) {
-            untaggedNoteFileNameList << note.getName();
-        }
+    QVectorIterator<Note> itr(noteList);
+    QVector<Note>::const_iterator it = noteList.constBegin();
+    for (; it != noteList.constEnd(); ++it) {
+        const int tagCount = Tag::countAllOfNote(*it);
+        if (tagCount == 0) untaggedNoteFileNameList << it->getName();
     }
 
     return untaggedNoteFileNameList;
@@ -710,15 +707,15 @@ QStringList Note::fetchAllNotTaggedNames() {
  * Counts all notes that are not tagged
  */
 int Note::countAllNotTagged(int activeNoteSubFolderId) {
-    QList<Note> noteList = Note::fetchAllNotTagged(activeNoteSubFolderId);
+    QVector<Note> noteList = Note::fetchAllNotTagged(activeNoteSubFolderId);
     return noteList.count();
 }
 
-QList<Note> Note::search(const QString &text) {
+QVector<Note> Note::search(const QString &text) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    QList<Note> noteList;
+    QVector<Note> noteList;
 
     query.prepare(
         QStringLiteral("SELECT * FROM note WHERE note_text LIKE :text "
@@ -738,12 +735,12 @@ QList<Note> Note::search(const QString &text) {
     return noteList;
 }
 
-QList<QString> Note::searchAsNameListInCurrentNoteSubFolder(
+QVector<QString> Note::searchAsNameListInCurrentNoteSubFolder(
     const QString &text, bool searchInNameOnly) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    QList<QString> nameList;
+    QVector<QString> nameList;
     const QString textSearchSql =
         !searchInNameOnly ? QStringLiteral("OR note_text LIKE :text ")
                           : QLatin1String("");
@@ -769,12 +766,12 @@ QList<QString> Note::searchAsNameListInCurrentNoteSubFolder(
     return nameList;
 }
 
-QList<QString> Note::searchAsNameList(const QString &text,
-                                      bool searchInNameOnly) {
+QVector<QString> Note::searchAsNameList(const QString &text,
+                                        bool searchInNameOnly) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    QList<QString> nameList;
+    QVector<QString> nameList;
     const QString textSearchSql =
         !searchInNameOnly ? QStringLiteral("OR note_text LIKE :text ")
                           : QLatin1String("");
@@ -805,11 +802,11 @@ QList<QString> Note::searchAsNameList(const QString &text,
  * You can search for longer texts by using quotes, `"this word1" word2`
  * will find all notes that are containing `this word1` and `word2`
  */
-QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
-                               int noteSubFolderId) {
+QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
+                                 int noteSubFolderId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
-    auto noteIdList = QList<int>();
+    auto noteIdList = QVector<int>();
     QStringList sqlList;
 
     // get the active note subfolder id if none was set
@@ -899,6 +896,7 @@ QStringList Note::buildQueryStringList(QString searchString,
     searchString = searchString.simplified();
 
     const QStringList searchStringList = searchString.split(QChar(' '));
+    queryStrings.reserve(searchStringList.size());
     // add the remaining strings
     for (const QString &text : searchStringList) {
         // escape the text so strings like `^ ` don't cause an
@@ -987,11 +985,11 @@ QStringList Note::fetchNoteFileNames() {
     return list;
 }
 
-QList<int> Note::fetchAllIdsByNoteTextPart(const QString &textPart) {
+QVector<int> Note::fetchAllIdsByNoteTextPart(const QString &textPart) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    QList<int> list;
+    QVector<int> list;
 
     query.prepare(
         QStringLiteral("SELECT id FROM note WHERE note_text LIKE :text "
@@ -2260,7 +2258,9 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     } else {
         const QString schemaStyles =
-            settings.value(QStringLiteral("MainWindow/noteTextView.useEditorStyles"), true)
+            settings.value(QStringLiteral(
+                               "MainWindow/noteTextView.useEditorStyles"),
+                           true)
                     .toBool()
                 ? Utils::Schema::getSchemaStyles()
                 : QLatin1String("");
@@ -2437,7 +2437,8 @@ QString Note::encryptNoteText() {
     // keep the first two lines unencrypted
     noteText = noteTextLines.at(0) + QStringLiteral("\n") +
                noteTextLines.at(1) + QStringLiteral("\n\n") +
-               QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) + QStringLiteral("\n");
+               QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
+               QStringLiteral("\n");
 
     // remove the first two lines for encryption
     noteTextLines.removeFirst();
@@ -2467,7 +2468,7 @@ QString Note::encryptNoteText() {
         // encrypt the text
         BotanWrapper botanWrapper;
         botanWrapper.setPassword(cryptoPassword);
-        botanWrapper.setSalt(BOTAN_SALT);
+        botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
         encryptedText = botanWrapper.Encrypt(text);
 
         //    SimpleCrypt *crypto = new
@@ -2490,10 +2491,11 @@ QString Note::encryptNoteText() {
  */
 QRegularExpression Note::getEncryptedNoteTextRegularExpression() const {
     // match the encrypted string
-    QRegularExpression re(
-        QRegularExpression::escape(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
-        QStringLiteral("\\s+(.+)\\s+") +
-        QRegularExpression::escape(NOTE_TEXT_ENCRYPTION_POST_STRING));
+    QRegularExpression re(QRegularExpression::escape(
+                              QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING)) +
+                          QStringLiteral("\\s+(.+)\\s+") +
+                          QRegularExpression::escape(QStringLiteral(
+                              NOTE_TEXT_ENCRYPTION_POST_STRING)));
 
     re.setPatternOptions(QRegularExpression::MultilineOption |
                          QRegularExpression::DotMatchesEverythingOption);
@@ -2543,7 +2545,7 @@ bool Note::canDecryptNoteText() const {
             // decrypt the note text with Botan
             BotanWrapper botanWrapper;
             botanWrapper.setPassword(cryptoPassword);
-            botanWrapper.setSalt(BOTAN_SALT);
+            botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
             decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
         } catch (Botan::Exception &) {
             return false;
@@ -2591,7 +2593,7 @@ QString Note::getDecryptedNoteText() const {
         try {
             BotanWrapper botanWrapper;
             botanWrapper.setPassword(cryptoPassword);
-            botanWrapper.setSalt(BOTAN_SALT);
+            botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
             decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
         } catch (Botan::Exception &) {
         }
@@ -2666,7 +2668,7 @@ int Note::countAll() {
 int Note::countByNoteSubFolderId(int noteSubFolderId, bool recursive) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
-    QList<int> noteSubFolderIdList;
+    QVector<int> noteSubFolderIdList;
 
     if (recursive) {
         noteSubFolderIdList =
@@ -2677,11 +2679,7 @@ int Note::countByNoteSubFolderId(int noteSubFolderId, bool recursive) {
 
     QStringList idStringList;
     idStringList.reserve(noteSubFolderIdList.size());
-#if QT_VERSION >= 0x050700
-    for (const int id : qAsConst(noteSubFolderIdList)) {
-#else
-    Q_FOREACH (const int id, noteSubFolderIdList) {
-#endif
+    for (const int id : Utils::asConst(noteSubFolderIdList)) {
         idStringList << QString::number(id);
     }
 
@@ -2718,8 +2716,8 @@ bool Note::isSameFile(const Note &note) const {
  * @param fileName
  * @return list of note ids
  */
-QList<int> Note::findLinkedNoteIds() const {
-    QList<int> noteIdList;
+QVector<int> Note::findLinkedNoteIds() const {
+    QVector<int> noteIdList;
 
     // search for legacy links
     const QString linkText = getNoteURL(name);
@@ -2759,7 +2757,12 @@ QList<int> Note::findLinkedNoteIds() const {
     }
 
     // remove duplicates and return list
-    return noteIdList.toSet().toList();
+    // return noteIdList.toSet().toList();
+    // QSet<int>(noteIdList.constBegin(), noteIdList.constEnd());
+    std::sort(noteIdList.begin(), noteIdList.end());
+    noteIdList.erase(std::unique(noteIdList.begin(), noteIdList.end()),
+                     noteIdList.end());
+    return noteIdList;
 }
 
 /**
@@ -2874,7 +2877,7 @@ QString Note::relativeFilePath(const QString &path) const {
  * @param oldNote
  */
 void Note::handleNoteMoving(const Note &oldNote) const {
-    const QList<int> noteIdList = oldNote.findLinkedNoteIds();
+    const QVector<int> noteIdList = oldNote.findLinkedNoteIds();
     const int noteCount = noteIdList.count();
 
     if (noteCount == 0) {
@@ -3353,7 +3356,7 @@ QString Note::getNotePreviewText(bool asHtml, int lines) const {
  * @param notes
  * @return
  */
-QString Note::generateMultipleNotesPreviewText(const QList<Note> &notes) {
+QString Note::generateMultipleNotesPreviewText(const QVector<Note> &notes) {
     const QSettings settings;
     const bool darkModeColors =
         settings.value(QStringLiteral("darkModeColors")).toBool();
@@ -3441,7 +3444,7 @@ QString Note::getParsedBookmarksWebServiceJsonText() const {
  *
  * @return
  */
-QList<Bookmark> Note::getParsedBookmarks() const {
+QVector<Bookmark> Note::getParsedBookmarks() const {
     const QString text =
         decryptedNoteText.isEmpty() ? noteText : decryptedNoteText;
     return Bookmark::parseBookmarks(text);

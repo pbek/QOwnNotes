@@ -56,7 +56,7 @@ LinkDialog::~LinkDialog() { delete ui; }
 void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
     // search notes when at least 2 characters were entered
     if (arg1.count() >= 2) {
-        QList<QString> noteNameList = Note::searchAsNameList(arg1, true);
+        QVector<QString> noteNameList = Note::searchAsNameList(arg1, true);
         this->firstVisibleNoteListRow = -1;
 
         for (int i = 0; i < this->ui->notesListWidget->count(); ++i) {

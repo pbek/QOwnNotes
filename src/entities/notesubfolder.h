@@ -21,7 +21,7 @@ class NoteSubFolder {
 
     static NoteSubFolder fetch(int id);
 
-    static QList<NoteSubFolder> fetchAll(int limit = -1);
+    static QVector<NoteSubFolder> fetchAll(int limit = -1);
 
     static NoteSubFolder noteSubFolderFromQuery(const QSqlQuery& query);
 
@@ -55,11 +55,11 @@ class NoteSubFolder {
 
     NoteSubFolder getParent() const;
 
-    static QList<NoteSubFolder> fetchAllByParentId(
+    static QVector<NoteSubFolder> fetchAllByParentId(
         int parentId,
         const QString& sortBy = QStringLiteral("file_last_modified DESC"));
 
-    static QList<int> fetchIdsRecursivelyByParentId(int parentId);
+    static QVector<int> fetchIdsRecursivelyByParentId(int parentId);
 
     bool isActive() const;
 
@@ -93,7 +93,7 @@ class NoteSubFolder {
 
     static int countAllParentId(int parentId);
 
-    static QList<int> fetchAllIds();
+    static QVector<int> fetchAllIds();
 
     static bool isNoteSubfoldersPanelShowNotesRecursively();
 

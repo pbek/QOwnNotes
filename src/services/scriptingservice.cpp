@@ -1725,9 +1725,9 @@ QList<int> ScriptingService::selectedNotesIds() const {
  *
  * @return {QList<int>} list of note ids
  */
-QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(
+QVector<int> ScriptingService::fetchNoteIdsByNoteTextPart(
     const QString &text) const {
-    QList<int> noteIds = Note::fetchAllIdsByNoteTextPart(text);
+    QVector<int> noteIds = Note::fetchAllIdsByNoteTextPart(text);
     return noteIds;
 }
 

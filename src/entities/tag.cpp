@@ -387,7 +387,7 @@ QList<Tag> Tag::fetchAllOfNote(const Note &note) {
 /**
  * Fetches all linked tags of a list of notes
  */
-QList<Tag> Tag::fetchAllOfNotes(const QList<Note> &notes) {
+QList<Tag> Tag::fetchAllOfNotes(const QVector<Note> &notes) {
     QList<Tag> resultTagList;
 
     for (const Note &note : notes) {
