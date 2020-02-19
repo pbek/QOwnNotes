@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.2.8
+- conflicted copies of the note folder database `notes.sqlite` are now
+  immediately deleted if tags and tag assignments are not different to the ones
+  from the current `notes.sqlite` (for [#1625](https://github.com/pbek/QOwnNotes/issues/1625))
+    - all other table differences can be safely ignored
+
 ## 20.2.7
 - some improvements to the todo list dialog were made
     - if the todo items in a list will be reloaded from the server the current

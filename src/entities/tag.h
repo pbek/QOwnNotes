@@ -139,6 +139,8 @@ class Tag {
 
     static QList<Tag> fetchAllOfNotes(const QList<Note> &notes);
 
+    static bool mergeFromDatabase(QSqlDatabase &db);
+
    protected:
     int id;
     int priority;

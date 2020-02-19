@@ -3262,6 +3262,7 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
 
     while (it.hasNext()) {
         const QString &file = it.next();
+        qDebug() << "Found conflicting note folder database: " << file;
 
         // check if conflicted database copy is the same as the current note
         // folder database
@@ -3271,6 +3272,13 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
                 QFile::remove(file)
                     ? tr("Removed duplicate conflicted database: %1").arg(file)
                     : tr("Could not remove duplicate conflicted database: %1")
+                          .arg(file),
+                4000);
+        } else if (DatabaseService::mergeNoteFolderDatabase(file)) {
+            showStatusBarMessage(
+                QFile::remove(file)
+                    ? tr("Removed merged conflicted database: %1").arg(file)
+                    : tr("Could not remove merged conflicted database: %1")
                           .arg(file),
                 4000);
         } else {

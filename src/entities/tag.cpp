@@ -1185,6 +1185,34 @@ void Tag::migrateDarkColors() {
     settings.setValue(QStringLiteral("darkMode"), darkMode);
 }
 
+bool Tag::mergeFromDatabase(QSqlDatabase &db) {
+    QSqlDatabase noteFolderDB = DatabaseService::getNoteFolderDatabase();
+
+    const bool isSameTagTable =
+        DatabaseService::generateDatabaseTableSha1Signature(
+            db, "tag") ==
+        DatabaseService::generateDatabaseTableSha1Signature(
+            noteFolderDB, "tag");
+
+    const bool isSameNoteTagLinkTable =
+        DatabaseService::generateDatabaseTableSha1Signature(
+            db, "noteTagLink") ==
+        DatabaseService::generateDatabaseTableSha1Signature(
+            noteFolderDB, "noteTagLink");
+
+    // if those tables are the same everything is ok
+    if (isSameTagTable && isSameNoteTagLinkTable) {
+        qDebug() << "Tag and tagLinkTable were the same in conflicting note "
+                    "folder database";
+
+        return true;
+    }
+
+    // TODO: try to merge
+
+    return false;
+}
+
 bool Tag::operator==(const Tag &tag) const { return id == tag.id; }
 
 bool Tag::operator<(const Tag &tag) const { return name < tag.name; }

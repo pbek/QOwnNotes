@@ -6,6 +6,7 @@
 #include <utils/misc.h>
 
 #include <QApplication>
+#include <QCryptographicHash>
 #include <QDebug>
 #include <QDir>
 #include <QMessageBox>
@@ -858,8 +859,53 @@ bool DatabaseService::mergeNoteFolderDatabase(const QString &path) {
                         "and the file writeable?")
                 .arg(path),
             QMessageBox::Ok);
+
         return false;
     }
 
-    return true;
+    const bool isTagsMerged = Tag::mergeFromDatabase(mergeDB);
+    mergeDB.close();
+
+    // We can ignore the appData table, because data there will get updated by
+    // QOwnNotes itself
+    // We can ignore the trashItem table, because QOwnNotes will manage the
+    // trashed notes itself
+    return isTagsMerged;
+}
+
+/**
+ * Generates a SHA1 signature for the content of a database table
+ *
+ * @return
+ */
+QByteArray DatabaseService::generateDatabaseTableSha1Signature(
+    QSqlDatabase &db, const QString &table) {
+    QCryptographicHash hash(QCryptographicHash::Sha1);
+    QSqlQuery query(db);
+    query.prepare(QStringLiteral("SELECT * FROM ") + table);
+
+    if (!query.exec()) {
+        qCritical() << __func__ << ": " << query.lastError();
+
+        return QByteArray();
+    }
+
+    // loop through all table rows
+    for (int r = 0; query.next(); r++) {
+        int i = 0;
+        QVariant value = query.value(i);
+
+        // add data from all query columns
+        while (value.isValid() && i < 1000) {
+            hash.addData(value.toByteArray());
+            value = query.value(i);
+            i++;
+        }
+    }
+
+    const QByteArray &result = hash.result();
+    qDebug() << __func__ << " - 'hash': " << result;
+
+    // retrieve the SHA1 signature from the hash
+    return result;
 }
