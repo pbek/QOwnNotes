@@ -3671,7 +3671,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
 }
 
 /**
- * Creates a hash of the text of the current note to be able if it was
+ * Creates a hash of the text of the current note to be able to tell if it was
  * modified outside of QOwnNotes
  */
 void MainWindow::updateCurrentNoteTextHash() {
