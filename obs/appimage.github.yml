@@ -19,15 +19,15 @@ build:
     - pkgconfig(Qt5WebSockets)
     - pkgconfig(Qt5Concurrent)
     - libQt5Sql5-sqlite
+  git:
+    - https://github.com/pbek/QOwnNotes.git
 
 script:
-  - cd $BUILD_SOURCE_DIR
-  - tar xf qownnotes-*.tar.xz
-  - cd qownnotes-*
+  - cd $BUILD_SOURCE_DIR/QOwnNotes/src
   - echo "#define RELEASE \"AppImage\"" > release.h
   - qmake-qt5 QOwnNotes.pro PREFIX=/usr
   - make INSTALL_ROOT=$BUILD_APPDIR install
   - unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH
   - linuxdeployqt $BUILD_APPDIR/usr/share/applications/*.desktop -bundle-non-qt-libs -verbose=2 -no-strip
   - mkdir -p $BUILD_APPDIR/usr/share/metainfo
-  - cp $BUILD_SOURCE_DIR/qownnotes.appdata.xml $BUILD_APPDIR/usr/share/metainfo/qownnotes.appdata.xml
+  - cp $BUILD_SOURCE_DIR/QOwnNotes/obs/qownnotes.appdata.xml $BUILD_APPDIR/usr/share/metainfo/qownnotes.appdata.xml
