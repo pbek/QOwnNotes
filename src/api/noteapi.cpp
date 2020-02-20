@@ -2,6 +2,7 @@
 
 #include <entities/notefolder.h>
 #include <entities/tag.h>
+#include <QVector>
 
 #include <utility>
 
