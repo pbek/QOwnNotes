@@ -54,10 +54,10 @@ bool Bookmark::operator==(const Bookmark &bookmark) const {
  * @param text
  * @return
  */
-QList<Bookmark> Bookmark::parseBookmarks(const QString &text,
+QVector<Bookmark> Bookmark::parseBookmarks(const QString &text,
                                          bool withBasicUrls) {
     QRegularExpressionMatchIterator i;
-    QList<Bookmark> bookmarks;
+    QVector<Bookmark> bookmarks;
 
     // parse bookmark links like `- [name](http://link) #tag1 #tag2 the
     // description text` with optional tags and description
@@ -133,7 +133,7 @@ QList<Bookmark> Bookmark::parseBookmarks(const QString &text,
  * @return
  */
 QString Bookmark::bookmarksWebServiceJsonText(
-    const QList<Bookmark> &bookmarks) {
+    const QVector<Bookmark> &bookmarks) {
     QJsonArray bookmarkObjectList;
     QJsonArray noteFolderObjectList;
 
@@ -173,7 +173,7 @@ QString Bookmark::parsedBookmarksWebServiceJsonText(const QString &text,
 /**
  * Merges the current bookmark into a list of bookmarks
  */
-void Bookmark::mergeInList(QList<Bookmark> &bookmarks) {
+void Bookmark::mergeInList(QVector<Bookmark> &bookmarks) {
     int i = bookmarks.indexOf(*this);
 
     if (i == -1) {
@@ -190,7 +190,7 @@ void Bookmark::mergeInList(QList<Bookmark> &bookmarks) {
 /**
  * Merges a bookmark into a list of bookmarks
  */
-void Bookmark::mergeInList(QList<Bookmark> &bookmarks, Bookmark &bookmark) {
+void Bookmark::mergeInList(QVector<Bookmark> &bookmarks, Bookmark &bookmark) {
     bookmark.mergeInList(bookmarks);
 }
 
@@ -218,8 +218,8 @@ void Bookmark::merge(Bookmark &bookmark) {
 /**
  * Merges a list of bookmarks into another
  */
-void Bookmark::mergeListInList(const QList<Bookmark> &sourceBookmarks,
-                               QList<Bookmark> &destinationBookmarks) {
+void Bookmark::mergeListInList(const QVector<Bookmark> &sourceBookmarks,
+                               QVector<Bookmark> &destinationBookmarks) {
     for (Bookmark bookmark : sourceBookmarks) {
         bookmark.mergeInList(destinationBookmarks);
     }

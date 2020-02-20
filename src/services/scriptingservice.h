@@ -168,7 +168,7 @@ class ScriptingService : public QObject {
     Q_INVOKABLE bool writeToFile(const QString &filePath,
                                  const QString &data) const;
 
-    Q_INVOKABLE QList<int> fetchNoteIdsByNoteTextPart(
+    Q_INVOKABLE QVector<int> fetchNoteIdsByNoteTextPart(
         const QString &text) const;
 
     Q_INVOKABLE void triggerMenuAction(

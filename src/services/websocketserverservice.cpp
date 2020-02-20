@@ -280,18 +280,18 @@ QString WebSocketServerService::getBookmarksJsonText() const {
 
     Tag tag = Tag::fetchByName(getBookmarksTag());
     QList<Note> noteList = tag.fetchAllLinkedNotes();
-    QList<Bookmark> bookmarks;
+    QVector<Bookmark> bookmarks;
 
     // get all bookmark links from notes tagged with the bookmarks tag
     Q_FOREACH (Note note, noteList) {
-        QList<Bookmark> noteBookmarks = note.getParsedBookmarks();
+        QVector<Bookmark> noteBookmarks = note.getParsedBookmarks();
 
         // merge bookmark lists
         Bookmark::mergeListInList(noteBookmarks, bookmarks);
     }
 
     // extract links from the current note
-    QList<Bookmark> currentNoteBookmarks = Bookmark::parseBookmarks(
+    QVector<Bookmark> currentNoteBookmarks = Bookmark::parseBookmarks(
         mainWindow->activeNoteTextEdit()->toPlainText(), true);
 
     // merge bookmark lists

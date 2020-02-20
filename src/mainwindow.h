@@ -167,7 +167,7 @@ class MainWindow : public QMainWindow {
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
         bool forceBuild = false, bool forceLoad = false);
 
-    QList<Note> selectedNotes();
+    QVector<Note> selectedNotes();
 
     bool jumpToNoteSubFolder(int noteSubFolderId);
 
@@ -665,8 +665,8 @@ class MainWindow : public QMainWindow {
     bool _isDefaultShortcutInitialized;
     QList<QShortcut *> _menuShortcuts;
     bool _showNotesFromAllNoteSubFolders;
-    QList<int> _buildNotesIndexBeforeNoteIdList;
-    QList<int> _buildNotesIndexBeforeNoteSubFolderIdList;
+    QVector<int> _buildNotesIndexBeforeNoteIdList;
+    QVector<int> _buildNotesIndexBeforeNoteSubFolderIdList;
     QList<int> _buildNotesIndexAfterNoteIdList;
     QList<int> _buildNotesIndexAfterNoteSubFolderIdList;
     QScrollArea *_noteTagButtonScrollArea;

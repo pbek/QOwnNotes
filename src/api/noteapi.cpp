@@ -2,6 +2,7 @@
 
 #include <entities/notefolder.h>
 #include <entities/tag.h>
+#include <QVector>
 
 #include <utility>
 
@@ -128,7 +129,7 @@ bool NoteApi::removeTag(QString tagName) {
  * @return
  */
 QQmlListProperty<NoteApi> NoteApi::fetchAll(int limit, int offset) {
-    QList<int> noteIds = Note::fetchAllIds(limit, offset);
+    QVector<int> noteIds = Note::fetchAllIds(limit, offset);
     QList<NoteApi*> notes;
 
     Q_FOREACH (int noteId, noteIds) {

@@ -32,7 +32,7 @@ OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent)
         mediaDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
     orphanedFiles.removeDuplicates();
 
-    QList<Note> noteList = Note::fetchAll();
+    QVector<Note> noteList = Note::fetchAll();
     int noteListCount = noteList.count();
 
     ui->progressBar->setMaximum(noteListCount);

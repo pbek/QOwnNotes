@@ -206,11 +206,11 @@ bool NoteSubFolder::fillFromQuery(const QSqlQuery& query) {
     return true;
 }
 
-QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
+QVector<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    QList<NoteSubFolder> noteSubFolderList;
+    QVector<NoteSubFolder> noteSubFolderList;
     QString sql = QStringLiteral(
         "SELECT * FROM noteSubFolder "
         "ORDER BY file_last_modified DESC");
@@ -238,11 +238,11 @@ QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     return noteSubFolderList;
 }
 
-QList<int> NoteSubFolder::fetchAllIds() {
+QVector<int> NoteSubFolder::fetchAllIds() {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    QList<int> idList;
+    QVector<int> idList;
     const QString sql = QStringLiteral("SELECT * FROM noteSubFolder");
 
     query.prepare(sql);
@@ -259,12 +259,12 @@ QList<int> NoteSubFolder::fetchAllIds() {
     return idList;
 }
 
-QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId,
+QVector<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId,
                                                        const QString& sortBy) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    QList<NoteSubFolder> noteSubFolderList;
+    QVector<NoteSubFolder> noteSubFolderList;
     const QString sql = QStringLiteral(
                             "SELECT * FROM noteSubFolder WHERE parent_id = "
                             ":parent_id ORDER BY ") +
@@ -292,8 +292,8 @@ QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId,
  * @param parentId
  * @return
  */
-QList<int> NoteSubFolder::fetchIdsRecursivelyByParentId(int parentId) {
-    QList<int> idList = QList<int>{parentId};
+QVector<int> NoteSubFolder::fetchIdsRecursivelyByParentId(int parentId) {
+    QVector<int> idList = QVector<int>{parentId};
     const auto noteSubFolders = fetchAllByParentId(parentId);
     idList.reserve(noteSubFolders.count());
 

@@ -36,17 +36,17 @@ OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent)
         attachmentsDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
     orphanedFiles.removeDuplicates();
 
-    QList<Note> noteList = Note::fetchAll();
+    QVector<Note> noteList = Note::fetchAll();
     int noteListCount = noteList.count();
 
     ui->progressBar->setMaximum(noteListCount);
     ui->progressBar->show();
 
-    Q_FOREACH (Note note, noteList) {
+    Q_FOREACH (const Note &note, noteList) {
         QStringList attachmentsFileList = note.getAttachmentsFileList();
 
         // remove all found attachments from the orphaned files list
-        Q_FOREACH (QString fileName, attachmentsFileList) {
+        Q_FOREACH (const QString &fileName, attachmentsFileList) {
             orphanedFiles.removeAll(fileName);
         }
 

@@ -55,21 +55,21 @@ class Note {
 
     static Note fetchByName(const QString &name, int noteSubFolderId = -1);
 
-    static QList<Note> fetchAll(int limit = -1);
+    static QVector<Note> fetchAll(int limit = -1);
 
-    static QList<Note> fetchAllNotTagged(int activeNoteSubFolderId);
+    static QVector<Note> fetchAllNotTagged(int activeNoteSubFolderId);
 
     static QStringList fetchAllNotTaggedNames();
 
     static int countAllNotTagged(int activeNoteSubFolderId = -1);
 
-    static QList<Note> search(const QString &text);
+    static QVector<Note> search(const QString &text);
 
-    static QList<QString> searchAsNameListInCurrentNoteSubFolder(
+    static QVector<QString> searchAsNameListInCurrentNoteSubFolder(
         const QString &text, bool searchInNameOnly = false);
 
-    static QList<QString> searchAsNameList(const QString &text,
-                                           bool searchInNameOnly = false);
+    static QVector<QString> searchAsNameList(const QString &text,
+                                             bool searchInNameOnly = false);
 
     static QStringList fetchNoteNamesInCurrentNoteSubFolder();
 
@@ -181,9 +181,9 @@ class Note {
 
     bool modifyNoteTextFileNameFromQMLHook();
 
-    static QList<int> searchInNotes(QString query,
-                                    bool ignoreNoteSubFolder = false,
-                                    int noteSubFolderId = -1);
+    static QVector<int> searchInNotes(QString query,
+                                      bool ignoreNoteSubFolder = false,
+                                      int noteSubFolderId = -1);
 
     int countSearchTextInNote(const QString &search) const;
 
@@ -198,9 +198,9 @@ class Note {
 
     void setNoteSubFolderId(int id);
 
-    static QList<Note> fetchAllByNoteSubFolderId(int noteSubFolderId);
+    static QVector<Note> fetchAllByNoteSubFolderId(int noteSubFolderId);
 
-    static QList<int> noteIdListFromNoteList(const QList<Note> &noteList);
+    static QVector<int> noteIdListFromNoteList(const QVector<Note> &noteList);
 
     static int countByNoteSubFolderId(int noteSubFolderId = 0,
                                       bool recursive = false);
@@ -241,9 +241,9 @@ class Note {
                                        const NoteSubFolder &noteSubFolder,
                                        bool withNoteNameHook = false);
 
-    static QList<int> fetchAllIds(int limit = -1, int offset = -1);
+    static QVector<int> fetchAllIds(int limit = -1, int offset = -1);
 
-    QList<int> findLinkedNoteIds() const;
+    QVector<int> findLinkedNoteIds() const;
 
     void handleNoteMoving(const Note &oldNote) const;
 
@@ -278,13 +278,13 @@ class Note {
 
     static Note fetchByUrlString(const QString &urlString);
 
-    static QList<int> fetchAllIdsByNoteTextPart(const QString &textPart);
+    static QVector<int> fetchAllIdsByNoteTextPart(const QString &textPart);
 
     QStringList getAttachmentsFileList() const;
 
     QString getNotePreviewText(bool asHtml = false, int lines = 3) const;
 
-    static QString generateMultipleNotesPreviewText(const QList<Note> &notes);
+    static QString generateMultipleNotesPreviewText(const QVector<Note> &notes);
 
     bool handleNoteTextFileName();
 
@@ -294,7 +294,7 @@ class Note {
 
     static QString extendedCleanupFileName(QString name);
 
-    QList<Bookmark> getParsedBookmarks() const;
+    QVector<Bookmark> getParsedBookmarks() const;
 
     QString getParsedBookmarksWebServiceJsonText() const;
 
