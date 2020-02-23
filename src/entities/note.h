@@ -300,7 +300,7 @@ class Note {
 
     void resetNoteTextHtmlConversionHash();
 
-    QString getFileURLFromFileName(QString fileName) const;
+    QString getFileURLFromFileName(QString fileName, bool urlDecodeFileName = false) const;
 
     static bool fileUrlIsNoteInCurrentNoteFolder(const QUrl &url);
 
@@ -326,6 +326,10 @@ class Note {
     bool updateRelativeAttachmentFileLinks();
 
     static Utils::Misc::ExternalImageHash *externalImageHash();
+
+    static QString urlEncodeNoteUrl(const QString &url);
+
+    static QString urlDecodeNoteUrl(QString url);
 
    protected:
     QString name;

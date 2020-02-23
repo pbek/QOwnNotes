@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 20.2.9
+- note links generated from the *Link dialog* will now get url-encoded to be
+  better compatible with other tools that can link to files, like GitHub or
+  GitLab (for [#1546](https://github.com/pbek/QOwnNotes/issues/1546))
+    - for example `Note with one bracket].md` will now get `Note%20with%20one%20bracket%5D.md`
+    - links with just spaces still work in QOwnNotes, as well as `&#32;` as spaces
+    - the new note links are click-able in both the note edit and the preview
+      and the broken-note-link highlighter will also handle them correctly
+
 ## 20.2.8
 - conflicted copies of the note folder database `notes.sqlite` are now
   immediately deleted if tags and tag assignments are not different to the ones

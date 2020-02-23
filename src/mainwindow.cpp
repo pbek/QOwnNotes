@@ -5918,7 +5918,7 @@ void MainWindow::openLocalUrl(QString urlString) {
     // if urlString is no valid url we will try to convert it into a note file
     // url
     if (!QOwnNotesMarkdownTextEdit::isValidUrl(urlString)) {
-        urlString = currentNote.getFileURLFromFileName(urlString);
+        urlString = currentNote.getFileURLFromFileName(urlString, true);
         urlWasNotValid = true;
     }
 

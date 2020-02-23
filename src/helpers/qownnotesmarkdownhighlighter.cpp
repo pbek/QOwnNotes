@@ -139,7 +139,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
         match = regex.match(text);
 
         if (match.hasMatch()) {
-            QString fileName = match.captured(1);
+            QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
             Note note = _currentNote.fetchByRelativeFileName(fileName);
 
             // if the note exists we don't need to do anything
@@ -152,7 +152,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
             match = regex.match(text);
 
             if (match.hasMatch()) {
-                QString fileName = match.captured(1);
+                QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
                 Note note = _currentNote.fetchByRelativeFileName(fileName);
 
                 // if the note exists we don't need to do anything

@@ -1525,7 +1525,7 @@ QString Note::getNoteUrlForLinkingTo(const Note &note, bool forceLegacy) const {
             Note::generateTextForLink(note.getName());
         noteUrl = QStringLiteral("note://") + noteNameForLink;
     } else {
-        noteUrl = getFilePathRelativeToNote(note);
+        noteUrl = urlEncodeNoteUrl(getFilePathRelativeToNote(note));
 
         // if one of the link characters `<>()` were found in the note url use
         // the legacy way of linking because otherwise the "url" would break the
@@ -1536,6 +1536,29 @@ QString Note::getNoteUrlForLinkingTo(const Note &note, bool forceLegacy) const {
     }
 
     return noteUrl;
+}
+
+/**
+ * Returns an url string that is fit to be placed in a note link
+ *
+ * Example:
+ * "Note with one bracket].md" will get "Note%20with%20one%20bracket%5D.md"
+ */
+QString Note::urlEncodeNoteUrl(const QString &url) {
+    return QUrl::toPercentEncoding(url);
+}
+
+/**
+ * Returns the url decoded representation of a string to e.g. fetch a note from
+ * the note database if url came from a note link
+ *
+ * Example:
+ * "Note%20with%20one%20bracket%5D.md" will get "Note with one bracket].md"
+ * "Note%20with&#32;one bracket].md" will also get "Note with one bracket].md"
+ */
+QString Note::urlDecodeNoteUrl(QString url) {
+    return QUrl::fromPercentEncoding(
+        url.replace(QStringLiteral("&#32;"), QStringLiteral(" ")).toUtf8());
 }
 
 /**
@@ -2069,7 +2092,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         const QString fileLink = match.captured(1);
-        const QString url = Note::getFileURLFromFileName(fileLink);
+        const QString url = Note::getFileURLFromFileName(fileLink, true);
 
         str.replace(match.captured(0), QStringLiteral("[") + fileLink +
                                            QStringLiteral("](") + url +
@@ -2096,7 +2119,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
             continue;
         }
 
-        const QString url = Note::getFileURLFromFileName(fileLink);
+        const QString url = Note::getFileURLFromFileName(fileLink, true);
 
         str.replace(match.captured(0), QStringLiteral("[") + fileText +
                                            QStringLiteral("](") + url +
@@ -2811,7 +2834,11 @@ const QString Note::getNoteURLFromFileName(const QString &fileName) {
  * @param fileName
  * @return
  */
-QString Note::getFileURLFromFileName(QString fileName) const {
+QString Note::getFileURLFromFileName(QString fileName, bool urlDecodeFileName) const {
+    if (urlDecodeFileName) {
+        fileName = urlDecodeNoteUrl(fileName);
+    }
+
     if (noteSubFolderId > 0) {
         const NoteSubFolder noteSubFolder = getNoteSubFolder();
         if (noteSubFolder.isFetched()) {
