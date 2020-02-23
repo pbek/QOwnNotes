@@ -6,6 +6,9 @@
 # We will need some packages to execute this locally:
 # sudo apt-get install osc xz
 #
+# osc needs m2crypto:
+# pip3 install m2crypto
+#
 # A file ~/.oscrc will be generated upon first start of osc
 #
 
