@@ -2411,7 +2411,7 @@ p, li { white-space: pre-wrap; }
     <string>Insert attachment</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+Shift+E</string>
+    <string notr="true">Ctrl+Shift+X</string>
    </property>
   </action>
   <action name="actionAllow_note_editing">
@@ -2607,9 +2607,9 @@ p, li { white-space: pre-wrap; }
   <tabstop>noteTextView</tabstop>
  </tabstops>
  <resources>
+  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
-  <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

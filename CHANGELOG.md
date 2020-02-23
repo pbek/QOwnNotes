@@ -8,6 +8,10 @@
     - links with just spaces still work in QOwnNotes, as well as `&#32;` as spaces
     - the new note links are click-able in both the note edit and the preview
       and the broken-note-link highlighter will also handle them correctly
+- the default shortcut for `Insert attachment` was changed to <kbd>Ctrl + Shift + X</kbd>
+  because of clashing with `Edit encrypted note` (for [#1637](https://github.com/pbek/QOwnNotes/issues/1637))
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+      for a list of all shortcuts
 
 ## 20.2.8
 - conflicted copies of the note folder database `notes.sqlite` are now
