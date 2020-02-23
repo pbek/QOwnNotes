@@ -12,6 +12,13 @@
   because of clashing with `Edit encrypted note` (for [#1637](https://github.com/pbek/QOwnNotes/issues/1637))
     - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
+- added more Indonesian, Spanish, Danish, Vietnamese, Dutch, Estonian, Filipino,
+  Finnish, Greek, Hausa, Hebrew, Hindi, Hungarian, Urdu (Pakistan), Icelandic,
+  Turkish, Irish, Japanese, Korean, Kurdish, Latvian, Lithuanian, Macedonian,
+  Norwegian, Persian, Polish, Portuguese, Punjabi, Romanian, Serbian (Cyrillic),
+  Slovak, Slovenian, Swedish, Ukrainian, Uzbek, Albanian, Arabic, Basque, Bengali,
+  Bosnian, Bulgarian, Chinese Simplified, Chinese Traditional, Croatian, Czech,
+  German, Russian translation (thank you zmni, richarson, Fabijenna, rakekniven, unchase)
 
 ## 20.2.8
 - conflicted copies of the note folder database `notes.sqlite` are now
