@@ -1546,7 +1546,7 @@ QString Note::fullNoteFilePath() const {
 }
 
 /**
- * Returns the full path of direcotry of the note file
+ * Returns the full path of directory of the note file
  */
 QString Note::fullNoteFileDirPath() const {
     QFileInfo fileInfo;
