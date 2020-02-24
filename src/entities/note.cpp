@@ -2752,17 +2752,20 @@ QVector<int> Note::findLinkedNoteIds() const {
 
     // search for legacy links
     const QString linkText = getNoteURL(name);
-    noteIdList.append(searchInNotes(QChar('<') + linkText + QChar('>'), true));
-    noteIdList.append(searchInNotes(
-        QStringLiteral("](") + linkText + QStringLiteral(")"), true));
+    Utils::Misc::appendIntVectorToIntVector(
+        noteIdList,
+        searchInNotes(QChar('<') + linkText + QChar('>'), true));
+    Utils::Misc::appendIntVectorToIntVector(
+        noteIdList,
+        searchInNotes(QStringLiteral("](") + linkText + QStringLiteral(")"), true));
 
     // search vor legacy links ending with "@"
     const QString altLinkText =
         Utils::Misc::appendIfDoesNotEndWith(linkText, QStringLiteral("@"));
     if (altLinkText != linkText) {
-        noteIdList.append(
+        Utils::Misc::appendIntVectorToIntVector(noteIdList,
             searchInNotes(QChar('<') + altLinkText + QChar('>'), true));
-        noteIdList.append(searchInNotes(
+        Utils::Misc::appendIntVectorToIntVector(noteIdList,searchInNotes(
             QStringLiteral("](") + altLinkText + QChar(')'), true));
     }
 
