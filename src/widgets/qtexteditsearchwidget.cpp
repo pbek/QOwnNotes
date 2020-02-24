@@ -252,13 +252,16 @@ bool QTextEditSearchWidget::doSearch(bool searchDown, bool allowRestartAtTop) {
     }
 
     // add a background color according if we found the text or not
-    QString colorCode = found ? QStringLiteral("#D5FAE2") : QStringLiteral("#FAE9EB");
+    QString colorCode =
+        found ? QStringLiteral("#D5FAE2") : QStringLiteral("#FAE9EB");
 
     if (_darkMode) {
-        colorCode = found ? QStringLiteral("#135a13") : QStringLiteral("#8d2b36");
+        colorCode =
+            found ? QStringLiteral("#135a13") : QStringLiteral("#8d2b36");
     }
 
-    ui->searchLineEdit->setStyleSheet(QStringLiteral("* { background: ") + colorCode + QStringLiteral("; }"));
+    ui->searchLineEdit->setStyleSheet(QStringLiteral("* { background: ") +
+                                      colorCode + QStringLiteral("; }"));
 
     return found;
 }

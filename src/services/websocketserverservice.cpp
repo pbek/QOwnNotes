@@ -87,7 +87,9 @@ quint16 WebSocketServerService::getPort() { return m_port; }
 quint16 WebSocketServerService::getSettingsPort() {
     QSettings settings;
     quint16 port = static_cast<quint16>(
-        settings.value(QStringLiteral("webSocketServerService/port"), getDefaultPort())
+        settings
+            .value(QStringLiteral("webSocketServerService/port"),
+                   getDefaultPort())
             .toULongLong());
     return port;
 }
@@ -134,7 +136,8 @@ void WebSocketServerService::processMessage(const QString &message) {
     const QString token = jsonObject.value(QStringLiteral("token")).toString();
     QSettings settings;
     QString storedToken =
-        settings.value(QStringLiteral("webSocketServerService/token")).toString();
+        settings.value(QStringLiteral("webSocketServerService/token"))
+            .toString();
 
     // request the token if not set
     if (token.isEmpty() || storedToken.isEmpty() || token != storedToken) {
@@ -160,12 +163,15 @@ void WebSocketServerService::processMessage(const QString &message) {
             return;
         }
 
-        const QString contentType = jsonObject.value(QStringLiteral("contentType")).toString();
+        const QString contentType =
+            jsonObject.value(QStringLiteral("contentType")).toString();
         const QString name =
-            Note::cleanupFileName(Note::extendedCleanupFileName(
-                                      jsonObject.value(QStringLiteral("headline")).toString()))
+            Note::cleanupFileName(
+                Note::extendedCleanupFileName(
+                    jsonObject.value(QStringLiteral("headline")).toString()))
                 .trimmed();
-        const QString text = jsonObject.value(QStringLiteral("text")).toString().trimmed();
+        const QString text =
+            jsonObject.value(QStringLiteral("text")).toString().trimmed();
         const bool contentTypeIsHTML = contentType == QLatin1String("html");
 
         mainWindow->createNewNote(
@@ -206,7 +212,8 @@ void WebSocketServerService::processMessage(const QString &message) {
             return;
         }
 
-        const int noteFolderId = jsonObject.value(QStringLiteral("data")).toInt();
+        const int noteFolderId =
+            jsonObject.value(QStringLiteral("data")).toInt();
 
         if (noteFolderId == NoteFolder::currentNoteFolderId()) {
             pSender->sendTextMessage(getNoteFolderSwitchedJsonText(false));
@@ -240,13 +247,18 @@ QJsonArray WebSocketServerService::createBookmarks(
     }
 
     QString noteText = bookmarksNote.getNoteText().trimmed();
-    const QJsonArray bookmarkList = jsonObject.value(QStringLiteral("data")).toArray();
+    const QJsonArray bookmarkList =
+        jsonObject.value(QStringLiteral("data")).toArray();
 
     Q_FOREACH (QJsonValue bookmarkObject, bookmarkList) {
         const QJsonObject data = bookmarkObject.toObject();
-        const QString name =
-            data.value(QStringLiteral("name")).toString().trimmed().remove(QStringLiteral("[")).remove(QStringLiteral("]"));
-        const QString url = data.value(QStringLiteral("url")).toString().trimmed();
+        const QString name = data.value(QStringLiteral("name"))
+                                 .toString()
+                                 .trimmed()
+                                 .remove(QStringLiteral("["))
+                                 .remove(QStringLiteral("]"));
+        const QString url =
+            data.value(QStringLiteral("url")).toString().trimmed();
         const QString description =
             data.value(QStringLiteral("description")).toString().trimmed();
 
@@ -311,7 +323,8 @@ QString WebSocketServerService::getBookmarksJsonText() const {
 QString WebSocketServerService::getNoteFolderSwitchedJsonText(
     bool switched) const {
     QJsonObject object;
-    object.insert(QStringLiteral("type"), QJsonValue::fromVariant("switchedNoteFolder"));
+    object.insert(QStringLiteral("type"),
+                  QJsonValue::fromVariant("switchedNoteFolder"));
     object.insert(QStringLiteral("data"), QJsonValue::fromVariant(switched));
     QJsonDocument doc(object);
 
@@ -325,7 +338,8 @@ QString WebSocketServerService::getNoteFolderSwitchedJsonText(
  */
 QString WebSocketServerService::getTokenQueryJsonText() const {
     QJsonObject object;
-    object.insert(QStringLiteral("type"), QJsonValue::fromVariant("tokenQuery"));
+    object.insert(QStringLiteral("type"),
+                  QJsonValue::fromVariant("tokenQuery"));
     QJsonDocument doc(object);
 
     return doc.toJson(QJsonDocument::Compact);
@@ -346,7 +360,9 @@ void WebSocketServerService::socketDisconnected() {
 QString WebSocketServerService::getBookmarksTag() {
     QSettings settings;
     QString bookmarksTag =
-        settings.value(QStringLiteral("webSocketServerService/bookmarksTag"), "bookmarks")
+        settings
+            .value(QStringLiteral("webSocketServerService/bookmarksTag"),
+                   "bookmarks")
             .toString();
     return bookmarksTag;
 }
@@ -354,14 +370,17 @@ QString WebSocketServerService::getBookmarksTag() {
 QString WebSocketServerService::getBookmarksNoteName() {
     QSettings settings;
     QString bookmarksNoteName =
-        settings.value(QStringLiteral("webSocketServerService/bookmarksNoteName"), "Bookmarks")
+        settings
+            .value(QStringLiteral("webSocketServerService/bookmarksNoteName"),
+                   "Bookmarks")
             .toString();
     return bookmarksNoteName;
 }
 
 QString WebSocketServerService::flashMessageJsonText(const QString &message) {
     QJsonObject resultObject;
-    resultObject.insert(QStringLiteral("type"), QJsonValue::fromVariant("flashMessage"));
+    resultObject.insert(QStringLiteral("type"),
+                        QJsonValue::fromVariant("flashMessage"));
     resultObject.insert(QStringLiteral("message"), message);
     resultObject.insert(QStringLiteral("noteFolderName"),
                         NoteFolder::currentNoteFolder().getName());

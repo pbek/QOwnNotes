@@ -259,8 +259,8 @@ QVector<int> NoteSubFolder::fetchAllIds() {
     return idList;
 }
 
-QVector<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId,
-                                                       const QString& sortBy) {
+QVector<NoteSubFolder> NoteSubFolder::fetchAllByParentId(
+    int parentId, const QString& sortBy) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 

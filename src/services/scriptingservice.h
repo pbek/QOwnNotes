@@ -189,7 +189,8 @@ class ScriptingService : public QObject {
     void outputMethodsOfObject(QObject *object);
     void reloadScriptComponents();
     void clearCustomStyleSheets();
-    QList<QVariant> registerSettingsVariables(QObject *object, const Script &script);
+    QList<QVariant> registerSettingsVariables(QObject *object,
+                                              const Script &script);
 
    signals:
     void noteStored(QVariant note);

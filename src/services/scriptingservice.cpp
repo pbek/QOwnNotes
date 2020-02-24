@@ -155,8 +155,8 @@ void ScriptingService::initComponent(const Script &script) {
  * @param object
  * @param script
  */
-QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object,
-                                                            const Script &script) {
+QList<QVariant> ScriptingService::registerSettingsVariables(
+    QObject *object, const Script &script) {
     // registerSettingsVariables will override the settingsVariables property
     if (methodExistsForObject(object,
                               QStringLiteral("registerSettingsVariables()"))) {
@@ -176,7 +176,8 @@ QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object,
         foreach (QVariant variable, list) {
             QMap<QString, QVariant> variableMap = variable.toMap();
             QString type = variableMap[QStringLiteral("type")].toString();
-            QString identifier = variableMap[QStringLiteral("identifier")].toString();
+            QString identifier =
+                variableMap[QStringLiteral("identifier")].toString();
 
             if (type == QStringLiteral("integer")) {
                 int value = jsonObject.value(identifier).toInt();
@@ -246,7 +247,8 @@ void ScriptingService::reloadScriptComponents() {
 /**
  * Checks if the script can be used in a component
  */
-bool ScriptingService::validateScript(const Script &script, QString &errorMessage) {
+bool ScriptingService::validateScript(const Script &script,
+                                      QString &errorMessage) {
     const QString path = script.getScriptPath();
     QFile file(path);
 
@@ -726,8 +728,8 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(
         i.next();
         ScriptComponent scriptComponent = i.value();
 
-//        QString text = callNoteToMarkdownHtmlHookForObject(
-//            scriptComponent.object, note, resultMarkdown);
+        //        QString text = callNoteToMarkdownHtmlHookForObject(
+        //            scriptComponent.object, note, resultMarkdown);
 
         if (methodExistsForObject(
                 scriptComponent.object,

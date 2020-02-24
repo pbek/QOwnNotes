@@ -1189,16 +1189,15 @@ bool Tag::mergeFromDatabase(QSqlDatabase &db) {
     QSqlDatabase noteFolderDB = DatabaseService::getNoteFolderDatabase();
 
     const bool isSameTagTable =
-        DatabaseService::generateDatabaseTableSha1Signature(
-            db, "tag") ==
-        DatabaseService::generateDatabaseTableSha1Signature(
-            noteFolderDB, "tag");
+        DatabaseService::generateDatabaseTableSha1Signature(db, "tag") ==
+        DatabaseService::generateDatabaseTableSha1Signature(noteFolderDB,
+                                                            "tag");
 
     const bool isSameNoteTagLinkTable =
-        DatabaseService::generateDatabaseTableSha1Signature(
-            db, "noteTagLink") ==
-        DatabaseService::generateDatabaseTableSha1Signature(
-            noteFolderDB, "noteTagLink");
+        DatabaseService::generateDatabaseTableSha1Signature(db,
+                                                            "noteTagLink") ==
+        DatabaseService::generateDatabaseTableSha1Signature(noteFolderDB,
+                                                            "noteTagLink");
 
     // if those tables are the same everything is ok
     if (isSameTagTable && isSameNoteTagLinkTable) {

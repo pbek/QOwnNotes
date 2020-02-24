@@ -270,9 +270,10 @@ void IssueAssistantDialog::on_searchIssueButton_clicked() {
 }
 
 void IssueAssistantDialog::on_newIssueButton_clicked() {
-    if (Utils::Gui::question(this, QStringLiteral("Create new issue"),
-                             QStringLiteral("Reset this dialog and create a new issue?"),
-                             QStringLiteral("issue-dialog-new-issue")) != QMessageBox::Yes) {
+    if (Utils::Gui::question(
+            this, QStringLiteral("Create new issue"),
+            QStringLiteral("Reset this dialog and create a new issue?"),
+            QStringLiteral("issue-dialog-new-issue")) != QMessageBox::Yes) {
         return;
     }
 

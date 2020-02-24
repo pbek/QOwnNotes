@@ -65,8 +65,8 @@ VersionDialog::VersionDialog(const QJSValue &versions, MainWindow *mainWindow,
     // iterate over the versions
     while (versionsIterator.hasNext()) {
         versionsIterator.next();
-        QJSValue property =
-            versionsIterator.value().property(QStringLiteral("humanReadableTimestamp"));
+        QJSValue property = versionsIterator.value().property(
+            QStringLiteral("humanReadableTimestamp"));
 
         if (property.isUndefined()) {
             continue;
@@ -79,13 +79,17 @@ VersionDialog::VersionDialog(const QJSValue &versions, MainWindow *mainWindow,
         }
 
         diffHtml = "<style>" + Utils::Misc::genericCSS() + "</style>" +
-                   versionsIterator.value().property(QStringLiteral("diffHtml")).toString();
+                   versionsIterator.value()
+                       .property(QStringLiteral("diffHtml"))
+                       .toString();
         diffHtml.replace(QLatin1String("\\n"), QLatin1String("&para;<br />"));
         diffHtml.replace(QLatin1String("\n"), QLatin1String("<br />"));
 
         ui->versionListWidget->addItem(itemName);
         diffList->append(diffHtml);
-        dataList->append(versionsIterator.value().property(QStringLiteral("data")).toString());
+        dataList->append(versionsIterator.value()
+                             .property(QStringLiteral("data"))
+                             .toString());
     }
 
     ui->versionListWidget->setCurrentRow(0);
@@ -100,7 +104,8 @@ void VersionDialog::setupMainSplitter() {
 
     // restore splitter sizes
     QSettings settings;
-    QByteArray state = settings.value(QStringLiteral("versionSplitterSizes")).toByteArray();
+    QByteArray state =
+        settings.value(QStringLiteral("versionSplitterSizes")).toByteArray();
     versionSplitter->restoreState(state);
 
     ui->gridLayout->addWidget(versionSplitter);
@@ -109,7 +114,8 @@ void VersionDialog::setupMainSplitter() {
 void VersionDialog::storeSettings() {
     // store the splitter sizes
     QSettings settings;
-    settings.setValue(QStringLiteral("versionSplitterSizes"), versionSplitter->saveState());
+    settings.setValue(QStringLiteral("versionSplitterSizes"),
+                      versionSplitter->saveState());
 }
 
 VersionDialog::~VersionDialog() { delete ui; }

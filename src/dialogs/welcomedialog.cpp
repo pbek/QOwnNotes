@@ -30,7 +30,8 @@ WelcomeDialog::WelcomeDialog(QWidget *parent)
     // if note layout has already been set, we can finish settings in the first
     // step
     QSettings settings;
-    _allowFinishButton = settings.contains(QStringLiteral("workspace-initial/windowState"));
+    _allowFinishButton =
+        settings.contains(QStringLiteral("workspace-initial/windowState"));
     ui->finishButton->setEnabled(_allowFinishButton);
 
     ui->backButton->setEnabled(false);
@@ -45,13 +46,15 @@ WelcomeDialog::WelcomeDialog(QWidget *parent)
 WelcomeDialog::~WelcomeDialog() { delete ui; }
 
 void WelcomeDialog::on_cancelButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/cancel"));
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("welcome-dialog/cancel"));
 
     done(QDialog::Rejected);
 }
 
 void WelcomeDialog::on_nextButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/next"));
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("welcome-dialog/next"));
 
     int index = ui->stackedWidget->currentIndex();
     int maxIndex = ui->stackedWidget->count() - 1;
@@ -119,7 +122,8 @@ bool WelcomeDialog::handleNoteFolderSetup() {
                         tr("Cannot create note path! You have to create "
                            "the note folder manually!"));
                     MetricsService::instance()->sendVisitIfEnabled(
-                        QStringLiteral("welcome-dialog/note-folder/cannot-create-mkpath"));
+                        QStringLiteral(
+                            "welcome-dialog/note-folder/cannot-create-mkpath"));
                 }
             } else {
                 qWarning() << "Cannot create note path!";
@@ -168,7 +172,8 @@ void WelcomeDialog::storeNoteFolderSettings() {
 }
 
 void WelcomeDialog::on_backButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/back"));
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("welcome-dialog/back"));
 
     int index = ui->stackedWidget->currentIndex();
 
@@ -182,7 +187,8 @@ void WelcomeDialog::on_backButton_clicked() {
 }
 
 void WelcomeDialog::on_finishButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/finished"));
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("welcome-dialog/finished"));
     if (ui->stackedWidget->currentIndex() == WelcomePages::NoteFolderPage) {
         if (!handleNoteFolderSetup()) return;
     } else {
@@ -242,6 +248,7 @@ void WelcomeDialog::on_networkSettingsButton_clicked() {
 }
 
 void WelcomeDialog::closeEvent(QCloseEvent *event) {
-    MetricsService::instance()->sendVisitIfEnabled(QStringLiteral("welcome-dialog/close"));
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("welcome-dialog/close"));
     MasterDialog::closeEvent(event);
 }

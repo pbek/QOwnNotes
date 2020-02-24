@@ -81,13 +81,15 @@ void NoteDiffDialog::dialogButtonClicked(QAbstractButton *button) {
     // set the setting to ignore all external changes
     if (ui->ignoreAllExternalChangesCheckBox->isChecked()) {
         QSettings settings;
-        settings.setValue(QStringLiteral("ignoreAllExternalModifications"), true);
+        settings.setValue(QStringLiteral("ignoreAllExternalModifications"),
+                          true);
     }
 
     // set the setting to accept all external changes
     if (ui->acceptAllExternalChangesCheckBox->isChecked()) {
         QSettings settings;
-        settings.setValue(QStringLiteral("acceptAllExternalModifications"), true);
+        settings.setValue(QStringLiteral("acceptAllExternalModifications"),
+                          true);
     }
 
     this->close();

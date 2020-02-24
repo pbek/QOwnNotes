@@ -129,7 +129,8 @@ void LocalTrashDialog::setupMainSplitter() {
 
     // restore splitter sizes
     QSettings settings;
-    QByteArray state = settings.value(QStringLiteral("localTrashSplitterSizes")).toByteArray();
+    QByteArray state =
+        settings.value(QStringLiteral("localTrashSplitterSizes")).toByteArray();
     trashSplitter->restoreState(state);
 
     ui->gridLayout->layout()->addWidget(trashSplitter);
@@ -139,7 +140,8 @@ void LocalTrashDialog::setupMainSplitter() {
 void LocalTrashDialog::storeSettings() {
     // store the splitter sizes
     QSettings settings;
-    settings.setValue(QStringLiteral("localTrashSplitterSizes"), trashSplitter->saveState());
+    settings.setValue(QStringLiteral("localTrashSplitterSizes"),
+                      trashSplitter->saveState());
 }
 
 LocalTrashDialog::~LocalTrashDialog() { delete ui; }
@@ -193,7 +195,8 @@ void LocalTrashDialog::restoreSelectedTrashItems() {
     if (Utils::Gui::question(this, tr("Restore selected notes"),
                              tr("Restore <strong>%n</strong> selected note(s)?",
                                 "", selectedItemsCount),
-                             QStringLiteral("local-trash-restore-notes")) == QMessageBox::Yes) {
+                             QStringLiteral("local-trash-restore-notes")) ==
+        QMessageBox::Yes) {
         const QSignalBlocker blocker(ui->trashTreeWidget);
         Q_UNUSED(blocker)
 
@@ -237,7 +240,8 @@ void LocalTrashDialog::removeSelectedTrashItems() {
     if (Utils::Gui::question(this, tr("Remove selected notes"),
                              tr("Remove <strong>%n</strong> selected note(s)?",
                                 "", selectedItemsCount),
-                             QStringLiteral("local-trash-remove-notes")) == QMessageBox::Yes) {
+                             QStringLiteral("local-trash-remove-notes")) ==
+        QMessageBox::Yes) {
         const QSignalBlocker blocker(ui->trashTreeWidget);
         Q_UNUSED(blocker)
 

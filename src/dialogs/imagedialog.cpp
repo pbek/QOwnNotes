@@ -225,9 +225,9 @@ void ImageDialog::on_disableCopyingCheckBox_toggled(bool checked) {
     }
 }
 
-void ImageDialog::on_graphicsView_rubberBandChanged(
-    QRect viewportRect, QPointF fromScenePoint,
-    QPointF toScenePoint) {
+void ImageDialog::on_graphicsView_rubberBandChanged(QRect viewportRect,
+                                                    QPointF fromScenePoint,
+                                                    QPointF toScenePoint) {
     if (viewportRect.isEmpty()) {    // dragging has stopped
         _rubberBand = new QRubberBand(QRubberBand::Rectangle, ui->graphicsView);
 

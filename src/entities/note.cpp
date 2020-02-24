@@ -1397,8 +1397,8 @@ bool Note::handleNoteTextFileName() {
         // check if note with this filename already exists
         while (Note::fetchByFileName(fileName).exists()) {
             // find new filename for the note
-            name = nameBase + QStringLiteral(" ") +
-                   QString::number(++nameCount);
+            name =
+                nameBase + QStringLiteral(" ") + QString::number(++nameCount);
             fileName = generateNoteFileNameFromName(name);
             qDebug() << __func__ << " - 'override fileName': " << fileName;
 
@@ -2753,20 +2753,23 @@ QVector<int> Note::findLinkedNoteIds() const {
     // search for legacy links
     const QString linkText = getNoteURL(name);
     Utils::Misc::appendIntVectorToIntVector(
-        noteIdList,
-        searchInNotes(QChar('<') + linkText + QChar('>'), true));
+        noteIdList, searchInNotes(QChar('<') + linkText + QChar('>'), true));
     Utils::Misc::appendIntVectorToIntVector(
         noteIdList,
-        searchInNotes(QStringLiteral("](") + linkText + QStringLiteral(")"), true));
+        searchInNotes(QStringLiteral("](") + linkText + QStringLiteral(")"),
+                      true));
 
     // search vor legacy links ending with "@"
     const QString altLinkText =
         Utils::Misc::appendIfDoesNotEndWith(linkText, QStringLiteral("@"));
     if (altLinkText != linkText) {
-        Utils::Misc::appendIntVectorToIntVector(noteIdList,
+        Utils::Misc::appendIntVectorToIntVector(
+            noteIdList,
             searchInNotes(QChar('<') + altLinkText + QChar('>'), true));
-        Utils::Misc::appendIntVectorToIntVector(noteIdList,searchInNotes(
-            QStringLiteral("](") + altLinkText + QChar(')'), true));
+        Utils::Misc::appendIntVectorToIntVector(
+            noteIdList,
+            searchInNotes(QStringLiteral("](") + altLinkText + QChar(')'),
+                          true));
     }
 
     const auto noteList = Note::fetchAll();
@@ -2837,7 +2840,8 @@ const QString Note::getNoteURLFromFileName(const QString &fileName) {
  * @param fileName
  * @return
  */
-QString Note::getFileURLFromFileName(QString fileName, bool urlDecodeFileName) const {
+QString Note::getFileURLFromFileName(QString fileName,
+                                     bool urlDecodeFileName) const {
     if (urlDecodeFileName) {
         fileName = urlDecodeNoteUrl(fileName);
     }

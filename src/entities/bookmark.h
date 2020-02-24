@@ -18,7 +18,7 @@ class Bookmark {
     friend QDebug operator<<(QDebug dbg, const Bookmark &bookmark);
     QJsonObject jsonObject() const;
     static QVector<Bookmark> parseBookmarks(const QString &text,
-                                          bool withBasicUrls = false);
+                                            bool withBasicUrls = false);
     static QString bookmarksWebServiceJsonText(
         const QVector<Bookmark> &bookmarks);
     static QString parsedBookmarksWebServiceJsonText(

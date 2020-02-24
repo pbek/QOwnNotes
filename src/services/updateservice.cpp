@@ -27,7 +27,8 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 
     QSettings settings;
     if (updateMode != Manual) {
-        settings.setValue(QStringLiteral("LastUpdateCheck"), QDateTime::currentDateTime());
+        settings.setValue(QStringLiteral("LastUpdateCheck"),
+                          QDateTime::currentDateTime());
     }
 
     auto *manager = new QNetworkAccessManager(this);
@@ -58,18 +59,24 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 
     q.addQueryItem(QStringLiteral("b"), QString::number(BUILD));
     q.addQueryItem(QStringLiteral("v"), version);
-    q.addQueryItem(QStringLiteral("d"), QStringLiteral(__DATE__) + " " + QStringLiteral(__TIME__));
+    q.addQueryItem(QStringLiteral("d"),
+                   QStringLiteral(__DATE__) + " " + QStringLiteral(__TIME__));
     q.addQueryItem(QStringLiteral("um"), QString::number(updateMode));
     q.addQueryItem(QStringLiteral("debug"), QString::number(isDebug));
 
-    if (!settings.value(QStringLiteral("appMetrics/disableTracking")).toBool() ||
-        !settings.value(QStringLiteral("appMetrics/disableAppHeartbeat")).toBool()) {
-        q.addQueryItem(QStringLiteral("cid"), settings.value(QStringLiteral("PiwikClientId")).toString());
+    if (!settings.value(QStringLiteral("appMetrics/disableTracking"))
+             .toBool() ||
+        !settings.value(QStringLiteral("appMetrics/disableAppHeartbeat"))
+             .toBool()) {
+        q.addQueryItem(
+            QStringLiteral("cid"),
+            settings.value(QStringLiteral("PiwikClientId")).toString());
     }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    q.addQueryItem(QStringLiteral("r"), qApp->property("release").toString() + " (" +
-                            QSysInfo::buildCpuArchitecture() + ")");
+    q.addQueryItem(QStringLiteral("r"),
+                   qApp->property("release").toString() + " (" +
+                       QSysInfo::buildCpuArchitecture() + ")");
 
     QString operatingSystem = QSysInfo::prettyProductName();
     if (!operatingSystem.contains(QSysInfo::currentCpuArchitecture())) {
@@ -146,29 +153,37 @@ void UpdateService::onResult(QNetworkReply *reply) {
     }
 
     // get the information if we should update our app
-    bool shouldUpdate = result.property(QStringLiteral("0")).property(QStringLiteral("should_update")).toBool();
+    bool shouldUpdate = result.property(QStringLiteral("0"))
+                            .property(QStringLiteral("should_update"))
+                            .toBool();
 
     // check if we should update our app
     if (shouldUpdate) {
         // get the release url
-        QString releaseUrl = result.property(QStringLiteral("0"))
-                                 .property(QStringLiteral("release"))
-                                 .property(QStringLiteral("assets"))
-                                 .property(QStringLiteral("0"))
-                                 .property(QStringLiteral("browser_download_url"))
-                                 .toString();
+        QString releaseUrl =
+            result.property(QStringLiteral("0"))
+                .property(QStringLiteral("release"))
+                .property(QStringLiteral("assets"))
+                .property(QStringLiteral("0"))
+                .property(QStringLiteral("browser_download_url"))
+                .toString();
 
         // get the release version string
         QString releaseVersionString =
-            result.property(QStringLiteral("0")).property(QStringLiteral("release_version_string")).toString();
+            result.property(QStringLiteral("0"))
+                .property(QStringLiteral("release_version_string"))
+                .toString();
 
         // get the release build number
         int releaseBuildNumber =
-            result.property(QStringLiteral("0")).property(QStringLiteral("release_build_number")).toInt();
+            result.property(QStringLiteral("0"))
+                .property(QStringLiteral("release_build_number"))
+                .toInt();
 
         // get the changes html
-        QString changesHtml =
-            result.property(QStringLiteral("0")).property(QStringLiteral("changes_html")).toString();
+        QString changesHtml = result.property(QStringLiteral("0"))
+                                  .property(QStringLiteral("changes_html"))
+                                  .toString();
 
         // show the update available button
         mainWindow->showUpdateAvailableButton(releaseVersionString);
@@ -178,7 +193,8 @@ void UpdateService::onResult(QNetworkReply *reply) {
         // do some more checks for non manual update requests
         if (updateMode != UpdateService::Manual) {
             QSettings settings;
-            QString skipVersion = settings.value(QStringLiteral("skipVersion")).toString();
+            QString skipVersion =
+                settings.value(QStringLiteral("skipVersion")).toString();
 
             // check if this version should be skipped
             if (releaseVersionString == skipVersion) {
@@ -198,7 +214,9 @@ void UpdateService::onResult(QNetworkReply *reply) {
             // check if the update dialog was disabled
             if (showUpdateDialog) {
                 showUpdateDialog =
-                    !settings.value(QStringLiteral("disableAutomaticUpdateDialog")).toBool();
+                    !settings
+                         .value(QStringLiteral("disableAutomaticUpdateDialog"))
+                         .toBool();
             }
         }
 

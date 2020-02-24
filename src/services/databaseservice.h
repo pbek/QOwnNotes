@@ -25,9 +25,9 @@ class DatabaseService {
     static void closeDatabaseConnection(const QSqlDatabase& db,
                                         QSqlQuery& query);
     static QString getNoteFolderDatabasePath();
-    static bool mergeNoteFolderDatabase(const QString &path);
-    static QByteArray generateDatabaseTableSha1Signature(
-        QSqlDatabase& db, const QString& table);
+    static bool mergeNoteFolderDatabase(const QString& path);
+    static QByteArray generateDatabaseTableSha1Signature(QSqlDatabase& db,
+                                                         const QString& table);
 
    private:
     static bool createMemoryConnection();

@@ -18,7 +18,8 @@ class TodoDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit TodoDialog(MainWindow *mainWindow, const QString &taskUid = QString(),
+    explicit TodoDialog(MainWindow *mainWindow,
+                        const QString &taskUid = QString(),
                         QWidget *parent = nullptr);
     ~TodoDialog();
 

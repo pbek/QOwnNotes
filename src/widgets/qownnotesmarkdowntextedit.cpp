@@ -74,7 +74,8 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(
 void QOwnNotesMarkdownTextEdit::overrideFontSizeStyle(int fontSize) {
     QSettings settings;
     bool overrideInterfaceFontSize =
-        settings.value(QStringLiteral("overrideInterfaceFontSize"), false).toBool();
+        settings.value(QStringLiteral("overrideInterfaceFontSize"), false)
+            .toBool();
 
     // remove old style
     QString stylesheet = styleSheet().remove(QRegularExpression(

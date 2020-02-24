@@ -82,7 +82,8 @@ TrashDialog::TrashDialog(const QJSValue &notes, MainWindow *mainWindow,
     while (notesIterator.hasNext()) {
         notesIterator.next();
 
-        QJSValue property = notesIterator.value().property(QStringLiteral("noteName"));
+        QJSValue property =
+            notesIterator.value().property(QStringLiteral("noteName"));
 
         if (property.isUndefined()) {
             continue;
@@ -94,11 +95,16 @@ TrashDialog::TrashDialog(const QJSValue &notes, MainWindow *mainWindow,
             continue;
         }
 
-        dateString = notesIterator.value().property(QStringLiteral("dateString")).toString();
-        data = notesIterator.value().property(QStringLiteral("data")).toString();
-        timestamp = notesIterator.value().property(QStringLiteral("timestamp")).toInt();
-        QString fileName =
-            notesIterator.value().property(QStringLiteral("fileName")).toString();
+        dateString = notesIterator.value()
+                         .property(QStringLiteral("dateString"))
+                         .toString();
+        data =
+            notesIterator.value().property(QStringLiteral("data")).toString();
+        timestamp =
+            notesIterator.value().property(QStringLiteral("timestamp")).toInt();
+        QString fileName = notesIterator.value()
+                               .property(QStringLiteral("fileName"))
+                               .toString();
 
         auto *item = new QListWidgetItem();
         item->setText(itemName);
@@ -123,7 +129,8 @@ void TrashDialog::setupMainSplitter() {
 
     // restore splitter sizes
     QSettings settings;
-    QByteArray state = settings.value(QStringLiteral("trashSplitterSizes")).toByteArray();
+    QByteArray state =
+        settings.value(QStringLiteral("trashSplitterSizes")).toByteArray();
     trashSplitter->restoreState(state);
 
     ui->gridLayout->layout()->addWidget(trashSplitter);
@@ -133,7 +140,8 @@ void TrashDialog::setupMainSplitter() {
 void TrashDialog::storeSettings() {
     // store the splitter sizes
     QSettings settings;
-    settings.setValue(QStringLiteral("trashSplitterSizes"), trashSplitter->saveState());
+    settings.setValue(QStringLiteral("trashSplitterSizes"),
+                      trashSplitter->saveState());
 }
 
 TrashDialog::~TrashDialog() { delete ui; }

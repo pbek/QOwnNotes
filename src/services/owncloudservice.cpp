@@ -15,6 +15,7 @@
 #include <QJSValueIterator>
 #include <QMessageBox>
 #include <QNetworkAccessManager>
+#include <QNetworkCookieJar>
 #include <QNetworkReply>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
@@ -24,7 +25,6 @@
 #include <QUrlQuery>
 #include <QXmlQuery>
 #include <QXmlResultItems>
-#include <QNetworkCookieJar>
 
 #include "cryptoservice.h"
 #include "dialogs/serverbookmarksimportdialog.h"

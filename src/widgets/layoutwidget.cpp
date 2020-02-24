@@ -18,10 +18,11 @@ LayoutWidget::LayoutWidget(QWidget *parent)
 LayoutWidget::~LayoutWidget() { delete ui; }
 
 void LayoutWidget::loadLayouts() {
-    _layoutSettings =
-        new QSettings(QStringLiteral(":/configurations/layouts.ini"), QSettings::IniFormat);
+    _layoutSettings = new QSettings(
+        QStringLiteral(":/configurations/layouts.ini"), QSettings::IniFormat);
     auto layoutIdentifiers =
-        _layoutSettings->value(QStringLiteral("LayoutIdentifiers")).toStringList();
+        _layoutSettings->value(QStringLiteral("LayoutIdentifiers"))
+            .toStringList();
 
     {
         const QSignalBlocker blocker(ui->layoutComboBox);
@@ -90,14 +91,16 @@ void LayoutWidget::storeSettings() {
     QString layoutIdentifier = ui->layoutComboBox->currentData().toString();
     QString layoutSettingsPrefix = "Layout-" + layoutIdentifier + "/";
     QSettings settings;
-    QStringList workspaces = settings.value(QStringLiteral("workspaces")).toStringList();
+    QStringList workspaces =
+        settings.value(QStringLiteral("workspaces")).toStringList();
 
     if (!workspaces.contains(QStringLiteral("initial"))) {
         workspaces << QStringLiteral("initial");
         settings.setValue(QStringLiteral("workspaces"), workspaces);
     }
 
-    settings.setValue(QStringLiteral("initialLayoutIdentifier"), layoutIdentifier);
+    settings.setValue(QStringLiteral("initialLayoutIdentifier"),
+                      layoutIdentifier);
     settings.setValue(QStringLiteral("currentWorkspace"), "initial");
     settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
                       _layoutSettings->value(layoutSettingsPrefix +
@@ -107,9 +110,10 @@ void LayoutWidget::storeSettings() {
         _layoutSettings->value(layoutSettingsPrefix + "windowState"));
     settings.setValue(QStringLiteral("workspace-initial/name"),
                       getLayoutName(layoutIdentifier));
-    settings.setValue(QStringLiteral("workspace-initial/noteSubFolderDockWidgetVisible"),
-                      _layoutSettings->value(layoutSettingsPrefix +
-                                             "noteSubFolderDockWidgetVisible"));
+    settings.setValue(
+        QStringLiteral("workspace-initial/noteSubFolderDockWidgetVisible"),
+        _layoutSettings->value(layoutSettingsPrefix +
+                               "noteSubFolderDockWidgetVisible"));
 
     // since a new layout is installed we later want to center and resize the
     // window

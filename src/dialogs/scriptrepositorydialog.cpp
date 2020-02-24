@@ -219,7 +219,8 @@ void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) {
         qDebug() << __func__ << " - 'path': " << path;
 
         QRegularExpressionMatch match =
-            QRegularExpression(QStringLiteral("(.+)\\/info\\.json")).match(path);
+            QRegularExpression(QStringLiteral("(.+)\\/info\\.json"))
+                .match(path);
 
         if (!match.hasMatch()) {
             continue;
@@ -319,7 +320,8 @@ void ScriptRepositoryDialog::setupMainSplitter() {
     // restore splitter sizes
     QSettings settings;
     QByteArray state =
-        settings.value(QStringLiteral("ScriptRepositoryDialog/mainSplitterState"))
+        settings
+            .value(QStringLiteral("ScriptRepositoryDialog/mainSplitterState"))
             .toByteArray();
     _mainSplitter->restoreState(state);
 
@@ -331,8 +333,9 @@ void ScriptRepositoryDialog::setupMainSplitter() {
  */
 void ScriptRepositoryDialog::storeSettings() {
     QSettings settings;
-    settings.setValue(QStringLiteral("ScriptRepositoryDialog/mainSplitterState"),
-                      _mainSplitter->saveState());
+    settings.setValue(
+        QStringLiteral("ScriptRepositoryDialog/mainSplitterState"),
+        _mainSplitter->saveState());
 }
 
 /**
@@ -450,7 +453,8 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
         return;
     }
 
-    QString identifier = jsonObject.value(QStringLiteral("identifier")).toString();
+    QString identifier =
+        jsonObject.value(QStringLiteral("identifier")).toString();
 
     if (identifier.isEmpty()) {
         return;

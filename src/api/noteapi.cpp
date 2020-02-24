@@ -2,8 +2,8 @@
 
 #include <entities/notefolder.h>
 #include <entities/tag.h>
-#include <QVector>
 
+#include <QVector>
 #include <utility>
 
 #include "tagapi.h"

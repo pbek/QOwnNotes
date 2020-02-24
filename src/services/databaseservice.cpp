@@ -846,7 +846,7 @@ QString DatabaseService::getAppData(const QString& name,
  * @param path
  * @return
  */
-bool DatabaseService::mergeNoteFolderDatabase(const QString &path) {
+bool DatabaseService::mergeNoteFolderDatabase(const QString& path) {
     QSqlDatabase mergeDB = QSqlDatabase::addDatabase(
         QStringLiteral("QSQLITE"), QStringLiteral("note_folder_merge"));
     mergeDB.setDatabaseName(path);
@@ -879,7 +879,7 @@ bool DatabaseService::mergeNoteFolderDatabase(const QString &path) {
  * @return
  */
 QByteArray DatabaseService::generateDatabaseTableSha1Signature(
-    QSqlDatabase &db, const QString &table) {
+    QSqlDatabase& db, const QString& table) {
     QCryptographicHash hash(QCryptographicHash::Sha1);
     QSqlQuery query(db);
     query.prepare(QStringLiteral("SELECT * FROM ") + table);
@@ -903,7 +903,7 @@ QByteArray DatabaseService::generateDatabaseTableSha1Signature(
         }
     }
 
-    const QByteArray &result = hash.result();
+    const QByteArray& result = hash.result();
     qDebug() << __func__ << " - 'hash': " << result;
 
     // retrieve the SHA1 signature from the hash

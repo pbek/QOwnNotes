@@ -69,15 +69,18 @@ CloudConnection CloudConnection::currentCloudConnection(
 
 CloudConnection CloudConnection::currentTodoCalendarCloudConnection() {
     QSettings settings;
-    const int id = settings
-                       .value(QStringLiteral("ownCloud/todoCalendarCloudConnectionId"),
-                              firstCloudConnection().getId())
-                       .toInt();
+    const int id =
+        settings
+            .value(QStringLiteral("ownCloud/todoCalendarCloudConnectionId"),
+                   firstCloudConnection().getId())
+            .toInt();
 
     return CloudConnection::fetch(id);
 }
 
-void CloudConnection::setName(const QString &text) { this->name = text.trimmed(); }
+void CloudConnection::setName(const QString &text) {
+    this->name = text.trimmed();
+}
 
 void CloudConnection::setServerUrl(const QString &text) {
     this->serverUrl = text.trimmed();
@@ -93,8 +96,8 @@ void CloudConnection::setPassword(const QString &text) {
 
 void CloudConnection::setPriority(int value) { this->priority = value; }
 
-bool CloudConnection::create(const QString &name, const QString &serverUrl, const QString &username,
-                             const QString &password) {
+bool CloudConnection::create(const QString &name, const QString &serverUrl,
+                             const QString &username, const QString &password) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
@@ -117,7 +120,8 @@ CloudConnection CloudConnection::fetch(int id, bool ignoreTableWarning) {
 
     CloudConnection cloudConnection;
 
-    query.prepare(QStringLiteral("SELECT * FROM cloudConnection WHERE id = :id"));
+    query.prepare(
+        QStringLiteral("SELECT * FROM cloudConnection WHERE id = :id"));
     query.bindValue(QStringLiteral(":id"), id);
 
     if (!query.exec()) {
@@ -135,7 +139,8 @@ int CloudConnection::countAll() {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
-    query.prepare(QStringLiteral("SELECT COUNT(*) AS cnt FROM cloudConnection"));
+    query.prepare(
+        QStringLiteral("SELECT COUNT(*) AS cnt FROM cloudConnection"));
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -162,13 +167,13 @@ bool CloudConnection::remove() {
 }
 
 CloudConnection CloudConnection::cloudConnectionFromQuery(
-    const QSqlQuery& query) {
+    const QSqlQuery &query) {
     CloudConnection cloudConnection;
     cloudConnection.fillFromQuery(query);
     return cloudConnection;
 }
 
-bool CloudConnection::fillFromQuery(const QSqlQuery& query) {
+bool CloudConnection::fillFromQuery(const QSqlQuery &query) {
     this->id = query.value(QStringLiteral("id")).toInt();
     this->name = query.value(QStringLiteral("name")).toString();
     this->serverUrl = query.value(QStringLiteral("server_url")).toString();
@@ -186,8 +191,8 @@ QList<CloudConnection> CloudConnection::fetchAll() {
 
     QList<CloudConnection> cloudConnectionList;
 
-    query.prepare(
-        QStringLiteral("SELECT * FROM cloudConnection ORDER BY priority ASC, id ASC"));
+    query.prepare(QStringLiteral(
+        "SELECT * FROM cloudConnection ORDER BY priority ASC, id ASC"));
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
@@ -267,8 +272,10 @@ bool CloudConnection::migrateToCloudConnections() {
     }
 
     QSettings settings;
-    const QString serverUrl = settings.value(QStringLiteral("ownCloud/serverUrl")).toString();
-    const QString username = settings.value(QStringLiteral("ownCloud/userName")).toString();
+    const QString serverUrl =
+        settings.value(QStringLiteral("ownCloud/serverUrl")).toString();
+    const QString username =
+        settings.value(QStringLiteral("ownCloud/userName")).toString();
     const QString password = CryptoService::instance()->decryptToString(
         settings.value(QStringLiteral("ownCloud/password")).toString());
 
@@ -303,7 +310,7 @@ QList<int> CloudConnection::fetchUsedCloudConnectionsIds() {
     return idList.toList();
 }
 
-QDebug operator<<(QDebug dbg, const CloudConnection& cloudConnection) {
+QDebug operator<<(QDebug dbg, const CloudConnection &cloudConnection) {
     dbg.nospace() << "CloudConnection: <id>" << cloudConnection.id << " <name>"
                   << cloudConnection.name << " <serverUrl>"
                   << cloudConnection.serverUrl << " <username>"

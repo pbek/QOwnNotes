@@ -243,11 +243,13 @@ bool FakeVimProxy::wantSaveAndQuit(const FakeVim::Internal::ExCommand &cmd) {
 }
 
 bool FakeVimProxy::wantSave(const FakeVim::Internal::ExCommand &cmd) {
-    return cmd.matches(QStringLiteral("w"), QStringLiteral("write")) || cmd.matches(QStringLiteral("wa"), QStringLiteral("wall"));
+    return cmd.matches(QStringLiteral("w"), QStringLiteral("write")) ||
+           cmd.matches(QStringLiteral("wa"), QStringLiteral("wall"));
 }
 
 bool FakeVimProxy::wantQuit(const FakeVim::Internal::ExCommand &cmd) {
-    return cmd.matches(QStringLiteral("q"), QStringLiteral("quit")) || cmd.matches(QStringLiteral("qa"), QStringLiteral("qall"));
+    return cmd.matches(QStringLiteral("q"), QStringLiteral("quit")) ||
+           cmd.matches(QStringLiteral("qa"), QStringLiteral("qall"));
 }
 
 void FakeVimProxy::cancel() { invalidate(); }

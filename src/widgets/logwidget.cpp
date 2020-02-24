@@ -218,9 +218,10 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
     //    text.prepend("[" + dateTime.toString("hh:mm:ss") + "] [" + type + "]
     //    "); text.append("\n");
 
-    const QString html = QStringLiteral("<div style=\"color: %1\">[%2] [%3] %4</div>")
-                             .arg(color.name(), dateTime.toString(QStringLiteral("hh:mm:ss")),
-                                  type, text.toHtmlEscaped());
+    const QString html =
+        QStringLiteral("<div style=\"color: %1\">[%2] [%3] %4</div>")
+            .arg(color.name(), dateTime.toString(QStringLiteral("hh:mm:ss")),
+                 type, text.toHtmlEscaped());
 
     QScrollBar *scrollBar = ui->logTextEdit->verticalScrollBar();
 

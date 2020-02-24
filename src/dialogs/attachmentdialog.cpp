@@ -61,7 +61,8 @@ void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
         return;
     }
 
-    ui->downloadButton->setVisible(url.scheme().startsWith(QLatin1String("http")));
+    ui->downloadButton->setVisible(
+        url.scheme().startsWith(QLatin1String("http")));
 
     if (url.scheme() == QLatin1String("file")) {
         ui->fileEdit->setText(url.toLocalFile());
@@ -139,7 +140,8 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
             nullptr, tr("Download error"),
             tr("Error while downloading:\n%1").arg(reply->errorString()));
 
-        qWarning() << QStringLiteral("Network error: %1").arg(reply->errorString());
+        qWarning()
+            << QStringLiteral("Network error: %1").arg(reply->errorString());
 
         return;
     }

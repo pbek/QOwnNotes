@@ -30,7 +30,8 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
     while (bookmarksIterator.hasNext()) {
         bookmarksIterator.next();
 
-        QJSValue property = bookmarksIterator.value().property(QStringLiteral("url"));
+        QJSValue property =
+            bookmarksIterator.value().property(QStringLiteral("url"));
 
         if (property.isUndefined()) {
             continue;
@@ -42,7 +43,9 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
             continue;
         }
 
-        title = bookmarksIterator.value().property(QStringLiteral("title")).toString();
+        title = bookmarksIterator.value()
+                    .property(QStringLiteral("title"))
+                    .toString();
         description = bookmarksIterator.value()
                           .property(QStringLiteral("description"))
                           .toString()
@@ -53,7 +56,9 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
                    .toStringList();
 
         Q_FOREACH (QString tag, tags) {
-            description.prepend("#" + tag.replace(QLatin1String(" "), QLatin1String("-")) + " ");
+            description.prepend(
+                "#" + tag.replace(QLatin1String(" "), QLatin1String("-")) +
+                " ");
         }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

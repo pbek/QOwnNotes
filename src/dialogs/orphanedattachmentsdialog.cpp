@@ -32,8 +32,8 @@ OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent)
         return;
     }
 
-    QStringList orphanedFiles =
-        attachmentsDir.entryList(QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
+    QStringList orphanedFiles = attachmentsDir.entryList(
+        QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
     orphanedFiles.removeDuplicates();
 
     QVector<Note> noteList = Note::fetchAll();
@@ -142,7 +142,8 @@ void OrphanedAttachmentsDialog::on_deleteButton_clicked() {
     if (Utils::Gui::question(this, tr("Delete selected files"),
                              tr("Delete <strong>%n</strong> selected file(s)?",
                                 "", selectedItemsCount),
-                             QStringLiteral("delete-files")) != QMessageBox::Yes) {
+                             QStringLiteral("delete-files")) !=
+        QMessageBox::Yes) {
         return;
     }
 

@@ -285,7 +285,8 @@ QList<Script> Script::fetchAll(bool enabledOnly) {
     QList<Script> scriptList;
     query.prepare(
         QStringLiteral("SELECT * FROM script %1 ORDER BY priority ASC, id ASC")
-            .arg(enabledOnly ? QStringLiteral("WHERE enabled = 1") : QLatin1String("")));
+            .arg(enabledOnly ? QStringLiteral("WHERE enabled = 1")
+                             : QLatin1String("")));
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -558,8 +559,7 @@ ScriptInfoJson::ScriptInfoJson(const QJsonObject &jsonObject) {
         platformList << platform;
     }
     if (platformList.isEmpty()) {
-        platformList << QStringLiteral("linux")
-                     << QStringLiteral("macos")
+        platformList << QStringLiteral("linux") << QStringLiteral("macos")
                      << QStringLiteral("windows");
     }
     QHash<QString, QString> platformHash;

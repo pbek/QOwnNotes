@@ -14,7 +14,8 @@ class CalendarItem {
 
     int getId();
     bool getHasDirtyData();
-    static bool addCalendarItem(const QString &name, const QString &fileName, const QString &text);
+    static bool addCalendarItem(const QString &name, const QString &fileName,
+                                const QString &text);
     static CalendarItem fetch(int id);
     static QList<CalendarItem> search(const QString &text);
     static CalendarItem calendarItemFromQuery(const QSqlQuery &query);
@@ -27,9 +28,10 @@ class CalendarItem {
     bool remove();
     bool isFetched();
     bool isCompleted();
-    static CalendarItem fetchByUrlAndCalendar(const QString &url, const QString &calendar);
-    static bool addCalendarItemForRequest(const QString &calendar, const QUrl &url,
-                                          const QString &etag,
+    static CalendarItem fetchByUrlAndCalendar(const QString &url,
+                                              const QString &calendar);
+    static bool addCalendarItemForRequest(const QString &calendar,
+                                          const QUrl &url, const QString &etag,
                                           const QString &lastModifiedString);
     static QList<CalendarItem> fetchAllByCalendar(const QString &calendar);
     static bool deleteAllByCalendar(const QString &calendar);
@@ -73,7 +75,8 @@ class CalendarItem {
     void setAlarmDate(const QDateTime &dateTime);
     static QList<CalendarItem> fetchAllForReminderAlert();
     static void alertTodoReminders();
-    static QList<QString> searchAsUidList(const QString &text, const QString &calendar);
+    static QList<QString> searchAsUidList(const QString &text,
+                                          const QString &calendar);
     static QList<CalendarItem> fetchAllForSystemTray(int limit = 10);
     static bool removeAll();
     static int countAll();
@@ -105,7 +108,8 @@ class CalendarItem {
     void generateICSDataHash();
     void updateICSDataKeyListFromHash();
     void updateSortPriority();
-    QString getICSDataAttributeInBlock(const QString &block, const QString &attributeName);
+    QString getICSDataAttributeInBlock(const QString &block,
+                                       const QString &attributeName);
     bool removeICSDataBlock(const QString &block);
     bool addVALARMBlockToICS();
 };

@@ -19,7 +19,8 @@
 #include "ui_updatedialog.h"
 
 UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
-                           const QString &releaseUrl, const QString &releaseVersionString,
+                           const QString &releaseUrl,
+                           const QString &releaseVersionString,
                            int releaseBuildNumber)
     : MasterDialog(parent), ui(new Ui::UpdateDialog) {
     ui->setupUi(this);
@@ -80,9 +81,9 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
     button->setToolTip(tr("Don't show this dialog automatically"));
     button->setProperty("ActionRole", Disable);
     button->setDefault(false);
-    button->setIcon(
-        QIcon::fromTheme(QStringLiteral("window-close"), QIcon(":/icons/breeze-qownnotes/16x16/"
-                                               "window-close.svg")));
+    button->setIcon(QIcon::fromTheme(QStringLiteral("window-close"),
+                                     QIcon(":/icons/breeze-qownnotes/16x16/"
+                                           "window-close.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Cancel"), this);
@@ -126,13 +127,15 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
     switch (actionRole) {
         case Skip: {
             QSettings settings;
-            settings.setValue(QStringLiteral("skipVersion"), this->releaseVersionString);
+            settings.setValue(QStringLiteral("skipVersion"),
+                              this->releaseVersionString);
             qDebug() << "skip version";
             break;
         }
         case Disable: {
             QSettings settings;
-            settings.setValue(QStringLiteral("disableAutomaticUpdateDialog"), true);
+            settings.setValue(QStringLiteral("disableAutomaticUpdateDialog"),
+                              true);
             qDebug() << "disable dialog";
             break;
         }
@@ -140,7 +143,8 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
             QString release = qApp->property("release").toString();
             // if the release was build by the CI systems download the new
             // release
-            if ((release == QLatin1String("Travis CI")) || (release == QLatin1String("AppVeyor"))) {
+            if ((release == QLatin1String("Travis CI")) ||
+                (release == QLatin1String("AppVeyor"))) {
                 // download the new release
                 QDesktopServices::openUrl(QUrl(releaseUrl.toUtf8()));
             } else if ((release == QLatin1String("AppImage"))) {
@@ -150,8 +154,8 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
                          "pbek:/QOwnNotes/AppImage/"));
             } else {
                 // open the installation page
-                QDesktopServices::openUrl(
-                    QUrl(QStringLiteral("https://www.qownnotes.org/installation")));
+                QDesktopServices::openUrl(QUrl(
+                    QStringLiteral("https://www.qownnotes.org/installation")));
             }
             break;
         }
@@ -164,7 +168,8 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
 #endif
 
             MetricsService::instance()->sendEventIfEnabled(
-                QStringLiteral("app/auto-update"), QStringLiteral("app"), QStringLiteral("auto update"), productName);
+                QStringLiteral("app/auto-update"), QStringLiteral("app"),
+                QStringLiteral("auto update"), productName);
 
 #if defined(Q_OS_MAC)
             // under macOS we will just start the update.sh
@@ -333,7 +338,8 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
 
     if (Utils::Gui::question(this, tr("Proceed with update"),
                              tr("Do you want to update and restart QOwnNotes?"),
-                             QStringLiteral("update-and-restart")) != QMessageBox::Yes) {
+                             QStringLiteral("update-and-restart")) !=
+        QMessageBox::Yes) {
         return false;
     }
 

@@ -90,9 +90,9 @@ void FontColorWidget::initSchemaSelector() {
     QSettings settings;
     QString currentSchemaKey =
         settings
-            .value(QStringLiteral("Editor/CurrentSchemaKey"), _defaultSchemaKeys.length() > 0
-                                                  ? _defaultSchemaKeys[0]
-                                                  : QString())
+            .value(QStringLiteral("Editor/CurrentSchemaKey"),
+                   _defaultSchemaKeys.length() > 0 ? _defaultSchemaKeys[0]
+                                                   : QString())
             .toString();
     int index = 0;
     int currentIndex = 0;
@@ -114,7 +114,8 @@ void FontColorWidget::initSchemaSelector() {
     //
     // load the custom schemes
     //
-    QStringList schemes = settings.value(QStringLiteral("Editor/ColorSchemes")).toStringList();
+    QStringList schemes =
+        settings.value(QStringLiteral("Editor/ColorSchemes")).toStringList();
     Q_FOREACH (QString schemaKey, schemes) {
         settings.beginGroup(schemaKey);
         QString name = settings.value(QStringLiteral("Name")).toString();
@@ -277,10 +278,10 @@ void FontColorWidget::updateSchemeEditFrame() {
     // check if we are not viewing a default schema
     ui->schemeEditFrame->setEnabled(!_currentSchemaIsDefault);
 
-    bool enabled =
-        Utils::Schema::schemaSettings
-            ->getSchemaValue(textSettingsKey(QStringLiteral("ForegroundColorEnabled")))
-            .toBool();
+    bool enabled = Utils::Schema::schemaSettings
+                       ->getSchemaValue(textSettingsKey(
+                           QStringLiteral("ForegroundColorEnabled")))
+                       .toBool();
     updateForegroundColorCheckBox(enabled);
 
     QColor color = Utils::Schema::schemaSettings->getForegroundColor(index);
@@ -288,7 +289,8 @@ void FontColorWidget::updateSchemeEditFrame() {
         QStringLiteral("* {background: %1; border: none;}").arg(color.name()));
 
     enabled = Utils::Schema::schemaSettings
-                  ->getSchemaValue(textSettingsKey(QStringLiteral("BackgroundColorEnabled")))
+                  ->getSchemaValue(
+                      textSettingsKey(QStringLiteral("BackgroundColorEnabled")))
                   .toBool();
     updateBackgroundColorCheckBox(enabled);
 
@@ -343,7 +345,8 @@ void FontColorWidget::updateSchemeEditFrame() {
 
         ui->fontSizeAdaptionSpinBox->setValue(
             Utils::Schema::schemaSettings
-                ->getSchemaValue(textSettingsKey(QStringLiteral("FontSizeAdaption")), 100)
+                ->getSchemaValue(
+                    textSettingsKey(QStringLiteral("FontSizeAdaption")), 100)
                 .toInt());
     }
 }
@@ -405,7 +408,8 @@ void FontColorWidget::on_colorSchemeComboBox_currentIndexChanged(int index) {
     ui->schemeEditFrame->setEnabled(!_currentSchemaIsDefault);
 
     QSettings settings;
-    settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"), _currentSchemaKey);
+    settings.setValue(QStringLiteral("Editor/CurrentSchemaKey"),
+                      _currentSchemaKey);
 
     updateSchemeEditFrame();
 

@@ -10,7 +10,9 @@ WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
     ui->setupUi(this);
 
     QSettings settings;
-    QString token = settings.value(QStringLiteral("webSocketServerService/token")).toString();
+    QString token =
+        settings.value(QStringLiteral("webSocketServerService/token"))
+            .toString();
 
     if (token.isEmpty()) {
         on_generateButton_clicked();
@@ -21,8 +23,8 @@ WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
 }
 
 QString WebSocketTokenDialog::generateToken() const {
-    const QString possibleCharacters(
-        QStringLiteral("ABCDEFGHKLMNPQRSTUVWXYZabcdefghkmnpqrstuvwxyz23456789"));
+    const QString possibleCharacters(QStringLiteral(
+        "ABCDEFGHKLMNPQRSTUVWXYZabcdefghkmnpqrstuvwxyz23456789"));
     const int randomStringLength = 8;
 
     QString randomString;
