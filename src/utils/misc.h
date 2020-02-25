@@ -131,8 +131,6 @@ QString createUuidString();
 QString localDictionariesPath();
 QByteArray generateFileSha1Signature(const QString &path);
 bool isSameFile(const QString &path1, const QString &path2);
-void appendIntVectorToIntVector(QVector<int> &vector1,
-                                const QVector<int> &vector2);
 }    // namespace Misc
 }    // namespace Utils
 

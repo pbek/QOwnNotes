@@ -1970,17 +1970,3 @@ QByteArray Utils::Misc::generateFileSha1Signature(const QString &path) {
 bool Utils::Misc::isSameFile(const QString &path1, const QString &path2) {
     return generateFileSha1Signature(path1) == generateFileSha1Signature(path2);
 }
-
-/**
- * Appends vector2 to vector1 with Qt < 5.5 support
- */
-void Utils::Misc::appendIntVectorToIntVector(QVector<int> &vector1,
-                                             const QVector<int> &vector2) {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-    vector1.append(vector2);
-#else
-    for (const int number : vector2) {
-        vector1.append(number);
-    }
-#endif
-}
