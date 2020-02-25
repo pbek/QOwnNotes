@@ -2781,8 +2781,8 @@ QVector<int> Note::findLinkedNoteIds() const {
             continue;
         }
 
-        const QString relativeFilePath = Note::urlEncodeNoteUrl(
-                note.getFilePathRelativeToNote(*this));
+        const QString relativeFilePath =
+            Note::urlEncodeNoteUrl(note.getFilePathRelativeToNote(*this));
         const QString noteText = note.getNoteText();
 
         // search for links to the relative file path in note
