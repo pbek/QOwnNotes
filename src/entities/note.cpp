@@ -2781,7 +2781,8 @@ QVector<int> Note::findLinkedNoteIds() const {
             continue;
         }
 
-        const QString relativeFilePath = note.getFilePathRelativeToNote(*this);
+        const QString relativeFilePath = Note::urlEncodeNoteUrl(
+                note.getFilePathRelativeToNote(*this));
         const QString noteText = note.getNoteText();
 
         // search for links to the relative file path in note
@@ -2965,12 +2966,23 @@ void Note::handleNoteMoving(const Note &oldNote) const {
                     QStringLiteral("](") + newUrl + QStringLiteral(")"));
             }
 
-            const QString oldNoteRelativeFilePath =
+            QString oldNoteRelativeFilePath =
                 note.getFilePathRelativeToNote(oldNote);
             const QString relativeFilePath =
-                note.getFilePathRelativeToNote(*this);
+                urlEncodeNoteUrl(note.getFilePathRelativeToNote(*this));
 
-            // replace relative file links to the note
+            // replace non-urlencoded relative file links to the note
+            text.replace(
+                QStringLiteral("<") + oldNoteRelativeFilePath +
+                    QStringLiteral(">"),
+                QStringLiteral("<") + relativeFilePath + QStringLiteral(">"));
+            text.replace(
+                QStringLiteral("](") + oldNoteRelativeFilePath +
+                    QStringLiteral(")"),
+                QStringLiteral("](") + relativeFilePath + QStringLiteral(")"));
+
+            // replace url encoded relative file links to the note
+            oldNoteRelativeFilePath = urlEncodeNoteUrl(oldNoteRelativeFilePath);
             text.replace(
                 QStringLiteral("<") + oldNoteRelativeFilePath +
                     QStringLiteral(">"),
