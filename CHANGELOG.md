@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.2.10
+- fixed a possible crash with the CSS code block highlighter
+  (for [#1638](https://github.com/pbek/QOwnNotes/issues/1638), thank you @Waqar144)
+- url-encoded links to notes will now also be correctly adapted if those notes
+  are renamed (for [#1546](https://github.com/pbek/QOwnNotes/issues/1546))
+
 ## 20.2.9
 - note links generated from the *Link dialog* will now get url-encoded to be
   better compatible with other tools that can link to files, like GitHub or
