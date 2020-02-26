@@ -3197,18 +3197,18 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
     if (!hasNoteSubFolder) {
         // check for removed notes
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-        const QList<int> removedNoteIdList =
-            QSet<int>(_buildNotesIndexBeforeNoteIdList.begin(),
-                      _buildNotesIndexBeforeNoteIdList.end())
-                .values();
-#else
+//#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
+//        const QList<int> removedNoteIdList =
+//            QSet<int>(_buildNotesIndexBeforeNoteIdList.begin(),
+//                      _buildNotesIndexBeforeNoteIdList.end())
+//                .values();
+//#else
         const QList<int> removedNoteIdList =
             _buildNotesIndexBeforeNoteIdList.toList()
                 .toSet()
                 .subtract(_buildNotesIndexAfterNoteIdList.toSet())
                 .toList();
-#endif
+//#endif
 
         // remove all missing notes
         for (const int noteId : removedNoteIdList) {
@@ -3220,18 +3220,18 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         }
 
         // check for removed note subfolders
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-        const QList<int> removedNoteSubFolderIdList =
-            QSet<int>(_buildNotesIndexBeforeNoteSubFolderIdList.begin(),
-                      _buildNotesIndexBeforeNoteSubFolderIdList.end())
-                .values();
-#else
+//#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
+//        const QList<int> removedNoteSubFolderIdList =
+//            QSet<int>(_buildNotesIndexBeforeNoteSubFolderIdList.begin(),
+//                      _buildNotesIndexBeforeNoteSubFolderIdList.end())
+//                .values();
+//#else
         const QList<int> removedNoteSubFolderIdList =
             _buildNotesIndexBeforeNoteSubFolderIdList.toList()
                 .toSet()
                 .subtract(_buildNotesIndexAfterNoteSubFolderIdList.toSet())
                 .toList();
-#endif
+//#endif
 
         // remove all missing note subfolders
         for (const int _noteSubFolderId : removedNoteSubFolderIdList) {
