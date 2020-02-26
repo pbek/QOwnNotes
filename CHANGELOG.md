@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.2.11
+- fixed strange line edit resizing problem in the *Nextcloud/ownCloud settings*
+  that was sighted on KDE
+    - other user interface elements were also slightly improved
+
 ## 20.2.10
 - fixed a possible crash with the CSS code block highlighter
   (for [#1638](https://github.com/pbek/QOwnNotes/issues/1638), thank you @Waqar144)
