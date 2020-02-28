@@ -82,7 +82,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     Q_FOREACH (QWidget *pageWidget, pageWidgets) {
         // make sure the margin of every page is 0
         QLayout *layout = pageWidget->layout();
-        layout->setMargin(0);
+        layout->setContentsMargins(0, 0, 0, 0);
 
         // inject a scroll area to make each page scrollable
         auto *scrollArea = new QScrollArea(ui->settingsStackedWidget);

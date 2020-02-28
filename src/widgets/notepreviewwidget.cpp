@@ -45,7 +45,6 @@ NotePreviewWidget::NotePreviewWidget(QWidget *parent) : QTextBrowser(parent) {
     // add a layout to the widget
     auto *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
-    layout->setMargin(0);
     layout->addStretch();
     this->setLayout(layout);
     this->layout()->addWidget(_searchWidget);
