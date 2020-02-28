@@ -13,6 +13,7 @@ class CodeToHtmlConverter {
     enum Format { Type, Keyword, Literal, String, Comment, Builtin, Other };
 
     enum Lang {
+        Invalid,
         CodeCpp,
         CodeJs,
         CodeC,
