@@ -20,7 +20,7 @@
 - fixed strike-through highlighting being applied to links
   (for [#1642](https://github.com/pbek/QOwnNotes/issues/1642), thank you @Waqar144)
 - fixed cpp being used for unknown code block languages in the note edit highlighter
-  (for [#1644](https://github.com/pbek/QOwnNotes/issues/1644), thank you @Waqar144)
+  (for [#1643](https://github.com/pbek/QOwnNotes/issues/1643), thank you @Waqar144)
 
 ## 20.2.11
 - fixed strange line edit resizing problem in the *Nextcloud/ownCloud settings*
