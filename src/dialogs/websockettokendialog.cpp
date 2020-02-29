@@ -1,5 +1,7 @@
 #include "websockettokendialog.h"
 
+#include <utils/misc.h>
+
 #include <QtCore/QSettings>
 #include <QtGui/QClipboard>
 
@@ -23,17 +25,7 @@ WebSocketTokenDialog::WebSocketTokenDialog(QWidget *parent)
 }
 
 QString WebSocketTokenDialog::generateToken() const {
-    const QString possibleCharacters(QStringLiteral(
-        "ABCDEFGHKLMNPQRSTUVWXYZabcdefghkmnpqrstuvwxyz23456789"));
-    const int randomStringLength = 8;
-
-    QString randomString;
-    for (int i = 0; i < randomStringLength; ++i) {
-        int index = qrand() % possibleCharacters.length();
-        QChar nextChar = possibleCharacters.at(index);
-        randomString.append(nextChar);
-    }
-    return randomString;
+    return Utils::Misc::generateRandomString(8);
 }
 
 WebSocketTokenDialog::~WebSocketTokenDialog() { delete ui; }

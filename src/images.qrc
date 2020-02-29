@@ -9,5 +9,6 @@
         <file>images/layouts/minimal.png</file>
         <file>images/layouts/1col.png</file>
         <file>images/layouts/full-vertical.png</file>
+        <file>images/layouts/preview-only.png</file>
     </qresource>
 </RCC>

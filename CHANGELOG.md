@@ -1,6 +1,20 @@
 # QOwnNotes Changelog
 
 ## 20.3.0
+- there new is a new predefined layout **Preview only** to choose from at the
+  initial setup and in the *Layout settings* that shows no note edit panel, but
+  the preview panel instead
+    - you could use a workspace with this layout to switch between a workspace
+      with only the note edit and a workspace with only the preview with the
+      shortcut <kbd>Alt + Shift + P</kbd>
+        - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+          for a list of all shortcuts
+    - using a new layout in the *Layout settings* now creates a new workspace
+      instead of replacing the initial workspace, but keep in mind that workspaces
+      that demand that there is no central widget will not work properly if the
+      central widget is enabled
+- you can now also select text with they keyboard in the *Debug information* of
+  the *Debug settings*
 - fixed headings retaining old formatting when removing the heading marker
   in the next line (for [#1641](https://github.com/pbek/QOwnNotes/issues/1641), thank you @Waqar144)
 - fixed strike-through highlighting being applied to links

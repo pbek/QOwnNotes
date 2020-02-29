@@ -131,6 +131,7 @@ QString createUuidString();
 QString localDictionariesPath();
 QByteArray generateFileSha1Signature(const QString &path);
 bool isSameFile(const QString &path1, const QString &path2);
+QString generateRandomString(int length = 8);
 }    // namespace Misc
 }    // namespace Utils
 

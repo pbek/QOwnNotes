@@ -1,5 +1,6 @@
 #include "layoutwidget.h"
 
+#include <utils/gui.h>
 #include <utils/misc.h>
 
 #include <QDebug>
@@ -50,7 +51,15 @@ void LayoutWidget::updateCurrentLayout() {
     QString layoutSettingsPrefix = "Layout-" + layoutIdentifier + "/";
     QString screenshot =
         _layoutSettings->value(layoutSettingsPrefix + "screenshot").toString();
-    ui->layoutDescriptionLabel->setText(getLayoutDescription(layoutIdentifier));
+    QString layoutDescription = getLayoutDescription(layoutIdentifier);
+
+    if (_manualSettingsStoring) {
+        layoutDescription += "\n\n" + tr("Keep in mind that workspaces that "
+             "demand that there is no central widget will not work properly if "
+             "the central widget is enabled.");
+    }
+
+    ui->layoutDescriptionLabel->setText(layoutDescription);
 
     auto scene = new QGraphicsScene();
 
@@ -81,7 +90,7 @@ void LayoutWidget::storeSettings() {
                     ? tr("The application will be quit afterwards.")
                     : tr("The application will be restarted afterwards.");
 
-        if (QMessageBox::question(this, title, text,
+        if (Utils::Gui::question(this, title, text, "layoutwidget-use-layout",
                                   QMessageBox::Yes | QMessageBox::No,
                                   QMessageBox::No) == QMessageBox::No) {
             return;
@@ -93,25 +102,27 @@ void LayoutWidget::storeSettings() {
     QSettings settings;
     QStringList workspaces =
         settings.value(QStringLiteral("workspaces")).toStringList();
+    QString workspaceIdentifier = _manualSettingsStoring ?
+        Utils::Misc::generateRandomString(12) : "initial";
 
-    if (!workspaces.contains(QStringLiteral("initial"))) {
-        workspaces << QStringLiteral("initial");
+    if (!workspaces.contains(workspaceIdentifier)) {
+        workspaces << workspaceIdentifier;
         settings.setValue(QStringLiteral("workspaces"), workspaces);
     }
 
     settings.setValue(QStringLiteral("initialLayoutIdentifier"),
                       layoutIdentifier);
-    settings.setValue(QStringLiteral("currentWorkspace"), "initial");
+    settings.setValue(QStringLiteral("currentWorkspace"),
+        workspaceIdentifier);
     settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
                       _layoutSettings->value(layoutSettingsPrefix +
                                              "noteEditIsCentralWidget"));
-    settings.setValue(
-        QStringLiteral("workspace-initial/windowState"),
+    settings.setValue("workspace-" + workspaceIdentifier + "/windowState",
         _layoutSettings->value(layoutSettingsPrefix + "windowState"));
-    settings.setValue(QStringLiteral("workspace-initial/name"),
+    settings.setValue("workspace-" + workspaceIdentifier + "/name",
                       getLayoutName(layoutIdentifier));
     settings.setValue(
-        QStringLiteral("workspace-initial/noteSubFolderDockWidgetVisible"),
+        "workspace-" + workspaceIdentifier + "/noteSubFolderDockWidgetVisible",
         _layoutSettings->value(layoutSettingsPrefix +
                                "noteSubFolderDockWidgetVisible"));
 
@@ -147,6 +158,8 @@ QString LayoutWidget::getLayoutName(const QString &layoutIdentifier) {
         return tr("Minimal", "Layout name");
     } else if (layoutIdentifier == QLatin1String("full")) {
         return tr("Full", "Layout name");
+    } else if (layoutIdentifier == QLatin1String("preview-only")) {
+        return tr("Preview only", "Layout name");
     } else if (layoutIdentifier == QLatin1String("full-vertical")) {
         return tr("Full vertical", "Layout name");
     } else if (layoutIdentifier == QLatin1String("1col")) {
@@ -178,6 +191,12 @@ QString LayoutWidget::getLayoutDescription(const QString &layoutIdentifier) {
                   "preview panel on the right are enabled by default.",
                   "Layout description") +
                centralWidgetAddText;
+    } else if (layoutIdentifier == QLatin1String("preview-only")) {
+        return tr("Most of the panels, like the note list on the left, the "
+                  "tagging panels, and only the preview panel on the right "
+                  "are enabled by default. You will need another workspace to "
+                  "actually edit notes!","Layout description") +
+               noCentralWidgetAddText;
     } else if (layoutIdentifier == QLatin1String("full-vertical")) {
         return tr("Most of the panels, like the note list on the left, the "
                   "tagging panels, the note edit panel on the right and the "
