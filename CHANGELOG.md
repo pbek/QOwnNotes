@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 20.3.0
-- there new is a new predefined layout **Preview only** to choose from at the
+- there now is a new predefined layout **Preview only** to choose from at the
   initial setup and in the *Layout settings* that shows no note edit panel, but
   the preview panel instead
     - you could use a workspace with this layout to switch between a workspace
