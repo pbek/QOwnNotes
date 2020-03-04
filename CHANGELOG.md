@@ -3,6 +3,15 @@
 ## 20.3.1
 - fixed inline code not being highlighted if there is a link in the same line
   (for [#1649](https://github.com/pbek/QOwnNotes/issues/1649), thank you @Waqar144)
+- added more Maori, Arabic, Vietnamese, Cebuano, Turkish, Hebrew, Galician, Hindi,
+  Kurdish, Urdu (Pakistan), Chinese Simplified, Uzbek, German, Spanish,
+  Brazilian Portuguese, Italian, Catalan, French, Filipino, Albanian, Basque,
+  Bosnian, Bulgarian, Chinese Traditional, Croatian, Czech, Danish, Dutch,
+  Estonian, Finnish, Greek, Hungarian, Icelandic, Indonesian, Irish, Japanese,
+  Korean, Latvian, Lithuanian, Macedonian, Norwegian, Polish, Portuguese,
+  Punjabi, Romanian, Serbian (Cyrillic), Slovak, Slovenian, Swedish, Russian
+  translation (thank you Fabijenna, rakekniven, fitoschido, mlimacarlos, mlocati,
+  MGuerra, primokorn, unchase)
 
 ## 20.3.0
 - there now is a new predefined layout **Preview only** to choose from at the
