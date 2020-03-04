@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.3.1
+- fixed inline code not being highlighted if there is a link in the same line
+  (for [#1649](https://github.com/pbek/QOwnNotes/issues/1649), thank you @Waqar144)
+
 ## 20.3.0
 - there now is a new predefined layout **Preview only** to choose from at the
   initial setup and in the *Layout settings* that shows no note edit panel, but
