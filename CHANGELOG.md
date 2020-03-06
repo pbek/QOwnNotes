@@ -4,11 +4,15 @@
 - when removing single or multiple notes the note folder will now not be reloaded,
   instead the notes will just be removed in the note list and the next existing
   note will be selected (for [#1650](https://github.com/pbek/QOwnNotes/issues/1650))
+- added **Māori translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current
+      translation
 
 ## 20.3.1
 - fixed inline code not being highlighted if there is a link in the same line
   (for [#1649](https://github.com/pbek/QOwnNotes/issues/1649), thank you @Waqar144)
-- added more Maori, Arabic, Vietnamese, Cebuano, Turkish, Hebrew, Galician, Hindi,
+- added more Arabic, Vietnamese, Cebuano, Turkish, Hebrew, Galician, Hindi,
   Kurdish, Urdu (Pakistan), Chinese Simplified, Uzbek, German, Spanish,
   Brazilian Portuguese, Italian, Catalan, French, Filipino, Albanian, Basque,
   Bosnian, Bulgarian, Chinese Traditional, Croatian, Czech, Danish, Dutch,
