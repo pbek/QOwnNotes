@@ -794,7 +794,7 @@ class MainWindow : public QMainWindow {
 
     void showAppMetricsNotificationIfNeeded();
 
-    void resetCurrentNote();
+    void resetCurrentNote(bool goToTop = true);
 
     void setupNoteBookmarkShortcuts();
 
@@ -1057,4 +1057,5 @@ class MainWindow : public QMainWindow {
     QTextDocument *getDocumentForPreviewExport();
 
     void noteTextEditTextWasUpdated();
+    void removeNoteFromNoteTreeWidget(Note &note) const;
 };

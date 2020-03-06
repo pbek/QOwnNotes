@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.3.2
+- when removing single or multiple notes the note folder will now not be reloaded,
+  instead the notes will just be removed in the note list and the next existing
+  note will be selected (for [#1650](https://github.com/pbek/QOwnNotes/issues/1650))
+
 ## 20.3.1
 - fixed inline code not being highlighted if there is a link in the same line
   (for [#1649](https://github.com/pbek/QOwnNotes/issues/1649), thank you @Waqar144)

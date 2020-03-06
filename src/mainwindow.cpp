@@ -3783,15 +3783,17 @@ void MainWindow::removeCurrentNote() {
             const QSignalBlocker blocker1(ui->noteTreeWidget);
             Q_UNUSED(blocker1)
 
+            // search and remove note from the note tree widget
+            removeNoteFromNoteTreeWidget(currentNote);
+
             // delete note in database and on file system
             currentNote.remove(true);
 
             unsetCurrentNote();
-            loadNoteDirectoryList();
         }
 
-        // set a new first note
-        resetCurrentNote();
+        // set a new current note
+        resetCurrentNote(false);
 
         // we try to fix problems with note subfolders
         // we need to wait some time to turn the watcher on again because
@@ -3802,11 +3804,24 @@ void MainWindow::removeCurrentNote() {
 }
 
 /**
+ * Searches and removes note from the note tree widget
+ */
+void MainWindow::removeNoteFromNoteTreeWidget(Note &note) const {
+    auto *item = Utils::Gui::getTreeWidgetItemWithUserData(ui->noteTreeWidget,
+                                                           note.getId());
+
+    if (item != nullptr) {
+        delete(item);
+    }
+}
+
+/**
  * Resets the current note to the first note
  */
-void MainWindow::resetCurrentNote() {
-    QKeyEvent *event =
-        new QKeyEvent(QEvent::KeyPress, Qt::Key_Home, Qt::NoModifier);
+void MainWindow::resetCurrentNote(bool goToTop) {
+    auto *event =
+        new QKeyEvent(QEvent::KeyPress, goToTop ? Qt::Key_Home : Qt::Key_Down,
+            Qt::NoModifier);
     QApplication::postEvent(ui->noteTreeWidget, event);
 }
 
@@ -4327,6 +4342,10 @@ void MainWindow::removeSelectedNotes() {
 
                 const int id = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(id);
+
+                // search and remove note from the note tree widget
+                removeNoteFromNoteTreeWidget(note);
+
                 note.remove(true);
                 qDebug() << "Removed note " << note.getName();
             }
@@ -4334,12 +4353,10 @@ void MainWindow::removeSelectedNotes() {
             // clear the text edit so it stays clear after removing the
             // last note
             activeNoteTextEdit()->clear();
-
-            loadNoteDirectoryList();
         }
 
-        // set a new first note
-        resetCurrentNote();
+        // set a new current note
+        resetCurrentNote(false);
 
         // we try to fix problems with note subfolders
         // we need to wait some time to turn the watcher on again because
