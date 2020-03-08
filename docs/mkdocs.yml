@@ -1,6 +1,7 @@
 site_name: QOwnNotes Documentation
 site_description: QOwnNotes - Plain-text file markdown note taking with Nextcloud integration
 site_author: qownnotes.org
+# needed for 404 error page and canonical urls
 site_url: https://docs.qownnotes.org/en/latest
 dev_addr: 0.0.0.0:8000
 
