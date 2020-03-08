@@ -75,6 +75,7 @@ markdown_extensions:
 nav:
   - 'Welcome': 'index.md'
   - 'Getting Started':
+      - 'Concept': 'getting-started/concept.md'
       - 'Install QOwnNotes': 'getting-started/install-qownnotes.md'
       - 'CLI parameters': 'getting-started/cli-parameters.md'
   - 'Editor':
