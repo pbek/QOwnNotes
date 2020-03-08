@@ -15,6 +15,7 @@ apps:
     command: desktop-launch ${SNAP}/usr/bin/QOwnNotes -style=Fusion --snap
     environment:
         DISABLE_WAYLAND: 1
+        QT_QPA_PLATFORMTHEME: gtk3
     # see https://docs.snapcraft.io/reference/interfaces
     plugs:
       - x11
@@ -27,6 +28,20 @@ apps:
       - removable-media
       - opengl
       - cups-control
+
+plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes:gtk-3-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes:icon-themes
+  sound-themes:
+    interface: content
+    target: $SNAP/data-dir/sounds
+    default-provider: gtk-common-themes:sounds-themes
 
 parts:
   qownnotes:
@@ -66,6 +81,7 @@ parts:
       plugin: make
       make-parameters: ["FLAVOR=qt5"]
       build-packages:
+        - build-essential
         - qtbase5-dev
         - dpkg-dev
       stage-packages:
@@ -81,3 +97,9 @@ parts:
         - libqt5svg5 # for loading icon themes which are svg
         - try: [appmenu-qt5] # not available on core18
         - locales-all
+        - xdg-user-dirs
+        - fcitx-frontend-qt5
+  qt5-gtk-platform:
+      plugin: nil
+      stage-packages:
+        - qt5-gtk-platformtheme
