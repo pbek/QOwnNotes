@@ -23,7 +23,7 @@ You can use these parameters on the command line interface:
 You may run the application on the command line interface differently on
 different operating systems:
 
-| Operating system | Output                                                 |
+| Operating system | Command                                                |
 | ---------------- | ------------------------------------------------------ |
 | Linux            | `QOwnNotes` (or `qownnotes` if installed as snap)      |
 | macOS            | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes` |
