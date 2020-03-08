@@ -85,3 +85,5 @@ nav:
       - 'Methods and objects': 'scripting/methods-and-objects.md'
       - 'Hooks': 'scripting/hooks.md'
       - 'Exposed classes': 'scripting/classes.md'
+  - 'Contributing':
+      - 'Maintainers': 'contributing/maintainers.md'
