@@ -46,8 +46,9 @@ note.
 | `hh:mm:ss.zzz`       | 14:13:09.042     |
 | `h:m:s ap`           | 2:13:9 pm        |
 
-Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more
-information about time formats.
+!!! info
+    Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more
+    information about time formats.
 
 !!! tip
     If you need to make more complex operations to output the current time
