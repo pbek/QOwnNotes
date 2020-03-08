@@ -1,5 +1,5 @@
 site_name: QOwnNotes Documentation
-site_description: QOwnNotes Documentation
+site_description: QOwnNotes - Plain-text file markdown note taking with Nextcloud integration
 site_author: qownnotes.org
 site_url: https://docs.qownnotes.org
 dev_addr: 0.0.0.0:8000
@@ -32,7 +32,7 @@ theme:
 copyright: "Copyright &copy; 2014-2020 Patrizio Bekerle"
 
 google_analytics:
-  - 'UA-52660882-6'
+  - 'UA-52660882-4'
   - 'docs.qownnotes.org'
 
 extra_css:
