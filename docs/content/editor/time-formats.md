@@ -9,12 +9,12 @@ note.
 | ------------ | ------------------------------------------------------------- |
 | `d`          | the day as number without a leading zero (1 to 31)            |
 | `dd`         | the day as number with a leading zero (01 to 31)              |
-| `ddd`        | the abbreviated localized day name (e.g. ?Mon? to ?Sun?).     |
-| `dddd`       | the long localized day name (e.g. ?Monday? to ?Sunday?).      |
+| `ddd`        | the abbreviated localized day name (e.g. `Mon` to `Sun`).     |
+| `dddd`       | the long localized day name (e.g. `Monday` to `Sunday`).      |
 | `M`          | the month as number without a leading zero (1-12)             |
 | `MM`         | the month as number with a leading zero (01-12)               |
-| `MMM`        | the abbreviated localized month name (e.g. ?Jan? to ?Dec?).   |
-| `MMMM`       | the long localized month name (e.g. ?January? to ?December?). |
+| `MMM`        | the abbreviated localized month name (e.g. `Jan` to `Dec`).   |
+| `MMMM`       | the long localized month name (e.g. `January` to `December`). |
 | `yy`         | the year as two digit number (00-99)                          |
 | `yyyy`       | the year as four digit number                                 |
 
