@@ -49,5 +49,6 @@ note.
 Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more
 information about time formats.
 
-If you need to make more complex operations to output the current time
-please consider creating a [custom action](../scripting/methods-and-objects.md#registering-a-custom-action).
+!!! tip
+    If you need to make more complex operations to output the current time
+    please consider creating a [custom action](../scripting/methods-and-objects.md#registering-a-custom-action).
