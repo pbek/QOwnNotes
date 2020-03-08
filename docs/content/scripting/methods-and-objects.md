@@ -63,7 +63,6 @@ Getting the path of the current note folder
     ```
 
 !!! example
-
     ```js
     var path = script.currentNoteFolderPath();
     ```
