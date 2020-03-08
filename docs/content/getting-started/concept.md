@@ -9,5 +9,5 @@
         - On Android you could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files
           and use software like *neutriNotes* to edit your notes.
     - [CloudNotes for iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (3rd party)
-        - On iOS you can also use [Notebooks]https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662)
+        - On iOS you can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662)
           and sync your notes via WebDAV.
