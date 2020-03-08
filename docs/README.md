@@ -1,5 +1,11 @@
 # QOwnNotes Documentation
 
+Feel free to post pull requests for fixes or improvements.
+
+## Quick links
+
+- [MkDocs Material Components - Cheat Sheet](https://yakworks.github.io/mkdocs-material-components/cheat-sheet/)
+
 ## Tooling
 
 | Tool              | Documentation                       | Sources                           |
