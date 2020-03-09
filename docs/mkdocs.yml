@@ -78,6 +78,7 @@ nav:
       - 'Concept': 'getting-started/concept.md'
       - 'Install QOwnNotes': 'getting-started/install-qownnotes.md'
       - 'CLI parameters': 'getting-started/cli-parameters.md'
+      - 'Shortcuts': 'getting-started/shortcuts.md'
   - 'Editor':
       - 'Spellchecking': 'editor/spellchecking.md'
       - 'Time formats': 'editor/time-formats.md'

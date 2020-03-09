@@ -2,6 +2,16 @@
 
 Feel free to post pull requests for fixes or improvements.
 
+## Development
+
+You can run a Docker container to develop the documentation.
+
+```bash
+make docs-serve
+```
+
+Then you can open <http://0.0.0.0:8000> to see the documentation with live-reload. 
+
 ## Quick links
 
 - [MkDocs Material Components - Cheat Sheet](https://yakworks.github.io/mkdocs-material-components/cheat-sheet/)
