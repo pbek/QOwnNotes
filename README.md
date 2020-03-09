@@ -4,7 +4,7 @@
 [Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) |
 [Issues](https://github.com/pbek/QOwnNotes/issues) |
 [Releases](https://github.com/pbek/QOwnNotes/releases) |
-[Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/SHORTCUTS.md) |
+[Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/getting-started/shortcuts.md) |
 [Documentation](http://docs.qownnotes.org) |
 [Knowledge base](https://www.qownnotes.org/Knowledge-base) |
 [Screenshots](https://www.qownnotes.org) |
