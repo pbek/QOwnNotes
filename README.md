@@ -78,8 +78,8 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
     - this feature can also be turned off and you can use any filename you like
 - manage your Nextcloud / ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
 - **encryption of notes** (AES-256 is built in or you can use custom encryption methods like
-  **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or
-  **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
+  **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/encryption-keybase.qml)) or
+  **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/encryption-pgp.qml)))
 - **dark mode** theme support
 - all **panels can be placed wherever you want**, they can even float or stack (fully dockable)
 - **toolbars** are **fully customizable**

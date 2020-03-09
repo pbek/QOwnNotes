@@ -16,7 +16,7 @@ onNoteStored
     ```
 
 You may want to take a look at the example
-[on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/on-note-opened.qml).
+[on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/on-note-opened.qml).
 
 noteOpenedHook
 --------------
@@ -32,7 +32,7 @@ noteOpenedHook
     ```
 
 You may want to take a look at the example
-[on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/on-note-opened.qml).
+[on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/on-note-opened.qml).
 
 noteDoubleClickedHook
 ---------------------
@@ -48,7 +48,7 @@ noteDoubleClickedHook
     ```
 
 You may want to take a look at the example
-[external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/external-note-open.qml).
+[external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/external-note-open.qml).
 
 insertMediaHook
 ---------------
@@ -67,7 +67,7 @@ insertMediaHook
     ```
 
 You may want to take a look at the example
-[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml).
+[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/example.qml).
 
 insertingFromMimeDataHook
 -------------------------
@@ -85,10 +85,10 @@ insertingFromMimeDataHook
     ```
 
 You may want to take a look at the example
-[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml),
-[insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/insert-headline-with-link-from-github-url.qml)
+[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/example.qml),
+[insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/insert-headline-with-link-from-github-url.qml)
 or
-[note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/note-text-from-5pm-mail.qml).
+[note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/note-text-from-5pm-mail.qml).
 
 handleNoteTextFileNameHook
 --------------------------
@@ -113,9 +113,9 @@ handleNoteTextFileNameHook
     ```
 
 You may want to take a look at the example
-[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml)
+[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/example.qml)
 or
-[use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/use-tag-names-in-filename.qml).
+[use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/use-tag-names-in-filename.qml).
 
 handleNoteNameHook
 ------------------
@@ -136,7 +136,7 @@ handleNoteNameHook
     ```
 
 You may want to take a look at the example
-[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml).
+[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/example.qml).
 
 It may not be a good idea to use this hook if the setting to use the
 file name as note name is active.
@@ -162,7 +162,7 @@ handleNewNoteHeadlineHook
     ```
 
 You may want to take a look at the example
-[custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-new-note-headline.qml).
+[custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/custom-new-note-headline.qml).
 
 preNoteToMarkdownHtmlHook
 -------------------------
@@ -187,7 +187,7 @@ preNoteToMarkdownHtmlHook
     ```
 
 You may want to take a look at the example
-[preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/preview-styling.qml).
+[preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/preview-styling.qml).
 
 noteToMarkdownHtmlHook
 ----------------------
@@ -210,9 +210,9 @@ noteToMarkdownHtmlHook
     ```
 
 You may want to take a look at the example
-[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml)
+[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/example.qml)
 or
-[preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/preview-styling.qml).
+[preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/preview-styling.qml).
 
 Please refer to the [Supported HTML
 Subset](http://doc.qt.io/qt-5/richtext-html-subset.html) documentation
@@ -235,10 +235,10 @@ encryptionHook
     ```
 
 You may want to take a look at the example
-[encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml),
-[encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)
+[encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/encryption-keybase.qml),
+[encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/encryption-pgp.qml)
 or
-[encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-rot13.qml).
+[encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/encryption-rot13.qml).
 
 noteTaggingHook
 ---------------
@@ -286,7 +286,7 @@ special text in your note like `@tag1`, `@tag2`, `@tag3`.
         those tags from your notes
 
 You may want to take a look at the example
-[note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/note-tagging.qml)
+[note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/note-tagging.qml)
 to implement your own tagging mechanism.
 
 autocompletionHook
@@ -307,4 +307,4 @@ when the autocompletion is invoked.
     ```
 
 You may want to take a look at the example
-[autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/autocompletion.qml).
+[autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/autocompletion.qml).
