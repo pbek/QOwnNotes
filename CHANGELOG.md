@@ -7,6 +7,8 @@
 - improved GTK and KDE Plasma support for the snap version of QOwnNotes
   (for [#1651](https://github.com/pbek/QOwnNotes/pull/1651))
     - the Breeze styling will now be used by default along with the GTK file selectors 
+- the *Table dialog* now also supports importing csv files with tabulator
+  characters as separator
 
 ## 20.3.2
 - when removing single or multiple notes the note folder will now not be reloaded,

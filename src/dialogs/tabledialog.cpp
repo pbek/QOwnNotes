@@ -93,10 +93,12 @@ void TableDialog::importCSV() {
 
     // start with two newlines to make sure that a proper table is inserted
     QString text = QStringLiteral("\n\n");
+    QString separator = ui->separatorComboBox->currentText();
+    separator.replace("\\t", "\t");
 
     // read data from file
     QList<QStringList> readData = QtCSV::Reader::readToList(
-        filePath, ui->separatorComboBox->currentText(),
+        filePath, separator,
         ui->textDelimiterComboBox->currentText());
 
     // loop through all rows
