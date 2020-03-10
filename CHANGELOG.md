@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 20.3.3
+- the documentation page was re-done in Markdown and will be generated automatically
+  with MkDocs at [docs.qownnotes.org](https://docs.qownnotes.org)
+    - feel free to add or improve the information
+- improved GTK and KDE Plasma support for the snap version of QOwnNotes
+  (for [#1651](https://github.com/pbek/QOwnNotes/pull/1651))
+    - the Breeze styling will now be used by default along with the GTK file selectors 
+
 ## 20.3.2
 - when removing single or multiple notes the note folder will now not be reloaded,
   instead the notes will just be removed in the note list and the next existing
