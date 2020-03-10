@@ -1,5 +1,7 @@
 # Concept
 
+![concept](../assets/graphs/concept.svg)
+
 - You **own** your own notes! All notes are stored as **plain-text Markdown files** on your desktop computer
 - **Sync** them over devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/) or [ownCloud](https://owncloud.org/) sync client to your server
     - Of course other software, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to sync your note files

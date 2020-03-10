@@ -49,4 +49,8 @@ docs-lint:
 docs-clean:
 	rm -rf $(SITE_DIR)
 
+graphs:
+	cd content/assets/graphs && \
+	dot -Tsvg concept.dot -o concept.svg
+
 .PHONY: all docs-verify docs docs-clean docs-build docs-lint
