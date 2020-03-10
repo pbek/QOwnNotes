@@ -663,7 +663,7 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
         QRegularExpression(QStringLiteral("<li.*?>(.+?)<\\/li>"),
                            QRegularExpression::CaseInsensitiveOption |
                                QRegularExpression::DotMatchesEverythingOption),
-        QStringLiteral("- \\1"));
+        QStringLiteral("- \\1\n"));
     text.replace(QRegularExpression(QStringLiteral("<br.*?>"),
                                     QRegularExpression::CaseInsensitiveOption),
                  QStringLiteral("\n"));

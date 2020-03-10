@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.3.4
+- improved html list importing of the *Paste html or media* action
+
 ## 20.3.3
 - the **documentation page** was **re-done in Markdown** and will be generated
   automatically with **MkDocs** at [docs.qownnotes.org](https://docs.qownnotes.org)
