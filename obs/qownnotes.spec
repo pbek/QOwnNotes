@@ -202,7 +202,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc LICENSE README.md CHANGELOG.md docs/content/getting-started/shortcuts.md
+%doc LICENSE README.md CHANGELOG.md shortcuts.md
 %{_bindir}/QOwnNotes
 %{_datadir}/pixmaps/QOwnNotes.png
 
