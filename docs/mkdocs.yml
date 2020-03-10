@@ -88,4 +88,5 @@ nav:
       - 'Hooks': 'scripting/hooks.md'
       - 'Exposed classes': 'scripting/classes.md'
   - 'Contributing':
+      - 'Get involved': 'contributing/get-involved.md'
       - 'Maintainers': 'contributing/maintainers.md'
