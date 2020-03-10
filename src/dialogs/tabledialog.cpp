@@ -3,6 +3,7 @@
 #include <mainwindow.h>
 
 #include <QDebug>
+//#include <QClipboard>
 
 #include "filedialog.h"
 #include "libraries/qtcsv/src/include/reader.h"
@@ -20,6 +21,15 @@ TableDialog::TableDialog(QWidget *parent)
     ui->createTableWidget->setColumnCount(50);
     ui->createTableWidget->setRowCount(100);
     ui->csvFileTextEdit->setVisible(false);
+
+//    QClipboard *clipboard = QApplication::clipboard();
+//    QString text = clipboard->text().trimmed();
+//
+//    // set text from clipboard
+//    if (!text.isEmpty()) {
+//        ui->csvFileTextEdit->show();
+//        ui->csvFileTextEdit->setPlainText(text);
+//    }
 }
 
 TableDialog::~TableDialog() { delete ui; }
