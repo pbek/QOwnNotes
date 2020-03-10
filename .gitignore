@@ -9,3 +9,8 @@ build-tests-*
 cmake-build-*
 doc/build
 *.qmlc
+stage
+parts
+prime
+*.snap
+snap/.snapcraft/state

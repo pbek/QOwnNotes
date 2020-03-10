@@ -12,7 +12,7 @@ description: |
 
 apps:
   qownnotes:
-    command: desktop-launch ${SNAP}/usr/bin/QOwnNotes -style=Fusion --snap
+    command: desktop-launch ${SNAP}/usr/bin/QOwnNotes -style=Breeze --snap
     environment:
         DISABLE_WAYLAND: 1
         QT_QPA_PLATFORMTHEME: gtk3
@@ -23,11 +23,19 @@ apps:
       - network
       - network-bind
       - home
+#      - kde-frameworks-5-plug
       - desktop
       - desktop-legacy
       - removable-media
       - opengl
       - cups-control
+
+# plugs:
+#   kde-frameworks-5-plug:
+#     content: kde-frameworks-5-all
+#     interface: content
+#     default-provider: kde-frameworks-5
+#     target: kf5
 
 plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
   gtk-3-themes:
@@ -99,6 +107,18 @@ parts:
         - locales-all
         - xdg-user-dirs
         - fcitx-frontend-qt5
+
+  plasma-integration:
+    plugin: nil
+    stage-packages:
+      #    - plasma-integration # causes the KDE file selector to be used that didn't work
+      - kde-style-breeze
+      - breeze-icon-theme
+    #    - kio # runtime slaves for kio, but does not seem to work
+    prime:
+      - "-usr/share/wallpapers/*"
+      - "-usr/share/fonts/*"
+
   qt5-gtk-platform:
       plugin: nil
       stage-packages:
