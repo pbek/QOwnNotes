@@ -1,7 +1,7 @@
 
 # Welcome
 
-![Architecture](assets/img/qownnotes.screenshot.png)
+![Screenshot](assets/img/qownnotes.screenshot.png)
 
 [QOwnNotes](https://www.qownnotes.org/) is the **open source** (GPL) plain-text file
 **markdown note taking** application for **GNU/Linux**, **Mac OS X** and **Windows**, that
