@@ -2,11 +2,31 @@
 
 ![concept](../assets/graphs/concept.svg)
 
-- You **own** your own notes! All notes are stored as **plain-text Markdown files** on your desktop computer
-- **Sync** them over devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/) or [ownCloud](https://owncloud.org/) sync client to your server
-    - Of course other software, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to sync your note files
-- Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes in the **web**
-- To access your Nextcloud / ownCloud notes from your **mobile device** you may want to get one of these apps
+??? info "QOwnNotes"
+	- QOwnNotes **stores notes** directly to your **note folder as markdown files**
+	- It can talk directly to your Nextcloud / ownCloud server to share notes
+	- You can also access your note history and trash on your Nextcloud / ownCloud server
+	  via the QOwnNotesApi Nextcloud app
+	- Todo lists on your Nextcloud / ownCloud server can be accessed from within QOwnNotes
+	- QOwnNotes **does not sync** your note files
+
+??? info "Markdown note files"
+	- You **own** all your notes!
+	- Yours notes are stored as **plain-text Markdown files** on your desktop computer
+	- **Sync** them over devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/) or [ownCloud](https://owncloud.org/) sync client to your server
+	    - Of course other software, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to sync your note files
+
+??? info "Nextcloud sync client"
+	- **Sync your notes** with other devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/)
+	  or [ownCloud](https://owncloud.org/) sync client to your server
+    - Of course other software, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used
+      too to sync your note files
+
+??? info "Nextcloud Notes server app"
+	- Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes in the **web**
+
+??? info "Nextcloud Notes mobile app"
+	- To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps
     - [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (3rd party)
         - On Android you could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files
           and use software like *neutriNotes* to edit your notes
