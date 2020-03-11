@@ -77,6 +77,7 @@ nav:
   - 'Getting Started':
       - 'Concept': 'getting-started/concept.md'
       - 'Install QOwnNotes': 'getting-started/install-qownnotes.md'
+      - 'Browser extension': 'getting-started/browser-extension.md'
       - 'CLI parameters': 'getting-started/cli-parameters.md'
       - 'Shortcuts': 'getting-started/shortcuts.md'
   - 'Editor':
