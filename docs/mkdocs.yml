@@ -30,6 +30,18 @@ theme:
     prev: 'Previous'
     next: 'Next'
 
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/pbek/QOwnNotes'
+    - type: 'telegram'
+      link: 'https://t.me/QOwnNotes'
+    - type: 'twitter'
+      link: 'https://twitter.com/QOwnNotes'
+    - type: 'facebook'
+      link: 'https://www.facebook.com/QOwnNotes/'
+  disqus: 'qownnotes-docs'
+
 copyright: "Copyright &copy; 2014-2020 Patrizio Bekerle"
 
 google_analytics:
@@ -78,6 +90,7 @@ nav:
       - 'Concept': 'getting-started/concept.md'
       - 'Install QOwnNotes': 'getting-started/install-qownnotes.md'
       - 'Browser extension': 'getting-started/browser-extension.md'
+      - 'QOwnNotesAPI': 'getting-started/qownnotesapi.md'
       - 'CLI parameters': 'getting-started/cli-parameters.md'
       - 'Shortcuts': 'getting-started/shortcuts.md'
   - 'Editor':

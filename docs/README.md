@@ -14,7 +14,7 @@ Then you can open <http://0.0.0.0:8000> to see the documentation with live-reloa
 
 ## Quick links
 
-- [MkDocs Material Components - Cheat Sheet](https://yakworks.github.io/mkdocs-material-components/cheat-sheet/)
+- [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/)
 
 ## Tooling
 

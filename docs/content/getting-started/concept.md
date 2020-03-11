@@ -34,6 +34,11 @@
     - Of course other software, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used
       too to sync your note files
 
+??? info "QOwnNotesAPI Nextcloud app"
+	- [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) can handle the **access** to **trashed notes**
+      and **note versions** for you
+	- Please visit [QOwnNotesAPI Nextcloud App](qownnotesapi.md) for more information
+
 ??? info "Nextcloud Notes server app"
 	- Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes in the **web**
 
