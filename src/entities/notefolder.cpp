@@ -140,13 +140,14 @@ bool NoteFolder::remove() {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
-        // remove the note history settings of the note folder
+        // remove the settings of the note folder
         QSettings settings;
         settings.remove(QStringLiteral("NoteHistory-") +
                         QString::number(this->id));
         settings.remove(QStringLiteral("NoteHistoryCurrentIndex-") +
                         QString::number(this->id));
-
+        settings.remove(QStringLiteral("NoteFolder-") +
+                        QString::number(this->id));
         return true;
     }
 }
@@ -541,6 +542,17 @@ bool NoteFolder::isPathNoteFolder(const QString &path) {
     }
 
     return false;
+}
+
+void NoteFolder::setSettingsValue(const QString &key, const QVariant &value) {
+    QSettings settings;
+    settings.setValue(QString("NoteFolder-%1/%2").arg(QString::number(id), key), value);
+}
+
+QVariant NoteFolder::settingsValue(const QString &key,
+                                   const QVariant &defaultValue) const {
+    const QSettings settings;
+    return settings.value(QString("NoteFolder-%1/%2").arg(QString::number(id), key), defaultValue);
 }
 
 QDebug operator<<(QDebug dbg, const NoteFolder &noteFolder) {

@@ -1068,9 +1068,8 @@ QStringList Note::customNoteFileExtensionList(const QString &prefix) {
  * Checks if it is allowed to have a different note file name than the headline
  */
 bool Note::allowDifferentFileName() {
-    const QSettings settings;
-    return settings.value(QStringLiteral("allowDifferentNoteFileName"))
-        .toBool();
+    return NoteFolder::currentNoteFolder().settingsValue(
+                QStringLiteral("allowDifferentNoteFileName")).toBool();
 }
 
 //

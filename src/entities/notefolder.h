@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QSqlQuery>
+#include <QVariant>
 
 class NoteSubFolder;
 class QJsonObject;
@@ -63,8 +64,10 @@ class NoteFolder {
     static QString noteFoldersWebServiceJsonText();
     static bool isPathNoteFolder(const QString &path);
     static bool isCurrentNoteTreeEnabled();
+    void setSettingsValue(const QString &key, const QVariant &value);
+    QVariant settingsValue(const QString &key, const QVariant &defaultValue = QVariant()) const;
 
-   private:
+private:
     QString name;
     QString localPath;
     QString remotePath;

@@ -801,6 +801,17 @@ bool DatabaseService::setupTables() {
         version = 32;
     }
 
+    if (version < 33) {
+        foreach(NoteFolder noteFolder, NoteFolder::fetchAll()) {
+            noteFolder.setSettingsValue(QStringLiteral("allowDifferentNoteFileName"),
+                                        settings.value(QStringLiteral("allowDifferentNoteFileName")));
+        }
+
+        settings.remove(QStringLiteral("allowDifferentNoteFileName"));
+
+        version = 33;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"),
                    QString::number(version));

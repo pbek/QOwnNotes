@@ -671,8 +671,6 @@ void SettingsDialog::storeSettings() {
     settings.setValue(
         QStringLiteral("ignoreAllExternalNoteFolderChanges"),
         ui->ignoreAllExternalNoteFolderChangesCheckBox->isChecked());
-    settings.setValue(QStringLiteral("allowDifferentNoteFileName"),
-                      ui->allowDifferentNoteFileNameCheckBox->isChecked());
     settings.setValue(QStringLiteral("newNoteAskHeadline"),
                       ui->newNoteAskHeadlineCheckBox->isChecked());
     settings.setValue(QStringLiteral("useUNIXNewline"),
@@ -1026,6 +1024,14 @@ void SettingsDialog::storeFontSettings() {
 
 void SettingsDialog::readSettings() {
     QSettings settings;
+
+    // set current note folder list item
+    QListWidgetItem *noteFolderListItem = Utils::Gui::getListWidgetItemWithUserData(
+                ui->noteFolderListWidget, NoteFolder::currentNoteFolderId());
+    if (noteFolderListItem != nullptr) {
+        ui->noteFolderListWidget->setCurrentItem(noteFolderListItem);
+    }
+
     ui->ownCloudSupportCheckBox->setChecked(
         OwnCloudService::isOwnCloudSupportEnabled());
     on_ownCloudSupportCheckBox_toggled();
@@ -1059,8 +1065,6 @@ void SettingsDialog::readSettings() {
     ui->ignoreAllExternalNoteFolderChangesCheckBox->setChecked(
         settings.value(QStringLiteral("ignoreAllExternalNoteFolderChanges"))
             .toBool());
-    ui->allowDifferentNoteFileNameCheckBox->setChecked(
-        settings.value(QStringLiteral("allowDifferentNoteFileName")).toBool());
     ui->newNoteAskHeadlineCheckBox->setChecked(
         settings.value(QStringLiteral("newNoteAskHeadline")).toBool());
     ui->useUNIXNewlineCheckBox->setChecked(
@@ -2368,6 +2372,9 @@ void SettingsDialog::on_ignoreSSLErrorsCheckBox_toggled(bool checked) {
  * Does the note folder page setup
  */
 void SettingsDialog::setupNoteFolderPage() {
+//    const QSignalBlocker blocker(ui->noteFolderListWidget);
+    //Q_UNUSED(blocker)
+
     // hide the owncloud server settings
     ui->noteFolderEditFrame->setEnabled(NoteFolder::countAll() > 0);
     setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
@@ -2381,10 +2388,12 @@ void SettingsDialog::setupNoteFolderPage() {
             auto *item = new QListWidgetItem(noteFolder.getName());
             item->setData(Qt::UserRole, noteFolder.getId());
             ui->noteFolderListWidget->addItem(item);
-        }
 
-        // set the current row
-        ui->noteFolderListWidget->setCurrentRow(0);
+            // set the current row
+            if (noteFolder.getId() == NoteFolder::currentNoteFolderId()) {
+                ui->noteFolderListWidget->setCurrentItem(item);
+            }
+        }
     }
 
     // disable the remove button if there is only one item
@@ -2415,6 +2424,8 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
             _selectedNoteFolder.getRemotePath());
         ui->noteFolderShowSubfoldersCheckBox->setChecked(
             _selectedNoteFolder.isShowSubfolders());
+        ui->allowDifferentNoteFileNameCheckBox->setChecked(
+            _selectedNoteFolder.settingsValue(QStringLiteral("allowDifferentNoteFileName")).toBool());
         ui->noteFolderGitCommitCheckBox->setChecked(
             _selectedNoteFolder.isUseGit());
         Utils::Gui::setComboBoxIndexByUserData(
@@ -3223,6 +3234,12 @@ void SettingsDialog::on_noteFolderShowSubfoldersCheckBox_toggled(bool checked) {
     }
 
     _selectedNoteFolder.store();
+}
+
+void SettingsDialog::on_allowDifferentNoteFileNameCheckBox_toggled(bool checked)
+{
+    _selectedNoteFolder.setSettingsValue(QStringLiteral("allowDifferentNoteFileName"),
+                                         checked);
 }
 
 /**

@@ -10059,7 +10059,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
                            "different from the headline."),
                         tr("Open &settings"), tr("&Cancel"), QString(), 0,
                         1) == 0) {
-                    openSettingsDialog(SettingsDialog::GeneralPage);
+                    openSettingsDialog(SettingsDialog::NoteFolderPage);
                 }
             }
         }

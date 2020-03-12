@@ -285,7 +285,9 @@ class SettingsDialog : public MasterDialog {
 
     void on_ownCloudServerAppPasswordPageButton_clicked();
 
-   private:
+    void on_allowDifferentNoteFileNameCheckBox_toggled(bool checked);
+
+private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
     QFont noteTextEditFont;

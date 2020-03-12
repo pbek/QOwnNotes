@@ -1,6 +1,11 @@
 # QOwnNotes Changelog
 
 ## 20.3.4
+- the setting `Allow note file name to be different from headline` can now be
+  set per note folder instead of only globally
+    - this allows you to use different settings for your note file names for each note folder
+    - the currently existing setting will be used as setting for all your note folders initially
+- if you open the *Note folders settings* now the currently active note folder will be selected
 - improved html list importing of the *Paste html or media* action
 
 ## 20.3.3

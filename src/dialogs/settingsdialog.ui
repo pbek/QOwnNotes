@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -545,98 +545,7 @@
                    <enum>QFrame::Raised</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_22">
-                   <item row="4" column="1">
-                    <widget class="QPushButton" name="noteFolderLocalPathButton">
-                     <property name="toolTip">
-                      <string>Click here to select your local note path</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
-                       <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="4" column="0">
-                    <widget class="QLineEdit" name="noteFolderLocalPathLineEdit">
-                     <property name="readOnly">
-                      <bool>true</bool>
-                     </property>
-                     <property name="placeholderText">
-                      <string>Path where your notes are stored locally</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="10" column="0">
-                    <widget class="QLineEdit" name="noteFolderRemotePathLineEdit">
-                     <property name="toolTip">
-                      <string>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</string>
-                     </property>
-                     <property name="placeholderText">
-                      <string extracomment="&quot;Notes&quot; should not be translated">&quot;Notes&quot; path on your server</string>
-                     </property>
-                     <property name="clearButtonEnabled">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="12" column="0">
-                    <widget class="QFrame" name="noteFolderVerticalSpacerFrame">
-                     <property name="frameShape">
-                      <enum>QFrame::NoFrame</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
-                     </property>
-                     <layout class="QGridLayout" name="gridLayout_27">
-                      <property name="leftMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>0</number>
-                      </property>
-                      <item row="0" column="0">
-                       <spacer name="noteFolderVerticalSpacer">
-                        <property name="orientation">
-                         <enum>Qt::Vertical</enum>
-                        </property>
-                        <property name="sizeType">
-                         <enum>QSizePolicy::Expanding</enum>
-                        </property>
-                        <property name="sizeHint" stdset="0">
-                         <size>
-                          <width>20</width>
-                          <height>5</height>
-                         </size>
-                        </property>
-                       </spacer>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item row="10" column="1">
-                    <widget class="QPushButton" name="noteFolderRemotePathButton">
-                     <property name="toolTip">
-                      <string>Click here to select your remote note path on your ownCloud server</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
-                       <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="11" column="0" colspan="2">
+                   <item row="12" column="0" colspan="2">
                     <widget class="QFrame" name="noteFolderRemotePathTreeWidgetFrame">
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
@@ -727,6 +636,121 @@
                      </layout>
                     </widget>
                    </item>
+                   <item row="8" column="0" colspan="2">
+                    <widget class="QLabel" name="noteFolderCloudConnectionLabel">
+                     <property name="text">
+                      <string>Cloud connection:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="9" column="0" colspan="2">
+                    <widget class="QComboBox" name="noteFolderCloudConnectionComboBox"/>
+                   </item>
+                   <item row="10" column="0" colspan="2">
+                    <widget class="QLabel" name="noteFolderRemotePathLabel">
+                     <property name="text">
+                      <string>Path on your ownCloud server:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="13" column="0">
+                    <widget class="QFrame" name="noteFolderVerticalSpacerFrame">
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_27">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item row="0" column="0">
+                       <spacer name="noteFolderVerticalSpacer">
+                        <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Expanding</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>5</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="3" column="0" colspan="2">
+                    <widget class="QLabel" name="label_13">
+                     <property name="text">
+                      <string>Note folder path:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0" colspan="2">
+                    <widget class="QCheckBox" name="noteFolderGitCommitCheckBox">
+                     <property name="toolTip">
+                      <string>You need to have git installed to make this work!</string>
+                     </property>
+                     <property name="text">
+                      <string>Use git to keep a local history of your notes</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0" colspan="2">
+                    <widget class="QCheckBox" name="noteFolderActiveCheckBox">
+                     <property name="text">
+                      <string>Use as active note folder</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0" colspan="2">
+                    <widget class="QCheckBox" name="noteFolderShowSubfoldersCheckBox">
+                     <property name="toolTip">
+                      <string>Be aware that the ownCloud notes app doesn't support sub-folders!</string>
+                     </property>
+                     <property name="text">
+                      <string>Use note sub-folders</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="11" column="1">
+                    <widget class="QPushButton" name="noteFolderRemotePathButton">
+                     <property name="toolTip">
+                      <string>Click here to select your remote note path on your ownCloud server</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                       <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLineEdit" name="noteFolderLocalPathLineEdit">
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Path where your notes are stored locally</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="1" column="0" colspan="2">
                     <widget class="QLineEdit" name="noteFolderNameLineEdit">
                      <property name="toolTip">
@@ -743,30 +767,6 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="0" colspan="2">
-                    <widget class="QCheckBox" name="noteFolderActiveCheckBox">
-                     <property name="text">
-                      <string>Use as active note folder</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="7" column="0" colspan="2">
-                    <widget class="QLabel" name="noteFolderCloudConnectionLabel">
-                     <property name="text">
-                      <string>Cloud connection:</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="8" column="0" colspan="2">
-                    <widget class="QComboBox" name="noteFolderCloudConnectionComboBox"/>
-                   </item>
-                   <item row="9" column="0" colspan="2">
-                    <widget class="QLabel" name="noteFolderRemotePathLabel">
-                     <property name="text">
-                      <string>Path on your ownCloud server:</string>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="0" column="0" colspan="2">
                     <widget class="QLabel" name="label_12">
                      <property name="text">
@@ -774,30 +774,40 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="0" colspan="2">
-                    <widget class="QLabel" name="label_13">
+                   <item row="4" column="1">
+                    <widget class="QPushButton" name="noteFolderLocalPathButton">
+                     <property name="toolTip">
+                      <string>Click here to select your local note path</string>
+                     </property>
                      <property name="text">
-                      <string>Note folder path:</string>
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                       <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
                      </property>
                     </widget>
                    </item>
-                   <item row="5" column="0" colspan="2">
-                    <widget class="QCheckBox" name="noteFolderShowSubfoldersCheckBox">
+                   <item row="11" column="0">
+                    <widget class="QLineEdit" name="noteFolderRemotePathLineEdit">
                      <property name="toolTip">
-                      <string>Be aware that the ownCloud notes app doesn't support sub-folders!</string>
+                      <string>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</string>
                      </property>
-                     <property name="text">
-                      <string>Use note sub-folders</string>
+                     <property name="placeholderText">
+                      <string extracomment="&quot;Notes&quot; should not be translated">&quot;Notes&quot; path on your server</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
                      </property>
                     </widget>
                    </item>
-                   <item row="6" column="0" colspan="2">
-                    <widget class="QCheckBox" name="noteFolderGitCommitCheckBox">
+                   <item row="7" column="0" colspan="2">
+                    <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
                      <property name="toolTip">
-                      <string>You need to have git installed to make this work!</string>
+                      <string>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</string>
                      </property>
                      <property name="text">
-                      <string>Use git to keep a local history of your notes</string>
+                      <string>Allow note file name to be different from headline</string>
                      </property>
                     </widget>
                    </item>
@@ -3694,20 +3704,33 @@
                   <string>Notes</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_5">
-                  <item row="1" column="0" colspan="2">
-                   <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
+                  <item row="3" column="0" colspan="2">
+                   <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
                     <property name="toolTip">
-                     <string>Check this if you want to ignore all external modifications while you are editing the current note.</string>
+                     <string>Do this at your own risk!</string>
                     </property>
                     <property name="text">
-                     <string>Ignore all external modifications of the current note</string>
+                     <string>Ignore all external note folder changes</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="12" column="0" colspan="2">
-                   <widget class="QCheckBox" name="imageScaleDownCheckBox">
+                  <item row="7" column="0" colspan="2">
+                   <widget class="QCheckBox" name="newNoteAskHeadlineCheckBox">
+                    <property name="toolTip">
+                     <string>By default the headline will generated automatically</string>
+                    </property>
                     <property name="text">
-                     <string>Scale images down when inserted into notes</string>
+                     <string>The shortcut to create a new note asks for a headline</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="text">
+                     <string>Notify about all external modifications of the current note</string>
                     </property>
                    </widget>
                   </item>
@@ -3721,13 +3744,23 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="2" column="0" colspan="2">
-                   <widget class="QCheckBox" name="acceptAllExternalModificationsCheckBox">
+                  <item row="10" column="0" colspan="2">
+                   <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
                     <property name="toolTip">
-                     <string>Check this if you want to accept all external modifications while you are editing the current note.</string>
+                     <string>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</string>
                     </property>
                     <property name="text">
-                     <string>Accept all external modifications of the current note</string>
+                     <string>Restore cursor position when opening a note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="9" column="0" colspan="2">
+                   <widget class="QCheckBox" name="restoreLastNoteAtStartupCheckBox">
+                    <property name="toolTip">
+                     <string>Disable this if you want to launch the application without opening a note</string>
+                    </property>
+                    <property name="text">
+                     <string>Open last accessed note at application startup</string>
                     </property>
                    </widget>
                   </item>
@@ -3750,13 +3783,51 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="6" column="0" colspan="2">
-                   <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
+                  <item row="11" column="0" colspan="2">
+                   <widget class="QCheckBox" name="automaticNoteFolderDatabaseClosingCheckBox">
                     <property name="toolTip">
-                     <string>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</string>
+                     <string>Automatically close the note folder database to prevent problems with sync tools</string>
                     </property>
                     <property name="text">
-                     <string>Allow note file name to be different from headline</string>
+                     <string>Automatically close the note folder database</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="12" column="0" colspan="2">
+                   <widget class="QCheckBox" name="imageScaleDownCheckBox">
+                    <property name="text">
+                     <string>Scale images down when inserted into notes</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QCheckBox" name="acceptAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>Check this if you want to accept all external modifications while you are editing the current note.</string>
+                    </property>
+                    <property name="text">
+                     <string>Accept all external modifications of the current note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0" colspan="2">
+                   <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>Check this if you want to ignore all external modifications while you are editing the current note.</string>
+                    </property>
+                    <property name="text">
+                     <string>Ignore all external modifications of the current note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLabel" name="noteSaveIntervalTimeLabel">
+                    <property name="toolTip">
+                     <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</string>
+                    </property>
+                    <property name="text">
+                     <string>note save interval time [sec]</string>
                     </property>
                    </widget>
                   </item>
@@ -3825,37 +3896,6 @@
                     </layout>
                    </widget>
                   </item>
-                  <item row="4" column="1">
-                   <widget class="QLabel" name="noteSaveIntervalTimeLabel">
-                    <property name="toolTip">
-                     <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</string>
-                    </property>
-                    <property name="text">
-                     <string>note save interval time [sec]</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="10" column="0" colspan="2">
-                   <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
-                    <property name="toolTip">
-                     <string>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</string>
-                    </property>
-                    <property name="text">
-                     <string>Restore cursor position when opening a note</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="11" column="0" colspan="2">
-                   <widget class="QCheckBox" name="automaticNoteFolderDatabaseClosingCheckBox">
-                    <property name="toolTip">
-                     <string>Automatically close the note folder database to prevent problems with sync tools</string>
-                    </property>
-                    <property name="text">
-                     <string>Automatically close the note folder database</string>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="14" column="0" colspan="2">
                    <widget class="QCheckBox" name="legacyLinkingCheckBox">
                     <property name="toolTip">
@@ -3863,46 +3903,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                     <property name="text">
                      <string>Use legacy way to link to notes, images and attachments</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="0" colspan="2">
-                   <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
-                    <property name="toolTip">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                    <property name="text">
-                     <string>Notify about all external modifications of the current note</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="3" column="0" colspan="2">
-                   <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
-                    <property name="toolTip">
-                     <string>Do this at your own risk!</string>
-                    </property>
-                    <property name="text">
-                     <string>Ignore all external note folder changes</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="7" column="0" colspan="2">
-                   <widget class="QCheckBox" name="newNoteAskHeadlineCheckBox">
-                    <property name="toolTip">
-                     <string>By default the headline will generated automatically</string>
-                    </property>
-                    <property name="text">
-                     <string>The shortcut to create a new note asks for a headline</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="9" column="0" colspan="2">
-                   <widget class="QCheckBox" name="restoreLastNoteAtStartupCheckBox">
-                    <property name="toolTip">
-                     <string>Disable this if you want to launch the application without opening a note</string>
-                    </property>
-                    <property name="text">
-                     <string>Open last accessed note at application startup</string>
                     </property>
                    </widget>
                   </item>
@@ -6152,7 +6152,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>ignoreAllExternalNoteFolderChangesCheckBox</tabstop>
   <tabstop>imageScaleDownCheckBox</tabstop>
   <tabstop>ignoreAllExternalModificationsCheckBox</tabstop>
-  <tabstop>allowDifferentNoteFileNameCheckBox</tabstop>
   <tabstop>acceptAllExternalModificationsCheckBox</tabstop>
   <tabstop>noteSaveIntervalTime</tabstop>
   <tabstop>restoreCursorPositionCheckBox</tabstop>
