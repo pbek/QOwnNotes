@@ -2166,6 +2166,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Bahasa Melayu</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Malay</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ms</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">বাংলা ভাষা</string>
                         </property>
                         <property name="toolTip">
@@ -2514,17 +2525,6 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">hu</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">بهاس ملايو</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>Malay</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">ms</string>
                         </property>
                        </item>
                        <item>
