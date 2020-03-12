@@ -11,6 +11,7 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages or help with the current
       translation
+- added more Catalan, Chinese Traditional, Filipino, Spanish translation (thank you Fabijenna)
 
 ## 20.3.3
 - the **documentation page** was **re-done in Markdown** and will be generated
