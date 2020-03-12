@@ -2518,6 +2518,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">بهاس ملايو</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Malay</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ms</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Norsk</string>
                         </property>
                         <property name="toolTip">
@@ -2723,6 +2734,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">tr</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">isiXhosa</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Xhosa</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">xh</string>
                         </property>
                        </item>
                        <item>

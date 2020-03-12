@@ -4804,7 +4804,7 @@ Ma hûn dixwazin wê yekê jî saz bikin?</translation>
     <name>SettingsDialog</name>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="26"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4168"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4190"/>
         <source>Settings</source>
         <translation>Mîhengên</translation>
     </message>
@@ -5021,45 +5021,45 @@ Servîsa ownCloud &lt;span style=&quot;font-weight:600;&quot;&gt; rûpelê sepan
         <translation>Din servera CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2861"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2883"/>
         <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
         <translation>Tenê dê çend reng werin adaptekirin, mijara sermaseya we dê mayî kontrol bike. Hûn hewce ne ku serîlêdanê ji nû ve bidin dest pê kirin da ku van guhartinan dest bi çalakiyê bikin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2864"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2886"/>
         <source>Optimize preview colors for dark mode desktop themes</source>
         <translation>Ji bo mijarên sermaseyê yên moda tarî rengên pêşdirêjê xweş bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2851"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2873"/>
         <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
         <translation>Ji bo mijarên sermaseyê yên moda tarî rengên pêşdirêjê xweş bikin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2854"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2876"/>
         <source>Enable dark mode</source>
         <translation>Moda tarî aktîf bike</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2880"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2890"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2921"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2931"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2902"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2912"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2943"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2953"/>
         <source>You need to restart the application to let this setting take effect</source>
         <translation>Hûn hewce ne ku serîlêdanê ji nû ve dest pê bikin da ku destûrê bidin vê mîhengê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2960"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2982"/>
         <source>Item sizes in the main window</source>
         <translation>Mezinahiya tiştên di pencereya bingehîn de</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4941"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4963"/>
         <source>Markdown highlighting</source>
         <translation>Nîşankirina Markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4969"/>
         <source>Enable markdown highlighting</source>
         <translation>Nîşana nîşangiran çalak bike</translation>
     </message>
@@ -5084,39 +5084,39 @@ Servîsa ownCloud &lt;span style=&quot;font-weight:600;&quot;&gt; rûpelê sepan
         <translation>Kurteçîrok</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4396"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4630"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4418"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4652"/>
         <source>Default font:</source>
         <translation>Font default:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4438"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4592"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4460"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4614"/>
         <source>Code font:</source>
         <translation>Font font:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3119"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3141"/>
         <source>Main window shortcuts</source>
         <translation>Kurteya pencereyên sereke</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3710"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3732"/>
         <source>Do this at your own risk!</source>
         <translation>Vê yekê bi xetera xwe bikin!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3713"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3735"/>
         <source>Ignore all external note folder changes</source>
         <translation>Hemî guhertinên peldanka peldanka derveyî bîr nekin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4293"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4315"/>
         <source>No two spaces to do a line break are added here if checked</source>
         <translation>Heke were kontrolkirin, du heb vala ne ku merheleyek bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4296"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4318"/>
         <source>Use GitHub line breaks</source>
         <translation>Vebijarkên xeta GitHub bikar bînin</translation>
     </message>
@@ -5131,17 +5131,17 @@ Servîsa ownCloud &lt;span style=&quot;font-weight:600;&quot;&gt; rûpelê sepan
         <translation>Fransî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2579"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2590"/>
         <source>Polish</source>
         <translation>Polandî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2601"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2612"/>
         <source>Portuguese</source>
         <translation>Portekizî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2546"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2557"/>
         <source>Dutch</source>
         <translation>Holandî</translation>
     </message>
@@ -5161,7 +5161,7 @@ Servîsa ownCloud &lt;span style=&quot;font-weight:600;&quot;&gt; rûpelê sepan
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Heke hûn dixwazin alîkariya wergerandina QOwnNotes bikin an wergeriyek heyî nûve bikin ji kerema xwe bixwînin: &lt;a href = &quot;http://www.qownnotes.org/Knowledge-base/How- can-I-help-to-translate-QOwnNotes &quot;&gt; Ez çawa dikarim ji bo wergerandina QOwnNotes alîkarî bikim? &lt;/a&gt; &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2825"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2847"/>
         <source>Dark mode</source>
         <translation>Moda tarî</translation>
     </message>
@@ -5181,7 +5181,7 @@ Servîsa ownCloud &lt;span style=&quot;font-weight:600;&quot;&gt; rûpelê sepan
         <translation>Dilê dilêşin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2634"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2645"/>
         <source>Russian</source>
         <translation>Rûsî</translation>
     </message>
@@ -5191,22 +5191,22 @@ Servîsa ownCloud &lt;span style=&quot;font-weight:600;&quot;&gt; rûpelê sepan
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Hûn dikarin bifikirin ku hûn belgeyek SSL ya belaş bistînin ji &lt;a href=&quot;https://letsencrypt.org/ &quot;&gt; Ka werin şîfre kirin &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2788"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2810"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>Ger hûn ziman biguherînin divê hûn serlêdana ji nû ve bidin dest pê kirin da ku hûn biguhezînin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3539"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3561"/>
         <source>You need to reload the scripting engine if you modify a script file</source>
         <translation>Heke hûn pelek skrîptê biguherînin, hûn hewce ne ku motora scripting-ê nû bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3542"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3564"/>
         <source>Reload scripting engine</source>
         <translation>Motora scripting nûve bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3532"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3554"/>
         <source>Validate script</source>
         <translation>Nivîsara rast bikin</translation>
     </message>
@@ -5216,90 +5216,90 @@ Servîsa ownCloud &lt;span style=&quot;font-weight:600;&quot;&gt; rûpelê sepan
         <translation>Giştî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3704"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3726"/>
         <source>Notes</source>
         <translation>Nîşe</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3730"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3752"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Heke were kontrol kirin hûn ê her gav li ser guhartinên derve agahdar bibin, tewra heke naha di deqîqeya paşîn de nehat sererast kirin. Pêşniyar e &lt;span style = &quot;font-style: italic;&quot;&gt; nehatî kontrol kirin &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3826"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5175"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5690"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3848"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5197"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5712"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>Dibe ku hûn digel guhertoyên kevintir ên hevdemiya ownCloud-ê gava ku ji biniya 10 sec biçûyî de, tengasiyên sync bike.
 Heke hûn nakokiyên sync bikevin û xwe bi xwe nirxek bilindtir destnîşan bikin ger hûn xwe ceribînin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2535"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2546"/>
         <source>Japanese</source>
         <translation>Japonî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3830"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3852"/>
         <source>note save interval time [sec]</source>
         <translation>nîşana dema interval hilîne [sec]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3733"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3755"/>
         <source>Notify about all external modifications of the current note</source>
         <translation>Li ser hemî guhêrên derveyî yên nîşana heyî agahdar bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4197"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4219"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2166"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2174"/>
         <source>Database</source>
         <translation>Databas</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4235"/>
         <source>Reinitialize Database</source>
         <translation type="unfinished">Reinitialize Database</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4136"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4158"/>
         <source>Clear application data and exit</source>
         <translation>Daneyên serîlêdanê û derketinê vala bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4142"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4164"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Vê bişkojka bihêle hûn hemî mîhengan paqij bikin, databasa herêmî ya todo ya herêmî rakin û QOwnNotes derkeve.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4152"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4174"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2238"/>
         <source>Clear app data and exit</source>
         <translation>Daneyên serîlêdanê û derketinê vala bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3931"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3953"/>
         <source>Update dialog</source>
         <translation>Diyaloga nûve bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4011"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4033"/>
         <source>Default note file extension</source>
         <translation>Pêveka dirêjkirina pelê nîşanker</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4096"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4118"/>
         <source>External editor</source>
         <translation>Edîtorê derveyî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4109"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4131"/>
         <source>path to external editor, leave empty for default</source>
         <translation>riya edîtorê derveyî, ji vala berbiçav vala bihêlin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4119"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5254"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4141"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5276"/>
         <source>set external editor</source>
         <translation>edîtorê derveyî saz bike</translation>
     </message>
@@ -5340,17 +5340,17 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
         <translation>Nivîsandin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3186"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3208"/>
         <source>Your scripts</source>
         <translation>Nivîsarên we</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3270"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3292"/>
         <source>&amp;Remove script</source>
         <translation>&amp;Skrîpê rakirin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3549"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3571"/>
         <source>Click here to select your QML script</source>
         <translation>Vira bikirtînin ku hûn tîpa QML-a xwe hilbijêrin</translation>
     </message>
@@ -5432,7 +5432,7 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="773"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3360"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3382"/>
         <source>Name:</source>
         <translation>Nav:</translation>
     </message>
@@ -5686,201 +5686,201 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
         <translation>Makedonî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2524"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2535"/>
         <source>Norwegian</source>
         <translation>Norwêcî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2568"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2579"/>
         <source>Uzbek</source>
         <translation>Ozbekî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2612"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2623"/>
         <source>Punjabi</source>
         <translation>Pencabî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2557"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2568"/>
         <source>Persian</source>
         <translation>Farsî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2623"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2634"/>
         <source>Romanian</source>
         <translation>Romanyayî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2645"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2656"/>
         <source>Serbian</source>
         <translation>Sirbî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2656"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2667"/>
         <source>Albanian</source>
         <translation>Albanî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2667"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2678"/>
         <source>Slovak</source>
         <translation>Slovakî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2678"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2689"/>
         <source>Slovenian</source>
         <translation>Slovenî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2689"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2700"/>
         <source>Swedish</source>
         <translation>Swêdî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2711"/>
         <source>Tagalog</source>
         <translation>Tagalogî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2722"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2733"/>
         <source>Turkish</source>
         <translation>Tirkî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2744"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2766"/>
         <source>Urdu</source>
         <translation>Ûrdûyî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2755"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2777"/>
         <source>Chinese Simplified</source>
         <translation>Chineseînî hêsan kirin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2766"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2788"/>
         <source>Chinese Traditional</source>
         <translation>Tradîsyona çînî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2834"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2856"/>
         <source>Enable dark mode application icon and tray icon</source>
         <translation>Iconkona serlêdana moda tarî û îkona tray çalak bike</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2841"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2863"/>
         <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
         <translation>Hûn dikarin di moda edîtorê de di moda tarî de jî bixwazin ku rengek rengek rengîn ê edîtor hilbijêrin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2944"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2966"/>
         <source>Enable dark mode icon theme</source>
         <translation>Mijara îkonê ya moda tarî çalak bike</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2874"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2896"/>
         <source>System tray</source>
         <translation>Tray pergala</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2883"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2905"/>
         <source>Show system tray icon</source>
         <translation>Sembola tray ya pergalê nîşan bide</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2893"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2915"/>
         <source>Start application hidden</source>
         <translation>Serîlêdana veşartî dest pê bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2903"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2925"/>
         <source>Interface style</source>
         <translation>Şêwaza navbeynkariyê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2934"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2956"/>
         <source>Enforce system icon theme</source>
         <translation>Vebijarka îkona pergalê bicîh bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3040"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3062"/>
         <source>Override interface font size</source>
         <translation>Mezinahiya fontê ya nîgarkêşê kêmtir bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3049"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3071"/>
         <source>Interface font size:</source>
         <translation>Size font font:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3259"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3281"/>
         <source>&amp;Add script…</source>
         <translation>&amp;Skrîptê lê zêde bike…</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3905"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3927"/>
         <source>Use legacy way to link to notes, images and attachments</source>
         <translation>Rêbaza mîras bikar bînin ku bi nîşeyan, wêneyan û pêvekan ve girêdayî bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3750"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3772"/>
         <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
         <translation>Gava ku vekirina nîgaran rewşa kursiyê di nav note de be, wê ji nû ve li rewşa ku gava paşîn di civîna niha de hat ziyaret kirin de ji nû ve li ser pozîsyonê were vegerandin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3720"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3742"/>
         <source>By default the headline will generated automatically</source>
         <translation>Bi xwerû sernavê dê bixweber çêbibe</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3723"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3745"/>
         <source>The shortcut to create a new note asks for a headline</source>
         <translation>Kurteya ji bo çêkirina niqteyek nû ji sernivîsek dipirse</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3789"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3811"/>
         <source>Automatically close the note folder database to prevent problems with sync tools</source>
         <translation>Ji bo pêşî li pirsgirêkên bi amûrên hevgirtinê re nebe, bixweber databasa peldanka nîşangê nêzîk dibe</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3792"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3814"/>
         <source>Automatically close the note folder database</source>
         <translation>Bixweber databasesa peldanka nîşanê bigire</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3953"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3975"/>
         <source>Search engine</source>
         <translation>Motora lêgerînê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3975"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3997"/>
         <source>Message boxes</source>
         <translation>Qutiyên peyamê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3981"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4003"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3839"/>
         <source>Reset message boxes</source>
         <translation>Bişkojkên mesajê resen bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4174"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4196"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3905"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3929"/>
         <source>Import settings</source>
         <translation>Mîhengên import</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4181"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4203"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3871"/>
         <source>Export settings</source>
         <translation>Mîhengên export</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4319"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4341"/>
         <source>Open issue assistant</source>
         <translation>Alîkarê pirsgirêka vekirî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4286"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4308"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;
 Awayê çêtirîn ji bo postandina pirsgirêkan bi karanîna arîkarê pirsgirêkê ye ku bi zextê &lt;span style = &quot;font-weight: 600;&quot;&gt; ê bikarbînin.
@@ -5888,32 +5888,32 @@ Awayê çêtirîn ji bo postandina pirsgirêkan bi karanîna arîkarê pirsgirê
 Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4661"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4683"/>
         <source>Ignore code font size to allow zooming</source>
         <translation>Mezinahiya fontê ya kodê ji bîr nekin da ku zoom bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4677"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4699"/>
         <source>Rendering</source>
         <translation>Rindkirin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4683"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4705"/>
         <source>Enable underline rendering</source>
         <translation>Rêzkirina binivîsê çalak bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4975"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4997"/>
         <source>Fully highlight blockquotes</source>
         <translation>Blokkotên tevahî ronî bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5045"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5067"/>
         <source>Note-edit cursor width:</source>
         <translation>Girêja kursî ya nîşanker-biguherîne:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4994"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5016"/>
         <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
         <translation>Mode Vim çalak bike (hin kurteyên QOwnNot dê kar nekin)</translation>
     </message>
@@ -5938,177 +5938,187 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
         <translation type="unfinished">Māori</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2711"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2524"/>
+        <source>Malay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2722"/>
         <source>Vietnamese</source>
         <translation>Vîetnamî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3760"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2744"/>
+        <source>Xhosa</source>
+        <translation type="unfinished">Xhosa</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="3782"/>
         <source>Disable this if you want to launch the application without opening a note</source>
         <translation>Heke hûn bixwazin serîlêdanê bêyî vekirina tomarek bixwazin vê yekê neçalakirin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3763"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3785"/>
         <source>Open last accessed note at application startup</source>
         <translation>Di destpêka serîlêdanê de nîşeya gihîştina paşîn vekin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4316"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4338"/>
         <source>This is the best way to open an issue</source>
         <translation>Ev awayê çêtirîn e ku pirsgirêkek vekin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4330"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4352"/>
         <source>Please use this in the issue tracker</source>
         <translation>Ji kerema xwe vê di tracker pirsgirêkê de bikar bînin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4333"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4355"/>
         <source>&amp;Copy debug information to clipboard</source>
         <translation>&amp;Agahdariya debug-ê kopê qewlê kopê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4344"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4366"/>
         <source>Please don&apos;t use this in the issue tracker</source>
         <translation>Ji kerema xwe vê di tracker pirsgirêkê de bikar neynin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4690"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4712"/>
         <source>Use editor highlighting styles also for the preview</source>
         <translation>Vebijêrkên ji bo pêşdibistanê jî ronakkirina edîtorê bikar bînin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4722"/>
         <source>Exporting</source>
         <translation>Andin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4706"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4728"/>
         <source>Use internal export styling for the PDF export and printing of the preview</source>
         <translation>Ji bo pêşandina hinardekirina pelê PDF û pêşgotina çapkirinê stîla deranîna hundir bikar bînin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5079"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5101"/>
         <source>Disable cursor blinking</source>
         <translation>Pirtûka cursor nekêşînin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5089"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5111"/>
         <source>Tabs and Indents</source>
         <translation>Tabî û înternet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5097"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5119"/>
         <source>Use tab character instead of spaces</source>
         <translation>Li şûna cihan karakterek tab bikar bînin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5104"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5126"/>
         <source>Indent:</source>
         <translation type="unfinished">Indent:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5347"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5369"/>
         <source>Show the number of matches in each note</source>
         <translation>Di her nokteyê de hejmara maçan nîşan bide</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5502"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5524"/>
         <source>Ignored sub-folders</source>
         <translation>Nîv peldankan çavnêr kirin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5518"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5540"/>
         <source>Reset ignored sub-folders</source>
         <translation>Veşandin peldankên nehsandî ji bîr kirin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5538"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5560"/>
         <source>Note list panel</source>
         <translation>Panela navnîşa nîşeyê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5544"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5566"/>
         <source>Show notes in the note list with preview</source>
         <translation>Di pêşandanê de navnîşên nîşeyan nîşan bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5617"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5639"/>
         <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
         <translation>Di şûna navnîşek nîşangê de darek nîşanê bi hemî subfolders re bikar bînin (heke ew ji bo peldanka nîşeyê ve têne zivirandin)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5788"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5810"/>
         <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
         <translation>Panelên di menuya sereke &lt;i&gt; Pencere / Panelî &lt;/i&gt; de dikarin bêne zivirandin û zexm kirin û hûn dikarin ji bo mîhengên panelên cûda yên &lt;i&gt; Karên cihan&lt;/i&gt; jî cuda bikin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5865"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5887"/>
         <source>Bookmarks</source>
         <translation>Dîmender</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5871"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5893"/>
         <source>Notes with this tag will be used for fetching bookmarks</source>
         <translation>Nîşeyên bi vê nîşanê dê ji bo pêşxistina nîşangiran were bikar anîn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5874"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5896"/>
         <source>Tag name for bookmarks notes</source>
         <translation>Navê name ji bo nîşanên nîşangiran</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5881"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5903"/>
         <source>Bookmarks tag:</source>
         <translation type="unfinished">Bookmarks tag:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5888"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5910"/>
         <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Ji hêla xwerû ve pêveka geroka dê hemî girêdanên nîşana heyî nîşan bide. Hûn dikarin wê bi lêvekek taybetî nîşanên girêdanên nîşankirî yên taybetî nîşan bidin. Ji bo bêtir agahdarî li ser syntax girêdana nîşankirî &lt;a href=&quot;%1&quot;&gt; li vir &lt;/a&gt; bikirtînin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5901"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5923"/>
         <source>Bookmarks note name:</source>
         <translation>Navê nîşeya nîşankirî:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5908"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5930"/>
         <source>This note will be used for adding new bookmarks from the browser extension</source>
         <translation>Ji bo lêzêdekirina nîşangirên nû ji dirêjkirina gerokê dê ev nîşang were bikar anîn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5911"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5933"/>
         <source>Note name for adding new bookmarks</source>
         <translation>Navê nîşankirin ji bo lêzêdekirina nîşankên nû</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5921"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5943"/>
         <source>Web socket server</source>
         <translation>Pêşkêşkara sokerê ya web</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5927"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5949"/>
         <source>Socket server port:</source>
         <translation>Porta servera Socket:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5961"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5983"/>
         <source>Show security token</source>
         <translation>Nîşana ewlehiyê nîşan bide</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5997"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6019"/>
         <source>Web socket server support</source>
         <translation>Piştgiriya serverê ya soketê ya malperê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6003"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6025"/>
         <source>Enable socket server</source>
         <translation>Pêşkêşkerê sokalê çalak bike</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5978"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6000"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
         <translation type="unfinished">Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
     </message>
@@ -6118,218 +6128,218 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
         <translation>Destûr bidin ku navê pelê nivisê ji sernivîsê cuda be. &lt;br&gt; Bibînin ku xwediyê navêCloud Notes hewce ye ku navê pelê bi serê sernav eynî be!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5315"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5337"/>
         <source>Note edit panel</source>
         <translation>Panelê sererastkirinê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5321"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5343"/>
         <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
         <translation>Heke ev neçalak e hûn dikarin sêwiranên panelê yên tevlihevtir biafirînin, lê ger pencereyê were mezin kirin dê biguheze</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5324"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5346"/>
         <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
         <translation>Heke panelê an panelên din bêne guhertin ji panelê biguherînin navgîniyê wekî widgeta navendî ya sabît were bikar anîn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5334"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5356"/>
         <source>Note search panel</source>
         <translation>Panela lêgerînê ya nîşanê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5340"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5362"/>
         <source>Disable auto-completion of previous searches</source>
         <translation>Vebijarkên xweseriya lêgerînên berê yên neçalak bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5640"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5662"/>
         <source>Navigation panel</source>
         <translation>Navê panelê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5646"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5668"/>
         <source>Hide navigation item search bar</source>
         <translation>Barê lêgerîna lêgerînê ya pelê veşêrin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5660"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5682"/>
         <source>Local trash settings</source>
         <translation>Mîhengên qutiyên herêmî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5694"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5716"/>
         <source>Remove trashed notes after:</source>
         <translation>Nîşeyên paşnavkirî jêbirin:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5701"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5723"/>
         <source> days</source>
         <extracomment>seconds</extracomment>
         <translation>rojan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5720"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5742"/>
         <source>Automatically remove trashed notes after a certain time</source>
         <translation>Piştî demek diyar bixweber nîşanên birêkûpêk rakirin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5746"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5768"/>
         <source>Local trash support</source>
         <translation>Piştgiriya qirêjiya herêmî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5752"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5774"/>
         <source>Enable local trash</source>
         <translation>Trashiya herêmî çalak bike</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5769"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5791"/>
         <source>Layout selector</source>
         <translation>Hilbijêrvaniya çirayê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5775"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5797"/>
         <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
         <translation>Hûn dikarin li vir çavek nû saz bikin. Bihesibînin ku hûn her gav dikare bişkoja &lt;i&gt;Pankartên Pêkvekirî&lt;/i&gt; rewşa panelê biguherînin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5021"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5043"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5969"/>
         <source>Reset the cursor width</source>
         <translation>Dirêjiya kursiyê resen bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5189"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5211"/>
         <source>External git log command to show the git versions of a note</source>
         <translation>Fermana git log derveyî da ku nîşangirên git-ê ya nîşanek nîşan bide</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5195"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5217"/>
         <source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Fermanek binivîse ku were bikar anîn da ku têketinek gitê nîşan bide (wek mînak &quot;gitk&quot;)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5215"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5237"/>
         <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Heke hûn vê mîhengê bikar bîne hûn ê têketinek menuya nû bistînin da ku heke hûn li ser nîgarek rast bişkînin guhertoyên git nîşan bidin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5499"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5508"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5521"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5530"/>
         <source>Regular expressions of note sub-folders to ignore, separated by &quot;;&quot;</source>
         <translation>Gotinên birêkûpêk ên peldankên nîşanê yên ji bîrnekirin, ji hev veqetandin &quot;;&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5558"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5580"/>
         <source>Show all notes of a tag including the notes of their children-tags</source>
         <translation>Hemî nîgarên tagê, bi navgîniya nîşanên zarokên wan-nîşanî nîşan bidin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5551"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5573"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>Hemî nîşangirên di peldankê de tevî subfoldêrên wan nîşan bidin (tenê ger pelên lêdanê werin vemirandin)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4909"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4931"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Dibe ku hûn dixwazin li hemî &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt; dema ku hûn lê digerin, bigerin. forma &lt;/a&gt;. &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5072"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5094"/>
         <source>Highlight the current line</source>
         <translation>Xeta heyî ronî bike</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5282"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5304"/>
         <source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
         <translation>Ji bîr nekin ku piştgiriya git ji bo peldankên weya xwe çalak bikin û navê û e-nameya e-nameya ji bo muwekîlê git xwe, ji bo nimûne bi van fermanên termînal ve bikin:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5357"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5379"/>
         <source>Tags panel</source>
         <translation>Tags panel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5386"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5462"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5591"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5408"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5484"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5613"/>
         <source>Order</source>
         <translation>Emir</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5392"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5468"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5600"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5414"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5490"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5622"/>
         <source>Ascending</source>
         <translation type="unfinished">Ascending</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5399"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5475"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5607"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5421"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5497"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5629"/>
         <source>Descending</source>
         <translation>Xwebûn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5363"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5432"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5565"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5385"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5454"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5587"/>
         <source>Sort</source>
         <translation>Jiberhevxistin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5065"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5087"/>
         <source>Only use editor width setting in distraction free mode</source>
         <translation>Tenê di moda belaş a dorpêçkirinê de mîhengê width editor bikar bînin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5438"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5571"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5391"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5460"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5593"/>
         <source>Alphabetical</source>
         <translation>Elfabeyî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5376"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5398"/>
         <source>By last change / use</source>
         <translation>Bi guhertina paşîn / karanîna paşîn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5409"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5431"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>Lêgerîna &apos;Find an afirandina tag&apos; veşêrin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5419"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5441"/>
         <source>Note subfolders panel</source>
         <translation>Panelê subfolders-ê nîşan bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5425"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5447"/>
         <source>Show with full path</source>
         <translation>Bi riya tevahî nîşan bidin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5445"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5578"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5467"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5600"/>
         <source>By last change</source>
         <translation>Bi guhertina paşîn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5455"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5477"/>
         <source>Show root folder name</source>
         <translation>Navê peldanka root nîşan bide</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5485"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5507"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>Lêgerîna &apos;Lêgerîn an Afirîna binê pelê binihêrin&apos; veşêrin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5492"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5514"/>
         <source>Display note subfolders as full tree</source>
         <translation>Dabeşên nîşankirinê wekî dara tevahî nîşan bikin</translation>
     </message>
@@ -6339,39 +6349,39 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
         <translation>Lêgerîna tomara lêgerînê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5205"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5227"/>
         <source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Hûn bi vebijarkî dikarin ji bo riya nîşana &quot;%notePath%&quot; bikar bînin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5228"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5250"/>
         <source>Git client</source>
         <translation>Muwekîlê Git</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5244"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5266"/>
         <source>Path to git executable:</source>
         <translation>Rê ji bo git îdamkirin:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5234"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5256"/>
         <source>Path to git client, leave empty for default</source>
         <translation>Riya ku bi xerîb git, dê ji bo xilafbûnê vala bimîne</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5153"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5175"/>
         <source>Commit interval</source>
         <translation>Navberiya komîteyê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5159"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5181"/>
         <source>sec</source>
         <extracomment>seconds</extracomment>
         <translation>sec</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5179"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5201"/>
         <source>git commit interval time [sec]</source>
         <translation>git commit dem interval [sec]</translation>
     </message>
@@ -6436,32 +6446,32 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
         <translation>Çekî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2601"/>
         <source>Brazilian Portuguese</source>
         <translation>Portekîzî Brazilian</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2733"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2755"/>
         <source>Ukrainian</source>
         <translation>Ûkraynî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3661"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3683"/>
         <source>The name</source>
         <translation>Nav</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3885"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3907"/>
         <source>Maximum height:</source>
         <translation>Bilindahiya herî zêde:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3858"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3880"/>
         <source>Maximum width:</source>
         <translation>Mezinahiya herî zêde:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3799"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3821"/>
         <source>Scale images down when inserted into notes</source>
         <translation>Wêneyê peldanka dakêşin jibergirtinê</translation>
     </message>
@@ -6471,127 +6481,127 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
         <translation>Xirwatî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3576"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3598"/>
         <source>Path to your QML file</source>
         <translation>Riya pelê xweya QML</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3367"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3389"/>
         <source>Script name</source>
         <translation>Navê script</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3389"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3411"/>
         <source>Description:</source>
         <translation>Terîf:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3471"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3493"/>
         <source>Version:</source>
         <translation>Awa:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3432"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3454"/>
         <source>Repository:</source>
         <translation>Depokî:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3409"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3431"/>
         <source>Author(s):</source>
         <translation>Nivîskar(s):</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3806"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3828"/>
         <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
         <translation>Heke hûn guhartina paşnavê ya heyî dixwazin hûn qebûl bikin ku hemî guhartinên derveyî qebûl bikin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3809"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3831"/>
         <source>Accept all external modifications of the current note</source>
         <translation>Hemî guherînên derveyî yên nîşana heyî qebûl bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3743"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3765"/>
         <source>Use UNIX newline instead of native newline characters</source>
         <translation>Di şûna tîpên nûjen ên xweyê de, newline UNIX bikar bînin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3753"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3775"/>
         <source>Restore cursor position when opening a note</source>
         <translation>Dema ku nîtek veke hûn rewşa kursiyê sererast bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4203"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4225"/>
         <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
         <translation>Hişyar bimînin ku ev ê di heman demê de tiştên xwe yên cached todo û peldank û nîgarên birêkûpêk werin rakirin!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4733"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4755"/>
         <source>Apply toolbar configuration</source>
         <translation>Vebijêrin mîhengê amûrê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4747"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4769"/>
         <source>Reset toolbars</source>
         <translation>Rêzikên amûran bisekinin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4775"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4797"/>
         <source>Enable logging to file</source>
         <translation>Tomarkirina têketinê were çalak kirin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4782"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4804"/>
         <source>Clear log file</source>
         <translation>Pelê logê paqij bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4793"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4815"/>
         <source>Fake old version number to trigger update</source>
         <translation>Hejmara guhertoya kevn a felq bikin ku nûvekirina nûve bike</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4821"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4843"/>
         <source>Log file path:</source>
         <translation>Riya pelê têketinê:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4883"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4905"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation>Li vir hûn dikarin formata dema xwe ya xweyê ji bo danasîna dema niha ya li ser lêkerek saz bikin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4886"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4908"/>
         <source>Insert current time</source>
         <translation>Wextê nûve bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4892"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4914"/>
         <source>Time format:</source>
         <translation>Formata demê:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4899"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4921"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation>Formata xweya xweya xweya xwerû binivîse, wek &quot;dd.MM.yyyy hh: mm&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4988"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5010"/>
         <source>Editor options</source>
         <translation>Vebijarkên edîtor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5001"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5023"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>Vebijarka girtina otomatan a nîgaran û nîşanên nîşangir ên nîşanker çalak bike</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5055"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5077"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>Pêdivî ye ku hûn qenciya paşperdeyê bikar bînin da ku karaktera vebûna jêke</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5058"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5080"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>Enable automatic removal of matching closing characters</translation>
     </message>
@@ -6636,38 +6646,38 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
         <translation>&amp;Navnîşa salnameyê hilweşînin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2831"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2941"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2853"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2963"/>
         <source>You may need to restart the application to let these changes take effect</source>
         <translation>Hûn hewce ne ku serîlêdanê ji nû ve bidin dest pê kirin da ku van guhertinan bidin dest pê kirin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2976"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2998"/>
         <source>Toolbar icon size:</source>
         <translation>Mezinahiya pelikê ya amûrê:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2966"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2988"/>
         <source>List and tree item height:</source>
         <translation>Bilindahî û tiştê dara darê:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2999"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3021"/>
         <source>Reset the icon size</source>
         <translation>Mezinahiya îkonê nû bikin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3013"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3035"/>
         <source>Reset the item height</source>
         <translation>Bêjeya hilberê hilanîn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4654"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4676"/>
         <source>View text right to left (RTL)</source>
         <translation>Dîtina rastê ji çepê (RTL)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3137"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3159"/>
         <source>Search for shortcut</source>
         <translation>Lêgerîna kurtenûsê</translation>
     </message>
@@ -6677,22 +6687,22 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
         <translation>Kalendêrên ku piştgiriyê nadin tiştên todo</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2777"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2799"/>
         <source>Arabic</source>
         <translation>Erebî</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2915"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2937"/>
         <source>Icons</source>
         <translation>Îkon</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2924"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2946"/>
         <source>Use internal icon theme instead of system icon theme</source>
         <translation>Di şûna sembola îkonê ya pergalê de, li şûna sembola îkonê navxweyî bikar bînin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3525"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3547"/>
         <source>Script path:</source>
         <translation>Riya script:</translation>
     </message>
@@ -6707,79 +6717,79 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
         <translation>Destûr bidin ku navê pelê nivisê ji sernav cuda be</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3816"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3838"/>
         <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
         <translation>Heke hûn guhartina paşnavê ya heyî dixwazin hûn hemû guhertinên derveyî ji bîr nekin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3819"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3841"/>
         <source>Ignore all external modifications of the current note</source>
         <translation>Hemû guhartinên derveyî yên nîşana heyî bîr nekin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3740"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3762"/>
         <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
         <translation>Hûn dikarin vê yekê mînakê di bin Windowsê de bikar bînin heke hûn di serîlêdanên xweya nû de di serîlêdana xweCloud / Nextcloud notes de pirsgirêkên xwe hene</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3915"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3937"/>
         <source>App instance</source>
         <translation>Mînakek sepanê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3921"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3943"/>
         <source>Only allow one app instance at the same time</source>
         <translation>Tenê yek mînakek serlêdanê di heman demê de destûr bidin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4017"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4039"/>
         <source>Add a custom file extension</source>
         <translation>Pêvekek pelê xweşikek zêde bike</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4031"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4053"/>
         <source>Remove a custom file extension</source>
         <translation>Pêvekek dirêjkirî ya pelê rakirin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4070"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4092"/>
         <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
         <translation>Heke hûn lêzêdanên xwerû bi navnîşan lê zêde bikin, wek &quot;kaxezê peywirê&quot;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4074"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4096"/>
         <source>Text file (txt)</source>
         <translation>Pelê nivîsê (txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4102"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4124"/>
         <source>Path to external editor:</source>
         <translation>Rê ji bo edîtorê derveyî:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3937"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3959"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>Diyaloga nûvekirinê bixweber nîşan nedin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4390"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4558"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4412"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4580"/>
         <source>Fonts</source>
         <translation>Wergêrê</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4413"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4455"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4564"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4616"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4435"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4477"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4586"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4638"/>
         <source>Set a new font</source>
         <translation>Fontek nû veke</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4424"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4469"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4578"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4602"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4446"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4491"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4600"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4624"/>
         <source>Reset font</source>
         <translation>Fontê</translation>
     </message>
@@ -6789,19 +6799,19 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
         <translation>Debug</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4254"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4276"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2185"/>
         <location filename="../dialogs/settingsdialog.cpp" line="4144"/>
         <source>Debug information</source>
         <translation>Agahdariya debug</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4282"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4347"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4369"/>
         <source>&amp;Save debug information</source>
         <translation>&amp;Agahdariya debug hilînin</translation>
     </message>

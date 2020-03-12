@@ -7,6 +7,10 @@
     - the currently existing setting will be used as setting for all your note folders initially
 - if you open the *Note folders settings* now the currently active note folder will be selected
 - improved html list importing of the *Paste html or media* action
+- added **Malay and Xhosa translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current
+      translation
 
 ## 20.3.3
 - the **documentation page** was **re-done in Markdown** and will be generated

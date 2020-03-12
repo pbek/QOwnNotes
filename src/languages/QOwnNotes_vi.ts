@@ -4763,7 +4763,7 @@ Bạn có muốn cài đặt nó không?</translation>
     <name>SettingsDialog</name>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="26"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4168"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4190"/>
         <source>Settings</source>
         <translation>Cài đặt</translation>
     </message>
@@ -4979,45 +4979,45 @@ Bạn có muốn cài đặt nó không?</translation>
         <translation>Máy chủ CalDAV khác</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2861"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2883"/>
         <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
         <translation>Chỉ một số màu sẽ được điều chỉnh, chủ đề máy tính để bàn của bạn sẽ kiểm soát phần còn lại. Bạn cần khởi động lại ứng dụng để cho những thay đổi này hành động.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2864"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2886"/>
         <source>Optimize preview colors for dark mode desktop themes</source>
         <translation>Tối ưu hóa màu sắc xem trước cho chủ đề máy tính để bàn ở chế độ tối</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2851"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2873"/>
         <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
         <translation>Điều này cho phép chế độ tối, giao diện và biểu tượng sẽ được sửa đổi. Bạn cần khởi động lại ứng dụng để cho những thay đổi này hành động.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2854"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2876"/>
         <source>Enable dark mode</source>
         <translation>Bật chế độ tối</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2880"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2890"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2921"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2931"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2902"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2912"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2943"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2953"/>
         <source>You need to restart the application to let this setting take effect</source>
         <translation>Bạn cần khởi động lại ứng dụng để cài đặt này có hiệu lực</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2960"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2982"/>
         <source>Item sizes in the main window</source>
         <translation>Kích thước mục trong cửa sổ chính</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4941"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4963"/>
         <source>Markdown highlighting</source>
         <translation>Đánh dấu Markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4969"/>
         <source>Enable markdown highlighting</source>
         <translation>Cho phép đánh dấu đánh dấu</translation>
     </message>
@@ -5042,39 +5042,39 @@ Bạn có muốn cài đặt nó không?</translation>
         <translation>Phím tắt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4396"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4630"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4418"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4652"/>
         <source>Default font:</source>
         <translation>Phông chữ mặc định:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4438"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4592"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4460"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4614"/>
         <source>Code font:</source>
         <translation>Phông chữ:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3119"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3141"/>
         <source>Main window shortcuts</source>
         <translation>Phím tắt cửa sổ chính</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3710"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3732"/>
         <source>Do this at your own risk!</source>
         <translation>Làm điều này có nguy cơ đến bạn!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3713"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3735"/>
         <source>Ignore all external note folder changes</source>
         <translation>Bỏ qua tất cả các thay đổi thư mục ghi chú bên ngoài</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4293"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4315"/>
         <source>No two spaces to do a line break are added here if checked</source>
         <translation>Không có hai khoảng trắng để ngắt dòng được thêm vào đây nếu được chọn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4296"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4318"/>
         <source>Use GitHub line breaks</source>
         <translation>Sử dụng ngắt dòng GitHub</translation>
     </message>
@@ -5089,17 +5089,17 @@ Bạn có muốn cài đặt nó không?</translation>
         <translation>Tiếng pháp</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2579"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2590"/>
         <source>Polish</source>
         <translation>Đánh bóng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2601"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2612"/>
         <source>Portuguese</source>
         <translation>Bồ Đào Nha</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2546"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2557"/>
         <source>Dutch</source>
         <translation>Hà Lan</translation>
     </message>
@@ -5119,7 +5119,7 @@ Bạn có muốn cài đặt nó không?</translation>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Nếu bạn muốn giúp dịch QOwnNotes hoặc cập nhật bản dịch hiện có, vui lòng đọc: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt; Làm cách nào tôi có thể giúp dịch QOwnNotes? &lt;/a&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2825"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2847"/>
         <source>Dark mode</source>
         <translation>Chế độ tối</translation>
     </message>
@@ -5139,7 +5139,7 @@ Bạn có muốn cài đặt nó không?</translation>
         <translation>Vô hiệu hóa nhịp tim</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2634"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2645"/>
         <source>Russian</source>
         <translation>Tiếng Nga</translation>
     </message>
@@ -5149,22 +5149,22 @@ Bạn có muốn cài đặt nó không?</translation>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn có thể muốn xem xét nhận chứng chỉ SSL miễn phí từ &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Hãy mã hóa &lt;/a&gt;. &lt;/ p&gt; &lt;/body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2788"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2810"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>Nếu bạn thay đổi ngôn ngữ, bạn phải khởi động lại ứng dụng để các thay đổi thực hiện.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3539"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3561"/>
         <source>You need to reload the scripting engine if you modify a script file</source>
         <translation>Bạn cần tải lại công cụ kịch bản nếu bạn sửa đổi tệp tập lệnh</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3542"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3564"/>
         <source>Reload scripting engine</source>
         <translation>Tải lại công cụ kịch bản</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3532"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3554"/>
         <source>Validate script</source>
         <translation>Xác thực tập lệnh</translation>
     </message>
@@ -5174,90 +5174,90 @@ Bạn có muốn cài đặt nó không?</translation>
         <translation>Chung</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3704"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3726"/>
         <source>Notes</source>
         <translation>Ghi chú</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3730"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3752"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Nếu được chọn, bạn sẽ luôn được thông báo về các sửa đổi bên ngoài, ngay cả khi ghi chú hiện tại không được chỉnh sửa trong phút cuối. Đề xuất là &lt;span style = &quot;font-style: italic;&quot;&gt; không được chọn &lt;/ span&gt;. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3826"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5175"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5690"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3848"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5197"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5712"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>Bạn có thể gặp rắc rối đồng bộ hóa với các phiên bản cũ hơn của đồng bộ ownCloud khi đi xa hơn 10 giây.
 Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ hóa và đặt giá trị cao hơn nếu có.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2535"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2546"/>
         <source>Japanese</source>
         <translation>Tiếng Nhật</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3830"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3852"/>
         <source>note save interval time [sec]</source>
         <translation>lưu ý lưu thời gian [giây]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3733"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3755"/>
         <source>Notify about all external modifications of the current note</source>
         <translation>Thông báo về tất cả các sửa đổi bên ngoài của ghi chú hiện tại</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4197"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4219"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2166"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2174"/>
         <source>Database</source>
         <translation>Cơ sở dữ liệu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4235"/>
         <source>Reinitialize Database</source>
         <translation>Tái khởi động lại cơ sở dữ liệu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4136"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4158"/>
         <source>Clear application data and exit</source>
         <translation>Xóa dữ liệu ứng dụng và thoát</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4142"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4164"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Nút này cho phép bạn xóa tất cả các cài đặt, xóa cơ sở dữ liệu việc cần làm cục bộ và thoát QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4152"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4174"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2238"/>
         <source>Clear app data and exit</source>
         <translation>Xóa dữ liệu ứng dụng và thoát</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3931"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3953"/>
         <source>Update dialog</source>
         <translation>Hộp thoại cập nhật</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4011"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4033"/>
         <source>Default note file extension</source>
         <translation>Phần mở rộng tập tin ghi chú mặc định</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4096"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4118"/>
         <source>External editor</source>
         <translation>Biên tập viên bên ngoài</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4109"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4131"/>
         <source>path to external editor, leave empty for default</source>
         <translation>đường dẫn đến trình soạn thảo bên ngoài, để trống</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4119"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5254"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4141"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5276"/>
         <source>set external editor</source>
         <translation>đặt trình soạn thảo bên ngoài</translation>
     </message>
@@ -5297,17 +5297,17 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation>Viết kịch bản</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3186"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3208"/>
         <source>Your scripts</source>
         <translation>Kịch bản của bạn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3270"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3292"/>
         <source>&amp;Remove script</source>
         <translation>&amp;Xóa tập lệnh</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3549"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3571"/>
         <source>Click here to select your QML script</source>
         <translation>Nhấn vào đây để chọn tập lệnh QML của bạn</translation>
     </message>
@@ -5389,7 +5389,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="773"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3360"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3382"/>
         <source>Name:</source>
         <translation>Tên:</translation>
     </message>
@@ -5643,231 +5643,231 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation>Tiếng Macedonia</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2524"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2535"/>
         <source>Norwegian</source>
         <translation>Na Uy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2568"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2579"/>
         <source>Uzbek</source>
         <translation>O&apos;zbek</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2612"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2623"/>
         <source>Punjabi</source>
         <translation>Tiếng Ba Tư</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2557"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2568"/>
         <source>Persian</source>
         <translation>Ba Tư</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2623"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2634"/>
         <source>Romanian</source>
         <translation>Rumani</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2645"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2656"/>
         <source>Serbian</source>
         <translation>Tiếng Serbia</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2656"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2667"/>
         <source>Albanian</source>
         <translation>Tiếng Albania</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2667"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2678"/>
         <source>Slovak</source>
         <translation>Tiếng Slovak</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2678"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2689"/>
         <source>Slovenian</source>
         <translation>Tiếng Slovenia</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2689"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2700"/>
         <source>Swedish</source>
         <translation>Thụy Điển</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2711"/>
         <source>Tagalog</source>
         <translation>Tagalog</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2722"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2733"/>
         <source>Turkish</source>
         <translation>Thổ Nhĩ Kỳ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2744"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2766"/>
         <source>Urdu</source>
         <translation>Tiếng Urdu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2755"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2777"/>
         <source>Chinese Simplified</source>
         <translation>Tiếng Trung giản thể</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2766"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2788"/>
         <source>Chinese Traditional</source>
         <translation>Truyền thống Trung Hoa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2834"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2856"/>
         <source>Enable dark mode application icon and tray icon</source>
         <translation>Bật biểu tượng ứng dụng chế độ tối và biểu tượng khay</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2841"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2863"/>
         <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
         <translation>Bạn cũng có thể muốn chọn một bảng phối màu khác trong cài đặt trình chỉnh sửa ở chế độ tối.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2944"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2966"/>
         <source>Enable dark mode icon theme</source>
         <translation>Bật chủ đề biểu tượng chế độ tối</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2874"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2896"/>
         <source>System tray</source>
         <translation>Khay hệ thống</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2883"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2905"/>
         <source>Show system tray icon</source>
         <translation>Hiển thị biểu tượng khay hệ thống</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2893"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2915"/>
         <source>Start application hidden</source>
         <translation>Hiển thị biểu tượng khay hệ thống</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2903"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2925"/>
         <source>Interface style</source>
         <translation>Giao diện phong cách</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2934"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2956"/>
         <source>Enforce system icon theme</source>
         <translation>Thực thi chủ đề biểu tượng hệ thống</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3040"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3062"/>
         <source>Override interface font size</source>
         <translation>Ghi đè kích thước phông chữ giao diện</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3049"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3071"/>
         <source>Interface font size:</source>
         <translation>Cỡ chữ giao diện:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3259"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3281"/>
         <source>&amp;Add script…</source>
         <translation>&amp;Thêm tập lệnh…</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3905"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3927"/>
         <source>Use legacy way to link to notes, images and attachments</source>
         <translation>Sử dụng cách kế thừa để liên kết đến ghi chú, hình ảnh và tệp đính kèm</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3750"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3772"/>
         <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
         <translation>Khi mở ghi chú, vị trí con trỏ bên trong ghi chú sẽ được khôi phục về vị trí khi ghi chú được truy cập lần cuối trong phiên hiện tại</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3720"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3742"/>
         <source>By default the headline will generated automatically</source>
         <translation>Theo mặc định, tiêu đề sẽ được tạo tự động</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3723"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3745"/>
         <source>The shortcut to create a new note asks for a headline</source>
         <translation>Phím tắt để tạo ghi chú mới yêu cầu tiêu đề</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3789"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3811"/>
         <source>Automatically close the note folder database to prevent problems with sync tools</source>
         <translation>Tự động đóng cơ sở dữ liệu thư mục ghi chú để ngăn sự cố với các công cụ đồng bộ hóa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3792"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3814"/>
         <source>Automatically close the note folder database</source>
         <translation>Tự động đóng cơ sở dữ liệu thư mục ghi chú</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3953"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3975"/>
         <source>Search engine</source>
         <translation>Máy tìm kiếm</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3975"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3997"/>
         <source>Message boxes</source>
         <translation>Hộp tin nhắn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3981"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4003"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3839"/>
         <source>Reset message boxes</source>
         <translation>Đặt lại hộp tin nhắn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4174"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4196"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3905"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3929"/>
         <source>Import settings</source>
         <translation>Nhập cài đặt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4181"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4203"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3871"/>
         <source>Export settings</source>
         <translation>Xuất cài đặt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4319"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4341"/>
         <source>Open issue assistant</source>
         <translation>Trợ lý vấn đề mở</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4286"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4308"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Cách tốt nhất để đăng các vấn đề là sử dụng trợ lý sự cố bằng cách nhấn nút &lt;span style = &quot;font-weight: 600;&quot;&gt; Mở trợ lý vấn đề &lt;/ span&gt; trên phía dưới. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4661"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4683"/>
         <source>Ignore code font size to allow zooming</source>
         <translation>Bỏ qua kích thước phông chữ mã để cho phép thu phóng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4677"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4699"/>
         <source>Rendering</source>
         <translation>Kết xuất</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4683"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4705"/>
         <source>Enable underline rendering</source>
         <translation>Cho phép kết xuất gạch chân</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4975"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4997"/>
         <source>Fully highlight blockquotes</source>
         <translation>Hoàn toàn làm nổi bật blockquote</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5045"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5067"/>
         <source>Note-edit cursor width:</source>
         <translation>Lưu ý chỉnh sửa độ rộng con trỏ:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4994"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5016"/>
         <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
         <translation>Bật chế độ Vim (một số phím tắt QOwnNotes sẽ không hoạt động)</translation>
     </message>
@@ -5892,177 +5892,187 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation type="unfinished">Māori</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2711"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2524"/>
+        <source>Malay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2722"/>
         <source>Vietnamese</source>
         <translation>Tiếng Việt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3760"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2744"/>
+        <source>Xhosa</source>
+        <translation type="unfinished">Xhosa</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="3782"/>
         <source>Disable this if you want to launch the application without opening a note</source>
         <translation>Vô hiệu hóa điều này nếu bạn muốn khởi chạy ứng dụng mà không cần mở ghi chú</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3763"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3785"/>
         <source>Open last accessed note at application startup</source>
         <translation>Mở ghi chú truy cập cuối cùng khi khởi động ứng dụng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4316"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4338"/>
         <source>This is the best way to open an issue</source>
         <translation>Đây là cách tốt nhất để mở một vấn đề</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4330"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4352"/>
         <source>Please use this in the issue tracker</source>
         <translation>Vui lòng sử dụng điều này trong trình theo dõi vấn đề</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4333"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4355"/>
         <source>&amp;Copy debug information to clipboard</source>
         <translation>&amp;Sao chép thông tin gỡ lỗi vào clipboard</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4344"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4366"/>
         <source>Please don&apos;t use this in the issue tracker</source>
         <translation>Vui lòng không sử dụng điều này trong trình theo dõi vấn đề</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4690"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4712"/>
         <source>Use editor highlighting styles also for the preview</source>
         <translation>Sử dụng các kiểu tô sáng trình chỉnh sửa cũng để xem trước</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4722"/>
         <source>Exporting</source>
         <translation>Xuất khẩu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4706"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4728"/>
         <source>Use internal export styling for the PDF export and printing of the preview</source>
         <translation>Sử dụng kiểu xuất nội bộ để xuất PDF và in bản xem trước</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5079"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5101"/>
         <source>Disable cursor blinking</source>
         <translation>Tắt nhấp nháy con trỏ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5089"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5111"/>
         <source>Tabs and Indents</source>
         <translation>Tab và thụt lề</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5097"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5119"/>
         <source>Use tab character instead of spaces</source>
         <translation>Sử dụng ký tự tab thay vì dấu cách</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5104"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5126"/>
         <source>Indent:</source>
         <translation>Thụt lề:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5347"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5369"/>
         <source>Show the number of matches in each note</source>
         <translation>Hiển thị số lượng trận đấu trong mỗi ghi chú</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5502"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5524"/>
         <source>Ignored sub-folders</source>
         <translation>Bỏ qua các thư mục con</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5518"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5540"/>
         <source>Reset ignored sub-folders</source>
         <translation>Đặt lại các thư mục con bị bỏ qua</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5538"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5560"/>
         <source>Note list panel</source>
         <translation>Bảng ghi chú danh sách</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5544"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5566"/>
         <source>Show notes in the note list with preview</source>
         <translation>Hiển thị ghi chú trong danh sách ghi chú với xem trước</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5617"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5639"/>
         <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
         <translation>Thay vì danh sách ghi chú, hãy sử dụng cây ghi chú với tất cả các thư mục con (nếu chúng được bật cho thư mục ghi chú)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5788"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5810"/>
         <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
         <translation>Các bảng có thể được bật và tắt trong menu chính &lt;i&gt; Cửa sổ / Bảng &lt;/i&gt; và bạn cũng có thể định cấu hình &lt;i&gt; Không gian làm việc &lt;/i&gt; khác nhau cho các cấu hình bảng khác nhau.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5865"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5887"/>
         <source>Bookmarks</source>
         <translation>Dấu trang</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5871"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5893"/>
         <source>Notes with this tag will be used for fetching bookmarks</source>
         <translation>Ghi chú với thẻ này sẽ được sử dụng để tìm nạp dấu trang</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5874"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5896"/>
         <source>Tag name for bookmarks notes</source>
         <translation>Tên thẻ cho ghi chú đánh dấu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5881"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5903"/>
         <source>Bookmarks tag:</source>
         <translation>Thẻ đánh dấu:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5888"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5910"/>
         <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Theo mặc định, phần mở rộng trình duyệt sẽ hiển thị tất cả các liên kết của ghi chú hiện tại. Bạn cũng có thể làm cho nó hiển thị các liên kết đánh dấu đặc biệt của ghi chú với một thẻ nhất định. Để biết thêm thông tin về cú pháp liên kết dấu trang, hãy nhấp vào &lt;a href=&quot;%1&quot;&gt; tại đây &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5901"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5923"/>
         <source>Bookmarks note name:</source>
         <translation>Tên ghi chú:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5908"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5930"/>
         <source>This note will be used for adding new bookmarks from the browser extension</source>
         <translation>Ghi chú này sẽ được sử dụng để thêm dấu trang mới từ tiện ích mở rộng trình duyệt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5911"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5933"/>
         <source>Note name for adding new bookmarks</source>
         <translation>Lưu ý tên để thêm dấu trang mới</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5921"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5943"/>
         <source>Web socket server</source>
         <translation>Máy chủ web socket</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5927"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5949"/>
         <source>Socket server port:</source>
         <translation>Cổng máy chủ socket:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5961"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5983"/>
         <source>Show security token</source>
         <translation>Hiển thị mã thông báo bảo mật</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5997"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6019"/>
         <source>Web socket server support</source>
         <translation>Hỗ trợ máy chủ web socket</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6003"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6025"/>
         <source>Enable socket server</source>
         <translation>Cho phép máy chủ ổ cắm</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5978"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6000"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
         <translation>Cài đặt &lt;a href=&quot;%1&quot;&gt; tiện ích mở rộng trình duyệt Đồng hành web &lt;/a&gt; từ &lt;a href=&quot;%2&quot;&gt; Cửa hàng Chrome trực tuyến &lt;/a&gt; hoặc &lt;a href=&quot;%3&quot;&gt; Firefox Add- trang ons &lt;/a&gt; để sử dụng QOwnNotes làm web clipper.</translation>
     </message>
@@ -6072,218 +6082,218 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation>Cho phép tên tệp ghi chú khác với tiêu đề. &lt;br&gt; Hãy coi chừng rằng Ghi chú của ownCloud cần tên tệp giống với tiêu đề!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5315"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5337"/>
         <source>Note edit panel</source>
         <translation>Bảng chỉnh sửa ghi chú</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5321"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5343"/>
         <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
         <translation>Nếu điều này bị vô hiệu hóa, bạn có thể tạo bố cục bảng phức tạp hơn, nhưng tất cả các bảng sẽ được thay đổi kích thước nếu cửa sổ được thay đổi kích thước</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5324"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5346"/>
         <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
         <translation>Sử dụng bảng chỉnh sửa ghi chú làm tiện ích trung tâm cố định được thay đổi kích thước nếu cửa sổ hoặc các bảng khác được thay đổi kích thước</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5334"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5356"/>
         <source>Note search panel</source>
         <translation>Bảng ghi chú tìm kiếm</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5340"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5362"/>
         <source>Disable auto-completion of previous searches</source>
         <translation>Vô hiệu hóa tự động hoàn thành các tìm kiếm trước đó</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5640"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5662"/>
         <source>Navigation panel</source>
         <translation>Bảng điều hướng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5646"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5668"/>
         <source>Hide navigation item search bar</source>
         <translation>Ẩn thanh tìm kiếm mục điều hướng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5660"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5682"/>
         <source>Local trash settings</source>
         <translation>Cài đặt thùng rác cục bộ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5694"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5716"/>
         <source>Remove trashed notes after:</source>
         <translation>Xóa ghi chú rác sau:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5701"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5723"/>
         <source> days</source>
         <extracomment>seconds</extracomment>
         <translation>ngày</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5720"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5742"/>
         <source>Automatically remove trashed notes after a certain time</source>
         <translation>Tự động xóa ghi chú rác sau một thời gian nhất định</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5746"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5768"/>
         <source>Local trash support</source>
         <translation>Hỗ trợ rác địa phương</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5752"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5774"/>
         <source>Enable local trash</source>
         <translation>Cho phép rác cục bộ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5769"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5791"/>
         <source>Layout selector</source>
         <translation>Công cụ chọn bố cục</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5775"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5797"/>
         <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
         <translation>Bạn có thể thiết lập một bố cục mới ở đây. Hãy nhớ rằng bạn luôn có thể sửa đổi vị trí của các bảng bằng nút &lt;i&gt; Mở khóa bảng &lt;/i&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5021"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5043"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5969"/>
         <source>Reset the cursor width</source>
         <translation>Đặt lại chiều rộng con trỏ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5189"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5211"/>
         <source>External git log command to show the git versions of a note</source>
         <translation>Lệnh git log bên ngoài để hiển thị các phiên bản git của ghi chú</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5195"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5217"/>
         <source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Nhập một lệnh sẽ được sử dụng để hiển thị nhật ký git (ví dụ như &quot;gitk&quot;)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5215"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5237"/>
         <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Nếu bạn sử dụng cài đặt này, bạn sẽ nhận được một mục menu mới để hiển thị các phiên bản git nếu bạn nhấp chuột phải vào một ghi chú.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5499"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5508"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5521"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5530"/>
         <source>Regular expressions of note sub-folders to ignore, separated by &quot;;&quot;</source>
         <translation>Biểu thức chính quy của các thư mục con ghi chú cần bỏ qua, phân tách bằng dấu &quot;;&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5558"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5580"/>
         <source>Show all notes of a tag including the notes of their children-tags</source>
         <translation>Hiển thị tất cả các ghi chú của một thẻ bao gồm các ghi chú của thẻ con của họ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5551"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5573"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>Hiển thị tất cả các ghi chú trong một thư mục bao gồm các thư mục con của chúng (chỉ hoạt động nếu các thư mục con được bật)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4909"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4931"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bạn có thể muốn xem tất cả &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt; định dạng thời gian &lt;/a&gt;. &lt;/ P&gt; &lt;/ body &gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5072"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5094"/>
         <source>Highlight the current line</source>
         <translation>Đánh dấu dòng hiện tại</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5282"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5304"/>
         <source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
         <translation>Đừng quên bật hỗ trợ git cho các thư mục ghi chú của bạn và định cấu hình tên và địa chỉ email cho ứng dụng khách git của bạn, ví dụ như với các lệnh đầu cuối này:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5357"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5379"/>
         <source>Tags panel</source>
         <translation>Bảng điều khiển thẻ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5386"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5462"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5591"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5408"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5484"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5613"/>
         <source>Order</source>
         <translation>Đặt hàng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5392"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5468"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5600"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5414"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5490"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5622"/>
         <source>Ascending</source>
         <translation>Tăng dần</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5399"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5475"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5607"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5421"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5497"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5629"/>
         <source>Descending</source>
         <translation>Giảm dần</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5363"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5432"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5565"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5385"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5454"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5587"/>
         <source>Sort</source>
         <translation>Sắp xếp</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5065"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5087"/>
         <source>Only use editor width setting in distraction free mode</source>
         <translation>Chỉ sử dụng cài đặt độ rộng của trình chỉnh sửa trong chế độ miễn phí phân tâm</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5438"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5571"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5391"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5460"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5593"/>
         <source>Alphabetical</source>
         <translation>Bảng chữ cái</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5376"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5398"/>
         <source>By last change / use</source>
         <translation>Thay đổi / sử dụng lần cuối</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5409"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5431"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>Ẩn &apos;Tìm hoặc tạo thẻ&apos; tìm kiếm</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5419"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5441"/>
         <source>Note subfolders panel</source>
         <translation>Bảng ghi chú con</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5425"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5447"/>
         <source>Show with full path</source>
         <translation>Hiển thị với đường dẫn đầy đủ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5445"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5578"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5467"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5600"/>
         <source>By last change</source>
         <translation>Thay đổi cuối cùng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5455"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5477"/>
         <source>Show root folder name</source>
         <translation>Hiển thị tên thư mục gốc</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5485"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5507"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>Ẩn tìm kiếm &apos;Tìm hoặc tạo thư mục con&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5492"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5514"/>
         <source>Display note subfolders as full tree</source>
         <translation>Hiển thị các thư mục con dưới dạng cây đầy đủ</translation>
     </message>
@@ -6293,39 +6303,39 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation>Tìm kiếm kho lưu trữ tập lệnh</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5205"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5227"/>
         <source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Bạn có thể tùy ý sử dụng &quot;%notePath%&quot; cho đường dẫn của ghi chú.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5228"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5250"/>
         <source>Git client</source>
         <translation>Khách hàng Git</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5244"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5266"/>
         <source>Path to git executable:</source>
         <translation>Đường dẫn đến git thực thi:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5234"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5256"/>
         <source>Path to git client, leave empty for default</source>
         <translation>Đường dẫn đến git client, để trống cho mặc định</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5153"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5175"/>
         <source>Commit interval</source>
         <translation>Cam kết khoảng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5159"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5181"/>
         <source>sec</source>
         <extracomment>seconds</extracomment>
         <translation>giây</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5179"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5201"/>
         <source>git commit interval time [sec]</source>
         <translation>thời gian cam kết git [giây]</translation>
     </message>
@@ -6390,32 +6400,32 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation>Séc</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2601"/>
         <source>Brazilian Portuguese</source>
         <translation>Tiếng Bồ Đào Nha Brazil</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2733"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2755"/>
         <source>Ukrainian</source>
         <translation>Tiếng Ukraina</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3661"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3683"/>
         <source>The name</source>
         <translation>Tên</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3885"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3907"/>
         <source>Maximum height:</source>
         <translation>Chiều cao tối đa:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3858"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3880"/>
         <source>Maximum width:</source>
         <translation>Chiều rộng tối đa:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3799"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3821"/>
         <source>Scale images down when inserted into notes</source>
         <translation>Thu nhỏ hình ảnh khi chèn vào ghi chú</translation>
     </message>
@@ -6425,127 +6435,127 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation>Tiếng Croatia</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3576"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3598"/>
         <source>Path to your QML file</source>
         <translation>Đường dẫn đến tệp QML của bạn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3367"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3389"/>
         <source>Script name</source>
         <translation>Tên tập lệnh</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3389"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3411"/>
         <source>Description:</source>
         <translation>Sự miêu tả:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3471"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3493"/>
         <source>Version:</source>
         <translation>Phiên bản:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3432"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3454"/>
         <source>Repository:</source>
         <translation>Kho:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3409"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3431"/>
         <source>Author(s):</source>
         <translation>Tác giả:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3806"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3828"/>
         <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
         <translation>Kiểm tra điều này nếu bạn muốn chấp nhận tất cả các sửa đổi bên ngoài trong khi bạn đang chỉnh sửa ghi chú hiện tại.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3809"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3831"/>
         <source>Accept all external modifications of the current note</source>
         <translation>Chấp nhận tất cả các sửa đổi bên ngoài của ghi chú hiện tại</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3743"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3765"/>
         <source>Use UNIX newline instead of native newline characters</source>
         <translation>Sử dụng dòng mới UNIX thay vì các ký tự dòng mới</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3753"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3775"/>
         <source>Restore cursor position when opening a note</source>
         <translation>Khôi phục vị trí con trỏ khi mở ghi chú</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4203"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4225"/>
         <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
         <translation>Được cảnh báo rằng điều này cũng sẽ loại bỏ các mục việc cần lưu trong bộ nhớ cache của bạn và các thư mục ghi chú và tập lệnh được cấu hình!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4733"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4755"/>
         <source>Apply toolbar configuration</source>
         <translation>Áp dụng cấu hình thanh công cụ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4747"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4769"/>
         <source>Reset toolbars</source>
         <translation>Đặt lại thanh công cụ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4775"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4797"/>
         <source>Enable logging to file</source>
         <translation>Cho phép đăng nhập vào tập tin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4782"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4804"/>
         <source>Clear log file</source>
         <translation>Xóa tệp nhật ký</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4793"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4815"/>
         <source>Fake old version number to trigger update</source>
         <translation>Số phiên bản cũ giả để kích hoạt cập nhật</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4821"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4843"/>
         <source>Log file path:</source>
         <translation>Đường dẫn tệp nhật ký:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4883"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4905"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation>Tại đây bạn có thể đặt định dạng thời gian của riêng mình để chèn thời gian hiện tại vào một ghi chú.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4886"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4908"/>
         <source>Insert current time</source>
         <translation>Chèn thời gian hiện tại</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4892"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4914"/>
         <source>Time format:</source>
         <translation>Định dạng thời gian:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4899"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4921"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation>Nhập định dạng thời gian tùy chỉnh của bạn, như &quot;dd.MM.yyyy hh:mm&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4988"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5010"/>
         <source>Editor options</source>
         <translation>Tùy chọn biên tập</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5001"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5023"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>Cho phép tự động đóng dấu ngoặc và ký tự định dạng đánh dấu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5055"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5077"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>Bạn phải sử dụng phím xóa lùi để xóa ký tự mở</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5058"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5080"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>Cho phép tự động loại bỏ các ký tự đóng phù hợp</translation>
     </message>
@@ -6590,38 +6600,38 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation>&amp;Tải lại danh sách lịch</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2831"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2941"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2853"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2963"/>
         <source>You may need to restart the application to let these changes take effect</source>
         <translation>Bạn có thể cần phải khởi động lại ứng dụng để những thay đổi này có hiệu lực</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2976"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2998"/>
         <source>Toolbar icon size:</source>
         <translation>Kích thước biểu tượng thanh công cụ:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2966"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2988"/>
         <source>List and tree item height:</source>
         <translation>Danh sách và chiều cao mục cây:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2999"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3021"/>
         <source>Reset the icon size</source>
         <translation>Đặt lại kích thước biểu tượng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3013"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3035"/>
         <source>Reset the item height</source>
         <translation>Đặt lại chiều cao mục</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4654"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4676"/>
         <source>View text right to left (RTL)</source>
         <translation>Xem văn bản từ phải sang trái (RTL)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3137"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3159"/>
         <source>Search for shortcut</source>
         <translation>Tìm kiếm lối tắt</translation>
     </message>
@@ -6631,22 +6641,22 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation>Bỏ qua các lịch không hỗ trợ các mục việc cần làm</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2777"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2799"/>
         <source>Arabic</source>
         <translation>Tiếng Ả Rập</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2915"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2937"/>
         <source>Icons</source>
         <translation>Các biểu tượng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2924"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2946"/>
         <source>Use internal icon theme instead of system icon theme</source>
         <translation>Sử dụng chủ đề biểu tượng nội bộ thay vì chủ đề biểu tượng hệ thống</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3525"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3547"/>
         <source>Script path:</source>
         <translation>Đường dẫn kịch bản:</translation>
     </message>
@@ -6661,79 +6671,79 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation>Cho phép tên tệp ghi chú khác với tiêu đề</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3816"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3838"/>
         <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
         <translation>Kiểm tra điều này nếu bạn muốn bỏ qua tất cả các sửa đổi bên ngoài trong khi bạn đang chỉnh sửa ghi chú hiện tại.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3819"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3841"/>
         <source>Ignore all external modifications of the current note</source>
         <translation>Bỏ qua tất cả các sửa đổi bên ngoài của ghi chú hiện tại</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3740"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3762"/>
         <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
         <translation>Bạn có thể sử dụng ví dụ này trong Windows nếu bạn gặp rắc rối với các dòng mới trong ứng dụng ghi chú ownCloud / Nextcloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3915"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3937"/>
         <source>App instance</source>
         <translation>Ví dụ ứng dụng</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3921"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3943"/>
         <source>Only allow one app instance at the same time</source>
         <translation>Chỉ cho phép một phiên bản ứng dụng cùng một lúc</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4017"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4039"/>
         <source>Add a custom file extension</source>
         <translation>Thêm phần mở rộng tập tin tùy chỉnh</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4031"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4053"/>
         <source>Remove a custom file extension</source>
         <translation>Xóa phần mở rộng tập tin tùy chỉnh</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4070"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4092"/>
         <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
         <translation>Nếu bạn thêm tiện ích mở rộng tùy chỉnh, chỉ cần nhập vào tiện ích mở rộng, như &quot;giấy tờ nhiệm vụ&quot;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4074"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4096"/>
         <source>Text file (txt)</source>
         <translation>Tệp văn bản (txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4102"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4124"/>
         <source>Path to external editor:</source>
         <translation>Đường dẫn đến trình soạn thảo bên ngoài:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3937"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3959"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>Không tự động hiển thị hộp thoại cập nhật</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4390"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4558"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4412"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4580"/>
         <source>Fonts</source>
         <translation>Phông chữ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4413"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4455"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4564"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4616"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4435"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4477"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4586"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4638"/>
         <source>Set a new font</source>
         <translation>Đặt một phông chữ mới</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4424"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4469"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4578"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4602"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4446"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4491"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4600"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4624"/>
         <source>Reset font</source>
         <translation>Đặt lại phông chữ</translation>
     </message>
@@ -6743,19 +6753,19 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
         <translation>Gỡ lỗi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4254"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4276"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2185"/>
         <location filename="../dialogs/settingsdialog.cpp" line="4144"/>
         <source>Debug information</source>
         <translation>Thông tin gỡ lỗi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4282"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn có thể &lt;span style = &quot;font-weight: 600;&quot;&gt; sao chép và dán &lt;/ span&gt; văn bản này (hoặc các phần của văn bản này) trong &lt;span style = &quot;font-weight: 600;&quot;&gt; vấn đề &lt;/ span&gt; trên &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; trang vấn đề QOwnNotes &lt;/a&gt; nếu bạn có &lt;span style = &quot;font-weight: 600;&quot;&gt; câu hỏi hoặc rắc rối &lt;/ span&gt; với QOwnNotes. Dữ liệu quá nhạy cảm bị ẩn trong thông tin này. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4347"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4369"/>
         <source>&amp;Save debug information</source>
         <translation>&amp;Lưu thông tin gỡ lỗi</translation>
     </message>

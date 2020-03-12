@@ -453,6 +453,8 @@ SET(QON_TS_FILES
     languages/QOwnNotes_pa.ts
     languages/QOwnNotes_sq.ts
     languages/QOwnNotes_he.ts
+    languages/QOwnNotes_xh.ts
+    languages/QOwnNotes_ms.ts
     languages/QOwnNotes_mi.ts
     languages/QOwnNotes_ga.ts
     languages/QOwnNotes_uz.ts
