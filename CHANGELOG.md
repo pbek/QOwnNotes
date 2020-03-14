@@ -4,6 +4,8 @@
 - you can now **import CSV** directly **from the clipboard** in the *Table dialog*
     - you can for example copy CSV from a table in a web-browser
 - an attempt to **detect the separator** when importing CSV will now be made in the *Table dialog*
+- added more Spanish, Italian, Russian, Brazilian Portuguese, German translation
+  (thank you richarson, Fabijenna, tiwi90, unchase, fitoschido, mlimacarlos, rakekniven)
 
 ## 20.3.4
 - the setting `Allow note file name to be different from headline` can now be

@@ -5068,7 +5068,7 @@ Gusto paba nimong padayunon ang pag-install?</translation>
       <translation>Awtomatikong</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2271"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2282"/>
       <source>English</source>
       <translation>English</translation>
     </message>
@@ -5115,12 +5115,12 @@ Gusto paba nimong padayunon ang pag-install?</translation>
       <translation>Paggamit ug GitHub para dili mahugno ang linya</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2249"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2260"/>
       <source>German</source>
       <translation>German</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2326"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2337"/>
       <source>French</source>
       <translation>French</translation>
     </message>
@@ -5140,12 +5140,12 @@ Gusto paba nimong padayunon ang pag-install?</translation>
       <translation>Dutch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2513"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2524"/>
       <source>Hungarian</source>
       <translation>Hungarian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2282"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2293"/>
       <source>Spanish</source>
       <translation>Spanish</translation>
     </message>
@@ -5323,7 +5323,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Ang usa ka gamay nga hangyo sa kasingkasing kay gipadala matag karon ug unya samtang ang QOwnNotes kay nagdagan. Himoa ang usa ka developer nga malipayon pinaagi sa pagpahibalo kaniya nga adunay usa nga naggamit sa QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2436"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2447"/>
       <source>Italian</source>
       <translation>Italian</translation>
     </message>
@@ -5564,117 +5564,117 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Taga-Indonesia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2172"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2183"/>
       <source>Bengali</source>
       <translation>Taga-Bengali</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2183"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2194"/>
       <source>Bosnian</source>
       <translation>Bosnian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2194"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2205"/>
       <source>Bulgarian</source>
       <translation>Bulgaria</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2205"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2216"/>
       <source>Catalan</source>
       <translation>Taga-Catalan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2216"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2227"/>
       <source>Cebuano</source>
       <translation>Taga-Cebu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2238"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Danish</source>
       <translation>Danish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2260"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2271"/>
       <source>Basque</source>
       <translation>Basig</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2293"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2304"/>
       <source>Estonian</source>
       <translation>Estonian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2304"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2315"/>
       <source>Filipino</source>
       <translation>Taga-Pilipinas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2315"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2326"/>
       <source>Finnish</source>
       <translation>Finnish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2337"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2348"/>
       <source>Irish</source>
       <translation>Irish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2348"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2359"/>
       <source>Galician</source>
       <translation>Galician</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2359"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2370"/>
       <source>Greek</source>
       <translation>Griyego</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2370"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2381"/>
       <source>Hausa</source>
       <translation>Hausa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2381"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2392"/>
       <source>Hebrew</source>
       <translation>Hebreohanon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2392"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2403"/>
       <source>Hindi</source>
       <translation>Ayaw</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2414"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2425"/>
       <source>Hiligaynon</source>
       <translation>Hiligaynon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2425"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2436"/>
       <source>Icelandic</source>
       <translation>Islandiko</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2447"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2458"/>
       <source>Korean</source>
       <translation>Koreano</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2458"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2469"/>
       <source>Kurdish</source>
       <translation>Kurdada</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2469"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2480"/>
       <source>Latvian</source>
       <translation>Latvian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2480"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2491"/>
       <source>Lithuanian</source>
       <translation>Lithuanian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2491"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2502"/>
       <source>Macedonian</source>
       <translation>Macedonian</translation>
     </message>
@@ -5923,12 +5923,12 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Ablihi ang imong kaugalingon nga panid sa liga sa App Password</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2502"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2513"/>
       <source>Māori</source>
       <translation type="unfinished">Māori</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2524"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2172"/>
       <source>Malay</source>
       <translation type="unfinished">Malay</translation>
     </message>
@@ -6431,7 +6431,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Palihug pasabta ang password alang sa imong username sa CalDAV. &lt;br/&gt; Sa pagkakaron ang password i-encrypt na sa laing settings, apan dili kaayo kasigurohan.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2227"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2238"/>
       <source>Czech</source>
       <translation>Sa Czech</translation>
     </message>
@@ -6466,7 +6466,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Mga hulagway nga hulagway sa dihang gisulod sa mga nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2403"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2414"/>
       <source>Croatian</source>
       <translation>Kroasia</translation>
     </message>
@@ -7439,57 +7439,57 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
       <translation>Ang gidaghanon sa mga dash character sa separator</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="150"/>
-      <source>Import CSV file</source>
-      <translation>Pag-import sa file sa CSV</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/tabledialog.ui" line="173"/>
+      <location filename="../dialogs/tabledialog.ui" line="260"/>
       <source>Separator:</source>
       <translation>Tig-buwag:</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="180"/>
+      <location filename="../dialogs/tabledialog.ui" line="169"/>
       <source>Select file</source>
       <translation>Magpili og file</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="191"/>
+      <location filename="../dialogs/tabledialog.ui" line="150"/>
+      <source>Import CSV file / clipboard</source>
+      <translation type="unfinished">Import CSV file / clipboard</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Please select the CSV file you want to import:</source>
       <translation>Palihug pilia ang CSV file nga gusto mong i-import:</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="225"/>
-      <source>\t</source>
-      <translation type="unfinished">\t</translation>
+      <location filename="../dialogs/tabledialog.ui" line="197"/>
+      <source>Import clipboard</source>
+      <translation type="unfinished">Import clipboard</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="236"/>
+      <location filename="../dialogs/tabledialog.ui" line="190"/>
       <source>CSV file</source>
       <translation>CSV file</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="243"/>
+      <location filename="../dialogs/tabledialog.ui" line="274"/>
       <source>First line is the table heading</source>
       <translation>Ang unang linya mao ang ulohan sa lamesa</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="266"/>
+      <location filename="../dialogs/tabledialog.ui" line="267"/>
       <source>Text-delimiter:</source>
       <translation>Teksto-tiglaraw:</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.cpp" line="192"/>
+      <location filename="../dialogs/tabledialog.cpp" line="186"/>
       <source>CSV files</source>
       <translation>Mga file nga CSV</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.cpp" line="193"/>
+      <location filename="../dialogs/tabledialog.cpp" line="187"/>
       <source>All files</source>
       <translation>Tanan nga mga file</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.cpp" line="198"/>
+      <location filename="../dialogs/tabledialog.cpp" line="192"/>
       <source>Select CSV file to import</source>
       <translation>Pilia ang CSV file sa pag-import</translation>
     </message>

@@ -1457,89 +1457,89 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="87"/>
       <source>Do you want to use the selected layout?</source>
-      <translation type="unfinished">Do you want to use the selected layout?</translation>
+      <translation>Ngabe ufuna ukusebenzisa isakhiwo esikhethiwe?</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="90"/>
       <source>The application will be quit afterwards.</source>
-      <translation type="unfinished">The application will be quit afterwards.</translation>
+      <translation>Isicelo sizoyiswa ngemuva kwalokho.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="91"/>
       <source>The application will be restarted afterwards.</source>
-      <translation type="unfinished">The application will be restarted afterwards.</translation>
+      <translation>Uhlelo lokusebenza lizoqala kabusha ngemuva kwalokho.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Minimal</translation>
+      <translation>Okuncane</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="160"/>
       <source>Full</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full</translation>
+      <translation>Kugcwele</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="162"/>
       <source>Preview only</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Preview only</translation>
+      <translation>Ukubuka kuqala kuphela</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="164"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full vertical</translation>
+      <translation>Okumile okugcwele</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
       <source>Single column</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Single column</translation>
+      <translation>Ikholomu eyodwa</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="174"/>
       <source>The note edit panel is the central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">The note edit panel is the central widget that will be resized automatically.</translation>
+      <translation>Iphaneli yokuhlela inothi yiwijethi emaphakathi ezokhulunyelwa ngokuzenzakalelayo.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="179"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Because of this there is no central widget that will be resized automatically.</translation>
+      <translation>Ngenxa yalokhu akukho iwijethi emaphakathi ezothuthukiswa ngokuzenzakalelayo.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="184"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Just the note list on the left and the note edit panel on the right are enabled by default.</translation>
+      <translation>Vele uhlu lwenothi ngakwesobunxele nephaneli yokuhlela inothi ngakwesokudla anikwe amandla ngokuzenzakalela.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="189"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</translation>
+      <translation>Iningi lamaphaneli, njengohlu lwenothi ngakwesobunxele, amaphaneli wokumaka, iphaneli yokuhlela inothi enkabeni nephaneli lokubuka ngakwesokudla inikwe amandla ngokuzenzakalela.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="195"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</translation>
+      <translation>Iningi lamaphaneli, njengohlu lwenothi ngakwesobunxele, iphaneli yokumaka, futhi iphaneli yokubuka kuphela ngakwesokunene inikwe amandla ngokuzenzakalela. Uzodinga enye indawo yokusebenza ukuze uhlele amanothi!</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="201"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</translation>
+      <translation>Iningi lamaphaneli, njengohlu lwenothi ngakwesobunxele, amaphaneli wokumaka, iphaneli yokuhlela inothi ngakwesokudla nephaneli lokubuka ngaphezulu kwephaneli yokulungisa inothi inikwe amandla ngokuzenzakalela.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="208"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Tiny one column layout with note search, note list and note edit on top of each other.</translation>
+      <translation>Mncane ukwakheka kwekholomu eyodwa ngokusesha kwenothi, uhlu lwenothi kanye nokuhlelwa kwenothi ngaphezulu komunye nomunye.</translation>
     </message>
   </context>
   <context>
@@ -1547,69 +1547,69 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation type="unfinished">Link an url or note</translation>
+      <translation>Xhumanisa i-url noma inothi</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="51"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>Faka i-URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="60"/>
       <source>Enter an URL to link to</source>
-      <translation type="unfinished">Enter an URL to link to</translation>
+      <translation>Faka i-URL ozoxhuma kuyo</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="83"/>
       <source>Select local file or directory to link to</source>
-      <translation type="unfinished">Select local file or directory to link to</translation>
+      <translation>Khetha ifayela lendawo noma isiqondisi ozoxhuma kulo</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Qaphela</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>Faka igama lesixhumanisi (ngokuzithandela)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Igama lesixhumanisi (ngokuzithandela)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="154"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Faka incazelo yesixhumanisi (ngokuzithandela)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="157"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Incazelo yesixhumanisi (ngokuzithandela)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="109"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>Sesha amanothi noma dala amanothi amasha ngokufaka umbhalo nokucindezela ukubuya</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="124"/>
       <source>Search for a note to link to</source>
-      <translation type="unfinished">Search for a note to link to</translation>
+      <translation>Sesha inothi ozoxhuma kulo</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="229"/>
       <location filename="../dialogs/linkdialog.cpp" line="314"/>
       <source>Select file to link to</source>
-      <translation type="unfinished">Select file to link to</translation>
+      <translation>Khetha ifayela ozoxhuma kulo</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="271"/>
       <location filename="../dialogs/linkdialog.cpp" line="322"/>
       <source>Select directory to link to</source>
-      <translation type="unfinished">Select directory to link to</translation>
+      <translation>Khetha umkhombandlela ozoxhumanisa kuwo</translation>
     </message>
   </context>
   <context>
@@ -1617,7 +1617,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation type="unfinished">Locally trashed notes</translation>
+      <translation>Amanothi endawo adotiwe</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
@@ -5073,7 +5073,7 @@ Do you want to install it anyway?</translation>
       <translation type="unfinished">Automatic</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2271"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2282"/>
       <source>English</source>
       <translation type="unfinished">English</translation>
     </message>
@@ -5120,12 +5120,12 @@ Do you want to install it anyway?</translation>
       <translation type="unfinished">Use GitHub line breaks</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2249"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2260"/>
       <source>German</source>
       <translation type="unfinished">German</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2326"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2337"/>
       <source>French</source>
       <translation type="unfinished">French</translation>
     </message>
@@ -5145,12 +5145,12 @@ Do you want to install it anyway?</translation>
       <translation type="unfinished">Dutch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2513"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2524"/>
       <source>Hungarian</source>
       <translation type="unfinished">Hungarian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2282"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2293"/>
       <source>Spanish</source>
       <translation type="unfinished">Spanish</translation>
     </message>
@@ -5328,7 +5328,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2436"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2447"/>
       <source>Italian</source>
       <translation type="unfinished">Italian</translation>
     </message>
@@ -5569,117 +5569,117 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">Indonesian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2172"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2183"/>
       <source>Bengali</source>
       <translation type="unfinished">Bengali</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2183"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2194"/>
       <source>Bosnian</source>
       <translation type="unfinished">Bosnian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2194"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2205"/>
       <source>Bulgarian</source>
       <translation type="unfinished">Bulgarian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2205"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2216"/>
       <source>Catalan</source>
       <translation type="unfinished">Catalan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2216"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2227"/>
       <source>Cebuano</source>
       <translation type="unfinished">Cebuano</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2238"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Danish</source>
       <translation type="unfinished">Danish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2260"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2271"/>
       <source>Basque</source>
       <translation type="unfinished">Basque</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2293"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2304"/>
       <source>Estonian</source>
       <translation type="unfinished">Estonian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2304"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2315"/>
       <source>Filipino</source>
       <translation type="unfinished">Filipino</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2315"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2326"/>
       <source>Finnish</source>
       <translation type="unfinished">Finnish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2337"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2348"/>
       <source>Irish</source>
       <translation type="unfinished">Irish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2348"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2359"/>
       <source>Galician</source>
       <translation type="unfinished">Galician</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2359"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2370"/>
       <source>Greek</source>
       <translation type="unfinished">Greek</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2370"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2381"/>
       <source>Hausa</source>
       <translation type="unfinished">Hausa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2381"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2392"/>
       <source>Hebrew</source>
       <translation type="unfinished">Hebrew</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2392"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2403"/>
       <source>Hindi</source>
       <translation type="unfinished">Hindi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2414"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2425"/>
       <source>Hiligaynon</source>
       <translation type="unfinished">Hiligaynon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2425"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2436"/>
       <source>Icelandic</source>
       <translation type="unfinished">Icelandic</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2447"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2458"/>
       <source>Korean</source>
       <translation type="unfinished">Korean</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2458"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2469"/>
       <source>Kurdish</source>
       <translation type="unfinished">Kurdish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2469"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2480"/>
       <source>Latvian</source>
       <translation type="unfinished">Latvian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2480"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2491"/>
       <source>Lithuanian</source>
       <translation type="unfinished">Lithuanian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2491"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2502"/>
       <source>Macedonian</source>
       <translation type="unfinished">Macedonian</translation>
     </message>
@@ -5928,12 +5928,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">Open your ownCloud server App Password page</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2502"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2513"/>
       <source>Māori</source>
       <translation type="unfinished">Māori</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2524"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2172"/>
       <source>Malay</source>
       <translation type="unfinished">Malay</translation>
     </message>
@@ -6436,7 +6436,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2227"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2238"/>
       <source>Czech</source>
       <translation type="unfinished">Czech</translation>
     </message>
@@ -6471,7 +6471,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">Scale images down when inserted into notes</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2403"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2414"/>
       <source>Croatian</source>
       <translation type="unfinished">Croatian</translation>
     </message>
@@ -7444,57 +7444,57 @@ Your notes will stay intact!</translation>
       <translation type="unfinished">The amount of dash characters in the separator</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="150"/>
-      <source>Import CSV file</source>
-      <translation type="unfinished">Import CSV file</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/tabledialog.ui" line="173"/>
+      <location filename="../dialogs/tabledialog.ui" line="260"/>
       <source>Separator:</source>
       <translation type="unfinished">Separator:</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="180"/>
+      <location filename="../dialogs/tabledialog.ui" line="169"/>
       <source>Select file</source>
       <translation type="unfinished">Select file</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="191"/>
+      <location filename="../dialogs/tabledialog.ui" line="150"/>
+      <source>Import CSV file / clipboard</source>
+      <translation type="unfinished">Import CSV file / clipboard</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Please select the CSV file you want to import:</source>
       <translation type="unfinished">Please select the CSV file you want to import:</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="225"/>
-      <source>\t</source>
-      <translation type="unfinished">\t</translation>
+      <location filename="../dialogs/tabledialog.ui" line="197"/>
+      <source>Import clipboard</source>
+      <translation type="unfinished">Import clipboard</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="236"/>
+      <location filename="../dialogs/tabledialog.ui" line="190"/>
       <source>CSV file</source>
       <translation type="unfinished">CSV file</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="243"/>
+      <location filename="../dialogs/tabledialog.ui" line="274"/>
       <source>First line is the table heading</source>
       <translation type="unfinished">First line is the table heading</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.ui" line="266"/>
+      <location filename="../dialogs/tabledialog.ui" line="267"/>
       <source>Text-delimiter:</source>
       <translation type="unfinished">Text-delimiter:</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.cpp" line="192"/>
+      <location filename="../dialogs/tabledialog.cpp" line="186"/>
       <source>CSV files</source>
       <translation type="unfinished">CSV files</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.cpp" line="193"/>
+      <location filename="../dialogs/tabledialog.cpp" line="187"/>
       <source>All files</source>
       <translation type="unfinished">All files</translation>
     </message>
     <message>
-      <location filename="../dialogs/tabledialog.cpp" line="198"/>
+      <location filename="../dialogs/tabledialog.cpp" line="192"/>
       <source>Select CSV file to import</source>
       <translation type="unfinished">Select CSV file to import</translation>
     </message>
