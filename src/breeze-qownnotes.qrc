@@ -5,6 +5,7 @@
         <file alias="16x16/document-new.svg">icons/breeze-qownnotes/16x16/document-new.svg</file>
         <file alias="16x16/document-save.svg">icons/breeze-qownnotes/16x16/document-save.svg</file>
         <file alias="16x16/edit-delete.svg">icons/breeze-qownnotes/16x16/edit-delete.svg</file>
+        <file alias="16x16/edit-paste.svg">icons/breeze-qownnotes/16x16/edit-paste.svg</file>
         <file alias="16x16/edit-find.svg">icons/breeze-qownnotes/16x16/edit-find.svg</file>
         <file alias="16x16/edit-find-in-note.svg">icons/breeze-qownnotes/16x16/edit-find-in-note.svg</file>
         <file alias="16x16/folder-sync.svg">icons/breeze-qownnotes/16x16/folder-sync.svg</file>

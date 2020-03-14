@@ -2,6 +2,8 @@
 
 #include "masterdialog.h"
 
+#include <QTemporaryFile>
+
 namespace Ui {
 class TableDialog;
 }
@@ -26,14 +28,18 @@ class TableDialog : public MasterDialog {
 
     void on_createTableWidget_itemChanged(QTableWidgetItem *item);
 
-   private:
+    void on_clipboardButton_clicked();
+
+private:
     enum Tab { CreateTab, ImportTab };
 
     Ui::TableDialog *ui;
     int _maxColumns = 0;
     int _maxRows = 0;
+    QTemporaryFile *_tempFile;
 
     void createMarkdownTable();
     void importCSV();
     void updateMaxItems();
+    void updateSeparator(const QString &text) const;
 };

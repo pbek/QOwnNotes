@@ -3,7 +3,7 @@
 #include <mainwindow.h>
 
 #include <QDebug>
-//#include <QClipboard>
+#include <QClipboard>
 
 #include "filedialog.h"
 #include "libraries/qtcsv/src/include/reader.h"
@@ -21,15 +21,7 @@ TableDialog::TableDialog(QWidget *parent)
     ui->createTableWidget->setColumnCount(50);
     ui->createTableWidget->setRowCount(100);
     ui->csvFileTextEdit->setVisible(false);
-
-//    QClipboard *clipboard = QApplication::clipboard();
-//    QString text = clipboard->text().trimmed();
-//
-//    // set text from clipboard
-//    if (!text.isEmpty()) {
-//        ui->csvFileTextEdit->show();
-//        ui->csvFileTextEdit->setPlainText(text);
-//    }
+    _tempFile = nullptr;
 }
 
 TableDialog::~TableDialog() { delete ui; }
@@ -96,7 +88,9 @@ void TableDialog::on_buttonBox_accepted() {
  * Imports the CSV file
  */
 void TableDialog::importCSV() {
-    QString filePath = ui->fileLineEdit->text();
+    QString filePath = _tempFile != nullptr ?
+                _tempFile->fileName() : ui->fileLineEdit->text();
+
     if (filePath.isEmpty()) {
         return;
     }
@@ -213,7 +207,12 @@ void TableDialog::on_fileButton_clicked() {
 
             // load the file into the file text edit
             ui->csvFileTextEdit->show();
-            ui->csvFileTextEdit->setPlainText(file.readAll());
+            const QByteArray &text = file.readAll();
+            ui->csvFileTextEdit->setPlainText(text);
+
+            updateSeparator(text);
+
+            _tempFile = nullptr;
         }
     }
 }
@@ -237,5 +236,49 @@ void TableDialog::on_createTableWidget_itemChanged(QTableWidgetItem *item) {
     if (length > ui->columnWidthSpinBox->value()) {
         ui->columnWidthSpinBox->setValue(length);
         ui->separatorColumnWidthSpinBox->setValue(length);
+    }
+}
+
+void TableDialog::on_clipboardButton_clicked() {
+    QClipboard *clipboard = QApplication::clipboard();
+    QString text = clipboard->text().trimmed();
+
+    // set text from clipboard
+    if (!text.isEmpty()) {
+        ui->fileLineEdit->clear();
+        ui->csvFileTextEdit->show();
+        ui->csvFileTextEdit->setPlainText(text);
+
+        _tempFile = new QTemporaryFile(QDir::tempPath() + QDir::separator() +
+                               QStringLiteral("table-XXXXXX.csv"));
+
+        if (!_tempFile->open()) {
+            _tempFile = nullptr;
+
+            return;
+        }
+
+        updateSeparator(text);
+
+        // write file data to the temporary file
+        _tempFile->write(text.toLatin1());
+
+        // close the file so the CSV reader can access it
+        _tempFile->close();
+    }
+}
+
+void TableDialog::updateSeparator(
+    const QString &text) const {
+    const QStringList list = { "\t", ";", "," };
+
+    foreach(const QString &character, list) {
+        if (text.contains(character)) {
+            // set separator if found
+            ui->separatorComboBox->setCurrentText(
+                character == "\t" ? "\\t" : character);
+
+            return;
+        }
     }
 }
