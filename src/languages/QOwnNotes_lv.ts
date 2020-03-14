@@ -7514,9 +7514,8 @@ Jūsu piezīmes paliks neskartas!</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="235"/>
         <source>\t</source>
-        <translation type="unfinished">\t</translation>
+        <translation type="obsolete">\t</translation>
     </message>
     <message>
         <location filename="../dialogs/tabledialog.ui" line="190"/>

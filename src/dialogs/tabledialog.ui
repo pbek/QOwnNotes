@@ -232,7 +232,7 @@
          </item>
          <item>
           <property name="text">
-           <string>\t</string>
+           <string notr="true">\t</string>
           </property>
          </item>
         </widget>
