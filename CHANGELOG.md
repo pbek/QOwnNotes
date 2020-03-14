@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.3.5
+- you can now **import CSV** directly **from the clipboard** in the *Table dialog*
+    - you can for example copy CSV from a table in a web-browser
+- an attempt to **detect the separator** when importing CSV will now be made in the *Table dialog*
+
 ## 20.3.4
 - the setting `Allow note file name to be different from headline` can now be
   set per note folder instead of only globally
