@@ -47,8 +47,8 @@ src_install() {
 	emake
 	dobin QOwnNotes
 
-	dodir /usr/share/QOwnNotes/languages
-	insinto /usr/share/QOwnNotes/languages
+	dodir /usr/share/qt5/translations
+	insinto /usr/share/qt5/translations
 
 	doins languages/*.qm
 

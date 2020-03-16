@@ -45,9 +45,9 @@
     app.installTranslator(&translator4);                                       \
     translator5.load("../src/languages/QOwnNotes_" + locale);                  \
     app.installTranslator(&translator5);                                       \
-    translator6.load("../share/QOwnNotes/languages/QOwnNotes_" + locale);      \
+    translator6.load("../share/qt5/translations/QOwnNotes_" + locale);      \
     app.installTranslator(&translator6);                                       \
-    translator7.load(appPath + "/../share/QOwnNotes/languages/QOwnNotes_" +    \
+    translator7.load(appPath + "/../share/qt5/translations/QOwnNotes_" +    \
                      locale);                                                  \
     app.installTranslator(&translator7);                                       \
     translatorLocal.load("QOwnNotes_" + locale);                               \
@@ -57,7 +57,7 @@
  * Macro for loading the release translations
  */
 #define LOAD_RELEASE_TRANSLATIONS(app)                                   \
-    translatorRelease.load("/usr/share/QOwnNotes/languages/QOwnNotes_" + \
+    translatorRelease.load("/usr/share/qt5/translations/QOwnNotes_" + \
                            locale);                                      \
     app.installTranslator(&translatorRelease);
 

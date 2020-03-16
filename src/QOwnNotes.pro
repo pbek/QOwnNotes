@@ -333,7 +333,7 @@ unix {
   desktop.path = $$DATADIR/applications
   desktop.files += PBE.QOwnNotes.desktop
 
-  i18n.path = $$DATADIR/QOwnNotes/languages
+  i18n.path = $$DATADIR/qt5/translations
   i18n.files += languages/*.qm
 
   icons.path = $$DATADIR/icons/hicolor
