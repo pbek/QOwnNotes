@@ -4268,12 +4268,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>工作空間選擇器</translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="301"/>
+        <location filename="../utils/gui.cpp" line="306"/>
         <source>Don&apos;t ask again!</source>
         <translation>別再問了！</translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="302"/>
+        <location filename="../utils/gui.cpp" line="307"/>
         <source>Don&apos;t show again!</source>
         <translation>別再顯示！</translation>
     </message>
@@ -4764,7 +4764,7 @@ Do you want to install it anyway?</source>
     <name>SettingsDialog</name>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="26"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4223"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4245"/>
         <source>Settings</source>
         <translation>設定</translation>
     </message>
@@ -4980,45 +4980,45 @@ Do you want to install it anyway?</source>
         <translation>其他CalDAV伺服器</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2916"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2938"/>
         <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
         <translation>僅部份色彩將適用，其餘將由您桌面佈景主題決定。您需重新啟動本程式以使設定生效。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2919"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2941"/>
         <source>Optimize preview colors for dark mode desktop themes</source>
         <translation>為深色桌面佈景主題最佳化預覽色彩</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2906"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2928"/>
         <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
         <translation>此選項啟用深色模式，界面與圖示將隨之調整。您需要重新啟動本程式以使設定生效。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2909"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2931"/>
         <source>Enable dark mode</source>
         <translation>啟用深色模式</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2935"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2945"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2976"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2986"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2957"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2967"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2998"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3008"/>
         <source>You need to restart the application to let this setting take effect</source>
         <translation>您必須重新啟動程式以使設定生效。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3015"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3037"/>
         <source>Item sizes in the main window</source>
         <translation>主視窗項目大小</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4996"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5018"/>
         <source>Markdown highlighting</source>
         <translation>Markdown語法突顯</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5002"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5024"/>
         <source>Enable markdown highlighting</source>
         <translation>啟用Markdown語法突顯</translation>
     </message>
@@ -5028,12 +5028,12 @@ Do you want to install it anyway?</source>
         <translation>界面語言</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2147"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2157"/>
         <source>Automatic</source>
         <translation>自動</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2282"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2292"/>
         <source>English</source>
         <translation>英文</translation>
     </message>
@@ -5043,74 +5043,74 @@ Do you want to install it anyway?</source>
         <translation>快捷鍵</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4451"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4685"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4473"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4707"/>
         <source>Default font:</source>
         <translation>預設字型：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4493"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4647"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4515"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4669"/>
         <source>Code font:</source>
         <translation>程式碼字型：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3174"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3196"/>
         <source>Main window shortcuts</source>
         <translation>主視窗快捷鍵</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3765"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3787"/>
         <source>Do this at your own risk!</source>
         <translation>此行為風險自負！</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3768"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3790"/>
         <source>Ignore all external note folder changes</source>
         <translation>忽略所有來自外部的筆記更動</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4348"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4370"/>
         <source>No two spaces to do a line break are added here if checked</source>
         <translation>若勾選，雙空格將不作為換行</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4351"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4373"/>
         <source>Use GitHub line breaks</source>
         <translation>使用GitHub斷行</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2270"/>
         <source>German</source>
         <translation>德文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2337"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2347"/>
         <source>French</source>
         <translation>法文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2601"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2611"/>
         <source>Polish</source>
         <translation>波蘭文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2623"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2633"/>
         <source>Portuguese</source>
         <translation>葡萄牙文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2568"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2578"/>
         <source>Dutch</source>
         <translation>荷蘭文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2535"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2545"/>
         <source>Hungarian</source>
         <translation>匈牙利文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2293"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2303"/>
         <source>Spanish</source>
         <translation>西班牙文</translation>
     </message>
@@ -5120,7 +5120,7 @@ Do you want to install it anyway?</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;若您想協助翻譯QOwnNotes或更新已存在的翻譯請見：&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;我如何協助翻譯QOwnNotes？&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2880"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2902"/>
         <source>Dark mode</source>
         <translation>深色模式</translation>
     </message>
@@ -5140,7 +5140,7 @@ Do you want to install it anyway?</source>
         <translation>停用Heartbeat封包</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2656"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2666"/>
         <source>Russian</source>
         <translation>俄文</translation>
     </message>
@@ -5150,22 +5150,22 @@ Do you want to install it anyway?</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;您或許會想要從&lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;取得免費的SSL憑證。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2843"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2146"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>若您修改了語言您必須重新啟動用程式以讓設定生效。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3594"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3616"/>
         <source>You need to reload the scripting engine if you modify a script file</source>
         <translation>若您修改了腳本檔您必須重新載入腳本引擎</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3597"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
         <source>Reload scripting engine</source>
         <translation>重新載入腳本引擎</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3609"/>
         <source>Validate script</source>
         <translation>驗證腳本</translation>
     </message>
@@ -5175,90 +5175,90 @@ Do you want to install it anyway?</source>
         <translation>一般</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3759"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3781"/>
         <source>Notes</source>
         <translation>筆記</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3785"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3807"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;若核取此項您將會在有任何外部修改時收到通知，即便不是正在編輯的筆記。建議您&lt;span style=&quot; font-style:italic;&quot;&gt;不要勾選&lt;/span&gt;。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3881"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5230"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5745"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3903"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5252"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5767"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>若您試定低於十秒，則在與舊版ownCloud同步時您可能會遇到同步問題。
 請您自行測試，若遭遇同步衝突的問題請調高該設定。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2557"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2567"/>
         <source>Japanese</source>
         <translation>日文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3885"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3907"/>
         <source>note save interval time [sec]</source>
         <translation>筆記存檔時間間隔（秒）</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3788"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3810"/>
         <source>Notify about all external modifications of the current note</source>
         <translation>若目前筆記遭外部程式修改時通知我</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4252"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4274"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2166"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2174"/>
         <source>Database</source>
         <translation>資料庫</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4268"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4290"/>
         <source>Reinitialize Database</source>
         <translation>重新初始化資料庫</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4191"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
         <source>Clear application data and exit</source>
         <translation>清除應用程式資料並離開</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4197"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4219"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>本按鈕可以清除所有設定、移除本機待辦資料庫並離開QOwnNotes。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4207"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4229"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2238"/>
         <source>Clear app data and exit</source>
         <translation>清除應用程式資料並離開</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3986"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4008"/>
         <source>Update dialog</source>
         <translation>更新對話框</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4066"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4088"/>
         <source>Default note file extension</source>
         <translation>預設筆記檔副檔名</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4151"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4173"/>
         <source>External editor</source>
         <translation>外部編輯器</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4164"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4186"/>
         <source>path to external editor, leave empty for default</source>
         <translation>外部編輯器路徑，若留白將採用預設值</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4174"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5309"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4196"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5331"/>
         <source>set external editor</source>
         <translation>設定外部編輯器</translation>
     </message>
@@ -5288,7 +5288,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>QOwnNotes執行時將定期發送一個小小的Heartbeat封包，好讓作者知道有人在用QOwnNotes，這樣他會很開心。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2447"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2457"/>
         <source>Italian</source>
         <translation>義大利文</translation>
     </message>
@@ -5298,17 +5298,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>腳本撰寫</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3241"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3263"/>
         <source>Your scripts</source>
         <translation>您的腳本</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3325"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3347"/>
         <source>&amp;Remove script</source>
         <translation>移除腳本(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3604"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3626"/>
         <source>Click here to select your QML script</source>
         <translation>點此選取您的QML腳本</translation>
     </message>
@@ -5390,7 +5390,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="773"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3415"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3437"/>
         <source>Name:</source>
         <translation>名稱：</translation>
     </message>
@@ -5524,351 +5524,351 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>儲存一個項目也會關閉待辦清單</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2161"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2171"/>
         <source>Indonesian</source>
         <translation>印尼文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2183"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2193"/>
         <source>Bengali</source>
         <translation>孟加拉文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2194"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2204"/>
         <source>Bosnian</source>
         <translation>波斯尼亞人</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2205"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2215"/>
         <source>Bulgarian</source>
         <translation>保加利亞語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2216"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2226"/>
         <source>Catalan</source>
         <translation>加泰隆尼亞文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2227"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2237"/>
         <source>Cebuano</source>
         <translation>宿霧語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2249"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2259"/>
         <source>Danish</source>
         <translation>丹麥文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2271"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2281"/>
         <source>Basque</source>
         <translation>巴斯克</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2304"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2314"/>
         <source>Estonian</source>
         <translation>愛沙尼亞語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2315"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2325"/>
         <source>Filipino</source>
         <translation>菲律賓文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2326"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2336"/>
         <source>Finnish</source>
         <translation>芬蘭文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2348"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2358"/>
         <source>Irish</source>
         <translation>愛爾蘭人</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2359"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2369"/>
         <source>Galician</source>
         <translation>加里斯亞文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2370"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2380"/>
         <source>Greek</source>
         <translation>希臘文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2381"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2391"/>
         <source>Hausa</source>
         <translation>豪薩</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2392"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2402"/>
         <source>Hebrew</source>
         <translation>希伯來語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2403"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2413"/>
         <source>Hindi</source>
         <translation>印度文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2425"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2435"/>
         <source>Hiligaynon</source>
         <translation>希利蓋農文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2436"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2446"/>
         <source>Icelandic</source>
         <translation>冰島的</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2458"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2468"/>
         <source>Korean</source>
         <translation>朝鮮的</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2469"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2479"/>
         <source>Kurdish</source>
         <translation>庫爾德</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2491"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2501"/>
         <source>Latvian</source>
         <translation>拉脫維亞</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2502"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2512"/>
         <source>Lithuanian</source>
         <translation>立陶宛</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2513"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2523"/>
         <source>Macedonian</source>
         <translation>馬其頓</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2546"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2556"/>
         <source>Norwegian</source>
         <translation>挪威語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2600"/>
         <source>Uzbek</source>
         <translation>烏茲別克</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2634"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2644"/>
         <source>Punjabi</source>
         <translation>旁遮普語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2579"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2589"/>
         <source>Persian</source>
         <translation>波斯語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2645"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2655"/>
         <source>Romanian</source>
         <translation>羅馬尼亞</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2667"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2677"/>
         <source>Serbian</source>
         <translation>塞爾維亞</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2678"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
         <source>Albanian</source>
         <translation>塞爾維亞...</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2710"/>
         <source>Slovak</source>
         <translation>斯洛伐克</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2711"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2721"/>
         <source>Slovenian</source>
         <translation>斯洛文尼亞</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2722"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2732"/>
         <source>Swedish</source>
         <translation>瑞典文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2733"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2743"/>
         <source>Tagalog</source>
         <translation>他加祿語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2755"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2765"/>
         <source>Turkish</source>
         <translation>土耳其文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2788"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2798"/>
         <source>Urdu</source>
         <translation>烏爾都語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2810"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2820"/>
         <source>Chinese Simplified</source>
         <translation>簡體中文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2821"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2831"/>
         <source>Chinese Traditional</source>
         <translation>繁體中文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2889"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2911"/>
         <source>Enable dark mode application icon and tray icon</source>
         <translation>啟用深色模式應用程式圖示與系統匣圖示</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2896"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2918"/>
         <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
         <translation>您可能還想在暗模式下的編輯器設置中選擇其他編輯器配色方案。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2999"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3021"/>
         <source>Enable dark mode icon theme</source>
         <translation>啟用黑暗模式圖標主題</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2929"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2951"/>
         <source>System tray</source>
         <translation>系統匣</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2938"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2960"/>
         <source>Show system tray icon</source>
         <translation>顯示系統匣圖示</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2948"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2970"/>
         <source>Start application hidden</source>
         <translation>在背景啟動程式</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2958"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2980"/>
         <source>Interface style</source>
         <translation>界面風格</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2989"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3011"/>
         <source>Enforce system icon theme</source>
         <translation>強制系統圖標主題</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3095"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3117"/>
         <source>Override interface font size</source>
         <translation>覆寫界面字型</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3104"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3126"/>
         <source>Interface font size:</source>
         <translation>界面字體大小：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3314"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3336"/>
         <source>&amp;Add script…</source>
         <translation>加入腳本(&amp;A)…</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3960"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3982"/>
         <source>Use legacy way to link to notes, images and attachments</source>
         <translation>使用舊方法鏈接到便箋，圖像和附件</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3805"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3827"/>
         <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
         <translation>當開啟筆記時游標將會自動還原至本作業階段上次開啟時的位置</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3775"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3797"/>
         <source>By default the headline will generated automatically</source>
         <translation>預設情況下標題將自動產生</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3778"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3800"/>
         <source>The shortcut to create a new note asks for a headline</source>
         <translation>建立新筆記的快捷鍵要求標題</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3844"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3866"/>
         <source>Automatically close the note folder database to prevent problems with sync tools</source>
         <translation>自動關閉筆記資料夾資料庫以防同步工具發生問題</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3847"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3869"/>
         <source>Automatically close the note folder database</source>
         <translation>自動關閉筆記資料夾資料庫</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4008"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4030"/>
         <source>Search engine</source>
         <translation>搜尋引擎</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4030"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4052"/>
         <source>Message boxes</source>
         <translation>訊息匣</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4036"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4058"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3839"/>
         <source>Reset message boxes</source>
         <translation>重設訊息匣</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4229"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4251"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3905"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3929"/>
         <source>Import settings</source>
         <translation>匯入設定</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4236"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4258"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3871"/>
         <source>Export settings</source>
         <translation>匯出設定</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4374"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4396"/>
         <source>Open issue assistant</source>
         <translation>啟動問題助手</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4341"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;張貼問題最棒的方法是透過下方的&lt;span style=&quot; font-weight:600;&quot;&gt;「啟動問題助理」&lt;/span&gt;按打開問題助理。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4716"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4738"/>
         <source>Ignore code font size to allow zooming</source>
         <translation>忽略代碼字體大小以允許縮放</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4732"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4754"/>
         <source>Rendering</source>
         <translation>排版</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4738"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4760"/>
         <source>Enable underline rendering</source>
         <translation>啟用底線排版</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5030"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5052"/>
         <source>Fully highlight blockquotes</source>
         <translation>完全突顯引言區塊</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5100"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5122"/>
         <source>Note-edit cursor width:</source>
         <translation>筆記編輯游標寬度：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5049"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5071"/>
         <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
         <translation>啟用Vim模式（某些QOwnNotes的快捷鍵將不能使用）</translation>
     </message>
@@ -5888,207 +5888,212 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>打開您自己的Cloud Server應用程序密碼頁面</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2524"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2534"/>
         <source>Māori</source>
         <translation>毛利人</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2172"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2182"/>
         <source>Malay</source>
         <translation type="unfinished">Malay</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2480"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2490"/>
         <source>Khmer</source>
         <translation type="unfinished">高棉語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2689"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2699"/>
         <source>Sinhala</source>
         <translation type="unfinished">僧伽羅語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2744"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2754"/>
         <source>Vietnamese</source>
         <translation>越南</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2766"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2776"/>
         <source>Xhosa</source>
         <translation type="unfinished">Xhosa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2799"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2809"/>
         <source>Zulu</source>
         <translation type="unfinished">祖魯</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3815"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2865"/>
+        <source>Search for language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="3837"/>
         <source>Disable this if you want to launch the application without opening a note</source>
         <translation>如果要啟動應用程序而不打開註釋，請禁用此功能</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3818"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3840"/>
         <source>Open last accessed note at application startup</source>
         <translation>在應用程序啟動時打開上次訪問的筆記</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4371"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4393"/>
         <source>This is the best way to open an issue</source>
         <translation>這是打開問題的最好方法</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4385"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4407"/>
         <source>Please use this in the issue tracker</source>
         <translation>請在問題跟踪器中使用它</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4388"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4410"/>
         <source>&amp;Copy debug information to clipboard</source>
         <translation>&amp;將調試信息複製到剪貼板</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4399"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4421"/>
         <source>Please don&apos;t use this in the issue tracker</source>
         <translation>請不要在問題跟踪器中使用它</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4745"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4767"/>
         <source>Use editor highlighting styles also for the preview</source>
         <translation>將編輯器突出顯示樣式也用於預覽</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4755"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4777"/>
         <source>Exporting</source>
         <translation>出口</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4761"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4783"/>
         <source>Use internal export styling for the PDF export and printing of the preview</source>
         <translation>使用內部導出樣式進行PDF導出和預覽打印</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5134"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5156"/>
         <source>Disable cursor blinking</source>
         <translation>禁用光標閃爍</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5144"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5166"/>
         <source>Tabs and Indents</source>
         <translation>製表符和縮進</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5152"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5174"/>
         <source>Use tab character instead of spaces</source>
         <translation>使用製表符而不是空格</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5159"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5181"/>
         <source>Indent:</source>
         <translation>縮進：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5402"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5424"/>
         <source>Show the number of matches in each note</source>
         <translation>顯示每個音符中的匹配數</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5557"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5579"/>
         <source>Ignored sub-folders</source>
         <translation>忽略子資料夾</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5573"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5595"/>
         <source>Reset ignored sub-folders</source>
         <translation>重設忽略子資料夾</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5593"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5615"/>
         <source>Note list panel</source>
         <translation>筆記列表面板</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5599"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5621"/>
         <source>Show notes in the note list with preview</source>
         <translation>顯示在筆記清單中顯示筆記預覽</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5672"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5694"/>
         <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
         <translation>代替筆記列表，使用帶有所有子文件夾的筆記樹（如果已為筆記文件夾打開了它們）</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5843"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5865"/>
         <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
         <translation>可以在&lt;i&gt; Window / Panels &lt;/ i&gt;主菜單中打開和關閉面板，還可以為不同的面板配置配置不同的&lt;i&gt; Workspaces &lt;/ i&gt;。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5920"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5942"/>
         <source>Bookmarks</source>
         <translation>書籤</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5926"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5948"/>
         <source>Notes with this tag will be used for fetching bookmarks</source>
         <translation>標上此標籤的筆記將會用於取得書籤</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5929"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5951"/>
         <source>Tag name for bookmarks notes</source>
         <translation>書籤筆記的標籤名稱</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5936"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5958"/>
         <source>Bookmarks tag:</source>
         <translation>書籤標籤：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5943"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5965"/>
         <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
         <translation>預設情況下, 瀏覽器附加元件將顯示目前筆記中所有的連結。您也可以讓它顯示含有特定標籤筆記中的特定書籤連結。更多關於書籤連結的語法，請看&lt;a href=&quot;%1&quot;&gt;這裡&lt;/a&gt;。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5956"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5978"/>
         <source>Bookmarks note name:</source>
         <translation>書籤筆記名稱：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5963"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5985"/>
         <source>This note will be used for adding new bookmarks from the browser extension</source>
         <translation>本筆記將被用於從瀏覽器附加元件加入的新標籤</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5966"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5988"/>
         <source>Note name for adding new bookmarks</source>
         <translation>加入新書籤的筆記名稱</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5976"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5998"/>
         <source>Web socket server</source>
         <translation>Web Socket 伺服器</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5982"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6004"/>
         <source>Socket server port:</source>
         <translation>Socket 伺服器通訊埠：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6016"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6038"/>
         <source>Show security token</source>
         <translation>顯示安全令牌</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6052"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6074"/>
         <source>Web socket server support</source>
         <translation>Web Socket 伺服器支援</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6058"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6080"/>
         <source>Enable socket server</source>
         <translation>啟用 Socket 伺服器</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6033"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6055"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
         <translation>從&lt;a href=&quot;%2&quot;&gt;Chrome線上應用程式商店&lt;/a&gt;或&lt;a href=&quot;%3&quot;&gt;Firefox附加元件站&lt;/a&gt;安裝&lt;a href=&quot;%1&quot;&gt;瀏覽器擴充功能&lt;/a&gt;以使用 QOwnNotes 來擷取網頁。</translation>
     </message>
@@ -6098,218 +6103,218 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>允許筆記檔名與標題不同。&lt;br&gt;請留意ownCloud筆記檔名與標題須一致！</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5370"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5392"/>
         <source>Note edit panel</source>
         <translation>筆記編輯面板</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5376"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5398"/>
         <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
         <translation>若停用本項您將可安排更複雜的面板佈局，但若視窗改變大小時所有的面板也將隨之縮放。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5379"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5401"/>
         <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
         <translation>使筆記面板作為固定於中央的面板，使之在視窗被縮放或其他面板縮放時雖之調整大小</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5389"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5411"/>
         <source>Note search panel</source>
         <translation>筆記搜尋面板</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5395"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5417"/>
         <source>Disable auto-completion of previous searches</source>
         <translation>停用先前搜尋的自動完成</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5695"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5717"/>
         <source>Navigation panel</source>
         <translation>導覽面板</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5701"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5723"/>
         <source>Hide navigation item search bar</source>
         <translation>隱藏導覽項目搜尋列</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5715"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5737"/>
         <source>Local trash settings</source>
         <translation>本機垃圾桶設定</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5749"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5771"/>
         <source>Remove trashed notes after:</source>
         <translation>垃圾桶中的筆記保存時效：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5756"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5778"/>
         <source> days</source>
         <extracomment>seconds</extracomment>
         <translation> 天</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5775"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5797"/>
         <source>Automatically remove trashed notes after a certain time</source>
         <translation>自動移除垃圾桶中的舊筆記</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5801"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5823"/>
         <source>Local trash support</source>
         <translation>支援本機垃圾桶</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5807"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5829"/>
         <source>Enable local trash</source>
         <translation>啟用本機垃圾桶</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5824"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5846"/>
         <source>Layout selector</source>
         <translation>版面配置選擇器</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5830"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5852"/>
         <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
         <translation>您可在此設定一個新的版面。請留意，您隨時可以透過按下&lt;i&gt;「解鎖面板」&lt;/i&gt;按鈕修改面板的位置。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5076"/>
-        <location filename="../dialogs/settingsdialog.ui" line="6002"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5098"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6024"/>
         <source>Reset the cursor width</source>
         <translation>重設游標寬度</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5244"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5266"/>
         <source>External git log command to show the git versions of a note</source>
         <translation>使用外部git log指令來顯示筆記的git版本</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5250"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5272"/>
         <source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>請輸入一個指令用來顯示 git 日誌（例如「gitk」）</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5270"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5292"/>
         <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>若您使用本設定您將會在筆記上有一個新的右鍵選單選項讓您顯示git版本。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5554"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5563"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5576"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5585"/>
         <source>Regular expressions of note sub-folders to ignore, separated by &quot;;&quot;</source>
         <translation>要忽略的筆記子資料夾名稱之正規表示，使用「;」分隔。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5613"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5635"/>
         <source>Show all notes of a tag including the notes of their children-tags</source>
         <translation>顯示所有標有此標籤的筆記以及其子標籤</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5606"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5628"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>顯示該資料夾中的所有筆記與子資料夾（僅在子資料夾功能開啟時有效）</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4964"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4986"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;您可以查閱所有可用的&lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;時間格式&lt;/a&gt;。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5127"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5149"/>
         <source>Highlight the current line</source>
         <translation>突顯所在的那一行</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5337"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5359"/>
         <source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
         <translation>別忘了啟用您筆記資料夾的git支援並且為您的git設定好您的名稱與電子郵件地址，例如使用這些終端機指令：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5412"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5434"/>
         <source>Tags panel</source>
         <translation>標籤面板</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5441"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5517"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5646"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5463"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5539"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5668"/>
         <source>Order</source>
         <translation>排序</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5447"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5523"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5655"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5469"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5545"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5677"/>
         <source>Ascending</source>
         <translation>升冪</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5454"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5530"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5662"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5476"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5552"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5684"/>
         <source>Descending</source>
         <translation>降冪</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5418"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5487"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5620"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5440"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5509"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5642"/>
         <source>Sort</source>
         <translation>排序方式</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5120"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5142"/>
         <source>Only use editor width setting in distraction free mode</source>
         <translation>僅在沈浸模式中採用編輯器寬度設定</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5424"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5493"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5626"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5446"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5515"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5648"/>
         <source>Alphabetical</source>
         <translation>字母</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5431"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5453"/>
         <source>By last change / use</source>
         <translation>最後存取時間</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5464"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5486"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>隱藏「尋找或建立標籤」搜尋</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5474"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5496"/>
         <source>Note subfolders panel</source>
         <translation>筆記子資料夾面板</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5480"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5502"/>
         <source>Show with full path</source>
         <translation>顯示完整路徑</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5500"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5633"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5522"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5655"/>
         <source>By last change</source>
         <translation>最後修改時間</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5510"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5532"/>
         <source>Show root folder name</source>
         <translation>顯示頂層資料夾名稱</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5540"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5562"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>隱藏「尋找與建立筆記子資料夾」搜尋</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5547"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5569"/>
         <source>Display note subfolders as full tree</source>
         <translation>顯示筆記資料夾為完整樹狀圖</translation>
     </message>
@@ -6319,39 +6324,39 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>搜尋腳本庫</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5282"/>
         <source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>您可以「%notePath%」為筆記路徑</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5283"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5305"/>
         <source>Git client</source>
         <translation>Git用戶端</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5299"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5321"/>
         <source>Path to git executable:</source>
         <translation>Git執行檔路徑：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5289"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5311"/>
         <source>Path to git client, leave empty for default</source>
         <translation>Git用戶端路徑，若留白將採用預設值</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5208"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5230"/>
         <source>Commit interval</source>
         <translation>Commit 間隔</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5214"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5236"/>
         <source>sec</source>
         <extracomment>seconds</extracomment>
         <translation>秒</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5234"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5256"/>
         <source>git commit interval time [sec]</source>
         <translation>git commit 間隔時間（秒）</translation>
     </message>
@@ -6411,167 +6416,167 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>請輸入您CalDAV使用者的密碼。&lt;br /&gt;目前密碼將被加密並與其他設定一同儲存，但這並不非常安全。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2238"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2248"/>
         <source>Czech</source>
         <translation>捷克文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2612"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2622"/>
         <source>Brazilian Portuguese</source>
         <translation>葡萄牙文（巴西）</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2777"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2787"/>
         <source>Ukrainian</source>
         <translation>烏克蘭文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3716"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3738"/>
         <source>The name</source>
         <translation>名稱</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3940"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3962"/>
         <source>Maximum height:</source>
         <translation>最大高度：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3913"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3935"/>
         <source>Maximum width:</source>
         <translation>最大寬度：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3854"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3876"/>
         <source>Scale images down when inserted into notes</source>
         <translation>插入圖片到筆記中時縮小圖片</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2414"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2424"/>
         <source>Croatian</source>
         <translation>克羅地亞語</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3631"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3653"/>
         <source>Path to your QML file</source>
         <translation>您QML檔的路徑</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3422"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3444"/>
         <source>Script name</source>
         <translation>腳本名稱</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3444"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3466"/>
         <source>Description:</source>
         <translation>敘述：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3526"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3548"/>
         <source>Version:</source>
         <translation>版本：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3487"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3509"/>
         <source>Repository:</source>
         <translation>庫：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3464"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3486"/>
         <source>Author(s):</source>
         <translation>作者：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3861"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3883"/>
         <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
         <translation>若您想在編輯筆記時接受所有外部修改，請核取此項。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3864"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3886"/>
         <source>Accept all external modifications of the current note</source>
         <translation>接受對目前筆記的所有外部編輯</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3798"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3820"/>
         <source>Use UNIX newline instead of native newline characters</source>
         <translation>使用UNIX式換行而非系統原生換行</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3808"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3830"/>
         <source>Restore cursor position when opening a note</source>
         <translation>開啟筆記時還原游標位置</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4258"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4280"/>
         <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
         <translation>警告，這也將移除您快取中的待辦項目以及已設定的筆記資料夾及腳本！</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4788"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4810"/>
         <source>Apply toolbar configuration</source>
         <translation>套用工具列設定</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4802"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4824"/>
         <source>Reset toolbars</source>
         <translation>重設工具列</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4830"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4852"/>
         <source>Enable logging to file</source>
         <translation>啟用日誌檔</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4837"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4859"/>
         <source>Clear log file</source>
         <translation>清除日誌檔</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4848"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4870"/>
         <source>Fake old version number to trigger update</source>
         <translation>偽造舊版號以觸發更新</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4876"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4898"/>
         <source>Log file path:</source>
         <translation>日誌檔路徑：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4938"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4960"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation>您可自訂時間格式以用於在筆記中插入當下時間。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4941"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4963"/>
         <source>Insert current time</source>
         <translation>插入現在時間</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4969"/>
         <source>Time format:</source>
         <translation>時間格式：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4954"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4976"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation>輸入您的自訂時間格式，例如「dd.MM.yyy hh:mm」</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5043"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5065"/>
         <source>Editor options</source>
         <translation>編輯器選項</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5056"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5078"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>自動補齊括號和Markdown格式字元</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5110"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5132"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>您必須使用Backspace鍵刪除開頭字元</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5113"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5135"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>啟用自動移除右括號或其他關閉字元</translation>
     </message>
@@ -6616,38 +6621,38 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>重新載入行事曆清單(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2886"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2996"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2908"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3018"/>
         <source>You may need to restart the application to let these changes take effect</source>
         <translation>您必須重新啟動程式以使修改生效。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3031"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3053"/>
         <source>Toolbar icon size:</source>
         <translation>工具列圖示大小：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3021"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3043"/>
         <source>List and tree item height:</source>
         <translation>清單與項目高度：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3054"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3076"/>
         <source>Reset the icon size</source>
         <translation>重設圖示大小</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3068"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3090"/>
         <source>Reset the item height</source>
         <translation>重設項目高度</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4709"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4731"/>
         <source>View text right to left (RTL)</source>
         <translation>由右至左檢視文字(RTL)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3192"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3214"/>
         <source>Search for shortcut</source>
         <translation>搜尋快捷鍵</translation>
     </message>
@@ -6657,22 +6662,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>忽略不支援待辦事項的行事曆</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2832"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2842"/>
         <source>Arabic</source>
         <translation>阿拉伯文</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2970"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2992"/>
         <source>Icons</source>
         <translation>圖示</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2979"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3001"/>
         <source>Use internal icon theme instead of system icon theme</source>
         <translation>使用內建圖示主題而非系統圖示主題</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3580"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3602"/>
         <source>Script path:</source>
         <translation>腳本路徑：</translation>
     </message>
@@ -6687,79 +6692,79 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>允許筆記檔名與標題不同</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3871"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3893"/>
         <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
         <translation>若您想在編輯筆記時忽略所有外部修改，請核取此項。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3874"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3896"/>
         <source>Ignore all external modifications of the current note</source>
         <translation>忽略對目前筆記的所有外部編輯</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3795"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3817"/>
         <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
         <translation>若您在ownCloud與Nextcloud筆記中遇到換行問題，如Windows中，您可以使用此選項</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3970"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3992"/>
         <source>App instance</source>
         <translation>應用程式實體</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3976"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3998"/>
         <source>Only allow one app instance at the same time</source>
         <translation>同時一時間僅允許單一程式實體</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4072"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4094"/>
         <source>Add a custom file extension</source>
         <translation>加入自訂副檔名</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4086"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4108"/>
         <source>Remove a custom file extension</source>
         <translation>移除自訂副檔名</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4125"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4147"/>
         <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
         <translation>若您想加入自訂副檔名，僅需輸入副檔名，如「taskpaper」。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4129"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4151"/>
         <source>Text file (txt)</source>
         <translation>純文字檔（txt）</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4157"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4179"/>
         <source>Path to external editor:</source>
         <translation>外部編輯器路徑：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3992"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4014"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>不自動顯示更新對話框</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4445"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4613"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4467"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4635"/>
         <source>Fonts</source>
         <translation>字型</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4468"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4510"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4619"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4671"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4490"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4532"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4641"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4693"/>
         <source>Set a new font</source>
         <translation>設定新字型</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4479"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4524"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4633"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4657"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4501"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4546"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4655"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4679"/>
         <source>Reset font</source>
         <translation>重設字型</translation>
     </message>
@@ -6769,19 +6774,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>除錯</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4309"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4331"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2185"/>
         <location filename="../dialogs/settingsdialog.cpp" line="4144"/>
         <source>Debug information</source>
         <translation>除錯資訊</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4315"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4337"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;若您&lt;span style=&quot; font-weight:600;&quot;&gt;有疑問遇到問題&lt;/span&gt;，您可以&lt;span style=&quot; font-weight:600;&quot;&gt;複製並貼上&lt;/span&gt;本文（全部或一部分）至一個&lt;span style=&quot; font-weight:600;&quot;&gt;議題&lt;/span&gt;到&lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes議題頁面&lt;/a&gt;中。過於敏感的資訊將被隱藏。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4402"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4424"/>
         <source>&amp;Save debug information</source>
         <translation>儲存除錯資訊(&amp;S)</translation>
     </message>

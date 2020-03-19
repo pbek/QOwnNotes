@@ -4307,12 +4307,12 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
         <translation>Vinnusvæði val</translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="301"/>
+        <location filename="../utils/gui.cpp" line="306"/>
         <source>Don&apos;t ask again!</source>
         <translation>Vinnusvæði val!</translation>
     </message>
     <message>
-        <location filename="../utils/gui.cpp" line="302"/>
+        <location filename="../utils/gui.cpp" line="307"/>
         <source>Don&apos;t show again!</source>
         <translation>Ekki sýna aftur!</translation>
     </message>
@@ -4804,7 +4804,7 @@ Viltu setja það upp samt?</translation>
     <name>SettingsDialog</name>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="26"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4223"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4245"/>
         <source>Settings</source>
         <translation>Stillingar</translation>
     </message>
@@ -5020,45 +5020,45 @@ Viltu setja það upp samt?</translation>
         <translation>Aðrir CalDAV netþjónar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2916"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2938"/>
         <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
         <translation>Aðeins einhverjir litir verða aðlagaðir, skjáborðsþemað þitt stjórnar því sem eftir er. Þú verður að endurræsa forritið til að láta þessar breytingar grípa til aðgerða.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2919"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2941"/>
         <source>Optimize preview colors for dark mode desktop themes</source>
         <translation>Fínstilltu forskoðunlitina fyrir skjáborðsþemu í dökkum ham</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2906"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2928"/>
         <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
         <translation>Þetta gerir kleift að breyta myrkri stillingu, viðmóti og táknum. Þú verður að endurræsa forritið til að láta þessar breytingar grípa til aðgerða.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2909"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2931"/>
         <source>Enable dark mode</source>
         <translation>Kveiktu á dökkri stillingu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2935"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2945"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2976"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2986"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2957"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2967"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2998"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3008"/>
         <source>You need to restart the application to let this setting take effect</source>
         <translation>Þú verður að endurræsa forritið til að láta þessa stillingu taka gildi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3015"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3037"/>
         <source>Item sizes in the main window</source>
         <translation>Stærðir hlutar í aðalglugganum</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4996"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5018"/>
         <source>Markdown highlighting</source>
         <translation>Hápunktur undirstrikunar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5002"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5024"/>
         <source>Enable markdown highlighting</source>
         <translation>Virkja auðkenningu merkingar</translation>
     </message>
@@ -5068,12 +5068,12 @@ Viltu setja það upp samt?</translation>
         <translation>Viðmótstungumál</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2147"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2157"/>
         <source>Automatic</source>
         <translation>Sjálfvirk</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2282"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2292"/>
         <source>English</source>
         <translation>Enska</translation>
     </message>
@@ -5083,74 +5083,74 @@ Viltu setja það upp samt?</translation>
         <translation>Flýtileiðir</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4451"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4685"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4473"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4707"/>
         <source>Default font:</source>
         <translation>Sjálfgefið leturgerð:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4493"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4647"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4515"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4669"/>
         <source>Code font:</source>
         <translation>Kóða letur:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3174"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3196"/>
         <source>Main window shortcuts</source>
         <translation>Flýtileiðir aðal glugga</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3765"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3787"/>
         <source>Do this at your own risk!</source>
         <translation>Gerðu þetta á eigin ábyrgð!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3768"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3790"/>
         <source>Ignore all external note folder changes</source>
         <translation>Hunsa allar breytingar á ytri athugasemdum</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4348"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4370"/>
         <source>No two spaces to do a line break are added here if checked</source>
         <translation>Ekki er bætt við tveimur rýmum til að gera línuskil ef þau eru merkt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4351"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4373"/>
         <source>Use GitHub line breaks</source>
         <translation>Notaðu GitHub lína brot</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2270"/>
         <source>German</source>
         <translation>Þýsku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2337"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2347"/>
         <source>French</source>
         <translation>Frönsku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2601"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2611"/>
         <source>Polish</source>
         <translation>Pólsku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2623"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2633"/>
         <source>Portuguese</source>
         <translation>Portúgalska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2568"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2578"/>
         <source>Dutch</source>
         <translation>Hollenskir</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2535"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2545"/>
         <source>Hungarian</source>
         <translation>Ungverska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2293"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2303"/>
         <source>Spanish</source>
         <translation>Spænsk</translation>
     </message>
@@ -5160,7 +5160,7 @@ Viltu setja það upp samt?</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ef þú vilt hjálpa við að þýða QOwnNotes eða uppfæra núverandi þýðingu vinsamlegast lestu: &lt;a href = &quot;http://www.qownnotes.org/Knowledge-base/How- get-I-help-to-translate-QOwnNotes &quot;&gt; Hvernig get ég hjálpað til við að þýða QOwnNotes? &lt;/a&gt; &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2880"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2902"/>
         <source>Dark mode</source>
         <translation>Myrkur háttur</translation>
     </message>
@@ -5180,7 +5180,7 @@ Viltu setja það upp samt?</translation>
         <translation>Slökkva á hjartslætti</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2656"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2666"/>
         <source>Russian</source>
         <translation>Rússnesku</translation>
     </message>
@@ -5190,22 +5190,22 @@ Viltu setja það upp samt?</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Þú gætir viljað íhuga að fá ókeypis SSL vottorð frá &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Dulkóða skulum &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2843"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2146"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>Ef þú breytir tungumálinu þarftu að endurræsa forritið til að breytingarnar geti gripið til aðgerða.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3594"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3616"/>
         <source>You need to reload the scripting engine if you modify a script file</source>
         <translation>Þú þarft að endurhlaða forskriftarvélina ef þú breytir handritaskránni</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3597"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
         <source>Reload scripting engine</source>
         <translation>Endurhlaða forskriftarvél</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3609"/>
         <source>Validate script</source>
         <translation>Staðfesta handrit</translation>
     </message>
@@ -5215,90 +5215,90 @@ Viltu setja það upp samt?</translation>
         <translation>Almennt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3759"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3781"/>
         <source>Notes</source>
         <translation>Skýringar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3785"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3807"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ef hakað við, verður þér alltaf tilkynnt um ytri breytingar, jafnvel þó að núverandi athugasemd hafi ekki verið breytt á síðustu stundu. Mælt er með &lt;span style = &quot;font-style: italic;&quot;&gt; ómerkt &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3881"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5230"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5745"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3903"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5252"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5767"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>Þú gætir lent í vandræðum með samstillingu við eldri útgáfur af ownCloud samstillingu þegar þú ferð langt undir 10 sek.
 Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu hærra gildi ef svo er.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2557"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2567"/>
         <source>Japanese</source>
         <translation>Japönsku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3885"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3907"/>
         <source>note save interval time [sec]</source>
         <translation>athugaðu að vista tímabil [sek]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3788"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3810"/>
         <source>Notify about all external modifications of the current note</source>
         <translation>Látið vita um allar ytri breytingar á núverandi seðli</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4252"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4274"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2166"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2174"/>
         <source>Database</source>
         <translation>Gagnagrunnur</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4268"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4290"/>
         <source>Reinitialize Database</source>
         <translation>Frumstilla gagnagrunninn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4191"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
         <source>Clear application data and exit</source>
         <translation>Hreinsa umsóknargögn og loka</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4197"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4219"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Þessi hnappur gerir þér kleift að hreinsa allar stillingar, fjarlægja staðbundna todo gagnagrunninn og loka QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4207"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4229"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2238"/>
         <source>Clear app data and exit</source>
         <translation>Hreinsaðu forritsgögn og lokaðu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3986"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4008"/>
         <source>Update dialog</source>
         <translation>Uppfæra glugga</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4066"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4088"/>
         <source>Default note file extension</source>
         <translation>Sjálfgefin athugasemd skrá eftirnafn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4151"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4173"/>
         <source>External editor</source>
         <translation>Ytri ritstjóri</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4164"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4186"/>
         <source>path to external editor, leave empty for default</source>
         <translation>slóð til utanaðkomandi ritstjóra, láttu tóm sem sjálfgefið</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4174"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5309"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4196"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5331"/>
         <source>set external editor</source>
         <translation>setja utanaðkomandi ritstjóra</translation>
     </message>
@@ -5328,7 +5328,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>Lítill beiðni um hjartslátt er send reglulega á meðan QOwnNotes er í gangi. Gleði verktaki með því að láta hann vita að einhver notar QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2447"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2457"/>
         <source>Italian</source>
         <translation>Ítalska</translation>
     </message>
@@ -5338,17 +5338,17 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>Forskriftir</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3241"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3263"/>
         <source>Your scripts</source>
         <translation>Handritin þín</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3325"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3347"/>
         <source>&amp;Remove script</source>
         <translation>&amp;Fjarlægðu handrit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3604"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3626"/>
         <source>Click here to select your QML script</source>
         <translation>Smelltu hér til að velja QML handritið þitt</translation>
     </message>
@@ -5430,7 +5430,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="773"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3415"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3437"/>
         <source>Name:</source>
         <translation>Nafn:</translation>
     </message>
@@ -5564,351 +5564,351 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>Að vista hlut lokar Todo listanum</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2161"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2171"/>
         <source>Indonesian</source>
         <translation>Indónesískt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2183"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2193"/>
         <source>Bengali</source>
         <translation>Bengalska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2194"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2204"/>
         <source>Bosnian</source>
         <translation>Bosníu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2205"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2215"/>
         <source>Bulgarian</source>
         <translation>Búlgarska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2216"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2226"/>
         <source>Catalan</source>
         <translation>Katalónska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2227"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2237"/>
         <source>Cebuano</source>
         <translation>Kebúanó</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2249"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2259"/>
         <source>Danish</source>
         <translation>Dönsku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2271"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2281"/>
         <source>Basque</source>
         <translation>Baskneska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2304"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2314"/>
         <source>Estonian</source>
         <translation>Eistnesku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2315"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2325"/>
         <source>Filipino</source>
         <translation>Filippseyska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2326"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2336"/>
         <source>Finnish</source>
         <translation>Finnskt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2348"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2358"/>
         <source>Irish</source>
         <translation>Írskir</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2359"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2369"/>
         <source>Galician</source>
         <translation>Galisíska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2370"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2380"/>
         <source>Greek</source>
         <translation>Gríska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2381"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2391"/>
         <source>Hausa</source>
         <translation>Hausa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2392"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2402"/>
         <source>Hebrew</source>
         <translation>Hebreska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2403"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2413"/>
         <source>Hindi</source>
         <translation>Hindí</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2425"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2435"/>
         <source>Hiligaynon</source>
         <translation>Hiligaynon</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2436"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2446"/>
         <source>Icelandic</source>
         <translation>Íslensku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2458"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2468"/>
         <source>Korean</source>
         <translation>Kóreska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2469"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2479"/>
         <source>Kurdish</source>
         <translation>Kúrdískt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2491"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2501"/>
         <source>Latvian</source>
         <translation>Latvian</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2502"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2512"/>
         <source>Lithuanian</source>
         <translation>Litháíska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2513"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2523"/>
         <source>Macedonian</source>
         <translation>Makedónska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2546"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2556"/>
         <source>Norwegian</source>
         <translation>Norsku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2600"/>
         <source>Uzbek</source>
         <translation>Úsbekisk</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2634"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2644"/>
         <source>Punjabi</source>
         <translation>Punjabi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2579"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2589"/>
         <source>Persian</source>
         <translation>Persneska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2645"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2655"/>
         <source>Romanian</source>
         <translation>Rúmenska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2667"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2677"/>
         <source>Serbian</source>
         <translation>Serbneska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2678"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
         <source>Albanian</source>
         <translation>Albanska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2710"/>
         <source>Slovak</source>
         <translation>Slóvakía</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2711"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2721"/>
         <source>Slovenian</source>
         <translation>Slóvenía</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2722"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2732"/>
         <source>Swedish</source>
         <translation>Sænsku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2733"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2743"/>
         <source>Tagalog</source>
         <translation>Tagalog</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2755"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2765"/>
         <source>Turkish</source>
         <translation>Tyrknesku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2788"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2798"/>
         <source>Urdu</source>
         <translation>Úrdú</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2810"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2820"/>
         <source>Chinese Simplified</source>
         <translation>Kínverska einfölduð</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2821"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2831"/>
         <source>Chinese Traditional</source>
         <translation>Hefðbundin kínverska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2889"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2911"/>
         <source>Enable dark mode application icon and tray icon</source>
         <translation>Kveiktu á forritatákni fyrir dimma stillingu og bakkatákn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2896"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2918"/>
         <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
         <translation>Þú gætir líka viljað velja annan ritstjóra litasamsetningu í ritstjórastillingunum í dökkum ham.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2999"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3021"/>
         <source>Enable dark mode icon theme</source>
         <translation>Virkja þema táknmyndar fyrir dimma stillingu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2929"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2951"/>
         <source>System tray</source>
         <translation>Kerfisbakkinn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2938"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2960"/>
         <source>Show system tray icon</source>
         <translation>Sýna tákn kerfisbakkans</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2948"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2970"/>
         <source>Start application hidden</source>
         <translation>Hefja forrit falið</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2958"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2980"/>
         <source>Interface style</source>
         <translation>Viðmótstíll</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2989"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3011"/>
         <source>Enforce system icon theme</source>
         <translation>Framfylgja þema kerfis helgimynda</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3095"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3117"/>
         <source>Override interface font size</source>
         <translation>Hnekkja leturstærð viðmótsins</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3104"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3126"/>
         <source>Interface font size:</source>
         <translation>Leturstærð viðmóts:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3314"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3336"/>
         <source>&amp;Add script…</source>
         <translation>&amp;Bættu við handriti…</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3960"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3982"/>
         <source>Use legacy way to link to notes, images and attachments</source>
         <translation>Notaðu eldri leið til að tengja við athugasemdir, myndir og viðhengi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3805"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3827"/>
         <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
         <translation>Þegar opnun minnispunkta er opnuð mun bendillinn inni í glósunni nú verða færður aftur í þá stöðu sem síðast var heimsótt minnispunktinn á yfirstandandi lotu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3775"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3797"/>
         <source>By default the headline will generated automatically</source>
         <translation>Sjálfgefið er að fyrirsögnin myndist sjálfkrafa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3778"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3800"/>
         <source>The shortcut to create a new note asks for a headline</source>
         <translation>Flýtileiðin til að búa til nýja athugasemd biður um fyrirsögn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3844"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3866"/>
         <source>Automatically close the note folder database to prevent problems with sync tools</source>
         <translation>Lokaðu sjálfkrafa gagnagrunninum fyrir minnismiða til að koma í veg fyrir vandamál með samstillingarverkfæri</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3847"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3869"/>
         <source>Automatically close the note folder database</source>
         <translation>Lokaðu sjálfkrafa gagnagrunni minnismiða</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4008"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4030"/>
         <source>Search engine</source>
         <translation>Leitarvél</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4030"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4052"/>
         <source>Message boxes</source>
         <translation>Skilaboðakassar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4036"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4058"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3839"/>
         <source>Reset message boxes</source>
         <translation>Núllstilla skilaboðareitina</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4229"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4251"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3905"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3929"/>
         <source>Import settings</source>
         <translation>Flytja inn stillingar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4236"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4258"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3871"/>
         <source>Export settings</source>
         <translation>Flytja út stillingar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4374"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4396"/>
         <source>Open issue assistant</source>
         <translation>Aðstoðarmaður með opið mál</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4341"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Besta leiðin til að setja inn mál er að nota útgáfuaðstoðarmanninn með því að ýta á &lt;span style = &quot;font-weight: 600;&quot;&gt; Opna útgáfuaðstoðarmann &lt;/span&gt; hnappinn á botninn. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4716"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4738"/>
         <source>Ignore code font size to allow zooming</source>
         <translation>Hunsa leturstærð kóða til að leyfa aðdrátt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4732"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4754"/>
         <source>Rendering</source>
         <translation>Útvegun</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4738"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4760"/>
         <source>Enable underline rendering</source>
         <translation>Kveiktu á undirstrikun</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5030"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5052"/>
         <source>Fully highlight blockquotes</source>
         <translation>Auðkenndu fullkomlega bálkur</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5100"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5122"/>
         <source>Note-edit cursor width:</source>
         <translation>Athugaðu að breyta bendilinn breidd:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5049"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5071"/>
         <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
         <translation>Virkja Vim-stillingu (sumar flýtileiðir QOwnNotes virka ekki)</translation>
     </message>
@@ -5928,207 +5928,212 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>Opnaðu ownCloud netþjóns lykilorðsforritsíðu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2524"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2534"/>
         <source>Māori</source>
         <translation type="unfinished">Māori</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2172"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2182"/>
         <source>Malay</source>
         <translation type="unfinished">Malay</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2480"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2490"/>
         <source>Khmer</source>
         <translation type="unfinished">Khmer</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2689"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2699"/>
         <source>Sinhala</source>
         <translation type="unfinished">Sinhala</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2744"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2754"/>
         <source>Vietnamese</source>
         <translation>Víetnamska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2766"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2776"/>
         <source>Xhosa</source>
         <translation type="unfinished">Xhosa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2799"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2809"/>
         <source>Zulu</source>
         <translation type="unfinished">Súlú</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3815"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2865"/>
+        <source>Search for language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="3837"/>
         <source>Disable this if you want to launch the application without opening a note</source>
         <translation>Slökkva á þessu ef þú vilt ræsa forritið án þess að opna athugasemd</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3818"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3840"/>
         <source>Open last accessed note at application startup</source>
         <translation>Opnaðu síðustu aðgangsmerki við upphaf umsóknar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4371"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4393"/>
         <source>This is the best way to open an issue</source>
         <translation>Þetta er besta leiðin til að opna mál</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4385"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4407"/>
         <source>Please use this in the issue tracker</source>
         <translation>Vinsamlegast notaðu þetta í útgáfu rekja spor einhvers</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4388"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4410"/>
         <source>&amp;Copy debug information to clipboard</source>
         <translation>&amp;Afritaðu villuleit á klemmuspjald</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4399"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4421"/>
         <source>Please don&apos;t use this in the issue tracker</source>
         <translation>Vinsamlegast ekki nota þetta í rekja spor einhvers</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4745"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4767"/>
         <source>Use editor highlighting styles also for the preview</source>
         <translation>Notaðu hápunktar ritstjóra til að forskoða</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4755"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4777"/>
         <source>Exporting</source>
         <translation>Útflutningur</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4761"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4783"/>
         <source>Use internal export styling for the PDF export and printing of the preview</source>
         <translation>Notaðu innri útflutningsstíl fyrir PDF útflutning og prentun forsýningarinnar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5134"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5156"/>
         <source>Disable cursor blinking</source>
         <translation>Slökkva á blikkandi bendilinn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5144"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5166"/>
         <source>Tabs and Indents</source>
         <translation>Tabs da Manuniya</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5152"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5174"/>
         <source>Use tab character instead of spaces</source>
         <translation>Yi amfani da yanayin tab maimakon filaye</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5159"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5181"/>
         <source>Indent:</source>
         <translation>Shiga ciki:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5402"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5424"/>
         <source>Show the number of matches in each note</source>
         <translation>Sýna fjölda leikja í hverri athugasemd</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5557"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5579"/>
         <source>Ignored sub-folders</source>
         <translation>Hunsa undirmöppur</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5573"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5595"/>
         <source>Reset ignored sub-folders</source>
         <translation>Núllstilla hunsaðar undirmöppur</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5593"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5615"/>
         <source>Note list panel</source>
         <translation>Athugasemdalisti</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5599"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5621"/>
         <source>Show notes in the note list with preview</source>
         <translation>Sýna minnismiða á minnispunktalistanum með forskoðun</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5672"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5694"/>
         <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
         <translation>Í staðinn fyrir minnispunkta skal nota nótutré með öllum undirmöppunum (ef kveikt er á þeim fyrir minnismiða)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5843"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5865"/>
         <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
         <translation>Hægt er að kveikja og slökkva á spjöldum í &lt;i&gt; aðalvalmynd &lt;i&gt; Window / Panels &lt;/i&gt; og einnig er hægt að stilla mismunandi &lt;i&gt; Workspaces &lt;/i&gt; fyrir mismunandi pallborðsstillingar.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5920"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5942"/>
         <source>Bookmarks</source>
         <translation>Bókamerki</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5926"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5948"/>
         <source>Notes with this tag will be used for fetching bookmarks</source>
         <translation>Minnismiðar með þessu merki verða notaðir til að sækja bókamerki</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5929"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5951"/>
         <source>Tag name for bookmarks notes</source>
         <translation>Merkið heiti fyrir minnismiða bókamerkja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5936"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5958"/>
         <source>Bookmarks tag:</source>
         <translation>Bókamerkjamerki:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5943"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5965"/>
         <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Sjálfgefið er að vafraviðbótin muni sýna alla tengla á núverandi athugasemd. Þú getur einnig látið það sjá sérstaka bókamerkjatengla með skýringum með ákveðnu merki. Smelltu á &lt;a href=&quot;%1&quot;&gt; hér &lt;/a&gt; til að fá frekari upplýsingar um setningafræði við bókamerkjatengil.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5956"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5978"/>
         <source>Bookmarks note name:</source>
         <translation>Heiti bókamerkja:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5963"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5985"/>
         <source>This note will be used for adding new bookmarks from the browser extension</source>
         <translation>Þessi athugasemd verður notuð til að bæta við nýjum bókamerkjum úr vafraviðbótinni</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5966"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5988"/>
         <source>Note name for adding new bookmarks</source>
         <translation>Athugaðu nafn til að bæta við nýjum bókamerkjum</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5976"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5998"/>
         <source>Web socket server</source>
         <translation>Vefur fals miðlara</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5982"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6004"/>
         <source>Socket server port:</source>
         <translation>Tengi netþjóns:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6016"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6038"/>
         <source>Show security token</source>
         <translation>Sýna öryggismerki</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6052"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6074"/>
         <source>Web socket server support</source>
         <translation>Stuðningur við netsendingarþjón</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6058"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6080"/>
         <source>Enable socket server</source>
         <translation>Virkja fals miðlara</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="6033"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6055"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
         <translation>Settu upp &lt;a href=&quot;%1&quot;&gt; viðbót vafra viðbótar &lt;/a&gt; úr &lt;a href=&quot;%2&quot;&gt; Chrome vefverslun &lt;/a&gt; eða &lt;a href=&quot;%3&quot;&gt; Firefox viðbót- ons síðu &lt;/a&gt; til að nota QOwnNotes sem vefklippara.</translation>
     </message>
@@ -6138,218 +6143,218 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>Leyfðu heiti nótnaskrárinnar að vera frábrugðið fyrirsögninni. &lt;br&gt; Gættu þín á því að ownCloud Notes þarf að skráarheitið sé það sama og fyrirsögnin!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5370"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5392"/>
         <source>Note edit panel</source>
         <translation>Athugaðu breyta spjaldið</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5376"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5398"/>
         <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
         <translation>Ef þetta er óvirk ertu fær um að búa til flóknari skipulag pallborðs, en öll spjöld verða breytt ef stærð gluggans er breytt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5379"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5401"/>
         <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
         <translation>Notaðu athugasemdarbreytispjaldið sem fastan aðalbúnað til að breyta stærð ef glugginn eða önnur spjöld eru breytt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5389"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5411"/>
         <source>Note search panel</source>
         <translation>Athugaðu leitarspjald</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5395"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5417"/>
         <source>Disable auto-completion of previous searches</source>
         <translation>Slökkva á sjálfvirkri útfyllingu fyrri leitar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5695"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5717"/>
         <source>Navigation panel</source>
         <translation>Leiðsögn pallborð</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5701"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5723"/>
         <source>Hide navigation item search bar</source>
         <translation>Fela leitarstiku yfir leiðsöguhlut</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5715"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5737"/>
         <source>Local trash settings</source>
         <translation>Staðbundnar ruslstillingar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5749"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5771"/>
         <source>Remove trashed notes after:</source>
         <translation>Fjarlægðu ruslpunkta eftir:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5756"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5778"/>
         <source> days</source>
         <extracomment>seconds</extracomment>
         <translation>daga</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5775"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5797"/>
         <source>Automatically remove trashed notes after a certain time</source>
         <translation>Fjarlægðu sjálfkrafa ruslabréf eftir ákveðinn tíma</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5801"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5823"/>
         <source>Local trash support</source>
         <translation>Local rusl stuðning</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5807"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5829"/>
         <source>Enable local trash</source>
         <translation>Virkja rusl á staðnum</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5824"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5846"/>
         <source>Layout selector</source>
         <translation>Skipulagaval</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5830"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5852"/>
         <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
         <translation>Þú getur stillt nýtt skipulag hér. Hafðu í huga að þú getur alltaf breytt staðsetningu spjaldanna með &lt;i&gt; Taka úr lás &lt;/i&gt; hnappinn.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5076"/>
-        <location filename="../dialogs/settingsdialog.ui" line="6002"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5098"/>
+        <location filename="../dialogs/settingsdialog.ui" line="6024"/>
         <source>Reset the cursor width</source>
         <translation>Núllstilla breidd bendilsins</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5244"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5266"/>
         <source>External git log command to show the git versions of a note</source>
         <translation>Ytri git log skipun til að sýna git útgáfur af athugasemd</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5250"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5272"/>
         <source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Sláðu inn skipun sem á að nota til að sýna git log (eins og til dæmis &quot;gitk&quot;)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5270"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5292"/>
         <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Ef þú notar þessa stillingu muntu fá nýja valmyndaratriði til að sýna git-útgáfurnar ef þú smellir á hægrismellt á athugasemd.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5554"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5563"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5576"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5585"/>
         <source>Regular expressions of note sub-folders to ignore, separated by &quot;;&quot;</source>
         <translation>Regluleg tjáning á undirtegundum möppum til að hunsa, aðskilin með &quot;;&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5613"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5635"/>
         <source>Show all notes of a tag including the notes of their children-tags</source>
         <translation>Sýna allar glósur af merkimiði þar með talnum af barnamerkjunum</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5606"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5628"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>Sýna allar minnispunkta í möppu þar á meðal undirmöppur þeirra (virkar aðeins ef kveikt er á undirmöppum)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4964"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4986"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Þú gætir viljað skoða allar tiltækar &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt; tíma snið &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5127"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5149"/>
         <source>Highlight the current line</source>
         <translation>Auðkenndu núverandi línu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5337"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5359"/>
         <source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
         <translation>Ekki gleyma að gera git stuðning fyrir athugasemdarmöppurnar þínar og stilla nafn þitt og netfang fyrir Git viðskiptavininn þinn, til dæmis með þessum flugstöðvaskipunum:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5412"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5434"/>
         <source>Tags panel</source>
         <translation>Merkispjald</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5441"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5517"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5646"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5463"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5539"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5668"/>
         <source>Order</source>
         <translation>Pantaðu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5447"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5523"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5655"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5469"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5545"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5677"/>
         <source>Ascending</source>
         <translation>Stígandi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5454"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5530"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5662"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5476"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5552"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5684"/>
         <source>Descending</source>
         <translation>Lækkandi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5418"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5487"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5620"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5440"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5509"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5642"/>
         <source>Sort</source>
         <translation>Raða</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5120"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5142"/>
         <source>Only use editor width setting in distraction free mode</source>
         <translation>Notaðu aðeins breiddarstillingu ritstjórans í frjálsri truflun</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5424"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5493"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5626"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5446"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5515"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5648"/>
         <source>Alphabetical</source>
         <translation>Stafrófsröð</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5431"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5453"/>
         <source>By last change / use</source>
         <translation>Eftir síðustu breytingu / notkun</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5464"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5486"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>Fela leit &apos;Finndu eða búa til merki&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5474"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5496"/>
         <source>Note subfolders panel</source>
         <translation>Athugaðu undirmöppur spjaldið</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5480"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5502"/>
         <source>Show with full path</source>
         <translation>Sýna með fullri leið</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5500"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5633"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5522"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5655"/>
         <source>By last change</source>
         <translation>Eftir síðustu breytingu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5510"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5532"/>
         <source>Show root folder name</source>
         <translation>Sýna heiti rótarmöppu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5540"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5562"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>Fela leit &apos;Finndu eða búa til undirmöppu athugasemda&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5547"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5569"/>
         <source>Display note subfolders as full tree</source>
         <translation>Birta undirmöppur athugasemda sem fullt tré</translation>
     </message>
@@ -6359,39 +6364,39 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>Leitar að geymslugeymslu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5282"/>
         <source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Þú getur valið að nota &quot;%notePath%&quot; fyrir slóð athugasemdarinnar.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5283"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5305"/>
         <source>Git client</source>
         <translation>Git viðskiptavinur</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5299"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5321"/>
         <source>Path to git executable:</source>
         <translation>Slóð til að keyra í git:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5289"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5311"/>
         <source>Path to git client, leave empty for default</source>
         <translation>Slóð til að fá viðskiptavin, láttu tóm sem sjálfgefið</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5208"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5230"/>
         <source>Commit interval</source>
         <translation>Fremja bil</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5214"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5236"/>
         <source>sec</source>
         <extracomment>seconds</extracomment>
         <translation>sek</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5234"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5256"/>
         <source>git commit interval time [sec]</source>
         <translation>git commit interval time [sec]</translation>
     </message>
@@ -6451,167 +6456,167 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>Vinsamlegast sláðu inn lykilorðið fyrir CalDAV notandanafnið þitt. &lt;br/&gt; Eins og er, verður lykilorðið geymt dulkóðað með hinum stillingunum, en er ekki mjög öruggt.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2238"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2248"/>
         <source>Czech</source>
         <translation>Tékkneska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2612"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2622"/>
         <source>Brazilian Portuguese</source>
         <translation>Brasilískar portúgölsku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2777"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2787"/>
         <source>Ukrainian</source>
         <translation>Úkraínska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3716"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3738"/>
         <source>The name</source>
         <translation>Nafnið</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3940"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3962"/>
         <source>Maximum height:</source>
         <translation>Hámarkshæð:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3913"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3935"/>
         <source>Maximum width:</source>
         <translation>Hámarksbreidd:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3854"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3876"/>
         <source>Scale images down when inserted into notes</source>
         <translation>Stækkaðu myndir niður þegar þær eru settar inn í minnismiða</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2414"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2424"/>
         <source>Croatian</source>
         <translation>Króatíska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3631"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3653"/>
         <source>Path to your QML file</source>
         <translation>Slóð að QML skránni þinni</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3422"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3444"/>
         <source>Script name</source>
         <translation>Nafn handrits</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3444"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3466"/>
         <source>Description:</source>
         <translation>Lýsing:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3526"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3548"/>
         <source>Version:</source>
         <translation>Útgáfa:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3487"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3509"/>
         <source>Repository:</source>
         <translation>Geymsla:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3464"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3486"/>
         <source>Author(s):</source>
         <translation>Höfundur(r):</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3861"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3883"/>
         <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
         <translation>Athugaðu þetta ef þú vilt samþykkja allar ytri breytingar á meðan þú ert að breyta núverandi athugasemd.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3864"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3886"/>
         <source>Accept all external modifications of the current note</source>
         <translation>Samþykkja allar ytri breytingar á núverandi athugasemd</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3798"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3820"/>
         <source>Use UNIX newline instead of native newline characters</source>
         <translation>Notaðu UNIX nýlínu í stað innfæddra nýliða stafi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3808"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3830"/>
         <source>Restore cursor position when opening a note</source>
         <translation>Endurheimta bendilinn þegar minnispunktur er opnaður</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4258"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4280"/>
         <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
         <translation>Vertu varaður við því að þetta mun einnig fjarlægja skyndiminni í skyndiminni og stilla athugasemdarmöppur og forskriftir!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4788"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4810"/>
         <source>Apply toolbar configuration</source>
         <translation>Notaðu stillingu tækjastikunnar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4802"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4824"/>
         <source>Reset toolbars</source>
         <translation>Núllstilla tækjastika</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4830"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4852"/>
         <source>Enable logging to file</source>
         <translation>Virkja skógarhögg til skjals</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4837"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4859"/>
         <source>Clear log file</source>
         <translation>Hreinsa annáll</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4848"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4870"/>
         <source>Fake old version number to trigger update</source>
         <translation>Falsa gamla útgáfunúmer til að kalla fram uppfærslu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4876"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4898"/>
         <source>Log file path:</source>
         <translation>Slóð skráarskrár:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4938"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4960"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation>Hér getur þú stillt þitt eigið tímasnið til að setja núverandi tíma inn í athugasemd.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4941"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4963"/>
         <source>Insert current time</source>
         <translation>Settu inn núverandi tíma</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4969"/>
         <source>Time format:</source>
         <translation>Tímasnið:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4954"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4976"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation>Sláðu inn sérsniðið tímasnið, eins og &quot;dd.MM.yyyy hh:mm&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5043"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5065"/>
         <source>Editor options</source>
         <translation>Valkostir ritstjóra</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5056"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5078"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>Kveiktu á sjálfvirkri lokun sviga og merkimiða á stöfum</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5110"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5132"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>Þú verður að nota bakhnappinn til að fjarlægja opnunarstafinn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5113"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5135"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>Virkja sjálfkrafa fjarlægingu samsvarandi lokunarstafna</translation>
     </message>
@@ -6656,38 +6661,38 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>&amp;Endurnýjaðu dagatalalistann</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2886"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2996"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2908"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3018"/>
         <source>You may need to restart the application to let these changes take effect</source>
         <translation>Þú gætir þurft að endurræsa forritið til að láta þessar breytingar taka gildi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3031"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3053"/>
         <source>Toolbar icon size:</source>
         <translation>Táknstærð tækjastikunnar:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3021"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3043"/>
         <source>List and tree item height:</source>
         <translation>Hæð lista og trjáa:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3054"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3076"/>
         <source>Reset the icon size</source>
         <translation>Núllstilla táknstærðina</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3068"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3090"/>
         <source>Reset the item height</source>
         <translation>Núllstilla hæð hlutarins</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4709"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4731"/>
         <source>View text right to left (RTL)</source>
         <translation>Skoða texta frá hægri til vinstri (RTL)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3192"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3214"/>
         <source>Search for shortcut</source>
         <translation>Leitaðu að flýtileið</translation>
     </message>
@@ -6697,22 +6702,22 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>Hunsa dagatöl sem styðja ekki todo atriði</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2832"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2842"/>
         <source>Arabic</source>
         <translation>Arabíska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2970"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2992"/>
         <source>Icons</source>
         <translation>Tákn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2979"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3001"/>
         <source>Use internal icon theme instead of system icon theme</source>
         <translation>Notaðu innra táknþema í stað þemu kerfis helgimynda</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3580"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3602"/>
         <source>Script path:</source>
         <translation>Handrit slóð:</translation>
     </message>
@@ -6727,79 +6732,79 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>Leyfa heiti minnispunkta að vera frábrugðið fyrirsögn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3871"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3893"/>
         <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
         <translation>Athugaðu þetta ef þú vilt hunsa allar ytri breytingar á meðan þú ert að breyta núverandi athugasemd.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3874"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3896"/>
         <source>Ignore all external modifications of the current note</source>
         <translation>Hunsa allar ytri breytingar á núverandi athugasemd</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3795"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3817"/>
         <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
         <translation>Þú getur notað þetta til dæmis undir Windows ef þú ert í vandræðum með nýjar línur í ownCloud / Nextcloud athugasemdum forritinu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3970"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3992"/>
         <source>App instance</source>
         <translation>App dæmi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3976"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3998"/>
         <source>Only allow one app instance at the same time</source>
         <translation>Leyfa aðeins eitt forritatímabil á sama tíma</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4072"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4094"/>
         <source>Add a custom file extension</source>
         <translation>Bættu við sérsniðinni skráarlengingu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4086"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4108"/>
         <source>Remove a custom file extension</source>
         <translation>Fjarlægðu sérsniðna skráarframlengingu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4125"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4147"/>
         <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
         <translation>Ef þú bætir við sérsniðnum viðbótum skaltu bara slá inn viðbótina, eins og „verkefnapappír“.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4129"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4151"/>
         <source>Text file (txt)</source>
         <translation>Textaskrá (txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4157"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4179"/>
         <source>Path to external editor:</source>
         <translation>Slóð til utanaðkomandi ritstjóra:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3992"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4014"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>Ekki sýna uppfærslugluggann sjálfkrafa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4445"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4613"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4467"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4635"/>
         <source>Fonts</source>
         <translation>Leturgerðir</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4468"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4510"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4619"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4671"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4490"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4532"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4641"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4693"/>
         <source>Set a new font</source>
         <translation>Stilltu nýtt letur</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4479"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4524"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4633"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4657"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4501"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4546"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4655"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4679"/>
         <source>Reset font</source>
         <translation>Núllstilla letur</translation>
     </message>
@@ -6809,19 +6814,19 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
         <translation>Kemba</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4309"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4331"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2185"/>
         <location filename="../dialogs/settingsdialog.cpp" line="4144"/>
         <source>Debug information</source>
         <translation>Kemba upplýsingar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4315"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4337"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Þú getur &lt;span style = &quot;font-weight: 600;&quot;&gt; afritað og límt &lt;/span&gt; þennan texta (eða hluta þessa texta) í &lt;span style = &quot;font-weight: 600;&quot;&gt; útgáfa &lt;/span&gt; á &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; QOwnNotes málefnasíðuna &lt;/a&gt; ef þú ert með &lt;span style = &quot;font-weight: 600;&quot;&gt; spurningar eða vandræði &lt;/span&gt; með QOwnNotes. Gögn sem eru of viðkvæm eru falin í þessum upplýsingum. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4402"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4424"/>
         <source>&amp;Save debug information</source>
         <translation>&amp;Vistaðu villuleitarupplýsingar</translation>
     </message>
