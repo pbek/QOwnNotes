@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 20.3.6
+- you can now **search for a language** in the *Interface settings* to make it
+  easier to find the translation you want to use
+    - you can search for the English name, the local name or the language code
 - added **Zulu, Sinhala and Khmer translation** (a big thank you to Fabijenna)
     - visit [QOwnNotes Translation](http://docs.qownnotes.org/en/latest/contributing/translation/)
       if you want to make QOwnNotes available in more languages or help with the

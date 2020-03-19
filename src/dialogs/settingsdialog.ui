@@ -2127,7 +2127,7 @@
                      <string>Interface language</string>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_10">
-                     <item row="2" column="0">
+                     <item row="3" column="0">
                       <widget class="Label" name="label_8">
                        <property name="text">
                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -2140,7 +2140,17 @@
                        </property>
                       </widget>
                      </item>
-                     <item row="1" column="0">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_2">
+                       <property name="text">
+                        <string>If you change the language you have to restart the application for the changes to take action.</string>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
                       <widget class="QListWidget" name="languageListWidget">
                        <item>
                         <property name="text">
@@ -2837,12 +2847,24 @@
                        </item>
                       </widget>
                      </item>
-                     <item row="0" column="0">
-                      <widget class="QLabel" name="label_2">
-                       <property name="text">
-                        <string>If you change the language you have to restart the application for the changes to take action.</string>
+                     <item row="1" column="0">
+                      <widget class="QLineEdit" name="languageSearchLineEdit">
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit {
+        /* the background image doesn't work without the border definition */
+	border: none;
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-right: 0px;
+}
+</string>
                        </property>
-                       <property name="wordWrap">
+                       <property name="placeholderText">
+                        <string>Search for language</string>
+                       </property>
+                       <property name="clearButtonEnabled">
                         <bool>true</bool>
                        </property>
                       </widget>

@@ -287,6 +287,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_allowDifferentNoteFileNameCheckBox_toggled(bool checked);
 
+    void on_languageSearchLineEdit_textChanged(const QString &arg1);
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

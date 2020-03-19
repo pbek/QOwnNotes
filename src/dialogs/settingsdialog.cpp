@@ -4150,3 +4150,7 @@ void SettingsDialog::on_ownCloudServerAppPasswordPageButton_clicked() {
     QDesktopServices::openUrl(
         QUrl(ui->serverUrlEdit->text() + "/index.php/settings/user/security"));
 }
+
+void SettingsDialog::on_languageSearchLineEdit_textChanged(const QString &arg1) {
+    Utils::Gui::searchForTextInListWidget(ui->languageListWidget, arg1, true);
+}

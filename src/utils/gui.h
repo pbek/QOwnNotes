@@ -53,7 +53,8 @@ bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
 
 void searchForTextInTreeWidget(QTreeWidget *treeWidget, const QString &text,
                                TreeWidgetSearchFlags searchFlags = None);
-void searchForTextInListWidget(QListWidget *listWidget, const QString &text);
+void searchForTextInListWidget(QListWidget *listWidget, const QString &text,
+        bool searchAddProps = false);
 
 QMessageBox::StandardButton showMessageBox(
     QWidget *parent, QMessageBox::Icon icon, const QString &title,

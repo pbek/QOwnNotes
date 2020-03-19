@@ -118,18 +118,23 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
  * Searches for text in items of a list widget
  */
 void Utils::Gui::searchForTextInListWidget(QListWidget *listWidget,
-                                           const QString &text) {
+                                           const QString &text,
+                                           bool searchAddProps) {
     QList<QListWidgetItem *> allItems =
         listWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
 
     // search text if at least one character was entered
     if (text.count() >= 1) {
-        QList<QListWidgetItem *> items =
-            listWidget->findItems(text, Qt::MatchContains | Qt::MatchRecursive);
-
         // hide all not found items
         Q_FOREACH (QListWidgetItem *item, allItems) {
-            item->setHidden(!items.contains(item));
+            bool show = item->text().contains(text, Qt::CaseInsensitive);
+
+            if (searchAddProps) {
+                show |= item->toolTip().contains(text, Qt::CaseInsensitive) ||
+                    item->whatsThis().contains(text, Qt::CaseInsensitive);
+            }
+
+            item->setHidden(!show);
         }
     } else {
         // show all items otherwise
