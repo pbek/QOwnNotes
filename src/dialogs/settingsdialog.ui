@@ -2474,6 +2474,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">ភាសាខ្មែរ</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Khmer</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">km</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">latviešu valoda</string>
                         </property>
                         <property name="toolTip">
@@ -2672,6 +2683,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">සිංහල</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Sinhala</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">si</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Slovenčina</string>
                         </property>
                         <property name="toolTip">
@@ -2767,6 +2789,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">ur</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">isiZulu</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Zulu</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">zu</string>
                         </property>
                        </item>
                        <item>

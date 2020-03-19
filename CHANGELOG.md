@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.3.6
+- added **Zulu, Sinhala and Khmer translation** (a big thank you to Fabijenna)
+    - visit [QOwnNotes Translation](http://docs.qownnotes.org/en/latest/contributing/translation/)
+      if you want to make QOwnNotes available in more languages or help with the
+      current translation
+
 ## 20.3.5
 - you can now **import CSV** directly **from the clipboard** in the *Table dialog*
     - you can for example copy CSV from a table in a web-browser
