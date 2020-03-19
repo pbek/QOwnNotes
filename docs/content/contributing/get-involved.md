@@ -12,7 +12,7 @@ The various ways to get involved with QOwnNotes
 - Follow [QOwnNotes on **Twitter**](https://twitter.com/QOwnNotes)
 - Subscribe to the [QOwnNotes **blog RSS Feed**](https://feeds.feedburner.com/QOwnNotesBlog) 
 - Subscribe to the [QOwnNotes **releases RSS feed**](https://feeds.feedburner.com/QOwnNotesReleases)
-- Contribute [**translations** to QOwnNotes](https://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
+- Contribute [**translations** to QOwnNotes](translation.md)
 - Report problems or share ideas for new features on the [QOwnNotes **GitHub issues** page](https://github.com/pbek/QOwnNotes/issues)
 - If you have made a great editor schema please also post it at the [**GitHub issues** page](https://github.com/pbek/QOwnNotes/issues)
 - Share your scripts at the [**QOwnNotes scripts** GitHub page](https://github.com/qownnotes/scripts)

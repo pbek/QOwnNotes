@@ -10,7 +10,7 @@ You can run a Docker container to develop the documentation.
 make docs-serve
 ```
 
-Then you can open <http://0.0.0.0:8000> to see the documentation with live-reload. 
+Then you can open <http://0.0.0.0:8321> to see the documentation with live-reload. 
 
 ## Quick links
 

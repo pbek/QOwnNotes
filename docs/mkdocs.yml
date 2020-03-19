@@ -104,3 +104,4 @@ nav:
   - 'Contributing':
       - 'Get involved': 'contributing/get-involved.md'
       - 'Maintainers': 'contributing/maintainers.md'
+      - 'Translation': 'contributing/translation.md'

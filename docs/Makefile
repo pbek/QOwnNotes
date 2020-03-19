@@ -11,16 +11,17 @@ QOWNNOTES_DOCS_CHECK_IMAGE ?= $(QOWNNOTES_DOCS_BUILD_IMAGE)-check
 
 SITE_DIR := $(CURDIR)/site
 
-DOCKER_RUN_DOC_PORT := 8000
+DOCKER_RUN_DOC_PORT := 8321
 DOCKER_RUN_DOC_MOUNTS := -v $(CURDIR):/mkdocs 
 DOCKER_RUN_DOC_OPTS := --rm $(DOCKER_RUN_DOC_MOUNTS) -p $(DOCKER_RUN_DOC_PORT):8000
 
 # Default: generates the documentation into $(SITE_DIR)
 docs: docs-clean docs-image docs-lint docs-build docs-verify
 
-# Writer Mode: build and serve docs on http://localhost:8000 with livereload
+# Writer Mode: build and serve docs on http://localhost:8321 with live-reload
 docs-serve: docs-image
-	docker run  $(DOCKER_RUN_DOC_OPTS) $(QOWNNOTES_DOCS_BUILD_IMAGE) mkdocs serve
+	echo "You should be able to open a browser window with http://localhost:$(DOCKER_RUN_DOC_PORT)" \
+	    && docker run  $(DOCKER_RUN_DOC_OPTS) $(QOWNNOTES_DOCS_BUILD_IMAGE) mkdocs serve
 
 # Utilities Targets for each step
 docs-image:

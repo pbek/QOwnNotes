@@ -10,3 +10,5 @@
 - Amy Lang ([Crowdin](https://crowdin.com/profile/Fabijenna))
 
 ...and many more, see [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
+
+If you want to help translating QOwnNotes please visit [Translation](translation.md).
