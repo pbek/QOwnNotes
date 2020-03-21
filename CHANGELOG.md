@@ -4,6 +4,10 @@
 - you now can also <kdb>Ctrl + Click</kbd> legacy attachment urls like
   `file://attachments/1260976404.pdf` in the note editor to open them externally
   (for [#1663](https://github.com/pbek/QOwnNotes/issues/1663))
+- added **Shona translation** (a big thank you to Fabijenna)
+    - visit [QOwnNotes Translation](http://docs.qownnotes.org/en/latest/contributing/translation/)
+      if you want to make QOwnNotes available in more languages or help with the
+      current translation
 
 ## 20.3.6
 - you can now **search for a language** in the *Interface settings* to make it

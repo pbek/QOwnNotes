@@ -2693,6 +2693,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">chiShona</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Shona</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">sn</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">සිංහල</string>
                         </property>
                         <property name="toolTip">
