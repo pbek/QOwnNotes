@@ -5960,6 +5960,24 @@ void MainWindow::openLocalUrl(QString urlString) {
         return;
     }
 
+    // convert legacy attachment urls to absolute urls and open them
+    if (urlString.startsWith(QStringLiteral("file://attachments"))) {
+        QString windowsSlash = QString();
+
+#ifdef Q_OS_WIN32
+        // we need another slash for Windows
+        windowsSlash = QStringLiteral("/");
+#endif
+
+        urlString.replace(QLatin1String("file://attachments"),
+                          QStringLiteral("file://") + windowsSlash +
+                              NoteFolder::currentLocalPath() +
+                              QStringLiteral("/attachments"));
+
+        QDesktopServices::openUrl(QUrl(urlString));
+        return;
+    }
+
     const QString scheme = url.scheme();
 
     if (scheme == QStringLiteral("noteid")) {    // jump to a note by note id

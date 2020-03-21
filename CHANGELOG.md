@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.3.7
+- you now can also <kdb>Ctrl + Click</kbd> legacy attachment urls like
+  `file://attachments/1260976404.pdf` in the note editor to open them externally
+  (for [#1663](https://github.com/pbek/QOwnNotes/issues/1663))
+
 ## 20.3.6
 - you can now **search for a language** in the *Interface settings* to make it
   easier to find the translation you want to use
