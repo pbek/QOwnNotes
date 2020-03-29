@@ -390,7 +390,7 @@ void FontColorWidget::setSchemaValue(const QString& key, const QVariant& value,
         schemaKey = _currentSchemaKey;
     }
 
-    QSettings(settings);
+    QSettings settings;
     settings.beginGroup(schemaKey);
     return settings.setValue(key, value);
 }
