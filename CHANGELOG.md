@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 20.3.8
+- added experimental **global keyboard shortcut support** (for [#44](https://github.com/pbek/QOwnNotes/issues/44))
+    - <kbd>Meta + Shift + N</kbd> will now create a new note
 - no 2nd backtick will now be entered if you enter one at the end of a word with an
   US keyboard layout (for [#111](https://github.com/pbek/qmarkdowntextedit/pull/111), thank you @Waqar144)
 - fixed a build problem under Qt 5.15 (for [#1666](https://github.com/pbek/QOwnNotes/issues/1666), thank you @data-man)

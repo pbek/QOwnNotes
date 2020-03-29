@@ -5874,6 +5874,11 @@ void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
     // show the window in case we are using the system tray
     show();
 
+    // bring window to the front
+    setWindowState( (windowState() & ~Qt::WindowMinimized) | Qt::WindowActive);
+    raise(); // for MacOS
+    activateWindow(); // for Windows
+
     if (noteName.isEmpty()) {
         noteName = QStringLiteral("Note");
     }
