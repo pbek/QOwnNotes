@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.3.8
+- no 2nd backtick will now be entered if you enter one at the end of a word with an
+  US keyboard layout (for [#111](https://github.com/pbek/qmarkdowntextedit/pull/111), thank you @Waqar144)
+- fixed a build problem under Qt 5.15 (for [#1666](https://github.com/pbek/QOwnNotes/issues/1666), thank you @data-man)
+
 ## 20.3.7
 - you now can also <kdb>Ctrl + Click</kbd> legacy attachment urls like
   `file://attachments/1260976404.pdf` in the note editor to open them externally
