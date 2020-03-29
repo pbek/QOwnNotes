@@ -27,6 +27,13 @@ find_package( Qt5XmlPatterns REQUIRED )
 find_package( Qt5PrintSupport REQUIRED )
 find_package( Qt5WebSockets REQUIRED )
 find_package( Qt5Qml REQUIRED )
+find_package( Qt5X11Extras REQUIRED )
+find_package( X11 REQUIRED )
+
+# cmake support currently only for Linux
+if (UNIX AND NOT APPLE)
+    add_compile_definitions(QHOTKEY)
+endif()
 
 find_program(CCACHE_FOUND ccache)
 
@@ -283,6 +290,10 @@ set(SOURCE_FILES
     libraries/sonnet/src/core/textbreaks_p.h
     libraries/sonnet/src/core/tokenizer.cpp
     libraries/sonnet/src/core/tokenizer_p.h
+    libraries/qhotkey/QHotkey/qhotkey.h
+    libraries/qhotkey/QHotkey/qhotkey.cpp
+    libraries/qhotkey/QHotkey/qhotkey_p.h
+    libraries/qhotkey/QHotkey/qhotkey_x11.cpp
 
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
@@ -499,13 +510,15 @@ add_executable(QOwnNotes ${SOURCE_FILES} ${RESOURCE_ADDED} ${QON_QM_FILES})
 include_directories(${Qt5Widgets_INCLUDES} ${Qt5Sql_INCLUDES}
         ${Qt5Svg_INCLUDES} ${Qt5Network_INCLUDES}
         ${Qt5Xml_INCLUDES} ${Qt5XmlPatterns_INCLUDES}
-        ${Qt5PrintSupport_INCLUDES} ${Qt5WebSockets_INCLUDES} ${Qt5Qml_INCLUDES})
+        ${Qt5PrintSupport_INCLUDES} ${Qt5WebSockets_INCLUDES} ${Qt5Qml_INCLUDES}
+        ${Qt5X11Extras_INCLUDES})
 
 # We need add -DQT_WIDGETS_LIB when using QtWidgets in Qt 5.
 add_definitions(${Qt5Widgets_DEFINITIONS} ${Qt5Sql_DEFINITIONS}
         ${Qt5Svg_DEFINITIONS} ${Qt5Network_DEFINITIONS}
         ${Qt5Xml_DEFINITIONS} ${Qt5XmlPatterns_DEFINITIONS}
-        ${Qt5PrintSupport_DEFINITIONS} ${Qt5WebSockets_DEFINITIONS} ${Qt5Qml_DEFINITIONS})
+        ${Qt5PrintSupport_DEFINITIONS} ${Qt5WebSockets_DEFINITIONS}
+        ${Qt5Qml_DEFINITIONS} ${Qt5X11Extras_DEFINITIONS})
 
 # Executables fail to build with Qt 5 in the default configuration
 # without -fPIE. We add that here.
@@ -518,13 +531,15 @@ set(CMAKE_CXX_FLAGS "${Qt5XmlPatterns_EXECUTABLE_COMPILE_FLAGS}")
 set(CMAKE_CXX_FLAGS "${Qt5PrintSupport_EXECUTABLE_COMPILE_FLAGS}")
 set(CMAKE_CXX_FLAGS "${Qt5WebSockets_EXECUTABLE_COMPILE_FLAGS}")
 set(CMAKE_CXX_FLAGS "${Qt5Qml_EXECUTABLE_COMPILE_FLAGS}")
+set(CMAKE_CXX_FLAGS "${Qt5X11Extras_EXECUTABLE_COMPILE_FLAGS}")
 set(CMAKE_CXX_FLAGS "-std=c++0x")
 
 # The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore
 target_link_libraries(QOwnNotes ${Qt5Widgets_LIBRARIES} ${Qt5Sql_LIBRARIES}
         ${Qt5Svg_LIBRARIES} ${Qt5Network_LIBRARIES}
         ${Qt5Xml_LIBRARIES} ${Qt5XmlPatterns_LIBRARIES}
-        ${Qt5PrintSupport_LIBRARIES} ${Qt5WebSockets_LIBRARIES} ${Qt5Qml_LIBRARIES})
+        ${Qt5PrintSupport_LIBRARIES} ${Qt5WebSockets_LIBRARIES}
+        ${Qt5Qml_LIBRARIES} ${Qt5X11Extras_LIBRARIES} ${X11_LIBRARIES})
 
 #qt5_use_modules(QOwnNotes Widgets Core Gui Sql Svg Network Script Xml PrintSupport)
 
