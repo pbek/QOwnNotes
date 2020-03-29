@@ -14,6 +14,7 @@ BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(Qt5XmlPatterns)
 BuildRequires:  pkgconfig(Qt5WebSockets)
+BuildRequires:  pkgconfig(Qt5X11Extras)
 
 # This is for all Fedora CentOS 7
 %if 0%{?fedora} || 0%{?rhel} >= 7 || 0%{?centos} >= 7
@@ -21,12 +22,12 @@ BuildRequires:  pkgconfig(Qt5WebSockets)
 BuildRequires:  desktop-file-utils
 BuildRequires:  aspell-devel
 BuildRequires:  qt5-linguist
-Requires:       qt5-qtsvg qt5-qtxmlpatterns qt5-qtwebsockets
+Requires:       qt5-qtsvg qt5-qtxmlpatterns qt5-qtwebsockets qt5-qtx11extras
 
 %else
 # This is for all SUSE
 
-BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel libQt5XmlPatterns-devel libqt5-qtwebsockets-devel libqt5-linguist
+BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel libQt5XmlPatterns-devel libqt5-qtwebsockets-devel libqt5-x11extras-devel libqt5-linguist
 
 # no aspell for SLE
 %if 0%{?sle_version} == 150000 || 0%{?sle_version} == 150100 && !0%{?is_backports}
@@ -36,7 +37,7 @@ BuildRequires:  libaspell15
 %endif
 
 BuildRequires:  update-desktop-files
-Requires:       libQt5Svg5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5 libQt5XmlPatterns5 libQt5PrintSupport5 libQt5WebSockets5
+Requires:       libQt5Svg5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5 libQt5XmlPatterns5 libQt5PrintSupport5 libQt5WebSockets5 libQt5X11Extras5
 
 # try to detect openSUSE Tumbleweed
 # the way described in https://en.opensuse.org/Archive:How_to_detect_Tumbleweed didn't seem to work

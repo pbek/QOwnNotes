@@ -19,3 +19,6 @@
 [submodule "src/libraries/md4c"]
 	path = src/libraries/md4c
 	url = https://github.com/qownnotes/md4c
+[submodule "src/libraries/qhotkey"]
+	path = src/libraries/qhotkey
+	url = https://github.com/qownnotes/QHotkey.git

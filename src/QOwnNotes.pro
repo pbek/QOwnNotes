@@ -315,6 +315,14 @@ include(libraries/fakevim/fakevim/fakevim.pri)
 include(libraries/singleapplication/singleapplication.pri)
 include(libraries/sonnet/src/core/sonnet-core.pri)
 
+#qtHaveModule(x11extras) {
+#    message("x11extras found! Including global hotkeys.")
+    include(libraries/qhotkey/qhotkey.pri)
+    DEFINES += QT_X11EXTRAS QHOTKEY
+#} else {
+#    message("x11extras not found! Global hotkeys are disabled.")
+#}
+
 unix {
 
   isEmpty(PREFIX) {

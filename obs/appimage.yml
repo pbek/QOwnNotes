@@ -18,6 +18,7 @@ build:
     - pkgconfig(Qt5Qml)
     - pkgconfig(Qt5WebSockets)
     - pkgconfig(Qt5Concurrent)
+    - pkgconfig(Qt5X11Extras)
     - libQt5Sql5-sqlite
 
 script:

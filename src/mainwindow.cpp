@@ -42,6 +42,10 @@
 #include <widgets/logwidget.h>
 #include <widgets/notetreewidgetitem.h>
 
+#ifdef QHOTKEY
+#include <libraries/qhotkey/QHotkey/qhotkey.h>
+#endif
+
 #include <QAbstractEventDispatcher>
 #include <QActionGroup>
 #include <QClipboard>
@@ -535,6 +539,11 @@ MainWindow::MainWindow(QWidget *parent)
     // attempt to quit the application when a logout is initiated
     connect(qApp, &QApplication::commitDataRequest, this,
             &MainWindow::on_action_Quit_triggered);
+
+#ifdef QHOTKEY
+    auto startKey = new QHotkey(QKeySequence(Qt::MetaModifier | Qt::ShiftModifier | Qt::Key_N), true, this);
+    connect(startKey, &QHotkey::activated, this, &MainWindow::on_action_New_note_triggered);
+#endif
 }
 
 void MainWindow::initWebSocketServerService() {
