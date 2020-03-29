@@ -6,6 +6,9 @@
 - no 2nd backtick will now be entered if you enter one at the end of a word with an
   US keyboard layout (for [#111](https://github.com/pbek/qmarkdowntextedit/pull/111), thank you @Waqar144)
 - fixed a build problem under Qt 5.15 (for [#1666](https://github.com/pbek/QOwnNotes/issues/1666), thank you @data-man)
+- added more Indonesian, Catalan, Khmer, Sinhala, Shona, Dutch, Hungarian,
+  Danish, Spanish, Brazilian Portuguese, German, Russian, Italian translation
+  (thank you zmni, MGuerra, Fabijenna, richarson, mlimacarlos, rakekniven, unchase, tiwi90)
 
 ## 20.3.7
 - you now can also <kdb>Ctrl + Click</kbd> legacy attachment urls like

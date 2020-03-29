@@ -380,47 +380,47 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
       <source>German (Medical Dictionary)</source>
-      <translation type="unfinished">German (Medical Dictionary)</translation>
+      <translation>អាល្លឺម៉ង់ (វចនានុក្រមវេជ្ជសាស្ត្រ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>ក្រិក</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation type="unfinished">Modern Greek (Polytonic Greek)</translation>
+      <translation>ភាសាក្រិចសម័យទំនើប (polytonality ភាសាក្រិច)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Gurani</source>
-      <translation type="unfinished">Gurani</translation>
+      <translation>ហ្គីរ៉ាន</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>ហេប្រ៊ូ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>ហិណ្ឌូ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>ហុងគ្រី</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>អ៊ីស្លង់</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>ឥណ្ឌូនេស៊ី</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
@@ -430,32 +430,32 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
       <source>Kazakh</source>
-      <translation type="unfinished">Kazakh</translation>
+      <translation>កាហ្សាក់ស្ថាន</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>ខ្មែរ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
       <source>Komi (Russia)</source>
-      <translation type="unfinished">Komi (Russia)</translation>
+      <translation>កូមី (ប្រទេសរុស្ស៊ី)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>កូរ៉េ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
       <source>Kurdish (Turkey)</source>
-      <translation type="unfinished">Kurdish (Turkey)</translation>
+      <translation>ឃឺដ (តួកគី)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
       <source>Lao</source>
-      <translation type="unfinished">Lao</translation>
+      <translation>ឡាវ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
@@ -465,62 +465,62 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>ឡាតាំង</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>លីទុយអានី</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>ឡាតវីយ៉ា</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>ទាបអាឡឺម៉ង់ / ទាបសាសាផុន</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>លុចសំបួរ (Letzeburgesch)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>ម៉ាសេដ្យាន</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="110"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>ម៉ាឡាយ៉ាឡា</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="111"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>ម៉ុងហ្គោលី</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
       <source>Nepali</source>
-      <translation type="unfinished">Nepali</translation>
+      <translation>នេប៉ាល់</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Norwegian (Bokmål)</source>
-      <translation type="unfinished">Norwegian (Bokmål)</translation>
+      <translation>ន័រវែស (បុកម៉ាល់)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+      <translation>ន័រវេស (ន័រវែស)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
       <source>Occitan</source>
-      <translation type="unfinished">Occitan</translation>
+      <translation>អាក់ស៊ីស</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
@@ -660,22 +660,22 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="156"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>ជនជាតិវៀតណាម</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="158"/>
       <source>Welsh</source>
-      <translation type="unfinished">Welsh</translation>
+      <translation>វែល</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="159"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>ហ្សូសា</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="160"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>ហ្សូលូ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="292"/>
@@ -1792,7 +1792,7 @@
     <message>
       <location filename="../mainwindow.ui" line="854"/>
       <source>Note &amp;folders</source>
-      <translation type="unfinished">Note &amp;folders</translation>
+      <translation>&amp;ថតឯកសារចំណាំ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="859"/>
@@ -1882,7 +1882,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1401"/>
       <source>Show note &amp;versions</source>
-      <translation type="unfinished">Show note &amp;versions</translation>
+      <translation>&amp;បង្ហាញកំណែចំណាំ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1404"/>
@@ -1898,13 +1898,13 @@
       <location filename="../mainwindow.ui" line="1421"/>
       <location filename="../mainwindow.cpp" line="10012"/>
       <source>Select &amp;all notes</source>
-      <translation type="unfinished">Select &amp;all notes</translation>
+      <translation>&amp;ជ្រើសរើសកំណត់ត្រាទាំងអស់</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1430"/>
       <location filename="../mainwindow.cpp" line="6376"/>
       <source>Insert &amp;link</source>
-      <translation type="unfinished">Insert &amp;link</translation>
+      <translation>&amp;បញ្ចូលតំណ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1433"/>
@@ -1996,7 +1996,7 @@
     <message>
       <location filename="../mainwindow.ui" line="997"/>
       <source>&amp;Edit</source>
-      <translation type="unfinished">&amp;Edit</translation>
+      <translation>&amp;កែសម្រួល</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1001"/>
@@ -2046,7 +2046,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1119"/>
       <source>&amp;Window</source>
-      <translation type="unfinished">&amp;Window</translation>
+      <translation>&amp;បង្អួច</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1136"/>
@@ -2083,7 +2083,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1210"/>
       <source>&amp;Scripting</source>
-      <translation type="unfinished">&amp;Scripting</translation>
+      <translation>&amp;ស្គ្រីប</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1316"/>
@@ -2124,12 +2124,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1515"/>
       <source>Insert current &amp;time</source>
-      <translation type="unfinished">Insert current &amp;time</translation>
+      <translation>&amp;បញ្ចូលពេលវេលាបច្ចុប្បន្ន</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1527"/>
       <source>Show &amp;Todo List</source>
-      <translation type="unfinished">Show &amp;Todo List</translation>
+      <translation>&amp;បង្ហាញបញ្ជីដូតូ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1539"/>
@@ -2154,7 +2154,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1584"/>
       <source>Insert &amp;image</source>
-      <translation type="unfinished">Insert &amp;image</translation>
+      <translation>&amp;បញ្ចូលរូបភាព</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1587"/>
@@ -2164,12 +2164,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1599"/>
       <source>Show &amp;changelog</source>
-      <translation type="unfinished">Show &amp;changelog</translation>
+      <translation>&amp;បង្ហាញការផ្លាស់ប្តូរ - កំណត់ហេតុ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1608"/>
       <source>&amp;Encrypt note</source>
-      <translation type="unfinished">&amp;Encrypt note</translation>
+      <translation>&amp;អ៊ិនគ្រីបចំណាំ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1617"/>
@@ -2194,7 +2194,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1659"/>
       <source>&amp;Get involved</source>
-      <translation type="unfinished">&amp;Get involved</translation>
+      <translation>&amp;ចូលរួម</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1668"/>
@@ -2204,7 +2204,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1680"/>
       <source>Next note</source>
-      <translation type="unfinished">Next note</translation>
+      <translation>កំណត់សំគាល់បន្ទាប់</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1692"/>
@@ -2224,7 +2224,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1718"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>&amp;បង្ហាញរបារឧបករណ៍</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1726"/>
@@ -5909,7 +5909,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2699"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>សូណា</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2710"/>

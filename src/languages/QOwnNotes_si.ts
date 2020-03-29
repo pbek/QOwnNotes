@@ -465,177 +465,177 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>ලතින්</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>ලිතුවේනියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>ලැට්වියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>අඩු ජර්මානු / අඩු සැක්සන්</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>ලක්සම්බර්ග් (Letzeburgesch)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>මැසිඩෝනියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="110"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>මලයාලම්</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="111"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>මොන්ගෝලියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
       <source>Nepali</source>
-      <translation type="unfinished">Nepali</translation>
+      <translation>නේපාලය</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Norwegian (Bokmål)</source>
-      <translation type="unfinished">Norwegian (Bokmål)</translation>
+      <translation>නෝර්වීජියානු (බොක්මාල්)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+      <translation>නෝර්වීජියානු (නයිනෝර්ස්ක්)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
       <source>Occitan</source>
-      <translation type="unfinished">Occitan</translation>
+      <translation>ඔක්සිටන්</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
       <source>Papiamentu</source>
-      <translation type="unfinished">Papiamentu</translation>
+      <translation>පැපියාමෙන්ටු</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>පර්සියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>රුමේනියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Romansh</source>
-      <translation type="unfinished">Romansh</translation>
+      <translation>රෝමන්ෂ්</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
       <source>Russian Medical Dictionary</source>
-      <translation type="unfinished">Russian Medical Dictionary</translation>
+      <translation>රුසියානු වෛද්‍ය ශබ්ද කෝෂය</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation type="unfinished">Rusyn / Ruthene (Slovakia)</translation>
+      <translation>රුසින් / රුතීන් (ස්ලොවැකියාව)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="131"/>
       <source>Serbian (Cyrillic)</source>
-      <translation type="unfinished">Serbian (Cyrillic)</translation>
+      <translation>සර්බියානු (සිරිලික්)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="132"/>
       <source>Serbian (Latin)</source>
-      <translation type="unfinished">Serbian (Latin)</translation>
+      <translation>සර්බියානු (ලතින්)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="134"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>ෂෝනා</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="135"/>
       <source>Sindhi</source>
-      <translation type="unfinished">Sindhi</translation>
+      <translation>ෂෝනා</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="136"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>සිංහල</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="137"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>ස්ලෝවැක්</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="138"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>ස්ලොවේනියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="141"/>
       <source>Swahili</source>
-      <translation type="unfinished">Swahili</translation>
+      <translation>ස්වහීලී</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="143"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>ටගාලොග්</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="144"/>
       <source>Tajik</source>
-      <translation type="unfinished">Tajik</translation>
+      <translation>ටජික්</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="145"/>
       <source>Tatar (Russia)</source>
-      <translation type="unfinished">Tatar (Russia)</translation>
+      <translation>ටාටාර් (රුසියාව)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="146"/>
       <source>Telugu</source>
-      <translation type="unfinished">Telugu</translation>
+      <translation>තෙළිඟු</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="147"/>
       <source>Thai</source>
-      <translation type="unfinished">Thai</translation>
+      <translation>තායි</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="148"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>තුර්කි</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="149"/>
       <source>Turkmen</source>
-      <translation type="unfinished">Turkmen</translation>
+      <translation>ටර්ක්මන්</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="150"/>
       <source>Udmurt (Russia)</source>
-      <translation type="unfinished">Udmurt (Russia)</translation>
+      <translation>උඩ්මර්ට් (රුසියාව)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="151"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>යුක්රේන</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="152"/>
@@ -715,7 +715,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation type="unfinished">Evernote Import</translation>
+      <translation>Evernote ආනයනය</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
@@ -755,7 +755,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
       <source>%v of %m note(s) imported</source>
-      <translation type="unfinished">%v of %m note(s) imported</translation>
+      <translation>ආනයනය කළ %m නෝට්ටු වලින් %v</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="81"/>
@@ -810,22 +810,22 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="691"/>
       <source>Altitude</source>
-      <translation type="unfinished">Altitude</translation>
+      <translation>උන්නතාංශය</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="694"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>කර්තෘ</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="697"/>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>මූලාශ්රය</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="700"/>
       <source>Source URL</source>
-      <translation type="unfinished">Source URL</translation>
+      <translation>මූලාශ්‍ර URL</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="704"/>
@@ -977,8 +977,8 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
+      <translation>
+        <numerusform>%n පේළියක් පෙරීම.</numerusform>
         <numerusform>පේළි%n පෙරීම.</numerusform>
       </translation>
     </message>
@@ -1682,17 +1682,17 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="221"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; සටහන ප්‍රතිෂ් was ාපනය කරන ලදි</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; සටහන් ප්‍රතිෂ් .ාපනය කරන ලදි</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>ඉවත් කරන්න තෝරාගත් සටහන &lt;strong&gt;%n&lt;/strong&gt; ක්?</numerusform>
+        <numerusform>ඉවත් කරන්න තෝරාගත් සටහන &lt;strong&gt;%n&lt;/strong&gt; ක්?</numerusform>
       </translation>
     </message>
     <message>
@@ -1703,9 +1703,9 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="266"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; සටහනක් ඉවත් කරන ලදි</numerusform>
+        <numerusform>නෝට්ටු &lt;strong&gt;%n&lt;/strong&gt; ක් ඉවත් කරන ලදී</numerusform>
       </translation>
     </message>
   </context>
@@ -1801,7 +1801,7 @@
     <message>
       <location filename="../mainwindow.ui" line="854"/>
       <source>Note &amp;folders</source>
-      <translation type="unfinished">Note &amp;folders</translation>
+      <translation>ෆෝල්ඩර සටහන් &amp;කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="859"/>
@@ -1861,7 +1861,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1340"/>
       <source>Check for &amp;updates</source>
-      <translation type="unfinished">Check for &amp;updates</translation>
+      <translation>යාවත්කාලීන කිරීම් &amp;සඳහා පරීක්ෂා කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1352"/>
@@ -1891,7 +1891,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1401"/>
       <source>Show note &amp;versions</source>
-      <translation type="unfinished">Show note &amp;versions</translation>
+      <translation>සටහන් අනුවාද &amp;පෙන්වන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1404"/>
@@ -1907,13 +1907,13 @@
       <location filename="../mainwindow.ui" line="1421"/>
       <location filename="../mainwindow.cpp" line="10012"/>
       <source>Select &amp;all notes</source>
-      <translation type="unfinished">Select &amp;all notes</translation>
+      <translation>සියලුම &amp;සටහන් තෝරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1430"/>
       <location filename="../mainwindow.cpp" line="6376"/>
       <source>Insert &amp;link</source>
-      <translation type="unfinished">Insert &amp;link</translation>
+      <translation>&amp;සබැඳිය ඇතුළු කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1433"/>
@@ -2005,7 +2005,7 @@
     <message>
       <location filename="../mainwindow.ui" line="997"/>
       <source>&amp;Edit</source>
-      <translation type="unfinished">&amp;Edit</translation>
+      <translation>&amp;සංස්කරණය කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1001"/>
@@ -2050,12 +2050,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1113"/>
       <source>To&amp;do</source>
-      <translation type="unfinished">To&amp;do</translation>
+      <translation>&amp;කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1119"/>
       <source>&amp;Window</source>
-      <translation type="unfinished">&amp;Window</translation>
+      <translation>&amp;කවුළුව</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1136"/>
@@ -2097,7 +2097,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1316"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation type="unfinished">About &amp;QOwnNotes…</translation>
+      <translation>&amp;QOwnNotes ගැන…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1355"/>
@@ -2133,17 +2133,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1515"/>
       <source>Insert current &amp;time</source>
-      <translation type="unfinished">Insert current &amp;time</translation>
+      <translation>වත්මන් කාලය &amp;ඇතුළු කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1527"/>
       <source>Show &amp;Todo List</source>
-      <translation type="unfinished">Show &amp;Todo List</translation>
+      <translation>ටෝඩෝ &amp;ලැයිස්තුව පෙන්වන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1539"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>&amp;සටහන PDF ලෙස අපනයනය කරන්න (පෙරදසුන)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1542"/>
@@ -2163,7 +2163,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1584"/>
       <source>Insert &amp;image</source>
-      <translation type="unfinished">Insert &amp;image</translation>
+      <translation>&amp;රූපය ඇතුළු කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1587"/>
@@ -2173,12 +2173,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1599"/>
       <source>Show &amp;changelog</source>
-      <translation type="unfinished">Show &amp;changelog</translation>
+      <translation>වෙනස් කිරීමේ ලොගය පෙන්වන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1608"/>
       <source>&amp;Encrypt note</source>
-      <translation type="unfinished">&amp;Encrypt note</translation>
+      <translation>&amp;සටහන සංකේතනය කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1617"/>
@@ -2208,7 +2208,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1668"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>කේත කොටස ඇතුල් &amp;කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1680"/>
@@ -2233,7 +2233,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1718"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>&amp;මෙවලම් තීරුව පෙන්වන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1726"/>
@@ -2269,42 +2269,42 @@
     <message>
       <location filename="../mainwindow.ui" line="1789"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>&amp;ගොනු කළමනාකරු තුළ සටහන පෙන්වන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1801"/>
       <source>Format text &amp;bold</source>
-      <translation type="unfinished">Format text &amp;bold</translation>
+      <translation>&amp;පෙළ තද අකුරු කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1813"/>
       <source>Format text &amp;italic</source>
-      <translation type="unfinished">Format text &amp;italic</translation>
+      <translation>&amp;පෙළ ඇල අකුරු ආකෘතිකරණය කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1825"/>
       <source>&amp;Increase note text size</source>
-      <translation type="unfinished">&amp;Increase note text size</translation>
+      <translation>&amp;සටහන් පෙළ ප්‍රමාණය වැඩි කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1837"/>
       <source>&amp;Decrease note text size</source>
-      <translation type="unfinished">&amp;Decrease note text size</translation>
+      <translation>&amp;සටහන් පෙළ ප්‍රමාණය අඩු කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1849"/>
       <source>&amp;Reset note text size</source>
-      <translation type="unfinished">&amp;Reset note text size</translation>
+      <translation>&amp;සටහන් පෙළ ප්‍රමාණය නැවත සකසන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1861"/>
       <source>&amp;Add tag to note</source>
-      <translation type="unfinished">&amp;Add tag to note</translation>
+      <translation>&amp;සටහන් කිරීමට ටැගය එක් කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1873"/>
       <source>&amp;Reload note folder</source>
-      <translation type="unfinished">&amp;Reload note folder</translation>
+      <translation>&amp;සටහන් ෆෝල්ඩරය නැවත පූරණය කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1945"/>
@@ -2405,7 +2405,7 @@
       <location filename="../mainwindow.ui" line="2294"/>
       <location filename="../mainwindow.cpp" line="6385"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>&amp;වාරණ උපුටා දැක්වීම ඇතුළත් කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2302"/>
@@ -2536,27 +2536,27 @@
       <location filename="../mainwindow.ui" line="2543"/>
       <location filename="../mainwindow.cpp" line="11966"/>
       <source>Automatically detect</source>
-      <translation type="unfinished">Automatically detect</translation>
+      <translation>ස්වයංක්‍රීයව හඳුනා ගන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2548"/>
       <source>Manage dictionaries</source>
-      <translation type="unfinished">Manage dictionaries</translation>
+      <translation>ශබ්ද කෝෂ කළමනාකරණය කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2556"/>
       <source>Custom</source>
-      <translation type="unfinished">Custom</translation>
+      <translation>චාරිත්රය</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2559"/>
       <source>5</source>
-      <translation type="unfinished">5</translation>
+      <translation>5</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1884"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation type="unfinished">Use &amp;vertical preview layout</translation>
+      <translation>&amp;සිරස් පෙරදසුන පිරිසැලසුම භාවිතා කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1887"/>
@@ -2614,7 +2614,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1572"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp;මුද්‍රණ සටහන (පෙරදසුන)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1978"/>
@@ -3046,25 +3046,25 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7265"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+      <translation>
+        <numerusform>%n සටහන %1 සිට පිටපත් කරන ලදි</numerusform>
+        <numerusform>%n සටහනය %1 සිට පිටපත් කරන ලදි</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7274"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>%n සටහන පිටපත් කිරීමට අපොහොසත් විය (බොහෝ දුරට දැනටමත් පවතින)</numerusform>
+        <numerusform>%n සටහනය පිටපත් කිරීමට අපොහොසත් විය (බොහෝ දුරට දැනටමත් පවතින)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7284"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>%n සටහන පිටපත් කිරීම මඟ හැරී ඇත (සලකුණු කිරීමක් හෝ පෙළ ගොනුවක් හෝ කියවිය නොහැක)</numerusform>
+        <numerusform>%n සටහන් පිටපත් කිරීම මඟ හැරී ඇත (සලකුණු කිරීමක් හෝ පෙළ ගොනුවක් හෝ කියවිය නොහැක)</numerusform>
       </translation>
     </message>
     <message>
@@ -3116,13 +3116,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8677"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>&amp;ටැග්… වෙත ගෙන යන්න…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8888"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation type="unfinished">Move to the root</translation>
+      <translation>මූලයට යන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9416"/>
@@ -3163,12 +3163,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9888"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;සටහන් වෙත ගෙන යන්න…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9889"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;සටහන් පිටපත් කරන්න…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9928"/>
@@ -3188,12 +3188,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9944"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>&amp;තෝරාගත් සටහන් සමඟ ටැග් කරන්න…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9968"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>&amp;තෝරාගත් සටහන් වලින් ටැගය ඉවත් කරන්න…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10062"/>
@@ -3290,9 +3290,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8420"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>%n සටහනක් තෝරා ඇත</numerusform>
+        <numerusform>නෝට්ටු %n ක් තෝරාගෙන ඇත</numerusform>
       </translation>
     </message>
     <message>
@@ -3314,17 +3314,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4708"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>ටැගය &lt;strong&gt;%1&lt;/strong&gt; %n තෝරාගත් සටහන?</numerusform>
+        <numerusform>තෝරාගත් සටහන් %n කින් &lt;strong&gt;%1&lt;/strong&gt; ටැගය ඉවත් කරන්න?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4768"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+      <translation>
+        <numerusform>ටැගය &lt;strong&gt;%1&lt;/strong&gt; %n සටහනකින් ඉවත් කරන ලදි</numerusform>
+        <numerusform>ටැගය &lt;strong&gt;%1&lt;/strong&gt;%n සටහන් වලින් ඉවත් කරන ලදි</numerusform>
       </translation>
     </message>
     <message>
@@ -3455,9 +3455,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="9137"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%2&lt;/strong&gt; සටහන් කිරීමට %n තෝරාගත් සටහන ගෙනයන්න?</numerusform>
+        <numerusform>&lt;strong&gt;%2&lt;/strong&gt; සටහන් කිරීමට %n තෝරාගත් සටහන් ගෙනයන්න?</numerusform>
       </translation>
     </message>
     <message>
@@ -3469,25 +3469,25 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="9221"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n සටහනක් "%2" යන උප ෆෝල්ඩරයට ගෙන යන ලදි</numerusform>
+        <numerusform>සටහන් %n ක් "%2" යන උප ෆෝල්ඩරයට ගෙන යන ලදී</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="9245"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%2&lt;/strong&gt; සටහන් කිරීමට %n තෝරාගත් සටහන පිටපත් කරන්න?</numerusform>
+        <numerusform>&lt;strong&gt;%2&lt;/strong&gt; සටහන් කිරීමට තෝරාගත් සටහන් %n ක් පිටපත් කරන්න?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="9312"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n සටහන "%2" යන උප ෆෝල්ඩරයට පිටපත් කරන ලදි</numerusform>
+        <numerusform>"%2" යන උප ෆෝල්ඩරයට සටහන් %n ක් පිටපත් කරන ලදි</numerusform>
       </translation>
     </message>
     <message>
@@ -3563,17 +3563,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5223"/>
       <source>&amp;Ok</source>
-      <translation type="unfinished">&amp;Ok</translation>
+      <translation>&amp;හරි</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9878"/>
       <source>&amp;Remove notes</source>
-      <translation type="unfinished">&amp;Remove notes</translation>
+      <translation>&amp;සටහන් ඉවත් කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6376"/>
       <source>&amp;Link selected text</source>
-      <translation type="unfinished">&amp;Link selected text</translation>
+      <translation>&amp;තෝරාගත් පෙළ සම්බන්ධ කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1003"/>
@@ -3604,26 +3604,26 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2839"/>
       <source>Stored %n note(s) to disk</source>
-      <translation type="unfinished">
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
+      <translation>
+        <numerusform>%n සටහන තැටියට ගබඩා කර ඇත</numerusform>
+        <numerusform>සටහන් %n තැටියට ගබඩා කර ඇත</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7640"/>
       <source>show all notes (%1)</source>
-      <translation type="unfinished">show all notes (%1)</translation>
+      <translation>සියලුම සටහන් පෙන්වන්න (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7643"/>
       <location filename="../mainwindow.cpp" line="7719"/>
       <source>All notes</source>
-      <translation type="unfinished">All notes</translation>
+      <translation>සියලුම සටහන්</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8663"/>
       <source>&amp;Add tag</source>
-      <translation type="unfinished">&amp;Add tag</translation>
+      <translation>&amp;ටැගය එක් කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8711"/>
@@ -3768,7 +3768,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2171"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
+      <translation>&lt;br /&gt; මාර්ගය: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2373"/>
@@ -3845,7 +3845,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="6382"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>තෝරාගත් &amp;පෙළ අවහිර කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7371"/>
@@ -3868,7 +3868,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5261"/>
       <location filename="../mainwindow.cpp" line="10078"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>සැකසුම් &amp;විවෘත කරන්න</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1600"/>
@@ -3889,7 +3889,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6857"/>
       <source>&amp;Decrypt</source>
-      <translation type="unfinished">&amp;Decrypt</translation>
+      <translation>&amp;විකේතනය</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6882"/>
@@ -4019,12 +4019,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation type="unfinished">Open &amp;attachment</translation>
+      <translation>&amp;ඇමුණුම විවෘත කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation type="unfinished">Open &amp;folder</translation>
+      <translation>ෆෝල්ඩරය &amp;විවෘත කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
@@ -4059,9 +4059,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="143"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+      <translation>
+        <numerusform>තෝරාගත් &lt;strong&gt;%n&lt;/strong&gt; ගොනුවක් මකන්නද?</numerusform>
+        <numerusform>තෝරාගත් ලිපිගොනු &lt;strong&gt;%n&lt;/strong&gt; ක් මකන්නද?</numerusform>
       </translation>
     </message>
   </context>
@@ -4105,14 +4105,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete selected files</source>
-      <translation type="unfinished">Delete selected files</translation>
+      <translation>තෝරාගත් ගොනු මකන්න</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="124"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+      <translation>
+        <numerusform>තෝරාගත් ලිපිගොනු &lt;strong&gt;%n&lt;/strong&gt; ක් මකන්නද?</numerusform>
+        <numerusform>තෝරාගත් ලිපිගොනු &lt;strong&gt;%n&lt;/strong&gt; ක් මකන්නද?</numerusform>
       </translation>
     </message>
   </context>
@@ -4156,12 +4156,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1161"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>සැකසුම් &amp;විවෘත කරන්න</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1161"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;අවලංගු කරන්න</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1220"/>
@@ -4291,9 +4291,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="3467"/>
       <source>…and %n more note(s)</source>
-      <translation type="unfinished">
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
+      <translation>
+        <numerusform>… සහ %n සටහනක්</numerusform>
+        <numerusform>… සහ තවත් සටහන් %n ක්</numerusform>
       </translation>
     </message>
     <message>
@@ -4948,7 +4948,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="889"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; ඔබටත් ක්ලවුඩ් කෝර් යෙදුම් දෙකක් තිබිය යුතුය &lt;span style = "font-weight: 600;"&gt; අනුවාද &lt;/ span&gt; සහ &lt;span style = "font-weight : 600; "&gt; මකා දැමූ ගොනු &lt;/ span&gt; ඔබේම ක්ලවුඩ් සේවාදායකයේ සක්‍රීය කර ඇත (එය පෙරනිමිය විය යුතුය). &lt;/ P&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="988"/>
@@ -5371,7 +5371,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="202"/>
       <source>Editor fonts &amp; colors</source>
-      <translation type="unfinished">Editor fonts &amp; colors</translation>
+      <translation>අකුරු සහ වර්ණ සංස්කරණය කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
@@ -5417,7 +5417,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="593"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation type="unfinished">&amp;Use as ownCloud path</translation>
+      <translation>OwnCloud මාර්ගය ලෙස භාවිතා &amp;කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="632"/>
@@ -5557,147 +5557,147 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2053"/>
       <source>Todo list settings</source>
-      <translation type="unfinished">Todo list settings</translation>
+      <translation>ටෝඩෝ ලැයිස්තු සැකසුම්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2059"/>
       <source>Saving an item also closes the Todo list</source>
-      <translation type="unfinished">Saving an item also closes the Todo list</translation>
+      <translation>අයිතමයක් සුරැකීම ද ටෝඩෝ ලැයිස්තුව වසා දමයි</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2171"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>ඉන්දුනීසියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2193"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>බෙංගාලි</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2204"/>
       <source>Bosnian</source>
-      <translation type="unfinished">Bosnian</translation>
+      <translation>බොස්නියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2215"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>බල්ගේරියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2226"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>කැටලන්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2237"/>
       <source>Cebuano</source>
-      <translation type="unfinished">Cebuano</translation>
+      <translation>සෙබුවානෝ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2259"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>ඩෙන්මාර්ක</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2281"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>බාස්ක්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2314"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>එස්තෝනියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2325"/>
       <source>Filipino</source>
-      <translation type="unfinished">Filipino</translation>
+      <translation>පිලිපීන</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2336"/>
       <source>Finnish</source>
-      <translation type="unfinished">Finnish</translation>
+      <translation>ෆින්ලන්ත</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2358"/>
       <source>Irish</source>
-      <translation type="unfinished">Irish</translation>
+      <translation>අයිරිෂ්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2369"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>ගැලීසියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2380"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>ග්‍රීක</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2391"/>
       <source>Hausa</source>
-      <translation type="unfinished">Hausa</translation>
+      <translation>හවුසා</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2402"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>හෙබ්‍රෙව්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2413"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>හින්දි</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2435"/>
       <source>Hiligaynon</source>
-      <translation type="unfinished">Hiligaynon</translation>
+      <translation>හිලිගෙයිනොන්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2446"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>අයිස්ලන්ත</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2468"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>කොරියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2479"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>කුර්දි</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2501"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>ලැට්වියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2512"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>ලිතුවේනියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2523"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>මැසිඩෝනියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2556"/>
       <source>Norwegian</source>
-      <translation type="unfinished">Norwegian</translation>
+      <translation>නෝර්වීජියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2600"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>උස්බෙක්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2644"/>
       <source>Punjabi</source>
-      <translation type="unfinished">Punjabi</translation>
+      <translation>පන්ජාබි</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2589"/>
@@ -5722,37 +5722,37 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2721"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>ස්ලෝවැක්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2732"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>ස්ලොවේනියානු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2743"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>ස්වීඩන්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2754"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>ටගාලොග්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2776"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>තුර්කි</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2809"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>උර්දු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2831"/>
       <source>Chinese Simplified</source>
-      <translation type="unfinished">Chinese Simplified</translation>
+      <translation>චීන සරල</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2842"/>
@@ -5812,7 +5812,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3347"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>&amp;ස්ක්‍රිප්ට් එක් කරන්න…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3993"/>
@@ -5936,42 +5936,42 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2182"/>
       <source>Malay</source>
-      <translation type="unfinished">Malay</translation>
+      <translation>මැලේ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2490"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>ඛමර්</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2699"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>ෂෝනා</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2710"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>සිංහල</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2765"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>වියට්නාම</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2787"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>ෂෝසා</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2820"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>සුලූ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2876"/>
       <source>Search for language</source>
-      <translation type="unfinished">Search for language</translation>
+      <translation>භාෂාව සොයන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3848"/>
@@ -6655,149 +6655,149 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2003"/>
       <source>Empty calendar item cache</source>
-      <translation type="unfinished">Empty calendar item cache</translation>
+      <translation>හිස් දින දර්ශන අයිතම හැඹිලිය</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2026"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
-      <translation type="unfinished">Click here to reload the list of calendars from your calendar server.</translation>
+      <translation>ඔබගේ දින දර්ශන සේවාදායකයෙන් දින දර්ශන ලැයිස්තුව නැවත පූරණය කිරීමට මෙතන ක්ලික් කරන්න.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2032"/>
       <source>&amp;Reload calendar list</source>
-      <translation type="unfinished">&amp;Reload calendar list</translation>
+      <translation>&amp;දින දර්ශන ලැයිස්තුව නැවත පූරණය කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2919"/>
       <location filename="../dialogs/settingsdialog.ui" line="3029"/>
       <source>You may need to restart the application to let these changes take effect</source>
-      <translation type="unfinished">You may need to restart the application to let these changes take effect</translation>
+      <translation>මෙම වෙනස්කම් බලාත්මක වීමට ඔබට යෙදුම නැවත ආරම්භ කිරීමට අවශ්‍ය විය හැකිය</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3064"/>
       <source>Toolbar icon size:</source>
-      <translation type="unfinished">Toolbar icon size:</translation>
+      <translation>මෙවලම් තීරු නිරූපක ප්‍රමාණය:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3054"/>
       <source>List and tree item height:</source>
-      <translation type="unfinished">List and tree item height:</translation>
+      <translation>ලැයිස්තුව සහ ගස් අයිතමයේ උස:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3087"/>
       <source>Reset the icon size</source>
-      <translation type="unfinished">Reset the icon size</translation>
+      <translation>නිරූපක ප්‍රමාණය නැවත සකසන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3101"/>
       <source>Reset the item height</source>
-      <translation type="unfinished">Reset the item height</translation>
+      <translation>අයිතමයේ උස නැවත සකසන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4742"/>
       <source>View text right to left (RTL)</source>
-      <translation type="unfinished">View text right to left (RTL)</translation>
+      <translation>පෙළ දකුණේ සිට වමට බලන්න (RTL)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3225"/>
       <source>Search for shortcut</source>
-      <translation type="unfinished">Search for shortcut</translation>
+      <translation>කෙටිමං සඳහා සොයන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2043"/>
       <source>Ignore calendars that don't support todo items</source>
-      <translation type="unfinished">Ignore calendars that don't support todo items</translation>
+      <translation>ටෝඩෝ අයිතම සඳහා සහය නොදක්වන දින දර්ශන නොසලකා හරින්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2853"/>
       <source>Arabic</source>
-      <translation type="unfinished">Arabic</translation>
+      <translation>අරාබි</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3003"/>
       <source>Icons</source>
-      <translation type="unfinished">Icons</translation>
+      <translation>අයිකන</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3012"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
+      <translation>පද්ධති නිරූපක තේමාව වෙනුවට අභ්‍යන්තර නිරූපක තේමාව භාවිතා කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3613"/>
       <source>Script path:</source>
-      <translation type="unfinished">Script path:</translation>
+      <translation>ස්ක්‍රිප්ට් මාර්ගය:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="763"/>
       <source>Note folder name</source>
-      <translation type="unfinished">Note folder name</translation>
+      <translation>ෆෝල්ඩරයේ නම සටහන් කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="810"/>
       <source>Allow note file name to be different from headline</source>
-      <translation type="unfinished">Allow note file name to be different from headline</translation>
+      <translation>සටහන් ගොනුවේ නම සිරස්තලයට වඩා වෙනස් වීමට ඉඩ දෙන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3904"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation type="unfinished">Check this if you want to ignore all external modifications while you are editing the current note.</translation>
+      <translation>ඔබ වත්මන් සටහන සංස්කරණය කරන අතරතුර සියලු බාහිර වෙනස් කිරීම් නොසලකා හැරීමට අවශ්‍ය නම් මෙය පරීක්ෂා කරන්න.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3907"/>
       <source>Ignore all external modifications of the current note</source>
-      <translation type="unfinished">Ignore all external modifications of the current note</translation>
+      <translation>වත්මන් සටහනේ සියලුම බාහිර වෙනස් කිරීම් නොසලකා හරින්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3828"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</translation>
+      <translation>ඔබට තමන්ගේම ක්ලවුඩ් / නෙක්ස්ට් ක්ලවුඩ් සටහන් යෙදුමේ නව රේඛා සමඟ ගැටලු ඇත්නම් වින්ඩෝස් යටතේ මෙය භාවිතා කළ හැකිය</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4003"/>
       <source>App instance</source>
-      <translation type="unfinished">App instance</translation>
+      <translation>යෙදුම් උදාහරණය</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4009"/>
       <source>Only allow one app instance at the same time</source>
-      <translation type="unfinished">Only allow one app instance at the same time</translation>
+      <translation>එකවර එක් යෙදුම් අවස්ථාවකට පමණක් ඉඩ දෙන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4105"/>
       <source>Add a custom file extension</source>
-      <translation type="unfinished">Add a custom file extension</translation>
+      <translation>අභිරුචි ගොනු දිගුවක් එක් කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4119"/>
       <source>Remove a custom file extension</source>
-      <translation type="unfinished">Remove a custom file extension</translation>
+      <translation>අභිරුචි ගොනු දිගුවක් ඉවත් කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4158"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation type="unfinished">If you add custom extensions just type in the extension, like "taskpaper".</translation>
+      <translation>ඔබ අභිරුචි දිගු එකතු කරන්නේ නම් "කාර්ය පත්‍රිකාව" වැනි දිගුව ටයිප් කරන්න.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4162"/>
       <source>Text file (txt)</source>
-      <translation type="unfinished">Text file (txt)</translation>
+      <translation>පෙළ ගොනුව (txt)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4190"/>
       <source>Path to external editor:</source>
-      <translation type="unfinished">Path to external editor:</translation>
+      <translation>බාහිර සංස්කාරකයට මාර්ගය:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4025"/>
       <source>Don't show the update dialog automatically</source>
-      <translation type="unfinished">Don't show the update dialog automatically</translation>
+      <translation>යාවත්කාලීන සංවාදය ස්වයංක්‍රීයව පෙන්වන්න එපා</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4478"/>
       <location filename="../dialogs/settingsdialog.ui" line="4646"/>
       <source>Fonts</source>
-      <translation type="unfinished">Fonts</translation>
+      <translation>අකුරු</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4501"/>
@@ -6805,7 +6805,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="4652"/>
       <location filename="../dialogs/settingsdialog.ui" line="4704"/>
       <source>Set a new font</source>
-      <translation type="unfinished">Set a new font</translation>
+      <translation>නව අකුරු සකසන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4512"/>
@@ -6813,69 +6813,69 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="4666"/>
       <location filename="../dialogs/settingsdialog.ui" line="4690"/>
       <source>Reset font</source>
-      <translation type="unfinished">Reset font</translation>
+      <translation>අකුරු යළි පිහිටුවන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="336"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>නිදොස්කරණය</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4342"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2185"/>
       <location filename="../dialogs/settingsdialog.cpp" line="4144"/>
       <source>Debug information</source>
-      <translation type="unfinished">Debug information</translation>
+      <translation>තොරතුරු නිදොස් කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4348"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; ඔබට &lt;span style = "font-weight: 600;"&gt; පිටපත් කර අලවන්න &lt;/ span&gt; මෙම පා (ය (හෝ මෙම පා text යේ කොටස්) &lt;span style = &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; QOwnNotes නිකුතු පිටුව &lt;/a&gt; හි &lt;font-weight: 600; "&gt; නිකුතුව &lt;/ span&gt; ඔබට &lt;span style = QOwnNotes සමඟ "font-weight: 600;"&gt; ප්‍රශ්න හෝ කරදර &lt;/ span&gt;. ඉතා සංවේදී දත්ත මෙම තොරතුරු තුළ සැඟවී ඇත. &lt;/ P&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
       <source>&amp;Save debug information</source>
-      <translation type="unfinished">&amp;Save debug information</translation>
+      <translation>&amp;නිදොස් කිරීමේ තොරතුරු සුරකින්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="489"/>
       <source>hostname of proxy server</source>
-      <translation type="unfinished">hostname of proxy server</translation>
+      <translation>ප්‍රොක්සි සේවාදායකයේ ධාරක නාමය</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="490"/>
       <source>username for proxy server</source>
-      <translation type="unfinished">username for proxy server</translation>
+      <translation>ප්‍රොක්සි සේවාදායකය සඳහා පරිශීලක නාමය</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="491"/>
       <source>password for proxy server</source>
-      <translation type="unfinished">password for proxy server</translation>
+      <translation>ප්‍රොක්සි සේවාදායකය සඳහා මුරපදය</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="493"/>
       <source>HTTP(S) proxy</source>
-      <translation type="unfinished">HTTP(S) proxy</translation>
+      <translation>HTTP(S) ප්‍රොක්සිය</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="494"/>
       <source>SOCKS5 proxy</source>
-      <translation type="unfinished">SOCKS5 proxy</translation>
+      <translation>SOCKS5 ප්‍රොක්සිය</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1458"/>
       <source>Automatic (needs restart)</source>
-      <translation type="unfinished">Automatic (needs restart)</translation>
+      <translation>ස්වයංක්‍රීය (නැවත ආරම්භ කිරීම අවශ්‍යයි)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1638"/>
       <source>Undefined key</source>
-      <translation type="unfinished">Undefined key</translation>
+      <translation>නිර්වචනය නොකළ යතුර</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1642"/>
       <source>Assign a new key</source>
-      <translation type="unfinished">Assign a new key</translation>
+      <translation>නව යතුරක් පවරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1643"/>
@@ -7103,7 +7103,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3537"/>
       <source>Reset and &amp;exit</source>
-      <translation type="unfinished">Reset and &amp;exit</translation>
+      <translation>නැවත සකසා &amp;පිටවන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3695"/>
@@ -7208,14 +7208,14 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2242"/>
       <source>Clear and &amp;exit</source>
-      <translation type="unfinished">Clear and &amp;exit</translation>
+      <translation>ඉවත් කර &amp;පිටවන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2170"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2242"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3537"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;අවලංගු කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="471"/>
@@ -7230,7 +7230,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2170"/>
       <source>Clear &amp;database</source>
-      <translation type="unfinished">Clear &amp;database</translation>
+      <translation>දත්ත &amp;සමුදාය හිස් කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2353"/>
@@ -7277,121 +7277,121 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="219"/>
       <source>40</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">40</translation>
+      <translation>40</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="220"/>
       <source>60</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">60</translation>
+      <translation>60</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="221"/>
       <source>80</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">80</translation>
+      <translation>80</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="222"/>
       <source>-ise suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes</translation>
+      <translation>-ise උපසර්ග</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="223"/>
       <source>-ize suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes</translation>
+      <translation>-ize උපසර්ග</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="224"/>
       <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and with accents</translation>
+      <translation>-ise උපසර්ග සහ උච්චාරණ සමඟ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
       <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and without accents</translation>
+      <translation>-ise උපසර්ග සහ උච්චාරණ නොමැතිව</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="229"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes and with accents</translation>
+      <translation>-ize උපසර්ග සහ උච්චාරණ සමඟ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="231"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes and without accents</translation>
+      <translation>-ize උපසර්ග සහ උච්චාරණ නොමැතිව</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
       <source>large</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">large</translation>
+      <translation>මහා</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="235"/>
       <source>medium</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">medium</translation>
+      <translation>මධ්යම</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="236"/>
       <source>small</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">small</translation>
+      <translation>කුඩා</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="237"/>
       <source>variant 0</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 0</translation>
+      <translation>ප්‍රභේදය 0</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="238"/>
       <source>variant 1</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 1</translation>
+      <translation>ප්‍රභේදය 1</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="239"/>
       <source>variant 2</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 2</translation>
+      <translation>ප්‍රභේදය 2</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">without accents</translation>
+      <translation>උච්චාරණ නොමැතිව</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="242"/>
       <source>with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with accents</translation>
+      <translation>උච්චාරණ සමඟ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="244"/>
       <source>with ye, modern russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with ye, modern russian</translation>
+      <translation>නූතන රුසියානු</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="246"/>
       <source>with yeyo, modern and old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yeyo, modern and old russian</translation>
+      <translation>නවීන හා පැරණි රුසියානු</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="249"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yo, old russian</translation>
+      <translation>පැරණි රුසියානු</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="250"/>
@@ -7423,17 +7423,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>වගුව ඇතුළු කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation type="unfinished">Create table</translation>
+      <translation>වගුව සාදන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation type="unfinished">Column width:</translation>
+      <translation>තීරු පළල:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
@@ -7473,57 +7473,57 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="260"/>
       <source>Separator:</source>
-      <translation type="unfinished">Separator:</translation>
+      <translation>බෙදුම්කරු:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="169"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>ගොනුව තෝරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file / clipboard</source>
-      <translation type="unfinished">Import CSV file / clipboard</translation>
+      <translation>CSV ගොනුව / ක්ලිප්බෝඩ් ආයාත කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Please select the CSV file you want to import:</source>
-      <translation type="unfinished">Please select the CSV file you want to import:</translation>
+      <translation>කරුණාකර ඔබට ආනයනය කිරීමට අවශ්‍ය CSV ගොනුව තෝරන්න:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="197"/>
       <source>Import clipboard</source>
-      <translation type="unfinished">Import clipboard</translation>
+      <translation>ක්ලිප්බෝඩ් ආයාත කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="190"/>
       <source>CSV file</source>
-      <translation type="unfinished">CSV file</translation>
+      <translation>CSV ගොනුව</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="274"/>
       <source>First line is the table heading</source>
-      <translation type="unfinished">First line is the table heading</translation>
+      <translation>පළමු පේළිය මේස ශීර්ෂයයි</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="267"/>
       <source>Text-delimiter:</source>
-      <translation type="unfinished">Text-delimiter:</translation>
+      <translation>පෙළ-පරිසීමකය:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="186"/>
       <source>CSV files</source>
-      <translation type="unfinished">CSV files</translation>
+      <translation>CSV ගොනු</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="187"/>
       <source>All files</source>
-      <translation type="unfinished">All files</translation>
+      <translation>සියලුම ලිපිගොනු</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="192"/>
       <source>Select CSV file to import</source>
-      <translation type="unfinished">Select CSV file to import</translation>
+      <translation>ආයාත කිරීමට CSV ගොනුව තෝරන්න</translation>
     </message>
   </context>
   <context>
@@ -7531,17 +7531,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation type="unfinished">Add a new tag</translation>
+      <translation>නව ටැගයක් එක් කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
       <source>Add new tag</source>
-      <translation type="unfinished">Add new tag</translation>
+      <translation>නව ටැගය එක් කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
       <source>New tag</source>
-      <translation type="unfinished">New tag</translation>
+      <translation>නව ටැගය</translation>
     </message>
   </context>
   <context>
@@ -7549,48 +7549,48 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation type="unfinished">Todo</translation>
+      <translation>ටෝඩෝ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="78"/>
       <location filename="../dialogs/tododialog.ui" line="85"/>
       <source>Priority</source>
-      <translation type="unfinished">Priority</translation>
+      <translation>ප්‍රමුඛතාවය</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="113"/>
       <source>Reminder</source>
-      <translation type="unfinished">Reminder</translation>
+      <translation>මතක්</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
       <source>Summary</source>
-      <translation type="unfinished">Summary</translation>
+      <translation>සාරාංශය</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>සුරකින්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>සටහන…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="105"/>
       <source>Save and insert into note</source>
-      <translation type="unfinished">Save and insert into note</translation>
+      <translation>සුරකින්න සහ සටහනට ඇතුල් කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>ඉවත් කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Show completed items</source>
-      <translation type="unfinished">Show completed items</translation>
+      <translation>සම්පුර්ණ කරන ලද අයිතම පෙන්වන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="292"/>
@@ -7761,7 +7761,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation type="unfinished">Move &amp;Up</translation>
+      <translation>ඉහළට &amp;යන්න</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
@@ -7776,7 +7776,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation type="unfinished">Move &amp;Down</translation>
+      <translation>පහළට &amp;යන්න</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
@@ -7791,7 +7791,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation type="unfinished">&amp;Insert</translation>
+      <translation>&amp;ඇතුළු කරන්න</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
@@ -7855,17 +7855,17 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="44"/>
       <source>&amp;Download selected note</source>
-      <translation type="unfinished">&amp;Download selected note</translation>
+      <translation>&amp;තෝරාගත් සටහන බාගන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="46"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt; වේගවත්, නමුත් අනුවාද නොමැතිව &lt;/ h3&gt; &lt;p&gt; පෙරදසුනෙහි ඇති පෙළ සමඟ සටහන නිර්මාණය වනු ඇත. &lt;/ p&gt; &lt;p&gt; ඔබේම ක්ලවුඩ් සේවාදායකයේ සටහන් අනුවාදයන් ප්‍රතිෂ් ored ාපනය නොවන අතර සටහන පවතිනු ඇත &lt;/ p&gt; &lt;p&gt; ඔබට සෑම විටම සටහන සහ එහි අනුවාදයන් පසුව ප්‍රතිස්ථාපනය කළ හැකිය. &lt;/ p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="58"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;අවලංගු කරන්න</translation>
     </message>
   </context>
   <context>
@@ -7873,116 +7873,116 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="14"/>
       <source>Update available</source>
-      <translation type="unfinished">Update available</translation>
+      <translation>යාවත්කාලීන කිරීම් තිබේ</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="26"/>
       <source>A new update of QOwnNotes is available!</source>
-      <translation type="unfinished">A new update of QOwnNotes is available!</translation>
+      <translation>QOwnNotes හි නව යාවත්කාලීන කිරීමක් තිබේ!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
       <source>Do you want to download the new version?</source>
-      <translation type="unfinished">Do you want to download the new version?</translation>
+      <translation>ඔබට නව අනුවාදය බාගත කිරීමට අවශ්‍යද?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="76"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation type="unfinished">QOwnNotes will be downloaded in your default browser.</translation>
+      <translation>QOwnNotes ඔබගේ සුපුරුදු බ්‍රව්සරයෙන් බාගත වේ.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation type="unfinished">Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</translation>
+      <translation>ස්වයංක්‍රීය යාවත්කාලීනය වැඩ කිරීම සඳහා ඔබට ලිඛිත ප්‍රවේශයක් ඇති ස්ථානයක සිට QOwnNotes ධාවනය කළ යුතු බව මතක තබා ගන්න!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt; QOwnNotes සමඟ සම්බන්ධ වන්න &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
       <source>%p% downloaded</source>
-      <translation type="unfinished">%p% downloaded</translation>
+      <translation>%p% බාගත කර ඇත</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="48"/>
       <source>&amp;Update</source>
-      <translation type="unfinished">&amp;Update</translation>
+      <translation>&amp;යාවත්කාලීන කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="59"/>
       <source>&amp;Download latest</source>
-      <translation type="unfinished">&amp;Download latest</translation>
+      <translation>&amp;නවතම බාගන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="57"/>
       <source>Just download</source>
-      <translation type="unfinished">Just download</translation>
+      <translation>බාගත කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="72"/>
       <source>&amp;Skip version</source>
-      <translation type="unfinished">&amp;Skip version</translation>
+      <translation>&amp;අනුවාදය මඟ හරින්න</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="80"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>&amp;සංවාදය අක්‍රීය කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="81"/>
       <source>Don't show this dialog automatically</source>
-      <translation type="unfinished">Don't show this dialog automatically</translation>
+      <translation>මෙම සංවාදය ස්වයංක්‍රීයව පෙන්වන්න එපා</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="89"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;අවලංගු කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="242"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>බාගැනීමේ දෝෂයකි</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="243"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>බාගත කිරීමේදී දෝෂයක්:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="245"/>
       <source>network error: %1</source>
-      <translation type="unfinished">network error: %1</translation>
+      <translation>ජාල දෝෂය: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="267"/>
       <location filename="../dialogs/updatedialog.cpp" line="288"/>
       <location filename="../dialogs/updatedialog.cpp" line="382"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>ගොනු දෝෂයකි</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="268"/>
       <location filename="../dialogs/updatedialog.cpp" line="383"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation type="unfinished">Could not open temporary file:
+      <translation>තාවකාලික ගොනුව විවෘත කළ නොහැක:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="289"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>බාගත කළ ගොනුව ගබඩා කිරීමට නොහැකි විය:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="340"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
+      <translation>QOwnNotes යාවත්කාලීන කර නැවත ආරම්භ කිරීමට ඔබට අවශ්‍යද?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="356"/>
@@ -7993,51 +7993,51 @@ This cannot be undone!</source>
       <location filename="../dialogs/updatedialog.cpp" line="477"/>
       <location filename="../dialogs/updatedialog.cpp" line="486"/>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>දෝෂයකි</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="357"/>
       <source>Could not find updater file:
 %1</source>
-      <translation type="unfinished">Could not find updater file:
+      <translation>යාවත්කාලීන කිරීමේ ගොනුව සොයාගත නොහැකි විය:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="442"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater script '%1' doesn't exist!</translation>
+      <translation>යාවත්කාලීන ස්ක්‍රිප්ට් '%1' නොපවතී!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="450"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater unzip executable '%1' doesn't exist!</translation>
+      <translation>යාවත්කාලීන කළ හැකි '%1' ක්‍රියාත්මක කළ නොහැක!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="459"/>
       <location filename="../dialogs/updatedialog.cpp" line="468"/>
       <source>Could not copy updater script '%1' to '%2'!</source>
-      <translation type="unfinished">Could not copy updater script '%1' to '%2'!</translation>
+      <translation>යාවත්කාලීන කිරීමේ ස්ක්‍රිප්ට් '%1' සිට '%2' වෙත පිටපත් කිරීමට නොහැකි විය!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="478"/>
       <source>Couldn't find updater script: %1</source>
-      <translation type="unfinished">Couldn't find updater script: %1</translation>
+      <translation>යාවත්කාලීන කිරීමේ ස්ක්‍රිප්ට් සොයාගත නොහැකි විය: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="487"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation type="unfinished">Couldn't find unzip executable: %1</translation>
+      <translation>සිප් ක්‍රියාත්මක කළ නොහැකි බව සොයාගත නොහැකි විය: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="339"/>
       <location filename="../dialogs/updatedialog.cpp" line="492"/>
       <source>Proceed with update</source>
-      <translation type="unfinished">Proceed with update</translation>
+      <translation>යාවත්කාලීන කිරීම සමඟ ඉදිරියට යන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="493"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">The download is now finished. Do you want to update and restart QOwnNotes?</translation>
+      <translation>බාගත කිරීම දැන් අවසන්. QOwnNotes යාවත්කාලීන කර නැවත ආරම්භ කිරීමට ඔබට අවශ්‍යද?</translation>
     </message>
   </context>
   <context>
@@ -8047,32 +8047,32 @@ This cannot be undone!</source>
       <location filename="../services/updateservice.cpp" line="126"/>
       <location filename="../services/updateservice.cpp" line="147"/>
       <source>Update-checker error</source>
-      <translation type="unfinished">Update-checker error</translation>
+      <translation>යාවත්කාලීන-පිරික්සුම් දෝෂයකි</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="112"/>
       <source>Network reply error: %1</source>
-      <translation type="unfinished">Network reply error: %1</translation>
+      <translation>ජාල පිළිතුරු දෝෂය: %1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="127"/>
       <source>No data was received by the network request!</source>
-      <translation type="unfinished">No data was received by the network request!</translation>
+      <translation>ජාල ඉල්ලීම මඟින් දත්ත කිසිවක් ලැබුනේ නැත!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="148"/>
       <source>The data from the network request could not be interpreted!</source>
-      <translation type="unfinished">The data from the network request could not be interpreted!</translation>
+      <translation>ජාල ඉල්ලීමෙහි දත්ත අර්ථ නිරූපණය කළ නොහැක!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="261"/>
       <source>No updates</source>
-      <translation type="unfinished">No updates</translation>
+      <translation>යාවත්කාලීන කිරීම් නොමැත</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="262"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
+      <translation>යාවත්කාලීනයන් නොමැත. &lt;br /&gt; &lt;strong&gt;%1&lt;/strong&gt; නවතම අනුවාදය වේ.</translation>
     </message>
   </context>
   <context>
@@ -8080,27 +8080,27 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation type="unfinished">Note versions on your ownCloud server</translation>
+      <translation>ඔබගේ ownCloud  සේවාදායකයේ අනුවාද සටහන් කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation type="unfinished">Diff</translation>
+      <translation>වෙනස</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>සටහන පෙළ</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="31"/>
       <source>&amp;Restore selected version</source>
-      <translation type="unfinished">&amp;Restore selected version</translation>
+      <translation>&amp;තෝරාගත් අනුවාදය ප්‍රතිස්ථාපනය කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="39"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;අවලංගු කරන්න</translation>
     </message>
   </context>
   <context>
@@ -8108,24 +8108,24 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="66"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
+      <translation>%1 වරායේ QOwnNotes සේවාදායක සවන්දීම</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="73"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
+      <translation>%1 වරායේ QOwnNotes සේවාදායකය ආරම්භ කිරීමට නොහැකි විය!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="119"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
+      <translation>%1 QOwnNotes සේවාදායකයට සම්බන්ධයි!</translation>
     </message>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="204"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>%n පොත් සලකුණක් නිර්මාණය විය</numerusform>
+        <numerusform>පිටු සලකුණු %n ක් නිර්මාණය කර ඇත</numerusform>
       </translation>
     </message>
     <message>
@@ -8173,22 +8173,22 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation type="unfinished">&amp;Back</translation>
+      <translation>&amp;ආපසු</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation type="unfinished">&amp;Next</translation>
+      <translation>&amp;ඊළඟ</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation type="unfinished">&amp;Finished</translation>
+      <translation>&amp;අවසන්</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;අවලංගු කරන්න</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>

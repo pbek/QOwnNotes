@@ -2537,7 +2537,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2556"/>
       <source>Custom</source>
-      <translation>Adat</translation>
+      <translation>Khusus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2559"/>
@@ -3255,7 +3255,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="12084"/>
       <source>Custom editor width</source>
-      <translation>Lebar editor khusus</translation>
+      <translation>Lebar penyunting khusus</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12084"/>
@@ -5889,12 +5889,12 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2534"/>
       <source>Māori</source>
-      <translation type="unfinished">Māori</translation>
+      <translation>Maori</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2182"/>
       <source>Malay</source>
-      <translation type="unfinished">Malay</translation>
+      <translation>Melayu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2490"/>
@@ -5904,7 +5904,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2699"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>Shona</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2710"/>
@@ -5919,7 +5919,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2787"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>Xhosa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2820"/>
@@ -5929,7 +5929,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2876"/>
       <source>Search for language</source>
-      <translation type="unfinished">Search for language</translation>
+      <translation>Cari bahasa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3848"/>
@@ -7440,7 +7440,7 @@ Catatan anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file / clipboard</source>
-      <translation type="unfinished">Import CSV file / clipboard</translation>
+      <translation>Impor berkas CSV / papan klip</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
@@ -7450,7 +7450,7 @@ Catatan anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="197"/>
       <source>Import clipboard</source>
-      <translation type="unfinished">Import clipboard</translation>
+      <translation>Impor papan klip</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="190"/>
