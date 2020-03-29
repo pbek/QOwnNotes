@@ -27,7 +27,7 @@ Requires:       qt5-qtsvg qt5-qtxmlpatterns qt5-qtwebsockets qt5-qtx11extras
 %else
 # This is for all SUSE
 
-BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel libQt5XmlPatterns-devel libqt5-qtwebsockets-devel libqt5-x11extras-devel libqt5-linguist
+BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel libQt5X11Extras-devel libQt5XmlPatterns-devel libqt5-qtwebsockets-devel libqt5-linguist
 
 # no aspell for SLE
 %if 0%{?sle_version} == 150000 || 0%{?sle_version} == 150100 && !0%{?is_backports}

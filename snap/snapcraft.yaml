@@ -70,6 +70,7 @@ parts:
       - qttools5-dev-tools
       - libqt5xmlpatterns5-dev
       - libqt5websockets5-dev
+      - libqt5x11extras5-dev
     stage-packages:
       - libqt5gui5
       - libqt5sql5
@@ -82,6 +83,7 @@ parts:
       - libqt5xmlpatterns5
       - libqt5printsupport5
       - libqt5websockets5
+      - libqt5x11extras5
       - qtwayland5
     stage:
       - -usr/share/pkgconfig
