@@ -70,7 +70,7 @@ markdown_extensions:
   - footnotes
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_generator: pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.highlight:
       use_pygments: false # hljs is used instead of pygment for TOML highlighting support
