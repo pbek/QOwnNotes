@@ -16,6 +16,8 @@
   (for [#1667](https://github.com/pbek/QOwnNotes/issues/1667))
     - for more information please take a look at the
       [Mainwindow scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#mainwindow)
+- fixed a possible crash on entering a backtick character
+  (for [#114](https://github.com/pbek/qmarkdowntextedit/pull/114), thank you @Waqar144)
 
 ## 20.3.8
 - added experimental **global keyboard shortcut support** (for [#44](https://github.com/pbek/QOwnNotes/issues/44))
