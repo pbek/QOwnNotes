@@ -1,8 +1,16 @@
 # QOwnNotes Changelog
 
+## 20.3.9
+- you can now also manage **global keyboard shortcuts** in the *Shortcuts settings*
+  (for [#44](https://github.com/pbek/QOwnNotes/issues/44))
+    - there you can set a global shortcut to every action of the main menu,
+      including custom scripting actions
+    - you can also search for global shortcuts in the `Search for shortcut` line edit
+    - by default there are no global shortcuts activated
+
 ## 20.3.8
 - added experimental **global keyboard shortcut support** (for [#44](https://github.com/pbek/QOwnNotes/issues/44))
-    - <kbd>Meta + Shift + N</kbd> will now create a new note
+    - <kbd>Meta + Shift + N</kbd> will now create a new note (for [#1048](https://github.com/pbek/QOwnNotes/issues/1048))
 - no 2nd backtick will now be entered if you enter one at the end of a word with an
   US keyboard layout (for [#111](https://github.com/pbek/qmarkdowntextedit/pull/111), thank you @Waqar144)
 - fixed a build problem under Qt 5.15 (for [#1666](https://github.com/pbek/QOwnNotes/issues/1666), thank you @data-man)

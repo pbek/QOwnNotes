@@ -15,6 +15,7 @@
 #pragma once
 
 #include <entities/note.h>
+#include <libraries/qhotkey/QHotkey/qhotkey.h>
 #include <widgets/logwidget.h>
 
 #include <QFileSystemWatcher>
@@ -722,6 +723,7 @@ class MainWindow : public QMainWindow {
     const QIcon _noteIcon = QIcon::fromTheme(
         QStringLiteral("text-x-generic"),
         QIcon(":icons/breeze-qownnotes/16x16/text-x-generic.svg"));
+    QList<QHotkey *> _globalShortcuts;
 
     void createSystemTrayIcon();
 
@@ -1058,4 +1060,5 @@ class MainWindow : public QMainWindow {
 
     void noteTextEditTextWasUpdated();
     void removeNoteFromNoteTreeWidget(Note &note) const;
+    void initGlobalKeyboardShortcuts();
 };

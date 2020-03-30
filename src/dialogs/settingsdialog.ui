@@ -3231,20 +3231,22 @@
                 </item>
                 <item>
                  <widget class="QTreeWidget" name="shortcutTreeWidget">
-                  <attribute name="headerVisible">
-                   <bool>false</bool>
-                  </attribute>
                   <attribute name="headerStretchLastSection">
                    <bool>false</bool>
                   </attribute>
                   <column>
                    <property name="text">
-                    <string notr="true">title</string>
+                    <string>Action name</string>
                    </property>
                   </column>
                   <column>
                    <property name="text">
-                    <string notr="true">shortcut</string>
+                    <string>Local shortcut</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>Global shortcut</string>
                    </property>
                   </column>
                  </widget>
@@ -6335,8 +6337,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
