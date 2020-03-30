@@ -11,6 +11,7 @@ Note
         Q_PROPERTY(QString fileName)
         Q_PROPERTY(QString fullNoteFilePath)
         Q_PROPERTY(QString fullNoteFileDirPath)
+        Q_PROPERTY(QString relativeNoteFileDirPath)
         Q_PROPERTY(int noteSubFolderId)
         Q_PROPERTY(QString noteText)
         Q_PROPERTY(QString decryptedNoteText)

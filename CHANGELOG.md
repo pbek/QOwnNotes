@@ -7,6 +7,10 @@
       including custom scripting actions
     - you can also search for global shortcuts in the `Search for shortcut` line edit
     - by default there are no global shortcuts activated
+- there now is a new property `relativeNoteFileDirPath` for notes in the scripting engine
+  (for [#1667](https://github.com/pbek/QOwnNotes/issues/1667))
+    - for more information please take a look at the
+      [Note scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#note)
 
 ## 20.3.8
 - added experimental **global keyboard shortcut support** (for [#44](https://github.com/pbek/QOwnNotes/issues/44))

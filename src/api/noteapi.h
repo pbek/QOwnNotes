@@ -16,6 +16,7 @@ class NoteApi : public QObject, public Note {
     Q_PROPERTY(QString fileName READ getFileName() CONSTANT)
     Q_PROPERTY(QString fullNoteFilePath READ fullNoteFilePath() CONSTANT)
     Q_PROPERTY(QString fullNoteFileDirPath READ fullNoteFileDirPath() CONSTANT)
+    Q_PROPERTY(QString relativeNoteFileDirPath READ relativeNoteSubFolderPath() CONSTANT)
     Q_PROPERTY(int noteSubFolderId READ getNoteSubFolderId() CONSTANT)
     Q_PROPERTY(QString noteText READ getNoteText() WRITE setNoteText())
     Q_PROPERTY(QString decryptedNoteText READ getDecryptedNoteText()
