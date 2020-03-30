@@ -60,11 +60,16 @@ MainWindow
         Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
                 bool forceBuild = false, bool forceLoad = false);
         Q_INVOKABLE void focusNoteTextEdit();
+        // Creates a new note subfolder in the current subfolder
+        Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
     };
     ```
 
 !!! example
     ```js
-    // force a reload of the note list
+    // Force a reload of the note list
     mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
+    
+    // Creates a new note subfolder "My fancy folder" in the current subfolder
+    mainWindow.createNewNoteSubFolder("My fancy folder");
     ```

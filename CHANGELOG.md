@@ -11,6 +11,11 @@
   (for [#1667](https://github.com/pbek/QOwnNotes/issues/1667))
     - for more information please take a look at the
       [Note scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#note)
+- there now is a new property `createNewNoteSubFolder` for `mainWindow` in the
+  scripting engine that creates a new note subfolder in the current subfolder
+  (for [#1667](https://github.com/pbek/QOwnNotes/issues/1667))
+    - for more information please take a look at the
+      [Mainwindow scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#mainwindow)
 
 ## 20.3.8
 - added experimental **global keyboard shortcut support** (for [#44](https://github.com/pbek/QOwnNotes/issues/44))

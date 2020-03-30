@@ -176,6 +176,8 @@ class MainWindow : public QMainWindow {
 
     Q_INVOKABLE void focusNoteTextEdit();
 
+    Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = QString());
+
     QString getLogText();
 
     void turnOnDebugLogging();
@@ -895,8 +897,6 @@ class MainWindow : public QMainWindow {
                                  QTreeWidgetItem *parent = nullptr);
 
     void removeSelectedNoteSubFolders(QTreeWidget *treeWidget);
-
-    bool createNewNoteSubFolder(QString folderName = QString());
 
     QTreeWidgetItem *findNoteInNoteTreeWidget(const Note &note);
 
