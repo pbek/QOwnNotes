@@ -6,6 +6,10 @@
     - this should work with and without enabled tray icon
     - assign a global keyboard shortcut to the action in the *Shortcuts settings*
       to make use of it properly
+- added more Spanish, Russian, Swedish, German, Italian, Galician, Greek, Hausa,
+  Albanian, Arabic, Basque, Bengali, Bosnian, Bulgarian, Cebuano, Chinese Simplified,
+  Dutch, Estonian, Filipino, Finnish translation (thank you richarson, unchase,
+  druus, rakekniven, tiwi90, Fabijenna)
 
 ## 20.3.9
 - you can now also manage **global keyboard shortcuts** in the *Shortcuts settings*
