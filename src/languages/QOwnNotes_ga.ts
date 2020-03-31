@@ -1787,7 +1787,7 @@
     <message>
         <location filename="../mainwindow.ui" line="408"/>
         <location filename="../mainwindow.ui" line="894"/>
-        <location filename="../mainwindow.cpp" line="780"/>
+        <location filename="../mainwindow.cpp" line="775"/>
         <source>Navigation</source>
         <translation>Nascleanúint</translation>
     </message>
@@ -1798,7 +1798,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
-        <location filename="../mainwindow.cpp" line="8442"/>
+        <location filename="../mainwindow.cpp" line="8440"/>
         <source>Add a tag to the current note</source>
         <translation>Cuir tag leis an nóta reatha</translation>
     </message>
@@ -1833,124 +1833,124 @@
         <translation>Leithead an eagarthóra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1214"/>
+        <location filename="../mainwindow.ui" line="1215"/>
         <source>Custom actions</source>
         <translation>Saincheap gníomhaíochtaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1234"/>
+        <location filename="../mainwindow.ui" line="1235"/>
         <source>main toolbar</source>
         <translation>príomhbharra uirlisí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1268"/>
+        <location filename="../mainwindow.ui" line="1269"/>
         <source>&amp;Quit</source>
         <translation>&amp;Scoir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1283"/>
+        <location filename="../mainwindow.ui" line="1284"/>
         <source>&amp;Setup note folders</source>
         <translation>&amp;Fillteáin nóta socraithe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1292"/>
+        <location filename="../mainwindow.ui" line="1293"/>
         <source>&amp;Find note</source>
         <translation>&amp;Faigh nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1304"/>
+        <location filename="../mainwindow.ui" line="1305"/>
         <source>&amp;Remove current note</source>
         <translation>&amp;Bain an nóta reatha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1328"/>
+        <location filename="../mainwindow.ui" line="1329"/>
         <source>&amp;New note</source>
         <translation>&amp;Nóta nua</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1340"/>
+        <location filename="../mainwindow.ui" line="1341"/>
         <source>Check for &amp;updates</source>
         <translation>Seiceáil do &amp;nuashrónaithe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1352"/>
+        <location filename="../mainwindow.ui" line="1353"/>
         <source>Post questions, feature requests or issues</source>
         <translation>Cuir ceisteanna, cuir isteach iarratais nó saincheisteanna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1363"/>
+        <location filename="../mainwindow.ui" line="1364"/>
         <source>Alphabetical</source>
         <translation>Aibítreach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1366"/>
+        <location filename="../mainwindow.ui" line="1367"/>
         <source>Sort alphabetical</source>
         <translation>Sórtáil in ord aibítre</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1374"/>
+        <location filename="../mainwindow.ui" line="1375"/>
         <source>By date</source>
         <translation>De réir dáta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1377"/>
+        <location filename="../mainwindow.ui" line="1378"/>
         <source>Sort by date</source>
         <translation>Sórtáil de réir dáta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1401"/>
+        <location filename="../mainwindow.ui" line="1402"/>
         <source>Show note &amp;versions</source>
         <translation>Taispeáin &amp;leaganacha nótaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1404"/>
+        <location filename="../mainwindow.ui" line="1405"/>
         <source>Show note versions on server</source>
         <translation>Taispeáin leaganacha nótaí ar an bhfreastalaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1416"/>
+        <location filename="../mainwindow.ui" line="1417"/>
         <source>Show trashed notes on server</source>
         <translation>Taispeáin nótaí sa Bhruscar ar an bhfreastalaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1421"/>
-        <location filename="../mainwindow.cpp" line="10054"/>
+        <location filename="../mainwindow.ui" line="1422"/>
+        <location filename="../mainwindow.cpp" line="10052"/>
         <source>Select &amp;all notes</source>
         <translation>Roghnaigh &amp;na nótaí go léir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1430"/>
-        <location filename="../mainwindow.cpp" line="6418"/>
+        <location filename="../mainwindow.ui" line="1431"/>
+        <location filename="../mainwindow.cpp" line="6416"/>
         <source>Insert &amp;link</source>
         <translation>Cuir isteach &amp;nasc</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1433"/>
+        <location filename="../mainwindow.ui" line="1434"/>
         <source>Insert link to an url or a note</source>
         <translation>Cuir isteach nasc chuig url nó nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1445"/>
+        <location filename="../mainwindow.ui" line="1446"/>
         <source>&amp;Find in current note</source>
         <translation>&amp;Faigh an nóta reatha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1448"/>
+        <location filename="../mainwindow.ui" line="1449"/>
         <source>Find text in current note</source>
         <translation>Faigh an téacs i nóta reatha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1461"/>
+        <location filename="../mainwindow.ui" line="1462"/>
         <source>&amp;Duplicate text</source>
         <translation>&amp;Téacs dúblach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1473"/>
+        <location filename="../mainwindow.ui" line="1474"/>
         <source>&amp;Back in note history</source>
         <translation>&amp;Ar ais i nóta stair</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1386"/>
+        <location filename="../mainwindow.ui" line="1387"/>
         <source>&amp;Settings</source>
         <translation>&amp;Socruithe</translation>
     </message>
@@ -1975,7 +1975,7 @@
         <translation>Cuardaigh nó cruthaigh nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8443"/>
+        <location filename="../mainwindow.cpp" line="8441"/>
         <source>Add a tag to the selected notes</source>
         <translation>Cuir tag leis na nótaí roghnaithe</translation>
     </message>
@@ -1986,7 +1986,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="869"/>
-        <location filename="../mainwindow.cpp" line="6469"/>
+        <location filename="../mainwindow.cpp" line="6467"/>
         <source>Export</source>
         <translation>Easpórtáil</translation>
     </message>
@@ -1997,7 +1997,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="907"/>
-        <location filename="../mainwindow.cpp" line="6450"/>
+        <location filename="../mainwindow.cpp" line="6448"/>
         <source>Print</source>
         <translation>Priontáil</translation>
     </message>
@@ -2068,7 +2068,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1136"/>
-        <location filename="../mainwindow.cpp" line="717"/>
+        <location filename="../mainwindow.cpp" line="712"/>
         <source>Workspaces</source>
         <translation>Spásanna oibre</translation>
     </message>
@@ -2089,524 +2089,529 @@
         <translation>Taispeáin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1165"/>
+        <location filename="../mainwindow.ui" line="1166"/>
         <source>Workspace</source>
         <translation>Spás oibre</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1174"/>
+        <location filename="../mainwindow.ui" line="1175"/>
         <source>Jump to</source>
         <translation>Léim go</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1210"/>
+        <location filename="../mainwindow.ui" line="1211"/>
         <source>&amp;Scripting</source>
         <translation>&amp;Scriptiú</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1316"/>
+        <location filename="../mainwindow.ui" line="1317"/>
         <source>About &amp;QOwnNotes…</source>
         <translation>Maidir le &amp;QOwnNotes…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1355"/>
+        <location filename="../mainwindow.ui" line="1356"/>
         <source>Post questions, feature requests or problems with the help of the issue assistant</source>
         <translation>Cuir ceisteanna, cuir isteach iarratais nó fadhbanna le cabhair an chúntóra eisiúna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1413"/>
+        <location filename="../mainwindow.ui" line="1414"/>
         <source>Show remote trash</source>
         <translation>Taispeáin bruscar iargúlta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1453"/>
-        <location filename="../mainwindow.ui" line="1456"/>
+        <location filename="../mainwindow.ui" line="1454"/>
+        <location filename="../mainwindow.ui" line="1457"/>
         <source>Auto format table</source>
         <translation>Tábla formáide uathoibríoch</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1485"/>
+        <location filename="../mainwindow.ui" line="1486"/>
         <source>Forward in note history</source>
         <translation>Ar aghaidh i stair nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1497"/>
+        <location filename="../mainwindow.ui" line="1498"/>
         <source>Show shortcuts</source>
         <translation>Taispeáin aicearraí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1506"/>
+        <location filename="../mainwindow.ui" line="1507"/>
         <source>&amp;Knowledge base</source>
         <translation>&amp;Bonn eolais</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1515"/>
+        <location filename="../mainwindow.ui" line="1516"/>
         <source>Insert current &amp;time</source>
         <translation>Cuir an t-am &amp;reatha isteach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1527"/>
+        <location filename="../mainwindow.ui" line="1528"/>
         <source>Show &amp;Todo List</source>
         <translation>Taispeáin Liosta &amp;Todo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1539"/>
+        <location filename="../mainwindow.ui" line="1540"/>
         <source>&amp;Export note as PDF (preview)</source>
         <translation>&amp;Easpórtáil nóta mar PDF (réamhamharc)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1542"/>
+        <location filename="../mainwindow.ui" line="1543"/>
         <source>Export note as PDF (preview)</source>
         <translation>Easpórtáil nóta mar PDF (réamhamharc)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1551"/>
+        <location filename="../mainwindow.ui" line="1552"/>
         <source>&amp;Export note as PDF (text)</source>
         <translation>&amp;Easpórtáil nóta mar PDF (téacs)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1560"/>
+        <location filename="../mainwindow.ui" line="1561"/>
         <source>&amp;Print note (text)</source>
         <translation>&amp;Priontáil nóta (téacs)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1584"/>
+        <location filename="../mainwindow.ui" line="1585"/>
         <source>Insert &amp;image</source>
         <translation>Cuir isteach an &amp;íomhá</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1587"/>
+        <location filename="../mainwindow.ui" line="1588"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
         <translation>Cuir isteach íomhá (déanfar an íomhá a chóipeáil chuig an bhfillteán `meáin &apos;sa fhillteán nótaí reatha)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1599"/>
+        <location filename="../mainwindow.ui" line="1600"/>
         <source>Show &amp;changelog</source>
         <translation>Taispeáin &amp;changelog</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1608"/>
+        <location filename="../mainwindow.ui" line="1609"/>
         <source>&amp;Encrypt note</source>
         <translation>&amp;Criptigh nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1617"/>
+        <location filename="../mainwindow.ui" line="1618"/>
         <source>Edit encrypted note</source>
         <translation>Cuir nóta criptithe in eagar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1629"/>
+        <location filename="../mainwindow.ui" line="1630"/>
         <source>Decrypt note</source>
         <translation>Nóta díchriptigh</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1638"/>
+        <location filename="../mainwindow.ui" line="1639"/>
         <source>&amp;Open note in external editor</source>
         <translation>&amp;Nóta oscailte in eagarthóir seachtrach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1650"/>
+        <location filename="../mainwindow.ui" line="1651"/>
         <source>&amp;Export note as markdown file</source>
         <translation>&amp;Easpórtáil nóta mar chomhad marcáilte</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1659"/>
+        <location filename="../mainwindow.ui" line="1660"/>
         <source>&amp;Get involved</source>
         <translation>&amp;Glac páirt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1668"/>
+        <location filename="../mainwindow.ui" line="1669"/>
         <source>Insert &amp;code block</source>
         <translation>Cuir isteach bloc na gcód</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1680"/>
+        <location filename="../mainwindow.ui" line="1681"/>
         <source>Next note</source>
         <translation>An chéad nóta eile</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1692"/>
+        <location filename="../mainwindow.ui" line="1693"/>
         <source>Previous note</source>
         <translation>Nóta roimhe seo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1704"/>
+        <location filename="../mainwindow.ui" line="1705"/>
         <source>&amp;Distraction free mode</source>
         <translation>&amp;Modh saor ó aird</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1707"/>
+        <location filename="../mainwindow.ui" line="1708"/>
         <source>Distraction free mode, you can leave it with a button on the bottom right</source>
         <translation>Modh saor in aisce ar seachrán, is féidir leat é a fhágáil le cnaipe ar dheis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1718"/>
+        <location filename="../mainwindow.ui" line="1719"/>
         <source>Show &amp;toolbar</source>
         <translation>Taispeáin barra &amp;uirlisí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1726"/>
+        <location filename="../mainwindow.ui" line="1727"/>
         <source>Narrow</source>
         <translation>Caol</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1737"/>
+        <location filename="../mainwindow.ui" line="1738"/>
         <source>Medium</source>
         <translation>Mheán</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1748"/>
+        <location filename="../mainwindow.ui" line="1749"/>
         <source>Wide</source>
         <translation>Leathan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1759"/>
+        <location filename="../mainwindow.ui" line="1760"/>
         <source>Full</source>
         <translation>Iomlán</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1771"/>
+        <location filename="../mainwindow.ui" line="1772"/>
         <source>Paste html or media</source>
         <translation>Greamaigh html nó meáin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1774"/>
-        <location filename="../mainwindow.ui" line="1777"/>
+        <location filename="../mainwindow.ui" line="1775"/>
+        <location filename="../mainwindow.ui" line="1778"/>
         <source>Paste images, notes and html from the clipboard</source>
         <translation>Greamaigh íomhánna, nótaí agus html ón ghearrthaisce</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1789"/>
+        <location filename="../mainwindow.ui" line="1790"/>
         <source>Show note in &amp;file manager</source>
         <translation>Taispeáin nóta i &amp;mbainisteoir comhad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1801"/>
+        <location filename="../mainwindow.ui" line="1802"/>
         <source>Format text &amp;bold</source>
         <translation>Téacs téacs &amp;trom</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1813"/>
+        <location filename="../mainwindow.ui" line="1814"/>
         <source>Format text &amp;italic</source>
         <translation>Téacs téacs &amp;iodálach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1825"/>
+        <location filename="../mainwindow.ui" line="1826"/>
         <source>&amp;Increase note text size</source>
         <translation>&amp;Méid an téacs nótaí a mhéadú</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1837"/>
+        <location filename="../mainwindow.ui" line="1838"/>
         <source>&amp;Decrease note text size</source>
         <translation>&amp;Laghdaigh méid an nóta téacs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1849"/>
+        <location filename="../mainwindow.ui" line="1850"/>
         <source>&amp;Reset note text size</source>
         <translation>&amp;Athraigh méid an nóta téacs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1861"/>
+        <location filename="../mainwindow.ui" line="1862"/>
         <source>&amp;Add tag to note</source>
         <translation>&amp;Cuir tag le tabhairt faoi deara</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1873"/>
+        <location filename="../mainwindow.ui" line="1874"/>
         <source>&amp;Reload note folder</source>
         <translation>&amp;Fillteán nóta athlódáil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1945"/>
+        <location filename="../mainwindow.ui" line="1946"/>
         <source>Show log</source>
         <translation>Taispeáin loga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1954"/>
+        <location filename="../mainwindow.ui" line="1955"/>
         <source>Export note as HTML</source>
         <translation>Easpórtáil nóta mar HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2033"/>
+        <location filename="../mainwindow.ui" line="2034"/>
         <source>Cycle text case</source>
         <translation>Cás téacs rothaíochta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2106"/>
+        <location filename="../mainwindow.ui" line="2107"/>
         <source>Show note list under tag panel</source>
         <translation>Taispeáin liosta nótaí faoi phainéal clib</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2124"/>
+        <location filename="../mainwindow.ui" line="2125"/>
         <source>Find notes in all tags / subfolders</source>
         <translation>Faigh nótaí i ngach clib / fo-fhillteán</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2145"/>
+        <location filename="../mainwindow.ui" line="2146"/>
         <source>Import notes from text files</source>
         <translation>Nótaí a allmhairiú ó chomhaid téacs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2154"/>
+        <location filename="../mainwindow.ui" line="2155"/>
         <source>Manage orphaned image files</source>
         <translation>Bainistigh comhaid íomhá dílleachta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2166"/>
-        <location filename="../mainwindow.ui" line="2169"/>
+        <location filename="../mainwindow.ui" line="2167"/>
+        <location filename="../mainwindow.ui" line="2170"/>
         <source>Open the Telegram group</source>
         <translation>Oscail an grúpa Telegram</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2181"/>
-        <location filename="../mainwindow.ui" line="2184"/>
+        <location filename="../mainwindow.ui" line="2182"/>
+        <location filename="../mainwindow.ui" line="2185"/>
         <source>Open the Riot room</source>
         <extracomment>&quot;Riot&quot; as in the chat service</extracomment>
         <translation>Oscail an seomra Riot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2211"/>
+        <location filename="../mainwindow.ui" line="2212"/>
         <source>Unlock panels</source>
         <translation>Díghlasáil painéil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2220"/>
-        <location filename="../mainwindow.cpp" line="11146"/>
+        <location filename="../mainwindow.ui" line="2221"/>
+        <location filename="../mainwindow.cpp" line="11144"/>
         <source>Remove current workspace</source>
         <translation>Bain amach an spás oibre reatha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2229"/>
+        <location filename="../mainwindow.ui" line="2230"/>
         <source>Add new workspace</source>
         <translation>Cuir spás oibre nua leis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2238"/>
+        <location filename="../mainwindow.ui" line="2239"/>
         <source>Rename current workspace</source>
         <translation>Athainmnigh an spás oibre reatha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2247"/>
+        <location filename="../mainwindow.ui" line="2248"/>
         <source>Switch to previous workspace</source>
         <translation>Téigh go dtí an spás oibre roimhe seo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2255"/>
+        <location filename="../mainwindow.ui" line="2256"/>
         <source>Show all panels</source>
         <translation>Taispeáin gach painéal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2264"/>
+        <location filename="../mainwindow.ui" line="2265"/>
         <source>Find action</source>
         <translation>Faigh gníomh</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2267"/>
-        <location filename="../mainwindow.ui" line="2270"/>
+        <location filename="../mainwindow.ui" line="2268"/>
+        <location filename="../mainwindow.ui" line="2271"/>
         <source>Find an action from the menu</source>
         <translation>Faigh gníomh ón roghchlár</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2282"/>
+        <location filename="../mainwindow.ui" line="2283"/>
         <source>Insert table</source>
         <translation>Cuir isteach an tábla</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2294"/>
-        <location filename="../mainwindow.cpp" line="6427"/>
+        <location filename="../mainwindow.ui" line="2295"/>
+        <location filename="../mainwindow.cpp" line="6425"/>
         <source>Insert block &amp;quote</source>
         <translation>Cuir isteach luachana &amp;bloc</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2302"/>
-        <location filename="../mainwindow.ui" line="2305"/>
+        <location filename="../mainwindow.ui" line="2303"/>
+        <location filename="../mainwindow.ui" line="2306"/>
         <source>Search selected text on the web</source>
         <translation>Cuardaigh téacs roghnaithe ar an ngréasán</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2313"/>
+        <location filename="../mainwindow.ui" line="2314"/>
         <source>Delete line</source>
         <translation>Scrios líne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2321"/>
+        <location filename="../mainwindow.ui" line="2322"/>
         <source>Delete word</source>
         <translation>Scrios focal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2329"/>
+        <location filename="../mainwindow.ui" line="2330"/>
         <source>Copy note headline</source>
         <translation>Ceannlíne nóta na gcóipeála</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2341"/>
-        <location filename="../mainwindow.cpp" line="10030"/>
+        <location filename="../mainwindow.ui" line="2342"/>
+        <location filename="../mainwindow.cpp" line="10028"/>
         <source>Open note in different window</source>
         <translation>Oscail nóta i bhfuinneog dhifriúil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2353"/>
+        <location filename="../mainwindow.ui" line="2354"/>
         <source>Save modified notes</source>
         <translation>Sábháil nótaí modhnaithe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2364"/>
+        <location filename="../mainwindow.ui" line="2365"/>
         <source>Ascending</source>
         <translation>Ag dul suas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2372"/>
+        <location filename="../mainwindow.ui" line="2373"/>
         <source>Descending</source>
         <translation>Ag dul suas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2381"/>
-        <location filename="../mainwindow.cpp" line="10038"/>
+        <location filename="../mainwindow.ui" line="2382"/>
+        <location filename="../mainwindow.cpp" line="10036"/>
         <source>Show note git versions</source>
         <translation>Taispeáin leaganacha nótaí git</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2390"/>
+        <location filename="../mainwindow.ui" line="2391"/>
         <source>Find scripts in script repository</source>
         <translation>Faigh scripteanna i stór scripte</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2402"/>
+        <location filename="../mainwindow.ui" line="2403"/>
         <source>Script settings</source>
         <translation>Socruithe Script</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2411"/>
+        <location filename="../mainwindow.ui" line="2412"/>
         <source>Insert attachment</source>
         <translation>Cuir ceangaltán isteach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2438"/>
+        <location filename="../mainwindow.ui" line="2439"/>
         <source>Check for script updates</source>
         <translation>Seiceáil le haghaidh nuashonruithe scripte</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2447"/>
+        <location filename="../mainwindow.ui" line="2448"/>
         <source>Show local trash</source>
         <translation>Taispeáin an bruscar áitiúil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2452"/>
-        <location filename="../mainwindow.ui" line="2455"/>
+        <location filename="../mainwindow.ui" line="2453"/>
+        <location filename="../mainwindow.ui" line="2456"/>
         <source>Jump to note edit panel</source>
         <translation>Léim chun nóta a dhéanamh den phainéal eagarthóireachta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2467"/>
+        <location filename="../mainwindow.ui" line="2468"/>
         <source>Manage orphaned attachments</source>
         <translation>Bainistigh iatáin dílleachta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2472"/>
+        <location filename="../mainwindow.ui" line="2473"/>
         <source>Jump to note subfolder panel</source>
         <translation>Léim chun painéal an fhillteora a thabhairt faoi deara</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2480"/>
+        <location filename="../mainwindow.ui" line="2481"/>
         <source>Jump to tags panel</source>
         <translation>Léim go painéal clibeanna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2488"/>
+        <location filename="../mainwindow.ui" line="2489"/>
         <source>Jump to note list panel</source>
         <translation>Léim go dtí an painéal liosta nótaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2496"/>
+        <location filename="../mainwindow.ui" line="2497"/>
         <source>Activate context menu</source>
         <translation>Cuir roghchlár comhthéacs i bhfeidhm</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2504"/>
+        <location filename="../mainwindow.ui" line="2505"/>
         <source>Import bookmarks from server</source>
         <translation>Iompórtáil leabharmharcanna ón bhfreastalaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2509"/>
-        <location filename="../mainwindow.ui" line="2512"/>
+        <location filename="../mainwindow.ui" line="2510"/>
+        <location filename="../mainwindow.ui" line="2513"/>
         <source>Toggle full-screen mode</source>
         <translation>Scoránaigh mód an scáileáin iomlán</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2523"/>
+        <location filename="../mainwindow.ui" line="2524"/>
         <source>Typewriter mode</source>
         <translation>Modh clóscríobháin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2535"/>
+        <location filename="../mainwindow.ui" line="2536"/>
         <source>Check spelling</source>
         <translation>Seiceáil an litriú</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2543"/>
-        <location filename="../mainwindow.cpp" line="12008"/>
+        <location filename="../mainwindow.ui" line="2544"/>
+        <location filename="../mainwindow.cpp" line="12006"/>
         <source>Automatically detect</source>
         <translation>Braith go huathoibríoch</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2548"/>
+        <location filename="../mainwindow.ui" line="2549"/>
         <source>Manage dictionaries</source>
         <translation>Foclóirí a bhainistiú</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2556"/>
+        <location filename="../mainwindow.ui" line="2557"/>
         <source>Custom</source>
         <translation>Saincheap</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2559"/>
+        <location filename="../mainwindow.ui" line="2560"/>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1884"/>
+        <location filename="../mainwindow.ui" line="2565"/>
+        <source>Show/Hide application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1885"/>
         <source>Use &amp;vertical preview layout</source>
         <translation>Úsáid &amp;leagan amach ingearach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1887"/>
-        <location filename="../mainwindow.ui" line="1890"/>
+        <location filename="../mainwindow.ui" line="1888"/>
+        <location filename="../mainwindow.ui" line="1891"/>
         <source>The note edit panel will be above the preview panel</source>
         <translation>Beidh an painéal in eagar nóta os cionn an phainéil réamhamhairc</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1899"/>
+        <location filename="../mainwindow.ui" line="1900"/>
         <source>Replace in current note</source>
         <translation>In ionad an nóta reatha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1907"/>
+        <location filename="../mainwindow.ui" line="1908"/>
         <source>Autocomplete, solve equation or open URL</source>
         <translation>Comhlánaithe go hiomlán, réiteach cothromóid nó URL oscailte</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1910"/>
+        <location filename="../mainwindow.ui" line="1911"/>
         <source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
         <translation>Réitigh cothromóid shimplí cosúil le &apos;(2 + 3) * 6 =&apos; sa líne reatha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1918"/>
+        <location filename="../mainwindow.ui" line="1919"/>
         <source>Select note folder</source>
         <translation>Roghnaigh fillteán nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1933"/>
+        <location filename="../mainwindow.ui" line="1934"/>
         <source>Reload scripting engine</source>
         <translation>Athlódáil inneall scriptithe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1966"/>
-        <location filename="../mainwindow.ui" line="1969"/>
+        <location filename="../mainwindow.ui" line="1967"/>
+        <location filename="../mainwindow.ui" line="1970"/>
         <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
         <translation>Oscail an cainéal #qownnotes IRC, caithfidh tú fanacht ar líne chun freagra a fháil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2196"/>
-        <location filename="../mainwindow.ui" line="2199"/>
+        <location filename="../mainwindow.ui" line="2197"/>
+        <location filename="../mainwindow.ui" line="2200"/>
         <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
         <translation>Oscailt an tseomra giuirléidí, is gá duit cuntas GitHub nó Twitter a úsáid chun logáil isteach, ach is féidir leat teachtaireachtaí as líne a fháil</translation>
     </message>
@@ -2621,88 +2626,88 @@
         <translation>Tabhair faoi deara oibríochtaí…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1572"/>
+        <location filename="../mainwindow.ui" line="1573"/>
         <source>&amp;Print note (preview)</source>
         <translation>&amp;Priontáil nóta (réamhamharc)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1978"/>
+        <location filename="../mainwindow.ui" line="1979"/>
         <source>Insert headline from note filename</source>
         <translation>Cuir isteach ceannlíne ó ainm an nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1992"/>
+        <location filename="../mainwindow.ui" line="1993"/>
         <source>Use softwrap in note editor and preview</source>
         <translation>Úsáid bogearra i n-eagarthóir nótaí agus i réamhamharc</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2000"/>
+        <location filename="../mainwindow.ui" line="2001"/>
         <source>Show status bar</source>
         <translation>Taispeáin barra stádais</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2015"/>
+        <location filename="../mainwindow.ui" line="2016"/>
         <source>Share note</source>
         <translation>Comhroinn nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2045"/>
+        <location filename="../mainwindow.ui" line="2046"/>
         <source>Markdown cheatsheet</source>
         <translation>Bileog cheats Markdown</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2054"/>
+        <location filename="../mainwindow.ui" line="2055"/>
         <source>Strike out text</source>
         <translation>Déan téacs a scriosadh amach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2065"/>
+        <location filename="../mainwindow.ui" line="2066"/>
         <source>Use one column mode</source>
         <translation>Úsáid modh colúin amháin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2068"/>
-        <location filename="../mainwindow.ui" line="2071"/>
+        <location filename="../mainwindow.ui" line="2069"/>
+        <location filename="../mainwindow.ui" line="2072"/>
         <source>Use a one column minimal mode (like NVAlt)</source>
         <translation>Bain úsáid as modh amháin colúin íosta (mar NVAlt)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2083"/>
+        <location filename="../mainwindow.ui" line="2084"/>
         <source>Show menu bar</source>
         <translation>Taispeáin an barra roghchláir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2095"/>
+        <location filename="../mainwindow.ui" line="2096"/>
         <source>Split note at cursor position</source>
         <translation>Nóta scoilte ag seasamh an chúrsóra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2115"/>
+        <location filename="../mainwindow.ui" line="2116"/>
         <source>Donate</source>
         <translation>Síntiús</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2136"/>
+        <location filename="../mainwindow.ui" line="2137"/>
         <source>Import notes from Evernote</source>
         <translation>Nótaí a allmhairiú ó Evernote</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2765"/>
+        <location filename="../mainwindow.cpp" line="2760"/>
         <source>Note was removed externally!</source>
         <translation>Baineadh nóta amach go seachtrach!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2766"/>
+        <location filename="../mainwindow.cpp" line="2761"/>
         <source>Current note was removed outside of this application!
 Restore current note?</source>
         <translation>Baineadh an nóta reatha lasmuigh den iarratas seo!
 Athchóirigh nóta reatha?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5280"/>
-        <location filename="../mainwindow.cpp" line="5303"/>
-        <location filename="../mainwindow.cpp" line="6899"/>
-        <location filename="../mainwindow.cpp" line="10120"/>
+        <location filename="../mainwindow.cpp" line="5275"/>
+        <location filename="../mainwindow.cpp" line="5298"/>
+        <location filename="../mainwindow.cpp" line="6897"/>
+        <location filename="../mainwindow.cpp" line="10118"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cealaigh</translation>
     </message>
@@ -2715,47 +2720,47 @@ Athchóirigh nóta reatha?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2983"/>
+        <location filename="../mainwindow.cpp" line="2978"/>
         <source>new version %1 available</source>
         <translation>leagan nua %1 ar fáil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3101"/>
+        <location filename="../mainwindow.cpp" line="3096"/>
         <source>Abort</source>
         <translation>Tobscoir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3101"/>
+        <location filename="../mainwindow.cpp" line="3096"/>
         <source>Loading notes…</source>
         <translation>Nótaí luchtaithe…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3331"/>
+        <location filename="../mainwindow.cpp" line="3326"/>
         <source>Removed duplicate conflicted database: %1</source>
         <translation>Bunachar sonraí comhshuite dúblach: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3332"/>
+        <location filename="../mainwindow.cpp" line="3327"/>
         <source>Could not remove duplicate conflicted database: %1</source>
         <translation>Níorbh fhéidir an bunachar sonraí comhshuite dúblach a bhaint: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3338"/>
+        <location filename="../mainwindow.cpp" line="3333"/>
         <source>Removed merged conflicted database: %1</source>
         <translation>Bunachar sonraí contrártha a cuireadh as oifig a baineadh as: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3339"/>
+        <location filename="../mainwindow.cpp" line="3334"/>
         <source>Could not remove merged conflicted database: %1</source>
         <translation>Níorbh fhéidir an bunachar sonraí comhchruinnithe a bhaint: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3354"/>
+        <location filename="../mainwindow.cpp" line="3349"/>
         <source>Delete conflicted database copies</source>
         <translation>Scrios cóipeanna bunachar sonraí atá contrártha</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3377"/>
+        <location filename="../mainwindow.cpp" line="3372"/>
         <source>Removed %n conflicted database copies</source>
         <translation>
             <numerusform>Rinneadh %n amháin de bhunachar sonraí a bhaint</numerusform>
@@ -2764,62 +2769,62 @@ Athchóirigh nóta reatha?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3534"/>
+        <location filename="../mainwindow.cpp" line="3529"/>
         <source>Please select the folder where your notes will get stored</source>
         <translation>Roghnaigh an fillteán ina stórálfar do chuid nótaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3560"/>
+        <location filename="../mainwindow.cpp" line="3555"/>
         <source>No folder was selected</source>
         <translation>Níor roghnaíodh aon fhillteán</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3562"/>
+        <location filename="../mainwindow.cpp" line="3557"/>
         <source>You have to select your ownCloud notes folder to make this software work!</source>
         <translation>Caithfidh tú d&apos;fhillteán nótaí ownCloud a roghnú chun an obair bogearraí seo a dhéanamh!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3564"/>
+        <location filename="../mainwindow.cpp" line="3559"/>
         <source>&amp;Retry</source>
         <translation>&amp;Atosaigh</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3564"/>
+        <location filename="../mainwindow.cpp" line="3559"/>
         <source>&amp;Exit</source>
         <translation>&amp;An slí amach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3804"/>
+        <location filename="../mainwindow.cpp" line="3799"/>
         <source>Remove current note</source>
         <translation>Bain an nóta reatha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3805"/>
+        <location filename="../mainwindow.cpp" line="3800"/>
         <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Bain an nóta reatha: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4160"/>
+        <location filename="../mainwindow.cpp" line="4155"/>
         <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
         <translation>Cuir isteach &lt;strong&gt; an focal faire &lt;/strong&gt; den nóta criptithe seo le do thoil.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4183"/>
+        <location filename="../mainwindow.cpp" line="4178"/>
         <source>Note can&apos;t be decrypted!</source>
         <translation>Ní féidir nóta a dhíchriptiú!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4184"/>
+        <location filename="../mainwindow.cpp" line="4179"/>
         <source>It seems that your password is not valid!</source>
         <translation>Dealraíonn sé nach bhfuil do phasfhocal bailí!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4352"/>
+        <location filename="../mainwindow.cpp" line="4347"/>
         <source>Remove selected notes</source>
         <translation>Bain na nótaí roghnaithe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4354"/>
+        <location filename="../mainwindow.cpp" line="4349"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -2836,13 +2841,13 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4442"/>
-        <location filename="../mainwindow.cpp" line="10333"/>
+        <location filename="../mainwindow.cpp" line="4437"/>
+        <location filename="../mainwindow.cpp" line="10331"/>
         <source>Remove selected folders</source>
         <translation>Bain fillteáin roghnaithe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4443"/>
+        <location filename="../mainwindow.cpp" line="4438"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation>
             <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; fillteán roghnaithe? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Bainfear gach comhad agus fillteán sna fillteáin seo chomh maith!</numerusform>
@@ -2851,17 +2856,17 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4454"/>
+        <location filename="../mainwindow.cpp" line="4449"/>
         <source>Removed note subfolder: %1</source>
         <translation>Fillteán nótaí bainte: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4472"/>
+        <location filename="../mainwindow.cpp" line="4467"/>
         <source>Remove selected tags</source>
         <translation>Bain clibeanna roghnaithe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4473"/>
+        <location filename="../mainwindow.cpp" line="4468"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
         <translation>
             <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; clib roghnaithe? Ní bhainfear aon nótaí sa phróiseas seo.</numerusform>
@@ -2870,13 +2875,13 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4525"/>
-        <location filename="../mainwindow.cpp" line="9184"/>
+        <location filename="../mainwindow.cpp" line="4520"/>
+        <location filename="../mainwindow.cpp" line="9182"/>
         <source>Move selected notes</source>
         <translation>Bog nótaí roghnaithe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4526"/>
+        <location filename="../mainwindow.cpp" line="4521"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Bog %n nóta roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2885,13 +2890,13 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4629"/>
-        <location filename="../mainwindow.cpp" line="9292"/>
+        <location filename="../mainwindow.cpp" line="4624"/>
+        <location filename="../mainwindow.cpp" line="9290"/>
         <source>Copy selected notes</source>
         <translation>Cóipeáil nótaí roghnaithe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4630"/>
+        <location filename="../mainwindow.cpp" line="4625"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Cóipeáil %n nóta roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2900,13 +2905,13 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4660"/>
-        <location filename="../mainwindow.cpp" line="4809"/>
+        <location filename="../mainwindow.cpp" line="4655"/>
+        <location filename="../mainwindow.cpp" line="4804"/>
         <source>Done</source>
         <translation>Arna dhéanamh</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4661"/>
+        <location filename="../mainwindow.cpp" line="4656"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>
             <numerusform>Déanadh cóip ar %n nóta chuig &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -2915,12 +2920,12 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4674"/>
+        <location filename="../mainwindow.cpp" line="4669"/>
         <source>Tag selected notes</source>
         <translation>Clibeáil nótaí roghnaithe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4675"/>
+        <location filename="../mainwindow.cpp" line="4670"/>
         <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Nóta clibe %n roghnaithe le &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2929,42 +2934,42 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4948"/>
+        <location filename="../mainwindow.cpp" line="4943"/>
         <source>Restart application</source>
         <translation>Iarratas a atosú</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4954"/>
+        <location filename="../mainwindow.cpp" line="4949"/>
         <source>You may need to restart the application manually to let the changes take effect.</source>
         <translation>Seans go mbeidh ort an t-iarratas a atosú de láimh chun ligean do na hathruithe teacht i bhfeidhm.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4959"/>
+        <location filename="../mainwindow.cpp" line="4954"/>
         <source>You may need to restart the application to let the changes take effect.</source>
         <translation>B&apos;fhéidir go mbeidh ort an t-iarratas a atosú chun ligean do na hathruithe teacht i bhfeidhm.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4961"/>
+        <location filename="../mainwindow.cpp" line="4956"/>
         <source>Restart</source>
         <translation>Tosaigh arís</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5192"/>
+        <location filename="../mainwindow.cpp" line="5187"/>
         <source>PDF files</source>
         <translation>Comhaid PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5276"/>
+        <location filename="../mainwindow.cpp" line="5271"/>
         <source>Todo lists disabled!</source>
         <translation>Liostaítear Todo faoi mhíchumas!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5277"/>
+        <location filename="../mainwindow.cpp" line="5272"/>
         <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation>Tá na liostaí todo díchumasaithe agat. &lt;br /&gt; Déan seiceáil ar do chumraíocht &lt;strong&gt; Todo &lt;/strong&gt; sna suímh!</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5520"/>
+        <location filename="../mainwindow.cpp" line="5515"/>
         <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>
             <numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; teagmhas ar bith de &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -2973,99 +2978,99 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6070"/>
+        <location filename="../mainwindow.cpp" line="6065"/>
         <source>Note was not found</source>
         <translation>Níor aimsíodh nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6071"/>
+        <location filename="../mainwindow.cpp" line="6066"/>
         <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Níor aimsíodh nóta, cruthaigh nóta nua &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6231"/>
+        <location filename="../mainwindow.cpp" line="6229"/>
         <source>Note folders</source>
         <translation>Tabhair faoi deara fillteáin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6354"/>
+        <location filename="../mainwindow.cpp" line="6352"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation>Tá leaganacha faoi deara á lódáil faoi láthair ó do fhreastalaí ownCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6371"/>
+        <location filename="../mainwindow.cpp" line="6369"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation>Tá nótaí Trashed á luchtú ó do fhreastalaí ownCloud faoi láthair</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6437"/>
+        <location filename="../mainwindow.cpp" line="6435"/>
         <source>Copy code block</source>
         <translation>Bloc cód cóipeála</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6458"/>
+        <location filename="../mainwindow.cpp" line="6456"/>
         <source>Print selected text</source>
         <translation>Priontáil téacs roghnaithe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6464"/>
+        <location filename="../mainwindow.cpp" line="6462"/>
         <source>Print selected text (preview)</source>
         <translation>Priontáil an téacs roghnaithe (réamhamharc)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6482"/>
+        <location filename="../mainwindow.cpp" line="6480"/>
         <source>Export selected text as PDF</source>
         <translation>Easpórtáil téacs roghnaithe mar PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6488"/>
+        <location filename="../mainwindow.cpp" line="6486"/>
         <source>Export selected text as PDF (preview)</source>
         <translation>Easpórtáil téacs roghnaithe mar PDF (réamhamharc)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6895"/>
+        <location filename="../mainwindow.cpp" line="6893"/>
         <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>Déanfar do nóta a dhíchriptiú agus a stóráil mar ghnáth-théacs arís. Coinnigh i gcuimhne go mbeidh an nóta neamhchriptithe sínithe le do fhreastalaí agus d’fhéadfadh go mbeadh téacs íogair nochta! &lt;br /&gt; An bhfuil tú ag iarraidh do nóta a dhíchriptiú?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6992"/>
+        <location filename="../mainwindow.cpp" line="6990"/>
         <source>Markdown files</source>
         <translation>Comhaid marcáilte</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7048"/>
+        <location filename="../mainwindow.cpp" line="7046"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>Post an nóta leabharmharcáilte ag sliotán %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7063"/>
+        <location filename="../mainwindow.cpp" line="7061"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>Léim go postmharc ag sliotán %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7283"/>
-        <location filename="../mainwindow.cpp" line="7352"/>
+        <location filename="../mainwindow.cpp" line="7281"/>
+        <location filename="../mainwindow.cpp" line="7350"/>
         <source>Inserting image</source>
         <translation>Íomhá a chur isteach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7288"/>
-        <location filename="../mainwindow.cpp" line="7356"/>
+        <location filename="../mainwindow.cpp" line="7286"/>
+        <location filename="../mainwindow.cpp" line="7354"/>
         <source>Done inserting image</source>
         <translation>Arna chur isteach an íomhá</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7290"/>
+        <location filename="../mainwindow.cpp" line="7288"/>
         <source>Inserting attachment</source>
         <translation>Ceangaltán a chur isteach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7295"/>
+        <location filename="../mainwindow.cpp" line="7293"/>
         <source>Done inserting attachment</source>
         <translation>Arna chur isteach i gceangal</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7307"/>
+        <location filename="../mainwindow.cpp" line="7305"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>Cóipeáil %n nóta go %1</numerusform>
@@ -3074,7 +3079,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7316"/>
+        <location filename="../mainwindow.cpp" line="7314"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>Níorbh fhéidir cóip %n nóta a chóipeáil (is dócha go bhfuil sé ann cheana féin)</numerusform>
@@ -3083,7 +3088,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7326"/>
+        <location filename="../mainwindow.cpp" line="7324"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>Scipeáil cóipeála de nóta %n (gan aon chomhad marcáilte nó téacs nó níl sé inléite)</numerusform>
@@ -3092,183 +3097,183 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7339"/>
+        <location filename="../mainwindow.cpp" line="7337"/>
         <source>Saving temporary image</source>
         <translation>Ag cosaint íomhá shealadaigh</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7358"/>
+        <location filename="../mainwindow.cpp" line="7356"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>Ní féidir comhad sealadach a oscailt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7401"/>
+        <location filename="../mainwindow.cpp" line="7399"/>
         <source>Downloading %1</source>
         <translation>%1 a íoslódáil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7584"/>
+        <location filename="../mainwindow.cpp" line="7582"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation>Athraigh méid an chló go %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8488"/>
+        <location filename="../mainwindow.cpp" line="8486"/>
         <source>Remove tag &apos;%1&apos; from the current note</source>
         <translation>Bain an clib &apos;%1&apos; ón nóta reatha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8489"/>
+        <location filename="../mainwindow.cpp" line="8487"/>
         <source>Remove tag &apos;%1&apos; from the selected notes</source>
         <translation>Bain an clib &apos;%1&apos; as na nótaí roghnaithe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8713"/>
+        <location filename="../mainwindow.cpp" line="8711"/>
         <source>Rename tag</source>
         <translation>Athainmnigh an chlib</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8714"/>
+        <location filename="../mainwindow.cpp" line="8712"/>
         <source>Assign color</source>
         <translation>Dath a shannadh</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8715"/>
+        <location filename="../mainwindow.cpp" line="8713"/>
         <source>Disable color</source>
         <translation>Díchumasaigh an dath</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8719"/>
+        <location filename="../mainwindow.cpp" line="8717"/>
         <source>&amp;Move tags to…</source>
         <translation>&amp;Bog clibeanna chuig…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8930"/>
+        <location filename="../mainwindow.cpp" line="8928"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
         <translation>Bog go dtí an fhréamh</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9458"/>
+        <location filename="../mainwindow.cpp" line="9456"/>
         <source>An url was opened at the current cursor position</source>
         <translation>Osclaíodh url ag staid an chúrsóra reatha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9562"/>
+        <location filename="../mainwindow.cpp" line="9560"/>
         <source>No equation was found in front of the cursor</source>
         <translation>Níor aimsíodh aon chothromóid os comhair an chúrsóra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9579"/>
+        <location filename="../mainwindow.cpp" line="9577"/>
         <source>Result for equation: %1 = %2</source>
         <translation>Toradh ar chothromóid: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9680"/>
+        <location filename="../mainwindow.cpp" line="9678"/>
         <source>The scripting engine was reloaded</source>
         <translation>Rinneadh an t-inneall scripteála a athlódáil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9714"/>
+        <location filename="../mainwindow.cpp" line="9712"/>
         <source>HTML files</source>
         <translation>Comhaid HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9914"/>
-        <location filename="../mainwindow.cpp" line="10104"/>
+        <location filename="../mainwindow.cpp" line="9912"/>
+        <location filename="../mainwindow.cpp" line="10102"/>
         <source>Rename note</source>
         <translation>Athainmnigh nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9916"/>
+        <location filename="../mainwindow.cpp" line="9914"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Ceadaíonn sé duit ainm comhaid an nóta a athainmniú</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9930"/>
+        <location filename="../mainwindow.cpp" line="9928"/>
         <source>&amp;Move notes to…</source>
         <translation>&amp;Bog nótaí go…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9931"/>
+        <location filename="../mainwindow.cpp" line="9929"/>
         <source>&amp;Copy notes to…</source>
         <translation>&amp;Cóipeáil nótaí chuig…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9970"/>
+        <location filename="../mainwindow.cpp" line="9968"/>
         <source>Jump to the note&apos;s sub-folder</source>
         <translation>Léim go fo-fhillteán an nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9974"/>
+        <location filename="../mainwindow.cpp" line="9972"/>
         <source>Move notes to subfolder…</source>
         <translation>Bog nótaí chuig an bhfillteán…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9978"/>
+        <location filename="../mainwindow.cpp" line="9976"/>
         <source>Copy notes to subfolder…</source>
         <translation>Cóipeáil nótaí chuig an bhfillteán…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9986"/>
+        <location filename="../mainwindow.cpp" line="9984"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;Clib na nótaí roghnaithe le…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10010"/>
+        <location filename="../mainwindow.cpp" line="10008"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>&amp;Bain an clib ó nótaí roghnaithe…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10104"/>
+        <location filename="../mainwindow.cpp" line="10102"/>
         <source>Name:</source>
         <translation>Ainm:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10116"/>
+        <location filename="../mainwindow.cpp" line="10114"/>
         <source>Note renaming not enabled!</source>
         <translation>Tabhair faoi deara nach bhfuil an t-athainmniú ar chumas!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10332"/>
+        <location filename="../mainwindow.cpp" line="10330"/>
         <source>Rename subfolder</source>
         <translation>Athfhuaimniú an fhillteán</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10917"/>
+        <location filename="../mainwindow.cpp" line="10915"/>
         <source>Create new workspace</source>
         <translation>Cruthaigh spás oibre nua</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10918"/>
-        <location filename="../mainwindow.cpp" line="11188"/>
+        <location filename="../mainwindow.cpp" line="10916"/>
+        <location filename="../mainwindow.cpp" line="11186"/>
         <source>Workspace name:</source>
         <translation>Ainm an spáis oibre:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11043"/>
+        <location filename="../mainwindow.cpp" line="11041"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>iomlán</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11050"/>
+        <location filename="../mainwindow.cpp" line="11048"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>íosta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11147"/>
+        <location filename="../mainwindow.cpp" line="11145"/>
         <source>Remove the current workspace?</source>
         <translation>Bain an spás oibre reatha?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11187"/>
+        <location filename="../mainwindow.cpp" line="11185"/>
         <source>Rename workspace</source>
         <translation>Athainmnigh spás oibre</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="11333"/>
+        <location filename="../mainwindow.cpp" line="11331"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -3278,42 +3283,42 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11605"/>
+        <location filename="../mainwindow.cpp" line="11603"/>
         <source>Disallow all note editing</source>
         <translation>Diúltú do gach eagarthóireacht nótaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11766"/>
+        <location filename="../mainwindow.cpp" line="11764"/>
         <source>Select text files to import</source>
         <translation>Roghnaigh comhaid téacs le hallmhairiú</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11796"/>
+        <location filename="../mainwindow.cpp" line="11794"/>
         <source>Importing: %1</source>
         <translation>Allmhairiú: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11861"/>
+        <location filename="../mainwindow.cpp" line="11859"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation>Déan cóip den cheannlíne &apos;%1&apos; a chóipeáil chuig an ghearrthaisce</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11946"/>
+        <location filename="../mainwindow.cpp" line="11944"/>
         <source>Leave full-screen mode</source>
         <translation>Fág mód an scáileáin iomláin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12126"/>
+        <location filename="../mainwindow.cpp" line="12124"/>
         <source>Custom editor width</source>
         <translation>Leithead eagarthóra an chustaiméara</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12126"/>
+        <location filename="../mainwindow.cpp" line="12124"/>
         <source>Characters:</source>
         <translation>Carachtair:</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8462"/>
+        <location filename="../mainwindow.cpp" line="8460"/>
         <source>%n notes selected</source>
         <translation>
             <numerusform>%n nóta roghnaithe</numerusform>
@@ -3322,23 +3327,23 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2426"/>
-        <location filename="../mainwindow.cpp" line="11606"/>
+        <location filename="../mainwindow.ui" line="2427"/>
+        <location filename="../mainwindow.cpp" line="11604"/>
         <source>Allow all note editing</source>
         <translation>Lig do gach eagarthóireacht nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1204"/>
+        <location filename="../mainwindow.ui" line="1205"/>
         <source>&amp;Tag</source>
         <translation>&amp;Clib</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4749"/>
+        <location filename="../mainwindow.cpp" line="4744"/>
         <source>Remove tag from selected notes</source>
         <translation>Bain an clib ó nótaí roghnaithe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4750"/>
+        <location filename="../mainwindow.cpp" line="4745"/>
         <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
         <translation>
             <numerusform>Bain an chlib &lt;strong&gt;%1&lt;/strong&gt; ó nóta roghnaithe %n?</numerusform>
@@ -3347,7 +3352,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4810"/>
+        <location filename="../mainwindow.cpp" line="4805"/>
         <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
         <translation>
             <numerusform>Baineadh clib &lt;strong&gt;%1&lt;/strong&gt; as nóta %n</numerusform>
@@ -3356,132 +3361,132 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4855"/>
+        <location filename="../mainwindow.cpp" line="4850"/>
         <source>Current notes folder: </source>
         <translation>Fillteán nótaí reatha: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4858"/>
+        <location filename="../mainwindow.cpp" line="4853"/>
         <source>Set the notes folder. Current notes folder: </source>
         <translation>Socraigh an fillteán nótaí. Fillteán nótaí reatha:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5060"/>
+        <location filename="../mainwindow.cpp" line="5055"/>
         <source>Print note</source>
         <translation>Priontáil nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5135"/>
+        <location filename="../mainwindow.cpp" line="5130"/>
         <source>Letter</source>
         <translation>Litir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5165"/>
+        <location filename="../mainwindow.cpp" line="5160"/>
         <source>Portrait</source>
         <translation>Portráid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5165"/>
+        <location filename="../mainwindow.cpp" line="5160"/>
         <source>Landscape</source>
         <translation>Tírdhreach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5170"/>
+        <location filename="../mainwindow.cpp" line="5165"/>
         <source>Orientation</source>
         <translation>Treoshuíomh</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5170"/>
+        <location filename="../mainwindow.cpp" line="5165"/>
         <source>Orientation:</source>
         <translation>Treoshuíomh:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5193"/>
+        <location filename="../mainwindow.cpp" line="5188"/>
         <source>Export current note as PDF</source>
         <translation>Easpórtáil nóta reatha mar PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5300"/>
+        <location filename="../mainwindow.cpp" line="5295"/>
         <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation>Níor roghnaigh tú aon liostaí todo. &lt;br/&gt; Déan seiceáil ar do chumraíocht &lt;strong&gt; Todo &lt;/strong&gt; sna suímh!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6213"/>
+        <location filename="../mainwindow.cpp" line="6211"/>
         <source>Open QOwnNotes</source>
         <translation>Oscail QOwnNotes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5879"/>
-        <location filename="../mainwindow.cpp" line="6263"/>
-        <location filename="../mainwindow.cpp" line="9910"/>
-        <location filename="../mainwindow.cpp" line="10330"/>
+        <location filename="../mainwindow.cpp" line="5874"/>
+        <location filename="../mainwindow.cpp" line="6261"/>
+        <location filename="../mainwindow.cpp" line="9908"/>
+        <location filename="../mainwindow.cpp" line="10328"/>
         <source>New note</source>
         <translation>Nóta nua</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6280"/>
+        <location filename="../mainwindow.cpp" line="6278"/>
         <source>Recent notes</source>
         <translation>Nótaí le déanaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6296"/>
+        <location filename="../mainwindow.cpp" line="6294"/>
         <source>Show todo lists</source>
         <translation>Taispeáin liostaí todo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6308"/>
+        <location filename="../mainwindow.cpp" line="6306"/>
         <source>Recent tasks</source>
         <translation>Tascanna le déanaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6329"/>
+        <location filename="../mainwindow.cpp" line="6327"/>
         <source>Quit</source>
         <translation>Scoir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7758"/>
+        <location filename="../mainwindow.cpp" line="7756"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>taispeáin nótaí ó gach fo-fhillteán nótaí (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7781"/>
+        <location filename="../mainwindow.cpp" line="7779"/>
         <source>show notes in note root folder (%1)</source>
         <translation>taispeáin nótaí i bhfillteán fréamhacha nóta (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
-        <location filename="../mainwindow.cpp" line="761"/>
-        <location filename="../mainwindow.cpp" line="2011"/>
-        <location filename="../mainwindow.cpp" line="7793"/>
+        <location filename="../mainwindow.cpp" line="756"/>
+        <location filename="../mainwindow.cpp" line="2006"/>
+        <location filename="../mainwindow.cpp" line="7791"/>
         <source>Note folder</source>
         <translation>Fillteán faoi deara</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9065"/>
-        <location filename="../mainwindow.cpp" line="9132"/>
+        <location filename="../mainwindow.cpp" line="9063"/>
+        <location filename="../mainwindow.cpp" line="9130"/>
         <source>Copy to note folder</source>
         <translation>Cóip le fillteán a thabhairt faoi deara</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9065"/>
-        <location filename="../mainwindow.cpp" line="9133"/>
+        <location filename="../mainwindow.cpp" line="9063"/>
+        <location filename="../mainwindow.cpp" line="9131"/>
         <source>Move to note folder</source>
         <translation>Fillteán bogadh go nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9066"/>
-        <location filename="../mainwindow.cpp" line="9134"/>
+        <location filename="../mainwindow.cpp" line="9064"/>
+        <location filename="../mainwindow.cpp" line="9132"/>
         <source>Copy to this subfolder</source>
         <translation>Cóipeáil chuig an bhfillteán seo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9067"/>
-        <location filename="../mainwindow.cpp" line="9135"/>
+        <location filename="../mainwindow.cpp" line="9065"/>
+        <location filename="../mainwindow.cpp" line="9133"/>
         <source>Move to this subfolder</source>
         <translation>Bog chuig an bhfillteán seo</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="9179"/>
+        <location filename="../mainwindow.cpp" line="9177"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Bog %n nóta roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
@@ -3490,13 +3495,13 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4961"/>
-        <location filename="../mainwindow.cpp" line="11780"/>
+        <location filename="../mainwindow.cpp" line="4956"/>
+        <location filename="../mainwindow.cpp" line="11778"/>
         <source>Cancel</source>
         <translation>Cealaigh</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="9263"/>
+        <location filename="../mainwindow.cpp" line="9261"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>Bogadh %n nóta chun nóta an fhillteora &quot;%2&quot; a thabhairt faoi deara</numerusform>
@@ -3505,7 +3510,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="9287"/>
+        <location filename="../mainwindow.cpp" line="9285"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Cóipeáil %n nóta roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
@@ -3514,7 +3519,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="9354"/>
+        <location filename="../mainwindow.cpp" line="9352"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>Cóipeáladh %n nóta amháin chun nóta “%2” a thabhairt faoi deara</numerusform>
@@ -3523,118 +3528,118 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10028"/>
+        <location filename="../mainwindow.cpp" line="10026"/>
         <source>Open note in external editor</source>
         <translation>Nóta oscailte in eagarthóir seachtrach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10032"/>
+        <location filename="../mainwindow.cpp" line="10030"/>
         <source>Show note in file manager</source>
         <translation>Taispeáin nóta i mbainisteoir comhad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10117"/>
+        <location filename="../mainwindow.cpp" line="10115"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Más mian leat do nóta a athainmniú ní mór duit an rogha a chumasú chun go mbeidh ainm an chomhartha nótaí difriúil ón gceannlíne.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10331"/>
+        <location filename="../mainwindow.cpp" line="10329"/>
         <source>New subfolder</source>
         <translation>Fillteán nua</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10335"/>
+        <location filename="../mainwindow.cpp" line="10333"/>
         <source>Show folder in file manager</source>
         <translation>Taispeáin an fillteán i mbainisteoir comhad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10380"/>
+        <location filename="../mainwindow.cpp" line="10378"/>
         <source>Create a new folder</source>
         <translation>Cruthaigh fillteán nua</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10381"/>
+        <location filename="../mainwindow.cpp" line="10379"/>
         <source>Folder name:</source>
         <translation>Ainm an fhillteáin:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7715"/>
+        <location filename="../mainwindow.cpp" line="7713"/>
         <source>show all untagged notes (%1)</source>
         <translation>taispeáin na nótaí neamhchaolaithe go léir (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7717"/>
+        <location filename="../mainwindow.cpp" line="7715"/>
         <source>Untagged notes</source>
         <translation>Nótaí neamhchaite</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9715"/>
+        <location filename="../mainwindow.cpp" line="9713"/>
         <source>Export current note as HTML file</source>
         <translation>Easpórtáil nóta reatha mar chomhad HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5144"/>
+        <location filename="../mainwindow.cpp" line="5139"/>
         <source>Page size</source>
         <translation>Méid an leathanaigh</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1117"/>
+        <location filename="../mainwindow.cpp" line="1112"/>
         <source>quit toolbar</source>
         <translation>scor an barra uirlisí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5144"/>
+        <location filename="../mainwindow.cpp" line="5139"/>
         <source>Page size:</source>
         <translation>Méid an leathanaigh:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5261"/>
+        <location filename="../mainwindow.cpp" line="5256"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>Déanfaidh QOwnNotes sonraí úsáide gan ainm a rianú, a chuidíonn le cinneadh a dhéanamh ar na codanna de QOwnNotes a fheabhsóidh seo chugainn agus chun bugaí a aimsiú agus a shocrú. Is féidir leat an t-iompar sin a dhíchumasú sna suíomhanna.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5265"/>
+        <location filename="../mainwindow.cpp" line="5260"/>
         <source>&amp;Ok</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9920"/>
+        <location filename="../mainwindow.cpp" line="9918"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Bain nótaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6418"/>
+        <location filename="../mainwindow.cpp" line="6416"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;Nasc téacs roghnaithe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1043"/>
+        <location filename="../mainwindow.cpp" line="1038"/>
         <source>Your tasks are being loaded from your server</source>
         <translation>Tá do chuid tascanna á luchtú ó do fhreastalaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2696"/>
+        <location filename="../mainwindow.cpp" line="2691"/>
         <source>Current note was modified externally</source>
         <translation>Athraíodh an nóta reatha go seachtrach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2779"/>
-        <location filename="../mainwindow.cpp" line="5817"/>
+        <location filename="../mainwindow.cpp" line="2774"/>
+        <location filename="../mainwindow.cpp" line="5812"/>
         <source>Stored current note to disk</source>
         <translation>Nóta reatha stóráilte ar an diosca</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2797"/>
+        <location filename="../mainwindow.cpp" line="2792"/>
         <source>Note was modified externally: %1</source>
         <translation>Athraíodh an Nóta go seachtrach: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2820"/>
+        <location filename="../mainwindow.cpp" line="2815"/>
         <source>Notes directory was modified externally</source>
         <translation>Athraíodh eolaire na nótaí go seachtrach</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2881"/>
+        <location filename="../mainwindow.cpp" line="2876"/>
         <source>Stored %n note(s) to disk</source>
         <translation>
             <numerusform>Nóta stóráilte %n ar dhiosca</numerusform>
@@ -3643,209 +3648,209 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7682"/>
+        <location filename="../mainwindow.cpp" line="7680"/>
         <source>show all notes (%1)</source>
         <translation>taispeáin na nótaí go léir (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7685"/>
-        <location filename="../mainwindow.cpp" line="7761"/>
+        <location filename="../mainwindow.cpp" line="7683"/>
+        <location filename="../mainwindow.cpp" line="7759"/>
         <source>All notes</source>
         <translation>Gach nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8705"/>
+        <location filename="../mainwindow.cpp" line="8703"/>
         <source>&amp;Add tag</source>
         <translation>&amp;Cuir tag leis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8753"/>
+        <location filename="../mainwindow.cpp" line="8751"/>
         <source>Tag could not be created!</source>
         <translation>Ní fhéadfaí clib a chruthú!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8932"/>
+        <location filename="../mainwindow.cpp" line="8930"/>
         <source>Move to this tag</source>
         <translation>Téigh go dtí an chlib seo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8967"/>
+        <location filename="../mainwindow.cpp" line="8965"/>
         <source>Tag this</source>
         <translation>Clib é seo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8992"/>
+        <location filename="../mainwindow.cpp" line="8990"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>Ní féidir clib &apos;%1&apos; a aistriú chuig an gclib seo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9007"/>
+        <location filename="../mainwindow.cpp" line="9005"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>Bog tag &apos;%1&apos; ar chlib nua</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8000"/>
+        <location filename="../mainwindow.cpp" line="7998"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>taispeáin gach nóta clibeáilte le &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8716"/>
+        <location filename="../mainwindow.cpp" line="8714"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;Bain clibeanna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5299"/>
+        <location filename="../mainwindow.cpp" line="5294"/>
         <source>No selected todo lists!</source>
         <translation>Uimh liostaí todo roghnaithe!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="730"/>
+        <location filename="../mainwindow.cpp" line="725"/>
         <source>Subfolders</source>
         <translation>Fillteáin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="742"/>
+        <location filename="../mainwindow.cpp" line="737"/>
         <source>Tags</source>
         <translation>Clibeanna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="751"/>
+        <location filename="../mainwindow.cpp" line="746"/>
         <source>Note search</source>
         <translation>Déan cuardach a thabhairt faoi deara</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="771"/>
+        <location filename="../mainwindow.cpp" line="766"/>
         <source>Note list</source>
         <translation>Liosta nótaí</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="796"/>
+        <location filename="../mainwindow.cpp" line="791"/>
         <source>Note edit</source>
         <translation>Cuir nótaí in eagar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="808"/>
+        <location filename="../mainwindow.cpp" line="803"/>
         <source>Note tags</source>
         <translation>Clibeanna Nóta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="819"/>
+        <location filename="../mainwindow.cpp" line="814"/>
         <source>Note preview</source>
         <translation>Tabhair réamhamharc faoi deara</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="827"/>
+        <location filename="../mainwindow.cpp" line="822"/>
         <source>Log</source>
         <translation>Logáil isteach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="836"/>
+        <location filename="../mainwindow.cpp" line="831"/>
         <source>Scripting</source>
         <translation>Scriptiú</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1084"/>
+        <location filename="../mainwindow.cpp" line="1079"/>
         <source>formatting toolbar</source>
         <translation>barra uirlisí a fhormáidiú</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1093"/>
+        <location filename="../mainwindow.cpp" line="1088"/>
         <source>inserting toolbar</source>
         <translation>cuir uirlisí isteach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1100"/>
+        <location filename="../mainwindow.cpp" line="1095"/>
         <source>encryption toolbar</source>
         <translation>barra uirlisí criptithe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1107"/>
+        <location filename="../mainwindow.cpp" line="1102"/>
         <source>window toolbar</source>
         <translation>barra uirlisí fuinneoige</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1112"/>
+        <location filename="../mainwindow.cpp" line="1107"/>
         <source>custom action toolbar</source>
         <translation>barra uirlisí gníomh saincheaptha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1132"/>
+        <location filename="../mainwindow.cpp" line="1127"/>
         <source>Workspace selector</source>
         <translation>Roghnóir spás oibre</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1278"/>
+        <location filename="../mainwindow.cpp" line="1273"/>
         <source>Show %1 panel</source>
         <translation>Taispeáin %1 painéal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1320"/>
+        <location filename="../mainwindow.cpp" line="1315"/>
         <source>Show %1</source>
         <translation>Taispeáin %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1643"/>
+        <location filename="../mainwindow.cpp" line="1638"/>
         <source>Leave distraction free mode</source>
         <translation>Fág mód saor ó chur isteach</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2167"/>
+        <location filename="../mainwindow.cpp" line="2162"/>
         <source>show notes in folder &apos;%1&apos; (%2)</source>
         <translation>taispeáin nótaí san fhillteán &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2206"/>
+        <location filename="../mainwindow.cpp" line="2201"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
         <translation>&lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; modhnaithe go deireanach: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2211"/>
+        <location filename="../mainwindow.cpp" line="2206"/>
         <source>&lt;br /&gt;path: %1</source>
         <translation>&lt;br /&gt;cosán: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2413"/>
+        <location filename="../mainwindow.cpp" line="2408"/>
         <source>Toolbar could not be loaded without name</source>
         <translation>Ní fhéadfaí Barra Uirlisí a luchtú gan ainm</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2723"/>
+        <location filename="../mainwindow.cpp" line="2718"/>
         <source>Overwriting external changes of: %1</source>
         <translation>Athscríobh a dhéanamh ar athruithe seachtracha de: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2744"/>
+        <location filename="../mainwindow.cpp" line="2739"/>
         <source>Loading external changes from: %1</source>
         <translation>Athruithe seachtracha a lódáil ó: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2780"/>
-        <location filename="../mainwindow.cpp" line="5818"/>
+        <location filename="../mainwindow.cpp" line="2775"/>
+        <location filename="../mainwindow.cpp" line="5813"/>
         <source>Current note could not be stored to disk</source>
         <translation>Níorbh fhéidir an nóta reatha a stóráil ar dhiosca</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2940"/>
+        <location filename="../mainwindow.cpp" line="2935"/>
         <source>Read-only</source>
         <translation>Léamh amháin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2942"/>
+        <location filename="../mainwindow.cpp" line="2937"/>
         <source>Note editing is disabled, click to enable</source>
         <translation>Tá eagarthóireacht nótaí faoi mhíchumas, cliceáil chun a chumasú</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2959"/>
+        <location filename="../mainwindow.cpp" line="2954"/>
         <source>Line numbers</source>
         <translation>Uimhreacha líne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2969"/>
+        <location filename="../mainwindow.cpp" line="2964"/>
         <source>Click here to see what has changed and to be able to update to the latest version</source>
         <translation>Cliceáil anseo chun an méid atá athraithe a fheiceáil agus chun an leagan is déanaí a nuashonrú</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3356"/>
+        <location filename="../mainwindow.cpp" line="3351"/>
         <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
         <translation>
             <numerusform>Lean ar aghaidh le scriosadh uathoibríoch de chóip bhunachar sonraí &lt;strong&gt;%n &lt;/strong&gt; a d&apos;fhéadfadh do phróiseas ownCloud a chosc?</numerusform>
@@ -3854,7 +3859,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4733"/>
+        <location filename="../mainwindow.cpp" line="4728"/>
         <source>%n note(s) were tagged with &quot;%2&quot;</source>
         <translation>
             <numerusform>Clibeáladh %n nóta le &quot;%2&quot;</numerusform>
@@ -3863,7 +3868,7 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5516"/>
+        <location filename="../mainwindow.cpp" line="5511"/>
         <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>
             <numerusform>Aimsíodh &lt;strong&gt;%n&lt;/ strong&gt; tharla an &lt;strong&gt;%1&lt;/ strong&gt;</numerusform>
@@ -3872,69 +3877,69 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5879"/>
+        <location filename="../mainwindow.cpp" line="5874"/>
         <source>Note headline</source>
         <translation>Tabhair ceannlíne faoi deara</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6424"/>
+        <location filename="../mainwindow.cpp" line="6422"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation>Bloc &amp;luaigh an téacs roghnaithe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7413"/>
+        <location filename="../mainwindow.cpp" line="7411"/>
         <source>Downloading images finished</source>
         <translation>Críochnaíodh íomhánna a íoslódáil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7556"/>
+        <location filename="../mainwindow.cpp" line="7554"/>
         <source>Increased font size to %1 pt</source>
         <translation>Méid an chló mhéadaithe go %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7573"/>
+        <location filename="../mainwindow.cpp" line="7571"/>
         <source>Decreased font size to %1 pt</source>
         <translation>Méid an chló laghdaithe go %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5265"/>
-        <location filename="../mainwindow.cpp" line="5280"/>
-        <location filename="../mainwindow.cpp" line="5303"/>
-        <location filename="../mainwindow.cpp" line="10120"/>
+        <location filename="../mainwindow.cpp" line="5260"/>
+        <location filename="../mainwindow.cpp" line="5275"/>
+        <location filename="../mainwindow.cpp" line="5298"/>
+        <location filename="../mainwindow.cpp" line="10118"/>
         <source>Open &amp;settings</source>
         <translation>Suíomhanna &amp;oscailte</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1640"/>
-        <location filename="../mainwindow.cpp" line="11932"/>
+        <location filename="../mainwindow.cpp" line="1635"/>
+        <location filename="../mainwindow.cpp" line="11930"/>
         <source>leave</source>
         <translation>fág</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6838"/>
+        <location filename="../mainwindow.cpp" line="6836"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>Cuir isteach do &lt;strong&gt; focal faire &lt;/strong&gt; chun an nóta a chriptiú. &lt;br /&gt;
 
 Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt; do phasfhocal a léamh ar an ábhar ar an &lt;br /&gt; faoi deara agus gur féidir leat &lt;strong&gt; ach &lt;/ strong&gt; é sin a dhéanamh &lt;strong&gt; in QOwnNotes &lt;/ strong &gt;!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6894"/>
+        <location filename="../mainwindow.cpp" line="6892"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>Díchriptigh nóta agus déan é a stóráil mar ghnáth-théacs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6899"/>
+        <location filename="../mainwindow.cpp" line="6897"/>
         <source>&amp;Decrypt</source>
         <translation>&amp;Díchriptigh</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6924"/>
+        <location filename="../mainwindow.cpp" line="6922"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br/&gt;Beidh tú in ann do nóta criptithe a chur in eagar.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6993"/>
+        <location filename="../mainwindow.cpp" line="6991"/>
         <source>Export current note as Markdown file</source>
         <translation>Onnmhairigh nóta reatha mar chomhad Markdown</translation>
     </message>

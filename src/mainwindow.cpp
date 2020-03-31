@@ -564,13 +564,8 @@ void MainWindow::initGlobalKeyboardShortcuts() {
         connect(hotKey, &QHotkey::activated, this, [this, action]() {
             qDebug() << "Global shortcut action triggered: " << action->objectName();
 
-            // show the window in case we are using the system tray
-            show();
-
-            // bring window to the front
-            setWindowState((windowState() & ~Qt::WindowMinimized) | Qt::WindowActive);
-            raise(); // for MacOS
-            activateWindow(); // for Windows
+            // bring application window to the front
+            showWindow();
 
             action->trigger();
         });
@@ -6189,10 +6184,13 @@ void MainWindow::systemTrayIconClicked(
  * Shows the window (also brings it to the front and un-minimizes it)
  */
 void MainWindow::showWindow() {
+    // show the window in case we are using the system tray
     show();
-    activateWindow();
+
+    // bring application window to the front
+    activateWindow();    // for Windows
     setWindowState((windowState() & ~Qt::WindowMinimized) | Qt::WindowActive);
-    raise();
+    raise();             // for MacOS
 }
 
 /**
@@ -12133,5 +12131,14 @@ void MainWindow::on_actionEditorWidthCustom_triggered() {
         settings.setValue(
             QStringLiteral("DistractionFreeMode/editorWidthCustom"),
             characters);
+    }
+}
+
+void MainWindow::on_actionShow_Hide_application_triggered() {
+    // isVisible() or isHidden() didn't work properly
+    if (isActiveWindow()) {
+        hide();
+    } else {
+        showWindow();
     }
 }

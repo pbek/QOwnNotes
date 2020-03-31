@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 20.4.0
+- you now can **show and hide the application window** with a new action `Show/Hide application`
+  in the *Window / Show* menu (for [#1324](https://github.com/pbek/QOwnNotes/issues/1324))
+    - this should work with and without enabled tray icon
+    - assign a global keyboard shortcut to the action in the *Shortcuts settings*
+      to make use of it properly
+
 ## 20.3.9
 - you can now also manage **global keyboard shortcuts** in the *Shortcuts settings*
   (for [#44](https://github.com/pbek/QOwnNotes/issues/44))

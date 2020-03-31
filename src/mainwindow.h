@@ -628,7 +628,9 @@ class MainWindow : public QMainWindow {
 
     void on_actionEditorWidthCustom_triggered();
 
-   private:
+    void on_actionShow_Hide_application_triggered();
+
+private:
     Ui::MainWindow *ui;
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
