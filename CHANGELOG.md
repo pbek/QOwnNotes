@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.4.1
+- you can now use the **Meta key in keyboard shortcuts** in the *Shortcuts settings*
+  (for [#1671](https://github.com/pbek/QOwnNotes/issues/1671))
+  - if you have troubles with a 2nd Meta key showing up while entering the shortcut
+    you can press <kbd>Enter</kbd> or <kbd>Escape</kbd> to finish the shortcut entering
+
 ## 20.4.0
 - you now can **show and hide the application window** with a new action `Show/Hide application`
   in the *Window / Show* menu (for [#1324](https://github.com/pbek/QOwnNotes/issues/1324))
