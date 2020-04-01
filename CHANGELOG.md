@@ -5,6 +5,7 @@
   (for [#1671](https://github.com/pbek/QOwnNotes/issues/1671))
   - if you have troubles with a 2nd Meta key showing up while entering the shortcut
     you can press <kbd>Enter</kbd> or <kbd>Escape</kbd> to finish the shortcut entering
+- added more Catalan translation (thank you MGuerra)
 
 ## 20.4.0
 - you now can **show and hide the application window** with a new action `Show/Hide application`

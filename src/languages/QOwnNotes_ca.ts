@@ -2550,7 +2550,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2565"/>
       <source>Show/Hide application</source>
-      <translation type="unfinished">Show/Hide application</translation>
+      <translation>Mostra/amaga aplicació</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1885"/>
@@ -5972,17 +5972,17 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3239"/>
       <source>Action name</source>
-      <translation type="unfinished">Action name</translation>
+      <translation>Nom de l'acció</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3244"/>
       <source>Local shortcut</source>
-      <translation type="unfinished">Local shortcut</translation>
+      <translation>Drecera local</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3249"/>
       <source>Global shortcut</source>
-      <translation type="unfinished">Global shortcut</translation>
+      <translation>Drecera global</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3850"/>
