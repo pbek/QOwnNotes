@@ -10,6 +10,14 @@
       will be shown in the title bar
     - if a session was set with the `--session` cli parameter then it will be
       shown in the title bar
+- added more German, Zulu, Shona, Maori, Xhosa, Filipino, Icelandic, Malay,
+  Serbian (Cyrillic), Vietnamese, Finnish, Indonesian, Irish, Slovak, French,
+  Japanese, Slovenian, Galician, Norwegian, Albanian, Arabic, Basque, Bengali,
+  Bosnian, Khmer, Persian, Bulgarian, Swedish, Polish, Greek, Cebuano, Korean,
+  Portuguese, Tagalog, Turkish, Chinese Simplified, Hausa, Ukrainian,
+  Chinese Traditional, Punjabi, Hebrew, Kurdish, Latvian, Croatian, Urdu (Pakistan),
+  Romanian, Czech, Hindi, Lithuanian, Uzbek, Danish, Estonian, Macedonian,
+  Hungarian, Dutch translation (thank you Fabijenna)
 
 ## 20.4.1
 - you can now use the **Meta key in keyboard shortcuts** in the *Shortcuts settings*
