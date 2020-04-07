@@ -26,6 +26,10 @@ You may want to take a look at the example
 or
 [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/execute-command-after-note-update.qml).
 
+!!! tip
+    You can also assign local and global shortcuts to your custom actions
+    in the *Shortcuts settings*.
+
 Starting an external program and wait for the output
 ----------------------------------------------------
 
