@@ -155,7 +155,11 @@ QSize FlowLayout::sizeHint() const
 QSize FlowLayout::minimumSize() const
 {
     QSize size;
+#if QT_VERSION >= 0x050700
     for (const QLayoutItem *item : qAsConst(itemList))
+#else
+    for (const QLayoutItem *item : itemList)
+#endif
         size = size.expandedTo(item->minimumSize());
 
     const QMargins margins = contentsMargins();
@@ -176,7 +180,11 @@ int FlowLayout::doLayout(const QRect &rect, bool testOnly) const
 //! [9]
 
 //! [10]
+#if QT_VERSION >= 0x050700
     for (QLayoutItem *item : qAsConst(itemList)) {
+#else
+    for (QLayoutItem *item : itemList) {
+#endif
         const QWidget *wid = item->widget();
         int spaceX = horizontalSpacing();
         if (spaceX == -1)
