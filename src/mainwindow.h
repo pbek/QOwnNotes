@@ -698,6 +698,8 @@ private:
     QWidget *_logDockTitleBarWidget;
     QWidget *_scriptingDockTitleBarWidget;
     QComboBox *_workspaceComboBox;
+    QFrame *_noteFolderDockWidgetFrame;
+    bool _useNoteFolderButtons;
     bool _noteFolderDockWidgetWasVisible;
     bool _noteSubFolderDockWidgetVisible;
     bool _closeEventWasFired;

@@ -123,6 +123,7 @@ SOURCES += main.cpp\
     helpers/toolbarcontainer.cpp \
     helpers/qownnotesmarkdownhighlighter.cpp \
     helpers/fakevimproxy.cpp \
+    helpers/flowlayout.cpp \
     services/databaseservice.cpp \
     widgets/graphicsview.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
@@ -212,6 +213,7 @@ HEADERS  += mainwindow.h \
     helpers/toolbarcontainer.h \
     helpers/qownnotesmarkdownhighlighter.h \
     helpers/fakevimproxy.h \
+    helpers/flowlayout.h \
     services/databaseservice.h \
     release.h \
     widgets/graphicsview.h \

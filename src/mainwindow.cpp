@@ -33,6 +33,7 @@
 #include <helpers/clientproxy.h>
 #include <helpers/fakevimproxy.h>
 #include <helpers/toolbarcontainer.h>
+#include <helpers/flowlayout.h>
 #include <services/cryptoservice.h>
 #include <services/scriptingservice.h>
 #include <utils/git.h>
@@ -177,6 +178,7 @@ MainWindow::MainWindow(QWidget *parent)
     _webSocketServerService = Q_NULLPTR;
     _closeEventWasFired = false;
     _leaveFullScreenModeButton = nullptr;
+    _useNoteFolderButtons = settings.value("useNoteFolderButtons").toBool();
 
     this->setWindowTitle(QStringLiteral("QOwnNotes - version ") +
                          QStringLiteral(VERSION) + QStringLiteral(" - build ") +
@@ -756,7 +758,16 @@ void MainWindow::initDockWidgets() {
     _noteFolderDockWidget = new QDockWidget(tr("Note folder"), this);
     _noteFolderDockWidget->setObjectName(
         QStringLiteral("noteFolderDockWidget"));
-    _noteFolderDockWidget->setWidget(ui->noteFolderComboBox);
+
+    if (_useNoteFolderButtons) {
+        _noteFolderDockWidgetFrame = new QFrame(_noteFolderDockWidget);
+        _noteFolderDockWidgetFrame->setLayout(new FlowLayout());
+        _noteFolderDockWidget->setWidget(_noteFolderDockWidgetFrame);
+        ui->noteFolderComboBox->setHidden(true);
+    } else {
+        _noteFolderDockWidget->setWidget(ui->noteFolderComboBox);
+    }
+
     _noteFolderDockTitleBarWidget = _noteFolderDockWidget->titleBarWidget();
     sizePolicy = _noteFolderDockWidget->sizePolicy();
     sizePolicy.setHorizontalStretch(2);
@@ -1758,8 +1769,22 @@ void MainWindow::loadNoteFolderListMenu() {
     int index = 0;
     int noteFolderComboBoxIndex = 0;
 
+    // clear all note folder buttons
+    if (_useNoteFolderButtons) {
+        QLayoutItem *child;
+
+        while ((child = _noteFolderDockWidgetFrame->layout()->takeAt(0)) !=
+               nullptr) {
+            _noteFolderDockWidgetFrame->layout()->removeWidget(child->widget());
+            delete child->widget();
+            delete child;
+        }
+    }
+
     // populate the note folder list
     if (noteFoldersCount > 0) {
+        QFont font;
+
         for (const NoteFolder &noteFolder : noteFolders) {
             // don't show not existing folders or if path is empty
             if (!noteFolder.localPathExists()) {
@@ -1768,6 +1793,7 @@ void MainWindow::loadNoteFolderListMenu() {
 
             const int folderId = noteFolder.getId();
             const QString name = noteFolder.getName();
+            const bool isCurrentNoteFolder = noteFolder.isCurrent();
 
             // add an entry to the combo box
             ui->noteFolderComboBox->addItem(name, folderId);
@@ -1781,8 +1807,8 @@ void MainWindow::loadNoteFolderListMenu() {
                                   QString::number(folderId));
             action->setIcon(_folderIcon);
 
-            if (noteFolder.isCurrent()) {
-                QFont font = action->font();
+            if (isCurrentNoteFolder) {
+                font = action->font();
                 font.setBold(true);
                 action->setFont(font);
 
@@ -1791,6 +1817,21 @@ void MainWindow::loadNoteFolderListMenu() {
 
             connect(action, &QAction::triggered, this,
                     [this, folderId]() { changeNoteFolder(folderId); });
+
+            // add note folder button if enabled
+            if (_useNoteFolderButtons) {
+                auto *button = new QPushButton(name);
+                button->setToolTip(tr("Switch to note folder"));
+
+                if (isCurrentNoteFolder) {
+                    button->setFont(font);
+                }
+
+                _noteFolderDockWidgetFrame->layout()->addWidget(button);
+
+                connect(button, &QPushButton::pressed, this,
+                        [this, folderId]() { changeNoteFolder(folderId); });
+            }
 
             ++index;
         }

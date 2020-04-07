@@ -182,6 +182,8 @@ set(SOURCE_FILES
     entities/tag.h
     entities/script.cpp
     entities/script.h
+    helpers/flowlayout.cpp
+    helpers/flowlayout.h
     helpers/htmlentities.cpp
     helpers/htmlentities.h
     helpers/clientproxy.cpp

@@ -243,6 +243,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             this, SLOT(needRestart()));
     connect(ui->noteEditCentralWidgetCheckBox, SIGNAL(toggled(bool)), this,
             SLOT(needRestart()));
+    connect(ui->noteFolderButtonsCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
     connect(ui->noteListPreviewCheckBox, SIGNAL(toggled(bool)), this,
             SLOT(needRestart()));
     connect(ui->vimModeCheckBox, SIGNAL(toggled(bool)), this,
@@ -719,6 +721,8 @@ void SettingsDialog::storeSettings() {
                       ui->fullyHighlightedBlockquotesCheckBox->isChecked());
     settings.setValue(QStringLiteral("noteEditIsCentralWidget"),
                       ui->noteEditCentralWidgetCheckBox->isChecked());
+    settings.setValue(QStringLiteral("useNoteFolderButtons"),
+                      ui->noteFolderButtonsCheckBox->isChecked());
     settings.setValue(QStringLiteral("MainWindow/noteTextView.rtl"),
                       ui->noteTextViewRTLCheckBox->isChecked());
     settings.setValue(
@@ -1149,6 +1153,8 @@ void SettingsDialog::readSettings() {
     ui->noteEditCentralWidgetCheckBox->setChecked(
         settings.value(QStringLiteral("noteEditIsCentralWidget"), true)
             .toBool());
+    ui->noteFolderButtonsCheckBox->setChecked(
+        settings.value(QStringLiteral("useNoteFolderButtons")).toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(
         settings.value(QStringLiteral("allowOnlyOneAppInstance")).toBool());
     ui->closeTodoListAfterSaveCheckBox->setChecked(

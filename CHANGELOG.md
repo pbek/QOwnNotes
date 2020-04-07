@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 20.4.2
+- you can now choose to **show your note folders** in your *Note folders panel*
+  **as buttons** in the *Panels settings* (for [#1676](https://github.com/pbek/QOwnNotes/issues/1676))
+    - you can use this button list vertically or horizontally, the buttons will
+      float to the next line if there is no space left
 - some title bar improvements were made (for [#1677](https://github.com/pbek/QOwnNotes/issues/1677))
     - if more than one note folder exists then the name of the current note folder
       will be shown in the title bar
