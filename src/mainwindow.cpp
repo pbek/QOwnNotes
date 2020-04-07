@@ -1888,6 +1888,7 @@ void MainWindow::changeNoteFolder(const int noteFolderId,
     }
 
     generateSystemTrayContextMenu();
+    updateWindowTitle();
 }
 
 /*
@@ -3763,11 +3764,24 @@ void MainWindow::updateShareButton() {
 }
 
 /**
- * Updates the windows title for the current note
+ * Updates the window title
  */
 void MainWindow::updateWindowTitle() {
-    setWindowTitle(currentNote.getName() + QStringLiteral(" - QOwnNotes ") +
-                   QStringLiteral(VERSION));
+    const QString &session = qApp->property("session").toString();
+    QString title = currentNote.exists() ?
+        currentNote.getName() : QStringLiteral("#");
+
+    if (NoteFolder::countAll() > 0) {
+        title += QStringLiteral(" - %1").arg(
+            NoteFolder::currentNoteFolder().getName());
+    }
+
+    if (!session.isEmpty()) {
+        title += QStringLiteral(" - %1").arg(session);
+    }
+
+    title += QStringLiteral(" - QOwnNotes - %3").arg(QStringLiteral(VERSION));
+    setWindowTitle(title);
 }
 
 /**

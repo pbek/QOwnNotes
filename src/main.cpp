@@ -365,6 +365,7 @@ int main(int argc, char *argv[]) {
     bool allowOnlyOneAppInstance = true;
     QStringList arguments;
     QString appNameAdd = QString();
+    QString session = QString();
 
 #ifdef QT_DEBUG
     appNameAdd = QStringLiteral("Debug");
@@ -402,8 +403,8 @@ int main(int argc, char *argv[]) {
         } else if (arg == QStringLiteral("--session")) {
             // check if there is a 2nd parameter with the session name
             if (argc > (i + 1)) {
-                appNameAdd +=
-                    QStringLiteral("-") + QString(argv[i + 1]).trimmed();
+                session = QString(argv[i + 1]).trimmed();
+                appNameAdd += QStringLiteral("-") + session;
             }
         }
     }
@@ -547,6 +548,7 @@ int main(int argc, char *argv[]) {
         app.setProperty("singleApplication", true);
         app.setProperty("snap", snap);
         app.setProperty("arguments", arguments);
+        app.setProperty("session", session);
 
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)
@@ -594,6 +596,7 @@ int main(int argc, char *argv[]) {
         app.setProperty("portable", portable);
         app.setProperty("snap", snap);
         app.setProperty("arguments", arguments);
+        app.setProperty("session", session);
 
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)

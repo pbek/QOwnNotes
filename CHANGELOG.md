@@ -1,10 +1,17 @@
 # QOwnNotes Changelog
 
+## 20.4.2
+- some title bar improvements were made (for [#1677](https://github.com/pbek/QOwnNotes/issues/1677))
+    - if more than one note folder exists then the name of the current note folder
+      will be shown in the title bar
+    - if a session was set with the `--session` cli parameter then it will be
+      shown in the title bar
+
 ## 20.4.1
 - you can now use the **Meta key in keyboard shortcuts** in the *Shortcuts settings*
   (for [#1671](https://github.com/pbek/QOwnNotes/issues/1671))
-  - if you have troubles with a 2nd Meta key showing up while entering the shortcut
-    you can press <kbd>Enter</kbd> or <kbd>Escape</kbd> to finish the shortcut entering
+    - if you have troubles with a 2nd Meta key showing up while entering the shortcut
+      you can press <kbd>Enter</kbd> or <kbd>Escape</kbd> to finish the shortcut entering
 - added more Catalan translation (thank you MGuerra)
 
 ## 20.4.0
