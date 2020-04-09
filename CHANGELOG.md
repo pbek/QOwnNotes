@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.4.3
+- when right-clicking a note in the note list and clicking `Open note in different window`
+  you can now also show a **preview of your note** instead of the note text
+  (for [#1678](https://github.com/pbek/QOwnNotes/issues/1678))
+
 ## 20.4.2
 - you can now choose to **show your note folders** in your *Note folders panel*
   **as buttons** in the *Panels settings* (for [#1676](https://github.com/pbek/QOwnNotes/issues/1676))
