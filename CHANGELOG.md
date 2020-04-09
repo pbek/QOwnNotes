@@ -4,6 +4,14 @@
 - when right-clicking a note in the note list and clicking `Open note in different window`
   you can now also show a **preview of your note** instead of the note text
   (for [#1678](https://github.com/pbek/QOwnNotes/issues/1678))
+- added more Catalan, German, Spanish, Albanian, Khmer, Arabic, Korean, Basque,
+  Kurdish, Bengali, Latvian, Bosnian, Lithuanian, Bulgarian, Macedonian, Cebuano,
+  Malay, Norwegian, Chinese Simplified, Romanian, Chinese Traditional,
+  Serbian (Cyrillic), Croatian, Slovak, Czech, Slovenian, Estonian, Swedish,
+  Filipino, Turkish, Finnish, Ukrainian, Galician, Urdu (Pakistan), Greek, Uzbek,
+  Hausa, Vietnamese, Hebrew, Hindi, Icelandic, Indonesian, Dutch, Irish,
+  Hungarian, Danish, Japanese, Italian, Russian translation (thank you MGuerra,
+  rakekniven, richarson, Fabijenna, tiwi90, unchase)
 
 ## 20.4.2
 - you can now choose to **show your note folders** in your *Note folders panel*
