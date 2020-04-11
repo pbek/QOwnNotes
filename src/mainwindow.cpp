@@ -3089,8 +3089,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     if (createDemoNotes) {
         qDebug() << "No notes! We will add some...";
         const QStringList filenames =
-            QStringList({"Markdown Showcase.md", "Markdown Cheatsheet.md",
-                         "Welcome to QOwnNotes.md"});
+            QStringList({"Markdown Cheatsheet.md", "Welcome to QOwnNotes.md"});
 
         // copy note files to the notes path
         for (int i = 0; i < filenames.size(); ++i) {
