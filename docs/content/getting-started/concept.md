@@ -1,6 +1,6 @@
 # Concept
 
-```mermaid
+<div class="mermaid">
 graph TB
     subgraph Your computer
         qon((QOwnNotes))-->md{{"Markdown files"}}
@@ -33,7 +33,7 @@ graph TB
     click qon-api "../concept/#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "../concept/#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click nc-notes-mob "../concept/#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
-```
+</div>
 
 ## QOwnNotes
 
