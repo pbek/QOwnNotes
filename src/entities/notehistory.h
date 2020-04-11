@@ -22,6 +22,7 @@ class NoteHistoryItem {
     bool isNoteValid() const;
     bool operator==(const NoteHistoryItem &item) const;
     void restoreTextEditPosition(QPlainTextEdit *textEdit) const;
+    bool isValid() const;
 
    private:
     QString _noteName;
