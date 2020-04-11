@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.4.4
+- some improvements for possible "cursor jumping to the top" issues were made
+  (for [#1681](https://github.com/pbek/QOwnNotes/issues/1681))
+ 
 ## 20.4.3
 - when right-clicking a note in the note list and clicking `Open note in different window`
   you can now also show a **preview of your note** instead of the note text
