@@ -182,7 +182,14 @@ bool NoteSubFolder::rename(const QString& newName) {
         Tag::renameNoteSubFolderPathsOfLinks(oldRelativePath, newRelativePath);
 
         // rename the note subfolder
-        return dir.rename(oldPath, newPath);
+        const bool ret = QDir().rename(oldPath, newPath);
+
+        if (!ret) {
+            qCritical() << "Renaming " << oldPath << " to "
+                << newPath << " failed";
+        }
+
+        return ret;
     }
 
     return false;
