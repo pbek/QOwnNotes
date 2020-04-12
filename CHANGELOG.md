@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.4.5
+- fixed the time formats link in the *Editor settings*
+  (for [#1685](https://github.com/pbek/QOwnNotes/issues/1685))
+
 ## 20.4.4
 - some improvements for possible "cursor jumping to the top" issues were made
   (for [#1681](https://github.com/pbek/QOwnNotes/issues/1681))
