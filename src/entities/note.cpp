@@ -1501,9 +1501,12 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
     const QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
         settings.value(QStringLiteral("notesPath")).toString());
 
-    return Utils::Misc::removeIfEndsWith(std::move(notesPath),
+    const QString path = Utils::Misc::removeIfEndsWith(std::move(notesPath),
                                          QStringLiteral("/")) +
            Utils::Misc::dirSeparator() + fileName;
+    const QFileInfo fileInfo(path);
+
+    return fileInfo.canonicalFilePath();
 }
 
 QString Note::getFilePathRelativeToNote(const Note &note) const {

@@ -332,6 +332,8 @@ QString NoteFolder::currentLocalPath() {
 
     if (noteFolder.isFetched()) {
         path = noteFolder.getLocalPath();
+        const QFileInfo fileInfo(path);
+        path = fileInfo.canonicalFilePath();
     }
 
     // load notesPath as fallback
