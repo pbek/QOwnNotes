@@ -3033,9 +3033,9 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     bool hasNoteSubFolder = false;
     bool wasModified = false;
 
-    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
-
     if (noteSubFolderId == 0) {
+        qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
+
         // make sure we destroy nothing
         storeUpdatedNotesToDisk();
 
