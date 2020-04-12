@@ -1506,7 +1506,16 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
            Utils::Misc::dirSeparator() + fileName;
     const QFileInfo fileInfo(path);
 
-    return fileInfo.canonicalFilePath();
+    // we can't get a canonical path if the path doesn't exist
+    if (!fileInfo.exists()) {
+        return path;
+    }
+
+    // we need that for links to notes in sub-folders in portable mode if
+    // note folder lies outside of the application directory
+    const QString canonicalFilePath = fileInfo.canonicalFilePath();
+
+    return canonicalFilePath;
 }
 
 QString Note::getFilePathRelativeToNote(const Note &note) const {
