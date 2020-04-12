@@ -7,6 +7,7 @@
   (for [#1683](https://github.com/pbek/QOwnNotes/issues/1683))
 - fixed note linking with sub-folders if the note folder is outside of the application
   directory in portable mode (for [#1682](https://github.com/pbek/QOwnNotes/issues/1682))
+- added more German, Russian, Italian translation (thank you rakekniven, unchase, tiwi90)
 
 ## 20.4.4
 - some improvements for possible "cursor jumping to the top" issues were made
