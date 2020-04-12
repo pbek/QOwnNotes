@@ -5,23 +5,16 @@ graph TB
     subgraph Your computer
         qon((QOwnNotes))-->md{{"Markdown files"}}
         sync("Nextcloud Sync")-->md
-
-        subgraph Web browser
-            browser[\Web browser/]-->qon-comp("QOwnNotes browser extension")
-        end
+        qon-comp("QOwnNotes browser extension")-->qon
     end
     subgraph Your Nextcloud server
         qon-api("QOwnNotesApi")-->ncs[("Nextcloud server")]
         nc-notes-app("Nextcloud Notes")-->ncs
     end
-    subgraph Your mobile phone
-        mob[\Mobile phone/]-->nc-notes-mob("Nextcloud Notes mobile app")
-    end
 
-    qon-comp-->qon
+    nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
     qon-->qon-api
     qon-->ncs
-    nc-notes-mob-->nc-notes-app
     sync-->ncs
 
     style qon fill:#d0d0ff,stroke:#333,stroke-width:4px
