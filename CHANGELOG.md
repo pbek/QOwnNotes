@@ -5,6 +5,8 @@
   (for [#1685](https://github.com/pbek/QOwnNotes/issues/1685))
 - now an error message in the log is shown if renaming of note subfolders fail
   (for [#1683](https://github.com/pbek/QOwnNotes/issues/1683))
+- fixed note linking with sub-folders if note directory is outside application
+  directory in portable mode (for [#1682](https://github.com/pbek/QOwnNotes/issues/1682))
 
 ## 20.4.4
 - some improvements for possible "cursor jumping to the top" issues were made
