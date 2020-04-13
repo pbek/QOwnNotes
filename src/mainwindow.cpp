@@ -3307,11 +3307,11 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
                 .subtract(QSet<int>(_buildNotesIndexAfterNoteSubFolderIdList.begin(),
                           _buildNotesIndexAfterNoteSubFolderIdList.end())).values();
 #else
-//        const QList<int> removedNoteSubFolderIdList =
-//            _buildNotesIndexBeforeNoteSubFolderIdList.toList()
-//                .toSet()
-//                .subtract(_buildNotesIndexAfterNoteSubFolderIdList.toSet())
-//                .toList();
+        const QList<int> removedNoteSubFolderIdList =
+            _buildNotesIndexBeforeNoteSubFolderIdList.toList()
+                .toSet()
+                .subtract(_buildNotesIndexAfterNoteSubFolderIdList.toSet())
+                .toList();
 #endif
 
         // remove all missing note subfolders
