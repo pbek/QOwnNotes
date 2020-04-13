@@ -199,6 +199,13 @@ Note Note::fetchByFileName(const QString &fileName, int noteSubFolderId) {
     return note;
 }
 
+Note Note::fetchByFileName(const QString &fileName,
+    const QString &noteSubFolderPathData) {
+    auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData);
+
+    return fetchByFileName(fileName, noteSubFolder.getId());
+}
+
 bool Note::fillByFileName(const QString &fileName, int noteSubFolderId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
@@ -506,6 +513,13 @@ Note Note::fetchByShareId(int shareId) {
     return Note();
 }
 
+Note Note::fetchByName(const QString &name,
+                       const QString &noteSubFolderPathData) {
+    auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData);
+
+    return fetchByName(name, noteSubFolder.getId());
+}
+
 Note Note::fetchByName(const QString &name, int noteSubFolderId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
@@ -688,19 +702,19 @@ QVector<Note> Note::fetchAllNotTagged(int activeNoteSubFolderId) {
 /**
  * Returns all notes names that are not tagged
  */
-QStringList Note::fetchAllNotTaggedNames() {
+QVector<int> Note::fetchAllNotTaggedIds() {
     QVector<Note> noteList = Note::fetchAll();
-    QStringList untaggedNoteFileNameList;
-    untaggedNoteFileNameList.reserve(noteList.size());
+    QVector<int> untaggedNoteIdList;
+    untaggedNoteIdList.reserve(noteList.size());
 
     QVectorIterator<Note> itr(noteList);
     QVector<Note>::const_iterator it = noteList.constBegin();
     for (; it != noteList.constEnd(); ++it) {
         const int tagCount = Tag::countAllOfNote(*it);
-        if (tagCount == 0) untaggedNoteFileNameList << it->getName();
+        if (tagCount == 0) untaggedNoteIdList << it->getId();
     }
 
-    return untaggedNoteFileNameList;
+    return untaggedNoteIdList;
 }
 
 /**

@@ -50,9 +50,9 @@ class Tag {
 
     bool removeLinkToNote(const Note &note) const;
 
-    QStringList fetchAllLinkedNoteFileNames(const bool fromAllSubfolders) const;
+    QVector<int> fetchAllLinkedNoteIds(const bool fromAllSubfolders) const;
 
-    QStringList fetchAllLinkedNoteFileNamesForFolder(
+    QVector<int> fetchAllLinkedNoteIdsForFolder(
         const NoteSubFolder &noteSubFolder, bool fromAllSubfolders) const;
 
     QList<Note> fetchAllLinkedNotes() const;

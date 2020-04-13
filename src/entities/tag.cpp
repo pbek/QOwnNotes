@@ -574,22 +574,22 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList &noteNameList) {
 }
 
 /**
- * Fetches all linked note file names
+ * Fetches all linked note ids
  */
-
-QStringList Tag::fetchAllLinkedNoteFileNames(
-    const bool fromAllSubfolders) const {
+QVector<int> Tag::fetchAllLinkedNoteIds(const bool fromAllSubfolders) const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
-    QStringList fileNameList;
+    QVector<int> noteIdList;
 
     if (fromAllSubfolders) {
         // 'All notes' selected in note subfolder panel
         query.prepare(QStringLiteral(
-            "SELECT note_file_name FROM noteTagLink WHERE tag_id = :id"));
+            "SELECT note_file_name, note_sub_folder_path "
+            "FROM noteTagLink WHERE tag_id = :id"));
     } else {
         query.prepare(QStringLiteral(
-            "SELECT note_file_name FROM noteTagLink WHERE tag_id = :id "
+            "SELECT note_file_name, note_sub_folder_path "
+            "FROM noteTagLink WHERE tag_id = :id "
             "AND note_sub_folder_path LIKE :noteSubFolderPath"));
         query.bindValue(
             QStringLiteral(":noteSubFolderPath"),
@@ -602,33 +602,41 @@ QStringList Tag::fetchAllLinkedNoteFileNames(
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            fileNameList.append(
-                query.value(QStringLiteral("note_file_name")).toString());
+            // always keep in mind that note_file_name is no file name,
+            // but the base name (so "my-note", instead of "my-note.md")
+            const QString &name = query.value(
+                QStringLiteral("note_file_name")).toString();
+            const QString &noteSubFolderPathData = query.value(
+                QStringLiteral("note_sub_folder_path")).toString();
+            const Note &note = Note::fetchByName(name, noteSubFolderPathData);
+
+            noteIdList.append(note.getId());
         }
     }
 
     DatabaseService::closeDatabaseConnection(db, query);
 
-    return fileNameList;
+    return noteIdList;
 }
 
 /**
- * Fetches all linked note file names for a given subfolder
+ * Fetches all linked note ids for a given subfolder
  */
-
-QStringList Tag::fetchAllLinkedNoteFileNamesForFolder(
+QVector<int> Tag::fetchAllLinkedNoteIdsForFolder(
     const NoteSubFolder &noteSubFolder, bool fromAllSubfolders) const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
-    QStringList fileNameList;
+    QVector<int> noteIdList;
 
     if (fromAllSubfolders) {
         // 'All notes' selected in note subfolder panel
         query.prepare(QStringLiteral(
-            "SELECT note_file_name FROM noteTagLink WHERE tag_id = :id"));
+            "SELECT note_file_name, note_sub_folder_path "
+            "FROM noteTagLink WHERE tag_id = :id"));
     } else {
         query.prepare(QStringLiteral(
-            "SELECT note_file_name FROM noteTagLink WHERE tag_id = :id "
+            "SELECT note_file_name, note_sub_folder_path "
+            "FROM noteTagLink WHERE tag_id = :id "
             "AND note_sub_folder_path LIKE :noteSubFolderPath"));
         query.bindValue(QStringLiteral(":noteSubFolderPath"),
                         noteSubFolder.relativePath() + "%");
@@ -640,14 +648,21 @@ QStringList Tag::fetchAllLinkedNoteFileNamesForFolder(
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            fileNameList.append(
-                query.value(QStringLiteral("note_file_name")).toString());
+            // always keep in mind that note_file_name is no file name,
+            // but the base name (so "my-note", instead of "my-note.md")
+            const QString &name = query.value(
+                QStringLiteral("note_file_name")).toString();
+            const QString &noteSubFolderPathData = query.value(
+                QStringLiteral("note_sub_folder_path")).toString();
+            const Note &note = Note::fetchByName(name, noteSubFolderPathData);
+
+            noteIdList.append(note.getId());
         }
     }
 
     DatabaseService::closeDatabaseConnection(db, query);
 
-    return fileNameList;
+    return noteIdList;
 }
 
 /**

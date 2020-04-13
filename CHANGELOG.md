@@ -5,6 +5,8 @@
   sub-folders (for [#1683](https://github.com/pbek/QOwnNotes/issues/1683))
 - the note folder will now be reloaded if a note sub-folder was deleted in the *Subfolders panel*
 - fixed optional automatic database closing under Windows (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
+- notes are now correctly filtered by tag even if notes with the same name are
+  in different note sub-folders (for [#1686](https://github.com/pbek/QOwnNotes/issues/1686))
 
 ## 20.4.5
 - fixed the time formats link in the *Editor settings*

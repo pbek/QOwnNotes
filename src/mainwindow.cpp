@@ -5638,7 +5638,7 @@ void MainWindow::filterNotesByTag() {
     }
 
     const int tagId = Tag::activeTagId();
-    QStringList fileNameList;
+    QVector<int> noteIdList;
 
     switch (tagId) {
         case Tag::AllNotesId:
@@ -5646,7 +5646,7 @@ void MainWindow::filterNotesByTag() {
             return;
         case Tag::AllUntaggedNotesId:
             // get all note names that are not tagged
-            fileNameList = Note::fetchAllNotTaggedNames();
+            noteIdList = Note::fetchAllNotTaggedIds();
             break;
         default:
             // check for multiple active;
@@ -5697,12 +5697,12 @@ void MainWindow::filterNotesByTag() {
                     for (const QTreeWidgetItem *i : selectedFolderItems) {
                         const int id = i->data(0, Qt::UserRole).toInt();
                         const NoteSubFolder folder = NoteSubFolder::fetch(id);
-                        fileNameList
-                            << tag.fetchAllLinkedNoteFileNamesForFolder(
+
+                        noteIdList << tag.fetchAllLinkedNoteIdsForFolder(
                                    folder, _showNotesFromAllNoteSubFolders);
                     }
                 } else {
-                    fileNameList << tag.fetchAllLinkedNoteFileNames(
+                    noteIdList << tag.fetchAllLinkedNoteIds(
                         _showNotesFromAllNoteSubFolders);
                 }
             }
@@ -5710,7 +5710,7 @@ void MainWindow::filterNotesByTag() {
             break;
     }
 
-    qDebug() << __func__ << " - 'fileNameList': " << fileNameList;
+    qDebug() << __func__ << " - 'noteIdList': " << noteIdList;
 
     // omit the already hidden notes
     QTreeWidgetItemIterator it(ui->noteTreeWidget,
@@ -5727,7 +5727,7 @@ void MainWindow::filterNotesByTag() {
         // note subfolder are not taken into account here (note names are now
         // not unique), but it should be ok because they are filtered by
         // filterNotesByNoteSubFolders
-        if (!fileNameList.contains((*it)->text(0))) {
+        if (!noteIdList.contains((*it)->data(0, Qt::UserRole).toInt())) {
             (*it)->setHidden(true);
         }
 
