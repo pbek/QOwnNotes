@@ -4504,6 +4504,8 @@ void MainWindow::removeSelectedNoteSubFolders(QTreeWidget *treeWidget) {
                                          .arg(noteSubFolder.fullPath()));
             }
         }
+
+        on_action_Reload_note_folder_triggered();
     }
 }
 

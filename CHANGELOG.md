@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.4.6
+- the note folder will now be reloaded if a note sub-folder was deleted in the *Subfolders panel*
+
 ## 20.4.5
 - fixed the time formats link in the *Editor settings*
   (for [#1685](https://github.com/pbek/QOwnNotes/issues/1685))
