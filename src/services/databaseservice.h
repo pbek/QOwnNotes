@@ -22,8 +22,7 @@ class DatabaseService {
     static bool setupNoteFolderTables();
     static QString getDiskDatabasePath();
     static QSqlDatabase getNoteFolderDatabase();
-    static void closeDatabaseConnection(const QSqlDatabase& db,
-                                        QSqlQuery& query);
+    static void closeDatabaseConnection(QSqlDatabase& db, QSqlQuery& query);
     static QString getNoteFolderDatabasePath();
     static bool mergeNoteFolderDatabase(const QString& path);
     static QByteArray generateDatabaseTableSha1Signature(QSqlDatabase& db,

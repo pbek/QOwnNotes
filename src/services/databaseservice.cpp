@@ -364,7 +364,7 @@ QSqlDatabase DatabaseService::getNoteFolderDatabase() {
  *
  * @param db
  */
-void DatabaseService::closeDatabaseConnection(const QSqlDatabase& db,
+void DatabaseService::closeDatabaseConnection(QSqlDatabase& db,
                                               QSqlQuery& query) {
     query.finish();
     query.clear();

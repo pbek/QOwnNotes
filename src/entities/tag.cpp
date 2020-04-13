@@ -42,7 +42,7 @@ int Tag::getPriority() const { return this->priority; }
 void Tag::setPriority(const int value) { this->priority = value; }
 
 Tag Tag::fetch(const int id) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     Tag tag;
@@ -69,7 +69,7 @@ Tag Tag::fetch(const int id) {
  * @return
  */
 Tag Tag::fetchByName(QString name, const bool startsWith) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     Tag tag;
     const QString sql =
@@ -96,7 +96,7 @@ Tag Tag::fetchByName(QString name, const bool startsWith) {
 }
 
 Tag Tag::fetchByName(const QString &name, const int parentId) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     Tag tag;
 
@@ -118,7 +118,7 @@ Tag Tag::fetchByName(const QString &name, const int parentId) {
 }
 
 int Tag::countAll() {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("SELECT COUNT(*) AS cnt FROM tag"));
@@ -141,7 +141,7 @@ int Tag::countAll() {
  * Removes the tag, their children and its note link items
  */
 bool Tag::remove() const {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     // remove the tag
@@ -159,7 +159,7 @@ bool Tag::remove() const {
             tag.remove();
         }
 
-        const QSqlDatabase db2 = DatabaseService::getNoteFolderDatabase();
+        QSqlDatabase db2 = DatabaseService::getNoteFolderDatabase();
         QSqlQuery query2(db2);
 
         // remove the note tag links
@@ -198,7 +198,7 @@ bool Tag::fillFromQuery(const QSqlQuery &query) {
 }
 
 QList<Tag> Tag::fetchAll() {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     QList<Tag> tagList;
@@ -245,7 +245,7 @@ QList<Tag> Tag::fetchAll() {
 }
 
 QList<Tag> Tag::fetchAllByParentId(const int parentId, const QString &sortBy) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Tag> tagList;
 
@@ -314,7 +314,7 @@ bool Tag::isTaggingShowNotesRecursively() {
 }
 
 int Tag::countAllParentId(const int parentId) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare(
@@ -355,7 +355,7 @@ bool Tag::hasChild(const int tagId) const {
  * Fetches all linked tags of a note
  */
 QList<Tag> Tag::fetchAllOfNote(const Note &note) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     QList<Tag> tagList;
@@ -410,7 +410,7 @@ QList<Tag> Tag::fetchAllOfNotes(const QVector<Note> &notes) {
  * Fetches the names of all linked tags of a note
  */
 QStringList Tag::fetchAllNamesOfNote(const Note &note) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList tagNameList;
 
@@ -441,7 +441,7 @@ QStringList Tag::fetchAllNamesOfNote(const Note &note) {
  * Fetches the names by substring searching for the name
  */
 QStringList Tag::searchAllNamesByName(const QString &name) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList tagNameList;
 
@@ -482,7 +482,7 @@ Tag Tag::fetchOneOfNoteWithColor(const Note &note) {
  * Count all linked tags of a note
  */
 int Tag::countAllOfNote(const Note &note) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare(
@@ -511,7 +511,7 @@ int Tag::countAllOfNote(const Note &note) {
  * Checks if tag is linked to a note
  */
 bool Tag::isLinkedToNote(const Note &note) const {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare(
@@ -542,7 +542,7 @@ bool Tag::isLinkedToNote(const Note &note) const {
  * Returns all tags that are linked to certain note names
  */
 QList<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList &noteNameList) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Tag> tagList;
     const QString noteIdListString = noteNameList.join(QStringLiteral("','"));
@@ -579,7 +579,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList &noteNameList) {
 
 QStringList Tag::fetchAllLinkedNoteFileNames(
     const bool fromAllSubfolders) const {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList fileNameList;
 
@@ -618,7 +618,7 @@ QStringList Tag::fetchAllLinkedNoteFileNames(
 
 QStringList Tag::fetchAllLinkedNoteFileNamesForFolder(
     const NoteSubFolder &noteSubFolder, bool fromAllSubfolders) const {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList fileNameList;
 
@@ -654,7 +654,7 @@ QStringList Tag::fetchAllLinkedNoteFileNamesForFolder(
  * Fetches all linked notes
  */
 QList<Note> Tag::fetchAllLinkedNotes() const {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Note> noteList;
 
@@ -690,7 +690,7 @@ QList<Note> Tag::fetchAllLinkedNotes() const {
  * problems with Windows
  */
 void Tag::convertDirSeparator() {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare(
@@ -708,7 +708,7 @@ void Tag::convertDirSeparator() {
  * Fetches all tag names
  */
 QStringList Tag::fetchAllNames() {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     QStringList nameList;
@@ -733,7 +733,7 @@ QStringList Tag::fetchAllNames() {
  */
 int Tag::countLinkedNoteFileNamesForNoteFolder(
     const NoteSubFolder &noteSubFolder, const bool recursive) const {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     if (recursive) {
@@ -772,7 +772,7 @@ int Tag::countLinkedNoteFileNamesForNoteFolder(
  */
 int Tag::countLinkedNoteFileNames(const bool fromAllSubfolders,
                                   const bool recursive) const {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     if (fromAllSubfolders) {
@@ -815,7 +815,7 @@ int Tag::countLinkedNoteFileNames(const bool fromAllSubfolders,
  * Inserts or updates a Tag object in the database
  */
 bool Tag::store() {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     const QString colorField = colorFieldName();
 
@@ -895,7 +895,7 @@ bool Tag::linkToNote(const Note &note) const {
         return false;
     }
 
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare(
         QStringLiteral("INSERT INTO noteTagLink (tag_id, note_file_name, "
@@ -948,7 +948,7 @@ bool Tag::removeLinkToNote(const Note &note) const {
         return false;
     }
 
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare(
         QStringLiteral("DELETE FROM noteTagLink WHERE tag_id = :tagId AND "
@@ -978,7 +978,7 @@ bool Tag::removeLinkToNote(const Note &note) const {
  * Removes all links to a note
  */
 bool Tag::removeAllLinksToNote(const Note &note) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare(
         QStringLiteral("DELETE FROM noteTagLink WHERE "
@@ -1007,7 +1007,7 @@ bool Tag::removeAllLinksToNote(const Note &note) {
  * Removes all broken note tag links
  */
 void Tag::removeBrokenLinks() {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("SELECT * FROM notetaglink"));
@@ -1043,7 +1043,7 @@ void Tag::removeBrokenLinks() {
  * @return
  */
 bool Tag::removeNoteLinkById(const int id) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare(QStringLiteral("DELETE FROM noteTagLink WHERE id = :id"));
     query.bindValue(QStringLiteral(":id"), id);
@@ -1065,7 +1065,7 @@ bool Tag::removeNoteLinkById(const int id) {
  */
 bool Tag::renameNoteFileNamesOfLinks(const QString &oldFileName,
                                      const QString &newFileName) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare(QStringLiteral(
         "UPDATE noteTagLink SET note_file_name = :newFileName WHERE "
@@ -1097,7 +1097,7 @@ bool Tag::renameNoteFileNamesOfLinks(const QString &oldFileName,
  */
 bool Tag::renameNoteSubFolderPathsOfLinks(const QString &oldPath,
                                           const QString &newPath) {
-    const QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare(QStringLiteral(
         "UPDATE noteTagLink SET note_sub_folder_path = "
