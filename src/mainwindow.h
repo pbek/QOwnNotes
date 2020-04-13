@@ -1065,4 +1065,5 @@ private:
     void noteTextEditTextWasUpdated();
     void removeNoteFromNoteTreeWidget(Note &note) const;
     void initGlobalKeyboardShortcuts();
+    void clearNoteDirectoryWatcher();
 };

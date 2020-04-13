@@ -3420,11 +3420,7 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
  */
 void MainWindow::updateNoteDirectoryWatcher() {
     // clear all paths from the directory watcher
-    const QStringList fileList =
-        noteDirectoryWatcher.directories() + noteDirectoryWatcher.files();
-    if (fileList.count() > 0) {
-        noteDirectoryWatcher.removePaths(fileList);
-    }
+    clearNoteDirectoryWatcher();
 
     const bool hasSubfolders = NoteFolder::isCurrentHasSubfolders();
     //    if (showSubfolders) {
@@ -3484,6 +3480,17 @@ void MainWindow::updateNoteDirectoryWatcher() {
     //
     //    qDebug() << __func__ << " - 'noteDirectoryWatcher.directories()': " <<
     //    noteDirectoryWatcher.directories();
+}
+
+/**
+ * Clears all paths from the directory watcher
+ */
+void MainWindow::clearNoteDirectoryWatcher() {
+    const QStringList fileList =
+        noteDirectoryWatcher.directories() + noteDirectoryWatcher.files();
+    if (fileList.count() > 0) {
+        noteDirectoryWatcher.removePaths(fileList);
+    }
 }
 
 /**
@@ -10486,6 +10493,12 @@ void MainWindow::on_noteSubFolderTreeWidget_itemChanged(QTreeWidgetItem *item,
     if (noteSubFolder.isFetched()) {
         const QString name = item->text(0);
 
+#ifdef Q_OS_WIN32
+        // clear all paths from the directory watcher, if a sub-folder of the
+        // folder to rename is watched Windows will block the renaming
+        clearNoteDirectoryWatcher();
+#endif
+
         // rename the note subfolder in the file system
         noteSubFolder.rename(name);
 
@@ -10494,6 +10507,12 @@ void MainWindow::on_noteSubFolderTreeWidget_itemChanged(QTreeWidgetItem *item,
             // reload tags, note subfolder and notes
             on_action_Reload_note_folder_triggered();
         }
+#ifdef Q_OS_WIN32
+        else {
+            // update the noteDirectoryWatcher if the note folder wasn't reloaded
+            updateNoteDirectoryWatcher();
+        }
+#endif
     }
 }
 
