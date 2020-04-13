@@ -131,6 +131,8 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
              "libpng warning: iCCP: known incorrect sRGB profile")) ||
          text.contains(QLatin1String("QXcbConnection: XCB error:")) ||
          text.contains(QLatin1String(
+             "Using QCharRef with an index pointing outside")) ||
+         text.contains(QLatin1String(
              "QFileSystemWatcher::removePaths: list is empty")))) {
         return;
     }
