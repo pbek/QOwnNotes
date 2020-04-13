@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 20.4.6
+- fixed renaming of note sub-folders under Windows if the folders contain other
+  sub-folders (for [#1683](https://github.com/pbek/QOwnNotes/issues/1683))
 - the note folder will now be reloaded if a note sub-folder was deleted in the *Subfolders panel*
 
 ## 20.4.5
