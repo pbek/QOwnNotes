@@ -38,7 +38,7 @@ void NoteSubFolder::setParentId(int parentId) { this->parentId = parentId; }
 bool NoteSubFolder::isFetched() const { return (this->id > 0); }
 
 NoteSubFolder NoteSubFolder::fetch(int id) {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     NoteSubFolder noteSubFolder;
@@ -59,7 +59,7 @@ NoteSubFolder NoteSubFolder::fetch(int id) {
 
 NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name,
                                                     int parentId) {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     NoteSubFolder noteSubFolder;
@@ -136,7 +136,7 @@ NoteSubFolder NoteSubFolder::fetchByPathData(QString pathData,
 }
 
 bool NoteSubFolder::remove() {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("DELETE FROM noteSubFolder WHERE id = :id"));
@@ -214,7 +214,7 @@ bool NoteSubFolder::fillFromQuery(const QSqlQuery& query) {
 }
 
 QVector<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QVector<NoteSubFolder> noteSubFolderList;
@@ -246,7 +246,7 @@ QVector<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
 }
 
 QVector<int> NoteSubFolder::fetchAllIds() {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QVector<int> idList;
@@ -268,7 +268,7 @@ QVector<int> NoteSubFolder::fetchAllIds() {
 
 QVector<NoteSubFolder> NoteSubFolder::fetchAllByParentId(
     int parentId, const QString& sortBy) {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QVector<NoteSubFolder> noteSubFolderList;
@@ -316,7 +316,7 @@ QVector<int> NoteSubFolder::fetchIdsRecursivelyByParentId(int parentId) {
 // inserts or updates a noteSubFolder object in the database
 //
 bool NoteSubFolder::store() {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     // don't store noteSubFolders with empty name
@@ -365,7 +365,7 @@ bool NoteSubFolder::store() {
 // deletes all noteSubFolders in the database
 //
 bool NoteSubFolder::deleteAll() {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     // no truncate in sqlite
@@ -389,7 +389,7 @@ bool NoteSubFolder::exists() const {
  * Counts all notes
  */
 int NoteSubFolder::countAll() {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("SELECT COUNT(*) AS cnt FROM noteSubFolder"));
@@ -407,7 +407,7 @@ int NoteSubFolder::countAll() {
  * Counts all notes of a parent
  */
 int NoteSubFolder::countAllParentId(int parentId) {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     query.prepare(

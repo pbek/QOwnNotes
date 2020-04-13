@@ -76,7 +76,7 @@ void NoteFolder::resetActiveNoteSubFolder() {
 
 bool NoteFolder::create(const QString &name, const QString &localPath,
                         int cloudConnectionId, const QString &remotePath) {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare(
@@ -92,7 +92,7 @@ bool NoteFolder::create(const QString &name, const QString &localPath,
 }
 
 NoteFolder NoteFolder::fetch(int id) {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("SELECT * FROM noteFolder WHERE id = :id"));
@@ -110,7 +110,7 @@ NoteFolder NoteFolder::fetch(int id) {
 }
 
 int NoteFolder::countAll() {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("SELECT COUNT(*) AS cnt FROM noteFolder"));
@@ -130,7 +130,7 @@ bool NoteFolder::localPathExists() const {
 }
 
 bool NoteFolder::remove() {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("DELETE FROM noteFolder WHERE id = :id"));
@@ -180,7 +180,7 @@ bool NoteFolder::fillFromQuery(const QSqlQuery &query) {
 }
 
 QList<NoteFolder> NoteFolder::fetchAll() {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     QList<NoteFolder> noteFolderList;
@@ -202,7 +202,7 @@ QList<NoteFolder> NoteFolder::fetchAll() {
  * Inserts or updates a NoteFolder object in the database
  */
 bool NoteFolder::store() {
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     if (this->id > 0) {
