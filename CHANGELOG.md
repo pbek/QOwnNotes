@@ -7,6 +7,12 @@
 - fixed optional automatic database closing under Windows (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
 - notes are now correctly filtered by tag even if notes with the same name are
   in different note sub-folders (for [#1686](https://github.com/pbek/QOwnNotes/issues/1686))
+- added more Bosnian, Albanian, Arabic, Basque, Bengali, Bulgarian, Catalan,
+  Chinese Simplified, Chinese Traditional, Croatian, Czech, Danish, Dutch,
+  Estonian, Filipino, Finnish, Galician, Greek, Hausa, Hebrew, Hungarian,
+  Turkish, Swedish, Slovenian, Slovak, Serbian (Cyrillic), Romanian, Polish,
+  Norwegian, Macedonian, Lithuanian, Latvian, Kurdish, Korean, Japanese
+  translation (thank you Fabijenna)
 
 ## 20.4.5
 - fixed the time formats link in the *Editor settings*
