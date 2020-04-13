@@ -3275,18 +3275,20 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
     if (!hasNoteSubFolder) {
         // check for removed notes
-//#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-//        const QList<int> removedNoteIdList =
-//            QSet<int>(_buildNotesIndexBeforeNoteIdList.begin(),
-//                      _buildNotesIndexBeforeNoteIdList.end())
-//                .values();
-//#else
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
+        const QList<int> removedNoteIdList =
+            QSet<int>(_buildNotesIndexBeforeNoteIdList.begin(),
+                      _buildNotesIndexBeforeNoteIdList.end())
+                .subtract(QSet<int>(_buildNotesIndexAfterNoteIdList.begin(),
+                                    _buildNotesIndexAfterNoteIdList.end()))
+                .values();
+#else
         const QList<int> removedNoteIdList =
             _buildNotesIndexBeforeNoteIdList.toList()
                 .toSet()
                 .subtract(_buildNotesIndexAfterNoteIdList.toSet())
                 .toList();
-//#endif
+#endif
 
         // remove all missing notes
         for (const int noteId : removedNoteIdList) {
@@ -3298,18 +3300,19 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         }
 
         // check for removed note subfolders
-//#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-//        const QList<int> removedNoteSubFolderIdList =
-//            QSet<int>(_buildNotesIndexBeforeNoteSubFolderIdList.begin(),
-//                      _buildNotesIndexBeforeNoteSubFolderIdList.end())
-//                .values();
-//#else
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
+        QList<int> removedNoteSubFolderIdList =
+            QSet<int>(_buildNotesIndexBeforeNoteSubFolderIdList.begin(),
+                      _buildNotesIndexBeforeNoteSubFolderIdList.end())
+                .subtract(QSet<int>(_buildNotesIndexAfterNoteSubFolderIdList.begin(),
+                          _buildNotesIndexAfterNoteSubFolderIdList.end())).values();
+#else
         const QList<int> removedNoteSubFolderIdList =
             _buildNotesIndexBeforeNoteSubFolderIdList.toList()
                 .toSet()
                 .subtract(_buildNotesIndexAfterNoteSubFolderIdList.toSet())
                 .toList();
-//#endif
+#endif
 
         // remove all missing note subfolders
         for (const int _noteSubFolderId : removedNoteSubFolderIdList) {
@@ -8361,12 +8364,19 @@ void MainWindow::handleScriptingNotesTagUpdating() {
                 ->callNoteTaggingHook(note, QStringLiteral("list"))
                 .toStringList();
         const QStringList tagNameList2 = Tag::fetchAllNamesOfNote(note);
-
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
+        const QSet<QString> subtraction =
+                QSet<QString>(tagNameList.begin(), tagNameList.end())
+                .subtract(QSet<QString>(tagNameList2.begin(), tagNameList2.end()));
+        const QSet<QString> subtraction1 =
+                QSet<QString>(tagNameList2.begin(), tagNameList2.end())
+                .subtract(QSet<QString>(tagNameList.begin(), tagNameList.end()));
+#else
         const QSet<QString> subtraction =
             tagNameList.toSet().subtract(tagNameList2.toSet());
         const QSet<QString> subtraction1 =
             tagNameList2.toSet().subtract(tagNameList.toSet());
-
+#endif
         // add missing tags to the tag database
         for (const QString &tagName : subtraction) {
             // create a new tag if it doesn't exist
