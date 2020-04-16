@@ -3763,7 +3763,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../mainwindow.cpp" line="1824"/>
       <source>Switch to note folder</source>
-      <translation type="unfinished">Switch to note folder</translation>
+      <translation>Przejdź do folderu notatek</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2204"/>
@@ -3929,12 +3929,12 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../dialogs/notedialog.ui" line="39"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>Texto da nota</translation>
     </message>
     <message>
       <location filename="../dialogs/notedialog.ui" line="71"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Pré-visualizar</translation>
     </message>
   </context>
   <context>
@@ -5955,22 +5955,22 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2182"/>
       <source>Malay</source>
-      <translation type="unfinished">Malay</translation>
+      <translation>Malaio</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2490"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>Khmer</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2699"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>Shona</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2710"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>Cingalês</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2765"/>
@@ -5980,12 +5980,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2787"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>Xhosa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2820"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>Zulu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2876"/>
@@ -6055,7 +6055,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4999"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Możesz przyjrzeć się wszystkim &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;dostępnym formatom&lt;/a&gt; czasu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5169"/>
@@ -6110,12 +6110,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5746"/>
       <source>Note folder panel</source>
-      <translation type="unfinished">Note folder panel</translation>
+      <translation>Panel notatek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5752"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation type="unfinished">Show note folders as buttons instead of in a select box</translation>
+      <translation>Pokaż foldery notatek jako przyciski zamiast w zaznaczonym polu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5894"/>

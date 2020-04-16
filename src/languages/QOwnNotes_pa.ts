@@ -3764,7 +3764,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1824"/>
       <source>Switch to note folder</source>
-      <translation type="unfinished">Switch to note folder</translation>
+      <translation>ਨੋਟ ਫੋਲਡਰ 'ਤੇ ਜਾਓ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2204"/>
@@ -3932,12 +3932,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="39"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>ਨੋਟ ਟੈਕਸਟ</translation>
     </message>
     <message>
       <location filename="../dialogs/notedialog.ui" line="71"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>ਝਲਕ</translation>
     </message>
   </context>
   <context>
@@ -6058,7 +6058,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4999"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ਤੁਸੀਂ ਸਾਰੇ ਉਪਲਬਧ ਸਮੇਂ ਦੇ ਫਾਰਮੈਟਾਂ &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;'ਤੇ ਝਾਤ ਮਾਰ ਸਕਦੇ ਹੋ&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5169"/>
@@ -6113,12 +6113,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5746"/>
       <source>Note folder panel</source>
-      <translation type="unfinished">Note folder panel</translation>
+      <translation>ਨੋਟ ਫੋਲਡਰ ਪੈਨਲ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5752"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation type="unfinished">Show note folders as buttons instead of in a select box</translation>
+      <translation>ਇੱਕ ਚੁਣੇ ਬਕਸੇ ਦੀ ਬਜਾਏ ਨੋਟ ਫੋਲਡਰਾਂ ਨੂੰ ਬਟਨਾਂ ਵਜੋਂ ਦਿਖਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5894"/>

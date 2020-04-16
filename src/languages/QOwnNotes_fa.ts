@@ -3770,7 +3770,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1824"/>
       <source>Switch to note folder</source>
-      <translation type="unfinished">Switch to note folder</translation>
+      <translation>به پوشه توجه داشته باشید</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2204"/>
@@ -3939,12 +3939,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="39"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>متن توجه داشته باشید</translation>
     </message>
     <message>
       <location filename="../dialogs/notedialog.ui" line="71"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>پیش نمایش</translation>
     </message>
   </context>
   <context>
@@ -6010,22 +6010,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2182"/>
       <source>Malay</source>
-      <translation type="unfinished">Malay</translation>
+      <translation>مالایی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2490"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>خمر</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2699"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>شونا</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2710"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>الهه</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2765"/>
@@ -6035,12 +6035,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2787"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>جوزا</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2820"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>زولو</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2876"/>
@@ -6110,7 +6110,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4999"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;
+ممکن است بخواهید به تمام قالبهای 
+&lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; زمان موجود 
+&lt;/a&gt;
+ نگاهی بیندازید.
+&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5169"/>
@@ -6165,12 +6170,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5746"/>
       <source>Note folder panel</source>
-      <translation type="unfinished">Note folder panel</translation>
+      <translation>پانل پوشه توجه داشته باشید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5752"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation type="unfinished">Show note folders as buttons instead of in a select box</translation>
+      <translation>پوشه های توجه داشته باشید را به جای دکمه های انتخاب در کادر انتخاب کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5894"/>

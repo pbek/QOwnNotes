@@ -3761,7 +3761,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="1824"/>
       <source>Switch to note folder</source>
-      <translation type="unfinished">Switch to note folder</translation>
+      <translation>Passer au dossier de notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2204"/>
@@ -3927,12 +3927,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../dialogs/notedialog.ui" line="39"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>Texte de la note</translation>
     </message>
     <message>
       <location filename="../dialogs/notedialog.ui" line="71"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Aperçu</translation>
     </message>
   </context>
   <context>
@@ -6051,7 +6051,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4999"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous voudrez peut-être jeter un œil à tous &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;les formats d'heure &lt;/a&gt;disponibles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5169"/>
@@ -6106,12 +6106,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5746"/>
       <source>Note folder panel</source>
-      <translation type="unfinished">Note folder panel</translation>
+      <translation>Panneau de dossier de notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5752"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation type="unfinished">Show note folders as buttons instead of in a select box</translation>
+      <translation>Afficher les dossiers de notes sous forme de boutons plutôt que dans une zone de sélection</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5894"/>

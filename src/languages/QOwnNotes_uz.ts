@@ -6066,7 +6066,7 @@ Sinxron to'qnashuvlarga duch kelsangiz, o'zingizni sinab ko'ring va agar shunday
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4999"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Barcha mavjud&lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; vaqt formatlarini &lt;/a&gt; ko'rib chiqishni xohlashingiz mumkin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5169"/>

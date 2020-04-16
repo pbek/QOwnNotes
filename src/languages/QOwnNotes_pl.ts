@@ -3829,7 +3829,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="1824"/>
       <source>Switch to note folder</source>
-      <translation type="unfinished">Switch to note folder</translation>
+      <translation>Przejdź do folderu notatek</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2204"/>
@@ -4001,12 +4001,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../dialogs/notedialog.ui" line="39"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>Treść notatki</translation>
     </message>
     <message>
       <location filename="../dialogs/notedialog.ui" line="71"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Podgląd</translation>
     </message>
   </context>
   <context>
@@ -6040,17 +6040,17 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2490"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>Khmer</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2699"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>Shona</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2710"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>Syngaleski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2765"/>
@@ -6060,12 +6060,12 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2787"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>Xhosa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2820"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>Zulus</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2876"/>
@@ -6190,12 +6190,12 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5746"/>
       <source>Note folder panel</source>
-      <translation type="unfinished">Note folder panel</translation>
+      <translation>Panel notatek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5752"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation type="unfinished">Show note folders as buttons instead of in a select box</translation>
+      <translation>Pokaż foldery notatek jako przyciski zamiast w zaznaczonym polu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5894"/>

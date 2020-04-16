@@ -5,6 +5,10 @@
   `All notes` in the subfolder panel (for [#1691](https://github.com/pbek/QOwnNotes/issues/1691))
 - added a **new editor color schema** *Atom One Dark Reasonable* by @leoniscsem
   (for [#1694](https://github.com/pbek/QOwnNotes/issues/1694))
+- added more Shona, Brazilian Portuguese, French, Icelandic, Indonesian, Irish,
+  Italian, Khmer, Persian, Polish, Portuguese, Punjabi, Ukrainian, Urdu (Pakistan),
+  Uzbek, Vietnamese, Spanish, Catalan translation (thank you Fabijenna, mlimacarlos,
+  richarson, MGuerra)
 
 ## 20.4.6
 - fixed renaming of note sub-folders under Windows if the folders contain other

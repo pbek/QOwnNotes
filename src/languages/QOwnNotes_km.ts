@@ -2199,7 +2199,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1669"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>&amp;បញ្ចូលបណ្តុំកូដ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1681"/>
@@ -2547,7 +2547,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2565"/>
       <source>Show/Hide application</source>
-      <translation type="unfinished">Show/Hide application</translation>
+      <translation>បង្ហាញ / លាក់កម្មវិធី</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1885"/>
@@ -5962,17 +5962,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3239"/>
       <source>Action name</source>
-      <translation type="unfinished">Action name</translation>
+      <translation>ឈ្មោះសកម្មភាព</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3244"/>
       <source>Local shortcut</source>
-      <translation type="unfinished">Local shortcut</translation>
+      <translation>ផ្លូវកាត់ក្នុងស្រុក</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3249"/>
       <source>Global shortcut</source>
-      <translation type="unfinished">Global shortcut</translation>
+      <translation>ផ្លូវកាត់សកល</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3850"/>
@@ -6022,7 +6022,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4999"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;អ្នកប្រហែលជាចង់មើលទ្រង់ទ្រាយពេលវេលា &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;ទាំងអស់&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5169"/>

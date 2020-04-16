@@ -38,7 +38,7 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="36"/>
       <source>Select file</source>
-      <translation>Selecionar Arquivo</translation>
+      <translation>Selecionar arquivo</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="46"/>
@@ -53,7 +53,7 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="94"/>
       <source>Cancel download</source>
-      <translation>Cancelar Download</translation>
+      <translation>Cancelar download</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="117"/>
@@ -75,7 +75,7 @@
       <location filename="../dialogs/attachmentdialog.cpp" line="141"/>
       <source>Error while downloading:
 %1</source>
-      <translation>Erro durante o download:%1</translation>
+      <translation>Erro durante o download: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="169"/>
@@ -87,13 +87,13 @@
       <location filename="../dialogs/attachmentdialog.cpp" line="170"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation>Não foi possível abrir o arquivo temporário:%1</translation>
+      <translation>Não foi possível abrir o arquivo temporário: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="194"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Não pode armazenar o arquivo baixado:%1</translation>
+      <translation>Não pode armazenar o arquivo baixado: %1</translation>
     </message>
   </context>
   <context>
@@ -101,7 +101,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="14"/>
       <source>Dictionary manager</source>
-      <translation>Gerenciador de Dicionário</translation>
+      <translation>Gerenciador de dicionário</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="61"/>
@@ -132,7 +132,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="137"/>
       <source>Downloaded dictionaries</source>
-      <translation>Download de Dicionários</translation>
+      <translation>Download de dicionários</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
@@ -2551,7 +2551,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2565"/>
       <source>Show/Hide application</source>
-      <translation type="unfinished">Show/Hide application</translation>
+      <translation>Mostrar / Ocultar aplicativo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1885"/>
@@ -2747,8 +2747,8 @@ Restaurar a nota atual? </translation>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3413"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Remover %n cópia de base de dados conflitantes</numerusform>
         <numerusform>Remover %n copias de base de dados conflitantes</numerusform>
       </translation>
     </message>
@@ -2944,8 +2944,8 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5569"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Encontrado &lt;strong&gt;%n&lt;/strong&gt; ocorrencia para qualquer termo de &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
         <numerusform>Encontrado &lt;strong&gt;%n&lt;/strong&gt; ocorrencias para qualquer termo de &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
@@ -3756,7 +3756,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="1824"/>
       <source>Switch to note folder</source>
-      <translation type="unfinished">Switch to note folder</translation>
+      <translation>Trocar o diretório de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2204"/>
@@ -3833,8 +3833,8 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5565"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Encontrado &lt;strong&gt;%n&lt;/strong&gt; ocorrencia de &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
         <numerusform>Encontrado &lt;strong&gt;%n&lt;/strong&gt; ocorrencias de &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
@@ -3922,12 +3922,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../dialogs/notedialog.ui" line="39"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>Texto da nota</translation>
     </message>
     <message>
       <location filename="../dialogs/notedialog.ui" line="71"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Pré-visualizar</translation>
     </message>
   </context>
   <context>
@@ -5986,17 +5986,17 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3239"/>
       <source>Action name</source>
-      <translation type="unfinished">Action name</translation>
+      <translation>Nome da ação</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3244"/>
       <source>Local shortcut</source>
-      <translation type="unfinished">Local shortcut</translation>
+      <translation>Atalho local</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3249"/>
       <source>Global shortcut</source>
-      <translation type="unfinished">Global shortcut</translation>
+      <translation>Atalho global</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3850"/>
@@ -6046,7 +6046,8 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4999"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Iwe unogona kuda kutarisa nezvese zviripo
+&lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; mafomati enguva &lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5169"/>
@@ -6101,12 +6102,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5746"/>
       <source>Note folder panel</source>
-      <translation type="unfinished">Note folder panel</translation>
+      <translation>Painel de diretórios</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5752"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation type="unfinished">Show note folders as buttons instead of in a select box</translation>
+      <translation>Mostrar diretório de notas como botões ao invés de box de seleção</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5894"/>
@@ -6186,7 +6187,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation>Permitir que o nome do arquivo seja diferente dpo título. &lt;br&gt; Esteja ciente que o  OwnCloud Notes precisa que o arquivo tenha o mesmo nome do título!</translation>
+      <translation>Permitir que o nome do arquivo seja diferente dpo título. &lt;br&gt; Esteja ciente que o OwnCloud Notes precisa que o arquivo tenha o mesmo nome do título!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5613"/>
@@ -7299,12 +7300,12 @@ Suas Notas estarão intactas!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="47"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation>Compartilhe publicamente sua nota no seu servidor OwnCloud/Nextcloud. Você poderá enviar o link gerado para os outros que poderão visualizar ou baixar o arquivo.</translation>
+      <translation>Compartilhe publicamente sua nota no seu servidor OwnCloud. Você poderá enviar o link gerado para os outros que poderão visualizar ou baixar o arquivo.</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="66"/>
       <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-      <translation>Tenha em mente que você ainda tem que sincronizar suas notas com seu servidor usando a ferramenta de sincronização de desktop ownCloud/NextCloud para poderes partilhar notas com os outros!</translation>
+      <translation>Tenha em mente que você ainda tem que sincronizar suas notas com seu servidor usando a ferramenta de sincronização de desktop ownCloud para poderes partilhar notas com os outros!</translation>
     </message>
   </context>
   <context>
@@ -7519,7 +7520,7 @@ Suas Notas estarão intactas!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file / clipboard</source>
-      <translation>Importar arquivo CSV/Área de transferência</translation>
+      <translation>Importar arquivo CSV/ Área de transferência</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
@@ -8156,8 +8157,8 @@ Isso não poderá ser desfeito!</translation>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="204"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>%n marcadore criado</numerusform>
         <numerusform>%n marcadores criados</numerusform>
       </translation>
     </message>
