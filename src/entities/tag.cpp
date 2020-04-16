@@ -1079,7 +1079,8 @@ bool Tag::removeNoteLinkById(const int id) {
  * Renames the note file name of note links
  */
 bool Tag::renameNoteFileNamesOfLinks(const QString &oldFileName,
-                                     const QString &newFileName) {
+                                     const QString &newFileName,
+                                     const NoteSubFolder &noteSubFolder) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare(QStringLiteral(
@@ -1089,10 +1090,8 @@ bool Tag::renameNoteFileNamesOfLinks(const QString &oldFileName,
 
     query.bindValue(QStringLiteral(":oldFileName"), oldFileName);
     query.bindValue(QStringLiteral(":newFileName"), newFileName);
-    // TODO: relying on NoteSubFolder::activeNoteSubFolder() can make troubles
-    // if "All notes" are selected as current tag
     query.bindValue(QStringLiteral(":noteSubFolderPath"),
-                    NoteSubFolder::activeNoteSubFolder().relativePath());
+                    noteSubFolder.relativePath());
 
     if (!query.exec()) {
         // on error

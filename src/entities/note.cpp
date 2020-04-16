@@ -1223,8 +1223,9 @@ bool Note::storeNoteTextFileToDisk() {
             trashItem.doTrashing();
         }
 
-        // TODO(pbek): we need to heed note subfolders here
-        Tag::renameNoteFileNamesOfLinks(oldName, newName);
+        // rename the note file names of note tag links
+        Tag::renameNoteFileNamesOfLinks(oldName, newName,
+                                        this->getNoteSubFolder());
 
         // handle the replacing of all note urls if a note was renamed
         handleNoteMoving(oldNote);
@@ -1709,7 +1710,8 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
             // check if the file name has changed
             if (oldName != newName) {
                 // rename the note file names of note tag links
-                Tag::renameNoteFileNamesOfLinks(oldName, newName);
+                Tag::renameNoteFileNamesOfLinks(oldName, newName,
+                                                note.getNoteSubFolder());
                 *noteWasRenamed = true;
 
                 // override the current note because the file name has changed

@@ -10232,7 +10232,8 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
                 setCurrentNote(note);
 
                 // rename the note file names of note tag links
-                Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
+                Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName,
+                                                note.getNoteSubFolder());
 
                 // handle the replacing of all note urls if a note was renamed
                 note.handleNoteMoving(oldNote);

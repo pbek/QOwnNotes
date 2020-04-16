@@ -99,7 +99,8 @@ class Tag {
     static bool removeAllLinksToNote(const Note &note);
 
     static bool renameNoteFileNamesOfLinks(const QString &oldFileName,
-                                           const QString &newFileName);
+                                           const QString &newFileName,
+                                           const NoteSubFolder &noteSubFolder);
 
     static bool renameNoteSubFolderPathsOfLinks(const QString &oldPath,
                                                 const QString &newPath);

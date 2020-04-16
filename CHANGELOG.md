@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.4.7
+- tags are now not lost if a note in a sub-folder is renamed after clicking on
+  `All notes` in the subfolder panel (for [#1691](https://github.com/pbek/QOwnNotes/issues/1691))
+
 ## 20.4.6
 - fixed renaming of note sub-folders under Windows if the folders contain other
   sub-folders (for [#1683](https://github.com/pbek/QOwnNotes/issues/1683))
