@@ -1643,12 +1643,12 @@ void SettingsDialog::loadShortcutSettings() {
                 QIcon::fromTheme(QStringLiteral("edit-clear"),
                                  QIcon(":/icons/breeze-qownnotes/16x16/"
                                        "edit-clear.svg")));
-            keyWidget->setNoneText(tr("Undefined key"));
+            keyWidget->setNoneText(tr("Undefined shortcut"));
             keyWidget->setShortcutButtonActiveColor(shortcutButtonActiveColor);
             keyWidget->setShortcutButtonInactiveColor(
                 shortcutButtonInactiveColor);
-            keyWidget->setToolTip(tr("Assign a new key"),
-                                  tr("Reset to default key"));
+            keyWidget->setToolTip(tr("Assign a new shortcut"),
+                                  tr("Reset to default shortcut"));
             keyWidget->setDefaultKeySequence(action->data().toString());
             keyWidget->setKeySequence(action->shortcut());
 
@@ -1656,7 +1656,28 @@ void SettingsDialog::loadShortcutSettings() {
                 keyWidget, &QKeySequenceWidget::keySequenceAccepted, this,
                 [this, actionObjectName]() { keySequenceEvent(actionObjectName); });
 
-            ui->shortcutTreeWidget->setItemWidget(actionItem, 1, keyWidget);
+            auto *disableShortcutButton = new QPushButton();
+            disableShortcutButton->setToolTip(tr("Clear shortcut"));
+            disableShortcutButton->setIcon(QIcon::fromTheme(
+                QStringLiteral("dialog-cancel"),
+                QIcon(QStringLiteral(
+                          ":icons/breeze-qownnotes/16x16/dialog-cancel.svg"))));
+
+            connect(disableShortcutButton, &QPushButton::pressed, this,
+                [this, keyWidget]() {
+                    keyWidget->setKeySequence(QKeySequence(""));
+                });
+
+            // create a frame for the key widget for the local shortcut and
+            // the shortcut disabling button
+            auto *frame = new QFrame();
+            auto *frameLayout = new QHBoxLayout();
+            frameLayout->setMargin(0);
+            frameLayout->setSpacing(2);
+            frameLayout->addWidget(keyWidget);
+            frameLayout->addWidget(disableShortcutButton);
+            frame->setLayout(frameLayout);
+            ui->shortcutTreeWidget->setItemWidget(actionItem, 1, frame);
 
             // create the key widget for the global shortcut
             auto *globalShortcutKeyWidget = new QKeySequenceWidget();
@@ -1665,20 +1686,15 @@ void SettingsDialog::loadShortcutSettings() {
                 QIcon::fromTheme(QStringLiteral("edit-clear"),
                                  QIcon(":/icons/breeze-qownnotes/16x16/"
                                        "edit-clear.svg")));
-            globalShortcutKeyWidget->setNoneText(tr("Undefined key"));
+            globalShortcutKeyWidget->setNoneText(tr("Undefined shortcut"));
             globalShortcutKeyWidget->setShortcutButtonActiveColor(shortcutButtonActiveColor);
             globalShortcutKeyWidget->setShortcutButtonInactiveColor(
                 shortcutButtonInactiveColor);
-            globalShortcutKeyWidget->setToolTip(tr("Assign a new key"),
-                                  tr("Reset to default key"));
-//            globalShortcutKeyWidget->setDefaultKeySequence(action->data().toString());
+            globalShortcutKeyWidget->setToolTip(tr("Assign a new shortcut"),
+                                  tr("Reset to default shortcut"));
             globalShortcutKeyWidget->setKeySequence(
                 settings.value(QStringLiteral("GlobalShortcuts/MainWindow-")
                 + actionObjectName).toString());
-
-//            connect(
-//                globalShortcutKeyWidget, &QKeySequenceWidget::keySequenceAccepted, this,
-//                [this, actionObjectName]() { keySequenceEvent(actionObjectName); });
 
             ui->shortcutTreeWidget->setItemWidget(actionItem, 2, globalShortcutKeyWidget);
 
@@ -1730,13 +1746,15 @@ void SettingsDialog::keySequenceEvent(const QString &objectName) {
                 continue;
             }
 
-            auto keyWidget = static_cast<QKeySequenceWidget *>(
-                ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
+            const auto keySequenceWidgets =
+                ui->shortcutTreeWidget->itemWidget(shortcutItem, 1)
+                    ->findChildren<QKeySequenceWidget *>();
 
-            if (keyWidget == Q_NULLPTR) {
+            if (keySequenceWidgets.count() == 0) {
                 continue;
             }
 
+            auto *keyWidget = keySequenceWidgets.at(0);
             QKeySequence keySequence = keyWidget->keySequence();
             QKeySequence defaultKeySequence = keyWidget->defaultKeySequence();
 
@@ -1776,12 +1794,16 @@ QKeySequenceWidget *SettingsDialog::findKeySequenceWidget(
         // loop all tree widget items of the menu (action shortcuts)
         for (int j = 0; j < menuItem->childCount(); j++) {
             QTreeWidgetItem *shortcutItem = menuItem->child(j);
-
             QString name = shortcutItem->data(1, Qt::UserRole).toString();
 
             if (name == objectName) {
-                return static_cast<QKeySequenceWidget *>(
-                    ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
+                const auto keySequenceWidgets =
+                    ui->shortcutTreeWidget->itemWidget(shortcutItem, 1)
+                        ->findChildren<QKeySequenceWidget *>();
+
+                if (keySequenceWidgets.count() > 0) {
+                    return keySequenceWidgets.at(0);
+                }
             }
         }
     }
@@ -1802,10 +1824,15 @@ void SettingsDialog::storeShortcutSettings() {
         // loop all tree widget items of the menu (action shortcuts)
         for (int j = 0; j < menuItem->childCount(); j++) {
             QTreeWidgetItem *shortcutItem = menuItem->child(j);
+            const auto keySequenceWidgets =
+                ui->shortcutTreeWidget->itemWidget(shortcutItem, 1)
+                    ->findChildren<QKeySequenceWidget *>();
 
-            auto *keyWidget = dynamic_cast<QKeySequenceWidget *>(
-                ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
+            if (keySequenceWidgets.count() == 0) {
+                continue;
+            }
 
+            auto *keyWidget = keySequenceWidgets.at(0);
             auto *globalShortcutKeyWidget = dynamic_cast<QKeySequenceWidget *>(
                 ui->shortcutTreeWidget->itemWidget(shortcutItem, 2));
 
@@ -1824,7 +1851,9 @@ void SettingsDialog::storeShortcutSettings() {
             // remove or store the setting for the shortcut if it's not default
             if (keySequence == defaultKeySequence) {
                 settings.remove(settingsKey);
-            } else if (!keySequence.isEmpty()) {
+            } else {
+                // set new key sequence (can also be empty if no key sequence
+                // should be used)
                 settings.setValue(settingsKey, keySequence);
             }
 

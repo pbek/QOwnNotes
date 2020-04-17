@@ -10641,12 +10641,13 @@ void MainWindow::initShortcuts() {
                                 QStringLiteral("Meta+"));
 #endif
 
+            const QString &key =
+                QStringLiteral("Shortcuts/MainWindow-") + action->objectName();
+            const bool settingFound = settings.contains(key);
+
             // try to load a key sequence from the settings
-            QKeySequence shortcut = QKeySequence(
-                settings
-                    .value(QStringLiteral("Shortcuts/MainWindow-") +
-                           action->objectName())
-                    .toString());
+            auto shortcut = QKeySequence(settingFound?
+                settings.value(key).toString() : "");
 
             // do we can this method the first time?
             if (!_isDefaultShortcutInitialized) {
@@ -10657,11 +10658,15 @@ void MainWindow::initShortcuts() {
                 if (!shortcut.isEmpty()) {
                     action->setShortcut(shortcut);
                 }
+            } else if (!settingFound) {
+                // set to the default shortcut if no shortcut setting was found
+                action->setShortcut(action->data().toString());
+            } else if (shortcut.isEmpty()) {
+                // disable shortcut if setting is empty
+                action->setShortcut(QKeySequence());
             } else {
-                // set to the default shortcut if no shortcut was found,
-                // otherwise store the new shortcut
-                action->setShortcut(
-                    shortcut.isEmpty() ? action->data().toString() : shortcut);
+                // else store the new shortcut
+                action->setShortcut(shortcut);
             }
 
 #ifndef Q_OS_MAC

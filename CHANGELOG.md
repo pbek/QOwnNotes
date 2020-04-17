@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.4.8
+- you can now also **clear local shortcuts** in the *Shortcuts settings*
+  (for [#1693](https://github.com/pbek/QOwnNotes/issues/1693))
+
 ## 20.4.7
 - tags are now not lost if a note in a sub-folder is renamed after clicking on
   `All notes` in the subfolder panel (for [#1691](https://github.com/pbek/QOwnNotes/issues/1691))
