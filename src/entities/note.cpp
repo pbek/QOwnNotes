@@ -201,7 +201,8 @@ Note Note::fetchByFileName(const QString &fileName, int noteSubFolderId) {
 
 Note Note::fetchByFileName(const QString &fileName,
     const QString &noteSubFolderPathData) {
-    auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData);
+    auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData,
+                                                        QStringLiteral("/"));
 
     return fetchByFileName(fileName, noteSubFolder.getId());
 }
@@ -515,7 +516,8 @@ Note Note::fetchByShareId(int shareId) {
 
 Note Note::fetchByName(const QString &name,
                        const QString &noteSubFolderPathData) {
-    auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData);
+    auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData,
+                                                        QStringLiteral("/"));
 
     return fetchByName(name, noteSubFolder.getId());
 }

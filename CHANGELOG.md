@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 20.4.9
+- notes in 2nd level sub-folder are now shown correctly in the note-list after
+  clicking on `All notes` in the subfolder panel and filtering by tag
+  (for [#1696](https://github.com/pbek/QOwnNotes/issues/1696))
 - if the application is in "portable mode" then this will now also be shown in
   the title bar (for [#1677](https://github.com/pbek/QOwnNotes/issues/1677))
 
