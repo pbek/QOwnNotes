@@ -6,6 +6,12 @@
   (for [#1696](https://github.com/pbek/QOwnNotes/issues/1696))
 - if the application is in "portable mode" then this will now also be shown in
   the title bar (for [#1677](https://github.com/pbek/QOwnNotes/issues/1677))
+- added more Catalan, Hungarian, Irish, Norwegian, Indonesian, Dutch, Japanese,
+  Korean, Basque, Kurdish, Croatian, Latvian, Czech, Lithuanian, Danish,
+  Macedonian, Estonian, Malay, Filipino, Maori, Finnish, Greek, Persian, Hausa,
+  Polish, Hebrew, Portuguese, Icelandic, Punjabi, Romanian, Serbian (Cyrillic),
+  Slovak, Slovenian, Swedish, Turkish, Ukrainian, Urdu (Pakistan), Uzbek,
+  Vietnamese, Zulu, Spanish translation (thank you MGuerra, Fabijenna, richarson)
 
 ## 20.4.8
 - you can now also **clear local shortcuts** in the *Shortcuts settings*
@@ -50,7 +56,7 @@
 ## 20.4.4
 - some improvements for possible "cursor jumping to the top" issues were made
   (for [#1681](https://github.com/pbek/QOwnNotes/issues/1681))
- 
+
 ## 20.4.3
 - when right-clicking a note in the note list and clicking `Open note in different window`
   you can now also show a **preview of your note** instead of the note text
