@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.4.9
+- if the application is in "portable mode" then this will now also be shown in
+  the title bar (for [#1677](https://github.com/pbek/QOwnNotes/issues/1677))
+
 ## 20.4.8
 - you can now also **clear local shortcuts** in the *Shortcuts settings*
   (for [#1693](https://github.com/pbek/QOwnNotes/issues/1693))

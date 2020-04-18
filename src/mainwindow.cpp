@@ -3830,7 +3830,13 @@ void MainWindow::updateWindowTitle() {
         title += QStringLiteral(" - %1").arg(session);
     }
 
-    title += QStringLiteral(" - QOwnNotes - %3").arg(QStringLiteral(VERSION));
+    title += QStringLiteral(" - QOwnNotes");
+
+    if (Utils::Misc::isInPortableMode()) {
+        title += QStringLiteral(" Portable");
+    }
+
+    title += QStringLiteral(" - %3").arg(QStringLiteral(VERSION));
     setWindowTitle(title);
 }
 
