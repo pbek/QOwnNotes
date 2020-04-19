@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 20.4.10
+- for all question dialogs where you clicked the checkbox `Don't ask again!` you
+  will be now asked again next time if you answer the dialog question with `No`
+  and remembering that decisions makes no sense (for [#1697](https://github.com/pbek/QOwnNotes/issues/1697))
+    - this will help you in case when you accidentally clicked the checkbox and
+      then pressed `No`, for example with shortcut-triggered dialogs like
+      `Remove current note`
+    - for all dialogs where remembering your `No` makes sense all of your
+      decisions will be still remembered, for example with the dialog
+      `Note editing is currently disabled, do you want to allow it again?`
+      when you try to edit a note in read-only mode
+
 ## 20.4.9
 - notes in 2nd level sub-folders (or deeper) are now shown correctly in the
   note-list after clicking on `All notes` in the subfolder panel and filtering

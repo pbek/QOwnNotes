@@ -2953,7 +2953,7 @@ void Note::handleNoteMoving(const Note &oldNote) const {
     const QString oldUrl = getNoteURL(oldNote.getName());
     const QString newUrl = getNoteURL(name);
 
-    if (Utils::Gui::question(
+    if (Utils::Gui::questionNoSkipOverride(
             Q_NULLPTR, QObject::tr("Note file path changed"),
             QObject::tr("A change of the note path was detected. Would you "
                         "like to replace all occurrences of "

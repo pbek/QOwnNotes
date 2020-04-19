@@ -2798,7 +2798,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
             qDebug() << "Current note was removed externally!";
 
-            if (Utils::Gui::question(
+            if (Utils::Gui::questionNoSkipOverride(
                     this, tr("Note was removed externally!"),
                     tr("Current note was removed outside of this application!\n"
                        "Restore current note?"),
@@ -6134,7 +6134,7 @@ void MainWindow::openLocalUrl(QString urlString) {
                 fileName.replace(QStringLiteral("_"), QStringLiteral(" ")));
 
             // ask if we want to create a new note if note wasn't found
-            if (Utils::Gui::question(this, tr("Note was not found"),
+            if (Utils::Gui::questionNoSkipOverride(this, tr("Note was not found"),
                                      tr("Note was not found, create new note "
                                         "<strong>%1</strong>?")
                                          .arg(fileName),
