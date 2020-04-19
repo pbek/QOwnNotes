@@ -11,6 +11,7 @@
       decisions will be still remembered, for example with the dialog
       `Note editing is currently disabled, do you want to allow it again?`
       when you try to edit a note in read-only mode
+- added more Russian, German translation (thank you unchase, rakekniven)
 
 ## 20.4.9
 - notes in 2nd level sub-folders (or deeper) are now shown correctly in the
