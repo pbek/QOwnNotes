@@ -7225,11 +7225,19 @@ void MainWindow::trackAction(QAction *action) {
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event) {
-    ui->tagTreeWidget->resizeColumnToContents(0);
-    ui->tagTreeWidget->resizeColumnToContents(1);
+    resizeTagTreeWidgetColumnToContents();
+    resizeNoteSubFolderTreeWidgetColumnToContents();
+    QMainWindow::resizeEvent(event);
+}
+
+void MainWindow::resizeNoteSubFolderTreeWidgetColumnToContents() const {
     ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
     ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
-    QMainWindow::resizeEvent(event);
+}
+
+void MainWindow::resizeTagTreeWidgetColumnToContents() const {
+    ui->tagTreeWidget->resizeColumnToContents(0);
+    ui->tagTreeWidget->resizeColumnToContents(1);
 }
 
 /**
@@ -7805,9 +7813,7 @@ void MainWindow::reloadTagTree() {
     ui->tagTreeWidget->setRootIsDecorated(Tag::countAllParentId(0) !=
                                           Tag::countAll());
 
-    ui->tagTreeWidget->resizeColumnToContents(0);
-    ui->tagTreeWidget->resizeColumnToContents(1);
-
+    resizeTagTreeWidgetColumnToContents();
     highlightCurrentNoteTagsInTagTree();
 }
 
@@ -7924,8 +7930,7 @@ void MainWindow::reloadNoteSubFolderTree() {
         ui->noteSubFolderTreeWidget->setCurrentItem(item);
     }
 
-    ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
-    ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+    resizeNoteSubFolderTreeWidgetColumnToContents();
 
     // send an event to jump to "All notes" in the note subfolder tree widget
     // if that item was last selected
@@ -10385,8 +10390,7 @@ void MainWindow::on_noteSubFolderTreeWidget_itemExpanded(
     }
 
     // resize columns so long folder names get displayed
-    ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
-    ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+    resizeNoteSubFolderTreeWidgetColumnToContents();
 }
 
 void MainWindow::on_noteSubFolderTreeWidget_itemCollapsed(
@@ -11586,8 +11590,7 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
  * Stores the note tag tree expand state when an tree widget item was collapsed
  */
 void MainWindow::on_tagTreeWidget_itemCollapsed(QTreeWidgetItem *item) {
-    Q_UNUSED(item)
-    storeTagTreeWidgetExpandState();
+    on_tagTreeWidget_itemExpanded(item);
 }
 
 /**
@@ -11595,6 +11598,7 @@ void MainWindow::on_tagTreeWidget_itemCollapsed(QTreeWidgetItem *item) {
  */
 void MainWindow::on_tagTreeWidget_itemExpanded(QTreeWidgetItem *item) {
     Q_UNUSED(item)
+    resizeTagTreeWidgetColumnToContents();
     storeTagTreeWidgetExpandState();
 }
 

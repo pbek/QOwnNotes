@@ -1066,4 +1066,6 @@ private:
     void removeNoteFromNoteTreeWidget(Note &note) const;
     void initGlobalKeyboardShortcuts();
     void clearNoteDirectoryWatcher();
+    void resizeTagTreeWidgetColumnToContents() const;
+    void resizeNoteSubFolderTreeWidgetColumnToContents() const;
 };

@@ -3,6 +3,9 @@
 ## 20.4.11
 - links to urls ending with `.md` are now not highlighted as broken note links
   in the editor any more
+- the column widths of the tag tree panel are now also recalculated when the
+  tree items are expanded or collapsed, not only when the tree is rebuilt or the
+  application window is resized (for [#1690](https://github.com/pbek/QOwnNotes/issues/1690))
 
 ## 20.4.10
 - for all question dialogs where you clicked the checkbox `Don't ask again!` you
