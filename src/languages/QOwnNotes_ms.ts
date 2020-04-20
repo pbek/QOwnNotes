@@ -4361,7 +4361,7 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Nota penyuntingan sedang dilumpuhkan, adakah anda mahu membenarkan lagi?</translation>
     </message>
   </context>
   <context>

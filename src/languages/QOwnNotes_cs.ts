@@ -4473,7 +4473,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Poznámka: editace je aktuálně zakázána, chcete ji znovu povolit?</translation>
     </message>
   </context>
   <context>

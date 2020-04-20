@@ -4439,7 +4439,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Modificarea notelor este dezactivată în prezent, doriți să permiteți din nou?</translation>
     </message>
   </context>
   <context>

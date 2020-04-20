@@ -4480,7 +4480,7 @@ Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho o
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Poznámka: úprava je momentálne zakázaná, chcete ju znova povoliť?</translation>
     </message>
   </context>
   <context>

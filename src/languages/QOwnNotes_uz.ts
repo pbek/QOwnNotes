@@ -4408,7 +4408,7 @@ Tanlangan papkalarni &lt;strong&gt;%n&lt;/strong&gt; o'chirish kerakmi!</numerus
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Ayni paytda qaydlarni tahrirlash o'chirilgan, yana ruxsat bermoqchimisiz?</translation>
     </message>
   </context>
   <context>

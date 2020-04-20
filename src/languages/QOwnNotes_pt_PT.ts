@@ -4397,7 +4397,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>A edição de notas está desativada no momento. Deseja permitir novamente?</translation>
     </message>
   </context>
   <context>

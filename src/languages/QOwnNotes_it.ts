@@ -4396,7 +4396,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>La modifica delle note è attualmente disabilitata, vuoi consentirla di nuovo?</translation>
     </message>
   </context>
   <context>

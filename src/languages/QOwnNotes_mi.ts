@@ -4359,7 +4359,7 @@ Tirohia koa to whirihoranga &lt;strong&gt; Todo &lt;/strong&gt; i nga tautuhinga
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Kei te ngoikore te whakatika whakatika, kei te hiahia koe ki te tuku ano?</translation>
     </message>
   </context>
   <context>

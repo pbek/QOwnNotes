@@ -6,6 +6,14 @@
 - the column widths of the tag tree panel are now also recalculated when the
   tree items are expanded or collapsed, not only when the tree is rebuilt or the
   application window is resized (for [#1690](https://github.com/pbek/QOwnNotes/issues/1690))
+- added more Brazilian Portuguese, Punjabi, Romanian, Serbian (Cyrillic), Slovak,
+  Slovenian, Spanish, Swedish, Turkish, Ukrainian, Uzbek, Vietnamese, Arabic,
+  Bengali, Bosnian, Bulgarian, Cebuano, Chinese Simplified, Galician, German,
+  Dutch, Hungarian, Albanian, Basque, Chinese Traditional, Croatian, Czech,
+  Danish, Estonian, Filipino, Finnish, French, Greek, Hausa, Hebrew, Hindi,
+  Icelandic, Indonesian, Irish, Japanese, Khmer, Korean, Kurdish, Latvian,
+  Lithuanian, Macedonian, Malay, Maori, Norwegian, Persian, Polish, Portuguese,
+  Catalan, Italian translation (thank you Fabijenna, MGuerra, tiwi90)
 
 ## 20.4.10
 - for all question dialogs where you clicked the checkbox `Don't ask again!` you

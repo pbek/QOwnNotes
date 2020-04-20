@@ -4389,7 +4389,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>L'edició de notes està deshabilitada ara mateix, la voleu habilitar de nou?</translation>
     </message>
   </context>
   <context>

@@ -4396,7 +4396,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>A megjegyzések szerkesztése jelenleg le van tiltva, újra engedélyezni szeretné?</translation>
     </message>
   </context>
   <context>

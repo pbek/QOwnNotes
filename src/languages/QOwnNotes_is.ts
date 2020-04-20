@@ -4400,7 +4400,7 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Athugasemdabreyting er sem stendur óvirk, viltu leyfa aftur?</translation>
     </message>
   </context>
   <context>

@@ -4397,7 +4397,7 @@ Nëse plehrat janë aktivizuar në serverin tuaj të fshehtë, ju duhet të jeni
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Redaktimi i shënimeve aktualisht është i çaktivizuar, doni të lejoni përsëri?</translation>
     </message>
   </context>
   <context>

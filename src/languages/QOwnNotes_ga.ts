@@ -4520,7 +4520,7 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Tá eagarthóireacht nótaí faoi mhíchumas faoi láthair, an bhfuil tú ag iarraidh ligean arís?</translation>
     </message>
   </context>
   <context>

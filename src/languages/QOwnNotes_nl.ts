@@ -4393,7 +4393,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Opmerking bewerken is momenteel uitgeschakeld, wilt u dit opnieuw toestaan?</translation>
     </message>
   </context>
   <context>

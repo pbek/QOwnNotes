@@ -4398,7 +4398,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Oharra editatzea gaituta dago, berriro baimendu nahi al duzu?</translation>
     </message>
   </context>
   <context>

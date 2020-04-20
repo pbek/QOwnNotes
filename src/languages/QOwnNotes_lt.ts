@@ -4479,7 +4479,7 @@ Jei šiukšliadėžė įgalinta jūsų ownCloud serveryje, turėtumėte galėti 
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Užrašų redagavimas šiuo metu yra išjungtas. Ar norite vėl leisti?</translation>
     </message>
   </context>
   <context>

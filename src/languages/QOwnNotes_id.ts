@@ -4360,7 +4360,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Penyuntingan catatan saat ini dinonaktifkan, apakah anda ingin mengaktifkannya lagi?</translation>
     </message>
   </context>
   <context>

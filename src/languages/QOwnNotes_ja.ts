@@ -4360,7 +4360,7 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>メモの編集は現在無効になっています。もう一度許可しますか？</translation>
     </message>
   </context>
   <context>

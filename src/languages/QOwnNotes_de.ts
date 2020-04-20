@@ -2123,7 +2123,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1498"/>
       <source>Show shortcuts</source>
-      <translation>Tastaturbefehle anzeigen</translation>
+      <translation>Kurzbefehle anzeigen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1507"/>
@@ -5099,7 +5099,7 @@ Möchten Sie es trotzdem installieren?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Shortcuts</source>
-      <translation>Tastaturbefehle</translation>
+      <translation>Kurzbefehle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4486"/>
@@ -5116,7 +5116,7 @@ Möchten Sie es trotzdem installieren?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3207"/>
       <source>Main window shortcuts</source>
-      <translation>Hauptfenster-Tastaturbefehle</translation>
+      <translation>Hauptfenster-Kurzbefehle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3800"/>
@@ -5849,7 +5849,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3813"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation>Der Tastaturbefehl zum Erstellen einer neuen Notiz fragt nach einer Überschrift</translation>
+      <translation>Der Kurzbefehl zum Erstellen einer neuen Notiz fragt nach einer Überschrift</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3879"/>
@@ -5928,7 +5928,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5084"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation>Vim-Modus aktivieren (einige QOwnNotes-Tastenkürzel funktionieren nicht)</translation>
+      <translation>Vim-Modus aktivieren (einige QOwnNotes-Kurzbefehle funktionieren nicht)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="642"/>
@@ -6742,7 +6742,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3225"/>
       <source>Search for shortcut</source>
-      <translation>Tastaturbefehl suchen</translation>
+      <translation>Kurzbefehle suchen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2043"/>
@@ -6911,7 +6911,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1764"/>
       <source>Shortcut already assigned</source>
-      <translation>Tastaturbefehl bereits in Verwendung</translation>
+      <translation>Kurzbefehl bereits in Verwendung</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1967"/>
@@ -7080,7 +7080,7 @@ Fehlermeldung: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1765"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation>Der Tastaturbefehl &lt;strong&gt;%1&lt;/strong&gt; wird bereits für &lt;strong&gt;%2&lt;/strong&gt; verwendet! Möchten Sie zum Tastaturbefehl wechseln?</translation>
+      <translation>Der Kurzbefehl &lt;strong&gt;%1&lt;/strong&gt; wird bereits für &lt;strong&gt;%2&lt;/strong&gt; verwendet! Möchten Sie zum Tastaturbefehl wechseln?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2944"/>

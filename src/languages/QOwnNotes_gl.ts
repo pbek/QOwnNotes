@@ -4400,7 +4400,7 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>A edición de notas está desactivada actualmente. ¿Queres volver permitila?</translation>
     </message>
   </context>
   <context>
@@ -7067,24 +7067,27 @@ Mensaxe de erro de conexión: </translation>
       <location filename="../dialogs/settingsdialog.cpp" line="1646"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1689"/>
       <source>Undefined shortcut</source>
-      <translation type="unfinished">Undefined shortcut</translation>
+      <translation>Atallo non definido
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1650"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1693"/>
       <source>Assign a new shortcut</source>
-      <translation type="unfinished">Assign a new shortcut</translation>
+      <translation>Asigna un novo atallo
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1651"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1694"/>
       <source>Reset to default shortcut</source>
-      <translation type="unfinished">Reset to default shortcut</translation>
+      <translation>Restablecer o atallo predeterminado
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1660"/>
       <source>Clear shortcut</source>
-      <translation type="unfinished">Clear shortcut</translation>
+      <translation>Eliminar atallo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1765"/>

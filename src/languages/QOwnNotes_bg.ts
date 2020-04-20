@@ -4398,7 +4398,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Понастоящем редактирането на бележки е деактивирано, искате ли да разрешите отново?</translation>
     </message>
   </context>
   <context>
@@ -7064,24 +7064,27 @@ Connection error message: </source>
       <location filename="../dialogs/settingsdialog.cpp" line="1646"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1689"/>
       <source>Undefined shortcut</source>
-      <translation type="unfinished">Undefined shortcut</translation>
+      <translation>Неопределен пряк път
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1650"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1693"/>
       <source>Assign a new shortcut</source>
-      <translation type="unfinished">Assign a new shortcut</translation>
+      <translation>Задайте нов пряк път
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1651"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1694"/>
       <source>Reset to default shortcut</source>
-      <translation type="unfinished">Reset to default shortcut</translation>
+      <translation>Възстановяване на пряк път по подразбиране
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1660"/>
       <source>Clear shortcut</source>
-      <translation type="unfinished">Clear shortcut</translation>
+      <translation>Изчистване на пряк път</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1765"/>

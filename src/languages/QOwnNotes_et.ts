@@ -4400,7 +4400,7 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Märkmete redigeerimine on praegu keelatud. Kas soovite uuesti lubada?</translation>
     </message>
   </context>
   <context>

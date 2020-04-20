@@ -4397,7 +4397,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Bemærk redigering er aktuelt deaktiveret, vil du tillade igen?</translation>
     </message>
   </context>
   <context>

@@ -4398,7 +4398,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Guhertina nuxteyê niha astengdar e, ma hûn dixwazin dîsa destûr bidin?</translation>
     </message>
   </context>
   <context>

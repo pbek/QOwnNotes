@@ -4360,7 +4360,7 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Lưu ý chỉnh sửa hiện đang bị vô hiệu hóa, bạn có muốn cho phép lại không?</translation>
     </message>
   </context>
   <context>

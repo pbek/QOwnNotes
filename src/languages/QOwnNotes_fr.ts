@@ -4395,7 +4395,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>La modification des notes est actuellement désactivée. Voulez-vous autoriser à nouveau?</translation>
     </message>
   </context>
   <context>

@@ -4397,7 +4397,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>নোট সম্পাদনা বর্তমানে অক্ষম করা হয়েছে, আপনি কি আবার অনুমতি দিতে চান?</translation>
     </message>
   </context>
   <context>
@@ -7066,24 +7066,27 @@ Connection error message: </source>
       <location filename="../dialogs/settingsdialog.cpp" line="1646"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1689"/>
       <source>Undefined shortcut</source>
-      <translation type="unfinished">Undefined shortcut</translation>
+      <translation>অপরিজ্ঞাত শর্টকাট
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1650"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1693"/>
       <source>Assign a new shortcut</source>
-      <translation type="unfinished">Assign a new shortcut</translation>
+      <translation>একটি নতুন শর্টকাট বরাদ্দ করুন
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1651"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1694"/>
       <source>Reset to default shortcut</source>
-      <translation type="unfinished">Reset to default shortcut</translation>
+      <translation>ডিফল্ট শর্টকাটে পুনরায় সেট করুন
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1660"/>
       <source>Clear shortcut</source>
-      <translation type="unfinished">Clear shortcut</translation>
+      <translation>শর্টকাট সাফ করুন</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1765"/>

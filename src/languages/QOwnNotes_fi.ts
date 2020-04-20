@@ -4399,7 +4399,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Huomautusten muokkaus on tällä hetkellä poistettu käytöstä, haluatko sallia sen uudelleen?</translation>
     </message>
   </context>
   <context>

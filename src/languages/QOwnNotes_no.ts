@@ -4400,7 +4400,7 @@ Hvis papirkurven er aktivert på din ownCloud-server, bør du kunne gjenopprette
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Merk redigering er for øyeblikket deaktivert, vil du tillate det igjen?</translation>
     </message>
   </context>
   <context>

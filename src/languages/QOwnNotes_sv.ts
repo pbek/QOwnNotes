@@ -4397,7 +4397,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Obs redigering är för närvarande inaktiverad, vill du tillåta igen?</translation>
     </message>
   </context>
   <context>

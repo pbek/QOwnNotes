@@ -4398,7 +4398,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Bayanan kula bayanin kula yana da rauni, shin kuna son sake ba da izini?</translation>
     </message>
   </context>
   <context>

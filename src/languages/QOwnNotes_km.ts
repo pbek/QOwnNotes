@@ -4362,7 +4362,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>បច្ចុប្បន្នការកែសំរួលត្រូវបានបិទតើអ្នកចង់អនុញ្ញាតម្តងទៀតទេ?</translation>
     </message>
   </context>
   <context>
