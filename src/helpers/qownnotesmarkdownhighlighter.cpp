@@ -124,10 +124,10 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
     QRegularExpressionMatch match = regex.match(text);
 
     if (match.hasMatch()) {    // check legacy note:// links
-        QString noteLink = match.captured(0);
+        const QString noteLink = match.captured(0);
 
         // try to fetch a note from the url string
-        Note note = Note::fetchByUrlString(noteLink);
+        const Note note = Note::fetchByUrlString(noteLink);
 
         // if the note exists we don't need to do anything
         if (note.isFetched()) {
@@ -139,8 +139,14 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
         match = regex.match(text);
 
         if (match.hasMatch()) {
-            QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
-            Note note = _currentNote.fetchByRelativeFileName(fileName);
+            const QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
+
+            // skip urls
+            if (fileName.contains(QStringLiteral("://"))) {
+                return;
+            }
+
+            const Note note = _currentNote.fetchByRelativeFileName(fileName);
 
             // if the note exists we don't need to do anything
             if (note.isFetched()) {
@@ -152,8 +158,14 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
             match = regex.match(text);
 
             if (match.hasMatch()) {
-                QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
-                Note note = _currentNote.fetchByRelativeFileName(fileName);
+                const QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
+
+                // skip urls
+                if (fileName.contains(QStringLiteral("://"))) {
+                    return;
+                }
+
+                const Note note = _currentNote.fetchByRelativeFileName(fileName);
 
                 // if the note exists we don't need to do anything
                 if (note.isFetched()) {

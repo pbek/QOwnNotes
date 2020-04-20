@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.4.11
+- links to urls ending with `.md` are now not highlighted as broken note links
+  in the editor any more
+
 ## 20.4.10
 - for all question dialogs where you clicked the checkbox `Don't ask again!` you
   will be now asked again next time if you answer the dialog question with `No`
