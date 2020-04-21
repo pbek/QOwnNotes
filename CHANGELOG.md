@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.4.12
+- when tags in the tag tree are double-clicked now the tag also is added or
+  removed via the scripting engine (for [#84](https://github.com/qownnotes/scripts/issues/84))
+
 ## 20.4.11
 - links to urls ending with `.md` are now not highlighted as broken note links
   in the editor any more

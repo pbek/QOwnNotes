@@ -11782,8 +11782,10 @@ void MainWindow::on_tagTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
 
         if (tag.isLinkedToNote(currentNote)) {
             tag.removeLinkToNote(currentNote);
+            handleScriptingNoteTagging(currentNote, tag.getName(), true, false);
         } else {
             tag.linkToNote(currentNote);
+            handleScriptingNoteTagging(currentNote, tag.getName(), false, false);
         }
 
         if (!NoteFolder::isCurrentNoteTreeEnabled()) {
