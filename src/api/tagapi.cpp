@@ -27,3 +27,9 @@ TagApi* TagApi::fetchByName(const QString& Name, int ParentId) {
 
     return this;
 }
+
+TagApi* TagApi::fromTag(const Tag& tag) {
+    auto* tagApi = new TagApi();
+    tagApi->fetch(tag.getId());
+    return tagApi;
+}

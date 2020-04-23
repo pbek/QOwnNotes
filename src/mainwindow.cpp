@@ -4558,7 +4558,7 @@ void MainWindow::removeSelectedTags() {
             qDebug() << "Removed tag " << tag.getName();
 
             // take care that the tag is removed from all notes
-            handleScriptingNotesTagRemoving(tag.getName(), true);
+            handleScriptingNotesTagRemoving(tag, true);
         }
 
         if (ScriptingService::instance()->noteTaggingHookExists()) {
@@ -4769,7 +4769,7 @@ void MainWindow::tagSelectedNotes(const Tag &tag) {
             if (useScriptingEngine) {
                 // add the tag to the note text if defined via
                 // scripting engine
-                handleScriptingNoteTagging(note, tag.getName(), false, false);
+                handleScriptingNoteTagging(note, tag, false, false);
             }
 
             // tag note
@@ -4843,7 +4843,7 @@ void MainWindow::removeTagFromSelectedNotes(const Tag &tag) {
 
             if (useScriptingEngine) {
                 // take care that the tag is removed from the note
-                handleScriptingNoteTagging(note, tag.getName(), true, false);
+                handleScriptingNoteTagging(note, tag, true, false);
             }
 
             // tag note
@@ -8287,13 +8287,13 @@ void MainWindow::linkTagNameToCurrentNote(const QString &tagName,
 
                 // add the tag to the note text if defined via scripting
                 // engine
-                handleScriptingNoteTagging(note, tagName, false, false);
+                handleScriptingNoteTagging(note, tag, false, false);
             }
         } else {
             tag.linkToNote(currentNote);
 
             // add the tag to the note text if defined via scripting engine
-            handleScriptingNoteTagging(currentNote, tagName, false, false);
+            handleScriptingNoteTagging(currentNote, tag, false, false);
         }
 
         reloadCurrentNoteTags();
@@ -8316,20 +8316,28 @@ void MainWindow::linkTagNameToCurrentNote(const QString &tagName,
  * @param doRemove
  * @param triggerPostMethods
  */
-void MainWindow::handleScriptingNoteTagging(Note note, const QString &tagName,
+void MainWindow::handleScriptingNoteTagging(Note note, const Tag &tag,
                                             bool doRemove,
                                             bool triggerPostMethods) {
     const QString oldNoteText = note.getNoteText();
+    const QString &action =
+        doRemove ? QStringLiteral("remove") : QStringLiteral("add");
     QString noteText =
         ScriptingService::instance()
             ->callNoteTaggingHook(
-                note,
-                doRemove ? QStringLiteral("remove") : QStringLiteral("add"),
-                tagName)
+                note, action,
+                tag.getName())
             .toString();
 
-    if (noteText.isEmpty() || (oldNoteText == noteText)) {
-        return;
+    // try noteTaggingByObjectHook if noteTaggingHook didn't do anything
+    if (noteText.isEmpty()) {
+        noteText =
+            ScriptingService::instance()
+                ->callNoteTaggingByObjectHook(note, action, tag).toString();
+
+        if (noteText.isEmpty() || (oldNoteText == noteText)) {
+            return;
+        }
     }
 
     // return if note could not be stored
@@ -8370,46 +8378,58 @@ void MainWindow::handleScriptingNotesTagUpdating() {
 
     const QVector<Note> &notes = Note::fetchAll();
     for (const Note &note : notes) {
+        QSet<int> tagIdList;
         const QStringList tagNameList =
             ScriptingService::instance()
                 ->callNoteTaggingHook(note, QStringLiteral("list"))
                 .toStringList();
-        const QStringList tagNameList2 = Tag::fetchAllNamesOfNote(note);
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-        const QSet<QString> subtraction =
-                QSet<QString>(tagNameList.begin(), tagNameList.end())
-                .subtract(QSet<QString>(tagNameList2.begin(), tagNameList2.end()));
-        const QSet<QString> subtraction1 =
-                QSet<QString>(tagNameList2.begin(), tagNameList2.end())
-                .subtract(QSet<QString>(tagNameList.begin(), tagNameList.end()));
-#else
-        const QSet<QString> subtraction =
-            tagNameList.toSet().subtract(tagNameList2.toSet());
-        const QSet<QString> subtraction1 =
-            tagNameList2.toSet().subtract(tagNameList.toSet());
-#endif
-        // add missing tags to the tag database
-        for (const QString &tagName : subtraction) {
-            // create a new tag if it doesn't exist
-            Tag tag = Tag::fetchByName(tagName);
-            if (!tag.isFetched()) {
-                tag.setName(tagName);
-                tag.store();
-            }
 
-            tag.linkToNote(note);
-            qDebug() << " difference1: " << tagName;
+        if (tagNameList.count() == 0) {
+            // if callNoteTaggingHook didn't return anything lets try
+            // callNoteTaggingByObjectHook
+            const auto variantTagIdList = ScriptingService::instance()
+                ->callNoteTaggingByObjectHook(note, QStringLiteral("list"))
+                .toList();
+
+            // get a tagId list from the variant list
+            for (const QVariant &tagId : variantTagIdList) {
+                tagIdList << tagId.toInt();
+            }
+        } else {
+            // get a tagId list from the tag name list
+            for (const QString &tagName : tagNameList) {
+                Tag tag = Tag::fetchByName(tagName);
+
+                // add missing tags to the tag database
+                if (!tag.isFetched()) {
+                    tag.setName(tagName);
+                    tag.store();
+                }
+
+                tagIdList << tag.getId();
+            }
         }
 
-        // remove tags that are not in the note text from the tag database
-        for (const QString &tagName : subtraction1) {
-            const Tag tag = Tag::fetchByName(tagName);
-            if (!tag.exists()) {
-                continue;
-            }
+        QSet<int> tagIdList2 = Tag::fetchAllIdsByNote(note);
 
+        // we need to create a copy of tagIdList, because subtract would modify tagIdList
+        QSet<int> subtraction = tagIdList;
+        subtraction.subtract(tagIdList2);
+
+        // add missing tag links to the note
+        for (const int tagId : subtraction) {
+            Tag tag = Tag::fetch(tagId);
+            tag.linkToNote(note);
+            qDebug() << " difference1: " << tag;
+        }
+
+        const QSet<int> subtraction1 = tagIdList2.subtract(tagIdList);
+
+        // remove tags from the note that are not in the note text
+        for (const int tagId : subtraction1) {
+            Tag tag = Tag::fetch(tagId);
             tag.removeLinkToNote(note);
-            qDebug() << " difference2: " << tagName;
+            qDebug() << " difference2: " << tag;
         }
     }
 
@@ -8423,7 +8443,7 @@ void MainWindow::handleScriptingNotesTagUpdating() {
  * @param oldTagName
  * @param newTagName
  */
-void MainWindow::handleScriptingNotesTagRenaming(const QString &oldTagName,
+void MainWindow::handleScriptingNotesTagRenaming(const Tag &tag,
                                                  const QString &newTagName) {
     if (!ScriptingService::instance()->noteTaggingHookExists()) {
         return;
@@ -8443,11 +8463,21 @@ void MainWindow::handleScriptingNotesTagRenaming(const QString &oldTagName,
         QString noteText =
             ScriptingService::instance()
                 ->callNoteTaggingHook(note, QStringLiteral("rename"),
-                                      oldTagName, newTagName)
+                                      tag.getName(), newTagName)
                 .toString();
 
-        if (noteText.isEmpty() || (oldNoteText == noteText)) {
-            continue;
+        // if nothing came back from callNoteTaggingHook let's try
+        // callNoteTaggingByObjectHook
+        if (noteText.isEmpty()) {
+            noteText =
+                ScriptingService::instance()
+                    ->callNoteTaggingByObjectHook(
+                        note, QStringLiteral("rename"), tag, newTagName)
+                    .toString();
+
+            if (noteText.isEmpty() || (oldNoteText == noteText)) {
+                continue;
+            }
         }
 
         note.storeNewText(std::move(noteText));
@@ -8460,7 +8490,7 @@ void MainWindow::handleScriptingNotesTagRenaming(const QString &oldTagName,
 
     reloadTagTree();
 
-    // refetch current note to make sure the note text with the tag was updated
+    // re-fetch current note to make sure the note text with the tag was updated
     currentNote.refetch();
     setNoteTextFromNote(&currentNote);
 }
@@ -8470,7 +8500,7 @@ void MainWindow::handleScriptingNotesTagRenaming(const QString &oldTagName,
  *
  * @param tagName
  */
-void MainWindow::handleScriptingNotesTagRemoving(const QString &tagName,
+void MainWindow::handleScriptingNotesTagRemoving(const Tag &tag,
                                                  bool forBulkOperation) {
     if (!ScriptingService::instance()->noteTaggingHookExists()) {
         return;
@@ -8485,7 +8515,7 @@ void MainWindow::handleScriptingNotesTagRemoving(const QString &tagName,
 
     const QVector<Note> &notes = Note::fetchAll();
     for (const Note &note : notes) {
-        handleScriptingNoteTagging(note, tagName, true, false);
+        handleScriptingNoteTagging(note, tag, true, false);
     }
 
     if (!forBulkOperation) {
@@ -8650,7 +8680,7 @@ void MainWindow::removeNoteTagClicked() {
             tag.removeLinkToNote(currentNote);
 
             // remove the tag from the note text if defined via scripting engine
-            handleScriptingNoteTagging(currentNote, tag.getName(), true);
+            handleScriptingNoteTagging(currentNote, tag, true);
         } else {
             const auto selectedNotesList = selectedNotes();
             for (const Note &note : selectedNotesList) {
@@ -8662,7 +8692,7 @@ void MainWindow::removeNoteTagClicked() {
 
                 // remove the tag from the note text if defined via
                 // scripting engine
-                handleScriptingNoteTagging(note, tag.getName(), true);
+                handleScriptingNoteTagging(note, tag, true);
             }
         }
 
@@ -8715,11 +8745,11 @@ void MainWindow::on_tagTreeWidget_itemChanged(QTreeWidgetItem *item,
             const QSignalBlocker blocker(this->noteDirectoryWatcher);
             Q_UNUSED(blocker)
 
+            // take care that a tag is renamed in all notes
+            handleScriptingNotesTagRenaming(tag, name);
+
             tag.setName(name);
             tag.store();
-
-            // take care that a tag is renamed in all notes
-            handleScriptingNotesTagRenaming(oldName, name);
         }
 
         // we also have to reload the tag tree if we don't change the tag
@@ -11782,10 +11812,10 @@ void MainWindow::on_tagTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
 
         if (tag.isLinkedToNote(currentNote)) {
             tag.removeLinkToNote(currentNote);
-            handleScriptingNoteTagging(currentNote, tag.getName(), true, false);
+            handleScriptingNoteTagging(currentNote, tag, true, false);
         } else {
             tag.linkToNote(currentNote);
-            handleScriptingNoteTagging(currentNote, tag.getName(), false, false);
+            handleScriptingNoteTagging(currentNote, tag, false, false);
         }
 
         if (!NoteFolder::isCurrentNoteTreeEnabled()) {

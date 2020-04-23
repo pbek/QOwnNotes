@@ -425,12 +425,60 @@ QVariant ScriptingService::callNoteTaggingHook(const Note &note,
 }
 
 /**
- * Checks if a noteTaggingHook function exists in a script
+ * Calls the noteTaggingByObjectHook function for all script components
+ * This function is called when tags are added to, removed from or renamed in
+ * notes or the tags of a note should be listed
+ *
+ * @param note
+ * @param action can be "add", "remove", "rename" or "list"
+ * @param tag to be added, removed or renamed
+ * @param newTagName tag name to be renamed to if action = "rename"
+ * @return QString or QStringList of tag ids (if action = "list") inside a QVariant
+ */
+QVariant ScriptingService::callNoteTaggingByObjectHook(
+    const Note &note, const QString &action, const Tag &tag,
+    const QString &newTagName) {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+    auto *noteApi = NoteApi::fromNote(note);
+    auto *tagApi = TagApi::fromTag(tag);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        QVariant result;
+
+        if (methodExistsForObject(
+                scriptComponent.object,
+                QStringLiteral(
+                    "noteTaggingByObjectHook(QVariant,QVariant,QVariant,QVariant)"))) {
+            QMetaObject::invokeMethod(
+                scriptComponent.object, "noteTaggingByObjectHook",
+                Q_RETURN_ARG(QVariant, result),
+                Q_ARG(QVariant,
+                      QVariant::fromValue(static_cast<QObject *>(noteApi))),
+                Q_ARG(QVariant, action),
+                Q_ARG(QVariant,
+                      QVariant::fromValue(static_cast<QObject *>(tagApi))),
+                Q_ARG(QVariant, newTagName));
+
+            if (!result.isNull()) {
+                return result;
+            }
+        }
+    }
+
+    return QVariant();
+}
+
+/**
+ * Checks if a noteTaggingHook or noteTaggingByObjectHook function exists in a script
  * @return true if a function was found
  */
 bool ScriptingService::noteTaggingHookExists() const {
     return methodExists(
-        QStringLiteral("noteTaggingHook(QVariant,QVariant,QVariant,QVariant)"));
+        QStringLiteral("noteTaggingHook(QVariant,QVariant,QVariant,QVariant)")) ||
+        methodExists(QStringLiteral(
+               "noteTaggingByObjectHook(QVariant,QVariant,QVariant,QVariant)"));
 }
 
 /**

@@ -132,6 +132,8 @@ class Tag {
 
     static QStringList fetchAllNamesOfNote(const Note &note);
 
+    static QSet<int> fetchAllIdsByNote(const Note &note);
+
     static QStringList searchAllNamesByName(const QString &name);
 
     static QList<Tag> fetchRecursivelyByParentId(const int parentId);

@@ -1001,16 +1001,16 @@ private:
 
     void selectAllNotesInTagTreeWidget() const;
 
-    void handleScriptingNoteTagging(Note note, const QString &tagName,
+    void handleScriptingNoteTagging(Note note, const Tag &tag,
                                     bool doRemove = false,
                                     bool triggerPostMethods = true);
 
     void handleScriptingNotesTagUpdating();
 
-    void handleScriptingNotesTagRenaming(const QString &oldTagName,
+    void handleScriptingNotesTagRenaming(const Tag &tag,
                                          const QString &newTagName);
 
-    void handleScriptingNotesTagRemoving(const QString &tagName,
+    void handleScriptingNotesTagRemoving(const Tag &tag,
                                          bool forBulkOperation = false);
 
     void directoryWatcherWorkaround(bool isNotesDirectoryWasModifiedDisabled,

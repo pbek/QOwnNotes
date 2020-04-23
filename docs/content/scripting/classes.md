@@ -46,6 +46,7 @@ Tag
         Q_PROPERTY(int id)
         Q_PROPERTY(QString name)
         Q_PROPERTY(int parentId)
+        Q_INVOKABLE TagApi fetchByName(const QString &name, int parentId = 0)
     };
     ```
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <entities/script.h>
+#include <entities/tag.h>
 
 #include <QMap>
 #include <QMessageBox>
@@ -36,6 +37,10 @@ class ScriptingService : public QObject {
     QVariant callNoteTaggingHook(const Note &note, const QString &action,
                                  const QString &tagName = QString(),
                                  const QString &newTagName = QString());
+    QVariant callNoteTaggingByObjectHook(const Note &note,
+                                         const QString &action,
+                                         const Tag &tag = Tag(),
+                                         const QString &newTagName = QString());
     bool noteTaggingHookExists() const;
     bool handleNoteNameHookExists() const;
     bool methodExists(const QString &methodName) const;
