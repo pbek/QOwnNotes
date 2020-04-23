@@ -1,13 +1,13 @@
 # QOwnNotes Changelog
 
 ## 20.4.13
-- there now is a new scripting hook `noteTaggingHookByObject` to implement your
+- there now is a new scripting hook `noteTaggingByObjectHook` to implement your
   own note tagging mechanism in a script (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703)
     - similarly to `noteTaggingHook` you can implement your own note tagging
       mechanism, but you are not bound to tag names in the tag tree root,
       this way you can make use of the whole tag tree instead of only a tag list
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#notetagginghookbyobject)
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/hooks/#notetaggingbyobjecthook)
 - you can now fetch a tag by name (if there already exists a tag object) with
   `tag.fetchByName()` via the scripting engine (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703)
     - for more information please take a look at the
