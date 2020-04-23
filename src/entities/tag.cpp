@@ -304,6 +304,24 @@ QList<Tag> Tag::fetchRecursivelyByParentId(const int parentId) {
     return tagList;
 }
 
+QStringList Tag::getParentTagNames() {
+    if (this->parentId == 0) {
+        return QStringList();
+    }
+
+    Tag parentTag = Tag::fetch(this->parentId);
+
+    if (!parentTag.isFetched()) {
+        return QStringList();
+    }
+
+    const QString tagName = parentTag.getName();
+    QStringList tagNames = {tagName};
+    tagNames << parentTag.getParentTagNames();
+
+    return tagNames;
+}
+
 /**
  * Checks if taggingShowNotesRecursively is set
  */

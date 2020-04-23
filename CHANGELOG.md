@@ -9,7 +9,11 @@
     - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#notetagginghookbyobject)
 - you can now fetch a tag by name (if there already exists a tag object) with
-  `tag.fetchByName()` (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703)
+  `tag.fetchByName()` via the scripting engine (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703)
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#tag)
+- you can now fetch the parent tag names of a tag with `tag.getParentTagNames()`
+  via the scripting engine (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703)
     - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#tag)
 

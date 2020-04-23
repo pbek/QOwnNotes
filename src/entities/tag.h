@@ -138,6 +138,8 @@ class Tag {
 
     static QList<Tag> fetchRecursivelyByParentId(const int parentId);
 
+    QStringList getParentTagNames();
+
     static bool isTaggingShowNotesRecursively();
 
     static QList<Tag> fetchAllOfNotes(const QVector<Note> &notes);

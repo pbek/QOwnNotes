@@ -22,7 +22,7 @@ Script {
         var tagName = tag.name;
         var noteText = note.noteText;
         var tagRegExp = RegExp("\\B@" + escapeRegExp(tagName) + "\\b");
-        script.log(action);
+        script.log("action: " + action);
 
         switch (action) {
             // adds the tag "tagName" to the note
