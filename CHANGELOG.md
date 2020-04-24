@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.4.14
+- moving of tags to another parent in the tag panel can now also be handled by
+  the scripting hook `noteTaggingByObjectHook` (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
+    - the application will trigger a series of `add` and `remove` actions for
+      all selected tags and their children on all notes if tags are moved
+
 ## 20.4.13
 - there now is a new scripting hook `noteTaggingByObjectHook` to implement your
   own note tagging mechanism in a script (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703))
