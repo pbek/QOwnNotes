@@ -540,7 +540,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Romansh</source>
-      <translation type="unfinished">Romansh</translation>
+      <translation>Romansh</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
@@ -565,12 +565,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="134"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>Shona</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="135"/>
       <source>Sindhi</source>
-      <translation type="unfinished">Sindhi</translation>
+      <translation>Sindhi</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="136"/>
@@ -595,12 +595,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="143"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>Tagalog</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="144"/>
       <source>Tajik</source>
-      <translation type="unfinished">Tajik</translation>
+      <translation>Tajik</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="145"/>
@@ -650,12 +650,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="154"/>
       <source>Venda</source>
-      <translation type="unfinished">Venda</translation>
+      <translation>Venda</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="155"/>
       <source>Venetian</source>
-      <translation type="unfinished">Venetian</translation>
+      <translation>Venetian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="156"/>
@@ -665,17 +665,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="158"/>
       <source>Welsh</source>
-      <translation type="unfinished">Welsh</translation>
+      <translation>Welsh</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="159"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>Xhosa</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="160"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>Zulu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="292"/>
@@ -5951,7 +5951,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2534"/>
       <source>Māori</source>
-      <translation type="unfinished">Māori</translation>
+      <translation>Māori</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2182"/>
@@ -5961,17 +5961,17 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2490"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>Khmer</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2699"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>Shona</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2710"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>Sinhala</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2765"/>
@@ -5986,7 +5986,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2820"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>Zulu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2876"/>

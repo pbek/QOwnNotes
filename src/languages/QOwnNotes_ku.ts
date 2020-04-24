@@ -5996,22 +5996,22 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2876"/>
       <source>Search for language</source>
-      <translation type="unfinished">Search for language</translation>
+      <translation>Li ziman digerin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3239"/>
       <source>Action name</source>
-      <translation type="unfinished">Action name</translation>
+      <translation>Navê çalakiyê</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3244"/>
       <source>Local shortcut</source>
-      <translation type="unfinished">Local shortcut</translation>
+      <translation>Kurteya herêmî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3249"/>
       <source>Global shortcut</source>
-      <translation type="unfinished">Global shortcut</translation>
+      <translation>Kurteya gerdûnî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3850"/>

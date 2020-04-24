@@ -11,6 +11,8 @@
       all selected tags and their children on all notes if tags are moved
     - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/hooks/#notetaggingbyobjecthook)
+- added more Albanian, Basque, Chinese Traditional, Hindi, French, Khmer,
+  Kurdish translation (thank you Fabijenna)
 
 ## 20.4.13
 - there now is a new scripting hook `noteTaggingByObjectHook` to implement your

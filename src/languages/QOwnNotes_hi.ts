@@ -210,7 +210,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Gujarati</source>
-      <translation type="unfinished">Gujarati</translation>
+      <translation>गुजराती</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
@@ -6060,7 +6060,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4999"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;आप सभी उपलब्ध &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; समय प्रारूपों&lt;/a&gt; पर एक नज़र रखना चाहते हैं.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5169"/>
@@ -7063,24 +7063,24 @@ Connection error message: </source>
       <location filename="../dialogs/settingsdialog.cpp" line="1646"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1689"/>
       <source>Undefined shortcut</source>
-      <translation type="unfinished">Undefined shortcut</translation>
+      <translation>अपरिभाषित शॉर्टकट</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1650"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1693"/>
       <source>Assign a new shortcut</source>
-      <translation type="unfinished">Assign a new shortcut</translation>
+      <translation>एक नया शॉर्टकट असाइन करें</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1651"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1694"/>
       <source>Reset to default shortcut</source>
-      <translation type="unfinished">Reset to default shortcut</translation>
+      <translation>डिफ़ॉल्ट शॉर्टकट पर रीसेट करें</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1660"/>
       <source>Clear shortcut</source>
-      <translation type="unfinished">Clear shortcut</translation>
+      <translation>शॉर्टकट साफ़ करें</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1765"/>

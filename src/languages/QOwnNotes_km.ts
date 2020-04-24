@@ -1389,7 +1389,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
       <source>&amp;Crop</source>
-      <translation type="unfinished">&amp;Crop</translation>
+      <translation>&amp;ច្រឹប</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
@@ -2041,7 +2041,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1113"/>
       <source>To&amp;do</source>
-      <translation type="unfinished">To&amp;do</translation>
+      <translation>&amp;ធ្វើ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1119"/>
@@ -7030,24 +7030,24 @@ Connection error message: </source>
       <location filename="../dialogs/settingsdialog.cpp" line="1646"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1689"/>
       <source>Undefined shortcut</source>
-      <translation type="unfinished">Undefined shortcut</translation>
+      <translation>ផ្លូវកាត់ដែលមិនបានកំណត់</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1650"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1693"/>
       <source>Assign a new shortcut</source>
-      <translation type="unfinished">Assign a new shortcut</translation>
+      <translation>ចាត់តាំងផ្លូវកាត់ថ្មី</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1651"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1694"/>
       <source>Reset to default shortcut</source>
-      <translation type="unfinished">Reset to default shortcut</translation>
+      <translation>កំណត់ទៅផ្លូវកាត់លំនាំដើមវិញ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1660"/>
       <source>Clear shortcut</source>
-      <translation type="unfinished">Clear shortcut</translation>
+      <translation>ជម្រះផ្លូវកាត់</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1765"/>
