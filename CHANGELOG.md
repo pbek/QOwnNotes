@@ -1,10 +1,16 @@
 # QOwnNotes Changelog
 
 ## 20.4.14
+- there now is a new scripting function `getTagByNameBreadcrumbList` to create
+  or fetch a tag by its name breadcrumb list (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#create-or-fetch-a-tag-by-its-name-breadcrumb-list)
 - moving of tags to another parent in the tag panel can now also be handled by
   the scripting hook `noteTaggingByObjectHook` (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
     - the application will trigger a series of `add` and `remove` actions for
       all selected tags and their children on all notes if tags are moved
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/hooks/#notetaggingbyobjecthook)
 
 ## 20.4.13
 - there now is a new scripting hook `noteTaggingByObjectHook` to implement your

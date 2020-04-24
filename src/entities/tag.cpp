@@ -1273,6 +1273,42 @@ bool Tag::mergeFromDatabase(QSqlDatabase &db) {
     return false;
 }
 
+/**
+ * Fetches a tag by its "breadcrumb list" of tag names.
+ * Element nameList[0] would be highest in the tree (with parentId: 0)
+ *
+ * @param nameList
+ * @param createMissing {bool} if true (default) all missing tags will be created
+ * @return Tag object of deepest tag of the name breadcrumb list
+ */
+Tag Tag::getTagByNameBreadcrumbList(const QStringList &nameList,
+                                    bool createMissing) {
+    int parentId = 0;
+    Tag tag;
+
+    foreach(const QString &tagName, nameList) {
+        tag = Tag::fetchByName(tagName, parentId);
+
+        if (!tag.isFetched()) {
+            if (!createMissing) {
+                return Tag();
+            }
+
+            tag.setName(tagName);
+            tag.setParentId(parentId);
+            tag.store();
+
+            if (!tag.isFetched()) {
+                return Tag();
+            }
+        }
+
+        parentId = tag.getId();
+    }
+
+    return tag;
+}
+
 bool Tag::operator==(const Tag &tag) const { return id == tag.id; }
 
 bool Tag::operator<(const Tag &tag) const { return name < tag.name; }

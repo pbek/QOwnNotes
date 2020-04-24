@@ -146,6 +146,9 @@ class Tag {
 
     static bool mergeFromDatabase(QSqlDatabase &db);
 
+    static Tag getTagByNameBreadcrumbList(const QStringList &nameList,
+                                          bool createMissing);
+
    protected:
     int id;
     int priority;

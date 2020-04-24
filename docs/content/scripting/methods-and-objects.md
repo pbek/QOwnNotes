@@ -573,6 +573,31 @@ You might want to look at the custom action `favoriteNote` in the
 example
 [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/favorite-note.qml).
 
+Create or fetch a tag by its name breadcrumb list
+-------------------------------------------------
+
+!!! help "Method call and parameters"
+    ```cpp
+    /**
+     * Fetches or creates a tag by its "breadcrumb list" of tag names
+     * Element nameList[0] would be highest in the tree (with parentId: 0)
+     *
+     * @param nameList
+     * @param createMissing {bool} if true (default) all missing tags will be created
+     * @return TagApi object of deepest tag of the name breadcrumb list
+     */
+    TagApi *ScriptingService::getTagByNameBreadcrumbList(
+        const QStringList &nameList, bool createMissing);
+    ```
+
+!!! example
+    ```js
+    // creates all tags until the 3rd level and returns the tag object for
+    // tag "level3", which would look like that in the tag tree:
+    // level1 > level2 > level3
+    var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
+    ```
+
 Search for tags by name
 -----------------------
 

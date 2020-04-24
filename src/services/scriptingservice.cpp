@@ -389,7 +389,7 @@ QString ScriptingService::callInsertMediaHook(QFile *file,
  * @param action can be "add", "remove", "rename" or "list"
  * @param tagName tag name to be added, removed or renamed
  * @param newTagName tag name to be renamed to if action = "rename"
- * @return QString or QStringList (if action = "list") inside a QVariant
+ * @return note text QString or QStringList of tag names (if action = "list") inside a QVariant
  */
 QVariant ScriptingService::callNoteTaggingHook(const Note &note,
                                                const QString &action,
@@ -433,7 +433,7 @@ QVariant ScriptingService::callNoteTaggingHook(const Note &note,
  * @param action can be "add", "remove", "rename" or "list"
  * @param tag to be added, removed or renamed
  * @param newTagName tag name to be renamed to if action = "rename"
- * @return QString or QStringList of tag ids (if action = "list") inside a QVariant
+ * @return note text QString or QStringList of tag ids (if action = "list") inside a QVariant
  */
 QVariant ScriptingService::callNoteTaggingByObjectHook(
     const Note &note, const QString &action, const Tag &tag,
@@ -1938,6 +1938,25 @@ QStringList ScriptingService::searchTagsByName(const QString &name) const {
 
     QStringList tags = Tag::searchAllNamesByName(name);
     return tags;
+}
+
+/**
+ * Fetches or creates a tag by its "breadcrumb list" of tag names
+ * Element nameList[0] would be highest in the tree (with parentId: 0)
+ *
+ * @param nameList
+ * @param createMissing {bool} if true (default) all missing tags will be created
+ * @return TagApi object of deepest tag of the name breadcrumb list
+ */
+TagApi *ScriptingService::getTagByNameBreadcrumbList(
+    const QStringList &nameList, bool createMissing) const {
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("scripting/") % QString(__func__));
+
+    Tag tag = Tag::getTagByNameBreadcrumbList(nameList, createMissing);
+    auto *tagApi = TagApi::fromTag(tag);
+
+    return tagApi;
 }
 
 /**

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <api/tagapi.h>
 #include <entities/script.h>
 #include <entities/tag.h>
 
@@ -165,6 +166,9 @@ class ScriptingService : public QObject {
     QStringList callAutocompletionHook() const;
 
     Q_INVOKABLE QStringList searchTagsByName(const QString &name) const;
+
+    Q_INVOKABLE TagApi *getTagByNameBreadcrumbList(
+        const QStringList &nameList, bool createMissing = true) const;
 
     Q_INVOKABLE void regenerateNotePreview() const;
 

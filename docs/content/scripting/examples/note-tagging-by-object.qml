@@ -60,6 +60,10 @@ Script {
 
             // returns a list of all tag names of the note
             case "list":
+                var tag = script.getTagByNameBreadcrumbList(["level1a", "level2b", "level3b"]);
+                script.log(tag.id);
+                script.log(tag.name);
+
                 var re = new RegExp("\\B@([^\\s,]+)", "gi"),
                     result, tagIdList = [];
 
