@@ -82,7 +82,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           # this doesn't work on ReadTheDocs, we need to use `<div class="mermaid"></div>` instead
-          format: !!python/name:pymdownx.superfences.fence_div_format
+#          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.tasklist
   - pymdownx.snippets:
       check_paths: true
