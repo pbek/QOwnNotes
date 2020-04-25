@@ -8741,6 +8741,9 @@ void MainWindow::on_tagTreeWidget_itemChanged(QTreeWidgetItem *item,
         const QString oldName = tag.getName();
         const QString name = item->text(0);
 
+        // workaround when signal block doesn't work correctly
+        directoryWatcherWorkaround(true, true);
+
         if (!name.isEmpty()) {
             const QSignalBlocker blocker(this->noteDirectoryWatcher);
             Q_UNUSED(blocker)
@@ -8755,6 +8758,10 @@ void MainWindow::on_tagTreeWidget_itemChanged(QTreeWidgetItem *item,
         // we also have to reload the tag tree if we don't change the tag
         // name to get the old name back
         reloadTagTree();
+        reloadCurrentNoteTags();
+
+        // turn off the workaround again
+        directoryWatcherWorkaround(false, true);
     }
 }
 
