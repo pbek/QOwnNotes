@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 20.4.15
+- when the setting to show all notes of a tag including the notes of their
+  children-tags is turned on now the note-count in the tag tree is adapted to
+  also count the notes of the children-tags (for [#1709](https://github.com/pbek/QOwnNotes/issues/1709))
 - some safety measures against note folder update race-conditions when renaming
   tags while using the note-tagging scripting hooks `noteTaggingHook` or
   `noteTaggingByObjectHook` were included (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))

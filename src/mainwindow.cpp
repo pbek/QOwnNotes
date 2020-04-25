@@ -8051,29 +8051,35 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
     const int parentId =
         parent == nullptr ? 0 : parent->data(0, Qt::UserRole).toInt();
     const int tagId = tag.getId();
-
-    auto *item = new QTreeWidgetItem();
     const QString name = tag.getName();
-
     int linkCount = 0;
-    const auto items = ui->noteSubFolderTreeWidget->selectedItems();
-    if (items.count() > 1) {
-        for (QTreeWidgetItem *folderItem : items) {
-            int id = folderItem->data(0, Qt::UserRole).toInt();
-            const NoteSubFolder folder = NoteSubFolder::fetch(id);
-            if (folder.isFetched()) {
-                linkCount += tag.countLinkedNoteFileNamesForNoteSubFolder(
-                    folder,
-                    NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
+    const QList<Tag> tagListToCount = Tag::isTaggingShowNotesRecursively() ?
+        Tag::fetchRecursivelyByParentId(tagId) : QList<Tag>{tag};
+    const auto selectedSubFolderItems =
+        ui->noteSubFolderTreeWidget->selectedItems();
+
+    for (Tag tagToCount : tagListToCount) {
+        if (selectedSubFolderItems.count() > 1) {
+            for (QTreeWidgetItem *folderItem : selectedSubFolderItems) {
+                int id = folderItem->data(0, Qt::UserRole).toInt();
+                const NoteSubFolder folder = NoteSubFolder::fetch(id);
+
+                if (folder.isFetched()) {
+                    linkCount += tagToCount.countLinkedNoteFileNamesForNoteSubFolder(
+                        folder,
+                        NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
+                }
             }
+        } else {
+            linkCount += tagToCount.countLinkedNoteFileNames(
+                _showNotesFromAllNoteSubFolders,
+                NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
         }
-    } else {
-        linkCount = tag.countLinkedNoteFileNames(
-            _showNotesFromAllNoteSubFolders,
-            NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
     }
+
     const QString toolTip = tr("show all notes tagged with '%1' (%2)")
                                 .arg(name, QString::number(linkCount));
+    auto *item = new QTreeWidgetItem();
     item->setData(0, Qt::UserRole, tagId);
     item->setText(0, name);
     item->setText(1, linkCount > 0 ? QString::number(linkCount) : QString());
