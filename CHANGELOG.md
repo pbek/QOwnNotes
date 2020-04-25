@@ -1,9 +1,9 @@
 # QOwnNotes Changelog
 
 ## 20.4.15
-- included some safety measures against note folder update race-conditions when
-  renaming tags while using the note-tagging scripting hooks `noteTaggingHook`
-  or `noteTaggingByObjectHook` (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
+- some safety measures against note folder update race-conditions when renaming
+  tags while using the note-tagging scripting hooks `noteTaggingHook` or
+  `noteTaggingByObjectHook` were included (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
 
 ## 20.4.14
 - there now is a new scripting function `getTagByNameBreadcrumbList` to create
