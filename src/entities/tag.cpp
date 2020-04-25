@@ -791,9 +791,9 @@ QStringList Tag::fetchAllNames() {
 }
 
 /**
- * Count the linked note file names for a note folder
+ * Count the linked note file names for a note sub folder
  */
-int Tag::countLinkedNoteFileNamesForNoteFolder(
+int Tag::countLinkedNoteFileNamesForNoteSubFolder(
     const NoteSubFolder &noteSubFolder, const bool recursive) const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);

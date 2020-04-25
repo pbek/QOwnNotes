@@ -8062,7 +8062,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
             int id = folderItem->data(0, Qt::UserRole).toInt();
             const NoteSubFolder folder = NoteSubFolder::fetch(id);
             if (folder.isFetched()) {
-                linkCount += tag.countLinkedNoteFileNamesForNoteFolder(
+                linkCount += tag.countLinkedNoteFileNamesForNoteSubFolder(
                     folder,
                     NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
             }

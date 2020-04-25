@@ -62,7 +62,7 @@ class Tag {
     int countLinkedNoteFileNames(const bool fromAllSubfolder,
                                  const bool recursive) const;
 
-    int countLinkedNoteFileNamesForNoteFolder(
+    int countLinkedNoteFileNamesForNoteSubFolder(
         const NoteSubFolder &noteSubFolder, const bool recursive) const;
 
     int getParentId() const;
