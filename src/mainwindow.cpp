@@ -9125,14 +9125,9 @@ void MainWindow::moveSelectedTagsToTagId(int tagId) {
     if (tagList.count() > 0) {
         const bool useScriptingEngine =
             ScriptingService::instance()->noteTaggingHookExists();
-        QVector<Note> notes;
 
         // workaround when signal block doesn't work correctly
         directoryWatcherWorkaround(true, true);
-
-        if (useScriptingEngine) {
-            notes = Note::fetchAll();
-        }
 
         // move tags
         for (Tag tag : Utils::asConst(tagList)) {
@@ -9143,8 +9138,9 @@ void MainWindow::moveSelectedTagsToTagId(int tagId) {
                 // check all tags we need to handle
                 for (const Tag &tagToHandle : tagsToHandle) {
                     // remove tag from all notes
-                    for (const Note &note : notes) {
-                        handleScriptingNoteTagging(note, tagToHandle, true, false);
+                    for (const Note &note : tagToHandle.fetchAllLinkedNotes()) {
+                        handleScriptingNoteTagging(
+                            note, tagToHandle, true, false);
                     }
                 }
             }
@@ -9159,8 +9155,9 @@ void MainWindow::moveSelectedTagsToTagId(int tagId) {
                 // check all tags we need to handle
                 for (const Tag &tagToHandle : tagsToHandle) {
                     // add tag to all notes
-                    for (const Note &note : notes) {
-                        handleScriptingNoteTagging(note, tagToHandle, false, false);
+                    for (const Note &note : tagToHandle.fetchAllLinkedNotes()) {
+                        handleScriptingNoteTagging(
+                            note, tagToHandle, false, false);
                     }
                 }
             }

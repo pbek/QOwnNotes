@@ -8,6 +8,8 @@
       script now makes use of these scripting functions
     - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#note)
+- fixed tag adding when moving tags to another parent in the tag panel when
+  handled by the scripting hook `noteTaggingByObjectHook` (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
 
 ## 20.4.15
 - when the setting to show all notes of a tag including the notes of their
