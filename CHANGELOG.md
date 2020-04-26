@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 20.4.16
+- there now are new scripting functions `note.renameNoteFile()` to rename a note
+  file and `note.allowDifferentFileName()` to check if it is allowed to have a
+  different note file name than the headline (for [#1704](https://github.com/pbek/QOwnNotes/issues/1704))
+    - the [meeting-note](https://github.com/qownnotes/scripts/tree/master/meeting-note)
+      script now makes use of these scripting functions
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#note)
+
 ## 20.4.15
 - when the setting to show all notes of a tag including the notes of their
   children-tags is turned on now the note-count in the tag tree is adapted to

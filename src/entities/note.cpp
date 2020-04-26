@@ -1893,7 +1893,10 @@ QString Note::fileBaseName(bool withFullName) {
 }
 
 /**
- * Renames a note
+ * Renames a note file
+ *
+ * @param newName new file name (without file-extension)
+ * @return
  */
 bool Note::renameNoteFile(QString newName) {
     // cleanup not allowed characters characters

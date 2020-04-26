@@ -19,11 +19,13 @@ Note
         Q_PROPERTY(QQmlListProperty<TagApi> tags)
         Q_PROPERTY(QDateTime fileCreated)
         Q_PROPERTY(QDateTime fileLastModified)
-        Q_INVOKABLE QStringList tagNames();
-        Q_INVOKABLE bool addTag(QString tagName);
-        Q_INVOKABLE bool removeTag(QString tagName);
-        Q_INVOKABLE QString toMarkdownHtml(bool forExport = true);
-        Q_INVOKABLE QString getFileURLFromFileName(QString localFileName);
+        Q_INVOKABLE QStringList tagNames()
+        Q_INVOKABLE bool addTag(QString tagName)
+        Q_INVOKABLE bool removeTag(QString tagName)
+        Q_INVOKABLE bool renameNoteFile(QString newName)
+        Q_INVOKABLE QString toMarkdownHtml(bool forExport = true)
+        Q_INVOKABLE QString getFileURLFromFileName(QString localFileName)
+        Q_INVOKABLE bool allowDifferentFileName()
     };
     ```
 
@@ -35,6 +37,12 @@ to work with `fileCreated` or `fileLastModified`.
     ```js
     script.log(note.fileCreated.toISOString());
     script.log(note.fileLastModified.getFullYear());
+
+    // renames a note to "new name.md"
+    note.renameNoteFile("new name");
+
+    // check if it is allowed to have a different note file name than the headline
+    script.log(note.allowDifferentFileName());
     ```
 
 Tag
