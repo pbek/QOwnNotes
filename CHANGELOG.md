@@ -1,8 +1,216 @@
 # QOwnNotes Changelog
 
+## 20.4.16
+- there now are new scripting functions `note.renameNoteFile()` to rename a note
+  file and `note.allowDifferentFileName()` to check if it is allowed to have a
+  different note file name than the headline (for [#1704](https://github.com/pbek/QOwnNotes/issues/1704))
+    - the [meeting-note](https://github.com/qownnotes/scripts/tree/master/meeting-note)
+      script now makes use of these scripting functions
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#note)
+- fixed tag adding when moving tags to another parent in the tag panel when
+  handled by the scripting hook `noteTaggingByObjectHook` (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
+
+## 20.4.15
+- when the setting to show all notes of a tag including the notes of their
+  children-tags is turned on now the note-count in the tag tree is adapted to
+  also count the notes of the children-tags (for [#1709](https://github.com/pbek/QOwnNotes/issues/1709))
+- some safety measures against note folder update race-conditions when renaming
+  tags while using the note-tagging scripting hooks `noteTaggingHook` or
+  `noteTaggingByObjectHook` were included (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
+
+## 20.4.14
+- there now is a new scripting function `getTagByNameBreadcrumbList` to create
+  or fetch a tag by its name breadcrumb list (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#create-or-fetch-a-tag-by-its-name-breadcrumb-list)
+- moving of tags to another parent in the tag panel can now also be handled by
+  the scripting hook `noteTaggingByObjectHook` (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
+    - the application will trigger a series of `add` and `remove` actions for
+      all selected tags and their children on all notes if tags are moved
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/hooks/#notetaggingbyobjecthook)
+- added more Albanian, Basque, Chinese Traditional, Hindi, French, Khmer,
+  Kurdish translation (thank you Fabijenna)
+
+## 20.4.13
+- there now is a new scripting hook `noteTaggingByObjectHook` to implement your
+  own note tagging mechanism in a script (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703))
+    - similarly to `noteTaggingHook` you can implement your own note tagging
+      mechanism, but you are not bound to tag names in the tag tree root,
+      this way you can make use of the whole tag tree instead of only a tag list
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/hooks/#notetaggingbyobjecthook)
+- you can now fetch a tag by name (if there already exists a tag object) with
+  `tag.fetchByName()` via the scripting engine (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703))
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#tag)
+- you can now fetch the parent tag names of a tag with `tag.getParentTagNames()`
+  via the scripting engine (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703))
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#tag)
+
+## 20.4.12
+- when tags in the tag tree are double-clicked now the tag also is added or
+  removed via the scripting engine (for [#84](https://github.com/qownnotes/scripts/issues/84))
+
+## 20.4.11
+- links to urls ending with `.md` are now not highlighted as broken note links
+  in the editor any more
+- the column widths of the tag tree panel are now also recalculated when the
+  tree items are expanded or collapsed, not only when the tree is rebuilt or the
+  application window is resized (for [#1690](https://github.com/pbek/QOwnNotes/issues/1690))
+- added more Brazilian Portuguese, Punjabi, Romanian, Serbian (Cyrillic), Slovak,
+  Slovenian, Spanish, Swedish, Turkish, Ukrainian, Uzbek, Vietnamese, Arabic,
+  Bengali, Bosnian, Bulgarian, Cebuano, Chinese Simplified, Galician, German,
+  Dutch, Hungarian, Albanian, Basque, Chinese Traditional, Croatian, Czech,
+  Danish, Estonian, Filipino, Finnish, French, Greek, Hausa, Hebrew, Hindi,
+  Icelandic, Indonesian, Irish, Japanese, Khmer, Korean, Kurdish, Latvian,
+  Lithuanian, Macedonian, Malay, Maori, Norwegian, Persian, Polish, Portuguese,
+  Catalan, Italian translation (thank you Fabijenna, MGuerra, tiwi90)
+
+## 20.4.10
+- for all question dialogs where you clicked the checkbox `Don't ask again!` you
+  will be now asked again next time if you answer the dialog question with `No`
+  and remembering that decisions makes no sense (for [#1697](https://github.com/pbek/QOwnNotes/issues/1697))
+    - this will help you in case when you accidentally clicked the checkbox and
+      then pressed `No`, for example with shortcut-triggered dialogs like
+      `Remove current note`
+    - for all dialogs where remembering your `No` makes sense all of your
+      decisions will be still remembered, for example with the dialog
+      `Note editing is currently disabled, do you want to allow it again?`
+      when you try to edit a note in read-only mode
+- added more Russian, German translation (thank you unchase, rakekniven)
+
+## 20.4.9
+- notes in 2nd level sub-folders (or deeper) are now shown correctly in the
+  note-list after clicking on `All notes` in the subfolder panel and filtering
+  by tag (for [#1696](https://github.com/pbek/QOwnNotes/issues/1696))
+- if the application is in "portable mode" then this will now also be shown in
+  the title bar (for [#1677](https://github.com/pbek/QOwnNotes/issues/1677))
+- added more Catalan, Hungarian, Irish, Norwegian, Indonesian, Dutch, Japanese,
+  Korean, Basque, Kurdish, Croatian, Latvian, Czech, Lithuanian, Danish,
+  Macedonian, Estonian, Malay, Filipino, Maori, Finnish, Greek, Persian, Hausa,
+  Polish, Hebrew, Portuguese, Icelandic, Punjabi, Romanian, Serbian (Cyrillic),
+  Slovak, Slovenian, Swedish, Turkish, Ukrainian, Urdu (Pakistan), Uzbek,
+  Vietnamese, Zulu, Spanish translation (thank you MGuerra, Fabijenna, richarson)
+
+## 20.4.8
+- you can now also **clear local shortcuts** in the *Shortcuts settings*
+  (for [#1693](https://github.com/pbek/QOwnNotes/issues/1693))
+- added more Hungarian, Dutch, Basque, Croatian, Czech, Danish, Estonian,
+  Filipino, Finnish, Greek, Hausa, Hebrew, Icelandic, Irish, Italian, German,
+  Russian translation (thank you Fabijenna, mlocati, rakekniven, unchase)
+
+## 20.4.7
+- tags are now not lost if a note in a sub-folder is renamed after clicking on
+  `All notes` in the subfolder panel (for [#1691](https://github.com/pbek/QOwnNotes/issues/1691))
+- added a **new editor color schema** *Atom One Dark Reasonable* by @leoniscsem
+  (for [#1694](https://github.com/pbek/QOwnNotes/issues/1694))
+- added more Shona, Brazilian Portuguese, French, Icelandic, Indonesian, Irish,
+  Italian, Khmer, Persian, Polish, Portuguese, Punjabi, Ukrainian, Urdu (Pakistan),
+  Uzbek, Vietnamese, Spanish, Catalan translation (thank you Fabijenna, mlimacarlos,
+  richarson, MGuerra)
+
+## 20.4.6
+- fixed renaming of note sub-folders under Windows if the folders contain other
+  sub-folders (for [#1683](https://github.com/pbek/QOwnNotes/issues/1683))
+- the note folder will now be reloaded if a note sub-folder was deleted in the *Subfolders panel*
+- fixed optional automatic database closing under Windows (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
+- notes are now correctly filtered by tag even if notes with the same name are
+  in different note sub-folders (for [#1686](https://github.com/pbek/QOwnNotes/issues/1686))
+- added more Bosnian, Albanian, Arabic, Basque, Bengali, Bulgarian, Catalan,
+  Chinese Simplified, Chinese Traditional, Croatian, Czech, Danish, Dutch,
+  Estonian, Filipino, Finnish, Galician, Greek, Hausa, Hebrew, Hungarian,
+  Turkish, Swedish, Slovenian, Slovak, Serbian (Cyrillic), Romanian, Polish,
+  Norwegian, Macedonian, Lithuanian, Latvian, Kurdish, Korean, Japanese
+  translation (thank you Fabijenna)
+
+## 20.4.5
+- fixed the time formats link in the *Editor settings*
+  (for [#1685](https://github.com/pbek/QOwnNotes/issues/1685))
+- now an error message in the log is shown if renaming of a note subfolder fails
+  (for [#1683](https://github.com/pbek/QOwnNotes/issues/1683))
+- fixed note linking with sub-folders if the note folder is outside of the application
+  directory in portable mode (for [#1682](https://github.com/pbek/QOwnNotes/issues/1682))
+- added more German, Russian, Italian translation (thank you rakekniven, unchase, tiwi90)
+
+## 20.4.4
+- some improvements for possible "cursor jumping to the top" issues were made
+  (for [#1681](https://github.com/pbek/QOwnNotes/issues/1681))
+
+## 20.4.3
+- when right-clicking a note in the note list and clicking `Open note in different window`
+  you can now also show a **preview of your note** instead of the note text
+  (for [#1678](https://github.com/pbek/QOwnNotes/issues/1678))
+- added more Catalan, German, Spanish, Albanian, Khmer, Arabic, Korean, Basque,
+  Kurdish, Bengali, Latvian, Bosnian, Lithuanian, Bulgarian, Macedonian, Cebuano,
+  Malay, Norwegian, Chinese Simplified, Romanian, Chinese Traditional,
+  Serbian (Cyrillic), Croatian, Slovak, Czech, Slovenian, Estonian, Swedish,
+  Filipino, Turkish, Finnish, Ukrainian, Galician, Urdu (Pakistan), Greek, Uzbek,
+  Hausa, Vietnamese, Hebrew, Hindi, Icelandic, Indonesian, Dutch, Irish,
+  Hungarian, Danish, Japanese, Italian, Russian translation (thank you MGuerra,
+  rakekniven, richarson, Fabijenna, tiwi90, unchase)
+
+## 20.4.2
+- you can now choose to **show your note folders** in your *Note folders panel*
+  **as buttons** in the *Panels settings* (for [#1676](https://github.com/pbek/QOwnNotes/issues/1676))
+    - you can use this button list vertically or horizontally, the buttons will
+      float to the next line if there is no space left
+- some title bar improvements were made (for [#1677](https://github.com/pbek/QOwnNotes/issues/1677))
+    - if more than one note folder exists then the name of the current note folder
+      will be shown in the title bar
+    - if a session was set with the `--session` cli parameter then it will be
+      shown in the title bar
+- added more German, Zulu, Shona, Maori, Xhosa, Filipino, Icelandic, Malay,
+  Serbian (Cyrillic), Vietnamese, Finnish, Indonesian, Irish, Slovak, French,
+  Japanese, Slovenian, Galician, Norwegian, Albanian, Arabic, Basque, Bengali,
+  Bosnian, Khmer, Persian, Bulgarian, Swedish, Polish, Greek, Cebuano, Korean,
+  Portuguese, Tagalog, Turkish, Chinese Simplified, Hausa, Ukrainian,
+  Chinese Traditional, Punjabi, Hebrew, Kurdish, Latvian, Croatian, Urdu (Pakistan),
+  Romanian, Czech, Hindi, Lithuanian, Uzbek, Danish, Estonian, Macedonian,
+  Hungarian, Dutch translation (thank you Fabijenna)
+
+## 20.4.1
+- you can now use the **Meta key in keyboard shortcuts** in the *Shortcuts settings*
+  (for [#1671](https://github.com/pbek/QOwnNotes/issues/1671))
+    - if you have troubles with a 2nd Meta key showing up while entering the shortcut
+      you can press <kbd>Enter</kbd> or <kbd>Escape</kbd> to finish the shortcut entering
+- added more Catalan translation (thank you MGuerra)
+
+## 20.4.0
+- you now can **show and hide the application window** with a new action `Show/Hide application`
+  in the *Window / Show* menu (for [#1324](https://github.com/pbek/QOwnNotes/issues/1324))
+    - this should work with and without enabled tray icon
+    - assign a global keyboard shortcut to the action in the *Shortcuts settings*
+      to make use of it properly
+- added more Spanish, Russian, Swedish, German, Italian, Galician, Greek, Hausa,
+  Albanian, Arabic, Basque, Bengali, Bosnian, Bulgarian, Cebuano, Chinese Simplified,
+  Dutch, Estonian, Filipino, Finnish translation (thank you richarson, unchase,
+  druus, rakekniven, tiwi90, Fabijenna)
+
+## 20.3.9
+- you can now also manage **global keyboard shortcuts** in the *Shortcuts settings*
+  (for [#44](https://github.com/pbek/QOwnNotes/issues/44))
+    - there you can set a global shortcut to every action of the main menu,
+      including custom scripting actions
+    - you can also search for global shortcuts in the `Search for shortcut` line edit
+    - by default there are no global shortcuts activated
+- there now is a new property `relativeNoteFileDirPath` for notes in the scripting engine
+  (for [#1667](https://github.com/pbek/QOwnNotes/issues/1667))
+    - for more information please take a look at the
+      [Note scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#note)
+- there now is a new property `createNewNoteSubFolder` for `mainWindow` in the
+  scripting engine that creates a new note subfolder in the current subfolder
+  (for [#1667](https://github.com/pbek/QOwnNotes/issues/1667))
+    - for more information please take a look at the
+      [Mainwindow scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#mainwindow)
+- fixed a possible crash on entering a backtick character
+  (for [#114](https://github.com/pbek/qmarkdowntextedit/pull/114), thank you @Waqar144)
+
 ## 20.3.8
 - added experimental **global keyboard shortcut support** (for [#44](https://github.com/pbek/QOwnNotes/issues/44))
-    - <kbd>Meta + Shift + N</kbd> will now create a new note
+    - <kbd>Meta + Shift + N</kbd> will now create a new note (for [#1048](https://github.com/pbek/QOwnNotes/issues/1048))
 - no 2nd backtick will now be entered if you enter one at the end of a word with an
   US keyboard layout (for [#111](https://github.com/pbek/qmarkdowntextedit/pull/111), thank you @Waqar144)
 - fixed a build problem under Qt 5.15 (for [#1666](https://github.com/pbek/QOwnNotes/issues/1666), thank you @data-man)

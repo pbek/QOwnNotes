@@ -62,3 +62,8 @@ p.subtitle {
     margin: 0 4px 0.25em -20px;
     vertical-align: middle;
 }
+
+/* Mermaid-JS overrides */
+.mermaid svg { height: auto }
+.mermaid:not([data-processed=true]) { display: none; }
+.mermaidTooltip { position: absolute; background-color: #0B7FC7; color: white; padding: 2px; }

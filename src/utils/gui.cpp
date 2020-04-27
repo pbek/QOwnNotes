@@ -242,14 +242,38 @@ QMessageBox::StandardButton Utils::Gui::information(
  * @param identifier
  * @param buttons
  * @param defaultButton
+ * @param skipOverrideButtons
  * @return
  */
 QMessageBox::StandardButton Utils::Gui::question(
     QWidget *parent, const QString &title, const QString &text,
     const QString &identifier, QMessageBox::StandardButtons buttons,
+    QMessageBox::StandardButton defaultButton,
+    QMessageBox::StandardButtons skipOverrideButtons) {
+    return showMessageBox(parent, QMessageBox::Icon::Question, title, text,
+                          identifier, buttons, defaultButton,
+                          skipOverrideButtons);
+}
+
+/**
+ * Shows a question message box with a checkbox to override the message box in
+ * the future (but no skip override buttons can be defined)
+ *
+ * @param parent
+ * @param title
+ * @param text
+ * @param identifier
+ * @param buttons
+ * @param defaultButton
+ * @return
+ */
+QMessageBox::StandardButton Utils::Gui::questionNoSkipOverride(
+    QWidget *parent, const QString &title, const QString &text,
+    const QString &identifier, QMessageBox::StandardButtons buttons,
     QMessageBox::StandardButton defaultButton) {
     return showMessageBox(parent, QMessageBox::Icon::Question, title, text,
-                          identifier, buttons, defaultButton);
+                          identifier, buttons, defaultButton,
+                          QMessageBox::NoButton);
 }
 
 /**
@@ -288,14 +312,16 @@ QMessageBox::StandardButton Utils::Gui::showMessageBox(
     QWidget *parent, QMessageBox::Icon icon, const QString &title,
     const QString &text, const QString &identifier,
     QMessageBox::StandardButtons buttons,
-    QMessageBox::StandardButton defaultButton) {
+    QMessageBox::StandardButton defaultButton,
+    QMessageBox::StandardButtons skipOverrideButtons) {
     QSettings settings;
     const QString settingsKey = "MessageBoxOverride/" + identifier;
     auto overrideButton = static_cast<QMessageBox::StandardButton>(
         settings.value(settingsKey, QMessageBox::NoButton).toInt());
 
     // check if we want to override the message box
-    if (overrideButton != QMessageBox::NoButton) {
+    if ((overrideButton != QMessageBox::NoButton) &&
+        !skipOverrideButtons.testFlag(overrideButton)) {
         return overrideButton;
     }
 
@@ -332,7 +358,7 @@ QMessageBox::StandardButton Utils::Gui::showMessageBox(
     auto result = msgBox.standardButton(msgBox.clickedButton());
 
     // store the override for the message box
-    if (checkBox->isChecked()) {
+    if (checkBox->isChecked() && !skipOverrideButtons.testFlag(result)) {
         settings.setValue(settingsKey, result);
     }
 

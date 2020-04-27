@@ -121,6 +121,31 @@ bool NoteApi::removeTag(QString tagName) {
 }
 
 /**
+ * Renames a note file
+ *
+ * @param newName new file name (without file-extension)
+ * @return true if the note was renamed
+ */
+bool NoteApi::renameNoteFile(const QString &newName) {
+    Note note = Note::fetch(id);
+
+    if (note.exists()) {
+        return note.renameNoteFile(newName);
+    }
+
+    return false;
+}
+
+/**
+ * Checks if it is allowed to have a different note file name than the headline
+ *
+ * @return bool
+ */
+bool NoteApi::allowDifferentFileName() {
+    return Note::allowDifferentFileName();
+}
+
+/**
  * Fetches all notes
  * Disclaimer: not tested, might not work yet
  *

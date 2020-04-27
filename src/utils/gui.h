@@ -60,7 +60,8 @@ QMessageBox::StandardButton showMessageBox(
     QWidget *parent, QMessageBox::Icon icon, const QString &title,
     const QString &text, const QString &identifier,
     QMessageBox::StandardButtons buttons,
-    QMessageBox::StandardButton defaultButton);
+    QMessageBox::StandardButton defaultButton,
+    QMessageBox::StandardButtons skipOverrideButtons = QMessageBox::NoButton);
 
 QMessageBox::StandardButton information(
     QWidget *parent, const QString &title, const QString &text,
@@ -69,6 +70,15 @@ QMessageBox::StandardButton information(
     QMessageBox::StandardButton defaultButton = QMessageBox::Ok);
 
 QMessageBox::StandardButton question(
+    QWidget *parent, const QString &title, const QString &text,
+    const QString &identifier = QStringLiteral("default"),
+    QMessageBox::StandardButtons buttons =
+        QMessageBox::StandardButtons(QMessageBox::Yes | QMessageBox::No),
+    QMessageBox::StandardButton defaultButton = QMessageBox::NoButton,
+    QMessageBox::StandardButtons skipOverrideButtons =
+        QMessageBox::StandardButtons(QMessageBox::No));
+
+QMessageBox::StandardButton questionNoSkipOverride(
     QWidget *parent, const QString &title, const QString &text,
     const QString &identifier = QStringLiteral("default"),
     QMessageBox::StandardButtons buttons =

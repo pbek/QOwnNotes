@@ -53,13 +53,19 @@ class Note {
     static Note fetchByFileName(const QString &fileName,
                                 int noteSubFolderId = -1);
 
+    static Note fetchByFileName(const QString &fileName,
+                                const QString &noteSubFolderPathData);
+
     static Note fetchByName(const QString &name, int noteSubFolderId = -1);
+
+    static Note fetchByName(const QString &name,
+        const QString &noteSubFolderPathData);
 
     static QVector<Note> fetchAll(int limit = -1);
 
     static QVector<Note> fetchAllNotTagged(int activeNoteSubFolderId);
 
-    static QStringList fetchAllNotTaggedNames();
+    static QVector<int> fetchAllNotTaggedIds();
 
     static int countAllNotTagged(int activeNoteSubFolderId = -1);
 

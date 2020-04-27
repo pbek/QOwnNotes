@@ -258,7 +258,7 @@ special text in your note like `@tag1`, `@tag2`, `@tag3`.
      * @param action can be "add", "remove", "rename" or "list"
      * @param tagName tag name to be added, removed or renamed
      * @param newTagName tag name to be renamed to if action = "rename"
-     * @return string or string-list (if action = "list")
+     * @return note text string or string-list of tag names (if action = "list")
      */
     function noteTaggingHook(note, action, tagName, newTagName);
     ```
@@ -266,7 +266,6 @@ special text in your note like `@tag1`, `@tag2`, `@tag3`.
 -   as soon as a script is activated that implements the new function
     `noteTaggingHook` note tagging will be handled by that function
 -   following features should work via the QOwnNotes user interface
-
     -   initially importing tags like `@tag` from your notes and
         overwriting your current tag assignment
         -   you will not loose your tags tree, just the former assignment
@@ -284,9 +283,51 @@ special text in your note like `@tag1`, `@tag2`, `@tag3`.
         notes
     -   bulk removing of tags from notes in the note list will remove
         those tags from your notes
+    -   the application will trigger a series of `add` and `remove` actions for
+        all selected tags and their children on all notes if tags are moved
+        in the tag panel
 
 You may want to take a look at the example
 [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/note-tagging.qml)
+to implement your own tagging mechanism.
+
+!!! warning
+    Make sure your `list` action is really fast, because it will be executed for
+    every note every time the note folder is reloaded! 
+
+noteTaggingByObjectHook
+----------------------
+
+Similarly to [noteTaggingHook](#notetagginghook) you can implement your own note
+tagging mechanism, but you are not bound to tag names in the tag tree root.
+This way you can make use of the whole tag tree instead of only a tag list.
+ 
+With `noteTaggingByObjectHook` you get a `TagApi` object as parameter, instead
+of a tag name. And as result for the `list` action you need to provide a list of
+tag ids.
+
+This also means you need to create missing tags yourself to be able to provide
+a list of already existing tag ids for the `list` action.  
+
+!!! help "Method call and parameters"
+    ```js
+    /**
+     * Handles note tagging for a note
+     *
+     * This function is called when tags are added to, removed from or renamed in
+     * a note or the tags of a note should be listed
+     *
+     * @param note
+     * @param action can be "add", "remove", "rename" or "list"
+     * @param tag to be added, removed or renamed
+     * @param newTagName tag name to be renamed to if action = "rename"
+     * @return note text string or string-list of tag ids (if action = "list")
+     */
+    function noteTaggingByObjectHook(note, action, tag, newTagName);
+    ```
+
+You may want to take a look at the example
+[note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/note-tagging-by-object.qml)
 to implement your own tagging mechanism.
 
 autocompletionHook

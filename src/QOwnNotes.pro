@@ -123,6 +123,7 @@ SOURCES += main.cpp\
     helpers/toolbarcontainer.cpp \
     helpers/qownnotesmarkdownhighlighter.cpp \
     helpers/fakevimproxy.cpp \
+    helpers/flowlayout.cpp \
     services/databaseservice.cpp \
     widgets/graphicsview.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
@@ -212,6 +213,7 @@ HEADERS  += mainwindow.h \
     helpers/toolbarcontainer.h \
     helpers/qownnotesmarkdownhighlighter.h \
     helpers/fakevimproxy.h \
+    helpers/flowlayout.h \
     services/databaseservice.h \
     release.h \
     widgets/graphicsview.h \
@@ -314,16 +316,9 @@ include(libraries/qttoolbareditor/toolbar_editor.pri)
 include(libraries/fakevim/fakevim/fakevim.pri)
 include(libraries/singleapplication/singleapplication.pri)
 include(libraries/sonnet/src/core/sonnet-core.pri)
+include(libraries/qhotkey/qhotkey.pri)
 
 unix {
-#  qtHaveModule(x11extras) {
-#    message("x11extras found! Including global hotkeys.")
-     include(libraries/qhotkey/qhotkey.pri)
-     DEFINES += QT_X11EXTRAS QHOTKEY
-#  } else {
-#    message("x11extras not found! Global hotkeys are disabled.")
-#  }
-
   isEmpty(PREFIX) {
     PREFIX = /usr
   }
@@ -349,9 +344,6 @@ unix {
 
   icons.path = $$DATADIR/icons/hicolor
   icons.files += images/icons/*
-} else {
-  include(libraries/qhotkey/qhotkey.pri)
-  DEFINES += QHOTKEY
 }
 
 CONFIG(debug, debug|release) {

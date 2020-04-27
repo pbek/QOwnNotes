@@ -3231,20 +3231,22 @@
                 </item>
                 <item>
                  <widget class="QTreeWidget" name="shortcutTreeWidget">
-                  <attribute name="headerVisible">
-                   <bool>false</bool>
-                  </attribute>
                   <attribute name="headerStretchLastSection">
                    <bool>false</bool>
                   </attribute>
                   <column>
                    <property name="text">
-                    <string notr="true">title</string>
+                    <string>Action name</string>
                    </property>
                   </column>
                   <column>
                    <property name="text">
-                    <string notr="true">shortcut</string>
+                    <string>Local shortcut</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>Global shortcut</string>
                    </property>
                   </column>
                  </widget>
@@ -4994,7 +4996,7 @@ p, li { white-space: pre-wrap; }
                 <item row="1" column="0" colspan="2">
                  <widget class="Label" name="label_14">
                   <property name="text">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="openExternalLinks">
                    <bool>true</bool>
@@ -5398,91 +5400,76 @@ git config --global user.name &quot;Your name&quot;</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_63">
              <item row="2" column="0">
-              <widget class="QGroupBox" name="noteEditPanelGroupBox">
+              <widget class="QGroupBox" name="notesPanelGroupBox">
                <property name="title">
-                <string>Note edit panel</string>
+                <string>Note list panel</string>
                </property>
-               <layout class="QGridLayout" name="gridLayout_67">
+               <layout class="QGridLayout" name="gridLayout_61">
+                <item row="2" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteListPreviewCheckBox">
+                  <property name="text">
+                   <string>Show notes in the note list with preview</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="0" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteEditCentralWidgetCheckBox">
-                  <property name="toolTip">
-                   <string>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</string>
-                  </property>
+                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
                   <property name="text">
-                   <string>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</string>
+                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
                   </property>
                  </widget>
                 </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QGroupBox" name="notesPanelGroupBox_2">
-               <property name="title">
-                <string>Note search panel</string>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_69">
-                <item row="0" column="1">
-                 <widget class="QCheckBox" name="disableSavedSearchesAutoCompletionCheckBox">
+                <item row="1" column="1" colspan="2">
+                 <widget class="QCheckBox" name="taggingShowNotesRecursivelyCheckBox">
                   <property name="text">
-                   <string>Disable auto-completion of previous searches</string>
+                   <string>Show all notes of a tag including the notes of their children-tags</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="1">
-                 <widget class="QCheckBox" name="showMatchesCheckBox">
-                  <property name="text">
-                   <string>Show the number of matches in each note</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="4" column="0">
-              <widget class="QGroupBox" name="tagsPanelGroupBox">
-               <property name="title">
-                <string>Tags panel</string>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_57">
-                <item row="2" column="0">
-                 <widget class="QGroupBox" name="tagsPanelSortGroupBox">
+                <item row="4" column="1">
+                 <widget class="QGroupBox" name="notesPanelSortGroupBox">
                   <property name="title">
                    <string>Sort</string>
                   </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_19">
+                  <layout class="QVBoxLayout" name="verticalLayout_16">
                    <item>
-                    <widget class="QRadioButton" name="tagsPanelSortAlphabeticalRadioButton">
+                    <widget class="QRadioButton" name="notesPanelSortAlphabeticalRadioButton">
                      <property name="text">
                       <string>Alphabetical</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QRadioButton" name="tagsPanelSortByLastChangeRadioButton">
+                    <widget class="QRadioButton" name="notesPanelSortByLastChangeRadioButton">
                      <property name="text">
-                      <string>By last change / use</string>
+                      <string>By last change</string>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </widget>
                 </item>
-                <item row="2" column="1">
-                 <widget class="QGroupBox" name="tagsPanelOrderGroupBox">
+                <item row="4" column="2">
+                 <widget class="QGroupBox" name="notesPanelOrderGroupBox">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
                   <property name="title">
                    <string>Order</string>
                   </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_20">
+                  <layout class="QVBoxLayout" name="verticalLayout_15">
                    <item>
-                    <widget class="QRadioButton" name="tagsPanelOrderAscendingRadioButton">
+                    <widget class="QRadioButton" name="notesPanelOrderAscendingRadioButton">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
                      <property name="text">
                       <string>Ascending</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QRadioButton" name="tagsPanelOrderDescendingRadioButton">
+                    <widget class="QRadioButton" name="notesPanelOrderDescendingRadioButton">
                      <property name="text">
                       <string>Descending</string>
                      </property>
@@ -5491,17 +5478,17 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="0" column="0" colspan="2">
-                 <widget class="QCheckBox" name="tagsPanelHideSearchCheckBox">
+                <item row="3" column="1" colspan="2">
+                 <widget class="QCheckBox" name="enableNoteTreeCheckBox">
                   <property name="text">
-                   <string>Hide 'Find or create tag' search</string>
+                   <string>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</string>
                   </property>
                  </widget>
                 </item>
                </layout>
               </widget>
              </item>
-             <item row="3" column="0">
+             <item row="4" column="0">
               <widget class="QGroupBox" name="noteSubfoldersPanelGroupBox">
                <property name="title">
                 <string>Note subfolders panel</string>
@@ -5620,77 +5607,85 @@ git config --global user.name &quot;Your name&quot;</string>
                </layout>
               </widget>
              </item>
-             <item row="1" column="0">
-              <widget class="QGroupBox" name="notesPanelGroupBox">
+             <item row="3" column="0">
+              <widget class="QGroupBox" name="noteEditPanelGroupBox">
                <property name="title">
-                <string>Note list panel</string>
+                <string>Note edit panel</string>
                </property>
-               <layout class="QGridLayout" name="gridLayout_61">
-                <item row="2" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteListPreviewCheckBox">
-                  <property name="text">
-                   <string>Show notes in the note list with preview</string>
-                  </property>
-                 </widget>
-                </item>
+               <layout class="QGridLayout" name="gridLayout_67">
                 <item row="0" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
+                 <widget class="QCheckBox" name="noteEditCentralWidgetCheckBox">
+                  <property name="toolTip">
+                   <string>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</string>
+                  </property>
                   <property name="text">
-                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
+                   <string>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="1" colspan="2">
-                 <widget class="QCheckBox" name="taggingShowNotesRecursivelyCheckBox">
+               </layout>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QGroupBox" name="navigationPanelGroupBox">
+               <property name="title">
+                <string>Navigation panel</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_25">
+                <item>
+                 <widget class="QCheckBox" name="navigationPanelHideSearchCheckBox">
                   <property name="text">
-                   <string>Show all notes of a tag including the notes of their children-tags</string>
+                   <string>Hide navigation item search bar</string>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="1">
-                 <widget class="QGroupBox" name="notesPanelSortGroupBox">
+               </layout>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QGroupBox" name="tagsPanelGroupBox">
+               <property name="title">
+                <string>Tags panel</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_57">
+                <item row="2" column="0">
+                 <widget class="QGroupBox" name="tagsPanelSortGroupBox">
                   <property name="title">
                    <string>Sort</string>
                   </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_16">
+                  <layout class="QVBoxLayout" name="verticalLayout_19">
                    <item>
-                    <widget class="QRadioButton" name="notesPanelSortAlphabeticalRadioButton">
+                    <widget class="QRadioButton" name="tagsPanelSortAlphabeticalRadioButton">
                      <property name="text">
                       <string>Alphabetical</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QRadioButton" name="notesPanelSortByLastChangeRadioButton">
+                    <widget class="QRadioButton" name="tagsPanelSortByLastChangeRadioButton">
                      <property name="text">
-                      <string>By last change</string>
+                      <string>By last change / use</string>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </widget>
                 </item>
-                <item row="4" column="2">
-                 <widget class="QGroupBox" name="notesPanelOrderGroupBox">
-                  <property name="enabled">
-                   <bool>true</bool>
-                  </property>
+                <item row="2" column="1">
+                 <widget class="QGroupBox" name="tagsPanelOrderGroupBox">
                   <property name="title">
                    <string>Order</string>
                   </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_15">
+                  <layout class="QVBoxLayout" name="verticalLayout_20">
                    <item>
-                    <widget class="QRadioButton" name="notesPanelOrderAscendingRadioButton">
-                     <property name="enabled">
-                      <bool>true</bool>
-                     </property>
+                    <widget class="QRadioButton" name="tagsPanelOrderAscendingRadioButton">
                      <property name="text">
                       <string>Ascending</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QRadioButton" name="notesPanelOrderDescendingRadioButton">
+                    <widget class="QRadioButton" name="tagsPanelOrderDescendingRadioButton">
                      <property name="text">
                       <string>Descending</string>
                      </property>
@@ -5699,17 +5694,17 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="3" column="1" colspan="2">
-                 <widget class="QCheckBox" name="enableNoteTreeCheckBox">
+                <item row="0" column="0" colspan="2">
+                 <widget class="QCheckBox" name="tagsPanelHideSearchCheckBox">
                   <property name="text">
-                   <string>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</string>
+                   <string>Hide 'Find or create tag' search</string>
                   </property>
                  </widget>
                 </item>
                </layout>
               </widget>
              </item>
-             <item row="6" column="0">
+             <item row="7" column="0">
               <spacer name="verticalSpacer_14">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -5722,16 +5717,39 @@ git config --global user.name &quot;Your name&quot;</string>
                </property>
               </spacer>
              </item>
-             <item row="5" column="0">
-              <widget class="QGroupBox" name="navigationPanelGroupBox">
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="notesPanelGroupBox_2">
                <property name="title">
-                <string>Navigation panel</string>
+                <string>Note search panel</string>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_25">
-                <item>
-                 <widget class="QCheckBox" name="navigationPanelHideSearchCheckBox">
+               <layout class="QGridLayout" name="gridLayout_69">
+                <item row="0" column="1">
+                 <widget class="QCheckBox" name="disableSavedSearchesAutoCompletionCheckBox">
                   <property name="text">
-                   <string>Hide navigation item search bar</string>
+                   <string>Disable auto-completion of previous searches</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QCheckBox" name="showMatchesCheckBox">
+                  <property name="text">
+                   <string>Show the number of matches in each note</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QGroupBox" name="noteFolderPanelGroupBox">
+               <property name="title">
+                <string>Note folder panel</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_75">
+                <item row="0" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteFolderButtonsCheckBox">
+                  <property name="text">
+                   <string>Show note folders as buttons instead of in a select box</string>
                   </property>
                  </widget>
                 </item>

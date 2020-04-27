@@ -29,12 +29,6 @@ find_package( Qt5WebSockets REQUIRED )
 find_package( Qt5Qml REQUIRED )
 find_package( Qt5X11Extras REQUIRED )
 find_package( X11 REQUIRED )
-
-# cmake support currently only for Linux
-if (UNIX AND NOT APPLE)
-    add_compile_definitions(QHOTKEY)
-endif()
-
 find_program(CCACHE_FOUND ccache)
 
 if(CCACHE_FOUND)
@@ -188,6 +182,8 @@ set(SOURCE_FILES
     entities/tag.h
     entities/script.cpp
     entities/script.h
+    helpers/flowlayout.cpp
+    helpers/flowlayout.h
     helpers/htmlentities.cpp
     helpers/htmlentities.h
     helpers/clientproxy.cpp

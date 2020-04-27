@@ -55,6 +55,8 @@ extra_css:
 extra_javascript:
   - assets/js/hljs/highlight.pack.js # Download from https://highlightjs.org/download/ and enable YAML, TOML and Dockerfile
   - assets/js/extra.js
+#  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js
 
 plugins:
   - search
@@ -75,7 +77,12 @@ markdown_extensions:
   - pymdownx.highlight:
       use_pygments: false # hljs is used instead of pygment for TOML highlighting support
   - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          # this doesn't work on ReadTheDocs, we need to use `<div class="mermaid"></div>` instead
+#          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.tasklist
   - pymdownx.snippets:
       check_paths: true

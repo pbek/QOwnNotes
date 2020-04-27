@@ -376,6 +376,7 @@ int main(int argc, char *argv[]) {
     bool allowOnlyOneAppInstance = true;
     QStringList arguments;
     QString appNameAdd = QString();
+    QString session = QString();
 
 #ifdef QT_DEBUG
     appNameAdd = QStringLiteral("Debug");
@@ -413,8 +414,8 @@ int main(int argc, char *argv[]) {
         } else if (arg == QStringLiteral("--session")) {
             // check if there is a 2nd parameter with the session name
             if (argc > (i + 1)) {
-                appNameAdd +=
-                    QStringLiteral("-") + QString(argv[i + 1]).trimmed();
+                session = QString(argv[i + 1]).trimmed();
+                appNameAdd += QStringLiteral("-") + session;
             }
         }
     }
@@ -554,6 +555,7 @@ int main(int argc, char *argv[]) {
                 " or use the parameter --allow-multiple-instances.");
           });
       setAppProperties(app, release, arguments, true, snap, portable);
+
 #ifndef QT_DEBUG
       LOAD_RELEASE_TRANSLATIONS(app)
 #endif
@@ -598,6 +600,7 @@ int main(int argc, char *argv[]) {
       // allowed
       QApplication app(argc, argv);
       setAppProperties(app, release, arguments, false, snap, portable);
+
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)
 #endif

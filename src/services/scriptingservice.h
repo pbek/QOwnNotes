@@ -1,6 +1,8 @@
 #pragma once
 
+#include <api/tagapi.h>
 #include <entities/script.h>
+#include <entities/tag.h>
 
 #include <QMap>
 #include <QMessageBox>
@@ -36,6 +38,10 @@ class ScriptingService : public QObject {
     QVariant callNoteTaggingHook(const Note &note, const QString &action,
                                  const QString &tagName = QString(),
                                  const QString &newTagName = QString());
+    QVariant callNoteTaggingByObjectHook(const Note &note,
+                                         const QString &action,
+                                         const Tag &tag = Tag(),
+                                         const QString &newTagName = QString());
     bool noteTaggingHookExists() const;
     bool handleNoteNameHookExists() const;
     bool methodExists(const QString &methodName) const;
@@ -160,6 +166,9 @@ class ScriptingService : public QObject {
     QStringList callAutocompletionHook() const;
 
     Q_INVOKABLE QStringList searchTagsByName(const QString &name) const;
+
+    Q_INVOKABLE TagApi *getTagByNameBreadcrumbList(
+        const QStringList &nameList, bool createMissing = true) const;
 
     Q_INVOKABLE void regenerateNotePreview() const;
 

@@ -199,6 +199,14 @@ Note Note::fetchByFileName(const QString &fileName, int noteSubFolderId) {
     return note;
 }
 
+Note Note::fetchByFileName(const QString &fileName,
+    const QString &noteSubFolderPathData) {
+    auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData,
+                                                        QStringLiteral("/"));
+
+    return fetchByFileName(fileName, noteSubFolder.getId());
+}
+
 bool Note::fillByFileName(const QString &fileName, int noteSubFolderId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
@@ -506,6 +514,14 @@ Note Note::fetchByShareId(int shareId) {
     return Note();
 }
 
+Note Note::fetchByName(const QString &name,
+                       const QString &noteSubFolderPathData) {
+    auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData,
+                                                        QStringLiteral("/"));
+
+    return fetchByName(name, noteSubFolder.getId());
+}
+
 Note Note::fetchByName(const QString &name, int noteSubFolderId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
@@ -688,19 +704,19 @@ QVector<Note> Note::fetchAllNotTagged(int activeNoteSubFolderId) {
 /**
  * Returns all notes names that are not tagged
  */
-QStringList Note::fetchAllNotTaggedNames() {
+QVector<int> Note::fetchAllNotTaggedIds() {
     QVector<Note> noteList = Note::fetchAll();
-    QStringList untaggedNoteFileNameList;
-    untaggedNoteFileNameList.reserve(noteList.size());
+    QVector<int> untaggedNoteIdList;
+    untaggedNoteIdList.reserve(noteList.size());
 
     QVectorIterator<Note> itr(noteList);
     QVector<Note>::const_iterator it = noteList.constBegin();
     for (; it != noteList.constEnd(); ++it) {
         const int tagCount = Tag::countAllOfNote(*it);
-        if (tagCount == 0) untaggedNoteFileNameList << it->getName();
+        if (tagCount == 0) untaggedNoteIdList << it->getId();
     }
 
-    return untaggedNoteFileNameList;
+    return untaggedNoteIdList;
 }
 
 /**
@@ -1209,8 +1225,9 @@ bool Note::storeNoteTextFileToDisk() {
             trashItem.doTrashing();
         }
 
-        // TODO(pbek): we need to heed note subfolders here
-        Tag::renameNoteFileNamesOfLinks(oldName, newName);
+        // rename the note file names of note tag links
+        Tag::renameNoteFileNamesOfLinks(oldName, newName,
+                                        this->getNoteSubFolder());
 
         // handle the replacing of all note urls if a note was renamed
         handleNoteMoving(oldNote);
@@ -1501,9 +1518,21 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
     const QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
         settings.value(QStringLiteral("notesPath")).toString());
 
-    return Utils::Misc::removeIfEndsWith(std::move(notesPath),
+    const QString path = Utils::Misc::removeIfEndsWith(std::move(notesPath),
                                          QStringLiteral("/")) +
            Utils::Misc::dirSeparator() + fileName;
+    const QFileInfo fileInfo(path);
+
+    // we can't get a canonical path if the path doesn't exist
+    if (!fileInfo.exists()) {
+        return path;
+    }
+
+    // we need that for links to notes in sub-folders in portable mode if
+    // note folder lies outside of the application directory
+    const QString canonicalFilePath = fileInfo.canonicalFilePath();
+
+    return canonicalFilePath;
 }
 
 QString Note::getFilePathRelativeToNote(const Note &note) const {
@@ -1683,7 +1712,8 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
             // check if the file name has changed
             if (oldName != newName) {
                 // rename the note file names of note tag links
-                Tag::renameNoteFileNamesOfLinks(oldName, newName);
+                Tag::renameNoteFileNamesOfLinks(oldName, newName,
+                                                note.getNoteSubFolder());
                 *noteWasRenamed = true;
 
                 // override the current note because the file name has changed
@@ -1863,7 +1893,10 @@ QString Note::fileBaseName(bool withFullName) {
 }
 
 /**
- * Renames a note
+ * Renames a note file
+ *
+ * @param newName new file name (without file-extension)
+ * @return
  */
 bool Note::renameNoteFile(QString newName) {
     // cleanup not allowed characters characters
@@ -2923,7 +2956,7 @@ void Note::handleNoteMoving(const Note &oldNote) const {
     const QString oldUrl = getNoteURL(oldNote.getName());
     const QString newUrl = getNoteURL(name);
 
-    if (Utils::Gui::question(
+    if (Utils::Gui::questionNoSkipOverride(
             Q_NULLPTR, QObject::tr("Note file path changed"),
             QObject::tr("A change of the note path was detected. Would you "
                         "like to replace all occurrences of "

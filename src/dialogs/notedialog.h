@@ -15,9 +15,12 @@ class NoteDialog : public MasterDialog {
    public:
     explicit NoteDialog(QWidget *parent = 0);
     ~NoteDialog();
-    void setNote(const Note &note);
+    void setNote(Note &note);
 
-   private:
+private slots:
+    void on_noteTextView_anchorClicked(const QUrl &url);
+
+private:
     Ui::NoteDialog *ui;
 };
 
