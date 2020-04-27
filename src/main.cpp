@@ -343,6 +343,17 @@ void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context,
     }
 }
 
+template <typename T>
+inline void setAppProperties(T &app, const QString &release,
+                             const QStringList &arguments, bool singleApp,
+                             bool snap, bool portable) {
+  app.setProperty("release", release);
+  app.setProperty("portable", portable);
+  if (singleApp) app.setProperty("singleApplication", true);
+  app.setProperty("snap", snap);
+  app.setProperty("arguments", arguments);
+}
+
 int main(int argc, char *argv[]) {
     // register NoteHistoryItem so we can store it to the settings
     // we need to do that before we are accessing QSettings or the
@@ -534,41 +545,37 @@ int main(int argc, char *argv[]) {
 
     // if only one app instance is allowed use SingleApplication
     if (allowOnlyOneAppInstance) {
-        SingleApplication app(
-            argc, argv, false, SingleApplication::Mode::User, 1000, []() {
-                qWarning() << QCoreApplication::translate(
-                    "main",
-                    "Another instance of QOwnNotes was already started! "
-                    "You can turn off the single instance mode in the settings"
-                    " or use the parameter --allow-multiple-instances.");
-            });
-        app.setProperty("release", release);
-        app.setProperty("portable", portable);
-        app.setProperty("singleApplication", true);
-        app.setProperty("snap", snap);
-        app.setProperty("arguments", arguments);
-
+      SingleApplication app(
+          argc, argv, false, SingleApplication::Mode::User, 1000, []() {
+            qWarning() << QCoreApplication::translate(
+                "main",
+                "Another instance of QOwnNotes was already started! "
+                "You can turn off the single instance mode in the settings"
+                " or use the parameter --allow-multiple-instances.");
+          });
+      setAppProperties(app, release, arguments, true, snap, portable);
 #ifndef QT_DEBUG
-        LOAD_RELEASE_TRANSLATIONS(app)
+      LOAD_RELEASE_TRANSLATIONS(app)
 #endif
 
-        LOAD_TRANSLATIONS(app)
+      LOAD_TRANSLATIONS(app)
 
 #ifdef Q_OS_MAC
-        LOAD_MAC_TRANSLATIONS(app)
+      LOAD_MAC_TRANSLATIONS(app)
 #endif
 
-        bool result = mainStartupMisc(arguments);
-        if (!result) {
-            return 0;
-        }
+      const bool result = mainStartupMisc(arguments);
+      if (!result) {
+        return 0;
+      }
 
-        MainWindow w;
-        w.show();
+      MainWindow w;
+      w.show();
 
-        // raise the main window if app was started a 2nd time in single
-        // application mode
-        QObject::connect(&app, &SingleApplication::instanceStarted, [&] {
+      // raise the main window if app was started a 2nd time in single
+      // application mode
+      QObject::connect(
+          &app, &SingleApplication::instanceStarted, [&] {
             qWarning() << QCoreApplication::translate(
                 "main",
                 "A second instance of QOwnNotes was attempted to be "
@@ -581,20 +588,16 @@ int main(int argc, char *argv[]) {
             // in case the window was minimized show it normal again
             // (it didn't came up when it was minimized on KDE)
             if (w.isMinimized()) {
-                w.showNormal();
+              w.showNormal();
             }
-        });
+          });
 
-        return app.exec();
+      return app.exec();
     } else {
-        // use a normal QApplication if multiple instances of the app are
-        // allowed
-        QApplication app(argc, argv);
-        app.setProperty("release", release);
-        app.setProperty("portable", portable);
-        app.setProperty("snap", snap);
-        app.setProperty("arguments", arguments);
-
+      // use a normal QApplication if multiple instances of the app are
+      // allowed
+      QApplication app(argc, argv);
+      setAppProperties(app, release, arguments, false, snap, portable);
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)
 #endif
@@ -604,10 +607,9 @@ int main(int argc, char *argv[]) {
 #ifdef Q_OS_MAC
         LOAD_MAC_TRANSLATIONS(app)
 #endif
-
-        bool result = mainStartupMisc(arguments);
+        const bool result = mainStartupMisc(arguments);
         if (!result) {
-            return 0;
+          return 0;
         }
 
         MainWindow w;
