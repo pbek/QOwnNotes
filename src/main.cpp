@@ -25,50 +25,64 @@
 /**
  * Macro for loading the translations
  */
-#define LOAD_TRANSLATIONS(app)                                                 \
-    qtTranslator.load("qt_" + QLocale::system().name(),                        \
-                      QLibraryInfo::location(QLibraryInfo::TranslationsPath)); \
-    app.installTranslator(&qtTranslator);                                      \
-    qtTranslator2.load("qt_" + locale, QLibraryInfo::location(                 \
-                                           QLibraryInfo::TranslationsPath));   \
-    app.installTranslator(&qtTranslator2);                                     \
-    QString appPath = QCoreApplication::applicationDirPath();                  \
-    qtTranslator3.load("qt_" + locale, appPath + "/translations");             \
-    app.installTranslator(&qtTranslator3);                                     \
-    translator1.load(appPath + "/../src/languages/QOwnNotes_" + locale);       \
-    app.installTranslator(&translator1);                                       \
-    translator2.load(appPath + "/../languages/QOwnNotes_" + locale);           \
-    app.installTranslator(&translator2);                                       \
-    translator3.load(appPath + "/languages/QOwnNotes_" + locale);              \
-    app.installTranslator(&translator3);                                       \
-    translator4.load(appPath + "/QOwnNotes_" + locale);                        \
-    app.installTranslator(&translator4);                                       \
-    translator5.load("../src/languages/QOwnNotes_" + locale);                  \
-    app.installTranslator(&translator5);                                       \
-    translator6.load("../share/qt5/translations/QOwnNotes_" + locale);      \
-    app.installTranslator(&translator6);                                       \
-    translator7.load(appPath + "/../share/qt5/translations/QOwnNotes_" +    \
-                     locale);                                                  \
-    app.installTranslator(&translator7);                                       \
-    translatorLocal.load("QOwnNotes_" + locale);                               \
-    app.installTranslator(&translatorLocal);
+template <typename T>
+void loadTranslations(T &app, QTranslator *translator,
+                      const QString &locale) noexcept {
+    translator[0].load("qt_" + QLocale::system().name(),
+                       QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    app.installTranslator(&translator[0]);
+    translator[1].load("qt_" + locale,
+                       QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    app.installTranslator(&translator[1]);
+    QString appPath = QCoreApplication::applicationDirPath();
+    translator[2].load("qt_" + locale, appPath + "/translations");
+    app.installTranslator(&translator[2]);
+    translator[3].load(appPath + "/../src/languages/QOwnNotes_" + locale);
+    app.installTranslator(&translator[3]);
+    translator[4].load(appPath + "/../languages/QOwnNotes_" + locale);
+    app.installTranslator(&translator[4]);
+    translator[5].load(appPath + "/languages/QOwnNotes_" + locale);
+    app.installTranslator(&translator[5]);
+    translator[6].load(appPath + "/QOwnNotes_" + locale);
+    app.installTranslator(&translator[6]);
+    translator[7].load("../src/languages/QOwnNotes_" + locale);
+    app.installTranslator(&translator[7]);
+    translator[8].load("../share/qt5/translations/QOwnNotes_" + locale);
+    app.installTranslator(&translator[8]);
+    translator[9].load(appPath + "/../share/qt5/translations/QOwnNotes_" +
+                       locale);
+    app.installTranslator(&translator[9]);
+    translator[10].load("QOwnNotes_" + locale);
+    app.installTranslator(&translator[10]);
+}
 
 /**
- * Macro for loading the release translations
+ * Macro for loading the release
+ * translations
  */
-#define LOAD_RELEASE_TRANSLATIONS(app)                                   \
-    translatorRelease.load("/usr/share/qt5/translations/QOwnNotes_" + \
-                           locale);                                      \
+template <typename T>
+inline void loadReleaseTranslations(T &app, QTranslator &translatorRelease,
+                                    const QString &locale) noexcept {
+    translatorRelease.load(
+        "/usr/share/qt5/translations/"
+        "QOwnNotes_" +
+        locale);
     app.installTranslator(&translatorRelease);
+}
 
 /**
  * Macro for loading the translations on OS X
  */
-#define LOAD_MAC_TRANSLATIONS(app)                                     \
-    translatorOSX.load(appPath + "/../Resources/QOwnNotes_" + locale); \
-    app.installTranslator(&translatorOSX);                             \
-    translatorOSX2.load("../Resources/QOwnNotes_" + locale);           \
+template <typename T>
+inline void loadMacTranslations(T &app, QTranslator &translatorOSX,
+                                QTranslator &translatorOSX2,
+                                const QString &appPath,
+                                const QString &locale) noexcept {
+    translatorOSX.load(appPath + "/../Resources/QOwnNotes_" + locale);
+    app.installTranslator(&translatorOSX);
+    translatorOSX2.load("../Resources/QOwnNotes_" + locale);
     app.installTranslator(&translatorOSX2);
+}
 
 /**
  * Does the miscellaneous startup
@@ -347,11 +361,11 @@ template <typename T>
 inline void setAppProperties(T &app, const QString &release,
                              const QStringList &arguments, bool singleApp,
                              bool snap, bool portable) {
-  app.setProperty("release", release);
-  app.setProperty("portable", portable);
-  if (singleApp) app.setProperty("singleApplication", true);
-  app.setProperty("snap", snap);
-  app.setProperty("arguments", arguments);
+    app.setProperty("release", release);
+    app.setProperty("portable", portable);
+    if (singleApp) app.setProperty("singleApplication", true);
+    app.setProperty("snap", snap);
+    app.setProperty("arguments", arguments);
 }
 
 int main(int argc, char *argv[]) {
@@ -507,24 +521,10 @@ int main(int argc, char *argv[]) {
 #ifdef Q_OS_MAC
     QTranslator translatorOSX;
     QTranslator translatorOSX2;
-#endif
-
-    QTranslator qtTranslator;
-    QTranslator qtTranslator2;
-    QTranslator qtTranslator3;
-    QTranslator translator1;
-    QTranslator translator2;
-    QTranslator translator3;
-    QTranslator translator4;
-    QTranslator translator5;
-    QTranslator translator6;
-    QTranslator translator7;
-    QTranslator translatorLocal;
-
-#ifdef Q_OS_MAC
     // we don't need this on macOS
     allowOnlyOneAppInstance = false;
 #else
+    QTranslator translators[11];
     // if allowOnlyOneAppInstance still has the default true let's ask the
     // settings
     if (allowOnlyOneAppInstance) {
@@ -546,38 +546,36 @@ int main(int argc, char *argv[]) {
 
     // if only one app instance is allowed use SingleApplication
     if (allowOnlyOneAppInstance) {
-      SingleApplication app(
-          argc, argv, false, SingleApplication::Mode::User, 1000, []() {
-            qWarning() << QCoreApplication::translate(
-                "main",
-                "Another instance of QOwnNotes was already started! "
-                "You can turn off the single instance mode in the settings"
-                " or use the parameter --allow-multiple-instances.");
-          });
-      setAppProperties(app, release, arguments, true, snap, portable);
-
+        SingleApplication app(
+            argc, argv, false, SingleApplication::Mode::User, 1000, []() {
+                qWarning() << QCoreApplication::translate(
+                    "main",
+                    "Another instance of QOwnNotes was already started! "
+                    "You can turn off the single instance mode in the settings"
+                    " or use the parameter --allow-multiple-instances.");
+            });
+        setAppProperties(app, release, arguments, true, snap, portable);
 #ifndef QT_DEBUG
-      LOAD_RELEASE_TRANSLATIONS(app)
+        loadReleaseTranslations(app, translatorRelease, locale);
 #endif
 
-      LOAD_TRANSLATIONS(app)
+        loadTranslations(app, translators, locale);
 
 #ifdef Q_OS_MAC
-      LOAD_MAC_TRANSLATIONS(app)
+        loadMacTranslations(app, translatorOSX, translatorOSX2,
+                            QCoreApplication::applicationDirPath(), locale);
 #endif
+        const bool result = mainStartupMisc(arguments);
+        if (!result) {
+            return 0;
+        }
 
-      const bool result = mainStartupMisc(arguments);
-      if (!result) {
-        return 0;
-      }
+        MainWindow w;
+        w.show();
 
-      MainWindow w;
-      w.show();
-
-      // raise the main window if app was started a 2nd time in single
-      // application mode
-      QObject::connect(
-          &app, &SingleApplication::instanceStarted, [&] {
+        // raise the main window if app was started a 2nd time in single
+        // application mode
+        QObject::connect(&app, &SingleApplication::instanceStarted, [&] {
             qWarning() << QCoreApplication::translate(
                 "main",
                 "A second instance of QOwnNotes was attempted to be "
@@ -590,29 +588,31 @@ int main(int argc, char *argv[]) {
             // in case the window was minimized show it normal again
             // (it didn't came up when it was minimized on KDE)
             if (w.isMinimized()) {
-              w.showNormal();
+                w.showNormal();
             }
-          });
+        });
 
-      return app.exec();
+        return app.exec();
     } else {
-      // use a normal QApplication if multiple instances of the app are
-      // allowed
-      QApplication app(argc, argv);
-      setAppProperties(app, release, arguments, false, snap, portable);
+        // use a normal QApplication if multiple instances of the app are
+        // allowed
+        QApplication app(argc, argv);
+        setAppProperties(app, release, arguments, false, snap, portable);
 
 #ifndef QT_DEBUG
-        LOAD_RELEASE_TRANSLATIONS(app)
+        loadReleaseTranslations(app, translatorRelease, locale);
 #endif
 
-        LOAD_TRANSLATIONS(app)
+        loadTranslations(app, translators, locale);
 
 #ifdef Q_OS_MAC
-        LOAD_MAC_TRANSLATIONS(app)
+        loadMacTranslations(app, translatorOSX, translatorOSX2,
+                            QCoreApplication::applicationDirPath(), locale);
 #endif
+
         const bool result = mainStartupMisc(arguments);
         if (!result) {
-          return 0;
+            return 0;
         }
 
         MainWindow w;
