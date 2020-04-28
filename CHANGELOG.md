@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.4.17
+- if you insert media files or attachments now a stripped-down version of the
+  files's original basename will be included into the filename of resulting file
+  in the `media` or `attachments` directory (for [#1716](https://github.com/pbek/QOwnNotes/issues/1716))
+
 ## 20.4.16
 - there now are new scripting functions `note.renameNoteFile()` to rename a note
   file and `note.allowDifferentFileName()` to check if it is allowed to have a

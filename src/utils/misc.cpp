@@ -1984,3 +1984,17 @@ QString Utils::Misc::generateRandomString(int length) {
 
     return randomString;
 }
+
+QString Utils::Misc::makeFileNameRandom(const QString &fileName,
+                                        const QString &overrideSuffix) {
+    const QFileInfo fileInfo(fileName);
+
+    QString baseName = fileInfo.baseName().remove(
+        QRegularExpression(QStringLiteral(R"([^\w\d\-_ ])"))).replace(
+                               QChar(' '), QChar('-'));
+    baseName.truncate(32);
+
+    // find a more random name for the file
+    return baseName + QChar('-') + QString::number(qrand()) + QChar('.') +
+           (overrideSuffix.isEmpty() ? fileInfo.suffix() : overrideSuffix);
+}

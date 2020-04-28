@@ -132,6 +132,8 @@ QString localDictionariesPath();
 QByteArray generateFileSha1Signature(const QString &path);
 bool isSameFile(const QString &path1, const QString &path2);
 QString generateRandomString(int length = 8);
+QString makeFileNameRandom(const QString &fileName,
+                           const QString &overrideSuffix = "");
 }    // namespace Misc
 }    // namespace Utils
 
