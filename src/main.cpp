@@ -23,7 +23,7 @@
 #define QAPPLICATION_CLASS QApplication
 
 /**
- * Macro for loading the translations
+ * Function for loading the translations
  */
 template <typename T>
 void loadTranslations(T &app, QTranslator *translator,
@@ -57,8 +57,7 @@ void loadTranslations(T &app, QTranslator *translator,
 }
 
 /**
- * Macro for loading the release
- * translations
+ * Function for loading the release translations
  */
 template <typename T>
 inline void loadReleaseTranslations(T &app, QTranslator &translatorRelease,
@@ -71,7 +70,7 @@ inline void loadReleaseTranslations(T &app, QTranslator &translatorRelease,
 }
 
 /**
- * Macro for loading the translations on OS X
+ * Function for loading the translations on OS X
  */
 template <typename T>
 inline void loadMacTranslations(T &app, QTranslator &translatorOSX,
@@ -517,14 +516,13 @@ int main(int argc, char *argv[]) {
 #ifndef QT_DEBUG
     QTranslator translatorRelease;
 #endif
-
+    QTranslator translators[11];
 #ifdef Q_OS_MAC
     QTranslator translatorOSX;
     QTranslator translatorOSX2;
     // we don't need this on macOS
     allowOnlyOneAppInstance = false;
 #else
-    QTranslator translators[11];
     // if allowOnlyOneAppInstance still has the default true let's ask the
     // settings
     if (allowOnlyOneAppInstance) {
