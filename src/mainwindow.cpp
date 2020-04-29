@@ -8079,7 +8079,13 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
         }
     }
 
+    // remove duplicate note ids
+#if (QT_VERSION < QT_VERSION_CHECK(5, 14, 0))
+    const QSet<int> linkedNoteIdSet = linkedNoteIds.toList().toSet();
+#else
     const QSet<int> linkedNoteIdSet(linkedNoteIds.begin(), linkedNoteIds.end());
+#endif
+
     const int linkCount = linkedNoteIdSet.count();
     const QString toolTip = tr("show all notes tagged with '%1' (%2)")
                                 .arg(name, QString::number(linkCount));
