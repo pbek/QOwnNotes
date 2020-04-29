@@ -3204,7 +3204,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     const bool showSubfolders = NoteFolder::isCurrentHasSubfolders();
     if (showSubfolders) {
         const QStringList folders =
-            notesDir.entryList(QStringList{"*"}, QDir::Dirs, QDir::Time);
+            notesDir.entryList(QDir::Dirs | QDir::Hidden, QDir::Time);
 
         // ignore some folders
         const QStringList ignoreFolderList{".", "..", "media", "attachments",

@@ -3,6 +3,9 @@
 ## 20.4.18
 - the counts in the tag tree are now showing the amount of linked notes and not
   the amount of note-links of a tag (for [#1709](https://github.com/pbek/QOwnNotes/issues/1709))
+- you now are able to show invisible sub-folders (folders starting with `.`) in
+  the note sub-folder panel if you clear the default `Ignored sub-folders`
+  setting in the *Panels settings* (for [#1718](https://github.com/pbek/QOwnNotes/issues/1718))
 
 ## 20.4.17
 - if you insert media files or attachments now a stripped-down version of the
