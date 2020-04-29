@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.4.18
+- the counts in the tag tree are now showing the amount of linked notes and not
+  the amount of note-links of a tag (for [#1709](https://github.com/pbek/QOwnNotes/issues/1709))
+
 ## 20.4.17
 - if you insert media files or attachments now a stripped-down version of the
   file's original basename will be included into the filename of resulting file

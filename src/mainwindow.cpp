@@ -8052,31 +8052,35 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
         parent == nullptr ? 0 : parent->data(0, Qt::UserRole).toInt();
     const int tagId = tag.getId();
     const QString name = tag.getName();
-    int linkCount = 0;
+    QVector<int> linkedNoteIds;
     const QList<Tag> tagListToCount = Tag::isTaggingShowNotesRecursively() ?
         Tag::fetchRecursivelyByParentId(tagId) : QList<Tag>{tag};
     const auto selectedSubFolderItems =
         ui->noteSubFolderTreeWidget->selectedItems();
 
-    for (Tag tagToCount : tagListToCount) {
+    for (const Tag &tagToCount : tagListToCount) {
         if (selectedSubFolderItems.count() > 1) {
             for (QTreeWidgetItem *folderItem : selectedSubFolderItems) {
                 int id = folderItem->data(0, Qt::UserRole).toInt();
                 const NoteSubFolder folder = NoteSubFolder::fetch(id);
 
-                if (folder.isFetched()) {
-                    linkCount += tagToCount.countLinkedNoteFileNamesForNoteSubFolder(
-                        folder,
-                        NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
+                if (!folder.isFetched()) {
+                    continue;
                 }
+
+                linkedNoteIds << tagToCount.fetchAllLinkedNoteIdsForFolder(
+                    folder, _showNotesFromAllNoteSubFolders,
+                    NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
             }
         } else {
-            linkCount += tagToCount.countLinkedNoteFileNames(
+            linkedNoteIds << tagToCount.fetchAllLinkedNoteIds(
                 _showNotesFromAllNoteSubFolders,
                 NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
         }
     }
 
+    const QSet<int> linkedNoteIdSet(linkedNoteIds.begin(), linkedNoteIds.end());
+    const int linkCount = linkedNoteIdSet.count();
     const QString toolTip = tr("show all notes tagged with '%1' (%2)")
                                 .arg(name, QString::number(linkCount));
     auto *item = new QTreeWidgetItem();

@@ -50,10 +50,12 @@ class Tag {
 
     bool removeLinkToNote(const Note &note) const;
 
-    QVector<int> fetchAllLinkedNoteIds(const bool fromAllSubfolders) const;
+    QVector<int> fetchAllLinkedNoteIds(const bool fromAllSubfolders,
+                                       const bool recursive = true) const;
 
     QVector<int> fetchAllLinkedNoteIdsForFolder(
-        const NoteSubFolder &noteSubFolder, bool fromAllSubfolders) const;
+        const NoteSubFolder &noteSubFolder, bool fromAllSubfolders,
+        const bool recursive = true) const;
 
     QList<Note> fetchAllLinkedNotes() const;
 
