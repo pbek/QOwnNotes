@@ -134,7 +134,7 @@ class ScriptingService : public QObject {
                                bool decrypt = false);
     void callHandleNoteOpenedHook(Note *note);
     QString callHandleNoteNameHook(Note *note);
-    void callHandleNoteDoubleClickedHook(Note *note);
+    bool callHandleNoteDoubleClickedHook(Note *note);
     QList<QVariant> getSettingsVariables(int scriptId);
     Q_INVOKABLE QString toNativeDirSeparators(const QString &path);
     Q_INVOKABLE QString fromNativeDirSeparators(const QString &path);

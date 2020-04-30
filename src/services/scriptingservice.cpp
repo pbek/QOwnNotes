@@ -863,9 +863,12 @@ QString ScriptingService::callEncryptionHook(const QString &text,
 
 /**
  * Calls the noteDoubleClickedHook function for all script components
+ *
+ * Returns true if hook was found
  */
-void ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
+bool ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
+    bool hookFound = false;
 
     while (i.hasNext()) {
         i.next();
@@ -876,6 +879,7 @@ void ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
                 object, QStringLiteral("noteDoubleClickedHook(QVariant)"))) {
             auto *noteApi = new NoteApi();
             noteApi->fetch(note->getId());
+            hookFound = true;
 
             QMetaObject::invokeMethod(
                 object, "noteDoubleClickedHook",
@@ -883,6 +887,8 @@ void ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
                       QVariant::fromValue(static_cast<QObject *>(noteApi))));
         }
     }
+
+    return hookFound;
 }
 /**
  * QML wrapper to start a detached process
