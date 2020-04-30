@@ -16,6 +16,8 @@
 - you will now get a warning dialog if you attempt to create a note sub-folder
   that will be ignored by the application, because the name is either used
   internally or ignored in the *Panels settings* (for [#1718](https://github.com/pbek/QOwnNotes/issues/1718))
+- added more German, Spanish, Russian, Catalan, Bengali, Italian translation
+  (thank you rakekniven, richarson, unchase, MGuerra, 2fake1987, Oymate, tiwi90)
 
 ## 20.4.18
 - the counts in the tag tree are now showing the amount of linked notes and not
