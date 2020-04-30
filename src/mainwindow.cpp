@@ -10108,10 +10108,6 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
     QAction *renameAction = nullptr;
 
     if (!multiNoteMenuEntriesOnly) {
-        auto *openNoteInTabAction = noteMenu.addAction(tr("Open note in tab"));
-        connect(openNoteInTabAction, &QAction::triggered, this,
-                &MainWindow::openCurrentNoteInTab);
-
         auto *createNoteAction = noteMenu.addAction(tr("New note"));
         connect(createNoteAction, &QAction::triggered, this,
                 &MainWindow::on_action_New_note_triggered);
@@ -10229,6 +10225,10 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
 
     if (!multiNoteMenuEntriesOnly) {
         noteMenu.addSeparator();
+        auto *openNoteInTabAction = noteMenu.addAction(tr("Open note in tab"));
+        connect(openNoteInTabAction, &QAction::triggered, this,
+                &MainWindow::openCurrentNoteInTab);
+
         openInExternalEditorAction =
             noteMenu.addAction(tr("Open note in external editor"));
         openNoteWindowAction =
