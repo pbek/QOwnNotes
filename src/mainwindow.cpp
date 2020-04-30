@@ -802,7 +802,7 @@ void MainWindow::initDockWidgets() {
         _noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
         _noteEditDockWidget->setObjectName(
             QStringLiteral("noteEditDockWidget"));
-        _noteEditDockWidget->setWidget(ui->noteEditFrame);
+        _noteEditDockWidget->setWidget(ui->noteEditTabWidget);
         _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
         sizePolicy = _noteEditDockWidget->sizePolicy();
         sizePolicy.setHorizontalStretch(5);
@@ -868,12 +868,12 @@ void MainWindow::initDockWidgets() {
         QTimer::singleShot(250, this, SLOT(releaseDockWidgetSizes()));
     }
 
-    //    ui->noteEditFrame->setStyleSheet("* { border: none; }");
+    //    ui->noteEditTabWidget->setStyleSheet("* { border: none; }");
     //    ui->noteTextEdit->setStyleSheet("* { border: none; }");
-    //    ui->noteEditFrame->layout()->setContentsMargins(0, 0, 0, 0);
+    //    ui->noteEditTabWidget->layout()->setContentsMargins(0, 0, 0, 0);
 
     setDockNestingEnabled(true);
-    setCentralWidget(_noteEditIsCentralWidget ? ui->noteEditFrame : Q_NULLPTR);
+    setCentralWidget(_noteEditIsCentralWidget ? ui->noteEditTabWidget : Q_NULLPTR);
 
     // macOS and Windows will look better without this
 #ifdef Q_OS_LINUX
@@ -1505,7 +1505,7 @@ void MainWindow::initStyling() {
     ui->notesListFrame->setStyleSheet(QString());
     ui->noteListSubFrame->setStyleSheet(QString());
     ui->navigationFrame->setStyleSheet(QString());
-    ui->noteEditFrame->setStyleSheet(QString());
+    ui->noteEditTabWidget->setStyleSheet(QString());
     ui->noteViewFrame->setStyleSheet(QString());
 
     // add some margins in OS X to match the styling of the note list
@@ -1930,6 +1930,12 @@ void MainWindow::changeNoteFolder(const int noteFolderId,
 
     generateSystemTrayContextMenu();
     updateWindowTitle();
+    _lastNoteId = 0;
+
+    // remove all but the first tab
+    while (ui->noteEditTabWidget->count() > 1) {
+        ui->noteEditTabWidget->removeTab(1);
+    }
 }
 
 /*
@@ -3643,19 +3649,24 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
     enableShowTrashButton();
 
     // update cursor position of previous note
-    if (currentNote.exists() && (currentNote.getId() != note.getId())) {
+    const int noteId = note.getId();
+    if (currentNote.exists() && (currentNote.getId() != noteId)) {
         this->noteHistory.updateCursorPositionOfNote(this->currentNote,
                                                      ui->noteTextEdit);
     }
 
+    this->_lastNoteId = this->currentNote.getId();
     this->currentNote = note;
 
     // for places we can't get the current note id, like the markdown
     // highlighter
-    qApp->setProperty("currentNoteId", note.getId());
+    qApp->setProperty("currentNoteId", noteId);
 
     const QString name = note.getName();
     updateWindowTitle();
+
+    // update current tab
+    updateCurrentTabData(note);
 
     // find and set the current item
     if (updateSelectedNote) {
@@ -3737,6 +3748,13 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
 
     // clear external image cache
     Note::externalImageHash()->clear();
+}
+
+void MainWindow::updateCurrentTabData(const Note &note) const {
+    ui->noteEditTabWidget->currentWidget()->setProperty("note-id",
+                                                        note.getId());
+    ui->noteEditTabWidget->setTabText(ui->noteEditTabWidget->currentIndex(),
+                                      note.getName());
 }
 
 /**
@@ -10039,6 +10057,37 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
     searchForSearchLineTextInNoteTextEdit();
 }
 
+void MainWindow::openCurrentNoteInTab() {
+    // simulate a newly opened tab by updating the current tab with the last note
+    if (_lastNoteId > 0) {
+        auto previousNote = Note::fetch(_lastNoteId);
+        if (previousNote.isFetched()) {
+            updateCurrentTabData(previousNote);
+        }
+    }
+
+    const QString &noteName = currentNote.getName();
+    const int noteId = currentNote.getId();
+    int tabIndex = Utils::Gui::getTabWidgetIndexByProperty(
+        ui->noteEditTabWidget, QStringLiteral("note-id"), noteId);
+
+    if (tabIndex == -1) {
+        auto *widgetPage = new QWidget();
+        widgetPage->setLayout(ui->noteEditTabWidgetLayout);
+        widgetPage->setProperty("note-id", noteId);
+        tabIndex = ui->noteEditTabWidget->addTab(widgetPage, noteName);
+    } else {
+        ui->noteEditTabWidget->setTabText(tabIndex, noteName);
+    }
+
+    ui->noteEditTabWidget->setCurrentIndex(tabIndex);
+
+    // remove the tab initially created by the ui file
+    if (ui->noteEditTabWidget->widget(0)->property("note-id").isNull()) {
+        ui->noteEditTabWidget->removeTab(0);
+    }
+}
+
 void MainWindow::on_noteTreeWidget_customContextMenuRequested(
     const QPoint pos) {
     auto *item = ui->noteTreeWidget->itemAt(pos);
@@ -10056,11 +10105,14 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
 void MainWindow::openNotesContextMenu(const QPoint globalPos,
                                       bool multiNoteMenuEntriesOnly) {
     QMenu noteMenu;
-
-    QAction *createNoteAction = nullptr;
     QAction *renameAction = nullptr;
+
     if (!multiNoteMenuEntriesOnly) {
-        createNoteAction = noteMenu.addAction(tr("New note"));
+        auto *openNoteInTabAction = noteMenu.addAction(tr("Open note in tab"));
+        connect(openNoteInTabAction, &QAction::triggered, this,
+                &MainWindow::openCurrentNoteInTab);
+
+        auto *createNoteAction = noteMenu.addAction(tr("New note"));
         connect(createNoteAction, &QAction::triggered, this,
                 &MainWindow::on_action_New_note_triggered);
 
@@ -12317,4 +12369,17 @@ void MainWindow::on_actionShow_Hide_application_triggered() {
     } else {
         showWindow();
     }
+}
+
+void MainWindow::on_noteEditTabWidget_currentChanged(int index) {
+    QWidget *widget = ui->noteEditTabWidget->currentWidget();
+    const int noteId = widget->property("note-id").toInt();
+    qDebug() << __func__ << " - 'noteId': " << noteId;
+
+    setCurrentNoteFromNoteId(noteId);
+    widget->setLayout(ui->noteEditTabWidgetLayout);
+}
+
+void MainWindow::on_noteEditTabWidget_tabCloseRequested(int index) {
+    ui->noteEditTabWidget->removeTab(index);
 }

@@ -1,6 +1,15 @@
 # QOwnNotes Changelog
 
 ## 20.5.0
+- you now can right-click on a note in the note list and click `Open note in tab`
+  to **open the note in a new tab** in the note edit panel (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
+    - those tabs can be individually be closed and moved
+    - opening notes without the new context menu action will open the note in
+      the current tab
+    - if only one tab is open the tabbed interface will be hidden
+    - since right-clicking a note in the note list also already opens the note
+      a click on the new context menu action will attempt to open the last note
+      to really open a new tab if only one tab was open 
 - you will now get a warning dialog if you attempt to create a note sub-folder
   that will be ignored by the application, because the name is either used
   internally or ignored in the *Panels settings* (for [#1718](https://github.com/pbek/QOwnNotes/issues/1718))

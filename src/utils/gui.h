@@ -119,5 +119,9 @@ bool autoFormatTableAtCursor(QPlainTextEdit *textEdit);
 void updateInterfaceFontSize(int fontSize = -1);
 
 void setComboBoxIndexByUserData(QComboBox *comboBox, const QVariant &userData);
+
+int getTabWidgetIndexByProperty(QTabWidget *tabWidget,
+                                const QString &propertyName,
+                                const QVariant &propertyValue);
 }    // namespace Gui
 }    // namespace Utils

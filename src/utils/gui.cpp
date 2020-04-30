@@ -675,3 +675,17 @@ void Utils::Gui::setComboBoxIndexByUserData(QComboBox *comboBox,
     const int index = comboBox->findData(userData);
     comboBox->setCurrentIndex(index);
 }
+
+int Utils::Gui::getTabWidgetIndexByProperty(QTabWidget *tabWidget,
+                                            const QString &propertyName,
+                                            const QVariant &propertyValue) {
+    for (int i = 0; i < tabWidget->count(); i++) {
+        const auto value = tabWidget->widget(i)->property(
+                          propertyName.toLocal8Bit());
+        if (value == propertyValue) {
+            return i;
+        }
+    }
+
+    return -1;
+}

@@ -630,7 +630,13 @@ class MainWindow : public QMainWindow {
 
     void on_actionShow_Hide_application_triggered();
 
-private:
+    void on_noteEditTabWidget_currentChanged(int index);
+
+    void on_noteEditTabWidget_tabCloseRequested(int index);
+
+    void openCurrentNoteInTab();
+
+   private:
     Ui::MainWindow *ui;
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
@@ -730,6 +736,7 @@ private:
         QStringLiteral("text-x-generic"),
         QIcon(":icons/breeze-qownnotes/16x16/text-x-generic.svg"));
     QList<QHotkey *> _globalShortcuts;
+    int _lastNoteId = 0;
 
     void createSystemTrayIcon();
 
@@ -1068,4 +1075,5 @@ private:
     void clearNoteDirectoryWatcher();
     void resizeTagTreeWidgetColumnToContents() const;
     void resizeNoteSubFolderTreeWidgetColumnToContents() const;
+    void updateCurrentTabData(const Note &note) const;
 };
