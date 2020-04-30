@@ -3206,27 +3206,8 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         const QStringList folders =
             notesDir.entryList(QDir::Dirs | QDir::Hidden, QDir::Time);
 
-        // ignore some folders
-        const QStringList ignoreFolderList{".", "..", "media", "attachments",
-                                           "trash"};
-
-        QSettings settings;
-        // ignore folders by regular expression
-        QStringList ignoredFolderRegExpList =
-            settings
-                .value(QStringLiteral("ignoreNoteSubFolders"),
-                       IGNORED_NOTE_SUBFOLDERS_DEFAULT)
-                .toString()
-                .split(QLatin1Char(';'));
-
         for (const QString &folder : folders) {
-            if (ignoreFolderList.contains(folder)) {
-                continue;
-            }
-
-            // ignore folders by regular expression
-            if (Utils::Misc::regExpInListMatches(folder,
-                                                 ignoredFolderRegExpList)) {
+            if (NoteSubFolder::willFolderBeIgnored(folder)) {
                 continue;
             }
 
@@ -10554,7 +10535,9 @@ bool MainWindow::createNewNoteSubFolder(QString folderName) {
                                            QLineEdit::Normal, QString(), &ok);
     }
 
-    if (!ok || folderName.isEmpty()) {
+    if (!ok || folderName.isEmpty() ||
+        NoteSubFolder::willFolderBeIgnored(folderName, true)) {
+
         return false;
     }
 

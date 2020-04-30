@@ -99,6 +99,9 @@ class NoteSubFolder {
 
     int depth() const;
 
+    static bool willFolderBeIgnored(const QString& folderName,
+                                    bool showWarning = false);
+
    protected:
     int id;
     int parentId;

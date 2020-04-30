@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.5.0
+- you will now get a warning dialog if you attempt to create a note sub-folder
+  that will be ignored by the application, because the name is either used
+  internally or ignored in the *Panels settings* (for [#1718](https://github.com/pbek/QOwnNotes/issues/1718))
+
 ## 20.4.18
 - the counts in the tag tree are now showing the amount of linked notes and not
   the amount of note-links of a tag (for [#1709](https://github.com/pbek/QOwnNotes/issues/1709))
