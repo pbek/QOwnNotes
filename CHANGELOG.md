@@ -6,7 +6,7 @@
       and <kbd>Alt + PgDn</kbd>
     - you can now close the current note tab with <kbd>Ctrl + W</kbd>
     - you can now open a new note in a new tab with <kbd>Ctrl + Shift + N</kbd>
-    - you can change or disable all shortcuts in the *Shortcuts settings*
+    - do keep in mind that you can change or disable all shortcuts in the *Shortcuts settings*
     - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
 - some glitches with duplicate tabs when the application was jumping to notes
@@ -15,6 +15,7 @@
 - there now is a software repository for **Fedora 32**
     - please visit the [Fedora installation page](https://www.qownnotes.org/installation#Fedora)
       for instructions
+- added more Russian, German, Catalan translation (thank you unchase, rakekniven, MGuerra)
 
 ## 20.5.0
 - you now can right-click on a note in the note list and click `Open note in tab`
