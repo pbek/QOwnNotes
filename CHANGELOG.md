@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-20.5.1
+## 20.5.1
 - new tabbing shortcuts were added (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
     - you can now jump to the previous or next note tab with <kbd>Alt + PgUp</kbd>
       and <kbd>Alt + PgDn</kbd>
