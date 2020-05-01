@@ -918,6 +918,8 @@ p, li { white-space: pre-wrap; }
      <addaction name="action_Forward_in_note_history"/>
      <addaction name="actionPrevious_Note"/>
      <addaction name="actionNext_note"/>
+     <addaction name="actionPrevious_note_tab"/>
+     <addaction name="actionNext_note_tab"/>
     </widget>
     <widget class="QMenu" name="menuPrint">
      <property name="title">
@@ -2580,6 +2582,30 @@ p, li { white-space: pre-wrap; }
   <action name="actionShow_Hide_application">
    <property name="text">
     <string>Show/Hide application</string>
+   </property>
+  </action>
+  <action name="actionPrevious_note_tab">
+   <property name="icon">
+    <iconset theme="go-previous" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/go-previous.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-previous.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Previous note tab</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+PgUp</string>
+   </property>
+  </action>
+  <action name="actionNext_note_tab">
+   <property name="icon">
+    <iconset theme="go-next" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/go-next.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-next.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Next note tab</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+PgDown</string>
    </property>
   </action>
  </widget>

@@ -12383,7 +12383,6 @@ void MainWindow::on_actionShow_Hide_application_triggered() {
 void MainWindow::on_noteEditTabWidget_currentChanged(int index) {
     QWidget *widget = ui->noteEditTabWidget->currentWidget();
     const int noteId = widget->property("note-id").toInt();
-    qDebug() << __func__ << " - 'noteId': " << noteId;
 
     setCurrentNoteFromNoteId(noteId);
     widget->setLayout(ui->noteEditTabWidgetLayout);
@@ -12391,4 +12390,24 @@ void MainWindow::on_noteEditTabWidget_currentChanged(int index) {
 
 void MainWindow::on_noteEditTabWidget_tabCloseRequested(int index) {
     ui->noteEditTabWidget->removeTab(index);
+}
+
+void MainWindow::on_actionPrevious_note_tab_triggered() {
+    int index = ui->noteEditTabWidget->currentIndex() - 1;
+
+    if (index < 0) {
+        index = ui->noteEditTabWidget->count() - 1;
+    }
+
+    ui->noteEditTabWidget->setCurrentIndex(index);
+}
+
+void MainWindow::on_actionNext_note_tab_triggered() {
+    int index = ui->noteEditTabWidget->currentIndex() + 1;
+
+    if (index >= ui->noteEditTabWidget->count()) {
+        index = 0;
+    }
+
+    ui->noteEditTabWidget->setCurrentIndex(index);
 }

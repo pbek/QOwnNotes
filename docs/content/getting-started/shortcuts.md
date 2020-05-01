@@ -21,6 +21,8 @@ Important Shortcuts
     - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>PgUp</kbd>
 - <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
     - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>PgDown</kbd>
+- <kbd>Alt</kbd> + <kbd>PageUp</kbd> jumps to the previous note tab
+- <kbd>Alt</kbd> + <kbd>PageDown</kbd> jumps to the next note tab
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
     - you can also close it with <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> prints the current note as text
@@ -133,6 +135,8 @@ Important Shortcuts
     - alternate shortcut is <kbd>⌘</kbd> + <kbd>PgUp</kbd>
 - <kbd>Ctrl</kbd> + <kbd>Down</kbd> jumps to the next visible note
     - alternate shortcut is <kbd>⌘</kbd> + <kbd>PgDown</kbd>
+- <kbd>Alt</kbd> + <kbd>PageUp</kbd> jumps to the previous note tab
+- <kbd>Alt</kbd> + <kbd>PageDown</kbd> jumps to the next note tab
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
     - you can also close it with <kbd>Esc</kbd>
 - <kbd>⌘</kbd> + <kbd>P</kbd> prints the current note as text

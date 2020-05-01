@@ -636,6 +636,10 @@ class MainWindow : public QMainWindow {
 
     void openCurrentNoteInTab();
 
+    void on_actionPrevious_note_tab_triggered();
+
+    void on_actionNext_note_tab_triggered();
+
    private:
     Ui::MainWindow *ui;
     QString notesPath;
