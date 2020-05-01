@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+20.5.1
+- there now is a software repository for **Fedora 32**
+    - please visit the [Fedora installation page](https://www.qownnotes.org/installation#Fedora)
+      for instructions
+
 ## 20.5.0
 - you now can right-click on a note in the note list and click `Open note in tab`
   to **open the note in a tab** in the note edit panel (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
