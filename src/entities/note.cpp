@@ -1861,7 +1861,9 @@ bool Note::fileWriteable() const {
 //
 // checks if the current note still exists in the database
 //
-bool Note::exists() const { return Note::fetch(this->id).id > 0; }
+bool Note::exists() const { return noteIdExists(this->id); }
+
+bool Note::noteIdExists(int id) { return fetch(id).id > 0; }
 
 //
 // reloads the current Note (by fileName)

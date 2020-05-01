@@ -1084,4 +1084,7 @@ class MainWindow : public QMainWindow {
     void resizeTagTreeWidgetColumnToContents() const;
     void resizeNoteSubFolderTreeWidgetColumnToContents() const;
     void updateCurrentTabData(const Note &note) const;
+    bool jumpToTab(const Note &note) const;
+    void closeOrphanedTabs() const;
+    void removeNoteTab(int index) const;
 };

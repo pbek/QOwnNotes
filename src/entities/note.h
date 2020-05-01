@@ -119,6 +119,8 @@ class Note {
 
     bool exists() const;
 
+    static bool noteIdExists(int id);
+
     bool refetch();
 
     void fillFromQuery(const QSqlQuery &query);

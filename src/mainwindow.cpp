@@ -3670,7 +3670,9 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
     updateWindowTitle();
 
     // update current tab
-    updateCurrentTabData(note);
+    if (!jumpToTab(note)) {
+        updateCurrentTabData(note);
+    }
 
     // find and set the current item
     if (updateSelectedNote) {
@@ -3759,6 +3761,33 @@ void MainWindow::updateCurrentTabData(const Note &note) const {
                                                         note.getId());
     ui->noteEditTabWidget->setTabText(ui->noteEditTabWidget->currentIndex(),
                                       note.getName());
+}
+
+void MainWindow::closeOrphanedTabs() const {
+    const int maxIndex = ui->noteEditTabWidget->count() - 1;
+
+    for (int i = maxIndex; i >= 0; i--) {
+        const int noteId = ui->noteEditTabWidget->widget(i)
+                               ->property("note-id").toInt();
+
+        if (!Note::noteIdExists(noteId)) {
+            removeNoteTab(i);
+        }
+    }
+}
+
+bool MainWindow::jumpToTab(const Note &note) const {
+    const int noteId = note.getId();
+    const int tabIndexOfNote = Utils::Gui::getTabWidgetIndexByProperty(
+        ui->noteEditTabWidget, QStringLiteral("note-id"), noteId);
+
+    if (tabIndexOfNote == -1) {
+        return false;
+    }
+
+    ui->noteEditTabWidget->setCurrentIndex(tabIndexOfNote);
+
+    return true;
 }
 
 /**
@@ -12384,12 +12413,20 @@ void MainWindow::on_noteEditTabWidget_currentChanged(int index) {
     QWidget *widget = ui->noteEditTabWidget->currentWidget();
     const int noteId = widget->property("note-id").toInt();
 
+    // close the tab if note doesn't exist any more
+    if (!Note::noteIdExists(noteId)) {
+        removeNoteTab(index);
+        return;
+    }
+
     setCurrentNoteFromNoteId(noteId);
     widget->setLayout(ui->noteEditTabWidgetLayout);
+
+    closeOrphanedTabs();
 }
 
 void MainWindow::on_noteEditTabWidget_tabCloseRequested(int index) {
-    ui->noteEditTabWidget->removeTab(index);
+    removeNoteTab(index);
 }
 
 void MainWindow::on_actionPrevious_note_tab_triggered() {
@@ -12413,12 +12450,16 @@ void MainWindow::on_actionNext_note_tab_triggered() {
 }
 
 void MainWindow::on_actionClose_current_note_tab_triggered() {
-    if (ui->noteEditTabWidget->count() > 1) {
-        ui->noteEditTabWidget->removeTab(ui->noteEditTabWidget->currentIndex());
-    }
+    removeNoteTab(ui->noteEditTabWidget->currentIndex());
 }
 
 void MainWindow::on_actionNew_note_in_new_tab_triggered() {
     on_action_New_note_triggered();
     openCurrentNoteInTab();
+}
+
+void MainWindow::removeNoteTab(int index) const {
+    if (ui->noteEditTabWidget->count() > 1) {
+        ui->noteEditTabWidget->removeTab(index);
+    }
 }

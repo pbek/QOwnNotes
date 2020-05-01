@@ -9,6 +9,9 @@
     - you can change or disable all shortcuts in the *Shortcuts settings*
     - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
+- some glitches with duplicate tabs when the application was jumping to notes
+  while the note was already open as a tab were fixed (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
+- tabs of removed notes are now also removed automatically (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
 - there now is a software repository for **Fedora 32**
     - please visit the [Fedora installation page](https://www.qownnotes.org/installation#Fedora)
       for instructions
