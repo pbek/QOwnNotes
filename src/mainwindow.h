@@ -640,6 +640,10 @@ class MainWindow : public QMainWindow {
 
     void on_actionNext_note_tab_triggered();
 
+    void on_actionClose_current_note_tab_triggered();
+
+    void on_actionNew_note_in_new_tab_triggered();
+
    private:
     Ui::MainWindow *ui;
     QString notesPath;

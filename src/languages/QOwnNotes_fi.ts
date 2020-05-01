@@ -1809,139 +1809,139 @@
         <translation>Lajittele</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="985"/>
+        <location filename="../mainwindow.ui" line="987"/>
         <source>&amp;Help</source>
         <translation>&amp;Ohje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1142"/>
+        <location filename="../mainwindow.ui" line="1144"/>
         <source>Editor width in distraction free mode</source>
         <translation>Toimittaja leveys häiriötekijä vapaa tila</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1145"/>
+        <location filename="../mainwindow.ui" line="1147"/>
         <source>Editor width</source>
         <translation>Toimittaja leveys</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1234"/>
+        <location filename="../mainwindow.ui" line="1236"/>
         <source>Custom actions</source>
         <translation>Mukautetut toiminnot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1254"/>
+        <location filename="../mainwindow.ui" line="1256"/>
         <source>main toolbar</source>
         <translation>meri koristella</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1288"/>
+        <location filename="../mainwindow.ui" line="1290"/>
         <source>&amp;Quit</source>
         <translation>&amp;Lopeta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1303"/>
+        <location filename="../mainwindow.ui" line="1305"/>
         <source>&amp;Setup note folders</source>
         <translation>&amp;Setup muistilappukansioihin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1312"/>
+        <location filename="../mainwindow.ui" line="1314"/>
         <source>&amp;Find note</source>
         <translation>&amp;Etsi huomautus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1324"/>
+        <location filename="../mainwindow.ui" line="1326"/>
         <source>&amp;Remove current note</source>
         <translation>&amp;Poista nykyisen muistiinpanon</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1348"/>
+        <location filename="../mainwindow.ui" line="1350"/>
         <source>&amp;New note</source>
         <translation>&amp;Uusi muistiinpano</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1360"/>
+        <location filename="../mainwindow.ui" line="1362"/>
         <source>Check for &amp;updates</source>
         <translation>Hae &amp;päivityksiä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1372"/>
+        <location filename="../mainwindow.ui" line="1374"/>
         <source>Post questions, feature requests or issues</source>
         <translation>Lähettää kysymyksiä, pyyntöjä tai kysymyksiä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1383"/>
+        <location filename="../mainwindow.ui" line="1385"/>
         <source>Alphabetical</source>
         <translation>Aakkosjärjestyksessä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1386"/>
+        <location filename="../mainwindow.ui" line="1388"/>
         <source>Sort alphabetical</source>
         <translation>Lajittelu aakkosjärjestyksessä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1394"/>
+        <location filename="../mainwindow.ui" line="1396"/>
         <source>By date</source>
         <translation>Mennessä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1397"/>
+        <location filename="../mainwindow.ui" line="1399"/>
         <source>Sort by date</source>
         <translation>Lajittele päivämäärän mukaan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1421"/>
+        <location filename="../mainwindow.ui" line="1423"/>
         <source>Show note &amp;versions</source>
         <translation>Näytä muistiinpano ja versiot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1424"/>
+        <location filename="../mainwindow.ui" line="1426"/>
         <source>Show note versions on server</source>
         <translation>Näytä Huomautus versiot palvelimelle</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1436"/>
+        <location filename="../mainwindow.ui" line="1438"/>
         <source>Show trashed notes on server</source>
         <translation>Näytä roskakorit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1441"/>
+        <location filename="../mainwindow.ui" line="1443"/>
         <location filename="../mainwindow.cpp" line="10263"/>
         <source>Select &amp;all notes</source>
         <translation>Valitse &amp;kaikki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1450"/>
+        <location filename="../mainwindow.ui" line="1452"/>
         <location filename="../mainwindow.cpp" line="6491"/>
         <source>Insert &amp;link</source>
         <translation>Lisää &amp;linkki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1453"/>
+        <location filename="../mainwindow.ui" line="1455"/>
         <source>Insert link to an url or a note</source>
         <translation>Lisää linkki Url-osoitteeseen tai muistiinpanoon</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1465"/>
+        <location filename="../mainwindow.ui" line="1467"/>
         <source>&amp;Find in current note</source>
         <translation>&amp;Etsi nykyisen muistiinpanon</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1468"/>
+        <location filename="../mainwindow.ui" line="1470"/>
         <source>Find text in current note</source>
         <translation>Etsi teksti nykyisessä muistiossa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1481"/>
+        <location filename="../mainwindow.ui" line="1483"/>
         <source>&amp;Duplicate text</source>
         <translation>&amp;Monista teksti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1493"/>
+        <location filename="../mainwindow.ui" line="1495"/>
         <source>&amp;Back in note history</source>
         <translation>&amp;Huomautus taaksepäin sivuhistoriassa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1406"/>
+        <location filename="../mainwindow.ui" line="1408"/>
         <source>&amp;Settings</source>
         <translation>&amp;Asetukset</translation>
     </message>
@@ -1987,637 +1987,647 @@
         <translation>Tuonti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="926"/>
+        <location filename="../mainwindow.ui" line="927"/>
         <location filename="../mainwindow.cpp" line="6523"/>
         <source>Print</source>
         <translation>Tulosta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="937"/>
+        <location filename="../mainwindow.ui" line="938"/>
         <source>View note</source>
         <translation>Näytä muistiinpano</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="949"/>
+        <location filename="../mainwindow.ui" line="950"/>
         <source>Trash</source>
         <translation>Roskakoriin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1016"/>
+        <location filename="../mainwindow.ui" line="1018"/>
         <source>&amp;Edit</source>
         <translation>&amp;Muokkaa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1020"/>
+        <location filename="../mainwindow.ui" line="1022"/>
         <source>Insert</source>
         <translation>Lisää</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1037"/>
+        <location filename="../mainwindow.ui" line="1039"/>
         <source>Format</source>
         <translation>Muodossa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1050"/>
+        <location filename="../mainwindow.ui" line="1052"/>
         <source>Extra</source>
         <translation>Kun</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1066"/>
+        <location filename="../mainwindow.ui" line="1068"/>
         <source>Edit</source>
         <translation>&amp;Muokata</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1079"/>
+        <location filename="../mainwindow.ui" line="1081"/>
         <source>Versioning</source>
         <translation>Versiointi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1090"/>
+        <location filename="../mainwindow.ui" line="1092"/>
         <source>Encryption</source>
         <translation>Salaus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1102"/>
+        <location filename="../mainwindow.ui" line="1104"/>
         <source>Languages</source>
         <translation>Kielet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1107"/>
+        <location filename="../mainwindow.ui" line="1109"/>
         <source>Spelling backend</source>
         <translation>Taustaohjelman oikeinkirjoitus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1132"/>
+        <location filename="../mainwindow.ui" line="1134"/>
         <source>To&amp;do</source>
         <translation>&amp;Tehdä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1138"/>
+        <location filename="../mainwindow.ui" line="1140"/>
         <source>&amp;Window</source>
         <translation>&amp;Ikkunan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1155"/>
+        <location filename="../mainwindow.ui" line="1157"/>
         <location filename="../mainwindow.cpp" line="718"/>
         <source>Workspaces</source>
         <translation>Työtilat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1160"/>
+        <location filename="../mainwindow.ui" line="1162"/>
         <source>Panels</source>
         <translation>Paneelit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1165"/>
+        <location filename="../mainwindow.ui" line="1167"/>
         <source>Toolbars</source>
         <translation>Työkalurivit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1170"/>
+        <location filename="../mainwindow.ui" line="1172"/>
         <source>Show</source>
         <extracomment>To show or hide stuff</extracomment>
         <translation>Näytä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1185"/>
+        <location filename="../mainwindow.ui" line="1187"/>
         <source>Workspace</source>
         <translation>Työtila</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1194"/>
+        <location filename="../mainwindow.ui" line="1196"/>
         <source>Jump to</source>
         <translation>Hypätä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1230"/>
+        <location filename="../mainwindow.ui" line="1232"/>
         <source>&amp;Scripting</source>
         <translation>&amp;Komentosarjat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1336"/>
+        <location filename="../mainwindow.ui" line="1338"/>
         <source>About &amp;QOwnNotes…</source>
         <translation>Tietoa &amp;QOwnNotes…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1375"/>
+        <location filename="../mainwindow.ui" line="1377"/>
         <source>Post questions, feature requests or problems with the help of the issue assistant</source>
         <translation>Lähetä kysymyksiä, ominaisuuspyyntöjä tai ongelmia ongelman avustajan avulla</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1433"/>
+        <location filename="../mainwindow.ui" line="1435"/>
         <source>Show remote trash</source>
         <translation>Näytä etähuomautus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1473"/>
-        <location filename="../mainwindow.ui" line="1476"/>
+        <location filename="../mainwindow.ui" line="1475"/>
+        <location filename="../mainwindow.ui" line="1478"/>
         <source>Auto format table</source>
         <translation>Automaattinen muotoilutaulukko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1505"/>
+        <location filename="../mainwindow.ui" line="1507"/>
         <source>Forward in note history</source>
         <translation>Välitä muistiinpanon historiaa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1517"/>
+        <location filename="../mainwindow.ui" line="1519"/>
         <source>Show shortcuts</source>
         <translation>Näytä pikavalinnat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1526"/>
+        <location filename="../mainwindow.ui" line="1528"/>
         <source>&amp;Knowledge base</source>
         <translation>&amp;Tietopohja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1535"/>
+        <location filename="../mainwindow.ui" line="1537"/>
         <source>Insert current &amp;time</source>
         <translation>Lisää nykyinen &amp;aika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1547"/>
+        <location filename="../mainwindow.ui" line="1549"/>
         <source>Show &amp;Todo List</source>
         <translation>Näytä &amp;Todo lista</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1559"/>
+        <location filename="../mainwindow.ui" line="1561"/>
         <source>&amp;Export note as PDF (preview)</source>
         <translation>&amp;Vie muistiinpano PDF-muodossa (esikatselu)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1562"/>
+        <location filename="../mainwindow.ui" line="1564"/>
         <source>Export note as PDF (preview)</source>
         <translation>Vie muistiinpano PDF-muodossa (esikatselu)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1571"/>
+        <location filename="../mainwindow.ui" line="1573"/>
         <source>&amp;Export note as PDF (text)</source>
         <translation>&amp;Vie muistiinpano PDF-muodossa (teksti)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1580"/>
+        <location filename="../mainwindow.ui" line="1582"/>
         <source>&amp;Print note (text)</source>
         <translation>&amp;Tulosta merkintä (teksti)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1604"/>
+        <location filename="../mainwindow.ui" line="1606"/>
         <source>Insert &amp;image</source>
         <translation>Lisää &amp;kuva</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1607"/>
+        <location filename="../mainwindow.ui" line="1609"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
         <translation>Lisää kuva (kuva kopioidaan nykyisen muistikansion kansion kansioon)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1619"/>
+        <location filename="../mainwindow.ui" line="1621"/>
         <source>Show &amp;changelog</source>
         <translation>Näytä ja &amp;vaihda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1628"/>
+        <location filename="../mainwindow.ui" line="1630"/>
         <source>&amp;Encrypt note</source>
         <translation>&amp;Salaa huomautus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1637"/>
+        <location filename="../mainwindow.ui" line="1639"/>
         <source>Edit encrypted note</source>
         <translation>Muokkaa salattua muistiinpanoa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1649"/>
+        <location filename="../mainwindow.ui" line="1651"/>
         <source>Decrypt note</source>
         <translation>Salaa huomautus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1658"/>
+        <location filename="../mainwindow.ui" line="1660"/>
         <source>&amp;Open note in external editor</source>
         <translation>&amp;Avaa muistiinpano ulkoisessa editorissa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1670"/>
+        <location filename="../mainwindow.ui" line="1672"/>
         <source>&amp;Export note as markdown file</source>
         <translation>&amp;Vie huomautus markdown-tiedostona</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1679"/>
+        <location filename="../mainwindow.ui" line="1681"/>
         <source>&amp;Get involved</source>
         <translation>&amp;Osallistu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1688"/>
+        <location filename="../mainwindow.ui" line="1690"/>
         <source>Insert &amp;code block</source>
         <translation>Lisää &amp;koodilohko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1700"/>
+        <location filename="../mainwindow.ui" line="1702"/>
         <source>Next note</source>
         <translation>Seuraava huomautus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1712"/>
+        <location filename="../mainwindow.ui" line="1714"/>
         <source>Previous note</source>
         <translation>Edellinen huomautus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1724"/>
+        <location filename="../mainwindow.ui" line="1726"/>
         <source>&amp;Distraction free mode</source>
         <translation>&amp;Häiriötön vapaa tila</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1727"/>
+        <location filename="../mainwindow.ui" line="1729"/>
         <source>Distraction free mode, you can leave it with a button on the bottom right</source>
         <translation>Vapautustilan vapaus, voit jättää sen alareunassa olevalla painikkeella</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1738"/>
+        <location filename="../mainwindow.ui" line="1740"/>
         <source>Show &amp;toolbar</source>
         <translation>Näytä &amp;työkalurivin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1746"/>
+        <location filename="../mainwindow.ui" line="1748"/>
         <source>Narrow</source>
         <translation>Kapea</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1757"/>
+        <location filename="../mainwindow.ui" line="1759"/>
         <source>Medium</source>
         <translation>Normaali</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1768"/>
+        <location filename="../mainwindow.ui" line="1770"/>
         <source>Wide</source>
         <translation>Laaja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1779"/>
+        <location filename="../mainwindow.ui" line="1781"/>
         <source>Full</source>
         <translation>Koko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1791"/>
+        <location filename="../mainwindow.ui" line="1793"/>
         <source>Paste html or media</source>
         <translation>Liitä html- tai media</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1794"/>
-        <location filename="../mainwindow.ui" line="1797"/>
+        <location filename="../mainwindow.ui" line="1796"/>
+        <location filename="../mainwindow.ui" line="1799"/>
         <source>Paste images, notes and html from the clipboard</source>
         <translation>Liitä kuvat, muistiinpanot ja html leikepöydältä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1809"/>
+        <location filename="../mainwindow.ui" line="1811"/>
         <source>Show note in &amp;file manager</source>
         <translation>Näytä huomautus &amp;tiedostonhallinnassa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1821"/>
+        <location filename="../mainwindow.ui" line="1823"/>
         <source>Format text &amp;bold</source>
         <translation>Alusta teksti &amp;lihavoitu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1833"/>
+        <location filename="../mainwindow.ui" line="1835"/>
         <source>Format text &amp;italic</source>
         <translation>Alusta teksti &amp;kursivoitu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1845"/>
+        <location filename="../mainwindow.ui" line="1847"/>
         <source>&amp;Increase note text size</source>
         <translation>&amp;Lisää muistin tekstin kokoa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1857"/>
+        <location filename="../mainwindow.ui" line="1859"/>
         <source>&amp;Decrease note text size</source>
         <translation>&amp;Pienennä muistin tekstin kokoa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1869"/>
+        <location filename="../mainwindow.ui" line="1871"/>
         <source>&amp;Reset note text size</source>
         <translation>&amp;Nollaa muistin tekstin koko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1881"/>
+        <location filename="../mainwindow.ui" line="1883"/>
         <source>&amp;Add tag to note</source>
         <translation>&amp;Lisää tunniste huomata</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1893"/>
+        <location filename="../mainwindow.ui" line="1895"/>
         <source>&amp;Reload note folder</source>
         <translation>&amp;Lataa muistikirja uudelleen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1965"/>
+        <location filename="../mainwindow.ui" line="1967"/>
         <source>Show log</source>
         <translation>Näytä loki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1974"/>
+        <location filename="../mainwindow.ui" line="1976"/>
         <source>Export note as HTML</source>
         <translation>Vietäessä muistiinpanoa HTML-muodossa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2053"/>
+        <location filename="../mainwindow.ui" line="2055"/>
         <source>Cycle text case</source>
         <translation>Cycle teksti tapaus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2126"/>
+        <location filename="../mainwindow.ui" line="2128"/>
         <source>Show note list under tag panel</source>
         <translation>Näytä merkintälista tag-paneelin alla</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2144"/>
+        <location filename="../mainwindow.ui" line="2146"/>
         <source>Find notes in all tags / subfolders</source>
         <translation>Etsi muistiinpanoja kaikissa tunnisteissa / alikansioissa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2165"/>
+        <location filename="../mainwindow.ui" line="2167"/>
         <source>Import notes from text files</source>
         <translation>Tuo muistiinpanoja tekstitiedostoista</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2174"/>
+        <location filename="../mainwindow.ui" line="2176"/>
         <source>Manage orphaned image files</source>
         <translation>Hallitse orpoja kuvia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2186"/>
-        <location filename="../mainwindow.ui" line="2189"/>
+        <location filename="../mainwindow.ui" line="2188"/>
+        <location filename="../mainwindow.ui" line="2191"/>
         <source>Open the Telegram group</source>
         <translation>Avaa Telegram-ryhmä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2201"/>
-        <location filename="../mainwindow.ui" line="2204"/>
+        <location filename="../mainwindow.ui" line="2203"/>
+        <location filename="../mainwindow.ui" line="2206"/>
         <source>Open the Riot room</source>
         <extracomment>&quot;Riot&quot; as in the chat service</extracomment>
         <translation>Åbn Riot-rummet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2231"/>
+        <location filename="../mainwindow.ui" line="2233"/>
         <source>Unlock panels</source>
         <translation>Avaa paneelit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2240"/>
+        <location filename="../mainwindow.ui" line="2242"/>
         <location filename="../mainwindow.cpp" line="11374"/>
         <source>Remove current workspace</source>
         <translation>Poista nykyinen työtila</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2249"/>
+        <location filename="../mainwindow.ui" line="2251"/>
         <source>Add new workspace</source>
         <translation>Lisää uusi työtila</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2258"/>
+        <location filename="../mainwindow.ui" line="2260"/>
         <source>Rename current workspace</source>
         <translation>Nimeä nykyinen työtila uudelleen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2267"/>
+        <location filename="../mainwindow.ui" line="2269"/>
         <source>Switch to previous workspace</source>
         <translation>Vaihda edelliseen työtilaan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2275"/>
+        <location filename="../mainwindow.ui" line="2277"/>
         <source>Show all panels</source>
         <translation>Näytä kaikki paneelit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2284"/>
+        <location filename="../mainwindow.ui" line="2286"/>
         <source>Find action</source>
         <translation>Löytää toimia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2287"/>
-        <location filename="../mainwindow.ui" line="2290"/>
+        <location filename="../mainwindow.ui" line="2289"/>
+        <location filename="../mainwindow.ui" line="2292"/>
         <source>Find an action from the menu</source>
         <translation>Etsi toiminto valikosta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2302"/>
+        <location filename="../mainwindow.ui" line="2304"/>
         <source>Insert table</source>
         <translation>Lisää taulukko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2314"/>
+        <location filename="../mainwindow.ui" line="2316"/>
         <location filename="../mainwindow.cpp" line="6500"/>
         <source>Insert block &amp;quote</source>
         <translation>Lisää lohko &amp;quote</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2322"/>
-        <location filename="../mainwindow.ui" line="2325"/>
+        <location filename="../mainwindow.ui" line="2324"/>
+        <location filename="../mainwindow.ui" line="2327"/>
         <source>Search selected text on the web</source>
         <translation>Hae valitusta tekstistä verkossa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2333"/>
+        <location filename="../mainwindow.ui" line="2335"/>
         <source>Delete line</source>
         <translation>Poista rivi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2341"/>
+        <location filename="../mainwindow.ui" line="2343"/>
         <source>Delete word</source>
         <translation>Poista sana</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2349"/>
+        <location filename="../mainwindow.ui" line="2351"/>
         <source>Copy note headline</source>
         <translation>Kopioi huomautus otsikko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2361"/>
+        <location filename="../mainwindow.ui" line="2363"/>
         <location filename="../mainwindow.cpp" line="10239"/>
         <source>Open note in different window</source>
         <translation>Avaa huomautus eri ikkunassa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2373"/>
+        <location filename="../mainwindow.ui" line="2375"/>
         <source>Save modified notes</source>
         <translation>Tallenna muokatut muistiinpanot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2384"/>
+        <location filename="../mainwindow.ui" line="2386"/>
         <source>Ascending</source>
         <translation>Nouseva</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2392"/>
+        <location filename="../mainwindow.ui" line="2394"/>
         <source>Descending</source>
         <translation>Laskeva</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2401"/>
+        <location filename="../mainwindow.ui" line="2403"/>
         <location filename="../mainwindow.cpp" line="10247"/>
         <source>Show note git versions</source>
         <translation>Näytä huomautuksen git-versiot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2410"/>
+        <location filename="../mainwindow.ui" line="2412"/>
         <source>Find scripts in script repository</source>
         <translation>Etsi skriptejä komentosarjavarastossa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2422"/>
+        <location filename="../mainwindow.ui" line="2424"/>
         <source>Script settings</source>
         <translation>Komentosarjan asetukset</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2431"/>
+        <location filename="../mainwindow.ui" line="2433"/>
         <source>Insert attachment</source>
         <translation>Lisää liite</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2458"/>
+        <location filename="../mainwindow.ui" line="2460"/>
         <source>Check for script updates</source>
         <translation>Tarkista skriptien päivitykset</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2467"/>
+        <location filename="../mainwindow.ui" line="2469"/>
         <source>Show local trash</source>
         <translation>Näytä paikalliset roskakorit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2472"/>
-        <location filename="../mainwindow.ui" line="2475"/>
+        <location filename="../mainwindow.ui" line="2474"/>
+        <location filename="../mainwindow.ui" line="2477"/>
         <source>Jump to note edit panel</source>
         <translation>Hyppää muistiin muokkauspaneeliin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2487"/>
+        <location filename="../mainwindow.ui" line="2489"/>
         <source>Manage orphaned attachments</source>
         <translation>Hallitse orpoja liitetiedostoja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2492"/>
+        <location filename="../mainwindow.ui" line="2494"/>
         <source>Jump to note subfolder panel</source>
         <translation>Hyppää muistiin alikansiopaneeliin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2500"/>
+        <location filename="../mainwindow.ui" line="2502"/>
         <source>Jump to tags panel</source>
         <translation>Siirry tunnisteiden paneeliin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2508"/>
+        <location filename="../mainwindow.ui" line="2510"/>
         <source>Jump to note list panel</source>
         <translation>Hyppää muistiinpanoriville</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2516"/>
+        <location filename="../mainwindow.ui" line="2518"/>
         <source>Activate context menu</source>
         <translation>Aktivoi kontekstivalikko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2524"/>
+        <location filename="../mainwindow.ui" line="2526"/>
         <source>Import bookmarks from server</source>
         <translation>Tuo kirjanmerkit palvelimelta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2529"/>
-        <location filename="../mainwindow.ui" line="2532"/>
+        <location filename="../mainwindow.ui" line="2531"/>
+        <location filename="../mainwindow.ui" line="2534"/>
         <source>Toggle full-screen mode</source>
         <translation>Vaihtaa koko näytön tilassa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2543"/>
+        <location filename="../mainwindow.ui" line="2545"/>
         <source>Typewriter mode</source>
         <translation>Kirjoituskonetila</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2555"/>
+        <location filename="../mainwindow.ui" line="2557"/>
         <source>Check spelling</source>
         <translation>Tarkista oikeinkirjoitus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2563"/>
+        <location filename="../mainwindow.ui" line="2565"/>
         <location filename="../mainwindow.cpp" line="12243"/>
         <source>Automatically detect</source>
         <translation>Tunnistaa automaattisesti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2568"/>
+        <location filename="../mainwindow.ui" line="2570"/>
         <source>Manage dictionaries</source>
         <translation>Hallitse sanakirjoja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2576"/>
+        <location filename="../mainwindow.ui" line="2578"/>
         <source>Custom</source>
         <translation>Mukautettu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2579"/>
+        <location filename="../mainwindow.ui" line="2581"/>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2584"/>
+        <location filename="../mainwindow.ui" line="2586"/>
         <source>Show/Hide application</source>
         <translation>Näytä / piilota sovellus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2593"/>
+        <location filename="../mainwindow.ui" line="2595"/>
         <source>Previous note tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2605"/>
+        <location filename="../mainwindow.ui" line="2607"/>
         <source>Next note tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1904"/>
+        <location filename="../mainwindow.ui" line="2619"/>
+        <source>Close current note tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="2631"/>
+        <source>New note in new tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1906"/>
         <source>Use &amp;vertical preview layout</source>
         <translation>Käytä &amp;pystysuoran esikatselun asettelua</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1907"/>
-        <location filename="../mainwindow.ui" line="1910"/>
+        <location filename="../mainwindow.ui" line="1909"/>
+        <location filename="../mainwindow.ui" line="1912"/>
         <source>The note edit panel will be above the preview panel</source>
         <translation>Huomautus-muokkauspaneeli on esikatselupaneelin yläpuolella</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1919"/>
+        <location filename="../mainwindow.ui" line="1921"/>
         <source>Replace in current note</source>
         <translation>Vaihda nykyiseen muistiinpanoon</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1927"/>
+        <location filename="../mainwindow.ui" line="1929"/>
         <source>Autocomplete, solve equation or open URL</source>
         <translation>Automaattinen täydennys, ratkaise yhtälö tai avoin URL</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1930"/>
+        <location filename="../mainwindow.ui" line="1932"/>
         <source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
         <translation>Ratkaise nykyinen rivi yksinkertainen yhtälö kuten &quot;(2 + 3) * 6 =&quot;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1938"/>
+        <location filename="../mainwindow.ui" line="1940"/>
         <source>Select note folder</source>
         <translation>Valitse huomautuskansio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1953"/>
+        <location filename="../mainwindow.ui" line="1955"/>
         <source>Reload scripting engine</source>
         <translation>Lataa komentosarja uudelleen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1986"/>
-        <location filename="../mainwindow.ui" line="1989"/>
+        <location filename="../mainwindow.ui" line="1988"/>
+        <location filename="../mainwindow.ui" line="1991"/>
         <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
         <translation>Avaa #qownnotes IRC -kanava, sinun on pysyttävä verkossa saadaksesi vastauksen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2216"/>
-        <location filename="../mainwindow.ui" line="2219"/>
+        <location filename="../mainwindow.ui" line="2218"/>
+        <location filename="../mainwindow.ui" line="2221"/>
         <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
         <translation>Avaa qownnotes Gitter -huone, tarvitset GitHub- tai Twitter-tilin kirjautumiseen, mutta voit saada offline-viestejä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="989"/>
+        <location filename="../mainwindow.ui" line="991"/>
         <source>Open chat</source>
         <translation>Avaa chat</translation>
     </message>
@@ -2627,68 +2637,68 @@
         <translation>Huomaa toimintaa…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1592"/>
+        <location filename="../mainwindow.ui" line="1594"/>
         <source>&amp;Print note (preview)</source>
         <translation>&amp;Tulosta Huomautus (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1998"/>
+        <location filename="../mainwindow.ui" line="2000"/>
         <source>Insert headline from note filename</source>
         <translation>Lisää otsikko huomautus tiedostonimi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2012"/>
+        <location filename="../mainwindow.ui" line="2014"/>
         <source>Use softwrap in note editor and preview</source>
         <translation>Käytä softwrapia muistiinpanojen editorissa ja esikatselussa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2020"/>
+        <location filename="../mainwindow.ui" line="2022"/>
         <source>Show status bar</source>
         <translation>Näytä tilarivi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2035"/>
+        <location filename="../mainwindow.ui" line="2037"/>
         <source>Share note</source>
         <translation>Jaa huomautus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2065"/>
+        <location filename="../mainwindow.ui" line="2067"/>
         <source>Markdown cheatsheet</source>
         <translation>Markdown cheatsheet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2074"/>
+        <location filename="../mainwindow.ui" line="2076"/>
         <source>Strike out text</source>
         <translation>Tarpeeton teksti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2085"/>
+        <location filename="../mainwindow.ui" line="2087"/>
         <source>Use one column mode</source>
         <translation>Käytä yhtä saraketilaa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2088"/>
-        <location filename="../mainwindow.ui" line="2091"/>
+        <location filename="../mainwindow.ui" line="2090"/>
+        <location filename="../mainwindow.ui" line="2093"/>
         <source>Use a one column minimal mode (like NVAlt)</source>
         <translation>Käytä yhden sarakkeen vähimmäistilaa (kuten NVAlt)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2103"/>
+        <location filename="../mainwindow.ui" line="2105"/>
         <source>Show menu bar</source>
         <translation>Näytä valikkorivi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2115"/>
+        <location filename="../mainwindow.ui" line="2117"/>
         <source>Split note at cursor position</source>
         <translation>Jaa huomautus kohdistimen kohdalla</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2135"/>
+        <location filename="../mainwindow.ui" line="2137"/>
         <source>Donate</source>
         <translation>Lahjoita</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2156"/>
+        <location filename="../mainwindow.ui" line="2158"/>
         <source>Import notes from Evernote</source>
         <translation>Tuo muistiinpanoja Evernotesta</translation>
     </message>
@@ -3316,13 +3326,13 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2446"/>
+        <location filename="../mainwindow.ui" line="2448"/>
         <location filename="../mainwindow.cpp" line="11834"/>
         <source>Allow all note editing</source>
         <translation>Salli kaikkien muistiinpanojen muokkaus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1224"/>
+        <location filename="../mainwindow.ui" line="1226"/>
         <source>&amp;Tag</source>
         <translation>&amp;Tag</translation>
     </message>

@@ -1818,139 +1818,139 @@
         <translation>Sorteaza dupa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="985"/>
+        <location filename="../mainwindow.ui" line="987"/>
         <source>&amp;Help</source>
         <translation>&amp;Ajutor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1142"/>
+        <location filename="../mainwindow.ui" line="1144"/>
         <source>Editor width in distraction free mode</source>
         <translation>Lățimea editorului în modul liber pentru distragere</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1145"/>
+        <location filename="../mainwindow.ui" line="1147"/>
         <source>Editor width</source>
         <translation>Editor de lăţime</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1234"/>
+        <location filename="../mainwindow.ui" line="1236"/>
         <source>Custom actions</source>
         <translation>Acțiuni particularizate</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1254"/>
+        <location filename="../mainwindow.ui" line="1256"/>
         <source>main toolbar</source>
         <translation>bara de instrumente principale</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1288"/>
+        <location filename="../mainwindow.ui" line="1290"/>
         <source>&amp;Quit</source>
         <translation>&amp;Renunta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1303"/>
+        <location filename="../mainwindow.ui" line="1305"/>
         <source>&amp;Setup note folders</source>
         <translation>&amp;Notă foldere de instalare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1312"/>
+        <location filename="../mainwindow.ui" line="1314"/>
         <source>&amp;Find note</source>
         <translation>&amp;Găsi notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1324"/>
+        <location filename="../mainwindow.ui" line="1326"/>
         <source>&amp;Remove current note</source>
         <translation>&amp;Elimina curent notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1348"/>
+        <location filename="../mainwindow.ui" line="1350"/>
         <source>&amp;New note</source>
         <translation>&amp;Notă nouă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1360"/>
+        <location filename="../mainwindow.ui" line="1362"/>
         <source>Check for &amp;updates</source>
         <translation>Pentru a verifica &amp;actualizări</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1372"/>
+        <location filename="../mainwindow.ui" line="1374"/>
         <source>Post questions, feature requests or issues</source>
         <translation>Posta intrebari, cereri de facilitati sau probleme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1383"/>
+        <location filename="../mainwindow.ui" line="1385"/>
         <source>Alphabetical</source>
         <translation>Ordine alfabetică</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1386"/>
+        <location filename="../mainwindow.ui" line="1388"/>
         <source>Sort alphabetical</source>
         <translation>Sortare alfabetică</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1394"/>
+        <location filename="../mainwindow.ui" line="1396"/>
         <source>By date</source>
         <translation>După dată</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1397"/>
+        <location filename="../mainwindow.ui" line="1399"/>
         <source>Sort by date</source>
         <translation>Sorteaza dupa data</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1421"/>
+        <location filename="../mainwindow.ui" line="1423"/>
         <source>Show note &amp;versions</source>
         <translation>Notă Arată &amp; versiuni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1424"/>
+        <location filename="../mainwindow.ui" line="1426"/>
         <source>Show note versions on server</source>
         <translation>Arată versiunile notă pe server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1436"/>
+        <location filename="../mainwindow.ui" line="1438"/>
         <source>Show trashed notes on server</source>
         <translation>Arată note trashed pe server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1441"/>
+        <location filename="../mainwindow.ui" line="1443"/>
         <location filename="../mainwindow.cpp" line="10263"/>
         <source>Select &amp;all notes</source>
         <translation>Selectaţi &amp;toate notele</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1450"/>
+        <location filename="../mainwindow.ui" line="1452"/>
         <location filename="../mainwindow.cpp" line="6491"/>
         <source>Insert &amp;link</source>
         <translation>Inserare &amp;link-ul</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1453"/>
+        <location filename="../mainwindow.ui" line="1455"/>
         <source>Insert link to an url or a note</source>
         <translation>Introduceţi link-ul la un url sau o notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1465"/>
+        <location filename="../mainwindow.ui" line="1467"/>
         <source>&amp;Find in current note</source>
         <translation>&amp;Găsi în nota de curent</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1468"/>
+        <location filename="../mainwindow.ui" line="1470"/>
         <source>Find text in current note</source>
         <translation>Găseşte textul în curent notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1481"/>
+        <location filename="../mainwindow.ui" line="1483"/>
         <source>&amp;Duplicate text</source>
         <translation>&amp;Text duplicat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1493"/>
+        <location filename="../mainwindow.ui" line="1495"/>
         <source>&amp;Back in note history</source>
         <translation>&amp;Înapoi în istorie de nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1406"/>
+        <location filename="../mainwindow.ui" line="1408"/>
         <source>&amp;Settings</source>
         <translation>&amp;Setările</translation>
     </message>
@@ -1996,637 +1996,647 @@
         <translation>Import</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="926"/>
+        <location filename="../mainwindow.ui" line="927"/>
         <location filename="../mainwindow.cpp" line="6523"/>
         <source>Print</source>
         <translation>Imprimare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="937"/>
+        <location filename="../mainwindow.ui" line="938"/>
         <source>View note</source>
         <translation>Vezi nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="949"/>
+        <location filename="../mainwindow.ui" line="950"/>
         <source>Trash</source>
         <translation>Coşul de gunoi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1016"/>
+        <location filename="../mainwindow.ui" line="1018"/>
         <source>&amp;Edit</source>
         <translation>&amp;Editare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1020"/>
+        <location filename="../mainwindow.ui" line="1022"/>
         <source>Insert</source>
         <translation>Inserare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1037"/>
+        <location filename="../mainwindow.ui" line="1039"/>
         <source>Format</source>
         <translation>Formatul</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1050"/>
+        <location filename="../mainwindow.ui" line="1052"/>
         <source>Extra</source>
         <translation>Suplimentar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1066"/>
+        <location filename="../mainwindow.ui" line="1068"/>
         <source>Edit</source>
         <translation>Editare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1079"/>
+        <location filename="../mainwindow.ui" line="1081"/>
         <source>Versioning</source>
         <translation>Controlul versiunilor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1090"/>
+        <location filename="../mainwindow.ui" line="1092"/>
         <source>Encryption</source>
         <translation>Criptare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1102"/>
+        <location filename="../mainwindow.ui" line="1104"/>
         <source>Languages</source>
         <translation>Limbile</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1107"/>
+        <location filename="../mainwindow.ui" line="1109"/>
         <source>Spelling backend</source>
         <translation>Backend ortografic</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1132"/>
+        <location filename="../mainwindow.ui" line="1134"/>
         <source>To&amp;do</source>
         <translation>La&amp;face</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1138"/>
+        <location filename="../mainwindow.ui" line="1140"/>
         <source>&amp;Window</source>
         <translation>&amp;Fereastra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1155"/>
+        <location filename="../mainwindow.ui" line="1157"/>
         <location filename="../mainwindow.cpp" line="718"/>
         <source>Workspaces</source>
         <translation>Spaţii de lucru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1160"/>
+        <location filename="../mainwindow.ui" line="1162"/>
         <source>Panels</source>
         <translation>Panouri</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1165"/>
+        <location filename="../mainwindow.ui" line="1167"/>
         <source>Toolbars</source>
         <translation>Bare de instrumente</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1170"/>
+        <location filename="../mainwindow.ui" line="1172"/>
         <source>Show</source>
         <extracomment>To show or hide stuff</extracomment>
         <translation>Arată</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1185"/>
+        <location filename="../mainwindow.ui" line="1187"/>
         <source>Workspace</source>
         <translation>Spațiu de lucru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1194"/>
+        <location filename="../mainwindow.ui" line="1196"/>
         <source>Jump to</source>
         <translation>Salt la</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1230"/>
+        <location filename="../mainwindow.ui" line="1232"/>
         <source>&amp;Scripting</source>
         <translation>&amp;Scripting</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1336"/>
+        <location filename="../mainwindow.ui" line="1338"/>
         <source>About &amp;QOwnNotes…</source>
         <translation>Despre &amp;QOwnNotes…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1375"/>
+        <location filename="../mainwindow.ui" line="1377"/>
         <source>Post questions, feature requests or problems with the help of the issue assistant</source>
         <translation>Posta intrebari, cereri de facilitati sau probleme cu ajutorul asistentului problema</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1433"/>
+        <location filename="../mainwindow.ui" line="1435"/>
         <source>Show remote trash</source>
         <translation>Arată coşul de gunoi de la distanţă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1473"/>
-        <location filename="../mainwindow.ui" line="1476"/>
+        <location filename="../mainwindow.ui" line="1475"/>
+        <location filename="../mainwindow.ui" line="1478"/>
         <source>Auto format table</source>
         <translation>Auto format masă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1505"/>
+        <location filename="../mainwindow.ui" line="1507"/>
         <source>Forward in note history</source>
         <translation>Transmite în notă istorie</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1517"/>
+        <location filename="../mainwindow.ui" line="1519"/>
         <source>Show shortcuts</source>
         <translation>Arată comenzi rapide</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1526"/>
+        <location filename="../mainwindow.ui" line="1528"/>
         <source>&amp;Knowledge base</source>
         <translation>&amp;Baza de cunoştinţe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1535"/>
+        <location filename="../mainwindow.ui" line="1537"/>
         <source>Insert current &amp;time</source>
         <translation>Inserare curent &amp;timp</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1547"/>
+        <location filename="../mainwindow.ui" line="1549"/>
         <source>Show &amp;Todo List</source>
         <translation>Arată &amp;lista Todo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1559"/>
+        <location filename="../mainwindow.ui" line="1561"/>
         <source>&amp;Export note as PDF (preview)</source>
         <translation>&amp;Notă de export în format PDF (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1562"/>
+        <location filename="../mainwindow.ui" line="1564"/>
         <source>Export note as PDF (preview)</source>
         <translation>Notă de export în format PDF (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1571"/>
+        <location filename="../mainwindow.ui" line="1573"/>
         <source>&amp;Export note as PDF (text)</source>
         <translation>&amp;Notă de export în format PDF (text)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1580"/>
+        <location filename="../mainwindow.ui" line="1582"/>
         <source>&amp;Print note (text)</source>
         <translation>&amp;Imprima nota (text)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1604"/>
+        <location filename="../mainwindow.ui" line="1606"/>
         <source>Insert &amp;image</source>
         <translation>Inserare &amp;imagine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1607"/>
+        <location filename="../mainwindow.ui" line="1609"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
         <translation>Inseraţi imaginea (imaginea va fi copiat în folderul &apos;media&apos; în folderul curent note)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1619"/>
+        <location filename="../mainwindow.ui" line="1621"/>
         <source>Show &amp;changelog</source>
         <translation>Arată &amp;changelog</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1628"/>
+        <location filename="../mainwindow.ui" line="1630"/>
         <source>&amp;Encrypt note</source>
         <translation>&amp;Cripta notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1637"/>
+        <location filename="../mainwindow.ui" line="1639"/>
         <source>Edit encrypted note</source>
         <translation>Editare notă criptate</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1649"/>
+        <location filename="../mainwindow.ui" line="1651"/>
         <source>Decrypt note</source>
         <translation>Decriptare notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1658"/>
+        <location filename="../mainwindow.ui" line="1660"/>
         <source>&amp;Open note in external editor</source>
         <translation>&amp;Notă deschisă în editor extern</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1670"/>
+        <location filename="../mainwindow.ui" line="1672"/>
         <source>&amp;Export note as markdown file</source>
         <translation>&amp;Export nota ca fişier markdown</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1679"/>
+        <location filename="../mainwindow.ui" line="1681"/>
         <source>&amp;Get involved</source>
         <translation>&amp;Implica</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1688"/>
+        <location filename="../mainwindow.ui" line="1690"/>
         <source>Insert &amp;code block</source>
         <translation>Inserare &amp;cod bloc</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1700"/>
+        <location filename="../mainwindow.ui" line="1702"/>
         <source>Next note</source>
         <translation>Următoarea notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1712"/>
+        <location filename="../mainwindow.ui" line="1714"/>
         <source>Previous note</source>
         <translation>Nota anterioară</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1724"/>
+        <location filename="../mainwindow.ui" line="1726"/>
         <source>&amp;Distraction free mode</source>
         <translation>&amp;Modul liber de distragere a atenţiei</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1727"/>
+        <location filename="../mainwindow.ui" line="1729"/>
         <source>Distraction free mode, you can leave it with a button on the bottom right</source>
         <translation>Modul gratuit de distragere a atenţiei, puteţi lăsa cu un buton de pe dreapta jos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1738"/>
+        <location filename="../mainwindow.ui" line="1740"/>
         <source>Show &amp;toolbar</source>
         <translation>Arată &amp;bara de instrumente</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1746"/>
+        <location filename="../mainwindow.ui" line="1748"/>
         <source>Narrow</source>
         <translation>Îngust</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1757"/>
+        <location filename="../mainwindow.ui" line="1759"/>
         <source>Medium</source>
         <translation>Mediu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1768"/>
+        <location filename="../mainwindow.ui" line="1770"/>
         <source>Wide</source>
         <translation>Largă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1779"/>
+        <location filename="../mainwindow.ui" line="1781"/>
         <source>Full</source>
         <translation>Complet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1791"/>
+        <location filename="../mainwindow.ui" line="1793"/>
         <source>Paste html or media</source>
         <translation>Pastă de html sau mass-media</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1794"/>
-        <location filename="../mainwindow.ui" line="1797"/>
+        <location filename="../mainwindow.ui" line="1796"/>
+        <location filename="../mainwindow.ui" line="1799"/>
         <source>Paste images, notes and html from the clipboard</source>
         <translation>Lipire imagini, note şi html din clipboard</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1809"/>
+        <location filename="../mainwindow.ui" line="1811"/>
         <source>Show note in &amp;file manager</source>
         <translation>Arată notă în &amp;file manager</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1821"/>
+        <location filename="../mainwindow.ui" line="1823"/>
         <source>Format text &amp;bold</source>
         <translation>Formatarea textului &amp;bold</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1833"/>
+        <location filename="../mainwindow.ui" line="1835"/>
         <source>Format text &amp;italic</source>
         <translation>Formatul text &amp;cursiv</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1845"/>
+        <location filename="../mainwindow.ui" line="1847"/>
         <source>&amp;Increase note text size</source>
         <translation>&amp;Creşte notă text size</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1857"/>
+        <location filename="../mainwindow.ui" line="1859"/>
         <source>&amp;Decrease note text size</source>
         <translation>&amp;Micşorează dimensiunea de text notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1869"/>
+        <location filename="../mainwindow.ui" line="1871"/>
         <source>&amp;Reset note text size</source>
         <translation>&amp;Reset notă dimensiunea textului</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1881"/>
+        <location filename="../mainwindow.ui" line="1883"/>
         <source>&amp;Add tag to note</source>
         <translation>&amp;Adăugaţi tag-ul pentru a nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1893"/>
+        <location filename="../mainwindow.ui" line="1895"/>
         <source>&amp;Reload note folder</source>
         <translation>&amp;Reload nota dosar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1965"/>
+        <location filename="../mainwindow.ui" line="1967"/>
         <source>Show log</source>
         <translation>Arată jurnal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1974"/>
+        <location filename="../mainwindow.ui" line="1976"/>
         <source>Export note as HTML</source>
         <translation>Exportați nota ca HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2053"/>
+        <location filename="../mainwindow.ui" line="2055"/>
         <source>Cycle text case</source>
         <translation>Caz de text ciclu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2126"/>
+        <location filename="../mainwindow.ui" line="2128"/>
         <source>Show note list under tag panel</source>
         <translation>Arată lista de notă în panoul de tag-ul</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2144"/>
+        <location filename="../mainwindow.ui" line="2146"/>
         <source>Find notes in all tags / subfolders</source>
         <translation>Găsi notele în toate Tag-urile / subfoldere</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2165"/>
+        <location filename="../mainwindow.ui" line="2167"/>
         <source>Import notes from text files</source>
         <translation>Note de import din fisiere text</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2174"/>
+        <location filename="../mainwindow.ui" line="2176"/>
         <source>Manage orphaned image files</source>
         <translation>Gestionaţi fişiere imagine orfani</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2186"/>
-        <location filename="../mainwindow.ui" line="2189"/>
+        <location filename="../mainwindow.ui" line="2188"/>
+        <location filename="../mainwindow.ui" line="2191"/>
         <source>Open the Telegram group</source>
         <translation>Deschideþi grupul telegrama</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2201"/>
-        <location filename="../mainwindow.ui" line="2204"/>
+        <location filename="../mainwindow.ui" line="2203"/>
+        <location filename="../mainwindow.ui" line="2206"/>
         <source>Open the Riot room</source>
         <extracomment>&quot;Riot&quot; as in the chat service</extracomment>
         <translation>Deschideți camera de Riot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2231"/>
+        <location filename="../mainwindow.ui" line="2233"/>
         <source>Unlock panels</source>
         <translation>Debloca panouri</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2240"/>
+        <location filename="../mainwindow.ui" line="2242"/>
         <location filename="../mainwindow.cpp" line="11374"/>
         <source>Remove current workspace</source>
         <translation>Elimina spațiu de lucru curent</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2249"/>
+        <location filename="../mainwindow.ui" line="2251"/>
         <source>Add new workspace</source>
         <translation>Adauga spațiu de lucru nou</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2258"/>
+        <location filename="../mainwindow.ui" line="2260"/>
         <source>Rename current workspace</source>
         <translation>Redenumiţi spațiu de lucru curent</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2267"/>
+        <location filename="../mainwindow.ui" line="2269"/>
         <source>Switch to previous workspace</source>
         <translation>Comutați la spațiul de lucru anterioare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2275"/>
+        <location filename="../mainwindow.ui" line="2277"/>
         <source>Show all panels</source>
         <translation>Arată toate panourile</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2284"/>
+        <location filename="../mainwindow.ui" line="2286"/>
         <source>Find action</source>
         <translation>Găsi acţiune</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2287"/>
-        <location filename="../mainwindow.ui" line="2290"/>
+        <location filename="../mainwindow.ui" line="2289"/>
+        <location filename="../mainwindow.ui" line="2292"/>
         <source>Find an action from the menu</source>
         <translation>Găsi o acţiune din meniul</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2302"/>
+        <location filename="../mainwindow.ui" line="2304"/>
         <source>Insert table</source>
         <translation>Inserare tabel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2314"/>
+        <location filename="../mainwindow.ui" line="2316"/>
         <location filename="../mainwindow.cpp" line="6500"/>
         <source>Insert block &amp;quote</source>
         <translation>Inserare bloc &amp; citat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2322"/>
-        <location filename="../mainwindow.ui" line="2325"/>
+        <location filename="../mainwindow.ui" line="2324"/>
+        <location filename="../mainwindow.ui" line="2327"/>
         <source>Search selected text on the web</source>
         <translation>Căutare text selectat pe web</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2333"/>
+        <location filename="../mainwindow.ui" line="2335"/>
         <source>Delete line</source>
         <translation>Şterge linia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2341"/>
+        <location filename="../mainwindow.ui" line="2343"/>
         <source>Delete word</source>
         <translation>Şterge cuvântul</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2349"/>
+        <location filename="../mainwindow.ui" line="2351"/>
         <source>Copy note headline</source>
         <translation>Titlul de notă copie</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2361"/>
+        <location filename="../mainwindow.ui" line="2363"/>
         <location filename="../mainwindow.cpp" line="10239"/>
         <source>Open note in different window</source>
         <translation>Notă deschisă în fereastra diferite</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2373"/>
+        <location filename="../mainwindow.ui" line="2375"/>
         <source>Save modified notes</source>
         <translation>Memora note modificate</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2384"/>
+        <location filename="../mainwindow.ui" line="2386"/>
         <source>Ascending</source>
         <translation>Ascendent</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2392"/>
+        <location filename="../mainwindow.ui" line="2394"/>
         <source>Descending</source>
         <translation>Descendentă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2401"/>
+        <location filename="../mainwindow.ui" line="2403"/>
         <location filename="../mainwindow.cpp" line="10247"/>
         <source>Show note git versions</source>
         <translation>Arată versiunile de git notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2410"/>
+        <location filename="../mainwindow.ui" line="2412"/>
         <source>Find scripts in script repository</source>
         <translation>Găsi script-uri în script-ul repozitoriu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2422"/>
+        <location filename="../mainwindow.ui" line="2424"/>
         <source>Script settings</source>
         <translation>Setãri script</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2431"/>
+        <location filename="../mainwindow.ui" line="2433"/>
         <source>Insert attachment</source>
         <translation>Inserare ataşament</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2458"/>
+        <location filename="../mainwindow.ui" line="2460"/>
         <source>Check for script updates</source>
         <translation>Verificaţi pentru actualizări script</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2467"/>
+        <location filename="../mainwindow.ui" line="2469"/>
         <source>Show local trash</source>
         <translation>Arată coşul de gunoi locale</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2472"/>
-        <location filename="../mainwindow.ui" line="2475"/>
+        <location filename="../mainwindow.ui" line="2474"/>
+        <location filename="../mainwindow.ui" line="2477"/>
         <source>Jump to note edit panel</source>
         <translation>Salt la nota panoul de editare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2487"/>
+        <location filename="../mainwindow.ui" line="2489"/>
         <source>Manage orphaned attachments</source>
         <translation>Gestiona atasamente orfani</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2492"/>
+        <location filename="../mainwindow.ui" line="2494"/>
         <source>Jump to note subfolder panel</source>
         <translation>Sari pentru a nota subfolder panou</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2500"/>
+        <location filename="../mainwindow.ui" line="2502"/>
         <source>Jump to tags panel</source>
         <translation>Salt la panoul de Tag-uri</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2508"/>
+        <location filename="../mainwindow.ui" line="2510"/>
         <source>Jump to note list panel</source>
         <translation>Sari pentru a nota panou lista</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2516"/>
+        <location filename="../mainwindow.ui" line="2518"/>
         <source>Activate context menu</source>
         <translation>Activa meniul contextual</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2524"/>
+        <location filename="../mainwindow.ui" line="2526"/>
         <source>Import bookmarks from server</source>
         <translation>Importați marcaje de pe server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2529"/>
-        <location filename="../mainwindow.ui" line="2532"/>
+        <location filename="../mainwindow.ui" line="2531"/>
+        <location filename="../mainwindow.ui" line="2534"/>
         <source>Toggle full-screen mode</source>
         <translation>Comutați modul ecran complet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2543"/>
+        <location filename="../mainwindow.ui" line="2545"/>
         <source>Typewriter mode</source>
         <translation>Modul de scris</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2555"/>
+        <location filename="../mainwindow.ui" line="2557"/>
         <source>Check spelling</source>
         <translation>Verifica ortografia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2563"/>
+        <location filename="../mainwindow.ui" line="2565"/>
         <location filename="../mainwindow.cpp" line="12243"/>
         <source>Automatically detect</source>
         <translation>Detectează automat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2568"/>
+        <location filename="../mainwindow.ui" line="2570"/>
         <source>Manage dictionaries</source>
         <translation>Gestionați dicționarele</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2576"/>
+        <location filename="../mainwindow.ui" line="2578"/>
         <source>Custom</source>
         <translation>Personalizat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2579"/>
+        <location filename="../mainwindow.ui" line="2581"/>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2584"/>
+        <location filename="../mainwindow.ui" line="2586"/>
         <source>Show/Hide application</source>
         <translation>Afișare / Ascundere aplicație</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2593"/>
+        <location filename="../mainwindow.ui" line="2595"/>
         <source>Previous note tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2605"/>
+        <location filename="../mainwindow.ui" line="2607"/>
         <source>Next note tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1904"/>
+        <location filename="../mainwindow.ui" line="2619"/>
+        <source>Close current note tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="2631"/>
+        <source>New note in new tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1906"/>
         <source>Use &amp;vertical preview layout</source>
         <translation>Utilizarea &amp;verticale previzualizare aspect</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1907"/>
-        <location filename="../mainwindow.ui" line="1910"/>
+        <location filename="../mainwindow.ui" line="1909"/>
+        <location filename="../mainwindow.ui" line="1912"/>
         <source>The note edit panel will be above the preview panel</source>
         <translation>Panoul de editare Notă va fi mai sus de panoul de previzualizare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1919"/>
+        <location filename="../mainwindow.ui" line="1921"/>
         <source>Replace in current note</source>
         <translation>Înlocuiţi în curent notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1927"/>
+        <location filename="../mainwindow.ui" line="1929"/>
         <source>Autocomplete, solve equation or open URL</source>
         <translation>Completare automată, rezolva ecuaţia sau deschide URL-ul</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1930"/>
+        <location filename="../mainwindow.ui" line="1932"/>
         <source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
         <translation>Rezolva o ecuaţie simplă ca &apos;(2+3) * 6 =&apos; în linia curentă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1938"/>
+        <location filename="../mainwindow.ui" line="1940"/>
         <source>Select note folder</source>
         <translation>Selectare folder de notă</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1953"/>
+        <location filename="../mainwindow.ui" line="1955"/>
         <source>Reload scripting engine</source>
         <translation>Motorul de scriptare reîncărcare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1986"/>
-        <location filename="../mainwindow.ui" line="1989"/>
+        <location filename="../mainwindow.ui" line="1988"/>
+        <location filename="../mainwindow.ui" line="1991"/>
         <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
         <translation>Deschide canalul de IRC #qownnotes, va trebui să staţi online pentru a obţine un răspuns</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2216"/>
-        <location filename="../mainwindow.ui" line="2219"/>
+        <location filename="../mainwindow.ui" line="2218"/>
+        <location filename="../mainwindow.ui" line="2221"/>
         <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
         <translation>Deschideți camera Gitter qownnotes, aveți nevoie de un cont GitHub sau Twitter pentru a vă conecta, dar puteți obține mesaje offline</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="989"/>
+        <location filename="../mainwindow.ui" line="991"/>
         <source>Open chat</source>
         <translation>Deschideți chat-ul</translation>
     </message>
@@ -2636,68 +2646,68 @@
         <translation>Operațiunile de notare…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1592"/>
+        <location filename="../mainwindow.ui" line="1594"/>
         <source>&amp;Print note (preview)</source>
         <translation>&amp;Notă imprimare (previzualizare)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1998"/>
+        <location filename="../mainwindow.ui" line="2000"/>
         <source>Insert headline from note filename</source>
         <translation>Inserați titlul din numele fișierului notei</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2012"/>
+        <location filename="../mainwindow.ui" line="2014"/>
         <source>Use softwrap in note editor and preview</source>
         <translation>Utilizați softwrap în editorul de note și previzualizare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2020"/>
+        <location filename="../mainwindow.ui" line="2022"/>
         <source>Show status bar</source>
         <translation>Afișează bara de stare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2035"/>
+        <location filename="../mainwindow.ui" line="2037"/>
         <source>Share note</source>
         <translation>Trimiteți nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2065"/>
+        <location filename="../mainwindow.ui" line="2067"/>
         <source>Markdown cheatsheet</source>
         <translation>Markdown cheatsheet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2074"/>
+        <location filename="../mainwindow.ui" line="2076"/>
         <source>Strike out text</source>
         <translation>Înlăturați textul</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2085"/>
+        <location filename="../mainwindow.ui" line="2087"/>
         <source>Use one column mode</source>
         <translation>Utilizați un mod de coloană</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2088"/>
-        <location filename="../mainwindow.ui" line="2091"/>
+        <location filename="../mainwindow.ui" line="2090"/>
+        <location filename="../mainwindow.ui" line="2093"/>
         <source>Use a one column minimal mode (like NVAlt)</source>
         <translation>Utilizați un mod minimal de o coloană (cum ar fi NVAlt)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2103"/>
+        <location filename="../mainwindow.ui" line="2105"/>
         <source>Show menu bar</source>
         <translation>Afișați bara de meniu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2115"/>
+        <location filename="../mainwindow.ui" line="2117"/>
         <source>Split note at cursor position</source>
         <translation>Notă separată la poziția cursorului</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2135"/>
+        <location filename="../mainwindow.ui" line="2137"/>
         <source>Donate</source>
         <translation>Dona</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2156"/>
+        <location filename="../mainwindow.ui" line="2158"/>
         <source>Import notes from Evernote</source>
         <translation>Note de import de la Evernote</translation>
     </message>
@@ -3342,13 +3352,13 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2446"/>
+        <location filename="../mainwindow.ui" line="2448"/>
         <location filename="../mainwindow.cpp" line="11834"/>
         <source>Allow all note editing</source>
         <translation>Permiteți editarea tuturor notelor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1224"/>
+        <location filename="../mainwindow.ui" line="1226"/>
         <source>&amp;Tag</source>
         <translation>&amp;Etichetă</translation>
     </message>

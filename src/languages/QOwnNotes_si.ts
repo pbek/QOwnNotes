@@ -1809,139 +1809,139 @@
         <translation>අනුව තෝරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="985"/>
+        <location filename="../mainwindow.ui" line="987"/>
         <source>&amp;Help</source>
         <translation>&amp;උදව්</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1142"/>
+        <location filename="../mainwindow.ui" line="1144"/>
         <source>Editor width in distraction free mode</source>
         <translation>අවධානය වෙනතකට යොමු නොවන ආකාරයෙන් සංස්කාරක පළල</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1145"/>
+        <location filename="../mainwindow.ui" line="1147"/>
         <source>Editor width</source>
         <translation>සංස්කාරක පළල</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1234"/>
+        <location filename="../mainwindow.ui" line="1236"/>
         <source>Custom actions</source>
         <translation>අභිරුචි ක්රියාවන්</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1254"/>
+        <location filename="../mainwindow.ui" line="1256"/>
         <source>main toolbar</source>
         <translation>ප්‍රධාන මෙවලම් තීරුව</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1288"/>
+        <location filename="../mainwindow.ui" line="1290"/>
         <source>&amp;Quit</source>
         <translation>&amp;ඉවත්</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1303"/>
+        <location filename="../mainwindow.ui" line="1305"/>
         <source>&amp;Setup note folders</source>
         <translation>&amp;සටහන් ෆෝල්ඩර සකසන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1312"/>
+        <location filename="../mainwindow.ui" line="1314"/>
         <source>&amp;Find note</source>
         <translation>&amp;සටහන සොයන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1324"/>
+        <location filename="../mainwindow.ui" line="1326"/>
         <source>&amp;Remove current note</source>
         <translation>&amp;වත්මන් සටහන ඉවත් කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1348"/>
+        <location filename="../mainwindow.ui" line="1350"/>
         <source>&amp;New note</source>
         <translation>&amp;නව සටහනක්</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1360"/>
+        <location filename="../mainwindow.ui" line="1362"/>
         <source>Check for &amp;updates</source>
         <translation>යාවත්කාලීන කිරීම් &amp;සඳහා පරීක්ෂා කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1372"/>
+        <location filename="../mainwindow.ui" line="1374"/>
         <source>Post questions, feature requests or issues</source>
         <translation>ප්‍රශ්න, විශේෂාංග ඉල්ලීම් හෝ ගැටළු පළ කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1383"/>
+        <location filename="../mainwindow.ui" line="1385"/>
         <source>Alphabetical</source>
         <translation>අකාරාදී</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1386"/>
+        <location filename="../mainwindow.ui" line="1388"/>
         <source>Sort alphabetical</source>
         <translation>අකාරාදී පිළිවෙලට</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1394"/>
+        <location filename="../mainwindow.ui" line="1396"/>
         <source>By date</source>
         <translation>දිනය අනුව</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1397"/>
+        <location filename="../mainwindow.ui" line="1399"/>
         <source>Sort by date</source>
         <translation>දිනය අනුව වර්ග කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1421"/>
+        <location filename="../mainwindow.ui" line="1423"/>
         <source>Show note &amp;versions</source>
         <translation>සටහන් අනුවාද &amp;පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1424"/>
+        <location filename="../mainwindow.ui" line="1426"/>
         <source>Show note versions on server</source>
         <translation>සේවාදායකයේ සටහන් අනුවාද පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1436"/>
+        <location filename="../mainwindow.ui" line="1438"/>
         <source>Show trashed notes on server</source>
         <translation>ඉවත දැමූ සටහන් සේවාදායකයේ පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1441"/>
+        <location filename="../mainwindow.ui" line="1443"/>
         <location filename="../mainwindow.cpp" line="10263"/>
         <source>Select &amp;all notes</source>
         <translation>සියලුම &amp;සටහන් තෝරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1450"/>
+        <location filename="../mainwindow.ui" line="1452"/>
         <location filename="../mainwindow.cpp" line="6491"/>
         <source>Insert &amp;link</source>
         <translation>&amp;සබැඳිය ඇතුළු කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1453"/>
+        <location filename="../mainwindow.ui" line="1455"/>
         <source>Insert link to an url or a note</source>
         <translation>යූආර්එල් හෝ සටහනකට සබැඳිය ඇතුළු කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1465"/>
+        <location filename="../mainwindow.ui" line="1467"/>
         <source>&amp;Find in current note</source>
         <translation>&amp;වත්මන් සටහනෙන් සොයා ගන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1468"/>
+        <location filename="../mainwindow.ui" line="1470"/>
         <source>Find text in current note</source>
         <translation>වත්මන් සටහනේ පෙළ සොයා ගන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1481"/>
+        <location filename="../mainwindow.ui" line="1483"/>
         <source>&amp;Duplicate text</source>
         <translation>&amp;අනුපිටපත් පෙළ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1493"/>
+        <location filename="../mainwindow.ui" line="1495"/>
         <source>&amp;Back in note history</source>
         <translation>&amp;සටහන් ඉතිහාසයට ආපසු</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1406"/>
+        <location filename="../mainwindow.ui" line="1408"/>
         <source>&amp;Settings</source>
         <translation>&amp;සැකසුම්</translation>
     </message>
@@ -1987,637 +1987,647 @@
         <translation>ආනයන</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="926"/>
+        <location filename="../mainwindow.ui" line="927"/>
         <location filename="../mainwindow.cpp" line="6523"/>
         <source>Print</source>
         <translation>මුද්‍රණය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="937"/>
+        <location filename="../mainwindow.ui" line="938"/>
         <source>View note</source>
         <translation>සටහන බලන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="949"/>
+        <location filename="../mainwindow.ui" line="950"/>
         <source>Trash</source>
         <translation>කුණු කූඩය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1016"/>
+        <location filename="../mainwindow.ui" line="1018"/>
         <source>&amp;Edit</source>
         <translation>&amp;සංස්කරණය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1020"/>
+        <location filename="../mainwindow.ui" line="1022"/>
         <source>Insert</source>
         <translation>ඇතුළු කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1037"/>
+        <location filename="../mainwindow.ui" line="1039"/>
         <source>Format</source>
         <translation>ආකෘතිය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1050"/>
+        <location filename="../mainwindow.ui" line="1052"/>
         <source>Extra</source>
         <translation>අමතර</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1066"/>
+        <location filename="../mainwindow.ui" line="1068"/>
         <source>Edit</source>
         <translation>සංස්කරණය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1079"/>
+        <location filename="../mainwindow.ui" line="1081"/>
         <source>Versioning</source>
         <translation>අනුවාදය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1090"/>
+        <location filename="../mainwindow.ui" line="1092"/>
         <source>Encryption</source>
         <translation>ගුප්ත කේතනය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1102"/>
+        <location filename="../mainwindow.ui" line="1104"/>
         <source>Languages</source>
         <translation>භාෂා</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1107"/>
+        <location filename="../mainwindow.ui" line="1109"/>
         <source>Spelling backend</source>
         <translation>අක්ෂර වින්‍යාසය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1132"/>
+        <location filename="../mainwindow.ui" line="1134"/>
         <source>To&amp;do</source>
         <translation>&amp;කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1138"/>
+        <location filename="../mainwindow.ui" line="1140"/>
         <source>&amp;Window</source>
         <translation>&amp;කවුළුව</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1155"/>
+        <location filename="../mainwindow.ui" line="1157"/>
         <location filename="../mainwindow.cpp" line="718"/>
         <source>Workspaces</source>
         <translation>වැඩබිම්</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1160"/>
+        <location filename="../mainwindow.ui" line="1162"/>
         <source>Panels</source>
         <translation>පැනල්</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1165"/>
+        <location filename="../mainwindow.ui" line="1167"/>
         <source>Toolbars</source>
         <translation>මෙවලම් තීරු</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1170"/>
+        <location filename="../mainwindow.ui" line="1172"/>
         <source>Show</source>
         <extracomment>To show or hide stuff</extracomment>
         <translation>පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1185"/>
+        <location filename="../mainwindow.ui" line="1187"/>
         <source>Workspace</source>
         <translation>වැඩබිම</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1194"/>
+        <location filename="../mainwindow.ui" line="1196"/>
         <source>Jump to</source>
         <translation>වෙත පනින්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1230"/>
+        <location filename="../mainwindow.ui" line="1232"/>
         <source>&amp;Scripting</source>
         <translation>&amp;පිටපත් කිරීම</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1336"/>
+        <location filename="../mainwindow.ui" line="1338"/>
         <source>About &amp;QOwnNotes…</source>
         <translation>&amp;QOwnNotes ගැන…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1375"/>
+        <location filename="../mainwindow.ui" line="1377"/>
         <source>Post questions, feature requests or problems with the help of the issue assistant</source>
         <translation>ගැටළු සහකාරගේ සහාය ඇතිව ප්‍රශ්න, විශේෂාංග ඉල්ලීම් හෝ ගැටළු පළ කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1433"/>
+        <location filename="../mainwindow.ui" line="1435"/>
         <source>Show remote trash</source>
         <translation>දුරස්ථ කුණු කූඩය පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1473"/>
-        <location filename="../mainwindow.ui" line="1476"/>
+        <location filename="../mainwindow.ui" line="1475"/>
+        <location filename="../mainwindow.ui" line="1478"/>
         <source>Auto format table</source>
         <translation>ස්වයංක්‍රීය ආකෘති වගුව</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1505"/>
+        <location filename="../mainwindow.ui" line="1507"/>
         <source>Forward in note history</source>
         <translation>සටහන් ඉතිහාසයේ ඉදිරියට</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1517"/>
+        <location filename="../mainwindow.ui" line="1519"/>
         <source>Show shortcuts</source>
         <translation>කෙටිමං පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1526"/>
+        <location filename="../mainwindow.ui" line="1528"/>
         <source>&amp;Knowledge base</source>
         <translation>&amp;දැනුම පදනම්</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1535"/>
+        <location filename="../mainwindow.ui" line="1537"/>
         <source>Insert current &amp;time</source>
         <translation>වත්මන් කාලය &amp;ඇතුළු කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1547"/>
+        <location filename="../mainwindow.ui" line="1549"/>
         <source>Show &amp;Todo List</source>
         <translation>ටෝඩෝ &amp;ලැයිස්තුව පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1559"/>
+        <location filename="../mainwindow.ui" line="1561"/>
         <source>&amp;Export note as PDF (preview)</source>
         <translation>&amp;සටහන PDF ලෙස අපනයනය කරන්න (පෙරදසුන)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1562"/>
+        <location filename="../mainwindow.ui" line="1564"/>
         <source>Export note as PDF (preview)</source>
         <translation>සටහන PDF ලෙස අපනයනය කරන්න (පෙරදසුන)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1571"/>
+        <location filename="../mainwindow.ui" line="1573"/>
         <source>&amp;Export note as PDF (text)</source>
         <translation>&amp;සටහන PDF ලෙස පෙළ අපනයනය කරන්න (පෙළ)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1580"/>
+        <location filename="../mainwindow.ui" line="1582"/>
         <source>&amp;Print note (text)</source>
         <translation>&amp;මුද්‍රණ සටහන (පෙළ)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1604"/>
+        <location filename="../mainwindow.ui" line="1606"/>
         <source>Insert &amp;image</source>
         <translation>&amp;රූපය ඇතුළු කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1607"/>
+        <location filename="../mainwindow.ui" line="1609"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
         <translation>රූපය ඇතුල් කරන්න (රූපය වත්මන් සටහන් ෆෝල්ඩරයේ `මාධ්‍ය` ෆෝල්ඩරයට පිටපත් කරනු ඇත)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1619"/>
+        <location filename="../mainwindow.ui" line="1621"/>
         <source>Show &amp;changelog</source>
         <translation>වෙනස් කිරීමේ ලොගය පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1628"/>
+        <location filename="../mainwindow.ui" line="1630"/>
         <source>&amp;Encrypt note</source>
         <translation>&amp;සටහන සංකේතනය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1637"/>
+        <location filename="../mainwindow.ui" line="1639"/>
         <source>Edit encrypted note</source>
         <translation>සංකේතාත්මක සටහන සංස්කරණය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1649"/>
+        <location filename="../mainwindow.ui" line="1651"/>
         <source>Decrypt note</source>
         <translation>සටහන විකේතනය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1658"/>
+        <location filename="../mainwindow.ui" line="1660"/>
         <source>&amp;Open note in external editor</source>
         <translation>&amp;බාහිර සංස්කාරකයේ සටහන විවෘත කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1670"/>
+        <location filename="../mainwindow.ui" line="1672"/>
         <source>&amp;Export note as markdown file</source>
         <translation>&amp;සලකුණු අපනයන ගොනුවක් ලෙස අපනයනය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1679"/>
+        <location filename="../mainwindow.ui" line="1681"/>
         <source>&amp;Get involved</source>
         <translation>&amp;සම්බන්ධ වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1688"/>
+        <location filename="../mainwindow.ui" line="1690"/>
         <source>Insert &amp;code block</source>
         <translation>කේත කොටස ඇතුල් &amp;කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1700"/>
+        <location filename="../mainwindow.ui" line="1702"/>
         <source>Next note</source>
         <translation>ඊළඟ සටහන</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1712"/>
+        <location filename="../mainwindow.ui" line="1714"/>
         <source>Previous note</source>
         <translation>පෙර සටහන</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1724"/>
+        <location filename="../mainwindow.ui" line="1726"/>
         <source>&amp;Distraction free mode</source>
         <translation>&amp;අවධානය වෙනතකට යොමු කිරීමේ මාදිලිය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1727"/>
+        <location filename="../mainwindow.ui" line="1729"/>
         <source>Distraction free mode, you can leave it with a button on the bottom right</source>
         <translation>අවධානය වෙනතකට යොමු කිරීමේ මාදිලිය, ඔබට එය පහළ දකුණේ බොත්තමක් සමඟ තැබිය හැකිය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1738"/>
+        <location filename="../mainwindow.ui" line="1740"/>
         <source>Show &amp;toolbar</source>
         <translation>&amp;මෙවලම් තීරුව පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1746"/>
+        <location filename="../mainwindow.ui" line="1748"/>
         <source>Narrow</source>
         <translation>පටුයි</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1757"/>
+        <location filename="../mainwindow.ui" line="1759"/>
         <source>Medium</source>
         <translation>මධ්යම</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1768"/>
+        <location filename="../mainwindow.ui" line="1770"/>
         <source>Wide</source>
         <translation>පුළුල්</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1779"/>
+        <location filename="../mainwindow.ui" line="1781"/>
         <source>Full</source>
         <translation>පූර්ණ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1791"/>
+        <location filename="../mainwindow.ui" line="1793"/>
         <source>Paste html or media</source>
         <translation>HTML හෝ මාධ්‍ය අලවන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1794"/>
-        <location filename="../mainwindow.ui" line="1797"/>
+        <location filename="../mainwindow.ui" line="1796"/>
+        <location filename="../mainwindow.ui" line="1799"/>
         <source>Paste images, notes and html from the clipboard</source>
         <translation>පින්තූර, සටහන් සහ html ක්ලිප් පුවරුවෙන් අලවන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1809"/>
+        <location filename="../mainwindow.ui" line="1811"/>
         <source>Show note in &amp;file manager</source>
         <translation>&amp;ගොනු කළමනාකරු තුළ සටහන පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1821"/>
+        <location filename="../mainwindow.ui" line="1823"/>
         <source>Format text &amp;bold</source>
         <translation>&amp;පෙළ තද අකුරු කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1833"/>
+        <location filename="../mainwindow.ui" line="1835"/>
         <source>Format text &amp;italic</source>
         <translation>&amp;පෙළ ඇල අකුරු ආකෘතිකරණය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1845"/>
+        <location filename="../mainwindow.ui" line="1847"/>
         <source>&amp;Increase note text size</source>
         <translation>&amp;සටහන් පෙළ ප්‍රමාණය වැඩි කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1857"/>
+        <location filename="../mainwindow.ui" line="1859"/>
         <source>&amp;Decrease note text size</source>
         <translation>&amp;සටහන් පෙළ ප්‍රමාණය අඩු කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1869"/>
+        <location filename="../mainwindow.ui" line="1871"/>
         <source>&amp;Reset note text size</source>
         <translation>&amp;සටහන් පෙළ ප්‍රමාණය නැවත සකසන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1881"/>
+        <location filename="../mainwindow.ui" line="1883"/>
         <source>&amp;Add tag to note</source>
         <translation>&amp;සටහන් කිරීමට ටැගය එක් කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1893"/>
+        <location filename="../mainwindow.ui" line="1895"/>
         <source>&amp;Reload note folder</source>
         <translation>&amp;සටහන් ෆෝල්ඩරය නැවත පූරණය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1965"/>
+        <location filename="../mainwindow.ui" line="1967"/>
         <source>Show log</source>
         <translation>ලොගය පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1974"/>
+        <location filename="../mainwindow.ui" line="1976"/>
         <source>Export note as HTML</source>
         <translation>සටහන HTML ලෙස අපනයනය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2053"/>
+        <location filename="../mainwindow.ui" line="2055"/>
         <source>Cycle text case</source>
         <translation>චක්‍රීය පෙළ නඩුව</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2126"/>
+        <location filename="../mainwindow.ui" line="2128"/>
         <source>Show note list under tag panel</source>
         <translation>ටැග් පැනලය යටතේ සටහන් ලැයිස්තුව පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2144"/>
+        <location filename="../mainwindow.ui" line="2146"/>
         <source>Find notes in all tags / subfolders</source>
         <translation>සියලුම ටැග් / උප ෆෝල්ඩර වල සටහන් සොයන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2165"/>
+        <location filename="../mainwindow.ui" line="2167"/>
         <source>Import notes from text files</source>
         <translation>පෙළ ගොනු වලින් සටහන් ආයාත කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2174"/>
+        <location filename="../mainwindow.ui" line="2176"/>
         <source>Manage orphaned image files</source>
         <translation>අනාථ රූප ගොනු කළමනාකරණය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2186"/>
-        <location filename="../mainwindow.ui" line="2189"/>
+        <location filename="../mainwindow.ui" line="2188"/>
+        <location filename="../mainwindow.ui" line="2191"/>
         <source>Open the Telegram group</source>
         <translation>ටෙලිග්‍රාම් කණ්ඩායම විවෘත කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2201"/>
-        <location filename="../mainwindow.ui" line="2204"/>
+        <location filename="../mainwindow.ui" line="2203"/>
+        <location filename="../mainwindow.ui" line="2206"/>
         <source>Open the Riot room</source>
         <extracomment>&quot;Riot&quot; as in the chat service</extracomment>
         <translation>කැරලි කාමරය විවෘත කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2231"/>
+        <location filename="../mainwindow.ui" line="2233"/>
         <source>Unlock panels</source>
         <translation>පැනල් අගුළු ඇරීම</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2240"/>
+        <location filename="../mainwindow.ui" line="2242"/>
         <location filename="../mainwindow.cpp" line="11374"/>
         <source>Remove current workspace</source>
         <translation>වත්මන් වැඩබිම ඉවත් කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2249"/>
+        <location filename="../mainwindow.ui" line="2251"/>
         <source>Add new workspace</source>
         <translation>නව වැඩබිම් එක් කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2258"/>
+        <location filename="../mainwindow.ui" line="2260"/>
         <source>Rename current workspace</source>
         <translation>වත්මන් වැඩබිම නැවත නම් කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2267"/>
+        <location filename="../mainwindow.ui" line="2269"/>
         <source>Switch to previous workspace</source>
         <translation>පෙර සේවා ස්ථානයට මාරු වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2275"/>
+        <location filename="../mainwindow.ui" line="2277"/>
         <source>Show all panels</source>
         <translation>සියලුම පැනල් පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2284"/>
+        <location filename="../mainwindow.ui" line="2286"/>
         <source>Find action</source>
         <translation>ක්‍රියාව සොයා ගන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2287"/>
-        <location filename="../mainwindow.ui" line="2290"/>
+        <location filename="../mainwindow.ui" line="2289"/>
+        <location filename="../mainwindow.ui" line="2292"/>
         <source>Find an action from the menu</source>
         <translation>මෙනුවෙන් ක්‍රියාවක් සොයා ගන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2302"/>
+        <location filename="../mainwindow.ui" line="2304"/>
         <source>Insert table</source>
         <translation>වගුව ඇතුළු කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2314"/>
+        <location filename="../mainwindow.ui" line="2316"/>
         <location filename="../mainwindow.cpp" line="6500"/>
         <source>Insert block &amp;quote</source>
         <translation>&amp;වාරණ උපුටා දැක්වීම ඇතුළත් කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2322"/>
-        <location filename="../mainwindow.ui" line="2325"/>
+        <location filename="../mainwindow.ui" line="2324"/>
+        <location filename="../mainwindow.ui" line="2327"/>
         <source>Search selected text on the web</source>
         <translation>තෝරාගත් පෙළ වෙබයේ සොයන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2333"/>
+        <location filename="../mainwindow.ui" line="2335"/>
         <source>Delete line</source>
         <translation>පේළිය මකන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2341"/>
+        <location filename="../mainwindow.ui" line="2343"/>
         <source>Delete word</source>
         <translation>වචනය මකන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2349"/>
+        <location filename="../mainwindow.ui" line="2351"/>
         <source>Copy note headline</source>
         <translation>සටහන් සිරස්තලය පිටපත් කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2361"/>
+        <location filename="../mainwindow.ui" line="2363"/>
         <location filename="../mainwindow.cpp" line="10239"/>
         <source>Open note in different window</source>
         <translation>විවිධ කවුළුවක සටහන විවෘත කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2373"/>
+        <location filename="../mainwindow.ui" line="2375"/>
         <source>Save modified notes</source>
         <translation>වෙනස් කළ සටහන් සුරකින්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2384"/>
+        <location filename="../mainwindow.ui" line="2386"/>
         <source>Ascending</source>
         <translation>නඟින්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2392"/>
+        <location filename="../mainwindow.ui" line="2394"/>
         <source>Descending</source>
         <translation>බැසයාම</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2401"/>
+        <location filename="../mainwindow.ui" line="2403"/>
         <location filename="../mainwindow.cpp" line="10247"/>
         <source>Show note git versions</source>
         <translation>සටහන් git අනුවාද පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2410"/>
+        <location filename="../mainwindow.ui" line="2412"/>
         <source>Find scripts in script repository</source>
         <translation>ස්ක්‍රිප්ට් ගබඩාවේ ස්ක්‍රිප්ට් සොයා ගන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2422"/>
+        <location filename="../mainwindow.ui" line="2424"/>
         <source>Script settings</source>
         <translation>ස්ක්‍රිප්ට් සැකසුම්</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2431"/>
+        <location filename="../mainwindow.ui" line="2433"/>
         <source>Insert attachment</source>
         <translation>ඇමුණුම ඇතුල් කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2458"/>
+        <location filename="../mainwindow.ui" line="2460"/>
         <source>Check for script updates</source>
         <translation>ස්ක්‍රිප්ට් යාවත්කාලීන කිරීම් සඳහා පරීක්ෂා කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2467"/>
+        <location filename="../mainwindow.ui" line="2469"/>
         <source>Show local trash</source>
         <translation>දේශීය කුණු කූඩය පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2472"/>
-        <location filename="../mainwindow.ui" line="2475"/>
+        <location filename="../mainwindow.ui" line="2474"/>
+        <location filename="../mainwindow.ui" line="2477"/>
         <source>Jump to note edit panel</source>
         <translation>සටහන් පැනලයට සටහන් කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2487"/>
+        <location filename="../mainwindow.ui" line="2489"/>
         <source>Manage orphaned attachments</source>
         <translation>අනාථ ඇමුණුම් කළමනාකරණය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2492"/>
+        <location filename="../mainwindow.ui" line="2494"/>
         <source>Jump to note subfolder panel</source>
         <translation>සටහන් කිරීමට උප ෆෝල්ඩර පැනලයට යන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2500"/>
+        <location filename="../mainwindow.ui" line="2502"/>
         <source>Jump to tags panel</source>
         <translation>Zum Tag-Bereich springen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2508"/>
+        <location filename="../mainwindow.ui" line="2510"/>
         <source>Jump to note list panel</source>
         <translation>ටැග් පැනලයට යන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2516"/>
+        <location filename="../mainwindow.ui" line="2518"/>
         <source>Activate context menu</source>
         <translation>සන්දර්භය මෙනුව සක්‍රිය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2524"/>
+        <location filename="../mainwindow.ui" line="2526"/>
         <source>Import bookmarks from server</source>
         <translation>සේවාදායකයෙන් පිටු සලකුණු ආයාත කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2529"/>
-        <location filename="../mainwindow.ui" line="2532"/>
+        <location filename="../mainwindow.ui" line="2531"/>
+        <location filename="../mainwindow.ui" line="2534"/>
         <source>Toggle full-screen mode</source>
         <translation>සම්පූර්ණ තිර ප්‍රකාරය ටොගල කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2543"/>
+        <location filename="../mainwindow.ui" line="2545"/>
         <source>Typewriter mode</source>
         <translation>යතුරු ලියන මාදිලිය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2555"/>
+        <location filename="../mainwindow.ui" line="2557"/>
         <source>Check spelling</source>
         <translation>අක්ෂර වින්‍යාසය පරීක්ෂා කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2563"/>
+        <location filename="../mainwindow.ui" line="2565"/>
         <location filename="../mainwindow.cpp" line="12243"/>
         <source>Automatically detect</source>
         <translation>ස්වයංක්‍රීයව හඳුනා ගන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2568"/>
+        <location filename="../mainwindow.ui" line="2570"/>
         <source>Manage dictionaries</source>
         <translation>ශබ්ද කෝෂ කළමනාකරණය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2576"/>
+        <location filename="../mainwindow.ui" line="2578"/>
         <source>Custom</source>
         <translation>චාරිත්රය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2579"/>
+        <location filename="../mainwindow.ui" line="2581"/>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2584"/>
+        <location filename="../mainwindow.ui" line="2586"/>
         <source>Show/Hide application</source>
         <translation type="unfinished">Show/Hide application</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2593"/>
+        <location filename="../mainwindow.ui" line="2595"/>
         <source>Previous note tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2605"/>
+        <location filename="../mainwindow.ui" line="2607"/>
         <source>Next note tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1904"/>
+        <location filename="../mainwindow.ui" line="2619"/>
+        <source>Close current note tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="2631"/>
+        <source>New note in new tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1906"/>
         <source>Use &amp;vertical preview layout</source>
         <translation>&amp;සිරස් පෙරදසුන පිරිසැලසුම භාවිතා කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1907"/>
-        <location filename="../mainwindow.ui" line="1910"/>
+        <location filename="../mainwindow.ui" line="1909"/>
+        <location filename="../mainwindow.ui" line="1912"/>
         <source>The note edit panel will be above the preview panel</source>
         <translation>සටහන් සංස්කරණ පැනලය පෙරදසුන් පැනලයට ඉහළින් ඇත</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1919"/>
+        <location filename="../mainwindow.ui" line="1921"/>
         <source>Replace in current note</source>
         <translation>වත්මන් සටහනේ ප්රතිස්ථාපනය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1927"/>
+        <location filename="../mainwindow.ui" line="1929"/>
         <source>Autocomplete, solve equation or open URL</source>
         <translation>ස්වයං සම්පුර්ණ කිරීම, සමීකරණය විසඳීම හෝ URL විවෘත කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1930"/>
+        <location filename="../mainwindow.ui" line="1932"/>
         <source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
         <translation>වත්මන් පේළියේ &apos;(2 + 3) * 6 =&apos; වැනි සරල සමීකරණයක් විසඳන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1938"/>
+        <location filename="../mainwindow.ui" line="1940"/>
         <source>Select note folder</source>
         <translation>සටහන් ෆෝල්ඩරය තෝරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1953"/>
+        <location filename="../mainwindow.ui" line="1955"/>
         <source>Reload scripting engine</source>
         <translation>ස්ක්‍රිප්ටින් එන්ජිම නැවත පූරණය කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1986"/>
-        <location filename="../mainwindow.ui" line="1989"/>
+        <location filename="../mainwindow.ui" line="1988"/>
+        <location filename="../mainwindow.ui" line="1991"/>
         <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
         <translation>#Qownnotes IRC නාලිකාව විවෘත කරන්න, ප්‍රතිචාරයක් ලබා ගැනීම සඳහා ඔබ මාර්ගගතව සිටිය යුතුය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2216"/>
-        <location filename="../mainwindow.ui" line="2219"/>
+        <location filename="../mainwindow.ui" line="2218"/>
+        <location filename="../mainwindow.ui" line="2221"/>
         <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
         <translation>Qownnotes Gitter කාමරය විවෘත කරන්න, ඔබට පිවිසීමට GitHub හෝ Twitter ගිණුමක් අවශ්‍ය නමුත් ඔබට නොබැඳි පණිවිඩ ලබා ගත හැකිය</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="989"/>
+        <location filename="../mainwindow.ui" line="991"/>
         <source>Open chat</source>
         <translation>විවෘත චැට්</translation>
     </message>
@@ -2627,68 +2637,68 @@
         <translation>සටහන් මෙහෙයුම්…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1592"/>
+        <location filename="../mainwindow.ui" line="1594"/>
         <source>&amp;Print note (preview)</source>
         <translation>&amp;මුද්‍රණ සටහන (පෙරදසුන)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1998"/>
+        <location filename="../mainwindow.ui" line="2000"/>
         <source>Insert headline from note filename</source>
         <translation>Insert headline from note filename</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2012"/>
+        <location filename="../mainwindow.ui" line="2014"/>
         <source>Use softwrap in note editor and preview</source>
         <translation>සටහන් සංස්කාරකයේ සහ පෙරදසුනෙහි මෘදු ආවරණයක් භාවිතා කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2020"/>
+        <location filename="../mainwindow.ui" line="2022"/>
         <source>Show status bar</source>
         <translation>තත්ව තීරුව පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2035"/>
+        <location filename="../mainwindow.ui" line="2037"/>
         <source>Share note</source>
         <translation>සටහන බෙදාගන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2065"/>
+        <location filename="../mainwindow.ui" line="2067"/>
         <source>Markdown cheatsheet</source>
         <translation>ලකුණු කිරීමේ වංචා පත්‍රිකාව</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2074"/>
+        <location filename="../mainwindow.ui" line="2076"/>
         <source>Strike out text</source>
         <translation>පෙළ ඉවත් කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2085"/>
+        <location filename="../mainwindow.ui" line="2087"/>
         <source>Use one column mode</source>
         <translation>එක් තීරු ආකාරයක් භාවිතා කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2088"/>
-        <location filename="../mainwindow.ui" line="2091"/>
+        <location filename="../mainwindow.ui" line="2090"/>
+        <location filename="../mainwindow.ui" line="2093"/>
         <source>Use a one column minimal mode (like NVAlt)</source>
         <translation>එක් තීරුවක අවම මාදිලියක් භාවිතා කරන්න (NVAlt වැනි)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2103"/>
+        <location filename="../mainwindow.ui" line="2105"/>
         <source>Show menu bar</source>
         <translation>මෙනු තීරුව පෙන්වන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2115"/>
+        <location filename="../mainwindow.ui" line="2117"/>
         <source>Split note at cursor position</source>
         <translation>කර්සරය ස්ථානයේ සටහන බෙදන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2135"/>
+        <location filename="../mainwindow.ui" line="2137"/>
         <source>Donate</source>
         <translation>පරිත්යාග කරන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2156"/>
+        <location filename="../mainwindow.ui" line="2158"/>
         <source>Import notes from Evernote</source>
         <translation>Evernote වෙතින් සටහන් ආයාත කරන්න</translation>
     </message>
@@ -3316,13 +3326,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2446"/>
+        <location filename="../mainwindow.ui" line="2448"/>
         <location filename="../mainwindow.cpp" line="11834"/>
         <source>Allow all note editing</source>
         <translation>සියලුම සටහන් සංස්කරණයට ඉඩ දෙන්න</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1224"/>
+        <location filename="../mainwindow.ui" line="1226"/>
         <source>&amp;Tag</source>
         <translation>&amp;ටැගය</translation>
     </message>

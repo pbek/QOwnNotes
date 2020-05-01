@@ -1,8 +1,12 @@
 # QOwnNotes Changelog
 
 20.5.1
-- you can now jump to the previous or next note tab with <kbd>Alt + PgUp</kbd>
-  and <kbd>Alt + PgDn</kbd> (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
+- new tabbing shortcuts were added (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
+    - you can now jump to the previous or next note tab with <kbd>Alt + PgUp</kbd>
+      and <kbd>Alt + PgDn</kbd>
+    - you can now close the current note tab with <kbd>Ctrl + W</kbd>
+    - you can now open a new note in a new tab with <kbd>Ctrl + Shift + N</kbd>
+    - you can change or disable all shortcuts in the *Shortcuts settings*
     - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
 - there now is a software repository for **Fedora 32**

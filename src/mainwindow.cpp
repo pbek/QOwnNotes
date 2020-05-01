@@ -12411,3 +12411,14 @@ void MainWindow::on_actionNext_note_tab_triggered() {
 
     ui->noteEditTabWidget->setCurrentIndex(index);
 }
+
+void MainWindow::on_actionClose_current_note_tab_triggered() {
+    if (ui->noteEditTabWidget->count() > 1) {
+        ui->noteEditTabWidget->removeTab(ui->noteEditTabWidget->currentIndex());
+    }
+}
+
+void MainWindow::on_actionNew_note_in_new_tab_triggered() {
+    on_action_New_note_triggered();
+    openCurrentNoteInTab();
+}
