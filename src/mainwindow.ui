@@ -442,9 +442,6 @@
         <property name="movable">
          <bool>true</bool>
         </property>
-        <property name="tabBarAutoHide">
-         <bool>true</bool>
-        </property>
         <widget class="QWidget" name="noteEditTabWidgetPage">
          <attribute name="title">
           <string/>

@@ -136,6 +136,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
+    ui->noteEditTabWidget->setTabBarAutoHide(true);
+#endif
+
     // setup vim mode
     if (settings.value(QStringLiteral("Editor/vimMode")).toBool()) {
         initFakeVim(ui->noteTextEdit);
