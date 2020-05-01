@@ -3,13 +3,13 @@
 [Installation](https://www.qownnotes.org/installation) |
 [Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) |
 [Issues](https://github.com/pbek/QOwnNotes/issues) |
-[Releases](https://github.com/pbek/QOwnNotes/releases) |
 [Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/getting-started/shortcuts.md) |
 [Documentation](http://docs.qownnotes.org) |
 [Knowledge base](https://www.qownnotes.org/Knowledge-base) |
 [Screenshots](https://www.qownnotes.org) |
 [ownCloud API](https://marketplace.owncloud.com/apps/qownnotesapi) |
 [Nextcloud API](https://apps.nextcloud.com/apps/qownnotesapi) |
+[Nextcloud App Page](https://apps.nextcloud.com/apps/qownnotes) |
 [Telegram Group](https://t.me/QOwnNotes) |
 [IRC Chat](https://kiwiirc.com/client/irc.freenode.net/#qownnotes) |
 [Gitter Chat](https://gitter.im/qownnotes/qownnotes) |
@@ -23,18 +23,24 @@
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/qownnotes/qownnotes)
 [![Documentation](https://readthedocs.org/projects/qownnotes/badge/?version=develop)](http://docs.qownnotes.org)
 
-[QOwnNotes](https://www.qownnotes.org) is the **open source notepad** with [**markdown support**](https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes/Markdown%20Cheatsheet.md) and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default notes application of [**ownCloud**](https://github.com/owncloud/notes) and [**Nextcloud**](https://github.com/Nextcloud/notes).
+[QOwnNotes](https://www.qownnotes.org) is the **open source notepad** with
+[**markdown support**](https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes/Markdown%20Cheatsheet.md)
+and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**,
+that works together with [**Nextcloud Notes**](https://github.com/Nextcloud/notes)
+and [**ownCloud Notes**](https://github.com/owncloud/notes).
 
 You are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device**, like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud / Nextcloud web-service**.
 
-The notes are stored as **plain text files** and are **synced with ownCloud's / Nextcloud's file sync** functionality.
+The notes are stored as **plain text files** and are **synced with Nextcloud's/ownCloud's file sync** functionality.
 Of course other software, like [Syncthing](https://syncthing.net) or [Dropbox](https://www.dropbox.com) can be used too.
 
 I like the concept of having notes accessible in plain text files, like it is done in the ownCloud / Nextcloud notes apps, to gain a maximum of **freedom**, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need **QOwnNotes** was born.
 
 Visit the project page here: [QOwnNotes project page](https://www.qownnotes.org)
 
-To manage your **todo lists** in the web and on your mobile devices, you need to install the Tasks backend on [ownCloud](https://marketplace.owncloud.com/apps/tasks) or [Nextcloud](https://apps.nextcloud.com/apps/tasks).
+To manage your **todo lists** in the web and on your mobile devices, you need to
+install the Tasks backend on [Nextcloud](https://apps.nextcloud.com/apps/tasks)
+or [ownCloud](https://marketplace.owncloud.com/apps/tasks).
 
 To get more on-line features for your notes, like **versioning** and **trash** access, you might also want to install the [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) app on your server.
 
@@ -66,6 +72,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - differences between current note and externally changed note are shown in a dialog
 - **markdown highlighting** of notes and a markdown **preview**
 - **[spellchecking](https://docs.qownnotes.org/en/develop/spellchecking.html)** support
+- **tabbing support** for editing notes
 - scripting support and an online [script repository](https://github.com/qownnotes/scripts)
   where you can install scripts inside the application
 - [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
