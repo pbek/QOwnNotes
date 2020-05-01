@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 20.5.1
-- you can now jump to the previous or next note tab with <kbd>Alt + PageUp</kbd>
-  and <kbd>Alt + PageDown</kbd> (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
+- you can now jump to the previous or next note tab with <kbd>Alt + PgUp</kbd>
+  and <kbd>Alt + PgDn</kbd> (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
     - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
 - there now is a software repository for **Fedora 32**
