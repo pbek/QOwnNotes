@@ -6,7 +6,7 @@ Important Shortcuts
 ### In the main window
 
 - <kbd>Ctrl</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> creates a new note in a new note tab
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> creates a new note in a new tab
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
 - <kbd>Alt</kbd> + <kbd>F</kbd> lets you search for notes in all tags / subfolders
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> switches to the previous workspace
@@ -122,7 +122,7 @@ Important Shortcuts
 ### In the main window
 
 - <kbd>⌘</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> creates a new note in a new note tab
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> creates a new note in a new tab
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search for notes in all tags / subfolders
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> switches to the previous workspace
