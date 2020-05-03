@@ -1863,7 +1863,7 @@ void MainWindow::changeNoteFolder(const int noteFolderId,
     // store the note history of the old note folder
     noteHistory.storeForCurrentNoteFolder();
 
-    Utils::Gui::storeNoteTabList(ui->noteEditTabWidget);
+    Utils::Gui::storeNoteTabs(ui->noteEditTabWidget);
 
     // recheck for broken tag note links
     resetBrokenTagNotesLinkFlag();
@@ -4005,7 +4005,7 @@ void MainWindow::storeSettings() {
     // store the note history of the current note folder
     noteHistory.storeForCurrentNoteFolder();
 
-    Utils::Gui::storeNoteTabList(ui->noteEditTabWidget);
+    Utils::Gui::storeNoteTabs(ui->noteEditTabWidget);
 }
 
 /*!

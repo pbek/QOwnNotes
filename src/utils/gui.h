@@ -128,7 +128,7 @@ int getTabWidgetIndexByProperty(QTabWidget *tabWidget,
                                 const QVariant &propertyValue);
 int getTabWidgetNoteId(QTabWidget *tabWidget, int index);
 Note getTabWidgetNote(QTabWidget *tabWidget, int index);
-void storeNoteTabList(QTabWidget *tabWidget);
+void storeNoteTabs(QTabWidget *tabWidget);
 void restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout);
 }    // namespace Gui
 }    // namespace Utils
