@@ -155,8 +155,8 @@ void Utils::Misc::openFolderSelect(const QString &absolutePath) {
                 QStringLiteral("nautilus"),
                 QStringList{"--no-desktop", QDir::toNativeSeparators(path)});
         } else if (output == QStringLiteral("caja-folder-handler.desktop")) {
-            QDir dir = QFileInfo(path).absoluteDir();
-            QString absDir=dir.absolutePath();
+            const QDir dir = QFileInfo(path).absoluteDir();
+            const QString absDir = dir.absolutePath();
             proc.startDetached(
                 QStringLiteral("caja"),
                 QStringList{"--no-desktop", QDir::toNativeSeparators(absDir)});
