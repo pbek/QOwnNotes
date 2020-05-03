@@ -15,6 +15,8 @@
 #include "gui.h"
 
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+#include <entities/notefolder.h>
+#include <entities/notesubfolder.h>
 
 #include <QApplication>
 #include <QCheckBox>
@@ -688,4 +690,87 @@ int Utils::Gui::getTabWidgetIndexByProperty(QTabWidget *tabWidget,
     }
 
     return -1;
+}
+
+int Utils::Gui::getTabWidgetNoteId(QTabWidget *tabWidget, int index) {
+    return tabWidget->widget(index)->property("note-id").toInt();
+}
+
+Note Utils::Gui::getTabWidgetNote(QTabWidget *tabWidget, int index) {
+    const int noteId = getTabWidgetNoteId(tabWidget, index);
+    return Note::fetch(noteId);
+}
+
+void Utils::Gui::storeNoteTabList(QTabWidget *tabWidget) {
+    QStringList noteNameList;
+    QStringList noteSubFolderPathDataList;
+
+    for (int i = 0; i < tabWidget->count(); i++) {
+        const Note note = getTabWidgetNote(tabWidget, i);
+
+        if (!note.isFetched()) {
+            continue;
+        }
+
+        noteNameList << note.getName();
+        noteSubFolderPathDataList << note.getNoteSubFolder().pathData();
+    }
+
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    noteFolder.setSettingsValue(QStringLiteral("NoteTabNameList"),
+                                noteNameList);
+    noteFolder.setSettingsValue(QStringLiteral("NoteTabSubFolderPathDataList"),
+                                noteSubFolderPathDataList);
+}
+
+void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
+    const QSignalBlocker blocker(tabWidget);
+    Q_UNUSED(blocker)
+
+    // remove all but the first tab
+    while (tabWidget->count() > 1) {
+        tabWidget->removeTab(1);
+    }
+
+    // if we want to disable restoring note tabs we could do that here
+
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    const QStringList noteNameList = noteFolder.settingsValue(
+        QStringLiteral("NoteTabNameList")).toStringList();
+    const QStringList noteSubFolderPathDataList = noteFolder.settingsValue(
+        QStringLiteral("NoteTabSubFolderPathDataList")).toStringList();
+    const int noteNameCount = noteNameList.count();
+
+    // don't restore if there was only one tab or NoteTabSubFolderPathDataList
+    // has too little entries
+    if (noteNameCount <= 1 ||
+        noteSubFolderPathDataList.count() < noteNameCount) {
+
+        // make sure a layout is set in the end
+        tabWidget->currentWidget()->setLayout(layout);
+
+        return;
+    }
+
+    for (int i = 0; i < noteNameCount; i++) {
+        const QString &noteName = noteNameList.at(i);
+        const QString &noteSubFolderPathData = noteSubFolderPathDataList.at(i);
+        const Note note = Note::fetchByName(noteName, noteSubFolderPathData);
+
+        if (!note.isFetched()) {
+            continue;
+        }
+
+        if ((tabWidget->count() - 1) < i) {
+            auto *widgetPage = new QWidget();
+            tabWidget->addTab(widgetPage, QStringLiteral(""));
+        }
+
+        tabWidget->setCurrentIndex(i);
+        tabWidget->currentWidget()->setProperty("note-id", note.getId());
+        tabWidget->setTabText(i, note.getName());
+    }
+
+    // make sure a layout is set in the end
+    tabWidget->currentWidget()->setLayout(layout);
 }

@@ -14,6 +14,8 @@
 
 #pragma once
 
+#include <entities/note.h>
+
 #include <QComboBox>
 #include <QFontDialog>
 #include <QListWidget>
@@ -21,6 +23,7 @@
 #include <QPlainTextEdit>
 #include <QTextBlock>
 #include <QTreeWidgetItem>
+#include <QVBoxLayout>
 
 /*  Gui functions that can be useful */
 
@@ -123,5 +126,9 @@ void setComboBoxIndexByUserData(QComboBox *comboBox, const QVariant &userData);
 int getTabWidgetIndexByProperty(QTabWidget *tabWidget,
                                 const QString &propertyName,
                                 const QVariant &propertyValue);
+int getTabWidgetNoteId(QTabWidget *tabWidget, int index);
+Note getTabWidgetNote(QTabWidget *tabWidget, int index);
+void storeNoteTabList(QTabWidget *tabWidget);
+void restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout);
 }    // namespace Gui
 }    // namespace Utils

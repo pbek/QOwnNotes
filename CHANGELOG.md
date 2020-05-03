@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.5.2
+- open note tabs are now restored when the note folder is switched or the
+  application is started (for [#1726](https://github.com/pbek/QOwnNotes/issues/1726))
+    - restoring the last open note when switching note folders was also improved
+
 ## 20.5.1
 - new tabbing shortcuts were added (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
     - you can now jump to the previous or next note tab with <kbd>Alt + PgUp</kbd>

@@ -517,6 +517,10 @@ MainWindow::MainWindow(QWidget *parent)
             &QOwnNotesMarkdownTextEdit::cursorPositionChanged, this,
             &MainWindow::noteEditCursorPositionChanged);
 
+    // restore the note tabs
+    Utils::Gui::restoreNoteTabs(ui->noteEditTabWidget,
+                                ui->noteEditTabWidgetLayout);
+
     // restore the note history of the current note folder
     noteHistory.restoreForCurrentNoteFolder();
 
@@ -1859,6 +1863,8 @@ void MainWindow::changeNoteFolder(const int noteFolderId,
     // store the note history of the old note folder
     noteHistory.storeForCurrentNoteFolder();
 
+    Utils::Gui::storeNoteTabList(ui->noteEditTabWidget);
+
     // recheck for broken tag note links
     resetBrokenTagNotesLinkFlag();
 
@@ -1914,12 +1920,24 @@ void MainWindow::changeNoteFolder(const int noteFolderId,
         // update the current folder tooltip
         updateCurrentFolderTooltip();
 
+        // restore the note tabs
+        Utils::Gui::restoreNoteTabs(ui->noteEditTabWidget,
+                                    ui->noteEditTabWidgetLayout);
+
         // restore the note history of the new note folder
         noteHistory.restoreForCurrentNoteFolder();
 
         // check if there is a note name set and jump to it
-        const QString noteName =
-            _activeNoteFolderNotePositions[noteFolderId].getNoteName();
+        QString noteName = _activeNoteFolderNotePositions[noteFolderId]
+                               .getNoteName();
+
+        // if there was no NoteHistory found try the note history
+        if (noteName.isEmpty()) {
+            _activeNoteFolderNotePositions[noteFolderId] =
+                noteHistory.getCurrentHistoryItem();
+            noteName = _activeNoteFolderNotePositions[noteFolderId].getNoteName();
+        }
+
         if (!noteName.isEmpty()) {
             jumpToNoteName(noteName);
 
@@ -1935,11 +1953,6 @@ void MainWindow::changeNoteFolder(const int noteFolderId,
     generateSystemTrayContextMenu();
     updateWindowTitle();
     _lastNoteId = 0;
-
-    // remove all but the first tab
-    while (ui->noteEditTabWidget->count() > 1) {
-        ui->noteEditTabWidget->removeTab(1);
-    }
 }
 
 /*
@@ -3670,9 +3683,8 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
     updateWindowTitle();
 
     // update current tab
-    if (!jumpToTab(note)) {
-        updateCurrentTabData(note);
-    }
+    jumpToTab(note);
+    updateCurrentTabData(note);
 
     // find and set the current item
     if (updateSelectedNote) {
@@ -3767,8 +3779,8 @@ void MainWindow::closeOrphanedTabs() const {
     const int maxIndex = ui->noteEditTabWidget->count() - 1;
 
     for (int i = maxIndex; i >= 0; i--) {
-        const int noteId = ui->noteEditTabWidget->widget(i)
-                               ->property("note-id").toInt();
+        const int noteId = Utils::Gui::getTabWidgetNoteId(
+            ui->noteEditTabWidget, i);
 
         if (!Note::noteIdExists(noteId)) {
             removeNoteTab(i);
@@ -3786,6 +3798,12 @@ bool MainWindow::jumpToTab(const Note &note) const {
     }
 
     ui->noteEditTabWidget->setCurrentIndex(tabIndexOfNote);
+    QWidget *widget = ui->noteEditTabWidget->currentWidget();
+
+    if (widget->layout() == nullptr) {
+        widget->setLayout(ui->noteEditTabWidgetLayout);
+        closeOrphanedTabs();
+    }
 
     return true;
 }
@@ -3986,6 +4004,8 @@ void MainWindow::storeSettings() {
 
     // store the note history of the current note folder
     noteHistory.storeForCurrentNoteFolder();
+
+    Utils::Gui::storeNoteTabList(ui->noteEditTabWidget);
 }
 
 /*!
