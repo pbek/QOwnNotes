@@ -1,10 +1,11 @@
 # QOwnNotes Changelog
 
 ## 20.5.2
-- open note tabs are now restored when the note folder is switched or the
+- **open note tabs are now restored** when the note folder is switched or the
   application is started (for [#1726](https://github.com/pbek/QOwnNotes/issues/1726))
     - restoring the last open note when switching note folders was also improved
     - you can turn note tab restoring off in the *Panels settings*
+- added more Bengali translation (thank you Oymate)
 
 ## 20.5.1
 - new tabbing shortcuts were added (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
