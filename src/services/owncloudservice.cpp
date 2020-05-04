@@ -522,6 +522,7 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
             } else {
                 settingsDialog->setOKLabelData(8, QStringLiteral("not found"),
                                                SettingsDialog::Failure);
+                qDebug() << __func__ << " - 'data': " << data;
             }
         }
     } else {
