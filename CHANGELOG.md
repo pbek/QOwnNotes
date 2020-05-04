@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.5.3
+- fixed `Show note in file manager` for file manager Caja on Linux
+  (for [#1727](https://github.com/pbek/QOwnNotes/issues/1727), thank you @r00tr4v3n)
+
 ## 20.5.2
 - **open note tabs are now restored** when the note folder is switched or the
   application is started (for [#1726](https://github.com/pbek/QOwnNotes/issues/1726))
