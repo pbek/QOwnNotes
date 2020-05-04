@@ -59,7 +59,8 @@ class Note {
     static Note fetchByName(const QString &name, int noteSubFolderId = -1);
 
     static Note fetchByName(const QString &name,
-        const QString &noteSubFolderPathData);
+        const QString &noteSubFolderPathData,
+        const QString& pathDataSeparator = QStringLiteral("\n"));
 
     static QVector<Note> fetchAll(int limit = -1);
 

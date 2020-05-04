@@ -664,7 +664,8 @@ QVector<int> Tag::fetchAllLinkedNoteIds(const bool fromAllSubfolders,
                 QStringLiteral("note_file_name")).toString();
             const QString &noteSubFolderPathData = query.value(
                 QStringLiteral("note_sub_folder_path")).toString();
-            const Note &note = Note::fetchByName(name, noteSubFolderPathData);
+            const Note &note = Note::fetchByName(name, noteSubFolderPathData,
+                                                 QStringLiteral("/"));
 
             noteIdList.append(note.getId());
         }
@@ -718,7 +719,8 @@ QVector<int> Tag::fetchAllLinkedNoteIdsForFolder(
                 QStringLiteral("note_file_name")).toString();
             const QString &noteSubFolderPathData = query.value(
                 QStringLiteral("note_sub_folder_path")).toString();
-            const Note &note = Note::fetchByName(name, noteSubFolderPathData);
+            const Note &note = Note::fetchByName(name, noteSubFolderPathData,
+                                                 QStringLiteral("/"));
 
             noteIdList.append(note.getId());
         }

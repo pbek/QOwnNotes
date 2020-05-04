@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 20.5.3
+- fixed a problem with restoring note tabs of notes from sub-subfolders
+  (for [#1726](https://github.com/pbek/QOwnNotes/issues/1726))
 - fixed `Show note in file manager` for file manager Caja on Linux
   (for [#1727](https://github.com/pbek/QOwnNotes/issues/1727), thank you @r00tr4v3n)
 

@@ -515,9 +515,10 @@ Note Note::fetchByShareId(int shareId) {
 }
 
 Note Note::fetchByName(const QString &name,
-                       const QString &noteSubFolderPathData) {
+                       const QString &noteSubFolderPathData,
+                       const QString& pathDataSeparator) {
     auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData,
-                                                        QStringLiteral("/"));
+                                                        pathDataSeparator);
 
     return fetchByName(name, noteSubFolder.getId());
 }
