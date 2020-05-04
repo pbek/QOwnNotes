@@ -7,6 +7,8 @@
   (for [#1727](https://github.com/pbek/QOwnNotes/issues/1727), thank you @r00tr4v3n)
 - added more debug output in case note folder was not found on server
   (for [#1725](https://github.com/pbek/QOwnNotes/issues/1725))
+- added more Spanish, Catalan, French, German, Italian, Russian translation
+  (thank you richarson, MGuerra, Fabijenna, gbabin, rakekniven, mlocati, unchase)
 
 ## 20.5.2
 - **open note tabs are now restored** when the note folder is switched or the

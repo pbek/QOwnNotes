@@ -6119,7 +6119,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+      <translation>Offene Notiz-Tabs beim Programmstart und beim Wechsel von Notizordnern wiederherstellen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5743"/>

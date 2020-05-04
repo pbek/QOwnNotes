@@ -2561,22 +2561,22 @@
     <message>
       <location filename="../mainwindow.ui" line="2595"/>
       <source>Previous note tab</source>
-      <translation type="unfinished">Previous note tab</translation>
+      <translation>Pestaña de notas previa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2607"/>
       <source>Next note tab</source>
-      <translation type="unfinished">Next note tab</translation>
+      <translation>Pestaña de notas siguiente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2619"/>
       <source>Close current note tab</source>
-      <translation type="unfinished">Close current note tab</translation>
+      <translation>Cerrar la pestaña de notas actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2631"/>
       <source>New note in new tab</source>
-      <translation type="unfinished">New note in new tab</translation>
+      <translation>Nueva nota en una pestaña nueva</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1906"/>
@@ -6117,7 +6117,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+      <translation>Restaurar las pestañas de notas abiertas cuando se inicie la aplicación y cuando se cambie de carpeta de notas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5743"/>

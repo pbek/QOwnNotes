@@ -28,7 +28,7 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="20"/>
       <source>Image filename or URL</source>
-      <translation>Chemin vers un fichier image ou URL</translation>
+      <translation>Nom de fichier de l'image ou URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="26"/>
@@ -59,12 +59,12 @@
       <location filename="../dialogs/attachmentdialog.ui" line="117"/>
       <source>Download URL</source>
       <comment>The URL will be downloaded</comment>
-      <translation>URL de téléchargement</translation>
+      <translation>Télécharger l'URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="42"/>
       <source>Select file to insert</source>
-      <translation>Choisir un fichier à joindre</translation>
+      <translation>Choisir un fichier à insérer</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="140"/>
@@ -75,7 +75,7 @@
       <location filename="../dialogs/attachmentdialog.cpp" line="141"/>
       <source>Error while downloading:
 %1</source>
-      <translation>Erreur pendant le téléchargement:
+      <translation>Erreur pendant le téléchargement :
 %1</translation>
     </message>
     <message>
@@ -88,14 +88,15 @@
       <location filename="../dialogs/attachmentdialog.cpp" line="170"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation>Impossible d'ouvrir le fichier temporaire:
+      <translation>Impossible d'ouvrir le fichier temporaire :
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="194"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Impossible d'enregistrer le fichier téléchargé: %1</translation>
+      <translation>Impossible d'enregistrer le fichier téléchargé :
+%1</translation>
     </message>
   </context>
   <context>
@@ -113,7 +114,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="89"/>
       <source>Download dictionary</source>
-      <translation>Téléchargez le dictionnaire</translation>
+      <translation>Télécharger le dictionnaire</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="107"/>
@@ -249,7 +250,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Ancient Greek</source>
-      <translation>Le grec ancien</translation>
+      <translation>Grec ancien</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
@@ -304,7 +305,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
       <source>Chuvash (Russia)</source>
-      <translation>Vous entendez (Russie)</translation>
+      <translation>Tchouvache (Russie)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
@@ -424,7 +425,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Kaszebsczi</source>
-      <translation>Kaszëbskô</translation>
+      <translation>Cachoube</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
@@ -544,7 +545,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
       <source>Russian Medical Dictionary</source>
-      <translation>Dictionnaire médical russe</translation>
+      <translation>Russe (Dictionnaire médical)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
@@ -685,7 +686,7 @@
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="293"/>
       <source>Error while downloading:
 %1</source>
-      <translation>Erreur pendant le téléchargement:
+      <translation>Erreur pendant le téléchargement :
 %1</translation>
     </message>
     <message>
@@ -698,13 +699,14 @@
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="310"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Impossible d'enregistrer le fichier téléchargé: %1</translation>
+      <translation>Impossible d'enregistrer le fichier téléchargé :
+%1</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="422"/>
       <source>Could not remove dictionary file:
 %1</source>
-      <translation>Impossible de supprimer le fichier du dictionnaire:
+      <translation>Impossible de supprimer le fichier du dictionnaire :
 %1</translation>
     </message>
   </context>
@@ -912,7 +914,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4313"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation>Tapez Alt-V, Alt + V pour quitter le mode de FakeVim.</translation>
+      <translation>Tapez Alt-V, Alt-V pour quitter le mode FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
@@ -932,7 +934,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
       <source>Move lines into themselves.</source>
-      <translation>Déplacez les lignes en eux-mêmes.</translation>
+      <translation>Déplacez les lignes en elles-mêmes.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
@@ -955,7 +957,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5978"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation>%1" %2 %3L, %4C écrits.</translation>
+      <translation>"%1" %2 %3L, %4C écrits.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5979"/>
@@ -965,7 +967,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5987"/>
       <source>Cannot open file "%1" for reading</source>
-      <translation>Impossible d’ouvrir le fichier "%1" pour la lecture</translation>
+      <translation>Impossible d’ouvrir le fichier "%1" en lecture</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6015"/>
@@ -1018,7 +1020,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation>La recherche à atteint le DÉBUT sans trouver de correspondance pour : %1</translation>
+      <translation>La recherche a atteint le DÉBUT sans trouver de correspondance pour : %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
@@ -1084,7 +1086,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation>Schéma de couleur</translation>
+      <translation>Thème de couleur</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
@@ -1110,7 +1112,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>Si vous avez créé un thème agréable, vous pouvez l'exporter et le partager avec tout le monde!</translation>
+      <translation>Si vous avez créé un thème de couleur agréable, vous pouvez l'exporter et le partager avec tout le monde !</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
@@ -1146,7 +1148,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Premier plan:</translation>
+      <translation>Premier plan :</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
@@ -1161,7 +1163,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Adapter la taille de police:</translation>
+      <translation>Adapter la taille de police :</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
@@ -1186,7 +1188,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="235"/>
       <source>(HTML) Comment</source>
-      <translation>(HTML) Commentaire</translation>
+      <translation>Commentaire (HTML)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="225"/>
@@ -1226,7 +1228,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="211"/>
       <source>Code (comment)</source>
-      <translation>Code (comment)</translation>
+      <translation>Code (commentaire)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
@@ -1332,12 +1334,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="519"/>
       <source>Copy color schema</source>
-      <translation>Copier le schéma de couleur</translation>
+      <translation>Copier le thème de couleur</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="520"/>
       <source>Color schema name</source>
-      <translation>Nom du schéma de couleur</translation>
+      <translation>Nom du thème de couleur</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="522"/>
@@ -1372,7 +1374,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="40"/>
       <source>Image filename or URL</source>
-      <translation>Chemin vers un fichier image ou URL</translation>
+      <translation>Nom de fichier de l'image ou URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="46"/>
@@ -1382,7 +1384,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="121"/>
       <source>Scaling width:</source>
-      <translation>Largeur du redimensionnement:</translation>
+      <translation>Largeur du redimensionnement :</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="217"/>
@@ -1402,7 +1404,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
       <source>Don't copy image to media folder</source>
-      <translation>Ne copiez pas l'image dans le dossier multimédia</translation>
+      <translation>Ne pas copier l'image dans le dossier multimédia</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
@@ -1455,12 +1457,12 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="87"/>
       <source>Do you want to use the selected layout?</source>
-      <translation>Vous voulez utiliser la disposition sélectionné ?</translation>
+      <translation>Voulez-vous utiliser la disposition sélectionnée ?</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="90"/>
       <source>The application will be quit afterwards.</source>
-      <translation>L’application va être fermer.</translation>
+      <translation>L’application va être fermée.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="91"/>
@@ -1471,7 +1473,7 @@
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation>Interface minimal</translation>
+      <translation>Interface minimale</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="160"/>
@@ -1525,7 +1527,7 @@
       <location filename="../widgets/layoutwidget.cpp" line="195"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
       <comment>Layout description</comment>
-      <translation>La plupart des panneaux, comme la liste des notes à gauche, les panneaux de balisage et seul le panneau d'aperçu à droite sont activés par défaut. Vous aurez besoin d'un autre espace de travail pour éditer réellement des notes!</translation>
+      <translation>La plupart des panneaux, comme la liste des notes à gauche, les panneaux de balisage et seul le panneau d'aperçu à droite sont activés par défaut. Vous aurez besoin d'un autre espace de travail pour éditer réellement des notes !</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="201"/>
@@ -1601,7 +1603,7 @@
       <location filename="../dialogs/linkdialog.cpp" line="229"/>
       <location filename="../dialogs/linkdialog.cpp" line="314"/>
       <source>Select file to link to</source>
-      <translation>Rechercher un fichier pour le lier avec</translation>
+      <translation>Sélectionnez le fichier vers lequel établir un lien</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="271"/>
@@ -1615,7 +1617,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation>Notes localement supprimées</translation>
+      <translation>Notes supprimées localement</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
@@ -1657,7 +1659,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="99"/>
       <source>File will be restored to: %1</source>
-      <translation>Le fichier sera restauré à :%1</translation>
+      <translation>Le fichier sera restauré ici : %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
@@ -1668,8 +1670,8 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="196"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation>
-        <numerusform>Restaurer &lt;strong&gt;%n&lt;/strong&gt; note(s) sélectionné(s)?</numerusform>
-        <numerusform>Restaurer &lt;strong&gt;%n&lt;/strong&gt; note(s) sélectionné(s)?</numerusform>
+        <numerusform>Restaurer &lt;strong&gt;%n&lt;/strong&gt; note(s) sélectionné(s) ?</numerusform>
+        <numerusform>Restaurer &lt;strong&gt;%n&lt;/strong&gt; notes sélectionnées ?</numerusform>
       </translation>
     </message>
     <message>
@@ -1681,7 +1683,7 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="221"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
       <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note est été restaurée</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note a été restaurée</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notes ont été restaurées</numerusform>
       </translation>
     </message>
@@ -1689,8 +1691,8 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation>
-        <numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; note sélectionnée?</numerusform>
-        <numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; notes sélectionnées?</numerusform>
+        <numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; note sélectionnée ?</numerusform>
+        <numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; notes sélectionnées ?</numerusform>
       </translation>
     </message>
     <message>
@@ -1702,7 +1704,7 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="266"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note est été supprimées</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note a été supprimée</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notes ont été supprimées</numerusform>
       </translation>
     </message>
@@ -2043,7 +2045,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1109"/>
       <source>Spelling backend</source>
-      <translation>Orthographe backend</translation>
+      <translation>Moteur d'orthographe</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1134"/>
@@ -2241,7 +2243,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1759"/>
       <source>Medium</source>
-      <translation>Médium</translation>
+      <translation>Moyen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1770"/>
@@ -2554,27 +2556,27 @@
     <message>
       <location filename="../mainwindow.ui" line="2586"/>
       <source>Show/Hide application</source>
-      <translation>Afficher / masquer l'application</translation>
+      <translation>Afficher/Masquer l'application</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2595"/>
       <source>Previous note tab</source>
-      <translation type="unfinished">Previous note tab</translation>
+      <translation>Onglet de note précédent</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2607"/>
       <source>Next note tab</source>
-      <translation type="unfinished">Next note tab</translation>
+      <translation>Onglet de note suivant</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2619"/>
       <source>Close current note tab</source>
-      <translation type="unfinished">Close current note tab</translation>
+      <translation>Fermer l'onglet de note courant</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2631"/>
       <source>New note in new tab</source>
-      <translation type="unfinished">New note in new tab</translation>
+      <translation>Nouvelle note dans un nouvel onglet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1906"/>
@@ -2703,13 +2705,13 @@
     <message>
       <location filename="../mainwindow.cpp" line="2825"/>
       <source>Note was removed externally!</source>
-      <translation>La note a été modifié de l'extérieur !</translation>
+      <translation>La note a été modifiée de l'extérieur !</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2826"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation>La note courante a été modié depuis une autre application !
+      <translation>La note courante a été modifiée depuis une autre application !
 Voulez vous restaurer la note courante ?</translation>
     </message>
     <message>
@@ -2745,22 +2747,22 @@ Voulez vous restaurer la note courante ?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3374"/>
       <source>Removed duplicate conflicted database: %1</source>
-      <translation>Suppression de la base de données en conflit en double: %1</translation>
+      <translation>Suppression de la base de données en conflit en double : %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3375"/>
       <source>Could not remove duplicate conflicted database: %1</source>
-      <translation>Impossible de supprimer la base de données en conflit en double: %1</translation>
+      <translation>Impossible de supprimer la base de données en conflit en double : %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3381"/>
       <source>Removed merged conflicted database: %1</source>
-      <translation>Suppression de la base de données en conflit fusionnée: %1</translation>
+      <translation>Suppression de la base de données en conflit fusionnée : %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3382"/>
       <source>Could not remove merged conflicted database: %1</source>
-      <translation>Impossible de supprimer la base de données en conflit fusionnée: %1</translation>
+      <translation>Impossible de supprimer la base de données en conflit fusionnée : %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3397"/>
@@ -2818,12 +2820,12 @@ Voulez vous restaurer la note courante ?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="4300"/>
       <source>Note can't be decrypted!</source>
-      <translation>La note ne peut être déchiffrée !</translation>
+      <translation>La note ne peut pas être déchiffrée !</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4301"/>
       <source>It seems that your password is not valid!</source>
-      <translation>Il semblerait que votre mot de passe n'est pas valide !</translation>
+      <translation>Il semble que votre mot de passe ne soit pas valide !</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4469"/>
@@ -2894,14 +2896,14 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../mainwindow.cpp" line="4748"/>
       <location filename="../mainwindow.cpp" line="9516"/>
       <source>Copy selected notes</source>
-      <translation>Copier la note sélectionnée</translation>
+      <translation>Copier les notes sélectionnées</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4749"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Copier %n note sélectionnée dans &lt;strong&gt;%2&lt;/strong&gt; ?</numerusform>
-        <numerusform>Copir les %n notes sélectionnées dans &lt;strong&gt;%2&lt;/strong&gt; ?</numerusform>
+        <numerusform>Copier les %n notes sélectionnées dans &lt;strong&gt;%2&lt;/strong&gt; ?</numerusform>
       </translation>
     </message>
     <message>
@@ -2921,7 +2923,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="4793"/>
       <source>Tag selected notes</source>
-      <translation>Ajouter un tag aux notes selectionnées</translation>
+      <translation>Ajouter un tag aux notes sélectionnées</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4794"/>
@@ -2959,7 +2961,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="5395"/>
       <source>Todo lists disabled!</source>
-      <translation>Todo listes désactivées!</translation>
+      <translation>Listes de tâches désactivées !</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5396"/>
@@ -3078,7 +3080,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../mainwindow.cpp" line="7446"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation>
-        <numerusform>Impossible de copier %n note(s) (existent certainement déjà)</numerusform>
+        <numerusform>Impossible de copier %n note (existe certainement déjà)</numerusform>
         <numerusform>Impossible de copier %n note(s) (existent certainement déjà)</numerusform>
       </translation>
     </message>
@@ -3086,7 +3088,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../mainwindow.cpp" line="7456"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
-        <numerusform>La copie de %n note a été sauté (pas de fichier markdown ou texte, ou non lisible)</numerusform>
+        <numerusform>La copie de %n note a été sautée (pas de fichier markdown ou texte, ou non lisible)</numerusform>
         <numerusform>La copie de %n notes a été sauté (pas de fichier markdown ou texte, ou non lisible)</numerusform>
       </translation>
     </message>
@@ -3175,7 +3177,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="10281"/>
       <source>Open note in tab</source>
-      <translation type="unfinished">Open note in tab</translation>
+      <translation>Ouvrir la note dans l'onglet</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10168"/>
@@ -3358,7 +3360,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="4974"/>
       <source>Current notes folder: </source>
-      <translation>Répertoire des notes courants : </translation>
+      <translation>Répertoire des notes courant : </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4977"/>
@@ -3514,7 +3516,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../mainwindow.cpp" line="9578"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation>
-        <numerusform>%n notes a été transférées dans le sous-dossier « %2 »</numerusform>
+        <numerusform>%n notes a été transférée dans le sous-dossier « %2 »</numerusform>
         <numerusform>%n notes ont été transférées dans le sous-dossier « %2 »</numerusform>
       </translation>
     </message>
@@ -3622,7 +3624,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="2857"/>
       <source>Note was modified externally: %1</source>
-      <translation>La note a été modifié de l'extérieur: %1</translation>
+      <translation>La note a été modifiée de l'extérieur : %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2880"/>
@@ -3676,7 +3678,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="9228"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation>Le tag '%1' à été déplacer dans un nouveau tag</translation>
+      <translation>Le tag '%1' a été déplacé dans un nouveau tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8142"/>
@@ -3806,7 +3808,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="2473"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation>La barre d'outils ne peut être chargé sans nom</translation>
+      <translation>La barre d'outils ne peut être chargée sans nom</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2783"/>
@@ -3848,7 +3850,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../mainwindow.cpp" line="3399"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation>
-        <numerusform>Poursuivre la suppression automatique de la &lt;strong&gt;%n&lt;/strong&gt; copie de la base de données en conflit qui peut bloquer votre processus de synchronisation ownCloud?</numerusform>
+        <numerusform>Poursuivre la suppression automatique de &lt;strong&gt;%n&lt;/strong&gt; copie de la base de données en conflit qui peut bloquer votre processus de synchronisation ownCloud?</numerusform>
         <numerusform>Poursuivre la suppression automatique des &lt;strong&gt;%n&lt;/strong&gt; copies de base de données en conflit qui peuvent bloquer votre processus de synchronisation ownCloud?</numerusform>
       </translation>
     </message>
@@ -3877,7 +3879,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../mainwindow.cpp" line="6546"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation>&amp;Citation de bloctexte sélectionné</translation>
+      <translation>Texte sélectionné en bloc de &amp;Citation</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7543"/>
@@ -3887,7 +3889,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="7686"/>
       <source>Increased font size to %1 pt</source>
-      <translation>Taille de police augmenté à %1 pt</translation>
+      <translation>Taille de police augmentée à %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7703"/>
@@ -3911,7 +3913,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="6960"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation>Merci d'entrer votre &lt;strong&gt;mot de passe&lt;/strong&gt; pour chiffrer la note.&lt;br-/&gt;Garder en tête que vous devez vous &lt;strong&gt;rappeler&lt;/strong&gt; de votre mot de passe pour lire le contenu de la note&lt;br-/&gt; et que vous pouvez &lt;strong&gt;seulement&lt;/strong&gt; le faire &lt;strong&gt;dans QOwnNotes&lt;/strong&gt; !</translation>
+      <translation>Merci d'entrer votre &lt;strong&gt;mot de passe&lt;/strong&gt; pour chiffrer la note.&lt;br /&gt;Garder en tête que vous devez vous &lt;strong&gt;rappeler&lt;/strong&gt; de votre mot de passe pour lire le contenu de la note&lt;br /&gt; et que vous pouvez &lt;strong&gt;seulement&lt;/strong&gt; le faire &lt;strong&gt;dans QOwnNotes&lt;/strong&gt; !</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7016"/>
@@ -3926,12 +3928,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="7046"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation>&lt;nr-/&gt;Vous pouvez éditer votre note chiffrée.</translation>
+      <translation>&lt;br /&gt;Vous pouvez éditer votre note chiffrée.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7115"/>
       <source>Export current note as Markdown file</source>
-      <translation>Exporter la note courrante en tant que fichier Markdown</translation>
+      <translation>Exporter la note courante en tant que fichier Markdown</translation>
     </message>
   </context>
   <context>
@@ -3970,7 +3972,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
       <source>The current note was modified outside of this application!</source>
-      <translation>La note courante a été modié depuis une autre application !</translation>
+      <translation>La note courante a été modifiée depuis une autre application !</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
@@ -4061,12 +4063,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation>Ouvrir &amp;la pièce jointe</translation>
+      <translation>Ouvrir la &amp;pièce jointe</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation>Ouvrir &amp;le dossier</translation>
+      <translation>Ouvrir le &amp;dossier</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
@@ -4102,7 +4104,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="143"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
-        <numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; le fichier sélectionné?</numerusform>
+        <numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; le fichier sélectionné ?</numerusform>
         <numerusform>Supprimer les &lt;strong&gt;%n&lt;/strong&gt; fichiers sélectionnés?</numerusform>
       </translation>
     </message>
@@ -4153,8 +4155,8 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="124"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
-        <numerusform>Supprimer %n fichier sélectionné?</numerusform>
-        <numerusform>Supprimer %n fichiers sélectionnés?</numerusform>
+        <numerusform>Supprimer %n fichier sélectionné ?</numerusform>
+        <numerusform>Supprimer %n fichiers sélectionnés ?</numerusform>
       </translation>
     </message>
   </context>
@@ -4173,7 +4175,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../services/owncloudservice.cpp" line="578"/>
       <source>API app version too low</source>
-      <translation>La version API de l'application est obsolète</translation>
+      <translation>La version de l'API de l'application est obsolète</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="579"/>
@@ -4398,17 +4400,17 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../entities/notesubfolder.cpp" line="553"/>
       <location filename="../entities/notesubfolder.cpp" line="576"/>
       <source>Folder will be hidden!</source>
-      <translation type="unfinished">Folder will be hidden!</translation>
+      <translation>Le dossier sera caché !</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="554"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</translation>
+      <translation>Le dossier portant le nom &lt;b&gt;%1&lt;/b&gt; ne peut pas être créé, car il est utilisé en interne par l'application !</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="577"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored sub-folders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored sub-folders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
+      <translation>Le dossier portant le nom &lt;b&gt;%1&lt;/b&gt; ne peut pas être créé, car il figure dans la liste des sous-dossiers ignorés ! Vous pouvez changer cela dans le &lt;i&gt;Panneau des paramètres&lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -4436,7 +4438,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="704"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation>La modification des notes est actuellement désactivée. Voulez-vous autoriser à nouveau?</translation>
+      <translation>La modification des notes est actuellement désactivée. Voulez-vous l'autoriser à nouveau ?</translation>
     </message>
   </context>
   <context>
@@ -6092,7 +6094,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4999"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous voudrez peut-être jeter un œil à tous &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;les formats d'heure &lt;/a&gt;disponibles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vous voudrez peut-être jeter un œil à tous les &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;formats d'heure&lt;/a&gt; disponibles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5169"/>
@@ -6117,7 +6119,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+      <translation>Restaurer les onglets de notes ouverts au démarrage de l'application et lorsque les dossiers de notes sont changés</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5743"/>
@@ -6157,7 +6159,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5759"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation>Afficher les dossiers de notes sous forme de boutons plutôt que dans une zone de sélection</translation>
+      <translation>Afficher les dossiers de notes sous forme de boutons plutôt que dans une boîte de sélection</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5901"/>
@@ -7119,7 +7121,7 @@ Le message d'erreur est : </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1664"/>
       <source>Clear shortcut</source>
-      <translation>Raccourci clair</translation>
+      <translation>Effacer le raccourci</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1769"/>
@@ -7573,7 +7575,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file / clipboard</source>
-      <translation>Importer un fichier / presse-papiers CSV</translation>
+      <translation>Importer un fichier CSV / presse-papiers</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
@@ -8256,7 +8258,7 @@ Cela ne peut être annuler !</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation>prise de notes de démarquage de fichiers en texte brut avec intégration ownCloud</translation>
+      <translation>prise de notes de fichiers markdown en texte brut avec intégration ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>

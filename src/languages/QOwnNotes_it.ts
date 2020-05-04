@@ -2561,22 +2561,22 @@
     <message>
       <location filename="../mainwindow.ui" line="2595"/>
       <source>Previous note tab</source>
-      <translation type="unfinished">Previous note tab</translation>
+      <translation>Scheda delle note precedente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2607"/>
       <source>Next note tab</source>
-      <translation type="unfinished">Next note tab</translation>
+      <translation>Scheda delle note successiva</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2619"/>
       <source>Close current note tab</source>
-      <translation type="unfinished">Close current note tab</translation>
+      <translation>Chiudi scheda delle note corrente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2631"/>
       <source>New note in new tab</source>
-      <translation type="unfinished">New note in new tab</translation>
+      <translation>Nuova nota in nuova scheda</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1906"/>
@@ -3176,7 +3176,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="10281"/>
       <source>Open note in tab</source>
-      <translation type="unfinished">Open note in tab</translation>
+      <translation>Apri nota in scheda</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10168"/>
@@ -6118,7 +6118,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+      <translation>Ripristina le schede aperte delle note all'avvio dell'applicazione quando si cambiano cartelle delle note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5743"/>
