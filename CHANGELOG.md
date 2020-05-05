@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.5.4
+- if the note of the current tab is renamed now the tab also will be renamed
+  (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
+
 ## 20.5.3
 - fixed a problem with restoring note tabs of notes from sub-subfolders
   (for [#1726](https://github.com/pbek/QOwnNotes/issues/1726))

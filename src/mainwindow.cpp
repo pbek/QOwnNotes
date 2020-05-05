@@ -2955,6 +2955,9 @@ void MainWindow::storeUpdatedNotesToDisk() {
             if (oldNoteName != currentNote.getName()) {
                 // just to make sure the window title is set correctly
                 updateWindowTitle();
+
+                // update current tab name
+                updateCurrentTabData(currentNote);
             }
         }
 
