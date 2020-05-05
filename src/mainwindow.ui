@@ -921,6 +921,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionPrevious_note_tab"/>
      <addaction name="actionNext_note_tab"/>
      <addaction name="actionClose_current_note_tab"/>
+     <addaction name="actionToggle_note_stickiness_of_current_tab"/>
     </widget>
     <widget class="QMenu" name="menuPrint">
      <property name="title">
@@ -2632,6 +2633,11 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+N</string>
+   </property>
+  </action>
+  <action name="actionToggle_note_stickiness_of_current_tab">
+   <property name="text">
+    <string>Toggle note stickiness of current tab</string>
    </property>
   </action>
  </widget>

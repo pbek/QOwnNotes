@@ -1,6 +1,13 @@
 # QOwnNotes Changelog
 
 ## 20.5.4
+- you can now stick a note to a tab with the new action `Toggle note stickiness of current tab`
+  in the *Note / Navigation* menu or by double-clicking on the tab
+  (for [#1730](https://github.com/pbek/QOwnNotes/issues/1730))
+    - this will cause a new tab being opened automatically if you click on
+      another note while in this tab
+    - the stickiness status will get also restored when the note folder is
+      switched or the application is started
 - if the note of the current tab is renamed now the tab also will be renamed
   (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
 

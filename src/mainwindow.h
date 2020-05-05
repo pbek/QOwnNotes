@@ -644,7 +644,11 @@ class MainWindow : public QMainWindow {
 
     void on_actionNew_note_in_new_tab_triggered();
 
-   private:
+    void on_noteEditTabWidget_tabBarDoubleClicked(int index);
+
+    void on_actionToggle_note_stickiness_of_current_tab_triggered();
+
+private:
     Ui::MainWindow *ui;
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;

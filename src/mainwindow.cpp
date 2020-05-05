@@ -3686,7 +3686,11 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
     updateWindowTitle();
 
     // update current tab
-    jumpToTab(note);
+    if (!jumpToTab(note) && Utils::Gui::isTabWidgetTabSticky(
+           ui->noteEditTabWidget, ui->noteEditTabWidget->currentIndex())) {
+        openCurrentNoteInTab();
+    }
+
     updateCurrentTabData(note);
 
     // find and set the current item
@@ -3772,10 +3776,9 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
 }
 
 void MainWindow::updateCurrentTabData(const Note &note) const {
-    ui->noteEditTabWidget->currentWidget()->setProperty("note-id",
-                                                        note.getId());
-    ui->noteEditTabWidget->setTabText(ui->noteEditTabWidget->currentIndex(),
-                                      note.getName());
+    Utils::Gui::updateTabWidgetTabData(ui->noteEditTabWidget,
+                                       ui->noteEditTabWidget->currentIndex(),
+                                       note);
 }
 
 void MainWindow::closeOrphanedTabs() const {
@@ -12485,4 +12488,13 @@ void MainWindow::removeNoteTab(int index) const {
     if (ui->noteEditTabWidget->count() > 1) {
         ui->noteEditTabWidget->removeTab(index);
     }
+}
+
+void MainWindow::on_noteEditTabWidget_tabBarDoubleClicked(int index) {
+    Utils::Gui::setTabWidgetTabSticky(ui->noteEditTabWidget, index,
+          !Utils::Gui::isTabWidgetTabSticky(ui->noteEditTabWidget, index));
+}
+
+void MainWindow::on_actionToggle_note_stickiness_of_current_tab_triggered() {
+    on_noteEditTabWidget_tabBarDoubleClicked(ui->noteEditTabWidget->currentIndex());
 }

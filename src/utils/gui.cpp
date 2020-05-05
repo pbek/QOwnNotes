@@ -710,6 +710,7 @@ void Utils::Gui::storeNoteTabs(QTabWidget *tabWidget) {
 
     QStringList noteNameList;
     QStringList noteSubFolderPathDataList;
+    QStringList noteStickinessList;
 
     for (int i = 0; i < tabWidget->count(); i++) {
         const Note note = getTabWidgetNote(tabWidget, i);
@@ -720,6 +721,10 @@ void Utils::Gui::storeNoteTabs(QTabWidget *tabWidget) {
 
         noteNameList << note.getName();
         noteSubFolderPathDataList << note.getNoteSubFolder().pathData();
+
+        if (isTabWidgetTabSticky(tabWidget, i)) {
+            noteStickinessList << QString::number(i);
+        }
     }
 
     NoteFolder noteFolder = NoteFolder::currentNoteFolder();
@@ -727,6 +732,8 @@ void Utils::Gui::storeNoteTabs(QTabWidget *tabWidget) {
                                 noteNameList);
     noteFolder.setSettingsValue(QStringLiteral("NoteTabSubFolderPathDataList"),
                                 noteSubFolderPathDataList);
+    noteFolder.setSettingsValue(QStringLiteral("NoteTabStickinessList"),
+                                noteStickinessList);
 }
 
 void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
@@ -747,6 +754,8 @@ void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
             QStringLiteral("NoteTabNameList")).toStringList();
         const QStringList noteSubFolderPathDataList = noteFolder.settingsValue(
             QStringLiteral("NoteTabSubFolderPathDataList")).toStringList();
+        const QStringList noteStickinessList = noteFolder.settingsValue(
+            QStringLiteral("NoteTabStickinessList")).toStringList();
         const int noteNameListCount = noteNameList.count();
 
         // only restore if there was more than one tab and
@@ -757,6 +766,8 @@ void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
                 const QString &noteName = noteNameList.at(i);
                 const QString &noteSubFolderPathData =
                     noteSubFolderPathDataList.at(i);
+                const bool isSticky = noteStickinessList.contains(
+                    QString::number(i));
                 const Note note = Note::fetchByName(noteName,
                                                     noteSubFolderPathData);
 
@@ -773,13 +784,36 @@ void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
 
                 // set the current tab index and the note data
                 tabWidget->setCurrentIndex(i);
-                tabWidget->setTabText(i, note.getName());
-                tabWidget->currentWidget()->setProperty("note-id",
-                                                        note.getId());
+                updateTabWidgetTabData(tabWidget, i, note);
+                setTabWidgetTabSticky(tabWidget, i, isSticky);
             }
         }
     }
 
     // make sure a layout is set in the end
     tabWidget->currentWidget()->setLayout(layout);
+}
+
+void Utils::Gui::updateTabWidgetTabData(QTabWidget *tabWidget, int index,
+                                       const Note &note) {
+    tabWidget->widget(index)->setProperty("note-id", note.getId());
+    QString text = note.getName();
+
+    if (isTabWidgetTabSticky(tabWidget, index)) {
+        // https://unicode-table.com/en/search/?q=flag
+        text.prepend(QStringLiteral("\u2690 "));
+    }
+
+    tabWidget->setTabText(index, text);
+}
+
+void Utils::Gui::setTabWidgetTabSticky(QTabWidget *tabWidget, int index,
+                                       bool sticky) {
+    tabWidget->widget(index)->setProperty("sticky", sticky);
+    Note note = getTabWidgetNote(tabWidget, index);
+    updateTabWidgetTabData(tabWidget, index, note);
+}
+
+bool Utils::Gui::isTabWidgetTabSticky(QTabWidget *tabWidget, int index) {
+    return tabWidget->widget(index)->property("sticky").toBool();
 }
