@@ -2053,6 +2053,18 @@ void highlightCode(QString &str, const QString &type, int cbCount) {
     }
 }
 
+static int nonOverlapCount(const QString &str, const QChar c = '`') {
+  const auto len = str.length();
+  int count = 0;
+  for (int i = 0; i < len; ++i) {
+    if (str[i] == c && i + 2 < len && str[i + 1] == c && str[i + 2] == c) {
+      ++count;
+      i += 2;
+    }
+  }
+  return count;
+}
+
 /**
  * Converts a markdown string for a note to html
  *
@@ -2170,10 +2182,10 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
     }
 
     /*CODE HIGHLIGHTING*/
-    int cbCount = str.count(QStringLiteral("```"));
+    int cbCount = nonOverlapCount(str, '`');
     if (cbCount % 2 != 0) --cbCount;
 
-    int cbTildeCount = str.count(QStringLiteral("~~~"));
+    int cbTildeCount = nonOverlapCount(str, '~');
     if (cbTildeCount % 2 != 0) --cbTildeCount;
 
     // divide by two to get actual number of code blocks
