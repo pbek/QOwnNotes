@@ -5,6 +5,9 @@
   (for [#1730](https://github.com/pbek/QOwnNotes/issues/1730))
 - the note tab sticky status will now be shown correctly if a note is double-clicked
   in the note list (for [#1730](https://github.com/pbek/QOwnNotes/issues/1730))
+- added more German, French, Russian, Italian, Catalan, Bengali, Hungarian, Dutch,
+  Danish, Finnish, Polish, Brazilian Portuguese translation (thank you rakekniven,
+  gbabin, unchase, mlocati, MGuerra, Oymate, Fabijenna, mlimacarlos)
 
 ## 20.5.4
 - you can now stick a note to a tab with the new action `Toggle note stickiness of current tab`
