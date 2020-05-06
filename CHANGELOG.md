@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.5.5
+- the note tab sticky status will now be shown correctly if a note is double-clicked
+  in the note list (for [#1730](https://github.com/pbek/QOwnNotes/issues/1730))
+
 ## 20.5.4
 - you can now stick a note to a tab with the new action `Toggle note stickiness of current tab`
   in the *Note / Navigation* menu or by double-clicking on the tab

@@ -10136,7 +10136,8 @@ void MainWindow::openCurrentNoteInTab() {
         widgetPage->setProperty("note-id", noteId);
         tabIndex = ui->noteEditTabWidget->addTab(widgetPage, noteName);
     } else {
-        ui->noteEditTabWidget->setTabText(tabIndex, noteName);
+        Utils::Gui::updateTabWidgetTabData(ui->noteEditTabWidget,
+                                           tabIndex, currentNote);
     }
 
     ui->noteEditTabWidget->setCurrentIndex(tabIndex);
