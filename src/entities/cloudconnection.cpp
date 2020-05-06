@@ -307,7 +307,11 @@ QList<int> CloudConnection::fetchUsedCloudConnectionsIds() {
 
     idList << CloudConnection::currentTodoCalendarCloudConnection().getId();
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
+    return idList.values();
+#else
     return idList.toList();
+#endif
 }
 
 QDebug operator<<(QDebug dbg, const CloudConnection &cloudConnection) {
