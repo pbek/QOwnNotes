@@ -4410,6 +4410,16 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
         <translation>Ná taispeáin arís!</translation>
     </message>
     <message>
+        <location filename="../utils/gui.cpp" line="810"/>
+        <source>Double-click to unstick note from tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../utils/gui.cpp" line="811"/>
+        <source>Double-click to stick note to tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../utils/git.cpp" line="76"/>
         <source>Command failed!</source>
         <translation>Theip ar an gceannas!</translation>

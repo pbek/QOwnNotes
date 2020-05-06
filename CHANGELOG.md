@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 20.5.5
+- now a tooltip is shown for note tabs to guide you how to stick and unstick notes
+  (for [#1730](https://github.com/pbek/QOwnNotes/issues/1730))
 - the note tab sticky status will now be shown correctly if a note is double-clicked
   in the note list (for [#1730](https://github.com/pbek/QOwnNotes/issues/1730))
 

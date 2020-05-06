@@ -4407,6 +4407,16 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
         <translation>Ne prikaži više!</translation>
     </message>
     <message>
+        <location filename="../utils/gui.cpp" line="810"/>
+        <source>Double-click to unstick note from tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../utils/gui.cpp" line="811"/>
+        <source>Double-click to stick note to tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../utils/git.cpp" line="76"/>
         <source>Command failed!</source>
         <translation>Komanda nije uspjela!</translation>

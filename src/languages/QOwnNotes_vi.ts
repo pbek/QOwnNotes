@@ -4330,6 +4330,16 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
         <translation>Đừng hiển thị lại!</translation>
     </message>
     <message>
+        <location filename="../utils/gui.cpp" line="810"/>
+        <source>Double-click to unstick note from tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../utils/gui.cpp" line="811"/>
+        <source>Double-click to stick note to tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../utils/git.cpp" line="76"/>
         <source>Command failed!</source>
         <translation>Lệnh không thành công!</translation>

@@ -4409,6 +4409,16 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
         <translation>Nerādīt atkal!</translation>
     </message>
     <message>
+        <location filename="../utils/gui.cpp" line="810"/>
+        <source>Double-click to unstick note from tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../utils/gui.cpp" line="811"/>
+        <source>Double-click to stick note to tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../utils/git.cpp" line="76"/>
         <source>Command failed!</source>
         <translation>Komanda neizdevās!</translation>

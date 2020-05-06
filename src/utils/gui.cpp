@@ -798,13 +798,17 @@ void Utils::Gui::updateTabWidgetTabData(QTabWidget *tabWidget, int index,
                                        const Note &note) {
     tabWidget->widget(index)->setProperty("note-id", note.getId());
     QString text = note.getName();
+    const bool isSticky = isTabWidgetTabSticky(tabWidget, index);
 
-    if (isTabWidgetTabSticky(tabWidget, index)) {
+    if (isSticky) {
         // https://unicode-table.com/en/search/?q=flag
         text.prepend(QStringLiteral("\u2690 "));
     }
 
     tabWidget->setTabText(index, text);
+    tabWidget->setTabToolTip(index, isSticky ?
+            QObject::tr("Double-click to unstick note from tab") :
+            QObject::tr("Double-click to stick note to tab"));
 }
 
 void Utils::Gui::setTabWidgetTabSticky(QTabWidget *tabWidget, int index,
