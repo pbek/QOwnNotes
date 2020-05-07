@@ -17,11 +17,11 @@ You can also **manage your bookmarks in notes** with the note tag `bookmarks` (c
 ### Syntax of bookmark links
 
 ```markdown
-- [some link name](http://link)
-- [some link name](http://link) #tag1 #tag2
-- [some link name](http://link) some description only
-- [some link name](http://link) #tag1 #tag2 some description and tags
-* [some link name](http://link) the alternative list character also works
+- [Webpage name](https://www.example.com)
+- [Webpage name](https://www.example.com) #tag1 #tag2
+- [Webpage name](https://www.example.com) some description only
+- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+* [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
 You are able to search for name, url tags or description in the browser extension.
