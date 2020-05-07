@@ -12,7 +12,7 @@ Right-click on a webpage or selected text to use the **web-clipper** functionali
 
 By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
 
-You can also manage your bookmarks in notes with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
 
 ### Syntax of bookmark links
 
