@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.5.6
+- fixed a possible crash in code block preview (for [#1731](https://github.com/pbek/QOwnNotes/pull/1731),
+  thank you @Waqar144)
+
 ## 20.5.5
 - now a tooltip is shown for note tabs to guide you how to stick and unstick notes
   (for [#1730](https://github.com/pbek/QOwnNotes/issues/1730))
