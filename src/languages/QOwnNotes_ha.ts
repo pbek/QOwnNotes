@@ -2561,27 +2561,32 @@
     <message>
       <location filename="../mainwindow.ui" line="2596"/>
       <source>Previous note tab</source>
-      <translation type="unfinished">Previous note tab</translation>
+      <translation>Shafin rubutu na baya
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2608"/>
       <source>Next note tab</source>
-      <translation type="unfinished">Next note tab</translation>
+      <translation>Shafin bayanin kula na gaba
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2620"/>
       <source>Close current note tab</source>
-      <translation type="unfinished">Close current note tab</translation>
+      <translation>Rufe shafin bayanin kula na yanzu
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2632"/>
       <source>New note in new tab</source>
-      <translation type="unfinished">New note in new tab</translation>
+      <translation>Sabuwar sanarwa a cikin sabon shafin
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2640"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>Canja bayanin kula na shafin yau
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>

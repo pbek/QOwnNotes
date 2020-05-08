@@ -2580,7 +2580,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2640"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>Schakel de plakkerigheid van het huidige tabblad</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -4367,12 +4367,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../utils/gui.cpp" line="810"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>Dubbelklik om de notitie van het tabblad los te maken</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="811"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>Dubbelklik om de notitie op het tabblad te plakken</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>

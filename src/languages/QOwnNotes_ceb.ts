@@ -2561,27 +2561,32 @@
     <message>
       <location filename="../mainwindow.ui" line="2596"/>
       <source>Previous note tab</source>
-      <translation type="unfinished">Previous note tab</translation>
+      <translation>Tab sa miaging nota
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2608"/>
       <source>Next note tab</source>
-      <translation type="unfinished">Next note tab</translation>
+      <translation>Sunod nga tab nga sulat
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2620"/>
       <source>Close current note tab</source>
-      <translation type="unfinished">Close current note tab</translation>
+      <translation>Pagtak sa karon nga tab nga timaan
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2632"/>
       <source>New note in new tab</source>
-      <translation type="unfinished">New note in new tab</translation>
+      <translation>Bag-ong nota sa bag-ong tab
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2640"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>Toggle nota stickiness sa karon nga tab
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -3177,7 +3182,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10287"/>
       <source>Open note in tab</source>
-      <translation type="unfinished">Open note in tab</translation>
+      <translation>Buksi ang nota sa tab
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10174"/>
@@ -4366,12 +4372,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/gui.cpp" line="810"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>Doble-klik sa unstick note gikan sa tab
+</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="811"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>Doble-klik sa stick stick aron tab
+</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>
@@ -4412,17 +4420,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../entities/notesubfolder.cpp" line="553"/>
       <location filename="../entities/notesubfolder.cpp" line="576"/>
       <source>Folder will be hidden!</source>
-      <translation type="unfinished">Folder will be hidden!</translation>
+      <translation>Itago ang folder!
+</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="554"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</translation>
+      <translation>Dili mahimo ang folder sa ngalan nga &lt;b&gt;%1 &lt;/b&gt; tungod kay kini gigamit sa sulod sa aplikasyon!
+</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="577"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored sub-folders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored sub-folders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
+      <translation>Dili mahimo ang folder sa ngalan nga &lt;b&gt;% 1 &lt;/b&gt; tungod kay naa kini sa lista sa mga gibalewala nga mga sub-folder! Mahimo nimo mabag-o kini sa mga setting sa &lt;i&gt; Panels &lt;/i&gt;.
+</translation>
     </message>
   </context>
   <context>
@@ -6136,7 +6147,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+      <translation>Ibalik ang bukas nga mga tab nga mubo nga sulat sa pagsugod sa aplikasyon ug kung ang mga folder nga mga sulat gibalhin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5743"/>

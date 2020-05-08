@@ -2552,27 +2552,32 @@
     <message>
       <location filename="../mainwindow.ui" line="2596"/>
       <source>Previous note tab</source>
-      <translation type="unfinished">Previous note tab</translation>
+      <translation>前一個筆記標籤
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2608"/>
       <source>Next note tab</source>
-      <translation type="unfinished">Next note tab</translation>
+      <translation>下一個筆記標籤
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2620"/>
       <source>Close current note tab</source>
-      <translation type="unfinished">Close current note tab</translation>
+      <translation>關閉當前筆記標籤
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2632"/>
       <source>New note in new tab</source>
-      <translation type="unfinished">New note in new tab</translation>
+      <translation>新標籤中的新註釋
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2640"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>切換當前標籤頁的便簽粘性
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -3159,7 +3164,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10287"/>
       <source>Open note in tab</source>
-      <translation type="unfinished">Open note in tab</translation>
+      <translation>在標籤中打開筆記
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10174"/>
@@ -4333,12 +4339,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/gui.cpp" line="810"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>雙擊以從選項卡中取消註釋
+</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="811"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>雙擊以將註釋粘貼到選項卡
+</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>
@@ -4379,17 +4387,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../entities/notesubfolder.cpp" line="553"/>
       <location filename="../entities/notesubfolder.cpp" line="576"/>
       <source>Folder will be hidden!</source>
-      <translation type="unfinished">Folder will be hidden!</translation>
+      <translation>文件夾將被隱藏！
+</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="554"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</translation>
+      <translation>無法創建名稱為&lt;b&gt;％1 &lt;/ b&gt;的文件夾，因為該文件夾在應用程序內部使用！
+</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="577"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored sub-folders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored sub-folders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
+      <translation>無法創建名稱為&lt;b&gt;％1 &lt;/ b&gt;的文件夾，因為該文件夾位於忽略的子文件夾列表中！ 您可以在&lt;i&gt;面板設置&lt;/ i&gt;中進行更改。
+</translation>
     </message>
   </context>
   <context>
@@ -6099,7 +6110,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+      <translation>在應用程序啟動時和切換便箋文件夾時還原打開的便箋選項卡</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5743"/>

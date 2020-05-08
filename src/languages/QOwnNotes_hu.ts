@@ -2581,7 +2581,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2640"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>Az aktuális fül megjegyzésének átváltása</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -4368,12 +4368,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
     <message>
       <location filename="../utils/gui.cpp" line="810"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>Kattintson kétszer a jegyzet eltávolításához a fülről</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="811"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>Kattintson duplán a jegyzet fülre rögzitéséhez</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>

@@ -2581,7 +2581,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2640"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>Alternar nota adhesiva de la pestaña actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -4368,12 +4368,13 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../utils/gui.cpp" line="810"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>Haga doble clic para despegar la nota de la pestaña
+</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="811"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>Haga doble clic para pegar la nota a la pestaña</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>

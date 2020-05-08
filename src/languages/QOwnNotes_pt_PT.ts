@@ -2561,27 +2561,32 @@
     <message>
       <location filename="../mainwindow.ui" line="2596"/>
       <source>Previous note tab</source>
-      <translation type="unfinished">Previous note tab</translation>
+      <translation>Guia Nota anterior
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2608"/>
       <source>Next note tab</source>
-      <translation type="unfinished">Next note tab</translation>
+      <translation>Guia Próxima nota
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2620"/>
       <source>Close current note tab</source>
-      <translation type="unfinished">Close current note tab</translation>
+      <translation>Fechar a guia de anotação atual
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2632"/>
       <source>New note in new tab</source>
-      <translation type="unfinished">New note in new tab</translation>
+      <translation>Nova nota na nova guia
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2640"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>Alternar aderência da nota da guia atual
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -3182,7 +3187,8 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../mainwindow.cpp" line="10287"/>
       <source>Open note in tab</source>
-      <translation type="unfinished">Open note in tab</translation>
+      <translation>Abrir nota na guia
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10174"/>
@@ -4369,12 +4375,14 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../utils/gui.cpp" line="810"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>Clique duas vezes para remover a nota da guia
+</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="811"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>Clique duas vezes para colar a nota na guia
+</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>
@@ -4415,17 +4423,20 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
       <location filename="../entities/notesubfolder.cpp" line="553"/>
       <location filename="../entities/notesubfolder.cpp" line="576"/>
       <source>Folder will be hidden!</source>
-      <translation type="unfinished">Folder will be hidden!</translation>
+      <translation>Pasta estará oculta!
+</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="554"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</translation>
+      <translation>Pasta com o nome &lt;b&gt;% 1 &lt;/b&gt; não pode ser criada, porque é usada internamente pelo aplicativo!
+</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="577"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored sub-folders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored sub-folders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
+      <translation>A pasta com o nome &lt;b&gt;%1 &lt;/b&gt; não pode ser criada, porque está na lista de subpastas ignoradas! Você pode alterar isso nas &lt;i&gt; configurações de painéis &lt;/i&gt;.
+</translation>
     </message>
   </context>
   <context>
@@ -6136,7 +6147,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+      <translation>Restaurar guias de notas abertas na inicialização do aplicativo e quando as pastas de notas são trocadas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5743"/>

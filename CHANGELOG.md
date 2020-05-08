@@ -2,12 +2,18 @@
 
 ## 20.5.6
 - leaving the distraction free mode with <kbd>Escape</kbd> now doesn't cause you
-  to enter the readonly mode automatically, you have to press <kbd>Escape</kbd>
-  a 2nd time to enter the readonly mode (for [#1733](https://github.com/pbek/QOwnNotes/issues/1733))
+  to enter the read-only mode automatically, you have to press <kbd>Escape</kbd>
+  a 2nd time to enter the read-only mode (for [#1733](https://github.com/pbek/QOwnNotes/issues/1733))
 - fixed a possible focus problem when entering the distraction free mode
   (for [#1733](https://github.com/pbek/QOwnNotes/issues/1733))
 - fixed a possible crash in code block preview (for [#1731](https://github.com/pbek/QOwnNotes/pull/1731),
   thank you @Waqar144)
+- added more Cebuano, Indonesian, Polish, Uzbek, Portuguese, Irish, Vietnamese,
+  Chinese Simplified, Punjabi, Albanian, Chinese Traditional, Romanian, Japanese,
+  Arabic, Filipino, Serbian (Cyrillic), Khmer, Galician, Czech, Slovak, Korean,
+  Greek, Danish, Slovenian, Dutch, Latvian, Hausa, Spanish, Basque, Hebrew, Swedish,
+  Lithuanian, Hindi, Turkish, Macedonian, Hungarian, Ukrainian, Norwegian, Bosnian,
+  Icelandic, Urdu (Pakistan), Persian, Bulgarian translation (thank you Fabijenna)
 
 ## 20.5.5
 - now a tooltip is shown for note tabs to guide you how to stick and unstick notes

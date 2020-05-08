@@ -2561,27 +2561,32 @@
     <message>
       <location filename="../mainwindow.ui" line="2596"/>
       <source>Previous note tab</source>
-      <translation type="unfinished">Previous note tab</translation>
+      <translation>ਪਿਛਲੀ ਨੋਟ ਟੈਬ
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2608"/>
       <source>Next note tab</source>
-      <translation type="unfinished">Next note tab</translation>
+      <translation>ਅਗਲਾ ਨੋਟ ਟੈਬ
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2620"/>
       <source>Close current note tab</source>
-      <translation type="unfinished">Close current note tab</translation>
+      <translation>ਮੌਜੂਦਾ ਨੋਟ ਟੈਬ ਨੂੰ ਬੰਦ ਕਰੋ
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2632"/>
       <source>New note in new tab</source>
-      <translation type="unfinished">New note in new tab</translation>
+      <translation>ਨਵੀਂ ਟੈਬ ਵਿਚ ਨਵਾਂ ਨੋਟ
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2640"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>ਮੌਜੂਦਾ ਟੈਬ ਦੀ ਨੋਟ ਸਟਿੱਕੀ ਨੂੰ ਬਦਲੋ
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -3183,7 +3188,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10287"/>
       <source>Open note in tab</source>
-      <translation type="unfinished">Open note in tab</translation>
+      <translation>ਟੈਬ ਵਿੱਚ ਨੋਟ ਖੋਲ੍ਹੋ
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10174"/>
@@ -4372,12 +4378,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/gui.cpp" line="810"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>ਟੈਬ ਤੋਂ ਨੋਟ ਹਟਾਉਣ ਲਈ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰੋ
+</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="811"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>ਨੋਟ ਨੂੰ ਟੈਬ ਤੇ ਟਿਕਣ ਲਈ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰੋ
+</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>
@@ -4418,17 +4426,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../entities/notesubfolder.cpp" line="553"/>
       <location filename="../entities/notesubfolder.cpp" line="576"/>
       <source>Folder will be hidden!</source>
-      <translation type="unfinished">Folder will be hidden!</translation>
+      <translation>ਫੋਲਡਰ ਲੁਕੋ ਜਾਣਗੇ!
+</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="554"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</translation>
+      <translation>&lt;b&gt;% 1 &lt;/b&gt; ਨਾਮ ਵਾਲਾ ਫੋਲਡਰ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ, ਕਿਉਂਕਿ ਇਹ ਅੰਦਰੂਨੀ ਤੌਰ ਤੇ ਐਪਲੀਕੇਸ਼ਨ ਦੁਆਰਾ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ!
+</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="577"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored sub-folders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored sub-folders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
+      <translation>&lt;b&gt;%1 &lt;/b&gt; ਨਾਮ ਵਾਲਾ ਫੋਲਡਰ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ, ਕਿਉਂਕਿ ਇਹ ਅਣਡਿੱਠ ਕੀਤੇ ਸਬ-ਫੋਲਡਰਾਂ ਦੀ ਸੂਚੀ ਵਿੱਚ ਹੈ! ਤੁਸੀਂ ਇਸਨੂੰ &lt;i&gt; ਪੈਨਲ ਸੈਟਿੰਗ &lt;/ i&gt; ਵਿਚ ਬਦਲ ਸਕਦੇ ਹੋ.
+</translation>
     </message>
   </context>
   <context>
@@ -6139,7 +6150,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+      <translation>ਐਪਲੀਕੇਸ਼ਨ ਦੀ ਸ਼ੁਰੂਆਤ ਵੇਲੇ ਅਤੇ ਜਦੋਂ ਨੋਟ ਫੋਲਡਰਾਂ ਨੂੰ ਬਦਲਿਆ ਜਾਂਦਾ ਹੈ ਤਾਂ ਖੁੱਲੇ ਨੋਟ ਟੈਬ ਨੂੰ ਰੀਸਟੋਰ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5743"/>

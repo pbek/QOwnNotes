@@ -2581,7 +2581,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2640"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>Skift notehøjhed på den aktuelle fane</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -4369,12 +4369,13 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     <message>
       <location filename="../utils/gui.cpp" line="810"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>Dobbeltklik for at fjerne markering af note fra fanen
+</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="811"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>Dobbeltklik for at sætte en note på fanen</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>
