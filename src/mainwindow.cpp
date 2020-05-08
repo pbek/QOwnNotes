@@ -1694,6 +1694,7 @@ void MainWindow::setDistractionFreeMode(const bool enabled) {
 
     ui->noteTextEdit->setPaperMargins();
     ui->encryptedNoteTextEdit->setPaperMargins();
+    activeNoteTextEdit()->setFocus();
 }
 
 /**
@@ -4136,7 +4137,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 isInDistractionFreeMode() &&
                 !activeNoteTextEdit()->searchWidget()->isVisible()) {
                 toggleDistractionFreeMode();
-                return false;
+                return true;
             }
             return false;
         } else if (obj == ui->noteTreeWidget) {

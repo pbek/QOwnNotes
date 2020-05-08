@@ -1,6 +1,11 @@
 # QOwnNotes Changelog
 
 ## 20.5.6
+- leaving the distraction free mode with <kbd>Escape</kbd> now doesn't cause you
+  to enter the readonly mode automatically, you have to press <kbd>Escape</kbd>
+  a 2nd time to enter the readonly mode (for [#1733](https://github.com/pbek/QOwnNotes/issues/1733))
+- fixed a possible focus problem when entering the distraction free mode
+  (for [#1733](https://github.com/pbek/QOwnNotes/issues/1733))
 - fixed a possible crash in code block preview (for [#1731](https://github.com/pbek/QOwnNotes/pull/1731),
   thank you @Waqar144)
 
