@@ -1968,10 +1968,9 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 /**
  * Writes a text to a file
  *
- *
- * @param filePath {QString}
- * @param data {QString}
- * @param createParentDirs {bool} optional (default: false)
+ * @param filePath
+ * @param data
+ * @param createParentDirs
  * @return
  */
 bool ScriptingService::writeToFile(const QString &filePath,
