@@ -2001,11 +2001,15 @@ bool ScriptingService::writeToFile(const QString &filePath,
  * @param filePath
  * @return the file data or null if the file does not exist
  */
-QString ScriptingService::readFromFile(const QString &filePath) const{
-    if (filePath.isEmpty()) return Q_NULLPTR;
+QString ScriptingService::readFromFile(const QString &filePath) const {
+    if (filePath.isEmpty()){
+        return Q_NULLPTR;
+    }
     QFile file(filePath);
 
-    if (!file.open(QFile::ReadOnly)) return Q_NULLPTR;
+    if (!file.open(QFile::ReadOnly)){
+        return Q_NULLPTR;
+    }
 
     QTextStream in(&file);
     in.setCodec("UTF-8");
@@ -2020,8 +2024,10 @@ QString ScriptingService::readFromFile(const QString &filePath) const{
  * @param filePath
  * @return
  */
-bool ScriptingService::fileExists(QString &filePath) const{
-    if (filePath.isEmpty()) return false;
+bool ScriptingService::fileExists(QString &filePath) const {
+    if (filePath.isEmpty()){
+        return false;
+    }
     QFile file(filePath);
     return file.exists();
 }
