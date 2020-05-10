@@ -1328,7 +1328,7 @@ Opening an input dialog with a line edit
     script.log(result);
     ```
 
-Checking for a file
+Check if a file exists
 ----------------------
 
 !!! help "Method call and parameters"
