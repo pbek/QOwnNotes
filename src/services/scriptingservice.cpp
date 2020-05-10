@@ -1970,13 +1970,22 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
  *
  * @param filePath
  * @param data
+ * @param createParentDirs
  * @return
  */
 bool ScriptingService::writeToFile(const QString &filePath,
-                                   const QString &data) const {
+                                   const QString &data,
+                                   const bool createParentDirs) const {
     if (filePath.isEmpty()) return false;
 
     QFile file(filePath);
+
+    if(createParentDirs) {
+        QFileInfo fileInfo(file);
+        QDir dir = fileInfo.dir();
+        if(!dir.mkpath(dir.path())) return false;
+    }
+
     if (!file.open(QFile::WriteOnly | QFile::Truncate)) return false;
 
     QTextStream out(&file);
@@ -1984,6 +1993,37 @@ bool ScriptingService::writeToFile(const QString &filePath,
     out << data;
     file.close();
     return true;
+}
+
+/**
+ * Read text from a file
+ *
+ * @param filePath
+ * @return the file data or null if the file does not exist
+ */
+QString ScriptingService::readFromFile(const QString &filePath) const{
+    if (filePath.isEmpty()) return Q_NULLPTR;
+    QFile file(filePath);
+
+    if (!file.open(QFile::ReadOnly)) return Q_NULLPTR;
+
+    QTextStream in(&file);
+    in.setCodec("UTF-8");
+    QString data = in.readAll();
+    file.close();
+    return data;
+}
+
+
+/**
+ * Check if a file exists
+ * @param filePath
+ * @return
+ */
+bool ScriptingService::fileExists(QString &filePath) const{
+    if (filePath.isEmpty()) return false;
+    QFile file(filePath);
+    return file.exists();
 }
 
 /**

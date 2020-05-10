@@ -6618,13 +6618,28 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
     menu->addAction(ui->actionAutocomplete);
     menu->addAction(ui->actionSplit_note_at_cursor_position);
 
+
+
+    // add the scripts menu
+    QMenu *scriptMenu = menu->addMenu(tr("Scripts"));
+    scriptMenu->setIcon(QIcon::fromTheme(
+        QStringLiteral("document-export"),
+        QIcon(QStringLiteral(
+            ":icons/breeze-qownnotes/16x16/document-export.svg"))));
+
+    QAction *customAction =
+        scriptMenu->addAction(tr("Custom Action"));
+    exportHTMLAction->setEnabled(isTextSelected);
+    exportHTMLAction->setIcon(pdfIcon);
+
+
     // add the custom actions to the context menu
     if (!_noteTextEditContextMenuActions.isEmpty()) {
-        menu->addSeparator();
+        scriptMenu->addSeparator();
 
         for (QAction *action :
              Utils::asConst(_noteTextEditContextMenuActions)) {
-            menu->addAction(action);
+            scriptMenu->addAction(action);
         }
     }
 
@@ -6672,6 +6687,8 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
             // copy the text from a copy block around currentTextBlock to the
             // clipboard
             Utils::Gui::copyCodeBlockText(currentTextBlock);
+        }else if(selectedItem == customAction){
+            qDebug() << activeNoteTextEdit()->textCursor().block().text();
         }
     }
 }

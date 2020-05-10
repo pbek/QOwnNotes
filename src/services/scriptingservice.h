@@ -175,7 +175,10 @@ class ScriptingService : public QObject {
     Q_INVOKABLE QList<int> selectedNotesIds() const;
 
     Q_INVOKABLE bool writeToFile(const QString &filePath,
-                                 const QString &data) const;
+                                 const QString &data,
+                                 const bool createParentDirs = false) const;
+    Q_INVOKABLE QString readFromFile(const QString &filePath) const;
+    Q_INVOKABLE bool fileExists(QString &filePath) const;
 
     Q_INVOKABLE QVector<int> fetchNoteIdsByNoteTextPart(
         const QString &text) const;
