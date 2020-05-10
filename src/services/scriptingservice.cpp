@@ -2003,12 +2003,12 @@ bool ScriptingService::writeToFile(const QString &filePath,
  */
 QString ScriptingService::readFromFile(const QString &filePath) const {
     if (filePath.isEmpty()){
-        return Q_NULLPTR;
+        return QString();
     }
     QFile file(filePath);
 
     if (!file.open(QFile::ReadOnly)){
-        return Q_NULLPTR;
+        return QString();
     }
 
     QTextStream in(&file);
