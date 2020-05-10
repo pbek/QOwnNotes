@@ -7384,7 +7384,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
     }
 
     if (mimeData->hasHtml()) {
-        insertHtml(mimeData->html());
+        insertHtmlAsMarkdownIntoCurrentNote(mimeData->html());
     } else if (mimeData->hasUrls()) {
         int successCount = 0;
         int failureCount = 0;
@@ -7503,7 +7503,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
  * Inserts html as markdown in the current note
  * Images are also downloaded
  */
-void MainWindow::insertHtml(QString html) {
+void MainWindow::insertHtmlAsMarkdownIntoCurrentNote(QString html) {
     // convert html tags to markdown
     html = Utils::Misc::htmlToMarkdown(std::move(html));
 

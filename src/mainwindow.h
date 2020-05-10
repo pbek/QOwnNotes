@@ -184,7 +184,7 @@ class MainWindow : public QMainWindow {
 
     void openIssueAssistantDialog();
 
-    void insertHtml(QString html);
+    Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
 
     void resetBrokenTagNotesLinkFlag();
 

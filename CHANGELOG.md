@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 20.5.8
+- there now is a new method `insertHtmlAsMarkdownIntoCurrentNote` for `mainWindow`
+  in the scripting engine that inserts html in the current note as markdown
+  (for [#1740](https://github.com/pbek/QOwnNotes/issues/1740))
+    - this method also downloads remote images and transforms `data:image` urls
+      to local images stored in the media directory
+    - for more information please take a look at the
+      [Mainwindow scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#mainwindow)
+
 ## 20.5.7
 - fixed a possible crash when restoring note tabs (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
 

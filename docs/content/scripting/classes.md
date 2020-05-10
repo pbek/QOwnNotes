@@ -72,6 +72,10 @@ MainWindow
         Q_INVOKABLE void focusNoteTextEdit();
         // Creates a new note subfolder in the current subfolder
         Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
+        // Inserts html in the current note as markdown
+        // This method also downloads remote images and transforms "data:image"
+        // urls to local images stored in the media directory
+        Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
     };
     ```
 
@@ -82,4 +86,7 @@ MainWindow
     
     // Creates a new note subfolder "My fancy folder" in the current subfolder
     mainWindow.createNewNoteSubFolder("My fancy folder");
+    
+    // Inserts html in the current note as markdown
+    mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
     ```
