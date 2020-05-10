@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 20.5.8
+## 20.5.7
 - there now is a new method `insertHtmlAsMarkdownIntoCurrentNote` for `mainWindow`
   in the scripting engine that inserts html in the current note as markdown
   (for [#1740](https://github.com/pbek/QOwnNotes/issues/1740))
@@ -18,8 +18,6 @@
     - take a look at the
       [handleNoteNameHook documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#websocketrawdatahook)
       for more information
-
-## 20.5.7
 - fixed a possible crash when restoring note tabs (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
 
 ## 20.5.6
