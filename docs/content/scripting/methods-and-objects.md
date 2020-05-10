@@ -1328,6 +1328,48 @@ Opening an input dialog with a line edit
     script.log(result);
     ```
 
+Checking for a file
+----------------------
+
+!!! help "Method call and parameters"
+    ```cpp
+    /**
+     * Check if a file exists
+     * @param filePath
+     * @return
+     */
+    bool ScriptingService::fileExists(QString &filePath);
+    ```
+
+!!! example
+    ```js
+    var result = script.fileExists(filePath);
+    script.log(result);
+    ```
+
+Reading text from a file
+----------------------
+
+!!! help "Method call and parameters"
+    ```cpp
+    /**
+     * Read text from a file
+     *
+     * @param filePath
+     * @return the file data or null if the file does not exist
+     */
+    QString ScriptingService::readFromFile(const QString &filePath)
+    ```
+
+!!! example
+    ```js
+    if(script.fileExists(filePath)){
+        var data = script.readFromFile(filePath);
+        script.log(data);
+    }
+    ```
+
+
 Writing text to a file
 ----------------------
 
@@ -1336,16 +1378,17 @@ Writing text to a file
     /**
      * Writes a text to a file
      *
-     * @param filePath
-     * @param data
+     * @param filePath {QString}
+     * @param data {QString}
+     * @param createParentDirs {bool} optional (default: false)
      * @return
      */
-    bool ScriptingService::writeToFile(const QString &filePath, const QString &data);
+    bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
     ```
 
 !!! example
     ```js
-    var result = script.writeToFile(filePath, html);;
+    var result = script.writeToFile(filePath, html);
     script.log(result);
     ```
 
