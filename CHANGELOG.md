@@ -8,6 +8,16 @@
       to local images stored in the media directory
     - for more information please take a look at the
       [Mainwindow scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#mainwindow)
+- added a new scripting hook `websocketRawDataHook` that is called when data is
+  sent from the QOwnNotes Web Companion browser extension via the web browser's
+  context menu (for [#1740](https://github.com/pbek/QOwnNotes/issues/1740))
+    - you need the QOwnNotes Web Companion 20.5.0 or higher for this to work
+    - this works with either the `send page` and `send selection` feature of the
+      web companion
+    - if a hook implementation is found in a script no new note will be created
+    - take a look at the
+      [handleNoteNameHook documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#websocketrawdatahook)
+      for more information
 
 ## 20.5.7
 - fixed a possible crash when restoring note tabs (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))

@@ -135,6 +135,11 @@ class ScriptingService : public QObject {
     void callHandleNoteOpenedHook(Note *note);
     QString callHandleNoteNameHook(Note *note);
     bool callHandleNoteDoubleClickedHook(Note *note);
+    bool callHandleWebsocketRawDataHook(const QString &requestType,
+                                        const QString &pageUrl,
+                                        const QString &pageTitle,
+                                        const QString &rawData,
+                                        const QString &screenshotDataUrl);
     QList<QVariant> getSettingsVariables(int scriptId);
     Q_INVOKABLE QString toNativeDirSeparators(const QString &path);
     Q_INVOKABLE QString fromNativeDirSeparators(const QString &path);

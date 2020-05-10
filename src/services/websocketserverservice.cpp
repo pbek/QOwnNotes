@@ -26,6 +26,7 @@
 #include "widgets/qownnotesmarkdowntextedit.h"
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
+#include <services/scriptingservice.h>
 #endif
 
 using namespace std;
@@ -156,7 +157,9 @@ void WebSocketServerService::processMessage(const QString &message) {
         return;
     }
 
-    if (type == QLatin1String("newNote")) {
+    const bool isHandleRawData = type == QLatin1String("handleRawData");
+
+    if ((type == QLatin1String("newNote")) || isHandleRawData) {
 #ifndef INTEGRATION_TESTS
         MainWindow *mainWindow = MainWindow::instance();
         if (mainWindow == Q_NULLPTR) {
@@ -173,14 +176,45 @@ void WebSocketServerService::processMessage(const QString &message) {
         const QString text =
             jsonObject.value(QStringLiteral("text")).toString().trimmed();
         const bool contentTypeIsHTML = contentType == QLatin1String("html");
+        bool isCreateNewNote = true;
 
-        mainWindow->createNewNote(
-            name, contentTypeIsHTML ? QString() : text,
-            MainWindow::CreateNewNoteOptions(
-                MainWindow::CreateNewNoteOption::UseNameAsHeadline));
+        // if the type was "handleRawData" let's check if there is a
+        // websocketRawDataHook used in a script
+        if (isHandleRawData) {
+            const QString requestType =
+                jsonObject.value(QStringLiteral("requestType"))
+                    .toString()
+                    .trimmed();
+            const QString pageUrl = jsonObject.value(QStringLiteral("pageUrl"))
+                                        .toString()
+                                        .trimmed();
+            const QString pageTitle =
+                jsonObject.value(QStringLiteral("pageTitle"))
+                    .toString()
+                    .trimmed();
+            const QString rawData = jsonObject.value(QStringLiteral("rawData"))
+                                        .toString()
+                                        .trimmed();
+            const QString screenshotDataUrl =
+                jsonObject.value(QStringLiteral("screenshotDataUrl"))
+                    .toString()
+                    .trimmed();
 
-        if (contentTypeIsHTML) {
-            mainWindow->insertHtml(std::move(text));
+            // call websocketRawDataHook
+            isCreateNewNote = !ScriptingService::instance()->callHandleWebsocketRawDataHook(
+                    requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
+        }
+
+        if (isCreateNewNote) {
+            mainWindow->createNewNote(
+                name, contentTypeIsHTML ? QString() : text,
+                MainWindow::CreateNewNoteOptions(
+                    MainWindow::CreateNewNoteOption::UseNameAsHeadline));
+
+            if (contentTypeIsHTML) {
+                mainWindow->insertHtmlAsMarkdownIntoCurrentNote(
+                    std::move(text));
+            }
         }
 #endif
     } else if (type == QLatin1String("getBookmarks")) {

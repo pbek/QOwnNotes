@@ -890,6 +890,48 @@ bool ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
 
     return hookFound;
 }
+
+/**
+ * Calls the websocketRawDataHook function for all script components
+ *
+ * @param requestType can be "page" or "selection"
+ * @param pageUrl the url of the webpage where the request was made
+ * @param pageTitle the page title of the webpage where the request was made
+ * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
+ * @param screenshotDataUrl the data url of the screenshot if the webpage where the request was made
+ * @return true if hook was found
+ */
+bool ScriptingService::callHandleWebsocketRawDataHook(
+    const QString &requestType, const QString &pageUrl,
+    const QString &pageTitle, const QString &rawData,
+    const QString &screenshotDataUrl) {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        QObject *object = scriptComponent.object;
+
+        if (methodExistsForObject(object, QStringLiteral(
+            "websocketRawDataHook(QVariant, QVariant, QVariant, QVariant, "
+                                              "QVariant)"))) {
+
+            QMetaObject::invokeMethod(
+                object, "websocketRawDataHook",
+                Q_ARG(QVariant, requestType),
+                Q_ARG(QVariant, pageUrl),
+                Q_ARG(QVariant, pageTitle),
+                Q_ARG(QVariant, rawData),
+                Q_ARG(QVariant, screenshotDataUrl)
+            );
+
+            return true;
+        }
+    }
+
+    return false;
+}
+
 /**
  * QML wrapper to start a detached process
  *
