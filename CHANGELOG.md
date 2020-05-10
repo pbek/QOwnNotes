@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.5.7
+- fixed a possible crash when restoring note tabs (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
+
 ## 20.5.6
 - leaving the distraction free mode with <kbd>Escape</kbd> now doesn't cause you
   to enter the read-only mode automatically, you have to press <kbd>Escape</kbd>

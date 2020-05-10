@@ -693,7 +693,13 @@ int Utils::Gui::getTabWidgetIndexByProperty(QTabWidget *tabWidget,
 }
 
 int Utils::Gui::getTabWidgetNoteId(QTabWidget *tabWidget, int index) {
-    return tabWidget->widget(index)->property("note-id").toInt();
+    QWidget *widget = tabWidget->widget(index);
+
+    if (widget == nullptr) {
+        return 0;
+    }
+
+    return widget->property("note-id").toInt();
 }
 
 Note Utils::Gui::getTabWidgetNote(QTabWidget *tabWidget, int index) {
@@ -796,7 +802,13 @@ void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
 
 void Utils::Gui::updateTabWidgetTabData(QTabWidget *tabWidget, int index,
                                        const Note &note) {
-    tabWidget->widget(index)->setProperty("note-id", note.getId());
+    QWidget *widget = tabWidget->widget(index);
+
+    if (widget == nullptr) {
+        return;
+    }
+
+    widget->setProperty("note-id", note.getId());
     QString text = note.getName();
     const bool isSticky = isTabWidgetTabSticky(tabWidget, index);
 
@@ -813,11 +825,23 @@ void Utils::Gui::updateTabWidgetTabData(QTabWidget *tabWidget, int index,
 
 void Utils::Gui::setTabWidgetTabSticky(QTabWidget *tabWidget, int index,
                                        bool sticky) {
-    tabWidget->widget(index)->setProperty("sticky", sticky);
+    QWidget *widget = tabWidget->widget(index);
+
+    if (widget == nullptr) {
+        return;
+    }
+
+    widget->setProperty("sticky", sticky);
     Note note = getTabWidgetNote(tabWidget, index);
     updateTabWidgetTabData(tabWidget, index, note);
 }
 
 bool Utils::Gui::isTabWidgetTabSticky(QTabWidget *tabWidget, int index) {
-    return tabWidget->widget(index)->property("sticky").toBool();
+    QWidget *widget = tabWidget->widget(index);
+
+    if (widget == nullptr) {
+        return false;
+    }
+
+    return widget->property("sticky").toBool();
 }
