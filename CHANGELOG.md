@@ -24,9 +24,12 @@
       causes all note ids to be different than before
 - fixed a possible crash when restoring note tabs (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
 - added new scripting methods `fileExists` and `readFromFile` and a new parameter
-  `createParentDirs` for method `writeToFile` (for [#1736](https://github.com/pbek/QOwnNotes/issues/1736), @r00tr4v3n)
+  `createParentDirs` for method `writeToFile` (for [#1736](https://github.com/pbek/QOwnNotes/issues/1736), thank you @r00tr4v3n)
     - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/)
+- there now is a new sub-menu for custom actions from scripts in the note-edit
+  context menu to prevent that too many menu items are shown on the first level
+  of the menu (for [#1737](https://github.com/pbek/QOwnNotes/issues/1737), thank you @r00tr4v3n)
 
 ## 20.5.6
 - leaving the distraction free mode with <kbd>Escape</kbd> now doesn't cause you

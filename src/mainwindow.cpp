@@ -6639,9 +6639,9 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
             QStringLiteral("story-editor"),
             QIcon(QStringLiteral(
                 ":icons/breeze-qownnotes/16x16/story-editor.svg")));
-        QMenu *scriptMenu = menu->addMenu(tr("Scripts"));
+        menu->addSeparator();
+        QMenu *scriptMenu = menu->addMenu(tr("Custom actions"));
         scriptMenu->setIcon(scriptIcon);
-        scriptMenu->addSeparator();
         for (QAction *action :
              Utils::asConst(_noteTextEditContextMenuActions)) {
             scriptMenu->addAction(action);
