@@ -6618,7 +6618,6 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
     menu->addAction(ui->actionAutocomplete);
     menu->addAction(ui->actionSplit_note_at_cursor_position);
 
-
     // add the custom actions to the context menu
     if (!_noteTextEditContextMenuActions.isEmpty()) {
         // add the scripts menu
