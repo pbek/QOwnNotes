@@ -2830,7 +2830,7 @@ void SettingsDialog::setupScriptingPage() {
     QString issueUrl =
         QStringLiteral("https://github.com/pbek/QOwnNotes/issues");
     QString documentationUrl = QStringLiteral(
-        "https://docs.qownnotes.org/en/develop/scripting/README.html");
+        "https://docs.qownnotes.org/en/latest/scripting/");
     ui->scriptInfoLabel->setText(
         tr("Take a look at the <a href=\"%1\">Scripting documentation</a> "
            "to get started fast.")
