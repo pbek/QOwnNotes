@@ -334,7 +334,7 @@ autocompletionHook
 ------------------
 
 You can return a list of strings to be added to the autocompletion list
-when the autocompletion is invoked.
+when the autocompletion is invoked (for example by pressing <kbd>Ctrl + Space</kbd>).
 
 !!! help "Method call and parameters"
     ```js
@@ -349,3 +349,30 @@ when the autocompletion is invoked.
 
 You may want to take a look at the example
 [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/autocompletion.qml).
+
+websocketRawDataHook
+--------------------
+
+This hook is called when data is sent from the QOwnNotes Web Companion browser
+extension via the web browser's context menu.
+
+!!! help "Method call and parameters"
+    ```js
+    /**
+     * @param requestType can be "page" or "selection"
+     * @param pageUrl the url of the webpage where the request was made
+     * @param pageTitle the page title of the webpage where the request was made
+     * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
+     * @param screenshotDataUrl the data url of the screenshot if the webpage where the request was made
+     * @return true if data was handled by a hook
+     */
+    bool ScriptingService::callHandleWebsocketRawDataHook(
+        const QString &requestType, const QString &pageUrl,
+        const QString &pageTitle, const QString &rawData,
+        const QString &screenshotDataUrl);
+    ```
+
+You may want to take a look at the examples
+[websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/websocket-raw-data-new-note.qml)
+and
+[websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/websocket-raw-data-selection-in-note.qml).

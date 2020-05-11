@@ -16,7 +16,7 @@
       web companion
     - if a hook implementation is found in a script no new note will be created
     - take a look at the
-      [handleNoteNameHook documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#websocketrawdatahook)
+      [handleNoteNameHook documentation](https://docs.qownnotes.org/en/latest/scripting/hooks/#websocketrawdatahook)
       for more information
 - fixed a possible crash when restoring note tabs (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
 

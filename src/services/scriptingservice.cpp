@@ -894,12 +894,15 @@ bool ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
 /**
  * Calls the websocketRawDataHook function for all script components
  *
+ * This hook is called when data is sent from the QOwnNotes Web Companion
+ * browser extension via the web browser's context menu
+ *
  * @param requestType can be "page" or "selection"
  * @param pageUrl the url of the webpage where the request was made
  * @param pageTitle the page title of the webpage where the request was made
  * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
  * @param screenshotDataUrl the data url of the screenshot if the webpage where the request was made
- * @return true if hook was found
+ * @return true if data was handled by a hook
  */
 bool ScriptingService::callHandleWebsocketRawDataHook(
     const QString &requestType, const QString &pageUrl,
@@ -913,11 +916,13 @@ bool ScriptingService::callHandleWebsocketRawDataHook(
         QObject *object = scriptComponent.object;
 
         if (methodExistsForObject(object, QStringLiteral(
-            "websocketRawDataHook(QVariant, QVariant, QVariant, QVariant, "
+            "websocketRawDataHook(QVariant,QVariant,QVariant,QVariant,"
                                               "QVariant)"))) {
+            QVariant result;
 
             QMetaObject::invokeMethod(
                 object, "websocketRawDataHook",
+                Q_RETURN_ARG(QVariant, result),
                 Q_ARG(QVariant, requestType),
                 Q_ARG(QVariant, pageUrl),
                 Q_ARG(QVariant, pageTitle),
@@ -925,7 +930,10 @@ bool ScriptingService::callHandleWebsocketRawDataHook(
                 Q_ARG(QVariant, screenshotDataUrl)
             );
 
-            return true;
+            // if data was handled by hook return true
+            if (result.toBool()) {
+                return true;
+            }
         }
     }
 
