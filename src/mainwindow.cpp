@@ -6634,11 +6634,17 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
 
     // add the custom actions to the context menu
     if (!_noteTextEditContextMenuActions.isEmpty()) {
-        menu->addSeparator();
-
+        // add the scripts menu
+        QIcon scriptIcon = QIcon::fromTheme(
+            QStringLiteral("story-editor"),
+            QIcon(QStringLiteral(
+                ":icons/breeze-qownnotes/16x16/story-editor.svg")));
+        QMenu *scriptMenu = menu->addMenu(tr("Scripts"));
+        scriptMenu->setIcon(scriptIcon);
+        scriptMenu->addSeparator();
         for (QAction *action :
              Utils::asConst(_noteTextEditContextMenuActions)) {
-            menu->addAction(action);
+            scriptMenu->addAction(action);
         }
     }
 
