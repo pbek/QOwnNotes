@@ -18,6 +18,10 @@
     - take a look at the
       [handleNoteNameHook documentation](https://docs.qownnotes.org/en/latest/scripting/hooks/#websocketrawdatahook)
       for more information
+- note tabs will now be reloaded correctly if the note-folder is reloaded
+  (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
+    - all note assignments were previously lost because reloading the note-folder
+      causes all note ids to be different than before
 - fixed a possible crash when restoring note tabs (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
 
 ## 20.5.6

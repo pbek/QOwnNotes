@@ -166,7 +166,7 @@ class MainWindow : public QMainWindow {
     Q_INVOKABLE void reloadNoteSubFolderTree();
 
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
-        bool forceBuild = false, bool forceLoad = false);
+        bool forceBuild = false, bool forceLoad = false, bool reloadTabs = true);
 
     QVector<Note> selectedNotes();
 

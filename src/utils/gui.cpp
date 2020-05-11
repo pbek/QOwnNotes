@@ -702,9 +702,23 @@ int Utils::Gui::getTabWidgetNoteId(QTabWidget *tabWidget, int index) {
     return widget->property("note-id").toInt();
 }
 
-Note Utils::Gui::getTabWidgetNote(QTabWidget *tabWidget, int index) {
-    const int noteId = getTabWidgetNoteId(tabWidget, index);
-    return Note::fetch(noteId);
+Note Utils::Gui::getTabWidgetNote(QTabWidget *tabWidget, int index,
+                                  bool fetchByName) {
+    if (fetchByName) {
+        QWidget *widget = tabWidget->widget(index);
+
+        if (widget == nullptr) {
+            return Note();
+        }
+
+        const QString &noteName = widget->property("note-name").toString();
+        const QString &noteSubFolderPathData = widget->property(
+                             "note-sub-folder-path-data").toString();
+        return Note::fetchByName(noteName, noteSubFolderPathData);
+    } else {
+        const int noteId = getTabWidgetNoteId(tabWidget, index);
+        return Note::fetch(noteId);
+    }
 }
 
 void Utils::Gui::storeNoteTabs(QTabWidget *tabWidget) {
@@ -800,6 +814,22 @@ void Utils::Gui::restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout) {
     tabWidget->currentWidget()->setLayout(layout);
 }
 
+void Utils::Gui::reloadNoteTabs(QTabWidget *tabWidget) {
+//    const QSignalBlocker blocker(tabWidget);
+//    Q_UNUSED(blocker)
+//    return;
+
+    for (int i = 0; i < tabWidget->count(); i++) {
+        const Note note = getTabWidgetNote(tabWidget, i, true);
+
+        if (!note.isFetched()) {
+            continue;
+        }
+
+        updateTabWidgetTabData(tabWidget, i, note);
+    }
+}
+
 void Utils::Gui::updateTabWidgetTabData(QTabWidget *tabWidget, int index,
                                        const Note &note) {
     QWidget *widget = tabWidget->widget(index);
@@ -809,6 +839,10 @@ void Utils::Gui::updateTabWidgetTabData(QTabWidget *tabWidget, int index,
     }
 
     widget->setProperty("note-id", note.getId());
+    widget->setProperty("note-name", note.getName());
+    widget->setProperty("note-sub-folder-path-data",
+                        note.getNoteSubFolder().pathData());
+
     QString text = note.getName();
     const bool isSticky = isTabWidgetTabSticky(tabWidget, index);
 

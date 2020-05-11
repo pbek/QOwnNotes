@@ -283,7 +283,7 @@ MainWindow::MainWindow(QWidget *parent)
     initShowHidden();
 
     createSystemTrayIcon();
-    buildNotesIndexAndLoadNoteDirectoryList();
+    buildNotesIndexAndLoadNoteDirectoryList(false, false, false);
 
     // setup the update available button
     setupStatusBarWidgets();
@@ -993,13 +993,20 @@ QAction *MainWindow::findAction(const QString &objectName) {
  *
  * @param forceBuild
  * @param forceLoad
+ * @param reloadTabs
  */
 void MainWindow::buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild,
-                                                         bool forceLoad) {
+                                                         bool forceLoad,
+                                                         bool reloadTabs) {
     const bool wasBuilt = buildNotesIndex(0, forceBuild);
 
     if (wasBuilt || forceLoad) {
         loadNoteDirectoryList();
+    }
+
+    if (wasBuilt && reloadTabs) {
+        // restore the note tabs
+        Utils::Gui::reloadNoteTabs(ui->noteEditTabWidget);
     }
 }
 
@@ -1916,7 +1923,7 @@ void MainWindow::changeNoteFolder(const int noteFolderId,
         // switching to another note folder
         unsetCurrentNote();
 
-        buildNotesIndexAndLoadNoteDirectoryList();
+        buildNotesIndexAndLoadNoteDirectoryList(false, false, false);
 
         // update the current folder tooltip
         updateCurrentFolderTooltip();
@@ -10134,12 +10141,11 @@ void MainWindow::openCurrentNoteInTab() {
     if (tabIndex == -1) {
         auto *widgetPage = new QWidget();
         widgetPage->setLayout(ui->noteEditTabWidgetLayout);
-        widgetPage->setProperty("note-id", noteId);
         tabIndex = ui->noteEditTabWidget->addTab(widgetPage, noteName);
-    } else {
-        Utils::Gui::updateTabWidgetTabData(ui->noteEditTabWidget,
-                                           tabIndex, currentNote);
     }
+
+    Utils::Gui::updateTabWidgetTabData(ui->noteEditTabWidget,
+                                       tabIndex, currentNote);
 
     ui->noteEditTabWidget->setCurrentIndex(tabIndex);
 

@@ -127,11 +127,13 @@ int getTabWidgetIndexByProperty(QTabWidget *tabWidget,
                                 const QString &propertyName,
                                 const QVariant &propertyValue);
 int getTabWidgetNoteId(QTabWidget *tabWidget, int index);
-Note getTabWidgetNote(QTabWidget *tabWidget, int index);
+Note getTabWidgetNote(QTabWidget *tabWidget, int index,
+                      bool fetchByName = false);
 void storeNoteTabs(QTabWidget *tabWidget);
 void restoreNoteTabs(QTabWidget *tabWidget, QVBoxLayout *layout);
 void setTabWidgetTabSticky(QTabWidget *tabWidget, int index, bool sticky);
 bool isTabWidgetTabSticky(QTabWidget *tabWidget, int index);
 void updateTabWidgetTabData(QTabWidget *tabWidget, int index, const Note &note);
+void reloadNoteTabs(QTabWidget *tabWidget);
 }    // namespace Gui
 }    // namespace Utils
