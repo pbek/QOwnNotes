@@ -1328,8 +1328,8 @@ Opening an input dialog with a line edit
     script.log(result);
     ```
 
-Check if a file exists
-----------------------
+Checking if a file exists
+-------------------------
 
 !!! help "Method call and parameters"
     ```cpp
