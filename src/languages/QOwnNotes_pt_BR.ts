@@ -4362,12 +4362,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../utils/gui.cpp" line="810"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>Duplo clique para des-selecionar nota da guia</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="811"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>Duplo clique para selecionar a nota na guia</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>

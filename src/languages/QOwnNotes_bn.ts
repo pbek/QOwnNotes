@@ -2581,7 +2581,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2640"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>বর্তমান নোটের স্টিকিনেস চালু/বন্ধ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -4369,12 +4369,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/gui.cpp" line="810"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>দুইবার ক্লিক করুন নোটের স্টিকিনেস ট্যাব থেকে বন্ধ করতে</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="811"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>দুইবার ক্লিক করুন নোটকে ট্যাবের সাথে স্টিকি করতে</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>

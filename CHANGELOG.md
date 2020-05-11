@@ -30,6 +30,8 @@
 - there now is a new sub-menu for custom actions from scripts in the note-edit
   context menu to prevent that too many menu items are shown on the first level
   of the menu (for [#1737](https://github.com/pbek/QOwnNotes/issues/1737), thank you @r00tr4v3n)
+- added more Bengali, Brazilian Portuguese, French translation (thank you Oymate,
+  Fabijenna, gbabin, bepolymathe)
 
 ## 20.5.6
 - leaving the distraction free mode with <kbd>Escape</kbd> now doesn't cause you
