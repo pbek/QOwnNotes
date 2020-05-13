@@ -234,6 +234,25 @@ void NotePreviewWidget::contextMenuEvent(QContextMenuEvent *event) {
     // check if clicked object was an image
     if (isImageFormat) {
         copyImageAction = menu->addAction(tr("Copy image file path"));
+        auto *copyImageClipboardAction = menu->addAction(tr("Copy image to clipboard"));
+
+        connect(copyImageClipboardAction, &QAction::triggered, this,
+                [this, format]() {
+                    QString imagePath = format.toImageFormat().name();
+                    QUrl imageUrl = QUrl(imagePath);
+                    QClipboard *clipboard = QApplication::clipboard();
+                    if (imageUrl.isLocalFile()) {
+                        clipboard->setImage(QImage(imageUrl.toLocalFile()));
+                    } else if (imagePath.startsWith(
+                        QLatin1String("data:image/"), Qt::CaseInsensitive)) {
+                        QStringList parts = imagePath.split(
+                            QStringLiteral(";base64,"));
+                        if (parts.count() == 2) {
+                            clipboard->setImage(QImage::fromData(
+                                QByteArray::fromBase64(parts[1].toLatin1())));
+                        }
+                    }
+                });
     }
 
     if (isAnchor) {

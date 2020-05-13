@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.5.8
+- you can now copy an image to the clipboard by right-clicking on it in the preview
+  (for [#1741](https://github.com/pbek/QOwnNotes/issues/1741))
+    - this works for local and as well for remote images
+
 ## 20.5.7
 - there now is a new method `insertHtmlAsMarkdownIntoCurrentNote` for `mainWindow`
   in the scripting engine that inserts html in the current note as markdown
