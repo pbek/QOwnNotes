@@ -105,6 +105,7 @@ build_script:
 #  - qmake QOwnNotes.pro -r -spec %gpp% CONFIG+=ccache QMAKE_CXX="ccache $$QMAKE_CXX"
   - qmake QOwnNotes.pro -r -spec %gpp% CONFIG+=ccache
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
+  - lrelease QOwnNotes.pro
   - mingw32-make
   # creating the release path
   - md ..\%RELEASE_PATH%

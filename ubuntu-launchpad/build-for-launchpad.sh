@@ -15,7 +15,7 @@
 
 BRANCH=develop
 #BRANCH=master
-UBUNTU_RELEASES=( "xenial" "bionic" "disco" "eoan" "focal" )
+UBUNTU_RELEASES=( "xenial" "bionic" "disco" "eoan" "focal" "groovy" )
 
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
@@ -51,6 +51,9 @@ cd $PROJECT_PATH
 
 # checkout submodules
 git submodule update --init
+
+# build binary translation files
+lrelease src/QOwnNotes.pro
 
 if [ -z $QOWNNOTES_VERSION ]; then
     # get version from version.h

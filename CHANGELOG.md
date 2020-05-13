@@ -4,6 +4,8 @@
 - you can now copy an image to the clipboard by right-clicking on it in the preview
   (for [#1741](https://github.com/pbek/QOwnNotes/issues/1741))
     - this works for local and as well for remote images
+- the binary translation files were removed from the git repository, they are now
+  built in all build systems (for [#1744](https://github.com/pbek/QOwnNotes/issues/1744))
 
 ## 20.5.7
 - there now is a new method `insertHtmlAsMarkdownIntoCurrentNote` for `mainWindow`

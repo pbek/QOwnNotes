@@ -90,6 +90,7 @@ script:
   - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - echo "#define RELEASE \"Travis CI\"" > release.h
   - qmake QOwnNotes.pro CONFIG+=$CONFIG CONFIG+=ccache
+  - lrelease QOwnNotes.pro
   - make
 
 before_deploy:
