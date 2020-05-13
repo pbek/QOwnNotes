@@ -124,6 +124,10 @@ Or you can build it directly in your terminal:
 
 ```shell
 cd src
+
+# build binary translation files if you want another language than English
+lrelease QOwnNotes.pro
+
 qmake
 make
 ```
