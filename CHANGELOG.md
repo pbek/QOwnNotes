@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.5.9
+- added a **new editor color schema** *Solarized Dark*
+  (for [#1742](https://github.com/pbek/QOwnNotes/issues/1742), thank you @sauces1313)
+
 ## 20.5.8
 - you can now copy an image to the clipboard by right-clicking on it in the preview
   (for [#1741](https://github.com/pbek/QOwnNotes/issues/1741))
