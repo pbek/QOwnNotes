@@ -1232,7 +1232,7 @@ bool Note::storeNoteTextFileToDisk() {
 
     // assign the tags to the new name if the name has changed
     if (oldName != newName) {
-        if (TrashItem::isLocalTrashEnabled()) {
+        if (!noteFileWasRenamed && TrashItem::isLocalTrashEnabled()) {
             qDebug() << __func__ << " - 'trashItem': " << trashItem;
 
             // trash the old note

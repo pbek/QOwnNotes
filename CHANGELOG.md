@@ -5,6 +5,8 @@
   (for [#1742](https://github.com/pbek/QOwnNotes/issues/1742), thank you @sauces1313)
 - the note files are now actually renamed if the headline of a note changes instead
   of a new note file being created (for [#1743](https://github.com/pbek/QOwnNotes/issues/1743))
+    - if if the note file was successfully renamed now a copy will not be move
+      to the local trash
 
 ## 20.5.8
 - you can now copy an image to the clipboard by right-clicking on it in the preview
