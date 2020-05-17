@@ -12,15 +12,15 @@ NoteApi* NoteApi::fetch(int _id) {
     _note = Note::fetch(_id);
 
     if (_note.isFetched()) {
-        this->id = _note.getId();
-        name = _note.getName();
-        fileName = _note.getFileName();
-        noteText = _note.getNoteText();
-        hasDirtyData = _note.getHasDirtyData();
-        noteSubFolderId = _note.getNoteSubFolderId();
-        decryptedNoteText = _note.getDecryptedNoteText();
-        fileCreated = _note.getFileCreated();
-        fileLastModified = _note.getFileLastModified();
+        this->_id = _note.getId();
+        _name = _note.getName();
+        _fileName = _note.getFileName();
+        _noteText = _note.getNoteText();
+        _hasDirtyData = _note.getHasDirtyData();
+        _noteSubFolderId = _note.getNoteSubFolderId();
+        _decryptedNoteText = _note.getDecryptedNoteText();
+        _fileCreated = _note.getFileCreated();
+        _fileLastModified = _note.getFileLastModified();
     }
 
     return this;
@@ -44,7 +44,7 @@ NoteApi* NoteApi::fromNote(const Note& note) {
 QQmlListProperty<TagApi> NoteApi::tags() {
     _tags.clear();
 
-    Note note = Note::fetch(id);
+    Note note = Note::fetch(_id);
     QList<Tag> tags = Tag::fetchAllOfNote(note);
     QListIterator<Tag> itr(tags);
     while (itr.hasNext()) {
@@ -63,7 +63,7 @@ QQmlListProperty<TagApi> NoteApi::tags() {
  */
 QStringList NoteApi::tagNames() const {
     QStringList tagNameList;
-    Note note = Note::fetch(id);
+    Note note = Note::fetch(_id);
     QList<Tag> tags = Tag::fetchAllOfNote(note);
     QListIterator<Tag> itr(tags);
     while (itr.hasNext()) {
@@ -85,7 +85,7 @@ bool NoteApi::addTag(const QString& tagName) {
         return false;
     }
 
-    Note note = Note::fetch(id);
+    Note note = Note::fetch(_id);
     if (!note.exists()) {
         return false;
     }
@@ -112,7 +112,7 @@ bool NoteApi::removeTag(QString tagName) {
         return false;
     }
 
-    Note note = Note::fetch(id);
+    Note note = Note::fetch(_id);
     if (!note.exists()) {
         return false;
     }
@@ -127,7 +127,7 @@ bool NoteApi::removeTag(QString tagName) {
  * @return true if the note was renamed
  */
 bool NoteApi::renameNoteFile(const QString &newName) {
-    Note note = Note::fetch(id);
+    Note note = Note::fetch(_id);
 
     if (note.exists()) {
         return note.renameNoteFile(newName);
