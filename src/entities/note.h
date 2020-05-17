@@ -124,7 +124,7 @@ class Note {
 
     bool refetch();
 
-    void fillFromQuery(const QSqlQuery &query);
+    Note fillFromQuery(const QSqlQuery &query);
 
     bool fillByFileName(const QString &fileName, int noteSubFolderId = -1);
 
