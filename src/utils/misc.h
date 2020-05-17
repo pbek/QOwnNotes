@@ -19,6 +19,7 @@
 #include <QString>
 #include <QStringList>
 #include <QVector>
+#include <QProcess>
 
 class QFile;
 
@@ -28,6 +29,14 @@ namespace Misc {
 struct ExternalImageHashItem {
     QString imageTag;
     int imageWidth;
+};
+
+struct TerminalCmd {
+    QString executablePath;
+    QStringList parameters;
+    QByteArray data;
+    int exitCode;
+    QByteArray resultSet;
 };
 
 typedef QHash<QString, ExternalImageHashItem> ExternalImageHash;
@@ -85,6 +94,7 @@ QString parseTaskList(const QString &html, bool clickable);
 QByteArray startSynchronousProcess(const QString &executablePath,
                                    const QStringList &parameters,
                                    const QByteArray &data = QByteArray());
+bool startSynchronousResultProcess(TerminalCmd &cmd);
 QList<QObject *> getParents(QObject *object);
 QString appDataPath();
 QString logFilePath();

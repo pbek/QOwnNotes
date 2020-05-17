@@ -437,6 +437,41 @@ QByteArray Utils::Misc::startSynchronousProcess(const QString &executablePath,
 }
 
 /**
+ * Starts a synchronous process and waits for its result
+ *
+ * @param cmd the terminal command containing all input and output information
+ * @return true on success, false otherwise
+ */
+bool Utils::Misc::startSynchronousResultProcess(TerminalCmd &cmd) {
+    QProcess process;
+
+    // start executablePath synchronous with parameters
+#ifdef Q_OS_MAC
+    process.start("open", QStringList()
+                              << executablePath << "--args" << parameters);
+#else
+    process.start(cmd.executablePath, cmd.parameters);
+#endif
+
+    if (!process.waitForStarted()) {
+        qWarning() << __func__ << " - 'process.waitForStarted' returned false";
+        return false;
+    }
+
+    process.write(cmd.data);
+    process.closeWriteChannel();
+
+    if (!process.waitForFinished()) {
+        qWarning() << __func__ << " - 'process.waitForFinished' returned false";
+        return false;
+    }
+
+    cmd.resultSet = process.readAll();
+    cmd.exitCode = process.exitCode();
+    return process.exitStatus() == QProcess::NormalExit;
+}
+
+/**
  * Returns the default notes path we are suggesting
  *
  * @return

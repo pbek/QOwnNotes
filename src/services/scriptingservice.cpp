@@ -297,7 +297,9 @@ void ScriptingService::initComponents() {
 /**
  * Reloads the engine
  */
-void ScriptingService::reloadEngine() { reloadScriptComponents(); }
+void ScriptingService::reloadEngine() {
+    reloadScriptComponents();
+}
 
 /**
  * Returns the registered script variables
@@ -945,13 +947,30 @@ bool ScriptingService::callHandleWebsocketRawDataHook(
  *
  * @param executablePath the path of the executable
  * @param parameters a list of parameter strings
+ * @param identifier
+ * @param index
+ * @param data
  * @return true on success, false otherwise
  */
 bool ScriptingService::startDetachedProcess(const QString &executablePath,
-                                            const QStringList &parameters) {
+                                            const QStringList &parameters,
+                                            const QString &identifier,
+                                            const int index,
+                                            const QByteArray &data) {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("scripting/") % QString(__func__));
 
+    // callback provided: create new script thread
+    if(!identifier.isEmpty()){
+        TerminalCmd cmd;
+        cmd.executablePath = executablePath;
+        cmd.parameters = parameters;
+        cmd.data = data;
+
+        ScriptThread *st = new ScriptThread(this, cmd, identifier, index);
+        st->start();
+        return true;
+    }
     return Utils::Misc::startDetachedProcess(executablePath, parameters);
 }
 
@@ -1360,6 +1379,7 @@ void ScriptingService::registerCustomAction(const QString &identifier,
     Q_UNUSED(useInNoteListContextMenu)
 #endif
 }
+
 
 /**
  * Registers a label to write to
@@ -2128,4 +2148,30 @@ void ScriptingService::triggerMenuAction(const QString &objectName,
     Q_UNUSED(objectName)
     Q_UNUSED(checked)
 #endif
+}
+
+/**
+ * Called after a script thread is done
+ * @brief ScriptingService::onScriptThreadDone
+ * @param thread
+ */
+void ScriptingService::onScriptThreadDone(ScriptThread *thread){
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+    TerminalCmd* cmd = thread->getTerminalCmd();
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        QVariantList cmdList, threadList;
+        cmdList << cmd->executablePath << cmd->parameters << cmd->exitCode;
+        threadList << thread->getIndex() << thread ->getThreadCounter();
+        if (methodExistsForObject(
+                scriptComponent.object, QStringLiteral("onCallback(QVariant,QVariant,QVariant,QVariant)"))) {
+            QMetaObject::invokeMethod(
+                scriptComponent.object, "onCallback",
+                Q_ARG(QVariant, thread->getIdentifier()),
+                Q_ARG(QVariant, cmd->resultSet),
+                Q_ARG(QVariant, QVariant::fromValue(cmdList)),
+                Q_ARG(QVariant, QVariant::fromValue(threadList)));
+        }
+    }
 }

@@ -15,28 +15,38 @@
 #include "scriptthread.h"
 #include <QDebug>
 
-ScriptThread::ScriptThread(QString s) : name(s)
-{
-   // connect(this, SIGNAL(newConnection(QString,int)), &myClass, SLOT(acceptConnection(QString,int)));
-    connect(this, SIGNAL(newConnection(QString,int)),this, SLOT(acceptConnection(QString,int)));
-      emit newConnection("test", 1234);
+QMap<QString, int> ScriptThread::threadCounter;
+
+ScriptThread::ScriptThread(ScriptingService *ss,
+                           const TerminalCmd &cmd,
+                           const QString &identifier,
+                           const int index) : QThread() {
+    this->cmd = cmd;
+    this->identifier = identifier;
+    this->index = index;
+    increaseThreadCounter();
+    ScriptThread::connect(this, SIGNAL(callBack(ScriptThread*)), ss, SLOT(onScriptThreadDone(ScriptThread*)));
+}
+
+void ScriptThread::increaseThreadCounter(){
+    threadCounter[identifier]++;
+}
+
+void ScriptThread::decreaseThreadCounter(){
+    threadCounter[identifier]--;
+}
+
+int ScriptThread::getThreadCounter(){
+    return threadCounter[identifier];
 }
 
 // We overrides the QThread's run() method here
 // run() will be called when a thread starts
 // the code will be shared by all threads
-
 void ScriptThread::run()
 {
-    for(int i = 0; i <= 100; i++)
-    {
-        qDebug() << this->name << " " << i;
-    }
-
-    emit callBack("done") ;//emit is not a function
-    qDebug() << "Sending packet!";//you can use qDebug
+    Utils::Misc::startSynchronousResultProcess(cmd);
+    decreaseThreadCounter();
+    emit callBack(this) ;//emit is not a function
 }
 
-void ScriptThread::acceptConnection(QString port, int current) {
-    qDebug() << "received data for port " << port;
-}

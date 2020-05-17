@@ -4,33 +4,39 @@
 
 #pragma once
 
-#include <QtCore/QString>
+#include <QObject>
 #include <QtCore/QDebug>
 #include <QThread>
 #include <QString>
+#include <services/scriptingservice.h>
+#include <utils/misc.h>
+class ScriptingService;
+
+using namespace Utils::Misc;
 
 class ScriptThread : public QThread
 {
     Q_OBJECT
+private:
+    static QMap<QString, int> threadCounter;
+    TerminalCmd cmd;   // cmd struct
+    QString identifier; // id for the callback
+    int index;      // addition information for the callback
+
 public:
     // constructor
-    // set name using initializer
-    explicit ScriptThread(QString s, QObject *start){
-        //calling "start" will automatically run the `run` function on the new thread
-        ScriptThread::connect(start, SIGNAL(clicked()), this, SLOT(start()));
-       //use queued connection, this way the slot will be executed on the handlers thread
-       ScriptThread::connect(this, SIGNAL(sendPacket(Packet*)),
-                              handler, SLOT(receivePacket(Packet*)), Qt::QueuedConnection);
-     }
+    explicit ScriptThread(ScriptingService *ss, const TerminalCmd &cmd, const QString &identifier, const int index = 0);
 
     // overriding the QThread's run() method
     void run();
-public slots:
-    void acceptConnection(QString port, int current);
-
+    TerminalCmd* getTerminalCmd() {return &cmd;}
+    QString getIdentifier() {return identifier;}
+    int getIndex() {return index;}
+    void increaseThreadCounter();
+    void decreaseThreadCounter();
+    int getThreadCounter();
 signals:
-    void newConnection(QString, int);
-    void callBack(QString);
-private:
-    QString name;
+    void callBack(ScriptThread*);
+public slots:
+
 };
