@@ -24,13 +24,13 @@ Script {
     * This function is called when a script thread is done executing.
     * Hint: thread[1]==0 helps to determine if a bulk of started processes for a certain identifier is done.
     *
-    * @param {QString} identifier - the provided id when calling startDetachedProcess()
+    * @param {QString} callBackIdentifier - the provided id when calling startDetachedProcess()
     * @param {QString} resultSet - the result of the process
     * @param {QVariantList} cmd - the entire command array [0-executablePath, 1-parameters, 2-exitCode]
     * @param {QVariantList} thread - the thread information array [0-passed callbackParameter, 1-remaining threads for this identifier]
     */
-    function onDetachedProcessCallback(identifier, resultSet, cmd, thread) {
-      if (identifier == "callback-example") {
+    function onDetachedProcessCallback(callBackIdentifier, resultSet, cmd, thread) {
+      if (callBackIdentifier == "callback-example") {
         log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
       }
     }
