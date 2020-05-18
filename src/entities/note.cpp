@@ -1769,7 +1769,7 @@ void Note::createFromFile(QFile &file, int noteSubFolderId,
         this->_noteText = noteText;
 
 #if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
-        this->fileCreated = fileInfo.created();
+        this->_fileCreated = fileInfo.created();
 #else
         this->_fileCreated = fileInfo.birthTime();
 #endif
