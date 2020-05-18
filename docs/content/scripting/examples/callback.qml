@@ -9,15 +9,15 @@ import com.qownnotes.noteapi 1.0
 Script {
 
     function log(txt) {
-     script.log("[callback-example] "+txt);
+        script.log("[callback-example] " + txt);
     }
 
     function init() {
-      log("init")
-      for (var i = 0; i < 100; i++) {
-        var dur = Math.floor(Math.random() * 10) + 1;
-        script.startDetachedProcess("sleep", [`${dur}s`], "callback-example", i);
-      }
+        log("init")
+        for (var i = 0; i < 100; i++) {
+            var dur = Math.floor(Math.random() * 10) + 1;
+            script.startDetachedProcess("sleep", [`${dur}s`], "callback-example", i);
+        }
     }
 
     /**

@@ -448,7 +448,7 @@ bool Utils::Misc::startSynchronousResultProcess(TerminalCmd &cmd) {
     // start executablePath synchronous with parameters
 #ifdef Q_OS_MAC
     process.start("open", QStringList()
-                              << executablePath << "--args" << parameters);
+                              << cmd.executablePath << "--args" << cmd.parameters);
 #else
     process.start(cmd.executablePath, cmd.parameters);
 #endif
