@@ -3,6 +3,13 @@
 ## 20.5.10
 - fixed file links interpreted in code blocks (for [#1748](https://github.com/pbek/QOwnNotes/issues/1748), thank you @Waqar144)
 - migrated from `sub-folder` to `subfolder` in menu items, documentation, comments and general text
+- added more Albanian, Arabic, Basque, Zulu, Xhosa, Hausa, Greek, Filipino, Kurdish,
+  Croatian, Estonian, Malay, Hungarian, Bengali, Bosnian, Bulgarian, Cebuano,
+  Chinese Simplified, Chinese Traditional, Czech, Danish, Dutch, Finnish, Galician,
+  Hebrew, Hindi, Icelandic, Indonesian, Irish, Japanese, Korean, Latvian, Lithuanian,
+  Macedonian, Norwegian, Persian, Polish, Portuguese, Punjabi, Romanian,
+  Serbian (Cyrillic), Slovak, Slovenian, Swedish, Turkish, Ukrainian, Urdu (Pakistan),
+  Uzbek, Vietnamese translation (thank you Fabijenna)
 
 ## 20.5.9
 - added a **new editor color schema** *Solarized Dark*
