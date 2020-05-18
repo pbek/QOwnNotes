@@ -2606,12 +2606,6 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     // init the saved searches completer
     initSavedSearchesCompleter();
 
-    // update the settings of all markdown edits
-    const auto textEdits = findChildren<QOwnNotesMarkdownTextEdit *>();
-    for (QOwnNotesMarkdownTextEdit *textEdit : textEdits) {
-        textEdit->updateSettings();
-    }
-
     // show or hide the note git version menu entry
     ui->actionShow_note_git_versions->setVisible(Utils::Git::hasLogCommand());
 
