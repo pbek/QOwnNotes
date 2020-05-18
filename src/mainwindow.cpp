@@ -1257,7 +1257,7 @@ void MainWindow::initPanelMenu() {
                          SLOT(updatePanelMenu()));
 
         // we are disabling the dock widget context menu to prevent enabling
-        // of the note sub-folder toolbar if sub-folders are disabled
+        // of the note subfolder toolbar if subfolders are disabled
         dockWidget->setContextMenuPolicy(Qt::PreventContextMenu);
     }
 }
@@ -1276,7 +1276,7 @@ void MainWindow::initToolbarMenu() {
                          &MainWindow::updateToolbarMenu);
 
         // we are disabling the toolbar context menu to prevent enabling of the
-        // note sub-folder toolbar if sub-folders are disabled
+        // note subfolder toolbar if subfolders are disabled
         toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
     }
 }
@@ -1301,7 +1301,7 @@ void MainWindow::updatePanelMenu() {
         action->setCheckable(true);
         action->setChecked(!dockWidget->isHidden());
 
-        // disable the noteSubFolderDockWidget menu entry if sub-folders are
+        // disable the noteSubFolderDockWidget menu entry if subfolders are
         // not enabled
         if (dockWidget->objectName() ==
                 QStringLiteral("noteSubFolderDockWidget") &&
@@ -2651,8 +2651,8 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     // reset cloud service instance
     OwnCloudService::instance(true);
 
-    // the notes need to be reloaded and sub-folder panel needs to be populated
-    // if sub-folders were activated for a note folder in the settings
+    // the notes need to be reloaded and subfolder panel needs to be populated
+    // if subfolders were activated for a note folder in the settings
     if (!isAppLaunch && NoteFolder::isCurrentShowSubfolders()) {
         buildNotesIndexAndLoadNoteDirectoryList();
     }
@@ -3664,8 +3664,8 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("note/current-note/changed"));
 
-    // if note sub-folder was different than the current we will
-    // switch to that note sub-folder
+    // if note subfolder was different than the current we will
+    // switch to that note subfolder
     // TODO: don't switch if "All notes" was selected!
     if (!_showNotesFromAllNoteSubFolders && !note.isInCurrentNoteSubFolder() &&
         !NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
@@ -6070,8 +6070,8 @@ void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with
  * spaces in the name"
  * - <https://www.qownnotes.org> opens the web page
- * - <file:///path/to/my/note/folder/sub-folder/My%20note.pdf> opens the note
- * "My note" in the sub-folder "sub-folder"
+ * - <file:///path/to/my/note/folder/subfolder/My%20note.pdf> opens the note
+ * "My note" in the subfolder "subfolder"
  * - <file:///path/to/my/file/QOwnNotes.pdf> opens the file
  * "/path/to/my/file/QOwnNotes.pdf" if the operating system supports that
  * handler
@@ -7756,7 +7756,7 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
         resetBrokenTagNotesLinkFlag();
     }
 
-    // hide the noteSubFolderDockWidget menu entry if sub-folders are
+    // hide the noteSubFolderDockWidget menu entry if subfolders are
     // not enabled
     QAction *action =
         findAction(QStringLiteral("togglePanel-noteSubFolderDockWidget"));
@@ -9322,7 +9322,7 @@ void MainWindow::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
 
 /**
  * Populates a subfolder menu tree for bulk note moving or copying to
- * sub-folders of other note folders
+ * subfolders of other note folders
  */
 void MainWindow::buildBulkNoteFolderSubFolderMenuTree(
     QMenu *parentMenu, bool doCopy, const QString &parentNoteSubFolderPath,
@@ -9467,7 +9467,7 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(
                 noteSubFolderCount++;
                 qDebug() << "Note was moved:" << note.getName();
 
-                // set the new sub-folder so the tags are stored correctly
+                // set the new subfolder so the tags are stored correctly
                 note.setNoteSubFolder(noteSubFolder);
 
                 // tag the note again
@@ -9562,7 +9562,7 @@ void MainWindow::copySelectedNotesToNoteSubFolder(
                 noteSubFolderCount++;
                 qDebug() << "Note was copied:" << note.getName();
 
-                // set the new sub-folder so the tags are stored correctly
+                // set the new subfolder so the tags are stored correctly
                 note.setNoteSubFolder(noteSubFolder);
 
                 // tag the note again
@@ -10112,7 +10112,7 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
         return;
     }
 
-    // handle changing of the current item for sub-folders
+    // handle changing of the current item for subfolders
     if (current->data(0, Qt::UserRole + 1).toInt() == FolderType) {
         on_noteSubFolderTreeWidget_currentItemChanged(current, previous);
 
@@ -10241,7 +10241,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
     if (showSubFolders) {
         if (ui->noteTreeWidget->selectedItems().count() == 1) {
             moveToThisSubFolderAction =
-                noteMenu.addAction(tr("Jump to the note's sub-folder"));
+                noteMenu.addAction(tr("Jump to the note's subfolder"));
         }
 
         auto *subFolderMoveMenu =
@@ -10713,7 +10713,7 @@ void MainWindow::on_noteSubFolderTreeWidget_itemChanged(QTreeWidgetItem *item,
         const QString name = item->text(0);
 
 #ifdef Q_OS_WIN32
-        // clear all paths from the directory watcher, if a sub-folder of the
+        // clear all paths from the directory watcher, if a subfolder of the
         // folder to rename is watched Windows will block the renaming
         clearNoteDirectoryWatcher();
 #endif

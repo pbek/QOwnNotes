@@ -93,7 +93,7 @@ server-side **trashed notes** and **note versions**.
 Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes in the **web**.
 
 !!! warning
-    Keep in mind that Nextcloud Notes currently only supports up to one level of sub-folders.
+    Keep in mind that Nextcloud Notes currently only supports up to one level of subfolders.
 
 ## Nextcloud Notes mobile app
 

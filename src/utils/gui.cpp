@@ -713,7 +713,7 @@ Note Utils::Gui::getTabWidgetNote(QTabWidget *tabWidget, int index,
 
         const QString &noteName = widget->property("note-name").toString();
         const QString &noteSubFolderPathData = widget->property(
-                             "note-sub-folder-path-data").toString();
+                             "note-subfolder-path-data").toString();
         return Note::fetchByName(noteName, noteSubFolderPathData);
     } else {
         const int noteId = getTabWidgetNoteId(tabWidget, index);
@@ -840,7 +840,7 @@ void Utils::Gui::updateTabWidgetTabData(QTabWidget *tabWidget, int index,
 
     widget->setProperty("note-id", note.getId());
     widget->setProperty("note-name", note.getName());
-    widget->setProperty("note-sub-folder-path-data",
+    widget->setProperty("note-subfolder-path-data",
                         note.getNoteSubFolder().pathData());
 
     QString text = note.getName();

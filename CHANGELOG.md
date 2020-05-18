@@ -2,6 +2,7 @@
 
 ## 20.5.10
 - fixed file links interpreted in code blocks (for [#1748](https://github.com/pbek/QOwnNotes/issues/1748), thank you @Waqar144)
+- migrated from `sub-folder` to `subfolder` in menu items, documentation, comments and general text
 
 ## 20.5.9
 - added a **new editor color schema** *Solarized Dark*
@@ -136,7 +137,7 @@
     - double clicking a note in the note list will now cause the note to be
       loaded in a tab if no `noteDoubleClickedHook` was registered in the
       scripting engine
-- you will now get a warning dialog if you attempt to create a note sub-folder
+- you will now get a warning dialog if you attempt to create a note subfolder
   that will be ignored by the application, because the name is either used
   internally or ignored in the *Panels settings* (for [#1718](https://github.com/pbek/QOwnNotes/issues/1718))
 - added more German, Spanish, Russian, Catalan, Bengali, Italian translation
@@ -145,8 +146,8 @@
 ## 20.4.18
 - the counts in the tag tree are now showing the amount of linked notes and not
   the amount of note-links of a tag (for [#1709](https://github.com/pbek/QOwnNotes/issues/1709))
-- you now are able to show invisible sub-folders (folders starting with `.`) in
-  the note sub-folder panel if you clear the default `Ignored sub-folders`
+- you now are able to show invisible subfolders (folders starting with `.`) in
+  the note subfolder panel if you clear the default `Ignored subfolders`
   setting in the *Panels settings* (for [#1718](https://github.com/pbek/QOwnNotes/issues/1718))
 
 ## 20.4.17
@@ -237,7 +238,7 @@
 - added more Russian, German translation (thank you unchase, rakekniven)
 
 ## 20.4.9
-- notes in 2nd level sub-folders (or deeper) are now shown correctly in the
+- notes in 2nd level subfolders (or deeper) are now shown correctly in the
   note-list after clicking on `All notes` in the subfolder panel and filtering
   by tag (for [#1696](https://github.com/pbek/QOwnNotes/issues/1696))
 - if the application is in "portable mode" then this will now also be shown in
@@ -257,7 +258,7 @@
   Russian translation (thank you Fabijenna, mlocati, rakekniven, unchase)
 
 ## 20.4.7
-- tags are now not lost if a note in a sub-folder is renamed after clicking on
+- tags are now not lost if a note in a subfolder is renamed after clicking on
   `All notes` in the subfolder panel (for [#1691](https://github.com/pbek/QOwnNotes/issues/1691))
 - added a **new editor color schema** *Atom One Dark Reasonable* by @leoniscsem
   (for [#1694](https://github.com/pbek/QOwnNotes/issues/1694))
@@ -267,12 +268,12 @@
   richarson, MGuerra)
 
 ## 20.4.6
-- fixed renaming of note sub-folders under Windows if the folders contain other
-  sub-folders (for [#1683](https://github.com/pbek/QOwnNotes/issues/1683))
-- the note folder will now be reloaded if a note sub-folder was deleted in the *Subfolders panel*
+- fixed renaming of note subfolders under Windows if the folders contain other
+  subfolders (for [#1683](https://github.com/pbek/QOwnNotes/issues/1683))
+- the note folder will now be reloaded if a note subfolder was deleted in the *Subfolders panel*
 - fixed optional automatic database closing under Windows (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
 - notes are now correctly filtered by tag even if notes with the same name are
-  in different note sub-folders (for [#1686](https://github.com/pbek/QOwnNotes/issues/1686))
+  in different note subfolders (for [#1686](https://github.com/pbek/QOwnNotes/issues/1686))
 - added more Bosnian, Albanian, Arabic, Basque, Bengali, Bulgarian, Catalan,
   Chinese Simplified, Chinese Traditional, Croatian, Czech, Danish, Dutch,
   Estonian, Filipino, Finnish, Galician, Greek, Hausa, Hebrew, Hungarian,
@@ -285,7 +286,7 @@
   (for [#1685](https://github.com/pbek/QOwnNotes/issues/1685))
 - now an error message in the log is shown if renaming of a note subfolder fails
   (for [#1683](https://github.com/pbek/QOwnNotes/issues/1683))
-- fixed note linking with sub-folders if the note folder is outside of the application
+- fixed note linking with subfolders if the note folder is outside of the application
   directory in portable mode (for [#1682](https://github.com/pbek/QOwnNotes/issues/1682))
 - added more German, Russian, Italian translation (thank you rakekniven, unchase, tiwi90)
 
@@ -738,7 +739,7 @@
 - fixed numeric highlighter and added more improvements (for [#1571](https://github.com/pbek/QOwnNotes/pull/1571), thank you @Waqar144)
 - added underline option to preview for MD4C (for [#1567](https://github.com/pbek/QOwnNotes/issues/1567), thank you @Waqar144)
 - added the main menu entry `Reload note folder` also to the context menu in the
-  note sub-folder panel (for [#1574](https://github.com/pbek/QOwnNotes/issues/1574)
+  note subfolder panel (for [#1574](https://github.com/pbek/QOwnNotes/issues/1574)
 - fixed highlighting of ordered lists (for [#1573](https://github.com/pbek/QOwnNotes/issues/1573)
 - added more Portuguese, Filipino, Kurdish, Japanese, Urdu (Pakistan), Turkish,
   Hebrew translation (thank you Fabijenna)
@@ -843,7 +844,7 @@
   if total byte size is not transmitted by the web server
 - you can now remove multiple indent-character inside of text when indenting with spaces
   (for [#1455](https://github.com/pbek/QOwnNotes/issues/1455))
-- fixed a problem with showing correct notes if no sub-folder was selected
+- fixed a problem with showing correct notes if no subfolder was selected
   (for [#1520](https://github.com/pbek/QOwnNotes/pull/1520), thank you @Waqar144)
 - added more German, Galician, French, Lithuanian, Serbian (Cyrillic), Czech,
   Uzbek translation (thank you rakekniven, Fabijenna)
@@ -936,7 +937,7 @@
   Hungarian, Basque, Icelandic, Czech, Danish translation (thank you Fabijenna)
 
 ## 19.12.5
-- fixed populating of the sub-folder panel if you turn on sub-folders for a note folder
+- fixed populating of the subfolder panel if you turn on subfolders for a note folder
   in the settings (for [#1493](https://github.com/pbek/QOwnNotes/issues/1493))
 - lots of fixes and improvements for the code highlighting were made and support
   for JSON and XML was added (thank you @Waqar144)
@@ -945,7 +946,7 @@
   richarson, MGuerra, unchase)
 
 ## 19.12.4
-- fixed a problem with loading notes if no note sub-folder was selected
+- fixed a problem with loading notes if no note subfolder was selected
   (for [#1489](https://github.com/pbek/QOwnNotes/issues/1489))
 - lots of syntax highlighting improvements were made (for [#40](https://github.com/pbek/qmarkdowntextedit/pull/40), thank you @Waqar144)
 - fixed deselection of multi folder selection again (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
@@ -971,7 +972,7 @@
   (thank you rakekniven, MGuerra, Fabijenna, mlocati, unchase, tiwi90)
 
 ## 19.12.1
-- you now can select multiple note sub-folders to filter notes
+- you now can select multiple note subfolders to filter notes
   (for [#327](https://github.com/pbek/QOwnNotes/issues/327), thank you @Waqar144)
 - attempted to switch to Core18 for the snap release on Launchpad
   (for [#1439](https://github.com/pbek/QOwnNotes/issues/1439))
@@ -1002,7 +1003,7 @@
 ## 19.11.22
 - more missing locales and dictionary names were fixed (for [#1459](https://github.com/pbek/QOwnNotes/issues/1459), thank you @Waqar144)
 - fixed unable to switch back to last note subfolder after jumping to a subfolder
-  with the `Jump to the note's sub-folder` note list context menu item
+  with the `Jump to the note's subfolder` note list context menu item
   (for [#1432](https://github.com/pbek/QOwnNotes/issues/1432))
 - the return key is now ignored in the *Table dialog* so you can better edit text
   in the table (for [#1446](https://github.com/pbek/QOwnNotes/issues/1446))
@@ -1012,7 +1013,7 @@
   mlocati, tiwi90, rakekniven, unchase)
 
 ## 19.11.21
-- added a note list context menu item to jump to the note sub-folder of the
+- added a note list context menu item to jump to the note subfolder of the
   selected note (for [#1432](https://github.com/pbek/QOwnNotes/issues/1432), thank you @Waqar144)
 - did more spellchecker optimization (for [#1442](https://github.com/pbek/QOwnNotes/pull/1442), thank you @Waqar144)
 - fixed autodetection for some languages that do not have trigrams (e.g. for Malayan)
@@ -1245,9 +1246,9 @@
 - fixed margin calculation in distraction free mode that was changed in 19.11.0
 
 ## 19.11.1
-- improvements where made to the **note / sub-folder tree mode**
+- improvements where made to the **note / subfolder tree mode**
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
-    - on application startup the last opened note will be loaded from the correct sub-folder
+    - on application startup the last opened note will be loaded from the correct subfolder
 - fixed highlighting of code blocks with empty lines (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
 - fixed highlighting of two-line headlines when typing them in (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
 - did some minor speed improvements
@@ -1255,17 +1256,17 @@
   (thank you data-man, Fabijenna)
 
 ## 19.11.0
-- improvements where made to the **note / sub-folder tree mode**
+- improvements where made to the **note / subfolder tree mode**
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
     - note search by text and filtering by tag is now working
     - if you right click on an item you will now either get the context menu
-      for a note or a sub-folder depending what item you have clicked
-        - you can create a new note or sub-folder via context menu
-        - you can show a sub-folder in file manager via context menu
-        - you can remove selected sub-folder via context menu
-        - you can rename the current sub-folder via context menu, by clicking it
+      for a note or a subfolder depending what item you have clicked
+        - you can create a new note or subfolder via context menu
+        - you can show a subfolder in file manager via context menu
+        - you can remove selected subfolder via context menu
+        - you can rename the current subfolder via context menu, by clicking it
           twice or by pressing <kbd>F2</kbd>
-    - if you click a sub-folder the current note sub-folder will be changed to it
+    - if you click a subfolder the current note subfolder will be changed to it
 - attempted to fix building the application on Qt 5.3, add more dictionary paths
   for Linux and skipping highlighting and spell checking if a text block is empty
   or just has spaces (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)

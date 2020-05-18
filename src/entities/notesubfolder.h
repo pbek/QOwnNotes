@@ -5,7 +5,7 @@
 #include <QDir>
 #include <QSqlQuery>
 
-// note sub-folders that should be ignored by default
+// note subfolders that should be ignored by default
 // regular expression, separated by ";"
 #define IGNORED_NOTE_SUBFOLDERS_DEFAULT "^\\."
 

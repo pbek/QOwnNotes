@@ -554,7 +554,7 @@ bool NoteSubFolder::willFolderBeIgnored(const QString &folderName,
                 QObject::tr("Folder with name <b>%1</b> can't be created, "
                             "because it's internally used by the "
                             "application!").arg(folderName),
-                "note-sub-folder-hidden-internal");
+                "note-subfolder-hidden-internal");
         }
 #endif
 
@@ -575,10 +575,10 @@ bool NoteSubFolder::willFolderBeIgnored(const QString &folderName,
             Utils::Gui::warning(
                 Q_NULLPTR, QObject::tr("Folder will be hidden!"),
                 QObject::tr("Folder with name <b>%1</b> can't be created, "
-                            "because it's on the list of ignored sub-folders! "
+                            "because it's on the list of ignored subfolders! "
                             "You can change that in the <i>Panels settings</i>.")
                     .arg(folderName),
-                "note-sub-folder-hidden-settings");
+                "note-subfolder-hidden-settings");
         }
 #endif
 

@@ -88,7 +88,7 @@ int Note::getNoteSubFolderId() const { return this->_noteSubFolderId; }
 bool Note::isInCurrentNoteSubFolder() const {
     const int currentNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
-    // beware: the special "All notes" note sub-folder also uses the id 0
+    // beware: the special "All notes" note subfolder also uses the id 0
     if (currentNoteSubFolderId < 0) {
         return true;
     }
@@ -241,7 +241,7 @@ bool Note::fillByFileName(const QString &fileName, int noteSubFolderId) {
 Note Note::fetchByRelativeFilePath(const QString &relativePath) {
     const QFileInfo &fileInfo{relativePath};
 
-    // load note sub-folder and note from the relative path
+    // load note subfolder and note from the relative path
     // be aware that there must not be a ".." in the path, a canonical path must
     // be presented!
     const auto noteSubFolder =
@@ -1529,7 +1529,7 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
         return path;
     }
 
-    // we need that for links to notes in sub-folders in portable mode if
+    // we need that for links to notes in subfolders in portable mode if
     // note folder lies outside of the application directory
     const QString canonicalFilePath = fileInfo.canonicalFilePath();
 
@@ -2953,7 +2953,7 @@ QString Note::relativeFilePath(const QString &path) const {
 
 /**
  * Handles the replacing of all note urls if the note was renamed or moved
- * (sub-folder)
+ * (subfolder)
  *
  * @param oldNote
  */
