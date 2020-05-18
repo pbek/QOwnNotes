@@ -11,7 +11,7 @@ Starting an external program in the background
      *
      * @param executablePath the path of the executable
      * @param parameters a list of parameter strings
-     * @param identifier an id to be used in the onCallback() function (optional)
+     * @param identifier an id to be used in the onDetachedProcessCallback() function (optional)
      * @param index a useful index for loops or the like (optional)
      * @return true on success, false otherwise
      */
@@ -28,7 +28,7 @@ Starting an external program in the background
       script.startDetachedProcess("sleep", [`${dur}s`], "my-callback", i);
     }
 
-    function onCallback(identifier, resultSet, cmd, thread){
+    function onDetachedProcessCallback(identifier, resultSet, cmd, thread){
       if(identifier == "my-callback"){
         script.log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
       }

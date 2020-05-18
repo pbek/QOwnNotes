@@ -28,23 +28,22 @@ ScriptThread::ScriptThread(ScriptingService *ss,
     ScriptThread::connect(this, SIGNAL(callBack(ScriptThread*)), ss, SLOT(onScriptThreadDone(ScriptThread*)));
 }
 
-void ScriptThread::increaseThreadCounter(){
+void ScriptThread::increaseThreadCounter() {
     threadCounter[identifier]++;
 }
 
-void ScriptThread::decreaseThreadCounter(){
+void ScriptThread::decreaseThreadCounter() {
     threadCounter[identifier]--;
 }
 
-int ScriptThread::getThreadCounter(){
+int ScriptThread::getThreadCounter() {
     return threadCounter[identifier];
 }
 
 // We overrides the QThread's run() method here
 // run() will be called when a thread starts
 // the code will be shared by all threads
-void ScriptThread::run()
-{
+void ScriptThread::run() {
     Utils::Misc::startSynchronousResultProcess(cmd);
     decreaseThreadCounter();
     emit callBack(this) ;//emit is not a function

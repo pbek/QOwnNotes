@@ -50,7 +50,7 @@ class ScriptingService : public QObject {
     static bool validateScript(const Script &script, QString &errorMessage);
     Q_INVOKABLE bool startDetachedProcess(const QString &executablePath,
                                           const QStringList &parameters,
-                                          const QString &identifier = QString(),
+                                          const QString &callbackIdentifier = QString(),
                                           const int index = 0,
                                           const QByteArray &data = QByteArray());
     Q_INVOKABLE QByteArray startSynchronousProcess(

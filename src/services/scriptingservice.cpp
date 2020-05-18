@@ -954,20 +954,20 @@ bool ScriptingService::callHandleWebsocketRawDataHook(
  */
 bool ScriptingService::startDetachedProcess(const QString &executablePath,
                                             const QStringList &parameters,
-                                            const QString &identifier,
+                                            const QString &callbackIdentifier,
                                             const int index,
                                             const QByteArray &data) {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("scripting/") % QString(__func__));
 
     // callback provided: create new script thread
-    if(!identifier.isEmpty()){
+    if(!callbackIdentifier.isEmpty()){
         TerminalCmd cmd;
         cmd.executablePath = executablePath;
         cmd.parameters = parameters;
         cmd.data = data;
 
-        ScriptThread *st = new ScriptThread(this, cmd, identifier, index);
+        ScriptThread *st = new ScriptThread(this, cmd, callbackIdentifier, index);
         st->start();
         return true;
     }
@@ -2165,9 +2165,9 @@ void ScriptingService::onScriptThreadDone(ScriptThread *thread){
         cmdList << cmd->executablePath << cmd->parameters << cmd->exitCode;
         threadList << thread->getIndex() << thread ->getThreadCounter();
         if (methodExistsForObject(
-                scriptComponent.object, QStringLiteral("onCallback(QVariant,QVariant,QVariant,QVariant)"))) {
+                scriptComponent.object, QStringLiteral("onDetachedProcessCallback(QVariant,QVariant,QVariant,QVariant)"))) {
             QMetaObject::invokeMethod(
-                scriptComponent.object, "onCallback",
+                scriptComponent.object, "onDetachedProcessCallback",
                 Q_ARG(QVariant, thread->getIdentifier()),
                 Q_ARG(QVariant, cmd->resultSet),
                 Q_ARG(QVariant, QVariant::fromValue(cmdList)),

@@ -31,7 +31,7 @@ QtObject {
     * @param {QVariantList} cmd - the entire command array [0-executablePath, 1-parameters, 2-exitCode]
     * @param {QVariantList} thread - the thread information array [0-passed index, 1-remaining threads for this identifier]
     */
-    function onCallback(identifier, resultSet, cmd, thread){
+    function onDetachedProcessCallback(identifier, resultSet, cmd, thread){
       if(identifier == "callback-example"){
         log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
       }
