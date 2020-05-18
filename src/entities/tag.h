@@ -28,7 +28,7 @@ class Tag {
 
     bool exists() const;
 
-    bool fillFromQuery(const QSqlQuery &query);
+    Tag fillFromQuery(const QSqlQuery &query);
 
     bool remove() const;
 
@@ -153,8 +153,8 @@ class Tag {
 
    protected:
     int _id;
-    int _priority;
     int _parentId;
+    int _priority;
     QColor _color;
     QString _name;
 

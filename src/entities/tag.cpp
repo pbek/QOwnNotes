@@ -17,7 +17,7 @@
 #include "notesubfolder.h"
 
 Tag::Tag() noexcept
-    : _id(0), _priority(0), _parentId(0), _name(QLatin1String("")) {}
+    : _id(0), _parentId(0), _priority(0), _name(QLatin1String("")) {}
 
 int Tag::getId() const { return _id; }
 
@@ -176,12 +176,10 @@ bool Tag::remove() const {
 }
 
 Tag Tag::tagFromQuery(const QSqlQuery &query) {
-    Tag tag;
-    tag.fillFromQuery(query);
-    return tag;
+    return Tag().fillFromQuery(query);
 }
 
-bool Tag::fillFromQuery(const QSqlQuery &query) {
+Tag Tag::fillFromQuery(const QSqlQuery &query) {
     _id = query.value(QStringLiteral("id")).toInt();
     _name = query.value(QStringLiteral("name")).toString();
     _priority = query.value(QStringLiteral("priority")).toInt();
@@ -190,7 +188,7 @@ bool Tag::fillFromQuery(const QSqlQuery &query) {
     const QString colorName = query.value(colorFieldName()).toString();
     _color = colorName.isEmpty() ? QColor() : QColor(colorName);
 
-    return true;
+    return *this;
 }
 
 QList<Tag> Tag::fetchAll() {
@@ -271,8 +269,7 @@ QList<Tag> Tag::fetchAllByParentId(const int parentId, const QString &sortBy) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            const Tag tag = tagFromQuery(query);
-            tagList.append(tag);
+            tagList.append(tagFromQuery(query));
         }
     }
 
@@ -301,11 +298,12 @@ QList<Tag> Tag::fetchRecursivelyByParentId(const int parentId) {
 }
 
 QStringList Tag::getParentTagNames() {
-    if (_parentId == 0) {
+    const int parentId = _parentId;
+    if (parentId == 0) {
         return QStringList();
     }
 
-    Tag parentTag = Tag::fetch(_parentId);
+    Tag parentTag = Tag::fetch(parentId);
 
     if (!parentTag.isFetched()) {
         return QStringList();
@@ -322,8 +320,8 @@ QStringList Tag::getParentTagNames() {
  * Checks if taggingShowNotesRecursively is set
  */
 bool Tag::isTaggingShowNotesRecursively() {
-    const QSettings settings;
-    return settings.value(QStringLiteral("taggingShowNotesRecursively"))
+    return QSettings()
+        .value(QStringLiteral("taggingShowNotesRecursively"))
         .toBool();
 }
 
@@ -895,7 +893,8 @@ bool Tag::store() {
     QSqlQuery query(db);
     const QString colorField = colorFieldName();
 
-    if (_id > 0) {
+    const int id = _id;
+    if (id > 0) {
         query.prepare(
             QStringLiteral("UPDATE tag SET name = :name, priority = :priority, "
                            "parent_id = :parentId, ") %
@@ -903,7 +902,7 @@ bool Tag::store() {
             QStringLiteral(" = :color, "
                            "updated = datetime('now') "
                            "WHERE id = :id"));
-        query.bindValue(QStringLiteral(":id"), _id);
+        query.bindValue(QStringLiteral(":id"), id);
     } else {
         query.prepare(
             QStringLiteral("INSERT INTO tag (name, priority, parent_id, ") %
@@ -911,9 +910,11 @@ bool Tag::store() {
             QStringLiteral(") VALUES (:name, :priority, :parentId, :color)"));
     }
 
+    const int parentId = _parentId;
+
     query.bindValue(QStringLiteral(":name"), _name);
     query.bindValue(QStringLiteral(":priority"), _priority);
-    query.bindValue(QStringLiteral(":parentId"), _parentId);
+    query.bindValue(QStringLiteral(":parentId"), parentId);
     query.bindValue(QStringLiteral(":color"),
                     _color.isValid() ? _color.name() : QLatin1String(""));
 
@@ -923,17 +924,17 @@ bool Tag::store() {
 
         DatabaseService::closeDatabaseConnection(db, query);
         return false;
-    } else if (_id == 0) {
+    } else if (id == 0) {
         // on insert
         _id = query.lastInsertId().toInt();
     }
 
     // update the parent tag for correct sorting by last use
-    if (_parentId > 0) {
+    if (parentId > 0) {
         QSqlQuery parentQuery(db);
         parentQuery.prepare(
             QStringLiteral("SELECT * FROM tag WHERE id = :parentId"));
-        parentQuery.bindValue(QStringLiteral(":parentId"), _parentId);
+        parentQuery.bindValue(QStringLiteral(":parentId"), parentId);
 
         if (!parentQuery.exec()) {
             qWarning() << __func__ << ": " << query.lastError();
@@ -957,8 +958,7 @@ bool Tag::store() {
  * @return
  */
 QString Tag::colorFieldName() const {
-    const QSettings settings;
-    return settings.value(QStringLiteral("darkMode")).toBool()
+    return QSettings().value(QStringLiteral("darkMode")).toBool()
                ? QStringLiteral("dark_color")
                : QStringLiteral("color");
 }
