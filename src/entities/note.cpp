@@ -35,36 +35,35 @@
 #include "tag.h"
 #include "trashitem.h"
 
-Note::Note() {
-    id = 0;
-    noteSubFolderId = 0;
-    shareId = 0;
-    sharePermissions = 0;
-    hasDirtyData = false;
-    fileSize = 0;
-    cryptoKey = 0;
-}
+Note::Note()
+    : _fileSize{0},
+      _cryptoKey{0},
+      _id{0},
+      _noteSubFolderId{0},
+      _shareId{0},
+      _sharePermissions{0},
+      _hasDirtyData{false} {}
 
-int Note::getId() const { return this->id; }
+int Note::getId() const { return this->_id; }
 
-QString Note::getName() const { return this->name; }
+QString Note::getName() const { return this->_name; }
 
-QDateTime Note::getFileLastModified() const { return this->fileLastModified; }
+QDateTime Note::getFileLastModified() const { return this->_fileLastModified; }
 
-QDateTime Note::getFileCreated() const { return this->fileCreated; }
+QDateTime Note::getFileCreated() const { return this->_fileCreated; }
 
-QDateTime Note::getModified() const { return this->modified; }
+QDateTime Note::getModified() const { return this->_modified; }
 
-qint64 Note::getCryptoKey() const { return this->cryptoKey; }
+qint64 Note::getCryptoKey() const { return this->_cryptoKey; }
 
-QString Note::getCryptoPassword() const { return this->cryptoPassword; }
+QString Note::getCryptoPassword() const { return this->_cryptoPassword; }
 
-QString Note::getShareUrl() const { return this->shareUrl; }
+QString Note::getShareUrl() const { return this->_shareUrl; }
 
-int Note::getShareId() const { return this->shareId; }
+int Note::getShareId() const { return this->_shareId; }
 
 unsigned int Note::getSharePermissions() const {
-    return this->sharePermissions;
+    return this->_sharePermissions;
 }
 
 /**
@@ -72,19 +71,19 @@ unsigned int Note::getSharePermissions() const {
  *
  * @return
  */
-bool Note::isShareEditAllowed() const { return sharePermissions & 2; }
+bool Note::isShareEditAllowed() const { return _sharePermissions & 2; }
 
-qint64 Note::getFileSize() const { return this->fileSize; }
+qint64 Note::getFileSize() const { return this->_fileSize; }
 
-bool Note::isShared() const { return this->shareId > 0; }
+bool Note::isShared() const { return this->_shareId > 0; }
 
-QString Note::getFileName() const { return this->fileName; }
+QString Note::getFileName() const { return this->_fileName; }
 
 NoteSubFolder Note::getNoteSubFolder() const {
-    return NoteSubFolder::fetch(this->noteSubFolderId);
+    return NoteSubFolder::fetch(this->_noteSubFolderId);
 }
 
-int Note::getNoteSubFolderId() const { return this->noteSubFolderId; }
+int Note::getNoteSubFolderId() const { return this->_noteSubFolderId; }
 
 bool Note::isInCurrentNoteSubFolder() const {
     const int currentNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
@@ -94,39 +93,39 @@ bool Note::isInCurrentNoteSubFolder() const {
         return true;
     }
 
-    return this->noteSubFolderId == currentNoteSubFolderId;
+    return this->_noteSubFolderId == currentNoteSubFolderId;
 }
 
 void Note::setNoteSubFolder(const NoteSubFolder &noteSubFolder) {
     setNoteSubFolderId(noteSubFolder.getId());
 }
 
-void Note::setNoteSubFolderId(int id) { this->noteSubFolderId = id; }
+void Note::setNoteSubFolderId(int id) { this->_noteSubFolderId = id; }
 
-QString Note::getNoteText() const { return this->noteText; }
+QString Note::getNoteText() const { return this->_noteText; }
 
 void Note::setHasDirtyData(const bool hasDirtyData) {
-    this->hasDirtyData = hasDirtyData;
+    this->_hasDirtyData = hasDirtyData;
 }
 
-bool Note::getHasDirtyData() const { return this->hasDirtyData; }
+bool Note::getHasDirtyData() const { return this->_hasDirtyData; }
 
-void Note::setName(QString text) { this->name = std::move(text); }
+void Note::setName(QString text) { this->_name = std::move(text); }
 
-void Note::setShareUrl(QString url) { this->shareUrl = std::move(url); }
+void Note::setShareUrl(QString url) { this->_shareUrl = std::move(url); }
 
-void Note::setShareId(int id) { this->shareId = id; }
+void Note::setShareId(int id) { this->_shareId = id; }
 
 void Note::setSharePermissions(unsigned int permissions) {
-    this->sharePermissions = permissions;
+    this->_sharePermissions = permissions;
 }
 
-void Note::setCryptoKey(const qint64 cryptoKey) { this->cryptoKey = cryptoKey; }
+void Note::setCryptoKey(const qint64 cryptoKey) { this->_cryptoKey = cryptoKey; }
 
-void Note::setNoteText(QString text) { this->noteText = std::move(text); }
+void Note::setNoteText(QString text) { this->_noteText = std::move(text); }
 
 void Note::setDecryptedNoteText(QString text) {
-    this->decryptedNoteText = std::move(text);
+    this->_decryptedNoteText = std::move(text);
 }
 
 bool Note::addNote(const QString &name, const QString &fileName,
@@ -178,8 +177,8 @@ Note Note::fetchByName(const QRegularExpression &regExp, int noteSubFolderId) {
     // since there is no regular expression search in Qt's sqlite
     // implementation we have to iterate
     for (const Note &note : noteList) {
-        QRegularExpressionMatch match = regExp.match(note.getName());
-        if (match.hasMatch()) {
+        const bool match = regExp.match(note.getName()).hasMatch();
+        if (match) {
             return note;
         }
     }
@@ -189,7 +188,6 @@ Note Note::fetchByName(const QRegularExpression &regExp, int noteSubFolderId) {
 
 Note Note::fetchByFileName(const QString &fileName, int noteSubFolderId) {
     Note note;
-
     // get the active note subfolder id if none was set
     if (noteSubFolderId == -1) {
         noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
@@ -200,10 +198,9 @@ Note Note::fetchByFileName(const QString &fileName, int noteSubFolderId) {
 }
 
 Note Note::fetchByFileName(const QString &fileName,
-    const QString &noteSubFolderPathData) {
+                           const QString &noteSubFolderPathData) {
     auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData,
                                                         QStringLiteral("/"));
-
     return fetchByFileName(fileName, noteSubFolder.getId());
 }
 
@@ -242,7 +239,7 @@ bool Note::fillByFileName(const QString &fileName, int noteSubFolderId) {
  * @return
  */
 Note Note::fetchByRelativeFilePath(const QString &relativePath) {
-    const QFileInfo fileInfo(relativePath);
+    const QFileInfo &fileInfo{relativePath};
 
     // load note sub-folder and note from the relative path
     // be aware that there must not be a ".." in the path, a canonical path must
@@ -263,10 +260,9 @@ Note Note::fetchByRelativeFilePath(const QString &relativePath) {
  * @return
  */
 Note Note::fetchByFileUrl(const QUrl &url) {
-    const QString relativePath =
+    const QString &relativePath =
         Note::fileUrlInCurrentNoteFolderToRelativePath(url);
     const Note note = Note::fetchByRelativeFilePath(relativePath);
-
     return note;
 }
 
@@ -275,7 +271,7 @@ bool Note::remove(bool withFile) {
     QSqlQuery query(db);
 
     query.prepare(QStringLiteral("DELETE FROM note WHERE id = :id"));
-    query.bindValue(QStringLiteral(":id"), this->id);
+    query.bindValue(QStringLiteral(":id"), this->_id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -303,7 +299,7 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
     if (this->fileExists() && (d.exists(destinationPath))) {
         QFile file(fullNoteFilePath());
         QString destinationFileName =
-            destinationPath + QDir::separator() + this->fileName;
+            destinationPath + QDir::separator() + this->_fileName;
 
         if (d.exists(destinationFileName)) {
             qDebug() << destinationFileName << "already exists!";
@@ -311,7 +307,7 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
             // find a new filename for the note
             const QDateTime currentDateTime = QDateTime::currentDateTime();
             destinationFileName = destinationPath + QDir::separator() +
-                                  this->name + QChar(' ') +
+                                  this->_name + QChar(' ') +
                                   currentDateTime.toString(Qt::ISODate)
                                       .replace(QChar(':'), QChar('_')) +
                                   QChar('.') + defaultNoteFileExtension();
@@ -321,42 +317,42 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
 
         // copy the note file to the destination
         const bool isFileCopied = file.copy(destinationFileName);
+        if (!isFileCopied) {
+            return false;
+        }
 
-        if (isFileCopied) {
-            const QStringList mediaFileList = getMediaFileList();
+        const QStringList mediaFileList = getMediaFileList();
+        if (mediaFileList.empty()) {
+            return false;
+        }
 
-            if (mediaFileList.count() > 0) {
-                if (noteFolderPath.isEmpty()) {
-                    noteFolderPath = destinationPath;
-                }
+        if (noteFolderPath.isEmpty()) {
+            noteFolderPath = destinationPath;
+        }
 
-                if (NoteFolder::isPathNoteFolder(noteFolderPath)) {
-                    const QDir mediaDir(noteFolderPath + QDir::separator() +
-                                        QStringLiteral("media"));
+        if (!NoteFolder::isPathNoteFolder(noteFolderPath)) {
+            return false;
+        }
+        const QDir mediaDir(noteFolderPath + QDir::separator() +
+                            QStringLiteral("media"));
 
-                    // created the media folder if it doesn't exist
-                    if (!mediaDir.exists()) {
-                        mediaDir.mkpath(mediaDir.path());
-                    }
-
-                    if (mediaDir.exists()) {
-                        // copy all images to the media folder inside
-                        // destinationPath
-                        for (const QString &fileName : mediaFileList) {
-                            QFile mediaFile(NoteFolder::currentMediaPath() +
-                                            QDir::separator() + fileName);
-
-                            if (mediaFile.exists()) {
-                                mediaFile.copy(mediaDir.path() +
-                                               QDir::separator() + fileName);
-                            }
-                        }
-                    }
-                }
+        // created the media folder if it doesn't exist
+        if (!mediaDir.exists()) {
+            if (!mediaDir.mkpath(mediaDir.path())) {
+                return false;
             }
         }
 
-        return isFileCopied;
+        // copy all images to the media folder inside
+        // destinationPath
+        for (const QString &fileName : mediaFileList) {
+            QFile mediaFile(NoteFolder::currentMediaPath() + QDir::separator() +
+                            fileName);
+
+            if (mediaFile.exists()) {
+                mediaFile.copy(mediaDir.path() + QDir::separator() + fileName);
+            }
+        }
     }
 
     return false;
@@ -371,7 +367,6 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
 bool Note::moveToPath(const QString &destinationPath,
                       const QString &noteFolderPath) {
     const bool result = copyToPath(destinationPath, noteFolderPath);
-
     if (result) {
         return remove(true);
     }
@@ -390,7 +385,7 @@ QStringList Note::getMediaFileList() {
     // match image links like ![media-qV920](file://media/608766373.gif)
     // or  ![media-qV920](media/608766373.gif)
     QRegularExpression re(QStringLiteral(R"(!\[.*?\]\(.*media/(.+?)\))"));
-    QRegularExpressionMatchIterator i = re.globalMatch(noteText);
+    QRegularExpressionMatchIterator i = re.globalMatch(_noteText);
 
     // remove all found images from the orphaned files list
     while (i.hasNext()) {
@@ -404,7 +399,7 @@ QStringList Note::getMediaFileList() {
 
 bool Note::updateRelativeMediaFileLinks() {
     QRegularExpression re(QStringLiteral(R"((!\[.*?\])\((.*media/(.+?))\))"));
-    QRegularExpressionMatchIterator i = re.globalMatch(noteText);
+    QRegularExpressionMatchIterator i = re.globalMatch(_noteText);
     bool textWasUpdated = false;
     QString newText = getNoteText();
 
@@ -460,7 +455,7 @@ QStringList Note::getAttachmentsFileList() const {
 bool Note::updateRelativeAttachmentFileLinks() {
     const QRegularExpression re(
         QStringLiteral(R"((\[.*?\])\((.*attachments/(.+?))\))"));
-    QRegularExpressionMatchIterator i = re.globalMatch(noteText);
+    QRegularExpressionMatchIterator i = re.globalMatch(_noteText);
     bool textWasUpdated = false;
     QString newText = getNoteText();
 
@@ -516,11 +511,12 @@ Note Note::fetchByShareId(int shareId) {
 
 Note Note::fetchByName(const QString &name,
                        const QString &noteSubFolderPathData,
-                       const QString& pathDataSeparator) {
-    auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData,
-                                                        pathDataSeparator);
+                       const QString &pathDataSeparator) {
+    int noteSubFolderId =
+        NoteSubFolder::fetchByPathData(noteSubFolderPathData, pathDataSeparator)
+            .getId();
 
-    return fetchByName(name, noteSubFolder.getId());
+    return fetchByName(name, noteSubFolderId);
 }
 
 Note Note::fetchByName(const QString &name, int noteSubFolderId) {
@@ -549,31 +545,30 @@ Note Note::fetchByName(const QString &name, int noteSubFolderId) {
 }
 
 Note Note::noteFromQuery(const QSqlQuery &query) {
-    Note note;
-    note.fillFromQuery(query);
-    return note;
+    return Note().fillFromQuery(query);
 }
 
-void Note::fillFromQuery(const QSqlQuery &query) {
-    id = query.value(QStringLiteral("id")).toInt();
-    name = query.value(QStringLiteral("name")).toString();
-    fileName = query.value(QStringLiteral("file_name")).toString();
-    shareUrl = query.value(QStringLiteral("share_url")).toString();
-    shareId = query.value(QStringLiteral("share_id")).toInt();
-    sharePermissions = query.value(QStringLiteral("share_permissions")).toInt();
-    noteSubFolderId = query.value(QStringLiteral("note_sub_folder_id")).toInt();
-    noteText = query.value(QStringLiteral("note_text")).toString();
-    decryptedNoteText =
+Note Note::fillFromQuery(const QSqlQuery &query) {
+    _id = query.value(QStringLiteral("id")).toInt();
+    _name = query.value(QStringLiteral("name")).toString();
+    _fileName = query.value(QStringLiteral("file_name")).toString();
+    _shareUrl = query.value(QStringLiteral("share_url")).toString();
+    _shareId = query.value(QStringLiteral("share_id")).toInt();
+    _sharePermissions = query.value(QStringLiteral("share_permissions")).toInt();
+    _noteSubFolderId = query.value(QStringLiteral("note_sub_folder_id")).toInt();
+    _noteText = query.value(QStringLiteral("note_text")).toString();
+    _decryptedNoteText =
         query.value(QStringLiteral("decrypted_note_text")).toString();
-    cryptoKey = query.value(QStringLiteral("crypto_key")).toLongLong();
-    fileSize = query.value(QStringLiteral("file_size")).toLongLong();
-    cryptoPassword = query.value(QStringLiteral("crypto_password")).toString();
-    hasDirtyData = query.value(QStringLiteral("has_dirty_data")).toInt() == 1;
-    fileCreated = query.value(QStringLiteral("file_created")).toDateTime();
-    fileLastModified =
+    _cryptoKey = query.value(QStringLiteral("crypto_key")).toLongLong();
+    _fileSize = query.value(QStringLiteral("file_size")).toLongLong();
+    _cryptoPassword = query.value(QStringLiteral("crypto_password")).toString();
+    _hasDirtyData = query.value(QStringLiteral("has_dirty_data")).toInt() == 1;
+    _fileCreated = query.value(QStringLiteral("file_created")).toDateTime();
+    _fileLastModified =
         query.value(QStringLiteral("file_last_modified")).toDateTime();
-    created = query.value(QStringLiteral("created")).toDateTime();
-    modified = query.value(QStringLiteral("modified")).toDateTime();
+    _created = query.value(QStringLiteral("created")).toDateTime();
+    _modified = query.value(QStringLiteral("modified")).toDateTime();
+    return *this;
 }
 
 QVector<Note> Note::fetchAll(int limit) {
@@ -599,7 +594,12 @@ QVector<Note> Note::fetchAll(int limit) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        for (int r = 0; query.next(); r++) {
+        // there is no way to get the num of rows returned by the query,
+        // so we use static int to save the size after first query to
+        // prevent extra allocations
+        static int r = 0;
+        noteList.reserve(r);
+        for (r = 0; query.next(); r++) {
             noteList.append(noteFromQuery(query));
         }
     }
@@ -636,7 +636,12 @@ QVector<int> Note::fetchAllIds(int limit, int offset) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        for (int r = 0; query.next(); r++) {
+        // there is no way to get the num of rows returned by the query,
+        // so we use static int to save the size after first query to
+        // prevent extra allocations
+        static int r = 0;
+        noteIdList.reserve(r);
+        for (r = 0; query.next(); r++) {
             noteIdList.append(noteFromQuery(query).getId());
         }
     }
@@ -710,7 +715,6 @@ QVector<int> Note::fetchAllNotTaggedIds() {
     QVector<int> untaggedNoteIdList;
     untaggedNoteIdList.reserve(noteList.size());
 
-    QVectorIterator<Note> itr(noteList);
     QVector<Note>::const_iterator it = noteList.constBegin();
     for (; it != noteList.constEnd(); ++it) {
         const int tagCount = Tag::countAllOfNote(*it);
@@ -724,8 +728,7 @@ QVector<int> Note::fetchAllNotTaggedIds() {
  * Counts all notes that are not tagged
  */
 int Note::countAllNotTagged(int activeNoteSubFolderId) {
-    QVector<Note> noteList = Note::fetchAllNotTagged(activeNoteSubFolderId);
-    return noteList.count();
+    return Note::fetchAllNotTagged(activeNoteSubFolderId).count();
 }
 
 QVector<Note> Note::search(const QString &text) {
@@ -882,7 +885,7 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
 }
 
 int Note::countSearchTextInNote(const QString &search) const {
-    return noteText.count(search, Qt::CaseInsensitive);
+    return _noteText.count(search, Qt::CaseInsensitive);
 }
 
 /**
@@ -1030,23 +1033,23 @@ bool Note::storeNewText(QString text) {
         return false;
     }
 
-    this->noteText = std::move(text);
-    this->hasDirtyData = true;
+    this->_noteText = std::move(text);
+    this->_hasDirtyData = true;
 
     return this->store();
 }
 
 void Note::setDecryptedText(QString text) {
-    this->decryptedNoteText = std::move(text);
+    this->_decryptedNoteText = std::move(text);
 }
 
 bool Note::storeNewDecryptedText(QString text) {
-    if (text == this->decryptedNoteText) {
+    if (text == this->_decryptedNoteText) {
         return false;
     }
 
-    this->decryptedNoteText = std::move(text);
-    this->hasDirtyData = true;
+    this->_decryptedNoteText = std::move(text);
+    this->_hasDirtyData = true;
 
     return this->store();
 }
@@ -1055,13 +1058,9 @@ bool Note::storeNewDecryptedText(QString text) {
  * Returns the default note file extension (`md`, `txt` or custom extensions)
  */
 QString Note::defaultNoteFileExtension() {
-    const QSettings settings;
-    const QString extension =
-        settings
-            .value(QStringLiteral("defaultNoteFileExtension"),
-                   QStringLiteral("md"))
-            .toString();
-    return extension;
+    return QSettings()
+        .value(QStringLiteral("defaultNoteFileExtension"), QStringLiteral("md"))
+        .toString();
 }
 
 /**
@@ -1085,8 +1084,9 @@ QStringList Note::customNoteFileExtensionList(const QString &prefix) {
  * Checks if it is allowed to have a different note file name than the headline
  */
 bool Note::allowDifferentFileName() {
-    return NoteFolder::currentNoteFolder().settingsValue(
-                QStringLiteral("allowDifferentNoteFileName")).toBool();
+    return NoteFolder::currentNoteFolder()
+        .settingsValue(QStringLiteral("allowDifferentNoteFileName"))
+        .toBool();
 }
 
 //
@@ -1096,16 +1096,16 @@ bool Note::store() {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    if (fileName.isEmpty()) {
+    if (_fileName.isEmpty()) {
         // don't store notes with empty filename and empty name
-        if (name.isEmpty()) {
+        if (_name.isEmpty()) {
             return false;
         }
 
         generateFileNameFromName();
     }
 
-    if (id > 0) {
+    if (_id > 0) {
         query.prepare(
             QStringLiteral("UPDATE note SET "
                            "name = :name,"
@@ -1124,7 +1124,7 @@ bool Note::store() {
                            "crypto_password = :crypto_password,"
                            "modified = :modified "
                            "WHERE id = :id"));
-        query.bindValue(QStringLiteral(":id"), id);
+        query.bindValue(QStringLiteral(":id"), _id);
     } else {
         query.prepare(QStringLiteral(
             "INSERT INTO note"
@@ -1144,34 +1144,34 @@ bool Note::store() {
     const QDateTime modified = QDateTime::currentDateTime();
 
     // get the size of the note text
-    const QByteArray bytes = noteText.toUtf8();
-    fileSize = bytes.size();
+    const QByteArray &bytes = _noteText.toUtf8();
+    _fileSize = bytes.size();
 
-    query.bindValue(QStringLiteral(":name"), name);
-    query.bindValue(QStringLiteral(":share_url"), shareUrl);
-    query.bindValue(QStringLiteral(":share_id"), shareId);
-    query.bindValue(QStringLiteral(":share_permissions"), sharePermissions);
-    query.bindValue(QStringLiteral(":file_name"), fileName);
-    query.bindValue(QStringLiteral(":file_size"), fileSize);
-    query.bindValue(QStringLiteral(":note_sub_folder_id"), noteSubFolderId);
-    query.bindValue(QStringLiteral(":note_text"), noteText);
-    query.bindValue(QStringLiteral(":decrypted_note_text"), decryptedNoteText);
-    query.bindValue(QStringLiteral(":has_dirty_data"), hasDirtyData ? 1 : 0);
-    query.bindValue(QStringLiteral(":file_created"), fileCreated);
-    query.bindValue(QStringLiteral(":file_last_modified"), fileLastModified);
-    query.bindValue(QStringLiteral(":crypto_key"), cryptoKey);
-    query.bindValue(QStringLiteral(":crypto_password"), cryptoPassword);
+    query.bindValue(QStringLiteral(":name"), _name);
+    query.bindValue(QStringLiteral(":share_url"), _shareUrl);
+    query.bindValue(QStringLiteral(":share_id"), _shareId);
+    query.bindValue(QStringLiteral(":share_permissions"), _sharePermissions);
+    query.bindValue(QStringLiteral(":file_name"), _fileName);
+    query.bindValue(QStringLiteral(":file_size"), _fileSize);
+    query.bindValue(QStringLiteral(":note_sub_folder_id"), _noteSubFolderId);
+    query.bindValue(QStringLiteral(":note_text"), _noteText);
+    query.bindValue(QStringLiteral(":decrypted_note_text"), _decryptedNoteText);
+    query.bindValue(QStringLiteral(":has_dirty_data"), _hasDirtyData ? 1 : 0);
+    query.bindValue(QStringLiteral(":file_created"), _fileCreated);
+    query.bindValue(QStringLiteral(":file_last_modified"), _fileLastModified);
+    query.bindValue(QStringLiteral(":crypto_key"), _cryptoKey);
+    query.bindValue(QStringLiteral(":crypto_password"), _cryptoPassword);
     query.bindValue(QStringLiteral(":modified"), modified);
 
     // on error
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
-    } else if (id == 0) {    // on insert
-        id = query.lastInsertId().toInt();
+    } else if (_id == 0) {    // on insert
+        _id = query.lastInsertId().toInt();
     }
 
-    this->modified = modified;
+    this->_modified = modified;
     return true;
 }
 
@@ -1181,7 +1181,7 @@ bool Note::store() {
  */
 bool Note::storeNoteTextFileToDisk() {
     const Note oldNote = *this;
-    const QString oldName = name;
+    const QString oldName = _name;
     const QString oldNoteFilePath = fullNoteFilePath();
     TrashItem trashItem = TrashItem::prepare(this);
 
@@ -1194,20 +1194,6 @@ bool Note::storeNoteTextFileToDisk() {
         handleNoteTextFileName();
     }
 
-    const QString newName = name;
-    bool noteFileWasRenamed = false;
-
-    // rename the current note file if the file name changed
-    if (oldName != newName) {
-        QFile oldFile(oldNoteFilePath);
-
-        // rename the note file
-        if (oldFile.exists()) {
-            noteFileWasRenamed = oldFile.rename(fullNoteFilePath());
-            qDebug() << __func__ << " - 'noteFileWasRenamed': " << noteFileWasRenamed;
-        }
-    }
-
     QFile file(fullNoteFilePath());
     QFile::OpenMode flags = QIODevice::WriteOnly;
     const QSettings settings;
@@ -1218,7 +1204,7 @@ bool Note::storeNoteTextFileToDisk() {
         flags |= QIODevice::Text;
     }
 
-    qDebug() << "storing note file: " << this->fileName;
+    qDebug() << "storing note file: " << this->_fileName;
 
     if (!file.open(flags)) {
         qCritical() << QObject::tr(
@@ -1229,10 +1215,11 @@ bool Note::storeNoteTextFileToDisk() {
     }
 
     const bool fileExists = this->fileExists();
+    const QString newName = _name;
 
     // assign the tags to the new name if the name has changed
     if (oldName != newName) {
-        if (!noteFileWasRenamed && TrashItem::isLocalTrashEnabled()) {
+        if (TrashItem::isLocalTrashEnabled()) {
             qDebug() << __func__ << " - 'trashItem': " << trashItem;
 
             // trash the old note
@@ -1248,15 +1235,15 @@ bool Note::storeNoteTextFileToDisk() {
     }
 
     // if we find a decrypted text to encrypt, then we attempt encrypt it
-    if (!decryptedNoteText.isEmpty()) {
-        noteText = decryptedNoteText;
+    if (!_decryptedNoteText.isEmpty()) {
+        _noteText = _decryptedNoteText;
         encryptNoteText();
-        decryptedNoteText = QLatin1String("");
+        _decryptedNoteText = QLatin1String("");
     }
 
     // transform all types of newline to \n
     // (maybe the ownCloud-sync works better then)
-    const QString text = Utils::Misc::transformLineFeeds(this->noteText);
+    const QString text = Utils::Misc::transformLineFeeds(this->_noteText);
 
     //    diff_match_patch *diff = new diff_match_patch();
     //    QList<Diff> diffList = diff->diff_main( this->noteText, text );
@@ -1272,46 +1259,41 @@ bool Note::storeNoteTextFileToDisk() {
     file.flush();
     file.close();
 
-    this->hasDirtyData = false;
-    this->fileLastModified = QDateTime::currentDateTime();
+    this->_hasDirtyData = false;
+    this->_fileLastModified = QDateTime::currentDateTime();
 
     if (!fileExists) {
-        this->fileCreated = this->fileLastModified;
+        this->_fileCreated = this->_fileLastModified;
     }
 
     const bool noteStored = this->store();
+    QFile oldFile(oldNoteFilePath);
+    const QFileInfo oldFileInfo(oldFile);
+    const QFile newFile(fullNoteFilePath());
+    const QFileInfo newFileInfo(newFile);
 
-    // if note was stored but the note file wasn't renamed do some more checks
-    // whether we need to remove the old note file
-    if (noteStored && !noteFileWasRenamed) {
-        QFile oldFile(oldNoteFilePath);
-        const QFileInfo oldFileInfo(oldFile);
-        const QFile newFile(fullNoteFilePath());
-        const QFileInfo newFileInfo(newFile);
-
-        // in the end we want to remove the old note file if note was stored and
-        // filename has changed
-        // #1190: we also need to check if the files are the same even if the
-        //  name is not the same for NTFS
-        if ((fullNoteFilePath() != oldNoteFilePath) &&
-            (oldFileInfo != newFileInfo)) {
-            // remove the old note file
-            if (oldFile.exists() && oldFileInfo.isFile() &&
-                oldFileInfo.isReadable() && oldFile.remove()) {
+    // in the end we want to remove the old note file if note was stored and
+    // filename has changed
+    // #1190: we also need to check if the files are the same even if the name
+    // is not the same for NTFS
+    if (noteStored && (fullNoteFilePath() != oldNoteFilePath) &&
+        (oldFileInfo != newFileInfo)) {
+        // remove the old note file
+        if (oldFile.exists() && oldFileInfo.isFile() &&
+            oldFileInfo.isReadable() && oldFile.remove()) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-                qInfo() << QObject::tr("Renamed note-file was removed: %1")
-                    .arg(oldFile.fileName());
+            qInfo() << QObject::tr("Renamed note-file was removed: %1")
+                           .arg(oldFile.fileName());
 #else
-                qDebug() << __func__ << " - 'renamed note-file was removed': "
+            qDebug() << __func__ << " - 'renamed note-file was removed': "
                      << oldFile.fileName();
 #endif
 
-            } else {
-                qWarning() << QObject::tr(
-                    "Could not remove renamed note-file: %1"
-                    " - Error message: %2")
-                    .arg(oldFile.fileName(), oldFile.errorString());
-            }
+        } else {
+            qWarning() << QObject::tr(
+                              "Could not remove renamed note-file: %1"
+                              " - Error message: %2")
+                              .arg(oldFile.fileName(), oldFile.errorString());
         }
     }
 
@@ -1358,12 +1340,12 @@ bool Note::modifyNoteTextFileNameFromQMLHook() {
         ScriptingService::instance()->callHandleNoteTextFileNameHook(this);
 
     // set the file name from the QML hook
-    if (!newName.isEmpty() && (newName != name)) {
+    if (!newName.isEmpty() && (newName != _name)) {
         qDebug() << __func__ << " - 'newName': " << newName;
 
         // store new name and filename
-        name = newName;
-        fileName = newName + QStringLiteral(".") + fileNameSuffix();
+        _name = newName;
+        _fileName = newName + QStringLiteral(".") + fileNameSuffix();
         return store();
     }
 
@@ -1380,7 +1362,7 @@ bool Note::modifyNoteTextFileNameFromQMLHook() {
 bool Note::handleNoteTextFileName() {
     // split the text into a string list
     const QStringList noteTextLines =
-        this->noteText.split(QRegExp(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+        this->_noteText.split(QRegExp(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
     const int noteTextLinesCount = noteTextLines.count();
 
     // do nothing if there is no text
@@ -1422,7 +1404,7 @@ bool Note::handleNoteTextFileName() {
     name = cleanupFileName(name);
 
     // check if name has changed
-    if (name != this->name) {
+    if (name != this->_name) {
         qDebug() << __func__ << " - 'name' was changed: " << name;
         QString fileName = generateNoteFileNameFromName(name);
 
@@ -1451,19 +1433,19 @@ bool Note::handleNoteTextFileName() {
         //        this->noteText = noteTextLines.join("\n");
 
         // set the new name and filename
-        this->name = name;
+        this->_name = name;
         generateFileNameFromName();
 
         // let's check if we would be able to write to the file
         if (!canWriteToNoteFile()) {
-            qDebug() << __func__ << " - cannot write to file " << this->fileName
+            qDebug() << __func__ << " - cannot write to file " << this->_fileName
                      << " - we will try another filename";
 
             // we try to replace some more characters (mostly for Windows
             // filesystems)
             name = extendedCleanupFileName(name);
 
-            this->name = name;
+            this->_name = name;
             generateFileNameFromName();
         }
 
@@ -1487,7 +1469,7 @@ QString Note::generateNoteFileNameFromName(const QString &name) {
  * Generates filename of the note from it's name
  */
 void Note::generateFileNameFromName() {
-    fileName = generateNoteFileNameFromName(name);
+    _fileName = generateNoteFileNameFromName(_name);
 }
 
 /**
@@ -1497,16 +1479,10 @@ void Note::generateFileNameFromName() {
  */
 bool Note::canWriteToNoteFile() {
     QFile file(fullNoteFilePath());
-    const bool fileExisted = file.exists();
     const bool canWrite = file.open(QIODevice::WriteOnly);
 
     if (file.isOpen()) {
         file.close();
-
-        // remove file if didn't exist previously
-        if (!fileExisted) {
-            file.remove();
-        }
     }
 
     return canWrite;
@@ -1527,11 +1503,11 @@ bool Note::updateNoteTextFromDisk() {
 
     QTextStream in(&file);
     in.setCodec("UTF-8");
-    this->noteText = in.readAll();
+    this->_noteText = in.readAll();
     file.close();
 
     // strangely it sometimes gets null
-    if (this->noteText.isNull()) this->noteText = QLatin1String("");
+    if (this->_noteText.isNull()) this->_noteText = QLatin1String("");
 
     return true;
 }
@@ -1544,8 +1520,8 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
         settings.value(QStringLiteral("notesPath")).toString());
 
     const QString path = Utils::Misc::removeIfEndsWith(std::move(notesPath),
-                                         QStringLiteral("/")) +
-           Utils::Misc::dirSeparator() + fileName;
+                                                       QStringLiteral("/")) +
+                         Utils::Misc::dirSeparator() + fileName;
     const QFileInfo fileInfo(path);
 
     // we can't get a canonical path if the path doesn't exist
@@ -1634,13 +1610,13 @@ QString Note::fullNoteFileDirPath() const {
  * Returns the relative path of the note file
  */
 QString Note::relativeNoteFilePath(QString separator) const {
-    QString fullFileName = fileName;
+    QString fullFileName = _fileName;
 
     if (separator.isEmpty()) {
         separator = Utils::Misc::dirSeparator();
     }
 
-    if (noteSubFolderId > 0) {
+    if (_noteSubFolderId > 0) {
         const NoteSubFolder noteSubFolder = getNoteSubFolder();
         if (noteSubFolder.isFetched()) {
             fullFileName.prepend(noteSubFolder.relativePath() + separator);
@@ -1656,7 +1632,7 @@ QString Note::relativeNoteFilePath(QString separator) const {
 QString Note::relativeNoteSubFolderPath() const {
     QString path = QLatin1String("");
 
-    if (noteSubFolderId > 0) {
+    if (_noteSubFolderId > 0) {
         const NoteSubFolder noteSubFolder = getNoteSubFolder();
         if (noteSubFolder.isFetched()) {
             path = noteSubFolder.relativePath();
@@ -1672,7 +1648,7 @@ QString Note::relativeNoteSubFolderPath() const {
 QString Note::noteSubFolderPathData() const {
     QString path = QLatin1String("");
 
-    if (noteSubFolderId > 0) {
+    if (_noteSubFolderId > 0) {
         const NoteSubFolder noteSubFolder = getNoteSubFolder();
         if (noteSubFolder.isFetched()) {
             path = noteSubFolder.pathData();
@@ -1712,7 +1688,6 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
     ScriptingService *scriptingService = ScriptingService::instance();
-    Note note;
     //    qDebug() << "storeDirtyNotesToDisk";
 
     query.prepare(
@@ -1720,53 +1695,52 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
         return 0;
-    } else {
-        int count = 0;
-        for (int r = 0; query.next(); r++) {
-            note = noteFromQuery(query);
-            const QString oldName = note.getName();
-            const bool noteWasStored = note.storeNoteTextFileToDisk();
+    }
+    int count = 0;
+    for (int r = 0; query.next(); r++) {
+        Note note = noteFromQuery(query);
+        const QString &oldName = note.getName();
+        const bool noteWasStored = note.storeNoteTextFileToDisk();
 
-            // continue if note couldn't be stored
-            if (!noteWasStored) {
-                continue;
-            }
-
-            const QString newName = note.getName();
-
-            // check if the file name has changed
-            if (oldName != newName) {
-                // rename the note file names of note tag links
-                Tag::renameNoteFileNamesOfLinks(oldName, newName,
-                                                note.getNoteSubFolder());
-                *noteWasRenamed = true;
-
-                // override the current note because the file name has changed
-                if (note.isSameFile(currentNote)) {
-                    currentNote = note;
-                }
-
-                // handle the replacing of all note urls if a note was renamed
-                // we don't need to do that here, it would be called two
-                // times this way
-                //                Note::handleNoteRenaming(oldName, newName);
-            }
-
-            // emit the signal for the QML that the note was stored
-            emit scriptingService->noteStored(QVariant::fromValue(
-                static_cast<QObject *>(NoteApi::fromNote(note))));
-
-            // reassign currentNote if filename of currentNote has changed
-            if (note.isSameFile(currentNote)) {
-                *currentNoteChanged = true;
-            }
-
-            qDebug() << "stored note: " << note;
-            count++;
+        // continue if note couldn't be stored
+        if (!noteWasStored) {
+            continue;
         }
 
-        return count;
+        const QString &newName = note.getName();
+
+        // check if the file name has changed
+        if (oldName != newName) {
+            // rename the note file names of note tag links
+            Tag::renameNoteFileNamesOfLinks(oldName, newName,
+                                            note.getNoteSubFolder());
+            *noteWasRenamed = true;
+
+            // override the current note because the file name has changed
+            if (note.isSameFile(currentNote)) {
+                currentNote = note;
+            }
+
+            // handle the replacing of all note urls if a note was renamed
+            // we don't need to do that here, it would be called two
+            // times this way
+            //                Note::handleNoteRenaming(oldName, newName);
+        }
+
+        // emit the signal for the QML that the note was stored
+        emit scriptingService->noteStored(QVariant::fromValue(
+            static_cast<QObject *>(NoteApi::fromNote(note))));
+
+        // reassign currentNote if filename of currentNote has changed
+        if (note.isSameFile(currentNote)) {
+            *currentNoteChanged = true;
+        }
+
+        qDebug() << "stored note: " << note;
+        count++;
     }
+
+    return count;
 }
 
 void Note::createFromFile(QFile &file, int noteSubFolderId,
@@ -1789,18 +1763,18 @@ void Note::createFromFile(QFile &file, int noteSubFolderId,
         const int lastPoint = name.lastIndexOf(QLatin1Char('.'));
         name = name.left(lastPoint);
 
-        this->name = std::move(name);
-        this->fileName = fileInfo.fileName();
-        this->noteSubFolderId = noteSubFolderId;
-        this->noteText = noteText;
+        this->_name = std::move(name);
+        this->_fileName = fileInfo.fileName();
+        this->_noteSubFolderId = noteSubFolderId;
+        this->_noteText = noteText;
 
 #if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
-        this->fileCreated = fileInfo.created();
+        this->_fileCreated = fileInfo.created();
 #else
-        this->fileCreated = fileInfo.birthTime();
+        this->_fileCreated = fileInfo.birthTime();
 #endif
 
-        this->fileLastModified = fileInfo.lastModified();
+        this->_fileLastModified = fileInfo.lastModified();
         this->store();
 
         if (withNoteNameHook) {
@@ -1809,7 +1783,7 @@ void Note::createFromFile(QFile &file, int noteSubFolderId,
                 ScriptingService::instance()->callHandleNoteNameHook(this);
 
             if (!hookName.isEmpty()) {
-                this->name = std::move(hookName);
+                this->_name = std::move(hookName);
                 this->store();
             }
         }
@@ -1886,21 +1860,21 @@ bool Note::fileWriteable() const {
 //
 // checks if the current note still exists in the database
 //
-bool Note::exists() const { return noteIdExists(this->id); }
+bool Note::exists() const { return noteIdExists(this->_id); }
 
-bool Note::noteIdExists(int id) { return fetch(id).id > 0; }
+bool Note::noteIdExists(int id) { return fetch(id)._id > 0; }
 
 //
 // reloads the current Note (by fileName)
 //
-bool Note::refetch() { return this->fillByFileName(fileName, noteSubFolderId); }
+bool Note::refetch() { return this->fillByFileName(_fileName, _noteSubFolderId); }
 
 /**
  * Returns the suffix of the note file name
  */
 QString Note::fileNameSuffix() const {
     QFileInfo fileInfo;
-    fileInfo.setFile(fileName);
+    fileInfo.setFile(_fileName);
     return fileInfo.suffix();
 }
 
@@ -1909,14 +1883,13 @@ QString Note::fileNameSuffix() const {
  */
 QString Note::fileBaseName(bool withFullName) {
     if (withFullName) {
-        QStringList parts = fileName.split(QChar('.'));
+        QStringList parts = _fileName.split(QChar('.'));
         parts.removeLast();
         return parts.join(QChar('.'));
-    } else {
-        QFileInfo fileInfo;
-        fileInfo.setFile(fileName);
-        return fileInfo.baseName();
     }
+    QFileInfo fileInfo;
+    fileInfo.setFile(_fileName);
+    return fileInfo.baseName();
 }
 
 /**
@@ -1933,13 +1906,13 @@ bool Note::renameNoteFile(QString newName) {
     const QString newFileName = newName + QChar('.') + fileNameSuffix();
 
     // check if name has really changed
-    if (name == newName) {
+    if (_name == newName) {
         return false;
     }
 
     // check if name already exists
     const Note existingNote = Note::fetchByName(newName);
-    if (existingNote.isFetched() && (existingNote.getId() != id)) {
+    if (existingNote.isFetched() && (existingNote.getId() != _id)) {
         return false;
     }
 
@@ -1953,8 +1926,8 @@ bool Note::renameNoteFile(QString newName) {
     QFile file(fullNoteFilePath());
 
     // store the new note file name
-    fileName = std::move(newFileName);
-    name = std::move(newName);
+    _fileName = std::move(newFileName);
+    _name = std::move(newName);
     store();
 
     // rename the note file name
@@ -1975,7 +1948,7 @@ bool Note::removeNoteFile() {
         }
 
         QFile file(fullNoteFilePath());
-        qDebug() << __func__ << " - 'this->fileName': " << this->fileName;
+        qDebug() << __func__ << " - 'this->fileName': " << this->_fileName;
         qDebug() << __func__ << " - 'file': " << file.fileName();
         return file.remove();
     }
@@ -2078,15 +2051,15 @@ void highlightCode(QString &str, const QString &type, int cbCount) {
 }
 
 static int nonOverlapCount(const QString &str, const QChar c = '`') {
-  const auto len = str.length();
-  int count = 0;
-  for (int i = 0; i < len; ++i) {
-    if (str[i] == c && i + 2 < len && str[i + 1] == c && str[i + 2] == c) {
-      ++count;
-      i += 2;
+    const auto len = str.length();
+    int count = 0;
+    for (int i = 0; i < len; ++i) {
+        if (str[i] == c && i + 2 < len && str[i + 1] == c && str[i + 2] == c) {
+            ++count;
+            i += 2;
+        }
     }
-  }
-  return count;
+    return count;
 }
 
 /**
@@ -2473,7 +2446,7 @@ Utils::Misc::ExternalImageHash *Note::externalImageHash() {
     return instance;
 }
 
-bool Note::isFetched() const { return (this->id > 0); }
+bool Note::isFetched() const { return (this->_id > 0); }
 
 /**
  * @brief Generates a text that can be used in a link
@@ -2534,10 +2507,10 @@ qint64 Note::qint64Hash(const QString &str) {
 QString Note::encryptNoteText() {
     // split the text into a string list
     QStringList noteTextLines =
-        this->noteText.split(QRegExp(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+        this->_noteText.split(QRegExp(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
 
     // keep the first two lines unencrypted
-    noteText = noteTextLines.at(0) + QStringLiteral("\n") +
+    _noteText = noteTextLines.at(0) + QStringLiteral("\n") +
                noteTextLines.at(1) + QStringLiteral("\n\n") +
                QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
                QStringLiteral("\n");
@@ -2562,14 +2535,14 @@ QString Note::encryptNoteText() {
 
     // check if we have an external encryption method
     QString encryptedText = ScriptingService::instance()->callEncryptionHook(
-        text, cryptoPassword, false);
+        text, _cryptoPassword, false);
 
     // check if a hook changed the text
     if (encryptedText.isEmpty()) {
         // fallback to Botan
         // encrypt the text
         BotanWrapper botanWrapper;
-        botanWrapper.setPassword(cryptoPassword);
+        botanWrapper.setPassword(_cryptoPassword);
         botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
         encryptedText = botanWrapper.Encrypt(text);
 
@@ -2579,13 +2552,13 @@ QString Note::encryptNoteText() {
     }
 
     // add the encrypted text to the new note text
-    noteText += encryptedText + QStringLiteral("\n") +
+    _noteText += encryptedText + QStringLiteral("\n") +
                 QStringLiteral(NOTE_TEXT_ENCRYPTION_POST_STRING);
 
     // store note
     store();
 
-    return noteText;
+    return _noteText;
 }
 
 /**
@@ -2639,14 +2612,14 @@ bool Note::canDecryptNoteText() const {
     // check if we have an external decryption method
     QString decryptedNoteText =
         ScriptingService::instance()->callEncryptionHook(encryptedNoteText,
-                                                         cryptoPassword, true);
+                                                         _cryptoPassword, true);
 
     // check if a hook changed the text
     if (decryptedNoteText.isEmpty()) {
         try {
             // decrypt the note text with Botan
             BotanWrapper botanWrapper;
-            botanWrapper.setPassword(cryptoPassword);
+            botanWrapper.setPassword(_cryptoPassword);
             botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
             decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
         } catch (Botan::Exception &) {
@@ -2655,7 +2628,7 @@ bool Note::canDecryptNoteText() const {
 
         // fallback to SimpleCrypt
         if (decryptedNoteText.isEmpty()) {
-            auto *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+            auto *crypto = new SimpleCrypt(static_cast<quint64>(_cryptoKey));
             decryptedNoteText = crypto->decryptToString(encryptedNoteText);
             delete crypto;
         }
@@ -2668,8 +2641,8 @@ bool Note::canDecryptNoteText() const {
  * Sets the password to generate the cryptoKey
  */
 void Note::setCryptoPassword(const QString &password) {
-    cryptoKey = qint64Hash(password);
-    cryptoPassword = password;
+    _cryptoKey = qint64Hash(password);
+    _cryptoPassword = password;
 }
 
 /**
@@ -2687,14 +2660,14 @@ QString Note::getDecryptedNoteText() const {
     // check if we have an external decryption method
     QString decryptedNoteText =
         ScriptingService::instance()->callEncryptionHook(encryptedNoteText,
-                                                         cryptoPassword, true);
+                                                         _cryptoPassword, true);
 
     // check if a hook changed the text
     if (decryptedNoteText.isEmpty()) {
         // decrypt the note text
         try {
             BotanWrapper botanWrapper;
-            botanWrapper.setPassword(cryptoPassword);
+            botanWrapper.setPassword(_cryptoPassword);
             botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
             decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
         } catch (Botan::Exception &) {
@@ -2702,7 +2675,7 @@ QString Note::getDecryptedNoteText() const {
 
         // fallback to SimpleCrypt
         if (decryptedNoteText.isEmpty()) {
-            auto *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+            auto *crypto = new SimpleCrypt(static_cast<quint64>(_cryptoKey));
             decryptedNoteText = crypto->decryptToString(encryptedNoteText);
             delete crypto;
         }
@@ -2807,8 +2780,8 @@ int Note::countByNoteSubFolderId(int noteSubFolderId, bool recursive) {
  * @return
  */
 bool Note::isSameFile(const Note &note) const {
-    return (id == note.getId()) &&
-           (noteSubFolderId == note.getNoteSubFolderId());
+    return (_id == note.getId()) &&
+           (_noteSubFolderId == note.getNoteSubFolderId());
 }
 
 /**
@@ -2822,7 +2795,7 @@ QVector<int> Note::findLinkedNoteIds() const {
     QVector<int> noteIdList;
 
     // search for legacy links
-    const QString linkText = getNoteURL(name);
+    const QString linkText = getNoteURL(_name);
     noteIdList << searchInNotes(QChar('<') + linkText + QChar('>'), true);
     noteIdList << searchInNotes(
         QStringLiteral("](") + linkText + QStringLiteral(")"), true);
@@ -2912,7 +2885,7 @@ QString Note::getFileURLFromFileName(QString fileName,
         fileName = urlDecodeNoteUrl(fileName);
     }
 
-    if (noteSubFolderId > 0) {
+    if (_noteSubFolderId > 0) {
         const NoteSubFolder noteSubFolder = getNoteSubFolder();
         if (noteSubFolder.isFetched()) {
             fileName.prepend(noteSubFolder.relativePath() +
@@ -2993,7 +2966,7 @@ void Note::handleNoteMoving(const Note &oldNote) const {
     }
 
     const QString oldUrl = getNoteURL(oldNote.getName());
-    const QString newUrl = getNoteURL(name);
+    const QString newUrl = getNoteURL(_name);
 
     if (Utils::Gui::questionNoSkipOverride(
             Q_NULLPTR, QObject::tr("Note file path changed"),
@@ -3004,7 +2977,7 @@ void Note::handleNoteMoving(const Note &oldNote) const {
                         "<strong>%3</strong> with <strong>%4</strong>"
                         " in <strong>%n</strong> note file(s)?",
                         "", noteCount)
-                .arg(oldUrl, newUrl, oldNote.getFileName(), fileName),
+                .arg(oldUrl, newUrl, oldNote.getFileName(), _fileName),
             QStringLiteral("note-replace-links")) == QMessageBox::Yes) {
         // replace the urls in all found notes
         for (const int noteId : noteIdList) {
@@ -3057,7 +3030,7 @@ void Note::handleNoteMoving(const Note &oldNote) const {
                     QStringLiteral(")"),
                 QStringLiteral("](") + relativeFilePath + QStringLiteral(")"));
 
-            note.storeNewText(text);
+            note.storeNewText(std::move(text));
         }
     }
 }
@@ -3105,8 +3078,8 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
         }
 
         // find a random name for the new file
-        const QString newFileName = Utils::Misc::makeFileNameRandom(
-            file->fileName(), suffix);
+        const QString newFileName =
+            Utils::Misc::makeFileNameRandom(file->fileName(), suffix);
 
         const QString newFilePath =
             mediaDir.path() + QDir::separator() + newFileName;
@@ -3190,8 +3163,8 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
         }
 
         // find a random name for the new file
-        const QString newFileName = Utils::Misc::makeFileNameRandom(
-            file->fileName());
+        const QString newFileName =
+            Utils::Misc::makeFileNameRandom(file->fileName());
 
         const QString newFilePath =
             dir.path() + QDir::separator() + newFileName;
@@ -3327,9 +3300,8 @@ bool Note::scaleDownImageFileIfNeeded(QFile &file) {
         settings.value(QStringLiteral("imageScaleDownMaximumHeight"), 1024)
             .toInt();
 
-    QPixmap pixmap;
-    pixmap = pixmap.fromImage(image.scaled(width, height, Qt::KeepAspectRatio,
-                                           Qt::SmoothTransformation));
+    const QPixmap &pixmap = QPixmap::fromImage(image.scaled(
+        width, height, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
     file.open(QIODevice::WriteOnly);
     pixmap.save(&file);
@@ -3345,7 +3317,7 @@ bool Note::scaleDownImageFileIfNeeded(QFile &file) {
  * @return
  */
 Note Note::fetchByUrlString(const QString &urlString) {
-    const QUrl url = QUrl(urlString);
+    const QUrl url{urlString};
 
     // if the name of the linked note only consists of numbers we cannot use
     // host() to get the filename, it would get converted to an ip-address
@@ -3448,13 +3420,17 @@ QString Note::getNotePreviewText(bool asHtml, int lines) const {
     }
 
     noteText = QLatin1String("");
-    for (int i = 0; i < std::min(lines, lineList.count()); i++) {
-        if (i > 0) {
-            noteText += QStringLiteral("\n");
-        }
 
-        QString line = lineList.at(i);
-        line = line.trimmed();
+    // first line
+    QString line = lineList.at(0).trimmed();
+    line.truncate(80);
+    noteText += line;
+
+    const auto min = std::min(lines, lineList.count());
+    for (int i = 1; i < min; i++) {
+        noteText += QStringLiteral("\n");
+
+        QString line = lineList.at(i).trimmed();
         line.truncate(80);
 
         noteText += line;
@@ -3507,7 +3483,7 @@ QString Note::generateMultipleNotesPreviewText(const QVector<Note> &notes) {
 
     bool isOdd = false;
     for (int i = 0; i < displayedNotesCount; i++) {
-        const Note note = notes[i];
+        const Note &note = notes.at(i);
         const QString oddStyle =
             isOdd ? QStringLiteral(" class='odd'") : QLatin1String("");
         const QDateTime modified = note.getFileLastModified();
@@ -3564,7 +3540,7 @@ QString Note::getParsedBookmarksWebServiceJsonText() const {
  */
 QVector<Bookmark> Note::getParsedBookmarks() const {
     const QString text =
-        decryptedNoteText.isEmpty() ? noteText : decryptedNoteText;
+        _decryptedNoteText.isEmpty() ? _noteText : _decryptedNoteText;
     return Bookmark::parseBookmarks(text);
 }
 
@@ -3581,11 +3557,11 @@ void Note::resetNoteTextHtmlConversionHash() {
 
 QDebug operator<<(QDebug dbg, const Note &note) {
     const NoteSubFolder noteSubFolder =
-        NoteSubFolder::fetch(note.noteSubFolderId);
-    dbg.nospace() << "Note: <id>" << note.id << " <name>" << note.name
-                  << " <fileName>" << note.fileName << " <noteSubFolderId>"
-                  << note.noteSubFolderId << " <relativePath>"
+        NoteSubFolder::fetch(note._noteSubFolderId);
+    dbg.nospace() << "Note: <id>" << note._id << " <name>" << note._name
+                  << " <fileName>" << note._fileName << " <noteSubFolderId>"
+                  << note._noteSubFolderId << " <relativePath>"
                   << noteSubFolder.relativePath() << " <hasDirtyData>"
-                  << note.hasDirtyData;
+                  << note._hasDirtyData;
     return dbg.space();
 }
