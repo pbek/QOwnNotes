@@ -9,12 +9,12 @@ onCallback
      * This function is called when a script thread is done executing.
      * Hint: thread[1]==0 helps to determine if a bulk of started processes for a certain identifier is done.
      *
-     * @param {QString} identifier - the provided id when calling startDetachedProcess()
+     * @param {QString} callbackIdentifier - the provided id when calling startDetachedProcess()
      * @param {QString} resultSet - the result of the process
      * @param {QVariantList} cmd - the entire command array [0-executablePath, 1-parameters, 2-exitCode]
      * @param {QVariantList} thread - the thread information array [0-passed callbackParameter, 1-remaining threads for this identifier]
      */
-    function onCallback(identifier, resultSet, cmd, thread);
+    function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
     ```
     You may want to take a look at the example
     [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/callback.qml).

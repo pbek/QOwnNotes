@@ -2,22 +2,20 @@ import QtQml 2.0
 import com.qownnotes.noteapi 1.0
 
 /**
- * This script is just an example of how to use scripts
+ * This script is a short example of how to use detatched processes and callbacks
+ * to relieve the UI thread.
  * Visit http://docs.qownnotes.org/ for more information about scripting
  */
-QtObject {
-    /**
-     * Just show some log entries when the script is initialized
-     */
+Script {
 
-    function log(txt){
+    function log(txt) {
      script.log("[callback-example] "+txt);
     }
 
     function init() {
       log("init")
       for (var i = 0; i < 100; i++) {
-        var dur = Math.floor(Math.random() * Math.floor(10))+1;
+        var dur = Math.floor(Math.random() * 10) + 1;
         script.startDetachedProcess("sleep", [`${dur}s`], "callback-example", i);
       }
     }
@@ -31,8 +29,8 @@ QtObject {
     * @param {QVariantList} cmd - the entire command array [0-executablePath, 1-parameters, 2-exitCode]
     * @param {QVariantList} thread - the thread information array [0-passed callbackParameter, 1-remaining threads for this identifier]
     */
-    function onDetachedProcessCallback(identifier, resultSet, cmd, thread){
-      if(identifier == "callback-example"){
+    function onDetachedProcessCallback(identifier, resultSet, cmd, thread) {
+      if (identifier == "callback-example") {
         log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
       }
     }

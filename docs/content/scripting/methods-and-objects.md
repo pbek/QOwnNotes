@@ -11,11 +11,11 @@ Starting an external program in the background
      *
      * @param executablePath the path of the executable
      * @param parameters a list of parameter strings
-     * @param identifier an id to be used in the onDetachedProcessCallback() function (optional)
+     * @param callbackIdentifier an id to be used in the onDetachedProcessCallback() function (optional)
      * @param callbackParameter an additional parameter for loops or the like (optional)
      * @return true on success, false otherwise
      */
-    bool startDetachedProcess(QString executablePath, QStringList parameters, QString identifier, QVariant callbackParameter);
+    bool startDetachedProcess(QString executablePath, QStringList parameters, QString callbackIdentifier, QVariant callbackParameter);
     ```
 
 !!! example
@@ -24,12 +24,12 @@ Starting an external program in the background
     ```
     ```js
     for (var i = 0; i < 100; i++) {
-      var dur = Math.floor(Math.random() * Math.floor(10))+1;
+      var dur = Math.floor(Math.random() * 10) + 1;
       script.startDetachedProcess("sleep", [`${dur}s`], "my-callback", i);
     }
 
-    function onDetachedProcessCallback(identifier, resultSet, cmd, thread){
-      if(identifier == "my-callback"){
+    function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
+      if (callbackIdentifier == "my-callback") {
         script.log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
       }
     }
