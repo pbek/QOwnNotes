@@ -12,10 +12,10 @@ Starting an external program in the background
      * @param executablePath the path of the executable
      * @param parameters a list of parameter strings
      * @param identifier an id to be used in the onDetachedProcessCallback() function (optional)
-     * @param index a useful index for loops or the like (optional)
+     * @param callbackParameter an additional parameter for loops or the like (optional)
      * @return true on success, false otherwise
      */
-    bool startDetachedProcess(QString executablePath, QStringList parameters, QString identifier, int index);
+    bool startDetachedProcess(QString executablePath, QStringList parameters, QString identifier, QVariant callbackParameter);
     ```
 
 !!! example

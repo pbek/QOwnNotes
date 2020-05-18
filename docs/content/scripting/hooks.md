@@ -12,7 +12,7 @@ onCallback
      * @param {QString} identifier - the provided id when calling startDetachedProcess()
      * @param {QString} resultSet - the result of the process
      * @param {QVariantList} cmd - the entire command array [0-executablePath, 1-parameters, 2-exitCode]
-     * @param {QVariantList} thread - the thread information array [0-passed index, 1-remaining threads for this identifier]
+     * @param {QVariantList} thread - the thread information array [0-passed callbackParameter, 1-remaining threads for this identifier]
      */
     function onCallback(identifier, resultSet, cmd, thread);
     ```

@@ -20,10 +20,10 @@ QMap<QString, int> ScriptThread::threadCounter;
 ScriptThread::ScriptThread(ScriptingService *ss,
                            const TerminalCmd &cmd,
                            const QString &identifier,
-                           const QVariant index) : QThread() {
+                           const QVariant callbackParameter) : QThread() {
     this->cmd = cmd;
     this->identifier = identifier;
-    this->index = index;
+    this->callbackParameter = callbackParameter;
     increaseThreadCounter();
     ScriptThread::connect(this, SIGNAL(callBack(ScriptThread*)), ss, SLOT(onScriptThreadDone(ScriptThread*)));
 }

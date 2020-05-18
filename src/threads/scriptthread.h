@@ -21,17 +21,17 @@ private:
     static QMap<QString, int> threadCounter;
     TerminalCmd cmd;   // cmd struct
     QString identifier; // id for the callback
-    QVariant index;      // addition information for the callback
+    QVariant callbackParameter;      // addition information for the callback
 
 public:
     // constructor
-    explicit ScriptThread(ScriptingService *ss, const TerminalCmd &cmd, const QString &identifier, const QVariant index = 0);
+    explicit ScriptThread(ScriptingService *ss, const TerminalCmd &cmd, const QString &identifier, const QVariant callbackParameter = 0);
 
     // overriding the QThread's run() method
     void run();
     TerminalCmd* getTerminalCmd() {return &cmd;}
     QString getIdentifier() {return identifier;}
-    QVariant getIndex() {return index;}
+    QVariant getIndex() {return callbackParameter;}
     void increaseThreadCounter();
     void decreaseThreadCounter();
     int getThreadCounter();
