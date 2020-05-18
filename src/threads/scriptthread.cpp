@@ -20,7 +20,7 @@ QMap<QString, int> ScriptThread::threadCounter;
 ScriptThread::ScriptThread(ScriptingService *ss,
                            const TerminalCmd &cmd,
                            const QString &identifier,
-                           const int index) : QThread() {
+                           const QVariant index) : QThread() {
     this->cmd = cmd;
     this->identifier = identifier;
     this->index = index;

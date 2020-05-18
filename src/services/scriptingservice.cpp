@@ -955,7 +955,7 @@ bool ScriptingService::callHandleWebsocketRawDataHook(
 bool ScriptingService::startDetachedProcess(const QString &executablePath,
                                             const QStringList &parameters,
                                             const QString &callbackIdentifier,
-                                            const int index,
+                                            const QVariant index,
                                             const QByteArray &data) {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("scripting/") % QString(__func__));
