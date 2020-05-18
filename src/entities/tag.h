@@ -14,7 +14,7 @@ class Tag {
         AllUntaggedNotesId = -2,
     };
 
-    explicit Tag();
+    Tag() noexcept;
 
     bool operator==(const Tag &tag) const;
 
@@ -28,7 +28,7 @@ class Tag {
 
     bool exists() const;
 
-    bool fillFromQuery(const QSqlQuery &query);
+    Tag fillFromQuery(const QSqlQuery &query);
 
     bool remove() const;
 
@@ -152,11 +152,11 @@ class Tag {
                                           bool createMissing);
 
    protected:
-    int id;
-    int priority;
-    int parentId;
+    int _id;
+    int _parentId;
+    int _priority;
     QColor _color;
-    QString name;
+    QString _name;
 
     QString colorFieldName() const;
 
