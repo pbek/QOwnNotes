@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.5.11
+- some startup performance improvements were made (for [#1755](https://github.com/pbek/QOwnNotes/pull/1755), thank you @Waqar144)
+
 ## 20.5.10
 - fixed file links interpreted in code blocks (for [#1748](https://github.com/pbek/QOwnNotes/issues/1748), thank you @Waqar144)
 - migrated from `sub-folder` to `subfolder` in menu items, documentation, comments and general text
