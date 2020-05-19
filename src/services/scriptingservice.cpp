@@ -2075,7 +2075,7 @@ QString ScriptingService::readFromFile(const QString &filePath) const {
  * @return
  */
 bool ScriptingService::fileExists(const QString &filePath) const {
-    if (filePath.isEmpty()){
+    if (filePath.isEmpty()) {
         return false;
     }
     QFile file(filePath);
