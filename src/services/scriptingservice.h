@@ -183,7 +183,7 @@ class ScriptingService : public QObject {
                                  const QString &data,
                                  const bool createParentDirs = false) const;
     Q_INVOKABLE QString readFromFile(const QString &filePath) const;
-    Q_INVOKABLE bool fileExists(QString &filePath) const;
+    Q_INVOKABLE bool fileExists(const QString &filePath) const;
 
     Q_INVOKABLE QVector<int> fetchNoteIdsByNoteTextPart(
         const QString &text) const;
