@@ -12,7 +12,13 @@
 #include <utils/misc.h>
 class ScriptingService;
 
-using namespace Utils::Misc;
+struct TerminalCmd {
+    QString executablePath;
+    QStringList parameters;
+    QByteArray data;
+    int exitCode;
+    QByteArray resultSet;
+};
 
 class ScriptThread : public QThread
 {

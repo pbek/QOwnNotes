@@ -19,7 +19,9 @@
 #include <QString>
 #include <QStringList>
 #include <QVector>
+#include "threads/scriptthread.h"
 
+struct TerminalCmd;
 class QFile;
 
 /*  Miscellaneous functions that can be useful */
@@ -28,14 +30,6 @@ namespace Misc {
 struct ExternalImageHashItem {
     QString imageTag;
     int imageWidth;
-};
-
-struct TerminalCmd {
-    QString executablePath;
-    QStringList parameters;
-    QByteArray data;
-    int exitCode;
-    QByteArray resultSet;
 };
 
 typedef QHash<QString, ExternalImageHashItem> ExternalImageHash;

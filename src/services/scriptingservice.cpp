@@ -2094,7 +2094,7 @@ QString ScriptingService::readFromFile(const QString &filePath) const {
  * @param filePath
  * @return
  */
-bool ScriptingService::fileExists(QString &filePath) const {
+bool ScriptingService::fileExists(const QString &filePath) const {
     if (filePath.isEmpty()){
         return false;
     }
@@ -2155,7 +2155,7 @@ void ScriptingService::triggerMenuAction(const QString &objectName,
  * @brief ScriptingService::onScriptThreadDone
  * @param thread
  */
-void ScriptingService::onScriptThreadDone(ScriptThread *thread){
+void ScriptingService::onScriptThreadDone(ScriptThread *thread) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
     TerminalCmd* cmd = thread->getTerminalCmd();
     while (i.hasNext()) {
