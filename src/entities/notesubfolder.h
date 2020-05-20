@@ -103,12 +103,12 @@ class NoteSubFolder {
                                     bool showWarning = false);
 
    protected:
-    int id;
-    int parentId;
-    QString name;
-    QDateTime fileLastModified;
-    QDateTime created;
-    QDateTime modified;
+    int _id;
+    int _parentId;
+    QString _name;
+    QDateTime _fileLastModified;
+    QDateTime _created;
+    QDateTime _modified;
 };
 
 Q_DECLARE_TYPEINFO(NoteSubFolder, Q_MOVABLE_TYPE);
