@@ -320,7 +320,7 @@ QVector<int> NoteSubFolder::fetchIdsRecursivelyByParentId(int parentId) {
     } else {
         for (int r = 0; query.next(); r++) {
             const int id = query.value(QStringLiteral("id")).toInt();
-            idList.append(id);
+            idList << fetchIdsRecursivelyByParentId(id);
         }
     }
 
