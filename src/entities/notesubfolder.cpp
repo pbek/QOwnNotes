@@ -1,4 +1,5 @@
 #include "entities/notesubfolder.h"
+
 #include <utils/misc.h>
 
 #ifndef INTEGRATION_TESTS
@@ -188,8 +189,8 @@ bool NoteSubFolder::rename(const QString& newName) {
         const bool ret = QDir().rename(oldPath, newPath);
 
         if (!ret) {
-            qCritical() << "Renaming " << oldPath << " to "
-                << newPath << " failed";
+            qCritical() << "Renaming " << oldPath << " to " << newPath
+                        << " failed";
         }
 
         return ret;
@@ -199,12 +200,10 @@ bool NoteSubFolder::rename(const QString& newName) {
 }
 
 NoteSubFolder NoteSubFolder::noteSubFolderFromQuery(const QSqlQuery& query) {
-    NoteSubFolder noteSubFolder;
-    noteSubFolder.fillFromQuery(query);
-    return noteSubFolder;
+    return NoteSubFolder().fillFromQuery(query);
 }
 
-bool NoteSubFolder::fillFromQuery(const QSqlQuery& query) {
+NoteSubFolder NoteSubFolder::fillFromQuery(const QSqlQuery& query) {
     id = query.value(QStringLiteral("id")).toInt();
     parentId = query.value(QStringLiteral("parent_id")).toInt();
     name = query.value(QStringLiteral("name")).toString();
@@ -213,7 +212,7 @@ bool NoteSubFolder::fillFromQuery(const QSqlQuery& query) {
     created = query.value(QStringLiteral("created")).toDateTime();
     modified = query.value(QStringLiteral("modified")).toDateTime();
 
-    return true;
+    return *this;
 }
 
 QVector<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
@@ -253,7 +252,7 @@ QVector<int> NoteSubFolder::fetchAllIds() {
     QSqlQuery query(db);
 
     QVector<int> idList;
-    const QString sql = QStringLiteral("SELECT * FROM noteSubFolder");
+    const QString sql = QStringLiteral("SELECT id FROM noteSubFolder");
 
     query.prepare(sql);
 
@@ -261,8 +260,8 @@ QVector<int> NoteSubFolder::fetchAllIds() {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
-            idList.append(noteSubFolder.getId());
+            const int id = query.value(QStringLiteral("id")).toInt();
+            idList.append(id);
         }
     }
 
@@ -303,13 +302,24 @@ QVector<NoteSubFolder> NoteSubFolder::fetchAllByParentId(
  * @return
  */
 QVector<int> NoteSubFolder::fetchIdsRecursivelyByParentId(int parentId) {
-    QVector<int> idList = QVector<int>{parentId};
-    const auto noteSubFolders = fetchAllByParentId(parentId);
-    idList.reserve(noteSubFolders.count());
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlQuery query(db);
 
-    for (const NoteSubFolder& noteSubFolder : noteSubFolders) {
-        const int id = noteSubFolder.getId();
-        idList << fetchIdsRecursivelyByParentId(id);
+    QVector<int> idList = QVector<int>{parentId};
+
+    const QString& sql = QStringLiteral(
+        "SELECT id FROM noteSubFolder WHERE parent_id = "
+        ":parent_id ORDER BY file_last_modified DESC");
+    query.prepare(sql);
+    query.bindValue(QStringLiteral(":parent_id"), parentId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            const int id = query.value(QStringLiteral("id")).toInt();
+            idList.append(id);
+        }
     }
 
     return idList;
@@ -507,8 +517,7 @@ bool NoteSubFolder::treeWidgetExpandState() const {
  * Checks if noteSubfoldersPanelShowNotesRecursively is set
  */
 bool NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively() {
-    const QSettings settings;
-    return settings
+    return QSettings()
         .value(QStringLiteral("noteSubfoldersPanelShowNotesRecursively"))
         .toBool();
 }
@@ -540,7 +549,7 @@ int NoteSubFolder::depth() const {
     return relativePath.split(QChar('\n')).count();
 }
 
-bool NoteSubFolder::willFolderBeIgnored(const QString &folderName,
+bool NoteSubFolder::willFolderBeIgnored(const QString& folderName,
                                         bool showWarning) {
     // ignore some folders
     const QStringList ignoreFolderList{".", "..", "media", "attachments",
@@ -553,7 +562,8 @@ bool NoteSubFolder::willFolderBeIgnored(const QString &folderName,
                 Q_NULLPTR, QObject::tr("Folder will be hidden!"),
                 QObject::tr("Folder with name <b>%1</b> can't be created, "
                             "because it's internally used by the "
-                            "application!").arg(folderName),
+                            "application!")
+                    .arg(folderName),
                 "note-subfolder-hidden-internal");
         }
 #endif
@@ -562,7 +572,8 @@ bool NoteSubFolder::willFolderBeIgnored(const QString &folderName,
     }
 
     const QSettings settings;
-    const QStringList ignoredFolderRegExpList = settings
+    const QStringList ignoredFolderRegExpList =
+        settings
             .value(QStringLiteral("ignoreNoteSubFolders"),
                    IGNORED_NOTE_SUBFOLDERS_DEFAULT)
             .toString()
@@ -574,9 +585,10 @@ bool NoteSubFolder::willFolderBeIgnored(const QString &folderName,
         if (showWarning) {
             Utils::Gui::warning(
                 Q_NULLPTR, QObject::tr("Folder will be hidden!"),
-                QObject::tr("Folder with name <b>%1</b> can't be created, "
-                            "because it's on the list of ignored subfolders! "
-                            "You can change that in the <i>Panels settings</i>.")
+                QObject::tr(
+                    "Folder with name <b>%1</b> can't be created, "
+                    "because it's on the list of ignored subfolders! "
+                    "You can change that in the <i>Panels settings</i>.")
                     .arg(folderName),
                 "note-subfolder-hidden-settings");
         }

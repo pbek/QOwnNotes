@@ -33,7 +33,7 @@ class NoteSubFolder {
 
     bool exists() const;
 
-    bool fillFromQuery(const QSqlQuery& query);
+    NoteSubFolder fillFromQuery(const QSqlQuery& query);
 
     bool remove();
 
