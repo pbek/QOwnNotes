@@ -118,28 +118,29 @@ void TestUtilsMisc::testHtmlToMarkdown() {
 }
 
 void TestUtilsMisc::testParseTaskList() {
-    QString t1 = "<li> [ ] task 1</li>";
-    QString r1 = parseTaskList(t1, true);
-    QString expec =
-        "<li style=\"list-style-type:square\"> <a class=\"task-list-item-checkbox\" "
+    const auto listTag = QStringLiteral("<li style=\"list-style-type:square\">");
+    const QString &t1 = "<li> [ ] task 1</li>";
+    const QString &r1 = parseTaskList(t1, true);
+    QString expec = listTag +
+        " <a class=\"task-list-item-checkbox\" "
         "href=\"checkbox://_0\">&#9744;</a> task 1</li>";
     QVERIFY(r1 == expec);
 
-    QString t2 = "<li> [x] task 2</li>";
-    QString r2 = parseTaskList(t2, true);
-    expec =
-        "<li> <a class=\"task-list-item-checkbox\" "
+    const QString &t2 = "<li> [x] task 2</li>";
+    const QString &r2 = parseTaskList(t2, true);
+    expec = listTag +
+        " <a class=\"task-list-item-checkbox\" "
         "href=\"checkbox://_0\">&#9745;</a> task 2</li>";
     QVERIFY(r2 == expec);
 
-    QString t3 = "<li> [x] task 3</li>";
-    QString r3 = parseTaskList(t3, false);
-    expec = "<li> &#9745; task 3</li>";
+    const QString &t3 = "<li> [x] task 3</li>";
+    const QString &r3 = parseTaskList(t3, false);
+    expec = listTag + " &#9745; task 3</li>";
     QVERIFY(r3 == expec);
 
-    QString t4 = "<li> [ ] task 4</li>";
-    QString r4 = parseTaskList(t4, false);
-    expec = "<li> &#9744; task 4</li>";
+    const QString &t4 = "<li> [ ] task 4</li>";
+    const QString &r4 = parseTaskList(t4, false);
+    expec = listTag + " &#9744; task 4</li>";
     QVERIFY(r4 == expec);
 }
 
