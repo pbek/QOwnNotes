@@ -10,8 +10,7 @@
   in a script (for [#1746](https://github.com/pbek/QOwnNotes/issues/1746), thank you @r00tr4v3n)
     - please take a look at the documentation for
       [startDetachedProcess](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#starting-an-external-program-in-the-background)
-      and
-      [onDetachedProcessCallback](https://docs.qownnotes.org/en/latest/scripting/hooks/#ondetachedprocesscallback)
+      and [onDetachedProcessCallback](https://docs.qownnotes.org/en/latest/scripting/hooks/#ondetachedprocesscallback)
       for more information
 - if the tab of current note was clicked now the subfolder of the note is
   activated if that is needed to show the note in the note list
@@ -21,6 +20,14 @@
   to disk (for [#1759](https://github.com/pbek/QOwnNotes/issues/1759))
     - you will only see the changes once the note edit panel is refreshed to
       prevent cursor jumping while you are editing the note
+- added more Russian, Greek, German, Estonian, Hindi, Portuguese, Hungarian,
+  Basque, Punjabi, Albanian, Filipino, Romanian, Arabic, Finnish, Icelandic,
+  Serbian (Cyrillic), Indonesian, Slovak, Bengali, Bosnian, Irish, Slovenian,
+  Bulgarian, Japanese, Swedish, Cebuano, Khmer, Turkish, Chinese Simplified,
+  Korean, Ukrainian, Kurdish, Urdu (Pakistan), Chinese Traditional, Latvian,
+  Uzbek, Croatian, Lithuanian, Vietnamese, Czech, Galician, Macedonian, Xhosa,
+  Danish, Norwegian, Dutch, Hausa, Persian, Hebrew, Polish, French translation
+  (thank you unchase, Gregory.K, Fabijenna, rakekniven, gbabin)
 
 ## 20.5.10
 - fixed file links interpreted in code blocks (for [#1748](https://github.com/pbek/QOwnNotes/issues/1748), thank you @Waqar144)
