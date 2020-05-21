@@ -24,19 +24,20 @@ Starting an external program in the background
     ```
     ```js
     for (var i = 0; i < 100; i++) {
-      var dur = Math.floor(Math.random() * 10) + 1;
-      script.startDetachedProcess("sleep", [`${dur}s`], "my-callback", i);
+        var dur = Math.floor(Math.random() * 10) + 1;
+        script.startDetachedProcess("sleep", [`${dur}s`], "my-callback", i);
     }
 
     function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
-      if (callbackIdentifier == "my-callback") {
-        script.log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
-      }
+        if (callbackIdentifier == "my-callback") {
+            script.log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
+        }
     }
     ```
 
 You may want to take a look at the example
-[custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/custom-actions.qml)
+[custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/custom-actions.qml),
+[callback.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/callback.qml)
 or
 [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/execute-command-after-note-update.qml).
 

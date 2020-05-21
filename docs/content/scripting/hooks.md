@@ -1,24 +1,5 @@
 # Hooks
 
-onCallback
-------------
-
-!!! help "Method call and parameters"
-    ```js
-    /**
-     * This function is called when a script thread is done executing.
-     * Hint: thread[1]==0 helps to determine if a bulk of started processes for a certain identifier is done.
-     *
-     * @param {QString} callbackIdentifier - the provided id when calling startDetachedProcess()
-     * @param {QString} resultSet - the result of the process
-     * @param {QVariantList} cmd - the entire command array [0-executablePath, 1-parameters, 2-exitCode]
-     * @param {QVariantList} thread - the thread information array [0-passed callbackParameter, 1-remaining threads for this identifier]
-     */
-    function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
-    ```
-    You may want to take a look at the example
-    [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/callback.qml).
-
 onNoteStored
 ------------
 
@@ -395,3 +376,25 @@ You may want to take a look at the examples
 [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/websocket-raw-data-new-note.qml)
 and
 [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/websocket-raw-data-selection-in-note.qml).
+
+onDetachedProcessCallback
+-------------------------
+
+This hook is called when a script thread of [startDetachedProcess](../methods-and-objects/#starting-an-external-program-in-the-background)
+is done executing.
+
+!!! help "Method call and parameters"
+    ```js
+    /**
+     * This function is called when a script thread is done executing.
+     * Hint: thread[1]==0 helps to determine if a bulk of started processes for a certain identifier is done.
+     *
+     * @param {QString} callbackIdentifier - the provided id when calling startDetachedProcess()
+     * @param {QString} resultSet - the result of the process
+     * @param {QVariantList} cmd - the entire command array [0-executablePath, 1-parameters, 2-exitCode]
+     * @param {QVariantList} thread - the thread information array [0-passed callbackParameter, 1-remaining threads for this identifier]
+     */
+    function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
+    ```
+    You may want to take a look at the example
+    [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/callback.qml).

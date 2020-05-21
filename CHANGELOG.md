@@ -4,6 +4,15 @@
 - some startup performance improvements were made (for [#1755](https://github.com/pbek/QOwnNotes/pull/1755), thank you @Waqar144)
 - markdown checkbox list items now have a square as list-style in the preview
   (for [#1761](https://github.com/pbek/QOwnNotes/issues/1761))
+- the scripting command `startDetachedProcess` now has new parameters to define
+  a callback identifier that can later be implemented via the new scripting hook
+  `onDetachedProcessCallback` to be able to handle the output of a detached process
+  in a script (for [#1740](https://github.com/pbek/QOwnNotes/issues/1740), thank you @r00tr4v3n)
+    - please take a look at the documentation for
+      [startDetachedProcess](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#starting-an-external-program-in-the-background)
+      and
+      [onDetachedProcessCallback](https://docs.qownnotes.org/en/latest/scripting/hooks/#ondetachedprocesscallback)
+      for more information
 
 ## 20.5.10
 - fixed file links interpreted in code blocks (for [#1748](https://github.com/pbek/QOwnNotes/issues/1748), thank you @Waqar144)
