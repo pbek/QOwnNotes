@@ -341,6 +341,12 @@ class Note {
 
     static QString urlDecodeNoteUrl(QString url);
 
+    QStringList getNoteTextLines() const;
+
+    bool stripTrailingSpaces(int skipLine = -1);
+
+    QString detectNewlineCharacters();
+
    protected:
     QString _name;
     QString _fileName;

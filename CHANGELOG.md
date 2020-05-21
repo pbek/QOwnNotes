@@ -16,6 +16,11 @@
 - if the tab of current note was clicked now the subfolder of the note is
   activated if that is needed to show the note in the note list
   (for [#1754](https://github.com/pbek/QOwnNotes/issues/1754))
+- you can now enable a checkbox in the *Editor settings* to automatically
+  **remove trailing spaces** from the current note text when the note is stored
+  to disk (for [#1759](https://github.com/pbek/QOwnNotes/issues/1759))
+    - you will only see the changes once the note edit panel is refreshed to
+      prevent cursor jumping while you are editing the note
 
 ## 20.5.10
 - fixed file links interpreted in code blocks (for [#1748](https://github.com/pbek/QOwnNotes/issues/1748), thank you @Waqar144)

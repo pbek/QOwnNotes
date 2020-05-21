@@ -2039,3 +2039,21 @@ QString Utils::Misc::makeFileNameRandom(const QString &fileName,
     return baseName + QChar('-') + QString::number(qrand()) + QChar('.') +
            (overrideSuffix.isEmpty() ? fileInfo.suffix() : overrideSuffix);
 }
+
+/**
+ * Strips all trailing spaces from str and returns the stripped text
+ *
+ * @param str
+ * @return
+ */
+QString Utils::Misc::rstrip(const QString& str) {
+    int n = str.size() - 1;
+
+    for (; n >= 0; --n) {
+        if (!str.at(n).isSpace()) {
+            return str.left(n + 1);
+        }
+    }
+
+    return "";
+}

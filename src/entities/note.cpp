@@ -1361,8 +1361,7 @@ bool Note::modifyNoteTextFileNameFromQMLHook() {
  */
 bool Note::handleNoteTextFileName() {
     // split the text into a string list
-    const QStringList noteTextLines =
-        this->_noteText.split(QRegExp(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+    const QStringList noteTextLines = getNoteTextLines();
     const int noteTextLinesCount = noteTextLines.count();
 
     // do nothing if there is no text
@@ -1741,6 +1740,50 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
     }
 
     return count;
+}
+
+/**
+ * Strips trailing whitespaces off the note text
+ *
+ * @param skipLine skip that line (e.g. the current line)
+ * @return
+ */
+bool Note::stripTrailingSpaces(int skipLine) {
+    QStringList noteTextLines = getNoteTextLines();
+    const int lineCount = noteTextLines.count();
+    bool wasStripped = false;
+
+    for (int l = 0; l < lineCount; l++) {
+        if (l == skipLine) {
+            continue;
+        }
+
+        const auto lineText = noteTextLines.at(l);
+        if (lineText.endsWith(QChar(' '))) {
+            noteTextLines[l] = Utils::Misc::rstrip(
+                Utils::Misc::rstrip(lineText));
+            wasStripped = true;
+        }
+    }
+
+    if (wasStripped) {
+        _noteText = noteTextLines.join(detectNewlineCharacters());
+        store();
+    }
+
+    return wasStripped;
+}
+
+QString Note::detectNewlineCharacters() {
+    if (_noteText.contains(QStringLiteral("\r\n"))) {
+        return QStringLiteral("\r\n");
+    } else if (_noteText.contains(QStringLiteral("\n\r"))) {
+        return QStringLiteral("\n\r");
+    } else if (_noteText.contains(QStringLiteral("\r"))) {
+        return QStringLiteral("\r");
+    }
+
+    return QStringLiteral("\n");
 }
 
 void Note::createFromFile(QFile &file, int noteSubFolderId,
@@ -2506,8 +2549,7 @@ qint64 Note::qint64Hash(const QString &str) {
  */
 QString Note::encryptNoteText() {
     // split the text into a string list
-    QStringList noteTextLines =
-        this->_noteText.split(QRegExp(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+    QStringList noteTextLines = getNoteTextLines();
 
     // keep the first two lines unencrypted
     _noteText = noteTextLines.at(0) + QStringLiteral("\n") +
@@ -2559,6 +2601,16 @@ QString Note::encryptNoteText() {
     store();
 
     return _noteText;
+}
+
+/**
+ * Splits the text into a string list
+ *
+ * @return
+ */
+QStringList Note::getNoteTextLines() const {
+    return _noteText.split(QRegExp(
+        QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
 }
 
 /**

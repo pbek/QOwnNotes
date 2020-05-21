@@ -2947,6 +2947,23 @@ void MainWindow::storeUpdatedNotesToDisk() {
         Utils::Misc::waitMsecs(100);
 
         if (currentNoteChanged) {
+            // strip trailing spaces of the current note (if enabled)
+            if (QSettings().value(QStringLiteral("Editor/removeTrainingSpaces"))
+                    .toBool()) {
+                const bool wasStripped = currentNote.stripTrailingSpaces(
+                    activeNoteTextEdit()->textCursor().position());
+
+                if (wasStripped) {
+                    qDebug() << __func__ << " - 'wasStripped'";
+
+                    // updating the current note text is disabled because it
+                    // moves the cursor to the top
+//                    const QSignalBlocker blocker2(activeNoteTextEdit());
+//                    Q_UNUSED(blocker2)
+//                    setNoteTextFromNote(&currentNote);
+                }
+            }
+
             // just to make sure everything is up-to-date
             currentNote.refetch();
 
