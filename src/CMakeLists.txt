@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.2.2)
 project(QOwnNotes)
 
 # include some Botan settings
-include(libraries/botan/CMakeLists.txt)
+add_subdirectory(libraries/botan)
 #include sonnet core directory, required for building plugins
 include_directories(libraries/sonnet/src/core)
 #some hunspell settings for windows
@@ -23,6 +23,14 @@ target_include_directories(QOwnNotes PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
 )
+
+# Disable shared library building of libraries
+set(BUILD_SHARED_LIBS OFF)
+# Disable building tests inside QHotKey library
+set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
+set(QHOTKEY_EXAMPLES OFF)
+add_subdirectory(libraries/qhotkey)
+
 
 find_package(Qt5 COMPONENTS REQUIRED
     LinguistTools
@@ -237,11 +245,6 @@ set(SOURCE_FILES
     services/scriptingservice.h
     libraries/piwiktracker/piwiktracker.h
     libraries/piwiktracker/piwiktracker.cpp
-    libraries/botan/botan.h
-    libraries/botan/botan_internal.h
-    libraries/botan/botan.cpp
-    libraries/botan/botanwrapper.h
-    libraries/botan/botanwrapper.cpp
     libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget_p.h
     libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h
     libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.cpp
@@ -269,10 +272,6 @@ set(SOURCE_FILES
     libraries/sonnet/src/core/textbreaks_p.h
     libraries/sonnet/src/core/tokenizer.cpp
     libraries/sonnet/src/core/tokenizer_p.h
-    libraries/qhotkey/QHotkey/qhotkey.h
-    libraries/qhotkey/QHotkey/qhotkey.cpp
-    libraries/qhotkey/QHotkey/qhotkey_p.h
-    libraries/qhotkey/QHotkey/qhotkey_x11.cpp
 
     threads/scriptthread.cpp
     threads/scriptthread.h
@@ -501,11 +500,21 @@ target_link_libraries(QOwnNotes PRIVATE
     Qt5::PrintSupport
     Qt5::WebSockets
     Qt5::Qml
+    QHotkey::QHotkey
+    Botan::Botan
 )
 if(UNIX)
     target_link_libraries(QOwnNotes PRIVATE
         Qt5::X11Extras
         ${X11_LIBRARIES}
+    )
+endif()
+
+if(MINGW)
+    # Qt 5 based on MinGW does not define UNICODE for CMake
+    # only qmake automatically define UNICODE
+    target_compile_definitions(QOwnNotes PRIVATE
+        UNICODE _UNICODE
     )
 endif()
 
