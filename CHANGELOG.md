@@ -7,7 +7,7 @@
 - the scripting command `startDetachedProcess` now has new parameters to define
   a callback identifier that can later be implemented via the new scripting hook
   `onDetachedProcessCallback` to be able to handle the output of a detached process
-  in a script (for [#1740](https://github.com/pbek/QOwnNotes/issues/1740), thank you @r00tr4v3n)
+  in a script (for [#1746](https://github.com/pbek/QOwnNotes/issues/1746), thank you @r00tr4v3n)
     - please take a look at the documentation for
       [startDetachedProcess](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#starting-an-external-program-in-the-background)
       and
