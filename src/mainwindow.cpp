@@ -12506,3 +12506,18 @@ void MainWindow::on_noteEditTabWidget_tabBarDoubleClicked(int index) {
 void MainWindow::on_actionToggle_note_stickiness_of_current_tab_triggered() {
     on_noteEditTabWidget_tabBarDoubleClicked(ui->noteEditTabWidget->currentIndex());
 }
+
+/**
+ * If the tab of current note was clicked now the subfolder of the note is
+ * activated if that is needed to show the note in the note list
+ */
+void MainWindow::on_noteEditTabWidget_tabBarClicked(int index) {
+    if (ui->noteEditTabWidget->currentIndex() != index) {
+        return;
+    }
+
+    if (!_showNotesFromAllNoteSubFolders &&
+        !currentNote.isInCurrentNoteSubFolder()) {
+        jumpToNoteSubFolder(currentNote.getNoteSubFolderId());
+    }
+}

@@ -13,6 +13,9 @@
       and
       [onDetachedProcessCallback](https://docs.qownnotes.org/en/latest/scripting/hooks/#ondetachedprocesscallback)
       for more information
+- if the tab of current note was clicked now the subfolder of the note is
+  activated if that is needed to show the note in the note list
+  (for [#1754](https://github.com/pbek/QOwnNotes/issues/1754))
 
 ## 20.5.10
 - fixed file links interpreted in code blocks (for [#1748](https://github.com/pbek/QOwnNotes/issues/1748), thank you @Waqar144)

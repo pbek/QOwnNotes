@@ -648,6 +648,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionToggle_note_stickiness_of_current_tab_triggered();
 
+    void on_noteEditTabWidget_tabBarClicked(int index);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
