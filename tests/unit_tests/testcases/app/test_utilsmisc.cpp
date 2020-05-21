@@ -121,7 +121,7 @@ void TestUtilsMisc::testParseTaskList() {
     QString t1 = "<li> [ ] task 1</li>";
     QString r1 = parseTaskList(t1, true);
     QString expec =
-        "<li> <a class=\"task-list-item-checkbox\" "
+        "<li style=\"list-style-type:square\"> <a class=\"task-list-item-checkbox\" "
         "href=\"checkbox://_0\">&#9744;</a> task 1</li>";
     QVERIFY(r1 == expec);
 
