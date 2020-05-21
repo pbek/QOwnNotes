@@ -1,5 +1,5 @@
 import QtQml 2.0
-import com.qownnotes.noteapi 1.0
+import QOwnNotesTypes 1.0
 
 /**
  * This script is a short example of how to use detatched processes and callbacks
@@ -30,8 +30,8 @@ Script {
     * @param {QVariantList} thread - the thread information array [0-passed callbackParameter, 1-remaining threads for this identifier]
     */
     function onDetachedProcessCallback(callBackIdentifier, resultSet, cmd, thread) {
-      if (callBackIdentifier == "callback-example") {
-        log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
-      }
+        if (callBackIdentifier == "callback-example") {
+            log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
+        }
     }
 }
