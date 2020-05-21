@@ -77,10 +77,18 @@ if(WIN32)
         )
         target_compile_definitions(botan PRIVATE
             _SCL_SECURE_NO_WARNINGS
+            _CRT_SECURE_NO_WARNINGS
         )
         target_compile_definitions(botan PUBLIC
             BOTAN_BUILD_COMPILER_IS_MSVC
         )
+        if(NOT (MSVC_VERSION LESS 1900))
+            # For included library binary ABI does not matter
+            # so disable warning
+            target_compile_definitions(botan  PRIVATE
+                _ENABLE_EXTENDED_ALIGNED_STORAGE
+            )
+        endif()
     else()
         target_compile_options(botan PRIVATE
             "-fpermissive" "-finline-functions" "-Wno-long-long"

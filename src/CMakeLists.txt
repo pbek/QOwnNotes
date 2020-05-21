@@ -26,10 +26,18 @@ target_include_directories(QOwnNotes PRIVATE
 
 # Disable shared library building of libraries
 set(BUILD_SHARED_LIBS OFF)
+# QHotKey library
 # Disable building tests inside QHotKey library
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 set(QHOTKEY_EXAMPLES OFF)
 add_subdirectory(libraries/qhotkey)
+
+# FakeVim library
+set(CREATE_STATIC_LIBRARY ON)
+if(MSVC)
+    add_compile_definitions(FAKEVIM_STATIC_DEFINE QTCREATOR_UTILS_STATIC_LIB)
+endif()
+add_subdirectory(libraries/fakevim)
 
 
 find_package(Qt5 COMPONENTS REQUIRED
@@ -510,11 +518,17 @@ if(UNIX)
     )
 endif()
 
-if(MINGW)
-    # Qt 5 based on MinGW does not define UNICODE for CMake
+if(MINGW OR MSVC)
+    # Qt 5 does not define UNICODE for CMake
     # only qmake automatically define UNICODE
     target_compile_definitions(QOwnNotes PRIVATE
         UNICODE _UNICODE
+    )
+endif()
+
+if(MSVC)
+    target_compile_definitions(QOwnNotes PRIVATE
+        NOMINMAX
     )
 endif()
 
