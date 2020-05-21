@@ -697,15 +697,19 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
 QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
     auto text = html;
 
+    // set a list item style for todo items
+    // using a css class didn't work because the styling seems to affects the sub-items too
+    const auto listTag = QStringLiteral("<li style=\"list-style-type:square\">");
+
     if (!clickable) {
         text.replace(
-            QRegularExpression(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[ ?\])"),
+            QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[ ?\])"),
                                QRegularExpression::CaseInsensitiveOption),
-            QStringLiteral("\\1&#9744;"));
+            listTag % QStringLiteral("\\1&#9744;"));
         text.replace(
-            QRegularExpression(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[[xX]\])"),
+            QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[[xX]\])"),
                                QRegularExpression::CaseInsensitiveOption),
-            QStringLiteral("\\1&#9745;"));
+            listTag % QStringLiteral("\\1&#9745;"));
         return text;
     }
 
@@ -717,14 +721,14 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
     const QString checkboxStart = QStringLiteral(
         R"(<a class="task-list-item-checkbox" href="checkbox://_)");
     text.replace(
-        QRegularExpression(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[ ?\])"),
+        QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[ ?\])"),
                            QRegularExpression::CaseInsensitiveOption),
-        QStringLiteral("\\1") % checkboxStart %
+        listTag % QStringLiteral("\\1") % checkboxStart %
             QStringLiteral("\">&#9744;</a>"));
     text.replace(
-        QRegularExpression(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[[xX]\])"),
+        QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[[xX]\])"),
                            QRegularExpression::CaseInsensitiveOption),
-        QStringLiteral("\\1") % checkboxStart %
+        listTag % QStringLiteral("\\1") % checkboxStart %
             QStringLiteral("\">&#9745;</a>"));
 
     int count = 0;
