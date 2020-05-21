@@ -947,30 +947,33 @@ bool ScriptingService::callHandleWebsocketRawDataHook(
  *
  * @param executablePath the path of the executable
  * @param parameters a list of parameter strings
- * @param identifier
- * @param index
- * @param data
+ * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
+ * @param callbackParameter an additional parameter for loops or the like (optional)
+ * @param processData data written to the process if the callback is used (optional)
  * @return true on success, false otherwise
  */
 bool ScriptingService::startDetachedProcess(const QString &executablePath,
                                             const QStringList &parameters,
                                             const QString &callbackIdentifier,
-                                            const QVariant index,
-                                            const QByteArray &data) {
+                                            const QVariant &callbackParameter,
+                                            const QByteArray &processData) {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("scripting/") % QString(__func__));
 
     // callback provided: create new script thread
-    if(!callbackIdentifier.isEmpty()){
+    if (!callbackIdentifier.isEmpty()) {
         TerminalCmd cmd;
         cmd.executablePath = executablePath;
         cmd.parameters = parameters;
-        cmd.data = data;
+        cmd.data = processData;
 
-        ScriptThread *st = new ScriptThread(this, cmd, callbackIdentifier, index);
+        ScriptThread *st = new ScriptThread(
+            this, cmd, callbackIdentifier, callbackParameter);
         st->start();
+
         return true;
     }
+
     return Utils::Misc::startDetachedProcess(executablePath, parameters);
 }
 

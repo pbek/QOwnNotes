@@ -11,11 +11,14 @@ Starting an external program in the background
      *
      * @param executablePath the path of the executable
      * @param parameters a list of parameter strings
-     * @param callbackIdentifier an id to be used in the onDetachedProcessCallback() function (optional)
+     * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
      * @param callbackParameter an additional parameter for loops or the like (optional)
+     * @param processData data written to the process if the callback is used (optional)
      * @return true on success, false otherwise
      */
-    bool startDetachedProcess(QString executablePath, QStringList parameters, QString callbackIdentifier, QVariant callbackParameter);
+    bool startDetachedProcess(QString executablePath, QStringList parameters,
+                              QString callbackIdentifier, QVariant callbackParameter,
+                              QByteArray processData);
     ```
 
 !!! example
@@ -40,6 +43,8 @@ You may want to take a look at the example
 [callback.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/callback.qml)
 or
 [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/execute-command-after-note-update.qml).
+
+You also might want to take a look at the [onDetachedProcessCallback](../hooks/#ondetachedprocesscallback) hook.
 
 !!! tip
     You can also assign local and global shortcuts to your custom actions

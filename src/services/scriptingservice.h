@@ -51,8 +51,8 @@ class ScriptingService : public QObject {
     Q_INVOKABLE bool startDetachedProcess(const QString &executablePath,
                                           const QStringList &parameters,
                                           const QString &callbackIdentifier = QString(),
-                                          const QVariant index = 0,
-                                          const QByteArray &data = QByteArray());
+                                          const QVariant &callbackParameter = 0,
+                                          const QByteArray &processData = QByteArray());
     Q_INVOKABLE QByteArray startSynchronousProcess(
         const QString &executablePath, QStringList parameters,
         QByteArray data = QByteArray()) const;
