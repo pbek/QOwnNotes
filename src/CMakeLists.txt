@@ -1,12 +1,6 @@
 cmake_minimum_required(VERSION 3.2.2)
 project(QOwnNotes)
 
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
-#set(CMAKE_AUTORCC ON)
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
 # include some Botan settings
 include(libraries/botan/CMakeLists.txt)
 #include sonnet core directory, required for building plugins
@@ -15,20 +9,40 @@ include_directories(libraries/sonnet/src/core)
 include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
 
 
-find_package( Qt5LinguistTools )
-find_package( Qt5Core 5.3 REQUIRED )
-find_package( Qt5Widgets REQUIRED )
-find_package( Qt5Gui REQUIRED )
-find_package( Qt5Sql REQUIRED )
-find_package( Qt5Svg REQUIRED )
-find_package( Qt5Network REQUIRED )
-find_package( Qt5Xml REQUIRED )
-find_package( Qt5XmlPatterns REQUIRED )
-find_package( Qt5PrintSupport REQUIRED )
-find_package( Qt5WebSockets REQUIRED )
-find_package( Qt5Qml REQUIRED )
-find_package( Qt5X11Extras REQUIRED )
-find_package( X11 REQUIRED )
+add_executable(QOwnNotes "")
+
+set_target_properties(QOwnNotes PROPERTIES
+    CXX_STANDARD 11
+    CXX_STANDARD_REQUIRED ON
+    AUTOMOC ON
+    AUTOUIC ON
+    AUTORCC ON
+)
+
+target_include_directories(QOwnNotes PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}
+)
+
+find_package(Qt5 COMPONENTS REQUIRED
+    LinguistTools
+    Core
+    Widgets
+    Gui
+    Sql
+    Svg
+    Network
+    Xml
+    XmlPatterns
+    PrintSupport
+    WebSockets
+    Qml
+)
+if(UNIX)
+    find_package(Qt5 COMPONENTS REQUIRED X11Extras)
+    find_package( X11 REQUIRED )
+endif()
+
 find_program(CCACHE_FOUND ccache)
 
 if(CCACHE_FOUND)
@@ -37,49 +51,18 @@ if(CCACHE_FOUND)
     set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
 endif(CCACHE_FOUND)
 
-qt5_wrap_ui(dialogs/ui_settingsdialog.h settingsdialog.ui)
-qt5_wrap_ui(dialogs/ui_tododialog.h tododialog.ui)
-qt5_wrap_ui(dialogs/ui_aboutdialog.h aboutdialog.ui)
-qt5_wrap_ui(widgets/ui_logwidget.h logwidget.ui)
-qt5_wrap_ui(dialogs/ui_trashdialog.h trashdialog.ui)
-qt5_wrap_ui(dialogs/ui_localtrashdialog.h localtrashdialog.ui)
-qt5_wrap_ui(dialogs/ui_linkdialog.h linkdialog.ui)
-qt5_wrap_ui(dialogs/ui_updatedialog.h updatedialog.ui)
-qt5_wrap_ui(dialogs/ui_notediffdialog.h notediffdialog.ui)
-qt5_wrap_ui(dialogs/ui_versiondialog.h versiondialog.ui)
-qt5_wrap_ui(dialogs/ui_welcomedialog.h welcomedialog.ui)
-qt5_wrap_ui(dialogs/ui_issueassistantdialog.h issueassistantdialog.ui)
-qt5_wrap_ui(dialogs/ui_tagadddialog.h tagadddialog.ui)
-qt5_wrap_ui(widgets/ui_fontcolorwidget.h fontcolorwidget.ui)
-qt5_wrap_ui(widgets/ui_evernoteimportdialog.h ui_evernoteimportdialog.ui)
-qt5_wrap_ui(widgets/ui_serverbookmarksimportdialog.h ui_serverbookmarksimportdialog.ui)
-qt5_wrap_ui(widgets/ui_layoutwidget.ui ui_layoutwidget.ui)
-qt5_wrap_ui(dialogs/ui_orphanedimagesdialog.h orphanedimagesdialog.ui)
-qt5_wrap_ui(dialogs/ui_orphanedattachmentsdialog.h orphanedattachmentsdialog.ui)
-qt5_wrap_ui(dialogs/ui_actiondialog.h actiondialog.ui)
-qt5_wrap_ui(dialogs/ui_tabledialog.h tabledialog.ui)
-qt5_wrap_ui(dialogs/ui_notedialog.h notedialog.ui)
-qt5_wrap_ui(dialogs/ui_websockettokendialog.h websockettokendialog.ui)
-qt5_wrap_ui(dialogs/ui_imagedialog.h imagedialog.ui)
-qt5_wrap_ui(libraries/qmarkdowntextedit/ui_qplaintexteditsearchwidget.h
-        libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui)
-qt5_wrap_ui(libraries/qttoolbareditor/src/toolbar_editor.hpp
-        libraries/qttoolbareditor/src/toolbar_editor.ui)
-
 set(RESOURCE_FILES
-        breeze-qownnotes.qrc
-        breeze-dark-qownnotes.qrc
-        qownnotes.qrc
-        demonotes.qrc
-        images.qrc
-        texts.qrc
-        configurations.qrc
-        libraries/qmarkdowntextedit/media.qrc
-        libraries/qdarkstyle/style.qrc
-        libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.qrc
-        )
-
-qt5_add_resources(RESOURCE_ADDED ${RESOURCE_FILES})
+    breeze-qownnotes.qrc
+    breeze-dark-qownnotes.qrc
+    qownnotes.qrc
+    demonotes.qrc
+    images.qrc
+    texts.qrc
+    configurations.qrc
+    libraries/qmarkdowntextedit/media.qrc
+    libraries/qdarkstyle/style.qrc
+    libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.qrc
+)
 
 set(SOURCE_FILES
     dialogs/welcomedialog.cpp
@@ -255,7 +238,7 @@ set(SOURCE_FILES
     libraries/piwiktracker/piwiktracker.h
     libraries/piwiktracker/piwiktracker.cpp
     libraries/botan/botan.h
-    libraries/botan/botan_internal.h    
+    libraries/botan/botan_internal.h
     libraries/botan/botan.cpp
     libraries/botan/botanwrapper.h
     libraries/botan/botanwrapper.cpp
@@ -291,8 +274,8 @@ set(SOURCE_FILES
     libraries/qhotkey/QHotkey/qhotkey_p.h
     libraries/qhotkey/QHotkey/qhotkey_x11.cpp
 
-	threads/scriptthread.cpp
-	threads/scriptthread.h
+    threads/scriptthread.cpp
+    threads/scriptthread.h
 
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
@@ -501,46 +484,30 @@ endif()
 install(FILES ${QON_QM_FILES}
         DESTINATION ${QT_TRANSLATIONS_DIR})
 
-add_executable(QOwnNotes ${SOURCE_FILES} ${RESOURCE_ADDED} ${QON_QM_FILES})
+target_sources(QOwnNotes PRIVATE
+    ${SOURCE_FILES}
+    ${RESOURCE_FILES}
+    ${QON_QM_FILES}
+)
 
-
-# The Qt5Widgets_INCLUDES also includes the include directories for
-# dependencies QtCore and QtGui
-include_directories(${Qt5Widgets_INCLUDES} ${Qt5Sql_INCLUDES}
-        ${Qt5Svg_INCLUDES} ${Qt5Network_INCLUDES}
-        ${Qt5Xml_INCLUDES} ${Qt5XmlPatterns_INCLUDES}
-        ${Qt5PrintSupport_INCLUDES} ${Qt5WebSockets_INCLUDES} ${Qt5Qml_INCLUDES}
-        ${Qt5X11Extras_INCLUDES})
-
-# We need add -DQT_WIDGETS_LIB when using QtWidgets in Qt 5.
-add_definitions(${Qt5Widgets_DEFINITIONS} ${Qt5Sql_DEFINITIONS}
-        ${Qt5Svg_DEFINITIONS} ${Qt5Network_DEFINITIONS}
-        ${Qt5Xml_DEFINITIONS} ${Qt5XmlPatterns_DEFINITIONS}
-        ${Qt5PrintSupport_DEFINITIONS} ${Qt5WebSockets_DEFINITIONS}
-        ${Qt5Qml_DEFINITIONS} ${Qt5X11Extras_DEFINITIONS})
-
-# Executables fail to build with Qt 5 in the default configuration
-# without -fPIE. We add that here.
-set(CMAKE_CXX_FLAGS "${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS "${Qt5Sql_EXECUTABLE_COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS "${Qt5Svg_EXECUTABLE_COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS "${Qt5Network_EXECUTABLE_COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS "${Qt5Xml_EXECUTABLE_COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS "${Qt5XmlPatterns_EXECUTABLE_COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS "${Qt5PrintSupport_EXECUTABLE_COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS "${Qt5WebSockets_EXECUTABLE_COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS "${Qt5Qml_EXECUTABLE_COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS "${Qt5X11Extras_EXECUTABLE_COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS "-std=c++0x")
-
-# The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore
-target_link_libraries(QOwnNotes ${Qt5Widgets_LIBRARIES} ${Qt5Sql_LIBRARIES}
-        ${Qt5Svg_LIBRARIES} ${Qt5Network_LIBRARIES}
-        ${Qt5Xml_LIBRARIES} ${Qt5XmlPatterns_LIBRARIES}
-        ${Qt5PrintSupport_LIBRARIES} ${Qt5WebSockets_LIBRARIES}
-        ${Qt5Qml_LIBRARIES} ${Qt5X11Extras_LIBRARIES} ${X11_LIBRARIES})
-
-#qt5_use_modules(QOwnNotes Widgets Core Gui Sql Svg Network Script Xml PrintSupport)
+# The Qt5::Widgets target will also link Qt::Gui and Qt::Core targets
+target_link_libraries(QOwnNotes PRIVATE
+    Qt5::Widgets
+    Qt5::Sql
+    Qt5::Svg
+    Qt5::Network
+    Qt5::Xml
+    Qt5::XmlPatterns
+    Qt5::PrintSupport
+    Qt5::WebSockets
+    Qt5::Qml
+)
+if(UNIX)
+    target_link_libraries(QOwnNotes PRIVATE
+        Qt5::X11Extras
+        ${X11_LIBRARIES}
+    )
+endif()
 
 # Sonnet support if we can get it to run in the future
 #find_package(KF5Sonnet)
