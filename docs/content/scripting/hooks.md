@@ -1,5 +1,24 @@
 # Hooks
 
+onCallback
+------------
+
+!!! help "Method call and parameters"
+    ```js
+    /**
+     * This function is called when a script thread is done executing.
+     * Hint: thread[1]==0 helps to determine if a bulk of started processes for a certain identifier is done.
+     *
+     * @param {QString} callbackIdentifier - the provided id when calling startDetachedProcess()
+     * @param {QString} resultSet - the result of the process
+     * @param {QVariantList} cmd - the entire command array [0-executablePath, 1-parameters, 2-exitCode]
+     * @param {QVariantList} thread - the thread information array [0-passed callbackParameter, 1-remaining threads for this identifier]
+     */
+    function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
+    ```
+    You may want to take a look at the example
+    [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/callback.qml).
+
 onNoteStored
 ------------
 
@@ -172,7 +191,7 @@ preNoteToMarkdownHtmlHook
     /**
      * This function is called before the markdown html of a note is generated
      *
-     * It allows you to modify what is passed to the markdown to html converter 
+     * It allows you to modify what is passed to the markdown to html converter
      *
      * The method can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
      * to its graphical representation for the preview
@@ -293,7 +312,7 @@ to implement your own tagging mechanism.
 
 !!! warning
     Make sure your `list` action is really fast, because it will be executed for
-    every note every time the note folder is reloaded! 
+    every note every time the note folder is reloaded!
 
 noteTaggingByObjectHook
 ----------------------
@@ -301,7 +320,7 @@ noteTaggingByObjectHook
 Similarly to [noteTaggingHook](#notetagginghook) you can implement your own note
 tagging mechanism, but you are not bound to tag names in the tag tree root.
 This way you can make use of the whole tag tree instead of only a tag list.
- 
+
 With `noteTaggingByObjectHook` you get a `TagApi` object as parameter, instead
 of a tag name. And as result for the `list` action you need to provide a list of
 tag ids.

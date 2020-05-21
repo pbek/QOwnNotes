@@ -11,14 +11,28 @@ Starting an external program in the background
      *
      * @param executablePath the path of the executable
      * @param parameters a list of parameter strings
+     * @param callbackIdentifier an id to be used in the onDetachedProcessCallback() function (optional)
+     * @param callbackParameter an additional parameter for loops or the like (optional)
      * @return true on success, false otherwise
      */
-    bool startDetachedProcess(QString executablePath, QStringList parameters);
+    bool startDetachedProcess(QString executablePath, QStringList parameters, QString callbackIdentifier, QVariant callbackParameter);
     ```
 
 !!! example
     ```js
     script.startDetachedProcess("/path/to/my/program", ["my parameter"]);
+    ```
+    ```js
+    for (var i = 0; i < 100; i++) {
+      var dur = Math.floor(Math.random() * 10) + 1;
+      script.startDetachedProcess("sleep", [`${dur}s`], "my-callback", i);
+    }
+
+    function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
+      if (callbackIdentifier == "my-callback") {
+        script.log(`#${thread[1]} i[${thread[0]}] t${cmd[1]}`);
+      }
+    }
     ```
 
 You may want to take a look at the example
@@ -240,13 +254,13 @@ Registering a custom action
     ```js
     // add a custom action without a button
     script.registerCustomAction("mycustomaction1", "Menu text");
-    
+
     // add a custom action with a button
     script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
-    
+
     // add a custom action with a button and freedesktop theme icon
     script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "task-new");
-    
+
     // add a custom action with a button and an icon from a file
     script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
     ```
@@ -272,9 +286,9 @@ Registering a label
 !!! example
     ```js
     script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.");
-    
+
     script.registerLabel("long-label", "an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text that will wrap");
-    
+
     script.registerLabel("counter-label");
     ```
 
@@ -640,10 +654,10 @@ Search for notes by note text
 !!! example
     ```js
     var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
-    
+
     noteIds.forEach(function (noteId){
         var note = script.fetchNoteById(noteId);
-    
+
         // do something with the note
     });
     ```
@@ -838,7 +852,7 @@ Jumping to a note subfolder
     ```js
     // jump to the note subfolder "a sub folder"
     script.jumpToNoteSubFolder("a sub folder");
-    
+
     // jump to the note subfolder "sub" inside of "a sub folder"
     script.jumpToNoteSubFolder("a sub folder/sub");
     ```
@@ -965,7 +979,7 @@ The user can then set these properties in the script settings.
     property int myInt;
     property string myFile;
     property string mySelection;
-    
+
     // register your settings variables so the user can set them in the script settings
     // use this property if you don't need
     //
@@ -1057,7 +1071,7 @@ Storing and loading persistent variables
      */
     void ScriptingService::setPersistentVariable(const QString &key,
                                                  const QVariant &value);
-    
+
     /**
      * Loads a persistent variable
      * These variables are accessible globally over all scripts
@@ -1074,7 +1088,7 @@ Storing and loading persistent variables
     ```js
     // store persistent variable
     script.setPersistentVariable("PersistentVariablesTest/myVar", result);
-    
+
     // load and log persistent variable
     script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
     ```
@@ -1124,11 +1138,11 @@ path to the script's directory.
     ```js
     import QtQml 2.0
     import QOwnNotesTypes 1.0
-    
+
     Script {
         // the path to the script's directory will be set here
         property string scriptDirPath;
-    
+
         function init() {
             script.log(scriptDirPath);
         }
@@ -1263,7 +1277,7 @@ Triggering a menu action
     ```js
     // toggle the read-only mode
     script.triggerMenuAction("actionAllow_note_editing");
-    
+
     // disable the read-only mode
     script.triggerMenuAction("actionAllow_note_editing", 1);
     ```

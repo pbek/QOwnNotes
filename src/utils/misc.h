@@ -19,7 +19,9 @@
 #include <QString>
 #include <QStringList>
 #include <QVector>
+#include "threads/scriptthread.h"
 
+struct TerminalCmd;
 class QFile;
 
 /*  Miscellaneous functions that can be useful */
@@ -85,6 +87,7 @@ QString parseTaskList(const QString &html, bool clickable);
 QByteArray startSynchronousProcess(const QString &executablePath,
                                    const QStringList &parameters,
                                    const QByteArray &data = QByteArray());
+bool startSynchronousResultProcess(TerminalCmd &cmd);
 QList<QObject *> getParents(QObject *object);
 QString appDataPath();
 QString logFilePath();

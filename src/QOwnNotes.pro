@@ -125,6 +125,7 @@ SOURCES += main.cpp\
     helpers/fakevimproxy.cpp \
     helpers/flowlayout.cpp \
     services/databaseservice.cpp \
+    threads/scriptthread.cpp \
     widgets/graphicsview.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
     dialogs/passworddialog.cpp \
@@ -178,6 +179,7 @@ HEADERS  += mainwindow.h \
     helpers/LanguageCache.h \
     helpers/codetohtmlconverter.h \
     helpers/qownspellchecker.h \
+    threads/scriptthread.h \
     version.h \
     libraries/diff_match_patch/diff_match_patch.h \
     libraries/simplecrypt/simplecrypt.h \

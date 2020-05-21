@@ -8,7 +8,9 @@
 #include <QMessageBox>
 #include <QObject>
 #include <QVariant>
+#include <threads/scriptthread.h>
 
+class ScriptThread;
 class QQmlComponent;
 class QQmlEngine;
 class NoteApi;
@@ -47,7 +49,10 @@ class ScriptingService : public QObject {
     bool methodExists(const QString &methodName) const;
     static bool validateScript(const Script &script, QString &errorMessage);
     Q_INVOKABLE bool startDetachedProcess(const QString &executablePath,
-                                          const QStringList &parameters);
+                                          const QStringList &parameters,
+                                          const QString &callbackIdentifier = QString(),
+                                          const QVariant index = 0,
+                                          const QByteArray &data = QByteArray());
     Q_INVOKABLE QByteArray startSynchronousProcess(
         const QString &executablePath, QStringList parameters,
         QByteArray data = QByteArray()) const;
@@ -183,7 +188,7 @@ class ScriptingService : public QObject {
                                  const QString &data,
                                  const bool createParentDirs = false) const;
     Q_INVOKABLE QString readFromFile(const QString &filePath) const;
-    Q_INVOKABLE bool fileExists(QString &filePath) const;
+    Q_INVOKABLE bool fileExists(const QString &filePath) const;
 
     Q_INVOKABLE QVector<int> fetchNoteIdsByNoteTextPart(
         const QString &text) const;
@@ -218,4 +223,5 @@ class ScriptingService : public QObject {
     void onCustomActionInvoked(const QString &identifier);
     void callCustomActionInvokedForObject(QObject *object,
                                           const QString &identifier);
+    void onScriptThreadDone(ScriptThread *thread);
 };

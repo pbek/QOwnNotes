@@ -291,6 +291,9 @@ set(SOURCE_FILES
     libraries/qhotkey/QHotkey/qhotkey_p.h
     libraries/qhotkey/QHotkey/qhotkey_x11.cpp
 
+	threads/scriptthread.cpp
+	threads/scriptthread.h
+
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
     widgets/navigationwidget.cpp
