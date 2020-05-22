@@ -722,7 +722,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHook(
  * Calls the noteToMarkdownHtmlHook function for an object
  */
 QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
-    QObject *object, Note *note, const QString &html) {
+    QObject *object, Note *note, const QString &html, const bool forExport) {
     if (methodExistsForObject(
             object,
             QStringLiteral("noteToMarkdownHtmlHook(QVariant,QVariant)"))) {
@@ -734,7 +734,8 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
             object, "noteToMarkdownHtmlHook", Q_RETURN_ARG(QVariant, text),
             Q_ARG(QVariant,
                   QVariant::fromValue(static_cast<QObject *>(noteApi))),
-            Q_ARG(QVariant, html));
+            Q_ARG(QVariant, html),
+            Q_ARG(QVariant, forExport));
         return text.toString();
     }
 
@@ -746,7 +747,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
  * This function is called when the markdown html of a note is generated
  */
 QString ScriptingService::callNoteToMarkdownHtmlHook(Note *note,
-                                                     const QString &html) {
+                                                     const QString &html, const bool forExport) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
     QString resultHtml = html;
 
@@ -755,7 +756,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(Note *note,
         ScriptComponent scriptComponent = i.value();
 
         QString text = callNoteToMarkdownHtmlHookForObject(
-            scriptComponent.object, note, resultHtml);
+            scriptComponent.object, note, resultHtml, forExport);
 
         if (!text.isEmpty()) {
             resultHtml = text;
@@ -770,7 +771,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(Note *note,
  * This function is called before the markdown html of a note is generated
  */
 QString ScriptingService::callPreNoteToMarkdownHtmlHook(
-    Note *note, const QString &markdown) {
+    Note *note, const QString &markdown, const bool forExport) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
     QString resultMarkdown = markdown;
 
@@ -784,7 +785,7 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(
         if (methodExistsForObject(
                 scriptComponent.object,
                 QStringLiteral(
-                    "preNoteToMarkdownHtmlHook(QVariant,QVariant)"))) {
+                    "preNoteToMarkdownHtmlHook(QVariant,QVariant,QVariant)"))) {
             auto *noteApi = new NoteApi();
             noteApi->fetch(note->getId());
 
@@ -794,7 +795,8 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(
                 Q_RETURN_ARG(QVariant, resultText),
                 Q_ARG(QVariant,
                       QVariant::fromValue(static_cast<QObject *>(noteApi))),
-                Q_ARG(QVariant, resultMarkdown));
+                Q_ARG(QVariant, resultMarkdown),
+                Q_ARG(QVariant, forExport));
             QString text = resultText.toString();
 
             if (!text.isEmpty()) {
