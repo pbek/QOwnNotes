@@ -2277,6 +2277,8 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
        src=\")((?!file:\/\/).+)\")"),
                 "\\1file://" + windowsSlash + notePath + "/\\2\"");
     */
+    // css classes applicable for export and preview
+    const QString additionalClasses = ".task-list-item-checkbox {list-style: none; text-decoration: none;  margin-left: -14;}";
 
     const QString fontString =
         settings.value(QStringLiteral("MainWindow/noteTextView.code.font"))
@@ -2369,10 +2371,10 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                      "border-width: 1px; "
                      "border-collapse: collapse; margin-top: 0.5em;}"
                      "th, td {padding: 2px 5px;}"
-                     "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
+                     "a { color: #FF9137; text-decoration: none; } %1 %2 %4 %6"
                      "</style></head><body class=\"export\">%3</body></html>")
                      .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle,
-                          codeBackgroundColor);
+                          codeBackgroundColor, additionalClasses);
 
         // remove trailing newline in code blocks
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
@@ -2394,9 +2396,9 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                 "table {border-spacing: 0; border-style: solid; border-width: "
                 "1px; border-collapse: collapse; margin-top: 0.5em;}"
                 "th, td {padding: 2px 5px;}"
-                "a { color: #FF9137; text-decoration: none; } %1 %3 %4"
+                "a { color: #FF9137; text-decoration: none; } %1 %3 %4 %5"
                 "</style></head><body class=\"preview\">%2</body></html>")
-                .arg(codeStyleSheet, result, rtlStyle, schemaStyles);
+                .arg(codeStyleSheet, result, rtlStyle, schemaStyles, additionalClasses);
         // remove trailing newline in code blocks
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     }

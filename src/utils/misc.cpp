@@ -734,7 +734,7 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
 
     // set a list item style for todo items
     // using a css class didn't work because the styling seems to affects the sub-items too
-    const auto listTag = QStringLiteral("<li style=\"list-style-type:square\">");
+    const auto listTag = QStringLiteral("<li class=\"task-list-item-checkbox\">");
 
     if (!clickable) {
         text.replace(
