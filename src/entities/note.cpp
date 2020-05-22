@@ -321,9 +321,10 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
             return false;
         }
 
+        // check if there are media files in the note
         const QStringList mediaFileList = getMediaFileList();
         if (mediaFileList.empty()) {
-            return false;
+            return true;
         }
 
         if (noteFolderPath.isEmpty()) {
@@ -331,15 +332,16 @@ bool Note::copyToPath(const QString &destinationPath, QString noteFolderPath) {
         }
 
         if (!NoteFolder::isPathNoteFolder(noteFolderPath)) {
-            return false;
+            return true;
         }
+
         const QDir mediaDir(noteFolderPath + QDir::separator() +
                             QStringLiteral("media"));
 
         // created the media folder if it doesn't exist
         if (!mediaDir.exists()) {
             if (!mediaDir.mkpath(mediaDir.path())) {
-                return false;
+                return true;
             }
         }
 

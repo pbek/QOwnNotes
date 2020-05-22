@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.5.12
+- fixed copying and moving of notes into sub-folders and note-folders that was
+  broken by [#1749](https://github.com/pbek/QOwnNotes/pull/1749) 
+  (for [#1764](https://github.com/pbek/QOwnNotes/issues/1764))
+
 ## 20.5.11
 - some startup performance improvements were made (for [#1755](https://github.com/pbek/QOwnNotes/pull/1755), thank you @Waqar144)
 - markdown checkbox list items now have a square as list-style in the preview
