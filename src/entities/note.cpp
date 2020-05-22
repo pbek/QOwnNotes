@@ -2401,14 +2401,6 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     }
 
-    // check if there is a script that wants to modify the content
-    const QString scriptResult =
-        ScriptingService::instance()->callNoteToMarkdownHtmlHook(this, result);
-
-    if (!scriptResult.isEmpty()) {
-        result = scriptResult;
-    }
-
     // check if width of embedded local images is too high
     const QRegularExpression re(
         QStringLiteral("<img src=\"(file:\\/\\/[^\"]+)\""));
@@ -2467,6 +2459,14 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                 QStringLiteral(R"(<img\1src="data:%1;base64,%2")")
                     .arg(type.name(), QString(ba.toBase64())));
         }
+    }
+
+    // check if there is a script that wants to modify the content
+    const QString scriptResult =
+        ScriptingService::instance()->callNoteToMarkdownHtmlHook(this, result);
+
+    if (!scriptResult.isEmpty()) {
+        result = scriptResult;
     }
 
     //    qDebug() << __func__ << " - 'result': " << result;

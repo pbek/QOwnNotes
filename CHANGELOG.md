@@ -4,6 +4,8 @@
 - fixed copying and moving of notes into sub-folders and note-folders that was
   broken by [#1749](https://github.com/pbek/QOwnNotes/pull/1749) 
   (for [#1764](https://github.com/pbek/QOwnNotes/issues/1764))
+- the scripting hook `noteToMarkdownHtmlHook` will now be called after modifications
+  to images in the note are made (for [#1766](https://github.com/pbek/QOwnNotes/issues/1766))
 
 ## 20.5.11
 - some startup performance improvements were made (for [#1755](https://github.com/pbek/QOwnNotes/pull/1755), thank you @Waqar144)
