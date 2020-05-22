@@ -1196,6 +1196,20 @@ bool Note::storeNoteTextFileToDisk() {
         handleNoteTextFileName();
     }
 
+    const QString newName = _name;
+    bool noteFileWasRenamed = false;
+
+    // rename the current note file if the file name changed
+    if (oldName != newName) {
+        QFile oldFile(oldNoteFilePath);
+
+        // rename the note file
+        if (oldFile.exists()) {
+            noteFileWasRenamed = oldFile.rename(fullNoteFilePath());
+            qDebug() << __func__ << " - 'noteFileWasRenamed': " << noteFileWasRenamed;
+        }
+    }
+
     QFile file(fullNoteFilePath());
     QFile::OpenMode flags = QIODevice::WriteOnly;
     const QSettings settings;
@@ -1217,11 +1231,10 @@ bool Note::storeNoteTextFileToDisk() {
     }
 
     const bool fileExists = this->fileExists();
-    const QString newName = _name;
 
     // assign the tags to the new name if the name has changed
     if (oldName != newName) {
-        if (TrashItem::isLocalTrashEnabled()) {
+        if (!noteFileWasRenamed && TrashItem::isLocalTrashEnabled()) {
             qDebug() << __func__ << " - 'trashItem': " << trashItem;
 
             // trash the old note
@@ -1269,20 +1282,23 @@ bool Note::storeNoteTextFileToDisk() {
     }
 
     const bool noteStored = this->store();
-    QFile oldFile(oldNoteFilePath);
-    const QFileInfo oldFileInfo(oldFile);
-    const QFile newFile(fullNoteFilePath());
-    const QFileInfo newFileInfo(newFile);
+    // if note was stored but the note file wasn't renamed do some more checks
+    // whether we need to remove the old note file
+    if (noteStored && !noteFileWasRenamed) {
+        QFile oldFile(oldNoteFilePath);
+        const QFileInfo oldFileInfo(oldFile);
+        const QFile newFile(fullNoteFilePath());
+        const QFileInfo newFileInfo(newFile);
 
-    // in the end we want to remove the old note file if note was stored and
-    // filename has changed
-    // #1190: we also need to check if the files are the same even if the name
-    // is not the same for NTFS
-    if (noteStored && (fullNoteFilePath() != oldNoteFilePath) &&
-        (oldFileInfo != newFileInfo)) {
-        // remove the old note file
-        if (oldFile.exists() && oldFileInfo.isFile() &&
-            oldFileInfo.isReadable() && oldFile.remove()) {
+        // in the end we want to remove the old note file if note was stored and
+        // filename has changed
+        // #1190: we also need to check if the files are the same even if the name
+        // is not the same for NTFS
+        if ((fullNoteFilePath() != oldNoteFilePath) &&
+            (oldFileInfo != newFileInfo)) {
+            // remove the old note file
+            if (oldFile.exists() && oldFileInfo.isFile() &&
+                oldFileInfo.isReadable() && oldFile.remove()) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
             qInfo() << QObject::tr("Renamed note-file was removed: %1")
                            .arg(oldFile.fileName());
@@ -1291,11 +1307,12 @@ bool Note::storeNoteTextFileToDisk() {
                      << oldFile.fileName();
 #endif
 
-        } else {
-            qWarning() << QObject::tr(
-                              "Could not remove renamed note-file: %1"
-                              " - Error message: %2")
-                              .arg(oldFile.fileName(), oldFile.errorString());
+            } else {
+                qWarning() << QObject::tr(
+                                  "Could not remove renamed note-file: %1"
+                                  " - Error message: %2")
+                                  .arg(oldFile.fileName(), oldFile.errorString());
+            }
         }
     }
 
@@ -1481,9 +1498,13 @@ void Note::generateFileNameFromName() {
 bool Note::canWriteToNoteFile() {
     QFile file(fullNoteFilePath());
     const bool canWrite = file.open(QIODevice::WriteOnly);
+    const bool fileExists = file.exists();
 
     if (file.isOpen()) {
         file.close();
+        if (!fileExists) {
+            file.remove();
+        }
     }
 
     return canWrite;
