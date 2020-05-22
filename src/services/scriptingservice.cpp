@@ -725,7 +725,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
     QObject *object, Note *note, const QString &html, const bool forExport) {
     if (methodExistsForObject(
             object,
-            QStringLiteral("noteToMarkdownHtmlHook(QVariant,QVariant)"))) {
+            QStringLiteral("noteToMarkdownHtmlHook(QVariant,QVariant,QVariant)"))) {
         auto *noteApi = new NoteApi();
         noteApi->fetch(note->getId());
 
@@ -737,7 +737,22 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
             Q_ARG(QVariant, html),
             Q_ARG(QVariant, forExport));
         return text.toString();
-    }
+    } else if (methodExistsForObject(
+                   object,
+                   QStringLiteral("noteToMarkdownHtmlHook(QVariant,QVariant)"))) {
+               auto *noteApi = new NoteApi();
+               noteApi->fetch(note->getId());
+               log("Warning: noteToMarkdownHtmlHook(QVariant,QVariant) "
+                   "is deprecated, please use "
+                   "noteToMarkdownHtmlHook(QVariant,QVariant,QVariant)");
+               QVariant text;
+               QMetaObject::invokeMethod(
+                   object, "noteToMarkdownHtmlHook", Q_RETURN_ARG(QVariant, text),
+                   Q_ARG(QVariant,
+                         QVariant::fromValue(static_cast<QObject *>(noteApi))),
+                   Q_ARG(QVariant, html));
+               return text.toString();
+           }
 
     return QString();
 }
@@ -802,7 +817,29 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(
             if (!text.isEmpty()) {
                 resultMarkdown = text;
             }
-        }
+        } else if (methodExistsForObject(
+                       scriptComponent.object,
+                       QStringLiteral(
+                           "preNoteToMarkdownHtmlHook(QVariant,QVariant)"))) {
+                   log("Warning: preNoteToMarkdownHtmlHook(QVariant,QVariant) "
+                       "is deprecated, please use "
+                       "preNoteToMarkdownHtmlHook(QVariant,QVariant,QVariant)");
+                   auto *noteApi = new NoteApi();
+                   noteApi->fetch(note->getId());
+
+                   QVariant resultText;
+                   QMetaObject::invokeMethod(
+                       scriptComponent.object, "preNoteToMarkdownHtmlHook",
+                       Q_RETURN_ARG(QVariant, resultText),
+                       Q_ARG(QVariant,
+                             QVariant::fromValue(static_cast<QObject *>(noteApi))),
+                       Q_ARG(QVariant, resultMarkdown));
+                   QString text = resultText.toString();
+
+                   if (!text.isEmpty()) {
+                       resultMarkdown = text;
+                   }
+               }
     }
 
     return markdown == resultMarkdown ? QString() : resultMarkdown;
