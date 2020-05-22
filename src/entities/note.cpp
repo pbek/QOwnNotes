@@ -1282,6 +1282,7 @@ bool Note::storeNoteTextFileToDisk() {
     }
 
     const bool noteStored = this->store();
+
     // if note was stored but the note file wasn't renamed do some more checks
     // whether we need to remove the old note file
     if (noteStored && !noteFileWasRenamed) {
@@ -1309,9 +1310,9 @@ bool Note::storeNoteTextFileToDisk() {
 
             } else {
                 qWarning() << QObject::tr(
-                                  "Could not remove renamed note-file: %1"
-                                  " - Error message: %2")
-                                  .arg(oldFile.fileName(), oldFile.errorString());
+                    "Could not remove renamed note-file: %1"
+                    " - Error message: %2")
+                    .arg(oldFile.fileName(), oldFile.errorString());
             }
         }
     }
@@ -1502,6 +1503,7 @@ bool Note::canWriteToNoteFile() {
 
     if (file.isOpen()) {
         file.close();
+
         if (!fileExists) {
             file.remove();
         }
