@@ -2278,7 +2278,8 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                 "\\1file://" + windowsSlash + notePath + "/\\2\"");
     */
     // css classes applicable for export and preview
-    const QString additionalClasses = ".task-list-item-checkbox {list-style: none; text-decoration: none;  margin-left: -14;}";
+    QString additionalClasses = ".task-list-item-checkbox {list-style: none; margin-left: -14px; text-decoration: none;} "
+                                ".normal-list-item {list-style: disc; margin-left: 0px;} ";
 
     const QString fontString =
         settings.value(QStringLiteral("MainWindow/noteTextView.code.font"))

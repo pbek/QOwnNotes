@@ -734,47 +734,54 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
 
     // set a list item style for todo items
     // using a css class didn't work because the styling seems to affects the sub-items too
-    const auto listTag = QStringLiteral("<li class=\"task-list-item-checkbox\">");
+    const auto taskListTag = QStringLiteral("<li class=\"task-list-item-checkbox\">");
+    const auto normalListTag = QStringLiteral("<li class=\"normal-list-item\">");
 
     if (!clickable) {
         text.replace(
             QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[ ?\])"),
                                QRegularExpression::CaseInsensitiveOption),
-            listTag % QStringLiteral("\\1&#9744;"));
+            taskListTag % QStringLiteral("\\1&#9744;"));
         text.replace(
             QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[[xX]\])"),
                                QRegularExpression::CaseInsensitiveOption),
-            listTag % QStringLiteral("\\1&#9745;"));
-        return text;
+            taskListTag % QStringLiteral("\\1&#9745;"));
+     } else {
+        // TODO
+        // to ensure the clicking behavior of checkboxes,
+        // line numbers of checkboxes in the original markdown text
+        // should be provided by the markdown parser
+
+        const QString checkboxStart = QStringLiteral(
+            R"(<a class="task-list-item-checkbox" href="checkbox://_)");
+        text.replace(
+            QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[ ?\])"),
+                               QRegularExpression::CaseInsensitiveOption),
+            taskListTag % QStringLiteral("\\1") % checkboxStart %
+                QStringLiteral("\">&#9744;</a>"));
+        text.replace(
+            QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[[xX]\])"),
+                               QRegularExpression::CaseInsensitiveOption),
+            taskListTag % QStringLiteral("\\1") % checkboxStart %
+                QStringLiteral("\">&#9745;</a>"));
+
+        int count = 0;
+        int pos = 0;
+        while (true) {
+            pos = text.indexOf(checkboxStart % QStringLiteral("\""), pos);
+            if (pos == -1) break;
+
+            pos += checkboxStart.length();
+            text.insert(pos, QString::number(count++));
+        }
     }
 
-    // TODO
-    // to ensure the clicking behavior of checkboxes,
-    // line numbers of checkboxes in the original markdown text
-    // should be provided by the markdown parser
-
-    const QString checkboxStart = QStringLiteral(
-        R"(<a class="task-list-item-checkbox" href="checkbox://_)");
+    // if it's not a task list, it should be a normal one
+    // Styles of parent tags have to be explicitly overwritten to avoid style leaks.
     text.replace(
-        QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[ ?\])"),
+        QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*))"),
                            QRegularExpression::CaseInsensitiveOption),
-        listTag % QStringLiteral("\\1") % checkboxStart %
-            QStringLiteral("\">&#9744;</a>"));
-    text.replace(
-        QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[[xX]\])"),
-                           QRegularExpression::CaseInsensitiveOption),
-        listTag % QStringLiteral("\\1") % checkboxStart %
-            QStringLiteral("\">&#9745;</a>"));
-
-    int count = 0;
-    int pos = 0;
-    while (true) {
-        pos = text.indexOf(checkboxStart % QStringLiteral("\""), pos);
-        if (pos == -1) break;
-
-        pos += checkboxStart.length();
-        text.insert(pos, QString::number(count++));
-    }
+                           normalListTag);
 
     return text;
 }
