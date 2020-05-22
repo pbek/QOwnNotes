@@ -8,6 +8,7 @@
 - the scripting hook `noteToMarkdownHtmlHook` will now be called after modifications
   to images in the note are made (for [#1766](https://github.com/pbek/QOwnNotes/issues/1766))
 - the `QHotkey` library was updated
+- added more translation (thank you unchase, richarson, gbabin, Fabijenna)
 
 ## 20.5.11
 - some startup performance improvements were made (for [#1755](https://github.com/pbek/QOwnNotes/pull/1755), thank you @Waqar144)

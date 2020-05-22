@@ -6132,7 +6132,7 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Fjern automatisk bagerste mellemrum i notateksten</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

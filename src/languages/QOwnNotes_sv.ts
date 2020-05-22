@@ -6141,7 +6141,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Ta automatiskt bort spårutrymmen i anteckningen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

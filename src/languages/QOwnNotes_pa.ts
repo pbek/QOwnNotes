@@ -6144,7 +6144,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>ਨੋਟ ਟੈਕਸਟ ਵਿੱਚ ਪਿਛਲੇ ਸਥਾਨਾਂ ਨੂੰ ਆਪਣੇ ਆਪ ਹਟਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

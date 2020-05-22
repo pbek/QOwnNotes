@@ -6103,7 +6103,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Qayd matni bo'sh joylarini avtomatik ravishda olib tashlang</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

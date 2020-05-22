@@ -3184,7 +3184,7 @@ Uma udoti unikwe amandla kwiseva yakho ownCloud kufanele ukwazi ukubuyisela laph
     <message>
       <location filename="../mainwindow.cpp" line="10255"/>
       <source>Jump to the note's subfolder</source>
-      <translation type="unfinished">Jump to the note's subfolder</translation>
+      <translation>Yeqa kwifolda yenothi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10312"/>
@@ -4439,7 +4439,7 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
     <message>
       <location filename="../entities/notesubfolder.cpp" line="588"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
+      <translation>Ifolda enegama elithi &lt;b&gt;%1&lt;/b&gt; alinakwakhiwa, ngoba kuluhlu lwamafolda anganakwa! Ungakushintsha lokho kuzilungiselelo ze &lt;i&gt; Panels &lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -5632,12 +5632,12 @@ Usazodinga i
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support subfolders!</translation>
+      <translation>Yazi, ukuthi uhlelo lokusebenza lamanothi ownCloud alisekeli amafolda amancane!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="726"/>
       <source>Use note subfolders</source>
-      <translation type="unfinished">Use note subfolders</translation>
+      <translation>Sebenzisa amafolda amancane</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1775"/>
@@ -6151,7 +6151,7 @@ Usazodinga i
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Susa ngokuzenzakalelayo izikhala zokulandela embhalweni wenothi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>
@@ -6172,17 +6172,17 @@ Usazodinga i
       <location filename="../dialogs/settingsdialog.ui" line="5581"/>
       <location filename="../dialogs/settingsdialog.ui" line="5590"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note subfolders to ignore, separated by ";"</translation>
+      <translation>Izinkulumo ezijwayelekile zamafolda amanothi ongazinaki, ezihlukaniswe ";"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5584"/>
       <source>Ignored subfolders</source>
-      <translation type="unfinished">Ignored subfolders</translation>
+      <translation>Unganakanga amafolda amancane</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5600"/>
       <source>Reset ignored subfolders</source>
-      <translation type="unfinished">Reset ignored subfolders</translation>
+      <translation>Setha kabusha amafolda anganakwa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5636"/>
@@ -8392,7 +8392,7 @@ Ungahlala ubuyisela inothi nezinguqulo zalo ngokuhamba kwesikhathi. &lt;/p&gt;</
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show subfolders</source>
-      <translation type="unfinished">Show subfolders</translation>
+      <translation>Khombisa amafolda amancane</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
