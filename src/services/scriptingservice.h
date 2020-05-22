@@ -205,7 +205,7 @@ class ScriptingService : public QObject {
     bool methodExistsForObject(QObject *object, const QString &method) const;
     QString callInsertMediaHookForObject(QObject *object, QFile *file,
                                          const QString &markdownText);
-    QString callNoteToMarkdownHtmlHookForObject(QObject *object, Note *note,
+    QString callNoteToMarkdownHtmlHookForObject(ScriptComponent *scriptComponent, Note *note,
                                                 const QString &html, const bool forExport);
     void initComponent(const Script &script);
     void outputMethodsOfObject(QObject *object);

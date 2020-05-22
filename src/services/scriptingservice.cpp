@@ -722,32 +722,33 @@ QString ScriptingService::callHandleNewNoteHeadlineHook(
  * Calls the noteToMarkdownHtmlHook function for an object
  */
 QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
-    QObject *object, Note *note, const QString &html, const bool forExport) {
+    ScriptComponent *scriptComponent, Note *note, const QString &html, const bool forExport) {
     if (methodExistsForObject(
-            object,
+            scriptComponent->object,
             QStringLiteral("noteToMarkdownHtmlHook(QVariant,QVariant,QVariant)"))) {
         auto *noteApi = new NoteApi();
         noteApi->fetch(note->getId());
 
         QVariant text;
         QMetaObject::invokeMethod(
-            object, "noteToMarkdownHtmlHook", Q_RETURN_ARG(QVariant, text),
+            scriptComponent->object, "noteToMarkdownHtmlHook", Q_RETURN_ARG(QVariant, text),
             Q_ARG(QVariant,
                   QVariant::fromValue(static_cast<QObject *>(noteApi))),
             Q_ARG(QVariant, html),
             Q_ARG(QVariant, forExport));
         return text.toString();
     } else if (methodExistsForObject(
-                   object,
+                   scriptComponent->object,
                    QStringLiteral("noteToMarkdownHtmlHook(QVariant,QVariant)"))) {
                auto *noteApi = new NoteApi();
                noteApi->fetch(note->getId());
-               log("Warning: noteToMarkdownHtmlHook(QVariant,QVariant) "
+               qWarning() << "Warning: noteToMarkdownHtmlHook(note, html) "
                    "is deprecated, please use "
-                   "noteToMarkdownHtmlHook(QVariant,QVariant,QVariant)");
+                   "noteToMarkdownHtmlHook(note, html, forExport) "
+                   "in "+scriptComponent->script.getName();
                QVariant text;
                QMetaObject::invokeMethod(
-                   object, "noteToMarkdownHtmlHook", Q_RETURN_ARG(QVariant, text),
+                   scriptComponent->object, "noteToMarkdownHtmlHook", Q_RETURN_ARG(QVariant, text),
                    Q_ARG(QVariant,
                          QVariant::fromValue(static_cast<QObject *>(noteApi))),
                    Q_ARG(QVariant, html));
@@ -771,7 +772,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(Note *note,
         ScriptComponent scriptComponent = i.value();
 
         QString text = callNoteToMarkdownHtmlHookForObject(
-            scriptComponent.object, note, resultHtml, forExport);
+            &scriptComponent, note, resultHtml, forExport);
 
         if (!text.isEmpty()) {
             resultHtml = text;
@@ -821,9 +822,10 @@ QString ScriptingService::callPreNoteToMarkdownHtmlHook(
                        scriptComponent.object,
                        QStringLiteral(
                            "preNoteToMarkdownHtmlHook(QVariant,QVariant)"))) {
-                   log("Warning: preNoteToMarkdownHtmlHook(QVariant,QVariant) "
+                   qWarning() <<"Warning: preNoteToMarkdownHtmlHook(note, markdown) "
                        "is deprecated, please use "
-                       "preNoteToMarkdownHtmlHook(QVariant,QVariant,QVariant)");
+                       "preNoteToMarkdownHtmlHook(note, markdown, forExport) "
+                       "in "+scriptComponent.script.getName();
                    auto *noteApi = new NoteApi();
                    noteApi->fetch(note->getId());
 
