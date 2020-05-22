@@ -2231,7 +2231,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
 
     // check if there is a script that wants to modify the markdown
     const QString preScriptResult =
-        ScriptingService::instance()->callPreNoteToMarkdownHtmlHook(this, str);
+        ScriptingService::instance()->callPreNoteToMarkdownHtmlHook(this, str, forExport);
 
     if (!preScriptResult.isEmpty()) {
         str = std::move(preScriptResult);
@@ -2463,7 +2463,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
 
     // check if there is a script that wants to modify the content
     const QString scriptResult =
-        ScriptingService::instance()->callNoteToMarkdownHtmlHook(this, result);
+        ScriptingService::instance()->callNoteToMarkdownHtmlHook(this, result, forExport);
 
     if (!scriptResult.isEmpty()) {
         result = scriptResult;
