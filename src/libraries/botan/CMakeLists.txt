@@ -1,15 +1,12 @@
 cmake_minimum_required(VERSION 3.2.2)
 project(Botan)
 
-# TODO Add conditional use system botan
+option(BUILD_WITH_SYSTEM_BOTAN "Build using system installed Botan 2 crypto library" OFF)
 
-add_library(botan "")
+add_library(botan STATIC "")
 add_library(Botan::Botan ALIAS botan)
 
 target_sources(botan PRIVATE
-    botan.h
-    botan.cpp
-    botan_internal.h
     botanwrapper.h
     botanwrapper.cpp
 )
@@ -17,6 +14,31 @@ target_sources(botan PRIVATE
 find_package(Qt5 REQUIRED COMPONENTS Core)
 
 target_link_libraries(botan PUBLIC Qt5::Core)
+
+target_include_directories(botan PUBLIC ${CMAKE_CURRENT_LIST_DIR})
+
+if(BUILD_WITH_SYSTEM_BOTAN)
+    find_package(Botan2 REQUIRED)
+    if(NOT TARGET Botan2::Botan2)
+        message(FATAL_ERROR "Could not find system Botan 2 library using PkgConfig")
+    endif()
+
+    target_link_libraries(botan PUBLIC Botan2::Botan2)
+
+    target_compile_definitions(botan PUBLIC USE_SYSTEM_BOTAN)
+
+    # Instead of put next lines into else() block
+    # it is better to just return
+    return()
+endif()
+
+
+target_sources(botan PRIVATE
+    botan.h
+    botan.cpp
+    botan_internal.h
+)
+
 
 # add some Botan defines for Linux
 if(UNIX)

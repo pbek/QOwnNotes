@@ -1,5 +1,17 @@
 #include "botanwrapper.h"
-#include<QDebug>
+#include <QDebug>
+#ifdef USE_SYSTEM_BOTAN
+#include <botan/pipe.h>
+#include <botan/cipher_mode.h>
+#include <botan/base64.h>
+#include <botan/filters.h>
+#include <botan/pbkdf2.h>
+#include <botan/kdf.h>
+#include <botan/hmac.h>
+#include <botan/sha160.h>
+#else
+#include "botan.h"
+#endif
 
 BotanWrapper::BotanWrapper() {
     // Set the default salt size
