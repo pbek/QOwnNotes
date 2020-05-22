@@ -15,3 +15,5 @@ prime
 *.snap
 snap/.snapcraft/state
 src/languages/*.qm
+.vscode/
+CMakeLists.txt.user*
