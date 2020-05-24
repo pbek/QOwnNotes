@@ -2753,8 +2753,6 @@ void MainWindow::notesWereModified(const QString &str) {
                 return;
             }
 
-            qDebug() << "Current note was modified externally!";
-
             showStatusBarMessage(tr("Current note was modified externally"),
                                  5000);
 
