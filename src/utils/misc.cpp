@@ -767,8 +767,9 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
 
         int count = 0;
         int pos = 0;
+        const QString searchTerm = checkboxStart % QStringLiteral("\"");
         while (true) {
-            pos = text.indexOf(checkboxStart % QStringLiteral("\""), pos);
+            pos = text.indexOf(searchTerm, pos);
             if (pos == -1) break;
 
             pos += checkboxStart.length();

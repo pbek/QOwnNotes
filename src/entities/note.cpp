@@ -2278,8 +2278,8 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                 "\\1file://" + windowsSlash + notePath + "/\\2\"");
     */
     // css classes applicable for export and preview
-    QString additionalClasses = ".task-list-item-checkbox {list-style: none; margin-left: -14px; text-decoration: none;} "
-                                ".normal-list-item {list-style: disc; margin-left: 0px;} ";
+    QString listCSS = QStringLiteral(".task-list-item-checkbox {list-style: none; margin-left: -14px; text-decoration: none;} "
+                                     ".normal-list-item {list-style: disc; margin-left: 0px;} ");
 
     const QString fontString =
         settings.value(QStringLiteral("MainWindow/noteTextView.code.font"))
@@ -2375,7 +2375,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                      "a { color: #FF9137; text-decoration: none; } %1 %2 %4 %6"
                      "</style></head><body class=\"export\">%3</body></html>")
                      .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle,
-                          codeBackgroundColor, additionalClasses);
+                          codeBackgroundColor, listCSS);
 
         // remove trailing newline in code blocks
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
@@ -2399,7 +2399,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                 "th, td {padding: 2px 5px;}"
                 "a { color: #FF9137; text-decoration: none; } %1 %3 %4 %5"
                 "</style></head><body class=\"preview\">%2</body></html>")
-                .arg(codeStyleSheet, result, rtlStyle, schemaStyles, additionalClasses);
+                .arg(codeStyleSheet, result, rtlStyle, schemaStyles, listCSS);
         // remove trailing newline in code blocks
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     }
