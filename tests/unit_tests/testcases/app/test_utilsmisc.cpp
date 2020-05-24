@@ -119,7 +119,6 @@ void TestUtilsMisc::testHtmlToMarkdown() {
 
 void TestUtilsMisc::testParseTaskList() {
     const auto taskListTag = QStringLiteral("<li class=\"task-list-item-checkbox\">");
-    const auto normalListTag = QStringLiteral("<li class=\"normal-list-item\">");
     const QString &t1 = "<li> [ ] task 1</li>";
     const QString &r1 = parseTaskList(t1, true);
     QString expec = taskListTag +
