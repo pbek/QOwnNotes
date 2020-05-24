@@ -6,7 +6,12 @@
 //#include <fstream>
 //#include <iostream>
 //#include <string>
+#ifdef USE_SYSTEM_BOTAN
+#include <botan/types.h>
+#include <botan/secmem.h>
+#else
 #include "botan.h"
+#endif
 
 class BotanWrapper
 {

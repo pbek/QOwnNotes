@@ -25,8 +25,15 @@
 #include "api/noteapi.h"
 #include "entities/bookmark.h"
 #include "helpers/codetohtmlconverter.h"
-#include "libraries/botan/botan.h"
-#include "libraries/botan/botanwrapper.h"
+
+#ifdef USE_SYSTEM_BOTAN
+#include <botan/secmem.h>
+#include <botan/exceptn.h>
+#else
+#include <botan.h>
+#endif
+
+#include <botanwrapper.h>
 #include "libraries/md4c/md2html/render_html.h"
 #include "libraries/md4c/md4c/md4c.h"
 #include "libraries/simplecrypt/simplecrypt.h"

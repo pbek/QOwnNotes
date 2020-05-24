@@ -83,7 +83,7 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
 CODECFORTR = UTF-8
 CONFIG += c++11
 
-INCLUDEPATH += $$PWD/libraries
+INCLUDEPATH += $$PWD/libraries $$PWD/libraries/diff_match_patch
 
 SOURCES += main.cpp\
     dialogs/attachmentdialog.cpp \

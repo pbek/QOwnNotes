@@ -38,6 +38,7 @@ if(MSVC)
     add_compile_definitions(FAKEVIM_STATIC_DEFINE QTCREATOR_UTILS_STATIC_LIB)
 endif()
 add_subdirectory(libraries/fakevim)
+add_subdirectory(libraries/diff_match_patch)
 
 
 find_package(Qt5 COMPONENTS REQUIRED
@@ -202,8 +203,6 @@ set(SOURCE_FILES
     api/tagapi.h
     api/scriptapi.cpp
     api/scriptapi.h
-    libraries/diff_match_patch/diff_match_patch.cpp
-    libraries/diff_match_patch/diff_match_patch.h
     libraries/md4c/md4c/md4c.c
     libraries/md4c/md2html/render_html.c
     libraries/md4c/md2html/entity.c
@@ -505,6 +504,7 @@ target_link_libraries(QOwnNotes PRIVATE
     QHotkey::QHotkey
     Botan::Botan
     fakevim
+    Google::DiffMatchPatch
 )
 if(UNIX)
     target_link_libraries(QOwnNotes PRIVATE

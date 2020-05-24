@@ -1,4 +1,5 @@
 INCLUDEPATH *= $$PWD/..
+INCLUDEPATH += $$PWD
 HEADERS += $$PWD/botan.h \
            $$PWD/botan_internal.h
 
