@@ -734,8 +734,8 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
 
     // set a list item style for todo items
     // using a css class didn't work because the styling seems to affects the sub-items too
-    const auto taskListTag = QStringLiteral("<li class=\"task-list-item-checkbox\">");
-    const auto normalListTag = QStringLiteral("<li class=\"normal-list-item\">");
+    const auto taskListTag = QStringLiteral("<li class=\"list-item-task\">");
+    const auto normalListTag = QStringLiteral("<li class=\"list-item-normal\">");
 
     if (!clickable) {
         text.replace(
@@ -753,7 +753,7 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
         // should be provided by the markdown parser
 
         const QString checkboxStart = QStringLiteral(
-            R"(<a class="task-list-item-checkbox" href="checkbox://_)");
+            R"(<a class="list-item-checkbox" href="checkbox://_)");
         text.replace(
             QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[ ?\])"),
                                QRegularExpression::CaseInsensitiveOption),
