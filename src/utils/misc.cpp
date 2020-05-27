@@ -753,7 +753,7 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable) {
         // should be provided by the markdown parser
 
         const QString checkboxStart = QStringLiteral(
-            R"(<a class="list-item-checkbox" href="checkbox://_)");
+            R"(<a class="list-item-task" href="checkbox://_)");
         text.replace(
             QRegularExpression(QStringLiteral(R"(<li>(\s*(<p>)*\s*)\[ ?\])"),
                                QRegularExpression::CaseInsensitiveOption),
