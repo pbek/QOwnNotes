@@ -3182,7 +3182,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="10255"/>
       <source>Jump to the note's subfolder</source>
-      <translation type="unfinished">Jump to the note's subfolder</translation>
+      <translation>Vai alla sottocartella della nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10312"/>
@@ -4430,7 +4430,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../entities/notesubfolder.cpp" line="588"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
+      <translation>La cartella con il nome &lt;b&gt;%1&lt;/b&gt; non può essere creata, perché è nella lista delle sotto cartelle ignorate! Puoi cambiare questo nelle &lt;i&gt;Impostazioni Pannelli&lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -5605,12 +5605,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support subfolders!</translation>
+      <translation>Prestare attenzione: l'app delle note "ownCloud" non supporta le sottocartelle!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="726"/>
       <source>Use note subfolders</source>
-      <translation type="unfinished">Use note subfolders</translation>
+      <translation>Usa sottocartelle della nota</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1775"/>
@@ -6124,7 +6124,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Rimuovi automaticamente gli spazi in coda al testo della nota</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>
@@ -6145,17 +6145,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="5581"/>
       <location filename="../dialogs/settingsdialog.ui" line="5590"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note subfolders to ignore, separated by ";"</translation>
+      <translation>Espressioni regolari delle sottocartelle delle note da ignorare, separate da ";"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5584"/>
       <source>Ignored subfolders</source>
-      <translation type="unfinished">Ignored subfolders</translation>
+      <translation>Sottocartelle ignorate</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5600"/>
       <source>Reset ignored subfolders</source>
-      <translation type="unfinished">Reset ignored subfolders</translation>
+      <translation>Azzera sottocartelle ignorate</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5636"/>
@@ -8354,7 +8354,7 @@ Non sarà possibile annullare l'operazione!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show subfolders</source>
-      <translation type="unfinished">Show subfolders</translation>
+      <translation>Mostra sottocartelle</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>

@@ -4,6 +4,7 @@
 - improved autocompletion for "bold" and "italic" markdown markers
   (for [#1753](https://github.com/pbek/QOwnNotes/issues/1753), thank you @Waqar144)
 - fixed hex numbers highlighting (for [#117](https://github.com/pbek/qmarkdowntextedit/pull/117), thank you @Waqar144)
+- added more translation (thank you Zack-83, mlimacarlos, MGuerra, rakekniven)
 
 ## 20.5.12
 - fixed copying and moving of notes into sub-folders and note-folders and other
