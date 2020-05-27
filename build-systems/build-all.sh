@@ -9,6 +9,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # minute until the files are accessible via https://download.tuxfamily.org/qownnotes/src
 $DIR/tuxfamily/build-tuxfamily-src.sh
 
+# check if exit code was 0
+rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
+
 # Upload source archive to SourceForge
 #$DIR/sourceforge/build-sourceforge-src.sh
 
