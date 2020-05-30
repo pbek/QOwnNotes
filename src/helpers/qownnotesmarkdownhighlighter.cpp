@@ -191,7 +191,7 @@ void QOwnNotesMarkdownHighlighter::setMisspelled(const int start,
                                                  const int count) {
     // append to the already existing text format.
     // creating a new format will destroy pre-existing format
-    QTextCharFormat format = QSyntaxHighlighter::format(start + 1);
+    QTextCharFormat format = QSyntaxHighlighter::format(start);
     format.setFontUnderline(true);
     format.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
     format.setUnderlineColor(Qt::red);
