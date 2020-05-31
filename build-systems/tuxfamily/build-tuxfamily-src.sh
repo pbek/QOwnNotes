@@ -130,7 +130,7 @@ fi
 url="https://download.tuxfamily.org/qownnotes/src/${archiveFile}"
 echo "Checking if $url exists..."
 
-# try to download file from tuxfamiliy
+# try to download file from tuxfamily
 if curl --output /dev/null --silent --head --fail "$url"; then
   echo "URL exists: $url"
   exit 0
