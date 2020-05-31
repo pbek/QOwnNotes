@@ -131,10 +131,11 @@ url="https://download.tuxfamily.org/qownnotes/src/${archiveFile}"
 echo "Checking if $url exists..."
 
 # try to download file from tuxfamily
-if curl --output /dev/null --silent --head --fail "$url"; then
-  echo "URL exists: $url"
-  exit 0
-else
-  echo "URL does not exist: $url"
-  exit 1
-fi
+until curl --output /dev/null --silent --head --fail "$url"
+do
+    echo "URL does not exist: $url..."
+    sleep 2
+done
+
+echo "URL exists: $url"
+exit 0
