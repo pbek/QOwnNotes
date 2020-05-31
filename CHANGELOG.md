@@ -4,6 +4,12 @@
 - fix problem with adding QOwnNotes installed from snap as favorite
   in Ubuntu 20.04 (for [#1713](https://github.com/pbek/QOwnNotes/issues/1713))
 - fix markdown heading highlighting issue (for [#1777](https://github.com/pbek/QOwnNotes/issues/1777), thank you @Waqar144)
+- the scripting commands `preNoteToMarkdownHtmlHook` and `preNoteToMarkdownHtmlHook`
+  now have a new parameter `forExport` (for [#1769](https://github.com/pbek/QOwnNotes/pull/1769), thank you @r00tr4v3n)
+    - please take a look at the documentation for
+      [preNoteToMarkdownHtmlHook](https://docs.qownnotes.org/en/latest/scripting/hooks/#prenotetomarkdownhtmlhook)
+      and [noteToMarkdownHtmlHook](https://docs.qownnotes.org/en/latest/scripting/hooks/#notetomarkdownhtmlhook)
+      for more information
 
 ## 20.5.13
 - improved autocompletion for "bold" and "italic" markdown markers

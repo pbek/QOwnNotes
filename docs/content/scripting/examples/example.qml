@@ -77,9 +77,10 @@ QtObject {
      * 
      * @param {Note} note - the note object
      * @param {string} html - the html that is about to being rendered
+     * @param {string} forExport - true if the html is used for an export, false for the preview
      * @return {string} the modified html or an empty string if nothing should be modified
      */
-    function noteToMarkdownHtmlHook(note, html) {
+    function noteToMarkdownHtmlHook(note, html, forExport) {
         script.log("noteToMarkdownHtmlHook was called");
         
         // show a custom headline and a horizontal ruler on top of the preview
