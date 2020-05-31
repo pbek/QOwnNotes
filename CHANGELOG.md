@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.6.0
+- fix problem with adding QOwnNotes installed from snap as favourite
+  in Ubuntu 20.04 (for [#1713](https://github.com/pbek/QOwnNotes/issues/1713))
+
 ## 20.5.13
 - improved autocompletion for "bold" and "italic" markdown markers
   (for [#1753](https://github.com/pbek/QOwnNotes/issues/1753), thank you @Waqar144)
