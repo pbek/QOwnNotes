@@ -3,6 +3,7 @@
 ## 20.6.0
 - fix problem with adding QOwnNotes installed from snap as favourite
   in Ubuntu 20.04 (for [#1713](https://github.com/pbek/QOwnNotes/issues/1713))
+- fix markdown heading highlighting issue (for [#1777](https://github.com/pbek/QOwnNotes/issues/1777), thank you @Waqar144)
 
 ## 20.5.13
 - improved autocompletion for "bold" and "italic" markdown markers
