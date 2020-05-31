@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 20.6.0
-- fix problem with adding QOwnNotes installed from snap as favourite
+- fix problem with adding QOwnNotes installed from snap as favorite
   in Ubuntu 20.04 (for [#1713](https://github.com/pbek/QOwnNotes/issues/1713))
 - fix markdown heading highlighting issue (for [#1777](https://github.com/pbek/QOwnNotes/issues/1777), thank you @Waqar144)
 
