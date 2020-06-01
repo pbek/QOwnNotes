@@ -101,7 +101,7 @@
 #include "dialogs/tododialog.h"
 #include "entities/calendaritem.h"
 #include "helpers/qownnotesmarkdownhighlighter.h"
-#include "libraries/diff_match_patch/diff_match_patch.h"
+#include <diff_match_patch.h>
 #include "libraries/fakevim/fakevim/fakevimhandler.h"
 #include "libraries/sonnet/src/core/speller.h"
 #include "release.h"
@@ -2752,8 +2752,6 @@ void MainWindow::notesWereModified(const QString &str) {
             if (noteTextEditText == noteTextOnDisk) {
                 return;
             }
-
-            qDebug() << "Current note was modified externally!";
 
             showStatusBarMessage(tr("Current note was modified externally"),
                                  5000);

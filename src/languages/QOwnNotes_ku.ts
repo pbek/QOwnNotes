@@ -6138,7 +6138,7 @@ Alîkarê pirsgirêka vekirî &lt;/span&gt; bişkoka li binî. &lt;/p&gt; &lt;/b
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Di nivîsa nîşanê de bi cîhên xwerû bixweber rabe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

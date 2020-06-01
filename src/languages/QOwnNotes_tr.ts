@@ -6143,7 +6143,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Not metnindeki boşlukları otomatik olarak kaldırma</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

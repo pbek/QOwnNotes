@@ -6174,7 +6174,7 @@ Samo se testirajte ako dobijete sukobe u sinkronizaciji i postavite veću vrijed
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Automatski uklonite zaostale prostore u tekstu bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

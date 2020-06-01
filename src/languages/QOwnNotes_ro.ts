@@ -6184,7 +6184,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Înlăturați automat spațiile de finalizare din textul notei</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

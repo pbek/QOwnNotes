@@ -126,8 +126,8 @@ class ScriptingService : public QObject {
     QString callHandleNoteTextFileNameHookForObject(QObject *object,
                                                     Note *note);
     QString callHandleNoteTextFileNameHook(Note *note);
-    QString callNoteToMarkdownHtmlHook(Note *note, const QString &html);
-    QString callPreNoteToMarkdownHtmlHook(Note *note, const QString &markdown);
+    QString callNoteToMarkdownHtmlHook(Note *note, const QString &html, const bool forExport);
+    QString callPreNoteToMarkdownHtmlHook(Note *note, const QString &markdown, const bool forExport);
 
     QString callHandleNewNoteHeadlineHookForObject(QObject *object,
                                                    const QString &headline);
@@ -205,8 +205,8 @@ class ScriptingService : public QObject {
     bool methodExistsForObject(QObject *object, const QString &method) const;
     QString callInsertMediaHookForObject(QObject *object, QFile *file,
                                          const QString &markdownText);
-    QString callNoteToMarkdownHtmlHookForObject(QObject *object, Note *note,
-                                                const QString &html);
+    QString callNoteToMarkdownHtmlHookForObject(ScriptComponent *scriptComponent, Note *note,
+                                                const QString &html, const bool forExport);
     void initComponent(const Script &script);
     void outputMethodsOfObject(QObject *object);
     void reloadScriptComponents();

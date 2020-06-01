@@ -6310,7 +6310,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>הסר אוטומטית רווחים נגררים בטקסט ההערה</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

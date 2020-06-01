@@ -6133,7 +6133,7 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Poista loput välilyönnit automaattisesti huomautuksen tekstistä</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

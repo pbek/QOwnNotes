@@ -3182,7 +3182,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="10255"/>
       <source>Jump to the note's subfolder</source>
-      <translation type="unfinished">Jump to the note's subfolder</translation>
+      <translation>Ir a la subcarpeta de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10312"/>
@@ -4431,7 +4431,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../entities/notesubfolder.cpp" line="588"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
+      <translation>¡No se puede crear la carpeta &lt;b&gt;%1&lt;/b&gt; porque está en la lista de subcarpetas ignoradas! Puedes modificar esto en los &lt;i&gt;Ajustes de Paneles&lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -5605,12 +5605,12 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support subfolders!</translation>
+      <translation>¡Ten en cuenta que la aplicación de notas de ownCloud no admite subcarpetas!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="726"/>
       <source>Use note subfolders</source>
-      <translation type="unfinished">Use note subfolders</translation>
+      <translation>Usar subcarpetas de notas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1775"/>
@@ -6124,7 +6124,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Eliminar automáticamente los espacios finales en el texto de la nota</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>
@@ -6145,17 +6145,17 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
       <location filename="../dialogs/settingsdialog.ui" line="5581"/>
       <location filename="../dialogs/settingsdialog.ui" line="5590"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note subfolders to ignore, separated by ";"</translation>
+      <translation>Expresiones regulares de subcarpetas de notas a ignorar, separadas por ";"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5584"/>
       <source>Ignored subfolders</source>
-      <translation type="unfinished">Ignored subfolders</translation>
+      <translation>Subcarpetas ignoradas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5600"/>
       <source>Reset ignored subfolders</source>
-      <translation type="unfinished">Reset ignored subfolders</translation>
+      <translation>Restablecer subcarpetas ignoradas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5636"/>
@@ -8348,7 +8348,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show subfolders</source>
-      <translation type="unfinished">Show subfolders</translation>
+      <translation>Mostrar subcarpetas</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>

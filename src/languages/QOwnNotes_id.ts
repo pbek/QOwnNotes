@@ -6103,7 +6103,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Secara otomatis menghapus spasi tambahan dalam teks catatan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>
@@ -8339,7 +8339,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show subfolders</source>
-      <translation type="unfinished">Show subfolders</translation>
+      <translation>Tampilkan subfolder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>

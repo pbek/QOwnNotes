@@ -6141,7 +6141,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Hiqni automatikisht hapësirat gjurmuese në tekstin e shënimit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

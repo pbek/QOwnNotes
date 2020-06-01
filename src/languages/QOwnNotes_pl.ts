@@ -6212,7 +6212,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Automatycznie usuwaj końcowe spacje w tekście notatki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

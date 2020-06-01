@@ -6126,7 +6126,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Supprimer automatiquement les espaces en fin de lignes dans le texte de la note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5186"/>

@@ -1,11 +1,31 @@
 # QOwnNotes Changelog
 
+## 20.6.0
+- fix problem with adding QOwnNotes installed from snap as favorite
+  in Ubuntu 20.04 (for [#1713](https://github.com/pbek/QOwnNotes/issues/1713))
+- fix markdown heading highlighting issue (for [#1777](https://github.com/pbek/QOwnNotes/issues/1777), thank you @Waqar144)
+- the scripting commands `preNoteToMarkdownHtmlHook` and `preNoteToMarkdownHtmlHook`
+  now have a new parameter `forExport` (for [#1769](https://github.com/pbek/QOwnNotes/pull/1769), thank you @r00tr4v3n)
+    - please take a look at the documentation for
+      [preNoteToMarkdownHtmlHook](https://docs.qownnotes.org/en/latest/scripting/hooks/#prenotetomarkdownhtmlhook)
+      and [noteToMarkdownHtmlHook](https://docs.qownnotes.org/en/latest/scripting/hooks/#notetomarkdownhtmlhook)
+      for more information
+
+## 20.5.13
+- improved autocompletion for "bold" and "italic" markdown markers
+  (for [#1753](https://github.com/pbek/QOwnNotes/issues/1753), thank you @Waqar144)
+- fixed hex numbers highlighting (for [#117](https://github.com/pbek/qmarkdowntextedit/pull/117), thank you @Waqar144)
+- added more translation (thank you Zack-83, mlimacarlos, MGuerra, rakekniven)
+
 ## 20.5.12
-- fixed copying and moving of notes into sub-folders and note-folders that was
-  broken by [#1749](https://github.com/pbek/QOwnNotes/pull/1749) 
-  (for [#1764](https://github.com/pbek/QOwnNotes/issues/1764))
+- fixed copying and moving of notes into sub-folders and note-folders and other
+  things that were broken by [#1749](https://github.com/pbek/QOwnNotes/pull/1749) 
+  (for [#1764](https://github.com/pbek/QOwnNotes/issues/1764)
+  and [#1743](https://github.com/pbek/QOwnNotes/issues/1743))
 - the scripting hook `noteToMarkdownHtmlHook` will now be called after modifications
   to images in the note are made (for [#1766](https://github.com/pbek/QOwnNotes/issues/1766))
+- the `QHotkey` library was updated
+- added more translation (thank you unchase, richarson, gbabin, Fabijenna)
 
 ## 20.5.11
 - some startup performance improvements were made (for [#1755](https://github.com/pbek/QOwnNotes/pull/1755), thank you @Waqar144)
@@ -27,25 +47,12 @@
   to disk (for [#1759](https://github.com/pbek/QOwnNotes/issues/1759))
     - you will only see the changes once the note edit panel is refreshed to
       prevent cursor jumping while you are editing the note
-- added more Russian, Greek, German, Estonian, Hindi, Portuguese, Hungarian,
-  Basque, Punjabi, Albanian, Filipino, Romanian, Arabic, Finnish, Icelandic,
-  Serbian (Cyrillic), Indonesian, Slovak, Bengali, Bosnian, Irish, Slovenian,
-  Bulgarian, Japanese, Swedish, Cebuano, Khmer, Turkish, Chinese Simplified,
-  Korean, Ukrainian, Kurdish, Urdu (Pakistan), Chinese Traditional, Latvian,
-  Uzbek, Croatian, Lithuanian, Vietnamese, Czech, Galician, Macedonian, Xhosa,
-  Danish, Norwegian, Dutch, Hausa, Persian, Hebrew, Polish, French translation
-  (thank you unchase, Gregory.K, Fabijenna, rakekniven, gbabin)
+- added more translation (thank you unchase, Gregory.K, Fabijenna, rakekniven, gbabin)
 
 ## 20.5.10
 - fixed file links interpreted in code blocks (for [#1748](https://github.com/pbek/QOwnNotes/issues/1748), thank you @Waqar144)
 - migrated from `sub-folder` to `subfolder` in menu items, documentation, comments and general text
-- added more Albanian, Arabic, Basque, Zulu, Xhosa, Hausa, Greek, Filipino, Kurdish,
-  Croatian, Estonian, Malay, Hungarian, Bengali, Bosnian, Bulgarian, Cebuano,
-  Chinese Simplified, Chinese Traditional, Czech, Danish, Dutch, Finnish, Galician,
-  Hebrew, Hindi, Icelandic, Indonesian, Irish, Japanese, Korean, Latvian, Lithuanian,
-  Macedonian, Norwegian, Persian, Polish, Portuguese, Punjabi, Romanian,
-  Serbian (Cyrillic), Slovak, Slovenian, Swedish, Turkish, Ukrainian, Urdu (Pakistan),
-  Uzbek, Vietnamese translation (thank you Fabijenna)
+- added more translation (thank you Fabijenna)
 
 ## 20.5.9
 - added a **new editor color schema** *Solarized Dark*
@@ -106,20 +113,14 @@
   (for [#1733](https://github.com/pbek/QOwnNotes/issues/1733))
 - fixed a possible crash in code block preview (for [#1731](https://github.com/pbek/QOwnNotes/pull/1731),
   thank you @Waqar144)
-- added more Cebuano, Indonesian, Polish, Uzbek, Portuguese, Irish, Vietnamese,
-  Chinese Simplified, Punjabi, Albanian, Chinese Traditional, Romanian, Japanese,
-  Arabic, Filipino, Serbian (Cyrillic), Khmer, Galician, Czech, Slovak, Korean,
-  Greek, Danish, Slovenian, Dutch, Latvian, Hausa, Spanish, Basque, Hebrew, Swedish,
-  Lithuanian, Hindi, Turkish, Macedonian, Hungarian, Ukrainian, Norwegian, Bosnian,
-  Icelandic, Urdu (Pakistan), Persian, Bulgarian translation (thank you Fabijenna)
+- added more translation (thank you Fabijenna)
 
 ## 20.5.5
 - now a tooltip is shown for note tabs to guide you how to stick and unstick notes
   (for [#1730](https://github.com/pbek/QOwnNotes/issues/1730))
 - the note tab sticky status will now be shown correctly if a note is double-clicked
   in the note list (for [#1730](https://github.com/pbek/QOwnNotes/issues/1730))
-- added more German, French, Russian, Italian, Catalan, Bengali, Hungarian, Dutch,
-  Danish, Finnish, Polish, Brazilian Portuguese translation (thank you rakekniven,
+- added more translation (thank you rakekniven,
   gbabin, unchase, mlocati, MGuerra, Oymate, Fabijenna, mlimacarlos)
 
 ## 20.5.4
@@ -258,14 +259,7 @@
 - the column widths of the tag tree panel are now also recalculated when the
   tree items are expanded or collapsed, not only when the tree is rebuilt or the
   application window is resized (for [#1690](https://github.com/pbek/QOwnNotes/issues/1690))
-- added more Brazilian Portuguese, Punjabi, Romanian, Serbian (Cyrillic), Slovak,
-  Slovenian, Spanish, Swedish, Turkish, Ukrainian, Uzbek, Vietnamese, Arabic,
-  Bengali, Bosnian, Bulgarian, Cebuano, Chinese Simplified, Galician, German,
-  Dutch, Hungarian, Albanian, Basque, Chinese Traditional, Croatian, Czech,
-  Danish, Estonian, Filipino, Finnish, French, Greek, Hausa, Hebrew, Hindi,
-  Icelandic, Indonesian, Irish, Japanese, Khmer, Korean, Kurdish, Latvian,
-  Lithuanian, Macedonian, Malay, Maori, Norwegian, Persian, Polish, Portuguese,
-  Catalan, Italian translation (thank you Fabijenna, MGuerra, tiwi90)
+- added more translation (thank you Fabijenna, MGuerra, tiwi90)
 
 ## 20.4.10
 - for all question dialogs where you clicked the checkbox `Don't ask again!` you
@@ -286,12 +280,7 @@
   by tag (for [#1696](https://github.com/pbek/QOwnNotes/issues/1696))
 - if the application is in "portable mode" then this will now also be shown in
   the title bar (for [#1677](https://github.com/pbek/QOwnNotes/issues/1677))
-- added more Catalan, Hungarian, Irish, Norwegian, Indonesian, Dutch, Japanese,
-  Korean, Basque, Kurdish, Croatian, Latvian, Czech, Lithuanian, Danish,
-  Macedonian, Estonian, Malay, Filipino, Maori, Finnish, Greek, Persian, Hausa,
-  Polish, Hebrew, Portuguese, Icelandic, Punjabi, Romanian, Serbian (Cyrillic),
-  Slovak, Slovenian, Swedish, Turkish, Ukrainian, Urdu (Pakistan), Uzbek,
-  Vietnamese, Zulu, Spanish translation (thank you MGuerra, Fabijenna, richarson)
+- added more translation (thank you MGuerra, Fabijenna, richarson)
 
 ## 20.4.8
 - you can now also **clear local shortcuts** in the *Shortcuts settings*

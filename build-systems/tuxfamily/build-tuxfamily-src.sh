@@ -126,3 +126,16 @@ rsync -ahv --progress ${archiveFile}* ${remotePath}
 if [ -d $PROJECT_PATH ]; then
     rm -rf $PROJECT_PATH
 fi
+
+url="https://download.tuxfamily.org/qownnotes/src/${archiveFile}"
+echo "Checking if $url exists..."
+
+# try to download file from tuxfamily
+until curl --output /dev/null --silent --head --fail "$url"
+do
+    echo "URL does not exist: $url..."
+    sleep 2
+done
+
+echo "URL exists: $url"
+exit 0
