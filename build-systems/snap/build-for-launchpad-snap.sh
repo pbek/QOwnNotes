@@ -70,6 +70,7 @@ sed -i "s/ARCHIVE-SHA256/$QOWNNOTES_ARCHIVE_SHA256/g" snapcraft.yaml
 
 
 echo "Committing changes..."
+git add -A
 git commit -m "releasing version $QOWNNOTES_VERSION" -a
 git push
 
