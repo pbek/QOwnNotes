@@ -10863,7 +10863,7 @@ void MainWindow::initShortcuts() {
             const bool settingFound = settings.contains(key);
 
             // try to load a key sequence from the settings
-            auto shortcut = QKeySequence(settingFound?
+            auto shortcut = QKeySequence(settingFound ?
                 settings.value(key).toString() : "");
 
             // do we can this method the first time?

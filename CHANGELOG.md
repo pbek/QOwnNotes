@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.6.1
+- fixed a problem with empty shortcuts if the menubar is disabled and settings
+  were stored in the *Settings dialog* (for [#1708](https://github.com/pbek/QOwnNotes/issues/1708))
+
 ## 20.6.0
 - fix problem with adding QOwnNotes installed from snap as favorite
   in Ubuntu 20.04 (for [#1713](https://github.com/pbek/QOwnNotes/issues/1713))

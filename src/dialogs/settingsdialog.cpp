@@ -1658,7 +1658,16 @@ void SettingsDialog::loadShortcutSettings() {
             keyWidget->setToolTip(tr("Assign a new shortcut"),
                                   tr("Reset to default shortcut"));
             keyWidget->setDefaultKeySequence(action->data().toString());
-            keyWidget->setKeySequence(action->shortcut());
+
+            const QString &shortcutSettingKey =
+                QStringLiteral("Shortcuts/MainWindow-") + action->objectName();
+            const bool settingFound = settings.contains(shortcutSettingKey);
+
+            // try to load the key sequence from the settings, because
+            // action->shortcut() is empty if menubar was disabled!
+            keyWidget->setKeySequence(settingFound ?
+                              settings.value(shortcutSettingKey).toString() :
+                              action->data().toString());
 
             connect(
                 keyWidget, &QKeySequenceWidget::keySequenceAccepted, this,
