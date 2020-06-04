@@ -16,7 +16,6 @@ BRANCH=develop
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-slackware-$$"
-CUR_DIR=$(pwd)
 
 # use temporary checksum variable file
 _QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
@@ -41,7 +40,7 @@ if [ -d $PROJECT_PATH ]; then
 fi
 
 mkdir $PROJECT_PATH
-cd $PROJECT_PATH
+cd $PROJECT_PATH || exit 1
 
 echo "Project path: $PROJECT_PATH"
 
@@ -50,7 +49,7 @@ git clone --depth=1 git@github.com:pbek/qownnotes-slackbuilds.git slackbuilds
 
 # checkout the source code
 git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
-cd QOwnNotes
+cd QOwnNotes || exit 1
 
 if [ -z $QOWNNOTES_VERSION ]; then
     # get version from version.h
@@ -59,7 +58,7 @@ fi
 
 buildSystemPath="../../../QOwnNotes/build-systems/slackware"
 
-cd ../slackbuilds/14.1/qownnotes/
+cd ../slackbuilds/14.1/qownnotes/ || exit 1
 cp ${buildSystemPath}/qownnotes.SlackBuild .
 cp ${buildSystemPath}/qownnotes.info .
 cp ${buildSystemPath}/dobuild.sh .

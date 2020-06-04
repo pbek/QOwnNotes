@@ -20,7 +20,6 @@ UBUNTU_RELEASES=( "xenial" "bionic" "eoan" "focal" "groovy" )
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
-CUR_DIR=$(pwd)
 UPLOAD="true"
 DEBUILD_ARGS=""
 GPG_PUBLIC_KEY=F5161BD3
@@ -47,7 +46,7 @@ fi
 
 # checkout the source code
 git clone --depth=1 git@github.com:pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
-cd $PROJECT_PATH
+cd $PROJECT_PATH || exit 1
 
 # checkout submodules
 git submodule update --init
@@ -86,7 +85,7 @@ for ubuntuRelease in "${UBUNTU_RELEASES[@]}"
 do
     :
     echo "Building for $ubuntuRelease..."
-    cd $qownnotesSrcDir
+    cd $qownnotesSrcDir || exit 1
 
     versionPart="$QOWNNOTES_VERSION-1ubuntu3ppa1~${ubuntuRelease}1"
 

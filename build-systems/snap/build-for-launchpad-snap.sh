@@ -18,7 +18,6 @@ BRANCH=develop
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-launchpad-snap-$$"
-CUR_DIR=$(pwd)
 
 # use temporary checksum variable file
 _QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
@@ -43,7 +42,7 @@ if [ -d $PROJECT_PATH ]; then
 fi
 
 mkdir $PROJECT_PATH
-cd $PROJECT_PATH
+cd $PROJECT_PATH || exit 1
 
 echo "Project path: $PROJECT_PATH"
 
@@ -52,14 +51,14 @@ git clone --depth=1 git+ssh://pbek@git.launchpad.net/~pbek/qownnotes-snap snap
 
 # checkout the source code
 git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
-cd QOwnNotes
+cd QOwnNotes || exit 1
 
 if [ -z $QOWNNOTES_VERSION ]; then
     # get version from version.h
     QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
 fi
 
-cd ../snap
+cd ../snap || exit 1
 cp ../QOwnNotes/build-systems/snap/snapcraft/* . -R
 
 # replace the version in the snapcraft.yaml file

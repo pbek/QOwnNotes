@@ -20,7 +20,6 @@ BRANCH=develop
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
-CUR_DIR=$(pwd)
 
 
 echo "Started the OBS source packaging process, using latest '$BRANCH' git tree"
@@ -30,13 +29,13 @@ if [ -d $PROJECT_PATH ]; then
 fi
 
 mkdir $PROJECT_PATH
-cd $PROJECT_PATH
+cd $PROJECT_PATH || exit 1
 
 echo "Project path: $PROJECT_PATH"
 
 # checkout the source code
 git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
-cd QOwnNotes
+cd QOwnNotes || exit 1
 
 # checkout submodules
 git submodule update --init
@@ -118,7 +117,7 @@ obsRepoPath="home:pbek:QOwnNotes/desktop"
 
 # remove other archives
 echo "Removing old archives..."
-cd $obsRepoPath
+cd $obsRepoPath || exit 1
 osc rm *.xz
 cd ../..
 
@@ -138,7 +137,7 @@ cp $qownnotesSrcDir/debian/rules $obsRepoPath/debian.rules
 cp $qownnotesSrcDir/debian/qownnotes.install $obsRepoPath/debian.qownnotes.install
 cp obs/qownnotes.dsc $obsRepoPath
 
-cd $obsRepoPath
+cd $obsRepoPath || exit 1
 
 # add all new files
 osc add $archiveFile
