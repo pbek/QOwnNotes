@@ -2278,13 +2278,11 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                 "\\1file://" + windowsSlash + notePath + "/\\2\"");
     */
     const QString previewFontString =
-        settings.value(QStringLiteral("MainWindow/noteTextEdit.font"))//MainWindow/noteTextEdit.font MainWindow/noteTextView.font
+        settings.value(QStringLiteral("MainWindow/noteTextEdit.font"))
             .toString();
-    int previewFontSize = 22;
     QString margin_listitem_str = "";
     QString margin_checkbox_str = "";
-    if(!previewFontString.isEmpty()){
-        previewFontSize = previewFontString.split(",")[1].toInt(); // e.g. Andale Mono,12,-1,5,50,0,0,0,0,0,Regular
+    if (!previewFontString.isEmpty()) {
         QFont previewFont;
         previewFont.fromString(previewFontString);
         const int width_checkbox = QFontMetrics(previewFont).horizontalAdvance("☑"); // &#9744; and &#9745;
@@ -2294,7 +2292,6 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
         const int margin_checkbox = -width_checkbox - width_bullet / 2 - 1 + margin_listitem;
         margin_listitem_str = QStringLiteral(" margin-left: %1px; ").arg(margin_listitem);
         margin_checkbox_str = QStringLiteral(" margin-left: %1px; ").arg(margin_checkbox);
-        qDebug() << margin_listitem << "c " << margin_checkbox;
     }
     // css classes applicable for export and preview
     QString listCSS = QStringLiteral(".list-item-normal {list-style: disc;  %1 } "
