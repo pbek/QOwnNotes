@@ -2277,20 +2277,39 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
        src=\")((?!file:\/\/).+)\")"),
                 "\\1file://" + windowsSlash + notePath + "/\\2\"");
     */
-    // css classes applicable for export and preview
-    QString listCSS = QStringLiteral(".list-item-task {list-style: none; margin-left: -14px; text-decoration: none;} "
-                                     ".list-item-normal {list-style: disc; margin-left: 0px;} ");
-
-    const QString fontString =
-        settings.value(QStringLiteral("MainWindow/noteTextView.code.font"))
+    const QString previewFontString =
+        settings.value(QStringLiteral("MainWindow/noteTextEdit.font"))//MainWindow/noteTextEdit.font MainWindow/noteTextView.font
             .toString();
+    int previewFontSize = 22;
+    QString margin_listitem_str = "";
+    QString margin_checkbox_str = "";
+    if(!previewFontString.isEmpty()){
+        previewFontSize = previewFontString.split(",")[1].toInt(); // e.g. Andale Mono,12,-1,5,50,0,0,0,0,0,Regular
+        QFont previewFont;
+        previewFont.fromString(previewFontString);
+        const int width_checkbox = QFontMetrics(previewFont).horizontalAdvance("☑"); // &#9744; and &#9745;
+        const int width_bullet = QFontMetrics(previewFont).horizontalAdvance("•"); // &#8226;
+        const int width_space = QFontMetrics(previewFont).horizontalAdvance(' ');
+        const int margin_listitem = 2 * width_space;
+        const int margin_checkbox = -width_checkbox - width_bullet / 2 - 1 + margin_listitem;
+        margin_listitem_str = QStringLiteral(" margin-left: %1px; ").arg(margin_listitem);
+        margin_checkbox_str = QStringLiteral(" margin-left: %1px; ").arg(margin_checkbox);
+        qDebug() << margin_listitem << "c " << margin_checkbox;
+    }
+    // css classes applicable for export and preview
+    QString listCSS = QStringLiteral(".list-item-normal {list-style: disc;  %1 } "
+                                     ".list-item-task {list-style: none; %2 text-decoration: none;} ")
+                                      .arg(margin_listitem_str,
+                                           margin_checkbox_str);
 
     // set the stylesheet for the <code> blocks
     QString codeStyleSheet = QLatin1String("");
-    if (!fontString.isEmpty()) {
+    const QString codeFontString =
+        settings.value(QStringLiteral("MainWindow/noteTextView.code.font")).toString();
+    if (!codeFontString.isEmpty()) {
         // set the note text view font
         QFont font;
-        font.fromString(fontString);
+        font.fromString(codeFontString);
 
         // add the font for the code block
         codeStyleSheet = QStringLiteral("pre, code { %1; }")
