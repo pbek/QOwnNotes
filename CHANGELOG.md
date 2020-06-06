@@ -8,9 +8,9 @@
   were stored in the *Settings dialog* (for [#1708](https://github.com/pbek/QOwnNotes/issues/1708))
 
 ## 20.6.0
-- fix problem with adding QOwnNotes installed from snap as favorite
+- fixed problem with adding QOwnNotes installed from snap as favorite
   in Ubuntu 20.04 (for [#1713](https://github.com/pbek/QOwnNotes/issues/1713))
-- fix markdown heading highlighting issue (for [#1777](https://github.com/pbek/QOwnNotes/issues/1777), thank you @Waqar144)
+- fixed markdown heading highlighting issue (for [#1777](https://github.com/pbek/QOwnNotes/issues/1777), thank you @Waqar144)
 - the scripting commands `preNoteToMarkdownHtmlHook` and `preNoteToMarkdownHtmlHook`
   now have a new parameter `forExport` (for [#1769](https://github.com/pbek/QOwnNotes/pull/1769), thank you @r00tr4v3n)
     - please take a look at the documentation for
