@@ -1497,24 +1497,20 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
         settings.value(QStringLiteral("interfaceLanguage")).toString(),
         withGitHubLineBreaks);
 #ifndef INTEGRATION_TESTS
-    QString screenResolution;
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     QScreen *primaryScreen = qApp->primaryScreen();
-    screenResolution = QString::number(primaryScreen->geometry().width()) +
-                       "x" +
-                       QString::number(primaryScreen->geometry().height());
 #else
-    screenResolution =
-        QString::number(QGuiApplication::primaryScreen()->geometry().width()) +
-        "x" +
-        QString::number(QGuiApplication::primaryScreen()->geometry().height());
-
+    QScreen *primaryScreen = QGuiApplication::primaryScreen();
 #endif
-
-    output +=
-        prepareDebugInformationLine(QStringLiteral("Primary screen resolution"),
-                                    screenResolution, withGitHubLineBreaks);
+    if (primaryScreen != nullptr) {
+        QString screenResolution =
+                QString::number(primaryScreen->geometry().width()) + "x" +
+                QString::number(primaryScreen->geometry().height());
+        output +=
+            prepareDebugInformationLine(QStringLiteral("Primary screen resolution"),
+                                        screenResolution, withGitHubLineBreaks);
+    }
 
     QList<QScreen *> screens = qApp->screens();
 

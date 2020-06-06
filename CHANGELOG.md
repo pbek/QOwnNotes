@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.6.2
+- fixed possible crash if no screen is present
+
 ## 20.6.1
 - fixed a problem with empty shortcuts if the menubar is disabled and settings
   were stored in the *Settings dialog* (for [#1708](https://github.com/pbek/QOwnNotes/issues/1708))
