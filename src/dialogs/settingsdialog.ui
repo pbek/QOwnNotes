@@ -4623,7 +4623,50 @@ p, li { white-space: pre-wrap; }
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item row="3" column="0">
+             <item row="1" column="0">
+              <widget class="QGroupBox" name="groupBox_34">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="title">
+                <string>Rendering</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_30">
+                <item>
+                 <widget class="QCheckBox" name="noteTextViewIgnoreCodeFontSizeCheckBox">
+                  <property name="text">
+                   <string>Ignore code font size to allow zooming</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="noteTextViewRTLCheckBox">
+                  <property name="text">
+                   <string>View text right to left (RTL)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="noteTextViewUnderlineCheckBox">
+                  <property name="text">
+                   <string>Enable underline rendering</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="noteTextViewUseEditorStylesCheckBox">
+                  <property name="text">
+                   <string>Use editor highlighting styles also for the preview</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="4" column="0">
               <spacer name="verticalSpacer_10">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -4636,8 +4679,24 @@ p, li { white-space: pre-wrap; }
                </property>
               </spacer>
              </item>
-             <item row="0" column="0">
-              <widget class="QGroupBox" name="groupBox_2">
+             <item row="3" column="0">
+              <widget class="QGroupBox" name="groupBox_26">
+               <property name="title">
+                <string>Exporting</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_29">
+                <item>
+                 <widget class="QCheckBox" name="useInternalExportStylingCheckBox">
+                  <property name="text">
+                   <string>Use internal export styling for the PDF export and printing of the preview</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QGroupBox" name="previewFontsGroupBox">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                  <horstretch>0</horstretch>
@@ -4648,6 +4707,23 @@ p, li { white-space: pre-wrap; }
                 <string>Fonts</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_6">
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="noteTextViewFontLabel">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="noteTextViewCodeFontHeadlineLabel">
+                  <property name="text">
+                   <string>Code font:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
                 <item row="1" column="2">
                  <widget class="QToolButton" name="noteTextViewCodeButton">
                   <property name="toolTip">
@@ -4659,30 +4735,6 @@ p, li { white-space: pre-wrap; }
                   <property name="icon">
                    <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
                     <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="3">
-                 <widget class="QToolButton" name="noteTextViewResetButton">
-                  <property name="toolTip">
-                   <string>Reset font</string>
-                  </property>
-                  <property name="text">
-                   <string notr="true">…</string>
-                  </property>
-                  <property name="icon">
-                   <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
-                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="noteTextViewCodeFontHeadlineLabel">
-                  <property name="text">
-                   <string>Code font:</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -4714,6 +4766,13 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="noteTextViewCodeFontLabel">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
                 <item row="0" column="0">
                  <widget class="QLabel" name="noteTextViewFontHeadlineLabel">
                   <property name="text">
@@ -4724,76 +4783,17 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="1">
-                 <widget class="QLineEdit" name="noteTextViewCodeFontLabel">
-                  <property name="readOnly">
-                   <bool>true</bool>
+                <item row="0" column="3">
+                 <widget class="QToolButton" name="noteTextViewResetButton">
+                  <property name="toolTip">
+                   <string>Reset font</string>
                   </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QLineEdit" name="noteTextViewFontLabel">
-                  <property name="readOnly">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="1" colspan="3">
-                 <widget class="QCheckBox" name="noteTextViewRTLCheckBox">
                   <property name="text">
-                   <string>View text right to left (RTL)</string>
+                   <string notr="true">…</string>
                   </property>
-                 </widget>
-                </item>
-                <item row="2" column="1" colspan="3">
-                 <widget class="QCheckBox" name="noteTextViewIgnoreCodeFontSizeCheckBox">
-                  <property name="text">
-                   <string>Ignore code font size to allow zooming</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QGroupBox" name="groupBox_34">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="title">
-                <string>Rendering</string>
-               </property>
-               <layout class="QFormLayout" name="formLayout_3">
-                <item row="0" column="0" colspan="2">
-                 <widget class="QCheckBox" name="noteTextViewUnderlineCheckBox">
-                  <property name="text">
-                   <string>Enable underline rendering</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0" colspan="2">
-                 <widget class="QCheckBox" name="noteTextViewUseEditorStylesCheckBox">
-                  <property name="text">
-                   <string>Use editor highlighting styles also for the preview</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QGroupBox" name="groupBox_26">
-               <property name="title">
-                <string>Exporting</string>
-               </property>
-               <layout class="QVBoxLayout" name="verticalLayout_29">
-                <item>
-                 <widget class="QCheckBox" name="useInternalExportStylingCheckBox">
-                  <property name="text">
-                   <string>Use internal export styling for the PDF export and printing of the preview</string>
+                  <property name="icon">
+                   <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
                   </property>
                  </widget>
                 </item>
@@ -6308,8 +6308,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>noteTextViewButton</tabstop>
   <tabstop>noteTextViewCodeFontLabel</tabstop>
   <tabstop>noteTextViewFontLabel</tabstop>
-  <tabstop>noteTextViewRTLCheckBox</tabstop>
-  <tabstop>noteTextViewIgnoreCodeFontSizeCheckBox</tabstop>
   <tabstop>noteTextViewUnderlineCheckBox</tabstop>
   <tabstop>applyToolbarButton</tabstop>
   <tabstop>resetToolbarPushButton</tabstop>
@@ -6367,8 +6365,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

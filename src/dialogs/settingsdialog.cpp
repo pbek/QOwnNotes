@@ -1118,10 +1118,7 @@ void SettingsDialog::readSettings() {
             .value(QStringLiteral("MainWindow/noteTextView.underline"), true)
             .toBool());
     ui->noteTextViewUseEditorStylesCheckBox->setChecked(
-        settings
-            .value(QStringLiteral("MainWindow/noteTextView.useEditorStyles"),
-                   true)
-            .toBool());
+        Utils::Misc::isPreviewUseEditorStyles());
     ui->useInternalExportStylingCheckBox->setChecked(
         Utils::Misc::useInternalExportStylingForPreview());
     ui->oldVersionNumberCheckBox->setChecked(
@@ -4261,4 +4258,8 @@ void SettingsDialog::on_ownCloudServerAppPasswordPageButton_clicked() {
 
 void SettingsDialog::on_languageSearchLineEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInListWidget(ui->languageListWidget, arg1, true);
+}
+
+void SettingsDialog::on_noteTextViewUseEditorStylesCheckBox_toggled(bool checked) {
+    ui->previewFontsGroupBox->setDisabled(checked);
 }

@@ -289,6 +289,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_languageSearchLineEdit_textChanged(const QString &arg1);
 
+    void on_noteTextViewUseEditorStylesCheckBox_toggled(bool checked);
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

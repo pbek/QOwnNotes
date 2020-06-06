@@ -2308,9 +2308,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                 "\\1file://" + windowsSlash + notePath + "/\\2\"");
     */
 
-    const QString fontString =
-        settings.value(QStringLiteral("MainWindow/noteTextView.code.font"))
-            .toString();
+    const QString fontString = Utils::Misc::previewCodeFontString() ;
 
     // set the stylesheet for the <code> blocks
     QString codeStyleSheet = QLatin1String("");
@@ -2373,9 +2371,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
 
     if (forExport) {
         // get defined body font from settings
-        const QString bodyFontString =
-            settings.value(QStringLiteral("MainWindow/noteTextView.font"))
-                .toString();
+        const QString bodyFontString = Utils::Misc::previewFontString();
 
         // create export stylesheet
         QString exportStyleSheet = QLatin1String("");
@@ -2407,13 +2403,8 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
         // remove trailing newline in code blocks
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     } else {
-        const QString schemaStyles =
-            settings.value(QStringLiteral(
-                               "MainWindow/noteTextView.useEditorStyles"),
-                           true)
-                    .toBool()
-                ? Utils::Schema::getSchemaStyles()
-                : QLatin1String("");
+        const QString schemaStyles = Utils::Misc::isPreviewUseEditorStyles() ?
+            Utils::Schema::getSchemaStyles() : QLatin1String("");
 
         // for preview
         result =

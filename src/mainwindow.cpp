@@ -2545,9 +2545,7 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
         settings.value(QStringLiteral("gitCommitInterval"), 30).toInt();
 
     // load note text view font
-    QString fontString =
-        settings.value(QStringLiteral("MainWindow/noteTextView.font"))
-            .toString();
+    QString fontString = Utils::Misc::previewFontString();
 
     // store the current font if there isn't any set yet
     if (fontString.isEmpty()) {

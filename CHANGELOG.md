@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 20.6.2
+- if `Use editor highlighting styles also for the preview` is turned on now the
+  preview fonts will be disabled at all and will not leak into the preview any more
 - fixed possible crash if no screen is present
 
 ## 20.6.1

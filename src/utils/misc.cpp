@@ -1247,6 +1247,42 @@ bool Utils::Misc::useInternalExportStylingForPreview() {
 }
 
 /**
+ * Returns the preview font string
+ *
+ * @return
+ */
+QString Utils::Misc::previewFontString() {
+    QSettings settings;
+    return settings.value(isPreviewUseEditorStyles() ?
+        QStringLiteral("MainWindow/noteTextEdit.font") :
+        QStringLiteral("MainWindow/noteTextView.font")).toString();
+}
+
+/**
+ * Returns the preview code font string
+ *
+ * @return
+ */
+QString Utils::Misc::previewCodeFontString() {
+    QSettings settings;
+    return settings.value(isPreviewUseEditorStyles() ?
+        QStringLiteral("MainWindow/noteTextEdit.code.font") :
+        QStringLiteral("MainWindow/noteTextView.code.font")).toString();
+}
+
+/**
+ * Returns if "MainWindow/noteTextView.useEditorStyles" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::isPreviewUseEditorStyles() {
+    const QSettings settings;
+    return settings.value(
+        QStringLiteral("MainWindow/noteTextView.useEditorStyles"),
+                       true).toBool();
+}
+
+/**
  * Returns if "allowNoteEditing" is turned on
  *
  * @return
