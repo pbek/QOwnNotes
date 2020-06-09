@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.6.3
+- fixed preview of inserted images from another drive without copying them to the
+  media library on Windows (for [#1785](https://github.com/pbek/QOwnNotes/issues/1785))
+
 ## 20.6.2
 - if `Use editor highlighting styles also for the preview` is turned on now the
   preview fonts will be disabled at all and will not leak into the preview any more

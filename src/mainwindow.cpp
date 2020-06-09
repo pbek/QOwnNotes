@@ -6844,6 +6844,13 @@ void MainWindow::on_actionInsert_image_triggered() {
                 pathOrUrl = currentNote.relativeFilePath(pathOrUrl);
             }
 
+#ifdef Q_OS_WIN32
+            // make sure a local path on a different drive really works
+            if (Utils::Misc::fileExists(pathOrUrl)) {
+                pathOrUrl.prepend("file:///");
+            }
+#endif
+
             // title must not be empty
             if (title.isEmpty()) {
                 title = QStringLiteral("img");
