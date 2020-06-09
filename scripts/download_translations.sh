@@ -7,6 +7,9 @@ echo "Downloading translation from Crowdin..."
 java -jar /opt/crowdin-cli/crowdin-cli.jar download translations
 echo
 
+# check if exit code was 0
+rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
+
 # we have to do this because this currently doesn't work in crowdin-cli
 echo "Renaming translation files..."
 cd ${TRANSLATION_PATH}
