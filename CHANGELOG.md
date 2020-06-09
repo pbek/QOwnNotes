@@ -5,6 +5,7 @@
   media library on Windows (for [#1785](https://github.com/pbek/QOwnNotes/issues/1785))
 - fixed quote behavior when cursor is at word start (for [#118](https://github.com/pbek/qmarkdowntextedit/pull/118),
   thank you @Waqar144)
+- added more Greek translation (thank you Gregory.K)
 
 ## 20.6.2
 - if `Use editor highlighting styles also for the preview` is turned on now the
