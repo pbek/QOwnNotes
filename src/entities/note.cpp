@@ -1916,9 +1916,7 @@ bool Note::deleteAll() {
  * @return bool
  */
 bool Note::fileExists() const {
-    const QFile file(fullNoteFilePath());
-    const QFileInfo fileInfo(file);
-    return file.exists() && fileInfo.isFile() && fileInfo.isReadable();
+    return Utils::Misc::fileExists(fullNoteFilePath());
 }
 
 /**

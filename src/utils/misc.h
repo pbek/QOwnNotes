@@ -141,6 +141,7 @@ QString rstrip(const QString &str);
 bool isPreviewUseEditorStyles();
 QString previewFontString();
 QString previewCodeFontString();
+bool fileExists(const QString &path);
 }    // namespace Misc
 }    // namespace Utils
 

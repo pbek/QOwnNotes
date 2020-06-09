@@ -2089,3 +2089,14 @@ QString Utils::Misc::rstrip(const QString& str) {
 
     return "";
 }
+
+/**
+ * Checks if file exists in the filesystem and is readable
+ *
+ * @return bool
+ */
+bool Utils::Misc::fileExists(const QString& path) {
+    const QFile file(path);
+    const QFileInfo fileInfo(file);
+    return file.exists() && fileInfo.isFile() && fileInfo.isReadable();
+}
