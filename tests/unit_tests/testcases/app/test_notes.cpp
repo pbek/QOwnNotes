@@ -453,6 +453,8 @@ void TestNotes::testCodeToHtmlStringLiterals() {
     QString squote = "\" hell \\\" \"";
     QString sq = "\"hell\\?\"";
 
+    QString charBef = "G\"hello\"";
+
     CodeToHtmlConverter c1(s.midRef(0, s.length()), QStringLiteral("c"));
     /*single char escapes expect */
     CodeToHtmlConverter c2(sa.midRef(0, sa.length()), QStringLiteral("c"));
@@ -468,7 +470,9 @@ void TestNotes::testCodeToHtmlStringLiterals() {
     CodeToHtmlConverter c11(sq.midRef(0, sq.length()), QStringLiteral("c"));
     CodeToHtmlConverter c12(squote.midRef(0, squote.length()),
                             QStringLiteral("c"));
+    CodeToHtmlConverter c13(charBef.midRef(0, charBef.length()), "c");
 
+    // R = result
     QString sR = c1.process();
     QString saR = c2.process();
     QString sbR = c3.process();
@@ -481,7 +485,9 @@ void TestNotes::testCodeToHtmlStringLiterals() {
     QString sslashR = c10.process();
     QString sqR = c11.process();
     QString squoteR = c12.process();
+    QString charBefR = c13.process();
 
+    // e = expected
     QString e =
         QStringLiteral("<span class=\"code-string\">&quot;hello&quot;</span>");
     QString esa = QStringLiteral(
@@ -528,6 +534,8 @@ void TestNotes::testCodeToHtmlStringLiterals() {
         "<span class=\"code-string\">&quot; hell </span><span "
         "class=\"code-literal\">\\&quot;</span><span class=\"code-string\"> "
         "&quot;</span>");
+    QString eCharBef =
+        QStringLiteral("G<span class=\"code-string\">&quot;hello&quot;</span>");
 
     QVERIFY(sR == e);
     QVERIFY(saR == esa);
@@ -541,6 +549,7 @@ void TestNotes::testCodeToHtmlStringLiterals() {
     QVERIFY(sslashR == esslash);
     QVERIFY(sqR == esq);
     QVERIFY(squoteR == esquote);
+    QVERIFY(charBefR == eCharBef);
 }
 
 void TestNotes::testOctal() {
