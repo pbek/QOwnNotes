@@ -210,7 +210,7 @@ QString CodeToHtmlConverter::process() const {
                     ++cnt;
                 }
                 i = cnt;
-                if (i < textLen) output += escape(_input.at(i));
+                i--;
             }
         } else {
             output += _input.at(i);
