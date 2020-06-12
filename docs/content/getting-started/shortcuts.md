@@ -102,6 +102,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>Down</kbd> scrolls the content down
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> moves the current line down
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> moves the current line up
+- <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### In the note preview panel
 
@@ -216,6 +217,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
 - <kbd>⌘</kbd> + <kbd>Up</kbd> scrolls the content up
 - <kbd>⌘</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### In the note preview panel
 
