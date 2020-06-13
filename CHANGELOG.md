@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.6.5
+- fixed preview of inserted images from another drive without copying them to the
+  media library on Windows if filename has spaces in it (for [#1787](https://github.com/pbek/QOwnNotes/issues/1787))
+
 ## 20.6.4
 - fixed string not being highlighted if there is a char before it
   (for [#1786](https://github.com/pbek/QOwnNotes/pull/1786), thank you @Waqar144)

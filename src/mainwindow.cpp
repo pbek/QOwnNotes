@@ -6847,7 +6847,7 @@ void MainWindow::on_actionInsert_image_triggered() {
 #ifdef Q_OS_WIN32
             // make sure a local path on a different drive really works
             if (Utils::Misc::fileExists(pathOrUrl)) {
-                pathOrUrl.prepend("file:///");
+                pathOrUrl = QUrl::toPercentEncoding(pathOrUrl).prepend("file:///");
             }
 #endif
 
