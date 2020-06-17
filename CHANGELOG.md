@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.6.6
+- fixed note links if note is inside a sym-linked subfolder that lies outside
+  the note folder (for [#1792](https://github.com/pbek/QOwnNotes/issues/1792))
+
 ## 20.6.5
 - fixed preview of inserted images from another drive without copying them to the
   media library on Windows if filename has spaces in it (for [#1787](https://github.com/pbek/QOwnNotes/issues/1787))

@@ -1562,7 +1562,17 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
 
     // we need that for links to notes in subfolders in portable mode if
     // note folder lies outside of the application directory
+    // Warning: This also resolves symbolic links! If a folder that lies outside
+    //          of the note folder is linked into it as subfolder
+    //          "canonicalFilePath" will show the original file path!
+#ifdef Q_OS_WIN32
+    // Let's stay with "canonicalFilePath" on Windows in case there is any issue
+    // in portable mode
     const QString canonicalFilePath = fileInfo.canonicalFilePath();
+#else
+    // Don't resolve symbolic links
+    const QString canonicalFilePath = fileInfo.absoluteFilePath();
+#endif
 
     return canonicalFilePath;
 }
@@ -3003,7 +3013,14 @@ QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl &url) {
     // translates the "a path/../an other path" to "an other path"
     // needed for Note::fetchByRelativeFilePath!
     const QFileInfo fileInfo(path);
+#ifdef Q_OS_WIN32
+    // Let's stay with "canonicalFilePath" on Windows in case there is any issue
+    // in portable mode
     path = fileInfo.canonicalFilePath();
+#else
+    // Don't resolve symbolic links
+    path = fileInfo.absoluteFilePath();
+#endif
 
     qDebug() << __func__ << " - 'canonicalFilePath': " << path;
 
