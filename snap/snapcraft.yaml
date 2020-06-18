@@ -135,4 +135,31 @@ parts:
     stage-packages:
       - git
     snap:
-      - usr/bin/git
+      - usr/bin/git*
+      - usr/lib/git*
+      - usr/lib/*/libasn1.so*
+      - usr/lib/*/libcurl-gnutls.so*
+      - usr/lib/*/libffi.so*
+      - usr/lib/*/libgmp.so*
+      - usr/lib/*/libgnutls.so*
+      - usr/lib/*/libgssapi.so*
+      - usr/lib/*/libgssapi_krb5.so*
+      - usr/lib/*/libhcrypto.so*
+      - usr/lib/*/libheimbase.so*
+      - usr/lib/*/libheimntlm.so*
+      - usr/lib/*/libhogweed.so*
+      - usr/lib/*/libhx509.so*
+      - usr/lib/*/libidn.so*
+      - usr/lib/*/libk5crypto.so*
+      - usr/lib/*/libkrb5.so*
+      - usr/lib/*/libkrb5support.so*
+      - usr/lib/*/liblber-2.4.so*
+      - usr/lib/*/libldap_r-2.4.so*
+      - usr/lib/*/libnettle.so*
+      - usr/lib/*/libp11-kit.so*
+      - usr/lib/*/libroken.so*
+      - usr/lib/*/librtmp.so*
+      - usr/lib/*/libsasl2.so*
+      - usr/lib/*/libsqlite3.so*
+      - usr/lib/*/libtasn1.so*
+      - usr/lib/*/libwind.so*
