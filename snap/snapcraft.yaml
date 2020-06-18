@@ -129,8 +129,3 @@ parts:
     plugin: nil
     stage-packages:
       - qt5-gtk-platformtheme
-  git:
-    # Git support
-    plugin: nil
-    stage-packages:
-      - git
