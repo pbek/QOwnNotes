@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.6.7
+- you can now remove a tabulator list indent of a new list item with `Shift + Tab`
+  if the setting `Use tab character instead of spaces` is disabled
+  (for [#1793](https://github.com/pbek/QOwnNotes/issues/1793))
+
 ## 20.6.6
 - fixed note links if note is inside a sym-linked subfolder that lies outside
   the note folder (for [#1792](https://github.com/pbek/QOwnNotes/issues/1792))
