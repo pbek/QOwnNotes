@@ -42,6 +42,11 @@
 #include "tag.h"
 #include "trashitem.h"
 
+#ifdef Q_OS_WIN32
+// for restoreCreatedDate()
+#include <windows.h>
+#endif
+
 Note::Note()
     : _fileSize{0},
       _cryptoKey{0},
@@ -1214,6 +1219,10 @@ bool Note::storeNoteTextFileToDisk() {
         if (oldFile.exists()) {
             noteFileWasRenamed = oldFile.rename(fullNoteFilePath());
             qDebug() << __func__ << " - 'noteFileWasRenamed': " << noteFileWasRenamed;
+
+            // Restore the created date of the current note under Windows,
+            // because it gets set to the current date when note is renamed
+            restoreCreatedDate();
         }
     }
 
@@ -1325,6 +1334,37 @@ bool Note::storeNoteTextFileToDisk() {
     }
 
     return noteStored;
+}
+
+/**
+ * Restores the created date of the current note under Windows,
+ * because it gets set to the current date when note is renamed
+ *
+ * See: https://github.com/pbek/QOwnNotes/issues/1743
+ */
+void Note::restoreCreatedDate() {
+#ifdef Q_OS_WIN32
+    // QDateTime to FILETIME conversion
+    // see: https://stackoverflow.com/questions/19704817/qdatetime-to-filetime
+    QDateTime origin(QDate(1601, 1, 1), QTime(0, 0, 0, 0), Qt::UTC);
+    const qint64 _100nanosecs = 10000 * origin.msecsTo(_fileCreated);
+    FILETIME fileTime;
+    fileTime.dwLowDateTime = _100nanosecs;
+    fileTime.dwHighDateTime = (_100nanosecs >> 32);
+
+    LPCWSTR filePath = (const wchar_t*) QDir::toNativeSeparators(
+                           fullNoteFilePath()).utf16();
+    HANDLE fileHandle = CreateFile(filePath,
+                    FILE_WRITE_ATTRIBUTES, FILE_SHARE_READ|FILE_SHARE_WRITE,
+                    nullptr, OPEN_EXISTING,
+                    FILE_ATTRIBUTE_NORMAL, nullptr);
+
+    // set the created date to the old created date before the rename
+    // see: https://stackoverflow.com/questions/10041651/changing-the-file-creation-date-in-c-using-windows-h-in-windows-7
+    SetFileTime(fileHandle, &fileTime, (LPFILETIME) nullptr,
+                (LPFILETIME) nullptr);
+    CloseHandle(fileHandle);
+#endif
 }
 
 /**

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.6.8
+- the creation date is now restored when a note gets renamed under Windows
+  (for [#1743](https://github.com/pbek/QOwnNotes/issues/1743))
+
 ## 20.6.7
 - you can now remove a tabulator list indent of a new list item with `Shift + Tab`
   if the setting `Use tab character instead of spaces` is disabled
