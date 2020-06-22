@@ -139,7 +139,7 @@ void TestNotes::testMarkdownTildeCodeFenceToHtml() {
         "class=\"code-keyword\">namespace</span> <span "
         "class=\"code-builtin\">std</span>;\n<span "
         "class=\"code-type\">int</span> <span "
-        "class=\"code-builtin\">main</span>() {\n<span "
+        "class=\"code-builtin\">main</span>&#40;&#41; {\n<span "
         "class=\"code-builtin\">std</span>::<span "
         "class=\"code-builtin\">cout</span>&lt;&lt;<span "
         "class=\"code-string\">&quot;hello&quot;</span>\n<span "
@@ -171,7 +171,7 @@ void TestNotes::testMarkdownBacktickCodeFenceToHtml() {
         "class=\"code-keyword\">namespace</span> <span "
         "class=\"code-builtin\">std</span>;\n<span "
         "class=\"code-type\">int</span> <span "
-        "class=\"code-builtin\">main</span>() {\n<span "
+        "class=\"code-builtin\">main</span>&#40;&#41; {\n<span "
         "class=\"code-builtin\">std</span>::<span "
         "class=\"code-builtin\">cout</span>&lt;&lt;<span "
         "class=\"code-string\">&quot;hello&quot;</span>\n<span "
@@ -193,7 +193,7 @@ void TestNotes::testCodeToHtmlConversionPython() {
 
     QString expectedOutputPython = QStringLiteral(
         "<span class=\"code-other\">import</span> hello\n"
-        "<span class=\"code-keyword\">if</span> this()\n"
+        "<span class=\"code-keyword\">if</span> this&#40;&#41;\n"
         "\tthat\n"
         "<span class=\"code-comment\"># this is a comment</span>\n");
 
@@ -336,7 +336,7 @@ void TestNotes::testCodeToHtmlNumericLiterals() {
     QString e1 =
         "<span class=\"code-literal\">123</span>+<span "
         "class=\"code-literal\">321</span>";
-    QString e2 = "(<span class=\"code-literal\">123</span>)";
+    QString e2 = "&#40;<span class=\"code-literal\">123</span>&#41;";
     QString e3 = "[<span class=\"code-literal\">123</span>]";
     QString expectedBad = "a123";
     QString expectedBad1 = "123a";
@@ -417,9 +417,9 @@ void TestNotes::testCodeToHtmlNumericEquations() {
         "<span class=\"code-literal\">100</span>&gt;&gt;<span "
         "class=\"code-literal\">200</span>";
     QString e9 =
-        "[(<span class=\"code-literal\">1</span>+<span "
+        "[&#40;<span class=\"code-literal\">1</span>+<span "
         "class=\"code-literal\">2</span>-<span "
-        "class=\"code-literal\">3</span>)+<span "
+        "class=\"code-literal\">3</span>&#41;+<span "
         "class=\"code-literal\">4</span>&#47;<span "
         "class=\"code-literal\">5</span>] <span "
         "class=\"code-builtin\">array</span>[<span "
