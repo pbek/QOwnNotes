@@ -782,10 +782,6 @@ QString CodeToHtmlConverter::escape(QChar c) {
             return QStringLiteral("&#40;");
         case ')':
             return QStringLiteral("&#41;");
-        case '[':
-            return QStringLiteral("&#91;");
-        case ']':
-            return QStringLiteral("&#93;");
     }
     return c;
 }
