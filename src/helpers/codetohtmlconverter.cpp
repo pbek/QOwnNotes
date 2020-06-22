@@ -213,7 +213,7 @@ QString CodeToHtmlConverter::process() const {
                 i--;
             }
         } else {
-            output += _input.at(i);
+            output += escape(_input.at(i));
         }
     }
     // release extra memory
@@ -778,6 +778,10 @@ QString CodeToHtmlConverter::escape(QChar c) {
             return QStringLiteral("&#126;");
         case '`':
             return QStringLiteral("&#96;");
+        case '(':
+            return QStringLiteral("&#40;");
+        case ')':
+            return QStringLiteral("&#41;");
     }
     return c;
 }
