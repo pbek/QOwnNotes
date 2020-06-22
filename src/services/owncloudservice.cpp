@@ -133,6 +133,7 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
     serverUrlWithoutPath = cloudConnection.getServerUrlWithoutPath();
     userName = cloudConnection.getUsername();
     password = cloudConnection.getPassword();
+    appQOwnNotesAPICheckEnabled = cloudConnection.getAppQOwnNotesAPIEnabled();
 
     versionListPath = rootPath % QStringLiteral("note/versions");
     trashListPath = rootPath % QStringLiteral("note/trashed");
@@ -623,13 +624,15 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
     reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
 
-    url.setUrl(serverUrl % appInfoPath);
-    QString serverNotesPath = NoteFolder::currentRemotePath();
-    q.addQueryItem(QStringLiteral("notes_path"), serverNotesPath);
-    url.setQuery(q);
-    r.setUrl(url);
-    reply = networkManager->get(r);
-    ignoreSslErrorsIfAllowed(reply);
+    if (appQOwnNotesAPICheckEnabled) {
+        url.setUrl(serverUrl % appInfoPath);
+        QString serverNotesPath = NoteFolder::currentRemotePath();
+        q.addQueryItem(QStringLiteral("notes_path"), serverNotesPath);
+        url.setQuery(q);
+        r.setUrl(url);
+        reply = networkManager->get(r);
+        ignoreSslErrorsIfAllowed(reply);
+    }
 }
 
 /**

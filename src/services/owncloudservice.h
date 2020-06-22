@@ -102,6 +102,7 @@ class OwnCloudService : public QObject {
     QString userName;
     QString todoCalendarUsername;
     QString password;
+    bool appQOwnNotesAPICheckEnabled;
     QString todoCalendarPassword;
     QNetworkAccessManager *networkManager;
     QNetworkAccessManager *calendarNetworkManager;

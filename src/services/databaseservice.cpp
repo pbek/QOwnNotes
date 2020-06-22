@@ -812,6 +812,12 @@ bool DatabaseService::setupTables() {
         version = 33;
     }
 
+    if (version < 34) {
+        queryDisk.exec(QStringLiteral(
+                           "ALTER TABLE cloudConnection ADD qownnotesapi_enabled BOOLEAN DEFAULT 1"));
+        version = 34;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"),
                    QString::number(version));

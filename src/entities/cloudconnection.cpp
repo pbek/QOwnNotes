@@ -52,6 +52,8 @@ QString CloudConnection::getUsername() { return this->username; }
 
 QString CloudConnection::getPassword() { return this->password; }
 
+bool CloudConnection::getAppQOwnNotesAPIEnabled() { return this->appQOwnNotesAPIEnabled; }
+
 int CloudConnection::getPriority() { return this->priority; }
 
 CloudConnection CloudConnection::firstCloudConnection() {
@@ -95,6 +97,7 @@ void CloudConnection::setPassword(const QString &text) {
 }
 
 void CloudConnection::setPriority(int value) { this->priority = value; }
+void CloudConnection::setAppQOwnNotesAPIEnabled(bool value) { this->appQOwnNotesAPIEnabled = value; }
 
 bool CloudConnection::create(const QString &name, const QString &serverUrl,
                              const QString &username, const QString &password) {
@@ -181,6 +184,8 @@ bool CloudConnection::fillFromQuery(const QSqlQuery &query) {
     this->password = CryptoService::instance()->decryptToString(
         query.value(QStringLiteral("password")).toString());
     this->priority = query.value(QStringLiteral("priority")).toInt();
+    this->appQOwnNotesAPIEnabled = query.value(QStringLiteral(
+                                       "qownnotesapi_enabled")).toBool();
 
     return true;
 }
@@ -216,15 +221,15 @@ bool CloudConnection::store() {
         query.prepare(
             "UPDATE cloudConnection SET name = :name, server_url = :serverUrl, "
             "username = :username, password = :password, "
-            "priority = :priority WHERE "
+            "priority = :priority, qownnotesapi_enabled = :qownnotesapi_enabled WHERE "
             "id = :id");
         query.bindValue(QStringLiteral(":id"), this->id);
     } else {
         query.prepare(
             "INSERT INTO cloudConnection (name, server_url, username, "
-            "password, priority)"
+            "password, priority, qownnotesapi_enabled)"
             " VALUES (:name, :serverUrl, :username, "
-            ":password, :priority)");
+            ":password, :priority, :qownnotesapi_enabled)");
     }
 
     query.bindValue(QStringLiteral(":name"), this->name);
@@ -233,6 +238,8 @@ bool CloudConnection::store() {
     query.bindValue(QStringLiteral(":password"),
                     CryptoService::instance()->encryptToString(this->password));
     query.bindValue(QStringLiteral(":priority"), this->priority);
+    query.bindValue(QStringLiteral(":qownnotesapi_enabled"),
+                    this->appQOwnNotesAPIEnabled);
 
     if (!query.exec()) {
         // on error

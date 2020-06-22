@@ -399,6 +399,7 @@ private:
 
     void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false,
                                        bool updateSchema = false);
+    void resetOKLabelData();
 };
 
 #endif    // SETTINGSDIALOG_H
