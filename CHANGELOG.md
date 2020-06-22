@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 20.6.9
-- fixed unwanted `def foo[A](a: A)` note link generation in the preview
+- fixed unwanted `def foo[A](a: A)` note link generation in code blocks in the preview
   (for [#1794](https://github.com/pbek/QOwnNotes/issues/1794), thank you @Waqar144)
 
 ## 20.6.8
