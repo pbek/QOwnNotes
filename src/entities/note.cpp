@@ -2116,7 +2116,7 @@ QString Note::toMarkdownHtml(const QString &notesPath, int maxImageWidth,
     return _noteTextHtml;
 }
 
-void captureHtmlFragment(const MD_CHAR *data, MD_SIZE data_size,
+static void captureHtmlFragment(const MD_CHAR *data, MD_SIZE data_size,
                          void *userData) {
     QByteArray *array = static_cast<QByteArray *>(userData);
 
@@ -2128,7 +2128,7 @@ void captureHtmlFragment(const MD_CHAR *data, MD_SIZE data_size,
 /**
  * @brief Converts code blocks to highlighted code
  */
-void highlightCode(QString &str, const QString &type, int cbCount) {
+static void highlightCode(QString &str, const QString &type, int cbCount) {
     if (cbCount >= 1) {
         const int firstBlock = str.indexOf(type, 0);
         int currentCbPos = firstBlock;
@@ -2173,7 +2173,7 @@ void highlightCode(QString &str, const QString &type, int cbCount) {
     }
 }
 
-static int nonOverlapCount(const QString &str, const QChar c = '`') {
+static inline int nonOverlapCount(const QString &str, const QChar c = '`') {
     const auto len = str.length();
     int count = 0;
     for (int i = 0; i < len; ++i) {
@@ -2200,8 +2200,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                                  bool base64Images) {
     // MD4C flags
     unsigned flags = MD_DIALECT_GITHUB | MD_FLAG_WIKILINKS |
-                     MD_FLAG_LATEXMATHSPANS | MD_FLAG_PERMISSIVEATXHEADERS |
-                     MD_FLAG_UNDERLINE;
+                     MD_FLAG_LATEXMATHSPANS | MD_FLAG_UNDERLINE;
     // we parse the task lists ourselves
     flags &= ~MD_FLAG_TASKLISTS;
 
