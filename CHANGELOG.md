@@ -7,6 +7,7 @@
 - the *Note dialog* for opening notes in a new window now remembers whether it
   showed the note text or the preview last time so you can use the dialog as
   preview in the *Distraction free mode* (for [#1804](https://github.com/pbek/QOwnNotes/issues/1804))
+- added more translation (thank you ardakilicdagi, MGuerra, rakekniven, richarson)
 
 ## 20.6.9
 - fixed unwanted `def foo[A](a: A)` note link generation in code blocks in the preview

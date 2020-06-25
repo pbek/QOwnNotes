@@ -5615,7 +5615,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1392"/>
       <source>Enable QOwnNotesAPI app</source>
-      <translation type="unfinished">Enable QOwnNotesAPI app</translation>
+      <translation>Habilitar la aplicación QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1782"/>

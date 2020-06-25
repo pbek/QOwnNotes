@@ -5610,7 +5610,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1392"/>
       <source>Enable QOwnNotesAPI app</source>
-      <translation type="unfinished">Enable QOwnNotesAPI app</translation>
+      <translation>Habilita l'aplicació mòvil QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1782"/>

@@ -5634,7 +5634,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1392"/>
       <source>Enable QOwnNotesAPI app</source>
-      <translation type="unfinished">Enable QOwnNotesAPI app</translation>
+      <translation>QOwnNotesAPI uygulamasını etkinleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1782"/>
