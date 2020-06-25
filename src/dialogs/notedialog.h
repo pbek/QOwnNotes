@@ -20,6 +20,8 @@ class NoteDialog : public MasterDialog {
 private slots:
     void on_noteTextView_anchorClicked(const QUrl &url);
 
+    void on_tabWidget_currentChanged(int index);
+
 private:
     Ui::NoteDialog *ui;
 };
