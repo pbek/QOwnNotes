@@ -49,9 +49,9 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     if (_highlighter) {
         _highlighter->setHighlightingOptions(options);
 
-         // re-initialize the highlighting rules if we are using some options
+        // re-initialize the highlighting rules if we are using some options
         if (options != MarkdownHighlighter::HighlightingOption::None) {
-         _highlighter->initHighlightingRules();
+            _highlighter->initHighlightingRules();
         }
     }
 }
@@ -388,51 +388,12 @@ QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 #endif
 }
 
-void QOwnNotesMarkdownTextEdit::enableSpellChecker(
-    QOwnNotesMarkdownHighlighter *h) {
-    if (!h) {
-        h = qobject_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
-    }
-
-    h->setSpellChecker(QOwnSpellChecker::instance());
-}
-
 void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
-    QSettings settings;
-    bool highlightingEnabled =
-        settings.value(QStringLiteral("markdownHighlightingEnabled"), true)
-            .toBool();
-    if (!highlightingEnabled) {
-        QMarkdownTextEdit::setText(text);
-        return;
-    }
-    QOwnNotesMarkdownHighlighter *h =
-        qobject_cast<QOwnNotesMarkdownHighlighter *>(_highlighter);
-
-    if (_spellCheckerEnabled) {
-        enableSpellChecker(h);
-    }
-
-    // check for comment block
-    if (!text.contains(QStringLiteral("<!--"))) {
-        h->setCommentHighlighting(false);
-    }
-
-    // check for code blocks
-    if (!(text.contains(QStringLiteral("```")) ||
-          text.contains(QStringLiteral("~~~")))) {
-        h->setCodeHighlighting(false);
-    }
-
     QMarkdownTextEdit::setText(text);
-
-    // after we are done we turn everything back on
-    h->setCodeHighlighting(true);
-    h->setCommentHighlighting(true);
 }
 
 void QOwnNotesMarkdownTextEdit::setSpellcheckingEnabled(bool enabled) {
-    _spellCheckerEnabled = enabled;
+    QOwnSpellChecker::instance()->setActive(enabled);
 }
 
 void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent *event) {

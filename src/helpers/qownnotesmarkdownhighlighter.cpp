@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright (c) 2014-2020 Patrizio Bekerle -- <patrizio@bekerle.com>
  *
  * This program is free software; you can redistribute it and/or modify
@@ -23,60 +23,16 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 
-#include "libraries/sonnet/src/core/languagefilter_p.h"
-#include "libraries/sonnet/src/core/tokenizer_p.h"
 #include "qownspellchecker.h"
 
-/**
- * Markdown syntax highlighting
- *
- * markdown syntax:
- * http://daringfireball.net/projects/markdown/syntax
- *
- * @param parent
- * @return
- */
 QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
     QTextDocument *parent, HighlightingOptions highlightingOptions)
-    : MarkdownHighlighter(parent, highlightingOptions) {
-    spellchecker = nullptr;
-    languageFilter = nullptr;
-    wordTokenizer = nullptr;
+    : MarkdownHighlighter(parent, highlightingOptions) {}
 
-    commentHighlightingOn = true;
-    codeHighlightingOn = true;
-}
-
-QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter() {
-    if (languageFilter != nullptr) delete languageFilter;
-    if (wordTokenizer != nullptr) delete wordTokenizer;
-    if (spellchecker) delete spellchecker;
-}
-
-void QOwnNotesMarkdownHighlighter::updateCurrentNote(const Note _note) {
-    _currentNote = std::move(_note);
-}
-
-void QOwnNotesMarkdownHighlighter::setSpellChecker(
-    QOwnSpellChecker *spellChecker) {
-    spellchecker = spellChecker;
-    languageFilter =
-        new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
-    wordTokenizer = new Sonnet::WordTokenizer();
-}
-
-void QOwnNotesMarkdownHighlighter::setCommentHighlighting(bool state) {
-    if (state == commentHighlightingOn) {
-        return;
+void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *note) {
+    if (note != nullptr) {
+        _currentNote = note;
     }
-    commentHighlightingOn = state;
-}
-
-void QOwnNotesMarkdownHighlighter::setCodeHighlighting(bool state) {
-    if (state == codeHighlightingOn) {
-        return;
-    }
-    codeHighlightingOn = state;
 }
 
 /**
@@ -104,10 +60,8 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     // skip spell checking empty blocks and blocks with just "spaces"
     // the rest of the highlighting needs to be done e.g. for code blocks with
     // empty lines
-    if (spellchecker != nullptr) {
-        if (!text.isEmpty() && spellchecker->isActive()) {
-            highlightSpellChecking(text);
-        }
+    if (!text.isEmpty() && QOwnSpellChecker::instance()->isActive()) {
+        highlightSpellChecking(text);
     }
 
     _highlightingFinished = true;
@@ -146,11 +100,14 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
                 return;
             }
 
-            const Note note = _currentNote.fetchByRelativeFileName(fileName);
+            if (_currentNote != nullptr) {
+                const Note note =
+                    _currentNote->fetchByRelativeFileName(fileName);
 
-            // if the note exists we don't need to do anything
-            if (note.isFetched()) {
-                return;
+                // if the note exists we don't need to do anything
+                if (note.isFetched()) {
+                    return;
+                }
             }
         } else {    // check [note](note file.md) links
             regex = QRegularExpression(
@@ -158,23 +115,25 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
             match = regex.match(text);
 
             if (match.hasMatch()) {
-                const QString fileName = Note::urlDecodeNoteUrl(match.captured(1));
+                const QString fileName =
+                    Note::urlDecodeNoteUrl(match.captured(1));
 
                 // skip urls
                 if (fileName.contains(QStringLiteral("://"))) {
                     return;
                 }
 
-                const Note note = _currentNote.fetchByRelativeFileName(fileName);
+                if (_currentNote != nullptr) {
+                    const Note note =
+                        _currentNote->fetchByRelativeFileName(fileName);
 
-                // if the note exists we don't need to do anything
-                if (note.isFetched()) {
-                    return;
+                    // if the note exists we don't need to do anything
+                    if (note.isFetched()) {
+                        return;
+                    }
                 }
-            } else {
-                // no note link was found
-                return;
             }
+            // no note link was found
         }
     }
 
@@ -182,10 +141,6 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
 
     setFormat(match.capturedStart(0), match.capturedLength(0), _formats[state]);
 }
-
-/*
- * Spellchecker lives here
- */
 
 void QOwnNotesMarkdownHighlighter::setMisspelled(const int start,
                                                  const int count) {
@@ -208,8 +163,8 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
     if (text.length() < 2) {
         return;
     }
-    if (!spellchecker->isValid()) {
-        qWarning() << "[Sonnet]Spellchecker invalid!";
+    if (!QOwnSpellChecker::instance()->isValid()) {
+        qWarning() << "Spellchecker invalid for current language!";
         return;
     }
     if (currentBlockState() == HighlighterState::HeadlineEnd ||
@@ -218,8 +173,8 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         return;
 
     // use our own settings, as KDE users might face issues with Autodetection
-    const bool autodetectLanguage = spellchecker->isAutoDetectOn();
-    // spellchecker->testAttribute(Sonnet::Speller::AutoDetectLanguage) : false;
+    const bool autodetectLanguage =
+        QOwnSpellChecker::instance()->isAutoDetectOn();
     LanguageCache *languageCache = nullptr;
     if (autodetectLanguage) {
         languageCache = dynamic_cast<LanguageCache *>(currentBlockUserData());
@@ -228,6 +183,7 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
             setCurrentBlockUserData(languageCache);
         }
     }
+    auto languageFilter = QOwnSpellChecker::instance()->languageFilter();
     languageFilter->setBuffer(text);
     while (languageFilter->hasNext()) {
         const QStringRef sentence = languageFilter->next();
@@ -248,11 +204,13 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
             if (lang.isEmpty()) {
                 continue;
             }
-            spellchecker->setCurrentLanguage(lang);
+            QOwnSpellChecker::instance()->setCurrentLanguage(lang);
         }
 
+        const auto wordTokenizer =
+            QOwnSpellChecker::instance()->wordTokenizer();
         wordTokenizer->setBuffer(sentence.toString());
-        int offset = sentence.position();
+        const int offset = sentence.position();
         while (wordTokenizer->hasNext()) {
             QStringRef word = wordTokenizer->next();
 
@@ -275,9 +233,9 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
                 continue;
             }
             // if the word is misspelled
-            if (spellchecker->isWordMisspelled(word.toString())) {
+            if (QOwnSpellChecker::instance()->isWordMisspelled(
+                    word.toString())) {
                 setMisspelled(word.position() + offset, word.length());
-                // else we do nothing and move on to the next word
             } else {
                 // unsetMisspelled(word.position()+offset, word.length());
             }

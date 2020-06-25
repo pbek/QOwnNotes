@@ -4362,10 +4362,10 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
         return;
     }
     if (!updateNoteTextViewOnly) {
-        qobject_cast<QOwnNotesMarkdownHighlighter *>(
-            ui->noteTextEdit->highlighter())
-            ->updateCurrentNote(*note);
-        ui->noteTextEdit->setText(note->getNoteText());
+      qobject_cast<QOwnNotesMarkdownHighlighter *>(
+          ui->noteTextEdit->highlighter())
+          ->updateCurrentNote(note);
+      ui->noteTextEdit->setText(note->getNoteText());
     }
 
     // update the preview text edit if the dock widget is visible

@@ -31,8 +31,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void updateSettings();
     QMargins viewportMargins();
     void setText(const QString &text);
-    void setSpellcheckingEnabled(bool enabled);
-    void enableSpellChecker(QOwnNotesMarkdownHighlighter *h = nullptr);
+    static void setSpellcheckingEnabled(bool enabled);
 
    protected:
     // we must not override _highlighter or Windows will create a
@@ -47,7 +46,6 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 
    private:
     MainWindow *mainWindow;
-    bool _spellCheckerEnabled = true;
 
     void setFormatStyle(MarkdownHighlighter::HighlighterState index);
 
