@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.6.10
+- incorrect headings like `#headline` will now not be rendered as heading in the preview
+ (for [#1802](https://github.com/pbek/QOwnNotes/issues/1802), thank you @Waqar144)
+
 ## 20.6.9
 - fixed unwanted `def foo[A](a: A)` note link generation in code blocks in the preview
   (for [#1794](https://github.com/pbek/QOwnNotes/issues/1794), thank you @Waqar144)
