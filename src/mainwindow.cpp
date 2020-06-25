@@ -521,6 +521,10 @@ MainWindow::MainWindow(QWidget *parent)
     Utils::Gui::restoreNoteTabs(ui->noteEditTabWidget,
                                 ui->noteEditTabWidgetLayout);
 
+    if (isInDistractionFreeMode()) {
+        ui->noteEditTabWidget->tabBar()->hide();
+    }
+
     // restore the note history of the current note folder
     noteHistory.restoreForCurrentNoteFolder();
 
@@ -1675,6 +1679,8 @@ void MainWindow::setDistractionFreeMode(const bool enabled) {
                 &MainWindow::toggleDistractionFreeMode);
 
         statusBar()->addPermanentWidget(_leaveDistractionFreeModeButton);
+
+        ui->noteEditTabWidget->tabBar()->hide();
     } else {
         //
         // leave the distraction free mode
@@ -1698,6 +1704,10 @@ void MainWindow::setDistractionFreeMode(const bool enabled) {
         ui->menuBar->setFixedHeight(
             settings.value(QStringLiteral("DistractionFreeMode/menuBarHeight"))
                 .toInt());
+
+        if (ui->noteEditTabWidget->count() > 1) {
+            ui->noteEditTabWidget->tabBar()->show();
+        }
     }
 
     ui->noteTextEdit->setPaperMargins();
