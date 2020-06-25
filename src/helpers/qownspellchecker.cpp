@@ -23,9 +23,9 @@ QOwnSpellChecker::QOwnSpellChecker() : _spellchecker{new Sonnet::Speller()} {
         new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
     _wordTokenizer = new Sonnet::WordTokenizer();
 #ifdef Q_OS_MACOS
-    QStringList s = spellchecker->availableLanguages();
-    if (!s.contains(spellchecker->defaultLanguage()) && !s.isEmpty()) {
-        spellchecker->setDefaultLanguage(s.at(0));
+    QStringList s = _spellchecker->availableLanguages();
+    if (!s.contains(_spellchecker->defaultLanguage()) && !s.isEmpty()) {
+        _spellchecker->setDefaultLanguage(s.at(0));
     }
 #endif
 }
