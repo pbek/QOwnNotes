@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.6.11
+- the *Note dialog* for opening notes in a new window can now also use custom
+  preview fonts (for [#1806](https://github.com/pbek/QOwnNotes/issues/1806))
+
 ## 20.6.10
 - incorrect headings like `#headline` will now not be rendered as heading in the preview
  (for [#1802](https://github.com/pbek/QOwnNotes/issues/1802), thank you @Waqar144)

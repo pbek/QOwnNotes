@@ -14,6 +14,11 @@ NoteDialog::NoteDialog(QWidget *parent)
     ui->textEdit->setReadOnly(true);
     ui->tabWidget->setCurrentIndex(
         QSettings().value("NoteDialog/tabWidgetIndex").toInt());
+
+    // set the note text view font
+    QFont font;
+    font.fromString(Utils::Misc::previewFontString());
+    ui->noteTextView->setFont(font);
 }
 
 void NoteDialog::setNote(Note &note) {
