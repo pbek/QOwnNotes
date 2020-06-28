@@ -5,11 +5,9 @@
 #include <QMultiHash>
 #include <QString>
 
-typedef QMultiHash<char, QLatin1String> LangData;
+using LangData = QMultiHash<char, QLatin1String>;
 
 class CodeToHtmlConverter {
-    /* ENUMS */
-   public:
     enum Format { Type, Keyword, Literal, String, Comment, Builtin, Other };
 
     enum Lang {
@@ -39,33 +37,34 @@ class CodeToHtmlConverter {
     };
 
    public:
-    CodeToHtmlConverter(const QStringRef input,
-                        const QString &lang) Q_DECL_NOTHROW;
-    Q_REQUIRED_RESULT QString process() const;
+    CodeToHtmlConverter(const QString &lang) Q_DECL_NOTHROW;
+    Q_REQUIRED_RESULT QString process(const QStringRef &input) const;
 
    private:
-    const QStringRef _input;
-    const QString _lang;
     Lang _currentLang;
 
     Q_REQUIRED_RESULT static QString escape(QChar c);
-    Q_REQUIRED_RESULT static QString escapeString(const QStringRef s);
-    Q_REQUIRED_RESULT static QString setFormat(const QStringRef str,
+    Q_REQUIRED_RESULT static QString escapeString(const QStringRef &s);
+    Q_REQUIRED_RESULT static QString setFormat(const QStringRef &str,
                                                Format format);
     static void initCodeLangs() Q_DECL_NOTHROW;
 
-    Q_REQUIRED_RESULT int highlightNumericLit(QString &output, int i) const;
-    Q_REQUIRED_RESULT int highlightStringLiterals(QChar strType,
-                                                  QString &output, int i) const;
-    Q_REQUIRED_RESULT int highlightComment(QString &output, int i,
-                                           bool isSingleLine = true) const;
-    Q_REQUIRED_RESULT int highlightWord(int i, const LangData &data,
-                                        QString &output, Format f) const;
-    Q_REQUIRED_RESULT QString xmlHighlighter() const;
-    Q_REQUIRED_RESULT QString cssHighlighter(const LangData &types,
+    Q_REQUIRED_RESULT int highlightNumericLit(const QStringRef &input,
+                                              QString &output, int i) const;
+    Q_REQUIRED_RESULT static int highlightStringLiterals(
+        const QStringRef &input, QChar strType, QString &output, int i);
+    Q_REQUIRED_RESULT static int highlightComment(const QStringRef &input,
+                                                  QString &output, int i,
+                                                  bool isSingleLine = true);
+    Q_REQUIRED_RESULT static int highlightWord(int i, const LangData &data,
+                                               const QStringRef &input,
+                                               QString &output, Format f);
+    Q_REQUIRED_RESULT QString xmlHighlighter(const QStringRef &input) const;
+    Q_REQUIRED_RESULT QString cssHighlighter(const QStringRef &input,
+                                             const LangData &types,
                                              const LangData &keywords) const;
-    Q_REQUIRED_RESULT QString ymlHighlighter() const;
-    Q_REQUIRED_RESULT QString iniHighlighter() const;
+    Q_REQUIRED_RESULT QString ymlHighlighter(const QStringRef &input) const;
+    Q_REQUIRED_RESULT QString iniHighlighter(const QStringRef &input) const;
 
     /**
      * @brief returns true if c is octal
