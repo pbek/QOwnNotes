@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.7.0
+- The QOwnNotes Gentoo overlay was added to the official Gentoo repository for
+  easier installation (for [#1807](https://github.com/pbek/QOwnNotes/issues/1807))
+    - please visit the [Gentoo installation page](https://www.qownnotes.org/installation#Gentoo)
+      for the updated instructions
+
 ## 20.6.11
 - the *Note dialog* for opening notes in a new window can now also use custom
   preview fonts (for [#1806](https://github.com/pbek/QOwnNotes/issues/1806))
