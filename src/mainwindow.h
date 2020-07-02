@@ -343,6 +343,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionFormat_text_bold_triggered();
 
+    void on_actionFormat_text_underline_triggered();
+
     void on_actionFormat_text_italic_triggered();
 
     void on_action_Increase_note_text_size_triggered();

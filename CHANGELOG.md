@@ -1,7 +1,9 @@
 # QOwnNotes Changelog
 
 ## 20.7.0
-- The QOwnNotes Gentoo overlay was added to the official Gentoo repository for
+- you can now press <kbd>Ctrl</kbd> + <kbd>U</kbd> to format the selected text underline
+  (for [#1811](https://github.com/pbek/QOwnNotes/issues/1811))
+- the QOwnNotes Gentoo overlay was added to the official Gentoo repository for
   easier installation (for [#1807](https://github.com/pbek/QOwnNotes/issues/1807))
     - please visit the [Gentoo installation page](https://www.qownnotes.org/installation#Gentoo)
       for the updated instructions

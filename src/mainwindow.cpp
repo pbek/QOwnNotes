@@ -7709,6 +7709,13 @@ void MainWindow::on_actionFormat_text_bold_triggered() {
 }
 
 /**
+ * Inserts a underline block at the current cursor position
+ */
+void MainWindow::on_actionFormat_text_underline_triggered() {
+    applyFormatter(QStringLiteral("__"));
+}
+
+/**
  * Inserts an italic block at the current cursor position
  */
 void MainWindow::on_actionFormat_text_italic_triggered() {

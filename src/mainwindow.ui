@@ -1045,6 +1045,7 @@ p, li { white-space: pre-wrap; }
      </property>
      <addaction name="actionFormat_text_bold"/>
      <addaction name="actionFormat_text_italic"/>
+     <addaction name="actionFormat_text_underline"/>
      <addaction name="actionStrike_out_text"/>
      <addaction name="actionToggle_text_case"/>
     </widget>
@@ -2640,6 +2641,18 @@ p, li { white-space: pre-wrap; }
     <string>Toggle note stickiness of current tab</string>
    </property>
   </action>
+  <action name="actionFormat_text_underline">
+   <property name="icon">
+    <iconset theme="format-text-underline" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/format-text-underline.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-underline.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Format text underline</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2688,8 +2701,8 @@ p, li { white-space: pre-wrap; }
   <tabstop>noteTextView</tabstop>
  </tabstops>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
