@@ -2592,12 +2592,11 @@
     <message>
         <location filename="../mainwindow.ui" line="2650"/>
         <source>Format text underline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Format text underline</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2653"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1908"/>
@@ -5643,7 +5642,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1392"/>
         <source>Enable QOwnNotesAPI app</source>
-        <translation type="unfinished">Enable QOwnNotesAPI app</translation>
+        <translation>បើកដំណើរការកម្មវិធី QOwnNotesAPI</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1782"/>

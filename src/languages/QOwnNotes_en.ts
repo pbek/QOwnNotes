@@ -2584,11 +2584,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2653"/>
-        <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="1908"/>
         <source>Use &amp;vertical preview layout</source>
         <translation type="unfinished"></translation>

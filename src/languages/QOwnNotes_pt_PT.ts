@@ -2592,12 +2592,11 @@
     <message>
         <location filename="../mainwindow.ui" line="2650"/>
         <source>Format text underline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Format text underline</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2653"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1908"/>
@@ -5642,7 +5641,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1392"/>
         <source>Enable QOwnNotesAPI app</source>
-        <translation type="unfinished">Enable QOwnNotesAPI app</translation>
+        <translation>Ativar o aplicativo QOwnNotesAPI</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1782"/>
@@ -6156,7 +6155,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="5183"/>
         <source>Automatically remove trailing spaces in the note text</source>
-        <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+        <translation>Remover automaticamente os espaços finais no texto da nota</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="5193"/>
