@@ -2650,7 +2650,7 @@ p, li { white-space: pre-wrap; }
     <string>Format text underline</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+U</string>
+    <string notr="true">Ctrl+U</string>
    </property>
   </action>
  </widget>
