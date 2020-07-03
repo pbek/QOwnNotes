@@ -1778,7 +1778,7 @@
     <message>
         <location filename="../mainwindow.ui" line="411"/>
         <location filename="../mainwindow.ui" line="911"/>
-        <location filename="../mainwindow.cpp" line="799"/>
+        <location filename="../mainwindow.cpp" line="802"/>
         <source>Navigation</source>
         <translation>នាវាចរណ៍</translation>
     </message>
@@ -1789,7 +1789,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
-        <location filename="../mainwindow.cpp" line="8674"/>
+        <location filename="../mainwindow.cpp" line="8677"/>
         <source>Add a tag to the current note</source>
         <translation>បន្ថែមស្លាកទៅកំណត់ត្រាបច្ចុប្បន្ន</translation>
     </message>
@@ -1825,7 +1825,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1238"/>
-        <location filename="../mainwindow.cpp" line="6661"/>
+        <location filename="../mainwindow.cpp" line="6664"/>
         <source>Custom actions</source>
         <translation>សកម្មភាពផ្ទាល់ខ្លួន</translation>
     </message>
@@ -1906,13 +1906,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1445"/>
-        <location filename="../mainwindow.cpp" line="10364"/>
+        <location filename="../mainwindow.cpp" line="10367"/>
         <source>Select &amp;all notes</source>
         <translation>&amp;ជ្រើសរើសកំណត់ត្រាទាំងអស់</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1454"/>
-        <location filename="../mainwindow.cpp" line="6572"/>
+        <location filename="../mainwindow.cpp" line="6575"/>
         <source>Insert &amp;link</source>
         <translation>&amp;បញ្ចូលតំណ</translation>
     </message>
@@ -1967,7 +1967,7 @@
         <translation>ស្វែងរកឬបង្កើតកំណត់ត្រា</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8675"/>
+        <location filename="../mainwindow.cpp" line="8678"/>
         <source>Add a tag to the selected notes</source>
         <translation>បន្ថែមស្លាកមួយទៅកំណត់ត្រាដែលបានជ្រើសរើស</translation>
     </message>
@@ -1978,7 +1978,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="886"/>
-        <location filename="../mainwindow.cpp" line="6623"/>
+        <location filename="../mainwindow.cpp" line="6626"/>
         <source>Export</source>
         <translation>នាំចេញ</translation>
     </message>
@@ -1989,7 +1989,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="928"/>
-        <location filename="../mainwindow.cpp" line="6604"/>
+        <location filename="../mainwindow.cpp" line="6607"/>
         <source>Print</source>
         <translation>បោះពុម្ព</translation>
     </message>
@@ -2060,7 +2060,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1159"/>
-        <location filename="../mainwindow.cpp" line="727"/>
+        <location filename="../mainwindow.cpp" line="730"/>
         <source>Workspaces</source>
         <translation>កន្លែងធ្វើការ</translation>
     </message>
@@ -2362,7 +2362,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2244"/>
-        <location filename="../mainwindow.cpp" line="11475"/>
+        <location filename="../mainwindow.cpp" line="11478"/>
         <source>Remove current workspace</source>
         <translation>យកកន្លែងធ្វើការបច្ចុប្បន្នចេញ</translation>
     </message>
@@ -2404,7 +2404,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2318"/>
-        <location filename="../mainwindow.cpp" line="6581"/>
+        <location filename="../mainwindow.cpp" line="6584"/>
         <source>Insert block &amp;quote</source>
         <translation>&amp;បញ្ចូលសម្រង់ប្លុក</translation>
     </message>
@@ -2431,7 +2431,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2365"/>
-        <location filename="../mainwindow.cpp" line="10340"/>
+        <location filename="../mainwindow.cpp" line="10343"/>
         <source>Open note in different window</source>
         <translation>បើកចំណាំនៅក្នុងបង្អួចផ្សេងគ្នា</translation>
     </message>
@@ -2452,7 +2452,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2405"/>
-        <location filename="../mainwindow.cpp" line="10348"/>
+        <location filename="../mainwindow.cpp" line="10351"/>
         <source>Show note git versions</source>
         <translation>បង្ហាញកំណែ git ចំណាំ</translation>
     </message>
@@ -2535,7 +2535,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2567"/>
-        <location filename="../mainwindow.cpp" line="12344"/>
+        <location filename="../mainwindow.cpp" line="12347"/>
         <source>Automatically detect</source>
         <translation>រកឃើញដោយស្វ័យប្រវត្តិ</translation>
     </message>
@@ -2723,22 +2723,22 @@
         <translation>នាំចូលកំណត់ត្រាពី Evernote</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2834"/>
+        <location filename="../mainwindow.cpp" line="2837"/>
         <source>Note was removed externally!</source>
         <translation>ចំណាំត្រូវបានយកចេញនៅខាងក្រៅ!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2835"/>
+        <location filename="../mainwindow.cpp" line="2838"/>
         <source>Current note was removed outside of this application!
 Restore current note?</source>
         <translation>កំណត់ត្រាបច្ចុប្បន្នត្រូវបានដកចេញនៅខាងក្រៅកម្មវិធីនេះ!
 ស្តារកំណត់ត្រាបច្ចុប្បន្នឡើងវិញ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5431"/>
-        <location filename="../mainwindow.cpp" line="5454"/>
-        <location filename="../mainwindow.cpp" line="7066"/>
-        <location filename="../mainwindow.cpp" line="10430"/>
+        <location filename="../mainwindow.cpp" line="5434"/>
+        <location filename="../mainwindow.cpp" line="5457"/>
+        <location filename="../mainwindow.cpp" line="7069"/>
+        <location filename="../mainwindow.cpp" line="10433"/>
         <source>&amp;Cancel</source>
         <translation>&amp;បោះបង់</translation>
     </message>
@@ -2750,47 +2750,47 @@ Restore current note?</source>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3072"/>
+        <location filename="../mainwindow.cpp" line="3075"/>
         <source>new version %1 available</source>
         <translation>មានកំណែថ្មី %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3189"/>
+        <location filename="../mainwindow.cpp" line="3192"/>
         <source>Abort</source>
         <translation>បោះបង់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3189"/>
+        <location filename="../mainwindow.cpp" line="3192"/>
         <source>Loading notes…</source>
         <translation>កំពុងផ្ទុកកំណត់ត្រា…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3403"/>
+        <location filename="../mainwindow.cpp" line="3406"/>
         <source>Removed duplicate conflicted database: %1</source>
         <translation>បានយកទិន្នន័យដែលស្ទួនស្ទួនចេញ៖ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3404"/>
+        <location filename="../mainwindow.cpp" line="3407"/>
         <source>Could not remove duplicate conflicted database: %1</source>
         <translation>មិនអាចលុបមូលដ្ឋានទិន្នន័យដែលស្ទួនគ្នា: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3410"/>
+        <location filename="../mainwindow.cpp" line="3413"/>
         <source>Removed merged conflicted database: %1</source>
         <translation>បានលុបមូលដ្ឋានទិន្នន័យដែលមានបញ្ហាច្របូកច្របល់បញ្ចូលគ្នាចេញ៖ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3411"/>
+        <location filename="../mainwindow.cpp" line="3414"/>
         <source>Could not remove merged conflicted database: %1</source>
         <translation>មិនអាចលុបមូលដ្ឋានទិន្នន័យដែលមានបញ្ហាច្របូកច្របល់បញ្ចូលគ្នាបានទេ៖ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3426"/>
+        <location filename="../mainwindow.cpp" line="3429"/>
         <source>Delete conflicted database copies</source>
         <translation>លុបច្បាប់ចម្លងមូលដ្ឋានទិន្នន័យដែលមានជម្លោះ</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3449"/>
+        <location filename="../mainwindow.cpp" line="3452"/>
         <source>Removed %n conflicted database copies</source>
         <translation>
             <numerusform>បានយកចេញច្បាប់ចម្លងមូលដ្ឋានទិន្នន័យដែលមានជម្លោះ %n</numerusform>
@@ -2798,62 +2798,62 @@ Restore current note?</source>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3613"/>
+        <location filename="../mainwindow.cpp" line="3616"/>
         <source>Please select the folder where your notes will get stored</source>
         <translation>សូមជ្រើសរើសថតឯកសារដែលកំណត់ត្រារបស់អ្នកនឹងត្រូវរក្សាទុក</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3639"/>
+        <location filename="../mainwindow.cpp" line="3642"/>
         <source>No folder was selected</source>
         <translation>គ្មានថតត្រូវបានជ្រើសរើសទេ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3641"/>
+        <location filename="../mainwindow.cpp" line="3644"/>
         <source>You have to select your ownCloud notes folder to make this software work!</source>
         <translation>អ្នកត្រូវជ្រើសរើសថតឯកសារកំណត់សំគាល់ផ្ទាល់ខ្លួនរបស់អ្នកដើម្បីឱ្យកម្មវិធីនេះដំណើរការបាន!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3643"/>
+        <location filename="../mainwindow.cpp" line="3646"/>
         <source>&amp;Retry</source>
         <translation>&amp;ព្យាយាមម្តងទៀត</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3643"/>
+        <location filename="../mainwindow.cpp" line="3646"/>
         <source>&amp;Exit</source>
         <translation>&amp;ចេញ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3951"/>
+        <location filename="../mainwindow.cpp" line="3954"/>
         <source>Remove current note</source>
         <translation>យកកំណត់ត្រាបច្ចុប្បន្នចេញ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3952"/>
+        <location filename="../mainwindow.cpp" line="3955"/>
         <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>លុបចំណាំបច្ចុប្បន្នចេញ៖ &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4309"/>
+        <location filename="../mainwindow.cpp" line="4312"/>
         <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
         <translation>សូមបញ្ចូល &lt;strong&gt; ពាក្យសម្ងាត់ &lt;/strong&gt; នៃកំណត់ត្រាដែលបានអ៊ិនគ្រីបនេះ។</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4332"/>
+        <location filename="../mainwindow.cpp" line="4335"/>
         <source>Note can&apos;t be decrypted!</source>
         <translation>មិនអាចឌិគ្រីបបាន!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4333"/>
+        <location filename="../mainwindow.cpp" line="4336"/>
         <source>It seems that your password is not valid!</source>
         <translation>វាហាក់ដូចជាពាក្យសម្ងាត់របស់អ្នកមិនត្រឹមត្រូវ!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4501"/>
+        <location filename="../mainwindow.cpp" line="4504"/>
         <source>Remove selected notes</source>
         <translation>យកកំណត់ត្រាដែលបានជ្រើសរើសចេញ</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4503"/>
+        <location filename="../mainwindow.cpp" line="4506"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -2865,13 +2865,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4591"/>
-        <location filename="../mainwindow.cpp" line="10643"/>
+        <location filename="../mainwindow.cpp" line="4594"/>
+        <location filename="../mainwindow.cpp" line="10646"/>
         <source>Remove selected folders</source>
         <translation>យកថតដែលបានជ្រើសរើសចេញ</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4592"/>
+        <location filename="../mainwindow.cpp" line="4595"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation>
             <numerusform>លុប &lt;strong&gt;%n&lt;/strong&gt; ថតដែលបានជ្រើសរើសចេញ? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt;
@@ -2880,17 +2880,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4603"/>
+        <location filename="../mainwindow.cpp" line="4606"/>
         <source>Removed note subfolder: %1</source>
         <translation>បានលុបថតរងចំណាំ៖ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4623"/>
+        <location filename="../mainwindow.cpp" line="4626"/>
         <source>Remove selected tags</source>
         <translation>យកស្លាកដែលបានជ្រើសរើសចេញ</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4624"/>
+        <location filename="../mainwindow.cpp" line="4627"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
         <translation>
             <numerusform>លុប &lt;strong&gt;%n &lt;/strong&gt; ស្លាកដែលបានជ្រើសរើសចេញ? មិនមានកំណត់ត្រាណាមួយត្រូវបានលុបចោលនៅក្នុងដំណើរការនេះទេ។</numerusform>
@@ -2898,13 +2898,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4676"/>
-        <location filename="../mainwindow.cpp" line="9460"/>
+        <location filename="../mainwindow.cpp" line="4679"/>
+        <location filename="../mainwindow.cpp" line="9463"/>
         <source>Move selected notes</source>
         <translation>ផ្លាស់ទីកំណត់ត្រាដែលបានជ្រើសរើស</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4677"/>
+        <location filename="../mainwindow.cpp" line="4680"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>ផ្លាស់ទីកំណត់ត្រា %n ដែលបានជ្រើសរើសទៅ &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2912,13 +2912,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4780"/>
-        <location filename="../mainwindow.cpp" line="9568"/>
+        <location filename="../mainwindow.cpp" line="4783"/>
+        <location filename="../mainwindow.cpp" line="9571"/>
         <source>Copy selected notes</source>
         <translation>ចម្លងកំណត់ចំណាំដែលបានជ្រើសរើស</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4781"/>
+        <location filename="../mainwindow.cpp" line="4784"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>ចម្លងកំណត់ចំណាំ %n ដែលបានជ្រើសរើសទៅ &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2926,13 +2926,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4811"/>
-        <location filename="../mainwindow.cpp" line="4960"/>
+        <location filename="../mainwindow.cpp" line="4814"/>
+        <location filename="../mainwindow.cpp" line="4963"/>
         <source>Done</source>
         <translation>ធ្វើរួច</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4812"/>
+        <location filename="../mainwindow.cpp" line="4815"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>
             <numerusform>%n ចំណាំត្រូវបានចម្លងទៅ &lt;strong&gt;%2&lt;/strong&gt; ។</numerusform>
@@ -2940,12 +2940,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4825"/>
+        <location filename="../mainwindow.cpp" line="4828"/>
         <source>Tag selected notes</source>
         <translation>ដាក់ស្លាកដែលបានជ្រើសរើស</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4826"/>
+        <location filename="../mainwindow.cpp" line="4829"/>
         <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>ស្លាក %n ចំណាំដែលបានជ្រើសរើសជាមួយ &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2953,43 +2953,43 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5099"/>
+        <location filename="../mainwindow.cpp" line="5102"/>
         <source>Restart application</source>
         <translation>ចាប់ផ្តើមកម្មវិធីឡើងវិញ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5105"/>
+        <location filename="../mainwindow.cpp" line="5108"/>
         <source>You may need to restart the application manually to let the changes take effect.</source>
         <translation>អ្នកប្រហែលជាត្រូវចាប់ផ្តើមកម្មវិធីឡើងវិញដោយដៃដើម្បីឱ្យការផ្លាស់ប្តូរមានប្រសិទ្ធិភាព។</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5110"/>
+        <location filename="../mainwindow.cpp" line="5113"/>
         <source>You may need to restart the application to let the changes take effect.</source>
         <translation>អ្នកប្រហែលជាត្រូវចាប់ផ្តើមកម្មវិធីឡើងវិញដើម្បីឱ្យការផ្លាស់ប្តូរមានប្រសិទ្ធិភាព។</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5112"/>
+        <location filename="../mainwindow.cpp" line="5115"/>
         <source>Restart</source>
         <translation>ចាប់ផ្តើមឡើងវិញ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5343"/>
+        <location filename="../mainwindow.cpp" line="5346"/>
         <source>PDF files</source>
         <translation>ឯកសារ PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5427"/>
+        <location filename="../mainwindow.cpp" line="5430"/>
         <source>Todo lists disabled!</source>
         <translation>បញ្ជីឈ្មោះដូតូត្រូវបានបិទ!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5428"/>
+        <location filename="../mainwindow.cpp" line="5431"/>
         <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation>អ្នកបានបិទបញ្ជីការងារត្រូវធ្វើ។
 &lt;br/&gt; សូមពិនិត្យមើលការកំណត់រចនាសម្ព័ន្ធ &lt;strong&gt; ដូស &lt;/strong&gt; របស់អ្នកនៅក្នុងការកំណត់!</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5671"/>
+        <location filename="../mainwindow.cpp" line="5674"/>
         <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>
             <numerusform>រកឃើញ &lt;strong&gt;%n&lt;/strong&gt; ការកើតឡើងនៃពាក្យណាមួយនៃ &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
@@ -2997,99 +2997,99 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6221"/>
+        <location filename="../mainwindow.cpp" line="6224"/>
         <source>Note was not found</source>
         <translation>រកមិនឃើញចំណាំទេ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6222"/>
+        <location filename="../mainwindow.cpp" line="6225"/>
         <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>រកមិនឃើញចំណាំបង្កើតកំណត់ត្រាថ្មី &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6385"/>
+        <location filename="../mainwindow.cpp" line="6388"/>
         <source>Note folders</source>
         <translation>ថតឯកសារចំណាំ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6508"/>
+        <location filename="../mainwindow.cpp" line="6511"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation>កំណែចំណាំបច្ចុប្បន្នត្រូវបានផ្ទុកពីម៉ាស៊ីនមេផ្ទាល់ខ្លួនរបស់អ្នក</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6525"/>
+        <location filename="../mainwindow.cpp" line="6528"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation>កំណត់ត្រាសំរាមត្រូវបានផ្ទុកពីម៉ាស៊ីនមេរបស់អ្នកផ្ទាល់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6591"/>
+        <location filename="../mainwindow.cpp" line="6594"/>
         <source>Copy code block</source>
         <translation>ចម្លងប្លុកកូដ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6612"/>
+        <location filename="../mainwindow.cpp" line="6615"/>
         <source>Print selected text</source>
         <translation>បោះពុម្ពអត្ថបទដែលបានជ្រើសរើស</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6618"/>
+        <location filename="../mainwindow.cpp" line="6621"/>
         <source>Print selected text (preview)</source>
         <translation>បោះពុម្ពអត្ថបទដែលបានជ្រើសរើស (មើលជាមុន)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6636"/>
+        <location filename="../mainwindow.cpp" line="6639"/>
         <source>Export selected text as PDF</source>
         <translation>នាំចេញអត្ថបទដែលបានជ្រើសរើសជា PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6642"/>
+        <location filename="../mainwindow.cpp" line="6645"/>
         <source>Export selected text as PDF (preview)</source>
         <translation>នាំចេញអត្ថបទដែលបានជ្រើសរើសជា PDF (មើលជាមុន)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7062"/>
+        <location filename="../mainwindow.cpp" line="7065"/>
         <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>កំណត់ចំណាំរបស់អ្នកនឹងត្រូវបានឌិគ្រីបហើយរក្សាទុកជាអត្ថបទធម្មតាម្តងទៀត។ ចងចាំថាចំណាំដែលមិនបានអ៊ិនគ្រីបអាចត្រូវបានធ្វើសមកាលកម្មទៅម៉ាស៊ីនមេរបស់អ្នកហើយអត្ថបទដែលងាយរងគ្រោះអាចត្រូវបានបង្ហាញ! &lt;br /&gt; តើអ្នកចង់ឌិគ្រីបចំណាំរបស់អ្នកទេ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7159"/>
+        <location filename="../mainwindow.cpp" line="7162"/>
         <source>Markdown files</source>
         <translation>ឯកសារសម្គាល់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7215"/>
+        <location filename="../mainwindow.cpp" line="7218"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>ទីតាំងចំណាំដែលបានចំណាំនៅរន្ធដោត %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7230"/>
+        <location filename="../mainwindow.cpp" line="7233"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>លោតទៅទីតាំងចំណាំនៅរន្ធ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7458"/>
-        <location filename="../mainwindow.cpp" line="7527"/>
+        <location filename="../mainwindow.cpp" line="7461"/>
+        <location filename="../mainwindow.cpp" line="7530"/>
         <source>Inserting image</source>
         <translation>បញ្ចូលរូបភាព</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7463"/>
-        <location filename="../mainwindow.cpp" line="7531"/>
+        <location filename="../mainwindow.cpp" line="7466"/>
+        <location filename="../mainwindow.cpp" line="7534"/>
         <source>Done inserting image</source>
         <translation>រួចរាល់ក្នុងការបញ្ចូលរូបភាព</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7465"/>
+        <location filename="../mainwindow.cpp" line="7468"/>
         <source>Inserting attachment</source>
         <translation>បញ្ចូលឯកសារភ្ជាប់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7470"/>
+        <location filename="../mainwindow.cpp" line="7473"/>
         <source>Done inserting attachment</source>
         <translation>រួចរាល់ក្នុងការបញ្ចូលឯកសារភ្ជាប់</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7482"/>
+        <location filename="../mainwindow.cpp" line="7485"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>បានចម្លងកំណត់ចំណាំ %n ទៅ %1</numerusform>
@@ -3097,7 +3097,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7491"/>
+        <location filename="../mainwindow.cpp" line="7494"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>បានបរាជ័យក្នុងការចម្លងកំណត់ចំណាំ %n (ភាគច្រើនមានរួចហើយ)</numerusform>
@@ -3105,7 +3105,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7501"/>
+        <location filename="../mainwindow.cpp" line="7504"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>រំលងការចម្លងនៃកំណត់ចំណាំ %n (គ្មានការកត់ចំណាំឬឯកសារអត្ថបទឬមិនអាចអានបាន)</numerusform>
@@ -3113,190 +3113,200 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7514"/>
+        <location filename="../mainwindow.cpp" line="7517"/>
         <source>Saving temporary image</source>
         <translation>រក្សាទុករូបភាពបណ្ដោះអាសន្ន</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7533"/>
+        <location filename="../mainwindow.cpp" line="7536"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>មិនអាចបើកឯកសារបណ្តោះអាសន្នបានទេ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7576"/>
+        <location filename="../mainwindow.cpp" line="7579"/>
         <source>Downloading %1</source>
         <translation>ទាញយក %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7766"/>
+        <location filename="../mainwindow.cpp" line="7769"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation>កំណត់ទំហំពុម្ពអក្សរឡើងវិញទៅ %1 ផេត</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8720"/>
+        <location filename="../mainwindow.cpp" line="8723"/>
         <source>Remove tag &apos;%1&apos; from the current note</source>
         <translation>យកស្លាក &apos;%1&apos; ចេញពីកំណត់ត្រាបច្ចុប្បន្ន</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8721"/>
+        <location filename="../mainwindow.cpp" line="8724"/>
         <source>Remove tag &apos;%1&apos; from the selected notes</source>
         <translation>យកស្លាក &apos;%1&apos; ចេញពីកំណត់ត្រាដែលបានជ្រើសរើស</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8952"/>
+        <location filename="../mainwindow.cpp" line="8955"/>
         <source>Rename tag</source>
         <translation>ប្តូរឈ្មោះស្លាក</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8953"/>
+        <location filename="../mainwindow.cpp" line="8956"/>
         <source>Assign color</source>
         <translation>កំណត់ពណ៌</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8954"/>
+        <location filename="../mainwindow.cpp" line="8957"/>
         <source>Disable color</source>
         <translation>បិទពណ៌</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8958"/>
+        <location filename="../mainwindow.cpp" line="8961"/>
         <source>&amp;Move tags to…</source>
         <translation>&amp;ផ្លាស់ទីស្លាកទៅ…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9169"/>
+        <location filename="../mainwindow.cpp" line="9172"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
         <translation>ផ្លាស់ទីទៅឫស</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9734"/>
+        <location filename="../mainwindow.cpp" line="9737"/>
         <source>An url was opened at the current cursor position</source>
         <translation>url មួយត្រូវបានបើកនៅទីតាំងទស្សន៍ទ្រនិចបច្ចុប្បន្ន</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9838"/>
+        <location filename="../mainwindow.cpp" line="9841"/>
         <source>No equation was found in front of the cursor</source>
         <translation>រកមិនឃើញសមីការនៅពីមុខទស្សន៍ទ្រនិចទេ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9855"/>
+        <location filename="../mainwindow.cpp" line="9858"/>
         <source>Result for equation: %1 = %2</source>
         <translation>លទ្ធផលសម្រាប់សមីការ៖ %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9956"/>
+        <location filename="../mainwindow.cpp" line="9959"/>
         <source>The scripting engine was reloaded</source>
         <translation>ម៉ាស៊ីនស្គ្រីបត្រូវបានផ្ទុកឡើងវិញ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9990"/>
+        <location filename="../mainwindow.cpp" line="9993"/>
         <source>HTML files</source>
         <translation>ឯកសារ HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10276"/>
+        <location filename="../mainwindow.cpp" line="10279"/>
         <source>Jump to the note&apos;s subfolder</source>
         <translation>លោតទៅថតរងរបស់ចំណាំ
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10333"/>
+        <location filename="../mainwindow.cpp" line="10336"/>
         <source>Open note in tab</source>
         <translation>បើកចំណាំនៅក្នុងផ្ទាំង
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10220"/>
-        <location filename="../mainwindow.cpp" line="10414"/>
+        <location filename="../mainwindow.cpp" line="12578"/>
+        <source>Toggle note stickiness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="12584"/>
+        <source>Close other note tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="10223"/>
+        <location filename="../mainwindow.cpp" line="10417"/>
         <source>Rename note</source>
         <translation>ប្តូរឈ្មោះចំណាំ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10222"/>
+        <location filename="../mainwindow.cpp" line="10225"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>អនុញ្ញាតឱ្យអ្នកប្តូរឈ្មោះឯកសារនៃកំណត់ត្រា</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10236"/>
+        <location filename="../mainwindow.cpp" line="10239"/>
         <source>&amp;Move notes to…</source>
         <translation>&amp;ផ្លាស់ទីចំណាំទៅ ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10237"/>
+        <location filename="../mainwindow.cpp" line="10240"/>
         <source>&amp;Copy notes to…</source>
         <translation>&amp;ចម្លងកំណត់ត្រាទៅ ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10280"/>
+        <location filename="../mainwindow.cpp" line="10283"/>
         <source>Move notes to subfolder…</source>
         <translation>ផ្លាស់ទីកំណត់ត្រាទៅថតរង…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10284"/>
+        <location filename="../mainwindow.cpp" line="10287"/>
         <source>Copy notes to subfolder…</source>
         <translation>ចម្លងកំណត់ត្រាទៅថតរង…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10292"/>
+        <location filename="../mainwindow.cpp" line="10295"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;ដាក់ស្លាកដែលបានជ្រើសរើសជាមួយ…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10316"/>
+        <location filename="../mainwindow.cpp" line="10319"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>&amp;យកស្លាកចេញពីកំណត់ត្រាដែលបានជ្រើសរើសចេញ ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10414"/>
+        <location filename="../mainwindow.cpp" line="10417"/>
         <source>Name:</source>
         <translation>ឈ្មោះ៖</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10426"/>
+        <location filename="../mainwindow.cpp" line="10429"/>
         <source>Note renaming not enabled!</source>
         <translation>ការប្តូរឈ្មោះមិនត្រូវបានអនុញ្ញាតទេ!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10642"/>
+        <location filename="../mainwindow.cpp" line="10645"/>
         <source>Rename subfolder</source>
         <translation>ប្តូរឈ្មោះថតរង</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11246"/>
+        <location filename="../mainwindow.cpp" line="11249"/>
         <source>Create new workspace</source>
         <translation>បង្កើតកន្លែងធ្វើការថ្មី</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11247"/>
-        <location filename="../mainwindow.cpp" line="11517"/>
+        <location filename="../mainwindow.cpp" line="11250"/>
+        <location filename="../mainwindow.cpp" line="11520"/>
         <source>Workspace name:</source>
         <translation>ឈ្មោះកន្លែងធ្វើការ៖</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11372"/>
+        <location filename="../mainwindow.cpp" line="11375"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>ពេញ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11379"/>
+        <location filename="../mainwindow.cpp" line="11382"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>តិចតួចបំផុត</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11476"/>
+        <location filename="../mainwindow.cpp" line="11479"/>
         <source>Remove the current workspace?</source>
         <translation>យកកន្លែងធ្វើការបច្ចុប្បន្នចេញ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11516"/>
+        <location filename="../mainwindow.cpp" line="11519"/>
         <source>Rename workspace</source>
         <translation>ប្តូរឈ្មោះកន្លែងធ្វើការ</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="11662"/>
+        <location filename="../mainwindow.cpp" line="11665"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -3305,42 +3315,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11934"/>
+        <location filename="../mainwindow.cpp" line="11937"/>
         <source>Disallow all note editing</source>
         <translation>មិនអនុញ្ញាតឱ្យកែសម្រួលកំណត់ត្រាទាំងអស់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12102"/>
+        <location filename="../mainwindow.cpp" line="12105"/>
         <source>Select text files to import</source>
         <translation>ជ្រើសឯកសារអត្ថបទដើម្បីនាំចូល</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12132"/>
+        <location filename="../mainwindow.cpp" line="12135"/>
         <source>Importing: %1</source>
         <translation>ការនាំចូល៖ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12197"/>
+        <location filename="../mainwindow.cpp" line="12200"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation>ចំណងជើងចំណងជើង &apos;%1&apos; ត្រូវបានចម្លងទៅក្តារតម្បៀតខ្ទាស់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12282"/>
+        <location filename="../mainwindow.cpp" line="12285"/>
         <source>Leave full-screen mode</source>
         <translation>ទុករបៀបពេញអេក្រង់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12462"/>
+        <location filename="../mainwindow.cpp" line="12465"/>
         <source>Custom editor width</source>
         <translation>ទទឹងកម្មវិធីនិពន្ធផ្ទាល់ខ្លួន</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="12462"/>
+        <location filename="../mainwindow.cpp" line="12465"/>
         <source>Characters:</source>
         <translation>តួអក្សរ៖</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8694"/>
+        <location filename="../mainwindow.cpp" line="8697"/>
         <source>%n notes selected</source>
         <translation>
             <numerusform>បានជ្រើសចំណាំ %n</numerusform>
@@ -3349,7 +3359,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2450"/>
-        <location filename="../mainwindow.cpp" line="11935"/>
+        <location filename="../mainwindow.cpp" line="11938"/>
         <source>Allow all note editing</source>
         <translation>អ្នកត្រូវជ្រើសរើសថតឯកសារ</translation>
     </message>
@@ -3359,12 +3369,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>&amp;ស្លាក</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4900"/>
+        <location filename="../mainwindow.cpp" line="4903"/>
         <source>Remove tag from selected notes</source>
         <translation>យកស្លាកចេញពីកំណត់ត្រាដែលបានជ្រើសរើស</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4901"/>
+        <location filename="../mainwindow.cpp" line="4904"/>
         <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
         <translation>
             <numerusform>លុបស្លាក &lt;strong&gt;%1&lt;/strong&gt; ចេញពីកំណត់ត្រា %n ដែលបានជ្រើសរើស?</numerusform>
@@ -3372,7 +3382,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4961"/>
+        <location filename="../mainwindow.cpp" line="4964"/>
         <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
         <translation>
             <numerusform>ស្លាក &lt;strong&gt;%1&lt;/strong&gt; ត្រូវបានលុបចេញពីកំណត់ត្រា %n</numerusform>
@@ -3380,132 +3390,132 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5006"/>
+        <location filename="../mainwindow.cpp" line="5009"/>
         <source>Current notes folder: </source>
         <translation>ថតឯកសារចំណាំបច្ចុប្បន្ន៖</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5009"/>
+        <location filename="../mainwindow.cpp" line="5012"/>
         <source>Set the notes folder. Current notes folder: </source>
         <translation>កំណត់ថតឯកសារកំណត់ចំណាំ។ ថតឯកសារចំណាំបច្ចុប្បន្ន៖</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5211"/>
+        <location filename="../mainwindow.cpp" line="5214"/>
         <source>Print note</source>
         <translation>បោះពុម្ពកំណត់ចំណាំ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5286"/>
+        <location filename="../mainwindow.cpp" line="5289"/>
         <source>Letter</source>
         <translation>លិខិត</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5316"/>
+        <location filename="../mainwindow.cpp" line="5319"/>
         <source>Portrait</source>
         <translation>បញ្ឈរ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5316"/>
+        <location filename="../mainwindow.cpp" line="5319"/>
         <source>Landscape</source>
         <translation>ទេសភាព</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5321"/>
+        <location filename="../mainwindow.cpp" line="5324"/>
         <source>Orientation</source>
         <translation>ការតំរង់ទិស</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5321"/>
+        <location filename="../mainwindow.cpp" line="5324"/>
         <source>Orientation:</source>
         <translation>ការតំរង់ទិស៖</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5344"/>
+        <location filename="../mainwindow.cpp" line="5347"/>
         <source>Export current note as PDF</source>
         <translation>នាំចេញកំណត់ត្រាបច្ចុប្បន្នជា PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5451"/>
+        <location filename="../mainwindow.cpp" line="5454"/>
         <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation>អ្នកមិនបានជ្រើសរើសបញ្ជីការងារដែលត្រូវធ្វើទេ។ &lt;br /&gt; សូមពិនិត្យមើលការកំណត់រចនាសម្ព័ន្ធ &lt;strong&gt; ដូស &lt;/strong&gt; របស់អ្នកនៅក្នុងការកំណត់!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6367"/>
+        <location filename="../mainwindow.cpp" line="6370"/>
         <source>Open QOwnNotes</source>
         <translation>បើក QOwnNotes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6030"/>
-        <location filename="../mainwindow.cpp" line="6417"/>
-        <location filename="../mainwindow.cpp" line="10216"/>
-        <location filename="../mainwindow.cpp" line="10640"/>
+        <location filename="../mainwindow.cpp" line="6033"/>
+        <location filename="../mainwindow.cpp" line="6420"/>
+        <location filename="../mainwindow.cpp" line="10219"/>
+        <location filename="../mainwindow.cpp" line="10643"/>
         <source>New note</source>
         <translation>កំណត់ចំណាំថ្មី</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6434"/>
+        <location filename="../mainwindow.cpp" line="6437"/>
         <source>Recent notes</source>
         <translation>កំណត់ត្រាថ្មីៗ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6450"/>
+        <location filename="../mainwindow.cpp" line="6453"/>
         <source>Show todo lists</source>
         <translation>បង្ហាញបញ្ជីការងារត្រូវធ្វើ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6462"/>
+        <location filename="../mainwindow.cpp" line="6465"/>
         <source>Recent tasks</source>
         <translation>ការងារថ្មីៗ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6483"/>
+        <location filename="../mainwindow.cpp" line="6486"/>
         <source>Quit</source>
         <translation>ឈប់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7938"/>
+        <location filename="../mainwindow.cpp" line="7941"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>បង្ហាញកំណត់ត្រាពីថតរងចំណាំទាំងអស់ (% 1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7961"/>
+        <location filename="../mainwindow.cpp" line="7964"/>
         <source>show notes in note root folder (%1)</source>
         <translation>បង្ហាញកំណត់ចំណាំក្នុងថតឯកសារគោល (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
-        <location filename="../mainwindow.cpp" line="771"/>
-        <location filename="../mainwindow.cpp" line="2090"/>
-        <location filename="../mainwindow.cpp" line="7973"/>
+        <location filename="../mainwindow.cpp" line="774"/>
+        <location filename="../mainwindow.cpp" line="2093"/>
+        <location filename="../mainwindow.cpp" line="7976"/>
         <source>Note folder</source>
         <translation>ថតឯកសារចំណាំ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9341"/>
-        <location filename="../mainwindow.cpp" line="9408"/>
+        <location filename="../mainwindow.cpp" line="9344"/>
+        <location filename="../mainwindow.cpp" line="9411"/>
         <source>Copy to note folder</source>
         <translation>ថតចំលងដើម្បីកត់សឺមី</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9341"/>
-        <location filename="../mainwindow.cpp" line="9409"/>
+        <location filename="../mainwindow.cpp" line="9344"/>
+        <location filename="../mainwindow.cpp" line="9412"/>
         <source>Move to note folder</source>
         <translation>ផ្លាស់ទីទៅថតឯកសារ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9342"/>
-        <location filename="../mainwindow.cpp" line="9410"/>
+        <location filename="../mainwindow.cpp" line="9345"/>
+        <location filename="../mainwindow.cpp" line="9413"/>
         <source>Copy to this subfolder</source>
         <translation>ថតចម្លងទៅថតរងនេះ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9343"/>
-        <location filename="../mainwindow.cpp" line="9411"/>
+        <location filename="../mainwindow.cpp" line="9346"/>
+        <location filename="../mainwindow.cpp" line="9414"/>
         <source>Move to this subfolder</source>
         <translation>ផ្លាស់ទីទៅថតរងនេះ</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="9455"/>
+        <location filename="../mainwindow.cpp" line="9458"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>ផ្លាស់ទីកំណត់ត្រា %n ដែលបានជ្រើសរើសដើម្បីកត់សឺមីរង &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3513,13 +3523,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5112"/>
-        <location filename="../mainwindow.cpp" line="12116"/>
+        <location filename="../mainwindow.cpp" line="5115"/>
+        <location filename="../mainwindow.cpp" line="12119"/>
         <source>Cancel</source>
         <translation>បោះបង់</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="9539"/>
+        <location filename="../mainwindow.cpp" line="9542"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n ចំណាំត្រូវបានផ្លាស់ប្តូរទៅកាន់កន្លែងដាក់រង &quot;%2&quot;</numerusform>
@@ -3527,7 +3537,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="9563"/>
+        <location filename="../mainwindow.cpp" line="9566"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>ចម្លងកំណត់សំគាល់ %n ដែលបានជ្រើសរើសដើម្បីកត់សឺមីរង &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3535,7 +3545,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="9630"/>
+        <location filename="../mainwindow.cpp" line="9633"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n ចំណាំត្រូវបានចម្លងទៅចំណាំថតរង &quot;%2&quot;</numerusform>
@@ -3543,118 +3553,118 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10338"/>
+        <location filename="../mainwindow.cpp" line="10341"/>
         <source>Open note in external editor</source>
         <translation>បើកកំណត់ត្រានៅក្នុងកម្មវិធីនិពន្ធខាងក្រៅ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10342"/>
+        <location filename="../mainwindow.cpp" line="10345"/>
         <source>Show note in file manager</source>
         <translation>បង្ហាញកំណត់ត្រានៅក្នុងកម្មវិធីគ្រប់គ្រងឯកសារ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10427"/>
+        <location filename="../mainwindow.cpp" line="10430"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>ប្រសិនបើអ្នកចង់ប្តូរឈ្មោះកំណត់ត្រារបស់អ្នកអ្នកត្រូវតែបើកជម្រើសដើម្បីអនុញ្ញាតឱ្យឈ្មោះឯកសារចំណាំខុសគ្នាពីចំណងជើង។</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10641"/>
+        <location filename="../mainwindow.cpp" line="10644"/>
         <source>New subfolder</source>
         <translation>ថតរងថ្មី</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10645"/>
+        <location filename="../mainwindow.cpp" line="10648"/>
         <source>Show folder in file manager</source>
         <translation>បង្ហាញថតឯកសារនៅក្នុងកម្មវិធីគ្រប់គ្រងឯកសារ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10690"/>
+        <location filename="../mainwindow.cpp" line="10693"/>
         <source>Create a new folder</source>
         <translation>បង្កើតថតឯកសារថ្មី</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10691"/>
+        <location filename="../mainwindow.cpp" line="10694"/>
         <source>Folder name:</source>
         <translation>ឈ្មោះថតឯកសារ៖</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7897"/>
+        <location filename="../mainwindow.cpp" line="7900"/>
         <source>show all untagged notes (%1)</source>
         <translation>បង្ហាញរាល់កំណត់ចំណាំ (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7899"/>
+        <location filename="../mainwindow.cpp" line="7902"/>
         <source>Untagged notes</source>
         <translation>កំណត់ចំណាំដែលមិនបានបង្កើត</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9991"/>
+        <location filename="../mainwindow.cpp" line="9994"/>
         <source>Export current note as HTML file</source>
         <translation>នាំចេញកំណត់ត្រាបច្ចុប្បន្នជាឯកសារ HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5295"/>
+        <location filename="../mainwindow.cpp" line="5298"/>
         <source>Page size</source>
         <translation>ទំហំទំព័រ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1143"/>
+        <location filename="../mainwindow.cpp" line="1146"/>
         <source>quit toolbar</source>
         <translation>ចេញពីរបារឧបករណ៍</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5295"/>
+        <location filename="../mainwindow.cpp" line="5298"/>
         <source>Page size:</source>
         <translation>ទំហំទំព័រ:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5412"/>
+        <location filename="../mainwindow.cpp" line="5415"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>QOwnNotes នឹងតាមដានទិន្នន័យការប្រើប្រាស់អនាមិកដែលជួយក្នុងការសំរេចថាផ្នែកណានៃ QOwnNotes ដើម្បីកែលំអបន្ទាប់និងរកនិងដោះស្រាយកំហុស។ អ្នកអាចបិទឥរិយាបថនោះនៅក្នុងការកំណត់។</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5416"/>
+        <location filename="../mainwindow.cpp" line="5419"/>
         <source>&amp;Ok</source>
         <translation>&amp;យល់ព្រម</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10226"/>
+        <location filename="../mainwindow.cpp" line="10229"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;យកកំណត់ត្រាចេញ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6572"/>
+        <location filename="../mainwindow.cpp" line="6575"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;ភ្ជាប់អត្ថបទដែលបានជ្រើសរើស</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1069"/>
+        <location filename="../mainwindow.cpp" line="1072"/>
         <source>Your tasks are being loaded from your server</source>
         <translation>ភារកិច្ចរបស់អ្នកកំពុងផ្ទុកពីម៉ាស៊ីនមេរបស់អ្នក</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2765"/>
+        <location filename="../mainwindow.cpp" line="2768"/>
         <source>Current note was modified externally</source>
         <translation>កំណត់ត្រាបច្ចុប្បន្នត្រូវបានកែប្រែពីខាងក្រៅ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2848"/>
-        <location filename="../mainwindow.cpp" line="5968"/>
+        <location filename="../mainwindow.cpp" line="2851"/>
+        <location filename="../mainwindow.cpp" line="5971"/>
         <source>Stored current note to disk</source>
         <translation>រក្សាទុកកំណត់ត្រាបច្ចុប្បន្នទៅថាស</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2866"/>
+        <location filename="../mainwindow.cpp" line="2869"/>
         <source>Note was modified externally: %1</source>
         <translation>ចំណាំត្រូវបានកែប្រែផ្នែកខាងក្រៅ៖ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2889"/>
+        <location filename="../mainwindow.cpp" line="2892"/>
         <source>Notes directory was modified externally</source>
         <translation>ថតឯកសារត្រូវបានកែប្រែនៅខាងក្រៅ</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2950"/>
+        <location filename="../mainwindow.cpp" line="2953"/>
         <source>Stored %n note(s) to disk</source>
         <translation>
             <numerusform>ទុក %n ចំណាំទៅក្នុងថាស</numerusform>
@@ -3662,215 +3672,215 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7864"/>
+        <location filename="../mainwindow.cpp" line="7867"/>
         <source>show all notes (%1)</source>
         <translation>បង្ហាញកំណត់ត្រាទាំងអស់ (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7867"/>
-        <location filename="../mainwindow.cpp" line="7941"/>
+        <location filename="../mainwindow.cpp" line="7870"/>
+        <location filename="../mainwindow.cpp" line="7944"/>
         <source>All notes</source>
         <translation>កំណត់ចំណាំទាំងអស់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8944"/>
+        <location filename="../mainwindow.cpp" line="8947"/>
         <source>&amp;Add tag</source>
         <translation>&amp;បន្ថែមស្លាក</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8992"/>
+        <location filename="../mainwindow.cpp" line="8995"/>
         <source>Tag could not be created!</source>
         <translation>មិនអាចបង្កើតស្លាកបានទេ!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9171"/>
+        <location filename="../mainwindow.cpp" line="9174"/>
         <source>Move to this tag</source>
         <translation>ផ្លាស់ទីទៅស្លាកនេះ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9206"/>
+        <location filename="../mainwindow.cpp" line="9209"/>
         <source>Tag this</source>
         <translation>Tag this</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9231"/>
+        <location filename="../mainwindow.cpp" line="9234"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>មិនអាចផ្លាស់ទីស្លាក &apos;%1&apos; ទៅស្លាកនេះទេ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9280"/>
+        <location filename="../mainwindow.cpp" line="9283"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>បានផ្លាស់ទីស្លាក &apos;%1&apos; ទៅស្លាកថ្មី</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8194"/>
+        <location filename="../mainwindow.cpp" line="8197"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>បង្ហាញរាល់កំណត់ត្រាដែលមានដាក់ក្នុង &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8955"/>
+        <location filename="../mainwindow.cpp" line="8958"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;យកស្លាកចេញ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5450"/>
+        <location filename="../mainwindow.cpp" line="5453"/>
         <source>No selected todo lists!</source>
         <translation>គ្មានបញ្ជីការងារត្រូវជ្រើសរើសទេ!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="740"/>
+        <location filename="../mainwindow.cpp" line="743"/>
         <source>Subfolders</source>
         <translation>ថតរង</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="752"/>
+        <location filename="../mainwindow.cpp" line="755"/>
         <source>Tags</source>
         <translation>ស្លាក</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="761"/>
+        <location filename="../mainwindow.cpp" line="764"/>
         <source>Note search</source>
         <translation>ស្វែងរកចំណាំ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="790"/>
+        <location filename="../mainwindow.cpp" line="793"/>
         <source>Note list</source>
         <translation>បញ្ជីចំណាំ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="815"/>
+        <location filename="../mainwindow.cpp" line="818"/>
         <source>Note edit</source>
         <translation>កែប្រែកំណត់សំគាល់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="827"/>
+        <location filename="../mainwindow.cpp" line="830"/>
         <source>Note tags</source>
         <translation>ស្លាកសម្គាល់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="838"/>
+        <location filename="../mainwindow.cpp" line="841"/>
         <source>Note preview</source>
         <translation>ការមើលចំណាំជាមុន</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="846"/>
+        <location filename="../mainwindow.cpp" line="849"/>
         <source>Log</source>
         <translation>កំណត់ហេតុ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="855"/>
+        <location filename="../mainwindow.cpp" line="858"/>
         <source>Scripting</source>
         <translation>ស្គ្រីប</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1110"/>
+        <location filename="../mainwindow.cpp" line="1113"/>
         <source>formatting toolbar</source>
         <translation>របារឧបករណ៍ធ្វើទ្រង់ទ្រាយ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1119"/>
+        <location filename="../mainwindow.cpp" line="1122"/>
         <source>inserting toolbar</source>
         <translation>បញ្ចូលរបារឧបករណ៍</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1126"/>
+        <location filename="../mainwindow.cpp" line="1129"/>
         <source>encryption toolbar</source>
         <translation>របារឧបករណ៍អ៊ិនគ្រីប</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1133"/>
+        <location filename="../mainwindow.cpp" line="1136"/>
         <source>window toolbar</source>
         <translation>របារឧបករណ៍បង្អួច</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1138"/>
+        <location filename="../mainwindow.cpp" line="1141"/>
         <source>custom action toolbar</source>
         <translation>របារឧបករណ៍សកម្មភាពផ្ទាល់ខ្លួន</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1158"/>
+        <location filename="../mainwindow.cpp" line="1161"/>
         <source>Workspace selector</source>
         <translation>ឧបករណ៍ជ្រើសរើសកន្លែងធ្វើការ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1304"/>
+        <location filename="../mainwindow.cpp" line="1307"/>
         <source>Show %1 panel</source>
         <translation>បង្ហាញបន្ទះ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1346"/>
+        <location filename="../mainwindow.cpp" line="1349"/>
         <source>Show %1</source>
         <translation>បង្ហាញ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1669"/>
+        <location filename="../mainwindow.cpp" line="1672"/>
         <source>Leave distraction free mode</source>
         <translation>ទុករបៀបទំនេររំខាន</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1851"/>
+        <location filename="../mainwindow.cpp" line="1854"/>
         <source>Switch to note folder</source>
         <translation>ប្តូរទៅថតឯកសារចំណាំ
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2246"/>
+        <location filename="../mainwindow.cpp" line="2249"/>
         <source>show notes in folder &apos;%1&apos; (%2)</source>
         <translation>បង្ហាញកំណត់ត្រាក្នុងថត &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2285"/>
+        <location filename="../mainwindow.cpp" line="2288"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
         <translation>&lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; កែប្រែចុងក្រោយ៖ %2 ២</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2290"/>
+        <location filename="../mainwindow.cpp" line="2293"/>
         <source>&lt;br /&gt;path: %1</source>
         <translation>&lt;b /&gt; ផ្លូវ៖ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2492"/>
+        <location filename="../mainwindow.cpp" line="2495"/>
         <source>Toolbar could not be loaded without name</source>
         <translation>មិនអាចផ្ទុករបារឧបករណ៍បានទេ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2792"/>
+        <location filename="../mainwindow.cpp" line="2795"/>
         <source>Overwriting external changes of: %1</source>
         <translation>សរសេរជាន់លើការផ្លាស់ប្តូរខាងក្រៅនៃ៖  %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2813"/>
+        <location filename="../mainwindow.cpp" line="2816"/>
         <source>Loading external changes from: %1</source>
         <translation>ផ្ទុកការផ្លាស់ប្តូរខាងក្រៅពី៖ %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2849"/>
-        <location filename="../mainwindow.cpp" line="5969"/>
+        <location filename="../mainwindow.cpp" line="2852"/>
+        <location filename="../mainwindow.cpp" line="5972"/>
         <source>Current note could not be stored to disk</source>
         <translation>កំណត់ត្រាបច្ចុប្បន្នមិនអាចរក្សាទុកក្នុងថាសបានទេ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3029"/>
+        <location filename="../mainwindow.cpp" line="3032"/>
         <source>Read-only</source>
         <translation>អាច​បាន​តែ​អាន</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3031"/>
+        <location filename="../mainwindow.cpp" line="3034"/>
         <source>Note editing is disabled, click to enable</source>
         <translation>ការកែសំរួលត្រូវបានបិទចុចដើម្បីបើកដំណើរការ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3048"/>
+        <location filename="../mainwindow.cpp" line="3051"/>
         <source>Line numbers</source>
         <translation>លេខជួរ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3058"/>
+        <location filename="../mainwindow.cpp" line="3061"/>
         <source>Click here to see what has changed and to be able to update to the latest version</source>
         <translation>ចុចត្រង់នេះដើម្បីមើលអ្វីដែលបានផ្លាស់ប្តូរនិងអាចអាប់ដេតទៅកំណែថ្មីបំផុត</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3428"/>
+        <location filename="../mainwindow.cpp" line="3431"/>
         <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
         <translation>
             <numerusform>បន្តជាមួយការលុបដោយស្វ័យប្រវត្តិនៃ &lt;strong&gt;%n&lt;/strong&gt; ដែលមានបញ្ហាចំលងទិន្នន័យដែលអាចរារាំងដំណើរការធ្វើសមកាលកម្មផ្ទាល់ខ្លួនរបស់អ្នក?</numerusform>
@@ -3878,7 +3888,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4884"/>
+        <location filename="../mainwindow.cpp" line="4887"/>
         <source>%n note(s) were tagged with &quot;%2&quot;</source>
         <translation>
             <numerusform>%n ចំណាំត្រូវបានដាក់ស្លាកជាមួយ &quot;%2&quot;</numerusform>
@@ -3886,7 +3896,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5667"/>
+        <location filename="../mainwindow.cpp" line="5670"/>
         <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>
             <numerusform>រកឃើញ &lt;strong&gt;%n&lt;/strong&gt; ការកើតឡើងនៃ &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3894,67 +3904,67 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6030"/>
+        <location filename="../mainwindow.cpp" line="6033"/>
         <source>Note headline</source>
         <translation>ចំណងជើងចំណងជើង</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6578"/>
+        <location filename="../mainwindow.cpp" line="6581"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation>&amp;រារាំងអត្ថបទដែលបានជ្រើសរើស</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7588"/>
+        <location filename="../mainwindow.cpp" line="7591"/>
         <source>Downloading images finished</source>
         <translation>ការទាញយករូបភាពបានបញ្ចប់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7738"/>
+        <location filename="../mainwindow.cpp" line="7741"/>
         <source>Increased font size to %1 pt</source>
         <translation>បង្កើនទំហំពុម្ពអក្សរដល់ %1 ផ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7755"/>
+        <location filename="../mainwindow.cpp" line="7758"/>
         <source>Decreased font size to %1 pt</source>
         <translation>ទំហំពុម្ពអក្សរថយចុះដល់ %1 ផេត</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5416"/>
-        <location filename="../mainwindow.cpp" line="5431"/>
-        <location filename="../mainwindow.cpp" line="5454"/>
-        <location filename="../mainwindow.cpp" line="10430"/>
+        <location filename="../mainwindow.cpp" line="5419"/>
+        <location filename="../mainwindow.cpp" line="5434"/>
+        <location filename="../mainwindow.cpp" line="5457"/>
+        <location filename="../mainwindow.cpp" line="10433"/>
         <source>Open &amp;settings</source>
         <translation>&amp;បើកការកំណត់</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1666"/>
-        <location filename="../mainwindow.cpp" line="12268"/>
+        <location filename="../mainwindow.cpp" line="1669"/>
+        <location filename="../mainwindow.cpp" line="12271"/>
         <source>leave</source>
         <translation>ចាកចេញ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7005"/>
+        <location filename="../mainwindow.cpp" line="7008"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>សូមបញ្ចូល &lt;strong&gt; ពាក្យសម្ងាត់ &lt;/strong&gt; របស់អ្នកដើម្បីអ៊ីនគ្រីបកំណត់ចំណាំ។ &lt;br /&gt; ចងចាំថាអ្នកត្រូវតែ &lt;strong&gt; ចងចាំ &lt;/strong&gt; ពាក្យសម្ងាត់របស់អ្នកដើម្បីអានខ្លឹមសារនៃកំណត់ចំណាំ។ &lt;br /&gt; អ្នកអាច &lt;strong&gt; ធ្វើបានតែ &lt;/strong&gt; ប៉ុណ្ណោះដែលអាចធ្វើបាន &lt;strong&gt; ក្នុង QOwnNotes &lt;/strong&gt;!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7061"/>
+        <location filename="../mainwindow.cpp" line="7064"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>ឌិគ្រីបចំណាំហើយទុកវាជាអត្ថបទធម្មតា</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7066"/>
+        <location filename="../mainwindow.cpp" line="7069"/>
         <source>&amp;Decrypt</source>
         <translation>&amp;ឌិគ្រីប</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7091"/>
+        <location filename="../mainwindow.cpp" line="7094"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br /&gt; អ្នកនឹងអាចកែសំរួលកំណត់ចំណាំរបស់អ្នក។</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7160"/>
+        <location filename="../mainwindow.cpp" line="7163"/>
         <source>Export current note as Markdown file</source>
         <translation>នាំចេញកំណត់ត្រាបច្ចុប្បន្នជាឯកសារម៉ាក្រូ</translation>
     </message>

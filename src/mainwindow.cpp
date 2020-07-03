@@ -139,6 +139,9 @@ MainWindow::MainWindow(QWidget *parent)
 #if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
     ui->noteEditTabWidget->setTabBarAutoHide(true);
 #endif
+    ui->noteEditTabWidget->tabBar()->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(ui->noteEditTabWidget->tabBar(), &QWidget::customContextMenuRequested,
+            this, &MainWindow::showNoteEditTabWidgetContextMenu);
 
     // setup vim mode
     if (settings.value(QStringLiteral("Editor/vimMode")).toBool()) {
@@ -12558,4 +12561,41 @@ void MainWindow::on_noteEditTabWidget_tabBarClicked(int index) {
         !currentNote.isInCurrentNoteSubFolder()) {
         jumpToNoteSubFolder(currentNote.getNoteSubFolderId());
     }
+}
+
+/**
+ * Note tab context menu
+ */
+void MainWindow::showNoteEditTabWidgetContextMenu(const QPoint &point) {
+    if (point.isNull()) {
+        return;
+    }
+
+    int tabIndex = ui->noteEditTabWidget->tabBar()->tabAt(point);
+    auto *menu = new QMenu();
+
+    // Toggle note stickiness
+    auto *stickAction = menu->addAction(tr("Toggle note stickiness"));
+    connect(stickAction, &QAction::triggered, this, [this, tabIndex]() {
+        on_noteEditTabWidget_tabBarDoubleClicked(tabIndex);
+    });
+
+    // Close other note tabs
+    auto *closeAction = menu->addAction(tr("Close other note tabs"));
+    connect(closeAction, &QAction::triggered, this, [this, tabIndex]() {
+        const int maxIndex = ui->noteEditTabWidget->count() - 1;
+        const int keepNoteId = Utils::Gui::getTabWidgetNoteId(
+            ui->noteEditTabWidget, tabIndex);
+
+        for (int i = maxIndex; i >= 0; i--) {
+            const int noteId = Utils::Gui::getTabWidgetNoteId(
+                ui->noteEditTabWidget, i);
+
+            if (noteId != keepNoteId) {
+                removeNoteTab(i);
+            }
+        }
+    });
+
+    menu->exec(ui->noteEditTabWidget->tabBar()->mapToGlobal(point));
 }

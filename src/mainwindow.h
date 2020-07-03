@@ -652,6 +652,8 @@ class MainWindow : public QMainWindow {
 
     void on_noteEditTabWidget_tabBarClicked(int index);
 
+    void showNoteEditTabWidgetContextMenu(const QPoint &point);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

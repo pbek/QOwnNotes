@@ -7,6 +7,8 @@
       used (and so on) 
 - more C++11/20 keywords and some types were added to the C++ highlighter
   (for [#120](https://github.com/pbek/qmarkdowntextedit/pull/120), thank you @data-man)
+- there now is a context menu for note tabs which allows you to toggle the note stickiness
+  and to close all other note tabs (for [#1814](https://github.com/pbek/QOwnNotes/issues/1814))
 
 ## 20.7.0
 - you can now press <kbd>Ctrl</kbd> + <kbd>U</kbd> to format the selected text underline
