@@ -4382,17 +4382,22 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
         <translation>Nevarēja noņemt pārdēvēto piezīmju failu: %1 - kļūdas ziņojums: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2524"/>
+        <location filename="../entities/note.cpp" line="1480"/>
+        <source>Note</source>
+        <translation type="unfinished">Piezīme</translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="2528"/>
         <source>Could not read image file: %1</source>
         <translation>Nevarēja nolasīt attēla failu: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3112"/>
+        <location filename="../entities/note.cpp" line="3116"/>
         <source>Note file path changed</source>
         <translation>Piezīmes faila ceļš ir mainīts</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3113"/>
+        <location filename="../entities/note.cpp" line="3117"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>Tika konstatētas piezīmju ceļa izmaiņas. Vai vēlaties aizstāt visus &lt;strong&gt;%1&lt;/strong&gt; saišu gadījumus ar &lt;strong&gt;%2&lt;/strong&gt; un saites ar faila nosaukumu &lt;strong&gt;%3&lt;/strong&gt; ar &lt;strong&gt;%4&lt;/strong&gt; &gt; vai &lt;strong&gt;%n&lt;/strong&gt; piezīmju failā?</numerusform>
@@ -4401,7 +4406,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3654"/>
+        <location filename="../entities/note.cpp" line="3658"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>… Un vēl %n piezīme</numerusform>

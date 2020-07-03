@@ -4308,24 +4308,29 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>이름이 바뀐 노트 파일을 제거 할 수 없습니다: %1 - 오류 메시지: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2524"/>
+        <location filename="../entities/note.cpp" line="1480"/>
+        <source>Note</source>
+        <translation type="unfinished">노트</translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="2528"/>
         <source>Could not read image file: %1</source>
         <translation>이미지 파일을 읽을 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3112"/>
+        <location filename="../entities/note.cpp" line="3116"/>
         <source>Note file path changed</source>
         <translation>참고 파일 경로가 변경되었습니다.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3113"/>
+        <location filename="../entities/note.cpp" line="3117"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>메모 경로 변경이 감지되었습니다. &lt;strong&gt; %1&lt;/ strong&gt; 링크의 모든 항목을 &lt;strong&gt; %2&lt;/ strong&gt;로 바꾸고 파일 이름이 &lt;strong&gt; %3&lt;/ strong&gt; 인 &lt;strong&gt; %4&lt;/ strong&gt; 링크를 바꾸시겠습니까? &gt; &lt;strong&gt; %n&lt;/ strong&gt; 메모 파일에서?</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3654"/>
+        <location filename="../entities/note.cpp" line="3658"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>… 그리고 %n 더 많은 노트</numerusform>

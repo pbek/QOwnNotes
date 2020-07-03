@@ -1476,6 +1476,10 @@ bool Note::handleNoteTextFileName() {
     // cleanup additional characters
     name = cleanupFileName(name);
 
+    if (name.isEmpty()) {
+        name = QObject::tr("Note");
+    }
+
     // check if name has changed
     if (name != this->_name) {
         qDebug() << __func__ << " - 'name' was changed: " << name;

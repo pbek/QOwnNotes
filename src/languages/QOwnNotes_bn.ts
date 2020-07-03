@@ -4336,17 +4336,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>পুনঃনামকরণের নাম-ফাইলটি সরানো যায়নি:% 1 - ত্রুটি বার্তা:% 2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2524"/>
+        <location filename="../entities/note.cpp" line="1480"/>
+        <source>Note</source>
+        <translation type="unfinished">নোট</translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="2528"/>
         <source>Could not read image file: %1</source>
         <translation>চিত্র ফাইলটি পড়তে পারিনি:% 1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3112"/>
+        <location filename="../entities/note.cpp" line="3116"/>
         <source>Note file path changed</source>
         <translation>নোট ফাইলের পথ পরিবর্তন হয়েছে</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3113"/>
+        <location filename="../entities/note.cpp" line="3117"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>নোটের পথের একটি পরিবর্তন সনাক্ত হয়েছে। আপনি কি &lt;strong&gt;%2&lt;/strong&gt; এর সাথে &lt;strong&gt;%1&lt;/strong&gt; লিঙ্ক এবং ফাইল নাম &lt;strong&gt;%3&lt;/strong&gt; এর সাথে &lt;strong&gt;%4&lt;/ strong এর লিঙ্কগুলি প্রতিস্থাপন করতে চান? &gt; &lt;strong&gt;%n/ strong&gt; নোট ফাইল তে?</numerusform>
@@ -4354,7 +4359,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3654"/>
+        <location filename="../entities/note.cpp" line="3658"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>... এবং আরও %n টি নোট (গুলি)</numerusform>

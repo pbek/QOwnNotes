@@ -4309,24 +4309,29 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>無法移除重命名的筆記檔： %1 - 錯誤訊息： %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2524"/>
+        <location filename="../entities/note.cpp" line="1480"/>
+        <source>Note</source>
+        <translation type="unfinished">筆記</translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="2528"/>
         <source>Could not read image file: %1</source>
         <translation>無法讀取圖檔： %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3112"/>
+        <location filename="../entities/note.cpp" line="3116"/>
         <source>Note file path changed</source>
         <translation>筆記文件路徑已更改</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3113"/>
+        <location filename="../entities/note.cpp" line="3117"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>檢測到音符路徑已更改。 您是否希望將所有出現的&lt;strong&gt;％1 &lt;/ strong&gt;鏈接替換為&lt;strong&gt;％2 &lt;/ strong&gt;，並將文件名&lt;strong&gt;％3 &lt;/ strong&gt;鏈接替換為&lt;strong&gt;％4 &lt;/ strong &gt;在&lt;strong&gt;％n &lt;/ strong&gt;筆記文件中？</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3654"/>
+        <location filename="../entities/note.cpp" line="3658"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>…以及%n則筆記</numerusform>

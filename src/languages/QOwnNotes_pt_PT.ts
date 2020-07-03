@@ -4342,17 +4342,22 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
         <translation>Não foi possível remover o arquivo de anotação renomeado: %1 - Mensagem de erro: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2524"/>
+        <location filename="../entities/note.cpp" line="1480"/>
+        <source>Note</source>
+        <translation type="unfinished">Nota</translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="2528"/>
         <source>Could not read image file: %1</source>
         <translation>Não foi possível ler o arquivo de imagem: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3112"/>
+        <location filename="../entities/note.cpp" line="3116"/>
         <source>Note file path changed</source>
         <translation>Anotar o caminho do arquivo alterado</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3113"/>
+        <location filename="../entities/note.cpp" line="3117"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>Uma alteração no caminho da nota foi detectada. Deseja substituir todas as ocorrências de links &lt;strong&gt;%1 &lt;/strong&gt; por &lt;strong&gt;%2 &lt;/strong&gt; e links com o nome de arquivo &lt;strong&gt;%3 &lt;/strong&gt; por &lt;strong&gt;%4 &lt;/ strong &gt; no &lt;strong&gt;%n &lt;/strong&gt; arquivo de anotações?</numerusform>
@@ -4360,7 +4365,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3654"/>
+        <location filename="../entities/note.cpp" line="3658"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>…e mais %n nota(s)</numerusform>

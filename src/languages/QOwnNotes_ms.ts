@@ -4301,24 +4301,29 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
         <translation>Tidak dapat mengalih keluar nama fail nota: %1 - Mesej ralat: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2524"/>
+        <location filename="../entities/note.cpp" line="1480"/>
+        <source>Note</source>
+        <translation type="unfinished">Catatan</translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="2528"/>
         <source>Could not read image file: %1</source>
         <translation>Tidak dapat membaca fail imej: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3112"/>
+        <location filename="../entities/note.cpp" line="3116"/>
         <source>Note file path changed</source>
         <translation>Perhatikan fail fail diubah</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3113"/>
+        <location filename="../entities/note.cpp" line="3117"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>Perubahan laluan nota telah dikesan. Adakah anda ingin menggantikan semua kejadian pautan &lt;strong&gt;%1&lt;/ strong&gt; dengan &lt;strong&gt;%2 &lt;/ strong&gt; dan pautan dengan nama fail &lt;strong&gt;%3&lt;/ strong&gt; dengan &lt;strong&gt;%4&lt;/ strong &gt; dalam fail nota &lt;strong&gt;%n&lt;/ strong&gt;?</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3654"/>
+        <location filename="../entities/note.cpp" line="3658"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>... dan% n lebih banyak nota</numerusform>

@@ -4339,17 +4339,22 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
         <translation>Ümbernimetatud märkmefaili ei saanud eemaldada: %1 - tõrketeade: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2524"/>
+        <location filename="../entities/note.cpp" line="1480"/>
+        <source>Note</source>
+        <translation type="unfinished">Märge</translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="2528"/>
         <source>Could not read image file: %1</source>
         <translation>Piltfaili ei õnnestunud lugeda: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3112"/>
+        <location filename="../entities/note.cpp" line="3116"/>
         <source>Note file path changed</source>
         <translation>Märkme faili tee on muudetud</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3113"/>
+        <location filename="../entities/note.cpp" line="3117"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>Tuvastati märkmetee muutus. Kas soovite asendada kõik &lt;strong&gt;%1 &lt;/strong&gt; esinemised sõnadega &lt;strong&gt;%2 &lt;/strong&gt; ja jätta failinimega &lt;strong&gt;%3 &lt;/strong&gt; tähisega &lt;strong&gt;% 4 &lt;/strong&gt; &gt; kas märkmefailis &lt;strong&gt;%n &lt;/strong&gt;?</numerusform>
@@ -4357,7 +4362,7 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3654"/>
+        <location filename="../entities/note.cpp" line="3658"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>... ja veel %n märkus</numerusform>

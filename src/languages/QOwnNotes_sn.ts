@@ -4353,17 +4353,22 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
         <translation>Haugone kubvisa zita rekuti-faira: %1 - Chikanganiso mharidzo: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2524"/>
+        <location filename="../entities/note.cpp" line="1480"/>
+        <source>Note</source>
+        <translation type="unfinished">Cherechedzo</translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="2528"/>
         <source>Could not read image file: %1</source>
         <translation>Haugone kuverenga faira yemufananidzo: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3112"/>
+        <location filename="../entities/note.cpp" line="3116"/>
         <source>Note file path changed</source>
         <translation>Cherechedzo faira nzira yakachinja</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3113"/>
+        <location filename="../entities/note.cpp" line="3117"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>Shanduko yenzira yetsotsi yakaonekwa. Ungave iwe unoda kutsiva zvese zvinoitika zve &lt;strong&gt;%1 &lt;/strong&gt; zvabatana ne &lt;strong&gt;%2 &lt;/strong&gt; uye zvinongedzo zvine zita faira &lt;strong&gt;%3 &lt;/strong&gt; ne &lt;strong&gt;%4 &lt;/strong&gt; &gt; mu &lt;strong&gt;%n &lt;/strong&gt; rodha faira?</numerusform>
@@ -4371,7 +4376,7 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3654"/>
+        <location filename="../entities/note.cpp" line="3658"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>… Uye %n zvimwe chinyorwa

@@ -4345,17 +4345,22 @@ Hvis papirkurven er aktivert på din ownCloud-server, bør du kunne gjenopprette
         <translation>Kunne ikke fjerne omdøpt notatfil: %1 - Feilmelding: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2524"/>
+        <location filename="../entities/note.cpp" line="1480"/>
+        <source>Note</source>
+        <translation type="unfinished">Note</translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="2528"/>
         <source>Could not read image file: %1</source>
         <translation>Kunne ikke lese bildefilen: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3112"/>
+        <location filename="../entities/note.cpp" line="3116"/>
         <source>Note file path changed</source>
         <translation>Merknadens filsti ble endret</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3113"/>
+        <location filename="../entities/note.cpp" line="3117"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>En endring av notatstien ble oppdaget. Vil du erstatte alle forekomster av &lt;strong&gt;%1&lt;/strong&gt; lenker med &lt;strong&gt;%2&lt;/strong&gt; og lenker med filnavn &lt;strong&gt;%3&lt;/strong&gt; med &lt;strong&gt;%4&lt;/ strong &gt; i &lt;strong&gt;%n&lt;/strong&gt; notatfil?</numerusform>
@@ -4363,7 +4368,7 @@ Hvis papirkurven er aktivert på din ownCloud-server, bør du kunne gjenopprette
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3654"/>
+        <location filename="../entities/note.cpp" line="3658"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>... og %n mer notat</numerusform>

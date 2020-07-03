@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.7.1
+- if the filename that is generated from the headline of a note turns out to be
+  empty it will now be substituted by `Note.md` (for [#1813](https://github.com/pbek/QOwnNotes/issues/1813))
+    - if that file already exists in the current folder `Note - 1.md` will be
+      used (and so on) 
+
 ## 20.7.0
 - you can now press <kbd>Ctrl</kbd> + <kbd>U</kbd> to format the selected text underline
   (for [#1811](https://github.com/pbek/QOwnNotes/issues/1811))
