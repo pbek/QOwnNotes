@@ -5,6 +5,8 @@
   empty it will now be substituted by `Note.md` (for [#1813](https://github.com/pbek/QOwnNotes/issues/1813))
     - if that file already exists in the current folder `Note 1.md` will be
       used (and so on) 
+- more C++11/20 keywords and some types were added to the C++ highlighter
+  (for [#120](https://github.com/pbek/qmarkdowntextedit/pull/120, thank you @data-man)
 
 ## 20.7.0
 - you can now press <kbd>Ctrl</kbd> + <kbd>U</kbd> to format the selected text underline
