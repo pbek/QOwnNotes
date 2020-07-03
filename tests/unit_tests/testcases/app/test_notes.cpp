@@ -244,7 +244,7 @@ void TestNotes::testCodeToHtmlConversionMultiLineComment() {
         QStringLiteral("/*hello my \nqownnotes blah \nblah single line*/\n");
     QString commentTrueMultiLineNoEnd =
         QStringLiteral("/*hello my \nqownnotes blah \nblah single line\n");
-    QString notAComment = QStringLiteral("not/ a /comment");
+    QString notAComment = QStringLiteral("isnot/ a /comment");
 
     CodeToHtmlConverter c(QStringLiteral("cpp"));
     CodeToHtmlConverter css("css");
@@ -270,8 +270,8 @@ void TestNotes::testCodeToHtmlConversionMultiLineComment() {
     QString expectedTrueMultiLineNoEnd = QStringLiteral(
         "<span class=\"code-comment\">&#47;*hello my \nqownnotes blah \nblah "
         "single line</span>\n");
-    QString expectedNotAComment = QStringLiteral("not&#47; a &#47;comment");
-    QString expectedCSSNotAComment = QStringLiteral("not&#47; a &#47;comment");
+    QString expectedNotAComment = QStringLiteral("isnot&#47; a &#47;comment");
+    QString expectedCSSNotAComment = QStringLiteral("isnot&#47; a &#47;comment");
 
     QVERIFY(outputMultiLineComment == expectedMultiLineComment);
     QVERIFY(outputTrueMultiLine == expectedTrueMultiLine);
