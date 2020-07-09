@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.7.2
+- more highlighting improvements were made in the note text edit
+  (for [#122](https://github.com/pbek/qmarkdowntextedit/pull/122), thank you @Waqar144)
+
 ## 20.7.1
 - if the filename that is generated from the headline of a note turns out to be
   empty it will now be substituted by `Note.md` (for [#1813](https://github.com/pbek/QOwnNotes/issues/1813))
