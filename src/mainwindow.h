@@ -755,6 +755,7 @@ private:
         QIcon(":icons/breeze-qownnotes/16x16/text-x-generic.svg"));
     QList<QHotkey *> _globalShortcuts;
     int _lastNoteId = 0;
+    bool _scriptUpdateFound = false;
 
     void createSystemTrayIcon();
 
@@ -1097,4 +1098,5 @@ private:
     bool jumpToTab(const Note &note) const;
     void closeOrphanedTabs() const;
     void removeNoteTab(int index) const;
+    void automaticScriptUpdateCheck();
 };

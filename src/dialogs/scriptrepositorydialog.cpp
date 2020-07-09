@@ -257,7 +257,7 @@ void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) {
  *
  * @param arr
  */
-void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
+void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(arr);
     QJsonObject jsonObject = jsonResponse.object();
     ScriptInfoJson infoJson(jsonObject);
@@ -277,6 +277,8 @@ void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
         if (localVersion >= remoteVersion) {
             return;
         }
+
+        emit updateFound();
 
         ui->selectFrame->show();
     }

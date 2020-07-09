@@ -551,6 +551,8 @@ MainWindow::MainWindow(QWidget *parent)
     // attempt to quit the application when a logout is initiated
     connect(qApp, &QApplication::commitDataRequest, this,
             &MainWindow::on_action_Quit_triggered);
+
+    automaticScriptUpdateCheck();
 }
 
 /**
@@ -11973,6 +11975,52 @@ void MainWindow::on_actionCheck_for_script_updates_triggered() {
 
     // reload the scripting engine
     ScriptingService::instance()->reloadEngine();
+}
+
+/**
+ * This method checks if scripts need to be updated and open a dialog to ask if
+ * the user wants to update them (if the dialog wasn't disabled)
+ */
+void MainWindow::automaticScriptUpdateCheck() {
+    _scriptUpdateFound = false;
+    auto *dialog = new ScriptRepositoryDialog(this, true);
+
+    // show a dialog once if a script update was found
+    QObject::connect(
+        dialog,
+        &ScriptRepositoryDialog::updateFound,
+        this, [this] () {
+            // we only want to run this once
+            if (_scriptUpdateFound) {
+                return;
+            }
+
+            _scriptUpdateFound = true;
+            showStatusBarMessage(tr("A script update was found!"), 4000);
+
+            // open the update question dialog in another thread so the dialog
+            // can be deleted meanwhile
+            QTimer::singleShot(100, this, [this] () {
+                if (Utils::Gui::question(
+                    this, tr("Script updates"),
+                    tr("Updates to your scripts were found in the script "
+                       "repository! Do you want to update them?"),
+                    "auto-script-update") == QMessageBox::Yes) {
+                    on_actionCheck_for_script_updates_triggered();
+                }
+            });
+        });
+
+    // delete the dialog after 10 sec
+    QTimer::singleShot(10000, this, [this, dialog] () {
+        delete(dialog);
+
+        if (_scriptUpdateFound) {
+            _scriptUpdateFound = false;
+        } else {
+            showStatusBarMessage(tr("No script updates were found"), 3000);
+        }
+    });
 }
 
 void MainWindow::noteTextEditResize(QResizeEvent *event) {

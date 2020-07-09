@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 20.7.2
+- scripts in the script repository are now checked for updates on application
+  start (for [#1820](https://github.com/pbek/QOwnNotes/issues/1820))
+    - if an update was found you'll be asked if you want to open the script
+      update dialog 
 - more highlighting improvements were made in the note text edit
   (for [#122](https://github.com/pbek/qmarkdowntextedit/pull/122), thank you @Waqar144)
 
