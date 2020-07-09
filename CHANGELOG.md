@@ -7,6 +7,8 @@
       update dialog 
 - more highlighting improvements were made in the note text edit
   (for [#122](https://github.com/pbek/qmarkdowntextedit/pull/122), thank you @Waqar144)
+- added more translation (thank you manuelarodsilva, MGuerra, Gregory.K,
+  rakekniven, unchase, mlimacarlos, richarson, Zack-83)
 
 ## 20.7.1
 - if the filename that is generated from the headline of a note turns out to be
