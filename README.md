@@ -31,10 +31,10 @@ and [**ownCloud Notes**](https://github.com/owncloud/notes).
 
 You are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device**, like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud / Nextcloud web-service**.
 
-The notes are stored as **plain text files** and are **synced with Nextcloud's/ownCloud's file sync** functionality.
+The notes are stored as **plain text markdown files** and are **synced with Nextcloud's/ownCloud's file sync** functionality.
 Of course other software, like [Syncthing](https://syncthing.net) or [Dropbox](https://www.dropbox.com) can be used too.
 
-I like the concept of having notes accessible in plain text files, like it is done in the ownCloud / Nextcloud notes apps, to gain a maximum of **freedom**, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need **QOwnNotes** was born.
+If you like the concept of having notes accessible in plain text files, like it is done in the Nextcloud / ownCloud notes apps to gain a maximum of **freedom** then QOwnNotes is for you.
 
 Visit the project page here: [QOwnNotes project page](https://www.qownnotes.org)
 
@@ -51,7 +51,7 @@ To access your ownCloud notes from your **mobile device** you may want to get th
 
 On Android you could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
 
-On iOS I heard [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) works well (syncing notes via WebDAV).
+On iOS [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) may also work well (syncing notes via WebDAV).
 
 ## Screenshot
 
@@ -136,18 +136,6 @@ Please feel free to contribute source code to this project, make suggestions or 
 
 You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
-## Chat
-
-### IRC
-
-If you are having trouble or would like to help out, join `#qownnotes` on Freenode.
-
-Kiwi IRC (IRC in your web browser): [QOwnNotes IRC](https://kiwiirc.com/client/irc.freenode.net/#qownnotes)
-
-### Join the Gitter channel
-
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/qownnotes/qownnotes)
-
 ## Minimum software requirements
 
 - A desktop operating system, that supports [Qt](http://www.qt.io/)
@@ -160,4 +148,4 @@ This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."
 
 There are inherent dangers in the use of any software, and you are solely responsible for determining whether this SOFTWARE PRODUCT is compatible with your equipment and other software installed on your equipment. You are also solely responsible for the protection of your equipment and backup of your data, and THE PROVIDER will not be liable for any damages you may suffer in connection with using, modifying, or distributing this SOFTWARE PRODUCT.
 
-[![Piwik Stats](https://p.bekerle.com/piwik.php?idsite=3&rec=1)](https://www.qownnotes.org)
+[![Matomo Stats](https://p.bekerle.com/piwik.php?idsite=3&rec=1)](https://www.qownnotes.org)
