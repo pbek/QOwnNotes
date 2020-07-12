@@ -1,4 +1,4 @@
-name: QOwnNotes Build
+name: build
 
 on:
   push:
