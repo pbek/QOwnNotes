@@ -1,18 +1,13 @@
 name: 'build'
-
 on:
   push:
-    branches: [ develop ]
   pull_request:
-    branches: [ develop ]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
+    # https://github.com/marketplace/actions/install-qt
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
