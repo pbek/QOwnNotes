@@ -1,7 +1,13 @@
 name: 'build'
+
 on:
   push:
   pull_request:
+
+defaults:
+  run:
+    working-directory: src
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,6 +21,6 @@ jobs:
       with:
         version: '5.3'
     - name: qmake
-      run: cd src && qmake
+      run: qmake
     - name: make
-      run: cd src && make
+      run: make
