@@ -11982,6 +11982,7 @@ void MainWindow::on_actionCheck_for_script_updates_triggered() {
  * the user wants to update them (if the dialog wasn't disabled)
  */
 void MainWindow::automaticScriptUpdateCheck() {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
     _scriptUpdateFound = false;
     auto *dialog = new ScriptRepositoryDialog(this, true);
 
@@ -12011,8 +12012,6 @@ void MainWindow::automaticScriptUpdateCheck() {
             });
         });
 
-
-#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
     // delete the dialog after 10 sec
     QTimer::singleShot(10000, this, [this, dialog] () {
         delete(dialog);
