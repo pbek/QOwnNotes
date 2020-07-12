@@ -2,6 +2,8 @@
 # QOwnNotes Changelog
 
 ## 20.7.3
+- fixed a possible crash when showing note versions of a note with note links
+  (for [#1805](https://github.com/pbek/QOwnNotes/pull/1805))
 - more minor fixes for preview syntax highlighter where made
   (for [#1821](https://github.com/pbek/QOwnNotes/pull/1821), thank you @Waqar144)
 

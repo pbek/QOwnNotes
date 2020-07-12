@@ -87,7 +87,13 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
         if (note.isFetched()) {
             return;
         }
-    } else {    // check <note file.md> links
+    } else {
+        // don't make any further checks if no current note was set
+        if (_currentNote == nullptr) {
+            return;
+        }
+
+        // check <note file.md> links
         regex = QRegularExpression(
             QStringLiteral("<([^\\s`][^`]*?\\.[^`]*?[^\\s`]\\.md)>"));
         match = regex.match(text);
@@ -100,14 +106,12 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
                 return;
             }
 
-            if (_currentNote != nullptr) {
-                const Note note =
-                    _currentNote->fetchByRelativeFileName(fileName);
+            const Note note =
+                _currentNote->fetchByRelativeFileName(fileName);
 
-                // if the note exists we don't need to do anything
-                if (note.isFetched()) {
-                    return;
-                }
+            // if the note exists we don't need to do anything
+            if (note.isFetched()) {
+                return;
             }
         } else {    // check [note](note file.md) links
             regex = QRegularExpression(
@@ -123,14 +127,12 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(
                     return;
                 }
 
-                if (_currentNote != nullptr) {
-                    const Note note =
-                        _currentNote->fetchByRelativeFileName(fileName);
+                const Note note =
+                    _currentNote->fetchByRelativeFileName(fileName);
 
-                    // if the note exists we don't need to do anything
-                    if (note.isFetched()) {
-                        return;
-                    }
+                // if the note exists we don't need to do anything
+                if (note.isFetched()) {
+                    return;
                 }
             }
             // no note link was found

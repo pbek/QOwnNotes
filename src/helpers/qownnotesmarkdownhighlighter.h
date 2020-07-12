@@ -48,5 +48,5 @@ class QOwnNotesMarkdownHighlighter : public MarkdownHighlighter {
     void highlightSpellChecking(const QString &text);
 
    private:
-    Note *_currentNote;
+    Note *_currentNote = nullptr;
 };
