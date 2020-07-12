@@ -12011,6 +12011,8 @@ void MainWindow::automaticScriptUpdateCheck() {
             });
         });
 
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
     // delete the dialog after 10 sec
     QTimer::singleShot(10000, this, [this, dialog] () {
         delete(dialog);
@@ -12021,6 +12023,7 @@ void MainWindow::automaticScriptUpdateCheck() {
             showStatusBarMessage(tr("No script updates were found"), 3000);
         }
     });
+#endif
 }
 
 void MainWindow::noteTextEditResize(QResizeEvent *event) {
