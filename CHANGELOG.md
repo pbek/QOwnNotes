@@ -1,4 +1,3 @@
-
 # QOwnNotes Changelog
 
 ## 20.7.3
