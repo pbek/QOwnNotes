@@ -121,10 +121,7 @@ void TestNotes::testNoteToMarkdownHtml() {
 void TestNotes::testMarkdownTildeCodeFenceToHtml() {
     QString code = QStringLiteral("# Tilde Code Fence\n");
     code += QStringLiteral("~~~cpp\n");
-    code += QStringLiteral("#include<iostream>\n");
-    code += QStringLiteral("using namespace std;\n");
     code += QStringLiteral("int main() {\n");
-    code += QStringLiteral("std::cout<<\"hello\"\n");
     code += QStringLiteral("return 0;\n");
     code += QStringLiteral("}\n");
     code += QStringLiteral("~~~\n");
@@ -133,16 +130,9 @@ void TestNotes::testMarkdownTildeCodeFenceToHtml() {
     note.setNoteText(code);
     QString result = note.toMarkdownHtml("", 980, true);
     QString expected = QStringLiteral(
-        "<h1>Tilde Code Fence</h1>\n<pre><code class=\"language-cpp\">#<span "
-        "class=\"code-other\">include</span>&lt;iostream&gt;\n<span "
-        "class=\"code-keyword\">using</span> <span "
-        "class=\"code-type\">namespace</span> <span "
-        "class=\"code-builtin\">std</span>;\n<span "
+        "<h1>Tilde Code Fence</h1>\n<pre><code class=\"language-cpp\"><span "
         "class=\"code-type\">int</span> <span "
         "class=\"code-builtin\">main</span>&#40;&#41; {\n<span "
-        "class=\"code-builtin\">std</span>::<span "
-        "class=\"code-builtin\">cout</span>&lt;&lt;<span "
-        "class=\"code-string\">&quot;hello&quot;</span>\n<span "
         "class=\"code-keyword\">return</span> <span "
         "class=\"code-literal\">0</span>;\n}</code></pre>");
 
@@ -152,10 +142,7 @@ void TestNotes::testMarkdownTildeCodeFenceToHtml() {
 void TestNotes::testMarkdownBacktickCodeFenceToHtml() {
     QString code = QStringLiteral("# Backtick Code Fence\n");
     code += QStringLiteral("```cpp\n");
-    code += QStringLiteral("#include<iostream>\n");
-    code += QStringLiteral("using namespace std;\n");
     code += QStringLiteral("int main() {\n");
-    code += QStringLiteral("std::cout<<\"hello\"\n");
     code += QStringLiteral("return 0;\n");
     code += QStringLiteral("}\n");
     code += QStringLiteral("```\n");
@@ -164,17 +151,9 @@ void TestNotes::testMarkdownBacktickCodeFenceToHtml() {
     note.setNoteText(code);
     QString result = note.toMarkdownHtml("", 980, true);
     QString expected = QStringLiteral(
-        "<h1>Backtick Code Fence</h1>\n<pre><code "
-        "class=\"language-cpp\">#<span "
-        "class=\"code-other\">include</span>&lt;iostream&gt;\n<span "
-        "class=\"code-keyword\">using</span> <span "
-        "class=\"code-type\">namespace</span> <span "
-        "class=\"code-builtin\">std</span>;\n<span "
+        "<h1>Backtick Code Fence</h1>\n<pre><code class=\"language-cpp\"><span "
         "class=\"code-type\">int</span> <span "
         "class=\"code-builtin\">main</span>&#40;&#41; {\n<span "
-        "class=\"code-builtin\">std</span>::<span "
-        "class=\"code-builtin\">cout</span>&lt;&lt;<span "
-        "class=\"code-string\">&quot;hello&quot;</span>\n<span "
         "class=\"code-keyword\">return</span> <span "
         "class=\"code-literal\">0</span>;\n}</code></pre>");
 
@@ -291,8 +270,7 @@ void TestNotes::testCodeToHtmlNumericLiterals() {
     QString bad3 = "a123b";
     QString bad4 = "12pxa";
     QString a5 = "0x123";
-    QString a6 = "12px\n";
-    QString a7 = "12em\n";
+    QString a7 = "12em;";
 
     CodeToHtmlConverter c(QStringLiteral("c"));
     CodeToHtmlConverter css(QStringLiteral("css"));
@@ -306,7 +284,6 @@ void TestNotes::testCodeToHtmlNumericLiterals() {
     QString badResult3 = c.process(bad3.midRef(0, bad3.length()));
     QString badResult4 = c.process(bad4.midRef(0, bad4.length()));
     QString a5r = c.process(a5.midRef(0, a5.length()));
-    QString a6r = css.process(a6.midRef(0, a6.length()));
     QString a7r = css.process(a7.midRef(0, a7.length()));
 
     QString e = "<span class=\"code-literal\">123</span>";
@@ -321,12 +298,9 @@ void TestNotes::testCodeToHtmlNumericLiterals() {
     QString expectedBad3 = "a123b";
     QString expectedBad4 = "12pxa";
     QString e5 = "<span class=\"code-literal\">0x123</span>";
-    QString e6 =
-        "<span class=\"code-literal\">12</span><span "
-        "class=\"code-keyword\">px</span>\n";
+
     QString e7 =
-        "<span class=\"code-literal\">12</span><span "
-        "class=\"code-keyword\">em</span>\n";
+        "<span class=\"code-literal\">12</span>em;";
 
     QVERIFY(ar == e);
     QVERIFY(a1r == e1);
@@ -338,7 +312,6 @@ void TestNotes::testCodeToHtmlNumericLiterals() {
     QVERIFY(badResult3 == expectedBad3);
     QVERIFY(badResult4 == expectedBad4);
     QVERIFY(a5r == e5);
-    QVERIFY(a6r == e6);
     QVERIFY(a7r == e7);
 }
 

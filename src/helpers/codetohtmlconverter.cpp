@@ -472,15 +472,15 @@ int CodeToHtmlConverter::highlightWord(int i, const LangData &data,
     if (data.isEmpty()) return i;
     // check if we are at the beginning OR if this is the start of a word
     // AND the current char is present in the data structure
-    if ((i == 0 || !input.at(i - 1).isLetter()) &&
-        data.contains(input.at(i).toLatin1())) {
+    if (i == 0 || (!input.at(i - 1).isLetterOrNumber() &&
+                   input.at(i-1) != QLatin1Char('_'))) {
         const auto wordList = data.values(input.at(i).toLatin1());
         for (const auto &word : wordList) {
             if (word == input.mid(i, word.size())) {
                 // check if we are at the end of text OR if we have a complete
                 // word
                 if (i + word.size() == input.length() ||
-                    !input.at(i + word.size()).isLetter()) {
+                    !input.at(i + word.size()).isLetterOrNumber()) {
                     output += setFormat(input.mid(i, word.size()), f);
                     i += word.size();
                 }
