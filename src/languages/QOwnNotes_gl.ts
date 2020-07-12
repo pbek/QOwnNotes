@@ -2593,7 +2593,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation type="unfinished">Format text underline</translation>
+      <translation>Formata o texto subliñado</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -3207,32 +3207,35 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../mainwindow.cpp" line="11999"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>Atopouse unha actualización de script.
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12005"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Actualizacións de script</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12006"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>Actualización de script</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12021"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>As actualizacións dos seus scripts atopáronse no repositorio de scripts. Queres actualizalos?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12626"/>
       <source>Toggle note stickiness</source>
-      <translation type="unfinished">Toggle note stickiness</translation>
+      <translation>Non se atoparon actualizacións de script
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12632"/>
       <source>Close other note tabs</source>
-      <translation type="unfinished">Close other note tabs</translation>
+      <translation>Cambiar a adherencia da nota
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10225"/>
@@ -4374,7 +4377,7 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../entities/note.cpp" line="1480"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Nota</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2528"/>

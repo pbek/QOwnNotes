@@ -2592,7 +2592,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation type="unfinished">Format text underline</translation>
+      <translation>Formatar sublinhado do texto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -3205,27 +3205,32 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../mainwindow.cpp" line="11999"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>Uma atualização de script foi encontrada!
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12005"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Atualizações de script
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12006"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>Atualizações para seus scripts foram encontradas no repositório de scripts! Deseja atualizá-los?
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12021"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>Nenhuma atualização de script foi encontrada
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12626"/>
       <source>Toggle note stickiness</source>
-      <translation type="unfinished">Toggle note stickiness</translation>
+      <translation>Alternar aderência da nota
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12632"/>

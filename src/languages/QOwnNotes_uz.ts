@@ -2592,7 +2592,8 @@
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation type="unfinished">Format text underline</translation>
+      <translation>Formatlangan matnni tagiga chizish
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -3209,32 +3210,37 @@ Tanlangan papkalarni &lt;strong&gt;%n&lt;/strong&gt; o'chirish kerakmi!</numerus
     <message>
       <location filename="../mainwindow.cpp" line="11999"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>Skript yangilanishi topildi!
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12005"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Skript yangilanishlari
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12006"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>Skriptlaringiz uchun yangilanishlar skript omborida topildi! Siz ularni yangilamoqchimisiz?
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12021"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>Skript yangilanishlari topilmadi
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12626"/>
       <source>Toggle note stickiness</source>
-      <translation type="unfinished">Toggle note stickiness</translation>
+      <translation>Yozuvning yopishqoqligini o'zgartiring
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12632"/>
       <source>Close other note tabs</source>
-      <translation type="unfinished">Close other note tabs</translation>
+      <translation>Boshqa qayd yorliqlarini yoping</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10225"/>
@@ -4377,7 +4383,7 @@ Tanlangan papkalarni &lt;strong&gt;%n&lt;/strong&gt; o'chirish kerakmi!</numerus
     <message>
       <location filename="../entities/note.cpp" line="1480"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Eslatma</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2528"/>

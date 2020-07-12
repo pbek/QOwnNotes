@@ -2619,7 +2619,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation type="unfinished">Format text underline</translation>
+      <translation>Cuir béim ar théacs na formáide</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -3277,32 +3277,36 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
     <message>
       <location filename="../mainwindow.cpp" line="11999"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>Fuarthas nuashonrú script!
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12005"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Nuashonruithe scripte</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12006"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>Fuarthas nuashonruithe ar do scripteanna sa stór script! Ar mhaith leat iad a nuashonrú?
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12021"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>Ní bhfuarthas aon nuashonruithe script
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12626"/>
       <source>Toggle note stickiness</source>
-      <translation type="unfinished">Toggle note stickiness</translation>
+      <translation>Toggle greamaitheacht nóta
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12632"/>
       <source>Close other note tabs</source>
-      <translation type="unfinished">Close other note tabs</translation>
+      <translation>Dún cluaisíní nótaí eile</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10225"/>
@@ -4487,7 +4491,7 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
     <message>
       <location filename="../entities/note.cpp" line="1480"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Nóta</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2528"/>

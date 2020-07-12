@@ -3199,22 +3199,22 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
     <message>
       <location filename="../mainwindow.cpp" line="11999"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>Eine Skript-Aktualisierung wurde gefunden</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12005"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Skript-Aktualisierungen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12006"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>Aktualisierungen für Ihre Skripte wurden im Skript-Repository gefunden! Möchten Sie diese aktualisieren?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12021"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>Keine Skript-Aktualisierungen gefunden</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12626"/>

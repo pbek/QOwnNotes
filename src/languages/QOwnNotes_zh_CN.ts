@@ -2577,7 +2577,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation type="unfinished">Format text underline</translation>
+      <translation>格式文字下划线</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -3172,32 +3172,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11999"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>找到脚本更新！</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12005"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>脚本更新</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12006"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>在脚本存储库中找到了脚本的更新！ 您要更新吗？</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12021"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>找不到脚本更新</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12626"/>
       <source>Toggle note stickiness</source>
-      <translation type="unfinished">Toggle note stickiness</translation>
+      <translation>切换音符粘性</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12632"/>
       <source>Close other note tabs</source>
-      <translation type="unfinished">Close other note tabs</translation>
+      <translation>关闭其他笔记标签</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10225"/>
@@ -4326,7 +4326,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="1480"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>笔记</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2528"/>

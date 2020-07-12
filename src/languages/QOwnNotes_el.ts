@@ -3205,22 +3205,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11999"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>Βρέθηκε ενημέρωση σεναρίου!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12005"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Ενημερώσεις σεναρίων</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12006"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>Βρέθηκαν ενημερώσεις για τα σενάρια σας στο αποθετήριο σεναρίων! Θέλετε να τα ενημερώσετε;</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12021"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>Δεν βρέθηκαν ενημερώσεις σεναρίου</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12626"/>

@@ -5,6 +5,7 @@
   (for [#1805](https://github.com/pbek/QOwnNotes/pull/1805))
 - more minor fixes for preview syntax highlighter where made
   (for [#1821](https://github.com/pbek/QOwnNotes/pull/1821), thank you @Waqar144)
+- added more translation (thank you Fabijenna, MGuerra, rakekniven, mlocati, unchase, gbabin)
 
 ## 20.7.2
 - scripts in the script repository are now checked for updates on application

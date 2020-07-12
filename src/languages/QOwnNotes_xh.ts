@@ -2036,7 +2036,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1094"/>
       <source>Encryption</source>
-      <translation type="unfinished">Encryption</translation>
+      <translation>Encryption</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1106"/>
@@ -2562,32 +2562,32 @@
     <message>
       <location filename="../mainwindow.ui" line="2597"/>
       <source>Previous note tab</source>
-      <translation type="unfinished">Previous note tab</translation>
+      <translation>Itheyibhile yangaphambili</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2609"/>
       <source>Next note tab</source>
-      <translation type="unfinished">Next note tab</translation>
+      <translation>Ithebhu elandelayo yenqaku</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2621"/>
       <source>Close current note tab</source>
-      <translation type="unfinished">Close current note tab</translation>
+      <translation>Vala ithebhu yangoku</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2633"/>
       <source>New note in new tab</source>
-      <translation type="unfinished">New note in new tab</translation>
+      <translation>Inqaku elitsha kwithebhu entsha</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2641"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>Guqulela inqaku lokuncamathisela ithebhu yangoku</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation type="unfinished">Format text underline</translation>
+      <translation>Fomatha isicatshulwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -3200,32 +3200,32 @@ Ngaba ufuna ukuphelisa inqaku lakho?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="10338"/>
       <source>Open note in tab</source>
-      <translation type="unfinished">Open note in tab</translation>
+      <translation>Vula inqaku kwithebhu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11999"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>Ukuhlaziywa kweskripthi kufunyenwe!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12005"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Uhlaziyo lweSkripthi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12006"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>Uhlaziyo kwizikripthi zakho lufunyenwe kwindawo ebhaliweyo! Ngaba uyafuna ukuzihlaziya?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12021"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>Akukho zihlaziyo zescript ezifunyenweyo</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12626"/>
       <source>Toggle note stickiness</source>
-      <translation type="unfinished">Toggle note stickiness</translation>
+      <translation>Guqula ukubambelela kokubhaliweyo</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12632"/>
@@ -6217,7 +6217,7 @@ Eyona ndlela yokuthumela imiba isebenzise umncedisi wemiba ngokucinezela i-span 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5591"/>
       <source>Ignored subfolders</source>
-      <translation type="unfinished">Ignored subfolders</translation>
+      <translation>Iincwadi ezincinci ezingazihoyanga</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5607"/>
@@ -6227,7 +6227,7 @@ Eyona ndlela yokuthumela imiba isebenzise umncedisi wemiba ngokucinezela i-span 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5643"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+      <translation>Buyisela iithebhu ezivuliweyo ekuqaleni kwesicelo kwaye xa iifolda zenqaku zitshintshiwe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5757"/>
@@ -6252,7 +6252,7 @@ Eyona ndlela yokuthumela imiba isebenzise umncedisi wemiba ngokucinezela i-span 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5767"/>
       <source>Note folder panel</source>
-      <translation type="unfinished">Note folder panel</translation>
+      <translation>Iphaneli yencwadi yenqaku</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5773"/>

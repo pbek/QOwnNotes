@@ -2592,7 +2592,8 @@
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation type="unfinished">Format text underline</translation>
+      <translation>فارمیٹ ٹیکسٹ لائن
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -3209,32 +3210,38 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11999"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>اسکرپٹ اپ ڈیٹ مل گیا!
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12005"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>اسکرپٹ اپ ڈیٹ
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12006"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>آپ کے اسکرپٹ میں تازہ کارییں اسکرپٹ اسٹوریج میں پائی گئیں! کیا آپ ان کو اپ ڈیٹ کرنا چاہتے ہیں؟
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12021"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>کوئی اسکرپٹ اپ ڈیٹ نہیں ملا
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12626"/>
       <source>Toggle note stickiness</source>
-      <translation type="unfinished">Toggle note stickiness</translation>
+      <translation>نوٹ اسٹیکنی ٹوگل کریں
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12632"/>
       <source>Close other note tabs</source>
-      <translation type="unfinished">Close other note tabs</translation>
+      <translation>نوٹ کے دیگر ٹیبز کو بند کریں
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10225"/>
@@ -4387,7 +4394,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="1480"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>میونسپل آفس</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2528"/>
