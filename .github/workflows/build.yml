@@ -12,7 +12,9 @@ jobs:
       uses: jurplel/install-qt-action@v2
       with:
         version: '5.14.2'
+    - name: submodules
+      run: git submodule update --init
     - name: qmake
       run: cd src && qmake
     - name: make
-      run: make
+      run: cd src && make
