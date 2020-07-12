@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: true
     # https://github.com/marketplace/actions/install-qt
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
         version: '5.3'
-    - name: submodules
-      run: git submodule update --init
     - name: qmake
       run: cd src && qmake
     - name: make
