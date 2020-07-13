@@ -10456,11 +10456,11 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 
         return;
     }
-    
+
     if (!Note::allowDifferentFileName()) {
         return;
     }
-    
+
     const int noteId = item->data(0, Qt::UserRole).toInt();
     Note note = Note::fetch(noteId);
     if (note.isFetched()) {
