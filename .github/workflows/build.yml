@@ -5,7 +5,7 @@ on:
     branches:
       - develop
     tags-ignore:
-      - '*.*'
+      - '*'
   pull_request:
 
 defaults:
