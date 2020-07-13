@@ -10449,15 +10449,18 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
     if (item == nullptr) {
         return;
     }
+    
     // handle note subfolder renaming in a note tree
     if (item->data(0, Qt::UserRole + 1) == FolderType) {
         on_noteSubFolderTreeWidget_itemChanged(item, column);
 
         return;
     }
+    
     if (!Note::allowDifferentFileName()) {
         return;
     }
+    
     const int noteId = item->data(0, Qt::UserRole).toInt();
     Note note = Note::fetch(noteId);
     if (note.isFetched()) {
