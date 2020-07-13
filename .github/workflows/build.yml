@@ -2,6 +2,10 @@ name: 'build'
 
 on:
   push:
+    branches:
+      - master
+    tags-ignore:
+      - '*.*'
   pull_request:
 
 defaults:
@@ -13,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        qt-version: ['5.3', '5.4', '5.5', '5.6', '5.11', '5.12', '5.13']
+        qt-version: ['5.3', '5.13', '5.14', '5.15']
     steps:
     - uses: actions/checkout@v2
       with:
