@@ -10446,6 +10446,10 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
  */
 void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
                                                int column) {
+    if (item == nullptr) {
+        return;
+    }
+    
     // handle note subfolder renaming in a note tree
     if (item->data(0, Qt::UserRole + 1) == FolderType) {
         on_noteSubFolderTreeWidget_itemChanged(item, column);
@@ -10453,7 +10457,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
         return;
     }
 
-    if (item == nullptr || !Note::allowDifferentFileName()) {
+    if (!Note::allowDifferentFileName()) {
         return;
     }
 
