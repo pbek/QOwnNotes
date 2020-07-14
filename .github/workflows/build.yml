@@ -14,9 +14,11 @@ defaults:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
+        os: [ubuntu-latest, macos-latest]
         # https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         qt-version: ['5.3', '5.4', '5.13.2', '5.14.2', '5.15.0']
     steps:
