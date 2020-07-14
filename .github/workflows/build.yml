@@ -21,6 +21,13 @@ jobs:
         os: [ubuntu-latest, macos-latest]
         # https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         qt-version: ['5.3', '5.4', '5.13.2', '5.14.2', '5.15.0']
+        exclude:
+          # xcode not found
+          - os: macos-latest
+            qt-version: '5.3'
+          # xcode not found
+          - os: macos-latest
+            qt-version: '5.4'
     steps:
     - uses: actions/checkout@v2
       with:
