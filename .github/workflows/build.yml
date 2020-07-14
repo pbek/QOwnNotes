@@ -30,6 +30,12 @@ jobs:
             qt-version: '5.4'
           # win64_mingw73 not found
           - os: windows-latest
+            qt-version: '5.3'
+          # win64_mingw73 not found
+          - os: windows-latest
+            qt-version: '5.4'
+          # win64_mingw73 not found
+          - os: windows-latest
             qt-version: '5.15.0'
     steps:
     - uses: actions/checkout@v2
