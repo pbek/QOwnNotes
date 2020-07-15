@@ -2766,6 +2766,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">ภาษาไทย</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Thai</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">th</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Tiếng Việt</string>
                         </property>
                         <property name="toolTip">

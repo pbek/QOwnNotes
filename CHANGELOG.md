@@ -3,6 +3,10 @@
 ## 20.7.4
 - added the **new editor color schema** *Dracula*
   (for [#1823](https://github.com/pbek/QOwnNotes/issues/1823), thank you @TheChiefMeat)
+- added **Thai translation** (a big thank you to Fabijenna)
+    - visit [QOwnNotes Translation](http://docs.qownnotes.org/en/latest/contributing/translation/)
+      if you want to make QOwnNotes available in more languages or help with the
+      current translation
 
 ## 20.7.3
 - fixed a possible crash when showing note versions of a note with note links
