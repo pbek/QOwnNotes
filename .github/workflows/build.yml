@@ -34,6 +34,9 @@ jobs:
           # win64_mingw73 not found
           - os: windows-latest
             qt-version: '5.4'
+          # Qt installation times out too often
+          - os: windows-latest
+            qt-version: '5.13.2'
           # win64_mingw73 not found
           - os: windows-latest
             qt-version: '5.15.0'
