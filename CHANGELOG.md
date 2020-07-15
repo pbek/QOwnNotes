@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.7.4
+- added the **new editor color schema** *Dracula*
+  (for [#1823](https://github.com/pbek/QOwnNotes/issues/1823), thank you @TheChiefMeat)
+
 ## 20.7.3
 - fixed a possible crash when showing note versions of a note with note links
   (for [#1805](https://github.com/pbek/QOwnNotes/pull/1805))
