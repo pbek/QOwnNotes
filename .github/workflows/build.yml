@@ -73,15 +73,15 @@ jobs:
       with:
         version: ${{ matrix.qt-version }}
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'linux')
+    - if: contains( matrix.os, 'ubuntu')
       name: Do Linux tests
       run: |
-        cd ./tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
+        cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
         ./../bin/tests/tests -platform minimal -txt
     - if: contains( matrix.os, 'macos')
       name: Do macOS tests
       run: |
-        cd ./tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
+        cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
         ./../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
     - name: Build QOwnNotes
       run: |
