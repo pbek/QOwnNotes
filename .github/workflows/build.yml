@@ -42,6 +42,9 @@ jobs:
           # win64_mingw73 not found
           - os: windows-latest
             qt-version: '5.15.0'
+          # Download error: decompression get wrong: no output data.
+          - os: windows-latest
+            qt-version: '5.7'
     steps:
     - uses: actions/checkout@v2
       with:
