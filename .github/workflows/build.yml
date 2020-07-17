@@ -44,6 +44,12 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: true
+    - name: Cache Qt
+      id: cache-qt
+      uses: actions/cache@v1
+      with:
+        path: ../Qt
+        key: ${{ runner.os }}-QtCache-${{ matrix.qt-version }}
     # https://github.com/marketplace/actions/install-qt
     - if: contains( matrix.os, 'windows')
       name: Install Qt on Windows
@@ -51,11 +57,13 @@ jobs:
       with:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw73
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows')
       name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
         version: ${{ matrix.qt-version }}
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - name: qmake & make
       run: |
         qmake
