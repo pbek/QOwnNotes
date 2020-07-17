@@ -20,7 +20,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
         # https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
-        qt-version: ['5.3', '5.4', '5.13.2', '5.14.2', '5.15.0']
+        qt-version: ['5.3', '5.4', '5.7', '5.13.2', '5.14.2', '5.15.0']
         exclude:
           # xcode not found
           - os: macos-latest
