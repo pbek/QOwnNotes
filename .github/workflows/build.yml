@@ -57,6 +57,8 @@ jobs:
       with:
         version: ${{ matrix.qt-version }}
         arch: win32_mingw53
+        # try mirror
+        mirror: 'http://mirrors.ocf.berkeley.edu/qt/'
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version != '5.7' )
       name: Install Qt on Windows
