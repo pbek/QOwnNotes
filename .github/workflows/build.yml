@@ -19,7 +19,9 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        # https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
+        # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
+        # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
+        # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
         qt-version: ['5.3', '5.4', '5.7', '5.13.2', '5.14.2', '5.15.0']
         exclude:
           # xcode not found
@@ -44,6 +46,11 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: true
+
+      #
+      # Install Qt
+      #
+
     - name: Cache Qt
       id: cache-qt
       uses: actions/cache@v1
@@ -73,16 +80,26 @@ jobs:
       with:
         version: ${{ matrix.qt-version }}
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'ubuntu')
+
+      #
+      # Do tests
+      #
+
+    - if: contains( matrix.os, 'ubuntu') && ( matrix.qt-version == '5.15.0' )
       name: Do Linux tests
       run: |
         cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
         ./../bin/tests/tests -platform minimal -txt
-    - if: contains( matrix.os, 'macos')
+    - if: contains( matrix.os, 'macos') && ( matrix.qt-version == '5.15.0' )
       name: Do macOS tests
       run: |
         cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
         ./../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
+
+      #
+      # Build QOwnNotes
+      #
+
     - name: Build QOwnNotes
       run: |
         qmake
