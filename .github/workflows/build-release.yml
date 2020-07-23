@@ -24,7 +24,7 @@ jobs:
           export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
           #export TAG=v${VERSION}.${GITHUB_RUN_ID}.${GITHUB_RUN_NUMBER}
           export TAG=v${VERSION}
-          export RELEASE_TEXT=$(grep -Pzo '## ${VERSION}\n(\n|.)+?\n##' ../CHANGELOG.md | sed '$ d')
+          export RELEASE_TEXT=$(grep -Pzo "## ${VERSION}\n(\n|.)+?\n##" ../CHANGELOG.md | sed '$ d')
           RELEASE_TEXT="${RELEASE_TEXT//'%'/'%25'}"
           RELEASE_TEXT="${RELEASE_TEXT//$'\n'/'%0A'}"
           RELEASE_TEXT="${RELEASE_TEXT//$'\r'/'%0D'}"
@@ -150,11 +150,10 @@ jobs:
       run: |
         echo "#define RELEASE \"GitHub Actions\"" > release.h
         lrelease QOwnNotes.pro
-        ls ${Qt5_Dir}/bin
-        whereis qmake
+        #ls ${Qt5_Dir}/bin
         qmake
         make -j2
-        ../travis/create-dmg.sh
+        ../build-systems/github/macos/create-dmg.sh
 
     - if: contains( matrix.os, 'windows')
       name: Build for Windows
