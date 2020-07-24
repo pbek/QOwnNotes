@@ -15,6 +15,7 @@
 [Gitter Chat](https://gitter.im/qownnotes/qownnotes) |
 [QOwnNotes Web Companion Chrome extension](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
 
+![Build status GitHub Actions](https://github.com/pbek/QOwnNotes/workflows/build/badge.svg)
 [![Build Status Linux / OS X](https://travis-ci.org/pbek/QOwnNotes.svg?branch=develop)](https://travis-ci.org/pbek/QOwnNotes)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
 [![Coverage Status](https://coveralls.io/repos/pbek/QOwnNotes/badge.svg?branch=develop&service=github)](https://coveralls.io/github/pbek/QOwnNotes?branch=develop)
