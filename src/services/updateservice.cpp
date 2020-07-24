@@ -53,7 +53,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 
     // check if we want to fake the version number to trigger an update
     if (settings.value(QStringLiteral("Debug/fakeOldVersionNumber")).toBool()) {
-        version = QLatin1String("20.1.15");
+        version = QLatin1String("20.7.0");
         isDebug = true;
     }
 
@@ -89,6 +89,13 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 #endif
 
     url.setQuery(q);
+
+//    QNetworkRequest r(url);
+//    QString concatenated(QStringLiteral("xxx:xxx"));
+//    QByteArray data = concatenated.toLocal8Bit().toBase64();
+//    QString headerData = QStringLiteral("Basic ") + data;
+//    r.setRawHeader("Authorization", headerData.toLocal8Bit());
+//    manager->get(r);
 
     manager->get(QNetworkRequest(url));
 }

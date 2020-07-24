@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 20.7.5
+- releases for Windows and macOS are now built with GitHub Actions in 64 bit
+  (for [#1828](https://github.com/pbek/QOwnNotes/issues/1828))
+    - there is a macOS DMG with Qt 5.14.2 and Windows ZIP file with Qt 5.13.2 in every release
+    - the updating api was adapted to use the new releases, please report any
+      troubles with updating or installing
+    - in addition there is a Linux AppImage 64 Bit with Qt 5.14.2
+
 ## 20.7.4
 - added the **new editor color schema** *Dracula*
   (for [#1823](https://github.com/pbek/QOwnNotes/issues/1823), thank you @TheChiefMeat)

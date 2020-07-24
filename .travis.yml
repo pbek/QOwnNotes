@@ -179,17 +179,17 @@ deploy:
 #        tags: false
 #        condition: ${TRAVIS_OS_NAME} = linux
     # macOS development release
-  - provider: releases
-    prerelease: true
-    api_key:
-        secure: DaUepv9X3aPy91r8FBCyA0yUEQ0CNYQyA5EzlXsvLWsTi7XjscWZXCkv2BoFxk+MXvsCweaS6/qRbIn8/cW1TFLo6ZAbHjucnmjtSZn9wr9j3SEV7fM6jpAc6XBMMHtgjCaKZMpvH1R2Ed6O3DNr7L0//zB/PDhQx+rDeDre1kA=
-    file: QOwnNotesDev-$TRAVIS_COMMIT.dmg
-    skip_cleanup: true
-    on:
-        repo: pbek/QOwnNotes
-        branch: develop
-        tags: false
-        condition: ${TRAVIS_OS_NAME} = osx
+#  - provider: releases
+#    prerelease: true
+#    api_key:
+#        secure: DaUepv9X3aPy91r8FBCyA0yUEQ0CNYQyA5EzlXsvLWsTi7XjscWZXCkv2BoFxk+MXvsCweaS6/qRbIn8/cW1TFLo6ZAbHjucnmjtSZn9wr9j3SEV7fM6jpAc6XBMMHtgjCaKZMpvH1R2Ed6O3DNr7L0//zB/PDhQx+rDeDre1kA=
+#    file: QOwnNotesDev-$TRAVIS_COMMIT.dmg
+#    skip_cleanup: true
+#    on:
+#        repo: pbek/QOwnNotes
+#        branch: develop
+#        tags: false
+#        condition: ${TRAVIS_OS_NAME} = osx
 
 notifications:
   email:
