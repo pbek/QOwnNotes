@@ -1,7 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.7.6
+- the note link dialog can now be resized smaller than the height needed for its 2nd tab
+  (for [#1828](https://github.com/pbek/QOwnNotes/issues/1828#issuecomment-663217669))
+
 ## 20.7.5
-- releases for Windows and macOS are now built with GitHub Actions in 64 bit
+- **releases for Windows and macOS** are now built with **GitHub Actions in 64 bit**
   (for [#1828](https://github.com/pbek/QOwnNotes/issues/1828))
     - there is a macOS DMG with Qt 5.14.2 and Windows ZIP file with Qt 5.13.2 in every release
     - the updating api was adapted to use the new releases, please report any
