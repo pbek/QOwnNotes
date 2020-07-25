@@ -6,6 +6,10 @@
 
 skip_tags: true
 
+branches:
+  only:
+    - master
+
 environment:
   global:
     qtdir57: C:\Qt\5.7\mingw53_32
@@ -13,14 +17,10 @@ environment:
     CCACHE_DIR: "%APPVEYOR_BUILD_FOLDER%\\.ccache"
 
   matrix:
-#    - QTDIR: C:\Qt\5.11\mingw53_32
-#      TOOLCHAIN_VERSION: 530_32
-#      gpp: win32-g++
     # latest Qt 32 bit
-    - QTDIR: C:\Qt\5.13\mingw73_32
-    #  QTDIR: C:\Qt\latest\mingw73_32
-      TOOLCHAIN_VERSION: 730_32
-      gpp: win32-g++
+#    - QTDIR: C:\Qt\5.13\mingw73_32
+#      TOOLCHAIN_VERSION: 730_32
+#      gpp: win32-g++
     # latest Qt 64 bit (broken)
 #    - QTDIR: C:\Qt\latest\mingw73_64
 #      TOOLCHAIN_VERSION: 730_64
@@ -30,11 +30,11 @@ environment:
       TOOLCHAIN_VERSION: 530_32
       gpp: win32-g++
 
-matrix:
-  allow_failures:
-    - QTDIR: C:\Qt\latest\mingw73_64
-      TOOLCHAIN_VERSION: 730_64
-      gpp: g++
+#matrix:
+#  allow_failures:
+#    - QTDIR: C:\Qt\latest\mingw73_64
+#      TOOLCHAIN_VERSION: 730_64
+#      gpp: g++
 
 cache:
   - .ccache
@@ -141,19 +141,17 @@ artifacts:
   - path: appveyor\release
     name: QOwnNotes
 
-deploy:
-  # Deploy to GitHub Releases
-  - provider: GitHub
-    artifact: QOwnNotes
-    draft: false
-    prerelease: false
-    auth_token:
-      secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
-    on:
-      branch: master
-#      QTDIR: C:\Qt\latest\mingw73_32
-      QTDIR: C:\Qt\5.13\mingw73_32
-#      QTDIR: C:\Qt\5.11\mingw53_32
+#deploy:
+#  # Deploy to GitHub Releases
+#  - provider: GitHub
+#    artifact: QOwnNotes
+#    draft: false
+#    prerelease: false
+#    auth_token:
+#      secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR#
+#    on:
+#      branch: master
+#      QTDIR: C:\Qt\5.13\mingw73_32
 
 notifications:
   # Gitter webhook
