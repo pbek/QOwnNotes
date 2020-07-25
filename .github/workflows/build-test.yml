@@ -107,7 +107,8 @@ jobs:
         copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
         copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
         windeployqt tests.exe
-        tests.exe -txt
+        dir -s
+        debug\tests.exe -txt
   
       #
       # Build QOwnNotes
