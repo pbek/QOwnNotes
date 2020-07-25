@@ -23,10 +23,7 @@ int main(int argc, char *argv[]) {
     int allTestsResult = 0 + QTest::qExec(new TestNotes(), argc, argv) +
                          QTest::qExec(new TestHTMLEntities(), argc, argv) +
                          QTest::qExec(new TestMetricsService(), argc, argv) +
-#if !defined(Q_OS_LINUX) || (QT_VERSION > QT_VERSION_CHECK(5, 7, 0))
-                         // TLS checks fail on GitHub Actions for Linux Qt <= 5.7
                          QTest::qExec(new TestNetwork(), argc, argv) +
-#endif
                          QTest::qExec(new TestUtilsMisc(), argc, argv);
 
     if (allTestsResult == 0)

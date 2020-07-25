@@ -92,16 +92,16 @@ jobs:
       name: Do Linux tests
       run: |
         cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
-        ./../bin/tests/tests -platform minimal -txt
+        ../bin/tests/tests -platform minimal -txt
     - if: contains( matrix.os, 'macos')
       name: Do macOS tests
       run: |
         cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
-        ./../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
+        ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
     - if: contains( matrix.os, 'windows')
       name: Do Windows tests
       run: |
-        cd ../tests
+        cd ..\tests
         qmake DEFINES+=INTEGRATION_TESTS
         make
         copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
@@ -109,7 +109,7 @@ jobs:
         copy ..\bin\tests\tests.exe .
         windeployqt tests.exe
         dir -s
-        release\tests.exe -txt
+        .\tests.exe -txt
 
       #
       # Build QOwnNotes
