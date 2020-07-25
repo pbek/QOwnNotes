@@ -1,4 +1,4 @@
-name: 'build'
+name: 'build-test'
 
 on:
   push:
@@ -98,7 +98,17 @@ jobs:
       run: |
         cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
         ./../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
-
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.14.2' )
+      name: Do Windows tests
+      run: |
+        cd ../tests
+        qmake DEFINES+=INTEGRATION_TESTS
+        make
+        copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
+        copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
+        windeployqt tests.exe
+        tests.exe -txt
+  
       #
       # Build QOwnNotes
       #
