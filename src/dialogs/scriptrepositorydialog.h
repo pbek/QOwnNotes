@@ -17,11 +17,13 @@ class ScriptRepositoryDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit ScriptRepositoryDialog(QWidget *parent = 0,
+    explicit ScriptRepositoryDialog(QWidget *parent = nullptr,
                                     bool checkForUpdates = false);
     ~ScriptRepositoryDialog();
 
     Script getLastInstalledScript();
+   signals:
+    void updateFound();
 
    private slots:
     void on_searchScriptEdit_returnPressed();
@@ -60,7 +62,7 @@ class ScriptRepositoryDialog : public MasterDialog {
 
     void storeSettings();
 
-    void parseInfoQMLReply(const QByteArray &arr) const;
+    void parseInfoQMLReply(const QByteArray &arr);
 
     void enableOverview(bool enable);
 

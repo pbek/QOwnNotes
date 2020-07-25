@@ -374,6 +374,8 @@ class Note {
     static const QString getNoteURL(const QString &baseName);
 
     static const QString getNoteURLFromFileName(const QString &fileName);
+
+    void restoreCreatedDate();
 };
 
 Q_DECLARE_TYPEINFO(Note, Q_MOVABLE_TYPE);

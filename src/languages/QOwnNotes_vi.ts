@@ -1565,32 +1565,32 @@
       <translation>Ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="141"/>
+      <location filename="../dialogs/linkdialog.ui" line="173"/>
       <source>Enter the name of the link (optional)</source>
       <translation>Nhập tên của liên kết (tùy chọn)</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="144"/>
+      <location filename="../dialogs/linkdialog.ui" line="176"/>
       <source>Name of link (optional)</source>
       <translation>Tên của liên kết (tùy chọn)</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="154"/>
+      <location filename="../dialogs/linkdialog.ui" line="186"/>
       <source>Enter a description for the link (optional)</source>
       <translation>Nhập mô tả cho liên kết (tùy chọn)</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="157"/>
+      <location filename="../dialogs/linkdialog.ui" line="189"/>
       <source>Description of link (optional)</source>
       <translation>Mô tả liên kết (tùy chọn)</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="109"/>
+      <location filename="../dialogs/linkdialog.ui" line="145"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
       <translation>Tìm kiếm ghi chú hoặc tạo ghi chú mới bằng cách nhập văn bản và nhấn return</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="124"/>
+      <location filename="../dialogs/linkdialog.ui" line="160"/>
       <source>Search for a note to link to</source>
       <translation>Tìm kiếm một ghi chú để liên kết đến</translation>
     </message>
@@ -1769,7 +1769,7 @@
     <message>
       <location filename="../mainwindow.ui" line="411"/>
       <location filename="../mainwindow.ui" line="911"/>
-      <location filename="../mainwindow.cpp" line="794"/>
+      <location filename="../mainwindow.cpp" line="804"/>
       <source>Navigation</source>
       <translation>Dẫn đường</translation>
     </message>
@@ -1780,7 +1780,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
-      <location filename="../mainwindow.cpp" line="8653"/>
+      <location filename="../mainwindow.cpp" line="8679"/>
       <source>Add a tag to the current note</source>
       <translation>Thêm một thẻ vào ghi chú hiện tại</translation>
     </message>
@@ -1805,135 +1805,135 @@
       <translation>&amp;Cứu giúp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1145"/>
+      <location filename="../mainwindow.ui" line="1146"/>
       <source>Editor width in distraction free mode</source>
       <translation>Chiều rộng biên tập trong chế độ miễn phí phân tâm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1148"/>
+      <location filename="../mainwindow.ui" line="1149"/>
       <source>Editor width</source>
       <translation>Chiều rộng biên tập</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1237"/>
-      <location filename="../mainwindow.cpp" line="6654"/>
+      <location filename="../mainwindow.ui" line="1238"/>
+      <location filename="../mainwindow.cpp" line="6666"/>
       <source>Custom actions</source>
       <translation>Hành động tùy chỉnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1257"/>
+      <location filename="../mainwindow.ui" line="1258"/>
       <source>main toolbar</source>
       <translation>thanh công cụ chính</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1291"/>
+      <location filename="../mainwindow.ui" line="1292"/>
       <source>&amp;Quit</source>
       <translation>&amp;Thoát</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1306"/>
+      <location filename="../mainwindow.ui" line="1307"/>
       <source>&amp;Setup note folders</source>
       <translation>&amp;Thiết lập thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1315"/>
+      <location filename="../mainwindow.ui" line="1316"/>
       <source>&amp;Find note</source>
       <translation>&amp;Tìm ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1327"/>
+      <location filename="../mainwindow.ui" line="1328"/>
       <source>&amp;Remove current note</source>
       <translation>&amp;Xóa ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1351"/>
+      <location filename="../mainwindow.ui" line="1352"/>
       <source>&amp;New note</source>
       <translation>&amp;Ghi chú mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1363"/>
+      <location filename="../mainwindow.ui" line="1364"/>
       <source>Check for &amp;updates</source>
       <translation>Kiểm tra &amp;cập nhật</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1375"/>
+      <location filename="../mainwindow.ui" line="1376"/>
       <source>Post questions, feature requests or issues</source>
       <translation>Gửi câu hỏi, yêu cầu tính năng hoặc vấn đề</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1386"/>
+      <location filename="../mainwindow.ui" line="1387"/>
       <source>Alphabetical</source>
       <translation>Bảng chữ cái</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1389"/>
+      <location filename="../mainwindow.ui" line="1390"/>
       <source>Sort alphabetical</source>
       <translation>Sắp xếp theo thứ tự abc</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1397"/>
+      <location filename="../mainwindow.ui" line="1398"/>
       <source>By date</source>
       <translation>Theo ngày</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1400"/>
+      <location filename="../mainwindow.ui" line="1401"/>
       <source>Sort by date</source>
       <translation>Lọc theo ngày</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1424"/>
+      <location filename="../mainwindow.ui" line="1425"/>
       <source>Show note &amp;versions</source>
       <translation>Hiển thị &amp;phiên bản ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1427"/>
+      <location filename="../mainwindow.ui" line="1428"/>
       <source>Show note versions on server</source>
       <translation>Hiển thị phiên bản ghi chú trên máy chủ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1439"/>
+      <location filename="../mainwindow.ui" line="1440"/>
       <source>Show trashed notes on server</source>
       <translation>Hiển thị ghi chú rác trên máy chủ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1444"/>
-      <location filename="../mainwindow.cpp" line="10343"/>
+      <location filename="../mainwindow.ui" line="1445"/>
+      <location filename="../mainwindow.cpp" line="10369"/>
       <source>Select &amp;all notes</source>
       <translation>Chọn &amp;tất cả các ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1453"/>
-      <location filename="../mainwindow.cpp" line="6565"/>
+      <location filename="../mainwindow.ui" line="1454"/>
+      <location filename="../mainwindow.cpp" line="6577"/>
       <source>Insert &amp;link</source>
       <translation>Chèn &amp;đường dẫn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1456"/>
+      <location filename="../mainwindow.ui" line="1457"/>
       <source>Insert link to an url or a note</source>
       <translation>Chèn liên kết đến một url hoặc ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1468"/>
+      <location filename="../mainwindow.ui" line="1469"/>
       <source>&amp;Find in current note</source>
       <translation>&amp;Tìm trong ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1471"/>
+      <location filename="../mainwindow.ui" line="1472"/>
       <source>Find text in current note</source>
       <translation>Tìm văn bản trong ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1484"/>
+      <location filename="../mainwindow.ui" line="1485"/>
       <source>&amp;Duplicate text</source>
       <translation>&amp;Văn bản trùng lặp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1496"/>
+      <location filename="../mainwindow.ui" line="1497"/>
       <source>&amp;Back in note history</source>
       <translation>&amp;Quay lại lịch sử ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1409"/>
+      <location filename="../mainwindow.ui" line="1410"/>
       <source>&amp;Settings</source>
       <translation>&amp;Cài đặt</translation>
     </message>
@@ -1958,7 +1958,7 @@
       <translation>Tìm kiếm hoặc tạo ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8654"/>
+      <location filename="../mainwindow.cpp" line="8680"/>
       <source>Add a tag to the selected notes</source>
       <translation>Thêm một thẻ vào ghi chú đã chọn</translation>
     </message>
@@ -1969,7 +1969,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="886"/>
-      <location filename="../mainwindow.cpp" line="6616"/>
+      <location filename="../mainwindow.cpp" line="6628"/>
       <source>Export</source>
       <translation>Xuất khẩu</translation>
     </message>
@@ -1980,7 +1980,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="928"/>
-      <location filename="../mainwindow.cpp" line="6597"/>
+      <location filename="../mainwindow.cpp" line="6609"/>
       <source>Print</source>
       <translation>In</translation>
     </message>
@@ -2010,621 +2010,627 @@
       <translation>Định dạng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1053"/>
+      <location filename="../mainwindow.ui" line="1054"/>
       <source>Extra</source>
       <translation>Thêm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1069"/>
+      <location filename="../mainwindow.ui" line="1070"/>
       <source>Edit</source>
       <translation>Chỉnh sửa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1082"/>
+      <location filename="../mainwindow.ui" line="1083"/>
       <source>Versioning</source>
       <translation>Phiên bản</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1093"/>
+      <location filename="../mainwindow.ui" line="1094"/>
       <source>Encryption</source>
       <translation>Mã hóa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1105"/>
+      <location filename="../mainwindow.ui" line="1106"/>
       <source>Languages</source>
       <translation>Ngôn ngữ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1110"/>
+      <location filename="../mainwindow.ui" line="1111"/>
       <source>Spelling backend</source>
       <translation>Chính tả phụ trợ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1135"/>
+      <location filename="../mainwindow.ui" line="1136"/>
       <source>To&amp;do</source>
       <translation>&amp;Làm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1141"/>
+      <location filename="../mainwindow.ui" line="1142"/>
       <source>&amp;Window</source>
       <translation>&amp;Cửa sổ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1158"/>
-      <location filename="../mainwindow.cpp" line="722"/>
+      <location filename="../mainwindow.ui" line="1159"/>
+      <location filename="../mainwindow.cpp" line="732"/>
       <source>Workspaces</source>
       <translation>Không gian làm việc</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1163"/>
+      <location filename="../mainwindow.ui" line="1164"/>
       <source>Panels</source>
       <translation>Tấm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1168"/>
+      <location filename="../mainwindow.ui" line="1169"/>
       <source>Toolbars</source>
       <translation>Thanh công cụ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1173"/>
+      <location filename="../mainwindow.ui" line="1174"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
       <translation>Chỉ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1188"/>
+      <location filename="../mainwindow.ui" line="1189"/>
       <source>Workspace</source>
       <translation>Không gian làm việc</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1197"/>
+      <location filename="../mainwindow.ui" line="1198"/>
       <source>Jump to</source>
       <translation>Nhảy tới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1233"/>
+      <location filename="../mainwindow.ui" line="1234"/>
       <source>&amp;Scripting</source>
       <translation>&amp;Viết kịch bản</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1339"/>
+      <location filename="../mainwindow.ui" line="1340"/>
       <source>About &amp;QOwnNotes…</source>
       <translation>Giới thiệu &amp;QOwnNotes…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1378"/>
+      <location filename="../mainwindow.ui" line="1379"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
       <translation>Gửi câu hỏi, yêu cầu tính năng hoặc vấn đề với sự giúp đỡ của trợ lý vấn đề</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1436"/>
+      <location filename="../mainwindow.ui" line="1437"/>
       <source>Show remote trash</source>
       <translation>Hiển thị thùng rác từ xa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1476"/>
-      <location filename="../mainwindow.ui" line="1479"/>
+      <location filename="../mainwindow.ui" line="1477"/>
+      <location filename="../mainwindow.ui" line="1480"/>
       <source>Auto format table</source>
       <translation>Bảng định dạng tự động</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1508"/>
+      <location filename="../mainwindow.ui" line="1509"/>
       <source>Forward in note history</source>
       <translation>Chuyển tiếp trong lịch sử ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1520"/>
+      <location filename="../mainwindow.ui" line="1521"/>
       <source>Show shortcuts</source>
       <translation>Hiển thị phím tắt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1529"/>
+      <location filename="../mainwindow.ui" line="1530"/>
       <source>&amp;Knowledge base</source>
       <translation>&amp;Kiến thức cơ bản</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1538"/>
+      <location filename="../mainwindow.ui" line="1539"/>
       <source>Insert current &amp;time</source>
       <translation>Chèn thời gian &amp;hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1550"/>
+      <location filename="../mainwindow.ui" line="1551"/>
       <source>Show &amp;Todo List</source>
       <translation>Hiển thị danh sách &amp;Todo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1562"/>
+      <location filename="../mainwindow.ui" line="1563"/>
       <source>&amp;Export note as PDF (preview)</source>
       <translation>&amp;Xuất ghi chú dưới dạng PDF (xem trước)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1565"/>
+      <location filename="../mainwindow.ui" line="1566"/>
       <source>Export note as PDF (preview)</source>
       <translation>Xuất ghi chú dưới dạng PDF (xem trước)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1574"/>
+      <location filename="../mainwindow.ui" line="1575"/>
       <source>&amp;Export note as PDF (text)</source>
       <translation>&amp;Xuất ghi chú dưới dạng PDF (văn bản)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1583"/>
+      <location filename="../mainwindow.ui" line="1584"/>
       <source>&amp;Print note (text)</source>
       <translation>&amp;Ghi chú in (văn bản)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1607"/>
+      <location filename="../mainwindow.ui" line="1608"/>
       <source>Insert &amp;image</source>
       <translation>Chèn hình &amp;ảnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1610"/>
+      <location filename="../mainwindow.ui" line="1611"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
       <translation>Chèn hình ảnh (hình ảnh sẽ được sao chép vào thư mục `media` trong thư mục ghi chú hiện tại)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1622"/>
+      <location filename="../mainwindow.ui" line="1623"/>
       <source>Show &amp;changelog</source>
       <translation>Hiển thị &amp;thay đổi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1631"/>
+      <location filename="../mainwindow.ui" line="1632"/>
       <source>&amp;Encrypt note</source>
       <translation>&amp;Mã hóa lưu ý</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1640"/>
+      <location filename="../mainwindow.ui" line="1641"/>
       <source>Edit encrypted note</source>
       <translation>Chỉnh sửa ghi chú được mã hóa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1652"/>
+      <location filename="../mainwindow.ui" line="1653"/>
       <source>Decrypt note</source>
       <translation>Giải mã lưu ý</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1661"/>
+      <location filename="../mainwindow.ui" line="1662"/>
       <source>&amp;Open note in external editor</source>
       <translation>&amp;Mở ghi chú trong trình soạn thảo bên ngoài</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1673"/>
+      <location filename="../mainwindow.ui" line="1674"/>
       <source>&amp;Export note as markdown file</source>
       <translation>&amp;Xuất ghi chú dưới dạng tệp đánh dấu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1682"/>
+      <location filename="../mainwindow.ui" line="1683"/>
       <source>&amp;Get involved</source>
       <translation>&amp;Tham gia vào</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1691"/>
+      <location filename="../mainwindow.ui" line="1692"/>
       <source>Insert &amp;code block</source>
       <translation>Chèn &amp;khối mã</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1703"/>
+      <location filename="../mainwindow.ui" line="1704"/>
       <source>Next note</source>
       <translation>Lưu ý tiếp theo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1715"/>
+      <location filename="../mainwindow.ui" line="1716"/>
       <source>Previous note</source>
       <translation>Ghi chú trước</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1727"/>
+      <location filename="../mainwindow.ui" line="1728"/>
       <source>&amp;Distraction free mode</source>
       <translation>&amp;Chế độ mất tập trung</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1730"/>
+      <location filename="../mainwindow.ui" line="1731"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
       <translation>Chế độ miễn phí làm phiền, bạn có thể để nó bằng một nút ở phía dưới bên phải</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1741"/>
+      <location filename="../mainwindow.ui" line="1742"/>
       <source>Show &amp;toolbar</source>
       <translation>Hiển thị &amp;thanh công cụ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1749"/>
+      <location filename="../mainwindow.ui" line="1750"/>
       <source>Narrow</source>
       <translation>Hẹp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1760"/>
+      <location filename="../mainwindow.ui" line="1761"/>
       <source>Medium</source>
       <translation>Trung bình</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1771"/>
+      <location filename="../mainwindow.ui" line="1772"/>
       <source>Wide</source>
       <translation>Rộng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1782"/>
+      <location filename="../mainwindow.ui" line="1783"/>
       <source>Full</source>
       <translation>Đầy</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1794"/>
+      <location filename="../mainwindow.ui" line="1795"/>
       <source>Paste html or media</source>
       <translation>Dán html hoặc phương tiện truyền thông</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1797"/>
-      <location filename="../mainwindow.ui" line="1800"/>
+      <location filename="../mainwindow.ui" line="1798"/>
+      <location filename="../mainwindow.ui" line="1801"/>
       <source>Paste images, notes and html from the clipboard</source>
       <translation>Dán hình ảnh, ghi chú và html từ bảng ghi tạm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1812"/>
+      <location filename="../mainwindow.ui" line="1813"/>
       <source>Show note in &amp;file manager</source>
       <translation>Hiển thị ghi chú trong trình &amp;quản lý tập tin</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1824"/>
+      <location filename="../mainwindow.ui" line="1825"/>
       <source>Format text &amp;bold</source>
       <translation>Định dạng văn bản in &amp;đậm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1836"/>
+      <location filename="../mainwindow.ui" line="1837"/>
       <source>Format text &amp;italic</source>
       <translation>Định dạng chữ &amp;nghiêng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1848"/>
+      <location filename="../mainwindow.ui" line="1849"/>
       <source>&amp;Increase note text size</source>
       <translation>&amp;Tăng kích thước văn bản ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1860"/>
+      <location filename="../mainwindow.ui" line="1861"/>
       <source>&amp;Decrease note text size</source>
       <translation>&amp;Giảm kích thước văn bản ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1872"/>
+      <location filename="../mainwindow.ui" line="1873"/>
       <source>&amp;Reset note text size</source>
       <translation>&amp;Đặt lại kích thước văn bản ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1884"/>
+      <location filename="../mainwindow.ui" line="1885"/>
       <source>&amp;Add tag to note</source>
       <translation>&amp;Thêm thẻ để ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1896"/>
+      <location filename="../mainwindow.ui" line="1897"/>
       <source>&amp;Reload note folder</source>
       <translation>&amp;Tải lại thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1968"/>
+      <location filename="../mainwindow.ui" line="1969"/>
       <source>Show log</source>
       <translation>Hiển thị nhật ký</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1977"/>
+      <location filename="../mainwindow.ui" line="1978"/>
       <source>Export note as HTML</source>
       <translation>Xuất ghi chú dưới dạng HTML</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2056"/>
+      <location filename="../mainwindow.ui" line="2057"/>
       <source>Cycle text case</source>
       <translation>Trường hợp văn bản chu kỳ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2129"/>
+      <location filename="../mainwindow.ui" line="2130"/>
       <source>Show note list under tag panel</source>
       <translation>Hiển thị danh sách ghi chú dưới bảng điều khiển thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2147"/>
+      <location filename="../mainwindow.ui" line="2148"/>
       <source>Find notes in all tags / subfolders</source>
       <translation>Tìm ghi chú trong tất cả các thẻ / thư mục con</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2168"/>
+      <location filename="../mainwindow.ui" line="2169"/>
       <source>Import notes from text files</source>
       <translation>Nhập ghi chú từ tệp văn bản</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2177"/>
+      <location filename="../mainwindow.ui" line="2178"/>
       <source>Manage orphaned image files</source>
       <translation>Quản lý tập tin hình ảnh mồ côi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2189"/>
-      <location filename="../mainwindow.ui" line="2192"/>
+      <location filename="../mainwindow.ui" line="2190"/>
+      <location filename="../mainwindow.ui" line="2193"/>
       <source>Open the Telegram group</source>
       <translation>Mở nhóm Telegram</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2204"/>
-      <location filename="../mainwindow.ui" line="2207"/>
+      <location filename="../mainwindow.ui" line="2205"/>
+      <location filename="../mainwindow.ui" line="2208"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
       <translation>Mở phòng bạo loạn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2234"/>
+      <location filename="../mainwindow.ui" line="2235"/>
       <source>Unlock panels</source>
       <translation>Mở khóa bảng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2243"/>
-      <location filename="../mainwindow.cpp" line="11454"/>
+      <location filename="../mainwindow.ui" line="2244"/>
+      <location filename="../mainwindow.cpp" line="11484"/>
       <source>Remove current workspace</source>
       <translation>Xóa không gian làm việc hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2252"/>
+      <location filename="../mainwindow.ui" line="2253"/>
       <source>Add new workspace</source>
       <translation>Thêm không gian làm việc mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2261"/>
+      <location filename="../mainwindow.ui" line="2262"/>
       <source>Rename current workspace</source>
       <translation>Đổi tên không gian làm việc hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2270"/>
+      <location filename="../mainwindow.ui" line="2271"/>
       <source>Switch to previous workspace</source>
       <translation>Chuyển sang không gian làm việc trước đó</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2278"/>
+      <location filename="../mainwindow.ui" line="2279"/>
       <source>Show all panels</source>
       <translation>Hiển thị tất cả các bảng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2287"/>
+      <location filename="../mainwindow.ui" line="2288"/>
       <source>Find action</source>
       <translation>Tìm hành động</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2290"/>
-      <location filename="../mainwindow.ui" line="2293"/>
+      <location filename="../mainwindow.ui" line="2291"/>
+      <location filename="../mainwindow.ui" line="2294"/>
       <source>Find an action from the menu</source>
       <translation>Tìm một hành động từ menu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2305"/>
+      <location filename="../mainwindow.ui" line="2306"/>
       <source>Insert table</source>
       <translation>Chèn bảng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2317"/>
-      <location filename="../mainwindow.cpp" line="6574"/>
+      <location filename="../mainwindow.ui" line="2318"/>
+      <location filename="../mainwindow.cpp" line="6586"/>
       <source>Insert block &amp;quote</source>
       <translation>Chèn trích &amp;dẫn khối</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2325"/>
-      <location filename="../mainwindow.ui" line="2328"/>
+      <location filename="../mainwindow.ui" line="2326"/>
+      <location filename="../mainwindow.ui" line="2329"/>
       <source>Search selected text on the web</source>
       <translation>Tìm kiếm văn bản đã chọn trên web</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2336"/>
+      <location filename="../mainwindow.ui" line="2337"/>
       <source>Delete line</source>
       <translation>Xóa dòng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2344"/>
+      <location filename="../mainwindow.ui" line="2345"/>
       <source>Delete word</source>
       <translation>Xóa từ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2352"/>
+      <location filename="../mainwindow.ui" line="2353"/>
       <source>Copy note headline</source>
       <translation>Sao chép tiêu đề ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2364"/>
-      <location filename="../mainwindow.cpp" line="10319"/>
+      <location filename="../mainwindow.ui" line="2365"/>
+      <location filename="../mainwindow.cpp" line="10345"/>
       <source>Open note in different window</source>
       <translation>Mở ghi chú trong cửa sổ khác nhau</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2376"/>
+      <location filename="../mainwindow.ui" line="2377"/>
       <source>Save modified notes</source>
       <translation>Lưu ghi chú sửa đổi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2387"/>
+      <location filename="../mainwindow.ui" line="2388"/>
       <source>Ascending</source>
       <translation>Tăng dần</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2395"/>
+      <location filename="../mainwindow.ui" line="2396"/>
       <source>Descending</source>
       <translation>Giảm dần</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2404"/>
-      <location filename="../mainwindow.cpp" line="10327"/>
+      <location filename="../mainwindow.ui" line="2405"/>
+      <location filename="../mainwindow.cpp" line="10353"/>
       <source>Show note git versions</source>
       <translation>Hiển thị phiên bản ghi chú git</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2413"/>
+      <location filename="../mainwindow.ui" line="2414"/>
       <source>Find scripts in script repository</source>
       <translation>Tìm tập lệnh trong kho lưu trữ tập lệnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2425"/>
+      <location filename="../mainwindow.ui" line="2426"/>
       <source>Script settings</source>
       <translation>Cài đặt tập lệnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2434"/>
+      <location filename="../mainwindow.ui" line="2435"/>
       <source>Insert attachment</source>
       <translation>Chèn tệp đính kèm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2461"/>
+      <location filename="../mainwindow.ui" line="2462"/>
       <source>Check for script updates</source>
       <translation>Kiểm tra cập nhật tập lệnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2470"/>
+      <location filename="../mainwindow.ui" line="2471"/>
       <source>Show local trash</source>
       <translation>Hiển thị thùng rác địa phương</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2475"/>
-      <location filename="../mainwindow.ui" line="2478"/>
+      <location filename="../mainwindow.ui" line="2476"/>
+      <location filename="../mainwindow.ui" line="2479"/>
       <source>Jump to note edit panel</source>
       <translation>Chuyển đến bảng chỉnh sửa ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2490"/>
+      <location filename="../mainwindow.ui" line="2491"/>
       <source>Manage orphaned attachments</source>
       <translation>Quản lý tệp đính kèm mồ côi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2495"/>
+      <location filename="../mainwindow.ui" line="2496"/>
       <source>Jump to note subfolder panel</source>
       <translation>Chuyển đến bảng ghi chú thư mục con</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2503"/>
+      <location filename="../mainwindow.ui" line="2504"/>
       <source>Jump to tags panel</source>
       <translation>Chuyển đến bảng điều khiển thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2511"/>
+      <location filename="../mainwindow.ui" line="2512"/>
       <source>Jump to note list panel</source>
       <translation>Chuyển đến bảng ghi chú danh sách</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2519"/>
+      <location filename="../mainwindow.ui" line="2520"/>
       <source>Activate context menu</source>
       <translation>Kích hoạt menu ngữ cảnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2527"/>
+      <location filename="../mainwindow.ui" line="2528"/>
       <source>Import bookmarks from server</source>
       <translation>Nhập dấu trang từ máy chủ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2532"/>
-      <location filename="../mainwindow.ui" line="2535"/>
+      <location filename="../mainwindow.ui" line="2533"/>
+      <location filename="../mainwindow.ui" line="2536"/>
       <source>Toggle full-screen mode</source>
       <translation>Bật chế độ toàn màn hình</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2546"/>
+      <location filename="../mainwindow.ui" line="2547"/>
       <source>Typewriter mode</source>
       <translation>Chế độ máy đánh chữ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2558"/>
+      <location filename="../mainwindow.ui" line="2559"/>
       <source>Check spelling</source>
       <translation>Kiểm tra chính tả</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2566"/>
-      <location filename="../mainwindow.cpp" line="12323"/>
+      <location filename="../mainwindow.ui" line="2567"/>
+      <location filename="../mainwindow.cpp" line="12401"/>
       <source>Automatically detect</source>
       <translation>Tự động phát hiện</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2571"/>
+      <location filename="../mainwindow.ui" line="2572"/>
       <source>Manage dictionaries</source>
       <translation>Quản lý từ điển</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2579"/>
+      <location filename="../mainwindow.ui" line="2580"/>
       <source>Custom</source>
       <translation>Tập quán</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2582"/>
+      <location filename="../mainwindow.ui" line="2583"/>
       <source>5</source>
       <translation>5</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2587"/>
+      <location filename="../mainwindow.ui" line="2588"/>
       <source>Show/Hide application</source>
       <translation>Hiển thị / ẩn ứng dụng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2596"/>
+      <location filename="../mainwindow.ui" line="2597"/>
       <source>Previous note tab</source>
       <translation>Tab ghi chú trước
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2608"/>
+      <location filename="../mainwindow.ui" line="2609"/>
       <source>Next note tab</source>
       <translation>Tab ghi chú tiếp theo
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2620"/>
+      <location filename="../mainwindow.ui" line="2621"/>
       <source>Close current note tab</source>
       <translation>Đóng tab ghi chú hiện tại
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2632"/>
+      <location filename="../mainwindow.ui" line="2633"/>
       <source>New note in new tab</source>
       <translation>Ghi chú mới trong tab mới
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2640"/>
+      <location filename="../mainwindow.ui" line="2641"/>
       <source>Toggle note stickiness of current tab</source>
       <translation>Chuyển đổi độ dính ghi chú của tab hiện tại
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1907"/>
+      <location filename="../mainwindow.ui" line="2650"/>
+      <source>Format text underline</source>
+      <translation>Định dạng văn bản gạch chân
+</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="1908"/>
       <source>Use &amp;vertical preview layout</source>
       <translation>Sử dụng &amp;bố cục xem trước dọc</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1910"/>
-      <location filename="../mainwindow.ui" line="1913"/>
+      <location filename="../mainwindow.ui" line="1911"/>
+      <location filename="../mainwindow.ui" line="1914"/>
       <source>The note edit panel will be above the preview panel</source>
       <translation>Bảng chỉnh sửa ghi chú sẽ ở trên bảng xem trước</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1922"/>
+      <location filename="../mainwindow.ui" line="1923"/>
       <source>Replace in current note</source>
       <translation>Thay thế trong ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1930"/>
+      <location filename="../mainwindow.ui" line="1931"/>
       <source>Autocomplete, solve equation or open URL</source>
       <translation>Tự động hoàn tất, giải phương trình hoặc mở URL</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1933"/>
+      <location filename="../mainwindow.ui" line="1934"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
       <translation>Giải phương trình đơn giản như '(2 + 3) * 6 =' trong dòng hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1941"/>
+      <location filename="../mainwindow.ui" line="1942"/>
       <source>Select note folder</source>
       <translation>Chọn thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1956"/>
+      <location filename="../mainwindow.ui" line="1957"/>
       <source>Reload scripting engine</source>
       <translation>Tải lại công cụ kịch bản</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1989"/>
-      <location filename="../mainwindow.ui" line="1992"/>
+      <location filename="../mainwindow.ui" line="1990"/>
+      <location filename="../mainwindow.ui" line="1993"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
       <translation>Mở kênh IRC #qownnotes, bạn phải ở lại trực tuyến để nhận được phản hồi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2219"/>
-      <location filename="../mainwindow.ui" line="2222"/>
+      <location filename="../mainwindow.ui" line="2220"/>
+      <location filename="../mainwindow.ui" line="2223"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
       <translation>Mở phòng qitternotes Gitter, bạn cần có tài khoản GitHub hoặc Twitter để đăng nhập, nhưng bạn có thể nhận được tin nhắn ngoại tuyến</translation>
     </message>
@@ -2639,88 +2645,88 @@
       <translation>Ghi chú hoạt động…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1595"/>
+      <location filename="../mainwindow.ui" line="1596"/>
       <source>&amp;Print note (preview)</source>
       <translation>&amp;Ghi chú in (xem trước)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2001"/>
+      <location filename="../mainwindow.ui" line="2002"/>
       <source>Insert headline from note filename</source>
       <translation>Chèn tiêu đề từ tên tệp ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2015"/>
+      <location filename="../mainwindow.ui" line="2016"/>
       <source>Use softwrap in note editor and preview</source>
       <translation>Sử dụng softwrap trong trình chỉnh sửa ghi chú và xem trước</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2023"/>
+      <location filename="../mainwindow.ui" line="2024"/>
       <source>Show status bar</source>
       <translation>Thanh trạng thái chương trình</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2038"/>
+      <location filename="../mainwindow.ui" line="2039"/>
       <source>Share note</source>
       <translation>Chia sẻ lưu ý</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2068"/>
+      <location filename="../mainwindow.ui" line="2069"/>
       <source>Markdown cheatsheet</source>
       <translation>Áo choàng Markdown</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2077"/>
+      <location filename="../mainwindow.ui" line="2078"/>
       <source>Strike out text</source>
       <translation>Xóa văn bản</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2088"/>
+      <location filename="../mainwindow.ui" line="2089"/>
       <source>Use one column mode</source>
       <translation>Sử dụng chế độ một cột</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2091"/>
-      <location filename="../mainwindow.ui" line="2094"/>
+      <location filename="../mainwindow.ui" line="2092"/>
+      <location filename="../mainwindow.ui" line="2095"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
       <translation>Sử dụng chế độ tối thiểu một cột (như NVAlt)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2106"/>
+      <location filename="../mainwindow.ui" line="2107"/>
       <source>Show menu bar</source>
       <translation>Hiển thị thanh menu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2118"/>
+      <location filename="../mainwindow.ui" line="2119"/>
       <source>Split note at cursor position</source>
       <translation>Chia ghi chú ở vị trí con trỏ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2138"/>
+      <location filename="../mainwindow.ui" line="2139"/>
       <source>Donate</source>
       <translation>Quyên góp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2159"/>
+      <location filename="../mainwindow.ui" line="2160"/>
       <source>Import notes from Evernote</source>
       <translation>Nhập ghi chú từ Evernote</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2827"/>
+      <location filename="../mainwindow.cpp" line="2839"/>
       <source>Note was removed externally!</source>
       <translation>Lưu ý đã được loại bỏ bên ngoài!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2828"/>
+      <location filename="../mainwindow.cpp" line="2840"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
       <translation>Lưu ý hiện tại đã được gỡ bỏ bên ngoài ứng dụng này!
 Khôi phục lưu ý hiện tại?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5424"/>
-      <location filename="../mainwindow.cpp" line="5447"/>
-      <location filename="../mainwindow.cpp" line="7052"/>
-      <location filename="../mainwindow.cpp" line="10409"/>
+      <location filename="../mainwindow.cpp" line="5436"/>
+      <location filename="../mainwindow.cpp" line="5459"/>
+      <location filename="../mainwindow.cpp" line="7071"/>
+      <location filename="../mainwindow.cpp" line="10435"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Hủy bỏ</translation>
     </message>
@@ -2731,109 +2737,109 @@ Khôi phục lưu ý hiện tại?</translation>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3065"/>
+      <location filename="../mainwindow.cpp" line="3077"/>
       <source>new version %1 available</source>
       <translation>phiên bản mới %1 có sẵn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3182"/>
+      <location filename="../mainwindow.cpp" line="3194"/>
       <source>Abort</source>
       <translation>Hủy bỏ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3182"/>
+      <location filename="../mainwindow.cpp" line="3194"/>
       <source>Loading notes…</source>
       <translation>Đang tải ghi chú…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3396"/>
+      <location filename="../mainwindow.cpp" line="3408"/>
       <source>Removed duplicate conflicted database: %1</source>
       <translation>Qarama-qarshi ma'lumotlar bazasi nusxasi o'chirildi: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3397"/>
+      <location filename="../mainwindow.cpp" line="3409"/>
       <source>Could not remove duplicate conflicted database: %1</source>
       <translation>Bir-biriga zid bo'lgan ma'lumotlar bazasini o'chirib bo'lmadi: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3403"/>
+      <location filename="../mainwindow.cpp" line="3415"/>
       <source>Removed merged conflicted database: %1</source>
       <translation>Birlashtirilgan qarama-qarshi ma'lumotlar bazasi o'chirildi: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3404"/>
+      <location filename="../mainwindow.cpp" line="3416"/>
       <source>Could not remove merged conflicted database: %1</source>
       <translation>Birlashtirilgan qarama-qarshi ma'lumotlar bazasini o'chirib bo'lmadi: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3419"/>
+      <location filename="../mainwindow.cpp" line="3431"/>
       <source>Delete conflicted database copies</source>
       <translation>Xóa các bản sao cơ sở dữ liệu bị xung đột</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3442"/>
+      <location filename="../mainwindow.cpp" line="3454"/>
       <source>Removed %n conflicted database copies</source>
       <translation>
         <numerusform>Đã xóa %n bản sao cơ sở dữ liệu bị xung đột</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3606"/>
+      <location filename="../mainwindow.cpp" line="3618"/>
       <source>Please select the folder where your notes will get stored</source>
       <translation>Vui lòng chọn thư mục nơi ghi chú của bạn sẽ được lưu trữ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3632"/>
+      <location filename="../mainwindow.cpp" line="3644"/>
       <source>No folder was selected</source>
       <translation>Không có thư mục nào được chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3634"/>
+      <location filename="../mainwindow.cpp" line="3646"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
       <translation>Bạn phải chọn ghi chú ownCloud của bạn thư mục để làm cho công việc phần mềm này!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3636"/>
+      <location filename="../mainwindow.cpp" line="3648"/>
       <source>&amp;Retry</source>
       <translation>&amp;Thử lại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3636"/>
+      <location filename="../mainwindow.cpp" line="3648"/>
       <source>&amp;Exit</source>
       <translation>&amp;Lối thoát hiểm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3944"/>
+      <location filename="../mainwindow.cpp" line="3956"/>
       <source>Remove current note</source>
       <translation>Xóa ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3945"/>
+      <location filename="../mainwindow.cpp" line="3957"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Xóa ghi chú hiện tại: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4302"/>
+      <location filename="../mainwindow.cpp" line="4314"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
       <translation>Vui lòng nhập &lt;strong&gt; mật khẩu &lt;/strong&gt; của ghi chú được mã hóa này.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4325"/>
+      <location filename="../mainwindow.cpp" line="4337"/>
       <source>Note can't be decrypted!</source>
       <translation>Lưu ý không thể được giải mã!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4326"/>
+      <location filename="../mainwindow.cpp" line="4338"/>
       <source>It seems that your password is not valid!</source>
       <translation>Có vẻ như mật khẩu của bạn không hợp lệ!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4494"/>
+      <location filename="../mainwindow.cpp" line="4506"/>
       <source>Remove selected notes</source>
       <translation>Xóa ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4496"/>
+      <location filename="../mainwindow.cpp" line="4508"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -2844,426 +2850,461 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4584"/>
-      <location filename="../mainwindow.cpp" line="10622"/>
+      <location filename="../mainwindow.cpp" line="4596"/>
+      <location filename="../mainwindow.cpp" line="10652"/>
       <source>Remove selected folders</source>
       <translation>Xóa các thư mục đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4585"/>
+      <location filename="../mainwindow.cpp" line="4597"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
       <translation>
         <numerusform>Xóa &lt;strong&gt;%n &lt;/strong&gt; thư mục đã chọn? &lt;Ul&gt; &lt;li&gt;%1&lt;/ li&gt; &lt;/ul&gt; Tất cả các tệp và thư mục trong các thư mục này cũng sẽ bị xóa!</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4596"/>
+      <location filename="../mainwindow.cpp" line="4608"/>
       <source>Removed note subfolder: %1</source>
       <translation>Thư mục con đã xóa: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4616"/>
+      <location filename="../mainwindow.cpp" line="4628"/>
       <source>Remove selected tags</source>
       <translation>Xóa các thẻ đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4617"/>
+      <location filename="../mainwindow.cpp" line="4629"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
         <numerusform>Xóa &lt;strong&gt;%n&lt;/ strong&gt; thẻ đã chọn? Không có ghi chú sẽ được gỡ bỏ trong quá trình này.</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4669"/>
-      <location filename="../mainwindow.cpp" line="9439"/>
+      <location filename="../mainwindow.cpp" line="4681"/>
+      <location filename="../mainwindow.cpp" line="9465"/>
       <source>Move selected notes</source>
       <translation>Di chuyển các ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4670"/>
+      <location filename="../mainwindow.cpp" line="4682"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Di chuyển %n ghi chú đã chọn sang &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4773"/>
-      <location filename="../mainwindow.cpp" line="9547"/>
+      <location filename="../mainwindow.cpp" line="4785"/>
+      <location filename="../mainwindow.cpp" line="9573"/>
       <source>Copy selected notes</source>
       <translation>Sao chép ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4774"/>
+      <location filename="../mainwindow.cpp" line="4786"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Sao chép %n ghi chú đã chọn vào &lt;strong&gt;%2&lt;/ strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4804"/>
-      <location filename="../mainwindow.cpp" line="4953"/>
+      <location filename="../mainwindow.cpp" line="4816"/>
+      <location filename="../mainwindow.cpp" line="4965"/>
       <source>Done</source>
       <translation>Làm xong</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4805"/>
+      <location filename="../mainwindow.cpp" line="4817"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>%n ghi chú đã được sao chép vào &lt;strong&gt;%2 &lt;/ strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4818"/>
+      <location filename="../mainwindow.cpp" line="4830"/>
       <source>Tag selected notes</source>
       <translation>Tag ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4819"/>
+      <location filename="../mainwindow.cpp" line="4831"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Gắn thẻ %n (các) ghi chú đã chọn với &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5092"/>
+      <location filename="../mainwindow.cpp" line="5104"/>
       <source>Restart application</source>
       <translation>Khỏi động lại ưng dụng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5098"/>
+      <location filename="../mainwindow.cpp" line="5110"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
       <translation>Bạn có thể cần phải khởi động lại ứng dụng theo cách thủ công để thay đổi có hiệu lực.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5103"/>
+      <location filename="../mainwindow.cpp" line="5115"/>
       <source>You may need to restart the application to let the changes take effect.</source>
       <translation>Bạn có thể cần phải khởi động lại ứng dụng để thay đổi có hiệu lực.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5105"/>
+      <location filename="../mainwindow.cpp" line="5117"/>
       <source>Restart</source>
       <translation>Khởi động lại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5336"/>
+      <location filename="../mainwindow.cpp" line="5348"/>
       <source>PDF files</source>
       <translation>Tập tin PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5420"/>
+      <location filename="../mainwindow.cpp" line="5432"/>
       <source>Todo lists disabled!</source>
       <translation>Danh sách Todo bị vô hiệu hóa!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5421"/>
+      <location filename="../mainwindow.cpp" line="5433"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Bạn đã tắt danh sách việc cần làm. &lt;br /&gt; Vui lòng kiểm tra cấu hình &lt;strong&gt; Todo &lt;/ strong&gt; của bạn trong cài đặt!</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5664"/>
+      <location filename="../mainwindow.cpp" line="5676"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Đã tìm thấy &lt;strong&gt;%n &lt;/ strong&gt; xảy ra bất kỳ điều khoản nào của &lt;strong&gt;%1 &lt;/ strong&gt;</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6214"/>
+      <location filename="../mainwindow.cpp" line="6226"/>
       <source>Note was not found</source>
       <translation>Không tìm thấy ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6215"/>
+      <location filename="../mainwindow.cpp" line="6227"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Không tìm thấy ghi chú, tạo ghi chú mới &lt;strong&gt;%1&lt;/ strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6378"/>
+      <location filename="../mainwindow.cpp" line="6390"/>
       <source>Note folders</source>
       <translation>Thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6501"/>
+      <location filename="../mainwindow.cpp" line="6513"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
       <translation>Phiên bản lưu ý hiện đang được tải từ máy chủ của riêng bạn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6518"/>
+      <location filename="../mainwindow.cpp" line="6530"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
       <translation>Ghi chú rác hiện đang được tải từ máy chủ của riêng bạn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6584"/>
+      <location filename="../mainwindow.cpp" line="6596"/>
       <source>Copy code block</source>
       <translation>Sao chép khối mã</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6605"/>
+      <location filename="../mainwindow.cpp" line="6617"/>
       <source>Print selected text</source>
       <translation>In văn bản đã chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6611"/>
+      <location filename="../mainwindow.cpp" line="6623"/>
       <source>Print selected text (preview)</source>
       <translation>In văn bản đã chọn (xem trước)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6629"/>
+      <location filename="../mainwindow.cpp" line="6641"/>
       <source>Export selected text as PDF</source>
       <translation>Xuất văn bản đã chọn dưới dạng PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6635"/>
+      <location filename="../mainwindow.cpp" line="6647"/>
       <source>Export selected text as PDF (preview)</source>
       <translation>Xuất văn bản đã chọn dưới dạng PDF (xem trước)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7048"/>
+      <location filename="../mainwindow.cpp" line="7067"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation>Ghi chú của bạn sẽ được giải mã và lưu trữ dưới dạng văn bản thuần túy một lần nữa. Hãy nhớ rằng ghi chú không được mã hóa có thể sẽ được đồng bộ hóa với máy chủ của bạn và văn bản nhạy cảm có thể bị lộ! &lt;br /&gt; Bạn có muốn giải mã ghi chú của mình không?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7145"/>
+      <location filename="../mainwindow.cpp" line="7164"/>
       <source>Markdown files</source>
       <translation>Tập tin đánh dấu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7201"/>
+      <location filename="../mainwindow.cpp" line="7220"/>
       <source>Bookmarked note position at slot %1</source>
       <translation>Vị trí ghi chú được đánh dấu tại vị trí %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7216"/>
+      <location filename="../mainwindow.cpp" line="7235"/>
       <source>Jumped to bookmark position at slot %1</source>
       <translation>Chuyển đến vị trí đánh dấu tại vị trí %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7444"/>
-      <location filename="../mainwindow.cpp" line="7513"/>
+      <location filename="../mainwindow.cpp" line="7463"/>
+      <location filename="../mainwindow.cpp" line="7532"/>
       <source>Inserting image</source>
       <translation>Chèn hình ảnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7449"/>
-      <location filename="../mainwindow.cpp" line="7517"/>
+      <location filename="../mainwindow.cpp" line="7468"/>
+      <location filename="../mainwindow.cpp" line="7536"/>
       <source>Done inserting image</source>
       <translation>Xong chèn hình ảnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7451"/>
+      <location filename="../mainwindow.cpp" line="7470"/>
       <source>Inserting attachment</source>
       <translation>Chèn tệp đính kèm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7456"/>
+      <location filename="../mainwindow.cpp" line="7475"/>
       <source>Done inserting attachment</source>
       <translation>Xong chèn tệp đính kèm</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7468"/>
+      <location filename="../mainwindow.cpp" line="7487"/>
       <source>Copied %n note(s) to %1</source>
       <translation>
         <numerusform>Đã sao chép %n ghi chú vào %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7477"/>
+      <location filename="../mainwindow.cpp" line="7496"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation>
         <numerusform>Không thể sao chép %n ghi chú (rất có thể đã tồn tại)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7487"/>
+      <location filename="../mainwindow.cpp" line="7506"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
         <numerusform>Bỏ qua việc sao chép %n ghi chú (không đánh dấu hoặc tệp văn bản hoặc không thể đọc được)</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7500"/>
+      <location filename="../mainwindow.cpp" line="7519"/>
       <source>Saving temporary image</source>
       <translation>Lưu hình ảnh tạm thời</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7519"/>
+      <location filename="../mainwindow.cpp" line="7538"/>
       <source>Temporary file can't be opened</source>
       <translation>Không thể mở tập tin tạm thời</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7562"/>
+      <location filename="../mainwindow.cpp" line="7581"/>
       <source>Downloading %1</source>
       <translation>Đang tải xuống %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7745"/>
+      <location filename="../mainwindow.cpp" line="7771"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
       <translation>Đặt lại kích thước phông chữ thành %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8699"/>
+      <location filename="../mainwindow.cpp" line="8725"/>
       <source>Remove tag '%1' from the current note</source>
       <translation>Xóa thẻ '%1' khỏi ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8700"/>
+      <location filename="../mainwindow.cpp" line="8726"/>
       <source>Remove tag '%1' from the selected notes</source>
       <translation>Xóa thẻ '%1' khỏi ghi chú đã chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8931"/>
+      <location filename="../mainwindow.cpp" line="8957"/>
       <source>Rename tag</source>
       <translation>Đổi tên thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8932"/>
+      <location filename="../mainwindow.cpp" line="8958"/>
       <source>Assign color</source>
       <translation>Gán màu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8933"/>
+      <location filename="../mainwindow.cpp" line="8959"/>
       <source>Disable color</source>
       <translation>Tắt màu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8937"/>
+      <location filename="../mainwindow.cpp" line="8963"/>
       <source>&amp;Move tags to…</source>
       <translation>&amp;Di chuyển các thẻ đến…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9148"/>
+      <location filename="../mainwindow.cpp" line="9174"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
       <translation>Di chuyển đến gốc</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9713"/>
+      <location filename="../mainwindow.cpp" line="9739"/>
       <source>An url was opened at the current cursor position</source>
       <translation>Một url đã được mở tại vị trí con trỏ hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9817"/>
+      <location filename="../mainwindow.cpp" line="9843"/>
       <source>No equation was found in front of the cursor</source>
       <translation>Không tìm thấy phương trình nào trước con trỏ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9834"/>
+      <location filename="../mainwindow.cpp" line="9860"/>
       <source>Result for equation: %1 = %2</source>
       <translation>Kết quả cho phương trình: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9935"/>
+      <location filename="../mainwindow.cpp" line="9961"/>
       <source>The scripting engine was reloaded</source>
       <translation>Các công cụ kịch bản đã được tải lại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9969"/>
+      <location filename="../mainwindow.cpp" line="9995"/>
       <source>HTML files</source>
       <translation>Tệp HTML</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10255"/>
+      <location filename="../mainwindow.cpp" line="10281"/>
       <source>Jump to the note's subfolder</source>
       <translation>Chuyển đến thư mục con của ghi chú
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10312"/>
+      <location filename="../mainwindow.cpp" line="10338"/>
       <source>Open note in tab</source>
       <translation>Mở ghi chú trong tab
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10199"/>
-      <location filename="../mainwindow.cpp" line="10393"/>
+      <location filename="../mainwindow.cpp" line="12004"/>
+      <source>A script update was found!</source>
+      <translation>Một bản cập nhật kịch bản đã được tìm thấy!
+</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="12010"/>
+      <source>Script updates</source>
+      <translation>Cập nhật tập lệnh
+</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="12011"/>
+      <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
+      <translation>Cập nhật cho tập lệnh của bạn đã được tìm thấy trong kho lưu trữ tập lệnh! Bạn có muốn cập nhật chúng?
+</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="12026"/>
+      <source>No script updates were found</source>
+      <translation>Không tìm thấy cập nhật tập lệnh
+</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="12632"/>
+      <source>Toggle note stickiness</source>
+      <translation>Chuyển đổi độ dính ghi chú
+</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="12638"/>
+      <source>Close other note tabs</source>
+      <translation>Đóng các tab ghi chú khác</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="10225"/>
+      <location filename="../mainwindow.cpp" line="10419"/>
       <source>Rename note</source>
       <translation>Đổi tên ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10201"/>
+      <location filename="../mainwindow.cpp" line="10227"/>
       <source>Allows you to rename the filename of the note</source>
       <translation>Cho phép bạn đổi tên tập tin của ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10215"/>
+      <location filename="../mainwindow.cpp" line="10241"/>
       <source>&amp;Move notes to…</source>
       <translation>&amp;Di chuyển ghi chú đến lọ…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10216"/>
+      <location filename="../mainwindow.cpp" line="10242"/>
       <source>&amp;Copy notes to…</source>
       <translation>&amp;Sao chép ghi chú vào lọ…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10259"/>
+      <location filename="../mainwindow.cpp" line="10285"/>
       <source>Move notes to subfolder…</source>
       <translation>Di chuyển ghi chú đến thư mục con…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10263"/>
+      <location filename="../mainwindow.cpp" line="10289"/>
       <source>Copy notes to subfolder…</source>
       <translation>Sao chép ghi chú vào thư mục con…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10271"/>
+      <location filename="../mainwindow.cpp" line="10297"/>
       <source>&amp;Tag selected notes with…</source>
       <translation>&amp;Gắn thẻ ghi chú đã chọn với…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10295"/>
+      <location filename="../mainwindow.cpp" line="10321"/>
       <source>&amp;Remove tag from selected notes…</source>
       <translation>&amp;Xóa thẻ khỏi ghi chú đã chọn…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10393"/>
+      <location filename="../mainwindow.cpp" line="10419"/>
       <source>Name:</source>
       <translation>Tên:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10405"/>
+      <location filename="../mainwindow.cpp" line="10431"/>
       <source>Note renaming not enabled!</source>
       <translation>Lưu ý đổi tên không được kích hoạt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10621"/>
+      <location filename="../mainwindow.cpp" line="10651"/>
       <source>Rename subfolder</source>
       <translation>Đổi tên thư mục con</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11225"/>
+      <location filename="../mainwindow.cpp" line="11255"/>
       <source>Create new workspace</source>
       <translation>Tạo không gian làm việc mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11226"/>
-      <location filename="../mainwindow.cpp" line="11496"/>
+      <location filename="../mainwindow.cpp" line="11256"/>
+      <location filename="../mainwindow.cpp" line="11526"/>
       <source>Workspace name:</source>
       <translation>Tên không gian làm việc:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11351"/>
+      <location filename="../mainwindow.cpp" line="11381"/>
       <source>full</source>
       <comment>full workspace</comment>
       <translation>đầy</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11358"/>
+      <location filename="../mainwindow.cpp" line="11388"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
       <translation>tối thiểu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11455"/>
+      <location filename="../mainwindow.cpp" line="11485"/>
       <source>Remove the current workspace?</source>
       <translation>Loại bỏ không gian làm việc hiện tại?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11495"/>
+      <location filename="../mainwindow.cpp" line="11525"/>
       <source>Rename workspace</source>
       <translation>Đổi tên không gian làm việc</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="11641"/>
+      <location filename="../mainwindow.cpp" line="11671"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation>
@@ -3271,645 +3312,645 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11913"/>
+      <location filename="../mainwindow.cpp" line="11943"/>
       <source>Disallow all note editing</source>
       <translation>Không cho phép chỉnh sửa ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12081"/>
+      <location filename="../mainwindow.cpp" line="12159"/>
       <source>Select text files to import</source>
       <translation>Chọn tệp văn bản để nhập</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12111"/>
+      <location filename="../mainwindow.cpp" line="12189"/>
       <source>Importing: %1</source>
       <translation>Nhập khẩu: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12176"/>
+      <location filename="../mainwindow.cpp" line="12254"/>
       <source>Note headline '%1' was copied to the clipboard</source>
       <translation>Lưu ý tiêu đề '%1' đã được sao chép vào bảng tạm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12261"/>
+      <location filename="../mainwindow.cpp" line="12339"/>
       <source>Leave full-screen mode</source>
       <translation>Để chế độ toàn màn hình</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12441"/>
+      <location filename="../mainwindow.cpp" line="12519"/>
       <source>Custom editor width</source>
       <translation>Chiều rộng biên tập tùy chỉnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12441"/>
+      <location filename="../mainwindow.cpp" line="12519"/>
       <source>Characters:</source>
       <translation>Nhân vật:</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8673"/>
+      <location filename="../mainwindow.cpp" line="8699"/>
       <source>%n notes selected</source>
       <translation>
         <numerusform>%n ghi chú được chọn</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2449"/>
-      <location filename="../mainwindow.cpp" line="11914"/>
+      <location filename="../mainwindow.ui" line="2450"/>
+      <location filename="../mainwindow.cpp" line="11944"/>
       <source>Allow all note editing</source>
       <translation>Cho phép tất cả chỉnh sửa ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1227"/>
+      <location filename="../mainwindow.ui" line="1228"/>
       <source>&amp;Tag</source>
       <translation>&amp;Nhãn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4893"/>
+      <location filename="../mainwindow.cpp" line="4905"/>
       <source>Remove tag from selected notes</source>
       <translation>Xóa thẻ khỏi ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4894"/>
+      <location filename="../mainwindow.cpp" line="4906"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
         <numerusform>Xóa thẻ &lt;strong&gt;%1 &lt;/ strong&gt; khỏi% n ghi chú đã chọn?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4954"/>
+      <location filename="../mainwindow.cpp" line="4966"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
         <numerusform>Thẻ &lt;strong&gt;%1 &lt;/ strong&gt; đã bị xóa khỏi %n ghi chú</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4999"/>
+      <location filename="../mainwindow.cpp" line="5011"/>
       <source>Current notes folder: </source>
       <translation>Thư mục ghi chú hiện tại:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5002"/>
+      <location filename="../mainwindow.cpp" line="5014"/>
       <source>Set the notes folder. Current notes folder: </source>
       <translation>Đặt thư mục ghi chú. Thư mục ghi chú hiện tại:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5204"/>
+      <location filename="../mainwindow.cpp" line="5216"/>
       <source>Print note</source>
       <translation>Ghi chú in</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5279"/>
+      <location filename="../mainwindow.cpp" line="5291"/>
       <source>Letter</source>
       <translation>Lá thư</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5309"/>
+      <location filename="../mainwindow.cpp" line="5321"/>
       <source>Portrait</source>
       <translation>Chân dung</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5309"/>
+      <location filename="../mainwindow.cpp" line="5321"/>
       <source>Landscape</source>
       <translation>Phong cảnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5314"/>
+      <location filename="../mainwindow.cpp" line="5326"/>
       <source>Orientation</source>
       <translation>Sự định hướng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5314"/>
+      <location filename="../mainwindow.cpp" line="5326"/>
       <source>Orientation:</source>
       <translation>Sự định hướng:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5337"/>
+      <location filename="../mainwindow.cpp" line="5349"/>
       <source>Export current note as PDF</source>
       <translation>Xuất ghi chú hiện tại dưới dạng PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5444"/>
+      <location filename="../mainwindow.cpp" line="5456"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Bạn chưa chọn bất kỳ danh sách việc cần làm nào. &lt;br /&gt; Vui lòng kiểm tra cấu hình &lt;strong&gt; Todo &lt;/strong&gt; của bạn trong cài đặt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6360"/>
+      <location filename="../mainwindow.cpp" line="6372"/>
       <source>Open QOwnNotes</source>
       <translation>Mở QOwnNote</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6023"/>
-      <location filename="../mainwindow.cpp" line="6410"/>
-      <location filename="../mainwindow.cpp" line="10195"/>
-      <location filename="../mainwindow.cpp" line="10619"/>
+      <location filename="../mainwindow.cpp" line="6035"/>
+      <location filename="../mainwindow.cpp" line="6422"/>
+      <location filename="../mainwindow.cpp" line="10221"/>
+      <location filename="../mainwindow.cpp" line="10649"/>
       <source>New note</source>
       <translation>Ghi chú mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6427"/>
+      <location filename="../mainwindow.cpp" line="6439"/>
       <source>Recent notes</source>
       <translation>Ghi chú gần đây</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6443"/>
+      <location filename="../mainwindow.cpp" line="6455"/>
       <source>Show todo lists</source>
       <translation>Hiển thị danh sách việc cần làm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6455"/>
+      <location filename="../mainwindow.cpp" line="6467"/>
       <source>Recent tasks</source>
       <translation>Nhiệm vụ gần đây</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6476"/>
+      <location filename="../mainwindow.cpp" line="6488"/>
       <source>Quit</source>
       <translation>Thoát</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7917"/>
+      <location filename="../mainwindow.cpp" line="7943"/>
       <source>show notes from all note subfolders (%1)</source>
       <translation>hiển thị ghi chú từ tất cả các thư mục con ghi chú (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7940"/>
+      <location filename="../mainwindow.cpp" line="7966"/>
       <source>show notes in note root folder (%1)</source>
       <translation>hiển thị ghi chú trong thư mục gốc ghi chú (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
-      <location filename="../mainwindow.cpp" line="766"/>
-      <location filename="../mainwindow.cpp" line="2079"/>
-      <location filename="../mainwindow.cpp" line="7952"/>
+      <location filename="../mainwindow.cpp" line="776"/>
+      <location filename="../mainwindow.cpp" line="2095"/>
+      <location filename="../mainwindow.cpp" line="7978"/>
       <source>Note folder</source>
       <translation>Thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9320"/>
-      <location filename="../mainwindow.cpp" line="9387"/>
+      <location filename="../mainwindow.cpp" line="9346"/>
+      <location filename="../mainwindow.cpp" line="9413"/>
       <source>Copy to note folder</source>
       <translation>Sao chép vào thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9320"/>
-      <location filename="../mainwindow.cpp" line="9388"/>
+      <location filename="../mainwindow.cpp" line="9346"/>
+      <location filename="../mainwindow.cpp" line="9414"/>
       <source>Move to note folder</source>
       <translation>Di chuyển đến thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9321"/>
-      <location filename="../mainwindow.cpp" line="9389"/>
+      <location filename="../mainwindow.cpp" line="9347"/>
+      <location filename="../mainwindow.cpp" line="9415"/>
       <source>Copy to this subfolder</source>
       <translation>Sao chép vào thư mục con này</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9322"/>
-      <location filename="../mainwindow.cpp" line="9390"/>
+      <location filename="../mainwindow.cpp" line="9348"/>
+      <location filename="../mainwindow.cpp" line="9416"/>
       <source>Move to this subfolder</source>
       <translation>Di chuyển đến thư mục con này</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9434"/>
+      <location filename="../mainwindow.cpp" line="9460"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Di chuyển %n (các) ghi chú đã chọn để ghi chú thư mục con &lt;strong&gt; %2 &lt;/ strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5105"/>
-      <location filename="../mainwindow.cpp" line="12095"/>
+      <location filename="../mainwindow.cpp" line="5117"/>
+      <location filename="../mainwindow.cpp" line="12173"/>
       <source>Cancel</source>
       <translation>Hủy bỏ</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9518"/>
+      <location filename="../mainwindow.cpp" line="9544"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation>
         <numerusform>%n ghi chú đã được di chuyển để ghi chú thư mục con "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9542"/>
+      <location filename="../mainwindow.cpp" line="9568"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Sao chép %n (các) ghi chú đã chọn để ghi chú thư mục con &lt;strong&gt;%2 &lt;/ strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9609"/>
+      <location filename="../mainwindow.cpp" line="9635"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation>
         <numerusform>%n ghi chú đã được sao chép để ghi chú thư mục con "%2"</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10317"/>
+      <location filename="../mainwindow.cpp" line="10343"/>
       <source>Open note in external editor</source>
       <translation>Mở ghi chú trong trình soạn thảo bên ngoài</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10321"/>
+      <location filename="../mainwindow.cpp" line="10347"/>
       <source>Show note in file manager</source>
       <translation>Hiển thị ghi chú trong trình quản lý tập tin</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10406"/>
+      <location filename="../mainwindow.cpp" line="10432"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
       <translation>Nếu bạn muốn đổi tên ghi chú của mình, bạn phải bật tùy chọn cho phép tên tệp ghi chú khác với tiêu đề.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10620"/>
+      <location filename="../mainwindow.cpp" line="10650"/>
       <source>New subfolder</source>
       <translation>Thư mục con mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10624"/>
+      <location filename="../mainwindow.cpp" line="10654"/>
       <source>Show folder in file manager</source>
       <translation>Hiển thị thư mục trong trình quản lý tập tin</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10669"/>
+      <location filename="../mainwindow.cpp" line="10699"/>
       <source>Create a new folder</source>
       <translation>Tạo một thư mục mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10670"/>
+      <location filename="../mainwindow.cpp" line="10700"/>
       <source>Folder name:</source>
       <translation>Tên thư mục:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7876"/>
+      <location filename="../mainwindow.cpp" line="7902"/>
       <source>show all untagged notes (%1)</source>
       <translation>hiển thị tất cả các ghi chú chưa được đánh dấu (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7878"/>
+      <location filename="../mainwindow.cpp" line="7904"/>
       <source>Untagged notes</source>
       <translation>Ghi chú chưa được đánh dấu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9970"/>
+      <location filename="../mainwindow.cpp" line="9996"/>
       <source>Export current note as HTML file</source>
       <translation>Xuất ghi chú hiện tại dưới dạng tệp HTML</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5288"/>
+      <location filename="../mainwindow.cpp" line="5300"/>
       <source>Page size</source>
       <translation>Kích thước trang</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1138"/>
+      <location filename="../mainwindow.cpp" line="1148"/>
       <source>quit toolbar</source>
       <translation>thoát khỏi thanh công cụ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5288"/>
+      <location filename="../mainwindow.cpp" line="5300"/>
       <source>Page size:</source>
       <translation>Kích thước trang:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5405"/>
+      <location filename="../mainwindow.cpp" line="5417"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation>QOwnNotes sẽ theo dõi dữ liệu sử dụng ẩn danh, giúp quyết định phần nào của QOwnNotes để cải thiện tiếp theo cũng như tìm và sửa lỗi. Bạn có thể vô hiệu hóa hành vi đó trong cài đặt.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5409"/>
+      <location filename="../mainwindow.cpp" line="5421"/>
       <source>&amp;Ok</source>
       <translation>&amp;Được</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10205"/>
+      <location filename="../mainwindow.cpp" line="10231"/>
       <source>&amp;Remove notes</source>
       <translation>&amp;Xóa ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6565"/>
+      <location filename="../mainwindow.cpp" line="6577"/>
       <source>&amp;Link selected text</source>
       <translation>&amp;Liên kết văn bản đã chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1064"/>
+      <location filename="../mainwindow.cpp" line="1074"/>
       <source>Your tasks are being loaded from your server</source>
       <translation>Nhiệm vụ của bạn đang được tải từ máy chủ của bạn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2758"/>
+      <location filename="../mainwindow.cpp" line="2770"/>
       <source>Current note was modified externally</source>
       <translation>Ghi chú hiện tại đã được sửa đổi bên ngoài</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2841"/>
-      <location filename="../mainwindow.cpp" line="5961"/>
+      <location filename="../mainwindow.cpp" line="2853"/>
+      <location filename="../mainwindow.cpp" line="5973"/>
       <source>Stored current note to disk</source>
       <translation>Lưu ý hiện tại vào đĩa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2859"/>
+      <location filename="../mainwindow.cpp" line="2871"/>
       <source>Note was modified externally: %1</source>
       <translation>Lưu ý đã được sửa đổi bên ngoài: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2882"/>
+      <location filename="../mainwindow.cpp" line="2894"/>
       <source>Notes directory was modified externally</source>
       <translation>Thư mục ghi chú đã được sửa đổi bên ngoài</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2944"/>
+      <location filename="../mainwindow.cpp" line="2955"/>
       <source>Stored %n note(s) to disk</source>
       <translation>
         <numerusform>Lưu trữ %n ghi chú vào đĩa</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7843"/>
+      <location filename="../mainwindow.cpp" line="7869"/>
       <source>show all notes (%1)</source>
       <translation>hiển thị tất cả các ghi chú (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7846"/>
-      <location filename="../mainwindow.cpp" line="7920"/>
+      <location filename="../mainwindow.cpp" line="7872"/>
+      <location filename="../mainwindow.cpp" line="7946"/>
       <source>All notes</source>
       <translation>Tất cả ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8923"/>
+      <location filename="../mainwindow.cpp" line="8949"/>
       <source>&amp;Add tag</source>
       <translation>&amp;Thêm thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8971"/>
+      <location filename="../mainwindow.cpp" line="8997"/>
       <source>Tag could not be created!</source>
       <translation>Thẻ không thể được tạo!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9150"/>
+      <location filename="../mainwindow.cpp" line="9176"/>
       <source>Move to this tag</source>
       <translation>Di chuyển đến thẻ này</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9185"/>
+      <location filename="../mainwindow.cpp" line="9211"/>
       <source>Tag this</source>
       <translation>Gắn thẻ cái này</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9210"/>
+      <location filename="../mainwindow.cpp" line="9236"/>
       <source>Cannot move tag '%1' to this tag</source>
       <translation>Không thể di chuyển thẻ '%1' sang thẻ này</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9259"/>
+      <location filename="../mainwindow.cpp" line="9285"/>
       <source>Moved tag '%1' to new tag</source>
       <translation>Đã chuyển thẻ '%1' sang thẻ mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8173"/>
+      <location filename="../mainwindow.cpp" line="8199"/>
       <source>show all notes tagged with '%1' (%2)</source>
       <translation>hiển thị tất cả các ghi chú được gắn thẻ '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8934"/>
+      <location filename="../mainwindow.cpp" line="8960"/>
       <source>&amp;Remove tags</source>
       <translation>&amp;Xóa thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5443"/>
+      <location filename="../mainwindow.cpp" line="5455"/>
       <source>No selected todo lists!</source>
       <translation>Không có danh sách việc cần chọn!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="735"/>
+      <location filename="../mainwindow.cpp" line="745"/>
       <source>Subfolders</source>
       <translation>Thư mục con</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="747"/>
+      <location filename="../mainwindow.cpp" line="757"/>
       <source>Tags</source>
       <translation>Thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="756"/>
+      <location filename="../mainwindow.cpp" line="766"/>
       <source>Note search</source>
       <translation>Lưu ý tìm kiếm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="785"/>
+      <location filename="../mainwindow.cpp" line="795"/>
       <source>Note list</source>
       <translation>Danh sách ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="810"/>
+      <location filename="../mainwindow.cpp" line="820"/>
       <source>Note edit</source>
       <translation>Lưu ý chỉnh sửa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="822"/>
+      <location filename="../mainwindow.cpp" line="832"/>
       <source>Note tags</source>
       <translation>Thẻ ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="833"/>
+      <location filename="../mainwindow.cpp" line="843"/>
       <source>Note preview</source>
       <translation>Xem trước ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="841"/>
+      <location filename="../mainwindow.cpp" line="851"/>
       <source>Log</source>
       <translation>Đăng nhập</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="850"/>
+      <location filename="../mainwindow.cpp" line="860"/>
       <source>Scripting</source>
       <translation>Viết kịch bản</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1105"/>
+      <location filename="../mainwindow.cpp" line="1115"/>
       <source>formatting toolbar</source>
       <translation>thanh công cụ định dạng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1114"/>
+      <location filename="../mainwindow.cpp" line="1124"/>
       <source>inserting toolbar</source>
       <translation>chèn thanh công cụ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1121"/>
+      <location filename="../mainwindow.cpp" line="1131"/>
       <source>encryption toolbar</source>
       <translation>thanh công cụ mã hóa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1128"/>
+      <location filename="../mainwindow.cpp" line="1138"/>
       <source>window toolbar</source>
       <translation>thanh công cụ cửa sổ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1133"/>
+      <location filename="../mainwindow.cpp" line="1143"/>
       <source>custom action toolbar</source>
       <translation>thanh công cụ hành động tùy chỉnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1153"/>
+      <location filename="../mainwindow.cpp" line="1163"/>
       <source>Workspace selector</source>
       <translation>Bộ chọn không gian làm việc</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1299"/>
+      <location filename="../mainwindow.cpp" line="1309"/>
       <source>Show %1 panel</source>
       <translation>Hiển thị bảng %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1341"/>
+      <location filename="../mainwindow.cpp" line="1351"/>
       <source>Show %1</source>
       <translation>Hiển thị %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1664"/>
+      <location filename="../mainwindow.cpp" line="1674"/>
       <source>Leave distraction free mode</source>
       <translation>Để chế độ miễn phí phân tâm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1840"/>
+      <location filename="../mainwindow.cpp" line="1856"/>
       <source>Switch to note folder</source>
       <translation>Chuyển sang thư mục ghi chú
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2235"/>
+      <location filename="../mainwindow.cpp" line="2251"/>
       <source>show notes in folder '%1' (%2)</source>
       <translation>hiển thị ghi chú trong thư mục '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2274"/>
+      <location filename="../mainwindow.cpp" line="2290"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
       <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;sửa đổi lần cuối: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2279"/>
+      <location filename="../mainwindow.cpp" line="2295"/>
       <source>&lt;br /&gt;path: %1</source>
       <translation>&lt;br /&gt;con đường: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2481"/>
+      <location filename="../mainwindow.cpp" line="2497"/>
       <source>Toolbar could not be loaded without name</source>
       <translation>Không thể tải thanh công cụ mà không có tên</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2785"/>
+      <location filename="../mainwindow.cpp" line="2797"/>
       <source>Overwriting external changes of: %1</source>
       <translation>Ghi đè các thay đổi bên ngoài của: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2806"/>
+      <location filename="../mainwindow.cpp" line="2818"/>
       <source>Loading external changes from: %1</source>
       <translation>Đang tải các thay đổi bên ngoài từ: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2842"/>
-      <location filename="../mainwindow.cpp" line="5962"/>
+      <location filename="../mainwindow.cpp" line="2854"/>
+      <location filename="../mainwindow.cpp" line="5974"/>
       <source>Current note could not be stored to disk</source>
       <translation>Ghi chú hiện tại không thể được lưu trữ vào đĩa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3022"/>
+      <location filename="../mainwindow.cpp" line="3034"/>
       <source>Read-only</source>
       <translation>Chỉ đọc</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3024"/>
+      <location filename="../mainwindow.cpp" line="3036"/>
       <source>Note editing is disabled, click to enable</source>
       <translation>Ghi chú chỉnh sửa bị vô hiệu hóa, nhấp để bật</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3041"/>
+      <location filename="../mainwindow.cpp" line="3053"/>
       <source>Line numbers</source>
       <translation>Số dòng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3051"/>
+      <location filename="../mainwindow.cpp" line="3063"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
       <translation>Nhấn vào đây để xem những gì đã thay đổi và để có thể cập nhật lên phiên bản mới nhất</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3421"/>
+      <location filename="../mainwindow.cpp" line="3433"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation>
         <numerusform>Tiến hành xóa tự động các bản sao cơ sở dữ liệu bị xung đột &lt;strong&gt;%n &lt;/ strong&gt; có thể chặn quá trình đồng bộ hóa của riêng bạn?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4877"/>
+      <location filename="../mainwindow.cpp" line="4889"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation>
         <numerusform>%n ghi chú được gắn thẻ "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5660"/>
+      <location filename="../mainwindow.cpp" line="5672"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Đã tìm thấy &lt;strong&gt;%n &lt;/ strong&gt; xảy ra &lt;strong&gt;%1&lt;/ strong&gt;</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6023"/>
+      <location filename="../mainwindow.cpp" line="6035"/>
       <source>Note headline</source>
       <translation>Lưu ý tiêu đề</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6571"/>
+      <location filename="../mainwindow.cpp" line="6583"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
       <translation>Chặn &amp;trích dẫn văn bản đã chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7574"/>
+      <location filename="../mainwindow.cpp" line="7593"/>
       <source>Downloading images finished</source>
       <translation>Đang tải ảnh xong</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7717"/>
+      <location filename="../mainwindow.cpp" line="7743"/>
       <source>Increased font size to %1 pt</source>
       <translation>Tăng cỡ chữ lên %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7734"/>
+      <location filename="../mainwindow.cpp" line="7760"/>
       <source>Decreased font size to %1 pt</source>
       <translation>Giảm cỡ chữ xuống %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5409"/>
-      <location filename="../mainwindow.cpp" line="5424"/>
-      <location filename="../mainwindow.cpp" line="5447"/>
-      <location filename="../mainwindow.cpp" line="10409"/>
+      <location filename="../mainwindow.cpp" line="5421"/>
+      <location filename="../mainwindow.cpp" line="5436"/>
+      <location filename="../mainwindow.cpp" line="5459"/>
+      <location filename="../mainwindow.cpp" line="10435"/>
       <source>Open &amp;settings</source>
       <translation>Mở &amp;cài đặt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1661"/>
-      <location filename="../mainwindow.cpp" line="12247"/>
+      <location filename="../mainwindow.cpp" line="1671"/>
+      <location filename="../mainwindow.cpp" line="12325"/>
       <source>leave</source>
       <translation>rời khỏi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6991"/>
+      <location filename="../mainwindow.cpp" line="7010"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation>Vui lòng nhập &lt;strong&gt; mật khẩu &lt;/ strong&gt; để mã hóa ghi chú. &lt;br/&gt; Hãy nhớ rằng bạn phải &lt;strong&gt; nhớ &lt;/ strong&gt; mật khẩu của mình để đọc nội dung của ghi chú &lt;br /&gt; và đó bạn chỉ có thể &lt;strong&gt; &lt;/ strong&gt; làm điều đó &lt;strong&gt; trong QOwnNotes &lt;/strong&gt;!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7047"/>
+      <location filename="../mainwindow.cpp" line="7066"/>
       <source>Decrypt note and store it as plain text</source>
       <translation>Giải mã ghi chú và lưu trữ dưới dạng văn bản thuần túy</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7052"/>
+      <location filename="../mainwindow.cpp" line="7071"/>
       <source>&amp;Decrypt</source>
       <translation>&amp;Giải mã</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7077"/>
+      <location filename="../mainwindow.cpp" line="7096"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation>&lt;br/&gt;Bạn sẽ có thể chỉnh sửa ghi chú được mã hóa của bạn.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7146"/>
+      <location filename="../mainwindow.cpp" line="7165"/>
       <source>Export current note as Markdown file</source>
       <translation>Xuất ghi chú hiện tại dưới dạng tệp Markdown</translation>
     </message>
@@ -4146,103 +4187,103 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
   <context>
     <name>OwnCloudService</name>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="244"/>
+      <location filename="../services/owncloudservice.cpp" line="245"/>
       <source>Username / password error</source>
       <translation>Lỗi tên người dùng / mật khẩu</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="245"/>
+      <location filename="../services/owncloudservice.cpp" line="246"/>
       <source>Your calendar username or password is incorrect!</source>
       <translation>Tên người dùng hoặc mật khẩu lịch của bạn không chính xác!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="579"/>
+      <location filename="../services/owncloudservice.cpp" line="580"/>
       <source>API app version too low</source>
       <translation>Phiên bản ứng dụng API quá thấp</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="580"/>
+      <location filename="../services/owncloudservice.cpp" line="581"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
       <translation>Vui lòng xem xét cập nhật ứng dụng QOwnNotesAPI trên máy chủ của bạn, phiên bản ứng dụng %1 của bạn quá thấp và có thể gây rắc rối trong QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1125"/>
+      <location filename="../services/owncloudservice.cpp" line="1128"/>
       <source>ownCloud server connection error</source>
       <translation>lỗi kết nối máy chủ ownCloud</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1130"/>
+      <location filename="../services/owncloudservice.cpp" line="1133"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
       <translation>lỗi máy chủ ownCloud: &lt;strong&gt;%1 &lt;/strong&gt; &lt;br /&gt; Vui lòng kiểm tra cấu hình ownCloud của bạn.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1150"/>
+      <location filename="../services/owncloudservice.cpp" line="1153"/>
       <source>You need to setup your ownCloud server!</source>
       <translation>Bạn cần phải thiết lập máy chủ ownCloud của bạn!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1162"/>
+      <location filename="../services/owncloudservice.cpp" line="1165"/>
       <source>Open &amp;settings</source>
       <translation>Mở &amp;cài đặt</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1162"/>
+      <location filename="../services/owncloudservice.cpp" line="1165"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Hủy bỏ</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1221"/>
+      <location filename="../services/owncloudservice.cpp" line="1224"/>
       <source>Done with loading note versions</source>
       <translation>Thực hiện với tải phiên bản ghi chú</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1266"/>
+      <location filename="../services/owncloudservice.cpp" line="1269"/>
       <source>No versions found</source>
       <translation>Không tìm thấy phiên bản nào</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1267"/>
+      <location filename="../services/owncloudservice.cpp" line="1270"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
       <translation>Không có phiên bản cho ghi chú này hoặc ghi chú không được tìm thấy trên máy chủ.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1287"/>
+      <location filename="../services/owncloudservice.cpp" line="1290"/>
       <source>Done with loading trashed notes</source>
       <translation>Thực hiện với tải ghi chú rác</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1332"/>
+      <location filename="../services/owncloudservice.cpp" line="1335"/>
       <source>No trashed notes</source>
       <translation>Không có ghi chú rác</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1333"/>
+      <location filename="../services/owncloudservice.cpp" line="1336"/>
       <source>No trashed notes were found on the server.</source>
       <translation>Không có ghi chú rác được tìm thấy trên máy chủ.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1355"/>
-      <location filename="../services/owncloudservice.cpp" line="1382"/>
+      <location filename="../services/owncloudservice.cpp" line="1358"/>
+      <location filename="../services/owncloudservice.cpp" line="1385"/>
       <source>Error while loading todo lists!</source>
       <translation>Lỗi trong khi tải danh sách việc cần làm!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1356"/>
+      <location filename="../services/owncloudservice.cpp" line="1359"/>
       <source>Your CalDAV server didn't reply anything!</source>
       <translation>Máy chủ CalDAV của bạn đã không trả lời bất cứ điều gì!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1383"/>
+      <location filename="../services/owncloudservice.cpp" line="1386"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>Thông báo lỗi từ máy chủ CalDAV của bạn: &lt;strong&gt;%1&lt;/ strong&gt;</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="2060"/>
+      <location filename="../services/owncloudservice.cpp" line="2063"/>
       <source>No bookmarks</source>
       <translation>Không có dấu trang</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="2061"/>
+      <location filename="../services/owncloudservice.cpp" line="2064"/>
       <source>No bookmarks were found on the server.</source>
       <translation>Không có dấu trang được tìm thấy trên máy chủ.</translation>
     </message>
@@ -4278,44 +4319,49 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../entities/notefolder.cpp" line="463"/>
+      <location filename="../entities/notefolder.cpp" line="470"/>
       <source>default</source>
       <translation>mặc định</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1210"/>
+      <location filename="../entities/note.cpp" line="1248"/>
       <source>Could not store note file: %1 - Error message: %2</source>
       <translation>Không thể lưu trữ tệp ghi chú: %1 - Thông báo lỗi: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1285"/>
+      <location filename="../entities/note.cpp" line="1326"/>
       <source>Renamed note-file was removed: %1</source>
       <translation>Tệp ghi chú đã đổi tên đã bị xóa: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1293"/>
+      <location filename="../entities/note.cpp" line="1334"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
       <translation>Không thể xóa tên tệp ghi chú đã đổi tên: %1 - Thông báo lỗi: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="2462"/>
+      <location filename="../entities/note.cpp" line="1480"/>
+      <source>Note</source>
+      <translation>Ghi chú</translation>
+    </message>
+    <message>
+      <location filename="../entities/note.cpp" line="2528"/>
       <source>Could not read image file: %1</source>
       <translation>Không thể đọc tệp hình ảnh: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="3037"/>
+      <location filename="../entities/note.cpp" line="3116"/>
       <source>Note file path changed</source>
       <translation>Lưu ý đường dẫn tệp đã thay đổi</translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="3038"/>
+      <location filename="../entities/note.cpp" line="3117"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation>
         <numerusform>Một sự thay đổi của đường dẫn ghi chú đã được phát hiện. Bạn có muốn thay thế tất cả các lần xuất hiện của &lt;strong&gt;%1 &lt;/ strong&gt; bằng &lt;strong&gt;%2 &lt;/ strong&gt; và liên kết bằng tên tệp &lt;strong&gt;%3 &lt;/ strong&gt; bằng &lt;strong&gt;%4 &lt;/ strong &gt; trong &lt;strong&gt;%n &lt;/ strong&gt; tệp ghi chú?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="3579"/>
+      <location filename="../entities/note.cpp" line="3658"/>
       <source>…and %n more note(s)</source>
       <translation>
         <numerusform>... thêm và %n ghi chú thêm</numerusform>
@@ -4365,12 +4411,12 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
       <translation>Lệnh &lt;code&gt;%1 &lt;/ code&gt; không thành công!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="4194"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4215"/>
       <source>New connection</source>
       <translation>Kết nối mới</translation>
     </message>
     <message>
-      <location filename="../entities/cloudconnection.cpp" line="284"/>
+      <location filename="../entities/cloudconnection.cpp" line="291"/>
       <source>Default</source>
       <translation>Mặc định</translation>
     </message>
@@ -4412,27 +4458,27 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
   <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="638"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="599"/>
       <source>No suggestions for %1</source>
       <translation>Không có đề xuất nào cho %1</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="650"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="611"/>
       <source>Ignore</source>
       <translation>Làm lơ</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="651"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="612"/>
       <source>Add to Dictionary</source>
       <translation>Thêm vào từ điển</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="708"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="669"/>
       <source>Note editing disabled</source>
       <translation>Ghi chú chỉnh sửa bị vô hiệu hóa</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="709"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="670"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
       <translation>Lưu ý chỉnh sửa hiện đang bị vô hiệu hóa, bạn có muốn cho phép lại không?</translation>
     </message>
@@ -4634,12 +4680,12 @@ Là thư mục và các tập tin có thể ghi?</translation>
       <translation>Không thể mở cơ sở dữ liệu thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../services/databaseservice.cpp" line="867"/>
+      <location filename="../services/databaseservice.cpp" line="873"/>
       <source>Cannot open database</source>
       <translation>Không thể mở cơ sở dữ liệu</translation>
     </message>
     <message>
-      <location filename="../services/databaseservice.cpp" line="868"/>
+      <location filename="../services/databaseservice.cpp" line="874"/>
       <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
       <translation>Không thể thiết lập kết nối cơ sở dữ liệu với cơ sở dữ liệu thư mục ghi chú để hợp nhất '%1'.
@@ -4665,14 +4711,14 @@ Là thư mục và các tập tin có thể ghi?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="411"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="413"/>
       <source>Installs the script</source>
       <translation>Cài đặt tập lệnh</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="410"/>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="473"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="412"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="475"/>
       <source>Install</source>
       <translation>Cài đặt</translation>
     </message>
@@ -4722,94 +4768,94 @@ Là thư mục và các tập tin có thể ghi?</translation>
       <translation>Tất cả các kịch bản được cập nhật.</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="380"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="382"/>
       <source>Authors</source>
       <translation>Tác giả</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="380"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="382"/>
       <source>Author</source>
       <translation>Tác giả</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="384"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="386"/>
       <source>Supported platforms</source>
       <translation>Nền tảng được hỗ trợ</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="385"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="387"/>
       <source>Supported platform</source>
       <translation>Nền tảng được hỗ trợ</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="389"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="391"/>
       <source>Open repository</source>
       <translation>Mở kho</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="399"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="401"/>
       <source>Update</source>
       <translation>Cập nhật</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="400"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="402"/>
       <source>Updates the script</source>
       <translation>Cập nhật tập lệnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="402"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="404"/>
       <source>Reinstall</source>
       <translation>Cài đặt lại</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="403"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="405"/>
       <source>Reinstalls the script</source>
       <translation>Cài đặt lại tập lệnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="470"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="472"/>
       <source>Platform not supported!</source>
       <translation>Nền tảng không được hỗ trợ!</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="471"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="473"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
       <translation>Nền tảng của bạn không được hỗ trợ bởi tập lệnh này!
 Bạn có muốn cài đặt nó không?</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="473"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="475"/>
       <source>Cancel</source>
       <translation>Hủy bỏ</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="480"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="482"/>
       <source>Update app</source>
       <translation>Cập nhật ứng dụng</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="481"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="483"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
       <translation>Xin đừng quên cập nhật cài đặt QOwnNotes của bạn để làm cho tập lệnh này hoạt động!</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="549"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="551"/>
       <source>Install successful</source>
       <translation>Cài đặt thành công</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="550"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="552"/>
       <source>The script was successfully installed!</source>
       <translation>Kịch bản đã được cài đặt thành công!</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="557"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="559"/>
       <source>Download failed</source>
       <translation>Tải xuống thất bại</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="558"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="560"/>
       <source>The script could not be downloaded!</source>
       <translation>Kịch bản không thể tải xuống!</translation>
     </message>
@@ -4860,7 +4906,7 @@ Bạn có muốn cài đặt nó không?</translation>
     <name>SettingsDialog</name>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4258"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4287"/>
       <source>Settings</source>
       <translation>Cài đặt</translation>
     </message>
@@ -5016,42 +5062,42 @@ Bạn có muốn cài đặt nó không?</translation>
       <translation>Mạng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1416"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1423"/>
       <source>Proxy Settings</source>
       <translation>Cài đặt proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1422"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1429"/>
       <source>No Proxy</source>
       <translation>Không có proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1432"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1439"/>
       <source>Use system proxy</source>
       <translation>Sử dụng proxy hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1439"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1446"/>
       <source>Specify proxy manually as</source>
       <translation>Chỉ định proxy theo cách thủ công là</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1464"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1471"/>
       <source>Host</source>
       <translation>Chủ nhà</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1515"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1522"/>
       <source>Proxy server requires authentication</source>
       <translation>Máy chủ proxy yêu cầu xác thực</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1572"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1579"/>
       <source>SSL Settings</source>
       <translation>Cài đặt SSL</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1578"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1585"/>
       <source>Ignore SSL errors</source>
       <translation>Bỏ qua lỗi SSL</translation>
     </message>
@@ -5061,7 +5107,7 @@ Bạn có muốn cài đặt nó không?</translation>
       <translation>Todo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1833"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1840"/>
       <source>Default ownCloud calendar</source>
       <translation>Lịch ownCloud mặc định</translation>
     </message>
@@ -5071,65 +5117,65 @@ Bạn có muốn cài đặt nó không?</translation>
       <translation>Giao diện</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1803"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1810"/>
       <source>Other CalDAV server</source>
       <translation>Máy chủ CalDAV khác</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2949"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2978"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
       <translation>Chỉ một số màu sẽ được điều chỉnh, chủ đề máy tính để bàn của bạn sẽ kiểm soát phần còn lại. Bạn cần khởi động lại ứng dụng để cho những thay đổi này hành động.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2952"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2981"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
       <translation>Tối ưu hóa màu sắc xem trước cho chủ đề máy tính để bàn ở chế độ tối</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2939"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2968"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
       <translation>Điều này cho phép chế độ tối, giao diện và biểu tượng sẽ được sửa đổi. Bạn cần khởi động lại ứng dụng để cho những thay đổi này hành động.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2942"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2971"/>
       <source>Enable dark mode</source>
       <translation>Bật chế độ tối</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2968"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2978"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3009"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3019"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2997"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3007"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3038"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3048"/>
       <source>You need to restart the application to let this setting take effect</source>
       <translation>Bạn cần khởi động lại ứng dụng để cài đặt này có hiệu lực</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3048"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3077"/>
       <source>Item sizes in the main window</source>
       <translation>Kích thước mục trong cửa sổ chính</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5031"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5060"/>
       <source>Markdown highlighting</source>
       <translation>Đánh dấu Markdown</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5037"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5066"/>
       <source>Enable markdown highlighting</source>
       <translation>Cho phép đánh dấu đánh dấu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2127"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2134"/>
       <source>Interface language</source>
       <translation>Ngôn ngữ giao diện</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2157"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2164"/>
       <source>Automatic</source>
       <translation>Tự động</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2292"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2299"/>
       <source>English</source>
       <translation>Anh</translation>
     </message>
@@ -5139,129 +5185,129 @@ Bạn có muốn cài đặt nó không?</translation>
       <translation>Phím tắt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4486"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4720"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4515"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4808"/>
       <source>Default font:</source>
       <translation>Phông chữ mặc định:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4528"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4682"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4557"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4749"/>
       <source>Code font:</source>
       <translation>Phông chữ:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3207"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3236"/>
       <source>Main window shortcuts</source>
       <translation>Phím tắt cửa sổ chính</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3800"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3829"/>
       <source>Do this at your own risk!</source>
       <translation>Làm điều này có nguy cơ đến bạn!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3803"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3832"/>
       <source>Ignore all external note folder changes</source>
       <translation>Bỏ qua tất cả các thay đổi thư mục ghi chú bên ngoài</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4383"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4412"/>
       <source>No two spaces to do a line break are added here if checked</source>
       <translation>Không có hai khoảng trắng để ngắt dòng được thêm vào đây nếu được chọn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4386"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4415"/>
       <source>Use GitHub line breaks</source>
       <translation>Sử dụng ngắt dòng GitHub</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2270"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2277"/>
       <source>German</source>
       <translation>Tiếng Đức</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2347"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2354"/>
       <source>French</source>
       <translation>Tiếng pháp</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2611"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2618"/>
       <source>Polish</source>
       <translation>Đánh bóng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2633"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2640"/>
       <source>Portuguese</source>
       <translation>Bồ Đào Nha</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2578"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2585"/>
       <source>Dutch</source>
       <translation>Hà Lan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2545"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2552"/>
       <source>Hungarian</source>
       <translation>Tiếng Hungary</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2303"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2310"/>
       <source>Spanish</source>
       <translation>Tiếng Tây Ban Nha</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2133"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2140"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Nếu bạn muốn giúp dịch QOwnNotes hoặc cập nhật bản dịch hiện có, vui lòng đọc: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt; Làm cách nào tôi có thể giúp dịch QOwnNotes? &lt;/a&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2913"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2942"/>
       <source>Dark mode</source>
       <translation>Chế độ tối</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1632"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1639"/>
       <source>Disable tracking of usage data</source>
       <translation>Vô hiệu hóa theo dõi dữ liệu sử dụng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1676"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1683"/>
       <source>Usage tracking is done on a private Piwik server.</source>
       <translation>Theo dõi sử dụng được thực hiện trên một máy chủ Piwik riêng.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1736"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1743"/>
       <source>Disable heartbeat</source>
       <translation>Vô hiệu hóa nhịp tim</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2666"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2673"/>
       <source>Russian</source>
       <translation>Tiếng Nga</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1585"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1592"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn có thể muốn xem xét nhận chứng chỉ SSL miễn phí từ &lt;a href="https://letsencrypt.org/"&gt; Hãy mã hóa &lt;/a&gt;. &lt;/ p&gt; &lt;/body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2146"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2153"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
       <translation>Nếu bạn thay đổi ngôn ngữ, bạn phải khởi động lại ứng dụng để các thay đổi thực hiện.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3629"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3658"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
       <translation>Bạn cần tải lại công cụ kịch bản nếu bạn sửa đổi tệp tập lệnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3632"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3661"/>
       <source>Reload scripting engine</source>
       <translation>Tải lại công cụ kịch bản</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3622"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3651"/>
       <source>Validate script</source>
       <translation>Xác thực tập lệnh</translation>
     </message>
@@ -5271,120 +5317,120 @@ Bạn có muốn cài đặt nó không?</translation>
       <translation>Chung</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3794"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3823"/>
       <source>Notes</source>
       <translation>Ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3820"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3849"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Nếu được chọn, bạn sẽ luôn được thông báo về các sửa đổi bên ngoài, ngay cả khi ghi chú hiện tại không được chỉnh sửa trong phút cuối. Đề xuất là &lt;span style = "font-style: italic;"&gt; không được chọn &lt;/ span&gt;. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3916"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5272"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5810"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3945"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5301"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5839"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
       <translation>Bạn có thể gặp rắc rối đồng bộ hóa với các phiên bản cũ hơn của đồng bộ ownCloud khi đi xa hơn 10 giây.
 Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ hóa và đặt giá trị cao hơn nếu có.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2567"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2574"/>
       <source>Japanese</source>
       <translation>Tiếng Nhật</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3920"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3949"/>
       <source>note save interval time [sec]</source>
       <translation>lưu ý lưu thời gian [giây]</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3823"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3852"/>
       <source>Notify about all external modifications of the current note</source>
       <translation>Thông báo về tất cả các sửa đổi bên ngoài của ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4287"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2253"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2261"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4316"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2270"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2278"/>
       <source>Database</source>
       <translation>Cơ sở dữ liệu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4303"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4332"/>
       <source>Reinitialize Database</source>
       <translation>Tái khởi động lại cơ sở dữ liệu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4226"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4255"/>
       <source>Clear application data and exit</source>
       <translation>Xóa dữ liệu ứng dụng và thoát</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4232"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4261"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
       <translation>Nút này cho phép bạn xóa tất cả các cài đặt, xóa cơ sở dữ liệu việc cần làm cục bộ và thoát QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4242"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2325"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4271"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2342"/>
       <source>Clear app data and exit</source>
       <translation>Xóa dữ liệu ứng dụng và thoát</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4021"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4050"/>
       <source>Update dialog</source>
       <translation>Hộp thoại cập nhật</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4101"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4130"/>
       <source>Default note file extension</source>
       <translation>Phần mở rộng tập tin ghi chú mặc định</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4186"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4215"/>
       <source>External editor</source>
       <translation>Biên tập viên bên ngoài</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4199"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4228"/>
       <source>path to external editor, leave empty for default</source>
       <translation>đường dẫn đến trình soạn thảo bên ngoài, để trống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4209"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5351"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4238"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5380"/>
       <source>set external editor</source>
       <translation>đặt trình soạn thảo bên ngoài</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1601"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1608"/>
       <source>App metrics</source>
       <translation>Số liệu ứng dụng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1619"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1626"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
       <translation>Dữ liệu sử dụng ẩn danh giúp quyết định phần nào của QOwnNotes để cải thiện tiếp theo cũng như tìm và sửa lỗi. Vui lòng vô hiệu hóa nó chỉ khi bạn thực sự không thể sống với nó.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1651"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1658"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
       <translation>Dữ liệu này bao gồm thông tin ẩn danh về những tính năng của ứng dụng được sử dụng.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1705"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1712"/>
       <source>App heartbeat</source>
       <translation>Nhịp tim ứng dụng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1723"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1730"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
       <translation>Một yêu cầu nhịp tim nhỏ được gửi định kỳ trong khi QOwnNotes đang chạy. Làm cho nhà phát triển hài lòng bằng cách cho anh ta biết rằng ai đó đang sử dụng QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2457"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2464"/>
       <source>Italian</source>
       <translation>Người Ý</translation>
     </message>
@@ -5394,17 +5440,17 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
       <translation>Viết kịch bản</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3276"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3305"/>
       <source>Your scripts</source>
       <translation>Kịch bản của bạn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3360"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3389"/>
       <source>&amp;Remove script</source>
       <translation>&amp;Xóa tập lệnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3639"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3668"/>
       <source>Click here to select your QML script</source>
       <translation>Nhấn vào đây để chọn tập lệnh QML của bạn</translation>
     </message>
@@ -5486,7 +5532,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="773"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3450"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3479"/>
       <source>Name:</source>
       <translation>Tên:</translation>
     </message>
@@ -5544,7 +5590,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1126"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1890"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1897"/>
       <source>Username:</source>
       <translation>Tên đăng nhập:</translation>
     </message>
@@ -5555,7 +5601,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1161"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1925"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1932"/>
       <source>Password:</source>
       <translation>Mật khẩu:</translation>
     </message>
@@ -5592,381 +5638,386 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1775"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1392"/>
+      <source>Enable QOwnNotesAPI app</source>
+      <translation>Kích hoạt ứng dụng QOwnNotesAPI</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="1782"/>
       <source>Todo settings</source>
       <translation>Thiết lập todo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1781"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1788"/>
       <source>Enable todo calendar support</source>
       <translation>Kích hoạt hỗ trợ lịch todo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1966"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1973"/>
       <source>Which cloud connection do you want to use?</source>
       <translation>Bạn muốn sử dụng kết nối đám mây nào?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1978"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1985"/>
       <source>Select the calendars you want to use for the Todo list</source>
       <translation>Chọn lịch bạn muốn sử dụng cho danh sách Todo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2053"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2060"/>
       <source>Todo list settings</source>
       <translation>Cài đặt danh sách Todo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2059"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2066"/>
       <source>Saving an item also closes the Todo list</source>
       <translation>Lưu một mục cũng đóng danh sách Todo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2171"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2178"/>
       <source>Indonesian</source>
       <translation>Tiếng Indonesia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2193"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2200"/>
       <source>Bengali</source>
       <translation>Tiếng Bengal</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2204"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2211"/>
       <source>Bosnian</source>
       <translation>Bosnian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2215"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2222"/>
       <source>Bulgarian</source>
       <translation>Tiếng Bulgaria</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2226"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2233"/>
       <source>Catalan</source>
       <translation>Tiếng Catalan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2237"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2244"/>
       <source>Cebuano</source>
       <translation>Cebuano</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2259"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2266"/>
       <source>Danish</source>
       <translation>Người Đan Mạch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2281"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2288"/>
       <source>Basque</source>
       <translation>Basque</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2314"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2321"/>
       <source>Estonian</source>
       <translation>Tiếng Estonia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2325"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2332"/>
       <source>Filipino</source>
       <translation>Tiếng Philipin</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2336"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2343"/>
       <source>Finnish</source>
       <translation>Phần Lan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2358"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2365"/>
       <source>Irish</source>
       <translation>Ailen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2369"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2376"/>
       <source>Galician</source>
       <translation>Galicia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2380"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2387"/>
       <source>Greek</source>
       <translation>Người Hy Lạp</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2391"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2398"/>
       <source>Hausa</source>
       <translation>Tiếng Hin-ddi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2402"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2409"/>
       <source>Hebrew</source>
       <translation>Tiếng Do Thái</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2413"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2420"/>
       <source>Hindi</source>
       <translation>Tiếng Hindi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2435"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2442"/>
       <source>Hiligaynon</source>
       <translation>Hiligaynon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2446"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2453"/>
       <source>Icelandic</source>
       <translation>Tiếng Iceland</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2468"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2475"/>
       <source>Korean</source>
       <translation>Tiếng hàn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2479"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2486"/>
       <source>Kurdish</source>
       <translation>Tiếng Kurd</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2501"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2508"/>
       <source>Latvian</source>
       <translation>Tiếng Latvia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2512"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2519"/>
       <source>Lithuanian</source>
       <translation>Tiếng Litva</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2523"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2530"/>
       <source>Macedonian</source>
       <translation>Tiếng Macedonia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2556"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2563"/>
       <source>Norwegian</source>
       <translation>Na Uy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2600"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2607"/>
       <source>Uzbek</source>
       <translation>O'zbek</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2644"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2651"/>
       <source>Punjabi</source>
       <translation>Tiếng Ba Tư</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2589"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2596"/>
       <source>Persian</source>
       <translation>Ba Tư</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2655"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2662"/>
       <source>Romanian</source>
       <translation>Rumani</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2677"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2684"/>
       <source>Serbian</source>
       <translation>Tiếng Serbia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2688"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2695"/>
       <source>Albanian</source>
       <translation>Tiếng Albania</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2721"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2728"/>
       <source>Slovak</source>
       <translation>Tiếng Slovak</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2732"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2739"/>
       <source>Slovenian</source>
       <translation>Tiếng Slovenia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2743"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2750"/>
       <source>Swedish</source>
       <translation>Thụy Điển</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2754"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2761"/>
       <source>Tagalog</source>
       <translation>Tagalog</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2776"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2794"/>
       <source>Turkish</source>
       <translation>Thổ Nhĩ Kỳ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2809"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2827"/>
       <source>Urdu</source>
       <translation>Tiếng Urdu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2831"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2860"/>
       <source>Chinese Simplified</source>
       <translation>Tiếng Trung giản thể</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2842"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2871"/>
       <source>Chinese Traditional</source>
       <translation>Truyền thống Trung Hoa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2922"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2951"/>
       <source>Enable dark mode application icon and tray icon</source>
       <translation>Bật biểu tượng ứng dụng chế độ tối và biểu tượng khay</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2929"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2958"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
       <translation>Bạn cũng có thể muốn chọn một bảng phối màu khác trong cài đặt trình chỉnh sửa ở chế độ tối.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3032"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3061"/>
       <source>Enable dark mode icon theme</source>
       <translation>Bật chủ đề biểu tượng chế độ tối</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2962"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2991"/>
       <source>System tray</source>
       <translation>Khay hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2971"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3000"/>
       <source>Show system tray icon</source>
       <translation>Hiển thị biểu tượng khay hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2981"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3010"/>
       <source>Start application hidden</source>
       <translation>Hiển thị biểu tượng khay hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2991"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3020"/>
       <source>Interface style</source>
       <translation>Giao diện phong cách</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3022"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3051"/>
       <source>Enforce system icon theme</source>
       <translation>Thực thi chủ đề biểu tượng hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3128"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3157"/>
       <source>Override interface font size</source>
       <translation>Ghi đè kích thước phông chữ giao diện</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3137"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3166"/>
       <source>Interface font size:</source>
       <translation>Cỡ chữ giao diện:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3349"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3378"/>
       <source>&amp;Add script…</source>
       <translation>&amp;Thêm tập lệnh…</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3995"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4024"/>
       <source>Use legacy way to link to notes, images and attachments</source>
       <translation>Sử dụng cách kế thừa để liên kết đến ghi chú, hình ảnh và tệp đính kèm</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3840"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3869"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
       <translation>Khi mở ghi chú, vị trí con trỏ bên trong ghi chú sẽ được khôi phục về vị trí khi ghi chú được truy cập lần cuối trong phiên hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3810"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3839"/>
       <source>By default the headline will generated automatically</source>
       <translation>Theo mặc định, tiêu đề sẽ được tạo tự động</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3813"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3842"/>
       <source>The shortcut to create a new note asks for a headline</source>
       <translation>Phím tắt để tạo ghi chú mới yêu cầu tiêu đề</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3879"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3908"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
       <translation>Tự động đóng cơ sở dữ liệu thư mục ghi chú để ngăn sự cố với các công cụ đồng bộ hóa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3882"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3911"/>
       <source>Automatically close the note folder database</source>
       <translation>Tự động đóng cơ sở dữ liệu thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4043"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4072"/>
       <source>Search engine</source>
       <translation>Máy tìm kiếm</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4065"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4094"/>
       <source>Message boxes</source>
       <translation>Hộp tin nhắn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4071"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3938"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4100"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3955"/>
       <source>Reset message boxes</source>
       <translation>Đặt lại hộp tin nhắn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4264"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="4004"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="4028"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4293"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4021"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4045"/>
       <source>Import settings</source>
       <translation>Nhập cài đặt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4271"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3970"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4300"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3987"/>
       <source>Export settings</source>
       <translation>Xuất cài đặt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4409"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4438"/>
       <source>Open issue assistant</source>
       <translation>Trợ lý vấn đề mở</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4376"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4405"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Cách tốt nhất để đăng các vấn đề là sử dụng trợ lý sự cố bằng cách nhấn nút &lt;span style = "font-weight: 600;"&gt; Mở trợ lý vấn đề &lt;/ span&gt; trên phía dưới. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4751"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4670"/>
       <source>Ignore code font size to allow zooming</source>
       <translation>Bỏ qua kích thước phông chữ mã để cho phép thu phóng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4767"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4664"/>
       <source>Rendering</source>
       <translation>Kết xuất</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4773"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4684"/>
       <source>Enable underline rendering</source>
       <translation>Cho phép kết xuất gạch chân</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5065"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5094"/>
       <source>Fully highlight blockquotes</source>
       <translation>Hoàn toàn làm nổi bật blockquote</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5135"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5164"/>
       <source>Note-edit cursor width:</source>
       <translation>Lưu ý chỉnh sửa độ rộng con trỏ:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5084"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5113"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
       <translation>Bật chế độ Vim (một số phím tắt QOwnNotes sẽ không hoạt động)</translation>
     </message>
@@ -5986,267 +6037,277 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
       <translation>O'zingizning virtual serveringiz App parolini oching</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2534"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2541"/>
       <source>Māori</source>
       <translation>Maori</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2182"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2189"/>
       <source>Malay</source>
       <translation>Mã Lai</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2490"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2497"/>
       <source>Khmer</source>
       <translation>Tiếng Khmer</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2699"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2706"/>
       <source>Shona</source>
       <translation>Shona</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2710"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2717"/>
       <source>Sinhala</source>
       <translation>Sinhala</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2765"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2772"/>
+      <source>Thai</source>
+      <translation>Tiếng thái</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2783"/>
       <source>Vietnamese</source>
       <translation>Tiếng Việt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2787"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2805"/>
       <source>Xhosa</source>
       <translation>Xhosa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2820"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2838"/>
+      <source>Yiddish</source>
+      <translation type="unfinished">Yiddish</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2849"/>
       <source>Zulu</source>
       <translation>Zulu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2876"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2905"/>
       <source>Search for language</source>
       <translation>Tìm kiếm ngôn ngữ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3239"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3268"/>
       <source>Action name</source>
       <translation>Tên hành động</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3244"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3273"/>
       <source>Local shortcut</source>
       <translation>Phím tắt cục bộ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3249"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3278"/>
       <source>Global shortcut</source>
       <translation>Phím tắt toàn cầu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3850"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3879"/>
       <source>Disable this if you want to launch the application without opening a note</source>
       <translation>Vô hiệu hóa điều này nếu bạn muốn khởi chạy ứng dụng mà không cần mở ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3853"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3882"/>
       <source>Open last accessed note at application startup</source>
       <translation>Mở ghi chú truy cập cuối cùng khi khởi động ứng dụng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4406"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4435"/>
       <source>This is the best way to open an issue</source>
       <translation>Đây là cách tốt nhất để mở một vấn đề</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4420"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4449"/>
       <source>Please use this in the issue tracker</source>
       <translation>Vui lòng sử dụng điều này trong trình theo dõi vấn đề</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4423"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4452"/>
       <source>&amp;Copy debug information to clipboard</source>
       <translation>&amp;Sao chép thông tin gỡ lỗi vào clipboard</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4434"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4463"/>
       <source>Please don't use this in the issue tracker</source>
       <translation>Vui lòng không sử dụng điều này trong trình theo dõi vấn đề</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4780"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4691"/>
       <source>Use editor highlighting styles also for the preview</source>
       <translation>Sử dụng các kiểu tô sáng trình chỉnh sửa cũng để xem trước</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4790"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4714"/>
       <source>Exporting</source>
       <translation>Xuất khẩu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4796"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4720"/>
       <source>Use internal export styling for the PDF export and printing of the preview</source>
       <translation>Sử dụng kiểu xuất nội bộ để xuất PDF và in bản xem trước</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4999"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5028"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bạn có thể muốn xem tất cả các định dạng &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; thời gian có sẵn &lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5169"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5198"/>
       <source>Disable cursor blinking</source>
       <translation>Tắt nhấp nháy con trỏ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5176"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5205"/>
       <source>Automatically remove trailing spaces in the note text</source>
       <translation>Qayd matni bo'sh joylarini avtomatik ravishda olib tashlang</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5186"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5215"/>
       <source>Tabs and Indents</source>
       <translation>Tab và thụt lề</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5194"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5223"/>
       <source>Use tab character instead of spaces</source>
       <translation>Sử dụng ký tự tab thay vì dấu cách</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5201"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5230"/>
       <source>Indent:</source>
       <translation>Thụt lề:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5581"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5590"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5610"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5619"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
       <translation>Biểu thức chính quy của các thư mục con ghi chú để bỏ qua, phân tách bằng ";"
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5584"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5613"/>
       <source>Ignored subfolders</source>
       <translation>Bỏ qua các thư mục con
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5600"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Reset ignored subfolders</source>
       <translation>Đặt lại các thư mục con bị bỏ qua
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5636"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5665"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
       <translation>Khôi phục các tab ghi chú mở khi khởi động ứng dụng và khi các thư mục ghi chú được chuyển đổi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5750"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5779"/>
       <source>Show the number of matches in each note</source>
       <translation>Hiển thị số lượng trận đấu trong mỗi ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5412"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5441"/>
       <source>Note list panel</source>
       <translation>Bảng ghi chú danh sách</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5418"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5447"/>
       <source>Show notes in the note list with preview</source>
       <translation>Hiển thị ghi chú trong danh sách ghi chú với xem trước</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5491"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5520"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
       <translation>Thay vì danh sách ghi chú, hãy sử dụng cây ghi chú với tất cả các thư mục con (nếu chúng được bật cho thư mục ghi chú)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5760"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5789"/>
       <source>Note folder panel</source>
       <translation>Bảng ghi chú thư mục
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5766"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5795"/>
       <source>Show note folders as buttons instead of in a select box</source>
       <translation>Hiển thị các thư mục ghi chú dưới dạng nút thay vì trong hộp chọn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5908"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5937"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
       <translation>Các bảng có thể được bật và tắt trong menu chính &lt;i&gt; Cửa sổ / Bảng &lt;/i&gt; và bạn cũng có thể định cấu hình &lt;i&gt; Không gian làm việc &lt;/i&gt; khác nhau cho các cấu hình bảng khác nhau.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5985"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6014"/>
       <source>Bookmarks</source>
       <translation>Dấu trang</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5991"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6020"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
       <translation>Ghi chú với thẻ này sẽ được sử dụng để tìm nạp dấu trang</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5994"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6023"/>
       <source>Tag name for bookmarks notes</source>
       <translation>Tên thẻ cho ghi chú đánh dấu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6001"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6030"/>
       <source>Bookmarks tag:</source>
       <translation>Thẻ đánh dấu:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6008"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6037"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
       <translation>Theo mặc định, phần mở rộng trình duyệt sẽ hiển thị tất cả các liên kết của ghi chú hiện tại. Bạn cũng có thể làm cho nó hiển thị các liên kết đánh dấu đặc biệt của ghi chú với một thẻ nhất định. Để biết thêm thông tin về cú pháp liên kết dấu trang, hãy nhấp vào &lt;a href="%1"&gt; tại đây &lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6021"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6050"/>
       <source>Bookmarks note name:</source>
       <translation>Tên ghi chú:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6028"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6057"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
       <translation>Ghi chú này sẽ được sử dụng để thêm dấu trang mới từ tiện ích mở rộng trình duyệt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6031"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6060"/>
       <source>Note name for adding new bookmarks</source>
       <translation>Lưu ý tên để thêm dấu trang mới</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6041"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6070"/>
       <source>Web socket server</source>
       <translation>Máy chủ web socket</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6047"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6076"/>
       <source>Socket server port:</source>
       <translation>Cổng máy chủ socket:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6081"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6110"/>
       <source>Show security token</source>
       <translation>Hiển thị mã thông báo bảo mật</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6117"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6146"/>
       <source>Web socket server support</source>
       <translation>Hỗ trợ máy chủ web socket</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6123"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6152"/>
       <source>Enable socket server</source>
       <translation>Cho phép máy chủ ổ cắm</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6098"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6127"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
       <translation>Cài đặt &lt;a href="%1"&gt; tiện ích mở rộng trình duyệt Đồng hành web &lt;/a&gt; từ &lt;a href="%2"&gt; Cửa hàng Chrome trực tuyến &lt;/a&gt; hoặc &lt;a href="%3"&gt; Firefox Add- trang ons &lt;/a&gt; để sử dụng QOwnNotes làm web clipper.</translation>
     </message>
@@ -6256,249 +6317,249 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
       <translation>Cho phép tên tệp ghi chú khác với tiêu đề. &lt;br&gt; Hãy coi chừng rằng Ghi chú của ownCloud cần tên tệp giống với tiêu đề!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5620"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5649"/>
       <source>Note edit panel</source>
       <translation>Bảng chỉnh sửa ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5626"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5655"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
       <translation>Nếu điều này bị vô hiệu hóa, bạn có thể tạo bố cục bảng phức tạp hơn, nhưng tất cả các bảng sẽ được thay đổi kích thước nếu cửa sổ được thay đổi kích thước</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5629"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5658"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
       <translation>Sử dụng bảng chỉnh sửa ghi chú làm tiện ích trung tâm cố định được thay đổi kích thước nếu cửa sổ hoặc các bảng khác được thay đổi kích thước</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5737"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5766"/>
       <source>Note search panel</source>
       <translation>Bảng ghi chú tìm kiếm</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5743"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5772"/>
       <source>Disable auto-completion of previous searches</source>
       <translation>Vô hiệu hóa tự động hoàn thành các tìm kiếm trước đó</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5646"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5675"/>
       <source>Navigation panel</source>
       <translation>Bảng điều hướng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5652"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5681"/>
       <source>Hide navigation item search bar</source>
       <translation>Ẩn thanh tìm kiếm mục điều hướng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5780"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5809"/>
       <source>Local trash settings</source>
       <translation>Cài đặt thùng rác cục bộ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5814"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5843"/>
       <source>Remove trashed notes after:</source>
       <translation>Xóa ghi chú rác sau:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5821"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5850"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
       <translation>ngày</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5840"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5869"/>
       <source>Automatically remove trashed notes after a certain time</source>
       <translation>Tự động xóa ghi chú rác sau một thời gian nhất định</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5866"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5895"/>
       <source>Local trash support</source>
       <translation>Hỗ trợ rác địa phương</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5872"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5901"/>
       <source>Enable local trash</source>
       <translation>Cho phép rác cục bộ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5889"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5918"/>
       <source>Layout selector</source>
       <translation>Công cụ chọn bố cục</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5895"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5924"/>
       <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
       <translation>Bạn có thể thiết lập một bố cục mới ở đây. Hãy nhớ rằng bạn luôn có thể sửa đổi vị trí của các bảng bằng nút &lt;i&gt; Mở khóa bảng &lt;/i&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5111"/>
-      <location filename="../dialogs/settingsdialog.ui" line="6067"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5140"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6096"/>
       <source>Reset the cursor width</source>
       <translation>Đặt lại chiều rộng con trỏ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5286"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5315"/>
       <source>External git log command to show the git versions of a note</source>
       <translation>Lệnh git log bên ngoài để hiển thị các phiên bản git của ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5292"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5321"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Nhập một lệnh sẽ được sử dụng để hiển thị nhật ký git (ví dụ như "gitk")</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5312"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5341"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Nếu bạn sử dụng cài đặt này, bạn sẽ nhận được một mục menu mới để hiển thị các phiên bản git nếu bạn nhấp chuột phải vào một ghi chú.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5432"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5461"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
       <translation>Hiển thị tất cả các ghi chú của một thẻ bao gồm các ghi chú của thẻ con của họ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5425"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5454"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
       <translation>Hiển thị tất cả các ghi chú trong một thư mục bao gồm các thư mục con của chúng (chỉ hoạt động nếu các thư mục con được bật)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5162"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5191"/>
       <source>Highlight the current line</source>
       <translation>Đánh dấu dòng hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5379"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5408"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
       <translation>Đừng quên bật hỗ trợ git cho các thư mục ghi chú của bạn và định cấu hình tên và địa chỉ email cho ứng dụng khách git của bạn, ví dụ như với các lệnh đầu cuối này:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5662"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5691"/>
       <source>Tags panel</source>
       <translation>Bảng điều khiển thẻ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5465"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5544"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5691"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5494"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5573"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5720"/>
       <source>Order</source>
       <translation>Đặt hàng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5474"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5550"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5697"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5503"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5579"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5726"/>
       <source>Ascending</source>
       <translation>Tăng dần</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5481"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5557"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5704"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5510"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5586"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5733"/>
       <source>Descending</source>
       <translation>Giảm dần</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5439"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5514"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5668"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5468"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5543"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5697"/>
       <source>Sort</source>
       <translation>Sắp xếp</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5155"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5184"/>
       <source>Only use editor width setting in distraction free mode</source>
       <translation>Chỉ sử dụng cài đặt độ rộng của trình chỉnh sửa trong chế độ miễn phí phân tâm</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5445"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5520"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5674"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5474"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5549"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5703"/>
       <source>Alphabetical</source>
       <translation>Bảng chữ cái</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5681"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5710"/>
       <source>By last change / use</source>
       <translation>Thay đổi / sử dụng lần cuối</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5714"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5743"/>
       <source>Hide 'Find or create tag' search</source>
       <translation>Ẩn 'Tìm hoặc tạo thẻ' tìm kiếm</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5501"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5530"/>
       <source>Note subfolders panel</source>
       <translation>Bảng ghi chú con</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5507"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5536"/>
       <source>Show with full path</source>
       <translation>Hiển thị với đường dẫn đầy đủ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5452"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5527"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5481"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5556"/>
       <source>By last change</source>
       <translation>Thay đổi cuối cùng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5537"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5566"/>
       <source>Show root folder name</source>
       <translation>Hiển thị tên thư mục gốc</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5567"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5596"/>
       <source>Hide 'Find or create note subfolder' search</source>
       <translation>Ẩn tìm kiếm 'Tìm hoặc tạo thư mục con'</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5574"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5603"/>
       <source>Display note subfolders as full tree</source>
       <translation>Hiển thị các thư mục con dưới dạng cây đầy đủ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2854"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2871"/>
       <source>Search script repository</source>
       <translation>Tìm kiếm kho lưu trữ tập lệnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5302"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5331"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Bạn có thể tùy ý sử dụng "%notePath%" cho đường dẫn của ghi chú.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5325"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5354"/>
       <source>Git client</source>
       <translation>Khách hàng Git</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5341"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5370"/>
       <source>Path to git executable:</source>
       <translation>Đường dẫn đến git thực thi:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5331"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5360"/>
       <source>Path to git client, leave empty for default</source>
       <translation>Đường dẫn đến git client, để trống cho mặc định</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5250"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5279"/>
       <source>Commit interval</source>
       <translation>Cam kết khoảng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5256"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5285"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
       <translation>giây</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5276"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5305"/>
       <source>git commit interval time [sec]</source>
       <translation>thời gian cam kết git [giây]</translation>
     </message>
@@ -6518,308 +6579,308 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
       <translation>Tiện ích mở rộng trình duyệt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1797"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1804"/>
       <source>Which calendar backend do you want to use?</source>
       <translation>Bạn muốn sử dụng phụ trợ lịch nào?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1830"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1837"/>
       <source>For most current ownCloud and Nextcloud installations</source>
       <translation>Đối với hầu hết các cài đặt ownCloud và Nextcloud hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1810"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1817"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
       <translation>Đối với các phiên bản cũ hơn của ownCloud, nơi cài đặt mặc định không hoạt động</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1813"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1820"/>
       <source>Legacy ownCloud calendar</source>
       <translation>Lịch sở hữu riêng củaCloud</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1846"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1853"/>
       <source>CalDAV server settings</source>
       <translation>Cài đặt máy chủ CalDAV</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1855"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1862"/>
       <source>Calendar base url:</source>
       <translation>Url cơ sở lịch:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1877"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1884"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
       <translation>Vui lòng nhập url cơ sở CalDAV vào lịch của bạn.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1947"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1954"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
       <translation>Vui lòng nhập mật khẩu cho tên người dùng CalDAV của bạn. &lt;br/&gt; Hiện tại mật khẩu sẽ được lưu trữ được mã hóa với các cài đặt khác, nhưng không an toàn lắm.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2248"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2255"/>
       <source>Czech</source>
       <translation>Séc</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2622"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2629"/>
       <source>Brazilian Portuguese</source>
       <translation>Tiếng Bồ Đào Nha Brazil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2798"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2816"/>
       <source>Ukrainian</source>
       <translation>Tiếng Ukraina</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3751"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3780"/>
       <source>The name</source>
       <translation>Tên</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3975"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4004"/>
       <source>Maximum height:</source>
       <translation>Chiều cao tối đa:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3948"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3977"/>
       <source>Maximum width:</source>
       <translation>Chiều rộng tối đa:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3889"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3918"/>
       <source>Scale images down when inserted into notes</source>
       <translation>Thu nhỏ hình ảnh khi chèn vào ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2424"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2431"/>
       <source>Croatian</source>
       <translation>Tiếng Croatia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3666"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3695"/>
       <source>Path to your QML file</source>
       <translation>Đường dẫn đến tệp QML của bạn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3457"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3486"/>
       <source>Script name</source>
       <translation>Tên tập lệnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3479"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3508"/>
       <source>Description:</source>
       <translation>Sự miêu tả:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3561"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3590"/>
       <source>Version:</source>
       <translation>Phiên bản:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3522"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3551"/>
       <source>Repository:</source>
       <translation>Kho:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3499"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3528"/>
       <source>Author(s):</source>
       <translation>Tác giả:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3896"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3925"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
       <translation>Kiểm tra điều này nếu bạn muốn chấp nhận tất cả các sửa đổi bên ngoài trong khi bạn đang chỉnh sửa ghi chú hiện tại.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3899"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3928"/>
       <source>Accept all external modifications of the current note</source>
       <translation>Chấp nhận tất cả các sửa đổi bên ngoài của ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3833"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3862"/>
       <source>Use UNIX newline instead of native newline characters</source>
       <translation>Sử dụng dòng mới UNIX thay vì các ký tự dòng mới</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3843"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3872"/>
       <source>Restore cursor position when opening a note</source>
       <translation>Khôi phục vị trí con trỏ khi mở ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4293"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4322"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
       <translation>Được cảnh báo rằng điều này cũng sẽ loại bỏ các mục việc cần lưu trong bộ nhớ cache của bạn và các thư mục ghi chú và tập lệnh được cấu hình!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4823"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4852"/>
       <source>Apply toolbar configuration</source>
       <translation>Áp dụng cấu hình thanh công cụ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4837"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4866"/>
       <source>Reset toolbars</source>
       <translation>Đặt lại thanh công cụ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4865"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4894"/>
       <source>Enable logging to file</source>
       <translation>Cho phép đăng nhập vào tập tin</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4872"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4901"/>
       <source>Clear log file</source>
       <translation>Xóa tệp nhật ký</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4883"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4912"/>
       <source>Fake old version number to trigger update</source>
       <translation>Số phiên bản cũ giả để kích hoạt cập nhật</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4911"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4940"/>
       <source>Log file path:</source>
       <translation>Đường dẫn tệp nhật ký:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4973"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5002"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
       <translation>Tại đây bạn có thể đặt định dạng thời gian của riêng mình để chèn thời gian hiện tại vào một ghi chú.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4976"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5005"/>
       <source>Insert current time</source>
       <translation>Chèn thời gian hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4982"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5011"/>
       <source>Time format:</source>
       <translation>Định dạng thời gian:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4989"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5018"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
       <translation>Nhập định dạng thời gian tùy chỉnh của bạn, như "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5078"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5107"/>
       <source>Editor options</source>
       <translation>Tùy chọn biên tập</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5091"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5120"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
       <translation>Cho phép tự động đóng dấu ngoặc và ký tự định dạng đánh dấu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5145"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5174"/>
       <source>You have to use the backspace key to remove the opening character</source>
       <translation>Bạn phải sử dụng phím xóa lùi để xóa ký tự mở</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5148"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5177"/>
       <source>Enable automatic removal of matching closing characters</source>
       <translation>Cho phép tự động loại bỏ các ký tự đóng phù hợp</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1880"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1887"/>
       <source>Your CalDAV calendar base url</source>
       <translation>Url cơ sở lịch CalDAV của bạn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1912"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1919"/>
       <source>Please enter the username of your CalDAV server.</source>
       <translation>Vui lòng nhập tên người dùng của máy chủ CalDAV của bạn.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1915"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1922"/>
       <source>Your CalDAV username</source>
       <translation>Tên người dùng CalDAV của bạn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1953"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1960"/>
       <source>Your CalDAV password</source>
       <translation>Mật khẩu CalDAV của bạn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2000"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2007"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
       <translation>Điều này khiến tất cả các mục danh sách việc cần tải lại từ máy chủ của bạn vào lần tiếp theo bạn mở hộp thoại việc cần làm.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2003"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2010"/>
       <source>Empty calendar item cache</source>
       <translation>Bộ nhớ cache của mục lịch trống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2026"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2033"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
       <translation>Nhấn vào đây để tải lại danh sách lịch từ máy chủ lịch của bạn.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2032"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2039"/>
       <source>&amp;Reload calendar list</source>
       <translation>&amp;Tải lại danh sách lịch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2919"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3029"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2948"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3058"/>
       <source>You may need to restart the application to let these changes take effect</source>
       <translation>Bạn có thể cần phải khởi động lại ứng dụng để những thay đổi này có hiệu lực</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3064"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3093"/>
       <source>Toolbar icon size:</source>
       <translation>Kích thước biểu tượng thanh công cụ:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3054"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3083"/>
       <source>List and tree item height:</source>
       <translation>Danh sách và chiều cao mục cây:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3087"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3116"/>
       <source>Reset the icon size</source>
       <translation>Đặt lại kích thước biểu tượng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3101"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3130"/>
       <source>Reset the item height</source>
       <translation>Đặt lại chiều cao mục</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4744"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4677"/>
       <source>View text right to left (RTL)</source>
       <translation>Xem văn bản từ phải sang trái (RTL)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3225"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3254"/>
       <source>Search for shortcut</source>
       <translation>Tìm kiếm lối tắt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2043"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2050"/>
       <source>Ignore calendars that don't support todo items</source>
       <translation>Bỏ qua các lịch không hỗ trợ các mục việc cần làm</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2853"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2882"/>
       <source>Arabic</source>
       <translation>Tiếng Ả Rập</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3003"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3032"/>
       <source>Icons</source>
       <translation>Các biểu tượng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3012"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3041"/>
       <source>Use internal icon theme instead of system icon theme</source>
       <translation>Sử dụng chủ đề biểu tượng nội bộ thay vì chủ đề biểu tượng hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3615"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3644"/>
       <source>Script path:</source>
       <translation>Đường dẫn kịch bản:</translation>
     </message>
@@ -6834,79 +6895,79 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
       <translation>Cho phép tên tệp ghi chú khác với tiêu đề</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3906"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3935"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
       <translation>Kiểm tra điều này nếu bạn muốn bỏ qua tất cả các sửa đổi bên ngoài trong khi bạn đang chỉnh sửa ghi chú hiện tại.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3909"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3938"/>
       <source>Ignore all external modifications of the current note</source>
       <translation>Bỏ qua tất cả các sửa đổi bên ngoài của ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3830"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3859"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
       <translation>Bạn có thể sử dụng ví dụ này trong Windows nếu bạn gặp rắc rối với các dòng mới trong ứng dụng ghi chú ownCloud / Nextcloud</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4005"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4034"/>
       <source>App instance</source>
       <translation>Ví dụ ứng dụng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4011"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4040"/>
       <source>Only allow one app instance at the same time</source>
       <translation>Chỉ cho phép một phiên bản ứng dụng cùng một lúc</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4107"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4136"/>
       <source>Add a custom file extension</source>
       <translation>Thêm phần mở rộng tập tin tùy chỉnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4121"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4150"/>
       <source>Remove a custom file extension</source>
       <translation>Xóa phần mở rộng tập tin tùy chỉnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4160"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4189"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
       <translation>Nếu bạn thêm tiện ích mở rộng tùy chỉnh, chỉ cần nhập vào tiện ích mở rộng, như "giấy tờ nhiệm vụ".</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4164"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4193"/>
       <source>Text file (txt)</source>
       <translation>Tệp văn bản (txt)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4192"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4221"/>
       <source>Path to external editor:</source>
       <translation>Đường dẫn đến trình soạn thảo bên ngoài:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4027"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4056"/>
       <source>Don't show the update dialog automatically</source>
       <translation>Không tự động hiển thị hộp thoại cập nhật</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4480"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4648"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4509"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4736"/>
       <source>Fonts</source>
       <translation>Phông chữ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4503"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4545"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4654"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4706"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4532"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4574"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4759"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4787"/>
       <source>Set a new font</source>
       <translation>Đặt một phông chữ mới</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4514"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4559"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4668"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4692"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4543"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4588"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4773"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4818"/>
       <source>Reset font</source>
       <translation>Đặt lại phông chữ</translation>
     </message>
@@ -6916,59 +6977,59 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
       <translation>Gỡ lỗi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4344"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2272"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="4243"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4373"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2289"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4264"/>
       <source>Debug information</source>
       <translation>Thông tin gỡ lỗi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4350"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4379"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn có thể &lt;span style = "font-weight: 600;"&gt; sao chép và dán &lt;/ span&gt; văn bản này (hoặc các phần của văn bản này) trong &lt;span style = "font-weight: 600;"&gt; vấn đề &lt;/ span&gt; trên &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; trang vấn đề QOwnNotes &lt;/a&gt; nếu bạn có &lt;span style = "font-weight: 600;"&gt; câu hỏi hoặc rắc rối &lt;/ span&gt; với QOwnNotes. Dữ liệu quá nhạy cảm bị ẩn trong thông tin này. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4437"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4466"/>
       <source>&amp;Save debug information</source>
       <translation>&amp;Lưu thông tin gỡ lỗi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="491"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="497"/>
       <source>hostname of proxy server</source>
       <translation>tên máy chủ của máy chủ proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="492"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="498"/>
       <source>username for proxy server</source>
       <translation>tên người dùng cho máy chủ proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="493"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="499"/>
       <source>password for proxy server</source>
       <translation>mật khẩu cho máy chủ proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="495"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="501"/>
       <source>HTTP(S) proxy</source>
       <translation>Proxy HTTP(S)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="496"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="502"/>
       <source>SOCKS5 proxy</source>
       <translation>SOCKS5 proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1472"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1480"/>
       <source>Automatic (needs restart)</source>
       <translation>Tự động (cần khởi động lại)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1772"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1789"/>
       <source>Shortcut already assigned</source>
       <translation>Phím tắt đã được chỉ định</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1975"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1992"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -6977,7 +7038,7 @@ Phiên bản máy chủ: %1
 Phiên bản QOwnNotesAPI: %2</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1988"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2005"/>
       <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -6988,113 +7049,113 @@ Bạn cũng cần cài đặt và bật ứng dụng QOwnNotesAPI!
 Thông báo lỗi kết nối: </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2273"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2290"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
       <translation>Vui lòng không sử dụng điều này trong trình theo dõi vấn đề, sao chép văn bản thông tin gỡ lỗi trực tiếp vào vấn đề.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2280"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2297"/>
       <source>Markdown files</source>
       <translation>Tập tin đánh dấu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2306"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
       <source>Disable usage tracking</source>
       <translation>Vô hiệu hóa theo dõi sử dụng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2307"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2324"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
       <translation>Dữ liệu sử dụng ẩn danh giúp quyết định phần nào của QOwnNote sẽ cải thiện tiếp theo cũng như tìm và sửa lỗi. &lt;br /&gt; Vui lòng vô hiệu hóa nó chỉ khi bạn thực sự không thể sống với nó. &lt;br /&gt; &lt;br/&gt; Thực sự vô hiệu hóa theo dõi sử dụng?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2534"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2551"/>
       <source>new folder</source>
       <translation>thư mục mới</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2568"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
       <source>Remove note folder</source>
       <translation>Xóa thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2569"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2586"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Xóa thư mục ghi chú hiện tại &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2643"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2660"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation>Vui lòng chọn thư mục nơi ghi chú của bạn sẽ được lưu trữ vào</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2678"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2695"/>
       <source>Loading folders from server</source>
       <translation>Đang tải thư mục từ máy chủ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2693"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2710"/>
       <source>No more folders were found in the current folder</source>
       <translation>Không có thêm thư mục được tìm thấy trong thư mục hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2766"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2783"/>
       <source>Loading folders in '%1' from server</source>
       <translation>Đang tải các thư mục trong '%1' từ máy chủ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2839"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2856"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
       <translation>Hãy xem tài liệu &lt;a href="%1"&gt; Scripting &lt;/a&gt; để bắt đầu nhanh.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2843"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2860"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
       <translation>Nếu bạn cần quyền truy cập vào một chức năng nhất định trong QOwnNotes, vui lòng mở một vấn đề trên trang vấn đề &lt;a href="%1"&gt; QOwnNotes &lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2865"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2882"/>
       <source>Check for script updates</source>
       <translation>Kiểm tra cập nhật tập lệnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2872"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2889"/>
       <source>Add local script</source>
       <translation>Thêm tập lệnh cục bộ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2876"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2893"/>
       <source>Add an existing, local script</source>
       <translation>Thêm một tập lệnh cục bộ hiện có</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3969"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="4027"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3986"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4044"/>
       <source>INI files</source>
       <translation>Tập tin INI</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="4005"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4022"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
       <translation>Bạn có thực sự muốn nhập cài đặt? Cài đặt hiện tại của bạn sẽ bị xóa và không phải mọi cài đặt có thể được khôi phục, như cài đặt thư mục ghi chú và tập lệnh bạn đang sử dụng. Bạn cũng sẽ cần điều chỉnh một số cài đặt, đặc biệt là trên các nền tảng, nhưng ghi chú của bạn sẽ được giữ nguyên!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="4015"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4032"/>
       <source>The application will be quit after the import.</source>
       <translation>Ứng dụng sẽ được thoát sau khi nhập.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="4016"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4033"/>
       <source>The application will be restarted after the import.</source>
       <translation>Ứng dụng sẽ được khởi động lại sau khi nhập.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="4244"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4265"/>
       <source>The debug information was copied to the clipboard.</source>
       <translation>Thông tin gỡ lỗi đã được sao chép vào clipboard.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2859"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2876"/>
       <source>Find a script in the script repository</source>
       <translation>Tìm một tập lệnh trong kho lưu trữ tập lệnh</translation>
     </message>
@@ -7109,141 +7170,141 @@ Thông báo lỗi kết nối: </translation>
       <translation>Hiển thị mục thanh menu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1654"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1697"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1662"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1714"/>
       <source>Undefined shortcut</source>
       <translation>Phím tắt không xác định
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1658"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1701"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1666"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1718"/>
       <source>Assign a new shortcut</source>
       <translation>Chỉ định một phím tắt mới
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1659"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1702"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1667"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1719"/>
       <source>Reset to default shortcut</source>
       <translation>Đặt lại về lối tắt mặc định
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1668"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1685"/>
       <source>Clear shortcut</source>
       <translation>Xóa phím tắt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1773"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1790"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
       <translation>Phím tắt &lt;strong&gt;%1 &lt;/ strong&gt; đã được gán cho &lt;strong&gt;%2 &lt;/ strong&gt;! Bạn có muốn nhảy đến phím tắt?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2952"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2969"/>
       <source>Remove script</source>
       <translation>Xóa tập lệnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2953"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2970"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Xóa tập lệnh hiện tại &lt;strong&gt;%1&lt;/ strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3003"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3020"/>
       <source>QML files</source>
       <translation>Tệp QML</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3004"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3021"/>
       <source>Please select your QML file</source>
       <translation>Vui lòng chọn tệp QML của bạn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3093"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3110"/>
       <source>Open repository</source>
       <translation>Mở kho</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3151"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3168"/>
       <source>Your script seems to be valid</source>
       <translation>Kịch bản của bạn có vẻ hợp lệ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3152"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3169"/>
       <source>There were script errors:
 %1</source>
       <translation>Có lỗi tập lệnh:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3220"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3237"/>
       <source>File extension</source>
       <translation>Phần mở rộng tập tin</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3220"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3237"/>
       <source>Enter your custom file extension:</source>
       <translation>Nhập phần mở rộng tập tin tùy chỉnh của bạn:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3549"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3566"/>
       <source>Calendar cache emptied</source>
       <translation>Lịch trống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3550"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3567"/>
       <source>Your calendar cache was emptied.</source>
       <translation>Bộ nhớ cache lịch của bạn đã được làm trống.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3631"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3648"/>
       <source>Reset toolbars and exit</source>
       <translation>Đặt lại thanh công cụ và thoát</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3632"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3649"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
       <translation>Bạn có thực sự muốn thiết lập lại tất cả các thanh công cụ? Ứng dụng sẽ được đóng trong quá trình, các thanh công cụ mặc định sẽ được khôi phục khi bạn khởi động lại.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3636"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3653"/>
       <source>Reset and &amp;exit</source>
       <translation>Đặt &amp;lại và thoát</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3794"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3811"/>
       <source>Log file cleared</source>
       <translation>Xóa tệp nhật ký</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3795"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3812"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
       <translation>Tệp nhật ký &lt;strong&gt;%1&lt;/ strong&gt; đã bị xóa.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3831"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3848"/>
       <source>Executable files</source>
       <translation>Các tập tin thực thi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3832"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3834"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3849"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3851"/>
       <source>All files</source>
       <translation>Tất cả các tập tin</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3842"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3859"/>
       <source>Please select the path of your git executable</source>
       <translation>Vui lòng chọn đường dẫn thực thi git của bạn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3939"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3956"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
       <translation>Bạn có thực sự muốn đặt lại phần ghi đè của tất cả các hộp thông báo không?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2262"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2279"/>
       <source>The Database was reinitialized.</source>
       <translation>Cơ sở dữ liệu đã được khởi tạo lại.</translation>
     </message>
@@ -7258,52 +7319,52 @@ Thông báo lỗi kết nối: </translation>
       <translation>Bạn có thể tải xuống ứng dụng khách git của mình tại đây: &lt;a href="%url"&gt; Git cho Windows &lt;/a&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="446"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="452"/>
       <source>enabled</source>
       <translation>kích hoạt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="446"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="452"/>
       <source>disabled</source>
       <translation>tàn tật</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="448"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="454"/>
       <source>Portable mode is currently:</source>
       <translation>Chế độ di động hiện tại:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="451"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="457"/>
       <source>In portable mode</source>
       <translation>Ở chế độ di động</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="452"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="458"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
       <translation>cơ sở dữ liệu sqlite nội bộ và các cài đặt sẽ được lưu trữ trong thư mục &lt;code&gt; Dữ liệu &lt;/ code&gt; tại vị trí của tệp nhị phân</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="455"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="461"/>
       <source>the settings will be stored in an ini file</source>
       <translation>các cài đặt sẽ được lưu trong tập tin ini</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="457"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="463"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
       <translation>các thư mục ghi chú, đường dẫn tập lệnh và đường dẫn đến trình soạn thảo bên ngoài sẽ được lưu trữ tự động liên quan đến thư mục &lt;code&gt; Dữ liệu &lt;/ code&gt; để các thư mục ghi chú, tập lệnh và trình soạn thảo bên ngoài sẽ được tải bất kể vị trí cài đặt QOwnNotes của bạn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="467"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="473"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
       <translation>Nó sẽ được kích hoạt nếu bạn chạy QOwnNotes với tham số &lt;code&gt; Portable &lt;/ code&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2281"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2298"/>
       <source>Save debug information</source>
       <translation>Lưu thông tin gỡ lỗi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2326"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2343"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -7312,34 +7373,34 @@ Your notes will stay intact!</source>
 Ghi chú của bạn sẽ được giữ nguyên!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2329"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2346"/>
       <source>Clear and &amp;exit</source>
       <translation>Xóa và &amp;thoát</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2257"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2329"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3636"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2274"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2346"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3653"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Hủy bỏ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="473"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="479"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
       <translation>Bạn sẽ tìm thấy &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; trong đường dẫn phát hành của mình để bắt đầu QOwnNotes ở chế độ di động.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2254"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2271"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
       <translation>Bạn có thực sự muốn xóa cơ sở dữ liệu địa phương? Điều này cũng sẽ loại bỏ các thư mục ghi chú được cấu hình của bạn và các mục việc cần lưu trong bộ nhớ cache của bạn!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2257"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2274"/>
       <source>Clear &amp;database</source>
       <translation>Xóa &amp;cơ sở dữ liệu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2440"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2457"/>
       <source>Select editor application</source>
       <translation>Chọn ứng dụng biên tập</translation>
     </message>
@@ -8149,34 +8210,34 @@ This cannot be undone!</source>
   <context>
     <name>UpdateService</name>
     <message>
-      <location filename="../services/updateservice.cpp" line="111"/>
-      <location filename="../services/updateservice.cpp" line="126"/>
-      <location filename="../services/updateservice.cpp" line="147"/>
+      <location filename="../services/updateservice.cpp" line="118"/>
+      <location filename="../services/updateservice.cpp" line="133"/>
+      <location filename="../services/updateservice.cpp" line="154"/>
       <source>Update-checker error</source>
       <translation>Lỗi kiểm tra cập nhật</translation>
     </message>
     <message>
-      <location filename="../services/updateservice.cpp" line="112"/>
+      <location filename="../services/updateservice.cpp" line="119"/>
       <source>Network reply error: %1</source>
       <translation>Lỗi trả lời mạng: %1</translation>
     </message>
     <message>
-      <location filename="../services/updateservice.cpp" line="127"/>
+      <location filename="../services/updateservice.cpp" line="134"/>
       <source>No data was received by the network request!</source>
       <translation>Không có dữ liệu được nhận bởi yêu cầu mạng!</translation>
     </message>
     <message>
-      <location filename="../services/updateservice.cpp" line="148"/>
+      <location filename="../services/updateservice.cpp" line="155"/>
       <source>The data from the network request could not be interpreted!</source>
       <translation>Dữ liệu từ yêu cầu mạng không thể diễn giải!</translation>
     </message>
     <message>
-      <location filename="../services/updateservice.cpp" line="261"/>
+      <location filename="../services/updateservice.cpp" line="268"/>
       <source>No updates</source>
       <translation>Không có cập nhật</translation>
     </message>
     <message>
-      <location filename="../services/updateservice.cpp" line="262"/>
+      <location filename="../services/updateservice.cpp" line="269"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
       <translation>Không có bản cập nhật nào. &lt;br /&gt; &lt;strong&gt;%1 &lt;/ strong&gt; là phiên bản mới nhất.</translation>
     </message>

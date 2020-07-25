@@ -1247,6 +1247,42 @@ bool Utils::Misc::useInternalExportStylingForPreview() {
 }
 
 /**
+ * Returns the preview font string
+ *
+ * @return
+ */
+QString Utils::Misc::previewFontString() {
+    QSettings settings;
+    return settings.value(isPreviewUseEditorStyles() ?
+        QStringLiteral("MainWindow/noteTextEdit.font") :
+        QStringLiteral("MainWindow/noteTextView.font")).toString();
+}
+
+/**
+ * Returns the preview code font string
+ *
+ * @return
+ */
+QString Utils::Misc::previewCodeFontString() {
+    QSettings settings;
+    return settings.value(isPreviewUseEditorStyles() ?
+        QStringLiteral("MainWindow/noteTextEdit.code.font") :
+        QStringLiteral("MainWindow/noteTextView.code.font")).toString();
+}
+
+/**
+ * Returns if "MainWindow/noteTextView.useEditorStyles" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::isPreviewUseEditorStyles() {
+    const QSettings settings;
+    return settings.value(
+        QStringLiteral("MainWindow/noteTextView.useEditorStyles"),
+                       true).toBool();
+}
+
+/**
  * Returns if "allowNoteEditing" is turned on
  *
  * @return
@@ -1497,24 +1533,20 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
         settings.value(QStringLiteral("interfaceLanguage")).toString(),
         withGitHubLineBreaks);
 #ifndef INTEGRATION_TESTS
-    QString screenResolution;
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     QScreen *primaryScreen = qApp->primaryScreen();
-    screenResolution = QString::number(primaryScreen->geometry().width()) +
-                       "x" +
-                       QString::number(primaryScreen->geometry().height());
 #else
-    screenResolution =
-        QString::number(QGuiApplication::primaryScreen()->geometry().width()) +
-        "x" +
-        QString::number(QGuiApplication::primaryScreen()->geometry().height());
-
+    QScreen *primaryScreen = QGuiApplication::primaryScreen();
 #endif
-
-    output +=
-        prepareDebugInformationLine(QStringLiteral("Primary screen resolution"),
-                                    screenResolution, withGitHubLineBreaks);
+    if (primaryScreen != nullptr) {
+        QString screenResolution =
+                QString::number(primaryScreen->geometry().width()) + "x" +
+                QString::number(primaryScreen->geometry().height());
+        output +=
+            prepareDebugInformationLine(QStringLiteral("Primary screen resolution"),
+                                        screenResolution, withGitHubLineBreaks);
+    }
 
     QList<QScreen *> screens = qApp->screens();
 
@@ -2056,4 +2088,15 @@ QString Utils::Misc::rstrip(const QString& str) {
     }
 
     return "";
+}
+
+/**
+ * Checks if file exists in the filesystem and is readable
+ *
+ * @return bool
+ */
+bool Utils::Misc::fileExists(const QString& path) {
+    const QFile file(path);
+    const QFileInfo fileInfo(file);
+    return file.exists() && fileInfo.isFile() && fileInfo.isReadable();
 }

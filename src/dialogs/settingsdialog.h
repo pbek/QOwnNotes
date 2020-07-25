@@ -289,6 +289,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_languageSearchLineEdit_textChanged(const QString &arg1);
 
+    void on_noteTextViewUseEditorStylesCheckBox_toggled(bool checked);
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
@@ -397,6 +399,7 @@ private:
 
     void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false,
                                        bool updateSchema = false);
+    void resetOKLabelData();
 };
 
 #endif    // SETTINGSDIALOG_H

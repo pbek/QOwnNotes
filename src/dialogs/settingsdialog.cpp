@@ -128,9 +128,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             SIGNAL(buttonPressed(QAbstractButton *)), this,
             SLOT(noteNotificationButtonGroupPressed(QAbstractButton *)));
 
-    for (int i = 0; i <= 8; i++) {
-        setOKLabelData(i, QStringLiteral("unknown"), SettingsDialog::Unknown);
-    }
+    resetOKLabelData();
 
     // add the QOwnNotesAPI minimum version number to the info text
     QString html = ui->installInfoTextLabel1->text();
@@ -279,6 +277,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
             SLOT(storeSelectedCloudConnection()));
     connect(ui->passwordEdit, SIGNAL(textChanged(QString)), this,
             SLOT(storeSelectedCloudConnection()));
+    connect(ui->appQOwnNotesAPICheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(storeSelectedCloudConnection()));
 
     // setup the search engine combo-box
     initSearchEngineComboBox();
@@ -319,6 +319,12 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     ui->systemIconThemeCheckBox->setHidden(true);
     ui->systemIconThemeCheckBox->setChecked(false);
 #endif
+}
+
+void SettingsDialog::resetOKLabelData() {
+    for (int i = 0; i <= 8; i++) {
+        setOKLabelData(i, QStringLiteral("unknown"), Unknown);
+    }
 }
 
 /**
@@ -617,6 +623,7 @@ void SettingsDialog::startConnectionTest() {
  */
 void SettingsDialog::on_connectButton_clicked() {
     storeSettings();
+    resetOKLabelData();
 
     // start a connection test
     startConnectionTest();
@@ -645,6 +652,8 @@ void SettingsDialog::storeSelectedCloudConnection() {
     _selectedCloudConnection.setServerUrl(url);
     _selectedCloudConnection.setUsername(ui->userNameEdit->text());
     _selectedCloudConnection.setPassword(ui->passwordEdit->text());
+    _selectedCloudConnection.setAppQOwnNotesAPIEnabled(
+        ui->appQOwnNotesAPICheckBox->isChecked());
     _selectedCloudConnection.store();
 
     if (updateComboBox) {
@@ -1049,6 +1058,8 @@ void SettingsDialog::readSettings() {
     ui->serverUrlEdit->setText(_selectedCloudConnection.getServerUrl());
     ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
+    ui->appQOwnNotesAPICheckBox->setChecked(
+        _selectedCloudConnection.getAppQOwnNotesAPIEnabled());
     ui->timeFormatLineEdit->setText(
         settings.value(QStringLiteral("insertTimeFormat")).toString());
 
@@ -1118,10 +1129,7 @@ void SettingsDialog::readSettings() {
             .value(QStringLiteral("MainWindow/noteTextView.underline"), true)
             .toBool());
     ui->noteTextViewUseEditorStylesCheckBox->setChecked(
-        settings
-            .value(QStringLiteral("MainWindow/noteTextView.useEditorStyles"),
-                   true)
-            .toBool());
+        Utils::Misc::isPreviewUseEditorStyles());
     ui->useInternalExportStylingCheckBox->setChecked(
         Utils::Misc::useInternalExportStylingForPreview());
     ui->oldVersionNumberCheckBox->setChecked(
@@ -1658,7 +1666,16 @@ void SettingsDialog::loadShortcutSettings() {
             keyWidget->setToolTip(tr("Assign a new shortcut"),
                                   tr("Reset to default shortcut"));
             keyWidget->setDefaultKeySequence(action->data().toString());
-            keyWidget->setKeySequence(action->shortcut());
+
+            const QString &shortcutSettingKey =
+                QStringLiteral("Shortcuts/MainWindow-") + action->objectName();
+            const bool settingFound = settings.contains(shortcutSettingKey);
+
+            // try to load the key sequence from the settings, because
+            // action->shortcut() is empty if menubar was disabled!
+            keyWidget->setKeySequence(settingFound ?
+                              settings.value(shortcutSettingKey).toString() :
+                              action->data().toString());
 
             connect(
                 keyWidget, &QKeySequenceWidget::keySequenceAccepted, this,
@@ -4178,12 +4195,16 @@ void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
     Q_UNUSED(blocker3)
     const QSignalBlocker blocker4(ui->passwordEdit);
     Q_UNUSED(blocker4)
+    const QSignalBlocker blocker5(ui->appQOwnNotesAPICheckBox);
+    Q_UNUSED(blocker5)
 
     ui->cloudServerConnectionNameLineEdit->setText(
         _selectedCloudConnection.getName());
     ui->serverUrlEdit->setText(_selectedCloudConnection.getServerUrl());
     ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
+    ui->appQOwnNotesAPICheckBox->setChecked(
+        _selectedCloudConnection.getAppQOwnNotesAPIEnabled());
     ui->cloudConnectionRemoveButton->setDisabled(
         CloudConnection::fetchUsedCloudConnectionsIds().contains(id));
 }
@@ -4252,4 +4273,8 @@ void SettingsDialog::on_ownCloudServerAppPasswordPageButton_clicked() {
 
 void SettingsDialog::on_languageSearchLineEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInListWidget(ui->languageListWidget, arg1, true);
+}
+
+void SettingsDialog::on_noteTextViewUseEditorStylesCheckBox_toggled(bool checked) {
+    ui->previewFontsGroupBox->setDisabled(checked);
 }

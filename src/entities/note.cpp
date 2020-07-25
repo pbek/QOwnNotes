@@ -27,13 +27,14 @@
 #include "helpers/codetohtmlconverter.h"
 
 #ifdef USE_SYSTEM_BOTAN
-#include <botan/secmem.h>
 #include <botan/exceptn.h>
+#include <botan/secmem.h>
 #else
 #include <botan.h>
 #endif
 
 #include <botanwrapper.h>
+
 #include "libraries/md4c/md2html/render_html.h"
 #include "libraries/md4c/md4c/md4c.h"
 #include "libraries/simplecrypt/simplecrypt.h"
@@ -41,6 +42,11 @@
 #include "notesubfolder.h"
 #include "tag.h"
 #include "trashitem.h"
+
+#ifdef Q_OS_WIN32
+// for restoreCreatedDate()
+#include <windows.h>
+#endif
 
 Note::Note()
     : _fileSize{0},
@@ -127,7 +133,9 @@ void Note::setSharePermissions(unsigned int permissions) {
     this->_sharePermissions = permissions;
 }
 
-void Note::setCryptoKey(const qint64 cryptoKey) { this->_cryptoKey = cryptoKey; }
+void Note::setCryptoKey(const qint64 cryptoKey) {
+    this->_cryptoKey = cryptoKey;
+}
 
 void Note::setNoteText(QString text) { this->_noteText = std::move(text); }
 
@@ -563,8 +571,10 @@ Note Note::fillFromQuery(const QSqlQuery &query) {
     _fileName = query.value(QStringLiteral("file_name")).toString();
     _shareUrl = query.value(QStringLiteral("share_url")).toString();
     _shareId = query.value(QStringLiteral("share_id")).toInt();
-    _sharePermissions = query.value(QStringLiteral("share_permissions")).toInt();
-    _noteSubFolderId = query.value(QStringLiteral("note_sub_folder_id")).toInt();
+    _sharePermissions =
+        query.value(QStringLiteral("share_permissions")).toInt();
+    _noteSubFolderId =
+        query.value(QStringLiteral("note_sub_folder_id")).toInt();
     _noteText = query.value(QStringLiteral("note_text")).toString();
     _decryptedNoteText =
         query.value(QStringLiteral("decrypted_note_text")).toString();
@@ -1213,7 +1223,12 @@ bool Note::storeNoteTextFileToDisk() {
         // rename the note file
         if (oldFile.exists()) {
             noteFileWasRenamed = oldFile.rename(fullNoteFilePath());
-            qDebug() << __func__ << " - 'noteFileWasRenamed': " << noteFileWasRenamed;
+            qDebug() << __func__
+                     << " - 'noteFileWasRenamed': " << noteFileWasRenamed;
+
+            // Restore the created date of the current note under Windows,
+            // because it gets set to the current date when note is renamed
+            restoreCreatedDate();
         }
     }
 
@@ -1300,31 +1315,63 @@ bool Note::storeNoteTextFileToDisk() {
 
         // in the end we want to remove the old note file if note was stored and
         // filename has changed
-        // #1190: we also need to check if the files are the same even if the name
-        // is not the same for NTFS
+        // #1190: we also need to check if the files are the same even if the
+        // name is not the same for NTFS
         if ((fullNoteFilePath() != oldNoteFilePath) &&
             (oldFileInfo != newFileInfo)) {
             // remove the old note file
             if (oldFile.exists() && oldFileInfo.isFile() &&
                 oldFileInfo.isReadable() && oldFile.remove()) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-            qInfo() << QObject::tr("Renamed note-file was removed: %1")
-                           .arg(oldFile.fileName());
+                qInfo() << QObject::tr("Renamed note-file was removed: %1")
+                               .arg(oldFile.fileName());
 #else
-            qDebug() << __func__ << " - 'renamed note-file was removed': "
-                     << oldFile.fileName();
+                qDebug() << __func__ << " - 'renamed note-file was removed': "
+                         << oldFile.fileName();
 #endif
 
             } else {
                 qWarning() << QObject::tr(
-                    "Could not remove renamed note-file: %1"
-                    " - Error message: %2")
-                    .arg(oldFile.fileName(), oldFile.errorString());
+                                  "Could not remove renamed note-file: %1"
+                                  " - Error message: %2")
+                                  .arg(oldFile.fileName(),
+                                       oldFile.errorString());
             }
         }
     }
 
     return noteStored;
+}
+
+/**
+ * Restores the created date of the current note under Windows,
+ * because it gets set to the current date when note is renamed
+ *
+ * See: https://github.com/pbek/QOwnNotes/issues/1743
+ */
+void Note::restoreCreatedDate() {
+#ifdef Q_OS_WIN32
+    // QDateTime to FILETIME conversion
+    // see: https://stackoverflow.com/questions/19704817/qdatetime-to-filetime
+    QDateTime origin(QDate(1601, 1, 1), QTime(0, 0, 0, 0), Qt::UTC);
+    const qint64 _100nanosecs = 10000 * origin.msecsTo(_fileCreated);
+    FILETIME fileTime;
+    fileTime.dwLowDateTime = _100nanosecs;
+    fileTime.dwHighDateTime = (_100nanosecs >> 32);
+
+    LPCWSTR filePath =
+        (const wchar_t *)QDir::toNativeSeparators(fullNoteFilePath()).utf16();
+    HANDLE fileHandle = CreateFile(
+        filePath, FILE_WRITE_ATTRIBUTES, FILE_SHARE_READ | FILE_SHARE_WRITE,
+        nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
+
+    // set the created date to the old created date before the rename
+    // see:
+    // https://stackoverflow.com/questions/10041651/changing-the-file-creation-date-in-c-using-windows-h-in-windows-7
+    SetFileTime(fileHandle, &fileTime, (LPFILETIME) nullptr,
+                (LPFILETIME) nullptr);
+    CloseHandle(fileHandle);
+#endif
 }
 
 /**
@@ -1429,6 +1476,10 @@ bool Note::handleNoteTextFileName() {
     // cleanup additional characters
     name = cleanupFileName(name);
 
+    if (name.isEmpty()) {
+        name = QObject::tr("Note");
+    }
+
     // check if name has changed
     if (name != this->_name) {
         qDebug() << __func__ << " - 'name' was changed: " << name;
@@ -1464,8 +1515,8 @@ bool Note::handleNoteTextFileName() {
 
         // let's check if we would be able to write to the file
         if (!canWriteToNoteFile()) {
-            qDebug() << __func__ << " - cannot write to file " << this->_fileName
-                     << " - we will try another filename";
+            qDebug() << __func__ << " - cannot write to file "
+                     << this->_fileName << " - we will try another filename";
 
             // we try to replace some more characters (mostly for Windows
             // filesystems)
@@ -1562,7 +1613,17 @@ QString Note::getFullFilePathForFile(const QString &fileName) {
 
     // we need that for links to notes in subfolders in portable mode if
     // note folder lies outside of the application directory
+    // Warning: This also resolves symbolic links! If a folder that lies outside
+    //          of the note folder is linked into it as subfolder
+    //          "canonicalFilePath" will show the original file path!
+#ifdef Q_OS_WIN32
+    // Let's stay with "canonicalFilePath" on Windows in case there is any issue
+    // in portable mode
     const QString canonicalFilePath = fileInfo.canonicalFilePath();
+#else
+    // Don't resolve symbolic links
+    const QString canonicalFilePath = fileInfo.absoluteFilePath();
+#endif
 
     return canonicalFilePath;
 }
@@ -1792,8 +1853,8 @@ bool Note::stripTrailingSpaces(int skipLine) {
 
         const auto lineText = noteTextLines.at(l);
         if (lineText.endsWith(QChar(' '))) {
-            noteTextLines[l] = Utils::Misc::rstrip(
-                Utils::Misc::rstrip(lineText));
+            noteTextLines[l] =
+                Utils::Misc::rstrip(Utils::Misc::rstrip(lineText));
             wasStripped = true;
         }
     }
@@ -1916,9 +1977,7 @@ bool Note::deleteAll() {
  * @return bool
  */
 bool Note::fileExists() const {
-    const QFile file(fullNoteFilePath());
-    const QFileInfo fileInfo(file);
-    return file.exists() && fileInfo.isFile() && fileInfo.isReadable();
+    return Utils::Misc::fileExists(fullNoteFilePath());
 }
 
 /**
@@ -1942,7 +2001,9 @@ bool Note::noteIdExists(int id) { return fetch(id)._id > 0; }
 //
 // reloads the current Note (by fileName)
 //
-bool Note::refetch() { return this->fillByFileName(_fileName, _noteSubFolderId); }
+bool Note::refetch() {
+    return this->fillByFileName(_fileName, _noteSubFolderId);
+}
 
 /**
  * Returns the suffix of the note file name
@@ -2068,8 +2129,8 @@ QString Note::toMarkdownHtml(const QString &notesPath, int maxImageWidth,
     return _noteTextHtml;
 }
 
-void captureHtmlFragment(const MD_CHAR *data, MD_SIZE data_size,
-                         void *userData) {
+static void captureHtmlFragment(const MD_CHAR *data, MD_SIZE data_size,
+                                void *userData) {
     QByteArray *array = static_cast<QByteArray *>(userData);
 
     if (data_size > 0) {
@@ -2080,7 +2141,7 @@ void captureHtmlFragment(const MD_CHAR *data, MD_SIZE data_size,
 /**
  * @brief Converts code blocks to highlighted code
  */
-void highlightCode(QString &str, const QString &type, int cbCount) {
+static void highlightCode(QString &str, const QString &type, int cbCount) {
     if (cbCount >= 1) {
         const int firstBlock = str.indexOf(type, 0);
         int currentCbPos = firstBlock;
@@ -2107,8 +2168,8 @@ void highlightCode(QString &str, const QString &type, int cbCount) {
 
             QString highlightedCodeBlock;
             if (!(codeBlock.isEmpty() && lang.isEmpty())) {
-                const CodeToHtmlConverter c(codeBlock, lang);
-                highlightedCodeBlock = c.process();
+                const CodeToHtmlConverter c(lang);
+                highlightedCodeBlock = c.process(codeBlock);
                 // take care of the null char
                 highlightedCodeBlock.replace(QChar('\u0000'),
                                              QLatin1String(""));
@@ -2125,7 +2186,7 @@ void highlightCode(QString &str, const QString &type, int cbCount) {
     }
 }
 
-static int nonOverlapCount(const QString &str, const QChar c = '`') {
+static inline int nonOverlapCount(const QString &str, const QChar c = '`') {
     const auto len = str.length();
     int count = 0;
     for (int i = 0; i < len; ++i) {
@@ -2152,8 +2213,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                                  bool base64Images) {
     // MD4C flags
     unsigned flags = MD_DIALECT_GITHUB | MD_FLAG_WIKILINKS |
-                     MD_FLAG_LATEXMATHSPANS | MD_FLAG_PERMISSIVEATXHEADERS |
-                     MD_FLAG_UNDERLINE;
+                     MD_FLAG_LATEXMATHSPANS | MD_FLAG_UNDERLINE;
     // we parse the task lists ourselves
     flags &= ~MD_FLAG_TASKLISTS;
 
@@ -2261,7 +2321,8 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
 
     // check if there is a script that wants to modify the markdown
     const QString preScriptResult =
-        ScriptingService::instance()->callPreNoteToMarkdownHtmlHook(this, str, forExport);
+        ScriptingService::instance()->callPreNoteToMarkdownHtmlHook(this, str,
+                                                                    forExport);
 
     if (!preScriptResult.isEmpty()) {
         str = std::move(preScriptResult);
@@ -2308,9 +2369,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
                 "\\1file://" + windowsSlash + notePath + "/\\2\"");
     */
 
-    const QString fontString =
-        settings.value(QStringLiteral("MainWindow/noteTextView.code.font"))
-            .toString();
+    const QString fontString = Utils::Misc::previewCodeFontString();
 
     // set the stylesheet for the <code> blocks
     QString codeStyleSheet = QLatin1String("");
@@ -2373,9 +2432,7 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
 
     if (forExport) {
         // get defined body font from settings
-        const QString bodyFontString =
-            settings.value(QStringLiteral("MainWindow/noteTextView.font"))
-                .toString();
+        const QString bodyFontString = Utils::Misc::previewFontString();
 
         // create export stylesheet
         QString exportStyleSheet = QLatin1String("");
@@ -2407,13 +2464,9 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
         // remove trailing newline in code blocks
         result.replace(QStringLiteral("\n</code>"), QStringLiteral("</code>"));
     } else {
-        const QString schemaStyles =
-            settings.value(QStringLiteral(
-                               "MainWindow/noteTextView.useEditorStyles"),
-                           true)
-                    .toBool()
-                ? Utils::Schema::getSchemaStyles()
-                : QLatin1String("");
+        const QString schemaStyles = Utils::Misc::isPreviewUseEditorStyles()
+                                         ? Utils::Schema::getSchemaStyles()
+                                         : QLatin1String("");
 
         // for preview
         result =
@@ -2493,7 +2546,8 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
 
     // check if there is a script that wants to modify the content
     const QString scriptResult =
-        ScriptingService::instance()->callNoteToMarkdownHtmlHook(this, result, forExport);
+        ScriptingService::instance()->callNoteToMarkdownHtmlHook(this, result,
+                                                                 forExport);
 
     if (!scriptResult.isEmpty()) {
         result = scriptResult;
@@ -2585,9 +2639,9 @@ QString Note::encryptNoteText() {
 
     // keep the first two lines unencrypted
     _noteText = noteTextLines.at(0) + QStringLiteral("\n") +
-               noteTextLines.at(1) + QStringLiteral("\n\n") +
-               QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
-               QStringLiteral("\n");
+                noteTextLines.at(1) + QStringLiteral("\n\n") +
+                QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
+                QStringLiteral("\n");
 
     // remove the first two lines for encryption
     noteTextLines.removeFirst();
@@ -2627,7 +2681,7 @@ QString Note::encryptNoteText() {
 
     // add the encrypted text to the new note text
     _noteText += encryptedText + QStringLiteral("\n") +
-                QStringLiteral(NOTE_TEXT_ENCRYPTION_POST_STRING);
+                 QStringLiteral(NOTE_TEXT_ENCRYPTION_POST_STRING);
 
     // store note
     store();
@@ -2641,8 +2695,7 @@ QString Note::encryptNoteText() {
  * @return
  */
 QStringList Note::getNoteTextLines() const {
-    return _noteText.split(QRegExp(
-        QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+    return _noteText.split(QRegExp(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
 }
 
 /**
@@ -3014,7 +3067,14 @@ QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl &url) {
     // translates the "a path/../an other path" to "an other path"
     // needed for Note::fetchByRelativeFilePath!
     const QFileInfo fileInfo(path);
+#ifdef Q_OS_WIN32
+    // Let's stay with "canonicalFilePath" on Windows in case there is any issue
+    // in portable mode
     path = fileInfo.canonicalFilePath();
+#else
+    // Don't resolve symbolic links
+    path = fileInfo.absoluteFilePath();
+#endif
 
     qDebug() << __func__ << " - 'canonicalFilePath': " << path;
 

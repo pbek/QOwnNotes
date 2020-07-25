@@ -1,0 +1,120 @@
+name: 'build-test'
+
+on:
+  push:
+    branches:
+      - develop
+    tags-ignore:
+      - '*'
+  pull_request:
+
+defaults:
+  run:
+    working-directory: src
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
+        # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
+        # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
+        qt-version: ['5.3', '5.4', '5.7', '5.13.2', '5.14.2', '5.15.0']
+        exclude:
+          # xcode not found
+          - os: macos-latest
+            qt-version: '5.3'
+          # xcode not found
+          - os: macos-latest
+            qt-version: '5.4'
+          # win64_mingw73 not found
+          - os: windows-latest
+            qt-version: '5.3'
+          # win64_mingw73 not found
+          - os: windows-latest
+            qt-version: '5.4'
+          # Qt installation times out too often
+#          - os: windows-latest
+#            qt-version: '5.13.2'
+          # win64_mingw73 not found
+          - os: windows-latest
+            qt-version: '5.15.0'
+          # Download error: decompression get wrong: no output data.
+          - os: windows-latest
+            qt-version: '5.7'
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+
+      #
+      # Install Qt
+      #
+
+    - name: Cache Qt
+      id: cache-qt
+      uses: actions/cache@v1
+      with:
+        path: ../Qt
+        key: ${{ runner.os }}-QtCache-${{ matrix.qt-version }}
+    # https://github.com/marketplace/actions/install-qt
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.7' )
+      name: Install Qt 5.7 on Windows
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: ${{ matrix.qt-version }}
+        arch: win32_mingw53
+        # try mirror
+        mirror: 'http://mirrors.ocf.berkeley.edu/qt/'
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version != '5.7' )
+      name: Install Qt on Windows
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: ${{ matrix.qt-version }}
+        arch: win64_mingw73
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
+    - if: false == contains( matrix.os, 'windows')
+      name: Install Qt
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: ${{ matrix.qt-version }}
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
+
+      #
+      # Do tests
+      #
+
+    - if: contains( matrix.os, 'ubuntu') && ( matrix.qt-version != '5.3' ) && ( matrix.qt-version != '5.4' ) && ( matrix.qt-version != '5.7' )
+      name: Do Linux tests
+      run: |
+        cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
+        ../bin/tests/tests -platform minimal -txt
+    - if: contains( matrix.os, 'macos')
+      name: Do macOS tests
+      run: |
+        cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
+        ../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
+    - if: contains( matrix.os, 'windows')
+      name: Do Windows tests
+      run: |
+        cd ..\tests
+        qmake DEFINES+=INTEGRATION_TESTS
+        make
+        copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll .
+        copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
+        copy ..\bin\tests\tests.exe .
+        windeployqt tests.exe
+        .\tests.exe -txt
+
+      #
+      # Build QOwnNotes
+      #
+
+    - name: Build QOwnNotes
+      run: |
+        qmake
+        make

@@ -139,6 +139,9 @@ MainWindow::MainWindow(QWidget *parent)
 #if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
     ui->noteEditTabWidget->setTabBarAutoHide(true);
 #endif
+    ui->noteEditTabWidget->tabBar()->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(ui->noteEditTabWidget->tabBar(), &QWidget::customContextMenuRequested,
+            this, &MainWindow::showNoteEditTabWidgetContextMenu);
 
     // setup vim mode
     if (settings.value(QStringLiteral("Editor/vimMode")).toBool()) {
@@ -521,6 +524,10 @@ MainWindow::MainWindow(QWidget *parent)
     Utils::Gui::restoreNoteTabs(ui->noteEditTabWidget,
                                 ui->noteEditTabWidgetLayout);
 
+    if (isInDistractionFreeMode()) {
+        ui->noteEditTabWidget->tabBar()->hide();
+    }
+
     // restore the note history of the current note folder
     noteHistory.restoreForCurrentNoteFolder();
 
@@ -544,6 +551,8 @@ MainWindow::MainWindow(QWidget *parent)
     // attempt to quit the application when a logout is initiated
     connect(qApp, &QApplication::commitDataRequest, this,
             &MainWindow::on_action_Quit_triggered);
+
+    automaticScriptUpdateCheck();
 }
 
 /**
@@ -634,7 +643,8 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
  * Attempts to check the api app version
  */
 void MainWindow::startAppVersionTest() {
-    if (!OwnCloudService::hasOwnCloudSettings()) {
+    if (!OwnCloudService::hasOwnCloudSettings() &&
+        CloudConnection::currentCloudConnection().getAppQOwnNotesAPIEnabled()) {
         return;
     }
 
@@ -1674,6 +1684,8 @@ void MainWindow::setDistractionFreeMode(const bool enabled) {
                 &MainWindow::toggleDistractionFreeMode);
 
         statusBar()->addPermanentWidget(_leaveDistractionFreeModeButton);
+
+        ui->noteEditTabWidget->tabBar()->hide();
     } else {
         //
         // leave the distraction free mode
@@ -1697,6 +1709,10 @@ void MainWindow::setDistractionFreeMode(const bool enabled) {
         ui->menuBar->setFixedHeight(
             settings.value(QStringLiteral("DistractionFreeMode/menuBarHeight"))
                 .toInt());
+
+        if (ui->noteEditTabWidget->count() > 1) {
+            ui->noteEditTabWidget->tabBar()->show();
+        }
     }
 
     ui->noteTextEdit->setPaperMargins();
@@ -2545,9 +2561,7 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
         settings.value(QStringLiteral("gitCommitInterval"), 30).toInt();
 
     // load note text view font
-    QString fontString =
-        settings.value(QStringLiteral("MainWindow/noteTextView.font"))
-            .toString();
+    QString fontString = Utils::Misc::previewFontString();
 
     // store the current font if there isn't any set yet
     if (fontString.isEmpty()) {
@@ -4353,10 +4367,10 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
         return;
     }
     if (!updateNoteTextViewOnly) {
-        qobject_cast<QOwnNotesMarkdownHighlighter *>(
-            ui->noteTextEdit->highlighter())
-            ->updateCurrentNote(*note);
-        ui->noteTextEdit->setText(note->getNoteText());
+      qobject_cast<QOwnNotesMarkdownHighlighter *>(
+          ui->noteTextEdit->highlighter())
+          ->updateCurrentNote(note);
+      ui->noteTextEdit->setText(note->getNoteText());
     }
 
     // update the preview text edit if the dock widget is visible
@@ -6846,6 +6860,13 @@ void MainWindow::on_actionInsert_image_triggered() {
                 pathOrUrl = currentNote.relativeFilePath(pathOrUrl);
             }
 
+#ifdef Q_OS_WIN32
+            // make sure a local path on a different drive really works
+            if (Utils::Misc::fileExists(pathOrUrl)) {
+                pathOrUrl = QUrl::toPercentEncoding(pathOrUrl).prepend("file:///");
+            }
+#endif
+
             // title must not be empty
             if (title.isEmpty()) {
                 title = QStringLiteral("img");
@@ -7690,6 +7711,13 @@ void MainWindow::applyFormatter(const QString &formatter) {
  */
 void MainWindow::on_actionFormat_text_bold_triggered() {
     applyFormatter(QStringLiteral("**"));
+}
+
+/**
+ * Inserts a underline block at the current cursor position
+ */
+void MainWindow::on_actionFormat_text_underline_triggered() {
+    applyFormatter(QStringLiteral("__"));
 }
 
 /**
@@ -10418,6 +10446,10 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
  */
 void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
                                                int column) {
+    if (item == nullptr) {
+        return;
+    }
+    
     // handle note subfolder renaming in a note tree
     if (item->data(0, Qt::UserRole + 1) == FolderType) {
         on_noteSubFolderTreeWidget_itemChanged(item, column);
@@ -10425,7 +10457,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
         return;
     }
 
-    if (item == nullptr || !Note::allowDifferentFileName()) {
+    if (!Note::allowDifferentFileName()) {
         return;
     }
 
@@ -10863,7 +10895,7 @@ void MainWindow::initShortcuts() {
             const bool settingFound = settings.contains(key);
 
             // try to load a key sequence from the settings
-            auto shortcut = QKeySequence(settingFound?
+            auto shortcut = QKeySequence(settingFound ?
                 settings.value(key).toString() : "");
 
             // do we can this method the first time?
@@ -11949,6 +11981,54 @@ void MainWindow::on_actionCheck_for_script_updates_triggered() {
     ScriptingService::instance()->reloadEngine();
 }
 
+/**
+ * This method checks if scripts need to be updated and open a dialog to ask if
+ * the user wants to update them (if the dialog wasn't disabled)
+ */
+void MainWindow::automaticScriptUpdateCheck() {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
+    _scriptUpdateFound = false;
+    auto *dialog = new ScriptRepositoryDialog(this, true);
+
+    // show a dialog once if a script update was found
+    QObject::connect(
+        dialog,
+        &ScriptRepositoryDialog::updateFound,
+        this, [this] () {
+            // we only want to run this once
+            if (_scriptUpdateFound) {
+                return;
+            }
+
+            _scriptUpdateFound = true;
+            showStatusBarMessage(tr("A script update was found!"), 4000);
+
+            // open the update question dialog in another thread so the dialog
+            // can be deleted meanwhile
+            QTimer::singleShot(100, this, [this] () {
+                if (Utils::Gui::question(
+                    this, tr("Script updates"),
+                    tr("Updates to your scripts were found in the script "
+                       "repository! Do you want to update them?"),
+                    "auto-script-update") == QMessageBox::Yes) {
+                    on_actionCheck_for_script_updates_triggered();
+                }
+            });
+        });
+
+    // delete the dialog after 10 sec
+    QTimer::singleShot(10000, this, [this, dialog] () {
+        delete(dialog);
+
+        if (_scriptUpdateFound) {
+            _scriptUpdateFound = false;
+        } else {
+            showStatusBarMessage(tr("No script updates were found"), 3000);
+        }
+    });
+#endif
+}
+
 void MainWindow::noteTextEditResize(QResizeEvent *event) {
     Q_UNUSED(event)
     ui->noteTextEdit->setPaperMargins();
@@ -12535,4 +12615,41 @@ void MainWindow::on_noteEditTabWidget_tabBarClicked(int index) {
         !currentNote.isInCurrentNoteSubFolder()) {
         jumpToNoteSubFolder(currentNote.getNoteSubFolderId());
     }
+}
+
+/**
+ * Note tab context menu
+ */
+void MainWindow::showNoteEditTabWidgetContextMenu(const QPoint &point) {
+    if (point.isNull()) {
+        return;
+    }
+
+    int tabIndex = ui->noteEditTabWidget->tabBar()->tabAt(point);
+    auto *menu = new QMenu();
+
+    // Toggle note stickiness
+    auto *stickAction = menu->addAction(tr("Toggle note stickiness"));
+    connect(stickAction, &QAction::triggered, this, [this, tabIndex]() {
+        on_noteEditTabWidget_tabBarDoubleClicked(tabIndex);
+    });
+
+    // Close other note tabs
+    auto *closeAction = menu->addAction(tr("Close other note tabs"));
+    connect(closeAction, &QAction::triggered, this, [this, tabIndex]() {
+        const int maxIndex = ui->noteEditTabWidget->count() - 1;
+        const int keepNoteId = Utils::Gui::getTabWidgetNoteId(
+            ui->noteEditTabWidget, tabIndex);
+
+        for (int i = maxIndex; i >= 0; i--) {
+            const int noteId = Utils::Gui::getTabWidgetNoteId(
+                ui->noteEditTabWidget, i);
+
+            if (noteId != keepNoteId) {
+                removeNoteTab(i);
+            }
+        }
+    });
+
+    menu->exec(ui->noteEditTabWidget->tabBar()->mapToGlobal(point));
 }

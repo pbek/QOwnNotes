@@ -1,9 +1,132 @@
 # QOwnNotes Changelog
 
+## 20.7.7
+- the name and description fields that got moved to the 2nd tab by accident were fixed in the
+  note link dialog (for [#1828](https://github.com/pbek/QOwnNotes/issues/1828#issuecomment-663835422))
+
+## 20.7.6
+- the note link dialog can now be resized smaller than the height needed for its 2nd tab
+  (for [#1828](https://github.com/pbek/QOwnNotes/issues/1828#issuecomment-663217669))
+- added **Yiddish translation** (a big thank you to Fabijenna)
+    - visit [QOwnNotes Translation](http://docs.qownnotes.org/en/latest/contributing/translation/)
+      if you want to make QOwnNotes available in more languages or help with the
+      current translation
+- added more Greek, Hungarian, Brazilian Portuguese, Russian, French translation
+  (thank you Gregory.K, rawfreeamy, mlimacarlos, unchase, gbabin)
+
+## 20.7.5
+- **releases for Windows and macOS** are now built with **GitHub Actions in 64 bit**
+  (for [#1828](https://github.com/pbek/QOwnNotes/issues/1828))
+    - there is a macOS DMG with Qt 5.14.2 and Windows ZIP file with Qt 5.13.2 in every release
+    - the updating api was adapted to use the new releases, please report any
+      troubles with updating or installing
+    - in addition there is a Linux AppImage 64 Bit with Qt 5.14.2
+
+## 20.7.4
+- added the **new editor color schema** *Dracula*
+  (for [#1823](https://github.com/pbek/QOwnNotes/issues/1823), thank you @TheChiefMeat)
+- added **Thai translation** (a big thank you to Fabijenna)
+    - visit [QOwnNotes Translation](http://docs.qownnotes.org/en/latest/contributing/translation/)
+      if you want to make QOwnNotes available in more languages or help with the
+      current translation
+
+## 20.7.3
+- fixed a possible crash when showing note versions of a note with note links
+  (for [#1805](https://github.com/pbek/QOwnNotes/pull/1805))
+- more minor fixes for preview syntax highlighter where made
+  (for [#1821](https://github.com/pbek/QOwnNotes/pull/1821), thank you @Waqar144)
+- added more translation (thank you Fabijenna, MGuerra, rakekniven, mlocati, unchase, gbabin)
+
+## 20.7.2
+- scripts in the script repository are now checked for updates on application
+  start (for [#1820](https://github.com/pbek/QOwnNotes/issues/1820))
+    - if an update was found you'll be asked if you want to open the script
+      update dialog 
+- more highlighting improvements were made in the note text edit
+  (for [#122](https://github.com/pbek/qmarkdowntextedit/pull/122), thank you @Waqar144)
+- added more translation (thank you manuelarodsilva, MGuerra, Gregory.K,
+  rakekniven, unchase, mlimacarlos, richarson, Zack-83)
+
+## 20.7.1
+- if the filename that is generated from the headline of a note turns out to be
+  empty it will now be substituted by `Note.md` (for [#1813](https://github.com/pbek/QOwnNotes/issues/1813))
+    - if that file already exists in the current folder `Note 1.md` will be
+      used (and so on) 
+- more C++11/20 keywords and some types were added to the C++ highlighter
+  (for [#120](https://github.com/pbek/qmarkdowntextedit/pull/120), thank you @data-man)
+- there now is a context menu for note tabs which allows you to toggle the note stickiness
+  and to close all other note tabs (for [#1814](https://github.com/pbek/QOwnNotes/issues/1814))
+- added more Italian, German, French translation (thank you mlocati, rakekniven, gbabin, Zack-83)
+
+## 20.7.0
+- you can now press <kbd>Ctrl</kbd> + <kbd>U</kbd> to format the selected text underline
+  (for [#1811](https://github.com/pbek/QOwnNotes/issues/1811))
+- the QOwnNotes Gentoo overlay was added to the official Gentoo repository for
+  easier installation (for [#1807](https://github.com/pbek/QOwnNotes/issues/1807))
+    - please visit the [Gentoo installation page](https://www.qownnotes.org/installation#Gentoo)
+      for the updated instructions
+- added more translation (thank you Fabijenna)
+
+## 20.6.11
+- the *Note dialog* for opening notes in a new window can now also use custom
+  preview fonts (for [#1806](https://github.com/pbek/QOwnNotes/issues/1806))
+
+## 20.6.10
+- incorrect headings like `#headline` will now not be rendered as heading in the preview
+ (for [#1802](https://github.com/pbek/QOwnNotes/issues/1802), thank you @Waqar144)
+- the note tabs will now be hidden in distraction free mode
+- the *Note dialog* for opening notes in a new window now remembers whether it
+  showed the note text or the preview last time so you can use the dialog as
+  preview in the *Distraction free mode* (for [#1804](https://github.com/pbek/QOwnNotes/issues/1804))
+- added more translation (thank you ardakilicdagi, MGuerra, rakekniven, richarson)
+
+## 20.6.9
+- fixed unwanted `def foo[A](a: A)` note link generation in code blocks in the preview
+  (for [#1794](https://github.com/pbek/QOwnNotes/issues/1794), thank you @Waqar144)
+- you can now turn off support for the QOwnNotesAPI Nextcloud/ownCloud app
+- added more translation (thank you unchase, gbabin, Gregory.K, tiwi90)
+
+## 20.6.8
+- the creation date is now restored when a note gets renamed under Windows
+  (for [#1743](https://github.com/pbek/QOwnNotes/issues/1743))
+
+## 20.6.7
+- you can now remove a tabulator list indent of a new list item with `Shift + Tab`
+  if the setting `Use tab character instead of spaces` is disabled
+  (for [#1793](https://github.com/pbek/QOwnNotes/issues/1793))
+
+## 20.6.6
+- fixed note links if note is inside a sym-linked subfolder that lies outside
+  the note folder (for [#1792](https://github.com/pbek/QOwnNotes/issues/1792))
+
+## 20.6.5
+- fixed preview of inserted images from another drive without copying them to the
+  media library on Windows if filename has spaces in it (for [#1787](https://github.com/pbek/QOwnNotes/issues/1787))
+
+## 20.6.4
+- fixed string not being highlighted if there is a char before it
+  (for [#1786](https://github.com/pbek/QOwnNotes/pull/1786), thank you @Waqar144)
+
+## 20.6.3
+- fixed preview of inserted images from another drive without copying them to the
+  media library on Windows (for [#1785](https://github.com/pbek/QOwnNotes/issues/1785))
+- fixed quote behavior when cursor is at word start (for [#118](https://github.com/pbek/qmarkdowntextedit/pull/118),
+  thank you @Waqar144)
+- added more Greek translation (thank you Gregory.K)
+
+## 20.6.2
+- if `Use editor highlighting styles also for the preview` is turned on now the
+  preview fonts will be disabled at all and will not leak into the preview any more
+- fixed possible crash if no screen is present
+
+## 20.6.1
+- fixed a problem with empty shortcuts if the menubar is disabled and settings
+  were stored in the *Settings dialog* (for [#1708](https://github.com/pbek/QOwnNotes/issues/1708))
+
 ## 20.6.0
-- fix problem with adding QOwnNotes installed from snap as favorite
+- fixed problem with adding QOwnNotes installed from snap as favorite
   in Ubuntu 20.04 (for [#1713](https://github.com/pbek/QOwnNotes/issues/1713))
-- fix markdown heading highlighting issue (for [#1777](https://github.com/pbek/QOwnNotes/issues/1777), thank you @Waqar144)
+- fixed markdown heading highlighting issue (for [#1777](https://github.com/pbek/QOwnNotes/issues/1777), thank you @Waqar144)
 - the scripting commands `preNoteToMarkdownHtmlHook` and `preNoteToMarkdownHtmlHook`
   now have a new parameter `forExport` (for [#1769](https://github.com/pbek/QOwnNotes/pull/1769), thank you @r00tr4v3n)
     - please take a look at the documentation for

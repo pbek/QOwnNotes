@@ -19,7 +19,6 @@ BRANCH=develop
 #BRANCH=master
 
 PROJECT_PATH="/tmp/QOwnNotes-sourceforge-$$"
-CUR_DIR=$(pwd)
 
 
 echo "Started the SourceForge packaging process, using latest '$BRANCH' git tree"
@@ -29,13 +28,13 @@ if [ -d $PROJECT_PATH ]; then
 fi
 
 mkdir $PROJECT_PATH
-cd $PROJECT_PATH
+cd $PROJECT_PATH || exit 1
 
 echo "Project path: $PROJECT_PATH"
 
 # checkout the source code
 git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
-cd QOwnNotes
+cd QOwnNotes || exit 1
 
 # checkout submodules
 git submodule update --init

@@ -19,10 +19,11 @@
 #include <libraries/sonnet/src/core/speller.h>
 
 #include "LanguageCache.h"
+#include "libraries/sonnet/src/core/languagefilter_p.h"
+#include "libraries/sonnet/src/core/tokenizer_p.h"
 
 class QOwnSpellChecker {
    public:
-    QOwnSpellChecker();
     ~QOwnSpellChecker();
 
     static QOwnSpellChecker *instance();
@@ -48,7 +49,7 @@ class QOwnSpellChecker {
      * @return true if the given word is misspelled.
      */
     inline bool isWordMisspelled(const QString &word) {
-        return spellchecker->isMisspelled(word);
+        return _spellchecker->isMisspelled(word);
     }
 
     /**
@@ -126,12 +127,17 @@ class QOwnSpellChecker {
     void setAutoDetect(bool autoDetect);
     bool isAutoDetectOn() const;
 
+    Sonnet::LanguageFilter *languageFilter() const;
+
+    Sonnet::WordTokenizer *wordTokenizer() const;
+
    private:
-    static QOwnSpellChecker *qonSpellchecker;
-    Sonnet::Speller *spellchecker;
-    bool active;
-    bool autoDetect;
-    QString language;
+    QOwnSpellChecker();
+    Sonnet::Speller *_spellchecker;
+    Sonnet::LanguageFilter *_languageFilter;
+    Sonnet::WordTokenizer *_wordTokenizer;
+    bool _active;
+    bool _autoDetect;
 };
 
 #endif    // QOWNSPELLCHECKER_H

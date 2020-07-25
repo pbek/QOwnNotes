@@ -333,7 +333,14 @@ QString NoteFolder::currentLocalPath() {
     if (noteFolder.isFetched()) {
         path = noteFolder.getLocalPath();
         const QFileInfo fileInfo(path);
+#ifdef Q_OS_WIN32
+        // Let's stay with "canonicalFilePath" on Windows in case there is any
+        // issue in portable mode
         path = fileInfo.canonicalFilePath();
+#else
+        // Don't resolve symbolic links
+        path = fileInfo.absoluteFilePath();
+#endif
     }
 
     // load notesPath as fallback

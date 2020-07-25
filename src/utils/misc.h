@@ -138,6 +138,10 @@ QString generateRandomString(int length = 8);
 QString makeFileNameRandom(const QString &fileName,
                            const QString &overrideSuffix = "");
 QString rstrip(const QString &str);
+bool isPreviewUseEditorStyles();
+QString previewFontString();
+QString previewCodeFontString();
+bool fileExists(const QString &path);
 }    // namespace Misc
 }    // namespace Utils
 

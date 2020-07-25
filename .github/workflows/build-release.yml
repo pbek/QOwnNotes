@@ -1,0 +1,256 @@
+name: 'build-release'
+
+on:
+  push:
+    branches:
+      - master
+#      - develop
+    tags-ignore:
+      - '*'
+
+defaults:
+  run:
+    working-directory: src
+
+jobs:
+  create_release:
+    name: Create release
+    runs-on: ubuntu-latest
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+      release_id: ${{ steps.create_release.outputs.id }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set Env
+        run: |
+          export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
+          #export TAG=v${VERSION}.${GITHUB_RUN_ID}.${GITHUB_RUN_NUMBER}
+          export TAG=v${VERSION}
+          export RELEASE_TEXT=$(grep -Pzo "## ${VERSION}\n(\n|.)+?\n##" ../CHANGELOG.md | sed '$ d')
+          RELEASE_TEXT="${RELEASE_TEXT//'%'/'%25'}"
+          RELEASE_TEXT="${RELEASE_TEXT//$'\n'/'%0A'}"
+          RELEASE_TEXT="${RELEASE_TEXT//$'\r'/'%0D'}"
+          echo "::set-env name=VERSION::${VERSION}"
+          echo "::set-env name=TAG::${TAG}"
+          echo "::set-env name=RELEASE_TEXT::${RELEASE_TEXT}"
+      - name: Printenv
+        run: |
+          echo "VERSION=${VERSION}"
+          echo "TAG=${TAG}"
+          echo "RELEASE_TEXT=${RELEASE_TEXT}"
+          printenv
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.TAG }}
+          release_name: Release v${{ env.VERSION }}
+          body: ${{ env.RELEASE_TEXT }}
+          draft: true
+          prerelease: false
+
+  build:
+    needs: create_release
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # Ubuntu 16.04 because of https://github.com/probonopd/linuxdeployqt/issues/340
+        os: [ubuntu-16.04, macos-latest, windows-latest]
+        # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
+        # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
+        # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
+        qt-version: ['5.13.2', '5.14.2']
+        exclude:
+          - os: ubuntu-16.04
+            qt-version: '5.13.2'
+          - os: macos-latest
+            qt-version: '5.13.2'
+          - os: windows-latest
+            qt-version: '5.14.2'
+    steps:
+    - uses: actions/checkout@v2	
+      with:	
+        submodules: true
+    - name: Set Env
+      shell: bash
+      run: |
+        export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
+        echo "::set-env name=VERSION::${VERSION}"
+
+    #
+    # Install Qt
+    #
+
+    - name: Cache Qt
+      id: cache-qt
+      uses: actions/cache@v1
+      with:
+        path: ../Qt
+        key: ${{ runner.os }}-QtCache-${{ matrix.qt-version }}
+    # https://github.com/marketplace/actions/install-qt
+    - if: contains( matrix.os, 'windows')
+      name: Install Qt on Windows
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: ${{ matrix.qt-version }}
+        arch: win64_mingw73
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
+    - if: false == contains( matrix.os, 'windows')
+      name: Install Qt on Linux/macOS
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: ${{ matrix.qt-version }}
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
+    - name: Printenv
+      shell: bash
+      run: |
+        echo "VERSION=${VERSION}"
+        printenv
+
+    #
+    # Build QOwnNotes
+    #
+
+#    - name: Build
+#      run: |
+#        echo "#define RELEASE \"GitHub Action\"" > release.h
+#        qmake
+#        lrelease QOwnNotes.pro
+#        make
+    - if: contains( matrix.os, 'ubuntu')
+      name: Build for Linux
+      run: |
+        sudo apt install desktop-file-utils
+        echo "#define RELEASE \"GitHub Actions\"" > release.h
+        qmake PREFIX=/usr
+        lrelease QOwnNotes.pro
+        make -j2
+        # Create DEB
+        #cd ../travis
+        #dpkg-deb -x QOwnNotes.deb build
+        #install ../src/QOwnNotes build/opt/QOwnNotes
+        #mkdir -p build/usr/bin
+        #ln -s /opt/QOwnNotes/QOwnNotes build/usr/bin
+        #mv ../src/languages/*.qm build/opt/QOwnNotes/
+        #mv ../icons/* build/opt/QOwnNotes/
+        #sed -i 's/VERSION_NUMBER/'"${VERSION}"'/g' build/DEBIAN/control
+        #dpkg -b build QOwnNotes.deb
+        #cd ../src
+        # Create AppImage (needs Ubuntu 16.04)
+        make INSTALL_ROOT=appdir -j2 install ; find appdir/
+        wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
+        chmod a+x linuxdeployqt-continuous-x86_64.AppImage
+        # export VERSION=... # linuxdeployqt uses this for naming the file
+        ./linuxdeployqt-continuous-x86_64.AppImage appdir/usr/share/applications/*.desktop -appimage
+
+    - if: contains( matrix.os, 'macos')
+      name: Build for macOS
+      run: |
+        echo "#define RELEASE \"GitHub Actions\"" > release.h
+        lrelease QOwnNotes.pro
+        #ls ${Qt5_Dir}/bin
+        qmake
+        make -j2
+        ../build-systems/github/macos/create-dmg.sh
+
+    - if: contains( matrix.os, 'windows')
+      name: Build for Windows
+      run: |
+        #dir -s ..\..\Qt
+        echo "#define RELEASE ""GitHub Actions""" > release.h
+        qmake QOwnNotes.pro -r
+        lrelease QOwnNotes.pro
+        make
+        md ..\release
+        # copy the binary to our release path
+        copy release\QOwnNotes.exe ..\release
+        # copy Win64 OpenSSL v1.1.1g DLLs to the release path
+        copy ..\build-systems\github\windows\libcrypto-1_1-x64.dll ..\release
+        copy ..\build-systems\github\windows\libssl-1_1-x64.dll ..\release
+        # copy unzip application for updater
+        copy ..\appveyor\unzip.exe ..\release
+        # copy updater script
+        copy ..\appveyor\update.bat ..\release
+        # copy portable mode launcher to the release path
+        copy ..\appveyor\QOwnNotesPortable.bat ..\release
+        # copy translation files
+        copy languages\*.qm ..\release
+        cd ..\release
+        # fetching dependencies of QT app
+        # http://doc.qt.io/qt-5/windows-deployment.html
+        # Bug in Qt 5.14+: https://stackoverflow.com/questions/61045959/windeployqt-error-unable-to-find-the-platform-plugin
+        windeployqt --release QOwnNotes.exe
+        # this dlls where missed by windeployqt
+        copy ..\..\Qt\5.13.2\mingw73_64\bin\libwinpthread-1.dll .
+        copy ..\..\Qt\5.13.2\mingw73_64\bin\libgcc_s_seh-1.dll .
+        # this dll didn't work when released by windeployqt
+        # important: this dll needs to be updated when a new version of Qt is used!
+        # search for it in the mingw* folder of your local installation of Qt
+        # Update: we are trying a direct copy again
+        copy ..\..\Qt\5.13.2\mingw73_64\bin\libstdc++-6.dll .
+        # for some reason AppVeyor or windeployqt uses a copy of the German
+        # translation file as English one, which screws up the English user interface
+        del translations\qt_en.qm
+        Compress-Archive -Path * -DestinationPath ..\QOwnNotes.zip
+
+    #
+    # Release QOwnNotes
+    #
+
+#    - if: contains( matrix.os, 'ubuntu')
+#      name: Release DEB package for Linux
+#      uses: actions/upload-release-asset@v1
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      with:
+#        upload_url: ${{ needs.create_release.outputs.upload_url }}
+#        asset_path: ./travis/QOwnNotes.deb
+#        asset_name: QOwnNotes.deb
+#        asset_content_type: application/vnd.debian.binary-package
+    - if: contains( matrix.os, 'ubuntu')
+      name: Release AppImage for Linux
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.create_release.outputs.upload_url }}
+        asset_path: ./src/QOwnNotes-${{ env.VERSION }}-x86_64.AppImage
+        asset_name: QOwnNotes-x86_64.AppImage
+        asset_content_type: application/application/x-appimage
+
+    - if: contains( matrix.os, 'macos')
+      name: Release DMG for macOS
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.create_release.outputs.upload_url }}
+        asset_path: ./src/QOwnNotes.dmg
+        asset_name: QOwnNotes.dmg
+        asset_content_type: application/x-apple-diskimage
+
+    - if: contains( matrix.os, 'windows')
+      name: Upload ZIP for Windows
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.create_release.outputs.upload_url }}
+        asset_path: ./QOwnNotes.zip
+        asset_name: QOwnNotes.zip
+        asset_content_type: application/zip
+
+  publish_release:
+    name: Publish release
+    runs-on: ubuntu-latest
+    needs: [create_release, build]
+    steps:
+    - name: Publish draft release
+      uses: eregon/publish-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        release_id: ${{ needs.create_release.outputs.release_id }}
