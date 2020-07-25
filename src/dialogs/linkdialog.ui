@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>524</width>
-    <height>352</height>
+    <height>365</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -72,7 +72,7 @@
            <property name="sizeHint" stdset="0">
             <size>
              <width>20</width>
-             <height>40</height>
+             <height>0</height>
             </size>
            </property>
           </spacer>
@@ -104,48 +104,12 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QScrollArea" name="scrollArea">
-           <property name="frameShape">
-            <enum>QFrame::NoFrame</enum>
+          <widget class="QLineEdit" name="searchLineEdit">
+           <property name="toolTip">
+            <string>Search for notes or create new notes by entering text and pressing return</string>
            </property>
-           <property name="horizontalScrollBarPolicy">
-            <enum>Qt::ScrollBarAlwaysOff</enum>
-           </property>
-           <property name="sizeAdjustPolicy">
-            <enum>QAbstractScrollArea::AdjustToContents</enum>
-           </property>
-           <property name="widgetResizable">
-            <bool>true</bool>
-           </property>
-           <widget class="QWidget" name="scrollAreaWidgetContents">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>0</y>
-              <width>502</width>
-              <height>251</height>
-             </rect>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_3">
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <item>
-              <widget class="QLineEdit" name="searchLineEdit">
-               <property name="toolTip">
-                <string>Search for notes or create new notes by entering text and pressing return</string>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QLineEdit {
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
 	border: 1px solid lightgray;
 	border-radius: 5px;
 	padding: 2px 5px 2px 25px;
@@ -155,50 +119,46 @@
 	margin-right: 0px;
 }
 </string>
-               </property>
-               <property name="placeholderText">
-                <string>Search for a note to link to</string>
-               </property>
-               <property name="clearButtonEnabled">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QListWidget" name="notesListWidget"/>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="nameLineEdit">
-               <property name="statusTip">
-                <string>Enter the name of the link (optional)</string>
-               </property>
-               <property name="placeholderText">
-                <string>Name of link (optional)</string>
-               </property>
-               <property name="clearButtonEnabled">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="descriptionLineEdit">
-               <property name="statusTip">
-                <string>Enter a description for the link (optional)</string>
-               </property>
-               <property name="placeholderText">
-                <string>Description of link (optional)</string>
-               </property>
-               <property name="clearButtonEnabled">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
+           </property>
+           <property name="placeholderText">
+            <string>Search for a note to link to</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
           </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="notesListWidget"/>
          </item>
         </layout>
        </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="nameLineEdit">
+       <property name="statusTip">
+        <string>Enter the name of the link (optional)</string>
+       </property>
+       <property name="placeholderText">
+        <string>Name of link (optional)</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="descriptionLineEdit">
+       <property name="statusTip">
+        <string>Enter a description for the link (optional)</string>
+       </property>
+       <property name="placeholderText">
+        <string>Description of link (optional)</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
     </layout>
@@ -218,7 +178,11 @@
  <tabstops>
   <tabstop>urlEdit</tabstop>
   <tabstop>fileUrlButton</tabstop>
+  <tabstop>nameLineEdit</tabstop>
+  <tabstop>descriptionLineEdit</tabstop>
   <tabstop>tabWidget</tabstop>
+  <tabstop>searchLineEdit</tabstop>
+  <tabstop>notesListWidget</tabstop>
  </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>

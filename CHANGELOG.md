@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.7.7
+- the name and description fields that got moved to the 2nd tab by accident were fixed in the
+  note link dialog (for [#1828](https://github.com/pbek/QOwnNotes/issues/1828#issuecomment-663835422))
+
 ## 20.7.6
 - the note link dialog can now be resized smaller than the height needed for its 2nd tab
   (for [#1828](https://github.com/pbek/QOwnNotes/issues/1828#issuecomment-663217669))
