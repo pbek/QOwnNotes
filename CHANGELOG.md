@@ -7,6 +7,8 @@
     - visit [QOwnNotes Translation](http://docs.qownnotes.org/en/latest/contributing/translation/)
       if you want to make QOwnNotes available in more languages or help with the
       current translation
+- added more Greek, Hungarian, Brazilian Portuguese, Russian, French translation
+  (thank you Gregory.K, rawfreeamy, mlimacarlos, unchase, gbabin)
 
 ## 20.7.5
 - **releases for Windows and macOS** are now built with **GitHub Actions in 64 bit**
