@@ -88,7 +88,7 @@ jobs:
       # Do tests
       #
 
-    - if: contains( matrix.os, 'ubuntu')
+    - if: contains( matrix.os, 'ubuntu') && ( matrix.qt-version != '5.3' ) && ( matrix.qt-version != '5.4' ) && ( matrix.qt-version != '5.7' )
       name: Do Linux tests
       run: |
         cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
@@ -108,7 +108,6 @@ jobs:
         copy ..\build-systems\github\windows\libssl-1_1-x64.dll .
         copy ..\bin\tests\tests.exe .
         windeployqt tests.exe
-        dir -s
         .\tests.exe -txt
 
       #
