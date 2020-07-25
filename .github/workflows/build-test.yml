@@ -88,17 +88,17 @@ jobs:
       # Do tests
       #
 
-    - if: contains( matrix.os, 'ubuntu') && ( matrix.qt-version == '5.15.0' )
+    - if: contains( matrix.os, 'ubuntu')
       name: Do Linux tests
       run: |
         cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
         ./../bin/tests/tests -platform minimal -txt
-    - if: contains( matrix.os, 'macos') && ( matrix.qt-version == '5.15.0' )
+    - if: contains( matrix.os, 'macos')
       name: Do macOS tests
       run: |
         cd ../tests && qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
         ./../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.14.2' )
+    - if: contains( matrix.os, 'windows')
       name: Do Windows tests
       run: |
         cd ../tests
