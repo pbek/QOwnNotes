@@ -2832,6 +2832,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">ייִדיש‎</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Yiddish</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">yi</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">isiZulu</string>
                         </property>
                         <property name="toolTip">

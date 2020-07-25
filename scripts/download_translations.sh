@@ -55,6 +55,7 @@ mv QOwnNotes_is_IS.ts QOwnNotes_is.ts
 mv QOwnNotes_pa_IN.ts QOwnNotes_pa.ts
 mv QOwnNotes_sq_AL.ts QOwnNotes_sq.ts
 mv QOwnNotes_he_IL.ts QOwnNotes_he.ts
+mv QOwnNotes_yi_DE.ts QOwnNotes_yi.ts
 mv QOwnNotes_th_TH.ts QOwnNotes_th.ts
 mv QOwnNotes_sn_ZW.ts QOwnNotes_sn.ts
 mv QOwnNotes_km_KH.ts QOwnNotes_km.ts

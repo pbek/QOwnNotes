@@ -3,6 +3,10 @@
 ## 20.7.6
 - the note link dialog can now be resized smaller than the height needed for its 2nd tab
   (for [#1828](https://github.com/pbek/QOwnNotes/issues/1828#issuecomment-663217669))
+- added **Yiddish translation** (a big thank you to Fabijenna)
+    - visit [QOwnNotes Translation](http://docs.qownnotes.org/en/latest/contributing/translation/)
+      if you want to make QOwnNotes available in more languages or help with the
+      current translation
 
 ## 20.7.5
 - **releases for Windows and macOS** are now built with **GitHub Actions in 64 bit**
