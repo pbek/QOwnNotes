@@ -2733,6 +2733,12 @@ void MainWindow::notesWereModified(const QString &str) {
         return;
     }
 
+    // if we should ignore all changes return here
+    if (QSettings().value(QStringLiteral("ignoreAllExternalNoteFolderChanges"))
+        .toBool()) {
+        return;
+    }
+
     qDebug() << "notesWereModified: " << str;
 
     QFileInfo fi(str);
@@ -2884,8 +2890,7 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
     }
 
     // if we should ignore all changes return here
-    QSettings settings;
-    if (settings.value(QStringLiteral("ignoreAllExternalNoteFolderChanges"))
+    if (QSettings().value(QStringLiteral("ignoreAllExternalNoteFolderChanges"))
             .toBool()) {
         return;
     }
