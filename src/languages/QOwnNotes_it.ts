@@ -6094,7 +6094,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2838"/>
       <source>Yiddish</source>
-      <translation type="unfinished">Yiddish</translation>
+      <translation>Yiddish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2849"/>

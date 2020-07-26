@@ -5982,13 +5982,13 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <location filename="../dialogs/settingsdialog.cpp" line="4021"/>
       <location filename="../dialogs/settingsdialog.cpp" line="4045"/>
       <source>Import settings</source>
-      <translation>Configurações de importação</translation>
+      <translation>Importar configurações</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4300"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3987"/>
       <source>Export settings</source>
-      <translation>Configurações de exportação</translation>
+      <translation>Exportar configurações</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4438"/>
