@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.7.8
+- fixed a possible crash when encrypting notes with less than two lines
+  (for [#1831](https://github.com/pbek/QOwnNotes/issues/1831))
+
 ## 20.7.7
 - the name and description fields that got moved to the 2nd tab by accident were fixed in the
   note link dialog (for [#1828](https://github.com/pbek/QOwnNotes/issues/1828#issuecomment-663835422))
