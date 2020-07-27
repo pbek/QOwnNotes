@@ -12333,11 +12333,20 @@ void MainWindow::on_actionToggle_fullscreen_triggered() {
     if (isFullScreen()) {
         showNormal();
 
+        // we need a showNormal() first to exist full-screen mode
+        if (_isMaximizedBeforeFullScreen) {
+            showMaximized();
+        } else if (_isMinimizedBeforeFullScreen) {
+            showMinimized();
+        }
+
         statusBar()->removeWidget(_leaveFullScreenModeButton);
         disconnect(_leaveFullScreenModeButton, Q_NULLPTR, Q_NULLPTR, Q_NULLPTR);
         delete _leaveFullScreenModeButton;
         _leaveFullScreenModeButton = nullptr;
     } else {
+        _isMaximizedBeforeFullScreen = isMaximized();
+        _isMinimizedBeforeFullScreen = isMinimized();
         showFullScreen();
 
         _leaveFullScreenModeButton->setFlat(true);

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.7.9
+- if you minimized or maximized the application window before entering full-screen mode that state will now
+  be restored after exiting full-screen mode (for [#1835](https://github.com/pbek/QOwnNotes/issues/1835))
+
 ## 20.7.8
 - fixed a possible crash when encrypting notes with less than two lines
   (for [#1831](https://github.com/pbek/QOwnNotes/issues/1831))
