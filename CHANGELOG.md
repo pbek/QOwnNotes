@@ -3,6 +3,8 @@
 ## 20.7.9
 - if you minimized or maximized the application window before entering full-screen mode that state will now
   be restored after exiting full-screen mode (for [#1835](https://github.com/pbek/QOwnNotes/issues/1835))
+- you are now able to also delete trashed notes on your server in the trash dialog
+  (for [#1833](https://github.com/pbek/QOwnNotes/issues/1833))
 
 ## 20.7.8
 - fixed a possible crash when encrypting notes with less than two lines

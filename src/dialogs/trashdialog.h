@@ -30,6 +30,7 @@ class TrashDialog : public MasterDialog {
     enum ButtonRole {
         Unset,    // nothing was selected
         Download,
+        DeleteOnServer,
         RestoreOnServer,
         Cancel
     };
