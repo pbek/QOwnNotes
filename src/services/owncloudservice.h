@@ -52,6 +52,8 @@ class OwnCloudService : public QObject {
     void restoreTrashedNoteOnServer(const QString &fileName, int timestamp,
                                     MainWindow *mainWindow);
 
+    int deleteTrashedNoteOnServer(const QString &fileName, int timestamp);
+
     void settingsGetCalendarList(SettingsDialog *dialog);
 
     void todoGetTodoList(const QString &calendarName, TodoDialog *dialog);
@@ -118,6 +120,7 @@ class OwnCloudService : public QObject {
     QString restoreTrashedNotePath;
     QString sharePath;
     QString bookmarkPath;
+    QString trashDeletePath;
     SettingsDialog *settingsDialog;
     TodoDialog *todoDialog;
     QString calendarName;

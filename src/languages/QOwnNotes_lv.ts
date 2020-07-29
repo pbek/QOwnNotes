@@ -1575,32 +1575,32 @@
       <translation>Piezīme</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="173"/>
+      <location filename="../dialogs/linkdialog.ui" line="141"/>
       <source>Enter the name of the link (optional)</source>
       <translation>Ievadiet saites nosaukumu (nav obligāti)</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="176"/>
+      <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
       <translation>Saites nosaukums (nav obligāti)</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="186"/>
+      <location filename="../dialogs/linkdialog.ui" line="154"/>
       <source>Enter a description for the link (optional)</source>
       <translation>Ievadiet saites aprakstu (nav obligāti)</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="189"/>
+      <location filename="../dialogs/linkdialog.ui" line="157"/>
       <source>Description of link (optional)</source>
       <translation>Saites apraksts (nav obligāti)</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="145"/>
+      <location filename="../dialogs/linkdialog.ui" line="109"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
       <translation>Meklējiet piezīmes vai izveidojiet jaunas piezīmes, ievadot tekstu un nospiežot atgriešanās</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="160"/>
+      <location filename="../dialogs/linkdialog.ui" line="124"/>
       <source>Search for a note to link to</source>
       <translation>Meklējiet piezīmi, ar kuru saistīt</translation>
     </message>
@@ -1798,7 +1798,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
-      <location filename="../mainwindow.cpp" line="8679"/>
+      <location filename="../mainwindow.cpp" line="8684"/>
       <source>Add a tag to the current note</source>
       <translation>Pievienojiet atzīmi pašreizējai piezīmei</translation>
     </message>
@@ -1834,7 +1834,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1238"/>
-      <location filename="../mainwindow.cpp" line="6666"/>
+      <location filename="../mainwindow.cpp" line="6671"/>
       <source>Custom actions</source>
       <translation>Pielāgotas darbības</translation>
     </message>
@@ -1915,13 +1915,13 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1445"/>
-      <location filename="../mainwindow.cpp" line="10369"/>
+      <location filename="../mainwindow.cpp" line="10374"/>
       <source>Select &amp;all notes</source>
       <translation>Atlasiet &amp;visas piezīmes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1454"/>
-      <location filename="../mainwindow.cpp" line="6577"/>
+      <location filename="../mainwindow.cpp" line="6582"/>
       <source>Insert &amp;link</source>
       <translation>Ievietot &amp;saiti</translation>
     </message>
@@ -1976,7 +1976,7 @@
       <translation>Meklējiet vai izveidojiet piezīmi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8680"/>
+      <location filename="../mainwindow.cpp" line="8685"/>
       <source>Add a tag to the selected notes</source>
       <translation>Pievienojiet atzīmi atlasītajām piezīmēm</translation>
     </message>
@@ -1987,7 +1987,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="886"/>
-      <location filename="../mainwindow.cpp" line="6628"/>
+      <location filename="../mainwindow.cpp" line="6633"/>
       <source>Export</source>
       <translation>Eksportēt</translation>
     </message>
@@ -1998,7 +1998,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="928"/>
-      <location filename="../mainwindow.cpp" line="6609"/>
+      <location filename="../mainwindow.cpp" line="6614"/>
       <source>Print</source>
       <translation>Drukāt</translation>
     </message>
@@ -2371,7 +2371,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2244"/>
-      <location filename="../mainwindow.cpp" line="11484"/>
+      <location filename="../mainwindow.cpp" line="11489"/>
       <source>Remove current workspace</source>
       <translation>Noņemiet pašreizējo darbvietu</translation>
     </message>
@@ -2413,7 +2413,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2318"/>
-      <location filename="../mainwindow.cpp" line="6586"/>
+      <location filename="../mainwindow.cpp" line="6591"/>
       <source>Insert block &amp;quote</source>
       <translation>Ievietojiet bloka &amp;cenu</translation>
     </message>
@@ -2440,7 +2440,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2365"/>
-      <location filename="../mainwindow.cpp" line="10345"/>
+      <location filename="../mainwindow.cpp" line="10350"/>
       <source>Open note in different window</source>
       <translation>Atvērt piezīmi citā logā</translation>
     </message>
@@ -2461,7 +2461,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2405"/>
-      <location filename="../mainwindow.cpp" line="10353"/>
+      <location filename="../mainwindow.cpp" line="10358"/>
       <source>Show note git versions</source>
       <translation>Rādīt piezīmju versijas</translation>
     </message>
@@ -2544,7 +2544,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2567"/>
-      <location filename="../mainwindow.cpp" line="12401"/>
+      <location filename="../mainwindow.cpp" line="12415"/>
       <source>Automatically detect</source>
       <translation>Automātiski noteikt</translation>
     </message>
@@ -2728,22 +2728,22 @@
       <translation>Importējiet piezīmes no Evernote</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2839"/>
+      <location filename="../mainwindow.cpp" line="2845"/>
       <source>Note was removed externally!</source>
       <translation>Piezīme tika noņemta ārēji!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2840"/>
+      <location filename="../mainwindow.cpp" line="2846"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
       <translation>Pašreizējā piezīme tika noņemta ārpus šīs lietojumprogrammas.
 Vai atjaunot pašreizējo piezīmi?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5436"/>
-      <location filename="../mainwindow.cpp" line="5459"/>
-      <location filename="../mainwindow.cpp" line="7071"/>
-      <location filename="../mainwindow.cpp" line="10435"/>
+      <location filename="../mainwindow.cpp" line="5441"/>
+      <location filename="../mainwindow.cpp" line="5464"/>
+      <location filename="../mainwindow.cpp" line="7076"/>
+      <location filename="../mainwindow.cpp" line="10440"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Atcelt</translation>
     </message>
@@ -2756,47 +2756,47 @@ Vai atjaunot pašreizējo piezīmi?</translation>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3077"/>
+      <location filename="../mainwindow.cpp" line="3082"/>
       <source>new version %1 available</source>
       <translation>ir pieejama jaunā versija %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3194"/>
+      <location filename="../mainwindow.cpp" line="3199"/>
       <source>Abort</source>
       <translation>Pārtraukt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3194"/>
+      <location filename="../mainwindow.cpp" line="3199"/>
       <source>Loading notes…</source>
       <translation>Notiek piezīmju ielāde…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3408"/>
+      <location filename="../mainwindow.cpp" line="3413"/>
       <source>Removed duplicate conflicted database: %1</source>
       <translation>Noņemta konfliktējošās datu bāzes dublikāta: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3409"/>
+      <location filename="../mainwindow.cpp" line="3414"/>
       <source>Could not remove duplicate conflicted database: %1</source>
       <translation>Nevarēja noņemt konfliktējošās datu bāzes dublikātu: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3415"/>
+      <location filename="../mainwindow.cpp" line="3420"/>
       <source>Removed merged conflicted database: %1</source>
       <translation>Noņemta apvienotā konfliktējošā datu bāze: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3416"/>
+      <location filename="../mainwindow.cpp" line="3421"/>
       <source>Could not remove merged conflicted database: %1</source>
       <translation>Nevarēja noņemt sapludināto konfliktējošo datu bāzi: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3431"/>
+      <location filename="../mainwindow.cpp" line="3436"/>
       <source>Delete conflicted database copies</source>
       <translation>Dzēst pretrunīgas datu bāzes kopijas</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3454"/>
+      <location filename="../mainwindow.cpp" line="3459"/>
       <source>Removed %n conflicted database copies</source>
       <translation>
         <numerusform>Noņemta %n konfliktējošā datu bāzes kopija</numerusform>
@@ -2805,62 +2805,62 @@ Vai atjaunot pašreizējo piezīmi?</translation>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3618"/>
+      <location filename="../mainwindow.cpp" line="3623"/>
       <source>Please select the folder where your notes will get stored</source>
       <translation>Lūdzu, atlasiet mapi, kurā tiks saglabātas jūsu piezīmes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3644"/>
+      <location filename="../mainwindow.cpp" line="3649"/>
       <source>No folder was selected</source>
       <translation>Neviena mape netika atlasīta</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3646"/>
+      <location filename="../mainwindow.cpp" line="3651"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
       <translation>Lai šī programmatūra darbotos, jums jāizvēlas mape ownCloud!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3648"/>
+      <location filename="../mainwindow.cpp" line="3653"/>
       <source>&amp;Retry</source>
       <translation>&amp;Mēģiniet vēlreiz</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3648"/>
+      <location filename="../mainwindow.cpp" line="3653"/>
       <source>&amp;Exit</source>
       <translation>&amp;Izeja</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3956"/>
+      <location filename="../mainwindow.cpp" line="3961"/>
       <source>Remove current note</source>
       <translation>Noņemt pašreizējo piezīmi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3957"/>
+      <location filename="../mainwindow.cpp" line="3962"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Vai noņemt pašreizējo piezīmi: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4314"/>
+      <location filename="../mainwindow.cpp" line="4319"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
       <translation>Lūdzu, ievadiet šīs šifrētās piezīmes &lt;strong&gt; paroli &lt;/strong&gt;.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4337"/>
+      <location filename="../mainwindow.cpp" line="4342"/>
       <source>Note can't be decrypted!</source>
       <translation>Piezīmi nevar atšifrēt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4338"/>
+      <location filename="../mainwindow.cpp" line="4343"/>
       <source>It seems that your password is not valid!</source>
       <translation>Šķiet, ka jūsu parole nav derīga!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4506"/>
+      <location filename="../mainwindow.cpp" line="4511"/>
       <source>Remove selected notes</source>
       <translation>Noņemiet atlasītās piezīmes</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4508"/>
+      <location filename="../mainwindow.cpp" line="4513"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -2877,13 +2877,13 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4596"/>
-      <location filename="../mainwindow.cpp" line="10652"/>
+      <location filename="../mainwindow.cpp" line="4601"/>
+      <location filename="../mainwindow.cpp" line="10657"/>
       <source>Remove selected folders</source>
       <translation>Noņemiet atlasītās mapes</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4597"/>
+      <location filename="../mainwindow.cpp" line="4602"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
       <translation>
         <numerusform>Vai noņemt atlasīto mapi &lt;strong&gt;%n &lt;/strong&gt;? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; Tiks noņemti arī visi šajās mapēs esošie faili un mapes!</numerusform>
@@ -2892,17 +2892,17 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4608"/>
+      <location filename="../mainwindow.cpp" line="4613"/>
       <source>Removed note subfolder: %1</source>
       <translation>Noņemtā piezīmes apakšmape: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4628"/>
+      <location filename="../mainwindow.cpp" line="4633"/>
       <source>Remove selected tags</source>
       <translation>Noņemt atlasītās atzīmes</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4629"/>
+      <location filename="../mainwindow.cpp" line="4634"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
         <numerusform>Vai noņemt &lt;strong&gt;%n&lt;/strong&gt; atlasīto tagu? Šajā procesā netiks noņemtas piezīmes.</numerusform>
@@ -2911,13 +2911,13 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4681"/>
-      <location filename="../mainwindow.cpp" line="9465"/>
+      <location filename="../mainwindow.cpp" line="4686"/>
+      <location filename="../mainwindow.cpp" line="9470"/>
       <source>Move selected notes</source>
       <translation>Pārvietot atlasītās piezīmes</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4682"/>
+      <location filename="../mainwindow.cpp" line="4687"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Pārvietot %n atlasīto piezīmi uz &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2926,13 +2926,13 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4785"/>
-      <location filename="../mainwindow.cpp" line="9573"/>
+      <location filename="../mainwindow.cpp" line="4790"/>
+      <location filename="../mainwindow.cpp" line="9578"/>
       <source>Copy selected notes</source>
       <translation>Kopēt atlasītās piezīmes</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4786"/>
+      <location filename="../mainwindow.cpp" line="4791"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Vai kopē %n atlasīto piezīmi uz &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2941,13 +2941,13 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4816"/>
-      <location filename="../mainwindow.cpp" line="4965"/>
+      <location filename="../mainwindow.cpp" line="4821"/>
+      <location filename="../mainwindow.cpp" line="4970"/>
       <source>Done</source>
       <translation>Gatavs</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4817"/>
+      <location filename="../mainwindow.cpp" line="4822"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>%n piezīme tika kopēta uz &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -2956,12 +2956,12 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4830"/>
+      <location filename="../mainwindow.cpp" line="4835"/>
       <source>Tag selected notes</source>
       <translation>Atzīmējiet atlasītās piezīmes</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4831"/>
+      <location filename="../mainwindow.cpp" line="4836"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Vai atzīmēt %n atlasīto piezīmi ar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2970,42 +2970,42 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5104"/>
+      <location filename="../mainwindow.cpp" line="5109"/>
       <source>Restart application</source>
       <translation>Restartējiet lietojumprogrammu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5110"/>
+      <location filename="../mainwindow.cpp" line="5115"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
       <translation>Jums, iespējams, būs jārestartē programma manuāli, lai izmaiņas stātos spēkā.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5115"/>
+      <location filename="../mainwindow.cpp" line="5120"/>
       <source>You may need to restart the application to let the changes take effect.</source>
       <translation>Jums, iespējams, būs jārestartē programma, lai izmaiņas stātos spēkā.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5117"/>
+      <location filename="../mainwindow.cpp" line="5122"/>
       <source>Restart</source>
       <translation>Restartēt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5348"/>
+      <location filename="../mainwindow.cpp" line="5353"/>
       <source>PDF files</source>
       <translation>PDF faili</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5432"/>
+      <location filename="../mainwindow.cpp" line="5437"/>
       <source>Todo lists disabled!</source>
       <translation>Todo saraksti ir atspējoti!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5433"/>
+      <location filename="../mainwindow.cpp" line="5438"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Jūs esat atspējojis uzdevumu sarakstu. &lt;br /&gt; Lūdzu, iestatījumos pārbaudiet savu &lt;strong&gt; Todo &lt;/strong&gt; konfigurāciju!</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5676"/>
+      <location filename="../mainwindow.cpp" line="5681"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Atrasts &lt;strong&gt;%n&lt;/strong&gt; jebkura veida termins &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3014,99 +3014,99 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6226"/>
+      <location filename="../mainwindow.cpp" line="6231"/>
       <source>Note was not found</source>
       <translation>Piezīme netika atrasta</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6227"/>
+      <location filename="../mainwindow.cpp" line="6232"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Piezīme netika atrasta. Vai izveidot jaunu piezīmi &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6390"/>
+      <location filename="../mainwindow.cpp" line="6395"/>
       <source>Note folders</source>
       <translation>Piezīmju mapes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6513"/>
+      <location filename="../mainwindow.cpp" line="6518"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
       <translation>Piezīmju versijas pašlaik tiek ielādētas no jūsu ownCloud servera</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6530"/>
+      <location filename="../mainwindow.cpp" line="6535"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
       <translation>Pašlaik miskastes tiek ielādētas no jūsu ownCloud servera</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6596"/>
+      <location filename="../mainwindow.cpp" line="6601"/>
       <source>Copy code block</source>
       <translation>Kopēt koda bloku</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6617"/>
+      <location filename="../mainwindow.cpp" line="6622"/>
       <source>Print selected text</source>
       <translation>Izdrukājiet atlasīto tekstu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6623"/>
+      <location filename="../mainwindow.cpp" line="6628"/>
       <source>Print selected text (preview)</source>
       <translation>Izdrukāt atlasīto tekstu (priekšskatījums)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6641"/>
+      <location filename="../mainwindow.cpp" line="6646"/>
       <source>Export selected text as PDF</source>
       <translation>Eksportēt atlasīto tekstu kā PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6647"/>
+      <location filename="../mainwindow.cpp" line="6652"/>
       <source>Export selected text as PDF (preview)</source>
       <translation>Eksportēt atlasīto tekstu kā PDF (priekšskatījums)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7067"/>
+      <location filename="../mainwindow.cpp" line="7072"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation>Jūsu piezīme tiks atšifrēta un atkal tiks saglabāta kā vienkāršs teksts. Ņemiet vērā, ka nešifrētā piezīme, iespējams, tiks sinhronizēta ar jūsu serveri, un var tikt atklāts sensitīvs teksts! &lt;br /&gt; Vai vēlaties atšifrēt piezīmi?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7164"/>
+      <location filename="../mainwindow.cpp" line="7169"/>
       <source>Markdown files</source>
       <translation>Atzīmju faili</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7220"/>
+      <location filename="../mainwindow.cpp" line="7225"/>
       <source>Bookmarked note position at slot %1</source>
       <translation>Grāmatzīmju banknotes pozīcija %1 slotā</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7235"/>
+      <location filename="../mainwindow.cpp" line="7240"/>
       <source>Jumped to bookmark position at slot %1</source>
       <translation>Pārlēca uz grāmatzīmes pozīciju %1 slotā</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7463"/>
-      <location filename="../mainwindow.cpp" line="7532"/>
+      <location filename="../mainwindow.cpp" line="7468"/>
+      <location filename="../mainwindow.cpp" line="7537"/>
       <source>Inserting image</source>
       <translation>Attēla ievietošana</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7468"/>
-      <location filename="../mainwindow.cpp" line="7536"/>
+      <location filename="../mainwindow.cpp" line="7473"/>
+      <location filename="../mainwindow.cpp" line="7541"/>
       <source>Done inserting image</source>
       <translation>Pabeigts attēla ievietošana</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7470"/>
+      <location filename="../mainwindow.cpp" line="7475"/>
       <source>Inserting attachment</source>
       <translation>Pielikuma ievietošana</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7475"/>
+      <location filename="../mainwindow.cpp" line="7480"/>
       <source>Done inserting attachment</source>
       <translation>Gatavs pielikuma ievietošana</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7487"/>
+      <location filename="../mainwindow.cpp" line="7492"/>
       <source>Copied %n note(s) to %1</source>
       <translation>
         <numerusform>Kopēta %n piezīme uz %1</numerusform>
@@ -3115,7 +3115,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7496"/>
+      <location filename="../mainwindow.cpp" line="7501"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation>
         <numerusform>Neizdevās nokopēt %n piezīmi (visticamāk, ka tā jau ir)</numerusform>
@@ -3124,7 +3124,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7506"/>
+      <location filename="../mainwindow.cpp" line="7511"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
         <numerusform>Izlaidta %n piezīmes kopēšana (nav atzīmju vai teksta faila vai nav lasāma)</numerusform>
@@ -3133,225 +3133,225 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7519"/>
+      <location filename="../mainwindow.cpp" line="7524"/>
       <source>Saving temporary image</source>
       <translation>Pagaidu attēla saglabāšana</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7538"/>
+      <location filename="../mainwindow.cpp" line="7543"/>
       <source>Temporary file can't be opened</source>
       <translation>Pagaidu failu nevar atvērt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7581"/>
+      <location filename="../mainwindow.cpp" line="7586"/>
       <source>Downloading %1</source>
       <translation>Notiek %1 lejupielāde</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7771"/>
+      <location filename="../mainwindow.cpp" line="7776"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
       <translation>Atiestatīt fonta lielumu uz %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8725"/>
+      <location filename="../mainwindow.cpp" line="8730"/>
       <source>Remove tag '%1' from the current note</source>
       <translation>Noņemiet atzīmi “%1” no pašreizējās piezīmes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8726"/>
+      <location filename="../mainwindow.cpp" line="8731"/>
       <source>Remove tag '%1' from the selected notes</source>
       <translation>Noņemiet atzīmi “%1” no atlasītajām piezīmēm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8957"/>
+      <location filename="../mainwindow.cpp" line="8962"/>
       <source>Rename tag</source>
       <translation>Pārdēvēt tagu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8958"/>
+      <location filename="../mainwindow.cpp" line="8963"/>
       <source>Assign color</source>
       <translation>Piešķirt krāsu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8959"/>
+      <location filename="../mainwindow.cpp" line="8964"/>
       <source>Disable color</source>
       <translation>Atspējot krāsu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8963"/>
+      <location filename="../mainwindow.cpp" line="8968"/>
       <source>&amp;Move tags to…</source>
       <translation>&amp;Pārvietot tagus uz…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9174"/>
+      <location filename="../mainwindow.cpp" line="9179"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
       <translation>Pāriet uz sakni</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9739"/>
+      <location filename="../mainwindow.cpp" line="9744"/>
       <source>An url was opened at the current cursor position</source>
       <translation>Pašreizējā kursora pozīcijā tika atvērts vietrādis URL</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9843"/>
+      <location filename="../mainwindow.cpp" line="9848"/>
       <source>No equation was found in front of the cursor</source>
       <translation>Kursora priekšā netika atrasts vienādojums</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9860"/>
+      <location filename="../mainwindow.cpp" line="9865"/>
       <source>Result for equation: %1 = %2</source>
       <translation>Rezultāts vienādojumam: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9961"/>
+      <location filename="../mainwindow.cpp" line="9966"/>
       <source>The scripting engine was reloaded</source>
       <translation>Skriptu dzinējs tika atkārtoti ielādēts</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9995"/>
+      <location filename="../mainwindow.cpp" line="10000"/>
       <source>HTML files</source>
       <translation>HTML faili</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10281"/>
+      <location filename="../mainwindow.cpp" line="10286"/>
       <source>Jump to the note's subfolder</source>
       <translation>Pāriet uz piezīmes apakšmapi
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10338"/>
+      <location filename="../mainwindow.cpp" line="10343"/>
       <source>Open note in tab</source>
       <translation>Atidarykite užrašą skirtuke
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12004"/>
+      <location filename="../mainwindow.cpp" line="12009"/>
       <source>A script update was found!</source>
       <translation>Tika atrasts skripta atjauninājums.
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12010"/>
+      <location filename="../mainwindow.cpp" line="12015"/>
       <source>Script updates</source>
       <translation>Skriptu atjauninājumi
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12011"/>
+      <location filename="../mainwindow.cpp" line="12016"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
       <translation>Skriptu atjauninājumi tika atrasti skriptu krātuvē! Vai vēlaties tos atjaunināt?
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12026"/>
+      <location filename="../mainwindow.cpp" line="12031"/>
       <source>No script updates were found</source>
       <translation>Skriptu atjauninājumi netika atrasti
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12632"/>
+      <location filename="../mainwindow.cpp" line="12646"/>
       <source>Toggle note stickiness</source>
       <translation>Pārslēgt piezīmju lipīgumu
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12638"/>
+      <location filename="../mainwindow.cpp" line="12652"/>
       <source>Close other note tabs</source>
       <translation>Aizveriet citas piezīmju cilnes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10225"/>
-      <location filename="../mainwindow.cpp" line="10419"/>
+      <location filename="../mainwindow.cpp" line="10230"/>
+      <location filename="../mainwindow.cpp" line="10424"/>
       <source>Rename note</source>
       <translation>Pārdēvēt piezīmi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10227"/>
+      <location filename="../mainwindow.cpp" line="10232"/>
       <source>Allows you to rename the filename of the note</source>
       <translation>Ļauj pārdēvēt piezīmes faila nosaukumu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10241"/>
+      <location filename="../mainwindow.cpp" line="10246"/>
       <source>&amp;Move notes to…</source>
       <translation>&amp;Pārvietot piezīmes uz…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10242"/>
+      <location filename="../mainwindow.cpp" line="10247"/>
       <source>&amp;Copy notes to…</source>
       <translation>&amp;Kopēt piezīmes uz…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10285"/>
+      <location filename="../mainwindow.cpp" line="10290"/>
       <source>Move notes to subfolder…</source>
       <translation>Pārvietot piezīmes apakšmapē …</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10289"/>
+      <location filename="../mainwindow.cpp" line="10294"/>
       <source>Copy notes to subfolder…</source>
       <translation>Kopēt piezīmes apakšmapē…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10297"/>
+      <location filename="../mainwindow.cpp" line="10302"/>
       <source>&amp;Tag selected notes with…</source>
       <translation>&amp;Atzīmējiet atlasītās piezīmes ar…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10321"/>
+      <location filename="../mainwindow.cpp" line="10326"/>
       <source>&amp;Remove tag from selected notes…</source>
       <translation>&amp;Noņemt atzīmi no atlasītajām piezīmēm…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10419"/>
+      <location filename="../mainwindow.cpp" line="10424"/>
       <source>Name:</source>
       <translation>Vārds:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10431"/>
+      <location filename="../mainwindow.cpp" line="10436"/>
       <source>Note renaming not enabled!</source>
       <translation>Piezīme pārdēvēšana nav iespējots!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10651"/>
+      <location filename="../mainwindow.cpp" line="10656"/>
       <source>Rename subfolder</source>
       <translation>Pārdēvēt apakšmapi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11255"/>
+      <location filename="../mainwindow.cpp" line="11260"/>
       <source>Create new workspace</source>
       <translation>Izveidojiet jaunu darbvietu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11256"/>
-      <location filename="../mainwindow.cpp" line="11526"/>
+      <location filename="../mainwindow.cpp" line="11261"/>
+      <location filename="../mainwindow.cpp" line="11531"/>
       <source>Workspace name:</source>
       <translation>Darbvietas nosaukums:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11381"/>
+      <location filename="../mainwindow.cpp" line="11386"/>
       <source>full</source>
       <comment>full workspace</comment>
       <translation>pilns</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11388"/>
+      <location filename="../mainwindow.cpp" line="11393"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
       <translation>minimāls</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11485"/>
+      <location filename="../mainwindow.cpp" line="11490"/>
       <source>Remove the current workspace?</source>
       <translation>Vai noņemt pašreizējo darbvietu?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11525"/>
+      <location filename="../mainwindow.cpp" line="11530"/>
       <source>Rename workspace</source>
       <translation>Pārdēvēt darbvietu</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="11671"/>
+      <location filename="../mainwindow.cpp" line="11676"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation>
@@ -3361,42 +3361,42 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11943"/>
+      <location filename="../mainwindow.cpp" line="11948"/>
       <source>Disallow all note editing</source>
       <translation>Neatļaut visu piezīmju rediģēšanu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12159"/>
+      <location filename="../mainwindow.cpp" line="12164"/>
       <source>Select text files to import</source>
       <translation>Atlasiet importējamos teksta failus</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12189"/>
+      <location filename="../mainwindow.cpp" line="12194"/>
       <source>Importing: %1</source>
       <translation>Importēšana: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12254"/>
+      <location filename="../mainwindow.cpp" line="12259"/>
       <source>Note headline '%1' was copied to the clipboard</source>
       <translation>Piezīmes virsraksts '%1' tika kopēts starpliktuvē</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12339"/>
+      <location filename="../mainwindow.cpp" line="12353"/>
       <source>Leave full-screen mode</source>
       <translation>Atstājiet pilnekrāna režīmu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12519"/>
+      <location filename="../mainwindow.cpp" line="12533"/>
       <source>Custom editor width</source>
       <translation>Pielāgota redaktora platums</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12519"/>
+      <location filename="../mainwindow.cpp" line="12533"/>
       <source>Characters:</source>
       <translation>Rakstzīmes:</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8699"/>
+      <location filename="../mainwindow.cpp" line="8704"/>
       <source>%n notes selected</source>
       <translation>
         <numerusform>Atlasīta %n piezīme</numerusform>
@@ -3406,7 +3406,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2450"/>
-      <location filename="../mainwindow.cpp" line="11944"/>
+      <location filename="../mainwindow.cpp" line="11949"/>
       <source>Allow all note editing</source>
       <translation>Atļaut visu piezīmju rediģēšanu</translation>
     </message>
@@ -3416,12 +3416,12 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       <translation>&amp;Birka</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4905"/>
+      <location filename="../mainwindow.cpp" line="4910"/>
       <source>Remove tag from selected notes</source>
       <translation>Noņemt atzīmi no atlasītajām piezīmēm</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4906"/>
+      <location filename="../mainwindow.cpp" line="4911"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
         <numerusform>Vai noņemt atzīmi &lt;strong&gt;%1&lt;/strong&gt; no %n atlasītās piezīmes?</numerusform>
@@ -3430,7 +3430,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4966"/>
+      <location filename="../mainwindow.cpp" line="4971"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
         <numerusform>Atzīme &lt;strong&gt;%1&lt;/strong&gt; tika noņemta no %n piezīmes</numerusform>
@@ -3439,95 +3439,95 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5011"/>
+      <location filename="../mainwindow.cpp" line="5016"/>
       <source>Current notes folder: </source>
       <translation>Pašreizējo piezīmju mape:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5014"/>
+      <location filename="../mainwindow.cpp" line="5019"/>
       <source>Set the notes folder. Current notes folder: </source>
       <translation>Iestatiet piezīmju mapi. Pašreizējo piezīmju mape:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5216"/>
+      <location filename="../mainwindow.cpp" line="5221"/>
       <source>Print note</source>
       <translation>Izdrukājiet piezīmi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5291"/>
+      <location filename="../mainwindow.cpp" line="5296"/>
       <source>Letter</source>
       <translation>Vēstule</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5321"/>
+      <location filename="../mainwindow.cpp" line="5326"/>
       <source>Portrait</source>
       <translation>Portrets</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5321"/>
+      <location filename="../mainwindow.cpp" line="5326"/>
       <source>Landscape</source>
       <translation>Ainava</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5326"/>
+      <location filename="../mainwindow.cpp" line="5331"/>
       <source>Orientation</source>
       <translation>Orientācija</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5326"/>
+      <location filename="../mainwindow.cpp" line="5331"/>
       <source>Orientation:</source>
       <translation>Orientācija:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5349"/>
+      <location filename="../mainwindow.cpp" line="5354"/>
       <source>Export current note as PDF</source>
       <translation>Eksportēt pašreizējo piezīmi kā PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5456"/>
+      <location filename="../mainwindow.cpp" line="5461"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Jūs neesat atlasījis nevienu uzdevumu sarakstu. &lt;br/&gt; Lūdzu, pārbaudiet sava &lt;strong&gt; Todo &lt;/strong&gt; konfigurāciju iestatījumos!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6372"/>
+      <location filename="../mainwindow.cpp" line="6377"/>
       <source>Open QOwnNotes</source>
       <translation>Atveriet QOwnNotes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6035"/>
-      <location filename="../mainwindow.cpp" line="6422"/>
-      <location filename="../mainwindow.cpp" line="10221"/>
-      <location filename="../mainwindow.cpp" line="10649"/>
+      <location filename="../mainwindow.cpp" line="6040"/>
+      <location filename="../mainwindow.cpp" line="6427"/>
+      <location filename="../mainwindow.cpp" line="10226"/>
+      <location filename="../mainwindow.cpp" line="10654"/>
       <source>New note</source>
       <translation>Jauna piezīme</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6439"/>
+      <location filename="../mainwindow.cpp" line="6444"/>
       <source>Recent notes</source>
       <translation>Jaunākās piezīmes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6455"/>
+      <location filename="../mainwindow.cpp" line="6460"/>
       <source>Show todo lists</source>
       <translation>Rādīt uzdevumu sarakstu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6467"/>
+      <location filename="../mainwindow.cpp" line="6472"/>
       <source>Recent tasks</source>
       <translation>Nesenie uzdevumi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6488"/>
+      <location filename="../mainwindow.cpp" line="6493"/>
       <source>Quit</source>
       <translation>Aiziet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7943"/>
+      <location filename="../mainwindow.cpp" line="7948"/>
       <source>show notes from all note subfolders (%1)</source>
       <translation>rādīt piezīmes no visām piezīmju apakšmapes (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7966"/>
+      <location filename="../mainwindow.cpp" line="7971"/>
       <source>show notes in note root folder (%1)</source>
       <translation>rādīt piezīmes piezīmes saknes mapē (%1)</translation>
     </message>
@@ -3535,36 +3535,36 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="776"/>
       <location filename="../mainwindow.cpp" line="2095"/>
-      <location filename="../mainwindow.cpp" line="7978"/>
+      <location filename="../mainwindow.cpp" line="7983"/>
       <source>Note folder</source>
       <translation>Piezīmju mape</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9346"/>
-      <location filename="../mainwindow.cpp" line="9413"/>
+      <location filename="../mainwindow.cpp" line="9351"/>
+      <location filename="../mainwindow.cpp" line="9418"/>
       <source>Copy to note folder</source>
       <translation>Kopēt piezīmju mapē</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9346"/>
-      <location filename="../mainwindow.cpp" line="9414"/>
+      <location filename="../mainwindow.cpp" line="9351"/>
+      <location filename="../mainwindow.cpp" line="9419"/>
       <source>Move to note folder</source>
       <translation>Pārvietot uz piezīmju mapi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9347"/>
-      <location filename="../mainwindow.cpp" line="9415"/>
+      <location filename="../mainwindow.cpp" line="9352"/>
+      <location filename="../mainwindow.cpp" line="9420"/>
       <source>Copy to this subfolder</source>
       <translation>Kopēt šajā apakšmapē</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9348"/>
-      <location filename="../mainwindow.cpp" line="9416"/>
+      <location filename="../mainwindow.cpp" line="9353"/>
+      <location filename="../mainwindow.cpp" line="9421"/>
       <source>Move to this subfolder</source>
       <translation>Pārvietot uz šo apakšmapi</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9460"/>
+      <location filename="../mainwindow.cpp" line="9465"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Pārvietot %n atlasīto piezīmi uz piezīmes apakšmapi &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3573,13 +3573,13 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5117"/>
-      <location filename="../mainwindow.cpp" line="12173"/>
+      <location filename="../mainwindow.cpp" line="5122"/>
+      <location filename="../mainwindow.cpp" line="12178"/>
       <source>Cancel</source>
       <translation>Atcelt</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9544"/>
+      <location filename="../mainwindow.cpp" line="9549"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation>
         <numerusform>%n piezīme tika pārvietota uz piezīmju apakšmapi "%2"</numerusform>
@@ -3588,7 +3588,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9568"/>
+      <location filename="../mainwindow.cpp" line="9573"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Vai kopēt atlasīto piezīmi %n piezīmju apakšmapē &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3597,7 +3597,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9635"/>
+      <location filename="../mainwindow.cpp" line="9640"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation>
         <numerusform>%n piezīme tika nokopēta piezīmju apakšmapē “%2”</numerusform>
@@ -3606,57 +3606,57 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10343"/>
+      <location filename="../mainwindow.cpp" line="10348"/>
       <source>Open note in external editor</source>
       <translation>Atvērt piezīmi ārējā redaktorā</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10347"/>
+      <location filename="../mainwindow.cpp" line="10352"/>
       <source>Show note in file manager</source>
       <translation>Rādīt piezīmi failu pārvaldniekā</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10432"/>
+      <location filename="../mainwindow.cpp" line="10437"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
       <translation>Ja vēlaties pārdēvēt piezīmi, jums jāatspējo opcija, kas ļauj piezīmju faila nosaukumam atšķirties no virsraksta.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10650"/>
+      <location filename="../mainwindow.cpp" line="10655"/>
       <source>New subfolder</source>
       <translation>Jauna apakšmape</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10654"/>
+      <location filename="../mainwindow.cpp" line="10659"/>
       <source>Show folder in file manager</source>
       <translation>Rādīt mapi failu pārvaldniekā</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10699"/>
+      <location filename="../mainwindow.cpp" line="10704"/>
       <source>Create a new folder</source>
       <translation>Izveidojiet jaunu mapi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10700"/>
+      <location filename="../mainwindow.cpp" line="10705"/>
       <source>Folder name:</source>
       <translation>Mapes nosaukums:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7902"/>
+      <location filename="../mainwindow.cpp" line="7907"/>
       <source>show all untagged notes (%1)</source>
       <translation>rādīt visas neatzīmētās piezīmes (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7904"/>
+      <location filename="../mainwindow.cpp" line="7909"/>
       <source>Untagged notes</source>
       <translation>Nemarķētas piezīmes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9996"/>
+      <location filename="../mainwindow.cpp" line="10001"/>
       <source>Export current note as HTML file</source>
       <translation>Eksportēt pašreizējo piezīmi kā HTML failu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5300"/>
+      <location filename="../mainwindow.cpp" line="5305"/>
       <source>Page size</source>
       <translation>Lapas lielums</translation>
     </message>
@@ -3666,27 +3666,27 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       <translation>iziet no rīkjoslas</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5300"/>
+      <location filename="../mainwindow.cpp" line="5305"/>
       <source>Page size:</source>
       <translation>Lapas lielums:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5417"/>
+      <location filename="../mainwindow.cpp" line="5422"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation>QOwnNotes izsekos anonīmus lietošanas datus, kas palīdz izlemt, kuras QOwnNotes daļas uzlabot nākamo, kā arī atrast un novērst kļūdas. Iestatījumos varat to atspējot.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5421"/>
+      <location filename="../mainwindow.cpp" line="5426"/>
       <source>&amp;Ok</source>
       <translation>&amp;Labi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10231"/>
+      <location filename="../mainwindow.cpp" line="10236"/>
       <source>&amp;Remove notes</source>
       <translation>&amp;Noņemiet piezīmes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6577"/>
+      <location filename="../mainwindow.cpp" line="6582"/>
       <source>&amp;Link selected text</source>
       <translation>&amp;Saistīt atlasīto tekstu</translation>
     </message>
@@ -3696,28 +3696,28 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       <translation>Jūsu uzdevumi tiek ielādēti no servera</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2770"/>
+      <location filename="../mainwindow.cpp" line="2776"/>
       <source>Current note was modified externally</source>
       <translation>Pašreizējā piezīme tika modificēta ārēji</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2853"/>
-      <location filename="../mainwindow.cpp" line="5973"/>
+      <location filename="../mainwindow.cpp" line="2859"/>
+      <location filename="../mainwindow.cpp" line="5978"/>
       <source>Stored current note to disk</source>
       <translation>Saglabātā pašreizējā piezīme diskā</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2871"/>
+      <location filename="../mainwindow.cpp" line="2877"/>
       <source>Note was modified externally: %1</source>
       <translation>Piezīme tika modificēta ārēji: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2894"/>
+      <location filename="../mainwindow.cpp" line="2899"/>
       <source>Notes directory was modified externally</source>
       <translation>Piezīmju katalogs tika modificēts ārēji</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2955"/>
+      <location filename="../mainwindow.cpp" line="2960"/>
       <source>Stored %n note(s) to disk</source>
       <translation>
         <numerusform>Saglabāta %n piezīme diskā</numerusform>
@@ -3726,58 +3726,58 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7869"/>
+      <location filename="../mainwindow.cpp" line="7874"/>
       <source>show all notes (%1)</source>
       <translation>rādīt visas piezīmes (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7872"/>
-      <location filename="../mainwindow.cpp" line="7946"/>
+      <location filename="../mainwindow.cpp" line="7877"/>
+      <location filename="../mainwindow.cpp" line="7951"/>
       <source>All notes</source>
       <translation>Visas piezīmes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8949"/>
+      <location filename="../mainwindow.cpp" line="8954"/>
       <source>&amp;Add tag</source>
       <translation>&amp;Pievienojiet tagu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8997"/>
+      <location filename="../mainwindow.cpp" line="9002"/>
       <source>Tag could not be created!</source>
       <translation>Tagu nevarēja izveidot!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9176"/>
+      <location filename="../mainwindow.cpp" line="9181"/>
       <source>Move to this tag</source>
       <translation>Pārvietot uz šo tagu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9211"/>
+      <location filename="../mainwindow.cpp" line="9216"/>
       <source>Tag this</source>
       <translation>Atzīmēt šo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9236"/>
+      <location filename="../mainwindow.cpp" line="9241"/>
       <source>Cannot move tag '%1' to this tag</source>
       <translation>Tagu '%1' nevar pārvietot uz šo tagu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9285"/>
+      <location filename="../mainwindow.cpp" line="9290"/>
       <source>Moved tag '%1' to new tag</source>
       <translation>Tags '%1' tika pārvietots uz jauno tagu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8199"/>
+      <location filename="../mainwindow.cpp" line="8204"/>
       <source>show all notes tagged with '%1' (%2)</source>
       <translation>parādīt visas piezīmes, kas marķētas ar '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8960"/>
+      <location filename="../mainwindow.cpp" line="8965"/>
       <source>&amp;Remove tags</source>
       <translation>&amp;Noņemt tagus</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5455"/>
+      <location filename="../mainwindow.cpp" line="5460"/>
       <source>No selected todo lists!</source>
       <translation>Nav atlasīts uzdevumu saraksts!</translation>
     </message>
@@ -3898,43 +3898,43 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       <translation>Rīkjoslu nevarēja ielādēt bez nosaukuma</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2797"/>
+      <location filename="../mainwindow.cpp" line="2803"/>
       <source>Overwriting external changes of: %1</source>
       <translation>Ārējo izmaiņu pārrakstīšana: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2818"/>
+      <location filename="../mainwindow.cpp" line="2824"/>
       <source>Loading external changes from: %1</source>
       <translation>Notiek ārējo izmaiņu ielāde no: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2854"/>
-      <location filename="../mainwindow.cpp" line="5974"/>
+      <location filename="../mainwindow.cpp" line="2860"/>
+      <location filename="../mainwindow.cpp" line="5979"/>
       <source>Current note could not be stored to disk</source>
       <translation>Pašreizējo piezīmi nevarēja saglabāt diskā</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3034"/>
+      <location filename="../mainwindow.cpp" line="3039"/>
       <source>Read-only</source>
       <translation>Tikai lasīt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3036"/>
+      <location filename="../mainwindow.cpp" line="3041"/>
       <source>Note editing is disabled, click to enable</source>
       <translation>Piezīmju rediģēšana ir atspējota, noklikšķiniet, lai iespējotu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3053"/>
+      <location filename="../mainwindow.cpp" line="3058"/>
       <source>Line numbers</source>
       <translation>Rindu numuri</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3063"/>
+      <location filename="../mainwindow.cpp" line="3068"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
       <translation>Noklikšķiniet šeit, lai redzētu, kas ir mainījies, un lai varētu atjaunināt uz jaunāko versiju</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3433"/>
+      <location filename="../mainwindow.cpp" line="3438"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation>
         <numerusform>Turpiniet automātisku &lt;strong&gt;%n&lt;/strong&gt; pretrunīgas datu bāzes kopijas dzēšanu, kas var bloķēt jūsu ownCloud sinhronizācijas procesu?</numerusform>
@@ -3943,7 +3943,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4889"/>
+      <location filename="../mainwindow.cpp" line="4894"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation>
         <numerusform>%n piezīme tika atzīmēta ar "%2"</numerusform>
@@ -3952,7 +3952,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5672"/>
+      <location filename="../mainwindow.cpp" line="5677"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Atrasts &lt;strong&gt;%n&lt;/strong&gt; notikums&lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3961,67 +3961,67 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6035"/>
+      <location filename="../mainwindow.cpp" line="6040"/>
       <source>Note headline</source>
       <translation>Piezīme virsraksts</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6583"/>
+      <location filename="../mainwindow.cpp" line="6588"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
       <translation>Bloka &amp;citāts izvēlēto tekstu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7593"/>
+      <location filename="../mainwindow.cpp" line="7598"/>
       <source>Downloading images finished</source>
       <translation>Attēlu lejupielāde ir pabeigta</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7743"/>
+      <location filename="../mainwindow.cpp" line="7748"/>
       <source>Increased font size to %1 pt</source>
       <translation>Palielināts fonta lielums līdz %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7760"/>
+      <location filename="../mainwindow.cpp" line="7765"/>
       <source>Decreased font size to %1 pt</source>
       <translation>Samazināts fonta lielums līdz %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5421"/>
-      <location filename="../mainwindow.cpp" line="5436"/>
-      <location filename="../mainwindow.cpp" line="5459"/>
-      <location filename="../mainwindow.cpp" line="10435"/>
+      <location filename="../mainwindow.cpp" line="5426"/>
+      <location filename="../mainwindow.cpp" line="5441"/>
+      <location filename="../mainwindow.cpp" line="5464"/>
+      <location filename="../mainwindow.cpp" line="10440"/>
       <source>Open &amp;settings</source>
       <translation>Atveriet &amp;iestatījumus</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1671"/>
-      <location filename="../mainwindow.cpp" line="12325"/>
+      <location filename="../mainwindow.cpp" line="12330"/>
       <source>leave</source>
       <translation>aizbraukt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7010"/>
+      <location filename="../mainwindow.cpp" line="7015"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation>Lūdzu, ievadiet savu &lt;strong&gt; paroli &lt;/strong&gt;, lai šifrētu piezīmi. &lt;br/&gt; Ņemiet vērā, ka jums ir &lt;strong&gt; jāatceras &lt;/strong&gt; sava parole, lai lasītu piezīmes saturu &lt;br/&gt; un ka jūs varat &lt;strong&gt; tikai &lt;/strong&gt; to izdarīt &lt;strong&gt; pakalpojumā QOwnNotes &lt;/strong&gt;!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7066"/>
+      <location filename="../mainwindow.cpp" line="7071"/>
       <source>Decrypt note and store it as plain text</source>
       <translation>Atšifrējiet piezīmi un saglabājiet to kā vienkāršu tekstu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7071"/>
+      <location filename="../mainwindow.cpp" line="7076"/>
       <source>&amp;Decrypt</source>
       <translation>&amp;Atšifrēt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7096"/>
+      <location filename="../mainwindow.cpp" line="7101"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation>&lt;br/&gt;Jūs varēsit rediģēt šifrēto piezīmi.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7165"/>
+      <location filename="../mainwindow.cpp" line="7170"/>
       <source>Export current note as Markdown file</source>
       <translation>Eksportēt pašreizējo piezīmi kā Markdown failu</translation>
     </message>
@@ -4261,103 +4261,103 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
   <context>
     <name>OwnCloudService</name>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="245"/>
+      <location filename="../services/owncloudservice.cpp" line="247"/>
       <source>Username / password error</source>
       <translation>Lietotājvārda / paroles kļūda</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="246"/>
+      <location filename="../services/owncloudservice.cpp" line="248"/>
       <source>Your calendar username or password is incorrect!</source>
       <translation>Jūsu kalendāra lietotājvārds vai parole nav pareiza!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="580"/>
+      <location filename="../services/owncloudservice.cpp" line="582"/>
       <source>API app version too low</source>
       <translation>API lietotnes versija ir pārāk zema</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="581"/>
+      <location filename="../services/owncloudservice.cpp" line="583"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
       <translation>Lūdzu, apsveriet iespēju atjaunināt QOwnNotesAPI lietotni uz jūsu servera, jūsu lietotnes versija %1 ir pārāk zema un var radīt problēmas ar QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1128"/>
+      <location filename="../services/owncloudservice.cpp" line="1175"/>
       <source>ownCloud server connection error</source>
       <translation>ownCloud servera savienojuma kļūda</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1133"/>
+      <location filename="../services/owncloudservice.cpp" line="1180"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
       <translation>ownCloud servera kļūda: &lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; Lūdzu, pārbaudiet ownCloud konfigurāciju.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1153"/>
+      <location filename="../services/owncloudservice.cpp" line="1200"/>
       <source>You need to setup your ownCloud server!</source>
       <translation>Jums jāiestata savu ownCloud serveri!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1165"/>
+      <location filename="../services/owncloudservice.cpp" line="1212"/>
       <source>Open &amp;settings</source>
       <translation>Atveriet &amp;iestatījumus</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1165"/>
+      <location filename="../services/owncloudservice.cpp" line="1212"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Atcelt</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1224"/>
+      <location filename="../services/owncloudservice.cpp" line="1271"/>
       <source>Done with loading note versions</source>
       <translation>Vairs neveicat piezīmju versiju ielādi</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1269"/>
+      <location filename="../services/owncloudservice.cpp" line="1316"/>
       <source>No versions found</source>
       <translation>Netika atrasta neviena versija</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1270"/>
+      <location filename="../services/owncloudservice.cpp" line="1317"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
       <translation>Šai piezīmei nav versiju, vai arī piezīme netika atrasta serverī.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1290"/>
+      <location filename="../services/owncloudservice.cpp" line="1337"/>
       <source>Done with loading trashed notes</source>
       <translation>Neveiciet piezemēto piezīmju ielādi</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1335"/>
+      <location filename="../services/owncloudservice.cpp" line="1382"/>
       <source>No trashed notes</source>
       <translation>Nav dzēstie piezīmes</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1336"/>
+      <location filename="../services/owncloudservice.cpp" line="1383"/>
       <source>No trashed notes were found on the server.</source>
       <translation>Nav dzēstie piezīmes netika atrasts uz servera.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1358"/>
-      <location filename="../services/owncloudservice.cpp" line="1385"/>
+      <location filename="../services/owncloudservice.cpp" line="1405"/>
+      <location filename="../services/owncloudservice.cpp" line="1432"/>
       <source>Error while loading todo lists!</source>
       <translation>Error while loading todo lists!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1359"/>
+      <location filename="../services/owncloudservice.cpp" line="1406"/>
       <source>Your CalDAV server didn't reply anything!</source>
       <translation>Jūsu CalDAV serveris neatbildēja neko!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1386"/>
+      <location filename="../services/owncloudservice.cpp" line="1433"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>Kļūdas ziņojums no jūsu CalDAV servera: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="2063"/>
+      <location filename="../services/owncloudservice.cpp" line="2110"/>
       <source>No bookmarks</source>
       <translation>Nav grāmatzīmju</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="2064"/>
+      <location filename="../services/owncloudservice.cpp" line="2111"/>
       <source>No bookmarks were found on the server.</source>
       <translation>Neviena grāmatzīme serverī netika atrasta.</translation>
     </message>
@@ -4423,12 +4423,12 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       <translation>Nevarēja nolasīt attēla failu: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="3116"/>
+      <location filename="../entities/note.cpp" line="3129"/>
       <source>Note file path changed</source>
       <translation>Piezīmes faila ceļš ir mainīts</translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="3117"/>
+      <location filename="../entities/note.cpp" line="3130"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation>
         <numerusform>Tika konstatētas piezīmju ceļa izmaiņas. Vai vēlaties aizstāt visus &lt;strong&gt;%1&lt;/strong&gt; saišu gadījumus ar &lt;strong&gt;%2&lt;/strong&gt; un saites ar faila nosaukumu &lt;strong&gt;%3&lt;/strong&gt; ar &lt;strong&gt;%4&lt;/strong&gt; &gt; vai &lt;strong&gt;%n&lt;/strong&gt; piezīmju failā?</numerusform>
@@ -4437,7 +4437,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="3658"/>
+      <location filename="../entities/note.cpp" line="3671"/>
       <source>…and %n more note(s)</source>
       <translation>
         <numerusform>… Un vēl %n piezīme</numerusform>
@@ -8090,29 +8090,59 @@ To nevar atsaukt!</translation>
       <translation>Atrodiet piezīmes vārdu</translation>
     </message>
     <message>
-      <location filename="../dialogs/trashdialog.cpp" line="30"/>
+      <location filename="../dialogs/trashdialog.cpp" line="31"/>
       <source>&amp;Restore selected note on server</source>
       <translation>&amp;Atjaunojiet atlasīto piezīmi serverī</translation>
     </message>
     <message>
-      <location filename="../dialogs/trashdialog.cpp" line="32"/>
+      <location filename="../dialogs/trashdialog.cpp" line="33"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
       <translation>&lt;h3&gt; Lēnāks, bet ar piezīmju versijām &lt;/h3&gt; &lt;p&gt; Piezīme tiks atjaunota jūsu pašuCloud serverī ar visām versijām. &lt;/p&gt; &lt;p&gt; Jums būs jāgaida, līdz sinhronizācija sinhronizēs to ar QOwnNotes. &lt;/p&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/trashdialog.cpp" line="44"/>
+      <location filename="../dialogs/trashdialog.cpp" line="45"/>
       <source>&amp;Download selected note</source>
       <translation>&amp;Lejupielādējiet atlasīto piezīmi</translation>
     </message>
     <message>
-      <location filename="../dialogs/trashdialog.cpp" line="46"/>
+      <location filename="../dialogs/trashdialog.cpp" line="47"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
       <translation>&lt;h3&gt; Ātrāk, bet bez versijām &lt;/h3&gt; &lt;p&gt; Piezīme tiks izveidota ar tekstu no priekšskatījuma. &lt;/p&gt; &lt;p&gt; Piezīmju versijas jūsu pašuCloud serverī netiks atjaunotas, un piezīme paliks. miskastē. &lt;/p&gt; &lt;p&gt; Piezīmi un tās versijas vienmēr varat atjaunot vēlāk. &lt;/p&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/trashdialog.cpp" line="58"/>
+      <location filename="../dialogs/trashdialog.cpp" line="59"/>
+      <source>&amp;Delete</source>
+      <translation type="unfinished">&amp;Delete</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/trashdialog.cpp" line="60"/>
+      <source>Delete selected note on server</source>
+      <translation type="unfinished">Delete selected note on server</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/trashdialog.cpp" line="68"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Atcelt</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/trashdialog.cpp" line="190"/>
+      <source>Delete note on server</source>
+      <translation type="unfinished">Delete note on server</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/trashdialog.cpp" line="191"/>
+      <source>Delete selected trashed note on server?</source>
+      <translation type="unfinished">Delete selected trashed note on server?</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/trashdialog.cpp" line="213"/>
+      <source>Error while deleting note</source>
+      <translation type="unfinished">Error while deleting note</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/trashdialog.cpp" line="214"/>
+      <source>Deleting trashed note failed with status code: %1</source>
+      <translation type="unfinished">Deleting trashed note failed with status code: %1</translation>
     </message>
   </context>
   <context>

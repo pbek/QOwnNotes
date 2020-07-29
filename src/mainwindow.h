@@ -756,6 +756,8 @@ private:
     QList<QHotkey *> _globalShortcuts;
     int _lastNoteId = 0;
     bool _scriptUpdateFound = false;
+    bool _isMaximizedBeforeFullScreen = false;
+    bool _isMinimizedBeforeFullScreen = false;
 
     void createSystemTrayIcon();
 

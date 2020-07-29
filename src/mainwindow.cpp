@@ -2733,6 +2733,12 @@ void MainWindow::notesWereModified(const QString &str) {
         return;
     }
 
+    // if we should ignore all changes return here
+    if (QSettings().value(QStringLiteral("ignoreAllExternalNoteFolderChanges"))
+        .toBool()) {
+        return;
+    }
+
     qDebug() << "notesWereModified: " << str;
 
     QFileInfo fi(str);
@@ -2884,8 +2890,7 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
     }
 
     // if we should ignore all changes return here
-    QSettings settings;
-    if (settings.value(QStringLiteral("ignoreAllExternalNoteFolderChanges"))
+    if (QSettings().value(QStringLiteral("ignoreAllExternalNoteFolderChanges"))
             .toBool()) {
         return;
     }
@@ -12328,11 +12333,20 @@ void MainWindow::on_actionToggle_fullscreen_triggered() {
     if (isFullScreen()) {
         showNormal();
 
+        // we need a showNormal() first to exist full-screen mode
+        if (_isMaximizedBeforeFullScreen) {
+            showMaximized();
+        } else if (_isMinimizedBeforeFullScreen) {
+            showMinimized();
+        }
+
         statusBar()->removeWidget(_leaveFullScreenModeButton);
         disconnect(_leaveFullScreenModeButton, Q_NULLPTR, Q_NULLPTR, Q_NULLPTR);
         delete _leaveFullScreenModeButton;
         _leaveFullScreenModeButton = nullptr;
     } else {
+        _isMaximizedBeforeFullScreen = isMaximized();
+        _isMinimizedBeforeFullScreen = isMinimized();
         showFullScreen();
 
         _leaveFullScreenModeButton->setFlat(true);

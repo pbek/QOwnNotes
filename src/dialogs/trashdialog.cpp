@@ -1,5 +1,6 @@
 #include "trashdialog.h"
 
+#include <services/owncloudservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
 
@@ -53,6 +54,15 @@ TrashDialog::TrashDialog(const QJSValue &notes, MainWindow *mainWindow,
     button->setIcon(QIcon::fromTheme(
         QStringLiteral("edit-download"),
         QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
+    ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
+
+    button = new QPushButton(tr("&Delete"));
+    button->setToolTip(tr("Delete selected note on server"));
+    button->setProperty("ActionRole", DeleteOnServer);
+    button->setDefault(false);
+    button->setIcon(QIcon::fromTheme(
+        QStringLiteral("edit-delete"),
+        QIcon(":/icons/breeze-qownnotes/16x16/edit-delete.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Cancel"));
@@ -173,6 +183,43 @@ void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
 
                 mainWindow->restoreTrashedNoteOnServer(fileName, timestamp);
                 break;
+            }
+
+            case DeleteOnServer: {
+                if (Utils::Gui::question(
+                        this, tr("Delete note on server"),
+                        tr("Delete selected trashed note on server?"),
+                        "trashdialog-delete",
+                        QMessageBox::Yes | QMessageBox::No,
+                        QMessageBox::No) == QMessageBox::No) {
+                    return;
+                }
+
+                const int timestamp = this->timestampList->value(
+                    ui->trashListWidget->currentRow());
+                auto currentItem = ui->trashListWidget->currentItem();
+                OwnCloudService *ownCloud = OwnCloudService::instance();
+                ui->trashListWidget->setDisabled(true);
+                ui->buttonBox->setDisabled(true);
+
+                // delete trashed note on server
+                const int statusCode = ownCloud->deleteTrashedNoteOnServer(
+                    fileName, timestamp);
+
+                if (statusCode >= 200 && statusCode < 300) {
+                    delete currentItem;
+                } else {
+                    Utils::Gui::warning(
+                        this, tr("Error while deleting note"),
+                        tr("Deleting trashed note failed with status code: %1").arg(
+                            QString::number(statusCode)),
+                        "trashdialog-delete-failed");
+                }
+
+                ui->trashListWidget->setDisabled(false);
+                ui->buttonBox->setDisabled(false);
+
+                return;
             }
 
             default:

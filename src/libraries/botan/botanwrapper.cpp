@@ -215,10 +215,9 @@ void BotanWrapper::setPassword(const QString &Password) {
 
 void BotanWrapper::setSalt(const QString &Salt) {
     QByteArray cBytes = Salt.toLatin1();
+    const int cBytesSize = cBytes.size();
+
     for (int i = 0; i < mSalt.size(); i++) {
-        mSalt[i] = cBytes[i];
+        mSalt[i] = i < cBytesSize ? cBytes[i] : '\0';
     }
 }
-
-
-

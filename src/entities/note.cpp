@@ -2634,21 +2634,34 @@ qint64 Note::qint64Hash(const QString &str) {
  * Encrypts the note text with the note's crypto key
  */
 QString Note::encryptNoteText() {
+    if (_noteText.isEmpty()) {
+        return _noteText;
+    }
+
     // split the text into a string list
     QStringList noteTextLines = getNoteTextLines();
+    const int noteTextLinesCount = noteTextLines.count();
 
     // keep the first two lines unencrypted
-    _noteText = noteTextLines.at(0) + QStringLiteral("\n") +
-                noteTextLines.at(1) + QStringLiteral("\n\n") +
+    _noteText = noteTextLines.at(0) + QStringLiteral("\n");
+
+    if (noteTextLinesCount > 1) {
+        _noteText += noteTextLines.at(1) + QStringLiteral("\n");
+    }
+
+    _noteText += QStringLiteral("\n") +
                 QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
                 QStringLiteral("\n");
 
     // remove the first two lines for encryption
     noteTextLines.removeFirst();
-    noteTextLines.removeFirst();
+
+    if (noteTextLinesCount > 1) {
+        noteTextLines.removeFirst();
+    }
 
     // remove the 3rd line too if it is empty
-    if (noteTextLines.at(0).isEmpty()) {
+    if (noteTextLinesCount > 2 && noteTextLines.at(0).isEmpty()) {
         noteTextLines.removeFirst();
     }
 

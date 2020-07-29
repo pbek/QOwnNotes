@@ -144,6 +144,8 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
     //    sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
     sharePath = QStringLiteral("/ocs/v2.php/apps/files_sharing/api/v1/shares");
     bookmarkPath = QStringLiteral("/apps/bookmarks/public/rest/v2/bookmark");
+    trashDeletePath = QStringLiteral("/remote.php/dav/trashbin/") % userName %
+                      QStringLiteral("/trash");
 
     int calendarBackend =
         settings
@@ -994,6 +996,51 @@ void OwnCloudService::restoreTrashedNoteOnServer(const QString &fileName,
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
+}
+
+/**
+ * @brief Deletes a trashed note on the server and returns the status code
+ */
+int OwnCloudService::deleteTrashedNoteOnServer(const QString &fileName,
+                                                 int timestamp) {
+    auto *manager = new QNetworkAccessManager();
+    QEventLoop loop;
+    QTimer timer;
+    timer.setSingleShot(true);
+    QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply *)), &loop,
+                     SLOT(quit()));
+
+    // 10 sec timeout for the request
+    timer.start(10000);
+
+    QUrl url(serverUrl % trashDeletePath % QStringLiteral("/") %
+             QUrl::toPercentEncoding(fileName) % QStringLiteral(".d") %
+             QString::number(timestamp));
+
+    qDebug() << __func__ << " - 'url': " << url;
+
+    QNetworkRequest networkRequest = QNetworkRequest(url);
+    addAuthHeader(&networkRequest);
+
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+
+    int statusCode = -1;
+    QNetworkReply *reply = manager->deleteResource(networkRequest);
+    ignoreSslErrorsIfAllowed(reply);
+    loop.exec();
+
+    // if we didn't get a timeout let us return the content
+    if (timer.isActive()) {
+        statusCode =
+            reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    }
+
+    reply->deleteLater();
+    delete (manager);
+
+    return statusCode;
 }
 
 /**
