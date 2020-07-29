@@ -48,6 +48,7 @@ class ScriptingService : public QObject {
     bool handleNoteNameHookExists() const;
     bool methodExists(const QString &methodName) const;
     static bool validateScript(const Script &script, QString &errorMessage);
+    Q_INVOKABLE QString cacheFolder(const QString &subFolder = QString()) const;
     Q_INVOKABLE bool startDetachedProcess(const QString &executablePath,
                                           const QStringList &parameters,
                                           const QString &callbackIdentifier = QString(),

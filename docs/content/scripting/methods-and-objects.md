@@ -1132,6 +1132,24 @@ Keep in mind that settings actually can be empty, you have to take care
 about that yourself. `defaultValue` is only used if the setting doesn't
 exist at all.
 
+Creating a cache folder for your script
+------------------------------------------------
+
+You can cache files at the default cache location of your system.
+!!! example
+    ```js
+    import QtQml 2.0
+    import QOwnNotesTypes 1.0
+
+    Script {
+        property string workdir;
+
+        function init() {
+            workDir = script.cacheFolder("my-script-folder");
+        }
+    }
+    ```
+
 Reading the path to the directory of your script
 ------------------------------------------------
 

@@ -20,6 +20,7 @@
 #include <QQmlEngine>
 #include <QRegularExpression>
 #include <QSettings>
+#include <QStandardPaths>
 #include <QStringBuilder>
 #include <QTimer>
 #include <QVariant>
@@ -2218,4 +2219,20 @@ void ScriptingService::onScriptThreadDone(ScriptThread *thread) {
                 Q_ARG(QVariant, QVariant::fromValue(threadList)));
         }
     }
+}
+
+/**
+ * Returns the default cache folder of QON
+ * @param {QString} subFolder the subfolder to create and use
+ */
+QString ScriptingService::cacheFolder(const QString &subFolder) const {
+    QString cacheFolder = QStandardPaths::writableLocation(QStandardPaths::CacheLocation);
+    if(!subFolder.isEmpty()){
+        cacheFolder = QDir::toNativeSeparators(cacheFolder + QString("/") + subFolder);
+    }
+    QDir dir = QDir(cacheFolder);
+    if(!dir.exists()) {
+        dir.mkpath(dir.path());
+    }
+    return dir.path();
 }
