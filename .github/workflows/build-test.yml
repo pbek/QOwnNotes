@@ -43,9 +43,6 @@ jobs:
           # win64_mingw73 not found
           - os: windows-latest
             qt-version: '5.15.0'
-          # Download error: decompression get wrong: no output data.
-          - os: windows-latest
-            qt-version: '5.7'
     steps:
     - uses: actions/checkout@v2
       with:
@@ -69,8 +66,9 @@ jobs:
         version: ${{ matrix.qt-version }}
         arch: win32_mingw53
         # try mirror
-        mirror: 'http://mirrors.ocf.berkeley.edu/qt/'
+#        mirror: 'http://mirrors.ocf.berkeley.edu/qt/'
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
+        py7zrversion: '==0.9.0b3'
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version != '5.7' )
       name: Install Qt on Windows
       uses: jurplel/install-qt-action@v2
