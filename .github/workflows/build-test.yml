@@ -68,7 +68,7 @@ jobs:
         # try mirror
 #        mirror: 'http://mirrors.ocf.berkeley.edu/qt/'
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
-        aqtversion: '==0.9.3'
+        aqtversion: '==0.9.4'
         py7zrversion: '==0.9.0'
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version != '5.7' )
       name: Install Qt on Windows
