@@ -2223,14 +2223,14 @@ void ScriptingService::onScriptThreadDone(ScriptThread *thread) {
 
 /**
  * Returns the default cache folder of QON
- * @param {QString} subFolder the subfolder to create and use
+ * @param {QString} subDir the subfolder to create and use
  */
-QString ScriptingService::cacheFolder(const QString &subFolder) const {
-    QString cacheFolder = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QString("/scripts/");
-    if(!subFolder.isEmpty()){
-        cacheFolder = QDir::toNativeSeparators(cacheFolder  + subFolder);
+QString ScriptingService::cacheDir(const QString &subDir) const {
+    QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QString("/scripts/");
+    if(!subDir.isEmpty()){
+        cacheDir = QDir::toNativeSeparators(cacheDir  + subDir);
     }
-    QDir dir = QDir(cacheFolder);
+    QDir dir = QDir(cacheDir);
     if(!dir.exists()) {
         dir.mkpath(dir.path());
     }
@@ -2238,18 +2238,20 @@ QString ScriptingService::cacheFolder(const QString &subFolder) const {
 }
 
 /**
- * Clears the provided cache folder
- * @param {QString} subFolder the subfolder to clear or nothing for the entire script cache folder
+ * Clears the provided cache directory
+ * @param {QString} subDir the subfolder to clear or nothing for the entire script cache folder
  * @return {bool} true on success
  */
-bool ScriptingService::clearCacheFolder(const QString &subFolder) const {
-    QString cacheFolder = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QString("/scripts/");
-    if(!subFolder.isEmpty()){
-        cacheFolder = QDir::toNativeSeparators(cacheFolder + subFolder);
+bool ScriptingService::clearCacheDir(const QString &subDir) const {
+    QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QString("/scripts/");
+    if(!subDir.isEmpty()){
+        cacheDir = QDir::toNativeSeparators(cacheDir + subDir);
     }
-    QDir dir = QDir(cacheFolder);
-    if(!dir.exists()) {
-        return dir.rmdir(cacheFolder);
+    QDir dir = QDir(cacheDir);
+    bool result = false;
+    if(dir.exists()) {
+        result = dir.removeRecursively();
+        dir.mkpath(dir.path()); // recreate the folder
     }
-    return false;
+    return result;
 }
