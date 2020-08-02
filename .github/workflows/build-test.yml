@@ -43,6 +43,9 @@ jobs:
           # win64_mingw73 not found
           - os: windows-latest
             qt-version: '5.15.0'
+          # botan 32bt error
+          - os: windows-latest
+            qt-version: '5.7'
     steps:
     - uses: actions/checkout@v2
       with:
@@ -69,7 +72,7 @@ jobs:
 #        mirror: 'http://mirrors.ocf.berkeley.edu/qt/'
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
         aqtversion: '==0.9.4'
-        py7zrversion: '==0.9.0'
+#        py7zrversion: '==0.9.0'
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version != '5.7' )
       name: Install Qt on Windows
       uses: jurplel/install-qt-action@v2
