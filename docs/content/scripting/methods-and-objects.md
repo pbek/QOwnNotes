@@ -1132,6 +1132,62 @@ Keep in mind that settings actually can be empty, you have to take care
 about that yourself. `defaultValue` is only used if the setting doesn't
 exist at all.
 
+Creating a cache folder for your script
+------------------------------------------------
+
+You can cache files at the default cache location of your system.
+
+!!! help "Method call and parameters"
+    ```cpp
+    /**
+     * Returns the default cache folder of QON
+     * @param {QString} subDir the subfolder to create and use or nothing for the cache root dir
+     * @return {QString} the cache dir path
+     */
+    QString ScriptingService::cacheDir(const QString &subDir) const;
+    ```
+
+!!! example
+    ```js
+    import QtQml 2.0
+    import QOwnNotesTypes 1.0
+
+    Script {
+        function init() {
+            var myDir = script.cacheDir("my-script-directory");
+            var scriptsDir = script.cacheDir(); // cache root dir
+        }
+    }
+    ```
+
+Clear the cache folder
+------------------------------------------------
+
+You can clear the cache files of your script by passing its name to clearCacheDir() or clear the entire script cache folder by passing nothing.
+
+!!! help "Method call and parameters"
+    ```cpp
+    /**
+     * Clears the provided cache directory
+     * @param {QString} subDir the subfolder to clear or nothing for the entire script cache folder
+     * @return {bool} true on success
+     */
+    bool ScriptingService::clearCacheDir(const QString &subDir) const;
+    ```
+
+!!! example
+    ```js
+    import QtQml 2.0
+    import QOwnNotesTypes 1.0
+
+    Script {
+        function init() {
+            script.clearCacheDir("my-script-directory");
+            script.clearCacheDir(); // clear all script caches
+        }
+    }
+    ```
+
 Reading the path to the directory of your script
 ------------------------------------------------
 
