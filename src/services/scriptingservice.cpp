@@ -2197,6 +2197,7 @@ void ScriptingService::triggerMenuAction(const QString &objectName,
 
 /**
  * Called after a script thread is done
+ *
  * @brief ScriptingService::onScriptThreadDone
  * @param thread
  */
@@ -2222,37 +2223,48 @@ void ScriptingService::onScriptThreadDone(ScriptThread *thread) {
 }
 
 /**
- * Returns the default cache folder of QON
+ * Returns a cache directory for a script
+ *
  * @param {QString} subDir the subfolder to create and use
  * @return {QString} the cache dir path
  */
 QString ScriptingService::cacheDir(const QString &subDir) const {
-    QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QString("/scripts/");
+    QString cacheDir = QStandardPaths::writableLocation(
+                           QStandardPaths::CacheLocation) + QString("/scripts/");
+
     if (!subDir.isEmpty()) {
         cacheDir = QDir::toNativeSeparators(cacheDir  + subDir);
     }
+
     QDir dir = QDir(cacheDir);
     if (!dir.exists()) {
         dir.mkpath(dir.path());
     }
+
     return dir.path();
 }
 
 /**
- * Clears the provided cache directory
+ * Clears the cache directory for a script
+ *
  * @param {QString} subDir the subfolder to clear or nothing for the entire script cache folder
  * @return {bool} true on success
  */
 bool ScriptingService::clearCacheDir(const QString &subDir) const {
-    QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QString("/scripts/");
+    QString cacheDir = QStandardPaths::writableLocation(
+                           QStandardPaths::CacheLocation) + QString("/scripts/");
+
     if (!subDir.isEmpty()) {
         cacheDir = QDir::toNativeSeparators(cacheDir + subDir);
     }
+
     QDir dir = QDir(cacheDir);
     bool result = false;
+
     if (dir.exists()) {
         result = dir.removeRecursively();
         dir.mkpath(dir.path()); // recreate the folder
     }
+
     return result;
 }

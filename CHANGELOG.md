@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 20.8.0
+- added new scripting methods `cacheDir` and `clearCacheDir`
+  (for [#1838](https://github.com/pbek/QOwnNotes/pull/1838), thank you @r00tr4v3n)
+    - please take a look at the documentation for
+      [cacheDir](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#creating-a-cache-directory)
+      and [clearCacheDir](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#clearing-a-cache-directory)
+      for more information
+
 ## 20.7.9
 - if you minimized or maximized the application window before entering full-screen mode that state will now
   be restored after exiting full-screen mode (for [#1835](https://github.com/pbek/QOwnNotes/issues/1835))

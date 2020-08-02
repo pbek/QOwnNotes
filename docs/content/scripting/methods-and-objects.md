@@ -1132,16 +1132,17 @@ Keep in mind that settings actually can be empty, you have to take care
 about that yourself. `defaultValue` is only used if the setting doesn't
 exist at all.
 
-Creating a cache folder for your script
-------------------------------------------------
+Creating a cache directory
+--------------------------
 
 You can cache files at the default cache location of your system.
 
 !!! help "Method call and parameters"
     ```cpp
     /**
-     * Returns the default cache folder of QON
-     * @param {QString} subDir the subfolder to create and use or nothing for the cache root dir
+     * Returns a cache directory for a script
+     *
+     * @param {QString} subDir the subfolder to create and use
      * @return {QString} the cache dir path
      */
     QString ScriptingService::cacheDir(const QString &subDir) const;
@@ -1149,27 +1150,21 @@ You can cache files at the default cache location of your system.
 
 !!! example
     ```js
-    import QtQml 2.0
-    import QOwnNotesTypes 1.0
-
-    Script {
-        function init() {
-            var myDir = script.cacheDir("my-script-directory");
-            var scriptsDir = script.cacheDir(); // cache root dir
-        }
-    }
+    // create the cache directory for my-script-id
+    var cacheDirForScript = script.cacheDir("my-script-id");
     ```
 
-Clear the cache folder
-------------------------------------------------
+Clearing a cache directory
+--------------------------
 
-You can clear the cache files of your script by passing its name to clearCacheDir() or clear the entire script cache folder by passing nothing.
+You can clear the cache files of your script by passing its name to clearCacheDir().
 
 !!! help "Method call and parameters"
     ```cpp
     /**
-     * Clears the provided cache directory
-     * @param {QString} subDir the subfolder to clear or nothing for the entire script cache folder
+     * Clears the cache directory for a script
+     *
+     * @param {QString} subDir the subfolder to clear
      * @return {bool} true on success
      */
     bool ScriptingService::clearCacheDir(const QString &subDir) const;
@@ -1177,15 +1172,8 @@ You can clear the cache files of your script by passing its name to clearCacheDi
 
 !!! example
     ```js
-    import QtQml 2.0
-    import QOwnNotesTypes 1.0
-
-    Script {
-        function init() {
-            script.clearCacheDir("my-script-directory");
-            script.clearCacheDir(); // clear all script caches
-        }
-    }
+    // clear cache directory of my-script-id 
+    script.clearCacheDir("my-script-id");
     ```
 
 Reading the path to the directory of your script
