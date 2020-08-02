@@ -18,7 +18,7 @@
   (for [#1832](https://github.com/pbek/QOwnNotes/issues/1832))
 - changes to individual notes are now also ignored if the setting to ignore all
   external note folder changes is active
-- added more Brazilian Portuguese, German, Italian translation (thank you ihatemyself, rakekniven, Zack-83)
+- added more Brazilian Portuguese, German, Italian translation (thank you i****myself, rakekniven, Zack-83)
 
 ## 20.7.6
 - the note link dialog can now be resized smaller than the height needed for its 2nd tab
