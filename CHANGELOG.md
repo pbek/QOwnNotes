@@ -7,6 +7,8 @@
       [cacheDir](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#creating-a-cache-directory)
       and [clearCacheDir](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#clearing-a-cache-directory)
       for more information
+- added more translation (thank you rawfreeamy, i****myself, mlimacarlos,
+  rakekniven, Zack-83, Gregory.K)
 
 ## 20.7.9
 - if you minimized or maximized the application window before entering full-screen mode that state will now

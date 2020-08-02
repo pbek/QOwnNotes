@@ -195,12 +195,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
       <source>Polish</source>
-      <translation type="unfinished">Polish</translation>
+      <translation>פּויליש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="93"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>איטאַליעניש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
@@ -215,147 +215,147 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
       <source>Portugese (Brazilian)</source>
-      <translation type="unfinished">Portugese (Brazilian)</translation>
+      <translation>פּאָרטוגעזיש (בראַזיליאַן)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
       <source>Portugese</source>
-      <translation type="unfinished">Portugese</translation>
+      <translation>פארטוגעזיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>דאַניש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="142"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>שוועדיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="47"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>טשעכיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
       <source>Afrikaans</source>
-      <translation type="unfinished">Afrikaans</translation>
+      <translation>אפריקאנער</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
       <source>Amharic</source>
-      <translation type="unfinished">Amharic</translation>
+      <translation>אַמהאַריש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Ancient Greek</source>
-      <translation type="unfinished">Ancient Greek</translation>
+      <translation>אלטע גריכיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
       <source>Arabic</source>
-      <translation type="unfinished">Arabic</translation>
+      <translation>אַראַביש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
       <source>Armenian</source>
-      <translation type="unfinished">Armenian</translation>
+      <translation>ארמאניש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>אַלבאַניש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>באַסק</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
       <source>Belarusian</source>
-      <translation type="unfinished">Belarusian</translation>
+      <translation>בעלארוסיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>בולגאַריש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>בענגאַליש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>Breton</source>
-      <translation type="unfinished">Breton</translation>
+      <translation>ברעטאָן</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>קאַטאַלאַניש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
       <source>Catalan (Valencian)</source>
-      <translation type="unfinished">Catalan (Valencian)</translation>
+      <translation>קאַטאַלאניש (Valencian)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
       <source>Chuvash (Russia)</source>
-      <translation type="unfinished">Chuvash (Russia)</translation>
+      <translation>טשוואַש (רוסלאַנד)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>קראָאַטיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>האָלענדיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
       <source>English (Australian)</source>
-      <translation type="unfinished">English (Australian)</translation>
+      <translation>ענגליש (אַוסטראַליאַן)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
       <source>English (Canadian)</source>
-      <translation type="unfinished">English (Canadian)</translation>
+      <translation>ענגליש (קאנאדיש)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
       <source>English (Medical Dictionary)</source>
-      <translation type="unfinished">English (Medical Dictionary)</translation>
+      <translation>ענגליש (מעדיציניש ווערטערבוך)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>English (South African)</source>
-      <translation type="unfinished">English (South African)</translation>
+      <translation>ענגליש (דרום אפריקאנער)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
       <source>Esperanto</source>
-      <translation type="unfinished">Esperanto</translation>
+      <translation>עספּעראַנטאָ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>עסטיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
       <source>Faroese</source>
-      <translation type="unfinished">Faroese</translation>
+      <translation>פעראָעעזיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
       <source>Friulian</source>
-      <translation type="unfinished">Friulian</translation>
+      <translation>פריוליאַן</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
@@ -375,22 +375,22 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
       <source>German (Classical Spelling)</source>
-      <translation type="unfinished">German (Classical Spelling)</translation>
+      <translation>דײַטש (קלאסישער אויסלייג)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
       <source>German (Medical Dictionary)</source>
-      <translation type="unfinished">German (Medical Dictionary)</translation>
+      <translation>דײַטש (מעדיציניש ווערטערבוך)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>גריכיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation type="unfinished">Modern Greek (Polytonic Greek)</translation>
+      <translation>מאָדערן גריכיש (פּאָליטאָניק גריכיש)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
@@ -400,7 +400,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>העברעאיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
@@ -410,7 +410,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>אונגעריש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
@@ -680,20 +680,20 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="292"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>אראפקאפיע טעות</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="293"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>טעות בעת דאַונלאָודינג:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="309"/>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="421"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>טעקע טעות</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="310"/>
@@ -962,7 +962,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5979"/>
       <source> [New] </source>
-      <translation type="unfinished"> [New] </translation>
+      <translation>[נייַ]</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5987"/>
@@ -1686,17 +1686,18 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="221"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>&lt;strong&gt;%n &lt;/strong&gt; נאָטיץ זענען געזונט</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; הערות זענען געזונט</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>אַראָפּנעמען &lt;/ strong&gt;% און &lt;/ strong&gt; סעלעקטעד טאָן?
+</numerusform>
+        <numerusform>אַראָפּנעמען &lt;/ strong&gt;% און &lt;/ strong&gt; סעלעקטעד הערות?</numerusform>
       </translation>
     </message>
     <message>
@@ -1801,12 +1802,12 @@
     <message>
       <location filename="../mainwindow.ui" line="867"/>
       <source>&amp;Note</source>
-      <translation type="unfinished">&amp;Note</translation>
+      <translation>&amp;נאטיץ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="871"/>
       <source>Note &amp;folders</source>
-      <translation type="unfinished">Note &amp;folders</translation>
+      <translation>באַמערקונג &amp;פאָלדערס</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="876"/>
@@ -1847,27 +1848,27 @@
     <message>
       <location filename="../mainwindow.ui" line="1307"/>
       <source>&amp;Setup note folders</source>
-      <translation type="unfinished">&amp;Setup note folders</translation>
+      <translation>&amp;סעטאַפּ נאָטיץ פאָלדערס</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1316"/>
       <source>&amp;Find note</source>
-      <translation type="unfinished">&amp;Find note</translation>
+      <translation>&amp;געפֿינען טאָן</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1328"/>
       <source>&amp;Remove current note</source>
-      <translation type="unfinished">&amp;Remove current note</translation>
+      <translation>&amp;אַראָפּנעמען קראַנט טאָן</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1352"/>
       <source>&amp;New note</source>
-      <translation type="unfinished">&amp;New note</translation>
+      <translation>&amp;ניו טאָן</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1364"/>
       <source>Check for &amp;updates</source>
-      <translation type="unfinished">Check for &amp;updates</translation>
+      <translation>&amp;זוך נייע ווערסיעס</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1376"/>
@@ -1897,7 +1898,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1425"/>
       <source>Show note &amp;versions</source>
-      <translation type="unfinished">Show note &amp;versions</translation>
+      <translation>&amp;ווייַזן טאָן ווערסיעס</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1428"/>
@@ -1913,7 +1914,7 @@
       <location filename="../mainwindow.ui" line="1445"/>
       <location filename="../mainwindow.cpp" line="10374"/>
       <source>Select &amp;all notes</source>
-      <translation type="unfinished">Select &amp;all notes</translation>
+      <translation>&amp;סעלעקטירן אַלע הערות</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1454"/>
@@ -1929,7 +1930,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1469"/>
       <source>&amp;Find in current note</source>
-      <translation type="unfinished">&amp;Find in current note</translation>
+      <translation>&amp;געפֿינען אין קראַנט טאָן</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1472"/>
@@ -1949,7 +1950,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1410"/>
       <source>&amp;Settings</source>
-      <translation type="unfinished">&amp;Settings</translation>
+      <translation>&amp;סעטטינגס</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
@@ -2011,7 +2012,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1019"/>
       <source>&amp;Edit</source>
-      <translation type="unfinished">&amp;Edit</translation>
+      <translation>&amp;רעדאַגירן</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1023"/>
@@ -2061,7 +2062,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1142"/>
       <source>&amp;Window</source>
-      <translation type="unfinished">&amp;Window</translation>
+      <translation>&amp;פענצטער</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1159"/>
@@ -2103,7 +2104,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1340"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation type="unfinished">About &amp;QOwnNotes…</translation>
+      <translation>&amp;וועגן QNwnNotes ...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1379"/>
@@ -2139,12 +2140,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1539"/>
       <source>Insert current &amp;time</source>
-      <translation type="unfinished">Insert current &amp;time</translation>
+      <translation>&amp;אַרייַנלייגן קראַנט צייט</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1551"/>
       <source>Show &amp;Todo List</source>
-      <translation type="unfinished">Show &amp;Todo List</translation>
+      <translation>&amp;ווייַזן טאָדאָ רשימה</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1563"/>
@@ -2169,7 +2170,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1608"/>
       <source>Insert &amp;image</source>
-      <translation type="unfinished">Insert &amp;image</translation>
+      <translation>&amp;ינסערט בילד</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1611"/>
@@ -2179,17 +2180,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1623"/>
       <source>Show &amp;changelog</source>
-      <translation type="unfinished">Show &amp;changelog</translation>
+      <translation>&amp;ווייַזן טשאַנגעלאָג</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1632"/>
       <source>&amp;Encrypt note</source>
-      <translation type="unfinished">&amp;Encrypt note</translation>
+      <translation>&amp;ענקריפּט טאָן</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1641"/>
       <source>Edit encrypted note</source>
-      <translation type="unfinished">Edit encrypted note</translation>
+      <translation>רעדאַגירן ענקריפּטיד טאָן</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1653"/>
@@ -2214,7 +2215,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1692"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>&amp;אַרייַנלייגן קאָד בלאָק</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
@@ -2310,12 +2311,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1897"/>
       <source>&amp;Reload note folder</source>
-      <translation type="unfinished">&amp;Reload note folder</translation>
+      <translation>&amp;רילאָוד טאָן טעקע</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1969"/>
       <source>Show log</source>
-      <translation type="unfinished">Show log</translation>
+      <translation>ווייַזן קלאָץ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1978"/>
@@ -2411,7 +2412,7 @@
       <location filename="../mainwindow.ui" line="2318"/>
       <location filename="../mainwindow.cpp" line="6591"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>&amp;אַרייַנלייגן בלאָק ציטירן</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2326"/>
@@ -3922,9 +3923,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5677"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>געפונען &lt;strong&gt;%n&lt;/strong&gt; פּאַסירונג (s) פון &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>געפונען &lt;strong&gt;%n &lt;/strong&gt; פּאַסירונג פון &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>געפונען &lt;strong&gt;%n &lt;/strong&gt; פֿאַלן פֿון &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -4267,7 +4268,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1212"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;באָטל מאַכן</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1271"/>
@@ -4756,7 +4757,7 @@ Are the folder and the file writeable?</source>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="412"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="475"/>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>ינסטאַלירן</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
@@ -4766,12 +4767,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>ווערסיע:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="202"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>ריפּאַזאַטאָרי:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
@@ -4781,7 +4782,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="433"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>נאָמען</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
@@ -4791,12 +4792,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
-      <translation type="unfinished">Find script</translation>
+      <translation>געפֿינען שריפט</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="52"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>שריפט דערהייַנטיקונגען</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="53"/>
@@ -4933,9 +4934,9 @@ Do you want to install it anyway?</source>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="88"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n בוקמאַרקס &lt;/ strong&gt; געפֿונען אויף סערווער</numerusform>
+        <numerusform>&lt;strong&gt;%n בוקמאַרקס &lt;/ strong&gt; געפֿונען אויף סערווער</numerusform>
       </translation>
     </message>
   </context>
@@ -4960,7 +4961,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="495"/>
       <source>&amp;Add folder</source>
-      <translation type="unfinished">&amp;Add folder</translation>
+      <translation>&amp;לייג טעקע</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="519"/>
@@ -5261,7 +5262,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2277"/>
       <source>German</source>
-      <translation type="unfinished">German</translation>
+      <translation>דײַטש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2354"/>
@@ -5650,7 +5651,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1217"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation type="unfinished">&amp;Connect to ownCloud server</translation>
+      <translation>&amp;פאַרבינדן צו OwnCloud סערווער</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1237"/>
@@ -5715,7 +5716,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2200"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>בענגאַליש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2211"/>
@@ -5725,12 +5726,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2222"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>בולגאַריש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2233"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>קאַטאַלאַניש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2244"/>
@@ -5740,17 +5741,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2266"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>דאַניש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2288"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>באַסק</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2321"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>עסטיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2332"/>
@@ -5775,7 +5776,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2387"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>גריכיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2398"/>
@@ -5785,7 +5786,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2409"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>העברעאיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2420"/>
@@ -5860,7 +5861,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2695"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>אַלבאַניש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2728"/>
@@ -5875,7 +5876,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2750"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>שוועדיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2761"/>
@@ -6652,7 +6653,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2255"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>טשעכיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2629"/>
@@ -6667,17 +6668,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3780"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>דער נאָמען</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4004"/>
       <source>Maximum height:</source>
-      <translation type="unfinished">Maximum height:</translation>
+      <translation>מאַקסימום הייך:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3977"/>
       <source>Maximum width:</source>
-      <translation type="unfinished">Maximum width:</translation>
+      <translation>מאַקסימום הייך:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3918"/>
@@ -6687,12 +6688,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2431"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>קראָאַטיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3695"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>דרך צו דיין QML טעקע</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3486"/>
@@ -6707,17 +6708,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3590"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>ווערסיע:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3551"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>ריפּאַזאַטאָרי:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3528"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>מחבר (s):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3925"/>
@@ -6852,7 +6853,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2039"/>
       <source>&amp;Reload calendar list</source>
-      <translation type="unfinished">&amp;Reload calendar list</translation>
+      <translation>&amp;רילאָוד קאַלענדאַר רשימה</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2948"/>
@@ -6898,12 +6899,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2882"/>
       <source>Arabic</source>
-      <translation type="unfinished">Arabic</translation>
+      <translation>אַראַביש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3032"/>
       <source>Icons</source>
-      <translation type="unfinished">Icons</translation>
+      <translation>יקאָנס</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3041"/>
@@ -6943,7 +6944,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4034"/>
       <source>App instance</source>
-      <translation type="unfinished">App instance</translation>
+      <translation>אַפּ בייַשפּיל</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4040"/>
@@ -6968,23 +6969,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4193"/>
       <source>Text file (txt)</source>
-      <translation type="unfinished">Text file (txt)</translation>
+      <translation>טעקסט טעקע (טקסט))</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4221"/>
       <source>Path to external editor:</source>
-      <translation type="unfinished">Path to external editor:</translation>
+      <translation>דרך צו פונדרויסנדיק רעדאַקטאָר:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4056"/>
       <source>Don't show the update dialog automatically</source>
-      <translation type="unfinished">Don't show the update dialog automatically</translation>
+      <translation>ווייַזן נישט די דערהייַנטיקן דיאַלאָג אויטאָמאַטיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4509"/>
       <location filename="../dialogs/settingsdialog.ui" line="4736"/>
       <source>Fonts</source>
-      <translation type="unfinished">Fonts</translation>
+      <translation>פאָנץ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4532"/>
@@ -6992,7 +6993,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="4759"/>
       <location filename="../dialogs/settingsdialog.ui" line="4787"/>
       <source>Set a new font</source>
-      <translation type="unfinished">Set a new font</translation>
+      <translation>באַשטעטיק אַ נייַ שריפֿט</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4543"/>
@@ -7000,19 +7001,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="4773"/>
       <location filename="../dialogs/settingsdialog.ui" line="4818"/>
       <source>Reset font</source>
-      <translation type="unfinished">Reset font</translation>
+      <translation>באַשטעטיק שריפֿט</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="336"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>דעבוג</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4373"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2289"/>
       <location filename="../dialogs/settingsdialog.cpp" line="4264"/>
       <source>Debug information</source>
-      <translation type="unfinished">Debug information</translation>
+      <translation>דעבוג אינפֿאָרמאַציע</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4379"/>
@@ -7022,22 +7023,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4466"/>
       <source>&amp;Save debug information</source>
-      <translation type="unfinished">&amp;Save debug information</translation>
+      <translation>&amp;היט דיבאַג אינפֿאָרמאַציע</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="497"/>
       <source>hostname of proxy server</source>
-      <translation type="unfinished">hostname of proxy server</translation>
+      <translation>האָסטנאַמע פון פראקסי סערווער</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="498"/>
       <source>username for proxy server</source>
-      <translation type="unfinished">username for proxy server</translation>
+      <translation>נאמען פֿאַר פראקסי סערווער</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="499"/>
       <source>password for proxy server</source>
-      <translation type="unfinished">password for proxy server</translation>
+      <translation>שפּריכוואָרט פֿאַר פראקסי סערווער</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="501"/>
@@ -7047,12 +7048,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="502"/>
       <source>SOCKS5 proxy</source>
-      <translation type="unfinished">SOCKS5 proxy</translation>
+      <translation>SOCKS5 פראקסי</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1480"/>
       <source>Automatic (needs restart)</source>
-      <translation type="unfinished">Automatic (needs restart)</translation>
+      <translation>אָטאַמאַטיק (דאַרף ריסטאַרט)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1789"/>
@@ -7298,7 +7299,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3653"/>
       <source>Reset and &amp;exit</source>
-      <translation type="unfinished">Reset and &amp;exit</translation>
+      <translation>באַשטעטיק און אַרויסגאַנג</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3811"/>
@@ -7308,7 +7309,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3812"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
+      <translation>דער קלאָץ טעקע &lt;strong&gt;%1 &lt;/strong&gt; איז געווען קלירד.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3848"/>
@@ -7403,14 +7404,14 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2346"/>
       <source>Clear and &amp;exit</source>
-      <translation type="unfinished">Clear and &amp;exit</translation>
+      <translation>קלאָר און &amp;אַרויסגאַנג</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2274"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2346"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3653"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;באָטל מאַכן</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="479"/>
@@ -7562,13 +7563,13 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">without accents</translation>
+      <translation>אָן אַקסענץ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="242"/>
       <source>with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with accents</translation>
+      <translation>מיט אַקסענץ</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="244"/>
@@ -7598,19 +7599,19 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="325"/>
       <source>%1 (%2) [%3]</source>
       <comment>dictionary name; %1 = language name, %2 = country name and %3 = language variant name</comment>
-      <translation type="unfinished">%1 (%2) [%3]</translation>
+      <translation>%1 (%2) [%3]</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="328"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = country name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="331"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7618,12 +7619,12 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>אַרייַנלייגן טיש</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation type="unfinished">Create table</translation>
+      <translation>שאַפֿן טיש</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
@@ -7658,7 +7659,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
       <source>Separator column width:</source>
-      <translation type="unfinished">Separator column width:</translation>
+      <translation>צעשיידונג זייַל ברייט:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
@@ -7760,17 +7761,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
       <source>Summary</source>
-      <translation type="unfinished">Summary</translation>
+      <translation>קיצער</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>היט</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>נאטיץ…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="105"/>
@@ -7780,7 +7781,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>אַראָפּנעמען</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
@@ -7795,7 +7796,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="295"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>רילאָוד ...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="260"/>
@@ -7925,7 +7926,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
       <source>New</source>
-      <translation type="unfinished">New</translation>
+      <translation>נייַ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
@@ -7946,7 +7947,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation type="unfinished">Move Up</translation>
+      <translation>רוק זיך ארויף</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
@@ -7956,12 +7957,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation type="unfinished">Move &amp;Up</translation>
+      <translation>&amp;רוק זיך ארויף</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation type="unfinished">Move Down</translation>
+      <translation>מאַך אַראָפּ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
@@ -7971,12 +7972,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation type="unfinished">Move &amp;Down</translation>
+      <translation>&amp;מאַך אַראָפּ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>אַרייַנלייגן</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
@@ -7986,38 +7987,38 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation type="unfinished">&amp;Insert</translation>
+      <translation>&amp;אַרייַנלייגן</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
       <source>Removes the selected item from the active toolbar</source>
-      <translation type="unfinished">Removes the selected item from the active toolbar</translation>
+      <translation>רימוווז די אויסגעקליבן נומער פון די אַקטיוו מכשיר</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;אַראָפּנעמען</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation type="unfinished">Separator</translation>
+      <translation>סעפּאַראַטאָר</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation type="unfinished">&amp;Separator</translation>
+      <translation>&amp;סעפּאַראַטאָר</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="192"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="216"/>
       <source>--(separator)--</source>
-      <translation type="unfinished">--(separator)--</translation>
+      <translation>- (סעפּאַראַטאָר) -</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="309"/>
       <source>Remove current toolbar</source>
-      <translation type="unfinished">Remove current toolbar</translation>
+      <translation>אַראָפּנעמען קראַנט מכשיר</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="310"/>
@@ -8060,12 +8061,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="59"/>
       <source>&amp;Delete</source>
-      <translation type="unfinished">&amp;Delete</translation>
+      <translation>&amp;ויסמעקן</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>
       <source>Delete selected note on server</source>
-      <translation type="unfinished">Delete selected note on server</translation>
+      <translation>ויסמעקן אויסגעקליבן טאָן אויף סערווער</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="68"/>
@@ -8075,22 +8076,22 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="190"/>
       <source>Delete note on server</source>
-      <translation type="unfinished">Delete note on server</translation>
+      <translation>ויסמעקן טאָן אויף סערווער</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
       <source>Delete selected trashed note on server?</source>
-      <translation type="unfinished">Delete selected trashed note on server?</translation>
+      <translation>ויסמעקן אויסגעקליבן אָפּפאַל צעטל אויף די סערווער?</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="213"/>
       <source>Error while deleting note</source>
-      <translation type="unfinished">Error while deleting note</translation>
+      <translation>טעות ווען דיליטינג טאָן</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation type="unfinished">Deleting trashed note failed with status code: %1</translation>
+      <translation>די ויסמעקן פון די טראַש טאָן ניט אַנדערש מיט סטאַטוס קאָד: %1</translation>
     </message>
   </context>
   <context>
@@ -8348,9 +8349,10 @@ This cannot be undone!</source>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="238"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>%n לייענ - צייכן
+</numerusform>
+        <numerusform>%n בוקמאַרקס באשאפן</numerusform>
       </translation>
     </message>
     <message>
@@ -8398,28 +8400,28 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation type="unfinished">&amp;Back</translation>
+      <translation>&amp;צוריק</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation type="unfinished">&amp;Next</translation>
+      <translation>&amp;ווייַטער</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation type="unfinished">&amp;Finished</translation>
+      <translation>&amp;געענדיקט</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;באָטל מאַכן</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <location filename="../dialogs/welcomedialog.cpp" line="219"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>באַמערקונג טעקע</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="191"/>
