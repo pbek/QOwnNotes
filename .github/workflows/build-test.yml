@@ -119,5 +119,4 @@ jobs:
 
     - name: Build QOwnNotes
       run: |
-        qmake
-        make
+        lrelease QOwnNotes.pro && qmake && make
