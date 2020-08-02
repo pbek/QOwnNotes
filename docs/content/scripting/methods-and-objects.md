@@ -1136,16 +1136,26 @@ Creating a cache folder for your script
 ------------------------------------------------
 
 You can cache files at the default cache location of your system.
+
+!!! help "Method call and parameters"
+    ```cpp
+    /**
+     * Returns the default cache folder of QON
+     * @param {QString} subDir the subfolder to create and use or nothing for the cache root dir
+     * @return {QString} the cache dir path
+     */
+    QString ScriptingService::cacheDir(const QString &subDir) const;
+    ```
+
 !!! example
     ```js
     import QtQml 2.0
     import QOwnNotesTypes 1.0
 
     Script {
-        property string workdir;
-
         function init() {
-            workDir = script.cacheDir("my-script-directory");
+            var myDir = script.cacheDir("my-script-directory");
+            var scriptsDir = script.cacheDir(); // cache root dir
         }
     }
     ```
@@ -1154,17 +1164,26 @@ Clear the cache folder
 ------------------------------------------------
 
 You can clear the cache files of your script by passing its name to clearCacheDir() or clear the entire script cache folder by passing nothing.
+
+!!! help "Method call and parameters"
+    ```cpp
+    /**
+     * Clears the provided cache directory
+     * @param {QString} subDir the subfolder to clear or nothing for the entire script cache folder
+     * @return {bool} true on success
+     */
+    bool ScriptingService::clearCacheDir(const QString &subDir) const;
+    ```
+
 !!! example
     ```js
     import QtQml 2.0
     import QOwnNotesTypes 1.0
 
     Script {
-        property string workdir;
-
         function init() {
-            workDir = script.clearCacheDir("my-script-directory");
-            workDir = script.clearCacheDir(); // clear all script caches
+            script.clearCacheDir("my-script-directory");
+            script.clearCacheDir(); // clear all script caches
         }
     }
     ```
