@@ -3,6 +3,9 @@
 ## 20.8.1
 - you can now also turn off/on the spellchecking inside encrypted notes
   (for [#1841](https://github.com/pbek/QOwnNotes/issues/1841))
+- you can now also use <kbd>Tab</kbd> or <kbd>Enter</kbd> to switch from the
+  note list to the note edit panel if note renaming in the note list is enabled
+  (for [#1837](https://github.com/pbek/QOwnNotes/issues/1837))
 
 ## 20.8.0
 - added new scripting methods `cacheDir` and `clearCacheDir`

@@ -4184,9 +4184,9 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 // on_noteTreeWidget_itemChanged when
                 // Note::handleNoteRenaming is called, so we don't allow to
                 // call focusNoteTextEdit()
-                if (!Note::allowDifferentFileName()) {
+//                if (!Note::allowDifferentFileName()) {
                     focusNoteTextEdit();
-                }
+//                }
                 return true;
             } else if ((keyEvent->key() == Qt::Key_Delete) ||
                        (keyEvent->key() == Qt::Key_Backspace)) {
