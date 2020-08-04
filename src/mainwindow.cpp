@@ -12388,6 +12388,7 @@ void MainWindow::on_actionCheck_spelling_toggled(bool checked) {
     QSettings settings;
     settings.setValue(QStringLiteral("checkSpelling"), checked);
     ui->noteTextEdit->updateSettings();
+    ui->encryptedNoteTextEdit->updateSettings();
 }
 
 void MainWindow::loadDictionaryNames() {

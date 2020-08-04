@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.8.1
+- you can now also turn off/on the spellchecking inside encrypted notes
+  (for [#1841](https://github.com/pbek/QOwnNotes/issues/1841))
+
 ## 20.8.0
 - added new scripting methods `cacheDir` and `clearCacheDir`
   (for [#1838](https://github.com/pbek/QOwnNotes/pull/1838), thank you @r00tr4v3n)
