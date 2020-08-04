@@ -3388,7 +3388,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
         <numerusform>Schlagwort &lt;strong&gt;%1&lt;/strong&gt; aus einer ausgewählten Notiz entfernen?</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; aus %n ausgewählten Notizen entfernen?</numerusform>
+        <numerusform>Schlagwort &lt;strong&gt;%1&lt;/strong&gt; aus %n ausgewählten Notizen entfernen?</numerusform>
       </translation>
     </message>
     <message numerus="yes">

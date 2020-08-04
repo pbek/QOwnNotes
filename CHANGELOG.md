@@ -6,6 +6,7 @@
 - you can now also use <kbd>Tab</kbd> or <kbd>Enter</kbd> to switch from the
   note list to the note edit panel if note renaming in the note list is enabled
   (for [#1837](https://github.com/pbek/QOwnNotes/issues/1837))
+- added more Brazilian Portuguese, German translation (thank you ihatemyself, rawfreeamy)
 
 ## 20.8.0
 - added new scripting methods `cacheDir` and `clearCacheDir`
