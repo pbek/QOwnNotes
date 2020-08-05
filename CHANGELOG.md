@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.8.2
+- Bold and italic highlighting now also works between inline code blocks in the note editor
+  (for [#1842](https://github.com/pbek/QOwnNotes/issues/1842), thank you @Waqar144)
+
 ## 20.8.1
 - you can now also turn off/on the spellchecking inside encrypted notes
   (for [#1841](https://github.com/pbek/QOwnNotes/issues/1841))
