@@ -57,7 +57,7 @@ Please consider a few things while working on the project:
 
    ![screenshot](../assets/img/crowdin/screenshot-4.png)
 
-(6) The `%1` tags need to be written without a space, in LTR languages you can either insert the tags
+6) The `%1` tags need to be written without a space, in LTR languages you can either insert the tags
     from the original or write them into your translation.
 
    ![screenshot](../assets/img/crowdin/screenshot-1.png)
@@ -66,7 +66,7 @@ Please consider a few things while working on the project:
 
    ![screenshot](../assets/img/crowdin/screenshot-3.png)
 
-(7) Use `&` in front of any letter that should be used in a shortcut, can be the same as in original but does not have to.
+7) Use `&` in front of any letter that should be used in a shortcut, can be the same as in original but does not have to.
 
    ![screenshot](../assets/img/crowdin/screenshot-4.png)
 
