@@ -8,11 +8,11 @@
 
 #include "tagapi.h"
 
-NoteApi* NoteApi::fetch(int _id) {
-    _note = Note::fetch(_id);
+NoteApi* NoteApi::fetch(int id) {
+    _note = Note::fetch(id);
 
     if (_note.isFetched()) {
-        this->_id = _note.getId();
+        _id = _note.getId();
         _name = _note.getName();
         _fileName = _note.getFileName();
         _noteText = _note.getNoteText();
@@ -45,8 +45,8 @@ QQmlListProperty<TagApi> NoteApi::tags() {
     _tags.clear();
 
     Note note = Note::fetch(_id);
-    QList<Tag> tags = Tag::fetchAllOfNote(note);
-    QListIterator<Tag> itr(tags);
+    QVector<Tag> tags = Tag::fetchAllOfNote(note);
+    QVectorIterator<Tag> itr(tags);
     while (itr.hasNext()) {
         Tag tag = itr.next();
 
@@ -54,8 +54,11 @@ QQmlListProperty<TagApi> NoteApi::tags() {
         tagApi->fetch(tag.getId());
         _tags.append(tagApi);
     }
-
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     return {this, _tags};
+#else
+    return {this, &_tags};
+#endif
 }
 
 /**
@@ -64,8 +67,8 @@ QQmlListProperty<TagApi> NoteApi::tags() {
 QStringList NoteApi::tagNames() const {
     QStringList tagNameList;
     Note note = Note::fetch(_id);
-    QList<Tag> tags = Tag::fetchAllOfNote(note);
-    QListIterator<Tag> itr(tags);
+    QVector<Tag> tags = Tag::fetchAllOfNote(note);
+    QVectorIterator<Tag> itr(tags);
     while (itr.hasNext()) {
         Tag tag = itr.next();
         tagNameList.append(tag.getName());
@@ -154,15 +157,18 @@ bool NoteApi::allowDifferentFileName() {
  * @return
  */
 QQmlListProperty<NoteApi> NoteApi::fetchAll(int limit, int offset) {
-    QVector<int> noteIds = Note::fetchAllIds(limit, offset);
+    const QVector<int> noteIds = Note::fetchAllIds(limit, offset);
     QList<NoteApi*> notes;
 
-    Q_FOREACH (int noteId, noteIds) {
+    for (int noteId : noteIds) {
         NoteApi* note = NoteApi::fetch(noteId);
         notes.append(note);
     }
-
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     return {this, notes};
+#else
+    return {this, &notes};
+#endif
 }
 
 /**

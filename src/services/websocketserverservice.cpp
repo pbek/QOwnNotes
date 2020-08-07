@@ -325,11 +325,11 @@ QString WebSocketServerService::getBookmarksJsonText() const {
     }
 
     Tag tag = Tag::fetchByName(getBookmarksTag());
-    QList<Note> noteList = tag.fetchAllLinkedNotes();
+    const QVector<Note> noteList = tag.fetchAllLinkedNotes();
     QVector<Bookmark> bookmarks;
 
     // get all bookmark links from notes tagged with the bookmarks tag
-    Q_FOREACH (Note note, noteList) {
+    for (const Note &note : noteList) {
         QVector<Bookmark> noteBookmarks = note.getParsedBookmarks();
 
         // merge bookmark lists
