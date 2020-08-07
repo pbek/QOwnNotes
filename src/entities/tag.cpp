@@ -191,11 +191,11 @@ Tag Tag::fillFromQuery(const QSqlQuery &query) {
     return *this;
 }
 
-QList<Tag> Tag::fetchAll() {
+QVector<Tag> Tag::fetchAll() {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
-    QList<Tag> tagList;
+    QVector<Tag> tagList;
 
     // query.prepare("SELECT * FROM tag ORDER BY priority ASC, name ASC");
     /*
@@ -238,10 +238,10 @@ QList<Tag> Tag::fetchAll() {
     return tagList;
 }
 
-QList<Tag> Tag::fetchAllByParentId(const int parentId, const QString &sortBy) {
+QVector<Tag> Tag::fetchAllByParentId(const int parentId, const QString &sortBy) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
-    QList<Tag> tagList;
+    QVector<Tag> tagList;
 
     // query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
     //                      "priority ASC, name ASC");
@@ -285,8 +285,8 @@ QList<Tag> Tag::fetchAllByParentId(const int parentId, const QString &sortBy) {
  * @param parentId
  * @return
  */
-QList<Tag> Tag::fetchRecursivelyByParentId(const int parentId) {
-    QList<Tag> tagList = QList<Tag>{fetch(parentId)};
+QVector<Tag> Tag::fetchRecursivelyByParentId(const int parentId) {
+    QVector<Tag> tagList = QVector<Tag>{fetch(parentId)};
     const auto tags = fetchAllByParentId(parentId);
     tagList.reserve(tags.size());
 
@@ -366,11 +366,11 @@ bool Tag::hasChild(const int tagId) const {
 /**
  * Fetches all linked tags of a note
  */
-QList<Tag> Tag::fetchAllOfNote(const Note &note) {
+QVector<Tag> Tag::fetchAllOfNote(const Note &note) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
-    QList<Tag> tagList;
+    QVector<Tag> tagList;
 
     query.prepare(
         QStringLiteral("SELECT t.* FROM tag t "
@@ -399,23 +399,20 @@ QList<Tag> Tag::fetchAllOfNote(const Note &note) {
 /**
  * Fetches all linked tags of a list of notes
  */
-QList<Tag> Tag::fetchAllOfNotes(const QVector<Note> &notes) {
-    QList<Tag> resultTagList;
+QVector<Tag> Tag::fetchAllOfNotes(const QVector<Note> &notes) {
+    QVector<Tag> notesTagList;
 
+    //get all tags for the notes list
     for (const Note &note : notes) {
-        const QList<Tag> tagList = Tag::fetchAllOfNote(note);
-
-        resultTagList.reserve(tagList.size());
-        for (const Tag &tag : tagList) {
-            if (!resultTagList.contains(tag)) {
-                resultTagList.append(tag);
-            }
-        }
+        notesTagList.append(Tag::fetchAllOfNote(note));
     }
+    //sort
+    std::sort (notesTagList.begin(), notesTagList.end());
+    //remove duplicates
+    notesTagList.erase(std::unique(notesTagList.begin(), notesTagList.end()),
+                      notesTagList.end());
 
-    std::sort(resultTagList.begin(), resultTagList.end());
-
-    return resultTagList;
+    return notesTagList;
 }
 
 /**
@@ -582,10 +579,10 @@ bool Tag::isLinkedToNote(const Note &note) const {
 /**
  * Returns all tags that are linked to certain note names
  */
-QList<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList &noteNameList) {
+QVector<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList &noteNameList) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
-    QList<Tag> tagList;
+    QVector<Tag> tagList;
     const QString noteIdListString = noteNameList.join(QStringLiteral("','"));
 
     const QString sql = QStringLiteral(
@@ -727,10 +724,10 @@ QVector<int> Tag::fetchAllLinkedNoteIdsForFolder(
 /**
  * Fetches all linked notes
  */
-QList<Note> Tag::fetchAllLinkedNotes() const {
+QVector<Note> Tag::fetchAllLinkedNotes() const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
-    QList<Note> noteList;
+    QVector<Note> noteList;
 
     query.prepare(
         QStringLiteral("SELECT note_file_name, note_sub_folder_path FROM "
@@ -1240,7 +1237,7 @@ void Tag::migrateDarkColors() {
     settings.setValue(QStringLiteral("darkMode"), false);
 
     // fetch all tags with non-dark mode colors
-    const QList<Tag> tags = fetchAll();
+    const QVector<Tag> tags = fetchAll();
 
     // enable dark mode to later set the dark color
     settings.setValue(QStringLiteral("darkMode"), true);

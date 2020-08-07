@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QColor>
-#include <QList>
+#include <QVector>
 #include <QSqlQuery>
 
 class Note;
@@ -57,7 +57,7 @@ class Tag {
         const NoteSubFolder &noteSubFolder, bool fromAllSubfolders,
         const bool recursive = true) const;
 
-    QList<Note> fetchAllLinkedNotes() const;
+    QVector<Note> fetchAllLinkedNotes() const;
 
     bool isLinkedToNote(const Note &note) const;
 
@@ -82,7 +82,7 @@ class Tag {
      * Public static functions
      */
 
-    static QList<Tag> fetchAll();
+    static QVector<Tag> fetchAll();
 
     static int countAll();
 
@@ -94,7 +94,7 @@ class Tag {
 
     static Tag fetchByName(const QString &name, const int parentId);
 
-    static QList<Tag> fetchAllOfNote(const Note &note);
+    static QVector<Tag> fetchAllOfNote(const Note &note);
 
     static QStringList fetchAllNames();
 
@@ -111,10 +111,10 @@ class Tag {
 
     static Tag tagFromQuery(const QSqlQuery &query);
 
-    static QList<Tag> fetchAllWithLinkToNoteNames(
+    static QVector<Tag> fetchAllWithLinkToNoteNames(
         const QStringList &noteNameList);
 
-    static QList<Tag> fetchAllByParentId(
+    static QVector<Tag> fetchAllByParentId(
         const int parentId,
         const QString &sortBy = QStringLiteral("created DESC"));
 
@@ -138,13 +138,13 @@ class Tag {
 
     static QStringList searchAllNamesByName(const QString &name);
 
-    static QList<Tag> fetchRecursivelyByParentId(const int parentId);
+    static QVector<Tag> fetchRecursivelyByParentId(const int parentId);
 
     QStringList getParentTagNames();
 
     static bool isTaggingShowNotesRecursively();
 
-    static QList<Tag> fetchAllOfNotes(const QVector<Note> &notes);
+    static QVector<Tag> fetchAllOfNotes(const QVector<Note> &notes);
 
     static bool mergeFromDatabase(QSqlDatabase &db);
 

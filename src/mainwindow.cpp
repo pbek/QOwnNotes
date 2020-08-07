@@ -4578,7 +4578,7 @@ void MainWindow::removeSelectedNoteSubFolders(QTreeWidget *treeWidget) {
 
     // gather the folders that are about to be deleted
     QStringList noteSubFolderPathList;
-    QList<NoteSubFolder> noteSubFolderList;
+    QVector<NoteSubFolder> noteSubFolderList;
     const auto selItems = treeWidget->selectedItems();
     for (QTreeWidgetItem *item : selItems) {
         if (item->data(0, Qt::UserRole + 1) != FolderType) {
@@ -5754,7 +5754,7 @@ void MainWindow::filterNotesByTag() {
         default:
             // check for multiple active;
             const auto selectedItems = ui->tagTreeWidget->selectedItems();
-            QList<int> tagIds;
+            QVector<int> tagIds;
             Tag activeTag;
 
             if (selectedItems.count() > 1) {
@@ -5772,13 +5772,13 @@ void MainWindow::filterNotesByTag() {
                 tagIds << activeTag.getId();
             }
 
-            QList<Tag> tags;
+            QVector<Tag> tags;
             tags.reserve(tagIds.count());
             for (const int id : Utils::asConst(tagIds)) {
                 tags << Tag::fetch(id);
             }
 
-            QList<Tag> tagList;
+            QVector<Tag> tagList;
             tagList.reserve(tags.count());
             for (const Tag &t : Utils::asConst(tags)) {
                 // check if the notes should be viewed recursively
@@ -7846,13 +7846,16 @@ void MainWindow::reloadTagTree() {
     const auto noteSubFolderWidgetItems =
         ui->noteSubFolderTreeWidget->selectedItems();
 
-    for (QTreeWidgetItem *i : noteSubFolderWidgetItems) {
-        const int id = i->data(0, Qt::UserRole).toInt();
-        // check if the notes should be viewed recursively
-        if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
+    // check if the notes should be viewed recursively
+    if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
+        for (QTreeWidgetItem *i : noteSubFolderWidgetItems) {
+            const int id = i->data(0, Qt::UserRole).toInt();
             noteSubFolderIds
-                << NoteSubFolder::fetchIdsRecursivelyByParentId(id);
-        } else {
+                    << NoteSubFolder::fetchIdsRecursivelyByParentId(id);
+        }
+    } else {
+        for (QTreeWidgetItem *i : noteSubFolderWidgetItems) {
+            const int id = i->data(0, Qt::UserRole).toInt();
             noteSubFolderIds << id;
         }
     }
@@ -8124,7 +8127,7 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent,
                    QString::number(NoteFolder::currentNoteFolderId()))
             .toStringList();
 
-    const QList<Tag> tagList = Tag::fetchAllByParentId(parentId);
+    const QVector<Tag> tagList = Tag::fetchAllByParentId(parentId);
     for (const Tag &tag : tagList) {
         const int tagId = tag.getId();
         QTreeWidgetItem *item = addTagToTagTreeWidget(parent, tag);
@@ -8167,8 +8170,8 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
     const int tagId = tag.getId();
     const QString name = tag.getName();
     QVector<int> linkedNoteIds;
-    const QList<Tag> tagListToCount = Tag::isTaggingShowNotesRecursively() ?
-        Tag::fetchRecursivelyByParentId(tagId) : QList<Tag>{tag};
+    const QVector<Tag> tagListToCount = Tag::isTaggingShowNotesRecursively() ?
+        Tag::fetchRecursivelyByParentId(tagId) : QVector<Tag>{tag};
     const auto selectedSubFolderItems =
         ui->noteSubFolderTreeWidget->selectedItems();
 
@@ -8683,7 +8686,7 @@ void MainWindow::reloadCurrentNoteTags() {
     ui->newNoteTagButton->setToolTip(
         currentNoteOnly ? tr("Add a tag to the current note")
                         : tr("Add a tag to the selected notes"));
-    QList<Tag> tagList;
+    QVector<Tag> tagList;
 
     ui->multiSelectActionFrame->setVisible(!currentNoteOnly);
     ui->noteEditorFrame->setVisible(currentNoteOnly);
@@ -8759,7 +8762,7 @@ void MainWindow::reloadCurrentNoteTags() {
 void MainWindow::highlightCurrentNoteTagsInTagTree() {
     const int selectedNotesCount = getSelectedNotesCount();
     const bool currentNoteOnly = selectedNotesCount <= 1;
-    QList<Tag> tagList;
+    QVector<Tag> tagList;
 
     if (currentNoteOnly) {
         tagList = Tag::fetchAllOfNote(currentNote);
@@ -9227,7 +9230,7 @@ void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu, int parentTagId) {
  */
 void MainWindow::moveSelectedTagsToTagId(int tagId) {
     qDebug() << __func__ << " - 'tagId': " << tagId;
-    QList<Tag> tagList{};
+    QVector<Tag> tagList;
 
     // gather tags to move (since we can't be sure the tag tree will not get
     // reloaded when we are actually moving the first tag)
@@ -9256,7 +9259,7 @@ void MainWindow::moveSelectedTagsToTagId(int tagId) {
         // move tags
         for (Tag tag : Utils::asConst(tagList)) {
             if (useScriptingEngine) {
-                const QList<Tag> tagsToHandle =
+                const QVector<Tag> tagsToHandle =
                     Tag::fetchRecursivelyByParentId(tag.getId());
 
                 // check all tags we need to handle
@@ -9273,7 +9276,7 @@ void MainWindow::moveSelectedTagsToTagId(int tagId) {
             tag.store();
 
             if (useScriptingEngine) {
-                const QList<Tag> tagsToHandle =
+                const QVector<Tag> tagsToHandle =
                     Tag::fetchRecursivelyByParentId(tag.getId());
 
                 // check all tags we need to handle
@@ -9496,7 +9499,7 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(
             }
 
             // fetch the tags to tag the note after moving it
-            const QList<Tag> tags = Tag::fetchAllOfNote(note);
+            const QVector<Tag> tags = Tag::fetchAllOfNote(note);
 
             if (note.getId() == currentNote.getId()) {
                 // unset the current note
@@ -9596,7 +9599,7 @@ void MainWindow::copySelectedNotesToNoteSubFolder(
             }
 
             // fetch the tags to tag the note after copying it
-            const QList<Tag> tags = Tag::fetchAllOfNote(note);
+            const QVector<Tag> tags = Tag::fetchAllOfNote(note);
 
             // copy note
             const bool result = note.copyToPath(noteSubFolder.fullPath());
@@ -10295,7 +10298,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
         buildBulkNoteSubFolderMenuTree(subFolderCopyMenu, true);
     }
 
-    const QList<Tag> tagList = Tag::fetchAll();
+    const QVector<Tag> tagList = Tag::fetchAll();
 
     // show the tagging menu if at least one tag is present
     if (tagList.count() > 0) {
@@ -10316,7 +10319,7 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
         }
     }
 
-    const QList<Tag> tagRemoveList =
+    const QVector<Tag> tagRemoveList =
         Tag::fetchAllWithLinkToNoteNames(noteNameList);
 
     // show the remove tags menu if at least one tag is present
@@ -10981,7 +10984,7 @@ void MainWindow::on_actionShow_menu_bar_triggered(bool checked) {
  */
 void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     QString name = currentNote.getName();
-    const QList<Tag> tags = Tag::fetchAllOfNote(currentNote);
+    const QVector<Tag> tags = Tag::fetchAllOfNote(currentNote);
 
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
