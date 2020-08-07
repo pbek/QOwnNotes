@@ -2,8 +2,8 @@ name: 'build-test'
 
 on:
   push:
-    branches:
-      - develop
+    branches-ignore:
+      - master
     tags-ignore:
       - '*'
   pull_request:
