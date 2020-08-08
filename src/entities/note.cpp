@@ -161,8 +161,6 @@ Note Note::fetch(int id) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    Note note;
-
     query.prepare(QStringLiteral("SELECT * FROM note WHERE id = :id"));
     query.bindValue(QStringLiteral(":id"), id);
 
@@ -170,11 +168,11 @@ Note Note::fetch(int id) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         if (query.first()) {
-            note = noteFromQuery(query);
+            return noteFromQuery(query);
         }
     }
 
-    return note;
+    return Note();
 }
 
 /**
@@ -787,8 +785,7 @@ QVector<Note> Note::search(const QString &text) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            Note note = noteFromQuery(query);
-            noteList.append(note);
+            noteList.append(noteFromQuery(query));
         }
     }
 
@@ -3382,7 +3379,11 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
 QString Note::downloadUrlToMedia(const QUrl &url, bool returnUrlOnly) {
     // try to get the suffix from the url
     QString suffix = url.toString()
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
                          .split(QStringLiteral("."), QString::SkipEmptyParts)
+#else
+                         .split(QStringLiteral("."), Qt::SkipEmptyParts)
+#endif
                          .last();
 
     if (suffix.isEmpty()) {
