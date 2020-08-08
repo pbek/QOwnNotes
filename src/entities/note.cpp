@@ -161,8 +161,6 @@ Note Note::fetch(int id) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    Note note;
-
     query.prepare(QStringLiteral("SELECT * FROM note WHERE id = :id"));
     query.bindValue(QStringLiteral(":id"), id);
 
@@ -170,11 +168,11 @@ Note Note::fetch(int id) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         if (query.first()) {
-            note = noteFromQuery(query);
+            return noteFromQuery(query);
         }
     }
 
-    return note;
+    return Note();
 }
 
 /**
@@ -631,7 +629,7 @@ QVector<int> Note::fetchAllIds(int limit, int offset) {
     QSqlQuery query(db);
 
     QVector<int> noteIdList;
-    QString sql = QStringLiteral("SELECT * FROM note ORDER BY id");
+    QString sql = QStringLiteral("SELECT id FROM note ORDER BY id");
 
     if (limit >= 0) {
         sql += QStringLiteral(" LIMIT :limit");
@@ -655,13 +653,9 @@ QVector<int> Note::fetchAllIds(int limit, int offset) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        // there is no way to get the num of rows returned by the query,
-        // so we use static int to save the size after first query to
-        // prevent extra allocations
-        static int r = 0;
-        noteIdList.reserve(r);
-        for (r = 0; query.next(); r++) {
-            noteIdList.append(noteFromQuery(query).getId());
+        for (int r = 0; query.next(); r++) {
+            int id = query.value(QStringLiteral("id")).toInt();
+            noteIdList.append(id);
         }
     }
 
@@ -685,6 +679,31 @@ QVector<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
     } else {
         for (int r = 0; query.next(); r++) {
             noteList.append(noteFromQuery(query));
+        }
+    }
+
+    return noteList;
+}
+
+QVector<int> Note::fetchAllIdsByNoteSubFolderId(int noteSubFolderId)
+{
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlQuery query(db);
+
+    QVector<int> noteList;
+    const QString sql = QStringLiteral(
+        "SELECT id FROM note WHERE note_sub_folder_id = "
+        ":note_sub_folder_id ORDER BY file_last_modified DESC");
+
+    query.prepare(sql);
+    query.bindValue(QStringLiteral(":note_sub_folder_id"), noteSubFolderId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            int id = query.value(QStringLiteral("id")).toInt();
+            noteList.append(id);
         }
     }
 
@@ -766,8 +785,7 @@ QVector<Note> Note::search(const QString &text) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            Note note = noteFromQuery(query);
-            noteList.append(note);
+            noteList.append(noteFromQuery(query));
         }
     }
 
@@ -3361,7 +3379,11 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
 QString Note::downloadUrlToMedia(const QUrl &url, bool returnUrlOnly) {
     // try to get the suffix from the url
     QString suffix = url.toString()
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
                          .split(QStringLiteral("."), QString::SkipEmptyParts)
+#else
+                         .split(QStringLiteral("."), Qt::SkipEmptyParts)
+#endif
                          .last();
 
     if (suffix.isEmpty()) {

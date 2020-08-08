@@ -228,8 +228,7 @@ QVector<Tag> Tag::fetchAll() {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            const Tag tag = tagFromQuery(query);
-            tagList.append(tag);
+            tagList.append(tagFromQuery(query));
         }
     }
 
@@ -386,8 +385,7 @@ QVector<Tag> Tag::fetchAllOfNote(const Note &note) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            const Tag tag = tagFromQuery(query);
-            tagList.append(tag);
+            tagList.append(tagFromQuery(query));
         }
     }
 
@@ -605,8 +603,7 @@ QVector<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList &noteNameList) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            const Tag tag = tagFromQuery(query);
-            tagList.append(tag);
+            tagList.append(tagFromQuery(query));
         }
     }
 

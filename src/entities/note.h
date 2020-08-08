@@ -209,6 +209,8 @@ class Note {
 
     static QVector<Note> fetchAllByNoteSubFolderId(int noteSubFolderId);
 
+    static QVector<int> fetchAllIdsByNoteSubFolderId(int noteSubFolderId);
+
     static QVector<int> noteIdListFromNoteList(const QVector<Note> &noteList);
 
     static int countByNoteSubFolderId(int noteSubFolderId = 0,

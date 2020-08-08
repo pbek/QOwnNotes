@@ -5874,9 +5874,7 @@ void MainWindow::filterNotesByNoteSubFolders() {
     noteIdList.reserve(noteSubFolderIds.count());
     for (int noteSubFolderId : Utils::asConst(noteSubFolderIds)) {
         // get all notes of a note sub folder
-        QVector<Note> noteList =
-            Note::fetchAllByNoteSubFolderId(noteSubFolderId);
-        noteIdList << Note::noteIdListFromNoteList(noteList);
+        noteIdList << Note::fetchAllIdsByNoteSubFolderId(noteSubFolderId);
     }
 
     // omit the already hidden notes
@@ -7840,8 +7838,6 @@ void MainWindow::reloadTagTree() {
     ui->tagTreeWidget->clear();
 
     QVector<int> noteSubFolderIds;
-    QVector<int> noteIdList;
-    int untaggedNoteCount = 0;
 
     const auto noteSubFolderWidgetItems =
         ui->noteSubFolderTreeWidget->selectedItems();
@@ -7862,13 +7858,13 @@ void MainWindow::reloadTagTree() {
 
     qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
 
+    QVector<int> noteIdList;
+    int untaggedNoteCount = 0;
     // get the notes from the subfolders
     for (int noteSubFolderId : Utils::asConst(noteSubFolderIds)) {
         // get all notes of a note sub folder
-        const QVector<Note> noteList =
-            Note::fetchAllByNoteSubFolderId(noteSubFolderId);
         untaggedNoteCount += Note::countAllNotTagged(noteSubFolderId);
-        noteIdList << Note::noteIdListFromNoteList(noteList);
+        noteIdList << Note::fetchAllIdsByNoteSubFolderId(noteSubFolderId);
     }
 
     // create an item to view all notes
@@ -8175,8 +8171,8 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
     const auto selectedSubFolderItems =
         ui->noteSubFolderTreeWidget->selectedItems();
 
-    for (const Tag &tagToCount : tagListToCount) {
-        if (selectedSubFolderItems.count() > 1) {
+    if (selectedSubFolderItems.count() > 1) {
+        for (const Tag &tagToCount : tagListToCount) {
             for (QTreeWidgetItem *folderItem : selectedSubFolderItems) {
                 int id = folderItem->data(0, Qt::UserRole).toInt();
                 const NoteSubFolder folder = NoteSubFolder::fetch(id);
@@ -8186,24 +8182,24 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
                 }
 
                 linkedNoteIds << tagToCount.fetchAllLinkedNoteIdsForFolder(
-                    folder, _showNotesFromAllNoteSubFolders,
-                    NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
+                                     folder, _showNotesFromAllNoteSubFolders,
+                                     NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
             }
-        } else {
+        }
+    } else {
+        for (const Tag &tagToCount : tagListToCount) {
             linkedNoteIds << tagToCount.fetchAllLinkedNoteIds(
-                _showNotesFromAllNoteSubFolders,
-                NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
+                                 _showNotesFromAllNoteSubFolders,
+                                 NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
         }
     }
 
     // remove duplicate note ids
-#if (QT_VERSION < QT_VERSION_CHECK(5, 14, 0))
-    const QSet<int> linkedNoteIdSet = linkedNoteIds.toList().toSet();
-#else
-    const QSet<int> linkedNoteIdSet(linkedNoteIds.begin(), linkedNoteIds.end());
-#endif
+    linkedNoteIds.erase(
+                std::unique(linkedNoteIds.begin(), linkedNoteIds.end()),
+                linkedNoteIds.end());
 
-    const int linkCount = linkedNoteIdSet.count();
+    const int linkCount = linkedNoteIds.count();
     const QString toolTip = tr("show all notes tagged with '%1' (%2)")
                                 .arg(name, QString::number(linkCount));
     auto *item = new QTreeWidgetItem();
@@ -9029,7 +9025,7 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(const QPoint pos) {
     }
 
     // don't allow clicking on non-tag items for removing, editing and colors
-    if (item->data(0, Qt::UserRole) <= 0) {
+    if (item->data(0, Qt::UserRole).toInt() <= 0) {
         return;
     }
 
@@ -9932,7 +9928,11 @@ bool MainWindow::noteTextEditAutoComplete(QStringList &resultList) {
                      .split(QRegularExpression(
                                 QStringLiteral("[^\\w\\d]"),
                                 QRegularExpression::UseUnicodePropertiesOption),
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                             QString::SkipEmptyParts)
+#else
+                            Qt::SkipEmptyParts)
+#endif
                      .filter(QRegularExpression(
                          QStringLiteral("^") + QRegularExpression::escape(text),
                          QRegularExpression::CaseInsensitiveOption));

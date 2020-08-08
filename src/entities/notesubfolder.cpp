@@ -46,8 +46,6 @@ NoteSubFolder NoteSubFolder::fetch(int id) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
-    NoteSubFolder noteSubFolder;
-
     query.prepare(QStringLiteral("SELECT * FROM noteSubFolder WHERE id = :id"));
     query.bindValue(QStringLiteral(":id"), id);
 
@@ -55,19 +53,17 @@ NoteSubFolder NoteSubFolder::fetch(int id) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         if (query.first()) {
-            noteSubFolder = noteSubFolderFromQuery(query);
+            return noteSubFolderFromQuery(query);
         }
     }
 
-    return noteSubFolder;
+    return NoteSubFolder();
 }
 
 NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name,
                                                     int parentId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
-
-    NoteSubFolder noteSubFolder;
 
     query.prepare(
         QStringLiteral("SELECT * FROM noteSubFolder WHERE name = :name "
@@ -79,11 +75,11 @@ NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name,
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         if (query.first()) {
-            noteSubFolder = noteSubFolderFromQuery(query);
+            return noteSubFolderFromQuery(query);
         }
     }
 
-    return noteSubFolder;
+    return NoteSubFolder();
 }
 
 /**
@@ -241,8 +237,7 @@ QVector<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            const NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
-            noteSubFolderList.append(noteSubFolder);
+            noteSubFolderList.append(noteSubFolderFromQuery(query));
         }
     }
 
@@ -288,8 +283,7 @@ QVector<NoteSubFolder> NoteSubFolder::fetchAllByParentId(
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            const NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
-            noteSubFolderList.append(noteSubFolder);
+            noteSubFolderList.append(noteSubFolderFromQuery(query));
         }
     }
 
