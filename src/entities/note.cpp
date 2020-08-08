@@ -631,7 +631,7 @@ QVector<int> Note::fetchAllIds(int limit, int offset) {
     QSqlQuery query(db);
 
     QVector<int> noteIdList;
-    QString sql = QStringLiteral("SELECT * FROM note ORDER BY id");
+    QString sql = QStringLiteral("SELECT id FROM note ORDER BY id");
 
     if (limit >= 0) {
         sql += QStringLiteral(" LIMIT :limit");
@@ -655,13 +655,9 @@ QVector<int> Note::fetchAllIds(int limit, int offset) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        // there is no way to get the num of rows returned by the query,
-        // so we use static int to save the size after first query to
-        // prevent extra allocations
-        static int r = 0;
-        noteIdList.reserve(r);
-        for (r = 0; query.next(); r++) {
-            noteIdList.append(noteFromQuery(query).getId());
+        for (int r = 0; query.next(); r++) {
+            int id = query.value(QStringLiteral("id")).toInt();
+            noteIdList.append(id);
         }
     }
 
