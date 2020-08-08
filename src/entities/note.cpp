@@ -687,6 +687,31 @@ QVector<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
     return noteList;
 }
 
+QVector<int> Note::fetchAllIdsByNoteSubFolderId(int noteSubFolderId)
+{
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlQuery query(db);
+
+    QVector<int> noteList;
+    const QString sql = QStringLiteral(
+        "SELECT id FROM note WHERE note_sub_folder_id = "
+        ":note_sub_folder_id ORDER BY file_last_modified DESC");
+
+    query.prepare(sql);
+    query.bindValue(QStringLiteral(":note_sub_folder_id"), noteSubFolderId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            int id = query.value(QStringLiteral("id")).toInt();
+            noteList.append(id);
+        }
+    }
+
+    return noteList;
+}
+
 /**
  * Gets a list of note ids from a note list
  */
