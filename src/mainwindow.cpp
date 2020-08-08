@@ -9928,7 +9928,11 @@ bool MainWindow::noteTextEditAutoComplete(QStringList &resultList) {
                      .split(QRegularExpression(
                                 QStringLiteral("[^\\w\\d]"),
                                 QRegularExpression::UseUnicodePropertiesOption),
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                             QString::SkipEmptyParts)
+#else
+                            Qt::SkipEmptyParts)
+#endif
                      .filter(QRegularExpression(
                          QStringLiteral("^") + QRegularExpression::escape(text),
                          QRegularExpression::CaseInsensitiveOption));
