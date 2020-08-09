@@ -1001,6 +1001,8 @@ void SettingsDialog::storePanelSettings() {
     // Tags Panel Options
     settings.setValue(QStringLiteral("tagsPanelHideSearch"),
                       ui->tagsPanelHideSearchCheckBox->isChecked());
+    settings.setValue(QStringLiteral("tagsPanelHideNoteCount"),
+                      ui->tagsPanelHideNoteCountCheckBox->isChecked());
 
     settings.setValue(QStringLiteral("taggingShowNotesRecursively"),
                       ui->taggingShowNotesRecursivelyCheckBox->isChecked());
@@ -1568,6 +1570,8 @@ void SettingsDialog::readPanelSettings() {
     // Tags Panel Options
     ui->tagsPanelHideSearchCheckBox->setChecked(
         settings.value(QStringLiteral("tagsPanelHideSearch")).toBool());
+    ui->tagsPanelHideNoteCountCheckBox->setChecked(
+        settings.value(QStringLiteral("tagsPanelHideNoteCount"), false).toBool());
 
     ui->taggingShowNotesRecursivelyCheckBox->setChecked(
         settings.value(QStringLiteral("taggingShowNotesRecursively")).toBool());
@@ -1618,7 +1622,7 @@ void SettingsDialog::loadShortcutSettings() {
     QColor shortcutButtonInactiveColor =
         darkMode ? Qt::darkGray : palette.color(QPalette::Mid);
 
-    QList<QMenu *> menus = mainWindow->menuList();
+    const QList<QMenu *> menus = mainWindow->menuList();
     ui->shortcutSearchLineEdit->clear();
     ui->shortcutTreeWidget->clear();
     ui->shortcutTreeWidget->setColumnCount(3);
@@ -1628,7 +1632,7 @@ void SettingsDialog::loadShortcutSettings() {
                                            << QStringLiteral("noteFoldersMenu");
 
     // loop through all menus
-    foreach (QMenu *menu, menus) {
+    for (const QMenu *menu : menus) {
         if (disabledMenuNames.contains(menu->objectName())) {
             continue;
         }
@@ -1689,7 +1693,7 @@ void SettingsDialog::loadShortcutSettings() {
                           ":icons/breeze-qownnotes/16x16/dialog-cancel.svg"))));
 
             connect(disableShortcutButton, &QPushButton::pressed, this,
-                [this, keyWidget]() {
+                [keyWidget]() {
                     keyWidget->setKeySequence(QKeySequence(""));
                 });
 
