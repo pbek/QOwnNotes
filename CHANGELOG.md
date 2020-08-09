@@ -6,6 +6,7 @@
 - added some speed improvements (for [#1848](https://github.com/pbek/QOwnNotes/pull/1848), thank you @Waqar144)
 - there now is an option to disable the note count in the tags panel to improve the
   performance on slower hardware (for [#943](https://github.com/pbek/QOwnNotes/issues/943), thank you @Waqar144)
+- added more Greek, Portuguese, Brazilian Portuguese translation (thank you Gregory.K, filipedias321, i****myself)
 
 ## 20.8.2
 - Bold and italic highlighting now also works between inline code blocks in the note editor
