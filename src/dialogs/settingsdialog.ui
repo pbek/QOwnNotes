@@ -5744,7 +5744,7 @@ git config --global user.name &quot;Your name&quot;</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0">
+                <item row="1" column="0" colspan="2">
                  <widget class="QCheckBox" name="tagsPanelHideNoteCountCheckBox">
                   <property name="text">
                    <string>Hide 'Note count' with tags (increases performance)</string>
