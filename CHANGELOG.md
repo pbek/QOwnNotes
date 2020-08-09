@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.8.3
+- added the **new editor color schema** *Breeze dark*
+  (for [#1847](https://github.com/pbek/QOwnNotes/pull/1847), thank you @fabianski7)
+- added some speed improvements (for [#1848](https://github.com/pbek/QOwnNotes/pull/1848), thank you @Waqar144)
+
 ## 20.8.2
 - Bold and italic highlighting now also works between inline code blocks in the note editor
   (for [#1842](https://github.com/pbek/QOwnNotes/issues/1842), thank you @Waqar144)
