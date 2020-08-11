@@ -702,7 +702,7 @@ reference of what styles are available.
 
 If you want to inject styles into html preview to alter the way notes
 are previewed please look at
-[notetomarkdownhtmlhook](#notetomarkdownhtmlhook).
+[notetomarkdownhtmlhook](../hooks/#notetomarkdownhtmlhook).
 
 Reloading the scripting engine
 ------------------------------
