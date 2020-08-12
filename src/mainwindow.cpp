@@ -8089,6 +8089,15 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
 
         buildNoteSubFolderTreeForParentItem(item);
 
+        // add the notes of the note folder root
+        if (parentId == 0 && isCurrentNoteTreeEnabled) {
+            const QVector<Note> noteList =
+                Note::fetchAllByNoteSubFolderId(0);
+            for (const auto &note : noteList) {
+                addNoteToNoteTreeWidget(note, parent);
+            }
+        }
+
         // set the expanded state
         const bool isExpanded = noteSubFolder.treeWidgetExpandState();
         item->setExpanded(isExpanded);
@@ -10214,12 +10223,13 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
     const QPoint pos) {
     auto *item = ui->noteTreeWidget->itemAt(pos);
     const QPoint globalPos = ui->noteTreeWidget->mapToGlobal(pos);
+    const int type = item->data(0, Qt::UserRole + 1).toInt();
 
     // if the user clicks at empty space, this is null and if it isn't handled
     // QON crashes
-    if (item == nullptr) {
+    if (item == nullptr || type == FolderType) {
         openNoteSubFolderContextMenu(globalPos, ui->noteTreeWidget);
-    } else if (item->data(0, Qt::UserRole + 1).toInt() == NoteType) {
+    } else if (type == NoteType) {
         openNotesContextMenu(globalPos);
     }
 }
