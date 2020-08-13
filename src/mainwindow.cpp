@@ -8089,15 +8089,6 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
 
         buildNoteSubFolderTreeForParentItem(item);
 
-        // add the notes of the note folder root
-        if (parentId == 0 && isCurrentNoteTreeEnabled) {
-            const QVector<Note> noteList =
-                Note::fetchAllByNoteSubFolderId(0);
-            for (const auto &note : noteList) {
-                addNoteToNoteTreeWidget(note, parent);
-            }
-        }
-
         // set the expanded state
         const bool isExpanded = noteSubFolder.treeWidgetExpandState();
         item->setExpanded(isExpanded);
@@ -8112,6 +8103,15 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
                 toQtOrder(
                     settings.value(QStringLiteral("noteSubfoldersPanelOrder"))
                         .toInt()));
+        }
+    }
+
+    // add the notes of the note folder root
+    if (parentId == 0 && isCurrentNoteTreeEnabled) {
+        const QVector<Note> noteList =
+            Note::fetchAllByNoteSubFolderId(0);
+        for (const auto &note : noteList) {
+            addNoteToNoteTreeWidget(note, parent);
         }
     }
 }
@@ -11901,10 +11901,7 @@ void MainWindow::on_actionScript_settings_triggered() {
 }
 
 Qt::SortOrder MainWindow::toQtOrder(int order) {
-    if (order == ORDER_ASCENDING) {
-        return Qt::AscendingOrder;
-    }
-    return Qt::DescendingOrder;
+    return order == ORDER_ASCENDING ? Qt::AscendingOrder : Qt::DescendingOrder;
 }
 
 void MainWindow::updatePanelsSortOrder() {
