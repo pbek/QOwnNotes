@@ -6245,7 +6245,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>Esconde 'Contar notas' com tags (aumenta a performance)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
@@ -8366,7 +8366,7 @@ Isso não poderá ser desfeito!</translation>
       <location filename="../services/websocketserverservice.cpp" line="238"/>
       <source>%n bookmark(s) created</source>
       <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
+        <numerusform>%n marcador(es) criado(s)</numerusform>
         <numerusform>%n bookmark(s) created</numerusform>
       </translation>
     </message>

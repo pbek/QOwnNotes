@@ -6220,7 +6220,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>Nascondi "Conteggio note" con i tag (aumenta le prestazioni)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>

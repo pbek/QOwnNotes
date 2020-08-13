@@ -2878,7 +2878,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
       <location filename="../mainwindow.cpp" line="4634"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
-        <numerusform>Excluir &lt;strong&gt;%n&lt;/strong&gt; tag(s) selecionadas? Nenhuma nota será removida nesse processo.</numerusform>
+        <numerusform>Deseja excluir a tag selecionada (%n)? Nenhuma nota será removida nesse processo.</numerusform>
         <numerusform>Deseja excluir as %n tags selecionadas? Nenhuma nota será removida nesse processo.</numerusform>
       </translation>
     </message>
@@ -3130,7 +3130,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
     <message>
       <location filename="../mainwindow.cpp" line="8965"/>
       <source>Rename tag</source>
-      <translation>Renomear a tag</translation>
+      <translation>Renomear</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8966"/>
@@ -3145,7 +3145,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
     <message>
       <location filename="../mainwindow.cpp" line="8971"/>
       <source>&amp;Move tags to…</source>
-      <translation>&amp;Mover as tags para…</translation>
+      <translation>&amp;Mover para…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9182"/>
@@ -3722,7 +3722,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
     <message>
       <location filename="../mainwindow.cpp" line="8968"/>
       <source>&amp;Remove tags</source>
-      <translation>&amp;Remover as Tags</translation>
+      <translation>&amp;Excluir</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5460"/>
@@ -4403,7 +4403,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
     <message>
       <location filename="../utils/gui.cpp" line="335"/>
       <source>Don't show again!</source>
-      <translation>Não montar novamente!</translation>
+      <translation>Não mostrar novamente!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="856"/>
@@ -6216,7 +6216,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>Ocultar 'contagem de notas' com tags (melhor performance)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
@@ -6536,7 +6536,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2875"/>
       <source>Search script repository</source>
-      <translation>Procurar um repositório de script</translation>
+      <translation>Procurar no repositório de script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5331"/>

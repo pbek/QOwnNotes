@@ -6240,7 +6240,7 @@ Thjesht provoni veten nëse merrni konflikte sinkronizimi dhe vendosni një vler
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>Fshih 'numërimin e shënimeve' me etiketa (rrit performancën)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>

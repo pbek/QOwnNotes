@@ -5,6 +5,8 @@
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
     - the notes of the note folder root are now shown
     - if your right-click a sub-folder the sub-folder context menu is now shown
+- added more translation (thank you MGuerra, richarson, rakekniven, Gregory.K,
+  rawfreeamy, unchase, filipedias321, ihatemyself, tiwi90, mlimacarlos, Utkirbek, gbabin)
 
 ## 20.8.3
 - added the **new editor color schema** *Breeze dark*

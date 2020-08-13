@@ -6215,7 +6215,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>Amaga el "Total de notes" al Panell d'Etiquetes (augmenta el rendiment)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>

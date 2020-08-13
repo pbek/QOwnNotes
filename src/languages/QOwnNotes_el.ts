@@ -2640,7 +2640,7 @@
       <location filename="../mainwindow.ui" line="2220"/>
       <location filename="../mainwindow.ui" line="2223"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>Ανοίξτε την αίθουσα Gitter qownnotes, για να συνδεθείτε, χρειάζεστε ένα λογαριασμό GitHub ή Twitter, αλλά μπορείτε να λάβετε μηνύματα εκτός σύνδεσης</translation>
+      <translation>Ανοίξτε τη συζήτηση 'qownnotes' στο Gitter, για να συνδεθείτε, χρειάζεστε ένα λογαριασμό GitHub ή Twitter, αλλά μπορείτε να λάβετε μηνύματα εκτός σύνδεσης</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="992"/>
@@ -6243,7 +6243,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>Απόκρυψη 'καταμέτρησης σημειώσεων' με ετικέτες (αυξάνει την απόδοση)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>

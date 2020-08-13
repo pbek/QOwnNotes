@@ -2331,7 +2331,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2148"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation>Suchen von Notizen in allen Schlagwörtern/Unterordnern</translation>
+      <translation>Suchen von Notizen in allen Schlagworten/Unterordnern</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2169"/>
@@ -2880,7 +2880,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
     <message>
       <location filename="../mainwindow.cpp" line="4633"/>
       <source>Remove selected tags</source>
-      <translation>Ausgewählte Schlagwörter entfernen</translation>
+      <translation>Ausgewählte Schlagworte entfernen</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4634"/>
@@ -3745,7 +3745,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
     <message>
       <location filename="../mainwindow.cpp" line="757"/>
       <source>Tags</source>
-      <translation>Schlagwörter</translation>
+      <translation>Schlagworte</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="766"/>
@@ -6221,7 +6221,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>'Notizanzahl' mit Schlagworten ausblenden (erhöht die Leistung)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
@@ -6435,7 +6435,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5461"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation>Alle Notizen eines Schlagwortes und untergerordneter Schlagwörter anzeigen</translation>
+      <translation>Alle Notizen eines Schlagwortes und untergerordneten Schlagworten anzeigen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5454"/>

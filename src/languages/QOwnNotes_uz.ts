@@ -6258,7 +6258,7 @@ Sinxron to'qnashuvlarga duch kelsangiz, o'zingizni sinab ko'ring va agar shunday
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>"Qaydlar soni" ni yashirib qo'yish (qulaylik uchun)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
