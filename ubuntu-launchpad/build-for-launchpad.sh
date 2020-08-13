@@ -6,7 +6,6 @@
 # We will need some packages to execute this locally:
 # sudo apt-get install build-essential autoconf automake autotools-dev dh-make debhelper devscripts fakeroot xutils lintian pbuilder cdbs
 #
-# The GPG public key $GPG_PUBLIC_KEY also has to be in place locally
 # Also a ~/.dput.cf has to be in place
 #
 
@@ -22,7 +21,7 @@ DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
 UPLOAD="true"
 DEBUILD_ARGS=""
-GPG_PUBLIC_KEY=F5161BD3
+SIGNING_EMAIL=patrizio@bekerle.com
 export DEBFULLNAME="Patrizio Bekerle"
 export DEBEMAIL="patrizio@bekerle.com"
 
@@ -101,7 +100,7 @@ do
     echo " -- $DEBFULLNAME <$DEBEMAIL>  $DATE" >> $changelogPath
 
     # launch debuild
-    debuild -S -sa -k$GPG_PUBLIC_KEY $DEBUILD_ARGS
+    debuild -S -sa -k$SIGNING_EMAIL $DEBUILD_ARGS
     cd ..
 
     # send to launchpad
