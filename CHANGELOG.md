@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.8.5
+- fixed regression from 20.8.4 that causes to crash the application when right-clicking
+  on an empty area in the note list (for [#1854](https://github.com/pbek/QOwnNotes/issues/1854))
+
 ## 20.8.4
 - improvements where made to the **note / subfolder tree mode**
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
