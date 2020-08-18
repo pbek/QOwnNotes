@@ -1,7 +1,15 @@
 # QOwnNotes Changelog
 
+## 20.8.6
+- the `readFromFile` script command now has a new parameter `codec` to specify the encoding
+  of the file (for [#1817](https://github.com/pbek/QOwnNotes/issues/1817))
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#reading-text-from-a-file)
+    - the script `dictionary-autocomplete` in the script repository was updated to use this parameter
+      in a script setting to set the encoding of the dictionary file
+
 ## 20.8.5
-- fixed regression from 20.8.4 that causes to crash the application when right-clicking
+- fixed a regression from 20.8.4 that causes to crash the application when right-clicking
   on an empty area in the note list (for [#1854](https://github.com/pbek/QOwnNotes/issues/1854))
 
 ## 20.8.4

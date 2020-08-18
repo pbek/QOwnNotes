@@ -2116,10 +2116,12 @@ bool ScriptingService::writeToFile(const QString &filePath,
  * @param filePath
  * @return the file data or null if the file does not exist
  */
-QString ScriptingService::readFromFile(const QString &filePath) const {
+QString ScriptingService::readFromFile(const QString &filePath,
+                                       const QString &codec) const {
     if (filePath.isEmpty()){
         return QString();
     }
+
     QFile file(filePath);
 
     if (!file.open(QFile::ReadOnly)){
@@ -2127,9 +2129,10 @@ QString ScriptingService::readFromFile(const QString &filePath) const {
     }
 
     QTextStream in(&file);
-    in.setCodec("UTF-8");
+    in.setCodec(codec.toLatin1());
     QString data = in.readAll();
     file.close();
+
     return data;
 }
 

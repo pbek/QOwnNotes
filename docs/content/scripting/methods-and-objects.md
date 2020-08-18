@@ -1412,17 +1412,18 @@ Checking if a file exists
     ```
 
 Reading text from a file
-----------------------
+------------------------
 
 !!! help "Method call and parameters"
     ```cpp
     /**
      * Read text from a file
      *
-     * @param filePath
+     * @param filePath {QString} path of the file to load
+     * @param codec {QString} file encoding (default: UTF-8)
      * @return the file data or null if the file does not exist
      */
-    QString ScriptingService::readFromFile(const QString &filePath)
+    QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
     ```
 
 !!! example
