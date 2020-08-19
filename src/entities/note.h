@@ -150,6 +150,8 @@ class Note {
 
     QString encryptNoteText();
 
+    QString fetchDecryptedNoteText() const;
+
     QString getDecryptedNoteText() const;
 
     bool hasEncryptedNoteText() const;

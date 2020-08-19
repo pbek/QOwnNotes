@@ -19,7 +19,7 @@ class NoteApi : public QObject, public Note {
     Q_PROPERTY(QString relativeNoteFileDirPath READ relativeNoteSubFolderPath() CONSTANT)
     Q_PROPERTY(int noteSubFolderId READ getNoteSubFolderId() CONSTANT)
     Q_PROPERTY(QString noteText READ getNoteText() WRITE setNoteText())
-    Q_PROPERTY(QString decryptedNoteText READ getDecryptedNoteText()
+    Q_PROPERTY(QString decryptedNoteText READ fetchDecryptedNoteText()
                    WRITE setDecryptedNoteText())
     Q_PROPERTY(QDateTime fileCreated READ getFileCreated() CONSTANT)
     Q_PROPERTY(QDateTime fileLastModified READ getFileLastModified() CONSTANT)

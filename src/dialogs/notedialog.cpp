@@ -26,7 +26,7 @@ void NoteDialog::setNote(Note &note) {
 
     // show the decrypted text if possible
     QString text = note.hasEncryptedNoteText() && note.canDecryptNoteText()
-                       ? note.getDecryptedNoteText()
+                       ? note.fetchDecryptedNoteText()
                        : note.getNoteText();
     ui->textEdit->setPlainText(text);
 

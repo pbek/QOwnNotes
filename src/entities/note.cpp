@@ -2121,7 +2121,7 @@ bool Note::removeNoteFile() {
 QString Note::toMarkdownHtml(const QString &notesPath, int maxImageWidth,
                              bool forExport, bool decrypt, bool base64Images) {
     // get the decrypted note text (or the normal note text if there isn't any)
-    const QString str = decrypt ? getDecryptedNoteText() : getNoteText();
+    const QString str = decrypt ? fetchDecryptedNoteText() : getNoteText();
 
     // create a hash of the note text and the parameters
     const QString toHash = str + QString::number(maxImageWidth) +
@@ -2814,10 +2814,17 @@ void Note::setCryptoPassword(const QString &password) {
 }
 
 /**
- * Returns decrypted note text if it is encrypted
- * The crypto key has to be set in the object
+ * Returns decrypted note text
  */
 QString Note::getDecryptedNoteText() const {
+    return _decryptedNoteText;
+}
+
+/**
+ * Fetches the decrypted note text if it is encrypted
+ * The crypto key has to be set in the object
+ */
+QString Note::fetchDecryptedNoteText() const {
     QString noteText = getNoteText();
     const QString encryptedNoteText = getEncryptedNoteText();
 

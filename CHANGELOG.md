@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.8.7
+- the note scripting api will now not attempt to automatically decrypt a note in the background because
+  this would happen every time the current note changes (for [#104](https://github.com/qownnotes/scripts/issues/104))
+
 ## 20.8.6
 - the `readFromFile` script command now has a new parameter `codec` to specify the encoding
   of the file (for [#1817](https://github.com/pbek/QOwnNotes/issues/1817))

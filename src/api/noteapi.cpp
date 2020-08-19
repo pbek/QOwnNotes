@@ -18,9 +18,12 @@ NoteApi* NoteApi::fetch(int id) {
         _noteText = _note.getNoteText();
         _hasDirtyData = _note.getHasDirtyData();
         _noteSubFolderId = _note.getNoteSubFolderId();
-        _decryptedNoteText = _note.getDecryptedNoteText();
         _fileCreated = _note.getFileCreated();
         _fileLastModified = _note.getFileLastModified();
+
+        // we'll try not to fetch the decrypted note text, because it
+        // would be done every time the current note changes
+        _decryptedNoteText = _note.getDecryptedNoteText();
     }
 
     return this;

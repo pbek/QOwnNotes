@@ -7079,7 +7079,7 @@ void MainWindow::on_actionDecrypt_note_triggered() {
 
     if (currentNote.canDecryptNoteText()) {
         ui->encryptedNoteTextEdit->hide();
-        ui->noteTextEdit->setText(currentNote.getDecryptedNoteText());
+        ui->noteTextEdit->setText(currentNote.fetchDecryptedNoteText());
         ui->noteTextEdit->show();
         ui->noteTextEdit->setFocus();
         updateNoteTextEditReadOnly();
@@ -7103,7 +7103,7 @@ void MainWindow::on_actionEdit_encrypted_note_triggered() {
         Q_UNUSED(blocker)
 
         ui->noteTextEdit->hide();
-        const auto text = currentNote.getDecryptedNoteText();
+        const auto text = currentNote.fetchDecryptedNoteText();
         currentNote.setDecryptedText(text);
         // for some reason this still triggers a "textChanged", so we will do a
         // "currentNote.setDecryptedText" and check if the text realy changed in
