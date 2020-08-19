@@ -93,7 +93,7 @@ void TestNotes::testNoteDecryption() {
     note.setCryptoPassword("test");
 
     QVERIFY(note.getId() == 2);
-    QVERIFY(note.getDecryptedNoteText() ==
+    QVERIFY(note.fetchDecryptedNoteText() ==
             QStringLiteral("MyTestNote\n============\n\nSome text"));
 }
 
@@ -102,7 +102,7 @@ void TestNotes::testNoteDecryptionFail() {
     note.setCryptoPassword("test2");
 
     QVERIFY(note.getId() == 2);
-    QVERIFY(note.getDecryptedNoteText() !=
+    QVERIFY(note.fetchDecryptedNoteText() !=
             QStringLiteral("MyTestNote\n============\n\nSome text"));
 }
 
