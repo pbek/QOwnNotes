@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.8.9
+- fixed a problem with pressing `Backspace` after a `'` in lists
+  (for [#1857](https://github.com/pbek/QOwnNotes/issues/1857), thank you @Waqar144)
+
 ## 20.8.8
 - fixed a problem where you could loose changes to an encrypted note if you switch
   to another note and back to the encrypted note and then immediately edit it again
