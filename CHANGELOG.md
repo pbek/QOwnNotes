@@ -3,7 +3,7 @@
 ## 20.8.8
 - fixed a problem where you could loose changes to an encrypted note if you switch
   to another note and back to the encrypted note and then immediately edit it again
-  before the encrypted note was stored to disk
+  before the encrypted note was stored to disk (for [#1858](https://github.com/pbek/QOwnNotes/issues/1858))
 
 ## 20.8.7
 - the note scripting api will now not attempt to automatically decrypt a note in the background because
