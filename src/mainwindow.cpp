@@ -7106,8 +7106,8 @@ void MainWindow::on_actionEdit_encrypted_note_triggered() {
         const auto text = currentNote.fetchDecryptedNoteText();
         currentNote.setDecryptedText(text);
         // for some reason this still triggers a "textChanged", so we will do a
-        // "currentNote.setDecryptedText" and check if the text realy changed in
-        // "currentNote.storeNewDecryptedText"
+        // "currentNote.setDecryptedText" and check if the text really changed
+        // in "currentNote.storeNewDecryptedText"
         ui->encryptedNoteTextEdit->setText(text);
         ui->encryptedNoteTextEdit->show();
         ui->encryptedNoteTextEdit->setFocus();

@@ -2814,7 +2814,7 @@ void Note::setCryptoPassword(const QString &password) {
 }
 
 /**
- * Returns decrypted note text
+ * Returns the decrypted note text
  */
 QString Note::getDecryptedNoteText() const {
     return _decryptedNoteText;
