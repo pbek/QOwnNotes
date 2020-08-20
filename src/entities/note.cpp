@@ -2825,6 +2825,14 @@ QString Note::getDecryptedNoteText() const {
  * The crypto key has to be set in the object
  */
 QString Note::fetchDecryptedNoteText() const {
+    // if there is "dirty data" it means that the encrypted note was recently
+    // changed, but not stored yet
+    // in that case we want to return the already decrypted text, because that
+    // text is the most current one
+    if (_hasDirtyData) {
+        return _decryptedNoteText;
+    }
+
     QString noteText = getNoteText();
     const QString encryptedNoteText = getEncryptedNoteText();
 
