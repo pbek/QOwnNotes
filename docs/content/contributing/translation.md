@@ -22,7 +22,7 @@ if you want to translate QOwnNotes to a new language.
 
 If you want to add new translations to existing languages you can do so right away.
 
-### Proofreading
+## Proofreading
 
 If you are a very good speaker of an already translated language that has not be proofread yet, we are grateful for your help making the QOwnNotes experience more reliable and convenient.
 
@@ -70,5 +70,10 @@ Please consider a few things while working on the project:
 
    ![screenshot](../assets/img/crowdin/screenshot-4.png)
 
+## Translating and proofreading are fun!
+
+You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
+
+If you are thus ready to help proofreading the translation of your language, Fabijenna, as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
 
 Thanks a lot for your help!
