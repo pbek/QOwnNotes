@@ -62,14 +62,14 @@ jobs:
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
-        qt-version: ['5.13.2', '5.14.2']
+        qt-version: ['5.13.2', '5.15.1']
         exclude:
           - os: ubuntu-16.04
             qt-version: '5.13.2'
           - os: macos-latest
             qt-version: '5.13.2'
           - os: windows-latest
-            qt-version: '5.14.2'
+            qt-version: '5.15.1'
     steps:
     - uses: actions/checkout@v2	
       with:	
@@ -123,7 +123,7 @@ jobs:
     - if: contains( matrix.os, 'ubuntu')
       name: Build for Linux
       run: |
-        sudo apt install desktop-file-utils
+        sudo apt install desktop-file-utils libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-composite0 libxcb-cursor0 libxcb-damage0 libxcb-dpms0 libxcb-dri2-0 libxcb-dri3-0 libxcb-ewmh2 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-record0 libxcb-render0 libxcb-res0 libxcb-screensaver0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1
         echo "#define RELEASE \"GitHub Actions\"" > release.h
         qmake PREFIX=/usr
         lrelease QOwnNotes.pro

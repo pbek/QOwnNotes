@@ -44,14 +44,17 @@ if [ "$?" -ne "0" ]; then
     exit 1
 fi
 
+##
+## macdeployqtfix doesn't seem to be needed on Qt 5.15.1
+##
 # trying to fix the macdeployqt problem with making the binary use the Qt
 # library files from /usr/local instead of the bundle
 # see: https://github.com/Homebrew/homebrew-core/issues/6161
 # example: https://github.com/iltommi/neutrino/blob/master/.travis.yml
-echo "Cloning macdeployqtfix"
-git clone --depth=1 https://github.com/aurelien-rainone/macdeployqtfix.git
-echo "Calling macdeployqtfix"
-python macdeployqtfix/macdeployqtfix.py $APP.app/Contents/MacOS/$APP /usr/local
+#echo "Cloning macdeployqtfix"
+#git clone --depth=1 https://github.com/aurelien-rainone/macdeployqtfix.git
+#echo "Calling macdeployqtfix"
+#python macdeployqtfix/macdeployqtfix.py $APP.app/Contents/MacOS/$APP /usr/local
 
 echo "Create $TEMPDIR"
 #Create a temporary directory if one doesn't exist

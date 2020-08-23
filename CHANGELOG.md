@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.8.10
+- the QOwnNotes AppImage for Linux and the DMG for macOS are now built with Qt 5.15.1
+    - this also fixed a script execution problem under macOS, because QtQml wasn't found
+
 ## 20.8.9
 - fixed a problem with pressing `Backspace` after a `'` in lists
   (for [#1857](https://github.com/pbek/QOwnNotes/issues/1857), thank you @Waqar144)
