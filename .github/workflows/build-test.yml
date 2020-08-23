@@ -51,7 +51,8 @@ jobs:
           - os: windows-latest
             qt-version: '5.7'
         include:
-          - qt-version: '6.0'
+          - os: [ubuntu-latest, macos-latest, windows-latest]
+            qt-version: '6.0'
             experimental: true
     steps:
     - uses: actions/checkout@v2
