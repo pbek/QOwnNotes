@@ -51,7 +51,13 @@ jobs:
           - os: windows-latest
             qt-version: '5.7'
         include:
-          - os: [ubuntu-latest, macos-latest, windows-latest]
+          - os: ubuntu-latest
+            qt-version: '6.0'
+            experimental: true
+          - os: macos-latest
+            qt-version: '6.0'
+            experimental: true
+          - os: windows-latest
             qt-version: '6.0'
             experimental: true
     steps:
