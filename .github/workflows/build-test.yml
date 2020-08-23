@@ -43,6 +43,9 @@ jobs:
           # win64_mingw73 not found
 #          - os: windows-latest
 #            qt-version: '5.15.0'
+          # qt.conf not found (https://github.com/jurplel/install-qt-action/issues/54)
+          - os: windows-latest
+            qt-version: '5.15.1'
           # botan 32bt error
           - os: windows-latest
             qt-version: '5.7'
@@ -61,7 +64,7 @@ jobs:
       with:
         path: ../Qt
         key: ${{ runner.os }}-QtCache-${{ matrix.qt-version }}
-    # https://github.com/marketplace/actions/install-qt
+    # https://github.com/jurplel/install-qt-action
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.7' )
       name: Install Qt 5.7 on Windows
       uses: jurplel/install-qt-action@v2
