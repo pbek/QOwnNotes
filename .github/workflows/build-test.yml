@@ -24,6 +24,7 @@ jobs:
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
         qt-version: ['5.3', '5.4', '5.7', '5.13.2', '5.14.2', '5.15.1']
+        experimental: [false]
         exclude:
           # xcode not found
           - os: macos-latest
@@ -49,6 +50,9 @@ jobs:
           # botan 32bt error
           - os: windows-latest
             qt-version: '5.7'
+        include:
+          - qt-version: '6.0'
+            experimental: true
     steps:
     - uses: actions/checkout@v2
       with:
