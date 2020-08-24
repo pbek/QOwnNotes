@@ -74,6 +74,6 @@ Please consider a few things while working on the project:
 
 You get to deal with the language that this software speaks and learn a lot about terms and the insides of the project.
 
-If you are thus ready to help proofreading the translation of your language, Fabijenna, as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
+If you are thus ready to help proofreading the translation of your language, [Fabijenna](https://crowdin.com/profile/rawfreeamy), as a translator and editor of twenty years welcomes you to a 30 minutes coaching in the science and the practice of translating and proofreading, where you can ask her questions that you might not been sure about and get the most out of your proofreading experience.
 
 Thanks a lot for your help!
