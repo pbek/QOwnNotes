@@ -8,6 +8,9 @@ Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes
 
 Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new with a **screenshot** of the current webpage.
 
+!!! tip
+    The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks/#websocketrawdatahook) if you want to control what you clip from webpages.
+
 ## Bookmarks
 
 By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
