@@ -28,7 +28,7 @@ If you are a very good speaker of an already translated language that has not be
 
 Click here to see if your language is among the translated ones! 
 
-[QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+[QOwnNotes on Crowdin](https://translate.qownnotes.org/)
 
 Once you’ve contacted the project owner [GitHub issue](https://github.com/pbek/QOwnNotes/issues) and received permission to proofread in your language, you’re ready to go!
 
