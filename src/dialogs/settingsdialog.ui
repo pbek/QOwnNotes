@@ -4409,7 +4409,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item row="5" column="0" colspan="7">
                  <widget class="QCheckBox" name="gitHubLineBreaksCheckBox">
                   <property name="toolTip">
-                   <string>No two spaces to do a line break are added here if checked</string>
+                   <string>GitHub doesn't need two spaces at the end of the line to do a line break</string>
                   </property>
                   <property name="text">
                    <string>Use GitHub line breaks</string>
