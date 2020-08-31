@@ -49,10 +49,10 @@
 #endif
 
 Note::Note()
-    : _fileSize{0},
-      _cryptoKey{0},
-      _id{0},
+      : _id{0},
       _noteSubFolderId{0},
+      _fileSize{0},
+      _cryptoKey{0},
       _shareId{0},
       _sharePermissions{0},
       _hasDirtyData{false} {}
@@ -86,7 +86,7 @@ unsigned int Note::getSharePermissions() const {
  */
 bool Note::isShareEditAllowed() const { return _sharePermissions & 2; }
 
-qint64 Note::getFileSize() const { return this->_fileSize; }
+int Note::getFileSize() const { return this->_fileSize; }
 
 bool Note::isShared() const { return this->_shareId > 0; }
 
