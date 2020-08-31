@@ -2,7 +2,7 @@
 
 ## 20.9.0
 - a tooltip in the *Settings dialog* was changed to make it more comprehensive
-- a lot of translation and proofreading were made (thank you amirkbrpr, CarmenC,
+- a lot of translation and proofreading took place (thank you amirkbrpr, CarmenC,
   Aya_Fouad, DavidLinek, i****myself, pehtranslator, vaniamartins, AhmedElsayed,
   abdo25, rawfreeamy, wribeiro86, matheussantosaraujo12, nandhpc, MartaStan,
   christopher.ruppenthal1997, hamza.0404, brittonando, manowski.pawel, Tommy903,
