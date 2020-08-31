@@ -248,7 +248,7 @@ class Note {
 
     static Note fetchByShareId(int shareId);
 
-    qint64 getFileSize() const;
+    int getFileSize() const;
 
     static Note updateOrCreateFromFile(QFile &file,
                                        const NoteSubFolder &noteSubFolder,
@@ -352,6 +352,8 @@ class Note {
     QString detectNewlineCharacters();
 
    protected:
+    int _id;
+    int _noteSubFolderId;
     QString _name;
     QString _fileName;
     QString _noteTextHtml;
@@ -364,10 +366,8 @@ class Note {
     QDateTime _fileLastModified;
     QDateTime _created;
     QDateTime _modified;
-    qint64 _fileSize;
     qint64 _cryptoKey;
-    int _id;
-    int _noteSubFolderId;
+    int _fileSize;
     int _shareId;
     unsigned int _sharePermissions;
     bool _hasDirtyData;
