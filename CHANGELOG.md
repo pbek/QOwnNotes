@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 20.9.0
+- a tooltip in the *Settings dialog* was changed to make it more comprehensive
+- a lot of translation and proofreading were made (thank you amirkbrpr, CarmenC,
+  Aya_Fouad, DavidLinek, i****myself, pehtranslator, vaniamartins, AhmedElsayed,
+  abdo25, rawfreeamy, wribeiro86, matheussantosaraujo12, nandhpc, MartaStan,
+  christopher.ruppenthal1997, hamza.0404, brittonando, manowski.pawel, Tommy903,
+  natallia.andranaki, Zamalor, rafacerutti.translator, secondjay, Basudeb_Dhaka,
+  Farhan1985, IvonkaTran, hitoshi2544, VasilikiBotsou, rakekniven, gbabin, je1311,
+  Koduja, tiwi90, Suci_R)
+
 ## 20.8.10
 - the QOwnNotes AppImage for Linux and the DMG for macOS are now built with Qt 5.15.1
     - this also fixed a script execution problem under macOS, because QtQml wasn't found
@@ -35,7 +45,7 @@
     - the notes of the note folder root are now shown
     - if your right-click a sub-folder the sub-folder context menu is now shown
 - added more translation (thank you MGuerra, richarson, rakekniven, Gregory.K,
-  rawfreeamy, unchase, filipedias321, ihatemyself, tiwi90, mlimacarlos, Utkirbek, gbabin)
+  rawfreeamy, unchase, filipedias321, i****myself, tiwi90, mlimacarlos, Utkirbek, gbabin)
 
 ## 20.8.3
 - added the **new editor color schema** *Breeze dark*
