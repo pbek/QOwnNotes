@@ -2206,16 +2206,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1704"/>
-        <source>Next note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="1716"/>
-        <source>Previous note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="1728"/>
         <source>&amp;Distraction free mode</source>
         <translation type="unfinished"></translation>
@@ -2644,6 +2634,16 @@
     <message>
         <location filename="../mainwindow.ui" line="1596"/>
         <source>&amp;Print note (preview)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1704"/>
+        <source>Move down in note list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1716"/>
+        <source>Move up in note list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -1701,7 +1701,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</iconset>
    </property>
    <property name="text">
-    <string>Next note</string>
+    <string>Move down in note list</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Down</string>
@@ -1713,7 +1713,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</iconset>
    </property>
    <property name="text">
-    <string>Previous note</string>
+    <string>Move up in note list</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Up</string>
