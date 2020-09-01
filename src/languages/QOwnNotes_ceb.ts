@@ -2212,16 +2212,6 @@
       <translation>Musingit &amp;babagan ang kulod</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1704"/>
-      <source>Next note</source>
-      <translation>Sunod nga pahibalo</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="1716"/>
-      <source>Previous note</source>
-      <translation>Pagniagi nga pahibalo</translation>
-    </message>
-    <message>
       <location filename="../mainwindow.ui" line="1728"/>
       <source>&amp;Distraction free mode</source>
       <translation>&amp;nakadistorbo ng libre mode</translation>
@@ -2656,6 +2646,16 @@
       <location filename="../mainwindow.ui" line="1596"/>
       <source>&amp;Print note (preview)</source>
       <translation>&amp;i-print ang talaa (ibalik)</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="1704"/>
+      <source>Move down in note list</source>
+      <translation type="unfinished">Move down in note list</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="1716"/>
+      <source>Move up in note list</source>
+      <translation type="unfinished">Move up in note list</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>

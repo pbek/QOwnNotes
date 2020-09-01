@@ -4,6 +4,9 @@
 - the action `Previous note` was renamed to to `Move up in note list` and the 
   action `Next note` to `Move down in note list` to make the meaning of the
   actions more clear (for [#1862](https://github.com/pbek/QOwnNotes/issues/1862))
+- added more translation (thank you amirkbrpr, muhannad.albayk.jaam, pehtranslator,
+  Farhan1985, abdo25, MGuerra, rafacerutti.translator, Gregory.K, danilosf,
+  secondjay, Iva16, mdirice, CarmenC)
 
 ## 20.9.0
 - a tooltip in the *Settings dialog* was changed to make it more comprehensive

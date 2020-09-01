@@ -2212,16 +2212,6 @@
       <translation>Isal-ot &amp;kode damul</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1704"/>
-      <source>Next note</source>
-      <translation>Sunod nga listahan</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="1716"/>
-      <source>Previous note</source>
-      <translation>Nagligad nga listahan</translation>
-    </message>
-    <message>
       <location filename="../mainwindow.ui" line="1728"/>
       <source>&amp;Distraction free mode</source>
       <translation>&amp;sabad nga libre nga mode</translation>
@@ -2651,6 +2641,16 @@
       <location filename="../mainwindow.ui" line="1596"/>
       <source>&amp;Print note (preview)</source>
       <translation>&amp;isulat sa listahan (makita tanan)</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="1704"/>
+      <source>Move down in note list</source>
+      <translation type="unfinished">Move down in note list</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="1716"/>
+      <source>Move up in note list</source>
+      <translation type="unfinished">Move up in note list</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>

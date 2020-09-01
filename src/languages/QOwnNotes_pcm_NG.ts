@@ -2212,16 +2212,6 @@
       <translation type="unfinished">Insert &amp;code block</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1704"/>
-      <source>Next note</source>
-      <translation type="unfinished">Next note</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="1716"/>
-      <source>Previous note</source>
-      <translation type="unfinished">Previous note</translation>
-    </message>
-    <message>
       <location filename="../mainwindow.ui" line="1728"/>
       <source>&amp;Distraction free mode</source>
       <translation type="unfinished">&amp;Distraction free mode</translation>
@@ -2651,6 +2641,16 @@
       <location filename="../mainwindow.ui" line="1596"/>
       <source>&amp;Print note (preview)</source>
       <translation type="unfinished">&amp;Print note (preview)</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="1704"/>
+      <source>Move down in note list</source>
+      <translation type="unfinished">Move down in note list</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="1716"/>
+      <source>Move up in note list</source>
+      <translation type="unfinished">Move up in note list</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
