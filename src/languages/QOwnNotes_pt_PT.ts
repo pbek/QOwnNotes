@@ -934,7 +934,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
       <source>Move lines into themselves.</source>
-      <translation>Mover as próprias linhas.</translation>
+      <translation>Mover as linhas para elas mesmas.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
@@ -2650,12 +2650,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Mover para baixo na lista de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Mover para cima na lista de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>

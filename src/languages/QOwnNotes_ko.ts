@@ -935,19 +935,19 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
       <source>Move lines into themselves.</source>
-      <translation>라인을 스스로 이동하십시오.</translation>
+      <translation>줄을 스스로 옮기십시오.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
       <translation>
-        <numerusform>%n 개의 줄이 이동했습니다.</numerusform>
+        <numerusform>%n개의 줄이 이동했습니다.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5958"/>
       <source>File "%1" exists (add ! to override)</source>
-      <translation>"%1" 파일이 존재합니다 (재정의하려면 추가!)</translation>
+      <translation>"%1" 파일이 존재합니다(재정의하려면 추가!)</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5972"/>
@@ -962,7 +962,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5979"/>
       <source> [New] </source>
-      <translation>[ਨਵਾਂ]</translation>
+      <translation> [New] </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5987"/>
@@ -978,7 +978,7 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
       <translation>
-        <numerusform>%n 개의 줄이 필터링되었습니다.</numerusform>
+        <numerusform>%n개의 줄이 필터링되었습니다.</numerusform>
       </translation>
     </message>
     <message>
@@ -1019,7 +1019,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation>%1과 (과) 일치하지 않는 검색 인기 항목</translation>
+      <translation>다음과 일치하는 항목 없이 TOP 검색: %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
@@ -1380,7 +1380,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="121"/>
       <source>Scaling width:</source>
-      <translation>스케일링 폭:</translation>
+      <translation>스케일링 너비:</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="217"/>
@@ -1425,7 +1425,7 @@
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="81"/>
       <source>Any files</source>
-      <translation>모든 파일</translation>
+      <translation>파일</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="87"/>
@@ -1505,7 +1505,7 @@
       <location filename="../widgets/layoutwidget.cpp" line="179"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation>이 때문에 자동으로 크기가 조정되는 중앙 위젯이 없습니다.</translation>
+      <translation>이것 때문에 자동으로 크기가 조정되는 중앙 위젯이 없습니다.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="184"/>
@@ -1558,7 +1558,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="83"/>
       <source>Select local file or directory to link to</source>
-      <translation>연결할 로컬 파일 또는 디렉토리 선택하기</translation>
+      <translation>연결할 로컬 파일 또는 디렉터리 선택하기</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
@@ -1605,7 +1605,7 @@
       <location filename="../dialogs/linkdialog.cpp" line="271"/>
       <location filename="../dialogs/linkdialog.cpp" line="322"/>
       <source>Select directory to link to</source>
-      <translation>연결할 디렉토리 선택하기</translation>
+      <translation>연결할 디렉터리 선택하기</translation>
     </message>
   </context>
   <context>
@@ -1628,7 +1628,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="86"/>
       <source>Trashed</source>
-      <translation>버려짐</translation>
+      <translation>휴지통에 버려짐</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="45"/>
@@ -1951,7 +1951,7 @@
     <message>
       <location filename="../mainwindow.ui" line="292"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>텍스트를 입력하고 Return 키를 눌러 메모 검색 또는 새 메모 작성</translation>
+      <translation>텍스트를 입력하고 리턴키를 눌러 노트 검색 또는 새 노트 작성</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="306"/>
@@ -2038,7 +2038,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1111"/>
       <source>Spelling backend</source>
-      <translation>맞춤법 백엔드</translation>
+      <translation>맞춤법 백 엔드</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1136"/>
@@ -2409,7 +2409,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2353"/>
       <source>Copy note headline</source>
-      <translation>노트 헤드라인 복사</translation>
+      <translation>노트 제목 복사</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2365"/>
@@ -2600,7 +2600,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1942"/>
       <source>Select note folder</source>
-      <translation>메모 폴더 선택</translation>
+      <translation>노트 폴더 선택</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1957"/>
@@ -2637,17 +2637,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>노트 목록 아래로 이동</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>노트 목록 위로 이동</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
       <source>Insert headline from note filename</source>
-      <translation>노트 파일 이름으로부터 헤드라인 삽입</translation>
+      <translation>노트 파일 이름으로부터 제목 삽입</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2016"/>
@@ -2727,8 +2727,8 @@ Restore current note?</source>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
-      <translation type="unfinished">
-        <numerusform>stored %n note(s) to disk</numerusform>
+      <translation>
+        <numerusform>%n개 노트를 디스크에 저장했습니다</numerusform>
       </translation>
     </message>
     <message>
@@ -3222,7 +3222,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../mainwindow.cpp" line="10265"/>
       <source>&amp;Copy notes to…</source>
-      <translation>노트를 복사(&amp;C)...</translation>
+      <translation>&amp;노트를 복사...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10308"/>
@@ -3318,7 +3318,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../mainwindow.cpp" line="12274"/>
       <source>Note headline '%1' was copied to the clipboard</source>
-      <translation>노트 헤드라인 '%1'이(가) 클립보드에 복사되었습니다</translation>
+      <translation>노트 제목 '%1'이(가) 클립보드에 복사되었습니다</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12368"/>
@@ -3395,7 +3395,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../mainwindow.cpp" line="5326"/>
       <source>Portrait</source>
-      <translation>초상화</translation>
+      <translation>인물 사진</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5326"/>
@@ -3405,12 +3405,12 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../mainwindow.cpp" line="5331"/>
       <source>Orientation</source>
-      <translation>정위</translation>
+      <translation>방향</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5331"/>
       <source>Orientation:</source>
-      <translation>정위:</translation>
+      <translation>방향:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5354"/>
@@ -3544,7 +3544,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../mainwindow.cpp" line="10455"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation>노트 이름을 바꾸려면 노트 파일 이름이 헤드라인과 다르도록 허용하는 옵션을 활성화해야 합니다.</translation>
+      <translation>노트 이름을 바꾸려면 노트 파일 이름이 제목과 다르도록 허용하는 옵션을 활성화해야 합니다.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10673"/>
@@ -3640,7 +3640,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../mainwindow.cpp" line="2899"/>
       <source>Notes directory was modified externally</source>
-      <translation>노트 디렉토리가 외부에서 수정되었습니다</translation>
+      <translation>노트 디렉터리가 외부에서 수정되었습니다</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2960"/>
@@ -3693,7 +3693,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../mainwindow.cpp" line="8216"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation>'%1' (%2) 태그로 모든 메모 표시</translation>
+      <translation>'%1'(%2) 태그가 붙은 모든 노트 표시</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8977"/>
@@ -3803,7 +3803,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../mainwindow.cpp" line="2251"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation>폴더에 메모 표시 '%1' (%2)</translation>
+      <translation>폴더에 노트 표시 '%1'(%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2290"/>
@@ -3874,19 +3874,19 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
       <location filename="../mainwindow.cpp" line="5677"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
-        <numerusform>&lt;strong&gt;%1&lt;/ strong&gt;의 &lt;strong&gt;%n&lt;/ strong&gt; 발생 발견</numerusform>
+        <numerusform>&lt;strong&gt;%1&lt;/strong&gt; 발생 &lt;strong&gt;%n&lt;/strong&gt;개를 찾았습니다</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6038"/>
       <source>Note headline</source>
-      <translation>노트 헤드라인</translation>
+      <translation>노트 제목</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6586"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation>ਹਵਾਲਾ &amp;ਚੁਣਿਆ ਗਿਆ ਪਾਠ ਨੂੰ ਰੋਕੋ</translation>
+      <translation>&amp;선택된 텍스트 인용 블록</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7596"/>
@@ -3948,7 +3948,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../widgets/navigationwidget.cpp" line="116"/>
       <source>headline %1</source>
-      <translation>헤드라인 %1</translation>
+      <translation>제목 %1</translation>
     </message>
   </context>
   <context>
@@ -4032,7 +4032,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="263"/>
       <source>Export generated raw HTML</source>
-      <translation>생성 된 원시 HTML 내보내기</translation>
+      <translation>생성된 원 HTML 내보내기</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="296"/>
@@ -4042,7 +4042,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="297"/>
       <source>Export preview as raw HTML file</source>
-      <translation>미리보기를 원시 HTML 파일로 내보내기</translation>
+      <translation>미리보기를 원 HTML 파일로 내보내기</translation>
     </message>
   </context>
   <context>
@@ -4343,7 +4343,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
       <location filename="../entities/note.cpp" line="3163"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation>
-        <numerusform>메모 경로 변경이 감지되었습니다. &lt;strong&gt; %1&lt;/ strong&gt; 링크의 모든 항목을 &lt;strong&gt; %2&lt;/ strong&gt;로 바꾸고 파일 이름이 &lt;strong&gt; %3&lt;/ strong&gt; 인 &lt;strong&gt; %4&lt;/ strong&gt; 링크를 바꾸시겠습니까? &gt; &lt;strong&gt; %n&lt;/ strong&gt; 메모 파일에서?</numerusform>
+        <numerusform>노트 경로의 변경이 감지되었습니다. &lt;strong&gt;%1&lt;/strong&gt;링크의 모든 항목을 &lt;strong&gt;%2&lt;/strong&gt;(으)로 바꾸고 &lt;strong&gt;%n&lt;/strong&gt;개의 노트 파일에서 파일 이름이 &lt;strong&gt;%3&lt;/strong&gt;인 링크를 &lt;strong&gt;%4&lt;/strong&gt;(으)로 바꾸시겠습니까?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -4434,7 +4434,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../entities/notesubfolder.cpp" line="582"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation>이름이 &lt;b&gt; %1 &lt;/ b&gt; 인 폴더는 무시할 수있는 하위 폴더 목록에 있으므로 만들 수 없습니다! &lt;i&gt; 패널 설정 &lt;/ i&gt;에서 변경할 수 있습니다.</translation>
+      <translation>&lt;b&gt;%1&lt;/b&gt; 이름의 폴더는 무시된 하위 폴더 목록에 있으므로 만들 수 없습니다! &lt;i&gt;패널 설정&lt;/i&gt;에서 변경할 수 있습니다.</translation>
     </message>
   </context>
   <context>
@@ -4500,7 +4500,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation>로 교체</translation>
+      <translation>교체</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
@@ -4520,12 +4520,12 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="203"/>
       <source>Regular expression</source>
-      <translation>정규식</translation>
+      <translation>정규 표현</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation>하나의 텍스트 발생 교체</translation>
+      <translation>단일 텍스트 발생 교체</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -4535,7 +4535,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation>모든 텍스트 어커런스 교체</translation>
+      <translation>모든 텍스트 발생 교체</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
@@ -4550,7 +4550,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="144"/>
       <source>Match case sensitive</source>
-      <translation>대소 문자 구분</translation>
+      <translation>대소문자 구분</translation>
     </message>
   </context>
   <context>
@@ -4588,7 +4588,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation>~로 바꾸다</translation>
+      <translation>교체</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="127"/>
@@ -4628,7 +4628,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>대소 문자 구분</translation>
+      <translation>대소문자 구분</translation>
     </message>
   </context>
   <context>
@@ -4874,7 +4874,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation>가져온 %m 개의 북마크 중 %v 개</translation>
+      <translation>가져온 %m개의 북마크 중 %v개</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="88"/>
@@ -5006,7 +5006,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="921"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>QOwnNotesAPI를 설치 또는 업데이트하고 코어를 활성화하기 위해 웹 브라우저에서 &lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; 클라우드 서버 &lt;span style = "font-weight: 600;"&gt; 앱 구성 &lt;/ span&gt; 페이지를 엽니 다 앱 &lt;span style = "font-weight: 600;"&gt; 버전 &lt;/ span&gt; 및 &lt;span style = "font-weight: 600;"&gt; 삭제 된 파일 &lt;/ span&gt;. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;웹 브라우저에서 QOwnNotesAPI를 설치하거나 업데이트하기 위해 ownCloud 서버 &lt;span style=" font-weight:600;"&gt;앱 환경설정&lt;/span&gt; 페이지를 여십시오. 또한 여기서 핵심 앱 &lt;span style=" font-weight:600;"&gt;버전&lt;/span&gt;과 &lt;span style=" font-weight:600;"&gt;삭제된 파일&lt;/span&gt;을 활성화하십시오.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="624"/>
@@ -5031,7 +5031,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="889"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; 또한 두 개의 자체 클라우드 코어 앱 &lt;span style = "font-weight: 600;"&gt; 버전 &lt;/ span&gt;과 &lt;span style = "font-weight가 있어야합니다.: 600; "&gt; 사용자 클라우드 서버에서 삭제 된 파일 &lt;/ span&gt;을 사용하도록 설정했습니다 (기본값). &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;또한 두 개의 ownCloud 핵심 앱 &lt;span style=" font-weight:600;"&gt;버전&lt;/span&gt;과 &lt;span style=" font-weight:600;"&gt;삭제된 파일&lt;/span&gt;을 ownCloud 서버에서 활성화되도록 설정해야 합니다(기본값이어야 함).</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="988"/>
@@ -5061,7 +5061,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1446"/>
       <source>Specify proxy manually as</source>
-      <translation>프록시를 수동으로 지정</translation>
+      <translation>수동으로 프록시 지정</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1471"/>
@@ -5139,12 +5139,12 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5060"/>
       <source>Markdown highlighting</source>
-      <translation>마크 다운 하이라이트</translation>
+      <translation>마크다운 하이라이트</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5066"/>
       <source>Enable markdown highlighting</source>
-      <translation>마크 다운 강조 표시 사용</translation>
+      <translation>마크다운 하이라이트 활성화</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2134"/>
@@ -5186,7 +5186,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3829"/>
       <source>Do this at your own risk!</source>
-      <translation>당신의 책임하에 이것을하십시오!</translation>
+      <translation>위험을 감수하고 이것을 하십시오!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3832"/>
@@ -5236,7 +5236,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2140"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; QOwnNotes를 번역하거나 기존 번역을 업데이트하려면 &lt;a href = "http://www.qownnotes.org/Knowledge-base/How- can-I-help-to-translate-QOwnNotes "&gt; QOwnNotes 번역을 어떻게 도와 드릴까요? &lt;/a&gt; &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QOwnNotes 번역을 돕거나 기존 번역을 업데이트하려면 다음을 읽어주십시오: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;어떻게 QOwnNotes 번역을 도울 수 있습니까?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2942"/>
@@ -5301,7 +5301,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3849"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;이 옵션을 선택하면 마지막 순간에 현재 메모가 편집되지 않은 경우에도 항상 외부 수정 사항에 대한 알림을받습니다. &lt;span style = "font-style: italic;"&gt; 확인되지 않은 &lt;/ span&gt;입니다. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;체크하면 현재 노트가 마지막 순간에 편집되지 않았더라도 항상 외부 수정에 대한 알림을 받습니다. 권장 사항은 &lt;span style=" font-style:italic;"&gt;체크하지 않음&lt;/span&gt;입니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3945"/>
@@ -5309,8 +5309,8 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="5846"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation>10 초 미만으로 떨어지면 이전 버전의 ownCloud 동기화와 동기화 문제가 발생할 수 있습니다.
-동기화 충돌이 발생하면 직접 테스트하고 더 높은 값을 설정하십시오.</translation>
+      <translation>10초 미만으로 훨씬 떨어지면 이전 버전의 ownCloud 동기화에 문제가 발생할 수 있습니다.
+동기화 충돌이 발생하는지 테스트하고, 발생한다면 더 높은 값을 설정하십시오.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2574"/>
@@ -5363,7 +5363,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4130"/>
       <source>Default note file extension</source>
-      <translation>기본 메모 파일 확장자</translation>
+      <translation>기본 노트 파일 확장자</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4215"/>
@@ -5389,7 +5389,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1626"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation>익명의 사용 데이터는 QOwnNotes의 다음 부분을 개선하고 버그를 찾아 수정하는 부분을 결정하는 데 도움이됩니다. 실제로 살 수없는 경우에만 비활성화하십시오.</translation>
+      <translation>익명 사용 데이터는 QOwnNotes의 어떤 부분을 개선할지 결정하는 것과 버그를 찾아 수정하는 데 도움이 됩니다. 이를 수용할 수 없는 경우에만 비활성화해 주십시오.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1658"/>
@@ -5541,12 +5541,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="876"/>
       <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation>&lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-weight: 600;"&gt; QOwnNotesAPI &lt;/ span&gt; &lt;/a&gt; 최신 버전을 설치하십시오 (최소 버전 QOwnNotes가 노트 버전 및 휴지통에 액세스 할 수 있도록하려면 고유 한 클라우드 서버에서 QOWNNOTESAPI_MIN_VERSION).</translation>
+      <translation>&lt;a href="https://github.com/pbek/qownnotesapi"&gt;QOwnNotesAPI&lt;/span&gt;의 최신 버전을 ownCloud 서버에 설치하십시오(QOWNNOTESAPI_MIN_VERSION 이상). QOwnNotes가 노트 버전과 휴지통에 있는 노트에 접근할 수 있습니다.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="902"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; 여전에도 &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; ownCloud 동기화 클라이언트가 필요합니다 &lt;/ span&gt; &lt;/a&gt; (또는 다른 데스크톱 동기화 클라이언트)로 메모를 동기화하세요! &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;노트를 동기화하기 위해서&lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud 동기화 클라이언트&lt;/span&gt;&lt;/a&gt;가 여전히 필요합니다!(또는 다른 데스크톱 동기화 클라이언트)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1021"/>
@@ -5872,7 +5872,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3010"/>
       <source>Start application hidden</source>
-      <translation>숨겨진 응용 프로그램 시작</translation>
+      <translation>숨겨진 애플리케이션 시작</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3020"/>
@@ -5887,7 +5887,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3157"/>
       <source>Override interface font size</source>
-      <translation>인터페이스 글꼴 크기 무시</translation>
+      <translation>인터페이스 글꼴 크기 재정의</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3166"/>
@@ -5902,22 +5902,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4024"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation>레거시 방법을 사용하여 메모, 이미지 및 첨부 파일에 연결</translation>
+      <translation>레거시 방법을 사용하여 노트, 이미지 및 첨부 파일에 연결</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3869"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation>노트를 열면 노트 내부의 커서 위치가 현재 세션에서 노트를 마지막으로 방문했을 때의 위치로 복원됩니다.</translation>
+      <translation>노트를 열면 노트 내부의 커서 위치가 현재 세션에서 노트를 마지막으로 방문했을 때의 위치로 복원됩니다</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3839"/>
       <source>By default the headline will generated automatically</source>
-      <translation>기본적으로 헤드 라인은 자동으로 생성됩니다</translation>
+      <translation>기본적으로 제목은 자동으로 생성됩니다</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3842"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation>새 메모를 작성하는 바로 가기는 헤드 라인을 요구합니다.</translation>
+      <translation>새 노트를 작성하는 단축키는 제목을 요구합니다</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3908"/>
@@ -6131,7 +6131,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4720"/>
       <source>Use internal export styling for the PDF export and printing of the preview</source>
-      <translation>PDF 내보내기 및 미리보기 인쇄에 내부 내보내기 스타일 사용</translation>
+      <translation>미리보기의 PDF 내보내기 및 인쇄에 내부 내보내기 스타일 사용</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5028"/>
@@ -6151,7 +6151,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5215"/>
       <source>Tabs and Indents</source>
-      <translation>탭과 들여 쓰기</translation>
+      <translation>탭과 들여쓰기</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5223"/>
@@ -6167,8 +6167,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="5610"/>
       <location filename="../dialogs/settingsdialog.ui" line="5619"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-      <translation>";"으로 구분 된 무시할 노트 하위 폴더의 정규식
-</translation>
+      <translation>";"으로 구분된 무시될 노트 하위 폴더의 정규 표현</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5613"/>
@@ -6251,7 +6250,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6044"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-      <translation>기본적으로 브라우저 확장은 현재 노트의 모든 링크를 표시합니다. 특정 태그가있는 메모의 특수 책갈피 링크를 표시 할 수도 있습니다. 북마크 링크 구문에 대한 자세한 내용을 보려면 &lt;a href="%1"&gt; 여기 &lt;/a&gt;를 클릭하십시오.</translation>
+      <translation>기본적으로 브라우저 확장 기능은 현재 노트의 모든 링크를 표시합니다. 특정 태그가 있는 노트의 특별한 북마크 링크를 표시하도록 할 수도 있습니다. 북마크 링크에 대한 자세한 내용을 보려면 &lt;a href="%1"&gt;여기&lt;/a&gt;를 클릭하십시오.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6057"/>
@@ -6296,12 +6295,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6134"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation>&lt;a href="%2"&gt; Chrome 웹 스토어 &lt;/a&gt; 또는 &lt;a href="%3"&gt; Firefox 추가 기능에서 &lt;a href="%1"&gt; Web Companion 브라우저 확장 프로그램 &lt;/a&gt;을 설치하십시오. QOwnNotes를 웹 클리퍼로 사용하려면</translation>
+      <translation>QOwnNotes를 웹 클리퍼로 사용하려면 &lt;a href="%1"&gt;Web Companion 브라우저 확장 기능&lt;/a&gt;을 설치하십시오. &lt;a href="%2"&gt;크롬 웹 스토어&lt;/a&gt;나 &lt;a href="%3"&gt;파이어폭스 애드온 페이지&lt;/a&gt;에서 설치하실 수 있습니다.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation>메모 파일 이름이 헤드 라인과 다른 것을 허용하십시오.&lt;br&gt; ownCloud Notes는 파일 이름이 헤드 라인과 같아야합니다.</translation>
+      <translation>노트 파일 이름이 제목과 다른 것을 허용하십시오.&lt;br&gt;ownCloud 노트는 파일 이름이 제목과 같아야 합니다.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5649"/>
@@ -6400,7 +6399,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="5341"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>이 설정을 사용하면 메모를 마우스 오른쪽 버튼으로 클릭하면 git 버전을 표시하는 새로운 메뉴 항목이 표시됩니다.</translation>
+      <translation>이 설정을 사용하면 노트를 마우스 오른쪽 버튼으로 클릭하면 git 버전을 표시하는 새 메뉴 항목이 표시됩니다.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5461"/>
@@ -6420,7 +6419,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5408"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation>다음과 같은 터미널 명령을 사용하여 노트 폴더에 git 지원을 활성화하고 git 클라이언트에 대한 이름 및 이메일 주소를 구성하는 것을 잊지 마십시오.</translation>
+      <translation>다음과 같은 터미널 명령을 사용하여 노트 폴더에 git 지원을 활성화하고 git 클라이언트에 대한 이름 및 이메일 주소를 설정하는 것을 잊지 마십시오:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5691"/>
@@ -6568,7 +6567,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1804"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation>어떤 캘린더 백엔드를 사용 하시겠습니까?</translation>
+      <translation>어떤 캘린더 백 엔드를 사용하시겠습니까?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1837"/>
@@ -6688,7 +6687,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3862"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation>기본 개행 문자 대신 UNIX 개행을 사용하십시오.</translation>
+      <translation>기본 줄 바꿈 문자 대신 UNIX 줄 바꿈 사용</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3872"/>
@@ -6698,7 +6697,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4322"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation>이렇게하면 캐시 된 할 일 항목과 구성된 노트 폴더 및 스크립트도 제거됩니다.</translation>
+      <translation>이렇게 하면 캐시 저장된 할 일 항목과 구성된 노트 폴더 및 스크립트도 제거된다는 점을 주의하십시오!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4852"/>
@@ -6723,7 +6722,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4912"/>
       <source>Fake old version number to trigger update</source>
-      <translation>업데이트를 트리거하는 가짜 이전 버전 번호</translation>
+      <translation>업데이트를 실행하는 가짜 이전 버전의 넘버</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4940"/>
@@ -6758,17 +6757,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5120"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
-      <translation>괄호 및 마크 다운 서식 문자 자동 닫기 사용</translation>
+      <translation>괄호 및 마크다운 서식 문자의 자동 닫기 사용</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5174"/>
       <source>You have to use the backspace key to remove the opening character</source>
-      <translation>여는 문자를 제거하려면 백 스페이스 키를 사용해야합니다</translation>
+      <translation>시작 문자를 제거하려면 백스페이스키를 사용해야 합니다</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5177"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation>일치하는 닫는 문자를 자동으로 제거합니다.</translation>
+      <translation>일치하는 닫기 문자 자동 제거 활성화</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1887"/>
@@ -6894,7 +6893,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3859"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation>OwnCloud / Nextcloud notes 앱에서 개행에 문제가있는 경우 Windows에서이를 예를 들어 사용할 수 있습니다.</translation>
+      <translation>ownCloud / Nextcloud 노트 앱에서 줄 바꿈에 문제가 있는 경우 Windows에서 이를 예를 들어 사용할 수 있습니다.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4034"/>
@@ -6904,22 +6903,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4040"/>
       <source>Only allow one app instance at the same time</source>
-      <translation>동시에 하나의 앱 인스턴스 만 허용</translation>
+      <translation>동시에 하나의 앱 인스턴스만 허용</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4136"/>
       <source>Add a custom file extension</source>
-      <translation>사용자 정의 파일 확장자 추가</translation>
+      <translation>커스텀 파일 확장기능 추가</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4150"/>
       <source>Remove a custom file extension</source>
-      <translation>사용자 정의 파일 확장자 제거</translation>
+      <translation>커스텀 파일 확장자 제거</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4189"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation>사용자 정의 확장을 추가하는 경우 "taskpaper"와 같이 확장을 입력하십시오.</translation>
+      <translation>커스텀 확장자를 추가하는 경우 "taskpaper"처럼 확장자를 입력하십시오.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4193"/>
@@ -6973,7 +6972,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4379"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; &lt;span style =에서이 텍스트 (또는이 텍스트의 일부)를 &lt;span style = "font-weight: 600;"&gt; 복사하여 붙여 넣기 &lt;/ span&gt; 할 수 있습니다. &lt;span style =이있는 경우 &lt;a href = "https://github.com/pbek/QOwnNotes/issues"&gt; QOwnNotes 문제 페이지 &lt;/a&gt;의 font-weight: 600; "&gt; 문제 &lt;/ span&gt; QOwnNotes의 "font-weight: 600;"&gt; 질문이나 문제 &lt;/ span&gt;. 너무 민감한 데이터는이 정보에 숨겨져 있습니다. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QOwnNotes에 &lt;span style=" font-weight:600;"&gt;문의 또는 문제&lt;/span&gt;가 있는 경우 이 텍스트(또는 이 텍스트의 일부)를 &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes 문제 페이지&lt;/a&gt;에 &lt;span style=" font-weight:600;"&gt;복사하여 붙여넣기&lt;/span&gt; 하십시오. 너무 민감한 데이터는 이 정보에 숨겨져 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4466"/>
@@ -7088,7 +7087,7 @@ QOwnNotesAPI 앱을 설치하고 활성화해야 합니다!
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2787"/>
       <source>Loading folders in '%1' from server</source>
-      <translation>서버에서 '%1' 에 폴더로드</translation>
+      <translation>서버로부터 '%1'에 폴더 로드 중</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2860"/>
@@ -7229,7 +7228,7 @@ QOwnNotesAPI 앱을 설치하고 활성화해야 합니다!
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3241"/>
       <source>Enter your custom file extension:</source>
-      <translation>사용자 정의 파일 확장자를 입력하십시오:</translation>
+      <translation>커스텀 파일 확장자를 입력하십시오:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3570"/>
@@ -7285,7 +7284,7 @@ QOwnNotesAPI 앱을 설치하고 활성화해야 합니다!
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3960"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation>ਕੀ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਸਾਰੇ ਮੈਸੇਜ ਬਾਕਸ ਦੇ ਓਵਰਰਾਈਡ ਨੂੰ ਰੀਸੈਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</translation>
+      <translation>정말로 모든 메시지 상자 무시를 리셋하시겠습니까?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2283"/>
@@ -7335,12 +7334,12 @@ QOwnNotesAPI 앱을 설치하고 활성화해야 합니다!
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="463"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation>메모 폴더, 스크립트 경로 및 외부 편집기의 경로는 &lt;code&gt; Data &lt;/ code&gt; 폴더를 기준으로 자동 저장되므로 QOwnNotes 설치 위치에 상관없이 올바른 메모 폴더, 스크립트 및 외부 편집기가로드됩니다.</translation>
+      <translation>노트 폴더, 스크립트 경로 및 외부 편집기에 대한 경로는 상대적으로 &lt;code&gt;Data&lt;/code&gt; 폴더에 자동 저장되므로 QOwnNotes 설치 위치와 관계없이 올바른 노트 폴더, 스크립트 및 외부 편집기가 로드됩니다.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="473"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-      <translation>&lt;code&gt;-portable &lt;/ code&gt; 매개 변수로 QOwnNotes를 실행하면 활성화됩니다.</translation>
+      <translation>&lt;code&gt;--portable&lt;/code&gt; 매개 변수로 QOwnNotes를 실행하면 활성화됩니다.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2302"/>
@@ -7376,7 +7375,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2275"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation>로컬 데이터베이스를 정말로 지우시겠습니까? 구성된 메모 폴더와 캐시 된 할 일 항목도 제거됩니다!</translation>
+      <translation>로컬 데이터베이스를 정말로 지우시겠습니까? 구성된 노트 폴더와 캐시 저장된 할 일 항목도 함께 삭제됩니다!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2278"/>
@@ -7458,25 +7457,25 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="224"/>
       <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ise 접미사 및 악센트</translation>
+      <translation>-ise 접미사 및 강조</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
       <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>악센트없이 -ise 접미사</translation>
+      <translation>강조 없이 -ise 접미사</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="229"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ize 접미사 및 악센트</translation>
+      <translation>-ize 접미사 및 강조</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="231"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>악센트없이 -ize 접미사</translation>
+      <translation>강조 없이 -ize 접미사</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
@@ -7518,13 +7517,13 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation>악센트없이</translation>
+      <translation>강조 없음</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="242"/>
       <source>with accents</source>
       <comment>dictionary variant</comment>
-      <translation>악센트</translation>
+      <translation>강조</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="244"/>
@@ -7536,13 +7535,13 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="246"/>
       <source>with yeyo, modern and old russian</source>
       <comment>dictionary variant</comment>
-      <translation>현대와 늙은 러시아</translation>
+      <translation>현대 및 고대 러시아어</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="249"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
-      <translation>늙은 러시아인</translation>
+      <translation>고대 러시아어</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="250"/>
@@ -7659,7 +7658,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="267"/>
       <source>Text-delimiter:</source>
-      <translation>텍스트 구분자:</translation>
+      <translation>텍스트 구분 기호:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="186"/>
@@ -7856,7 +7855,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation>사용 가능한 메뉴를 나열하여 해당 조치를 가져옵니다.</translation>
+      <translation>해당 작업을 가져 오기 위해 사용 가능한 메뉴를 나열합니다</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
@@ -7866,12 +7865,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation>사용 가능한 도구 모음을 나열하십시오. 선택한 것이 편집됩니다</translation>
+      <translation>사용 가능한 도구 모음을 나열합니다. 선택된 항목이 편집됩니다.</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation>선택한 툴바의 동작을 나열합니다.</translation>
+      <translation>선택된 툴바의 액션을 나열합니다.</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
@@ -7897,7 +7896,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
       <source>Lists the available actions for the selected menu</source>
-      <translation>선택한 메뉴에 사용 가능한 조치를 나열합니다.</translation>
+      <translation>선택된 메뉴에 대해 사용 가능한 액션을 나열합니다</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
@@ -8001,7 +8000,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="33"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt; 느리지 만 노트 버전 사용 &lt;/ h3&gt; &lt;p&gt; 노트는 모든 버전의 ownCloud 서버에서 복원됩니다. &lt;/ p&gt; &lt;p&gt; ownCloud 동기화로 QOwnNotes와 동기화 될 때까지 기다려야합니다.. &lt;/ p&gt;</translation>
+      <translation>&lt;h3&gt;느리지만, 노트 버전이 있는 경우&lt;/h3&gt;&lt;p&gt;노트는 모든 버전의 ownCloud 서버에 복원됩니다.&lt;/p&gt;&lt;p&gt;ownCloud 동기화로 QOwnNotes와 동기화될 때까지 기다려야 합니다.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="45"/>
@@ -8011,7 +8010,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="47"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt;빠르지 만 버전이없는 경우 &lt;/h3&gt;&lt;p&gt; 메모는 미리보기의 텍스트로 작성됩니다. &lt;/p&gt;&lt;p&gt; 사용자의 클라우드 서버에있는 노트 버전은 복원되지 않으며 노트는 그대로 유지됩니다. 휴지통에 있습니다. &lt;/p&gt; &lt;p&gt; 나중에 언제든지 메모와 해당 버전을 복원 할 수 있습니다. &lt;/p&gt;</translation>
+      <translation>&lt;h3&gt;빠르지만, 버전이 없는 경우&lt;/h3&gt;&lt;p&gt;노트는 미리 보기의 텍스트로 작성됩니다.&lt;/p&gt;&lt;p&gt;ownCloud 서버에 있는 노트 버전은 복원되지 않으며 노트는 휴지통에 유지됩니다.&lt;/p&gt; &lt;p&gt;나중에 언제든지 노트와 해당 버전을 복원할 수 있습니다.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="59"/>
@@ -8047,7 +8046,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation>상태 코드 %1 (으)로 휴지통을 삭제하지 못했습니다.</translation>
+      <translation>다음 상태 코드로 인해 휴지통 삭제에 실패했습니다: %1</translation>
     </message>
   </context>
   <context>
@@ -8085,7 +8084,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
       <source>%p% downloaded</source>
-      <translation>%p% 다운로드</translation>
+      <translation>%p% 다운로드됨</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="48"/>
@@ -8192,7 +8191,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="450"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation>업데이터 압축 해제 실행 파일 '%1'이 (가) 없습니다!</translation>
+      <translation>업데이터 압축 해제 실행 파일 '%1'이(가) 없습니다!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="459"/>
@@ -8208,7 +8207,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="487"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation>압축 풀기 실행 파일을 찾을 수 없습니다: %1</translation>
+      <translation>압축 해제 실행 파일을 찾을 수 없습니다: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="339"/>
@@ -8290,7 +8289,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="67"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation>%1 포트에서 청취하는 QOwnNotes 서버</translation>
+      <translation>%1 포트에서 QOWnNotes 서버 수신 중</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="74"/>
@@ -8300,7 +8299,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="120"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation>%1 이 QOwnNotes 서버에 연결되었습니다!</translation>
+      <translation>%1이(가) QOwnNotes 서버에 연결되었습니다!</translation>
     </message>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="238"/>
@@ -8325,7 +8324,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation>QOwnNotes 브라우저 확장 프로그램이 메모에 액세스 할 수 있도록하려면 브라우저 확장 설정에서이 보안 토큰을 붙여 넣으십시오.</translation>
+      <translation>QOwnNotes 브라우저 확장기능이 노트에 접근할 수 있도록 하려면 브라우저 확장기능 설정에서 이 보안 토큰을 붙여넣기 하십시오:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
@@ -8349,7 +8348,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation>ownCloud 통합으로 수행되는 일반 텍스트 파일 마크 다운 노트</translation>
+      <translation>ownCloud 통합으로 일반 텍스트 파일 마크다운 노트 작성</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
@@ -8455,7 +8454,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="220"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation>메모 폴더는 QOwnNotes가 휴대용 모드에있는 디렉토리에 상대적으로 저장됩니다! 따라서 동일한 드라이브에 있어야합니다.</translation>
+      <translation>상대적으로 노트 폴더는 QOwnNotes가 휴대용 모드에 있는 디렉터리에 저장된다는 점에 유의하십시오!</translation>
     </message>
   </context>
   <context>
@@ -8468,12 +8467,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="102"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation>GitHub Markdown 에서 애플리케이션 및 환경에 대한 설정 및 기타 정보 덤프를 인쇄하고 애플리케이션을 종료합니다.</translation>
+      <translation>GitHub 마크다운에서 애플리케이션 및 환경에 대한 설정 및 기타 정보를 인쇄하고 애플리케이션을 종료합니다.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="111"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation>설정에서 허용하지 않더라도 여러 QOwnNotes 인스턴스를 시작할 수 있습니다.</translation>
+      <translation>설정에서 허용되지 않은 경우에도 QOwnNotes의 여러 인스턴스를 시작할 수 있습니다.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="118"/>
@@ -8483,7 +8482,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="124"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation>설정 및 내부 파일에 대해 다른 컨텍스트에서 응용 프로그램을 실행합니다.</translation>
+      <translation>설정 및 내부 파일에 대한 다른 컨텍스트에서 애플리케이션을 실행합니다.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="539"/>
@@ -8493,12 +8492,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="549"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation>QOwnNotes 의 다른 인스턴스가 이미 시작되었습니다! 설정에서 단일 인스턴스 모드를 끄거나 매개 변수-다중 인스턴스 허용을 사용할 수 있습니다.</translation>
+      <translation>또 하나 QOwnNotes 인스턴스가 이미 시작되었습니다! 설정에서 단일 인스턴스 모드를 끄거나 --allow-multiple-instances 매개 변수를 사용할 수 있습니다.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="577"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation>QOwnNotes 의 두 번째 인스턴스가 시작되었습니다!</translation>
+      <translation>QOwnNotes의 두 번째 인스턴스가 시작되려고 합니다!</translation>
     </message>
   </context>
 </TS>

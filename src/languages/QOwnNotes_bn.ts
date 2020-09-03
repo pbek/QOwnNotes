@@ -6,7 +6,7 @@
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>QOwnNotes সম্পর্কে</translation>
+      <translation>QOwnNotes সম্পর্কে  বিস্তারিত </translation>
     </message>
   </context>
   <context>

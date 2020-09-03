@@ -936,7 +936,7 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
       <translation>
-        <numerusform>تم نقل خط %n.</numerusform>
+        <numerusform>تم نقل %n خط.</numerusform>
         <numerusform>تم نقل خط %n.</numerusform>
         <numerusform>%n خطوط منقولة. </numerusform>
         <numerusform>تم نقل خطوط %n</numerusform>
@@ -1056,7 +1056,7 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
       <translation>
-        <numerusform>%n خط انتزع.</numerusform>
+        <numerusform>%n خط مسحوب.</numerusform>
         <numerusform>%n سطور منزوعة.</numerusform>
         <numerusform>%n خط انتزع.</numerusform>
         <numerusform>%n خطوط انتزع.</numerusform>
@@ -2684,12 +2684,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>انتقل لأسفل في قائمة الملاحظة</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>انتقل لأعلى في قائمة الملاحظة</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -4346,7 +4346,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
         <numerusform>هل تريد حذف الملف &lt;strong&gt;%n&lt;/strong&gt; المختار؟</numerusform>
-        <numerusform>هل تريد حذف الملف &lt;strong&gt;%n&lt;/strong&gt; المختار؟</numerusform>
+        <numerusform>هل تريد حذف &lt;strong&gt;%n &lt;/strong&gt; الملف(ات) المحددة؟</numerusform>
         <numerusform>هل تريد حذف الملفين &lt;strong&gt;%n&lt;/strong&gt; المختارين؟</numerusform>
         <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; ملفات تم اختيارها؟</numerusform>
         <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; الملفات المختارة العديدة؟</numerusform>
@@ -4496,17 +4496,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="1266"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation>لا يمكن حفظ ملف الملاحظة: %1 - رسالة الخطأ: %2</translation>
+      <translation>تعذر حفظ ملف الملاحظة: %1 - رسالة خطأ: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1344"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation>تمت حذف ملف الملاحظة الذي تم تغيير تسميته: %1</translation>
+      <translation>تم إزالة ملف-الملاحظة المعاد تسميته: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1352"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation>تعذر حذف ملف الملاحظة الذي تم تغيير تسميته: %1 - رسالة الخطأ: %2</translation>
+      <translation>تعذرت إزالة ملف-الملاحظة المعاد تسميته: %1 --رسالة خطأ: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1498"/>
@@ -4516,12 +4516,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="2546"/>
       <source>Could not read image file: %1</source>
-      <translation>تعذرت قراءة ملف الصورة: %1</translation>
+      <translation>تعذر قراءة ملف الصورة: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="3162"/>
       <source>Note file path changed</source>
-      <translation>تم تغيير مسار ملف الملاحظة</translation>
+      <translation>تغير مسار ملف الملاحظة</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="3163"/>
@@ -4543,11 +4543,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>…and %n more note(s)</source>
       <translation>
         <numerusform>... و %n من الملاحظات الإضافية</numerusform>
-        <numerusform>... و %n من الملاحظات الإضافية</numerusform>
-        <numerusform>... و %n من الملاحظات الإضافية</numerusform>
-        <numerusform>... و %n من الملاحظات الإضافية</numerusform>
-        <numerusform>... و %n من الملاحظات الإضافية</numerusform>
-        <numerusform>... و %n من الملاحظات الإضافية</numerusform>
+        <numerusform>... و %n  ملاحظة إضافية</numerusform>
+        <numerusform>... و %n الملاحظتين الإضافيتين</numerusform>
+        <numerusform>... و %n بعض الملاحظات الإضافية</numerusform>
+        <numerusform>... و %n الملاحظات الإضافية العديدة</numerusform>
+        <numerusform>... و %n الملاحظات الإضافية الأخرى</numerusform>
       </translation>
     </message>
     <message>
@@ -4628,13 +4628,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notesubfolder.cpp" line="557"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation>لا يمكن إنشاء مجلد باسم &lt;b&gt;%1&lt;/b&gt; لأنه مستخدم داخليًا من قبل التطبيق!
+      <translation>لا يمكن إنشاء مجلد باسم &lt;b&gt;%1&lt;/b&gt;، حيث يستخدمه التطبيق داخلياً!
 </translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="582"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation>لا يمكن إنشاء مجلد باسم &lt;b&gt;%1 &lt;/b&gt;&lt;/i&gt; لأنه موجود في قائمة المجلدات الفرعية التي تم تجاهلها! يمكنك تغيير ذلك في &lt;i&gt; إعدادات اللوحات&lt;/i&gt;.</translation>
+      <translation>لا يمكن إنشاء مجلد باسم &lt;b&gt;%1 &lt;/b&gt;&lt;/i&gt;، لأنه يوجد في قائمة المجلدات الفرعية المتجاهلة! يمكنك تغيير ذلك في &lt;i&gt; إعدادات اللوحات&lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -4657,12 +4657,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="669"/>
       <source>Note editing disabled</source>
-      <translation>تحرير الملاحظات معطل</translation>
+      <translation>تحرير الملاحظة معطل</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="670"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation>تعديل الملاحظات معطل مؤقتًا، أترغب بالسماح بالتعديل مجددًا؟</translation>
+      <translation>تحرير الملاحظة معطل حالياً، هل ترغب في السماح به مجدداً؟</translation>
     </message>
   </context>
   <context>
@@ -4695,7 +4695,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation>البحث إلى الوراء</translation>
+      <translation>البحث للخلف</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
@@ -4725,7 +4725,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation>استبدال مرة تكرار نص واحدة</translation>
+      <translation>استبدل تواجد النص الواحد</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -4735,7 +4735,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation>استبدال كل مرارت تكرار النص</translation>
+      <translation>استبدل كل تواجد النص </translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
@@ -4750,7 +4750,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="144"/>
       <source>Match case sensitive</source>
-      <translation>مطابقة حالة الأحرف</translation>
+      <translation>مطابقة التحسس لحالة الأحرف</translation>
     </message>
   </context>
   <context>
@@ -4870,7 +4870,7 @@ Are the folder and the file writeable?</source>
       <location filename="../services/databaseservice.cpp" line="874"/>
       <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-      <translation>غير قادر على تأسيس اتصال قاعدة بيانات مع قاعدة بيانات مجلد الملاحظات لدمج '%1'.
+      <translation>غير قادر على تأسيس اتصال قاعدة بيانات مع قاعدة بيانات مجلد الملاحظة لدمج '%1'.
 هل المجلد والملف قابلان للكتابة؟</translation>
     </message>
   </context>
@@ -5934,7 +5934,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2343"/>
       <source>Finnish</source>
-      <translation>اللغة الفنلندية</translation>
+      <translation>الفنلندية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2365"/>
@@ -6009,7 +6009,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2607"/>
       <source>Uzbek</source>
-      <translation>الأوزبكي</translation>
+      <translation>الأوزبكية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2651"/>
@@ -6044,7 +6044,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2739"/>
       <source>Slovenian</source>
-      <translation>سلوفيني</translation>
+      <translation>السلوفينية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2750"/>
@@ -6059,7 +6059,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2794"/>
       <source>Turkish</source>
-      <translation>اللغة التركية</translation>
+      <translation>التركية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2827"/>
@@ -6074,47 +6074,47 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2871"/>
       <source>Chinese Traditional</source>
-      <translation>تقاليد صينية</translation>
+      <translation>الصينية التقليدية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2951"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation>تمكين أيقونة تطبيق الوضع المظلم وأيقونة الدرج</translation>
+      <translation>تمكين أيقونةالوضع المظلم في أيقونة التطبيقة وأيقونة القائمة التحتية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2958"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation>قد ترغب أيضًا في اختيار نظام ألوان محرر آخر في إعدادات المحرر في الوضع المظلم.</translation>
+      <translation>قد ترغب أيضًا في اختيار نظام ألوان محرر آخر في إعدادات المحرر في النمط المظلم.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3061"/>
       <source>Enable dark mode icon theme</source>
-      <translation>تمكين سمة رمز الوضع الداكن</translation>
+      <translation>تمكين سمة الوضع الداكن للأيقونة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2991"/>
       <source>System tray</source>
-      <translation>علبة النظام</translation>
+      <translation>القائمة التحتية للنظام</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3000"/>
       <source>Show system tray icon</source>
-      <translation>إظهار رمز علبة النظام</translation>
+      <translation>إظهار رمز القائمة التحتية للنظام</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3010"/>
       <source>Start application hidden</source>
-      <translation>بدء التطبيق مخفي</translation>
+      <translation>بدء التطبيق وهو مخفي</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3020"/>
       <source>Interface style</source>
-      <translation>نمط واجهة</translation>
+      <translation>نمط الواجهة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3051"/>
       <source>Enforce system icon theme</source>
-      <translation>فرض سمة رمز النظام</translation>
+      <translation>فرض سمة أيقونة النظام</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3157"/>
@@ -6124,32 +6124,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3166"/>
       <source>Interface font size:</source>
-      <translation>حجم الخط واجهة:</translation>
+      <translation>حجم خط الواجهة:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3378"/>
       <source>&amp;Add script…</source>
-      <translation>&amp;إضافة برنامج نصي…</translation>
+      <translation>&amp;إضافة نص برمجي</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4024"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation>استخدم الطريقة القديمة للارتباط بالملاحظات والصور والمرفقات</translation>
+      <translation>استخدم الطريقة القديمة لربط الملاحظات والصور والمرفقات</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3869"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation>عند فتح الملاحظات ، سيتم الآن استعادة موضع المؤشر داخل الملاحظة إلى الموضع عند آخر مرة تمت فيها زيارة الملاحظة في الجلسة الحالية</translation>
+      <translation>عند فتح الملاحظات، سيتم الآن إعادة مكان المؤشر داخل الملاحظة إلى موضع آخر مرة تمت فيها زيارة الملاحظة في الجلسة الحالية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3839"/>
       <source>By default the headline will generated automatically</source>
-      <translation>افتراضيًا ، سيتم إنشاء العنوان تلقائيًا</translation>
+      <translation>افتراضيًا، سيتم إنشاء العنوان تلقائيًا</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3842"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation>الاختصار لإنشاء ملاحظة جديدة يسأل عن عنوان</translation>
+      <translation>الاختصار لإنشاء ملاحظة جديدة يطلب عنوانًا</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3908"/>
@@ -6241,32 +6241,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="642"/>
       <source>Cloud connection:</source>
-      <translation>اتصال سحابة:</translation>
+      <translation>اتصال السحابة:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="941"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation>يفتح صفحة كلمة مرور التطبيق الخاصة بخادم ownCloud في webbrowser لإنشاء كلمة مرور تطبيق جديدة للتطبيق</translation>
+      <translation>يفتح صفحة كلمة مرور التطبيق الخاصة بك لخادم ownCloud في مستعرض الإنترنت لإنشاء كلمة مرور تطبيق جديدة للتطبيق</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="944"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation>افتح صفحة كلمة مرور التطبيق الخاصة بخدمة الخادم الخاص بك</translation>
+      <translation>افتح صفحة كلمة مرور تطبيق خادم ownCloud الخاص بك</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2541"/>
       <source>Māori</source>
-      <translation>الماوري</translation>
+      <translation>الماورية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2189"/>
       <source>Malay</source>
-      <translation>لغة الملايو</translation>
+      <translation>الملايو</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2497"/>
       <source>Khmer</source>
-      <translation>الخمير</translation>
+      <translation>الخميرية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2706"/>
@@ -6301,17 +6301,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2849"/>
       <source>Zulu</source>
-      <translation>الزولو</translation>
+      <translation>الزولوية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2905"/>
       <source>Search for language</source>
-      <translation>ابحث عن اللغة</translation>
+      <translation>ابحث عن لغة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3268"/>
       <source>Action name</source>
-      <translation>اسم العمل</translation>
+      <translation>اسم الإجراء</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3273"/>
@@ -6346,39 +6346,39 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4449"/>
       <source>Please use this in the issue tracker</source>
-      <translation>يرجى استخدام هذا في تعقب القضية</translation>
+      <translation>يرجى استخدام هذا في تعقب المشكلة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4452"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation>&amp;نسخ معلومات التصحيح إلى الحافظة</translation>
+      <translation>&amp;نسخ معلومات تصحيح الأخطاء إلى الحافظة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4463"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation>يرجى عدم استخدام هذا في تعقب القضية</translation>
+      <translation>يرجى عدم استخدام هذا في تعقب المشكلة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4691"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation>استخدام محرر تسليط الضوء على أنماط أيضا للمعاينة</translation>
+      <translation>استخدام أنماط تظليل المحرر أيضًا للمعاينة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4714"/>
       <source>Exporting</source>
-      <translation>تصدير</translation>
+      <translation>التصدير</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4720"/>
       <source>Use internal export styling for the PDF export and printing of the preview</source>
-      <translation>استخدم التصميم الداخلي للتصدير لتصدير PDF وطباعة المعاينة</translation>
+      <translation>استخدم أنماط التصميم الداخلي للتصدير لأجل لتصدير PDF وطباعة المعاينة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5028"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>قد ترغب في إلقاء نظرة على جميع &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;تنسيقات الوقت
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;قد ترغب في إلقاء نظرة على جميع &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;تنسيقات الوقت
 &lt;/a&gt;
- المتاحة.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+ المتاحة&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5198"/>
@@ -6388,17 +6388,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5205"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation>إزالة المسافات الزائدة في نص الملاحظة تلقائيًا</translation>
+      <translation>قم بإزالة المسافات اللاحقة في نص الملاحظة تلقائيا</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5215"/>
       <source>Tabs and Indents</source>
-      <translation>علامات التبويب والمسافات البادئة</translation>
+      <translation>مسافات tab والمسافات البادئة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5223"/>
       <source>Use tab character instead of spaces</source>
-      <translation>استخدم حرف الجدولة بدلاً من المسافات</translation>
+      <translation>استخدم محرف مسافة tab بدلاً من المسافات العادية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5230"/>
@@ -6409,20 +6409,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="5610"/>
       <location filename="../dialogs/settingsdialog.ui" line="5619"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-      <translation>التعبيرات المنتظمة لمجلدات الملاحظات الفرعية التي يجب تجاهلها ، مفصولة بعلامة "؛"
+      <translation>التعبيرات المنتظمة لمجلدات الملاحظات الفرعية التي يجب تجاهلها، مفصولة بعلامة "؛"
 </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5613"/>
       <source>Ignored subfolders</source>
-      <translation>المجلدات الفرعية المتجاهلة
-</translation>
+      <translation>المجلدات الفرعية المتجاهلة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Reset ignored subfolders</source>
-      <translation>إعادة تعيين المجلدات الفرعية التي تم تجاهلها
-</translation>
+      <translation>إعادة تعيين المجلدات الفرعية التي تم تجاهلها</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5665"/>
@@ -6432,12 +6430,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation>Fshih 'numërimin e shënimet' me etiketa (rritje performancën)</translation>
+      <translation>إخفاء "تعداد الملاحظات" باستخدام الوسوم (لتحسين الأداء)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
       <source>Show the number of matches in each note</source>
-      <translation>عرض عدد التطابقات في كل ملاحظة</translation>
+      <translation>عرض عدد المطابقات في كل ملاحظة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5441"/>
@@ -6452,7 +6450,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5520"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-      <translation>بدلاً من قائمة الملاحظات ، استخدم شجرة ملاحظات مع جميع المجلدات الفرعية (إذا كانت قيد التشغيل لمجلد الملاحظات)</translation>
+      <translation>بدلاً من قائمة الملاحظات، استخدم شجرة ملاحظات مع جميع المجلدات الفرعية (إذا كانت قيد التشغيل لمجلد الملاحظات)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5796"/>
@@ -6462,62 +6460,62 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5802"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation>إظهار مجلدات الملاحظات كأزرار بدلاً من مربع التحديد</translation>
+      <translation>إظهار مجلدات الملاحظات كأزرار بدلاً من مربع تحديد</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5944"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation>يمكن تشغيل وإيقاف اللوحات في القائمة الرئيسية &lt;i&gt; نافذة / لوحات &lt;/i&gt; ويمكنك أيضًا تكوين &lt;i&gt; مساحات عمل مختلفة &lt;/ i&gt; لتكوينات لوحة مختلفة.سياق الكلام</translation>
+      <translation>يمكن تشغيل وإيقاف تشغيل اللوحات في القائمة الرئيسية &lt;i&gt;للنافذة / تالوحات&lt;/i&gt; ويمكن أيضًا ضبط &lt;i&gt;مساحات عمل مختلفة&lt;/i&gt; لتكوينات لوحة مختلفة.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6021"/>
       <source>Bookmarks</source>
-      <translation>إرسال</translation>
+      <translation>الإشارات المرجعية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6027"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation>سيتم استخدام الملاحظات مع هذه العلامة لجلب الإشارات المرجعية</translation>
+      <translation>سيتم استخدام الملاحظات مع هذا الوسم لاستيراد الإشارات المرجعية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6030"/>
       <source>Tag name for bookmarks notes</source>
-      <translation>اسم العلامة لملاحظات المرجعية</translation>
+      <translation>اسم الوسم للملاحظات المرجعية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6037"/>
       <source>Bookmarks tag:</source>
-      <translation>العلامة المرجعية:</translation>
+      <translation>وسم العلامة المرجعية:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6044"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-      <translation>بشكل افتراضي ، سيعرض امتداد المستعرض جميع روابط الملاحظة الحالية. يمكنك أيضًا جعلها تظهر روابط إشارة مرجعية خاصة من الملاحظات مع علامة معينة. لمزيد من المعلومات حول بناء جملة ارتباط الإشارة المرجعية ، انقر على &lt;a href="٪1"&gt; هنا &lt;/a&gt;.</translation>
+      <translation>بشكل افتراضي، سيعرض امتداد المستعرض جميع روابط الملاحظة الحالية. يمكنك أيضًا جعلها تُظهر روابط إشارة مرجعية خاصة من الملاحظات مع علامة معينة. لمزيد من المعلومات حول هيكل ارتباط الإشارة المرجعية، انقر على &lt;a href="%1"&gt;هنا&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6057"/>
       <source>Bookmarks note name:</source>
-      <translation>اسم ملاحظة العلامات:</translation>
+      <translation>اسم ملاحظة الإشارات المرجعية:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6064"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation>سيتم استخدام هذه الملاحظة لإضافة إشارات مرجعية جديدة من امتداد المتصفح</translation>
+      <translation>سيتم استخدام هذه الملاحظة لإضافة إشارات مرجعية جديدة من إضافة المتصفح</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6067"/>
       <source>Note name for adding new bookmarks</source>
-      <translation>لاحظ اسم لإضافة إشارات مرجعية جديدة</translation>
+      <translation>اسم الملاحظة لإضافة إشارات مرجعية جديدة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6077"/>
       <source>Web socket server</source>
-      <translation>خادم مقبس الويب</translation>
+      <translation>خادم websocket</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6083"/>
       <source>Socket server port:</source>
-      <translation>منفذ خادم المقبس:</translation>
+      <translation>منفذ خادم socket:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6117"/>
@@ -6527,42 +6525,42 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6153"/>
       <source>Web socket server support</source>
-      <translation>دعم خادم مقبس الويب</translation>
+      <translation>دعم خادم web socket</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6159"/>
       <source>Enable socket server</source>
-      <translation>تمكين خادم المقبس</translation>
+      <translation>تمكين خادم socket</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6134"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation>قم بتثبيت &lt;a href="٪1"&gt; ملحق متصفح Web Companion &lt;/a&gt; من &lt;a href="٪2"&gt; Chrome Web Store &lt;/a&gt; أو &lt;a href="٪3"&gt; Firefox Add- في الصفحة &lt;/a&gt; لاستخدام QOwnNotes كمقص للويب.</translation>
+      <translation>قم بتثبيت &lt;a href="%1"&gt;ملحق متصفح مصاحب الويب&lt;/a&gt; من &lt;a href="%2"&gt;متجر كروم&lt;/a&gt; أو&lt;a href="%3"&gt;إضافة صفحة فايرفوكس&lt;/a&gt; لاستخدام QOwnNotes كقصاصة ويب.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation>اسمح أن يكون اسم ملف الملاحظة مختلفًا عن العنوان. &lt;br&gt; احذر أن ownCloud Notes يحتاج إلى أن يكون اسم الملف هو نفسه العنوان!</translation>
+      <translation>اسمح أن يكون اسم ملف الملاحظة مختلفًا عن العنوان.&lt;br&gt; احذر لأن ملاحظات ownCloud يحتاج إلى أن يكون اسم الملف هو نفسه العنوان!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5649"/>
       <source>Note edit panel</source>
-      <translation>ملاحظة تحرير لوحة</translation>
+      <translation>لوحة تعديل الملاحظة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5655"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-      <translation>إذا تم تعطيل هذا ، فستتمكن من إنشاء تخطيطات لوحة أكثر تعقيدًا ، ولكن سيتم تغيير حجم كل اللوحات إذا تم تغيير حجم النافذة</translation>
+      <translation>إذا تم تعطيل هذا الخيار، فستتمكن من إنشاء تخطيطات لوحة أكثر تعقيدًا، ولكن سيتم تغيير حجم كل اللوحات إذا تم تغيير حجم النافذة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5658"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-      <translation>استخدم لوحة تحرير الملاحظات باعتبارها أداة مركزية ثابتة يمكن تغيير حجمها إذا تم تغيير حجم النافذة أو اللوحات الأخرى</translation>
+      <translation>استخدم لوحة تحرير الملاحظات باعتبارها نافذة مركزية ثابتة يمكن تغيير حجمها إذا تم تغيير حجم النافذة أو اللوحات الأخرى</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5773"/>
       <source>Note search panel</source>
-      <translation>لاحظت لوحة البحث</translation>
+      <translation>لوحة بحث الملاحظات</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5779"/>
@@ -6577,48 +6575,48 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5681"/>
       <source>Hide navigation item search bar</source>
-      <translation>إخفاء شريط البحث عن عنصر التنقل</translation>
+      <translation>إخفاء شريط بحث عناصر التنقل</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5816"/>
       <source>Local trash settings</source>
-      <translation>إعدادات القمامة المحلية</translation>
+      <translation>إعدادات المهملات المحلية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5850"/>
       <source>Remove trashed notes after:</source>
-      <translation>أزل الملاحظات المحذوفة بعد:</translation>
+      <translation>إزالة الملاحظات المهملة بعد:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5857"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
-      <translation> أيام</translation>
+      <translation> يوم</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5876"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation>قم تلقائيًا بإزالة الملاحظات المحذوفة بعد وقت معين</translation>
+      <translation>قم تلقائيًا بإزالة الملاحظات من المهملات بعد وقت معين</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5902"/>
       <source>Local trash support</source>
-      <translation>دعم القمامة المحلية</translation>
+      <translation>دعم المهملات المحلية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5908"/>
       <source>Enable local trash</source>
-      <translation>تمكين القمامة المحلية</translation>
+      <translation>تمكين المهملات المحلية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5925"/>
       <source>Layout selector</source>
-      <translation>محدد التخطيط</translation>
+      <translation>محدد التنسيق</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5931"/>
       <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-      <translation>يمكنك تعيين تخطيط جديد هنا. ضع في اعتبارك أنه يمكنك دائمًا تعديل موضع اللوحات من خلال الزر &lt;i&gt; إلغاء قفل لوحات &lt;/i&gt;.</translation>
+      <translation>يمكنك تعيين تنسيق جديد هنا. ضع في اعتبارك أنه يمكنك دائمًا تعديل موضع اللوحات من خلال زر &lt;i&gt;إلغاء قفل اللوحات&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5140"/>
@@ -6629,51 +6627,51 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5315"/>
       <source>External git log command to show the git versions of a note</source>
-      <translation>أمر git الخارجي لإظهار إصدارات git لملاحظة</translation>
+      <translation>أمر سجل git الخارجي لإظهار إصدارات git السابقة لملاحظة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5321"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>أدخل أمرًا لاستخدامه لإظهار سجل بوابة (مثل ، على سبيل المثال ، "gitk")</translation>
+      <translation>أدخل أمرًا لاستخدامه لإظهار سجل git (مثل، "gitk")</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5341"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>إذا كنت تستخدم هذا الإعداد ، فستحصل على إدخال قائمة جديد لإظهار إصدارات git إذا قمت بالنقر بزر الماوس الأيمن فوق ملاحظة.</translation>
+      <translation>إذا كنت تستخدم هذا الإعداد، فستحصل على إدخال قائمة جديد لإظهار إصدارات git إذا قمت بالنقر بزر الماوس الأيمن على ملاحظة.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5461"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation>عرض جميع ملاحظات العلامة بما في ذلك ملاحظات علامات أطفالهم</translation>
+      <translation>عرض جميع ملاحظات الوسم بما في ذلك ملاحظات الوسوم الثانوية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5454"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation>إظهار جميع الملاحظات في مجلد بما في ذلك المجلدات الفرعية (يعمل فقط إذا كانت المجلدات الفرعية قيد التشغيل)</translation>
+      <translation>إظهار جميع الملاحظات في مجلد بما في ذلك المجلدات الفرعية (فقط إذا كانت المجلدات الفرعية مفعلة)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5191"/>
       <source>Highlight the current line</source>
-      <translation>تسليط الضوء على الخط الحالي</translation>
+      <translation>سلط الضوء على الخط الحالي</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5408"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation>لا تنس تمكين دعم git لمجلدات الملاحظات الخاصة بك وتكوين اسمك وعنوان بريدك الإلكتروني لعميل git الخاص بك ، على سبيل المثال مع أوامر المحطة الطرفية هذه:</translation>
+      <translation>لا تنس تمكين دعم git لمجلدات الملاحظات الخاصة بك وضبط اسمك وعنوان بريدك الإلكتروني لوكيل git الخاص بك، على سبيل المثال مع باستخدام أوامر "التيرمنال" هذه:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5691"/>
       <source>Tags panel</source>
-      <translation>لوحة علامات</translation>
+      <translation>لوحة الوسوم</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5494"/>
       <location filename="../dialogs/settingsdialog.ui" line="5573"/>
       <location filename="../dialogs/settingsdialog.ui" line="5720"/>
       <source>Order</source>
-      <translation>طلب</translation>
+      <translation>ترتيب</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5503"/>
@@ -6699,7 +6697,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5184"/>
       <source>Only use editor width setting in distraction free mode</source>
-      <translation>استخدم فقط إعداد عرض المحرر في وضع الهاء المجاني</translation>
+      <translation>استخدم فقط إعداد عرض المحرر في الوضع الخالي من التشتت</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5474"/>
@@ -6711,17 +6709,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5710"/>
       <source>By last change / use</source>
-      <translation>بواسطة التغيير الأخير / الاستخدام</translation>
+      <translation>حسب آخر تغيير / استخدام</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5743"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation>إخفاء "البحث أو إنشاء علامة" البحث</translation>
+      <translation>إخفاء بحث "إيجاد أو إنشاء وسم"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5530"/>
       <source>Note subfolders panel</source>
-      <translation>ملاحظة لوحة المجلدات الفرعية</translation>
+      <translation>لوحة المجلدات الفرعية للملاحظة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5536"/>
@@ -6732,53 +6730,53 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="5481"/>
       <location filename="../dialogs/settingsdialog.ui" line="5556"/>
       <source>By last change</source>
-      <translation>بواسطة التغيير الأخير</translation>
+      <translation>حسب التغيير الأخير</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5566"/>
       <source>Show root folder name</source>
-      <translation>إظهار اسم المجلد الجذر</translation>
+      <translation>إظهار اسم مجلد الجذر</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5596"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation>إخفاء "البحث عن أو إنشاء مجلد فرعي للملاحظات"</translation>
+      <translation>إخفاء "إيجاد أو إنشاء مجلد فرعي للملاحظات"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5603"/>
       <source>Display note subfolders as full tree</source>
-      <translation>عرض المجلدات الفرعية للمذكرة بالشجرة الكاملة</translation>
+      <translation>عرض المجلدات الفرعية للملاحظة كشجرة كاملة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2875"/>
       <source>Search script repository</source>
-      <translation>مستودع البحث النصي</translation>
+      <translation>مستقائمة بحث البرامج النصية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5331"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>يمكنك اختياريًا استخدام "٪notePath٪" لمسار الملاحظة.</translation>
+      <translation>يمكنك حسب رغبتك استخدام "%notePath%" ليكون مسار الملاحظة.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5354"/>
       <source>Git client</source>
-      <translation>عميل جيت</translation>
+      <translation>عميل git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5370"/>
       <source>Path to git executable:</source>
-      <translation>المسار إلى بوابة قابل للتنفيذ:</translation>
+      <translation>المسار إلى ملف git التنفيذي:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5360"/>
       <source>Path to git client, leave empty for default</source>
-      <translation>المسار إلى بوابة العميل ، وترك فارغة افتراضيا</translation>
+      <translation>المسار إلى عميل git، وتjرك فارغة افتراضيًا</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5279"/>
       <source>Commit interval</source>
-      <translation>ارتكاب الفاصل</translation>
+      <translation>فاصل التنفيذ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5285"/>
@@ -6789,7 +6787,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5305"/>
       <source>git commit interval time [sec]</source>
-      <translation>git ارتكاب الوقت الفاصل [ثانية]</translation>
+      <translation>وقت فاصل تنفيذ git  [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="924"/>
@@ -6804,7 +6802,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation>تمديد المتصفح</translation>
+      <translation>إضافة المتصفح</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1804"/>
@@ -6814,17 +6812,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1837"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation>بالنسبة لمعظم عمليات التثبيت الحالية الخاصة بـCloud و Nextcloud</translation>
+      <translation>لمعظم تنصيبات ownCloud و Nextcloud الحالية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1817"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation>بالنسبة للإصدارات الأقدم من ownCloud حيث لا يعمل الإعداد الافتراضي</translation>
+      <translation>للإصدارات الأقدم من ownCloud حيث لا يعمل الإعداد الافتراضي</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1820"/>
       <source>Legacy ownCloud calendar</source>
-      <translation>التقويم القديم ownCloud</translation>
+      <translation>تقويم ownCloud القديم</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1853"/>
@@ -6849,7 +6847,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2255"/>
       <source>Czech</source>
-      <translation>تشيكي</translation>
+      <translation>تشيكية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2629"/>
@@ -6929,12 +6927,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3862"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation>استخدم السطر الجديد من UNIX بدلاً من أحرف السطر الأصلي</translation>
+      <translation>استخدم سطر UNIX جديد بدلاً من أحرف السطر الأصلية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3872"/>
       <source>Restore cursor position when opening a note</source>
-      <translation>استعادة موقف المؤشر عند فتح ملاحظة</translation>
+      <translation>استعادة مكان المؤشر عند فتح ملاحظة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4322"/>
@@ -6974,7 +6972,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5002"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation>هنا يمكنك ضبط تنسيق الوقت الخاص بك لإدراج الوقت الحالي في ملاحظة.</translation>
+      <translation>يمكنك هنا ضبط تنسيق الوقت الخاص بك لإدراج الوقت الحالي في ملاحظة.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5005"/>
@@ -6989,7 +6987,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5018"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-      <translation>أدخل تنسيق الوقت المخصص لديك ، مثل "dd.MM.yyyy hh: mm"</translation>
+      <translation>أدخل تنسيق الوقت المخصص، مثل "يوم.شهر.سنة ساعة:دقيقة"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5107"/>
@@ -7115,7 +7113,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="763"/>
       <source>Note folder name</source>
-      <translation>لاحظ اسم المجلد</translation>
+      <translation>اسم مجلد الملاحظة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="810"/>
@@ -7135,7 +7133,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3859"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation>يمكنك استخدام هذا على سبيل المثال ضمن نظام Windows إذا كنت تواجه مشكلات في السطور الجديدة في تطبيق الملاحظات ownCloud / Nextcloud</translation>
+      <translation>يمكنك استخدام هذا على سبيل المثال ضمن نظام Windows إذا كنت تواجه مشكلات في السطور الجديدة في تطبيق ملاحظات ownCloud / Nextcloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4034"/>
@@ -7279,7 +7277,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2294"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation>من فضلك لا تستخدم هذا في تعقب القضية ، انسخ نص معلومات التصحيح مباشرة في المشكلة.</translation>
+      <translation>من فضلك لا تستخدم هذا في تعقب المشكلة، انسخ نص معلومات التصحيح مباشرة في المشكلة.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2301"/>
@@ -7334,13 +7332,12 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2860"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation>ألق نظرة على &lt;a href="٪1"&gt; وثائق البرمجة النصية &lt;/a&gt; للبدء بسرعة.</translation>
+      <translation>ألق نظرة على &lt;a href="%1"&gt;وثائق البرامج النصية&lt;/a&gt; للبدء بسرعة.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2864"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation>إذا كنت بحاجة إلى الوصول إلى وظيفة معينة في QOwnNotes ، فيرجى فتح مشكلة على 
-&lt;a href="٪1"&gt; صفحة مشكلات QOwnNotes.</translation>
+      <translation>إذا كنت بحاجة إلى الوصول إلى وظيفة معينة في QOwnNotes، فيرجى فتح مشكلة على &lt;a href="%1"&gt;صفحة مشكلات QOwnNotes&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2886"/>
@@ -7350,28 +7347,28 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2893"/>
       <source>Add local script</source>
-      <translation>أضف نصًا محليًا</translation>
+      <translation>أضف برنامج نصي محلي</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2897"/>
       <source>Add an existing, local script</source>
-      <translation>أضف نصًا محليًا حاليًا</translation>
+      <translation>أضف برنامج نصي محلي موجود بالفعل</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3990"/>
       <location filename="../dialogs/settingsdialog.cpp" line="4048"/>
       <source>INI files</source>
-      <translation>ملفات ini</translation>
+      <translation>ملفات INI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4026"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation>هل تريد حقًا استيراد الإعدادات؟ ستتم إزالة إعداداتك الحالية ولن تتم استعادة كل الإعدادات ، مثل إعدادات مجلد الملاحظات والبرامج النصية التي كنت تستخدمها. ستحتاج أيضًا إلى ضبط بعض الإعدادات ، لا سيما عبر الأنظمة الأساسية ، ولكن تظل ملاحظاتك سليمة!</translation>
+      <translation>هل تريد حقًا استيراد الإعدادات؟ ستتم إزالة إعداداتك الحالية ولن تتم استعادة كل الإعدادات، مثل إعدادات مجلد الملاحظات والبرامج النصية التي كنت تستخدمها. ستحتاج أيضًا إلى ضبط بعض الإعدادات، لا سيما عبر الأنظمة الأساسية، ولكن ستبقى ملاحظاتك سليمة!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4036"/>
       <source>The application will be quit after the import.</source>
-      <translation>سيتم إنهاء التطبيق بعد الاستيراد.</translation>
+      <translation>سيتم الخروج من التطبيق بعد الاستيراد.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4037"/>
@@ -7386,7 +7383,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2880"/>
       <source>Find a script in the script repository</source>
-      <translation>سيتم إعادة تشغيل التطبيق بعد الاستيراد</translation>
+      <translation>إيجاد برنامج نصي في قائمة البرامج النصية</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="288"/>
@@ -7424,7 +7421,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1794"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation>تم تعيين الاختصار &lt;strong&gt;%1&lt;/strong&gt; بالفعل إلى &lt;strong&gt;%2&lt;/strong&gt;! هل تريد القفز إلى الاختصار؟</translation>
+      <translation>تم تعيين الاختصار &lt;strong&gt;%1&lt;/strong&gt; بالفعل إلى &lt;strong&gt;%2&lt;/strong&gt;! هل تريد الانتقال إلى الاختصار؟</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2973"/>
@@ -7449,7 +7446,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3114"/>
       <source>Open repository</source>
-      <translation>مستودع مفتوح</translation>
+      <translation>قائمة مفتوحة</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3172"/>
@@ -7522,7 +7519,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3863"/>
       <source>Please select the path of your git executable</source>
-      <translation>يرجى تحديد مسار التنفيذ الخاص بك بوابة</translation>
+      <translation>يرجى اختيار مسار ملف تنفيذ git الخاص بك </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3960"/>
@@ -7537,12 +7534,12 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="102"/>
       <source>New script</source>
-      <translation>النصي الجديد</translation>
+      <translation>برنامج نصي جديد</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="106"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation>يمكنك تنزيل عميل git الخاص بك هنا: &lt;a href="٪url"&gt; Git for Windows &lt;/a&gt;</translation>
+      <translation>يمكنك تنزيل عميل git الخاص بك هنا: &lt;a href="%url"&gt;ملف git للويندوز&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="452"/>
@@ -7656,7 +7653,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="47"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation>مشاركة ملف الملاحظة الحالي على خادم ownCloud الخاص بك. يمكنك إرسال الرابط الذي تم إنشاؤه للآخرين حتى يتمكنوا من عرض أو تنزيل الملف.</translation>
+      <translation>مشاركة ملف الملاحظة الحالي على خادم ownCloud الخاص بك بشكل عام. يمكنك إرسال الرابط الذي تم إنشاؤه للآخرين حتى يتمكنوا من عرض أو تنزيل الملف.</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="66"/>

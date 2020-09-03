@@ -23,7 +23,7 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="14"/>
       <source>Insert attachment</source>
-      <translation>Umetni privitak</translation>
+      <translation>Dodaj privitak</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="20"/>
@@ -43,12 +43,12 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="46"/>
       <source>Title of the image link</source>
-      <translation>Naslov slike slike</translation>
+      <translation>Naslov poveznice na sliku</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="49"/>
       <source>Title</source>
-      <translation>Titula</translation>
+      <translation>Naslov</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="94"/>
@@ -59,12 +59,12 @@
       <location filename="../dialogs/attachmentdialog.ui" line="117"/>
       <source>Download URL</source>
       <comment>The URL will be downloaded</comment>
-      <translation>Preuzmite URL</translation>
+      <translation>Preuzmi URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="42"/>
       <source>Select file to insert</source>
-      <translation>Odaberi datoteku za umetanje</translation>
+      <translation>Odaberi datoteku </translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="140"/>
@@ -104,7 +104,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="14"/>
       <source>Dictionary manager</source>
-      <translation>Voditelj rječnika</translation>
+      <translation>Upravitelj rječnika</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="61"/>
@@ -120,12 +120,12 @@
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="107"/>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="165"/>
       <source>Name</source>
-      <translation>Ime</translation>
+      <translation>Naziv</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="115"/>
       <source>Enter your query text</source>
-      <translation>Unesite tekst upita</translation>
+      <translation>Unesite upit</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="118"/>
@@ -140,7 +140,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
       <source>If checked only the downloaded dictionaries will be used</source>
-      <translation>Ako je označeno, koristiće se samo preuzeti rječnici</translation>
+      <translation>Ako je označeno, koriste se samo preuzeti rječnici</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="176"/>
@@ -150,7 +150,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="183"/>
       <source>Delete selected dictionaries</source>
-      <translation>Izbrišite odabrane rječnike</translation>
+      <translation>Izbriši odabrane rječnike</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
@@ -160,12 +160,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
       <source>English (American)</source>
-      <translation>Engleski (američki)</translation>
+      <translation>Engleski (Amerika)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
       <source>German (Austrian)</source>
-      <translation>Njemački (austrijski)</translation>
+      <translation>Njemački (Austrija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
@@ -210,7 +210,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Gujarati</source>
-      <translation>Gujarati</translation>
+      <translation>Gudžaratski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
@@ -260,12 +260,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
       <source>Armenian</source>
-      <translation>Armenac</translation>
+      <translation>Armenski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
       <source>Albanian</source>
-      <translation>Albanac</translation>
+      <translation>Albanski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
@@ -290,7 +290,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>Breton</source>
-      <translation>Breton</translation>
+      <translation>Bretonski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
@@ -300,7 +300,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
       <source>Catalan (Valencian)</source>
-      <translation>Katalonski (Valencijski)</translation>
+      <translation>Katalonski (Valencija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
@@ -320,12 +320,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
       <source>English (Australian)</source>
-      <translation>Engleski (australijski)</translation>
+      <translation>Engleski (Australija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
       <source>English (Canadian)</source>
-      <translation>Engleski (kanadski)</translation>
+      <translation>Engleski (Kanada)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
@@ -335,7 +335,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>English (South African)</source>
-      <translation>Engleski (južnoafrički)</translation>
+      <translation>Engleski (Južna Afrika)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
@@ -350,7 +350,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
       <source>Faroese</source>
-      <translation>Farski</translation>
+      <translation>Ferojski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
@@ -405,7 +405,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Hindi</source>
-      <translation>Hindi</translation>
+      <translation>Hindski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
@@ -425,17 +425,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Kaszebsczi</source>
-      <translation>Kaszebsczi</translation>
+      <translation>Kašubski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
       <source>Kazakh</source>
-      <translation>Kazak</translation>
+      <translation>Kazaški</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
       <source>Khmer</source>
-      <translation>Crvenih</translation>
+      <translation>Kmerski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
@@ -455,7 +455,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
       <source>Lao</source>
-      <translation>Lao</translation>
+      <translation>Laoski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
@@ -480,7 +480,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Low German / Low Saxon</source>
-      <translation>Niska njemačka / niska saksonska</translation>
+      <translation>Južnonjemački / Južnosaksonski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
@@ -515,7 +515,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation>Norveški (nynorsk)</translation>
+      <translation>Norveški (Nynorsk)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
@@ -525,22 +525,22 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
       <source>Papiamentu</source>
-      <translation>Papiamentu</translation>
+      <translation>Papiamento</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
       <source>Persian</source>
-      <translation>Persijski</translation>
+      <translation>Perzijski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
       <source>Romanian</source>
-      <translation>Rumunski</translation>
+      <translation>Rumunjski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Romansh</source>
-      <translation>Retroromanski jezik</translation>
+      <translation>Retoromanski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
@@ -550,7 +550,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation>Rusyn / Ruthene (Slovačka)</translation>
+      <translation>Rusinski (Slovačka)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="131"/>
@@ -560,7 +560,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="132"/>
       <source>Serbian (Latin)</source>
-      <translation>Srpski (latinski)</translation>
+      <translation>Srpski (latinica)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="134"/>
@@ -570,12 +570,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="135"/>
       <source>Sindhi</source>
-      <translation>Sindhi</translation>
+      <translation>Sindhski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="136"/>
       <source>Sinhala</source>
-      <translation>Sinhala</translation>
+      <translation>Singaleški</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="137"/>
@@ -585,7 +585,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="138"/>
       <source>Slovenian</source>
-      <translation>Slovenac</translation>
+      <translation>Slovenski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="141"/>
@@ -615,7 +615,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="147"/>
       <source>Thai</source>
-      <translation>Tajlandska</translation>
+      <translation>Tajlandski</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="148"/>
@@ -680,7 +680,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="292"/>
       <source>Download error</source>
-      <translation>Pogreška pri preuzimanju</translation>
+      <translation>Pogreška tijekom preuzimanja</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="293"/>
@@ -699,14 +699,14 @@
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="310"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Preuzetu datoteku nije moguće pohraniti:
+      <translation>Nije moguće pohraniti preuzetu datoteku:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="422"/>
       <source>Could not remove dictionary file:
 %1</source>
-      <translation>Nije moguće ukloniti rječnik rječnik:
+      <translation>Nije moguće ukloniti rječnik:
 %1</translation>
     </message>
   </context>
@@ -720,7 +720,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation>Da biste dobili enex datoteku morate odabrati jednu ili više bilješki u Evernotes desktop klijentu i kliknuti "Export notes..." u izborniku File.</translation>
+      <translation>Da biste dobili .enex datoteku odaberite jednu ili više bilješki u Evernotes desktop klijentu i kliknite na "Uvezi bilješke..." u izborniku Datoteka.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -745,7 +745,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation>Uvoz bilješki</translation>
+      <translation>Uvezi bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
@@ -775,27 +775,27 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
       <source>Basic attributes</source>
-      <translation>Osnovni atributi</translation>
+      <translation>Osnovna svojstva</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="676"/>
       <source>Created date</source>
-      <translation>Datum izrade</translation>
+      <translation>Datum stvaranja</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="678"/>
       <source>Updated date</source>
-      <translation>Datum ažuriranja</translation>
+      <translation>Novi datum</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
       <source>Note attributes</source>
-      <translation>Atributi bilješke</translation>
+      <translation>Svojstva bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="682"/>
       <source>Subject date</source>
-      <translation>Datum predmeta</translation>
+      <translation>Datum</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="685"/>
@@ -825,7 +825,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="700"/>
       <source>Source URL</source>
-      <translation>URL izvornog</translation>
+      <translation>Izvorni URL</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="704"/>
@@ -835,7 +835,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="707"/>
       <source>Reminder order</source>
-      <translation>Podsjetnik naloga</translation>
+      <translation>Podsjetnik </translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="710"/>
@@ -845,7 +845,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="714"/>
       <source>Reminder done time</source>
-      <translation>Podsjetnik je obavio vrijeme</translation>
+      <translation>Podsjetnik vrijeme kraja</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="717"/>
@@ -855,7 +855,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="720"/>
       <source>Content class</source>
-      <translation>Razred sadržaja</translation>
+      <translation>Kategorija sadržaja</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="724"/>
@@ -865,7 +865,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="799"/>
       <source>Attribute</source>
-      <translation>Atribut</translation>
+      <translation>Svojstvo</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="799"/>
@@ -884,12 +884,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
       <source>Argument must be positive: %1=%2</source>
-      <translation>Argument mora biti pozitivan: %1 = %2</translation>
+      <translation>Unos mora biti pozitivan: %1 = %2</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
       <source>Mark "%1" not set.</source>
-      <translation>Označi "%1" nije postavljeno.</translation>
+      <translation>Oznaka "%1" nije postavljena.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2848"/>
@@ -904,7 +904,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3719"/>
       <source>%1All</source>
-      <translation>%1All</translation>
+      <translation>%1Sve</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3733"/>
@@ -924,7 +924,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5771"/>
       <source>Invalid argument:</source>
-      <translation>Neispravan argument:</translation>
+      <translation>Neispravan unos:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5773"/>
@@ -948,7 +948,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5958"/>
       <source>File "%1" exists (add ! to override)</source>
-      <translation>Datoteka "%1" postoji (dodajte! Za poništavanje)</translation>
+      <translation>Datoteka "%1" postoji (dodaj! za poništavanje)</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5972"/>
@@ -958,12 +958,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5978"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation>"%1" %2 %3L, %4C napisao.</translation>
+      <translation>"%1" %2 %3L, %4C napisano.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5979"/>
       <source> [New] </source>
-      <translation> [New] </translation>
+      <translation> [Novo] </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5987"/>
@@ -979,7 +979,7 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
       <translation>
-        <numerusform>%n linija filtrirana.</numerusform>
+        <numerusform>%n redaka filtrirano.</numerusform>
         <numerusform>%n linije filtrirane.</numerusform>
         <numerusform>%n linije filtrirane.</numerusform>
       </translation>
@@ -997,7 +997,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
       <source>Invalid regular expression: %1</source>
-      <translation>Nevažeći regularni izraz: %1</translation>
+      <translation>Nevažeći običan izraz: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6333"/>
@@ -1007,28 +1007,28 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6337"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
-      <translation>Pretraživanje je postiglo BOTTOM, nastavljajući na TOP.</translation>
+      <translation>Pretraživanje DNO, nastavak na VRH.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6338"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
-      <translation>Pretraživanje je dostiglo TOP, nastavlja se na BOTTOM.</translation>
+      <translation>Pretraživanje VRH, nastavak na DNO.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6343"/>
       <source>Search hit BOTTOM without match for: %1</source>
-      <translation>Pretraživanje je postiglo BOTTOM bez podudaranja za: %1</translation>
+      <translation>Pretraživanje DNO bez rezultata za: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation>Pretraživanje doseže vrh bez podudaranja za: %1</translation>
+      <translation>Pretraživanje VRH bez rezultata za: %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
       <source>%n lines indented.</source>
       <translation>
-        <numerusform>%n reda razvedena.</numerusform>
+        <numerusform>%n redaka razvedeno.</numerusform>
         <numerusform>%n redaka sa urezima.</numerusform>
         <numerusform>%n redaka sa urezima.</numerusform>
       </translation>
@@ -1038,7 +1038,7 @@
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
       <translation>
-        <numerusform>%n linija %1ed %2 puta.</numerusform>
+        <numerusform>%n redaka %1ed %2 puta.</numerusform>
         <numerusform>%n redaka %1ed %2 puta.</numerusform>
         <numerusform>%n redaka %1ed %2 puta.</numerusform>
       </translation>
@@ -1047,7 +1047,7 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
       <translation>
-        <numerusform>%n linije povukle.</numerusform>
+        <numerusform>%n redaka povučeno.</numerusform>
         <numerusform>%n linije povukle.</numerusform>
         <numerusform>%n linije povukle.</numerusform>
       </translation>
@@ -1055,12 +1055,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7778"/>
       <source>Already at oldest change.</source>
-      <translation>Već pri najstarijoj promjeni.</translation>
+      <translation>Već pri staroj promjeni.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7779"/>
       <source>Already at newest change.</source>
-      <translation>Već pri najnovijoj promjeni.</translation>
+      <translation>Već je primijenjena najnovija promjena</translation>
     </message>
   </context>
   <context>
@@ -1253,7 +1253,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Code (other)</source>
-      <translation>Šifra (ostalo)</translation>
+      <translation>Kod (ostalo)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
@@ -1263,12 +1263,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="221"/>
       <source>Checkbox unchecked</source>
-      <translation>Wala mailhi ang tsek</translation>
+      <translation>Izbornik nije označen</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="223"/>
       <source>Checkbox checked</source>
-      <translation>Gisusi ang tseke</translation>
+      <translation>Izbornik je označen</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="226"/>
@@ -1314,7 +1314,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="242"/>
       <source>Broken link</source>
-      <translation>Neispravan link</translation>
+      <translation>Neispravna poveznica</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="231"/>
@@ -1329,7 +1329,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="243"/>
       <source>Trailing space</source>
-      <translation>Zadnji prostor</translation>
+      <translation>Prazan prostor</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="255"/>
@@ -1374,7 +1374,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="14"/>
       <source>Insert image</source>
-      <translation>Umetnite sliku</translation>
+      <translation>Umetni sliku</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="40"/>
@@ -1399,32 +1399,32 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
       <source>&amp;Crop</source>
-      <translation>&amp;Usjev</translation>
+      <translation>&amp;Izreži</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation>Put ili Url bit će umetnuti izravno, staze do datoteka napravit će se u odnosu na trenutnu bilješku</translation>
+      <translation>Put ili url bit će umetnut izravno, putevi do datoteka napravit će se u odnosu na trenutnu bilješku</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
       <source>Don't copy image to media folder</source>
-      <translation>Ne kopirajte sliku u mapu medija</translation>
+      <translation>Ne kopiraj sliku u mapu medija</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
       <source>Title of the image link</source>
-      <translation>Naslov slike slike</translation>
+      <translation>Naslov poveznice do slike</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="59"/>
       <source>Title</source>
-      <translation>Titula</translation>
+      <translation>Naziv</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="20"/>
       <source>Select image file</source>
-      <translation>Odaberite datoteku slike</translation>
+      <translation>Odaberite sliku</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="78"/>
@@ -1434,12 +1434,12 @@
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="81"/>
       <source>Any files</source>
-      <translation>Bilo kakve datoteke</translation>
+      <translation>Sve datoteke</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="87"/>
       <source>Select image to insert</source>
-      <translation>Odaberi sliku za umetanje</translation>
+      <translation>Odaberite sliku za umetanje</translation>
     </message>
   </context>
   <context>
@@ -1452,7 +1452,7 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="57"/>
       <source>Keep in mind that workspaces that demand that there is no central widget will not work properly if the central widget is enabled.</source>
-      <translation>Imajte na umu da radni prostori koji zahtijevaju da ne postoji središnji widget neće raditi ispravno ako je središnji widget omogućen.</translation>
+      <translation>Imajte na umu da radni prostori koji zahtijevaju nepostojanje središnjeg widgeta neće raditi ispravno ako je središnji widget omogućen.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="86"/>
@@ -1462,23 +1462,23 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="87"/>
       <source>Do you want to use the selected layout?</source>
-      <translation>Želite li koristiti odabrani raspored?</translation>
+      <translation>Želite li koristiti izabrani raspored?</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="90"/>
       <source>The application will be quit afterwards.</source>
-      <translation>Aplikacija će nakon toga biti prekinuta.</translation>
+      <translation>Aplikacija će nakon toga biti ugašena.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="91"/>
       <source>The application will be restarted afterwards.</source>
-      <translation>Nakon toga aplikacija će se ponovno pokrenuti.</translation>
+      <translation>Aplikacija će se ponovno pokrenuti.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation>Minimalan</translation>
+      <translation>Minimalno</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="160"/>
@@ -1496,7 +1496,7 @@
       <location filename="../widgets/layoutwidget.cpp" line="164"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation>Puni vertikalno</translation>
+      <translation>Potpuno vertikalno</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
@@ -1514,37 +1514,37 @@
       <location filename="../widgets/layoutwidget.cpp" line="179"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation>Zbog toga ne postoji središnji widget koji će se automatski mijenjati.</translation>
+      <translation>Zato ne postoji središnji widget koji se automatski mijenja.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="184"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>Samo popis bilješki s lijeve strane i ploča za uređivanje bilješke s desne strane omogućeni su prema zadanim postavkama.</translation>
+      <translation>Samo su popis bilješki s lijeve strane i ploča za uređivanje bilješke s desne strane omogućeni prema zadanim postavkama.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="189"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>Većina panela, poput popisa bilješki s lijeve strane, ploča za označavanje, ploče za uređivanje bilješki u sredini i ploče za pregled s desne strane omogućene su prema zadanim postavkama.</translation>
+      <translation>Većina panela, poput popisa bilješki s lijeve strane, ploče za označavanje, ploče za uređivanje bilješki u sredini i ploče za pregled s desne strane omogućene su prema zadanim postavkama.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="195"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
       <comment>Layout description</comment>
-      <translation>Većina ploča, poput popisa bilješki s lijeve strane, ploče za označavanje i samo ploča za pregled s desne strane omogućeno je prema zadanim postavkama. Za zapravo uređivanje bilješki trebat će vam drugi radni prostor!</translation>
+      <translation>Većina ploča, poput popisa bilješki s lijeve strane, ploče za označavanje i ploče za pregled s desne strane omogućena je prema zadanim postavkama. Za uređivanje bilješki potreban je drugi radni prostor!</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="201"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>Većina panela, poput popisa bilješki s lijeve strane, ploča za označavanje, ploče za uređivanje bilješke s desne strane i ploče za pregled na vrhu ploče za uređivanje bilješki omogućene su prema zadanim postavkama.</translation>
+      <translation>Većina panela, poput popisa bilješki s lijeve strane, ploča za označavanje, ploče za uređivanje bilješki s desne strane i ploče za pregled na vrhu ploče za uređivanje omogućena je prema zadanim postavkama.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="208"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation>Maleni izgled jednog stupca s pretraživanjem bilješki, popisom bilješki i uređivanjem bilješki na vrhu svake druge.</translation>
+      <translation>Maleni izgled jednog stupca za pretraživanje, popisa bilješki i uređivanja bilješki jednih nad drugima.</translation>
     </message>
   </context>
   <context>
@@ -1567,7 +1567,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="83"/>
       <source>Select local file or directory to link to</source>
-      <translation>Odaberite lokalnu datoteku ili direktorij za koji ćete se povezati</translation>
+      <translation>Odaberite lokalnu datoteku ili direktorij s poveznicom</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
@@ -1577,22 +1577,22 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
       <source>Enter the name of the link (optional)</source>
-      <translation>Unesite naziv veze (izborno)</translation>
+      <translation>Unesite naziv veze (neobavezno)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
-      <translation>Naziv veze (izborno)</translation>
+      <translation>Naziv veze (neobavezno)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="154"/>
       <source>Enter a description for the link (optional)</source>
-      <translation>Unesite opis veze (izborno)</translation>
+      <translation>Unesite opis veze (neobavezno)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="157"/>
       <source>Description of link (optional)</source>
-      <translation>Opis veze (izborno)</translation>
+      <translation>Opis veze (neobavezno)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="109"/>
@@ -1614,7 +1614,7 @@
       <location filename="../dialogs/linkdialog.cpp" line="271"/>
       <location filename="../dialogs/linkdialog.cpp" line="322"/>
       <source>Select directory to link to</source>
-      <translation>Odaberite direktorij za koji ćete se povezati</translation>
+      <translation>Odaberite direktorij koji želite povezati</translation>
     </message>
   </context>
   <context>
@@ -1622,12 +1622,12 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation>Lokalno ispisane bilješke</translation>
+      <translation>Bilješke u lokalnoj kanti za smeće</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation>Pronađite ime bilješke</translation>
+      <translation>Pronađi ime bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="81"/>
@@ -1637,29 +1637,29 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="86"/>
       <source>Trashed</source>
-      <translation>Bačene</translation>
+      <translation>Bačeno</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="45"/>
       <source>Restore</source>
-      <translation>Vratiti</translation>
+      <translation>Vrati</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="46"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore selected notes</source>
-      <translation>Vraćanje odabranih bilješki</translation>
+      <translation>Vrati odabrane bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="54"/>
       <source>Remove</source>
-      <translation>Ukloniti</translation>
+      <translation>Obriši</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="55"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation>Ukloni odabrane bilješke</translation>
+      <translation>Obriši odabrane bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="99"/>
@@ -1669,13 +1669,13 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation>Datoteka &lt;strong&gt; %1 &lt;/strong&gt; nije čitljiva i ne može se vratiti!</translation>
+      <translation>Datoteku &lt;strong&gt; %1 &lt;/strong&gt; nemoguće je čitati i ne može se vratiti!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="196"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation>
-        <numerusform>Želite li vratiti &lt;strong&gt;%n&lt;/strong&gt; odabranu bilješku?</numerusform>
+        <numerusform>Vrati &lt;strong&gt;%n&lt;/strong&gt; odabranu bilješku?</numerusform>
         <numerusform>Želite li vratiti &lt;strong&gt;%n &lt;/strong&gt; odabrane bilješke?</numerusform>
         <numerusform>Želite li vratiti &lt;strong&gt;%n &lt;/strong&gt; odabrane bilješke?</numerusform>
       </translation>
@@ -1683,22 +1683,22 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="220"/>
       <source>Notes restored</source>
-      <translation>Bilješke obnovljena</translation>
+      <translation>Bilješke vraćene</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="221"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
       <translation>
-        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; bilješka je vraćena</numerusform>
-        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; bilješke su vraćene</numerusform>
-        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; bilješke su vraćene</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; bilješki je vraćeno</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; bilješki je vraćeno</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; bilješki je vraćeno</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation>
-        <numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabranu bilješku?</numerusform>
+        <numerusform>Obriši &lt;strong&gt;%n&lt;/strong&gt; odabranu bilješku?</numerusform>
         <numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabrane bilješke?</numerusform>
         <numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabrane bilješke?</numerusform>
       </translation>
@@ -1706,13 +1706,13 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>Notes removed</source>
-      <translation>Napomene su uklonjene</translation>
+      <translation>Bilješke su obrisane</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="266"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; bilješke uklonjene su</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; bilješki je uklonjeno</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; bilješke uklonjene su</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; bilješke uklonjene su</numerusform>
       </translation>
@@ -1794,13 +1794,13 @@
     <message>
       <location filename="../mainwindow.ui" line="394"/>
       <source>Find navigation item</source>
-      <translation>Pronađite navigacijsku stavku</translation>
+      <translation>Pronađi navigacijsku stavku</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
       <location filename="../mainwindow.cpp" line="8696"/>
       <source>Add a tag to the current note</source>
-      <translation>Dodajte oznaku trenutnoj bilješci</translation>
+      <translation>Dodaj oznaku trenutnoj bilješci</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="867"/>
@@ -1876,7 +1876,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1376"/>
       <source>Post questions, feature requests or issues</source>
-      <translation>Postavite pitanja, zahtjeve za značajke ili probleme</translation>
+      <translation>Postavite pitanja, zahtjeve za značajkama ili probleme</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1387"/>
@@ -1978,7 +1978,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="8697"/>
       <source>Add a tag to the selected notes</source>
-      <translation>Dodajte oznaku odabranim bilješkama</translation>
+      <translation>Dodaj oznaku odabranim bilješkama</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="710"/>
@@ -2010,7 +2010,7 @@
     <message>
       <location filename="../mainwindow.ui" line="951"/>
       <source>Trash</source>
-      <translation>Smeće</translation>
+      <translation>Kanta za smeće</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1019"/>
@@ -2055,7 +2055,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1111"/>
       <source>Spelling backend</source>
-      <translation>Pravopisni poticaj</translation>
+      <translation>Backend za pravopis</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1136"/>
@@ -2107,23 +2107,23 @@
     <message>
       <location filename="../mainwindow.ui" line="1340"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation>O &amp;QOwnNotes…</translation>
+      <translation>O &amp;QOwnNotes-u…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1379"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation>Postavite pitanja, zahtjeve za značajkama ili probleme uz pomoć pomoćnika za izdavanje</translation>
+      <translation>Postavite pitanja, zahtjeve za značajkama ili probleme uz pomoć pomoćnika </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1437"/>
       <source>Show remote trash</source>
-      <translation>Prikaži udaljeno smeće</translation>
+      <translation>Prikaži vanjsko smeće</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1477"/>
       <location filename="../mainwindow.ui" line="1480"/>
       <source>Auto format table</source>
-      <translation>Tablica automatskog formatiranja</translation>
+      <translation>Automatski formatiraj tablicu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1509"/>
@@ -2334,7 +2334,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2169"/>
       <source>Import notes from text files</source>
-      <translation>Uvezite bilješke iz tekstualnih datoteka</translation>
+      <translation>Uvezi bilješke iz tekstualnih datoteka</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2178"/>
@@ -2345,7 +2345,7 @@
       <location filename="../mainwindow.ui" line="2190"/>
       <location filename="../mainwindow.ui" line="2193"/>
       <source>Open the Telegram group</source>
-      <translation>Otvorite grupu Telegram</translation>
+      <translation>Otvori grupu Telegram</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2205"/>
@@ -2411,7 +2411,7 @@
       <location filename="../mainwindow.ui" line="2326"/>
       <location filename="../mainwindow.ui" line="2329"/>
       <source>Search selected text on the web</source>
-      <translation>Pretraživanje odabranog teksta na webu</translation>
+      <translation>Pretraži odabrani tekst na internetu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2337"/>
@@ -2473,28 +2473,28 @@
     <message>
       <location filename="../mainwindow.ui" line="2462"/>
       <source>Check for script updates</source>
-      <translation>Provjerite ažuriranja skripti</translation>
+      <translation>Traži ažuriranja skripti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2471"/>
       <source>Show local trash</source>
-      <translation>Prikaži lokalno smeće</translation>
+      <translation>Prikaži lokalnu kantu za smeće</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2476"/>
       <location filename="../mainwindow.ui" line="2479"/>
       <source>Jump to note edit panel</source>
-      <translation>Skoči na ploču za uređivanje bilješke</translation>
+      <translation>Skoči na ploču za uređivanje bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2491"/>
       <source>Manage orphaned attachments</source>
-      <translation>Upravljajte prilozima bez roditelja</translation>
+      <translation>Upravljajte ulonjenim prilozima </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2496"/>
       <source>Jump to note subfolder panel</source>
-      <translation>Skoči na ploču podmapa s bilješkom</translation>
+      <translation>Skoči na ploču podmapa bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2504"/>
@@ -2509,18 +2509,18 @@
     <message>
       <location filename="../mainwindow.ui" line="2520"/>
       <source>Activate context menu</source>
-      <translation>Aktivirajte kontekstni izbornik</translation>
+      <translation>Aktiviraj kontekstni izbornik</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2528"/>
       <source>Import bookmarks from server</source>
-      <translation>Uvoz oznaka s poslužitelja</translation>
+      <translation>Uvezi oznake s poslužitelja</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2533"/>
       <location filename="../mainwindow.ui" line="2536"/>
       <source>Toggle full-screen mode</source>
-      <translation>Uključite način rada preko cijelog zaslona</translation>
+      <translation>Uključi način rada preko cijelog zaslona</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2547"/>
@@ -2530,13 +2530,13 @@
     <message>
       <location filename="../mainwindow.ui" line="2559"/>
       <source>Check spelling</source>
-      <translation>Provjeriti pravopis</translation>
+      <translation>Provjeri pravopis</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2567"/>
       <location filename="../mainwindow.cpp" line="12431"/>
       <source>Automatically detect</source>
-      <translation>Automatsko otkrivanje</translation>
+      <translation>Automatski otkrij</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2572"/>
@@ -2546,7 +2546,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2580"/>
       <source>Custom</source>
-      <translation>Prilagođen</translation>
+      <translation>Prilagođeno</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2583"/>
@@ -2556,7 +2556,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2588"/>
       <source>Show/Hide application</source>
-      <translation>Prikaži / sakrij aplikaciju</translation>
+      <translation>Prikaži/Sakrij aplikaciju</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2597"/>
@@ -2566,7 +2566,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2609"/>
       <source>Next note tab</source>
-      <translation>Sljedeća kartica</translation>
+      <translation>Kartica sljedeće bilješke</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2621"/>
@@ -2576,7 +2576,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2633"/>
       <source>New note in new tab</source>
-      <translation>Nova napomena na novoj kartici</translation>
+      <translation>Nova bilješka u novoj kartici</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2641"/>
@@ -2586,7 +2586,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation>Oblikovanje teksta podcrtano</translation>
+      <translation>Oblikovanje podcrtanog teksta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -2654,12 +2654,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Idi dolje na popisu bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Idi gore na popisu bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>

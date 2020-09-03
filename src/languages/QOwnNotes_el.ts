@@ -1020,7 +1020,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation>Η αναζήτηση έφτασε στην κορυφή χωρίς αντιστοιχία για: %1</translation>
+      <translation>Η αναζήτηση έφτασε στην ΚΟΡΥΦΗ χωρίς αντιστοιχία για: %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
@@ -1112,7 +1112,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>Αν έχετε δημιουργήσει ένα ωραίο χρωματικό σχήμα, παρακαλείστε να το εξάγετε και να το κοινοποιήσετε!</translation>
+      <translation>Αν έχετε δημιουργήσει ένα ωραίο χρωματικό σχήμα, παρακαλείσθε να το εξάγετε και να το κοινοποιήσετε!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
@@ -1223,7 +1223,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Code (type)</source>
-      <translation>Κωδικός (τύπος)</translation>
+      <translation>Κώδικας (τύπος)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="211"/>
@@ -1243,7 +1243,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="216"/>
       <source>Code (num literal)</source>
-      <translation>Κώδικας (αριθμός κυριολεκτικά)</translation>
+      <translation>Κώδικας (αριθμητικός κυριολεκτικά)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
@@ -1258,12 +1258,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="221"/>
       <source>Checkbox unchecked</source>
-      <translation>Το πλαίσιο ελέγχου δεν έχει επιλεγεί</translation>
+      <translation>Το πεδίο ελέγχου δεν έχει επιλεγεί</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="223"/>
       <source>Checkbox checked</source>
-      <translation>Έλεγχος πλαισίου ελέγχου</translation>
+      <translation>Έλεγχος πεδίου ελέγχου</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="226"/>
@@ -1304,12 +1304,12 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>Μασκοφόρα σύνταξη</translation>
+      <translation>Κρυφή σύνταξη</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="242"/>
       <source>Broken link</source>
-      <translation>Σπασμένος σύνδεσμος</translation>
+      <translation>Κατεστραμμένος σύνδεσμος</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="231"/>
@@ -1324,38 +1324,38 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="243"/>
       <source>Trailing space</source>
-      <translation>Εμπρός χώρος</translation>
+      <translation>Κενό διάστημα</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="255"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation>Αυτό το στοιχείο θα χρησιμοποιηθεί για την προεπιλογή χρωμάτων για τα άλλα στοιχεία</translation>
+      <translation>Αυτό το στοιχείο θα χρησιμοποιηθεί για τον προκαθορισμό χρωμάτων για τα άλλα στοιχεία</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="519"/>
       <source>Copy color schema</source>
-      <translation>Αντιγραφή σχεδίου χρώματος</translation>
+      <translation>Αντιγραφή χρωματικής ομάδας</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="520"/>
       <source>Color schema name</source>
-      <translation>Όνομα σχήματος χρώματος</translation>
+      <translation>Ονομασία χρωματικής ομάδας</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="522"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation>Αντίγραφο</translation>
+      <translation>Αντιγραφή</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="640"/>
       <source>Remove schema</source>
-      <translation>Κατάργηση σχήματος</translation>
+      <translation>Κατάργηση ομάδας</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="641"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation>Κατάργηση τρέχοντος σχήματος; Αυτό δεν μπορεί να αναιρεθεί!</translation>
+      <translation>Κατάργηση τρέχουσας ομάδας; Αυτό δεν μπορεί να αναιρεθεί!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="688"/>
@@ -1394,17 +1394,17 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
       <source>&amp;Crop</source>
-      <translation>Περικοπή</translation>
+      <translation>&amp;Περικοπή</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation>Η διαδρομή ή το url θα εισαχθεί άμεσα, οι διαδρομές προς τα αρχεία θα γίνουν σχετικές με την τρέχουσα σημείωση</translation>
+      <translation>Η διαδρομή ή το url θα εισαχθεί άμεσα, οι διαδρομές προς τα αρχεία θα πραγματοποιηθούν σε σχέση με την τρέχουσα σημείωση</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
       <source>Don't copy image to media folder</source>
-      <translation>Να μην αντιγραφεί η εικόνα στο φάκελλο πολυμέσων</translation>
+      <translation>Να μην αντιγραφεί η εικόνα στον φάκελο πολυμέσων</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
@@ -1419,7 +1419,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="20"/>
       <source>Select image file</source>
-      <translation>Επέλεξε αρχείο εικόνας</translation>
+      <translation>Επιλογή αρχείου εικόνας</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="78"/>
@@ -1434,7 +1434,7 @@
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="87"/>
       <source>Select image to insert</source>
-      <translation>Επέλεξε εικόνα για εισαγωγή</translation>
+      <translation>Επιλογή εικόνας για εισαγωγή</translation>
     </message>
   </context>
   <context>
@@ -1447,7 +1447,7 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="57"/>
       <source>Keep in mind that workspaces that demand that there is no central widget will not work properly if the central widget is enabled.</source>
-      <translation>Λάβετε υπόψη ότι οι χώροι εργασίας που απαιτούν ότι δεν υπάρχει κεντρικό γραφικό στοιχείο δεν θα λειτουργούν σωστά εάν είναι ενεργοποιημένο το κεντρικό γραφικό στοιχείο.</translation>
+      <translation>Λάβετε υπόψη ότι οι χώροι εργασίας που απαιτούν να μην πάρχει κεντρικό γραφικό στοιχείο δεν θα λειτουργούν σωστά εάν είναι ενεργοποιημένο το κεντρικό γραφικό στοιχείο.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="86"/>
@@ -1491,31 +1491,31 @@
       <location filename="../widgets/layoutwidget.cpp" line="164"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation>Γεμάτος κατακόρυφοs</translation>
+      <translation>Πλήρης κατακόρυφη</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
       <source>Single column</source>
       <comment>Layout name</comment>
-      <translation>Μεμονωμένη στήλη</translation>
+      <translation>Μονή στήλη</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="174"/>
       <source>The note edit panel is the central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation>Ο πίνακας επεξεργασίας σημείωσης είναι το κεντρικό γραφικό στοιχείο που θα αλλάξει αυτόματα.</translation>
+      <translation>Ο πίνακας επεξεργασίας σημειώσεων αποτελεί το κεντρικό γραφικό στοιχείο που θα αλλάξει μέγεθος αυτόματα.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="179"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation>Εξαιτίας αυτού δεν υπάρχει κεντρικό γραφικό στοιχείο το οποίο θα αλλάζει αυτόματα.</translation>
+      <translation>Εξαιτίας αυτού δεν υπάρχει κεντρικό γραφικό στοιχείο το οποίο θα αλλάξει μέγεθος αυτόματα.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="184"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>Μόνο η λίστα σημειώσεων στην αριστερή πλευρά και ο πίνακας επεξεργασίας σημειώσεων στα δεξιά είναι ενεργοποιημένες από προεπιλογή.</translation>
+      <translation>Μόνο η λίστα σημειώσεων στην αριστερή πλευρά και ο πίνακας επεξεργασίας σημειώσεων στη δεξιά είναι ενεργοποιημένες από προεπιλογή.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="189"/>
@@ -1547,7 +1547,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation>Συνδέστε μια διεύθυνση Url ή μια σημείωση</translation>
+      <translation>Συνδέστε μια διεύθυνση url ή μια σημείωση</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="51"/>
@@ -1557,7 +1557,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="60"/>
       <source>Enter an URL to link to</source>
-      <translation>Καταχωρίστε μια διεύθυνση URL με τη σύνδεση</translation>
+      <translation>Καταχωρίστε μια διεύθυνση URL προς σύνδεση με</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="83"/>
@@ -1572,17 +1572,17 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
       <source>Enter the name of the link (optional)</source>
-      <translation>Καταχωρίστε το όνομα του συνδέσμου (προαιρετικό)</translation>
+      <translation>Καταχωρίστε την ονομασία του συνδέσμου (προαιρετικό)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
-      <translation>Όνομα συνδέσμου (προαιρετικό)</translation>
+      <translation>Ονομασία συνδέσμου (προαιρετικό)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="154"/>
       <source>Enter a description for the link (optional)</source>
-      <translation>Εισαγάγετε μια περιγραφή για το σύνδεσμο (προαιρετικό)</translation>
+      <translation>Εισάγετε μια περιγραφή για τον σύνδεσμο (προαιρετικό)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="157"/>
@@ -1597,7 +1597,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="124"/>
       <source>Search for a note to link to</source>
-      <translation>Αναζήτηση για μια σημείωση προς σύνδεση</translation>
+      <translation>Αναζήτηση σημείωσης προς σύνδεση</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="229"/>
@@ -1617,27 +1617,27 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation>Σημειώσεις που έχουν τραβηχτεί τοπικά</translation>
+      <translation>Σημειώσεις από τον τοπικό φάκελο απορριμάτων</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation>Εύρεση ονόματος σημείωσης</translation>
+      <translation>Εύρεση ονομασίας σημείωσης</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="81"/>
       <source>Name</source>
-      <translation>Όνομα</translation>
+      <translation>Ονομασία</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="86"/>
       <source>Trashed</source>
-      <translation>Καταστράφηκε</translation>
+      <translation>Στάλθηκε στον κάδο απορριμάτων</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="45"/>
       <source>Restore</source>
-      <translation>Επαναφέρω</translation>
+      <translation>Επαναφορά</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="46"/>
@@ -1664,20 +1664,20 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation>Το αρχείο &lt;strong&gt;%1&lt;/strong&gt; δεν είναι αναγνώσιμο και δεν μπορεί να αποκατασταθεί!</translation>
+      <translation>Το αρχείο &lt;strong&gt;%1&lt;/strong&gt; δεν είναι αναγνώσιμο και δεν μπορεί γίνει επαναφορά του!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="196"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation>
-        <numerusform>Επαναφορά &lt;strong&gt;%n&lt;/strong&gt; επιλεγμένης σημείωσης;</numerusform>
+        <numerusform>Επαναφορά &lt;strong&gt;%n&lt;/strong&gt; επιλεγμένης σημείωσης (επιλεγμένων σημειώσεων);</numerusform>
         <numerusform>Επαναφορά &lt;strong&gt;%n&lt;/strong&gt; επιλεγμένων σημειώσεων;</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="220"/>
       <source>Notes restored</source>
-      <translation>Οι σημειώσεις επαναφέρθηκαν</translation>
+      <translation>Έγινε επαναφορά σημειώσεων</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="221"/>
@@ -1691,7 +1691,7 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation>
-        <numerusform>Αφαίρεση &lt;strong&gt;%n&lt;/strong&gt; επιλεγμένης σημείωσης;</numerusform>
+        <numerusform>Κατάργηση &lt;strong&gt;%n&lt;/strong&gt; επιλεγμένης σημείωσης (επιλεγμένων σημειώσεων);</numerusform>
         <numerusform>Αφαίρεση &lt;strong&gt;%n&lt;/strong&gt; επιλεγμένων σημειώσεων;</numerusform>
       </translation>
     </message>
@@ -1704,7 +1704,7 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="266"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation>
-        <numerusform>&lt;strong&gt; %n &lt;/strong&gt; σημειώστε τι έχει καταργηθεί</numerusform>
+        <numerusform>Οι σημειώσεις &lt;strong&gt; %n &lt;/strong&gt; αφαιρέθηκαν</numerusform>
         <numerusform>Οι σημειώσεις &lt;strong&gt;%n&lt;/strong&gt; καταργήθηκαν</numerusform>
       </translation>
     </message>
@@ -1714,7 +1714,7 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation>Αρχεία καταγραφών</translation>
+      <translation>Αρχεία καταγραφής</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
@@ -1739,7 +1739,7 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation>Πληροφορία</translation>
+      <translation>Πληροφορίες</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
@@ -1755,7 +1755,7 @@
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="436"/>
       <source>Clear log</source>
-      <translation>Καθαρισμός αρχείου καταγραφών</translation>
+      <translation>Καθαρισμός αρχείου καταγραφής</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="434"/>
@@ -1785,7 +1785,7 @@
     <message>
       <location filename="../mainwindow.ui" line="394"/>
       <source>Find navigation item</source>
-      <translation>Βρείτε στοιχείο πλοήγησης</translation>
+      <translation>Εύρεση στοιχείου πλοήγησης</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
@@ -1837,7 +1837,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1292"/>
       <source>&amp;Quit</source>
-      <translation>&amp; Κλείσιμο</translation>
+      <translation>&amp; Έξοδος</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1307"/>
@@ -1847,12 +1847,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1316"/>
       <source>&amp;Find note</source>
-      <translation>&amp; Αναζήτηση σημείωσης</translation>
+      <translation>&amp;Εύρεση σημείωσης</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1328"/>
       <source>&amp;Remove current note</source>
-      <translation>&amp; Κατάργηση της τρέχουσας σημείωσης</translation>
+      <translation>&amp;Κατάργηση τρέχουσας σημείωσης</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1352"/>
@@ -1862,12 +1862,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1364"/>
       <source>Check for &amp;updates</source>
-      <translation>Έλεγχος για &amp;αναβαθμίσεις</translation>
+      <translation>Έλεγχος για &amp;ενημερώσεις</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1376"/>
       <source>Post questions, feature requests or issues</source>
-      <translation>Δημοσίευση ερωτήσεων, αιτημάτων χαρακτηριστικών ή ζητημάτων</translation>
+      <translation>Ανάρτηση ερωτήσεων, αιτημάτων χαρακτηριστικών ή ζητημάτων</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1387"/>
@@ -1882,12 +1882,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1398"/>
       <source>By date</source>
-      <translation>Από ημερομηνία</translation>
+      <translation>Κατά ημερομηνία</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1401"/>
       <source>Sort by date</source>
-      <translation>Ταξινόμηση ανά ημερομηνία</translation>
+      <translation>Ταξινόμηση κατά ημερομηνία</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1425"/>
@@ -1924,22 +1924,22 @@
     <message>
       <location filename="../mainwindow.ui" line="1469"/>
       <source>&amp;Find in current note</source>
-      <translation>&amp;Αναζήτηση στην τρέχουσα σημείωση</translation>
+      <translation>&amp;Εύρεση στην τρέχουσα σημείωση</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1472"/>
       <source>Find text in current note</source>
-      <translation>Αναζήτηση κειμένου στην τρέχουσα σημείωση</translation>
+      <translation>Εύρεση κειμένου στην τρέχουσα σημείωση</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1485"/>
       <source>&amp;Duplicate text</source>
-      <translation>&amp;Διπλοποίηση κειμένου</translation>
+      <translation>&amp;Αντίγραφο κειμένου</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1497"/>
       <source>&amp;Back in note history</source>
-      <translation>Πίσω στο ιστορικό σημείωμα</translation>
+      <translation>Πίσω στο ιστορικό σημειώσεων</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1410"/>
@@ -1949,12 +1949,12 @@
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation>Αναζήτηση η δημιουργία υπο-φακέλου σημείωσης</translation>
+      <translation>Εύρεση ή δημιουργία υπο-φακέλου σημειώσεων</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
       <source>Find or create tag</source>
-      <translation>Αναζήτηση η δημιουργία ετικέτας</translation>
+      <translation>Εύρεση ή δημιουργία ετικέτας</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="292"/>
@@ -2001,7 +2001,7 @@
     <message>
       <location filename="../mainwindow.ui" line="951"/>
       <source>Trash</source>
-      <translation>Κάδος</translation>
+      <translation>Κάδος απορριμάτων</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1019"/>
@@ -2011,7 +2011,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1023"/>
       <source>Insert</source>
-      <translation>Εισάγετε</translation>
+      <translation>Εισαγωγή</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1040"/>
@@ -2021,7 +2021,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1054"/>
       <source>Extra</source>
-      <translation>Extra</translation>
+      <translation>Επιπρόσθετα</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1070"/>
@@ -2046,7 +2046,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1111"/>
       <source>Spelling backend</source>
-      <translation>Ορθογραφικός έλεγχος</translation>
+      <translation>Σύστημα υποστήριξης ορθογραφικού ελέγχου</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1136"/>
@@ -2067,7 +2067,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1164"/>
       <source>Panels</source>
-      <translation>Πάνελ</translation>
+      <translation>Πίνακες</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1169"/>
@@ -2088,7 +2088,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1198"/>
       <source>Jump to</source>
-      <translation>Πηδάω σε</translation>
+      <translation>Μετάβαση σε</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1234"/>
@@ -2164,7 +2164,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1608"/>
       <source>Insert &amp;image</source>
-      <translation>Εισαγωγή &amp;εικόνα</translation>
+      <translation>Εισαγωγή &amp;εικόνας</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1611"/>
@@ -2204,7 +2204,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1683"/>
       <source>&amp;Get involved</source>
-      <translation>&amp;Εμπλέκομαι</translation>
+      <translation>&amp;Ενεργή συμμετοχή</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1692"/>
@@ -2229,12 +2229,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1750"/>
       <source>Narrow</source>
-      <translation>Στενό</translation>
+      <translation>Στενή</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1761"/>
       <source>Medium</source>
-      <translation>Μέσο</translation>
+      <translation>Μεσαία</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1772"/>
@@ -2249,7 +2249,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1795"/>
       <source>Paste html or media</source>
-      <translation>Επικόλληση html ή μέσα</translation>
+      <translation>Επικόλληση html ή μέσων</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1798"/>
@@ -2260,17 +2260,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1813"/>
       <source>Show note in &amp;file manager</source>
-      <translation>Εμφάνισε τη σημείωση στο διαχειριστή αρχείων</translation>
+      <translation>Εμφάνιση σημείωσης στον &amp;διαχειριστή αρχείων</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1825"/>
       <source>Format text &amp;bold</source>
-      <translation>Μορφή κειμένου με &amp;έντονα γράμματα</translation>
+      <translation>Μορφοποίηση κειμένου με &amp;έντονη γραφή</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1837"/>
       <source>Format text &amp;italic</source>
-      <translation>Μορφή κειμένου &amp;πλάγια</translation>
+      <translation>Μορφοποίηση κειμένου με &amp;πλάγια γραφή</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1849"/>
@@ -2412,7 +2412,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2345"/>
       <source>Delete word</source>
-      <translation>Διαγραφή λέξη</translation>
+      <translation>Διαγραφή λέξης</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2353"/>
@@ -2438,7 +2438,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2396"/>
       <source>Descending</source>
-      <translation>Φθίνων</translation>
+      <translation>Φθίνουσα</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2405"/>
@@ -2459,7 +2459,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2435"/>
       <source>Insert attachment</source>
-      <translation>Εισαγάγετε συνημμένο</translation>
+      <translation>Εισαγωγή συνημμένου</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2462"/>
@@ -2650,12 +2650,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Μετακινηθείτε προς τα κάτω στη λίστα σημειώσεων </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Μετακινηθείτε προς τα πάνω στη λίστα σημειώσεων</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>

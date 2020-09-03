@@ -3,6 +3,10 @@
 ## 20.9.2
 - the desktop file of the snap release of QOwnNotes was renamed to `qownnotes.desktop`
   to prevent problems with Gnome (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
+- added more translation (thank you amirkbrpr, Farhan1985, MartaStan, cberetta,
+  khoirul, pehtranslator, Iva16, diego2214, rawfreeamy, VasilikiBotsou, Basudeb_Dhaka,
+  MGuerra, IvonkaTran, I_L_D_A_R, Aya_Fouad, muhannad.albayk.jaam, je1311, danilosf,
+  filipedias321, rakekniven, gbabin)
 
 ## 20.9.1
 - the action `Previous note` was renamed to to `Move up in note list` and the 
