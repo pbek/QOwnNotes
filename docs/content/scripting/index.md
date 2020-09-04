@@ -1,6 +1,6 @@
 # QOwnNotes Scripting
 
-A QOwnNotes script is mostly a **JavaScript** file with a `qml` file extension.
+A QOwnNotes script is mostly **JavaScript** in [Qt QML files](https://doc.qt.io/qt-5/qtqml-index.html).
 
 !!! example "Example `hello-world.qml`"
     ```js
