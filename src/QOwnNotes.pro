@@ -341,7 +341,11 @@ unix {
 #  target.files += QOwnNotes
 
   desktop.path = $$DATADIR/applications
-  desktop.files += PBE.QOwnNotes.desktop
+
+  # Don't add desktop file when building snap
+  !CONFIG(snapcraft, snapcraft) {
+      desktop.files += PBE.QOwnNotes.desktop
+  }
 
   i18n.path = $$DATADIR/qt5/translations
   i18n.files += languages/*.qm

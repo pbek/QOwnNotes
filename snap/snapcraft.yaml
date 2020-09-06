@@ -62,6 +62,7 @@ parts:
     options:
       - ./src
       - CONFIG+=release
+      - CONFIG+=snapcraft
     build-packages:
       - qttools5-dev
       - build-essential

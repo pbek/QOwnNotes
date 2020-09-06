@@ -58,6 +58,9 @@ parts:
     # see https://snapcraft.io/docs/qmake-plugin
     plugin: qmake
     qt-version: qt5
+    options:
+      - CONFIG+=release
+      - CONFIG+=snapcraft
     build-packages:
       - qttools5-dev
       - build-essential
