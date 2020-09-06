@@ -9848,17 +9848,19 @@ bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
     // remove leading list characters
     equation.remove(QRegularExpression(QStringLiteral(R"(^\s*[\-*+] )")));
 
-    // match all characters and basic operations like +, -, * and /
+    // match all numbers and basic operations like +, -, * and /
     QRegularExpressionMatch match =
         QRegularExpression(QStringLiteral(R"(([\d\.,+\-*\/\(\)\s]+)\s*=)"))
             .match(equation);
 
     if (!match.hasMatch()) {
+        if (equation.trimmed().endsWith(QChar('='))) {
+            showStatusBarMessage(
+                tr("No equation was found in front of the cursor"), 5000);
+        }
+
         return false;
     }
-
-    showStatusBarMessage(tr("No equation was found in front of the cursor"),
-                         5000);
 
     equation = match.captured(1);
     qDebug() << __func__ << " - 'equation': " << equation;

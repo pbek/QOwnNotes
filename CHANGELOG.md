@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.9.3
+- fixed the status message `No equation was found in front of the cursor` when solving equations
+
 ## 20.9.2
 - the desktop file of the snap release of QOwnNotes was renamed to `qownnotes.desktop`
   to prevent problems with Gnome (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
