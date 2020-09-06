@@ -155,7 +155,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
       <source>English (British)</source>
-      <translation>Engleski (britanski)</translation>
+      <translation>Engleski (Velika Britanija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
@@ -830,7 +830,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="704"/>
       <source>Source application</source>
-      <translation>Izvorni program</translation>
+      <translation>Izvorna aplikacija</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="707"/>
@@ -934,7 +934,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
       <source>Move lines into themselves.</source>
-      <translation>Premjestite linije u sebe.</translation>
+      <translation>Premjestite retke u sebe.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
@@ -2649,12 +2649,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1596"/>
       <source>&amp;Print note (preview)</source>
-      <translation>&amp;Ispis napomene (pregled)</translation>
+      <translation>&amp;Ispis bilješke (pregled)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation>Idi dolje na popisu bilješki</translation>
+      <translation>Spusti se na popisu bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
@@ -2679,17 +2679,17 @@
     <message>
       <location filename="../mainwindow.ui" line="2039"/>
       <source>Share note</source>
-      <translation>Podijeli bilješku</translation>
+      <translation>Podijelite bilješku</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2069"/>
       <source>Markdown cheatsheet</source>
-      <translation>Stranica sa oznakama</translation>
+      <translation>Stranica s oznakama</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2078"/>
       <source>Strike out text</source>
-      <translation>Precrtaj tekst</translation>
+      <translation>Prekriži tekst</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2089"/>
@@ -2710,17 +2710,17 @@
     <message>
       <location filename="../mainwindow.ui" line="2119"/>
       <source>Split note at cursor position</source>
-      <translation>Podijeli bilješku na položaju pokazivača</translation>
+      <translation>Podijeli bilješku na pokazivaču</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2139"/>
       <source>Donate</source>
-      <translation>Daruj</translation>
+      <translation>Donirajte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2160"/>
       <source>Import notes from Evernote</source>
-      <translation>Importiraj bilješke iz Evernote</translation>
+      <translation>Importiraj bilješke iz Evernote-a</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2845"/>
@@ -2731,7 +2731,7 @@
       <location filename="../mainwindow.cpp" line="2846"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation>Izabrana bilješka je izbrisana izvan ovog programa! Povrat izabrane bilješke?</translation>
+      <translation>Odabrana bilješka je izbrisana izvan ovog programa! Povrat izabrane bilješke?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5441"/>
@@ -2757,7 +2757,7 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3199"/>
       <source>Abort</source>
-      <translation>Prekid</translation>
+      <translation>Otkaži</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3199"/>
@@ -2772,7 +2772,7 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3414"/>
       <source>Could not remove duplicate conflicted database: %1</source>
-      <translation>Ne mogu ukloniti duplicirane sukobljene baze podataka: %1</translation>
+      <translation>Nemoguće ukloniti duplicirane konfliktne baze podataka: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3420"/>
@@ -2782,18 +2782,18 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3421"/>
       <source>Could not remove merged conflicted database: %1</source>
-      <translation>Spajanje sukobljene baze podataka nije moguće ukloniti: %1</translation>
+      <translation>Nemoguće ukloniti spojene sukobljene baze podataka: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3436"/>
       <source>Delete conflicted database copies</source>
-      <translation>Izbrišite sukobljene kopije baze podataka</translation>
+      <translation>Izbriši sukobljene kopije baze podataka</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3459"/>
       <source>Removed %n conflicted database copies</source>
       <translation>
-        <numerusform>Uklonjena je %n sukobljena kopija baze podataka</numerusform>
+        <numerusform>Uklonjena je %n konfliktna kopija baze podataka</numerusform>
         <numerusform>Uklonjene su %n sukobljene kopije baze podataka</numerusform>
         <numerusform>Uklonjene su %n sukobljene kopije baze podataka</numerusform>
       </translation>
@@ -2801,7 +2801,7 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3623"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation>Molim odaberi mapu u koju će bilješke biti spremljene</translation>
+      <translation>Odaberite mapu u koju će bilješke biti spremljene</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3649"/>
@@ -2811,7 +2811,7 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3651"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation>Morate odabrati mapu ownCloud bilješki kako bi ovaj softver radio!</translation>
+      <translation>Morate odabrati mapu ownCloud bilješki kako bi program radio!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3653"/>
@@ -2836,7 +2836,7 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="4319"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation>Unesi &lt;strong&gt;lozinku&lt;/strong&gt; za kodiranje ove bilješke.</translation>
+      <translation>Unesi &lt;strong&gt;lozinku&lt;/strong&gt; za enkriptiranu bilješku.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4342"/>
@@ -2859,7 +2859,9 @@ Restore current note?</source>
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
       <translation>
-        <numerusform>Izbrisati izabranu bilješku &lt;strong&gt;%n&lt;/strong&gt;? Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali bi biti u mogućnosti povratiti je odande.</numerusform>
+        <numerusform>Izbrisati odabranu bilješku &lt;strong&gt;%n&lt;/strong&gt;? 
+
+Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju moći vratiti odande.</numerusform>
         <numerusform>Izbrisati izabrane bilješke &lt;strong&gt;%n&lt;/strong&gt;? Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali bi biti u mogućnosti povratiti ih odande.</numerusform>
         <numerusform>Izbrisati izabrane bilješke &lt;strong&gt;%n&lt;/strong&gt;? Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali bi biti u mogućnosti povratiti ih odande.</numerusform>
       </translation>
@@ -2874,7 +2876,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4602"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
       <translation>
-        <numerusform>Izbrisati izabranu &lt;strong&gt;%n&lt;/strong&gt; mapu? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Sve datoteke i mape u toj mapi bit će također izbrisani!</numerusform>
+        <numerusform>Izbrisati izabranu &lt;strong&gt;%n&lt;/strong&gt; mapu? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Sve datoteke i mape u toj mapi bit će također izbrisane!</numerusform>
         <numerusform>Izbrisati izabrane &lt;strong&gt;%n&lt;/strong&gt; mape? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Sve datoteke i mape u tim mapama bit će također izbrisani!</numerusform>
         <numerusform>Izbrisati izabrane &lt;strong&gt;%n&lt;/strong&gt; mape? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Sve datoteke i mape u tim mapama bit će također izbrisani!</numerusform>
       </translation>
@@ -2893,7 +2895,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4634"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; oznaku ukloniti? Nijedna bilješka pritom neće biti uklonjena.</numerusform>
+        <numerusform>Izbrisati &lt;strong&gt;%n&lt;/strong&gt; oznaku ? Nijedna bilješka neće biti uklonjena.</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; oznake ukloniti? Nijedna bilješka pritom neće biti uklonjena.</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; oznaku/oznake ukloniti? Nijedna bilješka pritom neće biti uklonjena.</numerusform>
       </translation>
@@ -2932,7 +2934,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4821"/>
       <location filename="../mainwindow.cpp" line="4970"/>
       <source>Done</source>
-      <translation>Završeno</translation>
+      <translation>Gotovo</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4822"/>
@@ -2952,7 +2954,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4836"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
-        <numerusform>Označiti %n odabranu bilješku s &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Označi %n odabranu bilješku s &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Označiti %n odabrane bilješke s &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Označiti %n odabrane bilješke s &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
@@ -2965,7 +2967,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5115"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation>Da aktivirate promjene ručno ponovno pokrenite aplikaciju.</translation>
+      <translation>Možda je potrebno ručno ponovno pokrenuti aplikaciju da bi promjene imale učinka.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5120"/>
@@ -2985,12 +2987,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5437"/>
       <source>Todo lists disabled!</source>
-      <translation>Todo popisi onemogućeni!</translation>
+      <translation>Popisi zadataka onemogućeni!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5438"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation>Onemogućili ste todo liste. &lt;br /&gt; Provjerite svoju &lt;strong&gt; Todo &lt;/strong&gt; konfiguraciju u postavkama!</translation>
+      <translation>Onemogućili ste popise zadataka. &lt;br /&gt; Provjerite svoju &lt;strong&gt; Zadatci&lt;/strong&gt; konfiguraciju u postavkama!</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5681"/>
@@ -3004,12 +3006,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6229"/>
       <source>Note was not found</source>
-      <translation>Napomena nije pronađena</translation>
+      <translation>Bilješka nije pronađena</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6230"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Napomena nije pronađena, izradite novu napomenu &lt;strong&gt; %1 &lt;/strong&gt;?</translation>
+      <translation>Bilješka nije pronađena, izradi novu bilješku&lt;strong&gt; %1 &lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6393"/>
@@ -3054,7 +3056,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7070"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation>Bilješka će biti dešifrirana i pohranjena kao otvoreni tekst. Imaj na umu da će tako dešifrirana vjerojatno biti sinkronizirana na poslužitelju i vrlo vjerojatno izložena drugima!&lt;br /&gt;Stvarno dešifrirati bilješku?</translation>
+      <translation>Bilješka će biti dešifrirana i pohranjena kao čisti tekst. Imajte na umu da će dešifrirana bilješka vjerojatno biti sinkronizirana na poslužitelju i važan teskt možda bude izložen!&lt;br /&gt;Želite li dešifrirati bilješku?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7167"/>
@@ -3069,7 +3071,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7238"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation>Skok na oznaku na mjestu %1</translation>
+      <translation>Skoči na oznaku na mjestu %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7466"/>
@@ -3097,7 +3099,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="7490"/>
       <source>Copied %n note(s) to %1</source>
       <translation>
-        <numerusform>Kopiraj %n bilješku na %1</numerusform>
+        <numerusform>Kopirana %n bilješka na %1</numerusform>
         <numerusform>Kopiraj %n bilješke na %1</numerusform>
         <numerusform>Kopiraj %n bilješke na %1</numerusform>
       </translation>
@@ -3115,7 +3117,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="7509"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
-        <numerusform>Izostavljeno kopiranje %n bilješke (nema oznaku ili je tekst datoteke nečitak)</numerusform>
+        <numerusform>Preskočeno kopiranje %n bilješke (nema oznaku ili je tekst datoteke nečitak)</numerusform>
         <numerusform>Izostavljeno kopiranje %n bilješki (nemaju oznaku ili su tekstovi datoteke nečitki)</numerusform>
         <numerusform>Izostavljeno kopiranje %n bilješki (nemaju oznaku ili su tekstovi datoteke nečitki)</numerusform>
       </translation>
@@ -3133,7 +3135,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7584"/>
       <source>Downloading %1</source>
-      <translation>Skidanje %1</translation>
+      <translation>Preuzimanje %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7774"/>
@@ -3149,7 +3151,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8743"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation>Uklonite oznaku "%1" iz odabranih bilješki</translation>
+      <translation>Ukloni oznaku "%1" iz odabranih bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8974"/>
@@ -3159,7 +3161,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8975"/>
       <source>Assign color</source>
-      <translation>Odredi boju</translation>
+      <translation>Dodijeli boju</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8976"/>
@@ -3169,13 +3171,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8980"/>
       <source>&amp;Move tags to…</source>
-      <translation>&amp;Premjesti oznake za…</translation>
+      <translation>&amp;Premjesti oznake u…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9191"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation>Premjesti u korijen</translation>
+      <translation>Premjesti u izvor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9756"/>
@@ -3185,7 +3187,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9860"/>
       <source>No equation was found in front of the cursor</source>
-      <translation>Jednadžba nije pronađena ispred pokazivča</translation>
+      <translation>Jednadžba nije pronađena ispred pokazivača</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9877"/>
@@ -3205,13 +3207,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10304"/>
       <source>Jump to the note's subfolder</source>
-      <translation>Skočite u podmapu bilješke
+      <translation>Skoči u podmapu bilješke
 </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10361"/>
       <source>Open note in tab</source>
-      <translation>Otvori bilješku na kartici</translation>
+      <translation>Otvori bilješku u kartici</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12024"/>
@@ -3236,12 +3238,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="12662"/>
       <source>Toggle note stickiness</source>
-      <translation>Uključite ljepljivost bilješki</translation>
+      <translation>Uključi ljepljivost bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12668"/>
       <source>Close other note tabs</source>
-      <translation>Zatvorite ostale kartice bilješki</translation>
+      <translation>Zatvori ostale kartice bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10248"/>
@@ -3257,7 +3259,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10264"/>
       <source>&amp;Move notes to…</source>
-      <translation>&amp;Premjesti bilješke…</translation>
+      <translation>&amp;Premjesti bilješke u…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10265"/>
@@ -3314,18 +3316,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="11404"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation>potpuna</translation>
+      <translation>potpuno</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11411"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation>minimalna</translation>
+      <translation>minimalno</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11508"/>
       <source>Remove the current workspace?</source>
-      <translation>Obrisati trenutnu radnu površinu?</translation>
+      <translation>Obriši trenutnu radnu površinu?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11548"/>
@@ -3345,7 +3347,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11963"/>
       <source>Disallow all note editing</source>
-      <translation>Onemogući sve uređivanje bilješki</translation>
+      <translation>Onemogući svo uređivanje bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12179"/>
@@ -3360,7 +3362,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="12274"/>
       <source>Note headline '%1' was copied to the clipboard</source>
-      <translation>Bilješka naslov "%1" kopiran je u međuspremnik</translation>
+      <translation>Bilješka naslov "%1" kopirana je u međuspremnik</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12368"/>
@@ -3375,14 +3377,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="12549"/>
       <source>Characters:</source>
-      <translation>Likovi:</translation>
+      <translation>Znakovi:</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8716"/>
       <source>%n notes selected</source>
       <translation>
-        <numerusform>Odabrana je %n nota</numerusform>
-        <numerusform>Odabrane su %n bilješke</numerusform>
+        <numerusform>Odabrane %n bilješke</numerusform>
+        <numerusform>Odabrane %n bilješke</numerusform>
         <numerusform>Odabrane su %n bilješke</numerusform>
       </translation>
     </message>
@@ -3400,13 +3402,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4910"/>
       <source>Remove tag from selected notes</source>
-      <translation>Ukloni oznaku iz odabranih bilježki</translation>
+      <translation>Ukloni oznaku iz odabranih bilješki</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4911"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
-        <numerusform>Ukloniti oznaku &lt;strong&gt;%1&lt;/strong&gt; %n s izabrane bilježke?</numerusform>
+        <numerusform>Ukloni oznaku &lt;strong&gt;%1&lt;/strong&gt; %n iz odabrane bilješke?</numerusform>
         <numerusform>Ukloniti oznake &lt;strong&gt;%1&lt;/strong&gt; %n s izabranih bilježki?</numerusform>
         <numerusform>Ukloniti oznake &lt;strong&gt;%1&lt;/strong&gt; %n s izabranih bilježki?</numerusform>
       </translation>
@@ -3423,12 +3425,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5016"/>
       <source>Current notes folder: </source>
-      <translation>Trenutna mapa bilješke: </translation>
+      <translation>Trenutačna mapa bilješke: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5019"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation>Postavljanje mape bilješke. Mapa izabrane bilješke: </translation>
+      <translation>Postavljanje mape bilješke. Trenutačna mapa bilješki: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5221"/>
@@ -3443,7 +3445,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5326"/>
       <source>Portrait</source>
-      <translation>Vertikalno</translation>
+      <translation>Portret</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5326"/>
@@ -3463,12 +3465,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5354"/>
       <source>Export current note as PDF</source>
-      <translation>Eksportiraj izabranu bilješku kao PDF</translation>
+      <translation>Izvezi odabranu bilješku kao PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5461"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation>Niste odabrali ni jednu listu zadataka.&lt;br /&gt;Molimo provjeri konfiguraciju &lt;strong&gt;Zadataka&lt;/strong&gt; u postavkama!</translation>
+      <translation>Niste odabrali nijedan popis zadataka.&lt;br /&gt;Provjerite konfiguraciju &lt;strong&gt;zadataka&lt;/strong&gt; u postavkama!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6375"/>
@@ -3491,7 +3493,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6458"/>
       <source>Show todo lists</source>
-      <translation>Prikaži listu zadataka</translation>
+      <translation>Prikaži popise zadataka</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6470"/>
@@ -3501,7 +3503,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6491"/>
       <source>Quit</source>
-      <translation>Završi</translation>
+      <translation>Izlaz</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7947"/>
@@ -3511,7 +3513,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7970"/>
       <source>show notes in note root folder (%1)</source>
-      <translation>pokaži bilješke iz korijenske mape (%1)</translation>
+      <translation>pokaži bilješke iz izvorne mape (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
@@ -3525,13 +3527,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="9363"/>
       <location filename="../mainwindow.cpp" line="9430"/>
       <source>Copy to note folder</source>
-      <translation>Kopiraj u mapu bilješke</translation>
+      <translation>Kopiraj u mapu bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9363"/>
       <location filename="../mainwindow.cpp" line="9431"/>
       <source>Move to note folder</source>
-      <translation>Premjesti u mapu bilješke</translation>
+      <translation>Premjesti u mapu bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9364"/>
@@ -3549,7 +3551,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="9477"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
-        <numerusform>Premjestiti %n odabranu bilješku u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Premjesti %n odabranu bilješku u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Premjestiti %n odabranih bilješki u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Premjestiti %n odabranih bilješki u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
@@ -3625,12 +3627,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7906"/>
       <source>show all untagged notes (%1)</source>
-      <translation>pokaži sve nestrukturirane bilješke (%1)</translation>
+      <translation>pokaži sve neoznačene bilješke (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7908"/>
       <source>Untagged notes</source>
-      <translation>Nestrukturirane bilješke</translation>
+      <translation>Neoznačene bilješke</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10017"/>
@@ -3655,7 +3657,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5422"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes anonimno bilježi korištenje podataka, to nam pomaže odlučiti koje dijelove QOwnNotes moramo poboljšati i također naći i popraviti bugove. To možete onemogućiti u postavkama.</translation>
+      <translation>QOwnNotes anonimno bilježi korištenje podataka, to nam pomaže odlučiti koje dijelove QOwnNotes moramo poboljšati te naći i popraviti greške. To možete onemogućiti u postavkama.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5426"/>
@@ -3675,7 +3677,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1074"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation>Zadaci se preuzimaju s poslužitelja</translation>
+      <translation>Zadatci se preuzimaju s poslužitelja</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2776"/>
@@ -3696,7 +3698,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2899"/>
       <source>Notes directory was modified externally</source>
-      <translation>Mapa sa bilješkama je promijenjena eksterno</translation>
+      <translation>Mapa s bilješkama je promijenjena izvana</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2960"/>
@@ -3741,7 +3743,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9253"/>
       <source>Cannot move tag '%1' to this tag</source>
-      <translation>Ne možete premjestiti oznaku '%1' u ovu oznaku</translation>
+      <translation>Nemoguće premjestiti oznaku '%1' u ovu oznaku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9302"/>
@@ -3761,7 +3763,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5460"/>
       <source>No selected todo lists!</source>
-      <translation>Nema odabranih listi zadataka!</translation>
+      <translation>Nisu odabrani popisi zadataka!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="745"/>
@@ -3786,17 +3788,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="820"/>
       <source>Note edit</source>
-      <translation>Uredi biješku</translation>
+      <translation>Uredi bilješku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="832"/>
       <source>Note tags</source>
-      <translation>Oznaka bilježaka</translation>
+      <translation>Oznake bilješki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="843"/>
       <source>Note preview</source>
-      <translation>Pretpregled bilješke</translation>
+      <translation>Pregled bilješke</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="851"/>
@@ -3811,7 +3813,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1115"/>
       <source>formatting toolbar</source>
-      <translation>oblikovanje alatne trake</translation>
+      <translation>formatiranje alatne trake</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1124"/>
@@ -3821,7 +3823,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1131"/>
       <source>encryption toolbar</source>
-      <translation>alatna traka šifriranja</translation>
+      <translation>alatna traka enkripcije</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1138"/>
@@ -3831,7 +3833,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1143"/>
       <source>custom action toolbar</source>
-      <translation>alatna traka prilagođenih akcija</translation>
+      <translation>prilagođena alatna traka</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1163"/>
@@ -3851,12 +3853,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1674"/>
       <source>Leave distraction free mode</source>
-      <translation>Ostavite ometanje slobodnog načina</translation>
+      <translation>Napusti način rada bez ometanja</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1856"/>
       <source>Switch to note folder</source>
-      <translation>Prebacite se u mapu bilješki
+      <translation>Prebaci se u mapu bilješki
 </translation>
     </message>
     <message>
@@ -3877,12 +3879,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2497"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation>Alatna traka se ne može učitati bez imena</translation>
+      <translation>Alatna traka ne može se učitati bez imena</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2803"/>
       <source>Overwriting external changes of: %1</source>
-      <translation>Prepisivanje vanjskih promjena: %1</translation>
+      <translation>Prekrivanje vanjskih promjena: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2824"/>
@@ -3903,7 +3905,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3041"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation>Napomena uređivanje je onemogućeno, kliknite da biste omogućili</translation>
+      <translation>Onemogućeno je uređivanje bilješki, kliknite da biste omogućili</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3058"/>
@@ -3919,8 +3921,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3438"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation>
-        <numerusform>Nastavite s automatskim brisanjem &lt;strong&gt;%n&lt;/strong&gt; konfliktne kopije baze podataka koja može blokirati vaš ownCloud postupak sinkronizacije?</numerusform>
-        <numerusform>Nastavite s automatskim brisanjem &lt;strong&gt;%n&lt;/strong&gt; sukobljene kopije baze podataka koje mogu blokirati vaš ownCloud postupak sinkronizacije?</numerusform>
+        <numerusform>Nastavi s automatskim brisanjem &lt;strong&gt;%n&lt;/strong&gt; konfliktne kopije baze podataka koja može blokirati ownCloud postupak sinkronizacije?</numerusform>
+        <numerusform>Nastavi s automatskim brisanjem &lt;strong&gt;%n&lt;/strong&gt; sukobljene kopije baze podataka koje može blokirati ownCloud postupak sinkronizacije?</numerusform>
         <numerusform>Nastavite s automatskim brisanjem &lt;strong&gt;%n&lt;/strong&gt; sukobljene kopije baze podataka koje mogu blokirati vaš ownCloud postupak sinkronizacije?</numerusform>
       </translation>
     </message>
@@ -3928,7 +3930,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4894"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation>
-        <numerusform>%n bilješka označena sa "%2"</numerusform>
+        <numerusform>%n bilješki označeno sa "%2"</numerusform>
         <numerusform>%n bilješke označene sa "%2"</numerusform>
         <numerusform>%n bilješke označene sa "%2"</numerusform>
       </translation>
@@ -3980,7 +3982,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="1671"/>
       <location filename="../mainwindow.cpp" line="12345"/>
       <source>leave</source>
-      <translation>ostavi</translation>
+      <translation>izlaz</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7013"/>
@@ -3990,7 +3992,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7069"/>
       <source>Decrypt note and store it as plain text</source>
-      <translation>Dešifriraj bilješku i spremi kao otvoren tekst</translation>
+      <translation>Dešifriraj bilješku i spremi kao čisti tekst</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7074"/>
@@ -4000,12 +4002,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7099"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation>&lt;br /&gt;Biti ćete u mogućnosti urediti šifriranu bilješku.</translation>
+      <translation>&lt;br /&gt;Moći ćete urediti šifriranu bilješku.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7168"/>
       <source>Export current note as Markdown file</source>
-      <translation>Eksportiraj izabranu bilješku kao datoteku oznake</translation>
+      <translation>Izvezi izabranu bilješku kao datoteku oznake</translation>
     </message>
   </context>
   <context>
@@ -4026,7 +4028,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="39"/>
       <source>Note text</source>
-      <translation>Tekst napomene</translation>
+      <translation>Tekst bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/notedialog.ui" line="71"/>
@@ -4054,7 +4056,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation>U budućnosti uvijek preuzmi vanjske promjene</translation>
+      <translation>U budućnosti uvijek prihvati vanjske promjene</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
@@ -4087,7 +4089,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="237"/>
       <source>Copy image to clipboard</source>
-      <translation>Kopirajte sliku u međuspremnik</translation>
+      <translation>Kopiraj sliku u međuspremnik</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="259"/>
@@ -4115,22 +4117,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation>Siroče prilozi</translation>
+      <translation>Izbrisani prilozi</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation>Izbrišite odabrane privitke</translation>
+      <translation>Izbriši odabrane privitke</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation>Brisanje</translation>
+      <translation>Obriši</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation>Dodajte odabrane privitke u bilješku</translation>
+      <translation>Dodaj odabrane privitke u bilješku</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
@@ -4140,7 +4142,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation>Otvorite &amp;privitak</translation>
+      <translation>Otvori &amp;privitak</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
@@ -4160,7 +4162,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
-      <translation>Putanja datoteke:</translation>
+      <translation>Put do datoteke:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
@@ -4175,13 +4177,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="142"/>
       <source>Delete selected files</source>
-      <translation>Izbrišite odabrane datoteke</translation>
+      <translation>Izbriši odabrane datoteke</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="143"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
-        <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabranih datoteka?</numerusform>
+        <numerusform>Izbriši&lt;strong&gt;%n&lt;/strong&gt; odabranih datoteka?</numerusform>
         <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabranih datotekas?</numerusform>
         <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabranih datotekas?</numerusform>
       </translation>
@@ -4197,12 +4199,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
       <source>Delete selected images</source>
-      <translation>Brisanje odabranih slika</translation>
+      <translation>Izbriši odabrane slike</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
       <source>Delete</source>
-      <translation>Brisanje</translation>
+      <translation>Izbriši</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
@@ -4227,13 +4229,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete selected files</source>
-      <translation>Brisanje odabranih datoteka</translation>
+      <translation>Izbriši odabrane datoteke
+</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="124"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
-        <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabranih datoteka?</numerusform>
+        <numerusform>Izbriši &lt;strong&gt;%n&lt;/strong&gt; odabranih datoteka?</numerusform>
         <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabranih datotekas?</numerusform>
         <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabranih datotekas?</numerusform>
       </translation>
@@ -4289,7 +4292,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1271"/>
       <source>Done with loading note versions</source>
-      <translation>Završeno učitavanje verzija bilješke</translation>
+      <translation>Završeno učitavanje verzija bilješki</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1316"/>
@@ -4325,12 +4328,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1406"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation>Vaš CalDAV poslužitelj nije ništa odgovorio!</translation>
+      <translation>Vaš CalDAV poslužitelj nije odgovorio!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1433"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation>Poruka o pogrešci s vašeg CalDAV poslužitelja: &lt;strong&gt; %1 &lt;/strong&gt;</translation>
+      <translation>Pogreška na vašem CalDAV poslužitelju: &lt;strong&gt; %1 &lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="2110"/>
@@ -4391,7 +4394,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="1352"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation>Nije moguće ukloniti preimenovanu datoteku napomene: %1 - Poruka o pogrešci: %2</translation>
+      <translation>Nije moguće ukloniti preimenovanu datoteku napomene: %1 - greška: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1498"/>
@@ -4412,7 +4415,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../entities/note.cpp" line="3163"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation>
-        <numerusform>Otkrivena je promjena staze bilješke. Želite li zamijeniti sve pojave veza &lt;strong&gt;%1 &lt;/strong&gt; s &lt;strong&gt;%2 &lt;/strong&gt; i veze s imenom datoteke %3 &lt;/strong&gt; s &lt;strong&gt;%4 &lt;/strong&gt; &gt; u &lt;strong&gt;%n &lt;/strong&gt; datoteci s napomenama?</numerusform>
+        <numerusform>Otkrivena je promjena staze bilješke. Želite li zamijeniti sve pojave veza &lt;strong&gt;%1 &lt;/strong&gt; s &lt;strong&gt;%2 &lt;/strong&gt; i veze s imenom datoteke %3 &lt;/strong&gt; s &lt;strong&gt;%4 &lt;/strong&gt; &gt; u &lt;strong&gt;%n &lt;/strong&gt; u datoteci s napomenama?</numerusform>
         <numerusform>Otkrivena je promjena staze bilješke. Želite li zamijeniti sve pojave veza &lt;strong&gt;%1 &lt;/strong&gt; s &lt;strong&gt;%2 &lt;/strong&gt; i veze s imenom datoteke %3 &lt;/strong&gt; s &lt;strong&gt;%4 &lt;/strong&gt; &gt; u &lt;strong&gt;%n &lt;/strong&gt; datotekama s napomenama?</numerusform>
         <numerusform>Otkrivena je promjena staze bilješke. Želite li zamijeniti sve pojave veza &lt;strong&gt;%1 &lt;/strong&gt; s &lt;strong&gt;%2 &lt;/strong&gt; i veze s imenom datoteke %3 &lt;/strong&gt; s &lt;strong&gt;%4 &lt;/strong&gt; &gt; u &lt;strong&gt;%n &lt;/strong&gt; datotekama s napomenama?</numerusform>
       </translation>
@@ -4421,7 +4424,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../entities/note.cpp" line="3708"/>
       <source>…and %n more note(s)</source>
       <translation>
-        <numerusform>... i još %n bilješka</numerusform>
+        <numerusform>... i još %n bilješki</numerusform>
         <numerusform>… i još %n bilješki</numerusform>
         <numerusform>… i još %n bilješki</numerusform>
       </translation>
@@ -4440,7 +4443,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/gui.cpp" line="334"/>
       <source>Don't ask again!</source>
-      <translation>Ne pitajte ponovno!</translation>
+      <translation>Ne pitaj ponovno!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="335"/>
@@ -4455,7 +4458,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/gui.cpp" line="857"/>
       <source>Double-click to stick note to tab</source>
-      <translation>Dvokliknite da biste zalijepili bilješku na karticu</translation>
+      <translation>Dvaput kliknite da biste zalijepili bilješku na karticu</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>
@@ -4480,17 +4483,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../main.cpp" line="256"/>
       <source>Note folder not found!</source>
-      <translation>Mapa s notama nije pronađena!</translation>
+      <translation>Mapa s bilješkama nije pronađena!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="257"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation>Mapa vaše bilješke više nije pronađena! Želite li odabrati novu?</translation>
+      <translation>Mapa vaše bilješke nije pronađena! Želite li odabrati novu?</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="264"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Molim odaberi mapu gdje će bilješke biti spremljene</translation>
+      <translation>Odaberite mapu u koju će bilješke biti spremljene</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="556"/>
@@ -4501,7 +4504,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notesubfolder.cpp" line="557"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation>Mapa s imenom &lt;b&gt;%1&lt;/b&gt; ne može se stvoriti jer je aplikacija interno korištena!</translation>
+      <translation>Mapa s imenom &lt;b&gt;%1&lt;/b&gt; ne može se stvoriti jer ju aplikacija interno koristi!</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="582"/>
@@ -4520,7 +4523,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="611"/>
       <source>Ignore</source>
-      <translation>Zanemariti</translation>
+      <translation>Zanemari</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="612"/>
@@ -4535,7 +4538,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="670"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation>Uređivanje bilježaka trenutno je onemogućeno, želite li je ponovo omogućiti?</translation>
+      <translation>Uređivanje bilješki trenutno je onemogućeno, želite li ga ponovno omogućiti?</translation>
     </message>
   </context>
   <context>
@@ -4573,7 +4576,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation>Zamijeniti s</translation>
+      <translation>Zamijeni s</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
@@ -4598,7 +4601,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation>Zamijenite jednu pojavu teksta</translation>
+      <translation>Zamijeni jednu pojavu teksta </translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -4608,12 +4611,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation>Zamijenite sve pojave teksta</translation>
+      <translation>Zamijeni sve pojave teksta</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation>Zamjeni sve</translation>
+      <translation>Zamijeni sve</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>

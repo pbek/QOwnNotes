@@ -2636,12 +2636,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>เลื่อนลงในรายการบันทึกย่อ
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>เลื่อนขึ้นในรายการบันทึกย่อ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -2666,7 +2667,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2069"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>แผ่นโกง Markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2078"/>

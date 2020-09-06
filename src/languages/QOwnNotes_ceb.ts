@@ -225,12 +225,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Danish</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="142"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Taga-Sweden</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="47"/>
@@ -2582,7 +2582,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation type="unfinished">Format text underline</translation>
+      <translation>Pag-format sa underline sa teksto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -2650,12 +2650,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Pagbalhin sa lista sa mubo nga sulat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Pagbalhin sa lista sa mubo nga sulat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -3200,32 +3200,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="12024"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>Nakit-an ang usa ka pag-update sa script!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12030"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Ang mga update sa script</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12031"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>Ang mga pag-update sa imong mga script nakita sa repository sa script! Gusto ba nimo nga bag-ohon sila?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12046"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>Wala makita ang mga pag-update sa iskrip</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12662"/>
       <source>Toggle note stickiness</source>
-      <translation type="unfinished">Toggle note stickiness</translation>
+      <translation>Pag-ilis sa pagkadikit sa sulat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12668"/>
       <source>Close other note tabs</source>
-      <translation type="unfinished">Close other note tabs</translation>
+      <translation>Pagsira sa ubang mga tala nga tala</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10248"/>
@@ -4367,7 +4367,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="1498"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Nota</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2546"/>
@@ -5663,7 +5663,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1392"/>
       <source>Enable QOwnNotesAPI app</source>
-      <translation type="unfinished">Enable QOwnNotesAPI app</translation>
+      <translation>Ipaandar ang QOwnNotesAPI app</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1782"/>
@@ -6145,7 +6145,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
       <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
-      <translation type="unfinished">GitHub doesn't need two spaces at the end of the line to do a line break</translation>
+      <translation> Ang GitHub dili kinahanglan duha ka mga wanang sa katapusan sa linya aron mahimo ang usa ka linya sa linya</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
@@ -6239,7 +6239,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>Itago ang 'Note count' nga adunay mga tag (nagdugang sa paghimo)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
@@ -8068,12 +8068,12 @@ Kini dili mahimong dili mahuman!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="59"/>
       <source>&amp;Delete</source>
-      <translation type="unfinished">&amp;Delete</translation>
+      <translation>&amp;Pagtangtang</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>
       <source>Delete selected note on server</source>
-      <translation type="unfinished">Delete selected note on server</translation>
+      <translation>I-delete ang napili nga nota sa server</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="68"/>
@@ -8083,22 +8083,22 @@ Kini dili mahimong dili mahuman!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="190"/>
       <source>Delete note on server</source>
-      <translation type="unfinished">Delete note on server</translation>
+      <translation>I-delete ang note sa server</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
       <source>Delete selected trashed note on server?</source>
-      <translation type="unfinished">Delete selected trashed note on server?</translation>
+      <translation>Pagtangtang sa napili nga basurahan nga sulat sa server?</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="213"/>
       <source>Error while deleting note</source>
-      <translation type="unfinished">Error while deleting note</translation>
+      <translation>Error while deleting note</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation type="unfinished">Deleting trashed note failed with status code: %1</translation>
+      <translation>Ang pagtangtang sa gitago nga nota napakyas sa status code: %1</translation>
     </message>
   </context>
   <context>

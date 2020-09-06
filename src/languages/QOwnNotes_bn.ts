@@ -38,7 +38,7 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="36"/>
       <source>Select file</source>
-      <translation>ফাইল নির্বাচন করুন</translation>
+      <translation>ফাইল নির্বাচন</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="46"/>
@@ -135,7 +135,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="137"/>
       <source>Downloaded dictionaries</source>
-      <translation>ডাউনলোড করা অভিধান</translation>
+      <translation>ডাউনলোডকৃত অভিধান</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
@@ -1467,13 +1467,13 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="91"/>
       <source>The application will be restarted afterwards.</source>
-      <translation>এরপরে অ্যাপ্লিকেশনটি আবার শুরু হবে।.</translation>
+      <translation>এরপরে অ্যাপ্লিকেশনটি আবার শুরু হবে।</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation>যত্সামান্য</translation>
+      <translation>যৎসামান্য </translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="160"/>
@@ -1485,13 +1485,13 @@
       <location filename="../widgets/layoutwidget.cpp" line="162"/>
       <source>Preview only</source>
       <comment>Layout name</comment>
-      <translation>শুধুমাত্র পূর্বরূপ</translation>
+      <translation>কেবল প্রিভিউ </translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="164"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation>সম্পূর্ণ উল্লম্ব</translation>
+      <translation>সম্পূর্ণ খাড়া</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
@@ -2645,12 +2645,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>নোট তালিকায় নীচে সরান</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>নোট তালিকায় উপরে সরান
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -6138,7 +6139,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
       <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
-      <translation type="unfinished">GitHub doesn't need two spaces at the end of the line to do a line break</translation>
+      <translation>লাইন বিরতিতে গিটহাবের লাইনের শেষে দুটি স্পেসের প্রয়োজন নেই</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>

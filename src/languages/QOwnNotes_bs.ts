@@ -2654,12 +2654,14 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Pomaknite se prema dolje na listi bilješki
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Pomicanje prema gore na listi bilješki
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -6179,7 +6181,7 @@ Samo se testirajte ako dobijete sukobe u sinkronizaciji i postavite veću vrijed
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
       <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
-      <translation type="unfinished">GitHub doesn't need two spaces at the end of the line to do a line break</translation>
+      <translation>GitHubu nisu potrebna dva razmaka na kraju retka da bi napravio prekid retka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
@@ -6273,7 +6275,7 @@ Samo se testirajte ako dobijete sukobe u sinkronizaciji i postavite veću vrijed
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>Sakrij 'Brojanje bilješki' s oznakama (povećava performanse)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>

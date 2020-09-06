@@ -2651,12 +2651,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Baixar na lista de notas
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Mover cara arriba na lista de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -6156,7 +6157,7 @@ Abre o asistente de emisión de temas &lt;/ span&gt; na parte inferior. &lt;/ P&
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
       <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
-      <translation type="unfinished">GitHub doesn't need two spaces at the end of the line to do a line break</translation>
+      <translation>GitHub non precisa de dous espazos ao final da liña para facer un salto de liña</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
@@ -6250,7 +6251,7 @@ Abre o asistente de emisión de temas &lt;/ span&gt; na parte inferior. &lt;/ P&
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>Ocultar o "Reconto de notas" coas etiquetas (aumenta o rendemento)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
@@ -8080,12 +8081,12 @@ Isto non se pode desfacer!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="59"/>
       <source>&amp;Delete</source>
-      <translation type="unfinished">&amp;Delete</translation>
+      <translation>&amp;Eliminar</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>
       <source>Delete selected note on server</source>
-      <translation type="unfinished">Delete selected note on server</translation>
+      <translation>Elimina a nota seleccionada no servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="68"/>
@@ -8095,22 +8096,22 @@ Isto non se pode desfacer!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="190"/>
       <source>Delete note on server</source>
-      <translation type="unfinished">Delete note on server</translation>
+      <translation>Eliminar nota no servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
       <source>Delete selected trashed note on server?</source>
-      <translation type="unfinished">Delete selected trashed note on server?</translation>
+      <translation>Queres eliminar a nota lixo seleccionada no servidor?</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="213"/>
       <source>Error while deleting note</source>
-      <translation type="unfinished">Error while deleting note</translation>
+      <translation>Erro ao eliminar a nota</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation type="unfinished">Deleting trashed note failed with status code: %1</translation>
+      <translation>Produciuse un erro ao eliminar a nota lixada co código de estado: %1</translation>
     </message>
   </context>
   <context>

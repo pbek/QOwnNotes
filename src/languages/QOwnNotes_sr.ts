@@ -2660,12 +2660,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Померите се према доле на листи бележака
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Померите се горе на листи белешки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>

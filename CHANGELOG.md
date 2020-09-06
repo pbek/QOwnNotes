@@ -5,6 +5,8 @@
 - the deployment of the original desktop file is now prohibited when building a
   snap with snapcraft to prevent two desktop files being deployed with the snap
   (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
+- added more translation (thank you Lubinka, muhannad.albayk.jaam, khoirul, rawfreeamy,
+  MartaStan, Zamalor, VasilikiBotsou, Basudeb_Dhaka, Iva16, Farhan1985, amirkbrpr)
 
 ## 20.9.2
 - the desktop file of the snap release of QOwnNotes was renamed to `qownnotes.desktop`

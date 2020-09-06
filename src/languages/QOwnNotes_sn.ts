@@ -2555,32 +2555,32 @@
     <message>
       <location filename="../mainwindow.ui" line="2597"/>
       <source>Previous note tab</source>
-      <translation type="unfinished">Previous note tab</translation>
+      <translation>Yapfuura katsamba tebhu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2609"/>
       <source>Next note tab</source>
-      <translation type="unfinished">Next note tab</translation>
+      <translation>Inotevera tsamba tab</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2621"/>
       <source>Close current note tab</source>
-      <translation type="unfinished">Close current note tab</translation>
+      <translation>Vhura yazvino noti tebhu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2633"/>
       <source>New note in new tab</source>
-      <translation type="unfinished">New note in new tab</translation>
+      <translation>Chinyorwa chitsva mune itsva tebhu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2641"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation type="unfinished">Toggle note stickiness of current tab</translation>
+      <translation>Chinja kucherechedza kunamira kwetabhu yazvino</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation type="unfinished">Format text underline</translation>
+      <translation>Fomati zvinyorwa pasi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -2648,12 +2648,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Enda pasi mune chinyorwa chinyorwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Enda kumusoro mune chinyorwa chinyorwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -3143,7 +3143,7 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
     <message>
       <location filename="../mainwindow.cpp" line="8974"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Dzorerazve tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8975"/>
@@ -3194,42 +3194,42 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
     <message>
       <location filename="../mainwindow.cpp" line="10304"/>
       <source>Jump to the note's subfolder</source>
-      <translation type="unfinished">Jump to the note's subfolder</translation>
+      <translation>Svetukira kubhuku retsamba</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10361"/>
       <source>Open note in tab</source>
-      <translation type="unfinished">Open note in tab</translation>
+      <translation>Vhura noti mu tebhu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12024"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>Iyo script yekuvandudza yakawanikwa!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12030"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Zvinyorwa zveScript</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12031"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>Kwidziridzo kune zvinyorwa zvako zvakawanikwa mune chinyorwa chinyorwa! Iwe unoda kuzvigadziridza here?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12046"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>Hapana zvinyorwa zve script zvakawanikwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12662"/>
       <source>Toggle note stickiness</source>
-      <translation type="unfinished">Toggle note stickiness</translation>
+      <translation>Shandura chinyorwa chinonamira</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12668"/>
       <source>Close other note tabs</source>
-      <translation type="unfinished">Close other note tabs</translation>
+      <translation>Vhara mamwe matabhu ekunyorera</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10248"/>
@@ -3285,7 +3285,7 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
     <message>
       <location filename="../mainwindow.cpp" line="10674"/>
       <source>Rename subfolder</source>
-      <translation type="unfinished">Rename subfolder</translation>
+      <translation>Dzorerazve subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11278"/>
@@ -3318,7 +3318,7 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
     <message>
       <location filename="../mainwindow.cpp" line="11548"/>
       <source>Rename workspace</source>
-      <translation type="unfinished">Rename workspace</translation>
+      <translation>Dzorerazve nzvimbo yekushanda</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="11694"/>
@@ -3362,7 +3362,7 @@ Ese mafaera nemaforodha ari mumaforodha aya anozobviswawo!</numerusform>
     <message>
       <location filename="../mainwindow.cpp" line="12549"/>
       <source>Characters:</source>
-      <translation type="unfinished">Characters:</translation>
+      <translation>Hunhu:</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8716"/>
@@ -4073,7 +4073,7 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="237"/>
       <source>Copy image to clipboard</source>
-      <translation type="unfinished">Copy image to clipboard</translation>
+      <translation>Kopa mufananidzo kubhodhibhodhi</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="259"/>
@@ -4381,7 +4381,7 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
     <message>
       <location filename="../entities/note.cpp" line="1498"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Cherechedzo</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2546"/>
@@ -4434,12 +4434,12 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
     <message>
       <location filename="../utils/gui.cpp" line="856"/>
       <source>Double-click to unstick note from tab</source>
-      <translation type="unfinished">Double-click to unstick note from tab</translation>
+      <translation>Double-click to unstick note from tab</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="857"/>
       <source>Double-click to stick note to tab</source>
-      <translation type="unfinished">Double-click to stick note to tab</translation>
+      <translation>Tinya kaviri kuti unamate noti kune tab</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>
@@ -4459,7 +4459,7 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
     <message>
       <location filename="../entities/cloudconnection.cpp" line="291"/>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>Zvisizvo</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="256"/>
@@ -4480,17 +4480,17 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
       <location filename="../entities/notesubfolder.cpp" line="556"/>
       <location filename="../entities/notesubfolder.cpp" line="581"/>
       <source>Folder will be hidden!</source>
-      <translation type="unfinished">Folder will be hidden!</translation>
+      <translation>Folder ichavanzwa!</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="557"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</translation>
+      <translation>Folda ine zita &lt;b&gt;%1 &lt;/b&gt; haigone kugadzirwa, nekuti iri mukati inoshandiswa nechishandiso!</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="582"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
+      <translation>Folda ine zita &lt;b&gt;%1 &lt;/b&gt; haigone kugadzirwa, nekuti iri pane irwo runyorwa rwefafitera dzakasiiwa! Unogona kushandura izvo mu &lt;i&gt; Panels masetingi &lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -4518,7 +4518,7 @@ uye kuti unogona ku &lt;strong&gt; chete &lt;/strong&gt; ita izvo &lt;strong&gt;
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="670"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow it again?</translation>
+      <translation>Cherekedza kugadziridza parizvino kwakaremara, unoda kuibvumira zvakare?</translation>
     </message>
   </context>
   <context>
@@ -4843,7 +4843,7 @@ Iyo folda nefaira zvinonyorwa here?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="404"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Dzorerazve</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="405"/>
@@ -4993,7 +4993,7 @@ Iwe unoda kuimisa zvakadaro?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1088"/>
       <source>ownCloud server url:</source>
-      <translation type="unfinished">ownCloud server url:</translation>
+      <translation>ownCloud server url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1110"/>
@@ -5094,7 +5094,7 @@ Dzvanya apa kuti uedze kubatana kune yako pachako iCloud server.
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="590"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation type="unfinished">Click here to use the selected folder from your server as note folder</translation>
+      <translation>Dzvanya apa kuti ushandise dhairekitori rakasarudzwa kubva kuseva yako segwaro retsamba</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="889"/>
@@ -5104,7 +5104,7 @@ Dzvanya apa kuti uedze kubatana kune yako pachako iCloud server.
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="988"/>
       <source>Error Message</source>
-      <translation type="unfinished">Error Message</translation>
+      <translation>Meseji Yekutadza</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="144"/>
@@ -5114,32 +5114,32 @@ Dzvanya apa kuti uedze kubatana kune yako pachako iCloud server.
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1423"/>
       <source>Proxy Settings</source>
-      <translation type="unfinished">Proxy Settings</translation>
+      <translation>Proxy Zvirongwa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1429"/>
       <source>No Proxy</source>
-      <translation type="unfinished">No Proxy</translation>
+      <translation>Kwete Proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1439"/>
       <source>Use system proxy</source>
-      <translation type="unfinished">Use system proxy</translation>
+      <translation>Shandisa system proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1446"/>
       <source>Specify proxy manually as</source>
-      <translation type="unfinished">Specify proxy manually as</translation>
+      <translation>Tsanangura proxy nemaoko se</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1471"/>
       <source>Host</source>
-      <translation type="unfinished">Host</translation>
+      <translation>Mubati</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1522"/>
       <source>Proxy server requires authentication</source>
-      <translation type="unfinished">Proxy server requires authentication</translation>
+      <translation>Proxy server inoda kuvimbiswa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1579"/>
@@ -5232,13 +5232,13 @@ Dzvanya apa kuti uedze kubatana kune yako pachako iCloud server.
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Shortcuts</source>
-      <translation type="unfinished">Shortcuts</translation>
+      <translation>Mapfupi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4515"/>
       <location filename="../dialogs/settingsdialog.ui" line="4808"/>
       <source>Default font:</source>
-      <translation type="unfinished">Default font:</translation>
+      <translation>Fonti yakasarudzika:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4557"/>
@@ -5918,7 +5918,7 @@ ownCloud sync mutengi &lt;/span&gt; &lt;/a&gt;
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2951"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
+      <translation>Bvumira rima mode application icon uye tray icon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2958"/>
@@ -6167,7 +6167,7 @@ ownCloud sync mutengi &lt;/span&gt; &lt;/a&gt;
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
       <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
-      <translation type="unfinished">GitHub doesn't need two spaces at the end of the line to do a line break</translation>
+      <translation>GitHub haidi nzvimbo mbiri kumagumo kwetambo kuti iite mutsetse</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
@@ -6217,7 +6217,7 @@ ownCloud sync mutengi &lt;/span&gt; &lt;/a&gt;
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5205"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Bvisa otomatiki nzvimbo dzinoteedzera mune chinyorwa chinyorwa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5215"/>
@@ -6238,27 +6238,27 @@ ownCloud sync mutengi &lt;/span&gt; &lt;/a&gt;
       <location filename="../dialogs/settingsdialog.ui" line="5610"/>
       <location filename="../dialogs/settingsdialog.ui" line="5619"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note subfolders to ignore, separated by ";"</translation>
+      <translation>Kugara uchitaura zvinyorwa zvidiki zvekuregeredza, zvakapatsanurwa na ";"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5613"/>
       <source>Ignored subfolders</source>
-      <translation type="unfinished">Ignored subfolders</translation>
+      <translation>Akaregeredzwa maforodha maduku</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Reset ignored subfolders</source>
-      <translation type="unfinished">Reset ignored subfolders</translation>
+      <translation>Dzorerazve mafafitera asina hanya</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5665"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+      <translation>Dzosera yakavhurika noti tabo pakutanga kwekushandisa uye kana manotsi mafirita achishandurwa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>Viga 'Cherechedzo kuverenga' nemaki (inowedzera kuita)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
@@ -6283,12 +6283,12 @@ ownCloud sync mutengi &lt;/span&gt; &lt;/a&gt;
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5796"/>
       <source>Note folder panel</source>
-      <translation type="unfinished">Note folder panel</translation>
+      <translation>Cherekedza folda pani</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5802"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation type="unfinished">Show note folders as buttons instead of in a select box</translation>
+      <translation>Ratidza noti maforodha semabhatani panzvimbo yebhokisi rakasarudzwa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5944"/>
@@ -6440,7 +6440,7 @@ Chenjerera icho ownCloud Notes inoda zita refaira kuti rive rakafanana nemusoro!
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5925"/>
       <source>Layout selector</source>
-      <translation type="unfinished">Layout selector</translation>
+      <translation>Dhizaini sarudza</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5931"/>
@@ -6533,7 +6533,7 @@ Chenjerera icho ownCloud Notes inoda zita refaira kuti rive rakafanana nemusoro!
       <location filename="../dialogs/settingsdialog.ui" line="5549"/>
       <location filename="../dialogs/settingsdialog.ui" line="5703"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>Mabhii</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5710"/>
@@ -7232,24 +7232,24 @@ Chaizvoizvo unodzima kushandiswa kwekutevera?</translation>
       <location filename="../dialogs/settingsdialog.cpp" line="1666"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1718"/>
       <source>Undefined shortcut</source>
-      <translation type="unfinished">Undefined shortcut</translation>
+      <translation>Isina kutsanangurwa nzira pfupi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1670"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1722"/>
       <source>Assign a new shortcut</source>
-      <translation type="unfinished">Assign a new shortcut</translation>
+      <translation>Sarudza nzira pfupi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1671"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1723"/>
       <source>Reset to default shortcut</source>
-      <translation type="unfinished">Reset to default shortcut</translation>
+      <translation>Dzorerazve kusarudzo pfupi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1689"/>
       <source>Clear shortcut</source>
-      <translation type="unfinished">Clear shortcut</translation>
+      <translation>Bvisa nzira pfupi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1794"/>
@@ -8093,7 +8093,7 @@ Izvi hazvigone kuitika</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>
       <source>Delete selected note on server</source>
-      <translation type="unfinished">Delete selected note on server</translation>
+      <translation>Bvisa chinyorwa chakasarudzwa pane server</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="68"/>
@@ -8103,22 +8103,22 @@ Izvi hazvigone kuitika</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="190"/>
       <source>Delete note on server</source>
-      <translation type="unfinished">Delete note on server</translation>
+      <translation>Delete noti pane server</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
       <source>Delete selected trashed note on server?</source>
-      <translation type="unfinished">Delete selected trashed note on server?</translation>
+      <translation>Delete yakasarudzika yakarashika noti pane server?</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="213"/>
       <source>Error while deleting note</source>
-      <translation type="unfinished">Error while deleting note</translation>
+      <translation>Kukanganisa pakubvisa chinyorwa</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation type="unfinished">Deleting trashed note failed with status code: %1</translation>
+      <translation>Kubvisa katsamba kakarasika kwakakundikana nekodhi yekodhi: %1</translation>
     </message>
   </context>
   <context>
@@ -8176,12 +8176,12 @@ Izvi hazvigone kuitika</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="72"/>
       <source>&amp;Skip version</source>
-      <translation type="unfinished">&amp;Skip version</translation>
+      <translation>&amp;Darika vhezheni</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="80"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>&amp;Dzima dialog</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="81"/>
@@ -8191,7 +8191,7 @@ Izvi hazvigone kuitika</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="89"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Kanzura</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="242"/>
@@ -8338,7 +8338,7 @@ Izvi hazvigone kuitika</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation type="unfinished">Diff</translation>
+      <translation>Kusiyanisa</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
@@ -8384,7 +8384,7 @@ Izvi hazvigone kuitika</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="386"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 yakabviswa kubva paQOwnNotes server</translation>
     </message>
   </context>
   <context>
@@ -8426,22 +8426,22 @@ Izvi hazvigone kuitika</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation type="unfinished">&amp;Back</translation>
+      <translation>&amp;Kudzoka</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation type="unfinished">&amp;Next</translation>
+      <translation>&amp;Inotevera</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation type="unfinished">&amp;Finished</translation>
+      <translation>&amp;Yapera</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Kanzura</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
@@ -8487,7 +8487,7 @@ Izvi hazvigone kuitika</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show subfolders</source>
-      <translation type="unfinished">Show subfolders</translation>
+      <translation>Ratidza maforodha maduku</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
@@ -8570,7 +8570,7 @@ Izvi hazvigone kuitika</translation>
     <message>
       <location filename="../main.cpp" line="577"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation type="unfinished">A second instance of QOwnNotes was attempted to be started!</translation>
+      <translation>Yechipiri chiitiko cheQOwnNotes chakaedzwa kutanga!</translation>
     </message>
   </context>
 </TS>

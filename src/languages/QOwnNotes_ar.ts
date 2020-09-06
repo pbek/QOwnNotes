@@ -6388,7 +6388,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5205"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation>قم بإزالة المسافات اللاحقة في نص الملاحظة تلقائيا</translation>
+      <translation>إزالة المسافات الزائدة بعد نهاية السطر من نص الملاحظة تلقائيًا</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5215"/>
@@ -6654,7 +6654,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5191"/>
       <source>Highlight the current line</source>
-      <translation>سلط الضوء على الخط الحالي</translation>
+      <translation>تظليل السطر الحالي</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5408"/>
@@ -7685,37 +7685,37 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="222"/>
       <source>-ise suffixes</source>
       <comment>dictionary variant</comment>
-      <translation>סיומות -ise</translation>
+      <translation>لواحق ise-</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="223"/>
       <source>-ize suffixes</source>
       <comment>dictionary variant</comment>
-      <translation>סיומות -ize</translation>
+      <translation>لواحق ize-</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="224"/>
       <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>-لاحقات لاحقة ومع لهجات</translation>
+      <translation>لواحق ise- ومع تشكيل</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
       <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>-لاحقات لاحقة وبدون لهجات</translation>
+      <translation>لواحق ise- وبدون تشكيل</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="229"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>-لاحقات لاحقة ومع لهجات</translation>
+      <translation>لواحق ize- ومع لهجات</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="231"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>-لاحقات لاحقة وبدون لهجات</translation>
+      <translation>لواحق ize- وبدون لهجات</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
@@ -7769,25 +7769,25 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="244"/>
       <source>with ye, modern russian</source>
       <comment>dictionary variant</comment>
-      <translation>الروسية الحديثة</translation>
+      <translation>مع ye، الروسية الحديثة</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="246"/>
       <source>with yeyo, modern and old russian</source>
       <comment>dictionary variant</comment>
-      <translation>الروسية الحديثة والقديمة</translation>
+      <translation>مع yeyo، الروسية الحديثة والقديمة</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="249"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
-      <translation>الروسية القديمة</translation>
+      <translation>مع yo، الروسية القديمة</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="250"/>
       <source>extended</source>
       <comment>dictionary variant</comment>
-      <translation>وسعوا</translation>
+      <translation>موسع</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="325"/>
@@ -7873,7 +7873,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file / clipboard</source>
-      <translation>استيراد ملف CSV / الحافظة</translation>
+      <translation>استورد ملف CSV / حافظة</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
@@ -7883,7 +7883,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="197"/>
       <source>Import clipboard</source>
-      <translation>استيراد الحافظة</translation>
+      <translation>استورد الحافظة</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="190"/>
@@ -7965,7 +7965,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation>ملحوظة…</translation>
+      <translation>ملاحظة…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="105"/>
@@ -8035,17 +8035,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="130"/>
       <source>Reload from server</source>
-      <translation>تحديث من الخادم</translation>
+      <translation>أعد التحميل من الخادم</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="134"/>
       <source>Reload tasks from server</source>
-      <translation>تحديث المهام من الخادم</translation>
+      <translation>أعد تحميل المهام من الخادم</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="138"/>
       <source>Clear cache and reload</source>
-      <translation>مسح ذاكرة التخزين المؤقت وإعادة تحميل</translation>
+      <translation>امسح ذاكرة التخزين المؤقت وأعد التحميل</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="143"/>
@@ -8229,7 +8229,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation>العثور على اسم المذكرة</translation>
+      <translation>اكتشف اسم الملاحظة</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="31"/>
@@ -8254,7 +8254,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="59"/>
       <source>&amp;Delete</source>
-      <translation>ا&amp;حذف</translation>
+      <translation>&amp;حذف</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>

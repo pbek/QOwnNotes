@@ -2642,12 +2642,14 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>ノートリストを下に移動
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>ノートリストを上に移動
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -6072,7 +6074,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2838"/>
       <source>Yiddish</source>
-      <translation type="unfinished">Yiddish</translation>
+      <translation>イディッシュ語
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2849"/>
@@ -6206,7 +6209,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>タグで「メモ数」を非表示にする（パフォーマンスを向上）
+</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
@@ -8035,12 +8039,13 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="59"/>
       <source>&amp;Delete</source>
-      <translation type="unfinished">&amp;Delete</translation>
+      <translation>削除(&amp;D)</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>
       <source>Delete selected note on server</source>
-      <translation type="unfinished">Delete selected note on server</translation>
+      <translation>サーバー上の選択したメモを削除
+</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="68"/>
@@ -8050,22 +8055,25 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="190"/>
       <source>Delete note on server</source>
-      <translation type="unfinished">Delete note on server</translation>
+      <translation>サーバー上のメモを削除
+</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
       <source>Delete selected trashed note on server?</source>
-      <translation type="unfinished">Delete selected trashed note on server?</translation>
+      <translation>サーバー上の選択したゴミ箱のメモを削除しますか？
+</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="213"/>
       <source>Error while deleting note</source>
-      <translation type="unfinished">Error while deleting note</translation>
+      <translation>メモの削除中にエラーが発生しました
+</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation type="unfinished">Deleting trashed note failed with status code: %1</translation>
+      <translation>ゴミ箱のメモを削除できませんでした。ステータスコード：％1</translation>
     </message>
   </context>
   <context>

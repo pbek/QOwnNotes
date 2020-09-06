@@ -2645,12 +2645,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Hambisa phantsi kuluhlu lwamanqaku
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Hambisa kuluhlu lwenqaku</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -3230,7 +3231,7 @@ Ngaba ufuna ukuphelisa inqaku lakho?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="12668"/>
       <source>Close other note tabs</source>
-      <translation type="unfinished">Close other note tabs</translation>
+      <translation>Vala ezinye iithebhu zamanqaku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10248"/>
@@ -4372,7 +4373,7 @@ Nceda ujonge uqwalaselo lwakho lwe &lt;strong&gt; Todo &lt;/strong&gt; kuseto!</
     <message>
       <location filename="../entities/note.cpp" line="1498"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Phawula</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2546"/>

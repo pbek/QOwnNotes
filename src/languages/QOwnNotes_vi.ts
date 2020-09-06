@@ -2642,12 +2642,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Di chuyển xuống trong danh sách ghi chú
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Di chuyển lên trong danh sách ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>

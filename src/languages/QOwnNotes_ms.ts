@@ -2568,7 +2568,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation type="unfinished">Format text underline</translation>
+      <translation>Format garis bawah teks</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -2636,12 +2636,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Turun dalam senarai nota
+</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Naik senarai nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -3164,7 +3165,7 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
     <message>
       <location filename="../mainwindow.cpp" line="10304"/>
       <source>Jump to the note's subfolder</source>
-      <translation type="unfinished">Jump to the note's subfolder</translation>
+      <translation>Lompat ke subfolder nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10361"/>
@@ -3174,32 +3175,32 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
     <message>
       <location filename="../mainwindow.cpp" line="12024"/>
       <source>A script update was found!</source>
-      <translation type="unfinished">A script update was found!</translation>
+      <translation>Kemas kini skrip dijumpai!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12030"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Kemas kini skrip</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12031"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-      <translation type="unfinished">Updates to your scripts were found in the script repository! Do you want to update them?</translation>
+      <translation>Kemas kini skrip anda terdapat di repositori skrip! Adakah anda mahu mengemas kini mereka?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12046"/>
       <source>No script updates were found</source>
-      <translation type="unfinished">No script updates were found</translation>
+      <translation>Tiada kemas kini skrip dijumpai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12662"/>
       <source>Toggle note stickiness</source>
-      <translation type="unfinished">Toggle note stickiness</translation>
+      <translation>Togol kekemasan nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12668"/>
       <source>Close other note tabs</source>
-      <translation type="unfinished">Close other note tabs</translation>
+      <translation>Tutup tab nota lain</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10248"/>
@@ -3706,7 +3707,7 @@ Sekiranya sampah diaktifkan pada pelayan anda sendiri, anda harus dapat mengemba
     <message>
       <location filename="../mainwindow.cpp" line="745"/>
       <source>Subfolders</source>
-      <translation type="unfinished">Subfolders</translation>
+      <translation>Subfolders</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="757"/>
@@ -4329,7 +4330,7 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
     <message>
       <location filename="../entities/note.cpp" line="1498"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Nota</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2546"/>
@@ -4435,7 +4436,7 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
     <message>
       <location filename="../entities/notesubfolder.cpp" line="582"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
+      <translation>Folder dengan nama &lt;b&gt;%1 &lt;/b&gt; tidak dapat dibuat, kerana terdapat dalam senarai subfolder yang diabaikan! Anda boleh mengubahnya dalam &lt;i&gt; Tetapan panel &lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -5606,12 +5607,12 @@ Cubalah sendiri jika anda mendapat konflik sync dan tetapkan nilai yang lebih ti
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support subfolders!</translation>
+      <translation>Ketahuilah bahawa aplikasi noteCloud sendiri tidak menyokong subfolder!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="726"/>
       <source>Use note subfolders</source>
-      <translation type="unfinished">Use note subfolders</translation>
+      <translation>Gunakan subfolder nota</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1392"/>
@@ -6021,7 +6022,7 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2189"/>
       <source>Malay</source>
-      <translation type="unfinished">Malay</translation>
+      <translation>Bahasa Melayu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2497"/>
@@ -6096,7 +6097,7 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
       <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
-      <translation type="unfinished">GitHub doesn't need two spaces at the end of the line to do a line break</translation>
+      <translation>GitHub tidak memerlukan dua ruang di hujung garisan untuk melakukan pemecahan garis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
@@ -6136,7 +6137,7 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5028"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda mungkin ingin melihat semua &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;format masa&lt;/a&gt; yang ada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5198"/>
@@ -6146,7 +6147,7 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5205"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+      <translation>Alih keluar spasi ketinggalan dalam teks nota secara automatik</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5215"/>
@@ -6167,17 +6168,17 @@ Pembantu isu Terbuka &lt;/ span&gt; di bahagian bawah. &lt;/ P&gt; &lt;/ body&gt
       <location filename="../dialogs/settingsdialog.ui" line="5610"/>
       <location filename="../dialogs/settingsdialog.ui" line="5619"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note subfolders to ignore, separated by ";"</translation>
+      <translation>Ungkapan biasa subfolder nota untuk diabaikan, dipisahkan dengan ";"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5613"/>
       <source>Ignored subfolders</source>
-      <translation type="unfinished">Ignored subfolders</translation>
+      <translation>Subfolder yang diabaikan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Reset ignored subfolders</source>
-      <translation type="unfinished">Reset ignored subfolders</translation>
+      <translation>Tetapkan semula subfolder yang diabaikan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5665"/>
@@ -8016,12 +8017,12 @@ Versi nota di pelayan ownCloud anda tidak akan dipulihkan dan nota akan kekal di
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="59"/>
       <source>&amp;Delete</source>
-      <translation type="unfinished">&amp;Delete</translation>
+      <translation>&amp;Padam</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>
       <source>Delete selected note on server</source>
-      <translation type="unfinished">Delete selected note on server</translation>
+      <translation>Padamkan nota terpilih di pelayan</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="68"/>
@@ -8031,22 +8032,22 @@ Versi nota di pelayan ownCloud anda tidak akan dipulihkan dan nota akan kekal di
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="190"/>
       <source>Delete note on server</source>
-      <translation type="unfinished">Delete note on server</translation>
+      <translation>Padamkan nota di pelayan</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
       <source>Delete selected trashed note on server?</source>
-      <translation type="unfinished">Delete selected trashed note on server?</translation>
+      <translation>Padamkan nota sampah terpilih di pelayan?</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="213"/>
       <source>Error while deleting note</source>
-      <translation type="unfinished">Error while deleting note</translation>
+      <translation>Ralat semasa memadam nota</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation type="unfinished">Deleting trashed note failed with status code: %1</translation>
+      <translation>Gagal menghapus nota sampah dengan kod status: %1</translation>
     </message>
   </context>
   <context>
@@ -8414,7 +8415,7 @@ Versi nota di pelayan ownCloud anda tidak akan dipulihkan dan nota akan kekal di
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show subfolders</source>
-      <translation type="unfinished">Show subfolders</translation>
+      <translation>Tunjukkan subfolder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>

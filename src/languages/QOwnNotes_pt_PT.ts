@@ -2315,7 +2315,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2130"/>
       <source>Show note list under tag panel</source>
-      <translation>Mostrar lista de notas no painel de tags</translation>
+      <translation>Mostrar a lista de notas sobre o painel de etiquetas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2148"/>
@@ -2325,12 +2325,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2169"/>
       <source>Import notes from text files</source>
-      <translation>Importar notas de arquivos de texto</translation>
+      <translation>Importar notas de ficheiros de texto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2178"/>
       <source>Manage orphaned image files</source>
-      <translation>Gerenciar arquivos de imagem órfãos</translation>
+      <translation>Gerenciar ficheiros de imagem órfãos</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2190"/>
@@ -2343,7 +2343,7 @@
       <location filename="../mainwindow.ui" line="2208"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
-      <translation>Abra a sala do motim</translation>
+      <translation>Abrir a sala da Riot</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2235"/>
@@ -2402,7 +2402,7 @@
       <location filename="../mainwindow.ui" line="2326"/>
       <location filename="../mainwindow.ui" line="2329"/>
       <source>Search selected text on the web</source>
-      <translation>Pesquise o texto selecionado na web</translation>
+      <translation>Pesquisar o texto selecionado na web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2337"/>
@@ -2423,7 +2423,7 @@
       <location filename="../mainwindow.ui" line="2365"/>
       <location filename="../mainwindow.cpp" line="10368"/>
       <source>Open note in different window</source>
-      <translation>Nota aberta em janela diferente</translation>
+      <translation>Abrir nota numa janela diferente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2377"/>

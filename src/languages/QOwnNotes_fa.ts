@@ -8629,7 +8629,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation>اگر می خواهید به نسخه های یادداشت خود و یادداشت های حذف شده خود در سرور ون کلاود خود دسترسی پیدا کنید، لاکنون می توانید QOwnNotes را برای آن پیکربندی کنید. همچنین می توانید این کار را بعداً انجام دهید.</translation>
+      <translation>اگر می خواهید به نسخه های یادداشت خود و یادداشت های حذف شده خود در سرور اون کلاود خود دسترسی پیدا کنید، اکنون می توانید QOwnNotes را برای آن پیکربندی کنید. همچنین می توانید این کار را بعداً انجام دهید.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
@@ -8639,7 +8639,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="391"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes داده کاربری ناشناس را ردیابی می کند که به شما امکان می دهد تصمیم بگیرید که چه قسمت هایی از QOwnNotes برای نسخه بعدی بهبود یابد و چه اشکلاتی باید پیدا شده و برطرف گردند. می توانید این عملکرد را در تنظیمات غیرفعال کنید.</translation>
+      <translation>QOwnNotes داده های استفاده ناشناس را ردیابی می کند ، که به شما کمک می کند تصمیم بگیرید که قسمت های QOwnNotes برای بهبود بعدی و یافتن و رفع اشکالات چیست. می توانید آن رفتار را در تنظیمات غیرفعال کنید.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="122"/>
@@ -8664,7 +8664,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="220"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation>به خاطر داشته باشید که پوشه یادداشت در فهرستی که در آن QOwnNotes در حالت قابل حمل قرار دارد، ذخیره می شود! بنابراین باید در همان درایو بمانید.</translation>
+      <translation>به خاطر داشته باشید که پوشه یادداشت در فهرستی ذخیره می شود که در آن QOwnNotes در حالت قابل حمل قرار دارد! بنابراین باید در همان درایو بمانید.</translation>
     </message>
   </context>
   <context>
@@ -8677,7 +8677,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="102"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation>روگرفتی از تنظیمات و سایر اطلاعات درباره برنامه و محیط در مارک داون گیت هاب چاپ می کند و در برنامه موجود است.</translation>
+      <translation>روگرفتی از تنظیمات و سایر اطلاعات درباره برنامه و محیط در مارک داون گیت هاب چاپ می کند و از برنامه خارج می شود.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="111"/>

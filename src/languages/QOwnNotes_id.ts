@@ -720,7 +720,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation>Untuk mendapatkan berkas enex, anda harus memilih satu atau lebih catatan di aplikasi desktop Evernote anda dan klik menu "Ekspor catatan…" di dalam menu Berkas.</translation>
+      <translation>Untuk mendapatkan berkas enex, Anda harus memilih satu atau lebih catatan di aplikasi desktop Evernote anda dan klik menu "Ekspor catatan…" di dalam menu Berkas.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -929,7 +929,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5773"/>
       <source>Trailing characters:</source>
-      <translation>Karakter yang tertinggal:</translation>
+      <translation>Karakter tambahan:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
@@ -1003,22 +1003,22 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6337"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
-      <translation>Cari tekan bawah, terus di atas.</translation>
+      <translation>Hasil pencarian BAWAH, berlanjut di ATAS.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6338"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
-      <translation>Cari tekan atas, terus di bawah.</translation>
+      <translation>Hasil pencarian ATAS, berlanjut di BAWAH.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6343"/>
       <source>Search hit BOTTOM without match for: %1</source>
-      <translation>Telusuri yang paling bawah tanpa kecocokan untuk: %1</translation>
+      <translation>Hasil pencarian BAWAH tanpa kecocokan untuk: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation>Cari hit top tanpa kecocokan untuk: %1</translation>
+      <translation>Hasil pencarian ATAS tanpa kecocokan untuk: %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
@@ -1032,14 +1032,14 @@
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
       <translation>
-        <numerusform>%n baris %1ed %2 kali.</numerusform>
+        <numerusform>%n baris %1ed %2 waktu.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
       <translation>
-        <numerusform>%n baris menarik.</numerusform>
+        <numerusform>%n baris ditarik.</numerusform>
       </translation>
     </message>
     <message>
@@ -1050,7 +1050,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7779"/>
       <source>Already at newest change.</source>
-      <translation>Sudah ada di perubahan terbaru.</translation>
+      <translation>Sudah ada pada perubahan terbaru.</translation>
     </message>
   </context>
   <context>
@@ -1107,7 +1107,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>Jika anda telah membuat skema warna yang indah, silakan ekspor warna tersebut dan bagikan ke semua orang!</translation>
+      <translation>Jika Anda telah membuat skema warna yang indah, harap ekspor warna tersebut dan bagikan ke semua orang!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
@@ -1319,7 +1319,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="243"/>
       <source>Trailing space</source>
-      <translation>Ruang tertinggal</translation>
+      <translation>Spasi tambahan</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="255"/>
@@ -1442,7 +1442,7 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="57"/>
       <source>Keep in mind that workspaces that demand that there is no central widget will not work properly if the central widget is enabled.</source>
-      <translation>Ingatlah bahwa ruang kerja yang menuntut tidak ada widget pusat tidak akan berfungsi dengan baik jika widget pusat diaktifkan.</translation>
+      <translation>Ingatlah bahwa ruang kerja yang menuntut agar tidak ada widget pusat tidak akan berfungsi dengan baik jika widget pusat diaktifkan.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="86"/>
@@ -1462,7 +1462,7 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="91"/>
       <source>The application will be restarted afterwards.</source>
-      <translation>Aplikasi akan berhenti setelahnya.</translation>
+      <translation>Aplikasi akan dimulai ulang setelahnya.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
@@ -1598,13 +1598,13 @@
       <location filename="../dialogs/linkdialog.cpp" line="229"/>
       <location filename="../dialogs/linkdialog.cpp" line="314"/>
       <source>Select file to link to</source>
-      <translation>Pilih berkas yang akan ditautkan</translation>
+      <translation>Pilih berkas yang akan ditautkan ke</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="271"/>
       <location filename="../dialogs/linkdialog.cpp" line="322"/>
       <source>Select directory to link to</source>
-      <translation>Pilih direktori untuk ditautkan</translation>
+      <translation>Pilih direktori untuk ditautkan ke</translation>
     </message>
   </context>
   <context>
@@ -2321,7 +2321,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2178"/>
       <source>Manage orphaned image files</source>
-      <translation>Kelola berkas gambar yang tidak digunakan</translation>
+      <translation>Kelola berkas gambar yang tidak digunakan lagi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2190"/>
@@ -2476,17 +2476,17 @@
     <message>
       <location filename="../mainwindow.ui" line="2496"/>
       <source>Jump to note subfolder panel</source>
-      <translation>Fokus ke panel subfolder catatan</translation>
+      <translation>Lompat ke panel subfolder catatan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2504"/>
       <source>Jump to tags panel</source>
-      <translation>Fokus ke panel tag</translation>
+      <translation>Lompat ke panel tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2512"/>
       <source>Jump to note list panel</source>
-      <translation>Fokus ke panel daftar catatan</translation>
+      <translation>Lompat ke panel daftar catatan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2520"/>
@@ -2528,7 +2528,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2580"/>
       <source>Custom</source>
-      <translation>Khusus</translation>
+      <translation>Tersuai</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2583"/>
@@ -2567,7 +2567,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2641"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation>Alihkan stickiness note dari tab saat ini
+      <translation>Aktifkan/nonaktifkan sifat menempel catatan dari tab saat ini
 </translation>
     </message>
     <message>
@@ -2578,7 +2578,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation>Gunakan tilikan pratinjau &amp;vertikal</translation>
+      <translation>Gunakan &amp;tata letak pratinjau vertikal</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1911"/>
@@ -2615,13 +2615,13 @@
       <location filename="../mainwindow.ui" line="1990"/>
       <location filename="../mainwindow.ui" line="1993"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation>Buka saluran IRC #qownnotes, anda harus tetap daring untuk mendapatkan respon</translation>
+      <translation>Buka saluran IRC #qownnotes, Anda harus tetap daring untuk mendapatkan respon</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2220"/>
       <location filename="../mainwindow.ui" line="2223"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>Buka kamar Gitter qownnotes, anda membutuhkan akun GitHub atau Twitter untuk masuk, tetapi anda bisa mendapatkan pesan luring</translation>
+      <translation>Buka kamar Gitter qownnotes, Anda membutuhkan akun GitHub atau Twitter untuk masuk, tetapi Anda bisa mendapatkan pesan luring</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="992"/>
@@ -2641,12 +2641,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Turunkan dalam daftar catatan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Naikkan dalam daftar catatan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -2676,7 +2676,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2078"/>
       <source>Strike out text</source>
-      <translation>Teks coret</translation>
+      <translation>Coret teks</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2089"/>
@@ -2719,7 +2719,7 @@
       <source>Current note was removed outside of this application!
 Restore current note?</source>
       <translation>Catatan ini dihapus di luar aplikasi ini!
-Pulihkan catatan?</translation>
+Pulihkan catatan saat ini?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5441"/>
@@ -2753,33 +2753,33 @@ Pulihkan catatan?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3413"/>
       <source>Removed duplicate conflicted database: %1</source>
-      <translation>Database konflik duplikat yang dihapus: %1</translation>
+      <translation>Menghapus basis data ganda yang bertentangan: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3414"/>
       <source>Could not remove duplicate conflicted database: %1</source>
-      <translation>Tidak dapat menghapus database konflik yang digabungkan: %1</translation>
+      <translation>Tidak dapat menghapus basis data ganda  yang bertentangan: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3420"/>
       <source>Removed merged conflicted database: %1</source>
-      <translation>Basis data bentrok gabungan yang dihapus: %1</translation>
+      <translation>Basis data tergabung bertentangan yang dihapus: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3421"/>
       <source>Could not remove merged conflicted database: %1</source>
-      <translation>Tidak dapat menghapus database konflik yang digabungkan: %1</translation>
+      <translation>Tidak dapat menghapus basis data tergabung yang bertentangan: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3436"/>
       <source>Delete conflicted database copies</source>
-      <translation>Hapus salinan basis data yang konflik</translation>
+      <translation>Hapus salinan basis data yang bertentangan</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3459"/>
       <source>Removed %n conflicted database copies</source>
       <translation>
-        <numerusform>Dihapus %n salinan basis data yang konflik</numerusform>
+        <numerusform>Dihapus %n salinan basis data yang bertentangan</numerusform>
       </translation>
     </message>
     <message>
@@ -2795,7 +2795,7 @@ Pulihkan catatan?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3651"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation>Anda harus memilih folder catatan ownCloud anda agar perangkat lunak ini bisa bekerja!</translation>
+      <translation>Anda harus memilih folder catatan ownCloud Anda agar perangkat lunak ini bisa bekerja!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3653"/>
@@ -2845,7 +2845,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>
         <numerusform>Buang &lt;strong&gt;%n&lt;/strong&gt; catatan yang dipilih?
 
-Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkannya dari sana.</numerusform>
+Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkannya dari sana.</numerusform>
       </translation>
     </message>
     <message>
@@ -2962,13 +2962,13 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="5438"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation>Anda telah menonaktifkan daftar todo.&lt;br /&gt;Silakan periksa konfigurasi &lt;strong&gt;Todo&lt;/strong&gt; anda di dalam pengaturan!</translation>
+      <translation>Anda telah menonaktifkan daftar todo.&lt;br /&gt;Silakan periksa konfigurasi &lt;strong&gt;Todo&lt;/strong&gt; Anda di dalam pengaturan!</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5681"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
-        <numerusform>Ditemukan &lt;strong&gt;%n&lt;/strong&gt; kemunculan istilah apa pun dari &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Ditemukan kemunculan  &lt;strong&gt;%n&lt;/strong&gt;  dari istilah apa pun dari &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -2989,12 +2989,12 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="6516"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation>Versi catatan saat ini dimuat dari server ownCloud anda</translation>
+      <translation>Versi catatan saat ini dimuat dari server ownCloud Anda</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6533"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation>Catatan dalam keranjang sampah saat ini dimuat dari server ownCloud anda</translation>
+      <translation>Catatan dalam keranjang sampah saat ini dimuat dari server ownCloud Anda</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6599"/>
@@ -3024,7 +3024,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="7070"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation>Catatan anda akan didekripsi dan disimpan sebagai teks biasa lagi. Harap diingat bahwa ada kemungkinan catatan yang tidak terenkripsi tetap disinkronkan ke server anda dan teks yang berisi informasi sensitif mungkin akan terbuka secara publik!&lt;br /&gt;Apakah anda ingin mendekripsi catatan anda?</translation>
+      <translation>Catatan Anda akan didekripsi dan disimpan sebagai teks biasa lagi. Harap diingat bahwa ada kemungkinan catatan yang tidak terenkripsi tetap disinkronkan ke server Anda dan teks yang berisi informasi sensitif mungkin akan terbuka secara publik!&lt;br /&gt;Apakah Anda ingin mendekripsi catatan Anda?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7167"/>
@@ -3039,7 +3039,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="7238"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation>Fokus ke posisi markah pada slot %1</translation>
+      <translation>Lompat ke posisi markah pada slot %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7466"/>
@@ -3169,7 +3169,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="10304"/>
       <source>Jump to the note's subfolder</source>
-      <translation>Langsung ke subfolder catatan
+      <translation>Lompat ke subfolder catatan
 </translation>
     </message>
     <message>
@@ -3205,7 +3205,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="12662"/>
       <source>Toggle note stickiness</source>
-      <translation>Beralih not stickiness
+      <translation>Aktif/nonaktifkan sifat menempel catatan
 </translation>
     </message>
     <message>
@@ -3338,7 +3338,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="12549"/>
       <source>Custom editor width</source>
-      <translation>Lebar penyunting khusus</translation>
+      <translation>Lebar penyunting tersuai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12549"/>
@@ -3554,7 +3554,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="10455"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation>Jika anda ingin mengubah nama catatan, anda harus mengaktifkan opsi yang mengizinkan nama berkas catatan berbeda dari judul.</translation>
+      <translation>Jika Anda ingin mengubah nama catatan, Anda harus mengaktifkan opsi yang mengizinkan nama berkas catatan berbeda dari judul.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10673"/>
@@ -3629,7 +3629,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="1074"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation>Tugas-tugas anda sedang dimuat dari server anda</translation>
+      <translation>Tugas-tugas Anda sedang dimuat dari server Anda</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2776"/>
@@ -3640,7 +3640,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
       <location filename="../mainwindow.cpp" line="2859"/>
       <location filename="../mainwindow.cpp" line="5976"/>
       <source>Stored current note to disk</source>
-      <translation>Catatan ini telah disimpan ke diska</translation>
+      <translation>Catatan ini telah disimpan ke disk</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2877"/>
@@ -3871,7 +3871,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
       <location filename="../mainwindow.cpp" line="3438"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation>
-        <numerusform>Lanjutkan dengan penghapusan otomatis &lt;strong&gt;%n&lt;/strong&gt; salinan basis data yang bentrok yang dapat memblokir proses ownCloud anda sendiri?</numerusform>
+        <numerusform>Lanjutkan dengan penghapusan otomatis &lt;strong&gt;%n&lt;/strong&gt; salinan basis data yang bertentangan yang dapat memblokir proses ownCloud Anda sendiri?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3885,7 +3885,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
       <location filename="../mainwindow.cpp" line="5677"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
-        <numerusform>Ditemukan &lt;strong&gt;%n&lt;/strong&gt; kejadian dari &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Ditemukan kemunculan &lt;strong&gt;%n&lt;/strong&gt; dari &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -3926,12 +3926,12 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
       <location filename="../mainwindow.cpp" line="1671"/>
       <location filename="../mainwindow.cpp" line="12345"/>
       <source>leave</source>
-      <translation>tinggalkan</translation>
+      <translation>keluar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7013"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation>Silakan masukkan &lt;strong&gt;sandi&lt;/strong&gt; anda untuk mengenkripsi catatan.&lt;br /&gt;Harap diingat bahwa anda harus &lt;strong&gt;mengingat&lt;/strong&gt; sandi anda agar bisa membaca isi dari catatan&lt;br /&gt; dan anda &lt;strong&gt;hanya&lt;/strong&gt; bisa melakukan itu &lt;strong&gt;di QOwnNotes&lt;/strong&gt;!</translation>
+      <translation>Silakan masukkan &lt;strong&gt;sandi&lt;/strong&gt; Anda untuk mengenkripsi catatan.&lt;br /&gt;Harap diingat bahwa Anda harus &lt;strong&gt;mengingat&lt;/strong&gt; sandi Anda agar bisa membaca isi dari catatan&lt;br /&gt; dan anda &lt;strong&gt;hanya&lt;/strong&gt; bisa melakukan itu &lt;strong&gt;di QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7069"/>
@@ -3972,7 +3972,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../dialogs/notedialog.ui" line="39"/>
       <source>Note text</source>
-      <translation>Catatan teks
+      <translation>Teks catatan
 </translation>
     </message>
     <message>
@@ -4193,7 +4193,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../services/owncloudservice.cpp" line="248"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation>Nama pengguna / sandi kalender anda salah!</translation>
+      <translation>Nama pengguna / sandi kalender Anda salah!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="582"/>
@@ -4203,7 +4203,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../services/owncloudservice.cpp" line="583"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation>Pertimbangkan untuk memperbarui aplikasi QOwnNotesAPI pada server anda, versi aplikasi %1 terlalu rendah dan bisa menyebabkan QOwnNotes memiliki masalah.</translation>
+      <translation>Pertimbangkan untuk memperbarui aplikasi QOwnNotesAPI pada server Anda, versi aplikasi %1 terlalu rendah dan dapat menyebabkan QOwnNotes bermasalah.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1175"/>
@@ -4213,12 +4213,12 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../services/owncloudservice.cpp" line="1180"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation>Galat server ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Silakan periksa konfigurasi ownCloud anda.</translation>
+      <translation>Galat server ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Silakan periksa konfigurasi ownCloud Anda.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1200"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation>Anda perlu menyiapkan server ownCloud anda sendiri!</translation>
+      <translation>Anda perlu menyiapkan server ownCloud Anda sendiri!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1212"/>
@@ -4292,12 +4292,12 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation>Silakan masukkan sandi anda</translation>
+      <translation>Silakan masukkan sandi Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation>Masukkan sandi anda:</translation>
+      <translation>Masukkan sandi Anda:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
@@ -4427,12 +4427,12 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../main.cpp" line="257"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation>Folder catatan anda tidak ditemukan! Apakah anda ingin memilih yang baru?</translation>
+      <translation>Folder catatan Anda tidak ditemukan! Apakah Anda ingin memilih yang baru?</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="264"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Silakan pilih folder tempat catatan anda akan disimpan</translation>
+      <translation>Silakan pilih folder tempat catatan Anda akan disimpan</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="556"/>
@@ -4444,13 +4444,13 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../entities/notesubfolder.cpp" line="557"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation>Folder dengan nama &lt;b&gt;% 1 &lt;/b&gt; tidak dapat dibuat, karena ini digunakan secara internal oleh aplikasi!
+      <translation>Folder dengan nama  &lt;b&gt;%1&lt;/b&gt; tidak dapat dibuat, karena ini digunakan secara internal oleh aplikasi!
 </translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="582"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation>Folder dengan nama &lt;b&gt;% 1 &lt;/b&gt; tidak dapat dibuat, karena itu ada dalam daftar subfolder yang diabaikan! Anda dapat mengubahnya di &lt;i&gt; Pengaturan panel &lt;/i&gt;.
+      <translation>Folder dengan nama  &lt;b&gt;%1&lt;/b&gt; tidak dapat dibuat, karena itu ada dalam daftar subfolder yang diabaikan! Anda dapat mengubahnya di &lt;i&gt; Pengaturan panel &lt;/i&gt;.
 </translation>
     </message>
   </context>
@@ -4479,7 +4479,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="670"/>
       <source>Note editing is currently disabled, do you want to allow it again?</source>
-      <translation>Penyuntingan catatan saat ini dinonaktifkan, apakah anda ingin mengaktifkannya lagi?</translation>
+      <translation>Penyuntingan catatan saat ini dinonaktifkan, apakah Anda ingin mengaktifkannya kembali?</translation>
     </message>
   </context>
   <context>
@@ -4542,7 +4542,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation>Ganti satu teks yang cocok</translation>
+      <translation>Ganti kemunculan satu teks </translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -4552,7 +4552,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation>Ganti semua teks yang cocok</translation>
+      <translation>Ganti kemunculan semua teks </translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
@@ -4645,7 +4645,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>Cocok besar kecil</translation>
+      <translation>Cocokkan besar kecil huruf</translation>
     </message>
   </context>
   <context>
@@ -4671,7 +4671,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
       <translation>Tidak bisa membuat koneksi basis data dengan berkas '%1'.
-Apakah folder dan berkas tersebut bisa ditulis?</translation>
+Apakah folder dan berkas tersebut bisa ditransfer?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="125"/>
@@ -4688,7 +4688,7 @@ Apakah folder dan berkas tersebut bisa ditulis?</translation>
       <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
       <translation>Tidak dapat membuat koneksi basis data dengan basis data folder catatan untuk menggabungkan '%1'.
-Apakah folder dan file dapat ditulisi?</translation>
+Apakah folder dan file bisa ditransfer?</translation>
     </message>
   </context>
   <context>
@@ -4821,7 +4821,7 @@ Apakah folder dan file dapat ditulisi?</translation>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
       <translation>Platform anda tidak didukung oleh skrip ini!
-Apakah anda tetap ingin memasangnya?</translation>
+Apakah Anda tetap ingin memasangnya?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="475"/>
@@ -4917,7 +4917,7 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="419"/>
       <source>Your note folders</source>
-      <translation>Folder catatan anda</translation>
+      <translation>Folder catatan Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="495"/>
@@ -4937,7 +4937,7 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="794"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation>Tetapkan jalur ownCloud sebagai jalur folder catatan yang akan disinkronkan ke server ownCloud anda.</translation>
+      <translation>Tetapkan jalur ownCloud sebagai jalur folder catatan yang akan disinkronkan ke server ownCloud Anda.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="716"/>
@@ -4947,7 +4947,7 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="862"/>
       <source>Your ownCloud server</source>
-      <translation>Server ownCloud anda</translation>
+      <translation>Server ownCloud Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1088"/>
@@ -4957,12 +4957,12 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1110"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Silakan masukkan URL server ownCloud anda, contoh: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Silakan masukkan URL server ownCloud Anda, contoh: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1148"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Silakan masukkan nama pengguna server ownCloud anda.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Silakan masukkan nama pengguna server ownCloud Anda.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1183"/>
@@ -5003,7 +5003,7 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1211"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klik di sini untuk menguji koneksi ke server ownCloud anda.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klik di sini untuk menguji koneksi ke server ownCloud Anda.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1322"/>
@@ -5023,7 +5023,7 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="921"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Buka halaman &lt;span style=" font-weight:600;"&gt;Konfigurasi aplikasi&lt;/span&gt; server ownCloud anda di peramban web untuk memasang atau memperbarui QOwnNotesAPI dan mengaktifkan fitur inti aplikasi, &lt;span style=" font-weight:600;"&gt;Versi&lt;/span&gt; dan &lt;span style=" font-weight:600;"&gt;Berkas terhapus&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Buka halaman &lt;span style=" font-weight:600;"&gt;Konfigurasi aplikasi&lt;/span&gt; server ownCloud Anda di peramban web untuk memasang atau memperbarui QOwnNotesAPI dan mengaktifkan fitur inti aplikasi, &lt;span style=" font-weight:600;"&gt;Versi&lt;/span&gt; dan &lt;span style=" font-weight:600;"&gt;Berkas terhapus&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="624"/>
@@ -5033,22 +5033,22 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="780"/>
       <source>Click here to select your local note path</source>
-      <translation>Klik di sini untuk memilih jalur lokal catatan anda</translation>
+      <translation>Klik di sini untuk memilih jalur lokal catatan Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="733"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation>Klik di sini untuk memilih jalur catatan pada server ownCloud anda</translation>
+      <translation>Klik di sini untuk memilih jalur catatan pada server ownCloud Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="590"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation>Klik di sini untuk menggunakan folder yang dipilih dari server anda sebagai folder catatan</translation>
+      <translation>Klik di sini untuk menggunakan folder yang dipilih dari server Anda sebagai folder catatan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="889"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda juga membutuhkan dua aplikasi inti ownCloud, &lt;span style=" font-weight:600;"&gt;Versi&lt;/span&gt; dan &lt;span style=" font-weight:600;"&gt;Berkas terhapus&lt;/span&gt;, aktif pada server ownCloud anda (secara bawaan sudah aktif).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda juga membutuhkan dua aplikasi inti ownCloud, &lt;span style=" font-weight:600;"&gt;Versi&lt;/span&gt; dan &lt;span style=" font-weight:600;"&gt;Berkas terhapus&lt;/span&gt;, aktif pada server ownCloud Anda (secara bawaan sudah aktif).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="988"/>
@@ -5123,7 +5123,7 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2978"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-      <translation>Hanya beberapa warna yang disesuaikan, sisanya dikontrol oleh tema desktop anda. Anda perlu memulai ulang aplikasi agar perubahan ini memiliki dampak.</translation>
+      <translation>Hanya beberapa warna yang disesuaikan, sisanya dikontrol oleh tema desktop Anda. Anda perlu memulai ulang aplikasi agar perubahan ini memiliki dampak.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2981"/>
@@ -5203,7 +5203,7 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3829"/>
       <source>Do this at your own risk!</source>
-      <translation>Lakukan ini dengan resiko anda sendiri!</translation>
+      <translation>Lakukan ini atas resiko Anda sendiri!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3832"/>
@@ -5253,7 +5253,7 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2140"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jika anda ingin membantu menerjemahkan QOwnNotes atau memperbarui terjemahan yang sudah ada, silakan baca: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;Bagaimana saya membantu menerjemahkan QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jika Anda ingin membantu menerjemahkan QOwnNotes atau memperbarui terjemahan yang sudah ada, silakan baca: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;Bagaimana saya membantu menerjemahkan QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2942"/>
@@ -5283,17 +5283,17 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1592"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda mungkin perlu mempertimbangkan untuk mendapatkan sertifikat SSL gratis dari &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda mungkin perlu mempertimbangkan untuk mendapatkan sertifikat SSL gratis dari &lt;a href="https://letsencrypt.org/"&gt;Ayo enskripsikan&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2153"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation>Jika anda mengubah bahasa, anda harus memulai ulang aplikasi agar perubahan memiliki dampak.</translation>
+      <translation>Jika Anda mengubah bahasa, Anda harus memulai ulang aplikasi agar perubahan memiliki dampak.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3658"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation>Anda perlu memuat ulang mesin skrip jika anda memodifikasi berkas skrip</translation>
+      <translation>Anda perlu memuat ulang mesin skrip jika Anda memodifikasi berkas skrip</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3661"/>
@@ -5318,7 +5318,7 @@ Apakah anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3849"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jika dicentang, anda akan selalu diberitahu tentang perubahan eksternal, walaupun catatan tidak disunting dalam beberapa menit terakhir. Direkomendasikan untuk &lt;span style=" font-style:italic;"&gt;tidak dicentang&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jika dicentang, Anda akan selalu diberitahu tentang perubahan eksternal, walaupun catatan tidak disunting dalam beberapa menit terakhir. Direkomendasikan untuk &lt;span style=" font-style:italic;"&gt;tidak dicentang&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3945"/>
@@ -5327,7 +5327,7 @@ Apakah anda tetap ingin memasangnya?</translation>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
       <translation>Anda mungkin akan mengalami masalah sinkronisasi dengan versi lama ownCloud sync jika durasi berada di bawah 10 detik.
-Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</translation>
+Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan tentukan nilai yang lebih tinggi jika itu terjadi. </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2574"/>
@@ -5364,7 +5364,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4261"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation>Tombol ini memungkinkan anda untuk menghapus semua pengaturan, membuang basis data todo lokal dan keluar dari QOwnNotes.</translation>
+      <translation>Tombol ini memungkinkan Anda untuk menghapus semua pengaturan, membuang basis data todo lokal dan keluar dari QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4271"/>
@@ -5406,7 +5406,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1626"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation>Data penggunaan anonim membantu menentukan bagian-bagian dari QOwnNotes yang perlu ditingkatkan dan memperbaiki masalah-masalah yang ada. Silakan nonaktifkan jika anda benar-benar merasa tidak nyaman dengan opsi ini.</translation>
+      <translation>Data penggunaan anonim membantu menentukan bagian-bagian dari QOwnNotes yang perlu ditingkatkan dan memperbaiki masalah-masalah yang ada. Silakan nonaktifkan jika Anda benar-benar merasa tidak nyaman dengan opsi ini.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1658"/>
@@ -5436,7 +5436,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3305"/>
       <source>Your scripts</source>
-      <translation>Skrip anda</translation>
+      <translation>Skrip Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3389"/>
@@ -5507,7 +5507,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
       <location filename="../dialogs/settingsdialog.ui" line="797"/>
       <source>"Notes" path on your server</source>
       <extracomment>"Notes" should not be translated</extracomment>
-      <translation>Jalur "Catatan" pada server anda</translation>
+      <translation>Jalur "Catatan" pada server Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="593"/>
@@ -5517,12 +5517,12 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="632"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation>Silakan pilih folder catatan pada server ownCloud anda:</translation>
+      <translation>Silakan pilih folder catatan pada server ownCloud Anda:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="652"/>
       <source>Path on your ownCloud server:</source>
-      <translation>Jalur pada server ownCloud anda:</translation>
+      <translation>Jalur pada server ownCloud Anda:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="773"/>
@@ -5543,7 +5543,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="709"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation>Gunakan git untuk menyimpan riwayat lokal catatan</translation>
+      <translation>Gunakan git untuk menyimpan riwayat lokal catatan Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="839"/>
@@ -5558,12 +5558,12 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="876"/>
       <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation>Silakan pasang versi terbaru &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style ="font-weight: 600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (setidaknya versi QOWNNOTESAPI_MIN_VERSION) di server ownCloud anda sendiri jika anda ingin QOwnNotes dapat mengakses versi catatan dan catatan yang dihapus.</translation>
+      <translation>Silakan pasang versi terbaru &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style ="font-weight: 600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (setidaknya versi QOWNNOTESAPI_MIN_VERSION) di server ownCloud Anda sendiri jika Anda ingin QOwnNotes dapat mengakses versi catatan dan catatan yang dihapus.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="902"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda masih memerlukan &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;aplikasi sinkronisasi ownCloud&lt;/span&gt;&lt;/a&gt; (atau aplikasi sinkronisasi desktop lainnya) untuk menyinkronisasi catatan Anda!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda masih memerlukan &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;aplikasi sinkronisasi ownCloud&lt;/span&gt;&lt;/a&gt; (atau aplikasi sinkronisasi desktop lainnya) untuk menyinkronkan catatan Anda!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1021"/>
@@ -5591,7 +5591,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1151"/>
       <source>Your ownCloud username</source>
-      <translation>Nama pengguna ownCloud anda</translation>
+      <translation>Nama pengguna ownCloud Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1161"/>
@@ -5602,7 +5602,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1189"/>
       <source>Your ownCloud password</source>
-      <translation>Sandi ownCloud anda</translation>
+      <translation>Sandi ownCloud Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1217"/>
@@ -5622,7 +5622,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
-      <translation>Ketahuilah bahwa aplikasi ownCloud notes tidak mendukung subfolder!
+      <translation>Ketahuilah bahwa aplikasi catatan ownCloud tidak mendukung subfolder!
 </translation>
     </message>
     <message>
@@ -5649,7 +5649,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1973"/>
       <source>Which cloud connection do you want to use?</source>
-      <translation>Koneksi cloud mana yang ingin anda gunakan?</translation>
+      <translation>Koneksi cloud mana yang ingin Anda gunakan?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1985"/>
@@ -6018,12 +6018,12 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="642"/>
       <source>Cloud connection:</source>
-      <translation>Koneksi cloud:</translation>
+      <translation>Koneksi Cloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="941"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation>Buka halaman Sandi Aplikasi ownCloud Anda sendiri di browser web Anda untuk membuat kata sandi aplikasi baru untuk aplikasi tersebut</translation>
+      <translation>Buka halaman Sandi Aplikasi di server ownCloud Anda di browser web Anda untuk membuat kata sandi aplikasi yang baru untuk aplikasi tersebut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="944"/>
@@ -6058,7 +6058,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2772"/>
       <source>Thai</source>
-      <translation>Thai</translation>
+      <translation>Bahasa/orang Thailand</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2783"/>
@@ -6088,27 +6088,27 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3268"/>
       <source>Action name</source>
-      <translation>Heiti aðgerðar</translation>
+      <translation>Nama tindakan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3273"/>
       <source>Local shortcut</source>
-      <translation>Staðbundin flýtileið</translation>
+      <translation>Pintasan lokal</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3278"/>
       <source>Global shortcut</source>
-      <translation>Almenn flýtileið</translation>
+      <translation>Pintasan global</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3879"/>
       <source>Disable this if you want to launch the application without opening a note</source>
-      <translation>Nonaktifkan ini jika anda ingin meluncurkan aplikasi tanpa membuka catatan</translation>
+      <translation>Nonaktifkan ini jika Anda ingin meluncurkan aplikasi tanpa membuka catatan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3882"/>
       <source>Open last accessed note at application startup</source>
-      <translation>Buka catatan yang terakhir diakses di startup aplikasi</translation>
+      <translation>Buka catatan yang terakhir diakses ketika memulai aplikasi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
@@ -6148,12 +6148,12 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4720"/>
       <source>Use internal export styling for the PDF export and printing of the preview</source>
-      <translation>Gunakan gaya ekspor internal untuk ekspor PDF dan pencetakan pratinjau</translation>
+      <translation>Gunakan gaya  ekspor internal untuk pengeksporan PDF dan pencetakan pratinjau</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5028"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda mungkin ingin melihat semua &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;format waktu &lt;/a&gt;yang tersedia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Disarankan untuk melihat semua &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;format waktu &lt;/a&gt;yang tersedia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5198"/>
@@ -6184,7 +6184,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
       <location filename="../dialogs/settingsdialog.ui" line="5610"/>
       <location filename="../dialogs/settingsdialog.ui" line="5619"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-      <translation>Ekspresi reguler dari subfolder note untuk diabaikan, dipisahkan oleh ";"
+      <translation>Ekspresi reguler dari subfolder catatan untuk diabaikan, dipisahkan oleh ";"
 </translation>
     </message>
     <message>
@@ -6202,12 +6202,12 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5665"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation>Kembalikan tab catatan terbuka pada saat startup aplikasi dan ketika folder catatan diaktifkan</translation>
+      <translation>Kembalikan tab catatan terbuka pada saat memulai aplikasi dan ketika folder catatan diaktifkan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation>Sembunyikan 'jumlah catatan' dengan kata kunci (meningkatkan kinerja)</translation>
+      <translation>Sembunyikan 'jumlah catatan' dengan tengara (meningkatkan kinerja)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
@@ -6232,8 +6232,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5796"/>
       <source>Note folder panel</source>
-      <translation>Catatan panel folder
-</translation>
+      <translation>Panel catatan folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5802"/>
@@ -6243,7 +6242,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5944"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation>Panel bisa diaktifkan dan dinonaktifkan di menu utama &lt;i&gt;Jendela / Panel&lt;/i&gt; dan anda juga bisa mengatur &lt;i&gt;Ruang Kerja&lt;/i&gt; yang berbeda untuk konfigurasi panel yang berbeda.</translation>
+      <translation>Panel bisa diaktifkan dan dinonaktifkan di menu utama &lt;i&gt;Jendela / Panel&lt;/i&gt; dan Anda juga bisa mengatur &lt;i&gt;Ruang-ruang Kerja&lt;/i&gt; yang berbeda untuk konfigurasi panel yang berbeda.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6021"/>
@@ -6318,7 +6317,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation>Izinkan nama berkas catatan berbeda dengan judul catatan.&lt;br&gt;Harap diingat bahwa Catatan ownCloud mengharuskan nama berkas sama dengan judul catatan!</translation>
+      <translation>Izinkan nama berkas catatan supaya berbeda dengan judul catatan.&lt;br&gt;Harap diingat bahwa Catatan ownCloud mengharuskan nama berkas sama dengan judul catatan!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5649"/>
@@ -6328,7 +6327,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5655"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-      <translation>Jika ini dinonaktifkan, anda dapat menyusun tata letak panel yang lebih kompleks, tetapi semua panel juga akan berubah ukurannya jika keseluruhan jendela aplikasi berubah ukuran</translation>
+      <translation>Jika ini dinonaktifkan, Anda dapat menyusun tata letak panel yang lebih kompleks, tetapi semua panel juga akan berubah ukurannya jika keseluruhan jendela aplikasi berubah ukuran</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5658"/>
@@ -6343,7 +6342,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5779"/>
       <source>Disable auto-completion of previous searches</source>
-      <translation>Nonaktifkan auto-completion kata pencarian sebelumnya</translation>
+      <translation>Nonaktifkan penyelesaian otomatis dari pencarian sebelumnya</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5675"/>
@@ -6394,7 +6393,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5931"/>
       <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-      <translation>Anda bisa mengatur tata letak baru di sini. Perlu diingat bahwa anda selalu bisa mengubah posisi panel dengan tombol &lt;i&gt;Buka kunci panel&lt;/i&gt;.</translation>
+      <translation>Anda bisa mengatur tata letak baru di sini. Perlu diingat bahwa Anda selalu bisa mengubah posisi panel dengan tombol &lt;i&gt;Buka kunci panel&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5140"/>
@@ -6417,7 +6416,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
       <location filename="../dialogs/settingsdialog.ui" line="5341"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Jika anda menggunakan pengaturan ini, anda akan mendapatkan entri menu baru untuk menampilkan versi git jika anda mengklik kanan sebuah catatan.</translation>
+      <translation>Jika Anda menggunakan pengaturan ini, Anda akan mendapatkan entri menu baru untuk menampilkan versi git jika Anda mengklik kanan sebuah catatan.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5461"/>
@@ -6437,7 +6436,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5408"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation>Jangan lupa mengaktifkan dukungan git untuk folder catatan anda dan atur nama dan alamat surel untuk aplikasi git anda, contohnya dengan perintah terminal berikut ini:</translation>
+      <translation>Jangan lupa mengaktifkan dukungan git untuk folder catatan Anda dan atur nama dan alamat surel untuk aplikasi git Anda, contohnya dengan perintah terminal berikut ini:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5691"/>
@@ -6534,7 +6533,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
       <location filename="../dialogs/settingsdialog.ui" line="5331"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Secara opsional anda bisa menggunakan "%notePath%" untuk jalur catatan.</translation>
+      <translation>Secara opsional Anda bisa menggunakan "%notePath%" untuk jalur catatan.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5354"/>
@@ -6570,7 +6569,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="924"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation>Buka halaman &amp;Aplikasi server ownCloud anda</translation>
+      <translation>Buka halaman &amp;Aplikasi server ownCloud Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
@@ -6585,7 +6584,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1804"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation>Dukungan kalender apa yang ingin anda gunakan?</translation>
+      <translation>Dukungan kalender apa yang ingin Anda gunakan?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1837"/>
@@ -6615,12 +6614,12 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1884"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation>Silakan masukkan url CalDAV untuk kalender anda.</translation>
+      <translation>Silakan masukkan url CalDAV untuk kalender Anda.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1954"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation>Silakan masukkan sandi dari nama pengguna CalDAV anda.&lt;br/&gt;Saat ini sandi akan disimpan terenkripsi dengan pengaturan lainnya, tetapi sangat tidak aman.</translation>
+      <translation>Silakan masukkan sandi dari nama pengguna CalDAV Anda.&lt;br/&gt;Saat ini sandi akan disimpan terenkripsi dengan pengaturan lainnya, tetapi sangat tidak aman.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2255"/>
@@ -6695,7 +6694,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3925"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation>Centang ini jika anda ingin menerima semua perubahan eksternal saat anda sedang menyunting catatan.</translation>
+      <translation>Centang ini jika Anda ingin menerima semua perubahan eksternal saat Anda sedang menyunting catatan.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3928"/>
@@ -6705,7 +6704,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3862"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation>Gunakan newline UNIX bukan karakter newline bawaan</translation>
+      <translation>Gunakan newline UNIX alih-alih karakter newline bawaan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3872"/>
@@ -6715,7 +6714,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4322"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation>Berhati-hatilah bahwa ini juga akan membuang item todo Anda yang tersimpan dan folder catatan dan skrip yang telah dikonfigurasi!</translation>
+      <translation>Harap diingat ini juga akan membuang item todo Anda yang tersimpan dan folder catatan dan skrip yang telah dikonfigurasi!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4852"/>
@@ -6750,7 +6749,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5002"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation>Di sini anda bisa mengatur format waktu anda sendiri untuk disisipkan ke dalam catatan.</translation>
+      <translation>Di sini Anda bisa mengatur format waktu Anda sendiri untuk disisipkan ke dalam catatan.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5005"/>
@@ -6790,27 +6789,27 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1887"/>
       <source>Your CalDAV calendar base url</source>
-      <translation>Url kalender CalDAV anda</translation>
+      <translation>Url kalender CalDAV Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1919"/>
       <source>Please enter the username of your CalDAV server.</source>
-      <translation>Silakan masukkan nama pengguna server CalDAV anda.</translation>
+      <translation>Silakan masukkan nama pengguna server CalDAV Anda.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1922"/>
       <source>Your CalDAV username</source>
-      <translation>Nama pengguna CalDAV anda</translation>
+      <translation>Nama pengguna CalDAV Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1960"/>
       <source>Your CalDAV password</source>
-      <translation>Sandi CalDAV anda</translation>
+      <translation>Sandi CalDAV Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2007"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-      <translation>Ini menyebabkan semua item daftar todo dimuat ulang dari server saat anda membuka lagi dialog todo anda.</translation>
+      <translation>Ini menyebabkan semua item daftar todo dimuat ulang dari server saat Anda membuka lagi dialog todo Anda.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2010"/>
@@ -6820,7 +6819,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2033"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
-      <translation>Klik di sini untuk memuat ulang daftar kalender dari server kalender anda.</translation>
+      <translation>Klik di sini untuk memuat ulang daftar kalender dari server kalender Anda.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2039"/>
@@ -6901,7 +6900,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3935"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation>Centang ini jika anda ingin mengabaikan semua perubahan eksternal saat anda sedang menyunting catatan.</translation>
+      <translation>Centang ini jika Anda ingin mengabaikan semua perubahan eksternal saat Anda sedang menyunting catatan.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3938"/>
@@ -6911,7 +6910,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3859"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation>Di windows, anda bisa menggunakan ini jika ada masalah dengan newline di dalam aplikasi catatan ownCloud / Nextcloud</translation>
+      <translation>Di windows, Anda bisa menggunakan ini jika ada masalah dengan newline di dalam aplikasi catatan ownCloud / Nextcloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4034"/>
@@ -6931,12 +6930,12 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4150"/>
       <source>Remove a custom file extension</source>
-      <translation>Buang ekstensi khusus berkas</translation>
+      <translation>Buang ekstensi berkas tersuai</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4189"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation>Jika anda menambahkan ekstensi khusus, cukup ketik ekstensinya saja, sebagai contoh "jurnal".</translation>
+      <translation>Jika Anda menambahkan ekstensi tersuai, cukup ketik ekstensinya saja, sebagai contoh "jurnal".</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4193"/>
@@ -6990,7 +6989,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4379"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda bisa &lt;span style=" font-weight:600;"&gt;salin dan tempel&lt;/span&gt; teks ini (atau sebagian dari teks) ke dalam &lt;span style=" font-weight:600;"&gt;masalah&lt;/span&gt; pada &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;halaman masalah QOwnNotes&lt;/a&gt;, jika anda memiliki &lt;span style=" font-weight:600;"&gt;pertanyaan atau kesulitan&lt;/span&gt; dengan QOwnNotes. Data yang sifatnya sangat sensitif, akan selalu disembunyikan di dalam informasi ini.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda bisa &lt;span style=" font-weight:600;"&gt;menyalin dan menempel&lt;/span&gt; teks ini (atau sebagian dari teks) ke dalam &lt;span style=" font-weight:600;"&gt;masalah&lt;/span&gt; pada &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;halaman masalah QOwnNotes&lt;/a&gt;, jika Anda memiliki &lt;span style=" font-weight:600;"&gt;pertanyaan atau kesulitan&lt;/span&gt; dengan QOwnNotes. Data yang sifatnya sangat sensitif, akan selalu disembunyikan di dalam informasi ini.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4466"/>
@@ -7055,7 +7054,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2294"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation>Jangan gunakan ini di dalam pelacak masalah, langsung salin informasi awakutu ke dalam masalah.</translation>
+      <translation>Jangan gunakan ini di dalam pelacak masalah, langsung salin teks informasi awakutu ke dalam masalah. </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2301"/>
@@ -7070,7 +7069,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2328"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation>Data penggunaan anonim membantu menentukan bagian-bagian dari QOwnNotes yang perlu ditingkatkan dan memperbaiki masalah-masalah yang ada.&lt;br /&gt;Silakan nonaktifkan jika anda benar-benar merasa tidak nyaman dengan opsi ini.&lt;br /&gt;&lt;br /&gt;Yakin ingin menonaktifkan pelacakan penggunaan?</translation>
+      <translation>Data penggunaan anonim membantu menentukan bagian-bagian dari QOwnNotes yang perlu ditingkatkan dan memperbaiki masalah-masalah yang ada.&lt;br /&gt;Silakan nonaktifkan jika Anda benar-benar merasa tidak nyaman dengan opsi ini.&lt;br /&gt;&lt;br /&gt;Yakin ingin menonaktifkan pelacakan penggunaan?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2555"/>
@@ -7090,7 +7089,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2664"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Silakan pilih folder tempat catatan anda akan disimpan</translation>
+      <translation>Silakan pilih folder tempat catatan Anda akan disimpan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2699"/>
@@ -7115,7 +7114,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2864"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation>Jika anda membutuhkan akses ke fungsi tertentu di dalam QOwnNotes, silakan buat laporan pada halaman &lt;a href="%1"&gt;masalah QOwnNotes&lt;/a&gt;.</translation>
+      <translation>Jika Anda membutuhkan akses ke fungsi tertentu di dalam QOwnNotes, silakan buat laporan pada halaman &lt;a href="%1"&gt;masalah QOwnNotes&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2886"/>
@@ -7141,7 +7140,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4026"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation>Apakah anda benar-benar ingin mengimpor pengaturan? Pengaturan anda yang sekarang akan dihapus dan tidak semua pengaturan bisa dipulihkan, seperti pengaturan folder catatan dan skrip yang anda gunakan. Anda juga harus menyesuaikan beberapa pengaturan lainnya, terutama lintas platform. Jangan khawatir, seluruh catatan anda tidak akan berubah dan akan tetap utuh seperti sebelumnya!</translation>
+      <translation>Apakah Anda benar-benar ingin mengimpor pengaturan? Pengaturan Anda yang berlaku saat ini akan dihapus dan tidak semua pengaturan bisa dipulihkan, seperti pengaturan folder catatan dan skrip yang Anda gunakan. Anda juga harus menyesuaikan beberapa pengaturan lainnya, terutama di lintas platform. Jangan khawatir, seluruh catatan Anda tidak akan berubah dan akan tetap utuh seperti sebelumnya!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4036"/>
@@ -7202,7 +7201,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1794"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation>Pintasan &lt;strong&gt;%1&lt;/strong&gt; sudah ditetapkan untuk &lt;strong&gt;%2&lt;/strong&gt;! Apakah anda ingin mengunjungi pintasan tersebut?</translation>
+      <translation>Pintasan &lt;strong&gt;%1&lt;/strong&gt; sudah ditetapkan untuk &lt;strong&gt;%2&lt;/strong&gt;! Apakah anda ingin langsung ke pintasan tersebut?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2973"/>
@@ -7222,7 +7221,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3025"/>
       <source>Please select your QML file</source>
-      <translation>Silakan pilih berkas QML anda</translation>
+      <translation>Silakan pilih berkas QML Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3114"/>
@@ -7232,7 +7231,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3172"/>
       <source>Your script seems to be valid</source>
-      <translation>Skrip anda tampaknya valid</translation>
+      <translation>Skrip Anda tampaknya valid</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3173"/>
@@ -7249,7 +7248,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3241"/>
       <source>Enter your custom file extension:</source>
-      <translation>Masukkan ekstensi khusus berkas anda:</translation>
+      <translation>Masukkan ekstensi khusus berkas Anda:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3570"/>
@@ -7269,7 +7268,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3653"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-      <translation>Apakah anda benar-benar ingin menyetel ulang semua bilah perkakas? Dalam prosesnya, aplikasi akan ditutup. Bilah perkakas bawaan akan dipulihkan saat anda menjalankan aplikasi ini lagi.</translation>
+      <translation>Apakah Anda benar-benar ingin menyetel ulang semua bilah perkakas? Dalam prosesnya, aplikasi akan ditutup. Bilah perkakas bawaan akan dipulihkan saat anda menjalankan aplikasi ini lagi.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3657"/>
@@ -7355,12 +7354,12 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="463"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation>folder catatan, jalur skrip dan jalur ke penyunting eksternal secara otomatis akan disimpan relatif ke folder &lt;code&gt;Data&lt;/code&gt;, sehingga folder catatan, skrip dan penyunting eksternal akan dimuat dengan benar terlepas di mana lokasi aplikasi QOwnNotes anda berada</translation>
+      <translation>folder catatan, jalur skrip dan jalur ke penyunting eksternal secara otomatis akan disimpan relatif ke folder &lt;code&gt;Data&lt;/code&gt;, sehingga folder catatan, skrip dan penyunting eksternal akan dimuat dengan benar terlepas di mana lokasi aplikasi QOwnNotes Anda berada</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="473"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-      <translation>Akan diaktifkan jika anda menjalankan QOwnNotes dengan parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
+      <translation>Akan diaktifkan jika Anda menjalankan QOwnNotes dengan parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2302"/>
@@ -7372,9 +7371,9 @@ Pesan kesalahan koneksi: </translation>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-      <translation>Apakah anda benar-benar ingin menghapus semua pengaturan, membuang semua basis data dan keluar dari QOwnNotes?
+      <translation>Apakah Anda benar-benar ingin menghapus semua pengaturan, membuang semua basis data dan keluar dari QOwnNotes?
 
-Catatan anda akan tetap utuh!</translation>
+Catatan Anda akan tetap utuh!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2350"/>
@@ -7396,7 +7395,7 @@ Catatan anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2275"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation>Apakah anda benar-benar ingin menghapus basis data lokal? Ini juga akan menghapus folder catatan yang telah dikonfigurasi dan item todo yang tersimpan!</translation>
+      <translation>Apakah Anda benar-benar ingin menghapus basis data lokal? Ini juga akan menghapus folder catatan yang telah dikonfigurasi dan item todo yang tersimpan!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2278"/>
@@ -7429,17 +7428,17 @@ Catatan anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>The public url of your note</source>
-      <translation>URL publik catatan anda</translation>
+      <translation>URL publik catatan Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="47"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation>Bagikan secara publik berkas catatan ini pada server ownCloud anda. Anda bisa mengirim tautan kepada orang lain sehingga mereka bisa melihat atau mengunduh berkas.</translation>
+      <translation>Bagikan secara publik berkas catatan ini pada server ownCloud Anda. Anda bisa mengirim tautan kepada orang lain sehingga mereka bisa melihat atau mengunduh berkas.</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="66"/>
       <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-      <translation>Harap diingat bahwa anda tetap harus menyinkronkan catatan dengan server anda menggunakan aplikasi sinkronisasi desktop ownCloud agar bisa berbagi catatan dengan orang lain!</translation>
+      <translation>Harap diingat bahwa Anda tetap harus menyinkronkan catatan dengan server Anda menggunakan aplikasi sinkronisasi desktop ownCloud agar bisa berbagi catatan dengan orang lain!</translation>
     </message>
   </context>
   <context>
@@ -7659,7 +7658,7 @@ Catatan anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Please select the CSV file you want to import:</source>
-      <translation>Silakan pilih berkas CSV yang ingin anda impor:</translation>
+      <translation>Silakan pilih berkas CSV yang ingin Anda impor:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="197"/>
@@ -7781,7 +7780,7 @@ Catatan anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="334"/>
       <source>select your todo list</source>
-      <translation>pilih daftar todo anda</translation>
+      <translation>pilih daftar todo Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
@@ -7876,7 +7875,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation>Daftar menu yang tersedia untuk mendapatkan tindakan yang sesuai</translation>
+      <translation>Cantumkan menu yang tersedia untuk mendapatkan tindakan yang sesuai</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
@@ -7922,7 +7921,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation>Pindah Ke Atas</translation>
+      <translation>Pindah ke Atas</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
@@ -7932,12 +7931,12 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation>Pindah Ke &amp;Atas</translation>
+      <translation>Pindah &amp;ke Atas</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation>Pindah Ke Bawah</translation>
+      <translation>Pindah ke Bawah</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
@@ -7947,7 +7946,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation>Pindah Ke &amp;Bawah</translation>
+      <translation>Pindah &amp;ke Bawah</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
@@ -8006,7 +8005,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation>Catatan dalam keranjang sampah</translation>
+      <translation>Catatan yang terhapus</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="55"/>
@@ -8021,7 +8020,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="33"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt;Lebih lambat, tetapi dengan versi catatan&lt;/h3&gt;&lt;p&gt;Catatan akan dipulihkan pada server ownCloud anda beserta semua versinya.&lt;/p&gt;&lt;p&gt;Anda harus menunggu sampai semua selesai disinkronkan ke QOwnNotes oleh aplikasi sinkronisasi ownCloud.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt;Lebih lambat, tetapi dengan versi catatan&lt;/h3&gt;&lt;p&gt;Catatan akan dipulihkan pada server ownCloud Anda beserta semua versinya.&lt;/p&gt;&lt;p&gt;Anda harus menunggu sampai semua selesai disinkronkan ke QOwnNotes oleh aplikasi sinkronisasi ownCloud.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="45"/>
@@ -8031,7 +8030,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="47"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt;Lebih cepat, tetapi tanpa versi&lt;/h3&gt;&lt;p&gt;Catatan akan dibuat dengan teks dari pratinjau.&lt;/p&gt;&lt;p&gt;Versi catatan pada server ownCloud anda tidak akan dipulihkan dan catatan akan tetap di keranjang sampah.&lt;/p&gt;&lt;p&gt;Anda tetap bisa memulihkan catatan dan versinya nanti.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt;Lebih cepat, tetapi tanpa versi&lt;/h3&gt;&lt;p&gt;Catatan akan dibuat dengan teks dari pratinjau.&lt;/p&gt;&lt;p&gt;Versi catatan pada server ownCloud Anda tidak akan dipulihkan dan catatan akan tetap di keranjang sampah.&lt;/p&gt;&lt;p&gt;Anda tetap bisa memulihkan catatan dan versinya nanti.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="59"/>
@@ -8088,12 +8087,12 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
       <source>Do you want to download the new version?</source>
-      <translation>Apakah anda ingin mengunduh versi terbaru?</translation>
+      <translation>Apakah Anda ingin mengunduh versi terbaru?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="76"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation>QOwnNotes akan diunduh menggunakan peramban bawaan anda.</translation>
+      <translation>QOwnNotes akan diunduh menggunakan peramban bawaan Anda.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
@@ -8187,7 +8186,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="340"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation>Apakah anda ingin memperbarui dan memulai ulang QOwnNotes?</translation>
+      <translation>Apakah Anda ingin memperbarui dan memulai ulang QOwnNotes?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="356"/>
@@ -8242,7 +8241,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="493"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation>Unduhan telah selesai. Apakah anda ingin memperbarui dan memulai ulang QOwnNotes?</translation>
+      <translation>Unduhan telah selesai. Apakah Anda ingin memperbarui dan memulai ulang QOwnNotes?</translation>
     </message>
   </context>
   <context>
@@ -8285,7 +8284,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation>Versi catatan pada server ownCloud anda</translation>
+      <translation>Versi catatan pada server ownCloud Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
@@ -8348,7 +8347,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation>Agar ekstensi peramban QOwnNotes bisa mengakses catatan anda, silakan tempel token keamanan ini ke dalam pengaturan ekstensi peramban anda:</translation>
+      <translation>Agar ekstensi peramban QOwnNotes bisa mengakses catatan Anda, silakan tempel token keamanan ini ke dalam pengaturan ekstensi peramban Anda:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
@@ -8372,7 +8371,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation>pencatatan penurunan file teks biasa dengan integrasi ownCloud</translation>
+      <translation>pencatatan markdown file teks biasa dengan integrasi ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
@@ -8433,7 +8432,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Please select where you want to store your notes:</source>
-      <translation>Silakan pilih dimana anda ingin menyimpan catatan anda:</translation>
+      <translation>Silakan pilih dimana anda ingin menyimpan catatan Anda:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
@@ -8443,12 +8442,12 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation>Jika anda ingin mengakses versi catatan dan catatan yang telah dihapus pada server ownCloud, anda bisa mengatur opsi tersebut di QOwnNotes sekarang. Anda juga bisa melakukannya nanti.</translation>
+      <translation>Jika Anda ingin mengakses versi catatan dan catatan yang telah dihapus pada server ownCloud, Anda bisa mengatur opsi tersebut di QOwnNotes sekarang. Anda juga bisa melakukannya nanti.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation>Anda membutuhkan aplikasi sinkronisasi ownCloud (atau aplikasi sinkronisasi lainnya) untuk menyinkronisasi catatan anda dengan server ownCloud anda.</translation>
+      <translation>Baik sekarang maupun nanti, Anda membutuhkan aplikasi sinkronisasi ownCloud (atau aplikasi sinkronisasi lainnya) untuk menyinkronisasi catatan Anda dengan server ownCloud Anda.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="391"/>
@@ -8473,7 +8472,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="207"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Silakan pilih folder tempat catatan anda akan disimpan</translation>
+      <translation>Silakan pilih folder tempat catatan Anda akan disimpan</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="220"/>
@@ -8511,7 +8510,7 @@ Ini tidak dapat dibatalkan!</translation>
     <message>
       <location filename="../main.cpp" line="539"/>
       <source>Single application mode is not supported on your system!</source>
-      <translation>Mode aplikasi tunggal tidak didukung pada sistem anda!</translation>
+      <translation>Mode aplikasi tunggal tidak didukung pada sistem Anda!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="549"/>
