@@ -3,6 +3,7 @@
 ## 20.9.4
 - the original desktop file is now removed while building a snap with snapcraft to prevent
   two desktop files being deployed with the snap (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
+- added more translation (thank you rawfreeamy, diego2214, silviact)
 
 ## 20.9.3
 - fixed the status message `No equation was found in front of the cursor` when solving equations

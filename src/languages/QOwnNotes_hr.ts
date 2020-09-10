@@ -4739,13 +4739,13 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../services/databaseservice.cpp" line="873"/>
       <source>Cannot open database</source>
-      <translation>Nije moguće otvoriti bazu podataka</translation>
+      <translation>Nemoguće otvoriti bazu podataka</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="874"/>
       <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-      <translation>Nije moguće uspostaviti vezu s bazom podataka s bazom podataka mape bilješki za spajanje '%1'.
+      <translation>Nemoguće uspostaviti vezu s bazom podataka s bazom podataka mape bilješki za spajanje '%1'.
 Mogu li se mapa i datoteka zapisati?</translation>
     </message>
   </context>
@@ -4782,7 +4782,7 @@ Mogu li se mapa i datoteka zapisati?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
       <source>Load more scripts</source>
-      <translation>Učitajte više skripti</translation>
+      <translation>Učitaj više skripti</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
@@ -4822,7 +4822,7 @@ Mogu li se mapa i datoteka zapisati?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="53"/>
       <source>All scripts are up-to-date.</source>
-      <translation>Sve skripte su ažurne.</translation>
+      <translation>Sve skripte su ažurirane.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="382"/>
@@ -4944,12 +4944,12 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation>Uvoz oznaka</translation>
+      <translation>Uvezi oznake</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation>Uvezeno je %v od %m oznake / oznaka</translation>
+      <translation>Uvezeno je %v od %m oznaka</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="88"/>
@@ -5183,17 +5183,17 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2978"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-      <translation>Samo će neke boje biti prilagođene, ostatak će kontrolirati tema radne površine. Morate ponovno pokrenuti aplikaciju da biste omogućili da te izmjene poduzmu.</translation>
+      <translation>Samo će neke boje biti prilagođene, ostatak će kontrolirati tema radne površine. Morate ponovno pokrenuti aplikaciju da biste omogućili da se izmjene poduzmu.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2981"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
-      <translation>Optimizirajte boje pretpregleda za teme tamnog načina rada</translation>
+      <translation>Optimiziraj boje pretpregleda za teme tamnog načina rada</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2968"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-      <translation>To omogućuje tamni način rada, sučelje i ikone će se mijenjati. Morate ponovno pokrenuti aplikaciju da biste omogućili da te izmjene poduzmu.</translation>
+      <translation>To omogućuje tamni način rada, sučelje i ikone će se mijenjati. Morate ponovno pokrenuti aplikaciju da biste omogućili da se izmjene poduzmu.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2971"/>
@@ -5206,7 +5206,7 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="3038"/>
       <location filename="../dialogs/settingsdialog.ui" line="3048"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation>Morate ponovo pokrenuti aplikaciju kako bi ova postavka stupila na snagu</translation>
+      <translation>Morate ponovno pokrenuti aplikaciju kako bi ova postavka stupila na snagu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3077"/>
@@ -5221,7 +5221,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5066"/>
       <source>Enable markdown highlighting</source>
-      <translation>Omogući označavanje smanjenja</translation>
+      <translation>Omogući istaknuto označavanje</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2134"/>
@@ -5253,12 +5253,12 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="4557"/>
       <location filename="../dialogs/settingsdialog.ui" line="4749"/>
       <source>Code font:</source>
-      <translation>Font kôda:</translation>
+      <translation>Font koda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3236"/>
       <source>Main window shortcuts</source>
-      <translation>Prečaci glavnog prozora</translation>
+      <translation>Prečice glavnog prozora</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3829"/>
@@ -5273,7 +5273,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4415"/>
       <source>Use GitHub line breaks</source>
-      <translation>Koristite GitHub prijelaze redaka</translation>
+      <translation>Koristi GitHub prijelaze redaka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2277"/>
@@ -5343,12 +5343,12 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1592"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Možda želite razmisliti o dobivanju besplatnog SSL certifikata iz &lt;a href="https://letsencrypt.org/"&gt; Šifriraj &lt;/a&gt;. &lt;/p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Razmislite o dobivanju besplatnog SSL certifikata iz &lt;a href="https://letsencrypt.org/"&gt; Šifriraj &lt;/a&gt;. &lt;/p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2153"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation>Ako promijenite jezik, morate ponovno pokrenuti aplikaciju kako bi promjene poduzele.</translation>
+      <translation>Ako promijenite jezik, morate ponovno pokrenuti aplikaciju kako bi se promjene poduzele.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3658"/>
@@ -5363,7 +5363,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3651"/>
       <source>Validate script</source>
-      <translation>Potvrdite skriptu</translation>
+      <translation>Potvrdi skriptu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="288"/>
@@ -5378,7 +5378,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3849"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ako je označeno, uvijek ćete biti obaviješteni o vanjskim izmjenama, čak i ako trenutna nota nije uređena u posljednjoj minuti. Preporučeno je &lt;span style = "font-style: italic;"&gt; neprovjereno &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ako je označeno, uvijek ćete biti obaviješteni o vanjskim izmjenama, čak i ako trenutna bilješka nije uređena u posljednjoj minuti. Preporučeno je &lt;span style = "font-style: italic;"&gt; neprovjereno &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3945"/>
@@ -5386,7 +5386,7 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="5846"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation>Možda ćete se suočiti s poteškoćama pri sinkronizaciji sa starijim verzijama sinkronizacije ownCloud kada idete daleko ispod 10 sekundi.
+      <translation>Možda ćete se suočiti s poteškoćama pri sinkronizaciji sa starijim verzijama sinkronizacije ownCloud kad prijeđete 10 sekundi.
 Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrijednost ako je tako.</translation>
     </message>
     <message>
@@ -5414,7 +5414,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4332"/>
       <source>Reinitialize Database</source>
-      <translation>Reinicirajte bazu podataka</translation>
+      <translation>Reiniciraj bazu podataka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4255"/>
@@ -5424,7 +5424,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4261"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation>Ovaj gumb omogućuje brisanje svih postavki, uklanjanje lokalne podatkovne baze podataka i izlazak iz QOwnNotes.</translation>
+      <translation>Ovaj gumb omogućuje brisanje svih postavki, uklanjanje lokalne baze zadataka i izlaz iz QOwnNotes-a.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4271"/>
@@ -5456,7 +5456,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
       <location filename="../dialogs/settingsdialog.ui" line="4238"/>
       <location filename="../dialogs/settingsdialog.ui" line="5380"/>
       <source>set external editor</source>
-      <translation>postavite vanjski urednik</translation>
+      <translation>postavi vanjskog urednika</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1608"/>
@@ -5466,7 +5466,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1626"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation>Anonimni podaci o korištenju pomažu u odlučivanju koje će dijelove QOwnNotes poboljšati sljedeće i pronaći i ispraviti greške. Isključite ga samo ako doista ne možete živjeti s njom.</translation>
+      <translation>Anonimni podaci o korištenju pomažu u odlučivanju koje će dijelove QOwnNotes poboljšati sljedeće te pronaći i ispraviti greške. Isključite ih samo ako doista ne možete živjeti s njima.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1658"/>
@@ -5476,12 +5476,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1712"/>
       <source>App heartbeat</source>
-      <translation>Otkucaji aplikacije</translation>
+      <translation>Aplikacija otkucaja</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1730"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation>Povremeno se šalje mali zahtjev za otkucaje srca dok je QOwnNotes pokrenut. Usrećite razvojnog programera tako da mu javite da netko koristi QOwnNotes.</translation>
+      <translation>Povremeno se šalje zahtjev za otkucaje srca dok je QOwnNotes pokrenut. Usrećite razvojnog programera tako da mu javite da netko koristi QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2464"/>
@@ -5551,7 +5551,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
       <source>Local trash</source>
-      <translation>Lokalni smeće</translation>
+      <translation>Lokalna kanta za smeće</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="347"/>
@@ -5567,7 +5567,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
       <location filename="../dialogs/settingsdialog.ui" line="797"/>
       <source>"Notes" path on your server</source>
       <extracomment>"Notes" should not be translated</extracomment>
-      <translation>Put gdje se bilješke pohranjuju lokalno</translation>
+      <translation>"Bilješke" put na vašem serveru</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="593"/>
@@ -5577,7 +5577,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="632"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation>Odaberite mapu s bilješkama na svom ownCloud:</translation>
+      <translation>Odaberite mapu s bilješkama na svom ownCloud serveru:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="652"/>
@@ -5593,7 +5593,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="699"/>
       <source>Note folder path:</source>
-      <translation>Napomena put mape:</translation>
+      <translation>Put do mape s bilješkama:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="706"/>
@@ -5634,13 +5634,13 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
       <location filename="../dialogs/settingsdialog.ui" line="1028"/>
       <location filename="../dialogs/settingsdialog.ui" line="1031"/>
       <source>Add connection</source>
-      <translation>Dodavanje veze</translation>
+      <translation>Dodaj vezu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1042"/>
       <location filename="../dialogs/settingsdialog.ui" line="1045"/>
       <source>Remove connection</source>
-      <translation>Uklonite vezu</translation>
+      <translation>Ukloni vezu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1126"/>
@@ -5699,12 +5699,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1782"/>
       <source>Todo settings</source>
-      <translation>Postavke Todoa</translation>
+      <translation>Postavke Zadataka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1788"/>
       <source>Enable todo calendar support</source>
-      <translation>Omogući podršku za kalendar todo</translation>
+      <translation>Omogući podršku za kalendar zadataka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1973"/>
@@ -5714,17 +5714,17 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1985"/>
       <source>Select the calendars you want to use for the Todo list</source>
-      <translation>Odaberite kalendare koje želite koristiti za popis Todo</translation>
+      <translation>Odaberite kalendare koje želite koristiti za popis zadataka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2060"/>
       <source>Todo list settings</source>
-      <translation>Postavke popisa Todo</translation>
+      <translation>Postavke popisa zadataka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2066"/>
       <source>Saving an item also closes the Todo list</source>
-      <translation>Spremanje stavke također zatvara popis Todo</translation>
+      <translation>Spremanje stavke također zatvara popis zadataka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2178"/>
@@ -5779,7 +5779,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2343"/>
       <source>Finnish</source>
-      <translation>finski</translation>
+      <translation>Finski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2365"/>
@@ -5794,7 +5794,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2387"/>
       <source>Greek</source>
-      <translation>grčki</translation>
+      <translation>Grčki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2398"/>
@@ -5809,12 +5809,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2420"/>
       <source>Hindi</source>
-      <translation>Hindi</translation>
+      <translation>Hindski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2442"/>
       <source>Hiligaynon</source>
-      <translation>Hrvatske</translation>
+      <translation>Hiligaynon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2453"/>
@@ -5839,7 +5839,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2519"/>
       <source>Lithuanian</source>
-      <translation>Litvanski</translation>
+      <translation>Litavski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2530"/>
@@ -5849,7 +5849,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2563"/>
       <source>Norwegian</source>
-      <translation>norveški</translation>
+      <translation>Norveški</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2607"/>
@@ -5859,17 +5859,17 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2651"/>
       <source>Punjabi</source>
-      <translation>Pendžabljanin</translation>
+      <translation>Punjabi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2596"/>
       <source>Persian</source>
-      <translation>Persijski</translation>
+      <translation>Perzijski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2662"/>
       <source>Romanian</source>
-      <translation>rumunski</translation>
+      <translation>Rumunjski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2684"/>
@@ -5879,7 +5879,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2695"/>
       <source>Albanian</source>
-      <translation>Albanac</translation>
+      <translation>Albanski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2728"/>
@@ -5889,7 +5889,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2739"/>
       <source>Slovenian</source>
-      <translation>Slovenac</translation>
+      <translation>Slovenski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2750"/>
@@ -5924,7 +5924,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2951"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation>Tamni simbol aplikacija i pladanj ikona</translation>
+      <translation>Omogući tamne ikone aplikacija i traku s ikonama</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2958"/>
@@ -5939,37 +5939,37 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2991"/>
       <source>System tray</source>
-      <translation>Sistem pladanj</translation>
+      <translation>Sistemska traka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3000"/>
       <source>Show system tray icon</source>
-      <translation>Pokazivanje sistem pladanj ikona</translation>
+      <translation>Pokaži ikonu sistemske trake</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3010"/>
       <source>Start application hidden</source>
-      <translation>Početak aplikacija skrivena</translation>
+      <translation>Započni sa skrivenom aplikacijom</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3020"/>
       <source>Interface style</source>
-      <translation>Sučelje stil</translation>
+      <translation>Stil sučelja</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3051"/>
       <source>Enforce system icon theme</source>
-      <translation>Provedite temu ikone sustava</translation>
+      <translation>Provedi temu ikone sustava</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3157"/>
       <source>Override interface font size</source>
-      <translation>Promijeniti veličinu fonta sučelje</translation>
+      <translation>Promijeni veličinu fonta sučelja</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3166"/>
       <source>Interface font size:</source>
-      <translation>Sučelje veličine fonta:</translation>
+      <translation>Veličina fonta sučelja:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3378"/>
@@ -5989,12 +5989,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3839"/>
       <source>By default the headline will generated automatically</source>
-      <translation>Prema zadanim postavkama naslov će automatski generira</translation>
+      <translation>Prema zadanim postavkama naslov će se automatski generirati</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3842"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation>Prečac da biste stvorili novu bilješku pita za naslov</translation>
+      <translation>Prečac da biste stvorili novu bilješku traži naslov</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3908"/>
@@ -6020,7 +6020,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
       <location filename="../dialogs/settingsdialog.ui" line="4100"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3959"/>
       <source>Reset message boxes</source>
-      <translation>Poništite okvire poruka</translation>
+      <translation>Poništi okvire poruka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4293"/>
@@ -6038,17 +6038,17 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4438"/>
       <source>Open issue assistant</source>
-      <translation>Otvori pomoćnik za izdavanje</translation>
+      <translation>Otvori pomoćnik za probleme</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4405"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Najbolji način objavljivanja problema je korištenje pomoćnika za izdavanje pritiskom na gumb &lt;span style = "font-weight: 600;"&gt; gumb Otvori pomoćnika za izdavanje &lt;/span&gt; na na dnu. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Najbolji način objavljivanja problema je korištenje pomoćnika za probleme pritiskom na gumb &lt;span style = "font-weight: 600;"&gt; gumb Otvori pomoćnika za izdavanje &lt;/span&gt; na na dnu. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4670"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation>Zanemari veličinu fonta koda kako bi se omogućilo zumiranje</translation>
+      <translation>Zanemarite veličinu fonta koda kako bi se omogućilo zumiranje</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4664"/>
@@ -6083,7 +6083,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="941"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation>Otvara svoju web stranicu web stranice za lozinku ownCloud poslužitelja kako biste stvorili novu lozinku za aplikaciju</translation>
+      <translation>Otvara vašu stranicu zaporke aplikacije na ownCloud serveru kako biste stvorili novu zaporku za aplikaciju</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="944"/>
@@ -6093,17 +6093,17 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2541"/>
       <source>Māori</source>
-      <translation>Maor</translation>
+      <translation>Maorski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2189"/>
       <source>Malay</source>
-      <translation>malajski</translation>
+      <translation>Malajski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2497"/>
       <source>Khmer</source>
-      <translation>Crvenih</translation>
+      <translation>Kmerski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2706"/>
@@ -6113,12 +6113,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2717"/>
       <source>Sinhala</source>
-      <translation>Sinhala</translation>
+      <translation>Singalski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2772"/>
       <source>Thai</source>
-      <translation>Tajlandska</translation>
+      <translation>Tajlandski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2783"/>
@@ -6133,7 +6133,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2838"/>
       <source>Yiddish</source>
-      <translation>jidiš</translation>
+      <translation>Jidiš</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2849"/>
@@ -6153,7 +6153,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3273"/>
       <source>Local shortcut</source>
-      <translation>Lokalni prečac</translation>
+      <translation>Lokalna prečica</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3278"/>
@@ -6168,7 +6168,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3882"/>
       <source>Open last accessed note at application startup</source>
-      <translation>Otvorite zadnju pristupnu bilješku pri pokretanju aplikacije</translation>
+      <translation>Otvori posljednju bilješku pri pokretanju aplikacije</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
@@ -6178,37 +6178,37 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
       <source>This is the best way to open an issue</source>
-      <translation>To je najbolji način za otvaranje problema</translation>
+      <translation>Ovo je najbolji način za prijavu problema</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4449"/>
       <source>Please use this in the issue tracker</source>
-      <translation>Upotrijebite ovo u alatu za praćenje problema</translation>
+      <translation>Upotrijebi ovo u alatu za praćenje problema</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4452"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation>&amp;Kopirajte podatke o pogrešci u međuspremnik</translation>
+      <translation>&amp;Kopiraj podatke o pogrešci u međuspremnik</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4463"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation>Nemojte upotrebljavati ovo u alatu za praćenje problema</translation>
+      <translation>Nemoj upotrebljavati ovo u alatu za praćenje problema</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4691"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation>Koristite stilove isticanja urednika također za pregled</translation>
+      <translation>Koristi stilove isticanja urednika i za pregled</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4714"/>
       <source>Exporting</source>
-      <translation>Изнасяне</translation>
+      <translation>Izvoz</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4720"/>
       <source>Use internal export styling for the PDF export and printing of the preview</source>
-      <translation>Използвайте вътрешен стил за експортиране за PDF експортиране и отпечатване на визуализацията</translation>
+      <translation>Koristi unutarnji izvoz za izvoz PDF-a i ispis pregleda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5028"/>
@@ -6223,7 +6223,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5205"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation>Automatski uklonite zaostale prostore u tekstu bilješke</translation>
+      <translation>Automatski ukloni zaostale prostore u tekstu bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5215"/>
@@ -6233,7 +6233,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5223"/>
       <source>Use tab character instead of spaces</source>
-      <translation>Koristite znak tablice umjesto razmaka</translation>
+      <translation>Koristi znak tablice umjesto razmaka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5230"/>
@@ -6256,13 +6256,13 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Reset ignored subfolders</source>
-      <translation>Poništite zanemarene podmape
+      <translation>Poništi zanemarene podmape
 </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5665"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation>Vratite otvorene kartice bilješki pri pokretanju aplikacije i kad se prebace bilješke</translation>
+      <translation>Vrati otvorene kartice bilješki pri pokretanju aplikacije i kad se prebace bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
@@ -6272,22 +6272,22 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
       <source>Show the number of matches in each note</source>
-      <translation>Pokažite broj podudaranja u svakoj bilješci</translation>
+      <translation>Pokaži broj podudaranja u svakoj bilješci</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5441"/>
       <source>Note list panel</source>
-      <translation>Panel popisa bilješki</translation>
+      <translation>Ploča popisa bilješki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5447"/>
       <source>Show notes in the note list with preview</source>
-      <translation>Prikažite bilješke na popisu bilješki uz pregled</translation>
+      <translation>Prikaži bilješke na popisu bilješki uz pregled</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5520"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-      <translation>Umjesto popisa bilješki, koristite stablo bilješki sa svim podmapama (ako su uključene za mapu bilješki)</translation>
+      <translation>Umjesto popisa bilješki, koristi stablo bilješki sa svim podmapama (ako su uključene za mapu bilješki)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5796"/>
@@ -6298,12 +6298,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5802"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation>Prikažite mape bilješki kao gumbe umjesto u odabranom okviru</translation>
+      <translation>Prikaži mape bilješki kao gumbe umjesto u odabranom okviru</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5944"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation>Ploče se mogu uključivati ​​i isključiti u glavnom izborniku &lt;i&gt; Prozor / Ploče &lt;/i&gt;, a možete konfigurirati i različite &lt;i&gt; Radne prostore &lt;/i&gt; za različite konfiguracije panela.</translation>
+      <translation>Ploče se mogu uključiti ​​i isključiti u glavnom izborniku &lt;i&gt; Prozor / Ploče &lt;/i&gt;, a možete konfigurirati i različite &lt;i&gt; Radne prostore &lt;/i&gt; za različite konfiguracije panela.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6021"/>
@@ -6313,7 +6313,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6027"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation>Napomene s ovom oznakom koristit će se za dohvaćanje oznaka</translation>
+      <translation>Bilješke s ovom oznakom koristit će se za dohvaćanje oznaka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6030"/>
@@ -6328,7 +6328,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6044"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-      <translation>Prema zadanim postavkama proširenje preglednika prikazat će sve veze trenutne bilješke. Također možete učiniti da se prikazuju posebne oznake bilješki s određenom oznakom. Za više informacija o sintaksi veza knjižnih oznaka kliknite &lt;a href="%1"&gt; ovdje &lt;/a&gt;.</translation>
+      <translation>Prema zadanim postavkama proširenje preglednika prikazat će sve veze trenutne bilješke. Također može prikazivati posebne oznake bilješki s određenom oznakom. Za više informacija o sintaksi veza knjižnih oznaka kliknite &lt;a href="%1"&gt; ovdje &lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6057"/>
@@ -6348,7 +6348,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6077"/>
       <source>Web socket server</source>
-      <translation>Web utičnice poslužitelja</translation>
+      <translation>Web poslužitelj utičnice </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6083"/>
@@ -6373,32 +6373,32 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6134"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation>Instalirajte &lt;a href="%1"&gt; proširenje preglednika Web Companion &lt;/a&gt; iz &lt;a href="%2"&gt; Chrome web-trgovine &lt;/a&gt; ili &lt;a href="%3"&gt; dodatka za Firefox na stranici &lt;/a&gt; da biste koristili QOwnNotes kao web-kliper.</translation>
+      <translation>Instaliraj &lt;a href="%1"&gt; proširenje preglednika Web Companion &lt;/a&gt; iz &lt;a href="%2"&gt; Chrome web-trgovine &lt;/a&gt; ili &lt;a href="%3"&gt; dodatka za Firefox na stranici &lt;/a&gt; da biste koristili QOwnNotes kao web-kliper.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation>Dozvolite naziv datoteke bilješke da se razlikuje od naslova. &lt;br&gt; Pazite da ownCloud Notes treba naziv datoteke biti isti kao i naslov!</translation>
+      <translation>Dozvoli da se naziv datoteke bilješke razlikuje od naslova. &lt;br&gt; Pazite da ownCloud Notes traži da naziv datoteke bude isti kao i naslov!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5649"/>
       <source>Note edit panel</source>
-      <translation>Panel uređivanja bilješke</translation>
+      <translation>Ploča uređivanja bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5655"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-      <translation>Ako je to onemogućeno, možete stvoriti složenije rasporede ploča, ali će se sve ploče mijenjati ako se promijeni prozor</translation>
+      <translation>Ako je ovo onemogućeno, možete stvoriti složenije rasporede ploča, ali će se sve ploče mijenjati ako se promijeni prozor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5658"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-      <translation>Koristite ploču za uređivanje bilješki kao fiksni središnji widget za promjenu veličine ako se promijene veličina prozora ili drugih ploča</translation>
+      <translation>Koristi ploču za uređivanje bilješki kao fiksni središnji widget za promjenu veličine ako se promijene veličina prozora ili drugih ploča</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5773"/>
       <source>Note search panel</source>
-      <translation>Panel za pretraživanje bilješki</translation>
+      <translation>Ploča za pretraživanje bilješki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5779"/>
@@ -6418,7 +6418,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5816"/>
       <source>Local trash settings</source>
-      <translation>Postavke lokalnog otpada</translation>
+      <translation>Postavke lokalne kante za smeće</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5850"/>
@@ -6434,7 +6434,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5876"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation>Automatski ukloni bilješke s otpadom nakon određenog vremena</translation>
+      <translation>Automatski ukloni bačene bilješke nakon određenog vremena</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5902"/>
@@ -6444,7 +6444,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5908"/>
       <source>Enable local trash</source>
-      <translation>Omogući lokalno smeće</translation>
+      <translation>Omogući lokalnu kantu za smeće</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5925"/>
@@ -6477,7 +6477,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
       <location filename="../dialogs/settingsdialog.ui" line="5341"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Ako koristite ovu postavku, dobit ćete novi unos u izborniku za prikaz git verzija ako desnom tipkom miša kliknete bilješku.</translation>
+      <translation>Ako koristite ovu postavku, dobit ćete novi unos u izborniku za prikaz git verzija ako desnom tipkom miša kliknete na bilješku.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5461"/>
@@ -6492,7 +6492,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5191"/>
       <source>Highlight the current line</source>
-      <translation>Označite trenutačni redak</translation>
+      <translation>Označi trenutačni redak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5408"/>
@@ -6535,7 +6535,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5184"/>
       <source>Only use editor width setting in distraction free mode</source>
-      <translation>Koristite samo postavku širine urednika u načinu rada koji ne odvlači pozornost</translation>
+      <translation>Koristi samo postavku širine urednika u načinu rada koji ne odvlači pozornost</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5474"/>
@@ -6557,7 +6557,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5530"/>
       <source>Note subfolders panel</source>
-      <translation>Panel podmapa bilješki</translation>
+      <translation>Ploča podmapa bilješki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5536"/>
@@ -6588,13 +6588,13 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2875"/>
       <source>Search script repository</source>
-      <translation>Skladište pretraživanja skripte</translation>
+      <translation>Skladište pretraživanja skripti</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5331"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Opcionalno možete upotrijebiti "% notePath%" za put bilješke.</translation>
+      <translation>Možete upotrijebiti "% notePath%" za put bilješke.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5354"/>
@@ -6609,12 +6609,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5360"/>
       <source>Path to git client, leave empty for default</source>
-      <translation>Put do klijenta git, ostavite prazno za zadane</translation>
+      <translation>Put do klijenta git, ostavi prazno za zadano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5279"/>
       <source>Commit interval</source>
-      <translation>Počiniti intervala</translation>
+      <translation>Počini interval</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5285"/>
@@ -6640,7 +6640,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation>Proširenje preglednika</translation>
+      <translation>Proširenje za preglednik</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1804"/>
@@ -6715,7 +6715,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3918"/>
       <source>Scale images down when inserted into notes</source>
-      <translation>Skaliranje slika prema dolje kada se umetne u bilješke</translation>
+      <translation>Skaliranje slika prema dolje kada se umetnu u bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2431"/>
@@ -6745,7 +6745,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3551"/>
       <source>Repository:</source>
-      <translation>Spremište:</translation>
+      <translation>Repozitorij:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3528"/>
@@ -6765,12 +6765,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3862"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation>Koristite UNIX novi red umjesto izvornih znakova novog reda</translation>
+      <translation>Koristi UNIX novi red umjesto izvornih znakova novog reda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3872"/>
       <source>Restore cursor position when opening a note</source>
-      <translation>Vratite položaj pokazivača prilikom otvaranja bilješke</translation>
+      <translation>Vrati položaj pokazivača prilikom otvaranja bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4322"/>
@@ -6795,7 +6795,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4901"/>
       <source>Clear log file</source>
-      <translation>Očisti datoteku dnevnika</translation>
+      <translation>Očisti log datoteku </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4912"/>
@@ -6805,7 +6805,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4940"/>
       <source>Log file path:</source>
-      <translation>Put datoteke zapisnika:</translation>
+      <translation>Put log datoteke:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5002"/>
@@ -6840,17 +6840,17 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5174"/>
       <source>You have to use the backspace key to remove the opening character</source>
-      <translation>Morate upotrijebiti tipku povratnice da biste uklonili znak za otvaranje</translation>
+      <translation>Morate upotrijebiti tipku backspace da biste uklonili znak za otvaranje</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5177"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation>Omogućite automatsko uklanjanje odgovarajućih znakova za zatvaranje</translation>
+      <translation>Omogući automatsko uklanjanje odgovarajućih znakova za zatvaranje</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1887"/>
       <source>Your CalDAV calendar base url</source>
-      <translation>Url kalendarske baze kalendara</translation>
+      <translation>Url CalDAV kalendarske baze </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1919"/>
@@ -6870,7 +6870,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2007"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-      <translation>To uzrokuje da se sve stavke popisa zadataka ponovo učitaju s vašeg poslužitelja sljedeći put kada otvorite dijaloški okvir.</translation>
+      <translation>Ovo uzrokuje da se sve stavke popisa zadataka ponovo učitaju s vašeg poslužitelja sljedeći put kada otvorite  okvir zadataka.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2010"/>
@@ -6921,7 +6921,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3254"/>
       <source>Search for shortcut</source>
-      <translation>Potražite prečac</translation>
+      <translation>Potraži prečicu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2050"/>
@@ -6941,17 +6941,17 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3041"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation>Koristite unutarnju temu ikone umjesto teme ikone sustava</translation>
+      <translation>Koristi unutarnju temu ikone umjesto teme ikone sustava</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3644"/>
       <source>Script path:</source>
-      <translation>Putanja skripte:</translation>
+      <translation>Put skripte:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="763"/>
       <source>Note folder name</source>
-      <translation>Napomena naziv mape</translation>
+      <translation>Naziv mape bilješki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="810"/>
@@ -6971,7 +6971,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3859"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation>Možete ga koristiti, primjerice, u sustavu Windows ako imate problema s novim redovima u aplikaciji za bilješke ownCloud / Nextcloud</translation>
+      <translation>Možete ga koristiti u sustavu Windows ako imate problema s novim redovima u aplikaciji za bilješke ownCloud / Nextcloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4034"/>
@@ -6981,17 +6981,17 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4040"/>
       <source>Only allow one app instance at the same time</source>
-      <translation>Dopustite samo jedan primjer aplikacije istodobno</translation>
+      <translation>Dopusti samo jedan primjer aplikacije istodobno</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4136"/>
       <source>Add a custom file extension</source>
-      <translation>Dodajte prilagođeno proširenje datoteke</translation>
+      <translation>Dodaj prilagođeno proširenje datoteke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4150"/>
       <source>Remove a custom file extension</source>
-      <translation>Uklanjanje prilagođene ekstenzije datoteke</translation>
+      <translation>Ukloni prilagođenu ekstenziju datoteke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4189"/>
@@ -7006,12 +7006,12 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4221"/>
       <source>Path to external editor:</source>
-      <translation>Put do vanjskog uređivača:</translation>
+      <translation>Put do vanjskog urednika:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4056"/>
       <source>Don't show the update dialog automatically</source>
-      <translation>Nemojte automatski prikazivati dijalog ažuriranja</translation>
+      <translation>Nemoj automatski prikazivati dijalog ažuriranja</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4509"/>
@@ -7050,7 +7050,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4379"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Možete &lt;span style = "font-weight: 600;"&gt; kopirati i zalijepiti &lt;/span&gt; ovaj tekst (ili dijelove ovog teksta) u &lt;span style = "font-weight: 600;"&gt; izdanje &lt;/span&gt; na &lt;a href="https://github.com/pbek/QOwnNotes/isissue"&gt; stranici s pitanjima QOwnNotes &lt;/a&gt; ako imate &lt;span style = "font-weight: 600;"&gt; pitanja ili problemi &lt;/span&gt; s QOwnNotes. Podaci koji su preosjetljivi u ovim podacima su skriveni. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Možete &lt;span style = "font-weight: 600;"&gt; kopirati i zalijepiti &lt;/span&gt; ovaj tekst (ili dijelove ovog teksta) u &lt;span style = "font-weight: 600;"&gt; izdanje &lt;/span&gt; na &lt;a href="https://github.com/pbek/QOwnNotes/isissue"&gt; stranici s pitanjima QOwnNotes &lt;/a&gt; ako imate &lt;span style = "font-weight: 600;"&gt; pitanja ili problem &lt;/span&gt; s QOwnNotes. Podaci koji su preosjetljivi u ovim podacima su skriveni. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4466"/>
@@ -7070,7 +7070,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="499"/>
       <source>password for proxy server</source>
-      <translation>lozinku za proxy poslužitelj</translation>
+      <translation>zaporka za proxy poslužitelj</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="501"/>
@@ -7097,7 +7097,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation>Veza je uspješno izvršena!
+      <translation>Veza je uspješno uspostavljena!
 Verzija poslužitelja: %1
 Verzija QOwnNotesAPI: %2</translation>
     </message>
@@ -7130,7 +7130,7 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2328"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation>Anonimni podaci o korištenju pomažu u određivanju sljedećih dijelova proizvoda QOwnNotes te u pronalaženju i otklanjanju grešaka. &lt;br/&gt; Isključite ga samo ako zaista ne možete živjeti s tim. &lt;br/&gt; &lt;br/&gt; Stvarno onemogućavanje praćenja korištenja?</translation>
+      <translation>Anonimni podaci o korištenju pomažu u poboljšanju QOwnNotes-a te u pronalaženju i otklanjanju grešaka. &lt;br/&gt; Isključite ga samo ako zaista ne možete živjeti s tim. &lt;br/&gt; &lt;br/&gt; Stvarno onemogućiti praćenje korištenja?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2555"/>
@@ -7140,7 +7140,7 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2589"/>
       <source>Remove note folder</source>
-      <translation>Uklonite mapu s bilješkama</translation>
+      <translation>Ukloni mapu s bilješkama</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2590"/>
@@ -7180,28 +7180,28 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2886"/>
       <source>Check for script updates</source>
-      <translation>Provjerite ažuriranja skripti</translation>
+      <translation>Provjeri ažuriranja skripti</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2893"/>
       <source>Add local script</source>
-      <translation>Dodajte lokalnu skriptu</translation>
+      <translation>Dodaj lokalnu skriptu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2897"/>
       <source>Add an existing, local script</source>
-      <translation>Dodajte postojeću, lokalnu skriptu</translation>
+      <translation>Dodaj postojeću, lokalnu skriptu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3990"/>
       <location filename="../dialogs/settingsdialog.cpp" line="4048"/>
       <source>INI files</source>
-      <translation>INI datoteka</translation>
+      <translation>INI datoteke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4026"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation>Doista želite uvesti postavke? Vaše trenutne postavke bit će uklonjene, a neće se obnoviti sve postavke, kao što su postavke mape s bilješkama i koje ste skripte koristili. Također ćete morati prilagoditi neke postavke, posebno na svim platformama, ali vaše bilješke ostaju netaknute!</translation>
+      <translation>Doista želite uvesti postavke? Vaše trenutne postavke bit će uklonjene, a neće se obnoviti sve postavke, kao što su postavke mape s bilješkama i korištene skripte. Također ćete morati prilagoditi neke postavke, posebno na svim platformama, ali vaše bilješke ostaju netaknute!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4036"/>
@@ -7221,7 +7221,7 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2880"/>
       <source>Find a script in the script repository</source>
-      <translation>Pronađite skriptu u spremištu skripti</translation>
+      <translation>Pronađi skriptu u spremištu skripti</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="288"/>
@@ -7244,7 +7244,7 @@ Poruka o pogrešci veze: </translation>
       <location filename="../dialogs/settingsdialog.cpp" line="1670"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1722"/>
       <source>Assign a new shortcut</source>
-      <translation>Dodijelite novu prečicu
+      <translation>Dodijeli novu prečicu
 </translation>
     </message>
     <message>
@@ -7257,7 +7257,7 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1689"/>
       <source>Clear shortcut</source>
-      <translation>Jasan prečac</translation>
+      <translation>Jasna prečica</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1794"/>
@@ -7287,7 +7287,7 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3114"/>
       <source>Open repository</source>
-      <translation>Otvorite spremište</translation>
+      <translation>Otvori repozitorij</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3172"/>
@@ -7314,17 +7314,17 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3570"/>
       <source>Calendar cache emptied</source>
-      <translation>Cache kalendara je ispražnjeno</translation>
+      <translation>Cache kalendara je ispražnjen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3571"/>
       <source>Your calendar cache was emptied.</source>
-      <translation>Vaša je cache kalendara ispražnjena.</translation>
+      <translation>Vaš je cache kalendara ispražnjen.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3652"/>
       <source>Reset toolbars and exit</source>
-      <translation>Poništite alatne trake i izađite</translation>
+      <translation>Poništi alatne trake i izađi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3653"/>
@@ -7334,17 +7334,17 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3657"/>
       <source>Reset and &amp;exit</source>
-      <translation>Resetiranje i &amp;izlazak</translation>
+      <translation>Resetiraj i &amp;izađi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3815"/>
       <source>Log file cleared</source>
-      <translation>Dnevnik je izbrisan</translation>
+      <translation>Log datoteka je izbrisana</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3816"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation>Datoteka zapisnika &lt;strong&gt; %1 &lt;/strong&gt; je izbrisana.</translation>
+      <translation>Log datoteka &lt;strong&gt; %1 &lt;/strong&gt; je izbrisana.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3852"/>
@@ -7360,7 +7360,7 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3863"/>
       <source>Please select the path of your git executable</source>
-      <translation>Odaberite put izvršne datoteke za Git</translation>
+      <translation>Odaberi put izvršne datoteke za Git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3960"/>
@@ -7375,7 +7375,7 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="102"/>
       <source>New script</source>
-      <translation>Nove skripte</translation>
+      <translation>Nova skripta</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="106"/>
@@ -7415,7 +7415,7 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="463"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation>mape bilješki, putanje skripte i put do vanjskog urednika bit će automatski spremljene u odnosu na mapu &lt;code&gt; Data &lt;/code&gt;, tako da će se učitati ispravne mape, skripte i vanjski uređivač bilješki, bez obzira gdje se trenutačno nalazi vaša instalacija QOwnNotes</translation>
+      <translation>mape bilješki, putovi skripte i put do vanjskog urednika bit će automatski spremljene u odnosu na mapu &lt;code&gt; Data &lt;/code&gt;, tako da će se učitati ispravne mape, skripte i vanjski urednik bilješki, bez obzira gdje se trenutačno nalazi vaša instalacija QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="473"/>
@@ -7425,33 +7425,33 @@ Poruka o pogrešci veze: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2302"/>
       <source>Save debug information</source>
-      <translation>Spremite informacije za otklanjanje pogrešaka</translation>
+      <translation>Spremi informacije za otklanjanje pogrešaka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2347"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-      <translation>Želite li zaista izbrisati sve postavke, ukloniti bazu podataka i izaći iz QOwnNotes?
+      <translation>Želite li zaista izbrisati sve postavke, ukloniti bazu podataka i izaći iz QOwnNotes-a?
 
 Vaše bilješke će ostati netaknute!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2350"/>
       <source>Clear and &amp;exit</source>
-      <translation>Brisanje i izlaz</translation>
+      <translation>Obriši i izađi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2278"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2350"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3657"/>
       <source>&amp;Cancel</source>
-      <translation>Brisanje</translation>
+      <translation>&amp;Odustani</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="479"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation>Pronaći ćete &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; u vašoj stazi za oslobađanje za pokretanje QOwnNotes u prijenosnom načinu rada.</translation>
+      <translation>Pronaći ćete &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; u vašoj stazi za oslobađanje za pokretanje QOwnNotes-a u prijenosnom načinu rada.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2275"/>
@@ -7466,7 +7466,7 @@ Vaše bilješke će ostati netaknute!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2461"/>
       <source>Select editor application</source>
-      <translation>Odaberite program za uređivanje</translation>
+      <translation>Odaberi program za uređivanje</translation>
     </message>
   </context>
   <context>
@@ -7474,12 +7474,12 @@ Vaše bilješke će ostati netaknute!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="20"/>
       <source>Share note</source>
-      <translation>Dijelite bilješku</translation>
+      <translation>Dijeli bilješku</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="40"/>
       <source>Share note on ownCloud</source>
-      <translation>Dijelite bilješku na ownCloud</translation>
+      <translation>Dijelit bilješku na ownCloud-u</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="73"/>
@@ -7494,7 +7494,7 @@ Vaše bilješke će ostati netaknute!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="47"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation>Javno dijelite trenutnu datoteku bilješke na poslužitelju ownCloud. Generiranu vezu možete poslati drugima kako bi mogli pregledati ili preuzeti datoteku.</translation>
+      <translation>Javno dijeli trenutnu datoteku bilješke na poslužitelju ownCloud. Generiranu vezu možete poslati drugima kako bi mogli pregledati ili preuzeti datoteku.</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="66"/>
@@ -7544,19 +7544,19 @@ Vaše bilješke će ostati netaknute!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
       <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ise sufiksa i bez akcenata</translation>
+      <translation>-ise sufiksa i bez naglasaka</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="229"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ize sufiksi i dijakritički</translation>
+      <translation>-ize sufiksi i s naglascima</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="231"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ize sufiksi i bez akcenata</translation>
+      <translation>-ize sufiksi i bez naglasaka</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
@@ -7628,7 +7628,7 @@ Vaše bilješke će ostati netaknute!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="250"/>
       <source>extended</source>
       <comment>dictionary variant</comment>
-      <translation>produžen</translation>
+      <translation>prošireno</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="325"/>
@@ -7669,7 +7669,7 @@ Vaše bilješke će ostati netaknute!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation>Umetnite separator zaglavlja tablice</translation>
+      <translation>Umetni separator zaglavlja tablice</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
@@ -7754,7 +7754,7 @@ Vaše bilješke će ostati netaknute!</translation>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="192"/>
       <source>Select CSV file to import</source>
-      <translation>Odaberite CSV datoteku za uvoz</translation>
+      <translation>Odaberi CSV datoteku za uvoz</translation>
     </message>
   </context>
   <context>
@@ -7762,7 +7762,7 @@ Vaše bilješke će ostati netaknute!</translation>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation>Dodajte novu oznaku</translation>
+      <translation>Dodaj novu oznaku</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
@@ -7801,7 +7801,7 @@ Vaše bilješke će ostati netaknute!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation>Uštedjeti</translation>
+      <translation>Spremi</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
@@ -7811,12 +7811,12 @@ Vaše bilješke će ostati netaknute!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="105"/>
       <source>Save and insert into note</source>
-      <translation>Spremite i umetnite u bilješku</translation>
+      <translation>Spremi i umetni u bilješku</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation>Ukloniti</translation>
+      <translation>Ukloni</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
@@ -7826,12 +7826,12 @@ Vaše bilješke će ostati netaknute!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="292"/>
       <source>Reload the todo list from server</source>
-      <translation>Ponovno učitajte popis zadataka s poslužitelja</translation>
+      <translation>Ponovno učitaj popis zadataka s poslužitelja</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="295"/>
       <source>Reload…</source>
-      <translation>Ponovno učitati…</translation>
+      <translation>Ponovno učitaj…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="260"/>
@@ -7846,52 +7846,52 @@ Vaše bilješke će ostati netaknute!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
       <source>Save the current todo item</source>
-      <translation>Spremite trenutnu stavku zadatka</translation>
+      <translation>Spremi trenutnu stavku zadataka</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="110"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation>Spremite trenutnu stavku zadatka i umetnite vezu na nju u trenutačnu bilješku</translation>
+      <translation>Spremi trenutnu stavku zadatka i umetni vezu na nju u trenutačnu bilješku</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="119"/>
       <source>Import the current todo item as new note</source>
-      <translation>Uvezite trenutnu stavku zadatka kao novu bilješku</translation>
+      <translation>Uvezi trenutnu stavku zadatka kao novu bilješku</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="115"/>
       <source>Import as note</source>
-      <translation>Uvezite kao bilješku</translation>
+      <translation>Uvezi kao bilješku</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation>Uklonite trenutnu stavku zadatka</translation>
+      <translation>Ukloni trenutnu stavku zadataka</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation>Stavke popisa Todo učitavaju se s poslužitelja</translation>
+      <translation>Stavke popisa zadataka učitavaju se s poslužitelja</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="130"/>
       <source>Reload from server</source>
-      <translation>Ponovno učitavanje s poslužitelja</translation>
+      <translation>Ponovno učitaj s poslužitelja</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="134"/>
       <source>Reload tasks from server</source>
-      <translation>Učitajte zadatke s poslužitelja</translation>
+      <translation>Učitaj zadatke s poslužitelja</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="138"/>
       <source>Clear cache and reload</source>
-      <translation>Očistite predmemoriju i ponovno učitajte</translation>
+      <translation>Očisti predmemoriju i ponovno učitaj</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="143"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation>Obrišite predmemoriju kalendara i ponovno učitajte zadatke s poslužitelja</translation>
+      <translation>Obriši predmemoriju kalendara i ponovno učitaj zadatke s poslužitelja</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="582"/>
@@ -7907,12 +7907,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="867"/>
       <source>Create sub-task</source>
-      <translation>Stvorite pod zadatak</translation>
+      <translation>Stvori podzadatak</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="874"/>
       <source>Create new sub-task</source>
-      <translation>Stvorite novi pod zadatak</translation>
+      <translation>Stvori novi podzadatak</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="874"/>
@@ -7922,7 +7922,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="875"/>
       <source>New sub-task</source>
-      <translation>Novi pod zadatak</translation>
+      <translation>Novi podzadatak</translation>
     </message>
   </context>
   <context>
@@ -7945,7 +7945,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation>Navedite dostupne alatne trake. Odabrani će se uređivati</translation>
+      <translation>Navedi dostupne alatne trake. Odabrane će se uređivati</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
@@ -7960,18 +7960,18 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
       <source>New</source>
-      <translation>Novi</translation>
+      <translation>Novo</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
       <source>Delete selected toolbar</source>
-      <translation>Brisanje odabrane alatne trake</translation>
+      <translation>Obriši odabranu alatnu traku</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
       <source>Remove</source>
-      <translation>Ukloniti</translation>
+      <translation>Ukloni</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
@@ -7996,17 +7996,17 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation>Pomicati prema dolje</translation>
+      <translation>Pomicanje dolje</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
       <source>moves the selected toolbar item down</source>
-      <translation>pomiče odabranu stavku na alatnoj traci</translation>
+      <translation>pomiče odabranu stavku na alatnoj traci dolje</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation>Pomicati prema dolje</translation>
+      <translation>Pomakni prema dolje</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
@@ -8021,7 +8021,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation>&amp;Umetnuti</translation>
+      <translation>&amp;Umetni</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
@@ -8031,23 +8031,23 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <source>&amp;Remove</source>
-      <translation>&amp;Ukloniti</translation>
+      <translation>&amp;Ukloni</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation>Razdjelnik</translation>
+      <translation>Separator</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation>&amp;Razdjelnik</translation>
+      <translation>&amp;Separator</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="192"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="216"/>
       <source>--(separator)--</source>
-      <translation>--(razdjelnik)--</translation>
+      <translation>--(separator)--</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="309"/>
@@ -8065,12 +8065,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation>Nabrane bilješke</translation>
+      <translation>Bačene bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation>Pronađite ime bilješke</translation>
+      <translation>Pronađi ime bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="31"/>
@@ -8090,23 +8090,23 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="47"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt; Brže, ali bez inačica &lt;/h3&gt; &lt;p&gt; Bilješka će se stvoriti s tekstom iz pregleda. &lt;/p&gt; &lt;p&gt; Verzije bilješki na vašem poslužitelju ownCloud neće biti obnovljene i napomena će ostati u otpadu. &lt;/p&gt; &lt;p&gt; Bilješku i njezine verzije uvijek možete vratiti kasnije. &lt;/p&gt;</translation>
+      <translation>&lt;h3&gt; Brže, ali bez verzija &lt;/h3&gt; &lt;p&gt; Bilješka će se stvoriti s tekstom iz pregleda. &lt;/p&gt; &lt;p&gt; Verzije bilješki na vašem poslužitelju ownCloud neće biti obnovljene i bilješka će ostati u otpadu. &lt;/p&gt; &lt;p&gt; Bilješku i njezine verzije uvijek možete vratiti kasnije. &lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="59"/>
       <source>&amp;Delete</source>
-      <translation>&amp;Brisanje</translation>
+      <translation>&amp;Obriši</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>
       <source>Delete selected note on server</source>
-      <translation>Izbrišite odabranu bilješku na poslužitelju
+      <translation>Izbriši odabranu bilješku na poslužitelju
 </translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="68"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Otkazati</translation>
+      <translation>&amp;Otkaži</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="190"/>
@@ -8142,7 +8142,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="26"/>
       <source>A new update of QOwnNotes is available!</source>
-      <translation>Novo ažuriranje QOwnNotes je dostupno!</translation>
+      <translation>Novo ažuriranje QOwnNotes-a je dostupno!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
@@ -8162,7 +8162,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt; Uključite se s QOwnNotes &lt;/a&gt;</translation>
+      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt; Uključite se u QOwnNotes &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8172,17 +8172,17 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="48"/>
       <source>&amp;Update</source>
-      <translation>&amp;Ažuriranje</translation>
+      <translation>&amp;Ažuriraj</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="59"/>
       <source>&amp;Download latest</source>
-      <translation>&amp;Preuzmite najnoviju verziju</translation>
+      <translation>&amp;Preuzmi najnoviju verziju</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="57"/>
       <source>Just download</source>
-      <translation>Samo preuzmite</translation>
+      <translation>Samo preuzmi</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="72"/>
@@ -8197,12 +8197,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="81"/>
       <source>Don't show this dialog automatically</source>
-      <translation>Ne prikazuje se automatski ovaj dijalog</translation>
+      <translation>Ne prikazuj ovaj dijalog automatski</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="89"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Otkazati</translation>
+      <translation>&amp;Otkaži</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="242"/>
@@ -8290,18 +8290,18 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="487"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation>Ne mogu pronaći unzip izvršnu datoteku: %1</translation>
+      <translation>Nemoguće pronaći unzip izvršnu datoteku: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="339"/>
       <location filename="../dialogs/updatedialog.cpp" line="492"/>
       <source>Proceed with update</source>
-      <translation>Nastavite s ažuriranjem</translation>
+      <translation>Nastavi s ažuriranjem</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="493"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation>Preuzimanje je sada završeno. Želite li ažurirati i ponovno pokrenuti QOwnNotes?</translation>
+      <translation>Preuzimanje je završeno. Želite li ažurirati i ponovno pokrenuti QOwnNotes?</translation>
     </message>
   </context>
   <context>
@@ -8344,7 +8344,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation>Obratite pažnju na verzije na vlastitom poslužitelju</translation>
+      <translation>Verije bilješki na vašem poslužitelju</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
@@ -8354,17 +8354,17 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
-      <translation>Tekst napomene</translation>
+      <translation>Tekst bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="31"/>
       <source>&amp;Restore selected version</source>
-      <translation>&amp;Vraćanje odabrane verzije</translation>
+      <translation>&amp;Vrati odabranu verziju</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="39"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Otkazati</translation>
+      <translation>&amp;Otkaži</translation>
     </message>
   </context>
   <context>
@@ -8372,12 +8372,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="67"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation>QOwnNotes poslužitelj koji sluša na portu %1</translation>
+      <translation>QOwnNotes poslužitelj sluša na portu %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="74"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation>Ne mogu pokrenuti poslužitelj QOwnNotes na portu %1!</translation>
+      <translation>Nemoguće pokrenuti poslužitelj QOwnNotes na portu %1!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="120"/>
@@ -8404,7 +8404,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation>Sigurnosni znak</translation>
+      <translation>Sigurnosni token</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
@@ -8414,7 +8414,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation>Generirajte novi token</translation>
+      <translation>Generiraj novi token</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
@@ -8428,7 +8428,7 @@ This cannot be undone!</source>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation>Dobro došli u QOwnNotes</translation>
+      <translation>Dobrodošli u QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
@@ -8438,22 +8438,22 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation>&amp;Leđa</translation>
+      <translation>&amp;Natrag</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation>&amp;Sljedeći</translation>
+      <translation>&amp;Sljedeće</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation>&amp;Dovršetka</translation>
+      <translation>&amp;Dovršeno</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Otkazati</translation>
+      <translation>&amp;Otkaži</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
@@ -8464,12 +8464,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="191"/>
       <source>Create note folder if not existing</source>
-      <translation>Stvorite mapu bilješki ako ne postoji</translation>
+      <translation>Stvori mapu bilješki ako ne postoji</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation>Put mape bilježi</translation>
+      <translation>Put mape bilješki</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
@@ -8484,12 +8484,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
       <source>Open ownCloud settings</source>
-      <translation>Otvorite ownCloud postavke</translation>
+      <translation>Otvori ownCloud postavke</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="384"/>
       <source>Open network settings</source>
-      <translation>Otvorite mrežne postavke</translation>
+      <translation>Otvori mrežne postavke</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
@@ -8504,7 +8504,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation>Ako želite biti u mogućnosti pristupiti verzijama bilješki i bilješkama u otpadu na poslužitelju ownCloud, sada možete konfigurirati QOwnNotes za njega. To možete učiniti i kasnije.</translation>
+      <translation>Ako želite pristupiti verzijama bilješki i bilješkama u otpadu na poslužitelju ownCloud, sada možete konfigurirati QOwnNotes. To možete učiniti i kasnije.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
@@ -8514,32 +8514,32 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="391"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes anonimno bilježi korištenje podataka, to nam pomaže odlučiti koje dijelove QOwnNotes moramo poboljšati i također naći i popraviti bugove. To možete onemogućiti u postavkama.</translation>
+      <translation>QOwnNotes anonimno bilježi korištenje podataka, to nam pomaže odlučiti koje dijelove QOwnNotes moramo poboljšati te naći i popraviti greške. To možete onemogućiti u postavkama.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="122"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation>Nije moguće izraditi putanju bilješke! Morate ručno napraviti mapu s bilješkama!</translation>
+      <translation>Nije moguće izraditi put bilješke! Morate ručno napraviti mapu s bilješkama!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="130"/>
       <source>Cannot create note path!</source>
-      <translation>Nije moguće izraditi putanju bilješke!</translation>
+      <translation>Nije moguće izraditi put bilješke!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="135"/>
       <source>This note path doesn't exist!</source>
-      <translation>Ova putanja s notama ne postoji!</translation>
+      <translation>Ovaj put bilješke ne postoji!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="207"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Molim odaberi mapu gdje će bilješke biti spremljene</translation>
+      <translation>Odaberite mapu u koju će bilješke biti spremljene</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="220"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation>Imajte na umu da će se mapa bilješki pohraniti u direktoriju u kojem se nalazi QOwnNotes u prijenosnom načinu rada! Dakle, morate ostati na istom pogonu.</translation>
+      <translation>Imajte na umu da će se mapa bilješki pohraniti u direktoriju u kojem se nalazi QOwnNotes u prijenosnom načinu rada! Dakle, morate ostati na istom disku.</translation>
     </message>
   </context>
   <context>
@@ -8552,12 +8552,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="102"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation>Ispisuje izvatke postavki i druge informacije o aplikaciji i okolini u GitHub Markdown i izlazi iz aplikacije.</translation>
+      <translation>Ispisuje izvatke postavki i druge informacije o aplikaciji i okolini u GitHub Markdown-u i izlazi iz aplikacije.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="111"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation>Omogućuje pokretanje višestrukih primjeraka QOwnNotes čak i ako ih se ne odobri u postavkama.</translation>
+      <translation>Omogućuje pokretanje višestrukih primjeraka QOwnNotes čak i ako nisu odobreni u postavkama.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="118"/>
@@ -8582,7 +8582,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="577"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation>Pokušalo se pokrenuti druga instanca QOwnNotes!</translation>
+      <translation>Pokušala se pokrenuti druga instanca QOwnNotes!</translation>
     </message>
   </context>
 </TS>

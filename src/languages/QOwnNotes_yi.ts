@@ -205,12 +205,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Aragonese</source>
-      <translation type="unfinished">Aragonese</translation>
+      <translation>אַראַגאָנעסע</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Gujarati</source>
-      <translation type="unfinished">Gujarati</translation>
+      <translation>גודזשאַראַטי</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
@@ -360,17 +360,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
       <source>Gaelic</source>
-      <translation type="unfinished">Gaelic</translation>
+      <translation>גאלישע</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>גאליציאנער</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
       <source>Georgian</source>
-      <translation type="unfinished">Georgian</translation>
+      <translation>גרוזיניש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
@@ -395,7 +395,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Gurani</source>
-      <translation type="unfinished">Gurani</translation>
+      <translation>גוראַני</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
@@ -405,7 +405,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>ניין</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
@@ -415,217 +415,217 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>איסלענדיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>אינדאָנעזיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Kaszebsczi</source>
-      <translation type="unfinished">Kaszebsczi</translation>
+      <translation>קאַשעבע</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
       <source>Kazakh</source>
-      <translation type="unfinished">Kazakh</translation>
+      <translation>קאַזאַק</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>כמער</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
       <source>Komi (Russia)</source>
-      <translation type="unfinished">Komi (Russia)</translation>
+      <translation>קאָמי (רוסלאַנד)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>קאָרעיִש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
       <source>Kurdish (Turkey)</source>
-      <translation type="unfinished">Kurdish (Turkey)</translation>
+      <translation>קורדיש (טערקיי)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
       <source>Lao</source>
-      <translation type="unfinished">Lao</translation>
+      <translation>טובערקולאָסיס</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Latgalian</source>
-      <translation type="unfinished">Latgalian</translation>
+      <translation>לאטגאליש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>לאַטייַן</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>ליטוויש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>לעטיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>נידעריק דייַטש / נידעריק סאַקסאָן</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>לוקסעמבורגיש (לעזעבורגעסטש)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>מאַקעדאָניש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="110"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>מאלייאלאם</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="111"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>מאנגאליש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
       <source>Nepali</source>
-      <translation type="unfinished">Nepali</translation>
+      <translation>נעפּאַליש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Norwegian (Bokmål)</source>
-      <translation type="unfinished">Norwegian (Bokmål)</translation>
+      <translation>נאָרוועגיש (Bokmål)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+      <translation>נאָרוועגיש (נינאָרסק)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
       <source>Occitan</source>
-      <translation type="unfinished">Occitan</translation>
+      <translation>אָקסיטאַן</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
       <source>Papiamentu</source>
-      <translation type="unfinished">Papiamentu</translation>
+      <translation>פּאַפּיאַמענטו</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>פערסיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>רומעניש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Romansh</source>
-      <translation type="unfinished">Romansh</translation>
+      <translation>ראָמאַנש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
       <source>Russian Medical Dictionary</source>
-      <translation type="unfinished">Russian Medical Dictionary</translation>
+      <translation>רוסיש מעדיציניש ווערטערבוך</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation type="unfinished">Rusyn / Ruthene (Slovakia)</translation>
+      <translation>רוסין / רוטענע (סלאָוואַקיאַ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="131"/>
       <source>Serbian (Cyrillic)</source>
-      <translation type="unfinished">Serbian (Cyrillic)</translation>
+      <translation>סערביש (סירילליק)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="132"/>
       <source>Serbian (Latin)</source>
-      <translation type="unfinished">Serbian (Latin)</translation>
+      <translation>סערביש (לאטיין)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="134"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>שאָנאַ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="135"/>
       <source>Sindhi</source>
-      <translation type="unfinished">Sindhi</translation>
+      <translation>סינדי</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="136"/>
       <source>Sinhala</source>
-      <translation type="unfinished">Sinhala</translation>
+      <translation>סינהאַלאַ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="137"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>סלאוואקיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="138"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>סלאוועניש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="141"/>
       <source>Swahili</source>
-      <translation type="unfinished">Swahili</translation>
+      <translation>סוואַהילי</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="143"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>טאגאלאג</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="144"/>
       <source>Tajik</source>
-      <translation type="unfinished">Tajik</translation>
+      <translation>טאַדזשיק</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="145"/>
       <source>Tatar (Russia)</source>
-      <translation type="unfinished">Tatar (Russia)</translation>
+      <translation>טאַטאַר (רוסלאַנד)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="146"/>
       <source>Telugu</source>
-      <translation type="unfinished">Telugu</translation>
+      <translation>טעלוגו</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="147"/>
       <source>Thai</source>
-      <translation type="unfinished">Thai</translation>
+      <translation>טאי</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="148"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>טערקיש</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="149"/>
       <source>Turkmen</source>
-      <translation type="unfinished">Turkmen</translation>
+      <translation>טורקמען</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="150"/>
@@ -5731,7 +5731,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2244"/>
       <source>Cebuano</source>
-      <translation type="unfinished">Cebuano</translation>
+      <translation>סעבואַנאָ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2266"/>
@@ -5751,22 +5751,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2332"/>
       <source>Filipino</source>
-      <translation type="unfinished">Filipino</translation>
+      <translation>Filipino</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2343"/>
       <source>Finnish</source>
-      <translation type="unfinished">Finnish</translation>
+      <translation>פיליפּינאָ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2365"/>
       <source>Irish</source>
-      <translation type="unfinished">Irish</translation>
+      <translation>איריש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2376"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>גאליציאנער</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2387"/>
@@ -5776,7 +5776,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2398"/>
       <source>Hausa</source>
-      <translation type="unfinished">Hausa</translation>
+      <translation>האַוסאַ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2409"/>
@@ -5786,72 +5786,72 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2420"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>הינדיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2442"/>
       <source>Hiligaynon</source>
-      <translation type="unfinished">Hiligaynon</translation>
+      <translation>היליגייַנאָן</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2453"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>איסלענדיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2475"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>קאָרעיִש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2486"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>קורדיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2508"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>לעטיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2519"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>ליטוויש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2530"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>מאַקעדאָניש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2563"/>
       <source>Norwegian</source>
-      <translation type="unfinished">Norwegian</translation>
+      <translation>נאָרוועגיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2607"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>אוזבעקיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2651"/>
       <source>Punjabi</source>
-      <translation type="unfinished">Punjabi</translation>
+      <translation>פּונדזשאַבי</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2596"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>פערסיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2662"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>רומעניש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2684"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>סערביש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2695"/>
@@ -5861,12 +5861,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2728"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>סלאוואקיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2739"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>סלאוועניש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2750"/>
@@ -5876,7 +5876,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2761"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>טאגאלאג</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2794"/>
@@ -6110,7 +6110,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2838"/>
       <source>Yiddish</source>
-      <translation type="unfinished">Yiddish</translation>
+      <translation>יידיש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2849"/>
@@ -6150,7 +6150,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
       <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
-      <translation type="unfinished">GitHub doesn't need two spaces at the end of the line to do a line break</translation>
+      <translation>גיטהוב דאַרף נישט צוויי ספּייסאַז אין די סוף פון די שורה צו מאַכן אַ שורה ברעכן</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
@@ -6241,7 +6241,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+      <translation>באַהאַלטן 'באַמערקונג ציילן' מיט טאַגס (ינקריסאַז פאָרשטעלונג)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
@@ -6503,7 +6503,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="5543"/>
       <location filename="../dialogs/settingsdialog.ui" line="5697"/>
       <source>Sort</source>
-      <translation type="unfinished">Sort</translation>
+      <translation>סאָרט</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5184"/>

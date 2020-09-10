@@ -1404,7 +1404,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
       <source>Don't copy image to media folder</source>
-      <translation>Não copie a imagem para a pasta de media</translation>
+      <translation>Não copie a imagem para a pasta de mídia</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
@@ -2552,7 +2552,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2597"/>
       <source>Previous note tab</source>
-      <translation>Guia Nota anterior
+      <translation>Guia de Nota anterior
 </translation>
     </message>
     <message>
@@ -2789,7 +2789,7 @@ Restaurar a nota atual? </translation>
       <location filename="../mainwindow.cpp" line="3459"/>
       <source>Removed %n conflicted database copies</source>
       <translation>
-        <numerusform>Removida %n cópia em conflito do banco de dados</numerusform>
+        <numerusform>Removidas %n cópias em conflito do banco de dados</numerusform>
         <numerusform>%n cópias de banco de dados em conflito removidas</numerusform>
       </translation>
     </message>

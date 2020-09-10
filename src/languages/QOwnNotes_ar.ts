@@ -6,7 +6,7 @@
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>حول كيو-أون-نوتس</translation>
+      <translation>حول QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -936,12 +936,12 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
       <translation>
-        <numerusform>تم نقل %n خط.</numerusform>
-        <numerusform>تم نقل خط %n.</numerusform>
-        <numerusform>%n خطوط منقولة. </numerusform>
-        <numerusform>تم نقل خطوط %n</numerusform>
-        <numerusform>تم نقل خطوط %n</numerusform>
-        <numerusform>تم نقل خطوط %n</numerusform>
+        <numerusform>تم نقل %n من الخطوط.</numerusform>
+        <numerusform>تم نقل %n من الخطوط.</numerusform>
+        <numerusform>تم نقل %n من الخطوط. </numerusform>
+        <numerusform>تم نقل %n من الخطوط.</numerusform>
+        <numerusform>تم نقل %n من الخطوط.</numerusform>
+        <numerusform>تم نقل %n من الخطوط.</numerusform>
       </translation>
     </message>
     <message>
@@ -1031,12 +1031,12 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
       <source>%n lines indented.</source>
       <translation>
-        <numerusform>%n سطر بادئة.</numerusform>
-        <numerusform>%n سطر بادئة.</numerusform>
-        <numerusform>خطوط %n بادئة.</numerusform>
-        <numerusform>خطوط %n بادئة.</numerusform>
-        <numerusform>خطوط %n بادئة.</numerusform>
-        <numerusform>خطوط %n بادئة.</numerusform>
+        <numerusform>طُبقت مسافة بادئة على %n من السطور.</numerusform>
+        <numerusform>طُبقت مسافة بادئة على %n من السطور.</numerusform>
+        <numerusform>طُبقت مسافة بادئة على %n من السطور.</numerusform>
+        <numerusform>طُبقت مسافة بادئة على %n من السطور.</numerusform>
+        <numerusform>طُبقت مسافة بادئة على %n من السطور.</numerusform>
+        <numerusform>طُبقت مسافة بادئة على %n من السطور.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1044,24 +1044,24 @@
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
       <translation>
-        <numerusform>%n سطر %1ed %2 مرة.</numerusform>
-        <numerusform>%n سطر٪1ed٪ 2 مرة.</numerusform>
-        <numerusform>%n من الأسطر٪1ed٪ 2 مرة.</numerusform>
-        <numerusform>%n من الأسطر٪1ed٪ 2 مرة.</numerusform>
-        <numerusform>%n من الأسطر٪1ed٪ 2 مرة.</numerusform>
-        <numerusform>%n من الأسطر٪1ed٪ 2 مرة.</numerusform>
+        <numerusform>%n من السطور %1eت %2 من المرات.</numerusform>
+        <numerusform>%n من السطور %1eت %2 من المرات.</numerusform>
+        <numerusform>%n من السطور %1eت %2 من المرات.</numerusform>
+        <numerusform>%n من السطور %1eت %2 من المرات.</numerusform>
+        <numerusform>%n من السطور %1eت %2 من المرات.</numerusform>
+        <numerusform>%n من السطور %1eت %2 من المرات.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
       <translation>
-        <numerusform>%n خط مسحوب.</numerusform>
-        <numerusform>%n سطور منزوعة.</numerusform>
-        <numerusform>%n خط انتزع.</numerusform>
-        <numerusform>%n خطوط انتزع.</numerusform>
-        <numerusform>%n خطوط انتزع.</numerusform>
-        <numerusform>%n خطوط انتزع.</numerusform>
+        <numerusform>سُحب %n من الخطوط.</numerusform>
+        <numerusform>سُحب %n من الخطوط.</numerusform>
+        <numerusform>سُحب %n من الخطوط.</numerusform>
+        <numerusform>سُحب %n من الخطوط.</numerusform>
+        <numerusform>سُحب %n من الخطوط.</numerusform>
+        <numerusform>سُحب %n من الخطوط.</numerusform>
       </translation>
     </message>
     <message>
@@ -1687,13 +1687,12 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="196"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation>
-        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظة(ات) المحددة؟
-</numerusform>
-        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظة (الملاحظات) المختارة؟</numerusform>
-        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظة (الملاحظات) المختارة؟</numerusform>
-        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظة (الملاحظات) المختارة؟</numerusform>
-        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظة (الملاحظات) المختارة؟</numerusform>
-        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظة (الملاحظات) المختارة؟</numerusform>
+        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
+        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
+        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
+        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
+        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
+        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
       </translation>
     </message>
     <message>
@@ -1705,24 +1704,24 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="221"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
       <translation>
-        <numerusform>تمت استعادة ملاحظة &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) تم استعادتها</numerusform>
-        <numerusform>تمت استعادة ملاحظة &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
-        <numerusform>تمت استعادة ملاحظتين &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
-        <numerusform>تمت استعادة ملاحظات &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
-        <numerusform>تمت استعادة ملاحظات عديدة &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
-        <numerusform>تمت استعادة ملاحظات أخرى &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
+        <numerusform>تمت استعادة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
+        <numerusform>تمت استعادة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
+        <numerusform>تمت استعادة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
+        <numerusform>تمت استعادة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
+        <numerusform>تمت استعادة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
+        <numerusform>تمت استعادة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation>
-        <numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; الملاحظة(ات) المحددة؟</numerusform>
-        <numerusform>استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظة المحددة؟</numerusform>
-        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظات المحددة؟</numerusform>
-        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظات المحددة؟</numerusform>
-        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظات المحددة؟</numerusform>
-        <numerusform>هل تريد استعادة &lt;strong&gt;%n&lt;/strong&gt; الملاحظات المحددة؟</numerusform>
+        <numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
+        <numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
+        <numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
+        <numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
+        <numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
+        <numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) محددة؟</numerusform>
       </translation>
     </message>
     <message>
@@ -1734,12 +1733,12 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="266"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation>
-        <numerusform>تمت إزالة العقدة &lt;strong&gt;%n&lt;/string&gt;</numerusform>
-        <numerusform>تمت إزالة العقدة &lt;strong&gt;%n&lt;/string&gt;</numerusform>
-        <numerusform>تمت إزالة العقد &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
-        <numerusform>تمت إزالة العقد &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
-        <numerusform>تمت إزالة العقد &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ملاحظة(ات) تم حذفها</numerusform>
+        <numerusform>تمت إزالة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
+        <numerusform>تمت إزالة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
+        <numerusform>تمت إزالة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
+        <numerusform>تمت إزالة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
+        <numerusform>تمت إزالة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
+        <numerusform>تمت إزالة &lt;strong&gt;%n&lt;/strong&gt; من الملاحظات</numerusform>
       </translation>
     </message>
   </context>
@@ -2827,12 +2826,12 @@ Restore current note?</source>
       <location filename="../mainwindow.cpp" line="3459"/>
       <source>Removed %n conflicted database copies</source>
       <translation>
-        <numerusform>تمت إزالة نسخة %n من قاعدة البيانات المتعارضة</numerusform>
-        <numerusform>تمت إزالة نسخة %n من قاعدة البيانات المتعارضة </numerusform>
-        <numerusform>تمت إزالة %n نسخ قاعدة البيانات المتعارضة</numerusform>
-        <numerusform>تمت إزالة %n نسخ قاعدة البيانات المتعارضة</numerusform>
-        <numerusform>تمت إزالة %n نسخ قاعدة البيانات المتعارضة</numerusform>
-        <numerusform>تمت إزالة %n نسخ قاعدة البيانات المتعارضة</numerusform>
+        <numerusform>تمت إزالة %n من نسخ قواعد البيانات المتعارضة</numerusform>
+        <numerusform>تمت إزالة %n من نسخ قواعد البيانات المتعارضة</numerusform>
+        <numerusform>تمت إزالة %n من نسخ قواعد البيانات المتعارضة</numerusform>
+        <numerusform>تمت إزالة %n من نسخ قواعد البيانات المتعارضة</numerusform>
+        <numerusform>تمت إزالة %n من نسخ قواعد البيانات المتعارضة</numerusform>
+        <numerusform>تمت إزالة %n من نسخ قواعد البيانات المتعارضة</numerusform>
       </translation>
     </message>
     <message>
@@ -3056,12 +3055,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5681"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
-        <numerusform>تم العثور على &lt;strong&gt;%n &lt;/strong&gt; حدوث أي مصطلح &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>تم العثور على &lt;strong&gt;%n &lt;/strong&gt; حدوث أي مصطلح &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>عثر على &lt;strong&gt;%n &lt;/strong&gt; تكرارات لأي مصطلح &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>عثر على &lt;strong&gt;%n &lt;/strong&gt; تكرارات لأي مصطلح &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>تم العثور على &lt;strong&gt;%n &lt;/strong&gt; تكرار(ات) لأي مصطلح &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>عثر على &lt;strong&gt;%n &lt;/strong&gt; تكرارات لأي مصطلح &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارت لأي من مصطلحات &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارت لأي من مصطلحات &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارت لأي من مصطلحات &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارت لأي من مصطلحات &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارت لأي من مصطلحات &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارت لأي من مصطلحات &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -3411,12 +3410,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>%n chars</source>
       <comment>characters</comment>
       <translation>
-        <numerusform>%n حروف</numerusform>
         <numerusform>%n حرف</numerusform>
-        <numerusform>%n شخصيات</numerusform>
-        <numerusform>%n شخصيات</numerusform>
-        <numerusform>%n شخصيات</numerusform>
-        <numerusform>%n شخصيات</numerusform>
+        <numerusform>%n حرف</numerusform>
+        <numerusform>%n حرف</numerusform>
+        <numerusform>%n حرف</numerusform>
+        <numerusform>%n حرف</numerusform>
+        <numerusform>%n حرف</numerusform>
       </translation>
     </message>
     <message>
@@ -3458,8 +3457,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="8716"/>
       <source>%n notes selected</source>
       <translation>
-        <numerusform>تم تحديد %n الملاحظة</numerusform>
-        <numerusform>تم تحديد %n الملاحظة</numerusform>
+        <numerusform>تم تحديد %n من الملاحظات</numerusform>
+        <numerusform>تم تحديد %n من الملاحظات</numerusform>
         <numerusform>تم تحديد %n من الملاحظات</numerusform>
         <numerusform>تم تحديد %n من الملاحظات</numerusform>
         <numerusform>تم تحديد %n من الملاحظات</numerusform>
@@ -4019,12 +4018,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3438"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation>
-        <numerusform>تابع الحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; نُسَخ قواعد البيانات المتعارضة التي قد تمنع عملية المزامنة السحابية الخاصة بك؟</numerusform>
-        <numerusform>تابع الحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; نسخة قاعدة البيانات المتعارضة التي قد تمنع عملية المزامنة الخاصة بك؟</numerusform>
-        <numerusform>تابع الحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; نسخ قواعد البيانات المتعارضة التي قد تمنع عملية المزامنة الخاصة بك؟</numerusform>
-        <numerusform>تابع الحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; نسخ قواعد البيانات المتعارضة التي قد تمنع عملية المزامنة الخاصة بك؟</numerusform>
-        <numerusform>تابع الحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; نسخ قواعد البيانات المتعارضة التي قد تمنع عملية المزامنة الخاصة بك؟</numerusform>
-        <numerusform>تابع الحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; نسخ قواعد البيانات المتعارضة التي قد تمنع عملية المزامنة الخاصة بك؟</numerusform>
+        <numerusform>الاستمرار بالحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; من نُسَخ قواعد البيانات المتعارضة التي قد تمنع عملية مزامنة ownCloud؟</numerusform>
+        <numerusform>الاستمرار بالحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; من نُسَخ قواعد البيانات المتعارضة التي قد تمنع عملية مزامنة ownCloud؟</numerusform>
+        <numerusform>الاستمرار بالحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; من نُسَخ قواعد البيانات المتعارضة التي قد تمنع عملية مزامنة ownCloud؟</numerusform>
+        <numerusform>الاستمرار بالحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; من نُسَخ قواعد البيانات المتعارضة التي قد تمنع عملية مزامنة ownCloud؟</numerusform>
+        <numerusform>الاستمرار بالحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; من نُسَخ قواعد البيانات المتعارضة التي قد تمنع عملية مزامنة ownCloud؟</numerusform>
+        <numerusform>الاستمرار بالحذف التلقائي لـ &lt;strong&gt;%n&lt;/strong&gt; من نُسَخ قواعد البيانات المتعارضة التي قد تمنع عملية مزامنة ownCloud؟</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -4043,12 +4042,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5677"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
-        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; تكرار(ات) لـ &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>تم العثور على &lt;strong&gt;%n &lt;/strong&gt; حدوث &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>عثر على &lt;strong&gt;%n &lt;/strong&gt; تكرارات &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
-        <numerusform>عثر على &lt;strong&gt;%n &lt;/strong&gt; تكرارات &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
-        <numerusform>عثر على &lt;strong&gt;%n &lt;/strong&gt; تكرارات &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
-        <numerusform>عثر على &lt;strong&gt;%n &lt;/strong&gt; تكرارات &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارات لـ &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارات لـ &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارات لـ &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارات لـ &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارات لـ &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>تم العثور على &lt;strong&gt;%n&lt;/strong&gt; من التكرارات لـ &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -4290,12 +4289,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="143"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
-        <numerusform>هل تريد حذف الملف &lt;strong&gt;%n&lt;/strong&gt; المحدد؟</numerusform>
-        <numerusform>هل تريد حذف الملف &lt;strong&gt;%n&lt;/strong&gt; المحدد؟</numerusform>
-        <numerusform>هل تريد حذف &lt;strong&gt;%n &lt;/strong&gt; الملف(ات) المحددة؟</numerusform>
-        <numerusform>هل تريد حذف &lt;strong&gt;%n &lt;/strong&gt; الملفات المحددة؟</numerusform>
-        <numerusform>هل تريد حذف &lt;strong&gt;%n &lt;/strong&gt; الملفات المحددة؟</numerusform>
-        <numerusform>هل تريد حذف &lt;strong&gt;%n &lt;/strong&gt; الملفات المحددة؟</numerusform>
+        <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; من الملفات المحددة؟</numerusform>
+        <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; من الملفات المحددة؟</numerusform>
+        <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; من الملفات المحددة؟</numerusform>
+        <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; من الملفات المحددة؟</numerusform>
+        <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; من الملفات المحددة؟</numerusform>
+        <numerusform>هل تريد حذف &lt;strong&gt;%n&lt;/strong&gt; من الملفات المحددة؟</numerusform>
       </translation>
     </message>
   </context>
@@ -7709,13 +7708,13 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="229"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>لواحق ize- ومع لهجات</translation>
+      <translation>لواحق ize- ومع تشكيل</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="231"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>لواحق ize- وبدون لهجات</translation>
+      <translation>لواحق ize- وبدون تشكيل</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
@@ -7757,13 +7756,13 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation>بدون لهجات</translation>
+      <translation>بدون تشكيل</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="242"/>
       <source>with accents</source>
       <comment>dictionary variant</comment>
-      <translation>مع لهجات</translation>
+      <translation>مع تشكيل</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="244"/>
@@ -7848,7 +7847,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation>حدد تخطيط الجدول أو أدخل النص:</translation>
+      <translation>حدد نسق الجدول أو أدخل النص:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -7873,7 +7872,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file / clipboard</source>
-      <translation>استورد ملف CSV / حافظة</translation>
+      <translation>استورد ملف CSV أو من الحافظة</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
@@ -7883,7 +7882,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="197"/>
       <source>Import clipboard</source>
-      <translation>استورد الحافظة</translation>
+      <translation>استورد من الحافظة</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="190"/>
@@ -8094,7 +8093,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation>يسرد القوائم المتاحة للحصول على الإجراءات المقابلة</translation>
+      <translation>سرد القوائم المتاحة للحصول على الإجراءات المقابلة</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
@@ -8276,7 +8275,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
       <source>Delete selected trashed note on server?</source>
-      <translation>حذف الملاحظة المحذوفة المحددة على الخادم؟
+      <translation>حذف الملاحظة المحددة من المهملات على الخادم؟
 </translation>
     </message>
     <message>
@@ -8288,7 +8287,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation>فشل حذف الملاحظة المحذوفة برمز الحالة: %1</translation>
+      <translation>فشل حذف الملاحظة من المهملات وكان رمز الحالة: %1</translation>
     </message>
   </context>
   <context>
@@ -8316,7 +8315,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation>ضع في اعتبارك أن QOwnNotes تحتاج إلى التشغيل من موقع يمكنك من خلاله الوصول إلى الكتابة لكي يعمل التحديث التلقائي!</translation>
+      <translation>يرجى مراعاة أن برنامج QOwnNotes يحتاج إلى أن يعمل في مكان لديك حقوق الكتابة فيه كي تعمل ميزة التحديث التلقائي!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
@@ -8467,22 +8466,22 @@ This cannot be undone!</source>
       <location filename="../services/updateservice.cpp" line="133"/>
       <location filename="../services/updateservice.cpp" line="154"/>
       <source>Update-checker error</source>
-      <translation>خطأ في تحديث المدقق</translation>
+      <translation>خطأ في اداة التحقق من التحديث</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="119"/>
       <source>Network reply error: %1</source>
-      <translation>خطأ في الرد على الشبكة: ٪1</translation>
+      <translation>خطأ في رد الشبكة: ٪1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="134"/>
       <source>No data was received by the network request!</source>
-      <translation>لم يتم تلقي أي بيانات بواسطة طلب الشبكة!</translation>
+      <translation>لم يتم تلقي أي بيانات من طلب الشبكة!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="155"/>
       <source>The data from the network request could not be interpreted!</source>
-      <translation>لا يمكن تفسير البيانات من طلب الشبكة!</translation>
+      <translation>لم يكن من الممكن تفسير البيانات الواردة من طلب الشبكة!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="268"/>
@@ -8528,12 +8527,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="67"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation>خادم QOwnNotes الاستماع على المنفذ ٪1</translation>
+      <translation>يستمع خادم QOwnNotes على المنفذ ٪1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="74"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation>لا يمكن بدء تشغيل خادم QOwnNotes على المنفذ ٪1!</translation>
+      <translation>لم يكن من الممكن بدء تشغيل خادم QOwnNotes على المنفذ ٪1!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="120"/>
@@ -8544,8 +8543,8 @@ This cannot be undone!</source>
       <location filename="../services/websocketserverservice.cpp" line="238"/>
       <source>%n bookmark(s) created</source>
       <translation>
-        <numerusform>تم إنشاء إشارة مرجعية %n</numerusform>
-        <numerusform>تم إنشاء إشارة مرجعية %n</numerusform>
+        <numerusform>تم إنشاء %n إشارة مرجعية </numerusform>
+        <numerusform>تم إنشاء %n إشارة مرجعية </numerusform>
         <numerusform>تم إنشاء %n من الإشارات المرجعية</numerusform>
         <numerusform>تم إنشاء %n من الإشارات المرجعية</numerusform>
         <numerusform>تم إنشاء %n من الإشارات المرجعية</numerusform>
@@ -8555,8 +8554,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="386"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation>%1
-تم قطع الاتصال من خادم QOwnNotes</translation>
+      <translation>انقطع اتصال %1 من خادم QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -8569,7 +8567,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation>للسماح لملحق متصفح QOwnNotes بالوصول إلى ملاحظاتك ، يرجى لصق رمز الأمان هذا في إعدادات امتداد المتصفح:</translation>
+      <translation>للسماح لإضافة متصفح QOwnNotes بالوصول إلى ملاحظاتك، يرجى لصق رمز الأمان هذا في إعدادات إضافة المتصفح:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
@@ -8579,7 +8577,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation>نسخة رمزية</translation>
+      <translation>نسخ الرمز</translation>
     </message>
   </context>
   <context>
@@ -8593,7 +8591,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation>نص عادي تدوين الملاحظات ملف تدوين مع التكامل ownCloud</translation>
+      <translation>تدوين ملاحظات نص عادي في ملف markdown مع تكامل ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
@@ -8639,7 +8637,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="285"/>
       <source>Panel layout</source>
-      <translation>تخطيط لوحة</translation>
+      <translation>نسق اللوحة</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
@@ -8664,12 +8662,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation>إذا كنت تريد أن تكون قادرًا على الوصول إلى إصدارات ملاحظاتك وملاحظاتك المحذوفة على خادمك الخاص ، يمكنك تكوين QOwnNotes لها الآن. يمكنك أيضا القيام بذلك في وقت لاحق.</translation>
+      <translation>إذا كنت تريد أن تكون قادرًا على الوصول إلى الإصدارات السابقة لملاحظاتك والملاحظاتك المهملة على خادمك ownCloud الخاص بك، يمكنك ضبط QOwnNotes للقيام بذلك الآن أو يمكنك القيام بذلك لاحقًا.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation>في أي حال ، تحتاج إلى عميل مزامنة ownCloud (أو أي عميل مزامنة آخر) لمزامنة ملاحظاتك مع خادم ownCloud الخاص بك.</translation>
+      <translation>في أي حال، ستحتاج إلى عميل مزامنة ownCloud (أو أي عميل مزامنة آخر) لمزامنة ملاحظاتك مع خادم ownCloud الخاص بك.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="391"/>
@@ -8699,7 +8697,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="220"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation>ضع في اعتبارك أنه سيتم تخزين مجلد الملاحظات بالنسبة إلى الدليل حيث يوجد QOwnNotes في الوضع المحمول! لذلك تحتاج إلى البقاء على نفس محرك الأقراص.</translation>
+      <translation>يرجى مراعاة أنه سيتم تخزين مجلد الملاحظات حسب المسار الذي يقع فيه تطبيق QOwnNotes في الوضعية المحمولة! لذا يجب أن تبقى على نفس محرك الأقراص.</translation>
     </message>
   </context>
   <context>
@@ -8707,37 +8705,37 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="96"/>
       <source>Runs the application in portable mode.</source>
-      <translation>يقوم بتشغيل التطبيق في الوضع المحمول.</translation>
+      <translation>يُشغل التطبيق في الوضعية المحمولة.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="102"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation>يطبع تفريغ الإعدادات وغيرها من المعلومات حول التطبيق والبيئة في GitHub Markdown ويخرج من التطبيق.</translation>
+      <translation>يطبع بيانات تفريغ الإعدادات وغيرها من المعلومات حول التطبيق والبيئة في GitHub Markdown ويخرج من التطبيق.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="111"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation>للسماح بتشغيل مثيلات QOwnNotes المتعددة حتى في حالة عدم السماح بها في الإعدادات.</translation>
+      <translation>يسمح بتشغيل عدة مثيلات من برنامج QOwnNotes حتى في حالة عدم السماح بذلك في الإعدادات.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="118"/>
       <source>Clears the settings and runs the application.</source>
-      <translation>مسح الإعدادات وتشغيل التطبيق.</translation>
+      <translation>يمسح الإعدادات وتشغيل التطبيق.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="124"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation>يقوم بتشغيل التطبيق في سياق مختلف للإعدادات والملفات الداخلية.</translation>
+      <translation>يُشغل التطبيق في سياق مختلف للإعدادات والملفات الداخلية.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="539"/>
       <source>Single application mode is not supported on your system!</source>
-      <translation>وضع التطبيق الفردي غير مدعوم على نظامك!</translation>
+      <translation>ليست وضعية التطبيق الفردي مدعومة على نظامك!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="549"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation>تم بدء مثيل آخر من QOwnNotes بالفعل! يمكنك إيقاف تشغيل وضع المثيل المفرد في الإعدادات أو استخدام المعلمة - السماح بمثيلات متعددة.</translation>
+      <translation>تم بدء مثيل آخر من QOwnNotes بالفعل! يمكنك إيقاف تشغيل وضع المثيل الفردي في الإعدادات أو استخدام معلمة -allow-multiple-instances.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="577"/>

@@ -2433,7 +2433,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2388"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Subfolders nîşan bikin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2396"/>
@@ -2646,12 +2646,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>Di navnîşa nîşeyê de dakêşin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>Di navnîşa nîşeyê de hilkişin jor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -2676,7 +2676,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2069"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>Çapa Markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2078"/>
@@ -3324,9 +3324,9 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
       <location filename="../mainwindow.cpp" line="11694"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>%n karakter</numerusform>
+        <numerusform>%n karakter</numerusform>
       </translation>
     </message>
     <message>
@@ -3381,7 +3381,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
     <message>
       <location filename="../mainwindow.ui" line="1228"/>
       <source>&amp;Tag</source>
-      <translation type="unfinished">&amp;Tag</translation>
+      <translation>&amp;Tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4910"/>
@@ -3746,7 +3746,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
     <message>
       <location filename="../mainwindow.cpp" line="745"/>
       <source>Subfolders</source>
-      <translation type="unfinished">Subfolders</translation>
+      <translation>Binepeldank</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="757"/>
@@ -4371,7 +4371,7 @@ Heke trash li ser servera 'xweCloud' ya we were veqetandin divê hûn karibin wa
     <message>
       <location filename="../entities/note.cpp" line="1498"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Not</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2546"/>
@@ -7697,7 +7697,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="197"/>
       <source>Import clipboard</source>
-      <translation type="unfinished">Import clipboard</translation>
+      <translation>Clipboard-ê têxin</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="190"/>
@@ -8476,7 +8476,7 @@ Hûn her dem dikarin paş nîşan û guhertoyên wê paşde bikin. &lt;/p&gt;</t
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show subfolders</source>
-      <translation type="unfinished">Show subfolders</translation>
+      <translation>Binepeldankan nîşan bide</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>

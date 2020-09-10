@@ -6,7 +6,7 @@
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>O podjetju QOwnNotes</translation>
+      <translation>O QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -23,7 +23,7 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="14"/>
       <source>Insert attachment</source>
-      <translation>Vstavite pritrditev</translation>
+      <translation>Vstavite datoteko</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="20"/>
@@ -59,7 +59,7 @@
       <location filename="../dialogs/attachmentdialog.ui" line="117"/>
       <source>Download URL</source>
       <comment>The URL will be downloaded</comment>
-      <translation>Prenos URL</translation>
+      <translation>Prenesi URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="42"/>
@@ -82,7 +82,7 @@
       <location filename="../dialogs/attachmentdialog.cpp" line="169"/>
       <location filename="../dialogs/attachmentdialog.cpp" line="193"/>
       <source>File error</source>
-      <translation>Datoteka zmota</translation>
+      <translation>Napaka datoteke</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="170"/>
@@ -95,7 +95,7 @@
       <location filename="../dialogs/attachmentdialog.cpp" line="194"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Lahko shranjujejo datoteke:
+      <translation>Ni možno shraniti datoteke:
 %1</translation>
     </message>
   </context>
@@ -104,7 +104,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="14"/>
       <source>Dictionary manager</source>
-      <translation>Vodja slovarjev</translation>
+      <translation>Upravitelj slovarja</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="61"/>
@@ -114,13 +114,13 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="89"/>
       <source>Download dictionary</source>
-      <translation>Prenos slovarja</translation>
+      <translation>Prenesi slovar</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="107"/>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="165"/>
       <source>Name</source>
-      <translation>Ime</translation>
+      <translation>Naziv</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="115"/>
@@ -155,42 +155,42 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
       <source>English (British)</source>
-      <translation>Angleščina (britanščina)</translation>
+      <translation>Angleščina (UK)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
       <source>English (American)</source>
-      <translation>Angleščina (ameriška)</translation>
+      <translation>Angleščina (US)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
       <source>German (Austrian)</source>
-      <translation>Nemško (avstrijsko)</translation>
+      <translation>Nemško (AT)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
       <source>German (German)</source>
-      <translation>Nemščina (nemščina)</translation>
+      <translation>Nemščina (DE)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>German (Swiss)</source>
-      <translation>Nemščina (švica)</translation>
+      <translation>Nemščina (SU)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
       <source>French</source>
-      <translation>Francosko</translation>
+      <translation>Francoščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="139"/>
       <source>Spanish</source>
-      <translation>Španski</translation>
+      <translation>Španščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="126"/>
       <source>Russian</source>
-      <translation>Ruski</translation>
+      <translation>Ruščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
@@ -205,22 +205,22 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Aragonese</source>
-      <translation>Aragonski</translation>
+      <translation>Aragonščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Gujarati</source>
-      <translation>Gudžarati</translation>
+      <translation>Gudžaratščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
       <source>Portugese (Brazilian)</source>
-      <translation>Portugalščina (brazilska)</translation>
+      <translation>Portugalščina (BR)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
       <source>Portugese</source>
-      <translation>Portugalščina</translation>
+      <translation>Portugalščina (PT)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
@@ -240,7 +240,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
       <source>Afrikaans</source>
-      <translation>Afričani</translation>
+      <translation>Afrikanščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
@@ -250,7 +250,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Ancient Greek</source>
-      <translation>Starogrški</translation>
+      <translation>Stara Grščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
@@ -265,17 +265,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
       <source>Albanian</source>
-      <translation>Albanski</translation>
+      <translation>Albanščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
       <source>Basque</source>
-      <translation>Baskščina</translation>
+      <translation>Baskovščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
       <source>Belarusian</source>
-      <translation>Beloruski</translation>
+      <translation>Beloruščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
@@ -290,7 +290,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>Breton</source>
-      <translation>Bretonski</translation>
+      <translation>Bretonščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
@@ -300,12 +300,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
       <source>Catalan (Valencian)</source>
-      <translation>Katalonski (Valencian)</translation>
+      <translation>Katalonščina (Valencijanščina)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
       <source>Chuvash (Russia)</source>
-      <translation>Chuvash (Rusija)</translation>
+      <translation>Čuvaščina (Rusija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
@@ -320,12 +320,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
       <source>English (Australian)</source>
-      <translation>Angleščina (avstralščina)</translation>
+      <translation>Angleščina (AU)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
       <source>English (Canadian)</source>
-      <translation>Angleščina (kanadščina)</translation>
+      <translation>Angleščina (CA)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
@@ -335,7 +335,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>English (South African)</source>
-      <translation>Angleščina (južnoafriška)</translation>
+      <translation>Angleščina (ZA)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
@@ -345,22 +345,22 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
       <source>Estonian</source>
-      <translation>Estonski</translation>
+      <translation>Estonščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
       <source>Faroese</source>
-      <translation>Ferski</translation>
+      <translation>Ferščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
       <source>Friulian</source>
-      <translation>Furlansko</translation>
+      <translation>Furlanščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
       <source>Gaelic</source>
-      <translation>Galski</translation>
+      <translation>Gelščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
@@ -370,7 +370,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
       <source>Georgian</source>
-      <translation>Gruzijski</translation>
+      <translation>Gruzinščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
@@ -390,7 +390,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation>Moderna grščina (politonska grščina)</translation>
+      <translation>Moderna Grščina (Politonska Grščina)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
@@ -405,7 +405,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Hindi</source>
-      <translation>Hindi</translation>
+      <translation>Hindijščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
@@ -415,7 +415,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
       <source>Icelandic</source>
-      <translation>Islandski</translation>
+      <translation>Islandščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
@@ -425,27 +425,27 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Kaszebsczi</source>
-      <translation>Kaszebsczi</translation>
+      <translation>Kašubščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
       <source>Kazakh</source>
-      <translation>Kazahstanka</translation>
+      <translation>Kazaščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
       <source>Khmer</source>
-      <translation>Kmer</translation>
+      <translation>Khmerščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
       <source>Komi (Russia)</source>
-      <translation>Komi (Rusija)</translation>
+      <translation>Komijščina (Rusija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
       <source>Korean</source>
-      <translation>Korejski</translation>
+      <translation>Korejščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
@@ -455,7 +455,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
       <source>Lao</source>
-      <translation>Laoški</translation>
+      <translation>Laoščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
@@ -465,7 +465,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Latin</source>
-      <translation>Latinsko</translation>
+      <translation>Latinščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
@@ -475,17 +475,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
       <source>Latvian</source>
-      <translation>Latvijski</translation>
+      <translation>Latvijščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Low German / Low Saxon</source>
-      <translation>Nizko nemško / nizko saško</translation>
+      <translation>Nizka nemščina / Nizkosaško</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation>Luksemburški (Letzeburgesch)</translation>
+      <translation>Luksemburščina (Letzeburgesch)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
@@ -495,7 +495,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="110"/>
       <source>Malayalam</source>
-      <translation>Malayalam</translation>
+      <translation>Malajalščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="111"/>
@@ -505,7 +505,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
       <source>Nepali</source>
-      <translation>Nepalski</translation>
+      <translation>Nepalščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
@@ -515,12 +515,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation>Norveški (nynorsk)</translation>
+      <translation>Norveščina (Nynorsk)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
       <source>Occitan</source>
-      <translation>Okcitanska</translation>
+      <translation>Okcitanščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
@@ -530,7 +530,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
       <source>Persian</source>
-      <translation>Perzijski</translation>
+      <translation>Perzijščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="123"/>
@@ -540,7 +540,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Romansh</source>
-      <translation>Romanščina</translation>
+      <translation>Retoromanščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
@@ -550,17 +550,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation>Rusyn / Ruthene (Slovaška)</translation>
+      <translation>Rusinščina / Ruthene (Slovaška)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="131"/>
       <source>Serbian (Cyrillic)</source>
-      <translation>Srbščina (cirilica)</translation>
+      <translation>Srbščina (Cirilica)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="132"/>
       <source>Serbian (Latin)</source>
-      <translation>Srbščina (latinsko)</translation>
+      <translation>Srbščina (Latinica)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="134"/>
@@ -570,12 +570,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="135"/>
       <source>Sindhi</source>
-      <translation>Sindhi</translation>
+      <translation>Sindščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="136"/>
       <source>Sinhala</source>
-      <translation>Sinhala</translation>
+      <translation>Singalščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="137"/>
@@ -595,27 +595,27 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="143"/>
       <source>Tagalog</source>
-      <translation>Tagalog</translation>
+      <translation>Tagaloščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="144"/>
       <source>Tajik</source>
-      <translation>Tadžik</translation>
+      <translation>Tadžiščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="145"/>
       <source>Tatar (Russia)</source>
-      <translation>Tatar (Rusija)</translation>
+      <translation>Tatarščina (Rusija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="146"/>
       <source>Telugu</source>
-      <translation>Telugu</translation>
+      <translation>Teluščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="147"/>
       <source>Thai</source>
-      <translation>Tajska</translation>
+      <translation>Tajščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="148"/>
@@ -630,17 +630,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="150"/>
       <source>Udmurt (Russia)</source>
-      <translation>Udmurt (Rusija)</translation>
+      <translation>Udmurtščina (Rusija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="151"/>
       <source>Ukrainian</source>
-      <translation>Ukrajinski</translation>
+      <translation>Ukrajinščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="152"/>
       <source>Urdu</source>
-      <translation>Urdu</translation>
+      <translation>Urdujščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="153"/>
@@ -655,7 +655,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="155"/>
       <source>Venetian</source>
-      <translation>Beneški</translation>
+      <translation>Beneščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="156"/>
@@ -670,12 +670,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="159"/>
       <source>Xhosa</source>
-      <translation>Xhosa</translation>
+      <translation>Koščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="160"/>
       <source>Zulu</source>
-      <translation>Zulu</translation>
+      <translation>Zulujščina</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="292"/>
@@ -686,20 +686,20 @@
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="293"/>
       <source>Error while downloading:
 %1</source>
-      <translation>Napaka med nalaganjem:
+      <translation>Napaka med prenašanjem:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="309"/>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="421"/>
       <source>File error</source>
-      <translation>Datoteka zmota</translation>
+      <translation>Napaka datoteke</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="310"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Lahko shranjujejo datoteke:
+      <translation>Ni možno shraniti datoteke:
 %1</translation>
     </message>
     <message>
@@ -715,7 +715,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation>Uvoz Evernote</translation>
+      <translation>Uvoz Evernota</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
