@@ -5,6 +5,7 @@
   two desktop files being deployed with the snap (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
 - a great amount of translations into Chinese Simplified were fixed so the menu items are
   correctly shown again (for [#1866](https://github.com/pbek/QOwnNotes/issues/1866), thank you @iclementine)
+- added more translation (thank you pehtranslator, VasilikiBotsou, rawfreeamy)
 
 ## 20.9.4
 - the original desktop file is now removed while building a snap with snapcraft to prevent

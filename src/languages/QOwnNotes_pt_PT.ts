@@ -2630,7 +2630,7 @@
       <location filename="../mainwindow.ui" line="2220"/>
       <location filename="../mainwindow.ui" line="2223"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>Abra a sala Gown, qownnotes, você precisa de uma conta GitHub ou Twitter para fazer login, mas pode receber mensagens offline</translation>
+      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="992"/>
