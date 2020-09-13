@@ -61,9 +61,13 @@ parts:
     options:
       - CONFIG+=release
       - CONFIG+=snapcraft
-#    override-build: |
-#      echo Remove PBE.QOwnNotes.desktop
-#      rm PBE.QOwnNotes.desktop
+    override-build: |
+      export QT_SELECT=qt5
+      rm PBE.QOwnNotes.desktop
+      echo "#define RELEASE \"Launchpad Snap\"" > release.h
+      lrelease QOwnNotes.pro
+      cd ..
+      snapcraftctl build
     build-packages:
       - qttools5-dev
       - build-essential
