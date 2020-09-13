@@ -61,9 +61,9 @@ parts:
     options:
       - CONFIG+=release
       - CONFIG+=snapcraft
-    override-build: |
-      echo Remove PBE.QOwnNotes.desktop
-      rm PBE.QOwnNotes.desktop
+#    override-build: |
+#      echo Remove PBE.QOwnNotes.desktop
+#      rm PBE.QOwnNotes.desktop
     build-packages:
       - qttools5-dev
       - build-essential
