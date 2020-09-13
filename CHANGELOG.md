@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.9.5
+- fixed removal of the original desktop file while building a snap with snapcraft to prevent
+  two desktop files being deployed with the snap (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
+
 ## 20.9.4
 - the original desktop file is now removed while building a snap with snapcraft to prevent
   two desktop files being deployed with the snap (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
