@@ -287,7 +287,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>Breton</source>
-      <translation>布列塔尼</translation>
+      <translation>布列塔尼语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
@@ -297,12 +297,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
       <source>Catalan (Valencian)</source>
-      <translation>加泰罗尼亚语（巴伦西亚语）</translation>
+      <translation>加泰罗尼亚语（瓦伦西亚）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
       <source>Chuvash (Russia)</source>
-      <translation>您听到了（俄罗斯）</translation>
+      <translation>楚瓦什语（俄罗斯）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
@@ -347,12 +347,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
       <source>Faroese</source>
-      <translation>法罗群岛</translation>
+      <translation>法罗语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
       <source>Friulian</source>
-      <translation>弗留利</translation>
+      <translation>弗留利语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
@@ -362,12 +362,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Galician</source>
-      <translation>加利西亚人</translation>
+      <translation>加利西亚语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
       <source>Georgian</source>
-      <translation>格鲁吉亚人</translation>
+      <translation>格鲁吉亚语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
@@ -387,12 +387,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation>现代希腊语（希腊语）</translation>
+      <translation>现代希腊语（多声调希腊语）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Gurani</source>
-      <translation>为了格拉</translation>
+      <translation>瓜拉尼语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
@@ -402,7 +402,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Hindi</source>
-      <translation>不行</translation>
+      <translation>印地语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
@@ -412,7 +412,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
       <source>Icelandic</source>
-      <translation>冰岛的</translation>
+      <translation>冰岛语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="91"/>
@@ -422,7 +422,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Kaszebsczi</source>
-      <translation>卡塞布齐</translation>
+      <translation>卡舒比语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="96"/>
@@ -432,17 +432,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
       <source>Khmer</source>
-      <translation>高棉</translation>
+      <translation>高棉语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
       <source>Komi (Russia)</source>
-      <translation>科米（俄罗斯）</translation>
+      <translation>科米语（俄罗斯）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
       <source>Korean</source>
-      <translation>韩语</translation>
+      <translation>朝鲜语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
@@ -452,17 +452,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="101"/>
       <source>Lao</source>
-      <translation>老挝</translation>
+      <translation>老挝语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Latgalian</source>
-      <translation>拉脱加利安</translation>
+      <translation>拉特加莱语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Latin</source>
-      <translation>拉丁</translation>
+      <translation>拉丁语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="105"/>
@@ -477,12 +477,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Low German / Low Saxon</source>
-      <translation>低德语/低撒克逊人</translation>
+      <translation>低地德语/低地萨克森语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation>卢森堡语（Letzeburgesch）</translation>
+      <translation>卢森堡语（卢森堡）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="109"/>
@@ -502,17 +502,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="112"/>
       <source>Nepali</source>
-      <translation>尼泊尔文</translation>
+      <translation>尼泊尔语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Norwegian (Bokmål)</source>
-      <translation>挪威文（Bokmål）</translation>
+      <translation>书面挪威语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation>挪威文（尼诺斯克）</translation>
+      <translation>新挪威语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
@@ -562,12 +562,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="134"/>
       <source>Shona</source>
-      <translation>庄名</translation>
+      <translation>绍纳语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="135"/>
       <source>Sindhi</source>
-      <translation>信地</translation>
+      <translation>信德语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="136"/>
@@ -577,17 +577,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="137"/>
       <source>Slovak</source>
-      <translation>斯洛伐克文</translation>
+      <translation>斯洛伐克语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="138"/>
       <source>Slovenian</source>
-      <translation>斯洛文尼亚文</translation>
+      <translation>斯洛文尼亚语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="141"/>
       <source>Swahili</source>
-      <translation>英文</translation>
+      <translation>斯瓦希里语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="143"/>
@@ -597,12 +597,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="144"/>
       <source>Tajik</source>
-      <translation>塔吉克</translation>
+      <translation>塔吉克语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="145"/>
       <source>Tatar (Russia)</source>
-      <translation>塔塔尔（俄罗斯）</translation>
+      <translation>鞑靼语（俄罗斯）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="146"/>
@@ -612,7 +612,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="147"/>
       <source>Thai</source>
-      <translation>泰国</translation>
+      <translation>泰语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="148"/>
@@ -622,7 +622,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="149"/>
       <source>Turkmen</source>
-      <translation>土库曼人</translation>
+      <translation>土库曼语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="150"/>
@@ -647,17 +647,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="154"/>
       <source>Venda</source>
-      <translation>待售</translation>
+      <translation>文达语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="155"/>
       <source>Venetian</source>
-      <translation>威尼斯人</translation>
+      <translation>威尼斯语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="156"/>
       <source>Vietnamese</source>
-      <translation>越南文</translation>
+      <translation>越南语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="158"/>
@@ -667,7 +667,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="159"/>
       <source>Xhosa</source>
-      <translation>科萨</translation>
+      <translation>科萨语</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="160"/>
@@ -683,7 +683,8 @@
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="293"/>
       <source>Error while downloading:
 %1</source>
-      <translation>下载时出错: %1</translation>
+      <translation>下载时出错: 
+%1</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="309"/>
@@ -695,13 +696,15 @@
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="310"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>无法存储下载的文件: %1</translation>
+      <translation>无法存储下载的文件: 
+%1</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="422"/>
       <source>Could not remove dictionary file:
 %1</source>
-      <translation>无法移除字典文件：%1</translation>
+      <translation>无法移除字典文件：
+%1</translation>
     </message>
   </context>
   <context>
@@ -714,7 +717,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation>要获得enex文件，您需要在Evernotes桌面客户端中选择一个或多个笔记，然后在 “文件”菜单中单击“导出备注...”。</translation>
+      <translation>要获得 enex 文件，您需要在 Evernotes 桌面客户端中选择一个或多个笔记，然后在 “文件”菜单中单击“导出笔记...”。</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -888,7 +891,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2848"/>
       <source>Recursive mapping</source>
-      <translation>递归对照</translation>
+      <translation>递归映射</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3717"/>
@@ -908,7 +911,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4313"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation>按Alt-V, Alt-V键退出FakeVim模式</translation>
+      <translation>按 Alt-V, Alt-V 键退出 FakeVim 模式</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
@@ -928,13 +931,13 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
       <source>Move lines into themselves.</source>
-      <translation>将线移动到自己。</translation>
+      <translation>将行移动到自身。</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
       <translation>
-        <numerusform>已移动%n行。</numerusform>
+        <numerusform>已移动 %n 行。</numerusform>
       </translation>
     </message>
     <message>
@@ -945,7 +948,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5972"/>
       <source>Cannot open file "%1" for writing</source>
-      <translation>无法打开写入文件"%1"</translation>
+      <translation>无法打开文件"%1"以写入</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5978"/>
@@ -960,7 +963,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5987"/>
       <source>Cannot open file "%1" for reading</source>
-      <translation>无法打开读取文件"%1"</translation>
+      <translation>无法打开文件"%1"以读取</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6015"/>
@@ -997,22 +1000,22 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6337"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
-      <translation>搜索触底，继续在顶部。</translation>
+      <translation>搜索到达底部，继续在顶部搜索。</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6338"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
-      <translation>搜索排在顶部，继续在底部。</translation>
+      <translation>搜索到达顶部，继续在底部搜索。</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6343"/>
       <source>Search hit BOTTOM without match for: %1</source>
-      <translation>搜索结果底部无匹配项: %1</translation>
+      <translation>搜索到达底部，无匹配项: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation>搜索结果顶部无匹配项：%1</translation>
+      <translation>搜索到达顶部，无匹配项：%1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
@@ -1026,14 +1029,14 @@
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
       <translation>
-        <numerusform>％n行％1ed％2次。</numerusform>
+        <numerusform>％n 行 ％1 了 ％2 次。</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
       <translation>
-        <numerusform>已复制%n行。</numerusform>
+        <numerusform>已复制 %n 行。</numerusform>
       </translation>
     </message>
     <message>
@@ -1217,7 +1220,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="211"/>
       <source>Code (comment)</source>
-      <translation>代码（方法）</translation>
+      <translation>代码（注释）</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
@@ -1232,7 +1235,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="216"/>
       <source>Code (num literal)</source>
-      <translation>代码（数字文字）</translation>
+      <translation>代码（数字字面值）</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
@@ -1298,7 +1301,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="242"/>
       <source>Broken link</source>
-      <translation>损坏的连接</translation>
+      <translation>损坏的链接</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="231"/>
@@ -1313,7 +1316,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="243"/>
       <source>Trailing space</source>
-      <translation>复选框已选中</translation>
+      <translation>末尾空格</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="255"/>
@@ -1363,12 +1366,12 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="40"/>
       <source>Image filename or URL</source>
-      <translation>图片文件名或URL</translation>
+      <translation>图片文件名或 URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="46"/>
       <source>Path to file or URL</source>
-      <translation>文件或URL路径</translation>
+      <translation>文件路径或 URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="121"/>
@@ -1383,12 +1386,12 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
       <source>&amp;Crop</source>
-      <translation>&amp;作物</translation>
+      <translation>裁剪(&amp;C)</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation>路径或网址将直接插入，文件的路径将相对于当前注释创建</translation>
+      <translation>路径或网址将直接插入，文件的路径为相对于当前笔记的相对路径</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
@@ -1436,7 +1439,7 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="57"/>
       <source>Keep in mind that workspaces that demand that there is no central widget will not work properly if the central widget is enabled.</source>
-      <translation>请记住，如果启用了中央窗口小部件，则要求没有中央窗口小部件的工作区将无法正常工作。</translation>
+      <translation>请记住，如果启用了中央窗口小部件，则要求没有中央窗口部件的工作区将无法正常工作。</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="86"/>
@@ -1451,12 +1454,12 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="90"/>
       <source>The application will be quit afterwards.</source>
-      <translation>应用将随后关闭，以启用新的页面布局。</translation>
+      <translation>应用随后将关闭。</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="91"/>
       <source>The application will be restarted afterwards.</source>
-      <translation>应用将随后重新启动。</translation>
+      <translation>应用随后将重新启动。</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
@@ -1504,31 +1507,31 @@
       <location filename="../widgets/layoutwidget.cpp" line="184"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>默认情况下，仅启用左侧的注释列表和右侧的注释编辑面板。</translation>
+      <translation>默认情况下，仅启用左侧的笔记列表和右侧的笔记编辑面板。</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="189"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>默认情况下，大多数面板（例如左侧的注释列表，标签面板，中间的注释编辑面板和右侧的预览面板）处于启用状态。</translation>
+      <translation>默认情况下，大多数面板（例如左侧的笔记列表，标签面板，中间的笔记编辑面板和右侧的预览面板）处于启用状态。</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="195"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
       <comment>Layout description</comment>
-      <translation>默认情况下，大多数面板（如左侧的注释列表，标签面板和右侧的预览面板）均处于启用状态。 您将需要另一个工作区来实际编辑笔记！</translation>
+      <translation>默认情况下，大多数面板（如左侧的笔记列表，标签面板和右侧的预览面板）均处于启用状态。 您将需要另一个工作区来实际编辑笔记！</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="201"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>默认情况下，大多数面板都是启用的，例如左侧的注释列表，标签面板，右侧的注释编辑面板以及注释编辑面板顶部的预览面板。</translation>
+      <translation>默认情况下，大多数面板都是启用的，例如左侧的笔记列表，标签面板，右侧的笔记编辑面板以及笔记编辑面板顶部的预览面板。</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="208"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation>注释搜索，注释列表和注释编辑彼此重叠的微小一栏布局。</translation>
+      <translation>笔记搜索，笔记列表和笔记编辑彼此重叠的小型单列布局。</translation>
     </message>
   </context>
   <context>
@@ -1566,7 +1569,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
-      <translation>连接名称（可选项）</translation>
+      <translation>链接名称（可选）</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="154"/>
@@ -1606,7 +1609,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation>本地已删除笔记</translation>
+      <translation>本地已回收笔记</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
@@ -1621,7 +1624,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="86"/>
       <source>Trashed</source>
-      <translation>已删除</translation>
+      <translation>已回收</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="45"/>
@@ -1637,13 +1640,13 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="54"/>
       <source>Remove</source>
-      <translation>移除</translation>
+      <translation>删除</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="55"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation>移除选中的笔记</translation>
+      <translation>删除选定的笔记</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="99"/>
@@ -1665,7 +1668,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="220"/>
       <source>Notes restored</source>
-      <translation>笔记恢复</translation>
+      <translation>笔记已恢复</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="221"/>
@@ -1684,13 +1687,13 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>Notes removed</source>
-      <translation>注释已删除</translation>
+      <translation>笔记已删除</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="266"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation>
-        <numerusform>&lt;strong&gt;％n &lt;/strong&gt;笔记已删除</numerusform>
+        <numerusform>&lt;strong&gt;％n &lt;/strong&gt;个笔记已删除</numerusform>
       </translation>
     </message>
   </context>
@@ -1776,7 +1779,7 @@
       <location filename="../mainwindow.ui" line="696"/>
       <location filename="../mainwindow.cpp" line="8696"/>
       <source>Add a tag to the current note</source>
-      <translation>在当前笔记中添加标签</translation>
+      <translation>为当前笔记添加标签</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="867"/>
@@ -1852,7 +1855,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1376"/>
       <source>Post questions, feature requests or issues</source>
-      <translation>发表问题，功能要求或问题</translation>
+      <translation>发布疑问，功能要求或议题</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1387"/>
@@ -1954,7 +1957,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="8697"/>
       <source>Add a tag to the selected notes</source>
-      <translation>将标签添加到所选笔记</translation>
+      <translation>为选定的笔记添加标签</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="710"/>
@@ -1986,7 +1989,7 @@
     <message>
       <location filename="../mainwindow.ui" line="951"/>
       <source>Trash</source>
-      <translation>垃圾</translation>
+      <translation>回收站</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1019"/>
@@ -2026,7 +2029,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1106"/>
       <source>Languages</source>
-      <translation>语言能力</translation>
+      <translation>语言</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1111"/>
@@ -2083,23 +2086,23 @@
     <message>
       <location filename="../mainwindow.ui" line="1340"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation>关于&amp;QOwnNotes…</translation>
+      <translation>关于 &amp;QOwnNotes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1379"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation>在问题助手的帮助下发布问题，功能要求或问题</translation>
+      <translation>在议题助手的帮助下发布疑问，功能要求或问题</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1437"/>
       <source>Show remote trash</source>
-      <translation>显示远程垃圾</translation>
+      <translation>显示远程回收站</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1477"/>
       <location filename="../mainwindow.ui" line="1480"/>
       <source>Auto format table</source>
-      <translation>自动格式表</translation>
+      <translation>自动格式化表</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1509"/>
@@ -2129,7 +2132,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1563"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation>&amp;将笔记导出为PDF（预览）</translation>
+      <translation>将笔记导出为PDF（预览）（&amp;E）</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1566"/>
@@ -2328,7 +2331,7 @@
       <location filename="../mainwindow.ui" line="2208"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
-      <translation>打开防暴室</translation>
+      <translation>打开 Riot 聊天室</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2235"/>
@@ -2454,13 +2457,13 @@
     <message>
       <location filename="../mainwindow.ui" line="2471"/>
       <source>Show local trash</source>
-      <translation>显示本地垃圾</translation>
+      <translation>显示本地回收站</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2476"/>
       <location filename="../mainwindow.ui" line="2479"/>
       <source>Jump to note edit panel</source>
-      <translation>跳至记事编辑面板</translation>
+      <translation>跳至笔记编辑面板</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2491"/>
@@ -2470,7 +2473,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2496"/>
       <source>Jump to note subfolder panel</source>
-      <translation>跳至注释子文件夹面板</translation>
+      <translation>跳至笔记子文件夹面板</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2504"/>
@@ -2480,7 +2483,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2512"/>
       <source>Jump to note list panel</source>
-      <translation>跳转到注释列表面板</translation>
+      <translation>跳至笔记列表面板</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2520"/>
@@ -2522,7 +2525,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2580"/>
       <source>Custom</source>
-      <translation>自订</translation>
+      <translation>子定义</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2583"/>
@@ -2537,37 +2540,32 @@
     <message>
       <location filename="../mainwindow.ui" line="2597"/>
       <source>Previous note tab</source>
-      <translation>前一个笔记标签
-</translation>
+      <translation>上一个笔记标签页</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2609"/>
       <source>Next note tab</source>
-      <translation>下一个笔记标签
-</translation>
+      <translation>下一个笔记标签页</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2621"/>
       <source>Close current note tab</source>
-      <translation>关闭当前笔记标签
-</translation>
+      <translation>关闭当前笔记标签页</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2633"/>
       <source>New note in new tab</source>
-      <translation>新标签中的新注释
-</translation>
+      <translation>在新标签页中新建笔记</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2641"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation>切换当前标签的音符粘性
-</translation>
+      <translation>切换笔记在当前标签页中的附着性</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
       <source>Format text underline</source>
-      <translation>格式文字下划线</translation>
+      <translation>格式化文字下划线</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
@@ -2625,24 +2623,22 @@
     <message>
       <location filename="../mainwindow.ui" line="526"/>
       <source>Note operations…</source>
-      <translation>注意操作…</translation>
+      <translation>笔记操作…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1596"/>
       <source>&amp;Print note (preview)</source>
-      <translation>&amp;打印便笺（预览）</translation>
+      <translation>打印便笺（预览）(&amp;P)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation>在记事清单中下移
-</translation>
+      <translation>在笔记列表中下移</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation>在记事清单中上移
-</translation>
+      <translation>在笔记列表中上移</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -2743,12 +2739,12 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3199"/>
       <source>Loading notes…</source>
-      <translation>正在载入记事…</translation>
+      <translation>正在载入笔记…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3413"/>
       <source>Removed duplicate conflicted database: %1</source>
-      <translation>删除重复的冲突数据库：％1</translation>
+      <translation>已删除重复的冲突数据库：％1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3414"/>
@@ -2758,12 +2754,12 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3420"/>
       <source>Removed merged conflicted database: %1</source>
-      <translation>删除了合并的冲突数据库：％1</translation>
+      <translation>已删除已合并的冲突数据库：％1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3421"/>
       <source>Could not remove merged conflicted database: %1</source>
-      <translation>无法删除合并的冲突数据库：％1</translation>
+      <translation>无法删除已合并的冲突数据库：％1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3436"/>
@@ -2774,7 +2770,7 @@ Restore current note?</source>
       <location filename="../mainwindow.cpp" line="3459"/>
       <source>Removed %n conflicted database copies</source>
       <translation>
-        <numerusform>删除了%n 个冲突的数据库副本</numerusform>
+        <numerusform>删除了 %n 个冲突的数据库副本</numerusform>
       </translation>
     </message>
     <message>
@@ -2955,13 +2951,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5438"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation>您已禁用待办事项列表。&lt;br /&gt;请检查设置中的&lt;strong&gt;待办事项&lt;/ strong&gt;配置！</translation>
+      <translation>您已禁用待办事项列表。&lt;br /&gt;请检查设置中的&lt;strong&gt;待办事项&lt;/strong&gt;配置！</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5681"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
-        <numerusform>发现任何&lt;strong&gt;％1 &lt;/ strong&gt;项的&lt;strong&gt;％n &lt;/ strong&gt;次</numerusform>
+        <numerusform>发现任何 &lt;strong&gt;％1&lt;/strong&gt; 出现  &lt;strong&gt;％n&lt;/strong&gt; 次</numerusform>
       </translation>
     </message>
     <message>
@@ -2972,7 +2968,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6230"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>找不到笔记，是否要创建新笔记&lt;strong&gt;％1 &lt;/ strong&gt;？</translation>
+      <translation>找不到笔记，是否要创建新笔记 &lt;strong&gt;％1&lt;/strong&gt;？</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6393"/>
@@ -2997,7 +2993,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6620"/>
       <source>Print selected text</source>
-      <translation>打印所选文字</translation>
+      <translation>打印选定的文本</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6626"/>
@@ -3101,12 +3097,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8742"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation>从当前注释中删除标签 '％1'</translation>
+      <translation>从当前笔记中删除标签 '％1'</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8743"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation>从所选注释中删除标签 '％1'</translation>
+      <translation>从所选笔记中删除标签 '％1'</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8974"/>
@@ -3126,7 +3122,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8980"/>
       <source>&amp;Move tags to…</source>
-      <translation>&amp;将标签移到…</translation>
+      <translation>将标签移到…(&amp;M)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9191"/>
@@ -3162,14 +3158,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10304"/>
       <source>Jump to the note's subfolder</source>
-      <translation>跳到笔记的子文件夹
-</translation>
+      <translation>跳到笔记的子文件夹</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10361"/>
       <source>Open note in tab</source>
-      <translation>在标签中打开笔记
-</translation>
+      <translation>在标签页中打开笔记</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12024"/>
@@ -3194,12 +3188,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="12662"/>
       <source>Toggle note stickiness</source>
-      <translation>切换音符粘性</translation>
+      <translation>切换笔记附着性</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12668"/>
       <source>Close other note tabs</source>
-      <translation>关闭其他笔记标签</translation>
+      <translation>关闭其他笔记标签页</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10248"/>
@@ -3215,12 +3209,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10264"/>
       <source>&amp;Move notes to…</source>
-      <translation>&amp;将笔记移到…</translation>
+      <translation>将笔记移到…(&amp;M)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10265"/>
       <source>&amp;Copy notes to…</source>
-      <translation>&amp;将笔记复制到…</translation>
+      <translation>将笔记复制到…(&amp;M)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10308"/>
@@ -3235,17 +3229,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10320"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation>&amp;用... 标记所选笔记</translation>
+      <translation>用... 标记所选笔记（&amp;T）</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10344"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation>&amp;从所选笔记中删除标签…</translation>
+      <translation>从所选笔记中删除标签…(&amp;R)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10442"/>
       <source>Name:</source>
-      <translation>名称︰</translation>
+      <translation>名称：</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10454"/>
@@ -3316,7 +3310,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="12274"/>
       <source>Note headline '%1' was copied to the clipboard</source>
-      <translation>注释标题 '%1' 已复制到剪贴板</translation>
+      <translation>笔记标题 '%1' 已复制到剪贴板</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12368"/>
@@ -3796,8 +3790,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1856"/>
       <source>Switch to note folder</source>
-      <translation>切换到记事文件夹
-</translation>
+      <translation>切换到笔记文件夹</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2251"/>
@@ -3843,7 +3836,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3041"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation>注意编辑已禁用，单击以启用</translation>
+      <translation>笔记编辑已禁用，单击以启用</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3058"/>
@@ -3859,7 +3852,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3438"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation>
-        <numerusform>继续自动删除&lt;strong&gt;％n &lt;/ strong&gt;冲突的数据库副本，这可能会阻止您自己的Cloud同步过程？</numerusform>
+        <numerusform>继续自动删除 &lt;strong&gt;％n&lt;/ strong&gt; 个冲突的数据库副本？ 这可能会阻止您的 ownCloud同步过程。</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3873,7 +3866,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5677"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
-        <numerusform>找到&lt;strong&gt;％1 &lt;/ strong&gt;的&lt;strong&gt;％n &lt;/ strong&gt;个事件</numerusform>
+        <numerusform>找到 &lt;strong&gt;％n&lt;/ strong&gt; 个 &lt;strong&gt;％1&lt;/ strong&gt; </numerusform>
       </translation>
     </message>
     <message>
@@ -3885,7 +3878,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="6586"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation>&amp;阻止引用所选文本</translation>
+      <translation>块引用选定的文本</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7596"/>
@@ -3960,14 +3953,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="39"/>
       <source>Note text</source>
-      <translation>注释文字
-</translation>
+      <translation>笔记文本</translation>
     </message>
     <message>
       <location filename="../dialogs/notedialog.ui" line="71"/>
       <source>Preview</source>
-      <translation>预习
-</translation>
+      <translation>预览</translation>
     </message>
   </context>
   <context>
@@ -4033,7 +4024,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="263"/>
       <source>Export generated raw HTML</source>
-      <translation>导出生成的原始HTML</translation>
+      <translation>导出生成的原始 HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="296"/>
@@ -4043,7 +4034,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="297"/>
       <source>Export preview as raw HTML file</source>
-      <translation>将预览导出为原始HTML文件</translation>
+      <translation>将预览导出为原始 HTML 文件</translation>
     </message>
   </context>
   <context>
@@ -4066,7 +4057,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation>将选定的附件添加到注释</translation>
+      <translation>将选定的附件添加到笔记</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
@@ -4076,32 +4067,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation>&amp;打开附件</translation>
+      <translation>打开附件</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation>&amp;打开文件夹</translation>
+      <translation>打开文件夹</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
-      <translation>档案大小：</translation>
+      <translation>文件大小：</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
-      <translation>档案类型：</translation>
+      <translation>文件类型：</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
-      <translation>档案路径：</translation>
+      <translation>文件路径：</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
-      <translation>注释中未使用的附件：</translation>
+      <translation>笔记中未使用的附件：</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="66"/>
@@ -4141,7 +4132,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
       <source>Add selected images to note</source>
-      <translation>将所选图像添加到注释</translation>
+      <translation>将所选图像添加到笔记</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
@@ -4344,14 +4335,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../entities/note.cpp" line="3163"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation>
-        <numerusform>检测到音符路径已更改。 您是否要用&lt;strong&gt;％2 &lt;/ strong&gt;替换所有出现的&lt;strong&gt;％1 &lt;/ strong&gt;链接，并用&lt;strong&gt;％4 &lt;/ strong&gt;替换文件名&lt;strong&gt;％3 &lt;/ strong&gt;的链接 &gt;在&lt;strong&gt;％n &lt;/ strong&gt;笔记文件中？</numerusform>
+        <numerusform>检测到笔记路径已更改。 您是否要用 &lt;strong&gt;％2&lt;/ strong&gt; 替换所有出现的&lt;strong&gt;％1&lt;/strong&gt; 链接 ，并在 &lt;strong&gt;％n&lt;/strong&gt; 个笔记文件中用 &lt;strong&gt;％4&lt;/strong&gt; 替换文件名为 &lt;strong&gt;％3&lt;/strong&gt; 的链接 ？</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="3708"/>
       <source>…and %n more note(s)</source>
       <translation>
-        <numerusform>…还有％n个音符</numerusform>
+        <numerusform>…以及 ％n 个笔记</numerusform>
       </translation>
     </message>
     <message>
@@ -4378,14 +4369,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/gui.cpp" line="856"/>
       <source>Double-click to unstick note from tab</source>
-      <translation>双击以从选项卡中取消注释
-</translation>
+      <translation>双击从标签页中取消笔记附着</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="857"/>
       <source>Double-click to stick note to tab</source>
-      <translation>双击以将注释粘贴到选项卡
-</translation>
+      <translation>双击将笔记附着至标签页</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="76"/>
@@ -4395,7 +4384,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/git.cpp" line="77"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation>命令&lt;code&gt;％1 &lt;/ code&gt;失败！</translation>
+      <translation>命令 &lt;code&gt;％1&lt;/code&gt; 失败！</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4219"/>
@@ -4410,12 +4399,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../main.cpp" line="256"/>
       <source>Note folder not found!</source>
-      <translation>找不到记事文件夹！</translation>
+      <translation>找不到笔记文件夹！</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="257"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation>找不到您的记事文件夹！ 您要选择一个新的吗？</translation>
+      <translation>找不到您的笔记文件夹！ 您要选择一个新的吗？</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="264"/>
@@ -4426,20 +4415,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../entities/notesubfolder.cpp" line="556"/>
       <location filename="../entities/notesubfolder.cpp" line="581"/>
       <source>Folder will be hidden!</source>
-      <translation>文件夹将被隐藏！
-</translation>
+      <translation>文件夹将被隐藏！</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="557"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation>无法创建名称为&lt;b&gt;％1 &lt;/ b&gt;的文件夹，因为该文件夹在应用程序内部使用！
-</translation>
+      <translation>无法创建名称为&lt;b&gt;％1 &lt;/b&gt;的文件夹，因为该文件夹在应用程序内部使用！</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="582"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation>无法创建名称为&lt;b&gt;％1 &lt;/ b&gt;的文件夹，因为该文件夹位于忽略的子文件夹列表中！ 您可以在&lt;i&gt;面板设置&lt;/ i&gt;中进行更改。
-</translation>
+      <translation>无法创建名称为&lt;b&gt;％1&lt;/b&gt;的文件夹，因为该文件夹位于忽略的子文件夹列表中！ 您可以在&lt;i&gt;面板设置&lt;/i&gt;中进行更改。</translation>
     </message>
   </context>
   <context>
@@ -4447,12 +4433,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="599"/>
       <source>No suggestions for %1</source>
-      <translation>没有％1的建议</translation>
+      <translation>没有 ％1 的建议</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="611"/>
       <source>Ignore</source>
-      <translation>忽视</translation>
+      <translation>忽略</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="612"/>
@@ -4462,7 +4448,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="669"/>
       <source>Note editing disabled</source>
-      <translation>注释编辑已禁用</translation>
+      <translation>笔记编辑已禁用</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="670"/>
@@ -4485,12 +4471,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation>关闭搜寻</translation>
+      <translation>关闭搜索</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation>在文字中查找</translation>
+      <translation>在文本中查找</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
@@ -4505,7 +4491,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation>用。。。来代替</translation>
+      <translation>替换为</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
@@ -4530,7 +4516,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation>替换一个文本出现</translation>
+      <translation>替换出现的文本一次</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -4540,7 +4526,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation>替换所有出现的文字</translation>
+      <translation>替换所有出现的文本</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
@@ -4674,7 +4660,7 @@ Are the folder and the file writeable?</source>
       <location filename="../services/databaseservice.cpp" line="874"/>
       <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-      <translation>无法与便笺文件夹数据库建立数据库连接以合并'％1'。
+      <translation>无法与笔记文件夹数据库建立数据库连接以合并'％1'。
 文件夹和文件是否可写？</translation>
     </message>
   </context>
@@ -4878,7 +4864,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation>已导入％m 个书签的 ％v 个</translation>
+      <translation>已导入 ％m 个书签中的 ％v 个</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="88"/>
@@ -5477,7 +5463,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
       <source>Local trash</source>
-      <translation>当地垃圾</translation>
+      <translation>本地回收站</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="347"/>
@@ -5544,12 +5530,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="876"/>
       <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation>请安装最新版本的&lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style =“ font-weight：600;”&gt; QOwnNotesAPI &lt;/ span&gt; &lt;/a&gt;（最低版本 如果您希望QOwnNotes能够访问便笺版本和已删除便笺，请在您自己的Cloud服务器上使用QOWNNOTESAPI_MIN_VERSION）。</translation>
+      <translation>如果您希望 QOwnNotes 能够访问笔记版本和已回收笔记，请在您的 ownCloud 服务器上安装最新版本的&lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;a href="https://github.com/pbek/qownnotesapi"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;（至低 version QOWNNOTESAPI_MIN_VERSION) 。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="902"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;您仍然需要&lt;a href="https://owncloud.org/"&gt; &lt;span style =“font-weight:600”&gt; ownCloud同步客户端&lt;/span&gt; &lt;/a&gt;（或其他桌面同步客户端）同步您的笔记！&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+      <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt;您仍然需要&lt;a href="https://owncloud.org/"&gt; &lt;span style=" font-weight:600"&gt; ownCloud同步客户端&lt;/span&gt; &lt;/a&gt;（或其他桌面同步客户端）同步您的笔记！&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1021"/>
@@ -5608,17 +5594,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
-      <translation>请注意，ownCloud 笔记  应用程序不支持子文件夹！</translation>
+      <translation>请注意，ownCloud notes  应用程序不支持子文件夹！</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="726"/>
       <source>Use note subfolders</source>
-      <translation>使用注释子文件夹</translation>
+      <translation>使用笔记子文件夹</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1392"/>
       <source>Enable QOwnNotesAPI app</source>
-      <translation>启用QOwnNotesAPI应用</translation>
+      <translation>启用 QOwnNotesAPI 应用</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1782"/>
@@ -5663,7 +5649,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2211"/>
       <source>Bosnian</source>
-      <translation>波斯尼亚人</translation>
+      <translation>波斯尼亚语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2222"/>
@@ -5853,12 +5839,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2958"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation>您可能还希望在暗模式下的编辑器设置中选择其他编辑器配色方案。</translation>
+      <translation>在暗色模式下， 你可能想在编辑器设置中选择另一种编辑器配色方案。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3061"/>
       <source>Enable dark mode icon theme</source>
-      <translation>启用黑暗模式图标主题</translation>
+      <translation>启用暗色模式图标主题</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2991"/>
@@ -5883,7 +5869,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3051"/>
       <source>Enforce system icon theme</source>
-      <translation>强制系统图标主题</translation>
+      <translation>强制使用系统图标主题</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3157"/>
@@ -5898,17 +5884,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3378"/>
       <source>&amp;Add script…</source>
-      <translation>&amp;添加脚本...</translation>
+      <translation>添加脚本...(&amp;A)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4024"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation>使用旧方法链接到便笺，图像和附件</translation>
+      <translation>使用旧方法链接到笔记，图像和附件</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3869"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation>打开笔记时，笔记内的光标位置现在将恢复为当前会话中上次访问笔记时的位置</translation>
+      <translation>当打开笔记时，光标位置将恢复为当前会话中上次访问该笔记时的位置</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3839"/>
@@ -5923,12 +5909,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3908"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation>打开笔记时，笔记内的光标位置现在将恢复为当前会话中上次访问笔记时的位置...</translation>
+      <translation>自动关闭笔记文件夹数据库以防止同步工具出问题</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3911"/>
       <source>Automatically close the note folder database</source>
-      <translation>自动关闭便笺文件夹数据库</translation>
+      <translation>自动关闭笔记文件夹数据库</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4072"/>
@@ -5951,23 +5937,24 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.cpp" line="4025"/>
       <location filename="../dialogs/settingsdialog.cpp" line="4049"/>
       <source>Import settings</source>
-      <translation>导入设定</translation>
+      <translation>导入设置</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4300"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3991"/>
       <source>Export settings</source>
-      <translation>导出设定</translation>
+      <translation>导出设置</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4438"/>
       <source>Open issue assistant</source>
-      <translation>公开发行助理</translation>
+      <translation>打开问题助手</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4405"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;发行问题的最佳方法是使用发布助手，方法是按下面的&lt;span style =“ font-weight：600;”&gt;打开发布助手&lt;/ span&gt;按钮 底部。&lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+      <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; 发布问题的最佳方法是使用问题助手，方法是按下面的
+&lt;span style=" font-weight:600;"&gt;打开问题助手&lt;/span&gt;按钮。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4670"/>
@@ -5977,7 +5964,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4664"/>
       <source>Rendering</source>
-      <translation>翻译</translation>
+      <translation>渲染</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4684"/>
@@ -5997,7 +5984,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5113"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation>启用Vim模式（某些QOwnNotes快捷方式不起作用）</translation>
+      <translation>启用 Vim 模式（某些 QOwnNotes 快捷键将不起作用）</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="642"/>
@@ -6007,12 +5994,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="941"/>
       <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-      <translation>在网络浏览器中打开您自己的Cloud server应用程序密码页面，为该应用程序创建新的应用程序密码</translation>
+      <translation>在您的网络服务器中打开 ownCloud Server 应用程序密码页面，为该应用程序创建新的应用程序密码</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="944"/>
       <source>Open your ownCloud server App Password page</source>
-      <translation>打开您自己的Cloud Server应用程序密码页面</translation>
+      <translation>打开您自己的Cloud Server 应用程序密码页面</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2541"/>
@@ -6067,30 +6054,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2905"/>
       <source>Search for language</source>
-      <translation>搜索语言
-</translation>
+      <translation>搜索语言</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3268"/>
       <source>Action name</source>
-      <translation>动作名称
-</translation>
+      <translation>动作名称</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3273"/>
       <source>Local shortcut</source>
-      <translation>本地
-</translation>
+      <translation>局部快捷键</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3278"/>
       <source>Global shortcut</source>
-      <translation>全局快捷方式</translation>
+      <translation>全局快捷键</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3879"/>
       <source>Disable this if you want to launch the application without opening a note</source>
-      <translation>如果要启动应用程序而不打开注释，请禁用此功能</translation>
+      <translation>如果要启动应用程序而不打开笔记，请禁用此功能</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3882"/>
@@ -6100,7 +6084,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
       <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
-      <translation>GitHub不需要在行尾使用两个空格进行换行</translation>
+      <translation>GitHub 不需要在行尾使用两个空格进行换行</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
@@ -6115,7 +6099,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4452"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation>&amp;将调试信息复制到剪贴板</translation>
+      <translation>将调试信息复制到剪贴板 （&amp;C）</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4463"/>
@@ -6130,17 +6114,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4714"/>
       <source>Exporting</source>
-      <translation>出口</translation>
+      <translation>导出</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4720"/>
       <source>Use internal export styling for the PDF export and printing of the preview</source>
-      <translation>使用内部导出样式进行PDF导出和预览打印</translation>
+      <translation>将内部导出样式用于 PDF 导出和预览打印</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5028"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;您可能想看看所有可用的&lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;时间格式&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; 您可能想看看所有可用的 &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; 时间格式 &lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; 。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5198"/>
@@ -6150,7 +6134,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5205"/>
       <source>Automatically remove trailing spaces in the note text</source>
-      <translation>自动删除注释文本中的尾随空格</translation>
+      <translation>自动删除笔记文本中的末尾空格</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5215"/>
@@ -6171,7 +6155,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="5610"/>
       <location filename="../dialogs/settingsdialog.ui" line="5619"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-      <translation>要忽略的注释子文件夹的正则表达式，以“;”分隔</translation>
+      <translation>要忽略的笔记子文件夹正则表达式，以“;”分隔</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5613"/>
@@ -6181,23 +6165,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Reset ignored subfolders</source>
-      <translation>重置忽略的子文件夹
-</translation>
+      <translation>重置忽略的子文件夹</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5665"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
-      <translation>在应用程序启动时和切换便笺文件夹时还原打开的便笺选项卡</translation>
+      <translation>在应用程序启动时和切换笔记文件夹时还原打开的笔记标签页</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5750"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
-      <translation>隐藏带有标签的“音符计数”（提高性能）</translation>
+      <translation>隐藏标签的“笔记数”（提高性能）</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5786"/>
       <source>Show the number of matches in each note</source>
-      <translation>显示每个音符中的匹配数</translation>
+      <translation>显示每个笔记中的匹配数</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5441"/>
@@ -6207,28 +6190,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5447"/>
       <source>Show notes in the note list with preview</source>
-      <translation>在预览中显示笔记列表中的笔记</translation>
+      <translation>在笔记列表中显示笔记预览</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5520"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-      <translation>代替笔记列表，使用带有所有子文件夹的笔记树（如果已为笔记文件夹打开了它们）</translation>
+      <translation>使用带有所有子文件夹的笔记树, 而不是笔记列表（如果它们已作为笔记文件夹开启）</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5796"/>
       <source>Note folder panel</source>
-      <translation>笔记文件夹面板
-</translation>
+      <translation>笔记文件夹面板</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5802"/>
       <source>Show note folders as buttons instead of in a select box</source>
-      <translation>将注释文件夹显示为按钮，而不是显示在选择框中</translation>
+      <translation>将笔记文件夹显示为按钮，而不是显示在选择框中</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5944"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation>可以在&lt;i&gt;窗口/面板&lt;/ i&gt;主菜单中打开和关闭面板，还可以为不同的面板配置配置不同的&lt;i&gt;工作区&lt;/ i&gt;。</translation>
+      <translation>可以在 &lt;i&gt;窗口/面板&lt;/i&gt; 主菜单中打开和关闭面板，还可以为不同的 &lt;i&gt;工作区&lt;/i&gt; 配置不同的面板配置。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6021"/>
@@ -6238,12 +6220,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6027"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation>具有此标签的注释将用于获取书签</translation>
+      <translation>具有此标签的笔记将用于获取书签</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6030"/>
       <source>Tag name for bookmarks notes</source>
-      <translation>书签注释的标签名称</translation>
+      <translation>书签笔记的标签名称</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6037"/>
@@ -6253,22 +6235,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6044"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-      <translation>默认情况下，浏览器扩展将显示当前注释的所有链接。 您还可以使其显示带有特定标签的注释的特殊书签链接。 有关书签链接语法的更多信息，请单击&lt;a href="%1"&gt;此处&lt;/a&gt;。</translation>
+      <translation>默认情况下，浏览器扩展将显示当前笔记的所有链接。 您还可以使其显示带有特定标签的笔记的特殊书签链接。 有关书签链接语法的更多信息，请单击 &lt;a href="%1"&gt;此处&lt;/a&gt;。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6057"/>
       <source>Bookmarks note name:</source>
-      <translation>书签注释名称：</translation>
+      <translation>书签笔记名称：</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6064"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation>该注释将用于从浏览器扩展中添加新书签。</translation>
+      <translation>该笔记将用于从浏览器扩展中添加新书签。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6067"/>
       <source>Note name for adding new bookmarks</source>
-      <translation>用于添加新书签的注释名称</translation>
+      <translation>用于添加新书签的笔记名称</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6077"/>
@@ -6283,7 +6265,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6117"/>
       <source>Show security token</source>
-      <translation>显示安全令牌</translation>
+      <translation>显示安全 token</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6153"/>
@@ -6298,12 +6280,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6134"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation>从&lt;a href="%2"&gt; Chrome网上应用店&lt;/a&gt;或&lt;a href="%3"&gt; Firefox Add-安装&lt;a href="%1"&gt; Web Companion浏览器扩展&lt;/a&gt;。 ons页面&lt;/a&gt;，以将QOwnNotes用作Web Clipper。</translation>
+      <translation>从 &lt;a href="%2"&gt;Chrome网上应用商店&lt;/a&gt; 或 &lt;a href="%3"&gt;Firefox 扩展安装ons页面&lt;/a&gt; 安装 &lt;a href="%1"&gt; Web Companion 浏览器扩展&lt;/a&gt; ，以将 QOwnNotes 用作网页剪辑器。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation>允许注释文件名与标题不同&lt;br&gt;请注意，ownCloud Notes需要使用与标题相同的文件名！</translation>
+      <translation>允许笔记文件名与标题不同&lt;br&gt;。请注意，ownCloud Notes 需要使用与标题相同的文件名！</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5649"/>
@@ -6318,7 +6300,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5658"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-      <translation>如果调整窗口或其他面板的大小，请使用注释编辑面板作为固定的中央小部件来调整大小</translation>
+      <translation>如果调整窗口或其他面板的大小，使用笔记编辑面板作为固定的中央部件来调整大小</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5773"/>
@@ -6328,7 +6310,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5779"/>
       <source>Disable auto-completion of previous searches</source>
-      <translation>禁用先前搜索的自动完成</translation>
+      <translation>禁用先前搜索的自动补全</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5675"/>
@@ -6343,33 +6325,33 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5816"/>
       <source>Local trash settings</source>
-      <translation>本地垃圾桶设置</translation>
+      <translation>本地回收站设置</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5850"/>
       <source>Remove trashed notes after:</source>
-      <translation>在以下情况下清除垃圾便笺：</translation>
+      <translation>在此时间后清除已回收的笔记：</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5857"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
-      <translation>天</translation>
+      <translation> 天</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5876"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation>一定时间后自动清除垃圾笔记</translation>
+      <translation>一定时间后自动清除已回收的笔记</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5902"/>
       <source>Local trash support</source>
-      <translation>当地垃圾支持</translation>
+      <translation>本地回收站支持</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5908"/>
       <source>Enable local trash</source>
-      <translation>启用本地垃圾</translation>
+      <translation>启用本地回收站</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5925"/>
@@ -6379,7 +6361,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5931"/>
       <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-      <translation>您可以在此处设置新的布局。 请记住，您始终可以使用&lt;i&gt;解锁面板&lt;/ i&gt;按钮修改面板的位置。</translation>
+      <translation>您可以在此处设置新的布局。 请记住，您始终可以使用&lt;i&gt;解锁面板&lt;/i&gt;按钮修改面板的位置。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5140"/>
@@ -7015,7 +6997,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1793"/>
       <source>Shortcut already assigned</source>
-      <translation>快捷方式已分配</translation>
+      <translation>快捷键已分配</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1996"/>
@@ -7157,32 +7139,29 @@ Connection error message: </source>
       <location filename="../dialogs/settingsdialog.cpp" line="1666"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1718"/>
       <source>Undefined shortcut</source>
-      <translation>未定义的快捷方式
-</translation>
+      <translation>未定义的快捷键</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1670"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1722"/>
       <source>Assign a new shortcut</source>
-      <translation>分配新的快捷方式
-</translation>
+      <translation>分配新的快捷键</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1671"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1723"/>
       <source>Reset to default shortcut</source>
-      <translation>重置为默认快捷方式
-</translation>
+      <translation>重置为默认快捷键</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1689"/>
       <source>Clear shortcut</source>
-      <translation>清除捷径</translation>
+      <translation>清除快捷键</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1794"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation>&lt;strong&gt;％1 &lt;/ strong&gt;快捷方式已分配给&lt;strong&gt;％2 &lt;/ strong&gt;！ 您要跳到快捷方式吗？</translation>
+      <translation>&lt;strong&gt;％1&lt;/strong&gt; 快捷键已分配给&lt;strong&gt;％2&lt;/strong&gt; ！ 您要跳到该快捷键吗？</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2973"/>
@@ -7411,12 +7390,12 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="47"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation>在您自己的Cloud服务器上公开共享当前笔记文件。 您可以将生成的链接发送给其他人，以便其他人可以查看或下载文件。</translation>
+      <translation>在您的 ownCloud 服务器上公开共享当前笔记文件。 您可以将生成的链接发送给其他人，以便其他人可以查看或下载文件。</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="66"/>
       <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-      <translation>请记住，您仍然必须使用ownCloud桌面同步工具将便笺与服务器同步，才能与他人共享便笺！</translation>
+      <translation>请记住，您仍然需要使用 ownCloud 桌面同步工具将笔记与服务器同步，才能与他人共享笔记！</translation>
     </message>
   </context>
   <context>
@@ -7443,37 +7422,37 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="222"/>
       <source>-ise suffixes</source>
       <comment>dictionary variant</comment>
-      <translation>-ise后缀</translation>
+      <translation>-ise 后缀</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="223"/>
       <source>-ize suffixes</source>
       <comment>dictionary variant</comment>
-      <translation>-ize后缀</translation>
+      <translation>-ize 后缀</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="224"/>
       <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ise后缀和重音符号</translation>
+      <translation>-ise 后缀和重音符号</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
       <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ise后缀，不带重音</translation>
+      <translation>-ise 后缀，不带重音符号</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="229"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ize后缀并带有重音</translation>
+      <translation>-ize 后缀并带有重音符号</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="231"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ize后缀，不带重音</translation>
+      <translation>-ize 后缀，不带重音符号</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
@@ -7485,7 +7464,7 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="235"/>
       <source>medium</source>
       <comment>dictionary variant</comment>
-      <translation>中</translation>
+      <translation>中等</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="236"/>
@@ -7515,7 +7494,7 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation>没有口音</translation>
+      <translation>没有重音</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="242"/>
@@ -7545,7 +7524,7 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="250"/>
       <source>extended</source>
       <comment>dictionary variant</comment>
-      <translation>扩展</translation>
+      <translation>扩展的</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="325"/>
@@ -7631,7 +7610,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file / clipboard</source>
-      <translation>导入CSV文件/剪贴板</translation>
+      <translation>导入 CSV 文件/剪贴板</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
@@ -8018,8 +7997,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>
       <source>Delete selected note on server</source>
-      <translation>删除服务器上的选定笔记
-</translation>
+      <translation>删除服务器上的选定笔记</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="68"/>
@@ -8029,25 +8007,22 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="190"/>
       <source>Delete note on server</source>
-      <translation>删除服务器上的笔记
-</translation>
+      <translation>删除服务器上的笔记</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
       <source>Delete selected trashed note on server?</source>
-      <translation>删除服务器上的选定垃圾便笺？
-</translation>
+      <translation>删除服务器上选定的已回收笔记？</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="213"/>
       <source>Error while deleting note</source>
-      <translation>删除记事时出错
-</translation>
+      <translation>删除笔记时出错</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation>删除已删除的便笺失败，状态码为％1</translation>
+      <translation>删除已回收的笔记失败，状态码为 ％1</translation>
     </message>
   </context>
   <context>
@@ -8110,7 +8085,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="80"/>
       <source>&amp;Disable dialog</source>
-      <translation>&amp;禁用对话框</translation>
+      <translation>禁用对话框 (&amp;D)</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="81"/>
@@ -8290,29 +8265,29 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="67"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation>QOwnNotes服务器在端口 ％1上侦听</translation>
+      <translation>QOwnNotes 服务器监听端口 ％1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="74"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation>无法在端口％1上启动QOwnNotes服务器！</translation>
+      <translation>无法在端口％1上启动 QOwnNotes 服务器！</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="120"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation>％1已连接到QOwnNotes服务器！</translation>
+      <translation>％1已连接到 QOwnNotes 服务器！</translation>
     </message>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="238"/>
       <source>%n bookmark(s) created</source>
       <translation>
-        <numerusform>已创建％n个书签</numerusform>
+        <numerusform>已创建 ％n 个书签</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="386"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation>％1已从QOwnNotes服务器断开连接</translation>
+      <translation>％1已从 QOwnNotes 服务器断开连接</translation>
     </message>
   </context>
   <context>
@@ -8320,22 +8295,22 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation>安全令牌</translation>
+      <translation>安全 token</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation>要让您的QOwnNotes浏览器扩展访问您的笔记，请将此安全令牌粘贴到浏览器扩展的设置中：</translation>
+      <translation>要让您的 QOwnNotes 浏览器扩展访问您的笔记，请将此安全 token 粘贴到浏览器扩展的设置中：</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation>生成新令牌</translation>
+      <translation>生成新 token</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation>复制Token</translation>
+      <translation>复制 token</translation>
     </message>
   </context>
   <context>
@@ -8349,7 +8324,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation>纯文本文件降价笔记，具有ownCloud集成</translation>
+      <translation>纯文本文件 markdown 笔记，具有 ownCloud 集成</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
@@ -8420,12 +8395,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation>如果要访问自己的cloud服务器上的便笺版本和已删除便笺，可以立即为其配置QOwnNotes。 您也可以稍后再做。</translation>
+      <translation>如果您希望能够在您的 ownCloud 服务器上使用您的笔记版本和已回收笔记,您可以现在对  QOwnNotes 进行配置.您也可以以后进行.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation>无论如何，您都需要ownCloud同步客户端（或任何其他同步客户端）将便笺与ownCloud服务器同步。</translation>
+      <translation>无论如何，您都需要 ownCloud 同步客户端（或任何其他同步客户端）将笔记与 ownCloud 服务器同步。</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="391"/>
@@ -8435,7 +8410,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="122"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation>无法创建笔记路径！ 您必须手动创建便笺文件夹！</translation>
+      <translation>无法创建笔记路径！ 您必须手动创建笔记文件夹！</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="130"/>
@@ -8455,7 +8430,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="220"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation>请记住，便笺文件夹将相对于QOwnNotes处于可移植模式的目录进行存储！ 因此，您需要保持在同一驱动器上。</translation>
+      <translation>请记住，在便携模式下，笔记文件夹将以相对 QOwnNotes 的相对目录进行存储！ 因此，您需要保持在同一驱动器上。</translation>
     </message>
   </context>
   <context>
@@ -8468,7 +8443,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="102"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation>在GitHub Markdown中打印出有关应用程序和环境的设置以及其他信息的转储，并退出该应用程序。</translation>
+      <translation>以 GitHub Markdown 格式打印有关应用程序和环境的设置以及其他信息的转储，并退出该应用程序。</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="111"/>
@@ -8493,12 +8468,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="549"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation>另一个QOwnNotes实例已经运行！你可以在设置中关闭单实例模式，或者使用--allow-multiple-instances参数启动。</translation>
+      <translation>另一个 QOwnNotes 实例已经运行！你可以在设置中关闭单实例模式，或者使用 --allow-multiple-instances 参数启动。</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="577"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation>尝试启动第二个QOwnNotes实例！</translation>
+      <translation>尝试启动第二个 QOwnNotes 实例！</translation>
     </message>
   </context>
 </TS>
