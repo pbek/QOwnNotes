@@ -65,8 +65,12 @@ parts:
       - CONFIG+=snapcraft
     # remove the default desktop file
     override-build: |
-      echo Remove PBE.QOwnNotes.desktop
-      rm src/PBE.QOwnNotes.desktop
+      cd src
+      rm PBE.QOwnNotes.desktop
+      echo "#define RELEASE \"Snapcraft.io\"" > release.h
+      qmake
+      lrelease QOwnNotes.pro
+      make -j $(nproc)
     build-packages:
       - qttools5-dev
       - build-essential
