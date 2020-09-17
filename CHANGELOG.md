@@ -2,7 +2,7 @@
 
 ## 20.9.6
 - you now can increase and decrease the editor font size also with the mouse wheel
-  while holding <kbd>Ctrl</kdb> pressed (for [#1870](https://github.com/pbek/QOwnNotes/issues/1870))
+  while holding <kbd>Ctrl</kbd> pressed (for [#1870](https://github.com/pbek/QOwnNotes/issues/1870))
 - fixed building snap stable release (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
 - code block highlighting was improved (for [#1873](https://github.com/pbek/QOwnNotes/issues/1873), thank you @Waqar144) 
 - added more Greek translation (thank you VasilikiBotsou)
