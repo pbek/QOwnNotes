@@ -6298,7 +6298,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6037"/>
       <source>Bookmarks tag:</source>
-      <translation>Επισημείωση σελιδοδεικτών:</translation>
+      <translation>Ετικέτα σελιδοδεικτών:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6044"/>
@@ -6393,7 +6393,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5816"/>
       <source>Local trash settings</source>
-      <translation>Τοπικές ρυθμίσεις απορριμμάτων</translation>
+      <translation>Ρυθμίσεις τοπικού κάδου απορριμμάτων</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5850"/>
@@ -6409,12 +6409,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5876"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation>Αφαιρέστε αυτόματα τις καταγραμμένες σημειώσεις μετά από ορισμένο χρόνο</translation>
+      <translation>Αυτόματη κατάργηση σημειώσεων του κάδου απορριμάτων μετά από ορισμένο χρονικό διάστημα</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5902"/>
       <source>Local trash support</source>
-      <translation>Τοπική υποστήριξη σκουπιδιών</translation>
+      <translation>Υποστήριξη τοπικού κάδου απορριμάτων</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5908"/>
@@ -6467,7 +6467,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5191"/>
       <source>Highlight the current line</source>
-      <translation>Επισημάνετε την τρέχουσα γραμμή</translation>
+      <translation>Επισήμανση τρέχουσας γραμμής</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5408"/>
@@ -7020,7 +7020,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.cpp" line="2293"/>
       <location filename="../dialogs/settingsdialog.cpp" line="4268"/>
       <source>Debug information</source>
-      <translation>Πληροφορίες σφαλμάτων</translation>
+      <translation>Πληροφορίες αποσφαλμάτωσης</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4379"/>
@@ -7030,7 +7030,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4466"/>
       <source>&amp;Save debug information</source>
-      <translation>&amp;Αποθήκευση πληροφοριών εντοπισμού σφαλμάτων</translation>
+      <translation>&amp;Αποθήκευση πληροφοριών αποσφαλμάτωσης</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="497"/>
@@ -7065,7 +7065,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1793"/>
       <source>Shortcut already assigned</source>
-      <translation>Η συντομεύση που έχει ήδη αντιστοιχιστεί</translation>
+      <translation>Η συντομεύση έχει ήδη εκχωριστεί</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1996"/>
@@ -7155,7 +7155,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2886"/>
       <source>Check for script updates</source>
-      <translation>Ελέγξτε για ενημερώσεις σεναρίων</translation>
+      <translation>Ελέγξτε για ενημερώσεις σεναρίων (δεσμών ενεργειών)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2893"/>
@@ -7242,7 +7242,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2973"/>
       <source>Remove script</source>
-      <translation>Καταργήστε το σενάριο</translation>
+      <translation>Κατάργηση σεναρίου (δέσμης ενεργειών)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2974"/>
@@ -7273,8 +7273,8 @@ Connection error message: </source>
       <location filename="../dialogs/settingsdialog.cpp" line="3173"/>
       <source>There were script errors:
 %1</source>
-      <translation>Υπήρχαν σφάλματα δέσμης ενεργειών:
-% 1</translation>
+      <translation>Υπήρχαν σφάλματα σεναρίου (δέσμης ενεργειών):
+%1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3241"/>
@@ -7284,7 +7284,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3241"/>
       <source>Enter your custom file extension:</source>
-      <translation>Καταχωρίστε την προσαρμοσμένη επέκταση αρχείου:</translation>
+      <translation>Καταχωρίστε την επέκταση του ειδικά διαμορφωμένου αρχείου σας:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3570"/>
@@ -7324,7 +7324,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3852"/>
       <source>Executable files</source>
-      <translation>Αρχεία εκτελέσιμα</translation>
+      <translation>Εκτελέσιμα αρχεία </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3853"/>
@@ -7335,7 +7335,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3863"/>
       <source>Please select the path of your git executable</source>
-      <translation>Επιλέξτε την διαδρομή του εκτελέσιμου αρχείου git</translation>
+      <translation>Παρακαλούμε επιλέξτε την διαδρομή του εκτελέσιμου αρχείου git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3960"/>
@@ -7350,7 +7350,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="102"/>
       <source>New script</source>
-      <translation>Νέο σενάριο</translation>
+      <translation>Νέο σενάριο (Νέα δέσμη ενεργειών)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="106"/>
@@ -7360,12 +7360,12 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="452"/>
       <source>enabled</source>
-      <translation>ενεργοποιημένη</translation>
+      <translation>ενεργοποιημένο</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="452"/>
       <source>disabled</source>
-      <translation>άτομα με ειδικές ανάγκες</translation>
+      <translation>απενεργοποιημένο</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="454"/>
@@ -7436,12 +7436,12 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2278"/>
       <source>Clear &amp;database</source>
-      <translation>Καθαρή &amp;βάση δεδομένων</translation>
+      <translation>Εκκαθάριση &amp;βάσης δεδομένων</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2461"/>
       <source>Select editor application</source>
-      <translation>Επιλέξτε την εφαρμογή επεξεργασίας</translation>
+      <translation>Επιλέξτε την εφαρμογή επεξεργαστή</translation>
     </message>
   </context>
   <context>
@@ -7464,7 +7464,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>The public url of your note</source>
-      <translation>Η δημόσια διεύθυνση της σημείωσής σας</translation>
+      <translation>Η δημόσια διεύθυνση url της σημείωσής σας</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="47"/>
@@ -7513,25 +7513,25 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="224"/>
       <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ise επιθήματα και με τόνους</translation>
+      <translation>καταλήξεις -ise και με τόνους</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
       <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ise καταλήξεις και χωρίς τόνους</translation>
+      <translation>καταλήξεις -ise και χωρίς τόνους</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="229"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ize επιθήματα και με τόνους</translation>
+      <translation>καταλήξεις -ize και με τόνους</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="231"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>-ize καταλήξεις και χωρίς τόνους</translation>
+      <translation>καταλήξεις -ize και χωρίς τόνους</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
@@ -7555,31 +7555,31 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="237"/>
       <source>variant 0</source>
       <comment>dictionary variant</comment>
-      <translation>μεταβλητό 0</translation>
+      <translation>μεταβλητή 0</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="238"/>
       <source>variant 1</source>
       <comment>dictionary variant</comment>
-      <translation>μεταβλητό 1</translation>
+      <translation>μεταβλητή 1</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="239"/>
       <source>variant 2</source>
       <comment>dictionary variant</comment>
-      <translation>μεταβλητό 2</translation>
+      <translation>μεταβλητή 2</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation>χωρίς προφορά</translation>
+      <translation>χωρίς τόνους</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="242"/>
       <source>with accents</source>
       <comment>dictionary variant</comment>
-      <translation>με προφορά</translation>
+      <translation>με τόνους</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="244"/>
