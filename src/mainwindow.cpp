@@ -86,6 +86,7 @@
 #include <QTreeWidgetItem>
 #include <QUuid>
 #include <QWidgetAction>
+#include <QWheelEvent>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 #include <utility>
 
@@ -4165,6 +4166,8 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             }
             return false;
         } else if (obj == activeNoteTextEdit()) {
+            qDebug() << __func__ << " - 'event->type()': " << event->type();
+
             // check if we want to leave the distraction free mode and the
             // search widget is not visible (because we want to close that
             // first)
@@ -4172,8 +4175,10 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 isInDistractionFreeMode() &&
                 !activeNoteTextEdit()->searchWidget()->isVisible()) {
                 toggleDistractionFreeMode();
+
                 return true;
             }
+
             return false;
         } else if (obj == ui->noteTreeWidget) {
             // set focus to the note text edit if Key_Return or Key_Tab were
@@ -4216,6 +4221,19 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                obj == ui->selectedTagsToolButton) {
         // we don't want to make the button clickable
         return true;
+    } else if (obj == activeNoteTextEdit() && event->type() == QEvent::Wheel) {
+        QWheelEvent *wheel = static_cast<QWheelEvent*>(event);
+
+        // do mouse wheel zoom
+        if (wheel->modifiers() == Qt::ControlModifier) {
+            if (wheel->angleDelta().y() > 0) {
+                on_action_Increase_note_text_size_triggered();
+            } else {
+                on_action_Decrease_note_text_size_triggered();
+            }
+
+            return false;
+        }
     }
 
     return QMainWindow::eventFilter(obj, event);

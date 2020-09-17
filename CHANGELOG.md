@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 20.9.6
+- you now can increase and decrease the editor font size also with the mouse wheel
+  while holding <kbd>Ctrl</kdb> pressed (for [#1870](https://github.com/pbek/QOwnNotes/issues/1870))
 - fixed building snap stable release (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
 
 ## 20.9.5
