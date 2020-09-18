@@ -1873,7 +1873,7 @@ p, li { white-space: pre-wrap; }
     <string>&amp;Reset note text size</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+/</string>
+    <string notr="true">Ctrl+0</string>
    </property>
   </action>
   <action name="action_new_tag">

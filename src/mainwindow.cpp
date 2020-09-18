@@ -1756,9 +1756,9 @@ void MainWindow::showStatusBarMessage(const QString &message,
  * Sets the shortcuts for the note bookmarks up
  */
 void MainWindow::setupNoteBookmarkShortcuts() {
-    for (int number = 0; number <= 9; number++) {
+    for (int number = 1; number <= 9; number++) {
         // setup the store shortcut
-        QShortcut *storeShortcut =
+        auto *storeShortcut =
             new QShortcut(QKeySequence(QStringLiteral("Ctrl+Shift+") +
                                        QString::number(number)),
                           this);
@@ -1767,7 +1767,7 @@ void MainWindow::setupNoteBookmarkShortcuts() {
                 [this, number]() { storeNoteBookmark(number); });
 
         // setup the goto shortcut
-        QShortcut *gotoShortcut = new QShortcut(
+        auto *gotoShortcut = new QShortcut(
             QKeySequence(QStringLiteral("Ctrl+") + QString::number(number)),
             this);
 

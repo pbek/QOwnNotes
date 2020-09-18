@@ -90,11 +90,11 @@ Important Shortcuts
 - <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>0..9</kbd> sets a note bookmark on bookmark slot 0..9
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
 - <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
-- <kbd>Ctrl</kbd> + <kbd>/</kbd> resets the note text font size
+- <kbd>Ctrl</kbd> + <kbd>0</kbd> resets the note text font size
 - <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in front of the cursor, auto-completes text or opens urls
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
@@ -208,11 +208,11 @@ Important Shortcuts
 - <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>0..9</kbd> sets a note bookmark on bookmark slot 0..9
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
 - <kbd>⌘</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
 - <kbd>⌘</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>⌘</kbd> + <kbd>-</kbd> decreases the note text font size by one point
-- <kbd>⌘</kbd> + <kbd>/</kbd> resets the note text font size
+- <kbd>⌘</kbd> + <kbd>0</kbd> resets the note text font size
 - <kbd>⌘</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor, auto-completes text or opens urls
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position

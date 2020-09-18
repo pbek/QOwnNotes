@@ -3,6 +3,8 @@
 ## 20.9.7
 - increasing and decreasing the editor font size with the mouse wheel now also works if
   not on beginning or end of note (for [#1870](https://github.com/pbek/QOwnNotes/issues/1870))
+- the note text bookmark slot 0 was sacrificed to allow <kbd>Ctrl</kbd> + <kbd>0</kbd>
+  to reset the note text font size (for [#1869](https://github.com/pbek/QOwnNotes/issues/1869))
 
 ## 20.9.6
 - you now can increase and decrease the editor font size also with the mouse wheel
