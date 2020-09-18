@@ -7788,12 +7788,6 @@ void MainWindow::on_action_Reset_note_text_size_triggered() {
                             "the font size is reset by 'Reset note text size'")
                              .arg(fontSize),
                          3000);
-
-    QTextCursor cursor(ui->noteTextEdit->document()->findBlockByNumber(3));
-
-    QTextCursor c = ui->noteTextEdit->textCursor();
-    c.setPosition(cursor.position());
-    ui->noteTextEdit->setTextCursor(c);
 }
 
 /**
