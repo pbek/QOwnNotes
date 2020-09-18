@@ -8,6 +8,10 @@
 #include <QSettings>
 #include <QSqlError>
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+#include <QRandomGenerator>
+#endif
+
 #include "note.h"
 #include "notefolder.h"
 #include "notesubfolder.h"
@@ -212,7 +216,13 @@ QString TrashItem::restorationFilePath() {
     file.setFileName(filePath);
     // if the file still exists use a random number
     if (file.exists()) {
-        filePath = folderPath + QDir::separator() + QString::number(qrand()) +
+#if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
+        const quint32 number = qrand();
+#else
+        const quint32 number = QRandomGenerator::global()->generate();
+#endif
+
+        filePath = folderPath + QDir::separator() + QString::number(number) +
                    "_" + fileName;
     }
 

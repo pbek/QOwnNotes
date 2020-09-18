@@ -63,6 +63,10 @@
 #include <windows.h>
 #endif
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+#include <QRandomGenerator>
+#endif
+
 enum SearchEngines {
     Google = 0,
     Bing = 1,
@@ -2050,7 +2054,12 @@ QString Utils::Misc::generateRandomString(int length) {
 
     QString randomString;
     for (int i = 0; i < length; ++i) {
-        int index = qrand() % possibleCharacters.length();
+#if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
+        const int index = qrand() % possibleCharacters.length();
+#else
+        const quint32 index = QRandomGenerator::global()->generate() %
+                        possibleCharacters.length();
+#endif
         QChar nextChar = possibleCharacters.at(index);
         randomString.append(nextChar);
     }
@@ -2068,7 +2077,13 @@ QString Utils::Misc::makeFileNameRandom(const QString &fileName,
     baseName.truncate(32);
 
     // find a more random name for the file
-    return baseName + QChar('-') + QString::number(qrand()) + QChar('.') +
+#if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
+    const quint32 number = qrand();
+#else
+    const quint32 number = QRandomGenerator::global()->generate();
+#endif
+
+    return baseName + QChar('-') + QString::number(number) + QChar('.') +
            (overrideSuffix.isEmpty() ? fileInfo.suffix() : overrideSuffix);
 }
 

@@ -4,13 +4,21 @@
 #include <QDebug>
 #include <QSettings>
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+#include <QRandomGenerator>
+#endif
+
 CryptoService::CryptoService(QObject *parent) : QObject(parent) {
     QSettings settings;
     qint64 cryptoKey = settings.value(QStringLiteral("cryptoKey")).toUInt();
 
     // generate a key if we don't have one
     if (cryptoKey == 0) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
         cryptoKey = qrand();
+#else
+        cryptoKey = QRandomGenerator::global()->generate();
+#endif
         settings.setValue(QStringLiteral("cryptoKey"), cryptoKey);
     }
 

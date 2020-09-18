@@ -4,6 +4,10 @@
 #include <QString>
 #include <QtTest>
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+#include <QRandomGenerator>
+#endif
+
 #include "helpers/codetohtmlconverter.h"
 #include "services/databaseservice.h"
 
@@ -15,9 +19,15 @@ void TestNotes::initTestCase() {
     DatabaseService::createConnection();
     DatabaseService::setupTables();
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
+    const quint32 number = qrand();
+#else
+    const quint32 number = QRandomGenerator::global()->generate();
+#endif
+
     // generate a notes path
     notesPath = QDir::tempPath() + QDir::separator() +
-                QStringLiteral("qownnotes_test_") + QString::number(qrand());
+                QStringLiteral("qownnotes_test_") + QString::number(number);
     // qDebug() << "generated notesPath:" << notesPath;
 
     // create temporary notes directory
