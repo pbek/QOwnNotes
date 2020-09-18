@@ -86,7 +86,6 @@
 #include <QTreeWidgetItem>
 #include <QUuid>
 #include <QWidgetAction>
-#include <QWheelEvent>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 #include <utility>
 
@@ -356,6 +355,16 @@ MainWindow::MainWindow(QWidget *parent)
     // also handle note url externally in the encrypted note text edit
     connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::urlClicked,
             this, &MainWindow::openLocalUrl);
+
+    // handle note edit zooming
+    connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::zoomIn, this,
+            &MainWindow::on_action_Increase_note_text_size_triggered);
+    connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::zoomOut, this,
+            &MainWindow::on_action_Decrease_note_text_size_triggered);
+    connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::zoomIn, this,
+            &MainWindow::on_action_Increase_note_text_size_triggered);
+    connect(ui->encryptedNoteTextEdit, &QOwnNotesMarkdownTextEdit::zoomOut, this,
+            &MainWindow::on_action_Decrease_note_text_size_triggered);
 
     // handle note text edit resize events
     connect(ui->noteTextEdit, &QOwnNotesMarkdownTextEdit::resize, this,
@@ -4166,8 +4175,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             }
             return false;
         } else if (obj == activeNoteTextEdit()) {
-            qDebug() << __func__ << " - 'event->type()': " << event->type();
-
             // check if we want to leave the distraction free mode and the
             // search widget is not visible (because we want to close that
             // first)
@@ -4221,19 +4228,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                obj == ui->selectedTagsToolButton) {
         // we don't want to make the button clickable
         return true;
-    } else if (obj == activeNoteTextEdit() && event->type() == QEvent::Wheel) {
-        QWheelEvent *wheel = static_cast<QWheelEvent*>(event);
-
-        // do mouse wheel zoom
-        if (wheel->modifiers() == Qt::ControlModifier) {
-            if (wheel->angleDelta().y() > 0) {
-                on_action_Increase_note_text_size_triggered();
-            } else {
-                on_action_Decrease_note_text_size_triggered();
-            }
-
-            return false;
-        }
     }
 
     return QMainWindow::eventFilter(obj, event);
