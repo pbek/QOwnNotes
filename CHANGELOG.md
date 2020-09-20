@@ -3,6 +3,10 @@
 ## 20.9.8
 - resetting the note text font size will now not move the text cursor
   (for [#1869](https://github.com/pbek/QOwnNotes/issues/1869))
+- the QOwnNotesAPI Nextcloud app  was updated to version 20.9.0 to support
+  Nextcloud 20/21 (for [#35](https://github.com/pbek/qownnotesapi/issues/35))
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 20.9.4 to fix a problem with opening all bookmarks in new tabs
 
 ## 20.9.7
 - increasing and decreasing the editor font size with the mouse wheel now also works if
