@@ -7,6 +7,7 @@
   Nextcloud 20/21 (for [#35](https://github.com/pbek/qownnotesapi/issues/35))
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 20.9.4 to fix a problem with opening all bookmarks in new tabs
+- added more Bengali translation (thank you Basudeb_Dhaka)
 
 ## 20.9.7
 - increasing and decreasing the editor font size with the mouse wheel now also works if

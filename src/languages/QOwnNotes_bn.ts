@@ -934,7 +934,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
       <source>Move lines into themselves.</source>
-      <translation>নিজের মধ্যে লাইন সরান।.</translation>
+      <translation>লাইনের মধ্যে লাইন পরিবর্তন করুন।  </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
@@ -957,7 +957,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5978"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation>"%1" %2 %3L, %4C লিখিত হয়েছে।.</translation>
+      <translation>"%1" %2 %3L, %4C লিখিত</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5979"/>
@@ -978,7 +978,7 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
       <translation>
-        <numerusform>%n লাইন ফিল্টার হয়েছে।.</numerusform>
+        <numerusform>%n লাইন ফিল্টার করা হয়েছে।</numerusform>
         <numerusform>%n লাইন ফিল্টার হয়েছে।.</numerusform>
       </translation>
     </message>
@@ -995,7 +995,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
       <source>Invalid regular expression: %1</source>
-      <translation>অবৈধ নিয়মিত অভিব্যক্তি: %1</translation>
+      <translation>অকার্যকর নিয়মিত অভিব্যক্তি: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6333"/>
@@ -1005,22 +1005,22 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6337"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
-      <translation>শীর্ষে অবিরত অনুসন্ধান করুন।.</translation>
+      <translation>হিট বটম অনুসন্ধান করুন, টপে অব্যাহত।  </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6338"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
-      <translation>নীচে অবিরত, অনুসন্ধান শীর্ষে হিট করুন।.</translation>
+      <translation>হিট টপ খুঁজুন, বটমে অব্যাহত। </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6343"/>
       <source>Search hit BOTTOM without match for: %1</source>
-      <translation>এর জন্য মিল না পেয়ে হিট তল অনুসন্ধান করুন: %1</translation>
+      <translation>কোন মিল ছাড়াই হিট বটমে খুঁজুন : %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation>এর জন্য ম্যাচ ছাড়াই হিট শীর্ষে অনুসন্ধান করুন: %1</translation>
+      <translation>কোন মিল ছাড়াই হিট টপ খুঁজুন : %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
@@ -1050,12 +1050,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7778"/>
       <source>Already at oldest change.</source>
-      <translation>ইতিমধ্যে পুরানো পরিবর্তন।.</translation>
+      <translation>ইতোমধ্যে সবচেয়ে পুরাতনে পরিবর্তন।   </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7779"/>
       <source>Already at newest change.</source>
-      <translation>ইতিমধ্যে নতুন পরিবর্তন।.</translation>
+      <translation>ইতোমধ্যে সবচেয়ে নতুনে পরিবর্তন।   </translation>
     </message>
   </context>
   <context>
@@ -1324,7 +1324,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="243"/>
       <source>Trailing space</source>
-      <translation>চলার জায়গা</translation>
+      <translation>চলমান স্পেস</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="255"/>
@@ -1369,7 +1369,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="14"/>
       <source>Insert image</source>
-      <translation>চিত্র Inোকান</translation>
+      <translation>চিত্র যুক্ত করুন  </translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="40"/>
