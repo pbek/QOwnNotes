@@ -103,6 +103,7 @@
 #include "helpers/qownnotesmarkdownhighlighter.h"
 #include <diff_match_patch.h>
 #include "libraries/fakevim/fakevim/fakevimhandler.h"
+#include "libraries/fakevim/fakevim/fakevimactions.h"
 #include "libraries/sonnet/src/core/speller.h"
 #include "release.h"
 #include "services/databaseservice.h"
@@ -611,6 +612,12 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
     handler->setupWidget();
 
     auto proxy = new FakeVimProxy(noteTextEdit, this, handler);
+
+    QSettings settings;
+    bool setExpandTab = settings.value(QStringLiteral("Editor/useTabIndent")).toBool();
+    FakeVim::Internal::theFakeVimSettings()->item("et")->setValue(setExpandTab);
+    auto width = settings.value("Editor/indentSize", 4).toInt();
+    FakeVim::Internal::theFakeVimSettings()->item("ts")->setValue(width);
 
     QObject::connect(handler,
                      &FakeVim::Internal::FakeVimHandler::commandBufferChanged,
