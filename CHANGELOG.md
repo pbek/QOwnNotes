@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.9.9
+- tab stop width and tab versus space settings are now also respected in fakevim mode
+  (for [#1875](https://github.com/pbek/QOwnNotes/issues/1875))
+
 ## 20.9.8
 - resetting the note text font size will now not move the text cursor
   (for [#1869](https://github.com/pbek/QOwnNotes/issues/1869))
