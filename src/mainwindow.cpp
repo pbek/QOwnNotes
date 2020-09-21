@@ -604,12 +604,8 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
     auto proxy = new FakeVimProxy(noteTextEdit, this, handler);
 
     QSettings settings;
-    if (settings.value(QStringLiteral("Editor/useTabIndent")).toBool()) {
-        FakeVim::Internal::theFakeVimSettings()->item("et")->setValue(true);
-    } else {
-        FakeVim::Internal::theFakeVimSettings()->item("et")->setValue(true);
-    }
-
+    bool setExpandTab = settings.value(QStringLiteral("Editor/useTabIndent")).toBool();
+    FakeVim::Internal::theFakeVimSettings()->item("et")->setValue(setExpandTab);
     auto width = settings.value("Editor/indentSize", 4).toInt();
     FakeVim::Internal::theFakeVimSettings()->item("ts")->setValue(width);
 
