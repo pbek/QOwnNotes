@@ -282,9 +282,9 @@ QVector<Tag> Tag::fetchAllByParentId(const int parentId, const QString &sortBy) 
             "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
             "WHERE parent_id = :parentId "
             "GROUP BY t.name "
-            "ORDER BY ") %
-        sortBy);
+            "ORDER BY :sortBy"));
     query.bindValue(QStringLiteral(":parentId"), parentId);
+    query.bindValue(QStringLiteral(":sortBy"), sortBy);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -309,6 +309,7 @@ QVector<int> Tag::fetchAllIdsByParentId(const int parentId)
             "SELECT t.id as id "
             "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
             "WHERE parent_id = :parentId"));
+
     query.bindValue(QStringLiteral(":parentId"), parentId);
 
     QVector<int> tagList;
