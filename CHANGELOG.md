@@ -1,10 +1,10 @@
 # QOwnNotes Changelog
 
 ## 20.9.10
-- the AMD64 stable release snap of QOwnNotes will now be built by GitHub Actions to prevent
+- the amd64 stable release snap of QOwnNotes will now be built by GitHub Actions to prevent
   two desktop files being deployed with the snap (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
     - the other architectures will still be built by Ubuntu Launchpad
-- fixed the incorrect setExpandTab setting for fakeVim (for [#1875](https://github.com/pbek/QOwnNotes/issues/1875), thank you @Waqar144)
+- fixed the incorrect setExpandTab setting for fakevim (for [#1875](https://github.com/pbek/QOwnNotes/issues/1875), thank you @Waqar144)
 - the speed of the tagging system was slightly improved (for [#943](https://github.com/pbek/QOwnNotes/issues/943), thank you @Waqar144)
 
 ## 20.9.9
