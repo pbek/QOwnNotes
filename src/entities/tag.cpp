@@ -427,14 +427,14 @@ bool Tag::hasChild(const int tagId) const {
 /**
  * Fetches all linked tags of a note
  */
-QVector<Tag> Tag::fetchAllOfNote(const Note &note) {
+QVector<TagHeader> Tag::fetchAllOfNote(const Note &note) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
-    QVector<Tag> tagList;
+    QVector<TagHeader> tagList;
 
     query.prepare(
-        QStringLiteral("SELECT t.* FROM tag t "
+        QStringLiteral("SELECT t.id as id, t.name as name FROM tag t "
                        "JOIN noteTagLink l ON t.id = l.tag_id "
                        "WHERE l.note_file_name = :fileName AND "
                        "l.note_sub_folder_path = :noteSubFolderPath "
@@ -447,7 +447,9 @@ QVector<Tag> Tag::fetchAllOfNote(const Note &note) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            tagList.append(tagFromQuery(query));
+            int id = query.value(QStringLiteral("id")).toInt();
+            QString name = query.value(QStringLiteral("name")).toString();
+            tagList.append(TagHeader{id, name});
         }
     }
 
@@ -459,8 +461,8 @@ QVector<Tag> Tag::fetchAllOfNote(const Note &note) {
 /**
  * Fetches all linked tags of a list of notes
  */
-QVector<Tag> Tag::fetchAllOfNotes(const QVector<Note> &notes) {
-    QVector<Tag> notesTagList;
+QVector<TagHeader> Tag::fetchAllOfNotes(const QVector<Note> &notes) {
+    QVector<TagHeader> notesTagList;
 
     //get all tags for the notes list
     for (const Note &note : notes) {
@@ -571,7 +573,8 @@ QStringList Tag::searchAllNamesByName(const QString &name) {
  */
 Tag Tag::fetchOneOfNoteWithColor(const Note &note) {
     const auto tagList = fetchAllOfNote(note);
-    for (const Tag &tag : tagList) {
+    for (const TagHeader &tagHeader : tagList) {
+        const auto tag = Tag::fetch(tagHeader._id);
         if (tag.getColor().isValid()) {
             return tag;
         }
@@ -1383,9 +1386,9 @@ Tag Tag::getTagByNameBreadcrumbList(const QStringList &nameList,
     return tag;
 }
 
-bool Tag::operator==(const Tag &tag) const { return _id == tag._id; }
+//bool Tag::operator==(const Tag &tag) const { return _id == tag._id; }
 
-bool Tag::operator<(const Tag &tag) const { return _name < tag._name; }
+//bool Tag::operator<(const Tag &tag) const { return _name < tag._name; }
 
 QDebug operator<<(QDebug dbg, const Tag &tag) {
     dbg.nospace() << "Tag: <id>" << tag._id << " <name>" << tag._name
