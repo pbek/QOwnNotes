@@ -890,7 +890,7 @@ private:
     void buildBulkNoteTagMenuTree(QMenu *parentMenu, int parentTagId = 0);
 
     QTreeWidgetItem *addTagToTagTreeWidget(QTreeWidgetItem *parent,
-                                           const Tag &tag);
+                                           const TagHeader &tag);
 
     bool jumpToNoteName(const QString &name);
 
@@ -996,6 +996,8 @@ private:
 
     static void handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
                                              const Tag &tag);
+    static void handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
+                                             int tag);
 
     void disableColorOfTagItem(QTreeWidgetItem *item);
 
