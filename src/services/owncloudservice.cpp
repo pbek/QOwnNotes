@@ -973,8 +973,7 @@ void OwnCloudService::restoreTrashedNoteOnServer(const QString &fileName,
     QUrl url(serverUrl % restoreTrashedNotePath);
     QString serverNotesPath = Utils::Misc::appendIfDoesNotEndWith(
         NoteFolder::currentRemotePath() +
-            NoteSubFolder::activeNoteSubFolder().relativePath(
-                QStringLiteral("/")),
+            NoteSubFolder::activeNoteSubFolder().relativePath('/'),
         QStringLiteral("/"));
 
     url.setUserName(userName);
@@ -1081,7 +1080,7 @@ void OwnCloudService::loadTrash(MainWindow *mainWindow) {
     QUrl url(serverUrl % trashListPath);
     QString serverNotesPath =
         NoteFolder::currentRemotePath() +
-        NoteSubFolder::activeNoteSubFolder().relativePath(QStringLiteral("/"));
+        NoteSubFolder::activeNoteSubFolder().relativePath('/');
 
     url.setUserName(userName);
     url.setPassword(password);

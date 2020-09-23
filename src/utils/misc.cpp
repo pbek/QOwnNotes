@@ -519,7 +519,7 @@ QString Utils::Misc::defaultNotesPath() {
  *
  * @return
  */
-QString Utils::Misc::dirSeparator() { return QStringLiteral("/"); }
+char Utils::Misc::dirSeparator() { return '/'; }
 
 void Utils::Misc::waitMsecs(int msecs) {
     QTime dieTime = QTime::currentTime().addMSecs(msecs);
