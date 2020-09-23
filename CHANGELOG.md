@@ -4,6 +4,7 @@
 - the AMD64 stable release snap of QOwnNotes will now be built by GitHub Actions to prevent
   two desktop files being deployed with the snap (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
     - the other architectures will still be built by Ubuntu Launchpad
+- fixed the incorrect setExpandTab setting for fakeVim (for [#1875](https://github.com/pbek/QOwnNotes/issues/1875), thank you @Waqar144)
 
 ## 20.9.9
 - tab stop width and tab versus space settings are now also respected in fakevim mode
