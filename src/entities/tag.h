@@ -7,7 +7,14 @@
 class Note;
 class NoteSubFolder;
 
-class Tag {
+struct TagHeader {
+    TagHeader() = default;
+    TagHeader(int id, QString name) : _id {id}, _name{std::move(name)} {}
+    int _id = 0;
+    QString _name{QLatin1String("")};
+};
+
+class Tag : protected TagHeader {
    public:
     enum SpecialTag {
         AllNotesId = -1,
@@ -15,6 +22,7 @@ class Tag {
     };
 
     Tag() noexcept;
+    explicit Tag(int id) noexcept : TagHeader{id, QString()}, _parentId{0} {}
 
     bool operator==(const Tag &tag) const;
 
@@ -22,7 +30,11 @@ class Tag {
 
     friend QDebug operator<<(QDebug dbg, const Tag &tag);
 
-    int getId() const;
+    inline int getId() const { return _id; }
+
+    inline const QString& getName() const { return _name; }
+
+    inline void setName(QString text) { _name = text; }
 
     bool store();
 
@@ -34,9 +46,6 @@ class Tag {
 
     bool isFetched() const;
 
-    QString getName() const;
-
-    void setName(const QString &text);
 
     int getPriority() const;
 
@@ -50,12 +59,14 @@ class Tag {
 
     bool removeLinkToNote(const Note &note) const;
 
-    QVector<int> fetchAllLinkedNoteIds(const bool fromAllSubfolders,
-                                       const bool recursive = true) const;
+    static QVector<int> fetchAllLinkedNoteIds(int tagId,
+                                       const bool fromAllSubfolders,
+                                       const bool recursive = true);
 
-    QVector<int> fetchAllLinkedNoteIdsForFolder(
+    static QVector<int> fetchAllLinkedNoteIdsForFolder(
+        int tagId,
         const NoteSubFolder &noteSubFolder, bool fromAllSubfolders,
-        const bool recursive = true) const;
+        const bool recursive = true);
 
     QVector<Note> fetchAllLinkedNotes() const;
 
@@ -114,7 +125,13 @@ class Tag {
     static QVector<Tag> fetchAllWithLinkToNoteNames(
         const QStringList &noteNameList);
 
+    static QVector<TagHeader> fetchAllTagHeadersByParentId(const int parentId);
+
     static QVector<Tag> fetchAllByParentId(
+        const int parentId,
+        const QString &sortBy = QStringLiteral("created DESC"));
+
+    static QVector<int> fetchAllIdsByParentId(
         const int parentId,
         const QString &sortBy = QStringLiteral("created DESC"));
 
@@ -140,6 +157,8 @@ class Tag {
 
     static QVector<Tag> fetchRecursivelyByParentId(const int parentId);
 
+    static QVector<int> fetchTagIdsRecursivelyByParentId(const int parentId);
+
     QStringList getParentTagNames();
 
     static bool isTaggingShowNotesRecursively();
@@ -151,12 +170,10 @@ class Tag {
     static Tag getTagByNameBreadcrumbList(const QStringList &nameList,
                                           bool createMissing);
 
-   protected:
-    int _id;
+protected:
     int _parentId;
     int _priority;
     QColor _color;
-    QString _name;
 
     QString colorFieldName() const;
 
