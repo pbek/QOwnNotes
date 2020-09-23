@@ -26,13 +26,6 @@
 #include "entities/bookmark.h"
 #include "helpers/codetohtmlconverter.h"
 
-#ifdef USE_SYSTEM_BOTAN
-#include <botan/exceptn.h>
-#include <botan/secmem.h>
-#else
-#include <botan.h>
-#endif
-
 #include <botanwrapper.h>
 
 #include "libraries/md4c/md2html/render_html.h"
@@ -51,8 +44,8 @@
 Note::Note()
       : _id{0},
       _noteSubFolderId{0},
-      _fileSize{0},
       _cryptoKey{0},
+      _fileSize{0},
       _shareId{0},
       _sharePermissions{0},
       _hasDirtyData{false} {}
@@ -2784,15 +2777,11 @@ bool Note::canDecryptNoteText() const {
 
     // check if a hook changed the text
     if (decryptedNoteText.isEmpty()) {
-        try {
             // decrypt the note text with Botan
-            BotanWrapper botanWrapper;
-            botanWrapper.setPassword(_cryptoPassword);
-            botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
-            decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
-        } catch (Botan::Exception &) {
-            return false;
-        }
+        BotanWrapper botanWrapper;
+        botanWrapper.setPassword(_cryptoPassword);
+        botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
+        decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
 
         // fallback to SimpleCrypt
         if (decryptedNoteText.isEmpty()) {
@@ -2848,13 +2837,10 @@ QString Note::fetchDecryptedNoteText() const {
     // check if a hook changed the text
     if (decryptedNoteText.isEmpty()) {
         // decrypt the note text
-        try {
-            BotanWrapper botanWrapper;
-            botanWrapper.setPassword(_cryptoPassword);
-            botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
-            decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
-        } catch (Botan::Exception &) {
-        }
+        BotanWrapper botanWrapper;
+        botanWrapper.setPassword(_cryptoPassword);
+        botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
+        decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
 
         // fallback to SimpleCrypt
         if (decryptedNoteText.isEmpty()) {

@@ -1,5 +1,7 @@
 #include "botanwrapper.h"
+
 #include <QDebug>
+
 #ifdef USE_SYSTEM_BOTAN
 #include <botan/pipe.h>
 #include <botan/cipher_mode.h>
@@ -9,6 +11,8 @@
 #include <botan/kdf.h>
 #include <botan/hmac.h>
 #include <botan/sha160.h>
+#include <botan/types.h>
+#include <botan/secmem.h>
 #else
 #include "botan.h"
 #endif
@@ -38,39 +42,6 @@ QString BotanWrapper::Hash(const QString &Data) {
     }
 }
 
-//QString BotanWrapper::HexHash(QString Data) {
-//    try {
-//        Pipe pipe(new Hash_Filter("SHA-1"), new Hex_Encoder);
-//        pipe.process_msg(Data.toStdString());
-//        QString Value = QString::fromStdString(pipe.read_all_as_string(0));
-//        return Value;
-//    } catch (...) {
-//        return QString();
-//    }
-//}
-
-//QString BotanWrapper::Encode(QString Data) {
-//    try {
-//        Pipe pipe(new Base64_Encoder);
-//        pipe.process_msg(Data.toStdString());
-//        QString Value = QString::fromStdString(pipe.read_all_as_string(0));
-//        return Value;
-//    } catch (...) {
-//        return QString();
-//    }
-//}
-
-//QString BotanWrapper::Decode(QString Data) {
-//    try {
-//        Pipe pipe(new Base64_Decoder);
-//        pipe.process_msg(Data.toStdString());
-//        QString Value = QString::fromStdString(pipe.read_all_as_string(0));
-//        return Value;
-//    } catch (...) {
-//        return QString();
-//    }
-//}
-
 QString BotanWrapper::Encrypt(const QString &Data) {
     try {
         // Setup the key derive functions
@@ -79,6 +50,8 @@ QString BotanWrapper::Encrypt(const QString &Data) {
 
         // Create the KEY and IV
         Botan::KDF *kdf = Botan::get_kdf("KDF2(SHA-1)");
+
+        mSalt.data();
 
         // Create the master key
         Botan::SecureVector<Botan::byte> mMaster = pbkdf2.derive_key(
@@ -130,84 +103,6 @@ QString BotanWrapper::Decrypt(const QString &Data) {
     }
 }
 
-//bool BotanWrapper::EncryptFile(QString Source, QString Destination) {
-//    try {
-//        // Setup the key derive functions
-//        PKCS5_PBKDF2 pbkdf2(new HMAC(new SHA_160));
-//        const std::uint32_t PBKDF2_ITERATIONS = 8192;
-
-//        // Create the KEY and IV
-//        KDF *kdf = get_kdf("KDF2(SHA-1)");
-
-//        // Create the master key
-//        SecureVector<byte> mMaster = pbkdf2.derive_key(
-//               48,
-//               mPassword.toStdString(),
-//               &mSalt[0], mSalt.size(),
-//               PBKDF2_ITERATIONS).bits_of();
-//        SymmetricKey mKey = kdf->derive_key(32, mMaster, "salt1");
-//        InitializationVector mIV = kdf->derive_key(16, mMaster, "salt2");
-
-//        std::string inFilename = Source.toStdString();
-//        std::string outFilename = Destination.toStdString();
-//        std::ifstream in(inFilename.c_str(), std::ios::binary);
-//        std::ofstream out(outFilename.c_str(), std::ios::binary);
-
-//        Pipe pipe(get_cipher("AES-256/CBC/PKCS7", mKey, mIV, ENCRYPTION),
-//                  new DataSink_Stream(out));
-//        pipe.start_msg();
-//        in >> pipe;
-//        pipe.end_msg();
-
-//        out.flush();
-//        out.close();
-//        in.close();
-
-//        return true;
-//    } catch (...) {
-//        return false;
-//    }
-//}
-
-//bool BotanWrapper::DecryptFile(QString Source, QString Destination) {
-//    try {
-//        // Setup the key derive functions
-//        PKCS5_PBKDF2 pbkdf2(new HMAC(new SHA_160));
-//        const std::uint32_t PBKDF2_ITERATIONS = 8192;
-
-//        // Create the KEY and IV
-//        KDF *kdf = get_kdf("KDF2(SHA-1)");
-
-//        // Create the master key
-//        SecureVector<byte> mMaster = pbkdf2.derive_key(
-//               48,
-//               mPassword.toStdString(),
-//               &mSalt[0], mSalt.size(),
-//               PBKDF2_ITERATIONS).bits_of();
-//        SymmetricKey mKey = kdf->derive_key(32, mMaster, "salt1");
-//        InitializationVector mIV = kdf->derive_key(16, mMaster, "salt2");
-
-//        std::string inFilename = Source.toStdString();
-//        std::string outFilename = Destination.toStdString();
-//        std::ifstream in(inFilename.c_str(), std::ios::binary);
-//        std::ofstream out(outFilename.c_str(), std::ios::binary);
-
-//        Pipe pipe(get_cipher("AES-256/CBC/PKCS7", mKey, mIV, DECRYPTION),
-//                  new DataSink_Stream(out));
-//        pipe.start_msg();
-//        in >> pipe;
-//        pipe.end_msg();
-
-//        out.flush();
-//        out.close();
-//        in.close();
-
-//        return true;
-//    } catch (...) {
-//        return false;
-//    }
-//}
-
 void BotanWrapper::setPassword(const QString &Password) {
     // Set the password
     mPassword = Password;
@@ -215,9 +110,10 @@ void BotanWrapper::setPassword(const QString &Password) {
 
 void BotanWrapper::setSalt(const QString &Salt) {
     QByteArray cBytes = Salt.toLatin1();
-    const int cBytesSize = cBytes.size();
 
-    for (int i = 0; i < mSalt.size(); i++) {
-        mSalt[i] = i < cBytesSize ? cBytes[i] : '\0';
-    }
+    if (cBytes.size() > 48)
+        cBytes.resize(48);
+
+    mSalt.fill(0);
+    std::copy(cBytes.cbegin(), cBytes.cend(), mSalt.begin());
 }
