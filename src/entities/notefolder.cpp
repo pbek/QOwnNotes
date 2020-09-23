@@ -354,7 +354,7 @@ QString NoteFolder::currentLocalPath() {
 
     path = Utils::Misc::removeIfEndsWith(std::move(path), QDir::separator());
     path = Utils::Misc::removeIfEndsWith(std::move(path),
-                                         Utils::Misc::dirSeparator());
+                                         QString{Utils::Misc::dirSeparator()});
 
     return path;
 }
