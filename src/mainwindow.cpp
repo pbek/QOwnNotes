@@ -10337,10 +10337,10 @@ void MainWindow::openNotesContextMenu(const QPoint globalPos,
         buildBulkNoteSubFolderMenuTree(subFolderCopyMenu, true);
     }
 
-    const QVector<Tag> tagList = Tag::fetchAll();
+    int tagCount = Tag::countAll();
 
     // show the tagging menu if at least one tag is present
-    if (tagList.count() > 0) {
+    if (tagCount) {
         auto *tagMenu = noteMenu.addMenu(tr("&Tag selected notes with…"));
         buildBulkNoteTagMenuTree(tagMenu);
     }
