@@ -60,7 +60,6 @@ NoteSubFolder NoteSubFolder::fetch(int id) {
     return NoteSubFolder();
 }
 
-
 NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name,
                                                     int parentId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
