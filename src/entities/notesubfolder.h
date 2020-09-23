@@ -49,7 +49,7 @@ class NoteSubFolder {
 
     void setParentId(int parentId);
 
-    QString relativePath(QString separator = QLatin1String("")) const;
+    QString relativePath(char separator = '/') const;
 
     QString fullPath() const;
 

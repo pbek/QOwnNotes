@@ -75,7 +75,7 @@ QString cycleTextCase(const QString &text);
 QString toSentenceCase(const QString &text);
 QString toStartCase(const QString &text);
 QString defaultNotesPath();
-QString dirSeparator();
+char dirSeparator();
 void waitMsecs(int msecs);
 QString portableDataPath();
 bool isInPortableMode();

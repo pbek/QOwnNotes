@@ -60,6 +60,7 @@ NoteSubFolder NoteSubFolder::fetch(int id) {
     return NoteSubFolder();
 }
 
+
 NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name,
                                                     int parentId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
@@ -85,13 +86,7 @@ NoteSubFolder NoteSubFolder::fetchByNameAndParentId(const QString& name,
 /**
  * Gets the relative path name of the note sub folder
  */
-QString NoteSubFolder::relativePath(QString separator) const {
-    if (separator.isEmpty()) {
-        // be aware that the separator has to be same on all platforms to
-        // work cross platform
-        separator = Utils::Misc::dirSeparator();
-    }
-
+QString NoteSubFolder::relativePath(char separator) const {
     return _parentId == 0
                ? _name
                : getParent().relativePath(separator) + separator + _name;
@@ -534,7 +529,7 @@ QString NoteSubFolder::treeWidgetExpandStateSettingsKey(int noteFolderId) {
  * @return
  */
 int NoteSubFolder::depth() const {
-    const auto relativePath = this->relativePath(QStringLiteral("\n"));
+    const auto relativePath = this->relativePath('\n');
 
     if (relativePath.isEmpty()) {
         return 0;
