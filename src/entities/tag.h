@@ -134,9 +134,7 @@ class Tag : protected TagHeader {
         const int parentId,
         const QString &sortBy = QStringLiteral("created DESC"));
 
-    static QVector<int> fetchAllIdsByParentId(
-        const int parentId,
-        const QString &sortBy = QStringLiteral("created DESC"));
+    static QVector<int> fetchAllIdsByParentId(const int parentId);
 
     static int countAllParentId(const int parentId);
 

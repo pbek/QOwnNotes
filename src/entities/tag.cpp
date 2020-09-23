@@ -299,7 +299,7 @@ QVector<Tag> Tag::fetchAllByParentId(const int parentId, const QString &sortBy) 
     return tagList;
 }
 
-QVector<int> Tag::fetchAllIdsByParentId(const int parentId, const QString &sortBy)
+QVector<int> Tag::fetchAllIdsByParentId(const int parentId)
 {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
@@ -308,9 +308,7 @@ QVector<int> Tag::fetchAllIdsByParentId(const int parentId, const QString &sortB
         QStringLiteral(
             "SELECT t.id as id "
             "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
-            "WHERE parent_id = :parentId "
-            "ORDER BY ") %
-        sortBy);
+            "WHERE parent_id = :parentId"));
     query.bindValue(QStringLiteral(":parentId"), parentId);
 
     QVector<int> tagList;
