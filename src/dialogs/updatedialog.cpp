@@ -188,9 +188,11 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
                 QNetworkRequest::FollowRedirectsAttribute, true);
 #endif
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
             // try to ensure the network is accessible
             _networkManager->setNetworkAccessible(
                 QNetworkAccessManager::Accessible);
+#endif
 
             QNetworkReply *reply = _networkManager->get(networkRequest);
 

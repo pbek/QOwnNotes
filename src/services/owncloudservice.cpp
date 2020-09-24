@@ -603,8 +603,10 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
     QUrl url(serverUrl);
     QNetworkRequest r(url);
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     // direct server url request without auth header
     QNetworkReply *reply = networkManager->get(r);
@@ -641,8 +643,10 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
  * Starts an api app version test
  */
 void OwnCloudService::startAppVersionTest() {
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     QUrl url(serverUrl % appInfoPath);
     QString serverNotesPath = NoteFolder::currentRemotePath();
@@ -813,8 +817,10 @@ void OwnCloudService::shareNote(const Note &note, ShareDialog *dialog) {
     r.setHeader(QNetworkRequest::ContentTypeHeader,
                 QStringLiteral("application/x-www-form-urlencoded"));
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     QNetworkReply *reply = networkManager->post(r, postData);
     ignoreSslErrorsIfAllowed(reply);
@@ -854,8 +860,10 @@ void OwnCloudService::setPermissionsOnSharedNote(const Note &note,
     r.setHeader(QNetworkRequest::ContentTypeHeader,
                 QStringLiteral("application/x-www-form-urlencoded"));
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     QNetworkReply *reply = networkManager->put(r, params.query().toUtf8());
     ignoreSslErrorsIfAllowed(reply);
@@ -884,8 +892,10 @@ void OwnCloudService::removeNoteShare(const Note &note, ShareDialog *dialog) {
     QNetworkRequest r(url);
     addAuthHeader(&r);
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     QNetworkReply *reply = networkManager->sendCustomRequest(r, "DELETE");
     ignoreSslErrorsIfAllowed(reply);
@@ -916,8 +926,10 @@ void OwnCloudService::fetchShares(const QString &path) {
     QNetworkRequest r(url);
     addAuthHeader(&r);
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
@@ -939,8 +951,10 @@ void OwnCloudService::fetchBookmarks() {
     QNetworkRequest r(url);
     addAuthHeader(&r);
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
@@ -990,8 +1004,10 @@ void OwnCloudService::restoreTrashedNoteOnServer(const QString &fileName,
     QNetworkRequest r(url);
     addAuthHeader(&r);
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
@@ -1022,8 +1038,10 @@ int OwnCloudService::deleteTrashedNoteOnServer(const QString &fileName,
     QNetworkRequest networkRequest = QNetworkRequest(url);
     addAuthHeader(&networkRequest);
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     int statusCode = -1;
     QNetworkReply *reply = manager->deleteResource(networkRequest);
@@ -1064,8 +1082,10 @@ void OwnCloudService::loadVersions(const QString &fileName,
     QNetworkRequest r(url);
     addAuthHeader(&r);
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
@@ -1108,8 +1128,10 @@ void OwnCloudService::loadTrash(MainWindow *mainWindow) {
     QNetworkRequest r(url);
     addAuthHeader(&r);
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
@@ -2085,8 +2107,10 @@ void OwnCloudService::settingsGetFileList(SettingsDialog *dialog,
                 QStringLiteral("application/xml"));
     auto *buffer = new QBuffer(dataToSend);
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+#endif
 
     QNetworkReply *reply =
         networkManager->sendCustomRequest(r, "PROPFIND", buffer);
