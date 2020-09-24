@@ -8183,8 +8183,6 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
     const int tagId = tag._id;
     const QString name = tag._name;
     auto hideCount = QSettings().value("tagsPanelHideNoteCount", false).toBool();
-    const bool isShowNotesRecursively =
-            NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
 
     QVector<int> linkedNoteIds;
     if (!hideCount) {
@@ -8192,8 +8190,12 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
                     Tag::fetchTagIdsRecursivelyByParentId(tagId) : QVector<int>{tag._id};
         const auto selectedSubFolderItems =
                 ui->noteSubFolderTreeWidget->selectedItems();
+        const bool showNotesFromAllSubFolders = this->_showNotesFromAllNoteSubFolders;
+        const bool isShowNotesRecursively =
+                NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
 
         if (selectedSubFolderItems.count() > 1) {
+            linkedNoteIds.reserve(tagIdListToCount.size());
             for (const int tagIdToCount : tagIdListToCount) {
                 for (QTreeWidgetItem *folderItem : selectedSubFolderItems) {
                     int id = folderItem->data(0, Qt::UserRole).toInt();
@@ -8205,15 +8207,16 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
 
                     linkedNoteIds << Tag::fetchAllLinkedNoteIdsForFolder(
                                          tagIdToCount,
-                                         folder, _showNotesFromAllNoteSubFolders,
+                                         folder, showNotesFromAllSubFolders,
                                          isShowNotesRecursively);
                 }
             }
         } else {
+            linkedNoteIds.reserve(tagIdListToCount.size());
             for (const int tagToCount : tagIdListToCount) {
                 linkedNoteIds << Tag::fetchAllLinkedNoteIds(
                                      tagToCount,
-                                     _showNotesFromAllNoteSubFolders,
+                                     showNotesFromAllSubFolders,
                                      isShowNotesRecursively);
             }
         }

@@ -725,6 +725,7 @@ QVector<int> Tag::fetchAllLinkedNoteIds(int tagId, const bool fromAllSubfolders,
             int noteId = Note::fetchNoteIdByName(name, noteSubFolderId);
             noteIdList.append(noteId);
         }
+        return noteIdList;
     }
 
     DatabaseService::closeDatabaseConnection(db, query);
