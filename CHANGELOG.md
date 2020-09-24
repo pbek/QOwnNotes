@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.9.11
+- the web socket server for the QOwnNotes browser extension is now only listening
+  on localhost any more (for [#1885](https://github.com/pbek/QOwnNotes/issues/1885))
+
 ## 20.9.10
 - the amd64 stable release snap of QOwnNotes will now be built by GitHub Actions to prevent
   two desktop files being deployed with the snap (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))

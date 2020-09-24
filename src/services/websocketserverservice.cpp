@@ -63,7 +63,7 @@ void WebSocketServerService::listen(quint16 port) {
 
     close();
 
-    if (m_pWebSocketServer->listen(QHostAddress::Any, port)) {
+    if (m_pWebSocketServer->listen(QHostAddress::LocalHost, port)) {
         Utils::Misc::printInfo(tr("QOwnNotes server listening on port %1")
                                    .arg(QString::number(port)));
 
