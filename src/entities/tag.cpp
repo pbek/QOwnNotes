@@ -683,6 +683,7 @@ QVector<int> Tag::fetchAllLinkedNoteIds(int tagId, const bool fromAllSubfolders,
                                         const bool recursive) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
+    QVector<int> noteIdList;
 
     if (fromAllSubfolders) {
         // 'All notes' selected in note subfolder panel
@@ -711,7 +712,6 @@ QVector<int> Tag::fetchAllLinkedNoteIds(int tagId, const bool fromAllSubfolders,
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
-        QVector<int> noteIdList;
         for (int r = 0; query.next(); r++) {
             // always keep in mind that note_file_name is no file name,
             // but the base name (so "my-note", instead of "my-note.md")
@@ -725,12 +725,11 @@ QVector<int> Tag::fetchAllLinkedNoteIds(int tagId, const bool fromAllSubfolders,
             int noteId = Note::fetchNoteIdByName(name, noteSubFolderId);
             noteIdList.append(noteId);
         }
-        return noteIdList;
     }
 
     DatabaseService::closeDatabaseConnection(db, query);
 
-    return QVector<int>();
+    return noteIdList;
 }
 
 /**
