@@ -62,6 +62,8 @@ class Note {
         const QString &noteSubFolderPathData,
         const QString& pathDataSeparator = QStringLiteral("\n"));
 
+    static int fetchNoteIdByName(const QString &name, int noteSubFolderId = -1);
+
     static QVector<Note> fetchAll(int limit = -1);
 
     static QVector<Note> fetchAllNotTagged(int activeNoteSubFolderId);

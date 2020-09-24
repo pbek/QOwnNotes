@@ -527,6 +527,32 @@ Note Note::fetchByName(const QString &name,
     return fetchByName(name, noteSubFolderId);
 }
 
+int Note::fetchNoteIdByName(const QString &name, int noteSubFolderId)
+{
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
+    QSqlQuery query(db);
+
+    // get the active note subfolder id if none was set
+    if (noteSubFolderId == -1) {
+        noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    }
+
+    query.prepare(
+        QStringLiteral("SELECT id FROM note WHERE name = :name AND "
+                       "note_sub_folder_id = :note_sub_folder_id"));
+    query.bindValue(QStringLiteral(":name"), name);
+    query.bindValue(QStringLiteral(":note_sub_folder_id"), noteSubFolderId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        if (query.first()) {
+            return query.value(QStringLiteral("id")).toInt();
+        }
+    }
+    return -1;
+}
+
 Note Note::fetchByName(const QString &name, int noteSubFolderId) {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
