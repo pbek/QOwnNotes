@@ -790,12 +790,13 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
       <source>Note attributes</source>
-      <translation>Opomba - atributi</translation>
+      <translation>
+Atributi opombe</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="682"/>
       <source>Subject date</source>
-      <translation>Datum predmet</translation>
+      <translation>Datum predmeta</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="685"/>
@@ -825,12 +826,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="700"/>
       <source>Source URL</source>
-      <translation>URL vira</translation>
+      <translation>Izvorni URL</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="704"/>
       <source>Source application</source>
-      <translation>Aplikacija vira</translation>
+      <translation>Izvorna aplikacija</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="707"/>
