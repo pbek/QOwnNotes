@@ -17,6 +17,9 @@ By default the browser extension will show all **links of the current note** in 
 
 You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
 
+!!! tip
+    You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
+
 ### Syntax of bookmark links
 
 ```markdown
