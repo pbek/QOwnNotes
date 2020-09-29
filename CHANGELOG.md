@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.10.0
+- the feature to jump to the start/end of the document when in the first/last line
+  was improved to detect the visible line (for [#1892](https://github.com/pbek/QOwnNotes/issues/1892))
+
 ## 20.9.11
 - the web socket server for the QOwnNotes browser extension is now only listening
   on localhost any more (for [#1885](https://github.com/pbek/QOwnNotes/issues/1885))
