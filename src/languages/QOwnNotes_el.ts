@@ -6353,7 +6353,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation>Επιτρέψτε στο όνομα του αρχείου σημείωσης να είναι διαφορετική από την επικεφαλίδα. &lt;br&gt; Προσοχή ότι το ownCloud Notes χρειάζεται το όνομα του αρχείου να είναι το ίδιο με τον τίτλο!</translation>
+      <translation>Να επιτρέπεται το όνομα του αρχείου σημειώσεων να είναι διαφορετικό από τον τίτλο. &lt;br&gt; Προσοχή στο ότι η εφαρμογή ownCloud Notes χρειάζεται το όνομα του αρχείου να είναι το ίδιο με τον τίτλο!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5649"/>
@@ -6462,7 +6462,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5454"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation>Εμφάνιση όλων των σημειώσεων σε ένα φάκελο, συμπεριλαμβανομένων των υποφακέλων τους (λειτουργεί μόνο εάν είναι ενεργοποιημένοι οι υποφακέλοι)</translation>
+      <translation>Εμφάνιση όλων των σημειώσεων σε έναν φάκελο, συμπεριλαμβανομένων των υποφακέλων τους (λειτουργεί μόνο εάν είναι ενεργοποιημένοι οι υποφακέλοι)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5191"/>
@@ -6850,7 +6850,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2010"/>
       <source>Empty calendar item cache</source>
-      <translation>Κενή προσωρινή μνήμη στοιχείων ημερολογίου</translation>
+      <translation>Αδειάστε την κρυφή μνήμη του στοιχείου ημερολογίου</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2033"/>
@@ -6901,7 +6901,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2050"/>
       <source>Ignore calendars that don't support todo items</source>
-      <translation>Αγνοήστε τα ημερολόγια που δεν υποστηρίζουν στοιχεία todo</translation>
+      <translation>Παράβλεψη των ημερολογίων που δεν υποστηρίζουν τα στοιχεία εκκρεμών εργασιών</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2882"/>
@@ -6916,7 +6916,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3041"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation>Χρησιμοποιήστε το εσωτερικό θέμα εικονιδίου αντί για θέμα εικονιδίου συστήματος</translation>
+      <translation>Χρησιμοποιήστε το θέμα εσωτερικού εικονιδίου αντί για το θέμα εικονιδίου του συστήματος</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3644"/>
@@ -6931,12 +6931,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="810"/>
       <source>Allow note file name to be different from headline</source>
-      <translation>Να επιτρέπεται το όνομα του αρχείου σημείωσης να είναι διαφορετικό από τον τίτλο</translation>
+      <translation>Να επιτρέπεται το όνομα του αρχείου σημειώσεων να είναι διαφορετικό από τον τίτλο</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3935"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation>Ελέγξτε αν θέλετε να αγνοήσετε όλες τις εξωτερικές τροποποιήσεις ενώ επεξεργάζεστε την τρέχουσα σημείωση.</translation>
+      <translation>Ελέγξτε το αν θέλετε να παραβλέψετε όλες τις εξωτερικές τροποποιήσεις ενώ επεξεργάζεστε την τρέχουσα σημείωση.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3938"/>
@@ -6946,7 +6946,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3859"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation>Μπορείτε να το χρησιμοποιήσετε, για παράδειγμα, στα Windows, εάν έχετε προβλήματα με νέες γραμμές στην εφαρμογή notesCloud / Nextcloud</translation>
+      <translation>Μπορείτε να το χρησιμοποιήσετε, για παράδειγμα, στα Windows εάν έχετε προβλήματα με τις αλλαγές γραμμών στην εφαρμογή σημειώσεων ownCloud / Nextcloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4034"/>
@@ -7644,7 +7644,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation>Εισαγάγετε ένα διαχωριστικό τίτλου πίνακα</translation>
+      <translation>Εισάγετε ένα διαχωριστικό τίτλου πίνακα</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
@@ -7664,7 +7664,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation>Επιλέξτε διάταξη πίνακα ή πληκτρολογήστε κείμενο:</translation>
+      <translation>Επιλέξτε διάταξη πίνακα ή εισάγετε κείμενο:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -7861,23 +7861,23 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="138"/>
       <source>Clear cache and reload</source>
-      <translation>Διαγραφή της προσωρινής μνήμης και επαναφόρτιση</translation>
+      <translation>Εκκαθάριση κρυφής μνήμης και επαναφόρτωση</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="143"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation>Εκκαθάριση της προσωρινής μνήμης του ημερολογίου και επανατοποθέτηση εργασιών από το διακομιστή</translation>
+      <translation>Εκκαθάριση κρυφής μνήμης του ημερολογίου και επαναφόρτωση εργασιών από τον διακομιστή</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="582"/>
       <source>Remove todo item</source>
-      <translation>Κατάργηση στοιχείου todo</translation>
+      <translation>Κατάργηση στοιχείου εκκρεμών εργασιών</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="583"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation>Κατάργηση του επιλεγμένου στοιχείου todo;
+      <translation>Κατάργηση του επιλεγμένου στοιχείου εκκρεμών εργασιών;
 Αυτό δεν μπορεί να αναιρεθεί!</translation>
     </message>
     <message>
@@ -7888,7 +7888,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="874"/>
       <source>Create new sub-task</source>
-      <translation>Δημιουργήστε νέα δευτερεύουσα εργασία</translation>
+      <translation>Δημιουργία νέας δευτερεύουσας εργασίας</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="874"/>
@@ -7898,7 +7898,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="875"/>
       <source>New sub-task</source>
-      <translation>Νέα υποεργασία</translation>
+      <translation>Νέα δευτερεύουσα εργασία</translation>
     </message>
   </context>
   <context>
@@ -7921,7 +7921,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation>Καταχωρίστε τις διαθέσιμες γραμμές εργαλείων. Η επιλεγμένη θα επεξεργαστεί</translation>
+      <translation>Καταχωρίστε τις διαθέσιμες γραμμές εργαλείων. Η επιλεγμένη θα υποστεί επεξεργασία</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
@@ -8002,7 +8002,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
       <source>Removes the selected item from the active toolbar</source>
-      <translation>Καταργεί το επιλεγμένο στοιχείο από την ενεργή γραμμή εργαλείων</translation>
+      <translation>Αφαιρεί το επιλεγμένο στοιχείο από την ενεργή γραμμή εργαλείων</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
@@ -8041,7 +8041,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation>Καταγραμμένες σημειώσεις</translation>
+      <translation>Σημειώσεις στον κάδο απορριμάτων</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="55"/>
@@ -8076,7 +8076,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>
       <source>Delete selected note on server</source>
-      <translation>Διαγραφή επιλεγμένης σημείωσης στο διακομιστή</translation>
+      <translation>Διαγραφή επιλεγμένης σημείωσης στον διακομιστή</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="68"/>
@@ -8086,7 +8086,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="190"/>
       <source>Delete note on server</source>
-      <translation>Διαγραφή σημείωσης στο διακομιστή</translation>
+      <translation>Διαγραφή σημείωσης στον διακομιστή</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
@@ -8149,7 +8149,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="59"/>
       <source>&amp;Download latest</source>
-      <translation>&amp;Κατεβάστε το τελευταίο</translation>
+      <translation>&amp;Κάντε λήψη του πιο πρόσφατου</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="57"/>
@@ -8361,7 +8361,7 @@ This cannot be undone!</source>
       <source>%n bookmark(s) created</source>
       <translation>
         <numerusform>Δημιουργήθηκε(αν) %n σελιδοδείκτης(ες)</numerusform>
-        <numerusform>Δημιουργήθηκαν %n σελιδοδείκτες</numerusform>
+        <numerusform>Δημιουργήθηκε(αν) %n σελιδοδείκτης(ες)</numerusform>
       </translation>
     </message>
     <message>

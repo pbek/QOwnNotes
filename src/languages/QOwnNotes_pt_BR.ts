@@ -592,7 +592,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="143"/>
       <source>Tagalog</source>
-      <translation>Tagalo</translation>
+      <translation>Tagaló (Filipino)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="144"/>
@@ -6271,7 +6271,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6037"/>
       <source>Bookmarks tag:</source>
-      <translation>Tag de marcadores:</translation>
+      <translation>Tag dos marcadores:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="6044"/>
@@ -8218,7 +8218,7 @@ Isso não poderá ser desfeito!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="450"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation>Descompactação do atualizador executável '%1' não existe!</translation>
+      <translation>O executável de descompactação "%1" não existe!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="459"/>

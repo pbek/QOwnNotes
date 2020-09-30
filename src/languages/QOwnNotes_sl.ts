@@ -856,12 +856,12 @@ Atributi opombe</translation>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="720"/>
       <source>Content class</source>
-      <translation>Razred vsebine</translation>
+      <translation>Vsebina razreda</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="724"/>
       <source>Application data</source>
-      <translation>Aplikacijski podatki</translation>
+      <translation>Podatki o aplikaciji</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="799"/>
@@ -905,7 +905,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3719"/>
       <source>%1All</source>
-      <translation>%1All</translation>
+      <translation>%1Vse</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3733"/>
@@ -915,7 +915,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4313"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation>Type Alt-V, Alt-V to quit FakeVim mode.</translation>
+      <translation>Pritisni Alt-V, Alt-V za izhod iz FakeVim načina.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
@@ -930,18 +930,18 @@ Atributi opombe</translation>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5773"/>
       <source>Trailing characters:</source>
-      <translation>Zaostajajo znakov:</translation>
+      <translation>Zaostajanje znakov:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
       <source>Move lines into themselves.</source>
-      <translation>Premakniti linije v sami.</translation>
+      <translation>Premakniti linije znotraj.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
       <translation>
-        <numerusform>%n premaknjena vrstica.</numerusform>
+        <numerusform>%n premaknjene linije.</numerusform>
         <numerusform>%n premaknjenih vrstic.</numerusform>
         <numerusform>%n premaknjenih vrstic.</numerusform>
         <numerusform>%n premaknjenih vrstic.</numerusform>
@@ -950,7 +950,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5958"/>
       <source>File "%1" exists (add ! to override)</source>
-      <translation>Datoteka "%1" obstaja (dodajte ! za preglasitev)</translation>
+      <translation>Datoteka "%1" obstaja (dodajte ! za prepis)</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5972"/>
