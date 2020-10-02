@@ -96,21 +96,21 @@ markdown_extensions:
 nav:
   - 'Welcome': 'index.md'
   - 'Getting Started':
-      - 'Concept': 'getting-started/concept.md'
+      - 'getting-started/concept.md'
       - 'Install QOwnNotes': 'getting-started/install-qownnotes.md'
       - 'Browser extension': 'getting-started/browser-extension.md'
       - 'QOwnNotesAPI': 'getting-started/qownnotesapi.md'
       - 'CLI parameters': 'getting-started/cli-parameters.md'
-      - 'Shortcuts': 'getting-started/shortcuts.md'
+      - 'getting-started/shortcuts.md'
   - 'Editor':
-      - 'Spellchecking': 'editor/spellchecking.md'
+      - 'editor/spellchecking.md'
       - 'Time formats': 'editor/time-formats.md'
   - 'Scripting':
       - 'Basics': 'scripting/index.md'
       - 'Methods and objects': 'scripting/methods-and-objects.md'
-      - 'Hooks': 'scripting/hooks.md'
+      - 'scripting/hooks.md'
       - 'Exposed classes': 'scripting/classes.md'
   - 'Contributing':
       - 'Get involved': 'contributing/get-involved.md'
-      - 'Maintainers': 'contributing/maintainers.md'
-      - 'Translation': 'contributing/translation.md'
+      - 'contributing/maintainers.md'
+      - 'contributing/translation.md'
