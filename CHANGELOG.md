@@ -4,7 +4,7 @@
 - you can now also search only in the note name (for [#1890](https://github.com/pbek/QOwnNotes/issues/1890))
     - `n:book` or `name:book` will search for notes with `book` just in the note
       name or file name
-    - for more information please take a look at the new
+    - for more information about searching please take a look at the new
       [searching documentation](https://docs.qownnotes.org/en/latest/getting-started/searching/)
 
 ## 20.10.0
