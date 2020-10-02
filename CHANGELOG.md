@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 20.10.1
+- you can now also search only in the note name (for [#1890](https://github.com/pbek/QOwnNotes/issues/1890))
+    - `n:book` or `name:book` will search for notes with `book` just in the note
+      name or file name
+    - for more information please take a look at the new
+      [searching documentation](https://docs.qownnotes.org/en/latest/getting-started/searching/)
+
 ## 20.10.0
 - the feature to jump to the start/end of the document when in the first/last line
   was improved to detect the visible line (for [#1892](https://github.com/pbek/QOwnNotes/issues/1892))

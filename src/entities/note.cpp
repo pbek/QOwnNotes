@@ -869,6 +869,15 @@ QVector<QString> Note::searchAsNameList(const QString &text,
     return nameList;
 }
 
+bool Note::isNameSearch(const QString &searchTerm) {
+    return searchTerm.startsWith(QStringLiteral("name:")) ||
+           searchTerm.startsWith(QStringLiteral("n:"));
+}
+
+QString Note::removeNameSearchPrefix(QString searchTerm) {
+    return searchTerm.remove(QRegularExpression("^(name:|n:)"));
+}
+
 /**
  * Searches for text in notes and returns the note ids
  *
@@ -897,7 +906,11 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
 
     // we want to search for the text in the note text and the filename
     for (int i = 0; i < queryStrings.count(); i++) {
-        sqlList.append(
+        const QString queryString = queryStrings[i];
+
+        // if we just want to search in the name we use different columns
+        sqlList.append(isNameSearch(queryString) ?
+            QStringLiteral("(name LIKE ? OR file_name LIKE ?)") :
             QStringLiteral("(note_text LIKE ? OR file_name LIKE ?)"));
     }
 
@@ -919,13 +932,20 @@ QVector<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
 
     // add the values to the query
     for (int i = 0; i < queryStrings.count(); i++) {
+        QString queryString = queryStrings[i];
+
+        // remove the search prefix if we searched for names only
+        if (isNameSearch(queryString)) {
+            queryString = removeNameSearchPrefix(queryString);
+        }
+
         int pos = i * 2;
         pos = ignoreNoteSubFolder ? pos : pos + 1;
 
-        // bind the values for the note text and the filename
+        // bind the values for the note text (or name) and the filename
         query.bindValue(
-            pos, QStringLiteral("%") + queryStrings[i] + QStringLiteral("%"));
-        query.bindValue(pos + 1, QStringLiteral("%") + queryStrings[i] +
+            pos, QStringLiteral("%") + queryString + QStringLiteral("%"));
+        query.bindValue(pos + 1, QStringLiteral("%") + queryString +
                                      QStringLiteral("%"));
     }
 
@@ -948,7 +968,8 @@ int Note::countSearchTextInNote(const QString &search) const {
  * Builds a string list of a search string
  */
 QStringList Note::buildQueryStringList(QString searchString,
-                                       bool escapeForRegularExpression) {
+                                       bool escapeForRegularExpression,
+                                       bool removeSearchPrefix) {
     auto queryStrings = QStringList();
 
     // check for strings in ""
@@ -974,7 +995,13 @@ QStringList Note::buildQueryStringList(QString searchString,
     const QStringList searchStringList = searchString.split(QChar(' '));
     queryStrings.reserve(searchStringList.size());
     // add the remaining strings
-    for (const QString &text : searchStringList) {
+    for (QString text : searchStringList) {
+        if (removeSearchPrefix) {
+            if (isNameSearch(text)) {
+                text = removeNameSearchPrefix(text);
+            }
+        }
+
         // escape the text so strings like `^ ` don't cause an
         // infinite loop
         queryStrings.append(escapeForRegularExpression

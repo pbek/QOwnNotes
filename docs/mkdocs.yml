@@ -101,6 +101,7 @@ nav:
       - 'Browser extension': 'getting-started/browser-extension.md'
       - 'QOwnNotesAPI': 'getting-started/qownnotesapi.md'
       - 'CLI parameters': 'getting-started/cli-parameters.md'
+      - 'getting-started/searching.md'
       - 'getting-started/shortcuts.md'
   - 'Editor':
       - 'editor/spellchecking.md'

@@ -201,7 +201,8 @@ class Note {
     int countSearchTextInNote(const QString &search) const;
 
     static QStringList buildQueryStringList(
-        QString searchString, bool escapeForRegularExpression = false);
+        QString searchString, bool escapeForRegularExpression = false,
+        bool removeSearchPrefix = false);
 
     QString fileBaseName(bool withFullName = false);
 
@@ -352,6 +353,10 @@ class Note {
     bool stripTrailingSpaces(int skipLine = -1);
 
     QString detectNewlineCharacters();
+
+    static bool isNameSearch(const QString &searchTerm);
+
+    static QString removeNameSearchPrefix(QString searchTerm);
 
    protected:
     int _id;

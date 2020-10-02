@@ -5667,6 +5667,7 @@ void MainWindow::filterNotesBySearchLineEditText() {
         while (*it) {
             QTreeWidgetItem *item = *it;
 
+            // skip note folders (if they are also shown in the note list)
             if (item->data(0, Qt::UserRole + 1) != NoteType) {
                 ++it;
                 continue;
@@ -5684,7 +5685,11 @@ void MainWindow::filterNotesBySearchLineEditText() {
                 item->setForeground(1, QColor(Qt::gray));
                 int count = 0;
 
-                for (const QString &word : searchTextTerms) {
+                for (QString word : searchTextTerms) {
+                    if (Note::isNameSearch(word)) {
+                        word = Note::removeNameSearchPrefix(word);
+                    }
+
                     count += note.countSearchTextInNote(word);
                 }
 
@@ -5738,7 +5743,7 @@ void MainWindow::filterNotesBySearchLineEditText() {
  */
 void MainWindow::doSearchInNote(QString searchText) {
     const QStringList searchTextTerms =
-        Note::buildQueryStringList(searchText, true);
+        Note::buildQueryStringList(searchText, true, true);
 
     if (searchTextTerms.count() > 1) {
         QString localSearchTerm = QStringLiteral("(") +
@@ -5747,6 +5752,10 @@ void MainWindow::doSearchInNote(QString searchText) {
         activeNoteTextEdit()->doSearch(
             localSearchTerm, QPlainTextEditSearchWidget::RegularExpressionMode);
     } else {
+        if (Note::isNameSearch(searchText)) {
+            searchText = Note::removeNameSearchPrefix(searchText);
+        }
+
         activeNoteTextEdit()->doSearch(searchText.remove(QStringLiteral("\"")));
     }
 }
