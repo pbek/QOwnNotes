@@ -711,7 +711,7 @@
   (thank you zmni, MGuerra, Fabijenna, richarson, mlimacarlos, rakekniven, unchase, tiwi90)
 
 ## 20.3.7
-- you now can also <kdb>Ctrl + Click</kbd> legacy attachment urls like
+- you now can also <kbd>Ctrl + Click</kbd> legacy attachment urls like
   `file://attachments/1260976404.pdf` in the note editor to open them externally
   (for [#1663](https://github.com/pbek/QOwnNotes/issues/1663))
 - added **Shona translation** (a big thank you to Fabijenna)
@@ -3439,7 +3439,7 @@
 - tags in the `tag selected notes with...` context menu of the note list are
   now sorted by name (for [#947](https://github.com/pbek/QOwnNotes/issues/947))
 - the search line edits in the note-, tag- and subfolder-lists can now be 
-  cleared with the <kdb>Escape</kdb> key (for [#948](https://github.com/pbek/QOwnNotes/issues/948))
+  cleared with the <kbd>Escape</kbd> key (for [#948](https://github.com/pbek/QOwnNotes/issues/948))
 
 ## 18.06.5
 - disabled note folder database closing feature temporarily, since it breaks 
@@ -4075,7 +4075,7 @@
 
 ## 17.11.0
 - list symbols like `*` and `-` will now only be removed in an empty line when
-  pressing <kdb>Return</kbd> if there was a space-character after them
+  pressing <kbd>Return</kbd> if there was a space-character after them
   (for [#763](https://github.com/pbek/QOwnNotes/issues/763))
 - added another layer of error handling to the *Update checker* and more 
   error messages in case something went wrong (for [#759](https://github.com/pbek/QOwnNotes/issues/759))
