@@ -1,7 +1,5 @@
 name: Build Webpage
 on:
-  push:
-    branches: [ develop ]
   pull_request:
     branches: [ develop ]
 

@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: img-qownnotes-webpage
+    build: .
+    container_name: qownnotes-webpage
+    restart: always
+    ports:
+      - "8080:80"
