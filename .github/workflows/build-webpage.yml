@@ -1,0 +1,26 @@
+name: Build Webpage
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+defaults:
+  run:
+    working-directory: webpage
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - run: yarn install
+    - run: cp ../CHANGELOG.md src/changelog.md
+    - run: cp ../docs/content/getting-started/shortcuts.md src
+    - run: yarn run build
