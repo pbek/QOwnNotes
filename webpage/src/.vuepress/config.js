@@ -32,8 +32,8 @@ module.exports = {
   themeConfig: {
     repo: 'pbek/QOwnNotes',
     editLinks: true,
-    docsRepo: 'qownnotes/webpage',
-    docsDir: 'src',
+    docsRepo: 'pbek/QOwnNotes',
+    docsDir: 'webpage/src',
     editLinkText: 'Help us improve this page!',
     lastUpdated: false,
     nav: [
