@@ -40,6 +40,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
+        path: ./webpage
         tags: pbeke/qownnotes-webpage:latest
     -
       name: Image digest
