@@ -1,0 +1,23 @@
+{
+  "name": "qownnotes-webpage",
+  "version": "0.0.1",
+  "description": "Plain-text file markdown note taking with Nextcloud integration",
+  "main": "index.js",
+  "authors": {
+    "name": "Patrizio Bekerle",
+    "email": "patrizio@bekerle.com"
+  },
+  "repository": "/qownnotes-webpage",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  },
+  "dependencies": {
+    "vuepress-plugin-sitemap": "^2.3.1",
+    "vuetify": "^2.3.12"
+  }
+}
