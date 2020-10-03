@@ -41,6 +41,7 @@ jobs:
       with:
         push: true
         path: ./webpage
+        dockerfile: ./webpage/Dockerfile
         tags: pbeke/qownnotes-webpage:latest
     -
       name: Image digest
