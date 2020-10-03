@@ -47,6 +47,15 @@ module.exports = {
         link: 'https://docs.qownnotes.org'
       },
       {
+        text: 'Changelog',
+        link: '/changelog',
+        collapsable: true,
+      },
+      {
+        text: 'Shortcuts',
+        link: '/shortcuts',
+      },
+      {
         text: 'Contact',
         ariaLabel: 'Contact Menu',
         items: [
