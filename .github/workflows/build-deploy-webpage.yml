@@ -42,7 +42,7 @@ jobs:
         push: true
         #path: ./webpage
         context: ./webpage
-        dockerfile: ./webpage/Dockerfile
+        file: ./webpage/Dockerfile
         tags: pbeke/qownnotes-webpage:latest
     -
       name: Image digest
