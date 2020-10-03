@@ -33,6 +33,7 @@ module.exports = {
     repo: 'pbek/QOwnNotes',
     editLinks: true,
     docsRepo: 'pbek/QOwnNotes',
+    docsBranch: 'develop',
     docsDir: 'webpage/src',
     editLinkText: 'Help us improve this page!',
     lastUpdated: false,
