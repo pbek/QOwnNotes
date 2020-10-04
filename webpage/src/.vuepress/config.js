@@ -66,35 +66,41 @@ module.exports = {
         ]
       }
     ],
-    sidebar: {
-      '/installation/': [
-        {
-          title: 'Installation',
-          collapsable: false,
-          children: [
-            '',
-            'ubuntu',
-            'windows',
-            'macos',
-            'debian',
-            'opensuse',
-            'fedora',
-            'snap',
-            'flatpak',
-            'appimage',
-            'arch',
-            'solus',
-            'kaos',
-            'centos',
-            'raspberry-pi-os',
-            'gentoo',
-            'slackware',
-            'freebsd',
-            'building',
-          ]
-        }
-      ],
-    }
+    sidebar: [
+      {
+        title: 'Installation',
+        children: [
+          'installation/',
+          'installation/ubuntu',
+          'installation/windows',
+          'installation/macos',
+          'installation/debian',
+          'installation/opensuse',
+          'installation/fedora',
+          'installation/snap',
+          'installation/flatpak',
+          'installation/appimage',
+          'installation/arch',
+          'installation/solus',
+          'installation/kaos',
+          'installation/centos',
+          'installation/raspberry-pi-os',
+          'installation/gentoo',
+          'installation/slackware',
+          'installation/freebsd',
+          'installation/building',
+        ]
+      },
+      {
+        title: 'Scripting',
+        children: [
+          'scripting/',
+          'scripting/methods-and-objects',
+          'scripting/hooks',
+          'scripting/classes',
+        ]
+      }
+    ]
   },
 
   /**
@@ -110,5 +116,9 @@ module.exports = {
         exclude: ['/404.html']
       },
     ]
-  ]
+  ],
+
+  markdown: {
+    lineNumbers: true
+  }
 }
