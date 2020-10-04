@@ -20,8 +20,7 @@
 
 UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
                            const QString &releaseUrl,
-                           const QString &releaseVersionString,
-                           int releaseBuildNumber)
+                           const QString &releaseVersionString)
     : MasterDialog(parent), ui(new Ui::UpdateDialog) {
     ui->setupUi(this);
     ui->downloadProgressBar->hide();
@@ -37,8 +36,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
     //                                 "</style>" + ui->label_4->text());
 
     ui->changeLogEdit->setHtml(changesHtml);
-    ui->versionLabel->setText("Version " + releaseVersionString + " - build " +
-                              QString::number(releaseBuildNumber));
+    ui->versionLabel->setText("Version " + releaseVersionString);
     this->releaseVersionString = releaseVersionString;
     this->releaseUrl = releaseUrl;
 

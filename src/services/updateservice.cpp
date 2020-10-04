@@ -181,12 +181,6 @@ void UpdateService::onResult(QNetworkReply *reply) {
                 .property(QStringLiteral("release_version_string"))
                 .toString();
 
-        // get the release build number
-        int releaseBuildNumber =
-            result.property(QStringLiteral("0"))
-                .property(QStringLiteral("release_build_number"))
-                .toInt();
-
         // get the changes html
         QString changesHtml = result.property(QStringLiteral("0"))
                                   .property(QStringLiteral("changes_html"))
@@ -251,7 +245,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
             // open the update dialog
             _updateDialog =
                 new UpdateDialog(Q_NULLPTR, changesHtml, releaseUrl,
-                                 releaseVersionString, releaseBuildNumber);
+                                 releaseVersionString);
 
             // try to prevent stealing of focus on periodic checks
             if (this->updateMode == UpdateService::Periodic) {

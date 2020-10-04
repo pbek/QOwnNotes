@@ -18,8 +18,7 @@ class UpdateDialog : public MasterDialog {
     explicit UpdateDialog(QWidget *parent = nullptr,
                           const QString &changesHtml = QString(),
                           const QString &releaseUrl = QString(),
-                          const QString &releaseVersionString = QString(),
-                          int releaseBuildNumber = 0);
+                          const QString &releaseVersionString = QString());
     ~UpdateDialog();
     static bool isUpdateDialogOpen();
     int exec();
