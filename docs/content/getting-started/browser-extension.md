@@ -4,6 +4,8 @@
 
 Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) or the [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) to install the [**QOwnNotes Web Companion browser extension**](https://github.com/qownnotes/web-companion/).
 
+You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
+
 ## Web clipper
 
 Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new with a **screenshot** of the current webpage.
