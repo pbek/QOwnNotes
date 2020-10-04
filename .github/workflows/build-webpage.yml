@@ -19,6 +19,4 @@ jobs:
       with:
         node-version: 14.x
     - run: yarn install
-    - run: cp ../CHANGELOG.md src/changelog.md
-    - run: cp ../docs/content/getting-started/shortcuts.md src
     - run: yarn run build
