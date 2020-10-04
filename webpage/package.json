@@ -10,10 +10,12 @@
   "repository": "/qownnotes-webpage",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "cp ../CHANGELOG.md src/changelog.md; cp ../docs/content/getting-started/shortcuts.md src; vuepress build src"
+    "build": "cp ../screenshots src/.vuepress/public -R; cp ../CHANGELOG.md src/changelog.md; cp ../docs/content/getting-started/shortcuts.md src; vuepress build src"
   },
   "license": "MIT",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.6.0",
+    "@vuepress/plugin-medium-zoom": "^1.6.0",
     "vuepress": "^1.5.3"
   },
   "dependencies": {

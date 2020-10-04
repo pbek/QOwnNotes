@@ -1113,12 +1113,26 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
+"@vuepress/plugin-back-to-top@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-back-to-top/-/plugin-back-to-top-1.6.0.tgz#a10df98b7a4f57c627f72289cd0ab2ff0f075a1d"
+  integrity sha512-nJr/qlBcCN8vUyAb3nZPKqBS1DjfgZJquroOOd41CcLgsq3yAxmWLmxbLjg1MoBxk1Q8TrWz8qI7JRIw7W4aVw==
+  dependencies:
+    lodash.debounce "^4.0.8"
+
 "@vuepress/plugin-last-updated@1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-last-updated/-/plugin-last-updated-1.6.0.tgz#9c27739b87adc908b1fbb90f96b3456065c20f08"
   integrity sha512-/gnk9HGaZw3ow/i9ODjZxK40TbriTWuMY3YYIzqvP7CT3mrM92nMKYDygYbffbu6xkWdUZppN8JadtJ7we4z9A==
   dependencies:
     cross-spawn "^6.0.5"
+
+"@vuepress/plugin-medium-zoom@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.6.0.tgz#766d8e535ed8f89ae13423bb39b96f2abeacc28a"
+  integrity sha512-oYos6FMNzcA8l6oFos6TVcY4h33swW1oJrTzk0TPezweAphb8ezhJPpN3ajWYCA27SQkvwu5t/li6IRNKE+Hzg==
+  dependencies:
+    medium-zoom "^1.0.4"
 
 "@vuepress/plugin-nprogress@1.6.0":
   version "1.6.0"
@@ -4865,6 +4879,11 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
+
+medium-zoom@^1.0.4:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-1.0.6.tgz#9247f21ca9313d8bbe9420aca153a410df08d027"
+  integrity sha512-UdiUWfvz9fZMg1pzf4dcuqA0W079o0mpqbTnOz5ip4VGYX96QjmbM+OgOU/0uOzAytxC0Ny4z+VcYQnhdifimg==
 
 memory-fs@^0.4.1:
   version "0.4.1"
