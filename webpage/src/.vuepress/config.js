@@ -105,7 +105,8 @@ module.exports = {
     [
       'sitemap', // https://github.com/ekoeryanto/vuepress-plugin-sitemap
       {
-        hostname: 'https://www.qownnotes.org'
+        hostname: 'https://www.qownnotes.org',
+        exclude: ['/404.html']
       },
     ]
   ]
