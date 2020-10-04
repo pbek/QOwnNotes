@@ -99,4 +99,22 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 .v-window__next {
   right: 0;
 }
+
+@media (max-width: 500px) {
+  .v-carousel {
+    height: 400px!important;
+  }
+}
+
+@media (max-width: 350px) {
+  .v-carousel {
+    height: 250px!important;
+  }
+}
+
+@media (max-width: 200px) {
+  .v-carousel {
+    height: 150px!important;
+  }
+}
 </style>
