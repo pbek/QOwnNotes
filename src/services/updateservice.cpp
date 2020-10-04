@@ -45,7 +45,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 
     // there were troubles with https by default on different platforms,
     // so we were using http until now
-    QUrl url("https://www.qownnotes.org/api/v1/last_release/QOwnNotes/" +
+    QUrl url("https://api.qownnotes.org/api/v1/last_release/QOwnNotes/" +
              QStringLiteral(PLATFORM) + ".json");
 
     QUrlQuery q;
@@ -53,7 +53,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 
     // check if we want to fake the version number to trigger an update
     if (settings.value(QStringLiteral("Debug/fakeOldVersionNumber")).toBool()) {
-        version = QLatin1String("20.7.0");
+        version = QLatin1String("20.10.0");
         isDebug = true;
     }
 

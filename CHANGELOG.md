@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.10.2
+- the url of the update service was changed to make it possible to detach the
+  api from the webpage in the future
+
 ## 20.10.1
 - you can now also search only in the note name (for [#1890](https://github.com/pbek/QOwnNotes/issues/1890))
     - `n:book` or `name:book` will search for notes with `book` just in the note
