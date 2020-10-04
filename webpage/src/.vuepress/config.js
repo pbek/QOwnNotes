@@ -19,6 +19,7 @@ module.exports = {
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '128x128', href: '/favicon.png' }],
     // ['link', { rel: 'stylesheet', href: `https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css` }],
     // ['script', { src: `https://cdn.jsdelivr.net/npm/vue/dist/vue.js` }],
     // ['script', { src: `https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js` }],
