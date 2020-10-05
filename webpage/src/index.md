@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: ./screenshots/screenshot.png
-tagline: Plain-text file markdown note taking with Nextcloud / ownCloud integration
+tagline: Free open source plain-text file markdown note taking with Nextcloud / ownCloud integration
 actionText: Quick Start →
 actionLink: getting-started/overview
 features:
