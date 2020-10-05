@@ -47,10 +47,6 @@ module.exports = {
         link: '/installation/',
       },
       {
-        text: 'Docs',
-        link: 'https://docs.qownnotes.org'
-      },
-      {
         text: 'Changelog',
         link: '/changelog',
         collapsable: true,
@@ -112,6 +108,13 @@ module.exports = {
           'scripting/methods-and-objects',
           'scripting/hooks',
           'scripting/classes',
+        ]
+      },
+      {
+        title: 'Editor',
+        children: [
+          'editor/spellchecking',
+          'editor/time-formats',
         ]
       },
       {
