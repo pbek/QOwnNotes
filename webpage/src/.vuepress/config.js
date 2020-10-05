@@ -65,6 +65,19 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: 'Getting started',
+        children: [
+          'getting-started/overview',
+          'getting-started/concept',
+          'getting-started/cli-parameters',
+          'getting-started/browser-extension',
+          'getting-started/qownnotesapi',
+          'getting-started/searching',
+          'getting-started/shortcuts',
+          'getting-started/donate',
+        ]
+      },
+      {
         title: 'Installation',
         children: [
           'installation/',
@@ -86,19 +99,6 @@ module.exports = {
           'installation/slackware',
           'installation/freebsd',
           'installation/building',
-        ]
-      },
-      {
-        title: 'Getting started',
-        children: [
-          'getting-started/overview',
-          'getting-started/concept',
-          'getting-started/cli-parameters',
-          'getting-started/browser-extension',
-          'getting-started/qownnotesapi',
-          'getting-started/searching',
-          'getting-started/shortcuts',
-          'getting-started/donate',
         ]
       },
       {
