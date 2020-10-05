@@ -64,7 +64,10 @@ module.exports = {
         ariaLabel: 'Contact Menu',
         items: [
           { text: 'Telegram', link: 'https://t.me/QOwnNotes' },
-          { text: 'Matrix/Riot.im', link: 'https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org' }
+          { text: 'Matrix/Riot.im', link: 'https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org' },
+          { text: 'Gitter IM', link: 'https://gitter.im/qownnotes/qownnotes' },
+          { text: 'IRC', link: 'https://kiwiirc.com/client/irc.freenode.net/#qownnotes' },
+          { text: 'IRC Log', link: 'https://quodlibet.duckdns.org/irc/qownnotes/latest.log.html' },
         ]
       }
     ],
