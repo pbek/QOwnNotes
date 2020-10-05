@@ -1,3 +1,7 @@
+---
+image: ./img/bookmarks.png
+---
+
 # QOwnNotes Web Companion browser extension
 
 ![bookmarks](./img/bookmarks.png)

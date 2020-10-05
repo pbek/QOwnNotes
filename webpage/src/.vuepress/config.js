@@ -34,6 +34,7 @@ module.exports = {
   themeConfig: {
     repo: 'pbek/QOwnNotes',
     editLinks: true,
+    author: { name: 'Patrizio Bekerle', twitter: '@PatrizioBekerle' },
     docsRepo: 'pbek/QOwnNotes',
     docsBranch: 'develop',
     docsDir: 'webpage/src',
@@ -122,8 +123,22 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    '@vuepress/last-updated', // https://vuepress.vuejs.org/plugin/official/plugin-last-updated.html#vuepress-plugin-last-updated
     'vuepress-plugin-mermaidjs', // https://github.com/eFrane/vuepress-plugin-mermaidjs
-    'seo', // https://github.com/lorisleiva/vuepress-plugin-seo
+    // 'seo', // https://github.com/lorisleiva/vuepress-plugin-seo
+    [
+      '@vuepress/last-updated',
+      {
+        hostname: 'https://www.qownnotes.org',
+        exclude: ['/404.html']
+      },
+    ],
+    [
+      'seo', // https://github.com/lorisleiva/vuepress-plugin-seo
+      {
+        image: ($page, $site) => ($page.frontmatter.image && (($site.themeConfig.domain && !$page.frontmatter.image.startsWith('http') || '') + $page.frontmatter.image)) || '/screenshots/screenshot.png',
+      },
+    ],
     [
       'sitemap', // https://github.com/ekoeryanto/vuepress-plugin-sitemap
       {
