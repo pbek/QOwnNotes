@@ -56,10 +56,6 @@ module.exports = {
         collapsable: true,
       },
       {
-        text: 'Shortcuts',
-        link: '/shortcuts',
-      },
-      {
         text: 'Contact',
         ariaLabel: 'Contact Menu',
         items: [
