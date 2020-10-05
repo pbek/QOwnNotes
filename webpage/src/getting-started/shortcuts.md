@@ -1,4 +1,4 @@
-# Important Shortcuts
+# Shortcuts
 
 ## Linux / Windows
 
