@@ -36,7 +36,6 @@ module.exports = {
     editLinks: true,
     domain: 'https://web.qownnotes.org',
     author: { name: 'Patrizio Bekerle', twitter: '@PatrizioBekerle' },
-    docsRepo: 'pbek/QOwnNotes',
     docsBranch: 'develop',
     docsDir: 'webpage/src',
     editLinkText: 'Help us improve this page!',
@@ -102,19 +101,19 @@ module.exports = {
         ]
       },
       {
+        title: 'Editor',
+        children: [
+          'editor/spellchecking',
+          'editor/time-formats',
+        ]
+      },
+      {
         title: 'Scripting',
         children: [
           'scripting/',
           'scripting/methods-and-objects',
           'scripting/hooks',
           'scripting/classes',
-        ]
-      },
-      {
-        title: 'Editor',
-        children: [
-          'editor/spellchecking',
-          'editor/time-formats',
         ]
       },
       {
