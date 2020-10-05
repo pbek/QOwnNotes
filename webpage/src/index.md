@@ -3,7 +3,7 @@ home: true
 heroImage: ./screenshots/screenshot.png
 tagline: Plain-text file markdown note taking with Nextcloud / ownCloud integration
 actionText: Quick Start →
-actionLink: overview
+actionLink: getting-started/overview
 features:
 - title: Own your notes
   details: All notes are stored as plain-text files on your computer

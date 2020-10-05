@@ -1,31 +1,27 @@
----
-sidebar: auto
----
-
 # Overview
 
 <template>
 <v-carousel cycle show-arrows-on-hover>
   <v-carousel-item>
-    <img src="screenshots/screenshot.png" alt="QOwnNotes screenshot" />
+    <img src="/screenshots/screenshot.png" alt="QOwnNotes screenshot" />
     <div class="sheet">
       Edit your notes with markdown highlighting, colored tags and subfolders
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="screenshots/screenshot-minimal.png" alt="Minimal view" />
+    <img src="/screenshots/screenshot-minimal.png" alt="Minimal view" />
     <div class="sheet">
       Minimal default user interface that can be stripped even more
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="screenshots/screenshot-vertical.png" alt="Vertical view" />
+    <img src="/screenshots/screenshot-vertical.png" alt="Vertical view" />
     <div class="sheet">
       View your notes in a vertical markdown view by moving the panels
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="screenshots/screenshot-portable-mode.png" alt="Portable mode" />
+    <img src="/screenshots/screenshot-portable-mode.png" alt="Portable mode" />
     <div class="sheet">
       Portable mode for USB sticks
     </div>

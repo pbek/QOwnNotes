@@ -92,6 +92,18 @@ module.exports = {
         ]
       },
       {
+        title: 'Getting started',
+        children: [
+          'getting-started/overview',
+          'getting-started/concept',
+          'getting-started/cli-parameters',
+          'getting-started/browser-extension',
+          'getting-started/qownnotesapi',
+          'getting-started/searching',
+          'getting-started/shortcuts',
+        ]
+      },
+      {
         title: 'Scripting',
         children: [
           'scripting/',
@@ -109,13 +121,22 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    'vuepress-plugin-mermaidjs',
     [
       'sitemap', // https://github.com/ekoeryanto/vuepress-plugin-sitemap
       {
         hostname: 'https://www.qownnotes.org',
         exclude: ['/404.html']
       },
-    ]
+    ],
+    [
+      "vuepress-plugin-matomo",
+      {
+        siteId: 7,
+        trackerUrl: 'https://p.bekerle.com/',
+        trackerJsFile: 'matomo.js'
+      }
+    ],
   ],
 
   markdown: {
