@@ -122,7 +122,8 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    'vuepress-plugin-mermaidjs',
+    'vuepress-plugin-mermaidjs', // https://github.com/eFrane/vuepress-plugin-mermaidjs
+    'seo', // https://github.com/lorisleiva/vuepress-plugin-seo
     [
       'sitemap', // https://github.com/ekoeryanto/vuepress-plugin-sitemap
       {
@@ -131,7 +132,7 @@ module.exports = {
       },
     ],
     [
-      "vuepress-plugin-matomo",
+      "vuepress-plugin-matomo", // https://github.com/qdot/vuepress-plugin-matomo
       {
         siteId: 7,
         trackerUrl: 'https://p.bekerle.com/',

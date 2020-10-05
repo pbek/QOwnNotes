@@ -7994,6 +7994,11 @@ vuepress-plugin-mermaidjs@^1.8.0:
   dependencies:
     mermaid "^8.8.0"
 
+vuepress-plugin-seo@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-seo/-/vuepress-plugin-seo-0.1.4.tgz#be8e5577491c1fc317a7ad4abe3ae51ff317be1e"
+  integrity sha512-foNKrAAKihiC47bx0UXFzs/+BIFmnowTQsLVF/8pfsnsPDp8FXjkTGyjxyjOhbwj7ADPv32CdX3pEoYGnZ7OjA==
+
 vuepress-plugin-sitemap@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-sitemap/-/vuepress-plugin-sitemap-2.3.1.tgz#51298aca77a5de96396fdbd1103e1637dd61ae6a"
