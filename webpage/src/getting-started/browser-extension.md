@@ -11,7 +11,7 @@ You can also find the extension on [GitHub](https://github.com/qownnotes/web-com
 Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new with a **screenshot** of the current webpage.
 
 ::: tip
-The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks/#websocketrawdatahook) if you want to control what you clip from webpages.
+The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) if you want to control what you clip from webpages.
 :::
 
 ## Bookmarks
