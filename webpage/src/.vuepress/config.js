@@ -133,14 +133,6 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
     '@vuepress/last-updated', // https://vuepress.vuejs.org/plugin/official/plugin-last-updated.html#vuepress-plugin-last-updated
     'vuepress-plugin-mermaidjs', // https://github.com/eFrane/vuepress-plugin-mermaidjs
-    // 'seo', // https://github.com/lorisleiva/vuepress-plugin-seo
-    [
-      '@vuepress/last-updated',
-      {
-        hostname: 'https://www.qownnotes.org',
-        exclude: ['/404.html']
-      },
-    ],
     [
       'seo', // https://github.com/lorisleiva/vuepress-plugin-seo
       {
