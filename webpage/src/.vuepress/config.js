@@ -101,6 +101,7 @@ module.exports = {
           'getting-started/qownnotesapi',
           'getting-started/searching',
           'getting-started/shortcuts',
+          'getting-started/donate',
         ]
       },
       {
