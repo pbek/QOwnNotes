@@ -46,7 +46,7 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
   Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
 :::
 
-[Understand the concept of QOwnNotes](https://docs.qownnotes.org/en/latest/getting-started/concept)
+[Understand the concept of QOwnNotes](concept.md)
 
 ## Features
 
@@ -55,13 +55,13 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 - **Sub-string searching** of notes is possible and search results are highlighted in the notes
 - **Keyboard shortcuts** are customizable
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
-- [Browser extension](https://docs.qownnotes.org/en/latest/getting-started/browser-extension/) to a add notes from the selected text, make screenshots or manage your bookmarks
+- [Browser extension](browser-extension.md) to a add notes from the selected text, make screenshots or manage your bookmarks
 - **External changes** of note files are **watched** (notes or note list are reloaded)
 - Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
 - **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
 - **differences** between current note and externally changed note are **showed** in a dialog
 - **markdown highlighting** of notes and a **markdown preview mode**
-- [**Spellchecking**](https://docs.qownnotes.org/en/latest/editor/spellchecking/) support
+- [**Spellchecking**](../editor/spellchecking.md) support
 - **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
 - Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use an other **CalDAV server** to sync your tasks to
 - Optional **encryption** of notes (AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
@@ -76,7 +76,7 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 - **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
 - **Evernote import**
 - **Available in many different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
-  - [Your help](https://docs.qownnotes.org/en/latest/contributing/translation/) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
+  - [Your help](../contributing/translation.md) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
 
 <style>
 .sheet {
