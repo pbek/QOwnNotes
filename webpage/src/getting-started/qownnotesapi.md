@@ -1,7 +1,7 @@
 # QOwnNotesAPI Nextcloud App
 
 
-![qownnotesapi](./img/qownnotesapi.png)
+![qownnotesapi](/img/qownnotesapi.png)
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) can handle the **access** to **trashed notes**
 and **note versions** for you.
