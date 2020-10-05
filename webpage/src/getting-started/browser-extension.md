@@ -1,10 +1,10 @@
 ---
-image: ./img/bookmarks.png
+image: /img/bookmarks.png
 ---
 
 # QOwnNotes Web Companion browser extension
 
-![bookmarks](./img/bookmarks.png)
+![bookmarks](/img/bookmarks.png)
 
 Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) or the [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) to install the [**QOwnNotes Web Companion browser extension**](https://github.com/qownnotes/web-companion/).
 

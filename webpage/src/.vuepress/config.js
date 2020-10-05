@@ -34,6 +34,7 @@ module.exports = {
   themeConfig: {
     repo: 'pbek/QOwnNotes',
     editLinks: true,
+    domain: 'https://web.qownnotes.org',
     author: { name: 'Patrizio Bekerle', twitter: '@PatrizioBekerle' },
     docsRepo: 'pbek/QOwnNotes',
     docsBranch: 'develop',
@@ -136,7 +137,16 @@ module.exports = {
     [
       'seo', // https://github.com/lorisleiva/vuepress-plugin-seo
       {
-        image: ($page, $site) => ($page.frontmatter.image && (($site.themeConfig.domain && !$page.frontmatter.image.startsWith('http') || '') + $page.frontmatter.image)) || '/screenshots/screenshot.png',
+        image: ($page, $site) => {
+          if ($page.frontmatter.image) {
+            return $site.themeConfig.domain &&
+                !$page.frontmatter.image.startsWith('http')
+                ? $site.themeConfig.domain + $page.frontmatter.image
+                : $page.frontmatter.image;
+          }
+
+          return $site.themeConfig.domain + '/screenshots/screenshot.png'
+        },
       },
     ],
     [
