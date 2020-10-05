@@ -113,6 +113,14 @@ module.exports = {
           'scripting/hooks',
           'scripting/classes',
         ]
+      },
+      {
+        title: 'Contributing',
+        children: [
+          'contributing/get-involved',
+          'contributing/maintainers',
+          'contributing/translation',
+        ]
       }
     ]
   },
