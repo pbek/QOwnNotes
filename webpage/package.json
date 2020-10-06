@@ -16,7 +16,7 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.6.0",
     "@vuepress/plugin-medium-zoom": "^1.6.0",
-    "vuepress": "^1.5.3",
+    "vuepress": "^1.6.0",
     "vuepress-plugin-mermaidjs": "^1.8.0",
     "vuepress-plugin-seo": "^0.1.4",
     "vuepress-plugin-matomo": "^1.0.2",
