@@ -40,6 +40,7 @@ module.exports = {
     docsDir: 'webpage/src',
     editLinkText: 'Help us improve this page!',
     lastUpdated: false,
+    logo: '/favicon.png',
     nav: [
       {
         text: 'Installation',
