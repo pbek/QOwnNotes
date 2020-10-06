@@ -1,7 +1,7 @@
 {
   "name": "qownnotes-webpage",
   "version": "0.0.1",
-  "description": "Plain-text file markdown note taking with Nextcloud integration",
+  "description": "QOwnNotes is an open source markdown note taking application for Linux, Mac OS X and Windows, that works together with Nextcloud Notes.",
   "main": "index.js",
   "authors": {
     "name": "Patrizio Bekerle",

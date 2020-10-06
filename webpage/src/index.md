@@ -1,6 +1,5 @@
 ---
 title: QOwnNotes
-description: QOwnNotes is an open source markdown note taking application for Linux, Mac OS X and Windows, that works together with Nextcloud Notes.
 home: true
 heroImage: ./screenshots/screenshot.png
 tagline: Free open source plain-text file markdown note taking with Nextcloud / ownCloud integration
