@@ -151,6 +151,12 @@ module.exports = {
     '@vuepress/last-updated', // https://vuepress.vuejs.org/plugin/official/plugin-last-updated.html#vuepress-plugin-last-updated
     'vuepress-plugin-mermaidjs', // https://github.com/eFrane/vuepress-plugin-mermaidjs
     [
+      'vuepress-plugin-code-copy', // https://github.com/znicholasbrown/vuepress-plugin-code-copy
+      {
+        color: '#3eaf7c'
+      }
+    ],
+    [
       'seo', // https://github.com/lorisleiva/vuepress-plugin-seo
       {
         image: ($page, $site) => {
