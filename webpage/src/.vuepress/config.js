@@ -130,6 +130,7 @@ module.exports = {
           'contributing/get-involved',
           'contributing/maintainers',
           'contributing/translation',
+          'contributing/sponsors',
         ]
       },
       {
