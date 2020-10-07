@@ -67,7 +67,7 @@ module.exports = {
       },
       {
         text: 'Donate',
-        link: '/getting-started/donate',
+        link: '/contributing/donate',
       }
     ],
     sidebar: [
@@ -81,7 +81,6 @@ module.exports = {
           'getting-started/qownnotesapi',
           'getting-started/searching',
           'getting-started/shortcuts',
-          'getting-started/donate',
         ]
       },
       {
@@ -130,6 +129,7 @@ module.exports = {
           'contributing/get-involved',
           'contributing/maintainers',
           'contributing/translation',
+          '/contributing/donate',
           'contributing/sponsors',
         ]
       },
