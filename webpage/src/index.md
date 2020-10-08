@@ -14,3 +14,5 @@ features:
   details: Heavily customizable and scriptable
 footer: Made by Patrizio Bekerle with ❤️
 ---
+
+<Poll />
