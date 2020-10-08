@@ -11,6 +11,8 @@
           <a href="https://www.facebook.com/QOwnNotes" target="_blank"><v-icon>mdi-facebook</v-icon></a>
         </div>
       </div>
+
+      <Poll />
     </template>
   </ParentLayout>
 </template>

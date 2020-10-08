@@ -1,7 +1,8 @@
 <template>
   <v-snackbar
+      id="poll"
       v-model="snackbar"
-      absolute
+      fixed
       bottom
       right
       color="#389d70"
@@ -9,30 +10,28 @@
   >
     <form>
       <v-text-field
-          v-model="name"
+          v-model="answer"
           :counter="200"
-          label="Name"
+          label="How did you find out about QOwnNotes?"
           required
       ></v-text-field>
 
       <v-btn
-          class=""
+          light
           @click="submit"
+          title="Submit your answer"
       >
-        submit
+        Submit
+      </v-btn>
+      <v-btn
+          text
+          title="Close poll"
+          @click="snackbar = false"
+      >
+        <v-icon>mdi-close</v-icon>
       </v-btn>
     </form>
 
-    <template v-slot:action="{ attrs }">
-      <v-btn
-          color="red"
-          text
-          v-bind="attrs"
-          @click="snackbar = false"
-      >
-        Close
-      </v-btn>
-    </template>
   </v-snackbar>
 </template>
 
@@ -42,10 +41,48 @@
     data() {
       return {
         snackbar: false,
+        answer: "",
+        pollId: 1,
+        sentPolls: []
       }
-    }
+    },
+    mounted() {
+      this.sentPolls = JSON.parse(window.localStorage.getItem("qon-polls") || "[]");
+
+      // turn on poll snackbar if poll wasn't sent already
+      if (!this.sentPolls.includes(this.pollId)) {
+        this.snackbar = true;
+      }
+    },
+    methods: {
+      submit () {
+        if (this.answer === "") {
+          return;
+        }
+
+        // store that poll was sent, so it will not be asked for next time
+        // (local storage will be synced across devices by the browser)
+        this.sentPolls.push(this.pollId);
+        window.localStorage.setItem("qon-polls", JSON.stringify(this.sentPolls));
+
+        // check if the Matomo library is available
+        if (typeof _paq !== 'undefined') {
+          _paq.push(['trackEvent', 'Poll', 'Found out about QON', this.answer]);
+        }
+
+        this.snackbar = false;
+      },
+    },
   }
 </script>
 
-<style scoped>
+<style>
+  #poll .v-snack__wrapper {
+    width: 352px;
+    min-width: 100px;
+  }
+
+  #poll .v-input {
+    padding-top: 5px;
+  }
 </style>
