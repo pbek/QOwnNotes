@@ -34,7 +34,7 @@ module.exports = {
   themeConfig: {
     repo: 'pbek/QOwnNotes',
     editLinks: true,
-    domain: 'https://web.qownnotes.org',
+    domain: 'https://www.qownnotes.org',
     author: { name: 'Patrizio Bekerle', twitter: '@PatrizioBekerle' },
     docsBranch: 'develop',
     docsDir: 'webpage/src',
