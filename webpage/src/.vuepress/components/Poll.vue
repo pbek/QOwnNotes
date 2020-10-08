@@ -8,29 +8,28 @@
       color="#389d70"
       :timeout="-1"
   >
-    <form>
-      <v-text-field
-          v-model="answer"
-          :counter="200"
-          label="How did you find out about QOwnNotes?"
-          required
-      ></v-text-field>
+    <v-text-field
+        v-model="answer"
+        :counter="200"
+        label="How did you find out about QOwnNotes?"
+        required
+        @keydown.enter="submit"
+    ></v-text-field>
 
-      <v-btn
-          light
-          @click="submit"
-          title="Submit your answer"
-      >
-        Submit
-      </v-btn>
-      <v-btn
-          text
-          title="Close poll"
-          @click="snackbar = false"
-      >
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
-    </form>
+    <v-btn
+        light
+        @click="submit"
+        title="Submit your answer"
+    >
+      Submit
+    </v-btn>
+    <v-btn
+        text
+        title="Close poll"
+        @click="snackbar = false"
+    >
+      <v-icon>mdi-close</v-icon>
+    </v-btn>
 
   </v-snackbar>
 </template>
