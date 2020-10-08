@@ -221,7 +221,7 @@ void WebSocketServerService::processMessage(const QString &message) {
 #ifndef INTEGRATION_TESTS
         //        pSender->sendTextMessage(
         //                R"({ "type": "bookmarks", "data": [ { "name": "Test1",
-        //                "url": "http://www.qownnotes.org" } ] })");
+        //                "url": "https://www.qownnotes.org" } ] })");
 
         QString jsonText = getBookmarksJsonText();
 

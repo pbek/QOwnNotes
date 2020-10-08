@@ -3,13 +3,13 @@
 [Installation](https://www.qownnotes.org/installation) |
 [Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) |
 [Issues](https://github.com/pbek/QOwnNotes/issues) |
-[Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/getting-started/shortcuts.md) |
+[Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/webpage/src/getting-started/shortcuts.md) |
 [Documentation](http://docs.qownnotes.org) |
-[Knowledge base](https://www.qownnotes.org/Knowledge-base) |
-[Screenshots](https://www.qownnotes.org) |
-[ownCloud API](https://marketplace.owncloud.com/apps/qownnotesapi) |
+[Knowledge base](https://www.qownnotes.org/getting-started/concept.html) |
+[Screenshots](https://www.qownnotes.org/getting-started/overview.html) |
 [Nextcloud API](https://apps.nextcloud.com/apps/qownnotesapi) |
 [Nextcloud App Page](https://apps.nextcloud.com/apps/qownnotes) |
+[ownCloud API](https://marketplace.owncloud.com/apps/qownnotesapi) |
 [Telegram Group](https://t.me/QOwnNotes) |
 [IRC Chat](https://kiwiirc.com/client/irc.freenode.net/#qownnotes) |
 [Gitter Chat](https://gitter.im/qownnotes/qownnotes) |
@@ -72,7 +72,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - external changes of note files are watched (notes or note list are reloaded)
 - differences between current note and externally changed note are shown in a dialog
 - **markdown highlighting** of notes and a markdown **preview**
-- **[spellchecking](https://docs.qownnotes.org/en/develop/spellchecking.html)** support
+- **[spellchecking](https://www.qownnotes.org/editor/spellchecking.html)** support
 - **tabbing support** for editing notes
 - scripting support and an online [script repository](https://github.com/qownnotes/scripts)
   where you can install scripts inside the application
@@ -86,8 +86,8 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
     - this feature can also be turned off and you can use any filename you like
 - manage your Nextcloud / ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
 - **encryption of notes** (AES-256 is built in or you can use custom encryption methods like
-  **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/encryption-keybase.qml)) or
-  **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/encryption-pgp.qml)))
+  **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml)) or
+  **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml)))
 - **dark mode** theme support
 - all **panels can be placed wherever you want**, they can even float or stack (fully dockable)
 - **toolbars** are **fully customizable**
@@ -101,7 +101,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - **distraction free mode**, **full-screen mode**, **typewriter mode**
 - Evernote import
 - QOwnNotes is **available in many different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
-	- [Your help](https://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
+	- [Your help](https://www.qownnotes.org/contributing/translation.html) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
 	- Join the fun at **[Crowdin](https://crowdin.com/project/qownnotes/invite)** to **help** with the **translations**
 
 ## Building QOwnNotes

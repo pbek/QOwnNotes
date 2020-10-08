@@ -1,15 +1,15 @@
-# [QOwnNotes snapcraft](http://www.qownnotes.org "QOwnNotes Official Site") 
+# [QOwnNotes snapcraft](https://www.qownnotes.org "QOwnNotes Official Site") 
 
-[Installation](http://www.qownnotes.org/installation) | 
-[Changelog](http://www.qownnotes.org/changelog/QOwnNotes) | 
+[Installation](https://www.qownnotes.org/installation) | 
+[Changelog](https://www.qownnotes.org/changelog/QOwnNotes) | 
 [Issues](https://github.com/pbek/QOwnNotes/issues) | 
-[Shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes) |
-[Knowledge base](http://www.qownnotes.org/Knowledge-base) |
-[Screenshots](http://www.qownnotes.org) |
+[Shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes) |
+[Knowledge base](https://www.qownnotes.org/getting-started/concept.html) |
+[Screenshots](https://www.qownnotes.org/getting-started/overview.html) |
 [ownCloud Apps page](https://apps.owncloud.com/content/show.php?content=168497)
 
 
-[QOwnNotes](http://www.qownnotes.org) is the **open source notepad** with **markdown support** and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default [**notes application**](https://github.com/owncloud/notes) of [**ownCloud**](http://owncloud.org/).
+[QOwnNotes](https://www.qownnotes.org) is the **open source notepad** with **markdown support** and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default [**notes application**](https://github.com/owncloud/notes) of [**ownCloud**](http://owncloud.org/).
 
 ## Building the qownnotes snap
 

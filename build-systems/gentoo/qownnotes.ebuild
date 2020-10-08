@@ -11,7 +11,7 @@ EAPI=7
 inherit qmake-utils eutils
 
 DESCRIPTION="A plain-text file markdown note taking with Nextcloud/ownCloud integration"
-HOMEPAGE="http://www.qownnotes.org/"
+HOMEPAGE="https://www.qownnotes.org/"
 SRC_URI="https://download.tuxfamily.org/${PN}/src/${P}.tar.xz"
 
 LICENSE="GPL-2"

@@ -11,7 +11,7 @@ Welcome to your installation of **QOwnNotes**!
 
 ## Later
 
-- [ ] Check out the [Important-Shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes) for more productivity.
+- [ ] Check out the [Important-Shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html) for more productivity.
     - You can click on links with `Ctrl + Click` (or `Cmd + Click` on macOS) in the editor to open them. 
 - [ ] Visit <https://www.qownnotes.org> for more information about **QOwnNotes**.
 - [ ] Use the <Markdown Cheatsheet.md> to explore the **Markdown syntax**.

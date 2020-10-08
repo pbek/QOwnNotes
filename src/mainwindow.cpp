@@ -6786,12 +6786,12 @@ void MainWindow::on_action_Forward_in_note_history_triggered() {
 
 void MainWindow::on_action_Shortcuts_triggered() {
     QDesktopServices::openUrl(
-        QUrl(QStringLiteral("https://www.qownnotes.org/shortcuts/QOwnNotes")));
+        QUrl(QStringLiteral("https://www.qownnotes.org/getting-started/shortcuts.html")));
 }
 
 void MainWindow::on_action_Knowledge_base_triggered() {
     QDesktopServices::openUrl(
-        QUrl(QStringLiteral("https://www.qownnotes.org/Knowledge-base")));
+        QUrl(QStringLiteral("https://www.qownnotes.org/getting-started/concept.html")));
 }
 
 /**
@@ -7011,7 +7011,7 @@ int MainWindow::currentNoteLineNumber() {
  */
 void MainWindow::on_actionShow_changelog_triggered() {
     QDesktopServices::openUrl(
-        QUrl(QStringLiteral("https://www.qownnotes.org/changelog/QOwnNotes")));
+        QUrl(QStringLiteral("https://www.qownnotes.org/changelog.html")));
 }
 
 void MainWindow::on_action_Find_text_in_note_triggered() {
@@ -7228,8 +7228,7 @@ void MainWindow::showEvent(QShowEvent *event) {
 
 void MainWindow::on_actionGet_invloved_triggered() {
     QDesktopServices::openUrl(
-        QUrl("https://www.qownnotes.org/Knowledge-base/"
-             "How-can-I-get-involved-with-QOwnNotes"));
+        QUrl("https://www.qownnotes.org/contributing/get-involved.html"));
 }
 
 /**
@@ -11162,7 +11161,7 @@ void MainWindow::setScriptingLabelText(const QString &identifier,
  */
 void MainWindow::on_actionDonate_triggered() {
     QDesktopServices::openUrl(
-        QUrl(QStringLiteral("https://www.qownnotes.org/donate")));
+        QUrl(QStringLiteral("https://www.qownnotes.org/contributing/donate.html")));
 }
 
 /**

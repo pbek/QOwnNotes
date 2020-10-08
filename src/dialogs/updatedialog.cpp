@@ -29,6 +29,9 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
     ui->permissionLabel->hide();
 #endif
 
+    ui->getInvolvedLabel->setText(ui->getInvolvedLabel->text().arg(
+        "https://www.qownnotes.org/contributing/get-involved.html"));
+
     // inject some generic CSS styles
     ui->changeLogEdit->document()->setDefaultStyleSheet(
         Utils::Misc::genericCSS());

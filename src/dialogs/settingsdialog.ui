@@ -2135,9 +2135,9 @@
                     </property>
                     <layout class="QGridLayout" name="gridLayout_10">
                      <item row="3" column="0">
-                      <widget class="Label" name="label_8">
+                      <widget class="Label" name="helpTranslateLabel">
                        <property name="text">
-                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        <string>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</string>
                        </property>
                        <property name="wordWrap">
                         <bool>true</bool>

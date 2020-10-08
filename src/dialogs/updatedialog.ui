@@ -88,9 +88,9 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="Label" name="label_4">
+      <widget class="Label" name="getInvolvedLabel">
        <property name="text">
-        <string>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</string>
+        <string>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</string>
        </property>
        <property name="openExternalLinks">
         <bool>true</bool>

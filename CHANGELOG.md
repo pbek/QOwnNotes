@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.10.3
+- the links in the application were updated for the new webpage
+
 ## 20.10.2
 - the url of the update service was changed to make it possible to detach the
   api from the webpage in the future
@@ -9,7 +12,7 @@
     - `n:book` or `name:book` will search for notes with `book` just in the note
       name or file name
     - for more information about searching please take a look at the new
-      [searching documentation](https://docs.qownnotes.org/en/latest/getting-started/searching/)
+      [searching documentation](https://www.qownnotes.org/getting-started/searching.html)
 
 ## 20.10.0
 - the feature to jump to the start/end of the document when in the first/last line
@@ -124,7 +127,7 @@
 - the `readFromFile` script command now has a new parameter `codec` to specify the encoding
   of the file (for [#1817](https://github.com/pbek/QOwnNotes/issues/1817))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#reading-text-from-a-file)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#reading-text-from-a-file)
     - the script `dictionary-autocomplete` in the script repository was updated to use this parameter
       in a script setting to set the encoding of the dictionary file
 
@@ -164,8 +167,8 @@
 - added new scripting methods `cacheDir` and `clearCacheDir`
   (for [#1838](https://github.com/pbek/QOwnNotes/pull/1838), thank you @r00tr4v3n)
     - please take a look at the documentation for
-      [cacheDir](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#creating-a-cache-directory)
-      and [clearCacheDir](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#clearing-a-cache-directory)
+      [cacheDir](https://www.qownnotes.org/scripting/methods-and-objects.html#creating-a-cache-directory)
+      and [clearCacheDir](https://www.qownnotes.org/scripting/methods-and-objects.html#clearing-a-cache-directory)
       for more information
 - added more translation (thank you rawfreeamy, i****myself, mlimacarlos,
   rakekniven, Zack-83, Gregory.K)
@@ -316,8 +319,8 @@
 - the scripting commands `preNoteToMarkdownHtmlHook` and `preNoteToMarkdownHtmlHook`
   now have a new parameter `forExport` (for [#1769](https://github.com/pbek/QOwnNotes/pull/1769), thank you @r00tr4v3n)
     - please take a look at the documentation for
-      [preNoteToMarkdownHtmlHook](https://docs.qownnotes.org/en/latest/scripting/hooks/#prenotetomarkdownhtmlhook)
-      and [noteToMarkdownHtmlHook](https://docs.qownnotes.org/en/latest/scripting/hooks/#notetomarkdownhtmlhook)
+      [preNoteToMarkdownHtmlHook](https://www.qownnotes.org/scripting/hooks.html#prenotetomarkdownhtmlhook)
+      and [noteToMarkdownHtmlHook](https://www.qownnotes.org/scripting/hooks.html#notetomarkdownhtmlhook)
       for more information
 
 ## 20.5.13
@@ -345,8 +348,8 @@
   `onDetachedProcessCallback` to be able to handle the output of a detached process
   in a script (for [#1746](https://github.com/pbek/QOwnNotes/issues/1746), thank you @r00tr4v3n)
     - please take a look at the documentation for
-      [startDetachedProcess](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#starting-an-external-program-in-the-background)
-      and [onDetachedProcessCallback](https://docs.qownnotes.org/en/latest/scripting/hooks/#ondetachedprocesscallback)
+      [startDetachedProcess](https://www.qownnotes.org/scripting/methods-and-objects.html#starting-an-external-program-in-the-background)
+      and [onDetachedProcessCallback](https://www.qownnotes.org/scripting/hooks.html#ondetachedprocesscallback)
       for more information
 - if the tab of current note was clicked now the subfolder of the note is
   activated if that is needed to show the note in the note list
@@ -388,7 +391,7 @@
     - this method also downloads remote images and transforms `data:image` urls
       to local images stored in the media directory
     - for more information please take a look at the
-      [Mainwindow scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#mainwindow)
+      [Mainwindow scripting documentation](https://www.qownnotes.org/scripting/classes.html#mainwindow)
 - added a new scripting hook `websocketRawDataHook` that is called when data is
   sent from the QOwnNotes Web Companion browser extension via the web browser's
   context menu (for [#1740](https://github.com/pbek/QOwnNotes/issues/1740))
@@ -397,7 +400,7 @@
       web companion
     - if a hook implementation is found in a script no new note will be created
     - take a look at the
-      [handleNoteNameHook documentation](https://docs.qownnotes.org/en/latest/scripting/hooks/#websocketrawdatahook)
+      [handleNoteNameHook documentation](https://www.qownnotes.org/scripting/hooks.html#websocketrawdatahook)
       for more information
 - note tabs will now be reloaded correctly if the note-folder is reloaded
   (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
@@ -407,7 +410,7 @@
 - added new scripting methods `fileExists` and `readFromFile` and a new parameter
   `createParentDirs` for method `writeToFile` (for [#1736](https://github.com/pbek/QOwnNotes/issues/1736), thank you @r00tr4v3n)
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html)
 - there now is a new sub-menu for custom actions from scripts in the note-edit
   context menu to prevent that too many menu items are shown on the first level
   of the menu (for [#1737](https://github.com/pbek/QOwnNotes/issues/1737), thank you @r00tr4v3n)
@@ -467,7 +470,7 @@
     - you can now close the current note tab with <kbd>Ctrl + W</kbd>
     - you can now open a new note in a new tab with <kbd>Ctrl + Shift + N</kbd>
     - do keep in mind that you can change or disable all shortcuts in the *Shortcuts settings*
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - some glitches with duplicate tabs when the application was jumping to notes
   while the note was already open as a tab were fixed (for [#1720](https://github.com/pbek/QOwnNotes/issues/1720))
@@ -515,7 +518,7 @@
     - the [meeting-note](https://github.com/qownnotes/scripts/tree/master/meeting-note)
       script now makes use of these scripting functions
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#note)
+      [scripting documentation](https://www.qownnotes.org/scripting/classes.html#note)
 - fixed tag adding when moving tags to another parent in the tag panel when
   handled by the scripting hook `noteTaggingByObjectHook` (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
 
@@ -531,13 +534,13 @@
 - there now is a new scripting function `getTagByNameBreadcrumbList` to create
   or fetch a tag by its name breadcrumb list (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#create-or-fetch-a-tag-by-its-name-breadcrumb-list)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#create-or-fetch-a-tag-by-its-name-breadcrumb-list)
 - moving of tags to another parent in the tag panel can now also be handled by
   the scripting hook `noteTaggingByObjectHook` (for [#1705](https://github.com/pbek/QOwnNotes/issues/1705))
     - the application will trigger a series of `add` and `remove` actions for
       all selected tags and their children on all notes if tags are moved
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/hooks/#notetaggingbyobjecthook)
+      [scripting documentation](https://www.qownnotes.org/scripting/hooks.html#notetaggingbyobjecthook)
 - added more Albanian, Basque, Chinese Traditional, Hindi, French, Khmer,
   Kurdish translation (thank you Fabijenna)
 
@@ -548,15 +551,15 @@
       mechanism, but you are not bound to tag names in the tag tree root,
       this way you can make use of the whole tag tree instead of only a tag list
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/hooks/#notetaggingbyobjecthook)
+      [scripting documentation](https://www.qownnotes.org/scripting/hooks.html#notetaggingbyobjecthook)
 - you can now fetch a tag by name (if there already exists a tag object) with
   `tag.fetchByName()` via the scripting engine (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#tag)
+      [scripting documentation](https://www.qownnotes.org/scripting/classes.html#tag)
 - you can now fetch the parent tag names of a tag with `tag.getParentTagNames()`
   via the scripting engine (for [#1703](https://github.com/pbek/QOwnNotes/issues/1703))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#tag)
+      [scripting documentation](https://www.qownnotes.org/scripting/classes.html#tag)
 
 ## 20.4.12
 - when tags in the tag tree are double-clicked now the tag also is added or
@@ -695,12 +698,12 @@
 - there now is a new property `relativeNoteFileDirPath` for notes in the scripting engine
   (for [#1667](https://github.com/pbek/QOwnNotes/issues/1667))
     - for more information please take a look at the
-      [Note scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#note)
+      [Note scripting documentation](https://www.qownnotes.org/scripting/classes.html#note)
 - there now is a new property `createNewNoteSubFolder` for `mainWindow` in the
   scripting engine that creates a new note subfolder in the current subfolder
   (for [#1667](https://github.com/pbek/QOwnNotes/issues/1667))
     - for more information please take a look at the
-      [Mainwindow scripting documentation](https://docs.qownnotes.org/en/latest/scripting/classes/#mainwindow)
+      [Mainwindow scripting documentation](https://www.qownnotes.org/scripting/classes.html#mainwindow)
 - fixed a possible crash on entering a backtick character
   (for [#114](https://github.com/pbek/qmarkdowntextedit/pull/114), thank you @Waqar144)
 
@@ -803,7 +806,7 @@
     - you could use a workspace with this layout to switch between a workspace
       with only the note edit and a workspace with only the preview with the
       shortcut <kbd>Alt + Shift + P</kbd>
-        - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+        - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
           for a list of all shortcuts
     - using a new layout in the *Layout settings* now creates a new workspace
       instead of replacing the initial workspace, but keep in mind that workspaces
@@ -841,7 +844,7 @@
       and the broken-note-link highlighter will also handle them correctly
 - the default shortcut for `Insert attachment` was changed to <kbd>Ctrl + Shift + X</kbd>
   because of clashing with `Edit encrypted note` (for [#1637](https://github.com/pbek/QOwnNotes/issues/1637))
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - added more Indonesian, Spanish, Danish, Vietnamese, Dutch, Estonian, Filipino,
   Finnish, Greek, Hausa, Hebrew, Hindi, Hungarian, Urdu (Pakistan), Icelandic,
@@ -995,7 +998,7 @@
 - there now is a new scripting command `script.noteTextEditSelectCurrentWord()`
   to select the current word in the note text edit (for [#1603](https://github.com/pbek/QOwnNotes/pull/1603), thank you @jfx2006)
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#select-the-current-word-in-the-note-text-edit)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#select-the-current-word-in-the-note-text-edit)
 - added more Cebuano, Italian, Chinese Simplified, Slovak, Chinese Traditional,
   Slovenian, Croatian, Spanish, Czech, Swedish, Danish, Ukrainian, Dutch,
   Urdu (Pakistan), Uzbek, Estonian, Vietnamese, Finnish, French, Greek, Hausa,
@@ -1660,9 +1663,9 @@
     - it can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
       to its graphical representation for the preview
     - there is an example call in
-      [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/preview-styling.qml)
+      [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml)
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#prenotetomarkdownhtmlhook)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#prenotetomarkdownhtmlhook)
 - fixed a highlighting problem for checkbox link lists like `- [ ] [QOwnNotes](https://www.qownnotes.org)`
 - fixed a possible crash when logging occurs on application exit
 - added **Macedonian** and **Bosnian translation** (a big thank you to Fabijenna)
@@ -1698,11 +1701,11 @@
 - there now is a new method `getFileURLFromFileName()` for `NoteApi` to get the
   absolute file url from a relative file name (for [script issue #71](https://github.com/qownnotes/scripts/issues/71))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#note)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#note)
 - there now is a new property `fullNoteFileDirPath` for `NoteApi` to get the
   absolute directory path of the a note file (for [script issue #71](https://github.com/qownnotes/scripts/issues/71))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#note)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#note)
 - added more Russian, Polish, German, Italian, Punjabi, Estonian, Bengali,
   Icelandic, Ukrainian, Korean, Norwegian, Persian, Romanian, Slovak, Slovenian,
   Swedish, Dutch, Croatian, Serbian (Cyrillic), Czech, Danish, Finnish, Galician,
@@ -2438,7 +2441,7 @@
   in the *Notes / Import* menu (for [#1198](https://github.com/pbek/QOwnNotes/issues/1198))
     - the bookmarks will be imported to your bookmarks note 
     - for more information about the **bookmarks feature** please visit
-      [Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
+      [Web Companion browser extension](https://www.qownnotes.org/contributing/get-involved.html)
 - **QOwnNotesAPI** is now ready for **Nextcloud 16**
     - see [QOwnNotesAPI for Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
 - added more Italian, German, Russian, Dutch, Norwegian, Danish, Hungarian,
@@ -2516,10 +2519,10 @@
   to set and get the currently selected text in the note text edit
   (for [#1167](https://github.com/pbek/QOwnNotes/issues/1167))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#set-the-currently-selected-text-in-the-note-text-edit)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#set-the-currently-selected-text-in-the-note-text-edit)
 - you now can activate the context menu of the current widget with the shortcut <kbd>F10</kbd>
   (for [#1154](https://github.com/pbek/QOwnNotes/issues/1154))
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - added more Chinese Traditional, German translation (thank you abev66, rakekniven)
 
@@ -2528,15 +2531,15 @@
     - you can define items with an index and a text
     - you will receive the selected index
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#registering-script-settings-variables)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-script-settings-variables)
 - there are now shortcuts to jump to the *note list* (<kbd>F5</kbd>), the
   *note subfolder panel* (<kbd>F6</kbd>) and the *tags panel* (<kbd>F7</kbd>)
   (for [#1153](https://github.com/pbek/QOwnNotes/issues/1153))
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - there now is a new scripting command `script.noteTextEditSelectCurrentLine()`
   to select the current line in the note text edit (for [#1167](https://github.com/pbek/QOwnNotes/issues/1167))
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#select-the-current-line-in-the-note-text-edit)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#select-the-current-line-in-the-note-text-edit)
 - added more Spanish, Italian, Russian, Cebuano, Hiligaynon, Dutch, Hungarian,
   Swedish, Greek translation (thank you richarson, mlocati, mikhail-khokhlov,
   Fabijenna, druus, tiwi90)
@@ -2751,7 +2754,7 @@
     - detection of tags and description of such links is also improved
     - links in the current note will now have the tag `current`
     - for more information about the **bookmarks feature** please visit
-      [Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
+      [Web Companion browser extension](https://www.qownnotes.org/contributing/get-involved.html)
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.1.4
     - bookmarks styling changes and the **search field** can now be **reset**
@@ -3080,7 +3083,7 @@
 - the last 200 entries of the note history will now be stored when you switch 
   note folders or quit the application and will be restored accordingly
   (for [#1044](https://github.com/pbek/QOwnNotes/issues/1044))
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts to navigate the note history
     - if you have enabled the setting `Restore cursor position when opening a note`
       in the *General settings* your position in notes will be restored if 
@@ -3095,7 +3098,7 @@
 - you can now **copy** the **headline** of the current note with the shortcut 
   <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>
     - multiple types of headlines are supported
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - added more Spanish, Italian, Brazilian Portuguese and German translation
   (thank you richarson, mlimacarlos and rakekniven)
@@ -3326,7 +3329,7 @@
   be entered, but the cursor will be moved to the right (for [#982](https://github.com/pbek/QOwnNotes/issues/982))
 - there now is a new scripting function `script.triggerMenuAction()` to trigger
   a menu action
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#triggering-a-menu-action)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#triggering-a-menu-action)
 - you can now focus the note text edit in a script with `mainWindow.focusNoteTextEdit()`
 - there now is a new script `Disable read-only mode` in the *Scripting repository*
   to disable the read-only mode if a note is double clicked
@@ -3482,7 +3485,7 @@
   note name is determined for a note
   (for [#929](https://github.com/pbek/QOwnNotes/issues/929))
     - take a look at the
-      [handleNoteNameHook documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#handlenotenamehook)
+      [handleNoteNameHook documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#handlenotenamehook)
       for more information
     - the user interface will currently not be updated when the note text (that 
       could result in a note name change with the new hook) is stored
@@ -3535,10 +3538,10 @@
 - added a new scripting hook `noteDoubleClickedHook(note)` that is called every
   time a note is double clicked in the note list (for [#913](https://github.com/pbek/QOwnNotes/issues/913))
     - take a look at the
-      [noteDoubleClickedHook documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#noteDoubleClickedHook)
+      [noteDoubleClickedHook documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#noteDoubleClickedHook)
       for more information
     - there is an example script at
-      [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/external-note-open.qml)
+      [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-open.qml)
     - you will also find a script `External note open` in the script repository
       that uses the new hook
 - added more Brazilian Portuguese, Italian, Dutch and Hungarian translation
@@ -3561,7 +3564,7 @@
 - there now is a new scripting command `script.fetchNoteIdsByNoteTextPart()` to 
   fetch the ids of all notes with a certain text in the note text
   (for [#904](https://github.com/pbek/QOwnNotes/issues/904))
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#search-for-notes-by-note-text)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#search-for-notes-by-note-text)
     - there now is a new script `Unique note id` in the *Script repository*
       that generates a 10 character alphanumeric id for the current note and
       also allows to jump to the note by it
@@ -3577,7 +3580,7 @@
   select all text in the note text edit (for [#902](https://github.com/pbek/QOwnNotes/issues/902))
     - you can use this together with `script.noteTextEditWrite()` to overwrite
       the whole text of the current note
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#select-all-text-in-the-note-text-edit)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#select-all-text-in-the-note-text-edit)
 - the dialog to delete orphaned images isn't modal any more and you can now 
   also use it to insert those images into the current note
 - added more Indonesian, Catalan and German translation (thank you zmni, MGuerra
@@ -3600,12 +3603,12 @@
 - fixed a warning if you are un-indenting text at the start or end of the note
 - you can now scroll the note content up and down with <kbd>Ctrl</kbd> + <kbd>Up</kbd>
   and <kbd>Ctrl</kbd> + <kbd>Down</kbd> (for [#872](https://github.com/pbek/QOwnNotes/issues/872))
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - you can now use the shortcut <kbd>F4</kbd> to jump to the *Note edit panel*
   (for [#877](https://github.com/pbek/QOwnNotes/issues/877))
     - if the *Note edit panel* was disabled it will be enabled first
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 
 ## 18.04.3
@@ -3673,7 +3676,7 @@
 - the scripting command `script.writeToFile()` now writes text to a file
   in the UTF-8 character set (for [script issue #25](https://github.com/qownnotes/scripts/issues/25))
     - for more information about the command please take a look at
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#writing-text-to-a-file)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#writing-text-to-a-file)
 - added the plug `opengl` to the snapped version of QOwnNotes to prevent 
   OpenGL AppArmor errors (for [#875](https://github.com/pbek/QOwnNotes/issues/875))
 - added the plug `removable-media` to the snapped version of QOwnNotes to
@@ -3683,23 +3686,23 @@
 ## 18.03.7
 - there now is a new scripting command `script.fetchNoteById()` to fetch a note
   by its id (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#fetching-a-note-by-its-id)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#fetching-a-note-by-its-id)
 - there now is a new scripting command `script.getSaveFileName()` to show a 
   save file dialog (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#showing-a-save-file-dialog)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#showing-a-save-file-dialog)
 - there now is a new scripting command `script.selectedNotesIds()` to return a
   list of the ids of all selected notes (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#getting-a-list-of-the-ids-of-all-selected-notes)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#getting-a-list-of-the-ids-of-all-selected-notes)
 - there now is a new scripting command `script.writeToFile()` to write text 
   to a file (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#writing-text-to-a-file)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#writing-text-to-a-file)
 - there now is a new method `toMarkdownHtml()` for `NoteApi` to get the
   generated html of a note (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
     - for more information please take a look at
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#note)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#note)
 - there now is a new script `Export notes as one HTML file` in the
   *Script repository* to export multiple notes as one HTML file (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
 - the text case toggling feature now automatically selects the word under the 
@@ -3749,14 +3752,14 @@
 ## 18.03.2
 - there now is a new scripting function `script.insertMediaFile()` to insert a
   media file into the media folder (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#inserting-a-media-file-into-the-media-folder)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#inserting-a-media-file-into-the-media-folder)
 - there now is a new scripting function `script.regenerateNotePreview()` to
   regenerate the note preview (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#regenerating-the-note-preview)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#regenerating-the-note-preview)
 - the *checkbox* properties for the *script settings variables* did get a `text`
   attribute for the checkbox text along with the `description` now used for the
   description text (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#registering-script-settings-variables)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-script-settings-variables)
 - there now is a new script `Scribble` in the *Scripting repository* to insert a
   scribble image to the media-folder, that will be edited by an external image
   editor (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
@@ -3820,7 +3823,7 @@
 - there now is a new **scripting command** to show a **question message box**
   `script.questionMessageBox()` (for [#847](https://github.com/pbek/QOwnNotes/issues/847))
     - for more information please take a look at
-      [Showing a question message box](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#showing-a-question-message-box)
+      [Showing a question message box](https://www.qownnotes.org/scripting/methods-and-objects.html#showing-a-question-message-box)
 - added more local trash features (for [#674](https://github.com/pbek/QOwnNotes/issues/674))
     - files that are missing in the local trash-folder will be now be marked in
       the *Local trash* dialog so that you know that they can't be restored
@@ -3859,14 +3862,14 @@
   strings to be added to the autocompletion list when the autocompletion is
   invoked by pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd>
   (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#autocompletionhook)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#autocompletionhook)
 - there now is a new scripting function `script.noteTextEditCurrentWord()` to 
   read the current word in the note text edit (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#read-the-current-word-from-the-note-text-edit)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#read-the-current-word-from-the-note-text-edit)
 - there now is a new scripting function `script.searchTagsByName()` to 
   fetches all tags by doing a substring search on the name field
   (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#search-for-tags-by-name)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#search-for-tags-by-name)
 - the script `@tag tagging in note text` was updated to use autocompletion
   (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
 - the Windows version of QOwnNotes is now built with Qt 5.10.0
@@ -3980,7 +3983,7 @@
 ## 17.12.0
 - enabled text wrapping for the script settings (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
 - you can now also search for text in the note-preview with <kbd>Ctrl</kbd> + <kbd>F</kbd>
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - there is now a checkbox `Don't ask again!` for most confirmation message 
   boxes and a checkbox `Don't show again!` for most information message boxes
@@ -3999,7 +4002,7 @@
 - you can now use the new scripting function `script.jumpToNoteSubFolder()`
   to jump to a note-subfolder in scripts (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#jumping-to-a-note-subfolder)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#jumping-to-a-note-subfolder)
 - added more Catalan, Italian, Spanish, Brazilian Portuguese and French translation
   (thank you MGuerra, mlocati, richarson, mlimacarlos and bepolymathe)
 
@@ -4091,7 +4094,7 @@
 - you can now use the new scripting function `script.getApplicationSettingsVariable()`
   to load application settings variables in scripts
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#loading-application-settings-variables)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#loading-application-settings-variables)
 - added more French, Catalan, Portuguese, Hungarian and Dutch translation
   (thank you bepolymathe, MGuerra, manuelarodsilva and Fabijenna)
 
@@ -4166,7 +4169,7 @@
 - there now is a new scripting command `script.inputDialogGetText` to open an
   input dialog with a line edit (for [#740](https://github.com/pbek/QOwnNotes/issues/740))
     - for more information please take a look at
-      [Opening an input dialog with a line edit](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#opening-an-input-dialog-with-a-line-edit)
+      [Opening an input dialog with a line edit](https://www.qownnotes.org/scripting/methods-and-objects.html#opening-an-input-dialog-with-a-line-edit)
 - added more French and German translation (thank you bepolymathe and rakekniven)
 
 ## 17.10.2
@@ -4247,7 +4250,7 @@
   [#603](https://github.com/pbek/QOwnNotes/issues/603))
     - as soon as a script is activated that implements the new function
       `noteTaggingHook` note tagging will be handled by that function
-    - please install the script [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/note-tagging.qml)
+    - please install the script [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml)
       to test the basic functionality and report in [#530](https://github.com/pbek/QOwnNotes/issues/530).
         - your internal tag database and your notes might get modified 
         - don't use this script on your production note folder, please make a 
@@ -4266,7 +4269,7 @@
         - bulk tagging of notes in the note list will add those tags to your notes
         - bulk removing of tags from notes in the note list will remove those 
           tags from your notes
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#notetagginghook)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#notetagginghook)
 
 ## 17.09.5
 - added support for entering a bracket-character that surrounds the currently 
@@ -4276,7 +4279,7 @@
   add and remove tags from notes (for [#530](https://github.com/pbek/QOwnNotes/issues/530))
     - custom tagging could now be implemented by parsing the note text for 
       custom tag handlers and adding/removing tags from the note
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#note)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#note)
 
 ## 17.09.4
 - fixed a possible crash when selecting a lot of notes quickly in succession 
@@ -4402,14 +4405,14 @@
 
 ## 17.08.6
 - if you want to remote control QOwnNotes with sockets you can use `WebSocketServer` in a script
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#working-with-websockets)
+    - for more information please take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#working-with-websockets)
 - you can now also search for filenames of notes in the note search line-edit, 
   instead of just for note-text (for [#678](https://github.com/pbek/QOwnNotes/issues/678))
 - you now can search for notes in all tags / subfolders with the new main menu 
   entry `Find notes in all tags / subfolders` (shortcut <kbd>Alt + F</kbd>)
   (for [#671](https://github.com/pbek/QOwnNotes/issues/671))
     - the menu entry `Find notes in all subfolders` was removed as a consequence
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - added more French and Italian translation (thank you bepolymathe and mlocati)
 
@@ -4425,7 +4428,7 @@
   and `script.getPersistentVariable()` to store and load persistent variables in 
   scripts (for [#677](https://github.com/pbek/QOwnNotes/issues/677))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#storing-and-loading-persistent-variables)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#storing-and-loading-persistent-variables)
 - added more French and Swedish translation (thank you bepolymathe and druus)
 
 ## 17.08.4
@@ -4485,7 +4488,7 @@
 - there now is a new scripting command `script.inputDialogGetItem` to open an
   input dialog with a select box (for [#490](https://github.com/pbek/QOwnNotes/issues/490))
     - for more information please take a look at
-      [Opening an input dialog with a select box](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#opening-an-input-dialog-with-a-select-box)
+      [Opening an input dialog with a select box](https://www.qownnotes.org/scripting/methods-and-objects.html#opening-an-input-dialog-with-a-select-box)
 - when entering an url in the link-dialog with <kbd>Ctrl + L</kbd> that is 
   missing a`://` then `http://` will automatically added in front of the url
   (for [#646](https://github.com/pbek/QOwnNotes/issues/646))
@@ -4496,11 +4499,11 @@
   list of the paths of all selected notes 
   (for [#490](https://github.com/pbek/QOwnNotes/issues/490))
     - for more information please take a look at
-      [Getting a list of the paths of all selected notes](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#getting-a-list-of-the-paths-of-all-selected-notes)
+      [Getting a list of the paths of all selected notes](https://www.qownnotes.org/scripting/methods-and-objects.html#getting-a-list-of-the-paths-of-all-selected-notes)
 - scripting function `registerCustomAction` now has a new parameter to add 
   a menu entry to the note list context menu
     - for more information please take a look at the 
-      [registerCustomAction documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#registering-a-custom-action)
+      [registerCustomAction documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-a-custom-action)
 - there is a new script *External note diff* in the script repository, that 
   uses above new features and adds adds a menu entry to the context menu of the
   note list to **diff selected notes** in an external diff program 
@@ -4626,7 +4629,7 @@
       be different from the headline in the *General settings*)
     - if you want more control over your note file name you can achieve that 
       by writing a script, please take a look at
-      [handleNoteTextFileNameHook](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#handlenotetextfilenamehook)
+      [handleNoteTextFileNameHook](https://www.qownnotes.org/scripting/methods-and-objects.html#handlenotetextfilenamehook)
 - added more Polish, Spanish and German translation (thank you lucjan,
   richarson and rakekniven)
 
@@ -4635,7 +4638,7 @@
   the dialog to select the script
 - there now is a new script variables datatype `boolean`
     - to get information about how to use it please take a look at the example
-      [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/variables.qml)
+      [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml)
     - there is a new script `Weather stats` in the *Script repository* that 
       is using this new setting
 - added more French translation (thank you lepascalou)
@@ -4655,7 +4658,7 @@
     - you can use `mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true)`
       to force a reload of the note list
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#mainwindow)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#mainwindow)
 - added more Italian translation (thank you mlocati)
 
 ## 17.06.2
@@ -4664,7 +4667,7 @@
     - you can use the methods from [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
       to work with these date properties
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#note)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#note)
 - when posting a script to the *Script repository* you can now define which 
   platforms are supported by the script with the new `platforms` parameter
   (for [Script repository issue #3](https://github.com/qownnotes/scripts/issues/3))
@@ -4767,7 +4770,7 @@
 - there now are new scripting functions `fromNativeDirSeparators`,
   `toNativeDirSeparators` and `dirSeparator` to work with native file paths
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html)
 - you can now use the property list `resources` in your `info.json` in the
   *Script repository* to specify further files that are present in your script's
   directory and that should be downloaded to be used by your script
@@ -4791,7 +4794,7 @@
     - currently there are settings types for `string`, `text`, `integer` and 
       `file`
     - take a look at the example at
-      [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/variables.qml)
+      [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml)
       to understand how this all will work
     - a lot of new useful scripts were added to the script repository, which 
       now can be configured with the script settings variables
@@ -4830,7 +4833,7 @@
 - scripting function `registerCustomAction` now got a new parameter to hide 
   the button of the custom action in the toolbar
     - for more information please take a look at the 
-      [registerCustomAction documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#registering-a-custom-action)
+      [registerCustomAction documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-a-custom-action)
 - fixed a problem with tag cases for cyrillic tags
   (for [#579](https://github.com/pbek/QOwnNotes/issues/579))
 - fixed a warning when tagging a note with the same tag twice
@@ -4851,7 +4854,7 @@
 - there now is a new scripting command to show an open file dialog
   `script.getOpenFileName()` (for [#536](https://github.com/pbek/QOwnNotes/issues/536))
     - for more information please take a look at
-      [Showing an open file dialog](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#showing-an-open-file-dialog)
+      [Showing an open file dialog](https://www.qownnotes.org/scripting/methods-and-objects.html#showing-an-open-file-dialog)
 - there now are new scripting commands to register labels with
   `script.registerLabel("my-label")` and write to them with
   `script.setLabelText("my-label", "my custom text")`
@@ -4860,8 +4863,8 @@
     - you can use both plain text or html in the labels
     - the text will be selectable and links can be clicked
     - for more information please take a look at
-      [Registering a label](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#registering-a-label)
-      and [Setting the text of a registered label](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#setting-the-text-of-a-registered-label)
+      [Registering a label](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-a-label)
+      and [Setting the text of a registered label](https://www.qownnotes.org/scripting/methods-and-objects.html#setting-the-text-of-a-registered-label)
 
 ## 17.05.1
 - the restoring of the expanded state of the items in the tag tree widget now
@@ -4872,7 +4875,7 @@
 - there now is a new scripting command to show an information message box
   `script.informationMessageBox()` (for [#536](https://github.com/pbek/QOwnNotes/issues/536))
     - for more information please take a look at
-      [Showing an information message box](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#showing-an-information-message-box)
+      [Showing an information message box](https://www.qownnotes.org/scripting/methods-and-objects.html#showing-an-information-message-box)
 - added more Italian, French, Polish and Spanish translation (thank you mlocati,
   lepascalou, lucjan and richarson)
 
@@ -5027,7 +5030,7 @@
 ## 17.02.5
 - you can now show a custom action in the note text edit context menu
     - for more information please take a look at the
-      [custom action documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#registering-a-custom-action)
+      [custom action documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-a-custom-action)
 - the last directory path will now be selected if you select a script file in 
   the *Scripting settings* or select an external editor in the *General settings*
 - the script name will now be set from the file name if no script name was set
@@ -5038,17 +5041,17 @@
 - you can now copy text to the clipboard in a script with the new scripting
   method `script.setClipboardText()`
     - there is an example at
-      [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/selected-markdown-to-bbcode.qml)
+      [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml)
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#copying-text-into-the-clipboard)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#copying-text-into-the-clipboard)
 - the unicode line endings from the result of the scripting method
   `script.noteTextEditSelectedText()` will now be converted to `\n` 
 - you can now jump to a note with the new scripting method `script.setCurrentNote()`
   if it is visible in the note list (for [#510](https://github.com/pbek/QOwnNotes/issues/510))
     - there is an example at
-      [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/journal-entry.qml)
+      [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml)
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#jumping-to-a-note)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#jumping-to-a-note)
 
 ## 17.02.3
 - the bracket closing feature now also just moves the cursor to the right if a
@@ -5059,12 +5062,12 @@
   method `script.fetchNoteByFileName(fileName)`
   (for [#510](https://github.com/pbek/QOwnNotes/issues/510))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#fetching-a-note-by-its-file-name)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#fetching-a-note-by-its-file-name)
 - you can now check if a note exists by its file name in a script with the 
   new scripting method `script.noteExistsByFileName(fileName)`
   (for [#510](https://github.com/pbek/QOwnNotes/issues/510))
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#checking-if-a-note-exists-by-its-file-name)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#checking-if-a-note-exists-by-its-file-name)
 
 ## 17.02.2
 - the restoring of the cursor position in notes is now disabled by default 
@@ -5120,9 +5123,9 @@
   to allow you to download an url to the media folder and return the media url
   or the markdown image text (for [#499](https://github.com/pbek/QOwnNotes/issues/499))
     - there is an example at
-      [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/paste-latex-image.qml)
+      [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml)
     - for more information please take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#downloading-an-url-to-the-media-folder)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#downloading-an-url-to-the-media-folder)
 - added more fixes for a warning that might trigger when notes are moved to an
   other note subfolder in macOS
   (for [#498](https://github.com/pbek/QOwnNotes/issues/498))
@@ -5238,7 +5241,7 @@
 ## 17.01.1
 - you can now enter a custom time format when inserting the current time into
   a note in the *Editor settings*
-    - take a look at the [time format documentation](https://docs.qownnotes.org/en/develop/time-formats.html)
+    - take a look at the [time format documentation](https://www.qownnotes.org/editor/time-formats.html)
       for more information about the available time formats
 - the menu entry for showing the note subfolder panel is now invisible if
   note subfolders are not enabled for the current note folder
@@ -5563,12 +5566,12 @@
   time a note is opened
   (for [#389](https://github.com/pbek/QOwnNotes/issues/389))
     - take a look at the
-      [noteOpenedHook documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#noteopenedhook)
+      [noteOpenedHook documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#noteopenedhook)
       for more information
     - there is an example script at
-      [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/on-note-opened.qml)
+      [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/on-note-opened.qml)
 - added some documentation for all scripting hooks to the
-  [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/)
+  [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html)
 - the closing of brackets and markdown formatting characters is now only
   allowed if the cursor was at the end of a block
   (for [#386](https://github.com/pbek/QOwnNotes/issues/386))
@@ -5625,9 +5628,9 @@
   with the help of the new scripting method `script.addStyleSheet()`
   (for [#381](https://github.com/pbek/QOwnNotes/issues/381))
     - there is an example for adding custom stylesheets at
-      [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/custom-stylesheet.qml)
+      [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml)
     - take a look at the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#add-a-custom-stylesheet)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#add-a-custom-stylesheet)
       for more information
     - you can get the object names from the `*.ui` files, for example
       [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui)
@@ -5832,7 +5835,7 @@
   (for [#351](https://github.com/pbek/QOwnNotes/issues/351))
     - there is an example for creating a custom action to add a tag
       `favorite` to the current note at
-      [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/favorite-note.qml)
+      [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml)
 - the status messages now all start with an uppercase letter
 - there now is a checkbox for ignoring of non-VTODO calendars in the
   todo settings that is turned on by default (for @binerf on GitHub)
@@ -5845,7 +5848,7 @@
 - fixed the restoring of the focus after switching workspaces
   (for [#343](https://github.com/pbek/QOwnNotes/issues/343))
 - added an example for custom styling of html in the note preview at
-  [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/preview-styling.qml)
+  [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml)
   (for [#356](https://github.com/pbek/QOwnNotes/issues/356))
 - the log dialog is now a dockable panel that can be placed everywhere
 - fixed a problem with showing the title bar of floating panels after
@@ -5931,18 +5934,18 @@
     - you can use the new scripting hook `encryptionHook()` do implement
       your own encryption
     - there are examples to encrypt notes with **[Keybase.io](https://keybase.io)**
-      ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/encryption-keybase.qml)),
-      **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/encryption-pgp.qml)) or
+      ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml)),
+      **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml)) or
       do a trivial "encryption" with ROT13
-      ([encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/encryption-rot13.qml))
+      ([encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml))
     - you can disable the password dialog with `script.encryptionDisablePassword()`
     - to start an external synchronous process you can use `script.startSynchronousProcess()`
     - to check on which platform the script is running you can use
       `script.platformIsLinux()`, `script.platformIsOSX()` and `script.platformIsWindows()` 
     - for more information on the new commands please take a look at the 
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html)
 - added some fixes to the demo script
-  [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/insert-headline-with-link-from-github-url.qml)
+  [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml)
 - the menu entry `Show tag pane under navigation pane` was replaced by
   `Show note list under tag panel` where note list and tag pane are swapped
   (for [#340](https://github.com/pbek/QOwnNotes/issues/340))
@@ -5959,12 +5962,12 @@
   to write text to the note text edit
   (for [#339](https://github.com/pbek/QOwnNotes/issues/339))
     - for more information please take a look at the 
-      [noteTextEditWrite documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#write-text-to-the-note-text-edit)
+      [noteTextEditWrite documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#write-text-to-the-note-text-edit)
 - there a now is a new scripting method `script.noteTextEditSelectedText()`
   to read the selected text from the note text edit
   (for [#339](https://github.com/pbek/QOwnNotes/issues/339))
     - for more information please take a look at the 
-      [noteTextEditSelectedText documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#read-the-selected-text-in-the-note-text-edit)
+      [noteTextEditSelectedText documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#read-the-selected-text-in-the-note-text-edit)
 - added more Portuguese, Polish, Italian and Russian translation (thank
   you mlimacarlos, lucjan, mlocati and frostyland)
 
@@ -6266,7 +6269,7 @@
   from your freedesktop theme icons or a local file
   (for [#297](https://github.com/pbek/QOwnNotes/issues/297))
     - for more information please take a look at the 
-      [registerCustomAction documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#register-a-custom-action)
+      [registerCustomAction documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#register-a-custom-action)
     - you will find a list of icons at
       [freedesktop icons](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html)
 - fixed a problem with selecting text
@@ -6289,10 +6292,10 @@
   and for [#297](https://github.com/pbek/QOwnNotes/issues/297))
     - there is an example for opening the current note with KWrite
       and to create a new note with a custom text at
-      [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/custom-actions.qml)
+      [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml)
     - there is a small documentation about the function
       `registerCustomAction` and other functions in the
-      [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/#register-a-custom-action)
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#register-a-custom-action)
     - you can also assign shortcuts for your custom actions in the 
       shortcut settings
 - added new methods to the scripting engine
@@ -6301,11 +6304,11 @@
     - you can now register a custom action with `script.registerCustomAction()`
     - you can now create a new note with `script.createNote()`
     - you can now access the clipboard with `script.clipboard()`
-    - take a look at the [scripting documentation](https://docs.qownnotes.org/en/latest/scripting/methods-and-objects/)
+    - take a look at the [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html)
       for more information
 - there now is a new example to create a note from a 5pm email with a 
   custom action at
-  [note-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/develop/docs/content/scripting/examples/note-from-5pm-mail.qml)
+  [note-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/develop/docs/scripting/examples/note-from-5pm-mail.qml)
 - the warning about tags when copying or moving notes to a note
   subfolder will now be only displayed if one of the selected notes has
   a tag assigned (for [#289](https://github.com/pbek/QOwnNotes/issues/289))
@@ -6514,7 +6517,7 @@
       characters `===` will be added automatically, you have to do that
       in your script
     - take a look at the updated example at
-      [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/custom-new-note-headline.qml)
+      [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml)
     - you now can use the hook to create your own headline styles, 
       for example using `# headline` instead of `headline`, followed by
       `==========`
@@ -6788,7 +6791,7 @@
     - note that you have to take care about a unique note name, otherwise
       the new note will not be created, it will just be found in the note list
     - there is an example at
-      [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/custom-new-note-headline.qml)
+      [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml)
 - added more Hungarian and Russian translation (thank you Fabijenna and 
   frostyland)
 
@@ -7045,7 +7048,7 @@
     - it allows you to modify this html
     - this is for example called before by the note preview
     - there is an example call in
-      [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/example.qml)
+      [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml)
 - added more Japanese and Portuguese translation (thank you piyo and mlimacarlos)
 
 ## 16.05.14
@@ -7088,7 +7091,7 @@
 - there now is a new script function `script.downloadUrlToString("http://the-webpage");`
     - it allows you to download an url to a string
     - there is an example at
-      [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/insert-headline-with-link-from-github-url.qml)
+      [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml)
 - added more German and Russian translation (thank you bigant and frostyland)
 
 ## 16.05.12
@@ -7106,7 +7109,7 @@
   (for [#166](https://github.com/pbek/QOwnNotes/issues/166))
     - it allows you to modify the name of the note file
     - there is an example at
-      [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/content/scripting/examples/use-tag-names-in-filename.qml)
+      [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml)
 - added more Japanese, Portuguese, German and Dutch translation (thank you 
   piyo, mlimacarlos, bigant and Telesight)
 
@@ -7125,7 +7128,7 @@
       with `Ctrl + Shift + V`
     - you can intercept the media paste mechanism with it
     - there is an example at
-      [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/develop/docs/content/scripting/examples/note-text-from-5pm-mail.qml)
+      [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/develop/docs/scripting/examples/note-text-from-5pm-mail.qml)
 - the script function `modifyMediaMarkdown` was be renamed to `insertMediaHook`
   for more consistency
 - added a `Paste HTML or media` context menu entry for notes
@@ -7276,7 +7279,7 @@
   (for [#149](https://github.com/pbek/QOwnNotes/issues/149))
     - The shortcut for removing the current note went to <kbd>Alt</kbd> + 
     <kbd>R</kbd>
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - added more Portuguese, French, Russian, German and Japanese translation 
   (thank you mlimacarlos, Loelo, frostyland and piyo)
@@ -7566,7 +7569,7 @@
     - you can now remove tasks with the <kbd>Del</kbd> key
     - fixed the shortcuts of the *Store*, *Store and insert* and *Remove* 
       buttons
-        - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+        - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
           for a list of all shortcuts
 - added more German and Portuguese translation (thank you calis2002 and mlimacarlos)
 
@@ -7695,7 +7698,7 @@
     - a new png image will be created in the `media` folder of your notes folder 
     - use <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> as shortcut for 
     pasting image data
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - added more Hungarian translation (thank you Fabijenna)
 
@@ -7770,7 +7773,7 @@
 - use <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> and <kbd>Ctrl</kbd> + <kbd>PgDn</kbd>
   to **jump between visible notes**
   (for [#80](https://github.com/pbek/QOwnNotes/issues/80))
-    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
     
 ## 1.0.5
@@ -7820,7 +7823,7 @@
 ## 1.0
 - yippee, **version 1.0**, so there were already 100 releases!?
     - want to get involved with QOwnNotes? read:
-    [Getting involved](https://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes)
+    [Getting involved](https://www.qownnotes.org/contributing/get-involved.html)
 - updated German and Russian translation (thanks for your help, @elnull)
 - fixed the visual blocking of the note search bar by the scroll bar
 - the code font in the note Markdown view can now be configured in the settings
@@ -7916,7 +7919,7 @@
     - the fallback language is English
 - added **German translation** from @calis2002, thanks a lot for the great job!
 - if you feel like translating QOwnNotes to another language please read
- [How can I help to translate QOwnNotes?](https://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
+ [How can I help to translate QOwnNotes?](https://www.qownnotes.org/contributing/translation.html)
 - fixed a character in link titles that was disorienting the markdown 
   highlighter
 
@@ -8058,7 +8061,7 @@
 - if you are using **Ubuntu Linux** or **openSUSE Linux** you can now take advantage of the brand new repositories for both distributions
     - take a look at the [QOwnNotes installation page](https://www.qownnotes.org/installation) for instructions
     - the update check for these releases have been removed from the menu and you will not get a report for new software versions, since updates are done by your operating system
-    - you can always visit the [QOwnNotes changelog](https://www.qownnotes.org/changelog/QOwnNotes) to see what has changed in the versions
+    - you can always visit the [QOwnNotes changelog](https://www.qownnotes.org/changelog.html) to see what has changed in the versions
 - you can now export notes as PDF (for [#23](https://github.com/pbek/QOwnNotes/issues/23))
 
 ## 0.68

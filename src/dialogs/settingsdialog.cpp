@@ -312,8 +312,9 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
         "pkgkfnampapjbopomdpnkckbjdnpkbkp",
         "https://addons.mozilla.org/firefox/addon/qownnotes-web-companion"));
     ui->bookmarkTagLabel->setText(ui->bookmarkTagLabel->text().arg(
-        "https://www.qownnotes.org/Knowledge-base/"
-        "QOwnNotes-Web-Companion-browser-extension"));
+        "https://www.qownnotes.org/getting-started/browser-extension.html"));
+    ui->helpTranslateLabel->setText(ui->helpTranslateLabel->text().arg(
+        "https://www.qownnotes.org/contributing/translation.html"));
 
 #ifndef Q_OS_LINUX
     ui->systemIconThemeCheckBox->setHidden(true);
@@ -2855,7 +2856,7 @@ void SettingsDialog::setupScriptingPage() {
     QString issueUrl =
         QStringLiteral("https://github.com/pbek/QOwnNotes/issues");
     QString documentationUrl = QStringLiteral(
-        "https://docs.qownnotes.org/en/latest/scripting/");
+        "https://www.qownnotes.org/scripting/");
     ui->scriptInfoLabel->setText(
         tr("Take a look at the <a href=\"%1\">Scripting documentation</a> "
            "to get started fast.")

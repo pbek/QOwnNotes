@@ -64,7 +64,7 @@ qownnotesSrcDir="qownnotes-${QOWNNOTES_VERSION}"
 cp LICENSE src
 cp README.md src
 cp CHANGELOG.md src
-cp docs/content/getting-started/shortcuts.md src
+cp webpage/src/getting-started/shortcuts.md src
 
 # rename the src directory
 mv src $qownnotesSrcDir
