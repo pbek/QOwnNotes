@@ -8,10 +8,10 @@ actionLink: getting-started/overview
 features:
 - title: Own your notes
   details: All notes are stored as plain-text markdown files on your computer, no "vendor lock-in"
-- title: Cloud support
+- title: Private cloud support
   details: Use Nextcloud, ownCloud or other services to work with your notes online or sync them across devices
 - title: Customization
-  details: Heavily customizable and scriptable, you are in control on how you want to work with your notes
+  details: Heavily customizable and scriptable, you are in control of on how you want to work with your notes
 footer: Made by Patrizio Bekerle with ❤️
 ---
 
