@@ -31,5 +31,5 @@ their note files (like Dropbox, Syncthing or Resilio Sync).
 
 - Syncing your notes (please use your ownCloud / Nextcloud sync client)
 - Sharing notes (that is done directly via the ownCloud / Nextcloud API)
-- Accessing images from [Nextcloud Text](https://apps.nextcloud.com/apps/text)
+- Accessing images from [Nextcloud Text](https://github.com/nextcloud/text)
   (that is done directly via the Nextcloud API)
