@@ -43,6 +43,10 @@ module.exports = {
     logo: '/favicon.png',
     nav: [
       {
+        text: 'Getting started',
+        link: '/getting-started/overview',
+      },
+      {
         text: 'Installation',
         link: '/installation/',
       },
