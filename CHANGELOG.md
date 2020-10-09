@@ -2,6 +2,8 @@
 
 ## 20.10.3
 - the links in the application were updated for the new webpage
+- added more translation (thank you MGuerra, gbabin, tiwi90, unchase, mlimacarlos,
+  amirkbrpr, fitoschido, diego2214, rakekniven, MartaStan)
 
 ## 20.10.2
 - the url of the update service was changed to make it possible to detach the
