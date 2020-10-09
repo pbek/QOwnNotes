@@ -1,37 +1,48 @@
 <template>
-  <v-snackbar
-      id="poll"
-      v-model="snackbar"
-      fixed
-      bottom
-      right
-      color="#389d70"
-      :timeout="-1"
-  >
-    <v-text-field
-        v-model="answer"
-        :counter="200"
-        label="How did you find out about QOwnNotes?"
-        required
-        @keydown.enter="submit"
-    ></v-text-field>
-
-    <v-btn
-        light
-        @click="submit"
-        title="Submit your answer"
+  <div>
+    <v-snackbar
+        id="poll"
+        v-model="snackbar"
+        fixed
+        bottom
+        right
+        color="#389d70"
+        :timeout="-1"
     >
-      Submit
-    </v-btn>
-    <v-btn
-        text
-        title="Close poll"
-        @click="snackbar = false"
-    >
-      <v-icon>mdi-close</v-icon>
-    </v-btn>
+      <v-text-field
+          v-model="answer"
+          :counter="200"
+          label="How did you find out about QOwnNotes?"
+          required
+          @keydown.enter="submit"
+      ></v-text-field>
 
-  </v-snackbar>
+      <v-btn
+          light
+          @click="submit"
+          title="Submit your answer"
+      >
+        Submit
+      </v-btn>
+      <v-btn
+          text
+          title="Close poll"
+          @click="snackbar = false"
+      >
+        <v-icon>mdi-close</v-icon>
+      </v-btn>
+    </v-snackbar>
+    <v-snackbar
+        v-model="success"
+        fixed
+        bottom
+        right
+        color="#389d70"
+        :timeout="1500"
+    >
+      Thank you for letting us know!
+    </v-snackbar>
+  </div>
 </template>
 
 <script>
@@ -40,6 +51,7 @@
     data() {
       return {
         snackbar: false,
+        success: false,
         answer: "",
         pollId: 1,
         sentPolls: []
@@ -70,6 +82,7 @@
         }
 
         this.snackbar = false;
+        this.success = true;
       },
     },
   }
