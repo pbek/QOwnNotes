@@ -41,6 +41,10 @@ module.exports = {
     editLinkText: 'Help us improve this page!',
     lastUpdated: false,
     logo: '/favicon.png',
+    algolia: {
+      apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+      indexName: 'qownnotes'
+    },
     nav: [
       {
         text: 'Getting started',
