@@ -43,8 +43,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
     isDebug = true;
 #endif
 
-    // there were troubles with https by default on different platforms,
-    // so we were using http until now
+//    QUrl url("http://localhost:8000/api/v1/last_release/QOwnNotes/" +
     QUrl url("https://api.qownnotes.org/api/v1/last_release/QOwnNotes/" +
              QStringLiteral(PLATFORM) + ".json");
 
