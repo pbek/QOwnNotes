@@ -1,11 +1,10 @@
 # [QOwnNotes](https://www.qownnotes.org "QOwnNotes Official Site")
 
 [Installation](https://www.qownnotes.org/installation) |
-[Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) |
+[Changelog](https://www.qownnotes.org/changelog.html) |
 [Issues](https://github.com/pbek/QOwnNotes/issues) |
-[Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/webpage/src/getting-started/shortcuts.md) |
-[Documentation](http://docs.qownnotes.org) |
-[Knowledge base](https://www.qownnotes.org/getting-started/concept.html) |
+[Shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html) |
+[Documentation](https://www.qownnotes.org/getting-started/concept.html) |
 [Screenshots](https://www.qownnotes.org/getting-started/overview.html) |
 [Nextcloud API](https://apps.nextcloud.com/apps/qownnotesapi) |
 [Nextcloud App Page](https://apps.nextcloud.com/apps/qownnotes) |
