@@ -11,7 +11,7 @@ wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/R
 Run the following shell commands to add the repository and install QOwnNotes from there.
 
 ```bash
-sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/' >> /etc/apt/sources.list.d/qownnotes.list"
+sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/ /' >> /etc/apt/sources.list.d/qownnotes.list"
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
@@ -33,7 +33,7 @@ wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/
 Run the following shell commands to add the repository and install QOwnNotes from there.
 
 ```bash
-sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/' >> /etc/apt/sources.list.d/qownnotes.list"
+sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/ /' >> /etc/apt/sources.list.d/qownnotes.list"
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
@@ -55,7 +55,7 @@ wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/
 Run the following shell commands to add the repository and install QOwnNotes from there.
 
 ```bash
-sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/' >> /etc/apt/sources.list.d/qownnotes.list"
+sudo bash -c "echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/ /' >> /etc/apt/sources.list.d/qownnotes.list"
 sudo apt-get update
 sudo apt-get install qownnotes
 ```
