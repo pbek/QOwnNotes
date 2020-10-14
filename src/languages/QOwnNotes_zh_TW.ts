@@ -170,12 +170,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
       <source>German (German)</source>
-      <translation>德語（德語）</translation>
+      <translation>德語（德語)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>German (Swiss)</source>
-      <translation>德文（瑞士）</translation>
+      <translation>德文（瑞士)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
@@ -205,22 +205,22 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Aragonese</source>
-      <translation>Aragonese</translation>
+      <translation type="unfinished">Aragonese</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Gujarati</source>
-      <translation>Gujarati</translation>
+      <translation type="unfinished">Gujarati</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
       <source>Portugese (Brazilian)</source>
-      <translation>Portuges (Brazilian)</translation>
+      <translation type="unfinished">Portugese (Brazilian)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
       <source>Portugese</source>
-      <translation>Portuges</translation>
+      <translation type="unfinished">Portugese</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
@@ -240,17 +240,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
       <source>Afrikaans</source>
-      <translation>Mga Afrikaans</translation>
+      <translation type="unfinished">Afrikaans</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
       <source>Amharic</source>
-      <translation>Amharic</translation>
+      <translation type="unfinished">Amharic</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Ancient Greek</source>
-      <translation>Sinaunang Griyego</translation>
+      <translation type="unfinished">Ancient Greek</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
@@ -260,7 +260,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
       <source>Armenian</source>
-      <translation>Armenian</translation>
+      <translation type="unfinished">Armenian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
@@ -440,7 +440,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
       <source>Komi (Russia)</source>
-      <translation>科米（俄羅斯）</translation>
+      <translation>科米（俄羅斯)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
@@ -460,7 +460,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Latgalian</source>
-      <translation>Latgalian</translation>
+      <translation type="unfinished">Latgalian</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
@@ -510,12 +510,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Norwegian (Bokmål)</source>
-      <translation>挪威文（Bokmål）</translation>
+      <translation>挪威文（Bokmål)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Norwegian (Nynorsk)</source>
-      <translation>挪威文（尼諾斯克）</translation>
+      <translation>挪威文（尼諾斯克)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
@@ -525,7 +525,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="118"/>
       <source>Papiamentu</source>
-      <translation>Papiamentu</translation>
+      <translation type="unfinished">Papiamentu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="119"/>
@@ -1218,7 +1218,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Code (type)</source>
-      <translation>Code (type)</translation>
+      <translation type="unfinished">Code (type)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="211"/>
@@ -2549,26 +2549,22 @@
     <message>
       <location filename="../mainwindow.ui" line="2609"/>
       <source>Next note tab</source>
-      <translation>下一個筆記標籤
-</translation>
+      <translation>下一個筆記標籤</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2621"/>
       <source>Close current note tab</source>
-      <translation>關閉當前筆記標籤
-</translation>
+      <translation>關閉當前筆記標籤</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2633"/>
       <source>New note in new tab</source>
-      <translation>新標籤中的新註釋
-</translation>
+      <translation>新標籤中的新註釋</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2641"/>
       <source>Toggle note stickiness of current tab</source>
-      <translation>切換當前標籤頁的便簽粘性
-</translation>
+      <translation>切換當前標籤頁的便簽粘性</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2650"/>
@@ -3172,15 +3168,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10339"/>
       <source>Jump to the note's subfolder</source>
-      <translation>跳到筆記的子文件夾
-
-</translation>
+      <translation>跳到筆記的子文件夾</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10396"/>
       <source>Open note in tab</source>
-      <translation>在標籤中打開筆記
-</translation>
+      <translation>在標籤中打開筆記</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="12059"/>
@@ -4896,7 +4889,7 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="88"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
       <translation>
-        <numerusform>在服務器上找到了&lt;strong&gt;％n個書籤&lt;/ strong&gt;</numerusform>
+        <numerusform>在服務器上找到了&lt;strong&gt;％n個書籤&lt;/strong&gt;</numerusform>
       </translation>
     </message>
   </context>
@@ -5621,8 +5614,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="726"/>
       <source>Use note subfolders</source>
-      <translation>使用註釋子文件夾
-</translation>
+      <translation>使用註釋子文件夾</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1392"/>
@@ -6071,8 +6063,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2838"/>
       <source>Yiddish</source>
-      <translation>意第緒語
-</translation>
+      <translation>意第緒語</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2849"/>
@@ -6183,20 +6174,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="5610"/>
       <location filename="../dialogs/settingsdialog.ui" line="5619"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-      <translation>要忽略的註釋子文件夾的正則表達式，以“;”分隔
-</translation>
+      <translation>要忽略的註釋子文件夾的正則表達式，以“;”分隔</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5613"/>
       <source>Ignored subfolders</source>
-      <translation>忽略的子文件夾
-</translation>
+      <translation>忽略的子文件夾</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5629"/>
       <source>Reset ignored subfolders</source>
-      <translation>重置忽略的子文件夾
-</translation>
+      <translation>重置忽略的子文件夾</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5665"/>

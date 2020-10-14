@@ -6056,7 +6056,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2140"/>
       <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-      <translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
+      <translation>Ha szeretne segíteni a QOwnNotes fordításában vagy egy meglévő fordítás frissítésében, olvassa el: &lt;a href="%1"&gt; Hogyan segíthetek a QOwnNotes fordításában?&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2497"/>
@@ -8109,7 +8109,7 @@ Nem lehet visszavonni!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="%1"&gt; Kapcsolódjon be a QOwnNotes szolgáltatásba &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>

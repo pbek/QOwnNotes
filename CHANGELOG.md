@@ -5,6 +5,8 @@
   to check for application updates (for [#1900](https://github.com/pbek/QOwnNotes/issues/1900))
     - the source code to the api is available on https://github.com/qownnotes/api
     - the new api also supports requests to the old api for backward compatibility  
+- added more Chinese Traditional, Greek, Chinese Simplified, Hungarian, Dutch
+  translation (thank you rawfreeamy, VasilikiBotsou)
 
 ## 20.10.3
 - the links in the application were updated for the new webpage

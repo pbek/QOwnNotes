@@ -2773,7 +2773,7 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3437"/>
       <source>Removed merged conflicted database: %1</source>
-      <translation>Αφαίρεση συγχωνευμένης συγκρουόμενης βάσης δεδομένων: %1</translation>
+      <translation>Kαταργήθηκε συγχωνευμένη συγκρουόμενη βάση δεδομένων: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3438"/>
@@ -3401,7 +3401,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4990"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
-        <numerusform>Η ετικέτα &lt;strong&gt;%1 &lt;/ strong&gt; καταργήθηκε από τη %n σημείωση</numerusform>
+        <numerusform>Η ετικέτα &lt;strong&gt;%1 &lt;/ strong&gt; καταργήθηκε από τη(ις) %n σημείωση(-ειώσεις)</numerusform>
         <numerusform>Η ετικέτα &lt;strong&gt;%1&lt;/strong&gt; καταργήθηκε από τις σημειώσεις %n</numerusform>
       </translation>
     </message>
@@ -4234,22 +4234,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="583"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation>Σκεφτείτε να ενημερώσετε την εφαρμογή QOwnNotesAPI στο διακομιστή σας, η έκδοση εφαρμογής σας %1 είναι πολύ χαμηλή και μπορεί να προκαλέσει προβλήματα στο QOwnNotes.</translation>
+      <translation>Παρακαλούμε λάβετε υπόψη να ενημερώσετε την εφαρμογή QOwnNotesAPI στον διακομιστή σας, η έκδοση εφαρμογής σας %1 είναι πολύ χαμηλή και μπορεί να προκαλέσει προβλήματα στο QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1196"/>
       <source>ownCloud server connection error</source>
-      <translation>ownCloud σφάλμα σύνδεσης διακομιστή</translation>
+      <translation>σφάλμα σύνδεσης διακομιστή ownCloud</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1201"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation>σφάλμα διακομιστήCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt;Ελέγξτε τη δική σας ρύθμιση παραμέτρωνCloud.</translation>
+      <translation>σφάλμα διακομιστή ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt;Παρακαλείσθε να ελέγξετε τη δική σας ρύθμιση παραμέτρων ownCloud.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1221"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation>Πρέπει να ρυθμίσετε το διακομιστή σας ownCloud!</translation>
+      <translation>Πρέπει να ρυθμίσετε τον διακομιστή σας ownCloud!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1233"/>
@@ -6039,12 +6039,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5164"/>
       <source>Note-edit cursor width:</source>
-      <translation>Σημείωση-επεξεργασία πλάτος δρομέα:</translation>
+      <translation>Πλάτος δρομέα επεξεργασίας σημειώσεων:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5113"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation>Ενεργοποίηση λειτουργίας Vim (μερικές συντομεύσεις QOwnNotes δεν θα λειτουργήσουν)</translation>
+      <translation>Ενεργοποίηση λειτουργίας Vim (μερικές συντομεύσεις του QOwnNotes δεν θα λειτουργήσουν)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="642"/>
@@ -6139,7 +6139,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3879"/>
       <source>Disable this if you want to launch the application without opening a note</source>
-      <translation>Απενεργοποιήστε το αν θέλετε να ξεκινήσετε την εφαρμογή χωρίς να ανοίξετε μια σημείωση</translation>
+      <translation>Απενεργοποιήστε το αν θέλετε να ξεκινήσετε την εφαρμογή χωρίς να ανοίξετε κάποια σημείωση</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3882"/>
@@ -6149,12 +6149,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4412"/>
       <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
-      <translation>Το GitHub δεν χρειάζεται δύο κενά στο τέλος της γραμμής για να κάνει ένα διάλειμμα</translation>
+      <translation>Το GitHub δεν χρειάζεται δύο διαστήματα στο τέλος της γραμμής για να πραγματοποιήσει αλλαγή γραμμής</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
       <source>This is the best way to open an issue</source>
-      <translation>Αυτός είναι ο καλύτερος τρόπος για να ξεκινήσεις ένα θέμα</translation>
+      <translation>Αυτός είναι ο καλύτερος τρόπος για να εισάγεις ένα θέμα</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4449"/>
@@ -6378,7 +6378,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5779"/>
       <source>Disable auto-completion of previous searches</source>
-      <translation>Απενεργοποιήστε την αυτόματη συμπλήρωση προηγούμενων αναζητήσεων</translation>
+      <translation>Απενεργοποίηση αυτόματης συμπλήρωσης προηγούμενων αναζητήσεων</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5675"/>
@@ -6855,7 +6855,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2033"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
-      <translation>Κάντε κλικ εδώ για να φορτώσετε ξανά τη λίστα των ημερολογίων από το διακομιστή ημερολογίου σας.</translation>
+      <translation>Κάντε κλικ εδώ για να επαναφορτώσετε τη λίστα των ημερολογίων από τον διακομιστή του ημερολογίου σας.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2039"/>
@@ -7176,7 +7176,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4027"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation>Θέλετε πραγματικά να εισαγάγετε ρυθμίσεις; Οι τρέχουσες ρυθμίσεις θα καταργηθούν και δεν είναι δυνατή η επαναφορά όλων των ρυθμίσεων, όπως οι ρυθμίσεις του φακέλου σημειώσεων και των σεναρίων που χρησιμοποιούσατε. Θα χρειαστεί επίσης να προσαρμόσετε κάποιες ρυθμίσεις, ειδικά σε όλες τις πλατφόρμες, αλλά οι σημειώσεις σας θα παραμείνουν άθικτες!</translation>
+      <translation>Επιθυμείτε πραγματικά να εισάγετε ρυθμίσεις; Οι τρέχουσες ρυθμίσεις θα καταργηθούν και ενδέχεται να μην είναι δυνατή η επαναφορά όλων των ρυθμίσεων, όπως οι ρυθμίσεις του φακέλου σημειώσεων και των σεναρίων/δεσμών ενεργειών που χρησιμοποιούσατε. Θα χρειαστεί επίσης να προσαρμόσετε κάποιες ρυθμίσεις, ειδικά σε όλες τις πλατφόρμες, αλλά οι σημειώσεις σας θα παραμείνουν άθικτες!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4037"/>
@@ -7304,7 +7304,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3654"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-      <translation>Θέλετε πραγματικά να επαναφέρετε όλες τις γραμμές εργαλείων; Η εφαρμογή θα κλείσει κατά τη διαδικασία, οι προεπιλεγμένες γραμμές εργαλείων θα αποκατασταθούν όταν την ξαναρχίσετε.</translation>
+      <translation>Επιθυμείτε πραγματικά να επαναφέρετε όλες τις γραμμές εργαλείων; Η εφαρμογή θα κλείσει κατά τη διαδικασία, οι προεπιλεγμένες γραμμές εργαλείων θα αποκατασταθούν όταν την επανεκκινήσετε.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3658"/>
@@ -7340,7 +7340,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3961"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation>Θέλετε πραγματικά να επαναφέρετε τις ακυρώσεις όλων των κουτιών μηνυμάτων;</translation>
+      <translation>Επιθυμείτε πραγματικά να επαναφέρετε την παράκαμψη όλων των παραθύρων μηνυμάτων;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2284"/>
@@ -7355,7 +7355,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="106"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation>Μπορείτε να κατεβάσετε τον πελάτη git εδώ: &lt;a href="%url"&gt; Git για Windows &lt;/a&gt;</translation>
+      <translation>Μπορείτε να κάνετε λήψη του πελάτη git εδώ: &lt;a href="%url"&gt; Git για Windows &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="453"/>
@@ -7385,7 +7385,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="462"/>
       <source>the settings will be stored in an ini file</source>
-      <translation>οι ρυθμίσεις θα αποθηκευτούν σε ένα αρχείο ini</translation>
+      <translation>οι ρυθμίσεις θα αποθηκευτούν σε ένα αρχείο INI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="464"/>
@@ -7469,12 +7469,12 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="47"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation>Μοιραστείτε δημόσια το τρέχον αρχείο σημειώσεων στον δικό σας κεντρικό υπολογιστή. Μπορείτε να στείλετε τον δημιουργούμενο σύνδεσμο σε άλλους ώστε να μπορούν να προβάλλουν ή να κατεβάσουν το αρχείο.</translation>
+      <translation>Μοιραστείτε δημόσια το τρέχον αρχείο σημειώσεων στον δικό σας διακομιστή ownCloud. Μπορείτε να στείλετε τον δημιουργούμενο σύνδεσμο σε άλλους ώστε να μπορεί να γίνει προβολή ή λήψη του αρχείου.</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="66"/>
       <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-      <translation>Λάβετε υπόψη ότι εξακολουθείτε να πρέπει να συγχρονίζετε τις σημειώσεις σας με το διακομιστή σας χρησιμοποιώντας το εργαλείο συγχρονισμού desktopCloud για να μπορείτε να μοιράζεστε σημειώσεις με άλλους!</translation>
+      <translation>Λάβετε υπόψη ότι εξακολουθείτε να πρέπει να συγχρονίσετε τις σημειώσεις σας με τον διακομιστή σας χρησιμοποιώντας το εργαλείο συγχρονισμού desktop ownCloud για να μπορείτε να μοιράζεστε σημειώσεις με άλλους!</translation>
     </message>
   </context>
   <context>
@@ -8091,7 +8091,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
       <source>Delete selected trashed note on server?</source>
-      <translation>Οριστική Διαγραφή επιλεγμένων απορριφθέντων σημειώσεων στο διακομιστή;</translation>
+      <translation>Διαγραφή επιλεγμένων απορριφθέντων σημειώσεων στον διακομιστή;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="213"/>
@@ -8101,7 +8101,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation>Η οριστική διαγραφή σημείωσης απέτυχε με κωδικό κατάστασης: %1</translation>
+      <translation>Η διαγραφή σημείωσης απέτυχε με κωδικό κατάστασης: %1</translation>
     </message>
   </context>
   <context>
@@ -8129,7 +8129,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation>Λάβετε υπόψη ότι το QOwnNotes πρέπει να εκτελείται από μια τοποθεσία όπου έχετε πρόσβαση στην εγγραφή για να λειτουργήσει η αυτόματη ενημέρωση!</translation>
+      <translation>Λάβετε υπόψη ότι το QOwnNotes πρέπει να εκτελείται από μια τοποθεσία όπου έχετε δικαιώματα εγγραφής ώστε να λειτουργήσει η αυτόματη ενημέρωση!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
@@ -8241,7 +8241,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="445"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation>Το script του Updater '%1' δεν υπάρχει!</translation>
+      <translation>Το σενάριο/η δέσμη ενεργειών του ενημερωτή '%1' δεν υπάρχει!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="453"/>
@@ -8252,12 +8252,12 @@ This cannot be undone!</source>
       <location filename="../dialogs/updatedialog.cpp" line="462"/>
       <location filename="../dialogs/updatedialog.cpp" line="471"/>
       <source>Could not copy updater script '%1' to '%2'!</source>
-      <translation>Δεν ήταν δυνατή η αντιγραφή του σεναρίου updater '%1' στο '%2'!</translation>
+      <translation>Δεν ήταν δυνατή η αντιγραφή του σεναρίου ενημερωτή '%1' στο '%2!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="481"/>
       <source>Couldn't find updater script: %1</source>
-      <translation>Δεν βρέθηκε script updater: %1</translation>
+      <translation>Δεν βρέθηκε σενάριο/δέσμη ενεργειών ενημερωτή: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="490"/>
@@ -8283,7 +8283,7 @@ This cannot be undone!</source>
       <location filename="../services/updateservice.cpp" line="133"/>
       <location filename="../services/updateservice.cpp" line="154"/>
       <source>Update-checker error</source>
-      <translation>Ενημέρωση-σφάλμα ελέγχου</translation>
+      <translation>Σφάλμα ενημέρωσης-ελέγχου</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="119"/>
@@ -8354,7 +8354,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="120"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation>%1 συνδεδεμένο στο διακομιστή QOwnNotes!</translation>
+      <translation>%1 συνδεδεμένο στον διακομιστή QOwnNotes!</translation>
     </message>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="238"/>
@@ -8367,7 +8367,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="386"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation>%1 αποσυνδέθηκε από το διακομιστή QOwnNotes</translation>
+      <translation>%1 αποσυνδέθηκε από τον διακομιστή QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -8490,7 +8490,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="122"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation>Δεν είναι δυνατή η δημιουργία διαδρομής σημειώσεων! Πρέπει να δημιουργήσετε το φάκελο σημειώσεων με μη αυτόματο τρόπο!</translation>
+      <translation>Δεν είναι δυνατή η δημιουργία διαδρομής σημειώσεων! Πρέπει να δημιουργήσετε τον φάκελο σημειώσεων χειροκίνητα!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="130"/>

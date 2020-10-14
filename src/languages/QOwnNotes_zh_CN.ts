@@ -627,7 +627,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="150"/>
       <source>Udmurt (Russia)</source>
-      <translation>乌德穆特（俄罗斯）</translation>
+      <translation>乌德穆特(俄罗斯）</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="151"/>
