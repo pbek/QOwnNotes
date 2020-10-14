@@ -15,6 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.6.0",
+    "@vuepress/plugin-blog": "^1.9.2",
     "@vuepress/plugin-medium-zoom": "^1.6.0",
     "vuepress": "^1.6.0",
     "vuepress-plugin-matomo": "^1.0.2",
