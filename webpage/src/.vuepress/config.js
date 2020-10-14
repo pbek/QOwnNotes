@@ -84,6 +84,7 @@ module.exports = {
         children: [
           'getting-started/overview',
           'getting-started/concept',
+          'getting-started/importing-notes',
           'getting-started/cli-parameters',
           'getting-started/browser-extension',
           'getting-started/qownnotesapi',
