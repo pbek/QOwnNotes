@@ -14,7 +14,7 @@
 
 BRANCH=develop
 #BRANCH=master
-UBUNTU_RELEASES=( "xenial" "bionic" "eoan" "focal" "groovy" )
+UBUNTU_RELEASES=( "xenial" "bionic" "focal" "groovy" )
 
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
