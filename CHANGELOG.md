@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.10.4
+- the update service now makes use of the new api on https://api.qownnotes.org/
+  to check for application updates (for [#1900](https://github.com/pbek/QOwnNotes/issues/1900))
+    - the source code to the api is available on https://github.com/qownnotes/api
+    - the new api also supports requests to the old api for backward compatibility  
+
 ## 20.10.3
 - the links in the application were updated for the new webpage
 - added more translation (thank you MGuerra, gbabin, tiwi90, unchase, mlimacarlos,

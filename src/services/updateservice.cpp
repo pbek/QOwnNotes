@@ -43,9 +43,9 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
     isDebug = true;
 #endif
 
-//    QUrl url("http://localhost:8000/api/v1/last_release/QOwnNotes/" +
-    QUrl url("https://api.qownnotes.org/api/v1/last_release/QOwnNotes/" +
-             QStringLiteral(PLATFORM) + ".json");
+//    QUrl url("http://localhost:8000/latest_releases/" +
+    QUrl url("https://api.qownnotes.org/latest_releases/" +
+             QStringLiteral(PLATFORM));
 
     QUrlQuery q;
     QString version(VERSION);
@@ -56,10 +56,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
         isDebug = true;
     }
 
-    q.addQueryItem(QStringLiteral("b"), QString::number(BUILD));
-    q.addQueryItem(QStringLiteral("v"), version);
-    q.addQueryItem(QStringLiteral("d"),
-                   QStringLiteral(__DATE__) + " " + QStringLiteral(__TIME__));
+    q.addQueryItem(QStringLiteral("version"), version);
     q.addQueryItem(QStringLiteral("um"), QString::number(updateMode));
     q.addQueryItem(QStringLiteral("debug"), QString::number(isDebug));
 
@@ -73,7 +70,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
     }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    q.addQueryItem(QStringLiteral("r"),
+    q.addQueryItem(QStringLiteral("release"),
                    qApp->property("release").toString() + " (" +
                        QSysInfo::buildCpuArchitecture() + ")");
 
@@ -82,9 +79,9 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
         operatingSystem += " (" + QSysInfo::currentCpuArchitecture() + ")";
     }
 
-    q.addQueryItem(QStringLiteral("o"), operatingSystem);
+    q.addQueryItem(QStringLiteral("os"), operatingSystem);
 #else
-    q.addQueryItem("r", qApp->property("release").toString());
+    q.addQueryItem("release", qApp->property("release").toString());
 #endif
 
     url.setQuery(q);
@@ -160,7 +157,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
     // get the information if we should update our app
     bool shouldUpdate = result.property(QStringLiteral("0"))
-                            .property(QStringLiteral("should_update"))
+                            .property(QStringLiteral("needUpdate"))
                             .toBool();
 
     // check if we should update our app
@@ -168,21 +165,18 @@ void UpdateService::onResult(QNetworkReply *reply) {
         // get the release url
         QString releaseUrl =
             result.property(QStringLiteral("0"))
-                .property(QStringLiteral("release"))
-                .property(QStringLiteral("assets"))
-                .property(QStringLiteral("0"))
-                .property(QStringLiteral("browser_download_url"))
+                .property(QStringLiteral("url"))
                 .toString();
 
         // get the release version string
         QString releaseVersionString =
             result.property(QStringLiteral("0"))
-                .property(QStringLiteral("release_version_string"))
+                .property(QStringLiteral("version"))
                 .toString();
 
         // get the changes html
         QString changesHtml = result.property(QStringLiteral("0"))
-                                  .property(QStringLiteral("changes_html"))
+                                  .property(QStringLiteral("releaseChangesHtml"))
                                   .toString();
 
         // show the update available button

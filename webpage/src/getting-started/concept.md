@@ -16,6 +16,8 @@ graph TB
     qon-->qon-api
     qon-->ncs
     sync-->ncs
+    qon-.->qon-web-api("api.qownnotes.org")
+    qon-web-api-->github("GitHub")
 
     style qon fill:#d0d0ff,stroke:#333,stroke-width:4px
     click qon "/getting-started/concept.html#qownnotes" "QOwnNotes Desktop Application for managing your notes on your desktop computer"
@@ -26,6 +28,7 @@ graph TB
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
 ## QOwnNotes
@@ -116,4 +119,15 @@ and use software like *neutriNotes* to edit your notes.
 ::: tip
 You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662)
 and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+:::
+
+## api.qownnotes.org
+
+This is an online service provided by QOwnNotes to check if there is a new release of the application available.
+
+It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes
+from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
+
+::: tip
+You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api).
 :::
