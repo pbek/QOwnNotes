@@ -21,7 +21,8 @@ sudo make
 sudo make install
 ```
 Then cd into the folder where your tomboy notes are:
- ```bashcd ~/.local/share/tomboy/
+ ```bash
+ cd ~/.local/share/tomboy/
 ```
 Then run this:
  ```bash
