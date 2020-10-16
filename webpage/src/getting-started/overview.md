@@ -157,12 +157,12 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 - **Sub-string searching** of notes is possible and search results are highlighted in the notes
 - **Keyboard shortcuts** are customizable
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
-- [Browser extension](browser-extension.md) to a add notes from the selected text, make screenshots or manage your bookmarks
+- [Browser extension](browser-extension.md) to add notes from the selected text, make screenshots or manage your bookmarks
 - **External changes** of note files are **watched** (notes or note list are reloaded)
 - Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
 - **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
-- **differences** between current note and externally changed note are **showed** in a dialog
-- **markdown highlighting** of notes and a **markdown preview mode**
+- **Differences** between current note and externally changed note are **showed** in a dialog
+- **Markdown highlighting** of notes and a **markdown preview mode**
 - [**Spellchecking**](../editor/spellchecking.md) support
 - **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
 - Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use an other **CalDAV server** to sync your tasks to
@@ -172,7 +172,7 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 - All **panels can be placed wherever you want**,  they can even **float** or **stack** (fully dockable)
 - Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
 - Support for **hierarchical note tagging** and **note subfolders**
-- Support for **sharing notes** on your ownCloud** **/ Nextcloud server
+- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
 - **Portable mode** for carrying QOwnNotes around on USB sticks
 - **Vim mode**
 - **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
