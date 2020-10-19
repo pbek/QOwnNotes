@@ -7857,10 +7857,14 @@ void MainWindow::reloadTagTree() {
 
     QVector<int> noteSubFolderIds;
 
-    const auto noteSubFolderWidgetItems =
-        ui->noteSubFolderTreeWidget->selectedItems();
-    noteSubFolderIds.reserve(noteSubFolderWidgetItems.count());
+    auto noteSubFolderWidgetItems = ui->noteSubFolderTreeWidget->selectedItems();
+    //if only one item is selected, then take current Item otherwise we will get the item that
+    //was selected previously
+    if (noteSubFolderWidgetItems.count() == 1) {
+        noteSubFolderWidgetItems[0] = ui->noteSubFolderTreeWidget->currentItem();
+    }
 
+    noteSubFolderIds.reserve(noteSubFolderWidgetItems.count());
     // check if the notes should be viewed recursively
     if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
         for (QTreeWidgetItem *i : noteSubFolderWidgetItems) {
