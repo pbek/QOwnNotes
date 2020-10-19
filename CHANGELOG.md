@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.10.5
+- the `All notes` count in the tags panel showing the count for the previously
+  selected item was fixed (for [#1903](https://github.com/pbek/QOwnNotes/issues/1903), thank you @Waqar144)
+
 ## 20.10.4
 - the update service now makes use of the new api on https://api.qownnotes.org/
   to check for application updates (for [#1900](https://github.com/pbek/QOwnNotes/issues/1900))
