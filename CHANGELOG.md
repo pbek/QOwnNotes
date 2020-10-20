@@ -7,6 +7,7 @@
   (for [#1908](https://github.com/pbek/QOwnNotes/issues/1908), thank you @Waqar144)
 - improved auto-removal of `*` and tick characters (for [#105](https://github.com/pbek/qmarkdowntextedit/issues/105), thank you @Waqar144)
 - inline code spans will now not be spell checked (for [#1911](https://github.com/pbek/QOwnNotes/issues/1911), thank you @Waqar144)
+- added more translation (thank you rawfreeamy, danilosf)
 
 ## 20.10.4
 - the update service now makes use of the new api on https://api.qownnotes.org/

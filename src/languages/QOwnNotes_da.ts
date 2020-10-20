@@ -6066,7 +6066,7 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2140"/>
       <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-      <translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
+      <translation>Hvis du vil hjælpe med at oversætte QOwnNotes eller opdatere en eksisterende oversættelse, bedes du læse: &lt;a href="%1"&gt; Hvordan kan jeg hjælpe med at oversætte QOwnNotes? &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2497"/>
@@ -8130,7 +8130,7 @@ Dette kan ikke fortrydes!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="%1"&gt; Bliv involveret i QOwnNotes &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>

@@ -1043,7 +1043,7 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
       <translation>
-        <numerusform>%n γραμμές αποσπάστηκαν.</numerusform>
+        <numerusform>%n γραμμές τραβήχτηκαν.</numerusform>
         <numerusform>Οι γραμμές %n τραβήχτηκαν.</numerusform>
       </translation>
     </message>
@@ -4387,7 +4387,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../entities/note.cpp" line="3202"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation>
-        <numerusform>Ανιχνεύθηκε αλλαγή στη διαδρομή αποθήκευσης της σημείωσης. Θα επιθυμούσες την αλλαγή όλων των εμφανίσεων των &lt;strong&gt;%1&lt;/strong&gt; συνδέσμων με &lt;strong&gt;%2&lt;/strong&gt; και συνδέσμων με ονόματα αρχείων &lt;strong&gt;%3&lt;/strong&gt; με &lt;strong&gt;%4&lt;/strong&gt; σε &lt;strong&gt;%n&lt;/strong&gt; αρχείο(α) σημείωσης;</numerusform>
+        <numerusform>Ανιχνεύθηκε αλλαγή στη διαδρομή αποθήκευσης της σημείωσης. Θα επιθυμούσες την αλλαγή όλων των εμφανίσεων των &lt;strong&gt;%1&lt;/strong&gt; συνδέσμων με &lt;strong&gt;%2&lt;/strong&gt; και συνδέσμων με ονόματα αρχείων &lt;strong&gt;%3&lt;/strong&gt; με &lt;strong&gt;%4&lt;/strong&gt; σε &lt;strong&gt;%n&lt;/strong&gt; αρχείο(α) σημείωσης(ων);</numerusform>
         <numerusform>Ανιχνεύθηκε αλλαγή στη διαδρομή αποθήκευσης της σημείωσης. Θα επιθυμούσες την αλλαγή όλων των εμφανίσεων των &lt;strong&gt;%1&lt;/strong&gt; συνδέσμων με &lt;strong&gt;%2&lt;/strong&gt; και συνδέσμων με ονόματα αρχείων &lt;strong&gt;%3&lt;/strong&gt; με &lt;strong&gt;%4&lt;/strong&gt; σε &lt;strong&gt;%n&lt;/strong&gt; αρχείο(α) σημείωσηςων;</numerusform>
       </translation>
     </message>
@@ -6074,7 +6074,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2140"/>
       <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-      <translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
+      <translation>Εάν θέλετε να βοηθήσετε στη μετάφραση των QOwnNotes ή να ενημερώσετε μια υπάρχουσα μετάφραση, διαβάστε: &lt;a href="%1"&gt; Πώς μπορώ να βοηθήσω στη μετάφραση των QOwnNotes? &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2497"/>
@@ -8134,7 +8134,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="%1"&gt; Συμμετάσχετε στο QOwnNotes &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8548,7 +8548,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="549"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation>Μια άλλη εκτέλεση του QOwnNotes είχε ήδη ξεκινήσει! Μπορείτε να απενεργοποιήσετε τη λειτουργία ενιαίας εκτέλεσης στις ρυθμίσεις ή να χρησιμοποιήσετε την παράμετρο --allow-multiple-instances.</translation>
+      <translation>Μια άλλη εκτέλεση του QOwnNotes είχε ήδη ξεκινήσει! Μπορείτε να απενεργοποιήσετε τη λειτουργία ενιαίας εκτέλεσης στις ρυθμίσεις ή να χρησιμοποιήσετε την παράμετρο - επιτρέψτε-πολλαπλές εκτελέσεις.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="577"/>
