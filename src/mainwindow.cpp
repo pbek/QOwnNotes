@@ -11943,6 +11943,9 @@ Qt::SortOrder MainWindow::toQtOrder(int order) {
 void MainWindow::updatePanelsSortOrder() {
     updateNotesPanelSortOrder();
     reloadNoteSubFolderTree();
+    // do not reload it again, it has already been reloaded when
+    // updateNotesPanelSortOrder() was called
+    //reloadTagTree();
 }
 
 void MainWindow::updateNotesPanelSortOrder() {
