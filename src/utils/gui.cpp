@@ -611,7 +611,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
     // text
      for (int col = 1; col < maxColumns; col++) {
 
-         const Qt::AlignmentFlag alignment = colAlignment.at(col);
+         const Qt::AlignmentFlag alignment = colAlignment.value(col, static_cast<Qt::AlignmentFlag>(0));
          const int maxTextLength = colLength.at(col);
 
 
