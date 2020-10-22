@@ -1,0 +1,24 @@
+---
+title: Portable mode
+image: /img/blog/Portable-mode_reference.png
+date: 2016-09-18T10:22:41+00:00
+order: 20160918102241
+---
+
+# Portable mode
+
+<v-subheader class="blog">Date: 2016-09-18</v-subheader>
+
+There now is a **portable mode** for **QOwnNotes**, for example to carry around QOwnNotes on an **USB stick**.
+
+In portable mode
+
+- the internal sqlite **database** and the **settings** will be stored inside a ***Data* folder** at the binary's location
+- the settings will be stored in an **ini file**
+- the **note folders** will be automatically stored relative to the ***Data* folder** so that the correct note folders will be loaded regardless where your QOwnNotes installation is currently located
+
+It will be activated if you run QOwnNotes with the **parameter *--portable***.
+
+On **Windows** there is a ***QOwnNotesPortable.exe*** in your release path to start QOwnNotes in **portable mode**.
+
+ ![Portable mode for USB sticks](/img/blog/Portable-mode_reference.png "Portable mode for USB sticks") **Portable mode** for USB sticks

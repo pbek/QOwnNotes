@@ -1,4 +1,5 @@
 const { description } = require('../../package')
+const utils = require('./utils');
 
 module.exports = {
   /**
@@ -149,6 +150,10 @@ module.exports = {
           'faq/preview-without-edit',
           'faq/references',
         ]
+      },
+      {
+        title: 'Blog',
+        children: utils.getChildren('src', 'blog', true)
       }
     ]
   },
