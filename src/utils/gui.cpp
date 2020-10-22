@@ -549,65 +549,136 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
         maxColumns = std::max(maxColumns, stringList.count());
     }
 
-    QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^-+$)"));
+    const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
     QString justifiedText;
+
+    const int lineCount = tableTextList.size();
+    if (lineCount < 2) {
+        return false;
+    }
+
+     QVector<int> colLength;
+     colLength << 1;
+
+     // for every column, store maximum column length
+     for (int col = 1; col < maxColumns; col++) {
+         int maxTextLength = 0;
+         for (int line = 0; line < lineCount; line++) {
+             const QStringList &lineTextList = tableTextList.at(line);
+
+             if (col >= lineTextList.count()) {
+                 break;
+             }
+
+             const QString &text = lineTextList.at(col).trimmed();
+             maxTextLength = std::max(text.count(), maxTextLength);
+         }
+
+         colLength << maxTextLength;
+     }
+
+     QVector<Qt::AlignmentFlag> colAlignment;
+     colAlignment << Qt::AlignLeft;
+
+     const QStringList &headerStringList = tableTextList.at(1);
+
+     // for every column, store column alignment
+     for (int col = 1; col < maxColumns - 1; col++) {
+         const QString &text = headerStringList.at(col);
+         QString trimmedText = text.trimmed();
+
+         if (!headlineSeparatorRegExp.match(trimmedText).hasMatch()) {
+             return false;
+         }
+
+         const bool startsWithCol = trimmedText.startsWith(QStringLiteral(":"));
+         const bool endsWithCol = trimmedText.endsWith(QStringLiteral(":"));
+
+         if (startsWithCol && endsWithCol) {
+             colAlignment << Qt::AlignCenter;
+         } else if (endsWithCol) {
+             colAlignment << Qt::AlignRight;
+         } else if (startsWithCol) {
+             colAlignment << Qt::AlignLeft;
+         } else {
+             // implicit left alignment
+             colAlignment << static_cast<Qt::AlignmentFlag>(0);
+         }
+     }
 
     // justify text in tableTextList
     // we can skip the first column in the list since it is bound to have no
     // text
-    const int lineCount = tableTextList.count();
-    for (int col = 1; col < maxColumns; col++) {
-        // find the maximum text length
-        int maxTextLength = 0;
-        for (int line = 0; line < lineCount; line++) {
-            const QStringList &lineTextList = tableTextList.at(line);
+     for (int col = 1; col < maxColumns; col++) {
 
-            if (col >= lineTextList.count()) {
-                break;
-            }
+         const Qt::AlignmentFlag alignment = colAlignment.value(col, static_cast<Qt::AlignmentFlag>(0));
+         const int maxTextLength = colLength.at(col);
 
-            const QString &text = lineTextList.at(col).trimmed();
-            maxTextLength = std::max(text.count(), maxTextLength);
-        }
 
-        // do the text justification
-        for (int line = 0; line < lineCount; line++) {
-            QStringList lineTextList = tableTextList.at(line);
+         // do the text justification
+         for (int line = 0; line < lineCount; line++) {
+             QStringList lineTextList = tableTextList.at(line);
 
-            const int lineTextListCount = lineTextList.count();
+             const int lineTextListCount = lineTextList.count();
 
-            if (col >= lineTextListCount) {
-                break;
-            }
+             if (col >= lineTextListCount) {
+                 break;
+             }
 
-            const QString &text = lineTextList.at(col);
+             const QString &text = lineTextList.at(col);
 
-            // stop if the text in the last column is empty
-            if (col == (lineTextListCount - 1) && text.isEmpty()) {
-                break;
-            }
+             // stop if the text in the last column is empty
+             if (col == (lineTextListCount - 1) && text.isEmpty()) {
+                 break;
+             }
 
-            // check if text is a headline separator
-            if (headlineSeparatorRegExp.match(text.trimmed()).hasMatch()) {
-                // justify the headline separator text
-                justifiedText = QStringLiteral(" ") +
-                                QStringLiteral("-").repeated(maxTextLength) +
-                                QStringLiteral(" ");
-            } else {
-                // justify the text
-                justifiedText = QStringLiteral(" ") +
-                                text.trimmed().leftJustified(maxTextLength) +
-                                QStringLiteral(" ");
-            }
+             QString trimmedText = text.trimmed();
 
-            // update the tableTextList
-            if (text != justifiedText) {
-                lineTextList.replace(col, justifiedText);
-                tableTextList.replace(line, lineTextList);
-                tableWasModified = true;
-            }
-        }
-    }
+             if (line == 1) {
+                 // heading
+                 QString prefix(" ");
+                 QString suffix(" ");
+
+                 if (alignment == Qt::AlignCenter) {
+                     prefix = " :";
+                     suffix = ": ";
+                 } else if (alignment == Qt::AlignLeft) {
+                     prefix = " :";
+                 } else if (alignment == Qt::AlignRight) {
+                     suffix = ": ";
+                 }
+
+                 const int numSpecialChars(prefix.size() + suffix.size() - 2);
+                 justifiedText = prefix +
+                         QStringLiteral("-").repeated(maxTextLength - numSpecialChars) +
+                         suffix;
+             } else {
+                 if (alignment == Qt::AlignCenter) {
+                     const int leftFillSize = (maxTextLength - trimmedText.size()) / 2;
+                     const int rightFillSize = (maxTextLength - trimmedText.size()) - leftFillSize;
+                     justifiedText = QString().fill(' ', leftFillSize) +
+                             trimmedText +
+                             QString().fill(' ', rightFillSize);
+                 } else if (alignment == Qt::AlignRight) {
+                     justifiedText = trimmedText.rightJustified(maxTextLength);
+                 } else {
+                     justifiedText = trimmedText.leftJustified(maxTextLength);
+                 }
+
+                 // add padding
+                 justifiedText = QStringLiteral(" ") +
+                         justifiedText +
+                         QStringLiteral(" ");
+             }
+
+             // update the tableTextList
+             if (text != justifiedText) {
+                 lineTextList.replace(col, justifiedText);
+                 tableTextList.replace(line, lineTextList);
+                 tableWasModified = true;
+             }
+         }
+     }
 
     // return if table doesn't need to be modified
     if (!tableWasModified) {
