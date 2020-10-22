@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.10.6
+- you can now also change the alignment of your markdown table by setting it in
+  the table header and pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd>
+  (for [#1905](https://github.com/pbek/QOwnNotes/issues/1905), thank you @fnkabit)
+
 ## 20.10.5
 - the `All notes` count in the tags panel showing the count for the previously
   selected item was fixed (for [#1903](https://github.com/pbek/QOwnNotes/issues/1903), thank you @Waqar144)
