@@ -11,8 +11,8 @@ order: 20180329153952
 
 There now are releases of **QOwnNotes** for **openSUSE Leap 15**, **SUSE Linux Enterprise 15** and **SUSE Linux Enterprise 12 SP3**.
 
-Visit the [installation](https://old.qownnotes.org/installation#openSUSE) page for more information on how to install the new releases.
+Visit the [installation](https://www.qownnotes.org/installation#openSUSE) page for more information on how to install the new releases.
 
-[ [ ![openSUSE](/img/blog/openSUSE_reference.jpg "openSUSE") ](/installation#openSUSE)  ](https://old.qownnotes.org/installation#openSUSE)
+[![openSUSE](/img/blog/openSUSE_reference.jpg "openSUSE")](/installation#openSUSE)
 
 (image by [victorhckinthefreeworld](https://victorhckinthefreeworld.com))

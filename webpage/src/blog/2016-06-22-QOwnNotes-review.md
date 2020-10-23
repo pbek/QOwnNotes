@@ -14,7 +14,9 @@ I want to share a very comprehensive review of QOwnNotes by [geckolinux](https:/
 Review of QOwnNotes
 -------------------
 
- ![QOwnNotes review](/img/blog/QOwnNotes-review_medium.png "QOwnNotes review")  Hi, I just wanted to leave some general feedback on QOwnNotes and why I think it's one of the best in its class:
+![QOwnNotes review](/img/blog/QOwnNotes-review_medium.png "QOwnNotes review")
+
+Hi, I just wanted to leave some general feedback on QOwnNotes and why I think it's one of the best in its class:
 
 I've been extensively researching Markdown editors with live preview and export to a formatted file such as PDF. One of the finalists is QOwnNotes:
 

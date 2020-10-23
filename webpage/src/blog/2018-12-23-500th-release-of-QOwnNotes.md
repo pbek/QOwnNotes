@@ -10,6 +10,6 @@ order: 20181223152404
 
 Right for Christmas comes *version 18.12.5*, the **500th release of QOwnNotes**!
 
-A lot has changed between the first release in end of 2014 and now over the course of 3593 commits. The [changelog](https://old.qownnotes.org/changelog/QOwnNotes) will tell you the (almost) whole story.
+A lot has changed between the first release in end of 2014 and now over the course of 3593 commits. The [changelog](https://www.qownnotes.org/changelog/QOwnNotes) will tell you the (almost) whole story.
 
 Thank you for your support in the last years!

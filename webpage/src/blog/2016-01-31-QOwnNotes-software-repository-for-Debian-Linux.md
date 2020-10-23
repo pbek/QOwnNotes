@@ -12,4 +12,4 @@ Beside **Linux** software repositories for **Arch**, **Ubuntu**, **Fedora** and 
 
 The repository also makes use of the wonderful openSUSE build service.
 
-Please visit the [QOwnNotes installation page](https://old.qownnotes.org/installation#Debian) for details on how to use it.
+Please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation#Debian) for details on how to use it.

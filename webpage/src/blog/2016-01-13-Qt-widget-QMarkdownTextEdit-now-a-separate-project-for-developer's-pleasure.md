@@ -13,7 +13,9 @@ For the pleasure of you developers I extracted the markdown widget functionality
 
 It's name is **QMarkdownTextEdit** and you'll find it on **[QMarkdownTextEdit on GitHub](https://github.com/pbek/qmarkdowntextedit/)**.
 
- ![QMarkdownTextEdit screenshot](/img/blog/QMarkdownTextEdit-screenshot_large.png "QMarkdownTextEdit screenshot")  Current features
+![QMarkdownTextEdit screenshot](/img/blog/QMarkdownTextEdit-screenshot_large.png "QMarkdownTextEdit screenshot")
+ 
+Current features
 ----------------
 
 - markdown highlighting

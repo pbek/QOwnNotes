@@ -29,4 +29,4 @@ There are now scripts directly available to
 
 Feel free to **add your own scripts** to the script repository. You will find a **guide** on how to do so at the **[QOwnNotes script repository](https://github.com/qownnotes/scripts)**.
 
- ![Script repository](/img/blog/Script-repository_imagelarge.png "Script repository")   ![Script settings variables](https://old.qownnotes.org/var/bekerle/storage/images/media/images/script-settings-variables/4496-1-eng-GB/Script-settings-variables_imagelarge.png "Script settings variables")
+![Script repository](/img/blog/Script-repository_imagelarge.png "Script repository")

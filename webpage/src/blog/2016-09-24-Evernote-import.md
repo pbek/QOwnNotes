@@ -16,6 +16,6 @@ Then click ***Import / Import notes from Evernote*** in the QOwnNotes main menu 
 
 Formattings like bold and italic will be converted to markdown, as are headlines and links. Images from your Evernote notes will be embedded in your QOwnNotes markdown notes.
 
-You can **download QOwnNotes** on the **[installation page](https://old.qownnotes.org/installation)**.
+You can **download QOwnNotes** on the **[installation page](https://www.qownnotes.org/installation)**.
 
  ![Evernote screenshot](/img/blog/Evernote-screenshot_reference.png "Evernote screenshot")

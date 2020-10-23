@@ -11,6 +11,8 @@ order: 20170703155221
 
 There now are releases of **QOwnNotes** as **AppImage**.
 
-Visit the [installation](https://old.qownnotes.org/installation#AppImage) page for more information on how to install the new release.
+Visit the [installation](https://www.qownnotes.org/installation#AppImage) page for more information on how to install the new release.
 
- ![AppImage](/img/blog/AppImage_reference.jpg "AppImage")  (image by [appimage.org](http://appimage.org/))
+![AppImage](/img/blog/AppImage_reference.jpg "AppImage")
+
+(image by [appimage.org](http://appimage.org/))

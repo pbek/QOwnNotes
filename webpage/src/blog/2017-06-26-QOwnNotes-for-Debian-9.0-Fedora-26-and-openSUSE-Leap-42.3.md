@@ -11,6 +11,8 @@ order: 20170626184045
 
 There now are releases of **QOwnNotes** for **Debian Linux 9.0**, **Fedora 26** and **openSUSE Leap 42.3**.
 
-Visit the [installation](https://old.qownnotes.org/installation#Fedora) page for more information on how to install the new releases.
+Visit the [installation](https://www.qownnotes.org/installation#Fedora) page for more information on how to install the new releases.
 
- ![Debian 9.0](/img/blog/Debian-9.0_reference.jpg "Debian 9.0")  (image by [Softpedia News](http://news.softpedia.com))
+ ![Debian 9.0](/img/blog/Debian-9.0_reference.jpg "Debian 9.0")
+ 
+ (image by [Softpedia News](http://news.softpedia.com))

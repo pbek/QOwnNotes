@@ -20,6 +20,6 @@ Now I know why lately more people are assuming that QOwnNotes is using the notes
 **QOwnNotes** uses the same **text files** as the **ownCloud notes** app.  
 OwnNote uses HTML in the database.
 
-Please read [Does QOwnNotes support ownNote](https://old.qownnotes.org/Knowledge-base/Does-QOwnNotes-support-ownNote) for more information.
+Please read [Does QOwnNotes support ownNote](https://www.qownnotes.org/Knowledge-base/Does-QOwnNotes-support-ownNote) for more information.
 
  ![screenshot-linuxvoice25](/img/blog/screenshot-linuxvoice25_reference.png "screenshot-linuxvoice25")

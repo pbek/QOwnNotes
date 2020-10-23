@@ -13,6 +13,6 @@ If you want to take a look at the first release of the **bookmark management** c
 
 Don't forget to update your installation of QOwnNotes as well!
 
-For more information about the **syntax** of the **bookmark links** and everything else please visit the **[QOwnNotes Web Companion browser extension](https://old.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)** knowledge page entry.
+For more information about the **syntax** of the **bookmark links** and everything else please visit the **[QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)** knowledge page entry.
 
  ![qownnotes-web-companion-bookmarks](/img/blog/qownnotes-web-companion-bookmarks_reference.png "qownnotes-web-companion-bookmarks")

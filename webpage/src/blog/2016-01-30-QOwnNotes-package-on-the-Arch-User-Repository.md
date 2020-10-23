@@ -11,6 +11,6 @@ order: 20160130112918
 
 Beside the regular **QOwnNotes** software repository for **Arch Linux** there now also is an official package on the **Arch User Repository** called **qownnotes-pbek**.
 
-Please visit the [QOwnNotes installation page](https://old.qownnotes.org/installation#Arch) for more details.
+Please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation#Arch) for more details.
 
  ![arch-linux-logo](/img/blog/arch-linux-logo_large.png "arch-linux-logo")
