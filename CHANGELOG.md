@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.10.7
+- it is now also possible to move text in the note text edit via drag and drop
+  (for [#1888](https://github.com/pbek/QOwnNotes/issues/1888), thank you @fnkabit)
+
 ## 20.10.6
 - you can now also change the alignment of your markdown table by setting it in
   the table header and pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd>
