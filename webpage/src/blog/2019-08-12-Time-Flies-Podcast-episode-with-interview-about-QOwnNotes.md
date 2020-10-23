@@ -3,6 +3,7 @@ title: Time Flies Podcast episode with interview about QOwnNotes
 image: /img/blog/Time-Flies_reference.jpg
 date: 2019-08-12T16:45:47+00:00
 order: 20190812164547
+description: Interview about QOwnNotes with Time Flies Podcast
 ---
 
 # Time Flies Podcast episode with interview about QOwnNotes

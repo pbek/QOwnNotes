@@ -6,10 +6,12 @@ module.exports = {
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
   title: 'QOwnNotes',
+
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
+   * Note: This overrides too much
    */
-  description: description,
+  // description: description,
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -175,6 +177,7 @@ module.exports = {
     [
       'seo', // https://github.com/lorisleiva/vuepress-plugin-seo
       {
+        description: $page => ($page.frontmatter.description || description),
         image: ($page, $site) => {
           if ($page.frontmatter.image) {
             return $site.themeConfig.domain &&
