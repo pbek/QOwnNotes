@@ -459,9 +459,6 @@ MainWindow::MainWindow(QWidget *parent)
             &MainWindow::dfmEditorWidthActionTriggered);
 
     setAcceptDrops(true);
-    // we need to disallow this explicitly under Windows
-    // so that the MainWindow gets the event
-    ui->noteTextEdit->setAcceptDrops(false);
 
     // act on position clicks in the navigation widget
     connect(ui->navigationWidget, &NavigationWidget::positionClicked, this,
