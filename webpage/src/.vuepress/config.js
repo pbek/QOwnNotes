@@ -1,4 +1,5 @@
 const { description } = require('../../package')
+const _ = require('lodash');
 const utils = require('./utils');
 
 module.exports = {
@@ -25,6 +26,7 @@ module.exports = {
     ['link', { rel: 'icon', type: 'image/png', sizes: '128x128', href: '/favicon.png' }],
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css' }],
     ['link', { rel: 'alternate', title: 'QOwnNotes Releases RSS', type: 'application/rss+xml', href: 'https://feeds.feedburner.com/QOwnNotesReleases' }],
+    ['link', { rel: 'alternate', title: 'QOwnNotes Blog RSS', type: 'application/rss+xml', href: 'https://feeds.feedburner.com/QOwnNotesBlog' }],
     // ['link', { rel: 'stylesheet', href: `https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css` }],
     // ['script', { src: `https://cdn.jsdelivr.net/npm/vue/dist/vue.js` }],
     // ['script', { src: `https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js` }],
@@ -198,11 +200,22 @@ module.exports = {
       },
     ],
     [
-      "vuepress-plugin-matomo", // https://github.com/qdot/vuepress-plugin-matomo
+      'vuepress-plugin-matomo', // https://github.com/qdot/vuepress-plugin-matomo
       {
         siteId: 7,
         trackerUrl: 'https://p.bekerle.com/',
         trackerJsFile: 'matomo.js'
+      }
+    ],
+    [
+      'feed', // https://github.com/webmasterish/vuepress-plugin-feed
+      {
+        feed_options: {
+          title: 'QOwnNotes Blog',
+          description: "News about QOwnNotes, the open source markdown note taking application for Linux, Mac OS X and Windows, that works together with Nextcloud Notes",
+        },
+        canonical_base: 'https://www.qownnotes.org',
+        sort: entries => _.reverse( _.sortBy( entries, 'date' ) ),
       }
     ],
   ],
