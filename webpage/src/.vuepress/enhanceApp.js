@@ -7,6 +7,8 @@
 import Vuetify from 'vuetify'
 import "vuetify/dist/vuetify.min.css";
 import { findPageForPath } from '@app/util'
+import VueFilterDateFormat from '@vuejs-community/vue-filter-date-format';
+import VueFilterDateParse from '@vuejs-community/vue-filter-date-parse';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -16,6 +18,8 @@ export default ({
 }) => {
   // ...apply enhancements for the site.
   Vue.use(Vuetify);
+  Vue.use(VueFilterDateFormat);
+  Vue.use(VueFilterDateParse);
   options.vuetify = new Vuetify({});
 
   Vue.mixin({

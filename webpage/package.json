@@ -14,6 +14,8 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@vuejs-community/vue-filter-date-format": "^1.6.2",
+    "@vuejs-community/vue-filter-date-parse": "^1.1.5",
     "@vuepress/plugin-back-to-top": "^1.6.0",
     "@vuepress/plugin-medium-zoom": "^1.6.0",
     "markdown-it": "^12.0.1",

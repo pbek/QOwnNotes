@@ -6,9 +6,9 @@ order: 20190812164547
 description: Interview about QOwnNotes with Time Flies Podcast
 ---
 
-# Time Flies Podcast episode with interview about QOwnNotes
+# {{ $frontmatter.title }}
 
-<v-subheader class="blog">Date: 2019-08-12</v-subheader>
+<BlogDate v-bind:fm="$frontmatter" />
 
 A few weeks ago *Santi Younger* interviewed me in his Podcast [Time Flies](https://anchor.fm/time-flies) about QOwnNotes.
 
