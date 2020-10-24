@@ -61,6 +61,10 @@ module.exports = {
         link: '/installation/',
       },
       {
+        text: 'Blog',
+        link: '/blog/',
+      },
+      {
         text: 'Changelog',
         link: '/changelog',
         collapsable: true,
