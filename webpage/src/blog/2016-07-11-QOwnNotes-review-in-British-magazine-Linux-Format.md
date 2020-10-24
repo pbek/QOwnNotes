@@ -13,6 +13,6 @@ order: 20160711110042
 
 With friendly permission from Neil from *Linux Format* you can **download** the article here:
 
- [LXF213.hot.pdf](https://www.qownnotes.org/content/download/683/4031/file/LXF213.hot.pdf) 376.23 kB  You can also buy the full issue: [Buy Linux Format issue 213](https://www.myfavouritemagazines.co.uk/computer/linux-format-magazine-back-issues/Linux-Format-August-2016-Issue-213/)
+ [LXF213.hot.pdf](/media/blog/LXF213.hot.pdf) 376.23 kB  You can also buy the full issue: [Buy Linux Format issue 213](https://www.myfavouritemagazines.co.uk/computer/linux-format-magazine-back-issues/Linux-Format-August-2016-Issue-213/)
 
  ![Linuf-Format-magazine](/img/blog/Linuf-Format-magazine_reference.png "Linuf-Format-magazine")
