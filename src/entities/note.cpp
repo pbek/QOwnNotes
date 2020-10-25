@@ -252,10 +252,12 @@ Note Note::fetchByRelativeFilePath(const QString &relativePath) {
     // be presented!
     const auto noteSubFolder =
         NoteSubFolder::fetchByPathData(fileInfo.path(), QStringLiteral("/"));
-    const Note note =
-        Note::fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
 
-    return note;
+    if ((fileInfo.path() != ".") && !noteSubFolder.exists()) {
+        return Note();
+    }
+
+    return Note::fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
 }
 
 /**
@@ -268,6 +270,7 @@ Note Note::fetchByRelativeFilePath(const QString &relativePath) {
 Note Note::fetchByFileUrl(const QUrl &url) {
     const QString &relativePath =
         Note::fileUrlInCurrentNoteFolderToRelativePath(url);
+
     const Note note = Note::fetchByRelativeFilePath(relativePath);
     return note;
 }
@@ -3132,6 +3135,17 @@ Note Note::fetchByRelativeFileName(const QString &fileName) const {
 }
 
 bool Note::fileUrlIsNoteInCurrentNoteFolder(const QUrl &url) {
+    if (url.scheme() != QStringLiteral("file")) {
+        return false;
+    }
+
+    const QString path = url.toLocalFile();
+
+    return path.startsWith(NoteFolder::currentLocalPath()) &&
+           path.endsWith(QLatin1String(".md"), Qt::CaseInsensitive);
+}
+
+bool Note::fileUrlIsExistingNoteInCurrentNoteFolder(const QUrl &url) {
     if (url.scheme() != QStringLiteral("file")) {
         return false;
     }

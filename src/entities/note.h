@@ -321,6 +321,8 @@ class Note {
 
     static bool fileUrlIsNoteInCurrentNoteFolder(const QUrl &url);
 
+    static bool fileUrlIsExistingNoteInCurrentNoteFolder(const QUrl &url);
+
     static QString fileUrlInCurrentNoteFolderToRelativePath(const QUrl &url);
 
     QString relativeFilePath(const QString &path) const;
