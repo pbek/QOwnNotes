@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.10.8
+- you can now choose to create the note of broken note links when you <kbd>Ctrl</kbd> + Click
+  on the note in the note text edit (for [#1698](https://github.com/pbek/QOwnNotes/issues/1698), thank you @fnkabit)
+
 ## 20.10.7
 - it is now also possible to move text in the note text edit via drag and drop
   (for [#1888](https://github.com/pbek/QOwnNotes/issues/1888), thank you @fnkabit)
