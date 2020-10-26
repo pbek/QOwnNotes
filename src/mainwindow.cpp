@@ -6266,10 +6266,11 @@ void MainWindow::openLocalUrl(QString urlString) {
 
             if (!relativeFilePath.isEmpty() && !NoteFolder::isCurrentHasSubfolders()) {
                 Utils::Gui::warning(
-                            this, tr("Note not found."),
-                            tr("Could not find note.\n"
-                               "Unable to automatically create note at location because subfolders are disabled for the current folder."),
-                            "cannot-create-note-not-has-subfolders");
+                    this, tr("Note was not found"),
+                    tr("Could not find note.<br />Unable to automatically "
+                       "create note at location, because subfolders are "
+                       "disabled for the current note folder."),
+                    "cannot-create-note-not-has-subfolders");
                 return;
             }
 
