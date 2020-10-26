@@ -6133,7 +6133,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
          scheme == QStringLiteral("task") ||
          scheme == QStringLiteral("checkbox")) ||
         (scheme == QStringLiteral("file") &&
-         Note::fileUrlIsExistingNoteInCurrentNoteFolder(url))) {
+         Note::fileUrlIsNoteInCurrentNoteFolder(url))) {
         openLocalUrl(url.toString());
     } else {
         ui->noteTextEdit->openUrl(url.toString());
