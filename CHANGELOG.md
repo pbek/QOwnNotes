@@ -5,6 +5,7 @@
   on the note in the note preview (for [#1698](https://github.com/pbek/QOwnNotes/issues/1698), thank you @fnkabit)
     - if note subfolders are disabled for your note folder you will now also get
       a proper error message when trying to create notes in subfolders 
+- added more translation (thank you gbabin, rakekniven, mlimacarlos, Tommy903, amirkbrpr, unchase)
 
 ## 20.10.8
 - you can now choose to create the note of broken note links when you <kbd>Ctrl</kbd> + Click
