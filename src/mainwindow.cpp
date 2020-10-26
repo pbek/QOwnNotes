@@ -6133,7 +6133,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
          scheme == QStringLiteral("task") ||
          scheme == QStringLiteral("checkbox")) ||
         (scheme == QStringLiteral("file") &&
-         Note::fileUrlIsExistingNoteInCurrentNoteFolder(url))) {
+         Note::fileUrlIsNoteInCurrentNoteFolder(url))) {
         openLocalUrl(url.toString());
     } else {
         ui->noteTextEdit->openUrl(url.toString());
@@ -6263,6 +6263,15 @@ void MainWindow::openLocalUrl(QString urlString) {
 
             QString relativeFilePath =
                     Note::fileUrlInCurrentNoteFolderToRelativePath(filePath);
+
+            if (!relativeFilePath.isEmpty() && !NoteFolder::isCurrentHasSubfolders()) {
+                Utils::Gui::warning(
+                            this, tr("Note not found."),
+                            tr("Could not find note.\n"
+                               "Unable to automatically create note at location because subfolders are disabled for the current folder."),
+                            "cannot-create-note-not-has-subfolders");
+                return;
+            }
 
             QString promptQuestion;
 
