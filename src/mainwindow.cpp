@@ -6133,7 +6133,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
          scheme == QStringLiteral("task") ||
          scheme == QStringLiteral("checkbox")) ||
         (scheme == QStringLiteral("file") &&
-         Note::fileUrlIsNoteInCurrentNoteFolder(url))) {
+         Note::fileUrlIsExistingNoteInCurrentNoteFolder(url))) {
         openLocalUrl(url.toString());
     } else {
         ui->noteTextEdit->openUrl(url.toString());
@@ -6163,10 +6163,11 @@ void MainWindow::openLocalUrl(QString urlString) {
     }
 
     QUrl url = QUrl(urlString);
+    const bool isExistingNoteFileUrl = Note::fileUrlIsExistingNoteInCurrentNoteFolder(url);
     const bool isNoteFileUrl = Note::fileUrlIsNoteInCurrentNoteFolder(url);
 
     // convert relative file urls to absolute urls and open them
-    if (urlString.startsWith(QStringLiteral("file://..")) && !isNoteFileUrl) {
+    if (urlString.startsWith(QStringLiteral("file://..")) && !isExistingNoteFileUrl) {
         QString windowsSlash = QString();
 
 #ifdef Q_OS_WIN32
@@ -6223,6 +6224,7 @@ void MainWindow::openLocalUrl(QString urlString) {
         Note note;
 
         if (isNoteFileUrl) {
+            ui->noteSubFolderTreeWidget->reset();
             note = Note::fetchByFileUrl(url);
         } else {
             // try to fetch a note from the url string
@@ -6234,27 +6236,91 @@ void MainWindow::openLocalUrl(QString urlString) {
             // set current note
             setCurrentNote(std::move(note));
         } else {
-            // if the name of the linked note only consists of numbers we cannot
-            // use host() to get the filename, it would get converted to an
-            // ip-address
-            QRegularExpressionMatch match =
-                QRegularExpression(QStringLiteral(R"(^\w+:\/\/(\d+)$)"))
-                    .match(urlString);
-            QString fileName =
-                match.hasMatch() ? match.captured(1) : url.host();
+            QString fileName;
+            QUrl filePath;
 
-            // try to generate a useful title for the note
-            fileName = Utils::Misc::toStartCase(
-                fileName.replace(QStringLiteral("_"), QStringLiteral(" ")));
+            if (!isNoteFileUrl) {
+                // if the name of the linked note only consists of numbers we cannot
+                // use host() to get the filename, it would get converted to an
+                // ip-address
+                QRegularExpressionMatch match =
+                    QRegularExpression(QStringLiteral(R"(^\w+:\/\/(\d+)$)"))
+                        .match(urlString);
+                fileName =
+                    match.hasMatch() ? match.captured(1) : url.host();
+
+                // try to generate a useful title for the note
+                fileName = Utils::Misc::toStartCase(
+                            fileName.replace(QStringLiteral("_"), QStringLiteral(" ")));
+            } else {
+                fileName = url.fileName();
+                filePath = url.adjusted(QUrl::RemoveFilename);
+            }
+
+            // remove file extension
+            QFileInfo fileInfo(fileName);
+            fileName = fileInfo.baseName();
+
+            QString relativeFilePath =
+                    Note::fileUrlInCurrentNoteFolderToRelativePath(filePath);
+
+            QString promptQuestion;
+
+            if (relativeFilePath.isEmpty()) {
+                promptQuestion = tr("Note was not found, create new note "
+                                    "<strong>%1</strong>?")
+                        .arg(fileName);
+            } else {
+                promptQuestion = tr("Note was not found, create new note "
+                                    "<strong>%1</strong> at path <strong>%2</strong> ?")
+                        .arg(fileName).arg(relativeFilePath);
+            }
 
             // ask if we want to create a new note if note wasn't found
             if (Utils::Gui::questionNoSkipOverride(this, tr("Note was not found"),
-                                     tr("Note was not found, create new note "
-                                        "<strong>%1</strong>?")
-                                         .arg(fileName),
-                                     QStringLiteral("open-url-create-note")) ==
-                QMessageBox::Yes) {
-                return createNewNote(fileName, false);
+                                                   promptQuestion,
+                                                   QStringLiteral("open-url-create-note")) == QMessageBox::Yes) {
+
+                NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
+                bool subFolderCreationFailed(false);
+
+                if (!relativeFilePath.isEmpty()) {
+                    for (QString folderName : relativeFilePath.split("/")) {
+                        if (folderName.isEmpty()) {
+                            break;
+                        }
+
+                        NoteSubFolder subFolder = NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
+                        if (!subFolder.exists()) {
+                            createNewNoteSubFolder(folderName);
+                            noteSubFolder = NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
+                            if (!noteSubFolder.exists()) {
+                                qWarning() << "Failed to create subfolder: " << folderName <<
+                                              "when attempting to create path: " << relativeFilePath;
+                                subFolderCreationFailed = true;
+                                break;
+                            }
+                        } else {
+                            noteSubFolder = subFolder;
+                        }
+
+                        noteSubFolder.setAsActive();
+                    }
+                }
+
+                if (!subFolderCreationFailed) {
+                    if (!relativeFilePath.isEmpty()) {
+                        ui->noteSubFolderTreeWidget->reset();
+                        jumpToNoteSubFolder(noteSubFolder.getId());
+                    }
+                    createNewNote(fileName, false);
+                } else {
+                    Utils::Gui::warning(
+                        this, tr("Failed to create note"),
+                        tr("Note creation failed"),
+                        "note-create-failed");
+                }
+                return;
             }
         }
     } else if (scheme == QStringLiteral("task")) {
