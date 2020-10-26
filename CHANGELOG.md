@@ -3,6 +3,9 @@
 ## 20.10.8
 - you can now choose to create the note of broken note links when you <kbd>Ctrl</kbd> + Click
   on the note in the note text edit (for [#1698](https://github.com/pbek/QOwnNotes/issues/1698), thank you @fnkabit)
+- the legacy update service is up again for older versions of QOwnNotes
+  (see [Legacy update service up again](https://www.qownnotes.org/blog/2020-10-26-Legacy-update-service-up-again.html))
+- added more translation (thank you pgrules7, rawfreeamy, VasilikiBotsou, danilosf)
 
 ## 20.10.7
 - it is now also possible to move text in the note text edit via drag and drop
