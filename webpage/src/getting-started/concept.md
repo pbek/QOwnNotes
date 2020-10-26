@@ -67,7 +67,9 @@ or [ownCloud](https://owncloud.org/) sync client to your server.
 
 ::: tip
 Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used
-too to sync your notes and other files
+too to sync your notes and other files.
+
+You can also use **git** to sync with tools like [gitomatic](https://github.com/muesli/gitomatic/). 
 :::
 
 ## Nextcloud server
