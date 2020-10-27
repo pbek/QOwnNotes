@@ -3935,7 +3935,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="6270"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-      <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+      <translation>Impossible de trouver la note.&lt;br /&gt;Impossible de créer automatiquement la note à l'emplacement, car les sous-dossiers sont désactivés pour le dossier de notes actuel.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6684"/>

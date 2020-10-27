@@ -3000,17 +3000,17 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="6284"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
+      <translation>Nota non trovata; creare nuova nota &lt;strong&gt;%1&lt;/strong&gt; nel percorso &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6329"/>
       <source>Failed to create note</source>
-      <translation type="unfinished">Failed to create note</translation>
+      <translation>Creazione nota non riuscita</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6330"/>
       <source>Note creation failed</source>
-      <translation type="unfinished">Note creation failed</translation>
+      <translation>Creazione nota non riuscita</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6491"/>
@@ -3934,7 +3934,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="6270"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-      <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+      <translation>Impossibile trovare la nota.&lt;br /&gt;Impossibile creare la nota automaticamente nel percorso indicato, perché le sottocartelle sono disabilitate per la cartella attuale.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6684"/>

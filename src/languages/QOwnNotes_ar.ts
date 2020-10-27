@@ -4074,7 +4074,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6270"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-      <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+      <translation>لم يتم العثور على الملاحظة.&lt;br /&gt;تعذر إنشاء الملاحظة آلياً في الموقع، بسبب فصل المجلدات الفرعية عن المجلد الحالي للملاحظة.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6684"/>

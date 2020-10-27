@@ -5,6 +5,7 @@
   that you can use to reload the current note, for example because the path changed
     - for more information please take a look at the
       [scripting documentation](https://www.qownnotes.org/scripting/classes.html#mainwindow)
+- added more translation (thank you unchase, Tommy903, Zack-83, mlimacarlos, amirkbrpr, gbabin, rakekniven)
 
 ## 20.10.9
 - you can now also choose to create the note of broken note links when clicking

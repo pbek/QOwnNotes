@@ -3936,7 +3936,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
     <message>
       <location filename="../mainwindow.cpp" line="6270"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-      <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+      <translation>Konnte die Notiz nicht finden.&lt;br /&gt;Automatisches Erstellen der Notiz am Speicherort nicht möglich, da Unterordner für den aktuellen Notizordner deaktiviert sind.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6684"/>

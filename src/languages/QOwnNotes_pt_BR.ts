@@ -3928,7 +3928,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
     <message>
       <location filename="../mainwindow.cpp" line="6270"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-      <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+      <translation>Não foi possível encontra a nota.&lt;br /&gt;Incapaz de criar notas automaticamente no local, porque as subpastas estão desabilitadas para a pasta de notas atual.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6684"/>
