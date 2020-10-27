@@ -1,5 +1,24 @@
 # Install on Fedora Linux
 
+## Fedora 33
+
+Run the following shell commands as root to trust the repository.
+
+```bash
+su -
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_33/repodata/repomd.xml.key
+```
+
+Run the following shell commands as root to add the repository and install QOwnNotes from there.
+
+```bash
+wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_33/home:pbek:QOwnNotes.repo -O /etc/yum.repos.d/QOwnNotes.repo
+dnf clean expire-cache
+dnf install qownnotes
+```
+
+[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_33)
+
 ## Fedora 32
 
 Run the following shell commands as root to trust the repository.
