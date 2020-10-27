@@ -2102,7 +2102,7 @@ QString Note::fileBaseName(bool withFullName) {
  * @return
  */
 bool Note::renameNoteFile(QString newName) {
-    // cleanup not allowed characters characters
+    // cleanup not allowed characters
     newName = cleanupFileName(std::move(newName));
 
     // add the old file suffix to the name
