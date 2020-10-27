@@ -76,6 +76,9 @@ class MainWindow {
     // This method also downloads remote images and transforms "data:image"
     // urls to local images stored in the media directory
     Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
+    // Reloads the current note by id
+    // This is useful when the path or filename of the current note changed
+    Q_INVOKABLE void reloadCurrentNoteByNoteId();
 };
 ```
 

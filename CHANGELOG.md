@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.10.10
+- there now is a new scripting command `mainWindow.reloadCurrentNoteByNoteId()`
+  that you can use to reload the current note, for example because the path changed
+    - for more information please take a look at the
+      [scripting documentation](https://www.qownnotes.org/scripting/classes.html#mainwindow)
+
 ## 20.10.9
 - you can now also choose to create the note of broken note links when clicking
   on the note in the note preview (for [#1698](https://github.com/pbek/QOwnNotes/issues/1698), thank you @fnkabit)

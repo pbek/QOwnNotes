@@ -3696,6 +3696,24 @@ void MainWindow::setCurrentNoteFromNoteId(const int noteId) {
     }
 }
 
+/**
+ * Reloads the current note by id
+ * This is useful when the path or filename of the current note changed
+ */
+void MainWindow::reloadCurrentNoteByNoteId() {
+    // get current cursor position
+    auto cursor = activeNoteTextEdit()->textCursor();
+    const int pos = cursor.position();
+
+    // update the current note
+    currentNote = Note::fetch(currentNote.getId());
+    setCurrentNote(std::move(currentNote), false);
+
+    // restore old cursor position
+    cursor.setPosition(pos);
+    activeNoteTextEdit()->setTextCursor(cursor);
+}
+
 void MainWindow::setCurrentNote(Note note, bool updateNoteText,
                                 bool updateSelectedNote,
                                 bool addNoteToHistory) {

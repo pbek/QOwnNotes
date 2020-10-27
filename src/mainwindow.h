@@ -188,6 +188,8 @@ class MainWindow : public QMainWindow {
 
     void resetBrokenTagNotesLinkFlag();
 
+    Q_INVOKABLE void reloadCurrentNoteByNoteId();
+
    protected:
     void closeEvent(QCloseEvent *event);
 
