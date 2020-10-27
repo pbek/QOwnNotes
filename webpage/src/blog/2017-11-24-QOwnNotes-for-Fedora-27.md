@@ -11,7 +11,7 @@ order: 20171124102652
 
 There now is a **QOwnNotes** release for **Fedora Linux 27**.
 
-Visit the [installation](https://www.qownnotes.org/installation#Fedora) page for more information on how to install the **Fedora 27** release of QOwnNotes.
+Visit the [installation](https://www.qownnotes.org/installation/fedora.html) page for more information on how to install the **Fedora 27** release of QOwnNotes.
 
 Note: There is no debug build for Fedora 27, because [OBS](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) had problems building it.
 
