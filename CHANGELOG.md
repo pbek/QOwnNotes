@@ -3,6 +3,9 @@
 ## 20.10.11
 - in the issue assistant there now are tooltips to show how many characters are needed
   at minimum and it's not mandatory to post the log-output for issues any more
+- there now is a software repository for **Fedora 33**
+    - please visit the [Fedora installation page](https://www.qownnotes.org/installation/fedora.html#fedora-33)
+      for instructions
 - added more Catalan translation (thank you MGuerra)
 
 ## 20.10.10
