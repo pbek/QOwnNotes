@@ -72,6 +72,7 @@ class ScriptingService : public QObject {
         bool useInNoteEditContextMenu = false, bool hideButtonInToolbar = false,
         bool useInNoteListContextMenu = false);
     Q_INVOKABLE void createNote(QString text);
+    Q_INVOKABLE void createSubFolder(QString folderName);
     Q_INVOKABLE QString clipboard(bool asHtml = false);
     Q_INVOKABLE void noteTextEditWrite(const QString &text);
     Q_INVOKABLE QString noteTextEditSelectedText();

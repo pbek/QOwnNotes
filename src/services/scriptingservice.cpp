@@ -1501,6 +1501,27 @@ void ScriptingService::createNote(QString text) {
 }
 
 /**
+ * Creates a new subfolder
+ *
+ * @param folderName the subfolder name
+ */
+void ScriptingService::createSubFolder(QString folderName)
+{
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != Q_NULLPTR) {
+        MetricsService::instance()->sendVisitIfEnabled(
+            QStringLiteral("scripting/") % QString(__func__));
+
+        mainWindow->createNewNoteSubFolder(std::move(folderName));
+    }
+#else
+    Q_UNUSED(folderName)
+#endif
+}
+
+/**
  * Returns the content of the clipboard as text or html
  *
  * @param asHtml returns the clipboard content as html instead of text
