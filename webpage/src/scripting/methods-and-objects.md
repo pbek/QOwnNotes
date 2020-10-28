@@ -870,6 +870,10 @@ script.jumpToNoteSubFolder("a sub folder");
 script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
+::: tip
+You can create a new subfolder by calling [`mainWindow.createNewNoteSubFolder`](../classes/#example-2)
+:::
+
 Showing an information message box
 ----------------------------------
 
