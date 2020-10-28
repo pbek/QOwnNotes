@@ -61,24 +61,24 @@ void IssueAssistantDialog::on_nextButton_clicked() {
 }
 
 void IssueAssistantDialog::allowIssuePageNextButton() const {
-    bool allow = ui->titleLineEdit->text().length() > 4;
+    bool allow = ui->titleLineEdit->text().length() >= 8;
 
     if (ui->questionPlainTextEdit->isVisible()) {
-        allow = allow && ui->questionPlainTextEdit->toPlainText().length() > 10;
+        allow = allow && ui->questionPlainTextEdit->toPlainText().length() >= 10;
     }
 
     if (ui->expectedBehaviourPlainTextEdit->isVisible()) {
         allow = allow &&
-                ui->expectedBehaviourPlainTextEdit->toPlainText().length() > 10;
+                ui->expectedBehaviourPlainTextEdit->toPlainText().length() >= 10;
     }
 
     if (ui->actualBehaviourPlainTextEdit->isVisible()) {
         allow = allow &&
-                ui->actualBehaviourPlainTextEdit->toPlainText().length() > 10;
+                ui->actualBehaviourPlainTextEdit->toPlainText().length() >= 10;
     }
 
     if (ui->stepsPlainTextEdit->isVisible()) {
-        allow = allow && ui->stepsPlainTextEdit->toPlainText().length() > 10;
+        allow = allow && ui->stepsPlainTextEdit->toPlainText().length() >= 10;
     }
 
     ui->nextButton->setEnabled(allow);
@@ -87,9 +87,9 @@ void IssueAssistantDialog::allowIssuePageNextButton() const {
 void IssueAssistantDialog::allowLogPageNextButton() const {
     bool allow = true;
 
-    if (ui->issueTypeComboBox->currentIndex() == ProblemIssueType) {
-        allow = ui->logOutputPlainTextEdit->toPlainText().length() > 10;
-    }
+//    if (ui->issueTypeComboBox->currentIndex() == ProblemIssueType) {
+//        allow = ui->logOutputPlainTextEdit->toPlainText().length() >= 10;
+//    }
 
     ui->nextButton->setEnabled(allow);
 }
@@ -98,7 +98,7 @@ void IssueAssistantDialog::allowDebugSettingsPageNextButton() const {
     bool allow = true;
 
     if (ui->issueTypeComboBox->currentIndex() == ProblemIssueType) {
-        allow = ui->debugOutputPlainTextEdit->toPlainText().length() > 100;
+        allow = ui->debugOutputPlainTextEdit->toPlainText().length() >= 100;
     }
 
     ui->nextButton->setEnabled(allow);

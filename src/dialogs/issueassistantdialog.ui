@@ -196,7 +196,11 @@
              </property>
              <layout class="QGridLayout" name="gridLayout_8">
               <item row="1" column="0">
-               <widget class="QLineEdit" name="titleLineEdit"/>
+               <widget class="QLineEdit" name="titleLineEdit">
+                <property name="toolTip">
+                 <string>Minimum 8 characters</string>
+                </property>
+               </widget>
               </item>
               <item row="1" column="1">
                <widget class="QPushButton" name="searchIssueButton">
@@ -235,7 +239,11 @@
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_3">
               <item>
-               <widget class="QOwnNotesMarkdownTextEdit" name="questionPlainTextEdit"/>
+               <widget class="QOwnNotesMarkdownTextEdit" name="questionPlainTextEdit">
+                <property name="toolTip">
+                 <string>Minimum 10 characters</string>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -247,7 +255,11 @@
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
               <item>
-               <widget class="QOwnNotesMarkdownTextEdit" name="expectedBehaviourPlainTextEdit"/>
+               <widget class="QOwnNotesMarkdownTextEdit" name="expectedBehaviourPlainTextEdit">
+                <property name="toolTip">
+                 <string>Minimum 10 characters</string>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -259,7 +271,11 @@
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
-               <widget class="QOwnNotesMarkdownTextEdit" name="actualBehaviourPlainTextEdit"/>
+               <widget class="QOwnNotesMarkdownTextEdit" name="actualBehaviourPlainTextEdit">
+                <property name="toolTip">
+                 <string>Minimum 10 characters</string>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -271,7 +287,11 @@
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_7">
               <item>
-               <widget class="QOwnNotesMarkdownTextEdit" name="stepsPlainTextEdit"/>
+               <widget class="QOwnNotesMarkdownTextEdit" name="stepsPlainTextEdit">
+                <property name="toolTip">
+                 <string>Minimum 10 characters</string>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -517,8 +537,8 @@
   <tabstop>cancelButton</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../images.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
