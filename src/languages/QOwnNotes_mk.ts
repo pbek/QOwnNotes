@@ -1438,6 +1438,22 @@
     </message>
   </context>
   <context>
+    <name>IssueAssistantDialog</name>
+    <message>
+      <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
+      <source>Minimum 8 characters</source>
+      <translation type="unfinished">Minimum 8 characters</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
+      <location filename="../dialogs/issueassistantdialog.ui" line="260"/>
+      <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
+      <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
+      <source>Minimum 10 characters</source>
+      <translation type="unfinished">Minimum 10 characters</translation>
+    </message>
+  </context>
+  <context>
     <name>LayoutWidget</name>
     <message>
       <location filename="../widgets/layoutwidget.ui" line="97"/>
@@ -1789,7 +1805,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
-      <location filename="../mainwindow.cpp" line="8804"/>
+      <location filename="../mainwindow.cpp" line="8822"/>
       <source>Add a tag to the current note</source>
       <translation>Додадете ознака во тековната белешка</translation>
     </message>
@@ -1825,7 +1841,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1238"/>
-      <location filename="../mainwindow.cpp" line="6767"/>
+      <location filename="../mainwindow.cpp" line="6785"/>
       <source>Custom actions</source>
       <translation>Обични акции</translation>
     </message>
@@ -1906,13 +1922,13 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1445"/>
-      <location filename="../mainwindow.cpp" line="10504"/>
+      <location filename="../mainwindow.cpp" line="10522"/>
       <source>Select &amp;all notes</source>
       <translation>Изберете &amp;ги сите белешки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1454"/>
-      <location filename="../mainwindow.cpp" line="6678"/>
+      <location filename="../mainwindow.cpp" line="6696"/>
       <source>Insert &amp;link</source>
       <translation>Вметнете &amp;врска</translation>
     </message>
@@ -1967,7 +1983,7 @@
       <translation>Пребарувајте или креирајте белешка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8805"/>
+      <location filename="../mainwindow.cpp" line="8823"/>
       <source>Add a tag to the selected notes</source>
       <translation>Додадете ознака во избраните белешки</translation>
     </message>
@@ -1978,7 +1994,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="886"/>
-      <location filename="../mainwindow.cpp" line="6729"/>
+      <location filename="../mainwindow.cpp" line="6747"/>
       <source>Export</source>
       <translation>Извоз</translation>
     </message>
@@ -1989,7 +2005,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="928"/>
-      <location filename="../mainwindow.cpp" line="6710"/>
+      <location filename="../mainwindow.cpp" line="6728"/>
       <source>Print</source>
       <translation>Печати</translation>
     </message>
@@ -2352,7 +2368,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2244"/>
-      <location filename="../mainwindow.cpp" line="11619"/>
+      <location filename="../mainwindow.cpp" line="11637"/>
       <source>Remove current workspace</source>
       <translation>Отстранете го тековниот работен простор</translation>
     </message>
@@ -2394,7 +2410,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2318"/>
-      <location filename="../mainwindow.cpp" line="6687"/>
+      <location filename="../mainwindow.cpp" line="6705"/>
       <source>Insert block &amp;quote</source>
       <translation>Вметнете &amp;понуда за блок</translation>
     </message>
@@ -2421,7 +2437,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2365"/>
-      <location filename="../mainwindow.cpp" line="10480"/>
+      <location filename="../mainwindow.cpp" line="10498"/>
       <source>Open note in different window</source>
       <translation>Отворете белешка во различен прозорец</translation>
     </message>
@@ -2442,7 +2458,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2405"/>
-      <location filename="../mainwindow.cpp" line="10488"/>
+      <location filename="../mainwindow.cpp" line="10506"/>
       <source>Show note git versions</source>
       <translation>Покажете верзии на git</translation>
     </message>
@@ -2525,7 +2541,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2567"/>
-      <location filename="../mainwindow.cpp" line="12545"/>
+      <location filename="../mainwindow.cpp" line="12563"/>
       <source>Automatically detect</source>
       <translation>Автоматско откривање</translation>
     </message>
@@ -2732,10 +2748,10 @@ Restore current note?</source>
 Вратете ја тековната нота?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5457"/>
-      <location filename="../mainwindow.cpp" line="5480"/>
-      <location filename="../mainwindow.cpp" line="7172"/>
-      <location filename="../mainwindow.cpp" line="10570"/>
+      <location filename="../mainwindow.cpp" line="5475"/>
+      <location filename="../mainwindow.cpp" line="5498"/>
+      <location filename="../mainwindow.cpp" line="7190"/>
+      <location filename="../mainwindow.cpp" line="10588"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Откажи</translation>
     </message>
@@ -2820,37 +2836,37 @@ Restore current note?</source>
       <translation>&amp;Излез</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3975"/>
+      <location filename="../mainwindow.cpp" line="3993"/>
       <source>Remove current note</source>
       <translation>Отстранете ја тековната нота</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3976"/>
+      <location filename="../mainwindow.cpp" line="3994"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Отстранете ја тековната белешка: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4335"/>
+      <location filename="../mainwindow.cpp" line="4353"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
       <translation>Внесете ја &lt;strong&gt; лозинката &lt;/strong&gt; на оваа шифрирана нота.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4358"/>
+      <location filename="../mainwindow.cpp" line="4376"/>
       <source>Note can't be decrypted!</source>
       <translation>Белешката не може да се декриптира!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4359"/>
+      <location filename="../mainwindow.cpp" line="4377"/>
       <source>It seems that your password is not valid!</source>
       <translation>Се чини дека вашата лозинка не е валидна!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4527"/>
+      <location filename="../mainwindow.cpp" line="4545"/>
       <source>Remove selected notes</source>
       <translation>Отстранете ги избраните белешки</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4529"/>
+      <location filename="../mainwindow.cpp" line="4547"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -2864,13 +2880,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4617"/>
-      <location filename="../mainwindow.cpp" line="10787"/>
+      <location filename="../mainwindow.cpp" line="4635"/>
+      <location filename="../mainwindow.cpp" line="10805"/>
       <source>Remove selected folders</source>
       <translation>Отстранете ги избраните папки</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4618"/>
+      <location filename="../mainwindow.cpp" line="4636"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
       <translation>
         <numerusform>Отстранете ја избраната папка &lt;strong&gt;%n&lt;/strong&gt;? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Сите датотеки и папки во овие папки ќе бидат отстранети, исто така!</numerusform>
@@ -2878,17 +2894,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4629"/>
+      <location filename="../mainwindow.cpp" line="4647"/>
       <source>Removed note subfolder: %1</source>
       <translation>Отстранет под-папка за белешка: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4649"/>
+      <location filename="../mainwindow.cpp" line="4667"/>
       <source>Remove selected tags</source>
       <translation>Отстранете ги избраните ознаки</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4650"/>
+      <location filename="../mainwindow.cpp" line="4668"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
         <numerusform>Отстранете ја избраната ознака &lt;strong&gt;%n&lt;/strong&gt;? Нема белешки да се отстранат во овој процес.</numerusform>
@@ -2896,13 +2912,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4702"/>
-      <location filename="../mainwindow.cpp" line="9590"/>
+      <location filename="../mainwindow.cpp" line="4720"/>
+      <location filename="../mainwindow.cpp" line="9608"/>
       <source>Move selected notes</source>
       <translation>Поместете избрани белешки</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4703"/>
+      <location filename="../mainwindow.cpp" line="4721"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Поместете ја избраната нота %n на &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2910,13 +2926,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4806"/>
-      <location filename="../mainwindow.cpp" line="9699"/>
+      <location filename="../mainwindow.cpp" line="4824"/>
+      <location filename="../mainwindow.cpp" line="9717"/>
       <source>Copy selected notes</source>
       <translation>Копирајте ги избраните белешки</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4807"/>
+      <location filename="../mainwindow.cpp" line="4825"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Копирајте %n избрана белешка на &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2924,13 +2940,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4837"/>
-      <location filename="../mainwindow.cpp" line="4986"/>
+      <location filename="../mainwindow.cpp" line="4855"/>
+      <location filename="../mainwindow.cpp" line="5004"/>
       <source>Done</source>
       <translation>Направено</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4838"/>
+      <location filename="../mainwindow.cpp" line="4856"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>%n белешката е копирана на &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -2938,12 +2954,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4851"/>
+      <location filename="../mainwindow.cpp" line="4869"/>
       <source>Tag selected notes</source>
       <translation>Означете ги избраните белешки</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4852"/>
+      <location filename="../mainwindow.cpp" line="4870"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Означете ја избраната нота %n со &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2951,42 +2967,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5125"/>
+      <location filename="../mainwindow.cpp" line="5143"/>
       <source>Restart application</source>
       <translation>Рестартирајте ја апликацијата</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5131"/>
+      <location filename="../mainwindow.cpp" line="5149"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
       <translation>Можеби треба да ја рестартирате апликацијата рачно за да ги ставите во сила промените.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5136"/>
+      <location filename="../mainwindow.cpp" line="5154"/>
       <source>You may need to restart the application to let the changes take effect.</source>
       <translation>Можеби треба да ја рестартирате апликацијата за да ги ставите во сила промените.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5138"/>
+      <location filename="../mainwindow.cpp" line="5156"/>
       <source>Restart</source>
       <translation>Рестарт</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5369"/>
+      <location filename="../mainwindow.cpp" line="5387"/>
       <source>PDF files</source>
       <translation>PDF датотеки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5453"/>
+      <location filename="../mainwindow.cpp" line="5471"/>
       <source>Todo lists disabled!</source>
       <translation>Тодо листи оневозможени!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5454"/>
+      <location filename="../mainwindow.cpp" line="5472"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Вие ги оневозможивте листите со todo. &lt;br /&gt; Проверете ја конфигурацијата на &lt;strong&gt; Todo &lt;/strong&gt; во поставките!</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5702"/>
+      <location filename="../mainwindow.cpp" line="5720"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Откриено е &lt;strong&gt;%n&lt;/strong&gt; појава на кој било термин на &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -2994,115 +3010,115 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6269"/>
-      <location filename="../mainwindow.cpp" line="6290"/>
+      <location filename="../mainwindow.cpp" line="6287"/>
+      <location filename="../mainwindow.cpp" line="6308"/>
       <source>Note was not found</source>
       <translation>Белешката не е пронајдена</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6280"/>
+      <location filename="../mainwindow.cpp" line="6298"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Забелешката не е пронајдена, создадете нова белешка &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6284"/>
+      <location filename="../mainwindow.cpp" line="6302"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</source>
       <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6329"/>
+      <location filename="../mainwindow.cpp" line="6347"/>
       <source>Failed to create note</source>
       <translation type="unfinished">Failed to create note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6330"/>
+      <location filename="../mainwindow.cpp" line="6348"/>
       <source>Note creation failed</source>
       <translation type="unfinished">Note creation failed</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6491"/>
+      <location filename="../mainwindow.cpp" line="6509"/>
       <source>Note folders</source>
       <translation>Папки за белешка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6614"/>
+      <location filename="../mainwindow.cpp" line="6632"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
       <translation>Верзиите за белешка во моментот се вчитуваат од вашиот 'ownCloud' сервер</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6631"/>
+      <location filename="../mainwindow.cpp" line="6649"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
       <translation>Trубрените белешки во моментот се вчитуваат од вашиот ownCloud сервер</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6697"/>
+      <location filename="../mainwindow.cpp" line="6715"/>
       <source>Copy code block</source>
       <translation>Копирајте го блок-кодот</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6718"/>
+      <location filename="../mainwindow.cpp" line="6736"/>
       <source>Print selected text</source>
       <translation>Печати избран текст</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6724"/>
+      <location filename="../mainwindow.cpp" line="6742"/>
       <source>Print selected text (preview)</source>
       <translation>Печати избран текст (преглед)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6742"/>
+      <location filename="../mainwindow.cpp" line="6760"/>
       <source>Export selected text as PDF</source>
       <translation>Изнесете избран текст како PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6748"/>
+      <location filename="../mainwindow.cpp" line="6766"/>
       <source>Export selected text as PDF (preview)</source>
       <translation>Извези избран текст како PDF (преглед)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7168"/>
+      <location filename="../mainwindow.cpp" line="7186"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation>Вашата нота повторно ќе биде декриптирана и зачувана како обичен текст. Имајте на ум дека некриптираната нота најверојатно ќе биде синхронизирана на вашиот сервер и чувствителниот текст може да биде изложен! &lt;br /&gt; Дали сакате да ја декриптирате вашата нота?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7265"/>
+      <location filename="../mainwindow.cpp" line="7283"/>
       <source>Markdown files</source>
       <translation>Датотеки за одбележување</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7320"/>
+      <location filename="../mainwindow.cpp" line="7338"/>
       <source>Bookmarked note position at slot %1</source>
       <translation>Позиција на обележана ознака во слот %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7335"/>
+      <location filename="../mainwindow.cpp" line="7353"/>
       <source>Jumped to bookmark position at slot %1</source>
       <translation>Скокна на позицијата за обележувачи во слот %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7563"/>
-      <location filename="../mainwindow.cpp" line="7632"/>
+      <location filename="../mainwindow.cpp" line="7581"/>
+      <location filename="../mainwindow.cpp" line="7650"/>
       <source>Inserting image</source>
       <translation>Вметнување слика</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7568"/>
-      <location filename="../mainwindow.cpp" line="7636"/>
+      <location filename="../mainwindow.cpp" line="7586"/>
+      <location filename="../mainwindow.cpp" line="7654"/>
       <source>Done inserting image</source>
       <translation>Готово е вметнување на слика</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7570"/>
+      <location filename="../mainwindow.cpp" line="7588"/>
       <source>Inserting attachment</source>
       <translation>Вметнување прилог</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7575"/>
+      <location filename="../mainwindow.cpp" line="7593"/>
       <source>Done inserting attachment</source>
       <translation>Готово е вметнување прилог</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7587"/>
+      <location filename="../mainwindow.cpp" line="7605"/>
       <source>Copied %n note(s) to %1</source>
       <translation>
         <numerusform>Копирана %n белешка на %1</numerusform>
@@ -3110,7 +3126,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7596"/>
+      <location filename="../mainwindow.cpp" line="7614"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation>
         <numerusform>Не успеа да ја копира %n нотата (најверојатно веќе постои)</numerusform>
@@ -3118,7 +3134,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7606"/>
+      <location filename="../mainwindow.cpp" line="7624"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
         <numerusform>Прескокна копирање на % n белешка (нема обележување или текстуална датотека или не може да се чита)</numerusform>
@@ -3126,225 +3142,225 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7619"/>
+      <location filename="../mainwindow.cpp" line="7637"/>
       <source>Saving temporary image</source>
       <translation>Зачувување на привремена слика</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7638"/>
+      <location filename="../mainwindow.cpp" line="7656"/>
       <source>Temporary file can't be opened</source>
       <translation>Привремената датотека не може да се отвори</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7681"/>
+      <location filename="../mainwindow.cpp" line="7699"/>
       <source>Downloading %1</source>
       <translation>Преземање %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7871"/>
+      <location filename="../mainwindow.cpp" line="7889"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
       <translation>Ресетирајте ја големината на фонтот на %1 точка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8850"/>
+      <location filename="../mainwindow.cpp" line="8868"/>
       <source>Remove tag '%1' from the current note</source>
       <translation>Отстранете ја ознаката "%1" од тековната белешка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8851"/>
+      <location filename="../mainwindow.cpp" line="8869"/>
       <source>Remove tag '%1' from the selected notes</source>
       <translation>Отстранете ја ознаката „%1“ од избраните белешки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9082"/>
+      <location filename="../mainwindow.cpp" line="9100"/>
       <source>Rename tag</source>
       <translation>Преименувајте ја ознаката</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9083"/>
+      <location filename="../mainwindow.cpp" line="9101"/>
       <source>Assign color</source>
       <translation>Доделете боја</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9084"/>
+      <location filename="../mainwindow.cpp" line="9102"/>
       <source>Disable color</source>
       <translation>Оневозможи боја</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9088"/>
+      <location filename="../mainwindow.cpp" line="9106"/>
       <source>&amp;Move tags to…</source>
       <translation>&amp;Поместете ознаки на…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9299"/>
+      <location filename="../mainwindow.cpp" line="9317"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
       <translation>Преместете се во коренот</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9866"/>
+      <location filename="../mainwindow.cpp" line="9884"/>
       <source>An url was opened at the current cursor position</source>
       <translation>Беше урл за време на тековната позиција на покажувачот</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9969"/>
+      <location filename="../mainwindow.cpp" line="9987"/>
       <source>No equation was found in front of the cursor</source>
       <translation>Не беше пронајдена равенка пред курсорот</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9989"/>
+      <location filename="../mainwindow.cpp" line="10007"/>
       <source>Result for equation: %1 = %2</source>
       <translation>Резултат за равенка: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10094"/>
+      <location filename="../mainwindow.cpp" line="10112"/>
       <source>The scripting engine was reloaded</source>
       <translation>Моторот за скриптирање беше преточен</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10128"/>
+      <location filename="../mainwindow.cpp" line="10146"/>
       <source>HTML files</source>
       <translation>HTML-датотеки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10416"/>
+      <location filename="../mainwindow.cpp" line="10434"/>
       <source>Jump to the note's subfolder</source>
       <translation>Скокни до потпапникот на белешката
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10473"/>
+      <location filename="../mainwindow.cpp" line="10491"/>
       <source>Open note in tab</source>
       <translation>Отворете ја белешката во табулаторот
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12138"/>
+      <location filename="../mainwindow.cpp" line="12156"/>
       <source>A script update was found!</source>
       <translation>Пронајдено е ажурирање на скриптата!
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12144"/>
+      <location filename="../mainwindow.cpp" line="12162"/>
       <source>Script updates</source>
       <translation>Ажурирања на скриптата
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12145"/>
+      <location filename="../mainwindow.cpp" line="12163"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
       <translation>Ажурирањата на вашите скрипти беа пронајдени во складиштето со скрипти! Дали сакате да ги ажурирате?
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12160"/>
+      <location filename="../mainwindow.cpp" line="12178"/>
       <source>No script updates were found</source>
       <translation>Не се пронајдени ажурирања во скриптата
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12776"/>
+      <location filename="../mainwindow.cpp" line="12794"/>
       <source>Toggle note stickiness</source>
       <translation>Вклучи лепливост на белешката
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12782"/>
+      <location filename="../mainwindow.cpp" line="12800"/>
       <source>Close other note tabs</source>
       <translation>Затворете ги другите јазичиња со белешки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10360"/>
-      <location filename="../mainwindow.cpp" line="10554"/>
+      <location filename="../mainwindow.cpp" line="10378"/>
+      <location filename="../mainwindow.cpp" line="10572"/>
       <source>Rename note</source>
       <translation>Преименувајте белешка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10362"/>
+      <location filename="../mainwindow.cpp" line="10380"/>
       <source>Allows you to rename the filename of the note</source>
       <translation>Ви овозможува да го преименувате името на името на белешката</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10376"/>
+      <location filename="../mainwindow.cpp" line="10394"/>
       <source>&amp;Move notes to…</source>
       <translation>&amp;Премести белешки до…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10377"/>
+      <location filename="../mainwindow.cpp" line="10395"/>
       <source>&amp;Copy notes to…</source>
       <translation>&amp;Копирајте белешки до…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10420"/>
+      <location filename="../mainwindow.cpp" line="10438"/>
       <source>Move notes to subfolder…</source>
       <translation>Преместете белешки во потпапки…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10424"/>
+      <location filename="../mainwindow.cpp" line="10442"/>
       <source>Copy notes to subfolder…</source>
       <translation>Копирајте белешки во под-папка…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10432"/>
+      <location filename="../mainwindow.cpp" line="10450"/>
       <source>&amp;Tag selected notes with…</source>
       <translation>&amp;Означете ги избраните белешки со…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10456"/>
+      <location filename="../mainwindow.cpp" line="10474"/>
       <source>&amp;Remove tag from selected notes…</source>
       <translation>&amp;Отстранете ја ознаката од избраните белешки…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10554"/>
+      <location filename="../mainwindow.cpp" line="10572"/>
       <source>Name:</source>
       <translation>Име:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10566"/>
+      <location filename="../mainwindow.cpp" line="10584"/>
       <source>Note renaming not enabled!</source>
       <translation>Забелешка за преименувањето не е овозможено!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10786"/>
+      <location filename="../mainwindow.cpp" line="10804"/>
       <source>Rename subfolder</source>
       <translation>Преименувајте потпапка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11390"/>
+      <location filename="../mainwindow.cpp" line="11408"/>
       <source>Create new workspace</source>
       <translation>Создадете нов работен простор</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11391"/>
-      <location filename="../mainwindow.cpp" line="11661"/>
+      <location filename="../mainwindow.cpp" line="11409"/>
+      <location filename="../mainwindow.cpp" line="11679"/>
       <source>Workspace name:</source>
       <translation>Име на работното место:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11516"/>
+      <location filename="../mainwindow.cpp" line="11534"/>
       <source>full</source>
       <comment>full workspace</comment>
       <translation>полн</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11523"/>
+      <location filename="../mainwindow.cpp" line="11541"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
       <translation>минимална</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11620"/>
+      <location filename="../mainwindow.cpp" line="11638"/>
       <source>Remove the current workspace?</source>
       <translation>Отстранете го тековниот работен простор?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11660"/>
+      <location filename="../mainwindow.cpp" line="11678"/>
       <source>Rename workspace</source>
       <translation>Преименување на работниот простор</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="11806"/>
+      <location filename="../mainwindow.cpp" line="11824"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation>
@@ -3353,42 +3369,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12077"/>
+      <location filename="../mainwindow.cpp" line="12095"/>
       <source>Disallow all note editing</source>
       <translation>Оневозможете го целото уредување на белешката</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12293"/>
+      <location filename="../mainwindow.cpp" line="12311"/>
       <source>Select text files to import</source>
       <translation>Изберете текстуални датотеки за увоз</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12323"/>
+      <location filename="../mainwindow.cpp" line="12341"/>
       <source>Importing: %1</source>
       <translation>Увоз: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12388"/>
+      <location filename="../mainwindow.cpp" line="12406"/>
       <source>Note headline '%1' was copied to the clipboard</source>
       <translation>Насловот за забелешка „%1“ беше копиран во таблата со исечоци</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12482"/>
+      <location filename="../mainwindow.cpp" line="12500"/>
       <source>Leave full-screen mode</source>
       <translation>Оставете режим на цел екран</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12663"/>
+      <location filename="../mainwindow.cpp" line="12681"/>
       <source>Custom editor width</source>
       <translation>Прилагодена ширина на уредникот</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12663"/>
+      <location filename="../mainwindow.cpp" line="12681"/>
       <source>Characters:</source>
       <translation>Карактеристики:</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8824"/>
+      <location filename="../mainwindow.cpp" line="8842"/>
       <source>%n notes selected</source>
       <translation>
         <numerusform>Избрана %n белешка</numerusform>
@@ -3397,7 +3413,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2450"/>
-      <location filename="../mainwindow.cpp" line="12078"/>
+      <location filename="../mainwindow.cpp" line="12096"/>
       <source>Allow all note editing</source>
       <translation>Дозволи сите уредување белешки</translation>
     </message>
@@ -3407,12 +3423,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>&amp;ден</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4926"/>
+      <location filename="../mainwindow.cpp" line="4944"/>
       <source>Remove tag from selected notes</source>
       <translation>Отстранете ја ознаката од избраните белешки</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4927"/>
+      <location filename="../mainwindow.cpp" line="4945"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
         <numerusform>Отстранете ја ознаката &lt;strong&gt;%1&lt;/strong&gt; од %n избрана белешка?</numerusform>
@@ -3420,7 +3436,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4987"/>
+      <location filename="../mainwindow.cpp" line="5005"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
         <numerusform>Ознаката &lt;strong&gt;%1&lt;/strong&gt; беше отстранета од %n белешка</numerusform>
@@ -3428,95 +3444,95 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5032"/>
+      <location filename="../mainwindow.cpp" line="5050"/>
       <source>Current notes folder: </source>
       <translation>Тековни папки за белешки: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5035"/>
+      <location filename="../mainwindow.cpp" line="5053"/>
       <source>Set the notes folder. Current notes folder: </source>
       <translation>Поставете ја папката со белешки. Тековни папки за белешки: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5237"/>
+      <location filename="../mainwindow.cpp" line="5255"/>
       <source>Print note</source>
       <translation>Белешка за печатење</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5312"/>
+      <location filename="../mainwindow.cpp" line="5330"/>
       <source>Letter</source>
       <translation>Писмо</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5342"/>
+      <location filename="../mainwindow.cpp" line="5360"/>
       <source>Portrait</source>
       <translation>Портрет</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5342"/>
+      <location filename="../mainwindow.cpp" line="5360"/>
       <source>Landscape</source>
       <translation>Пејзаж</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5347"/>
+      <location filename="../mainwindow.cpp" line="5365"/>
       <source>Orientation</source>
       <translation>Ориентација</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5347"/>
+      <location filename="../mainwindow.cpp" line="5365"/>
       <source>Orientation:</source>
       <translation>Ориентација:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5370"/>
+      <location filename="../mainwindow.cpp" line="5388"/>
       <source>Export current note as PDF</source>
       <translation>Export current note as PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5477"/>
+      <location filename="../mainwindow.cpp" line="5495"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Вие не одбравте никакви листи на тодо. &lt;br /&gt; Ве молиме проверете ја конфигурацијата &lt;strong&gt; Todo &lt;/strong&gt; во поставките!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6473"/>
+      <location filename="../mainwindow.cpp" line="6491"/>
       <source>Open QOwnNotes</source>
       <translation>Отворете QOwnNotes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6060"/>
-      <location filename="../mainwindow.cpp" line="6523"/>
-      <location filename="../mainwindow.cpp" line="10356"/>
-      <location filename="../mainwindow.cpp" line="10784"/>
+      <location filename="../mainwindow.cpp" line="6078"/>
+      <location filename="../mainwindow.cpp" line="6541"/>
+      <location filename="../mainwindow.cpp" line="10374"/>
+      <location filename="../mainwindow.cpp" line="10802"/>
       <source>New note</source>
       <translation>Нова нота</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6540"/>
+      <location filename="../mainwindow.cpp" line="6558"/>
       <source>Recent notes</source>
       <translation>Неодамнешни белешки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6556"/>
+      <location filename="../mainwindow.cpp" line="6574"/>
       <source>Show todo lists</source>
       <translation>Покажете списоци со тодо</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6568"/>
+      <location filename="../mainwindow.cpp" line="6586"/>
       <source>Recent tasks</source>
       <translation>Неодамнешни задачи</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6589"/>
+      <location filename="../mainwindow.cpp" line="6607"/>
       <source>Quit</source>
       <translation>Престани</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8043"/>
+      <location filename="../mainwindow.cpp" line="8061"/>
       <source>show notes from all note subfolders (%1)</source>
       <translation>покаже белешки од сите потпапки за белешки (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8066"/>
+      <location filename="../mainwindow.cpp" line="8084"/>
       <source>show notes in note root folder (%1)</source>
       <translation>покажи белешки во папката за корен на белешки (%1)</translation>
     </message>
@@ -3524,36 +3540,36 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="790"/>
       <location filename="../mainwindow.cpp" line="2109"/>
-      <location filename="../mainwindow.cpp" line="8078"/>
+      <location filename="../mainwindow.cpp" line="8096"/>
       <source>Note folder</source>
       <translation>Папка за белешка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9471"/>
-      <location filename="../mainwindow.cpp" line="9538"/>
+      <location filename="../mainwindow.cpp" line="9489"/>
+      <location filename="../mainwindow.cpp" line="9556"/>
       <source>Copy to note folder</source>
       <translation>Копирајте ја папката за забелешка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9471"/>
-      <location filename="../mainwindow.cpp" line="9539"/>
+      <location filename="../mainwindow.cpp" line="9489"/>
+      <location filename="../mainwindow.cpp" line="9557"/>
       <source>Move to note folder</source>
       <translation>Преместете во папката за белешки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9472"/>
-      <location filename="../mainwindow.cpp" line="9540"/>
+      <location filename="../mainwindow.cpp" line="9490"/>
+      <location filename="../mainwindow.cpp" line="9558"/>
       <source>Copy to this subfolder</source>
       <translation>Копирајте го овој потпапки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9473"/>
-      <location filename="../mainwindow.cpp" line="9541"/>
+      <location filename="../mainwindow.cpp" line="9491"/>
+      <location filename="../mainwindow.cpp" line="9559"/>
       <source>Move to this subfolder</source>
       <translation>Преместете во оваа потпапка</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9585"/>
+      <location filename="../mainwindow.cpp" line="9603"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Преместете ја %n избрана белешка за да забележите потпапка &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -3561,13 +3577,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5138"/>
-      <location filename="../mainwindow.cpp" line="12307"/>
+      <location filename="../mainwindow.cpp" line="5156"/>
+      <location filename="../mainwindow.cpp" line="12325"/>
       <source>Cancel</source>
       <translation>Откажи</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9670"/>
+      <location filename="../mainwindow.cpp" line="9688"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation>
         <numerusform>%n белешката е преместена во под-папката за забелешка "%2"</numerusform>
@@ -3575,7 +3591,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9694"/>
+      <location filename="../mainwindow.cpp" line="9712"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Копирајте %n избрани белешки (а) за да забележите потпапка &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3583,7 +3599,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9762"/>
+      <location filename="../mainwindow.cpp" line="9780"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation>
         <numerusform>%n белешката е копирана за под-папката за забелешка "%2"</numerusform>
@@ -3591,57 +3607,57 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10478"/>
+      <location filename="../mainwindow.cpp" line="10496"/>
       <source>Open note in external editor</source>
       <translation>Отворете белешка во надворешен уредувач</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10482"/>
+      <location filename="../mainwindow.cpp" line="10500"/>
       <source>Show note in file manager</source>
       <translation>Прикажи белешка во управувачот со датотеки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10567"/>
+      <location filename="../mainwindow.cpp" line="10585"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
       <translation>Ако сакате да ја преименувате вашата белешка, треба да ја овозможите опцијата да дозволите името на датотеката за белешка да се разликува од насловот.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10785"/>
+      <location filename="../mainwindow.cpp" line="10803"/>
       <source>New subfolder</source>
       <translation>Нов потпалер</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10789"/>
+      <location filename="../mainwindow.cpp" line="10807"/>
       <source>Show folder in file manager</source>
       <translation>Прикажи папка во управувачот со датотеки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10834"/>
+      <location filename="../mainwindow.cpp" line="10852"/>
       <source>Create a new folder</source>
       <translation>Создадете нова папка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10835"/>
+      <location filename="../mainwindow.cpp" line="10853"/>
       <source>Folder name:</source>
       <translation>Име на папка:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8002"/>
+      <location filename="../mainwindow.cpp" line="8020"/>
       <source>show all untagged notes (%1)</source>
       <translation>прикажете ги сите ненајавени белешки (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8004"/>
+      <location filename="../mainwindow.cpp" line="8022"/>
       <source>Untagged notes</source>
       <translation>Незабележани белешки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10129"/>
+      <location filename="../mainwindow.cpp" line="10147"/>
       <source>Export current note as HTML file</source>
       <translation>Извези ја тековната нота како HTML-датотека</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5321"/>
+      <location filename="../mainwindow.cpp" line="5339"/>
       <source>Page size</source>
       <translation>Големина на страница</translation>
     </message>
@@ -3651,27 +3667,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>престанам од алатникот</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5321"/>
+      <location filename="../mainwindow.cpp" line="5339"/>
       <source>Page size:</source>
       <translation>Големина на страница:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5438"/>
+      <location filename="../mainwindow.cpp" line="5456"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation>QOwnNotes ќе следи анонимни податоци за употреба, што помага да се одлучи кои делови на QOwnNotes да ги подобрат следните и да пронајдете и поправите грешки. Може да го оневозможите таквото однесување во поставките.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5442"/>
+      <location filename="../mainwindow.cpp" line="5460"/>
       <source>&amp;Ok</source>
       <translation>&amp;Добро</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10366"/>
+      <location filename="../mainwindow.cpp" line="10384"/>
       <source>&amp;Remove notes</source>
       <translation>&amp;Отстранете ги белешките</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6678"/>
+      <location filename="../mainwindow.cpp" line="6696"/>
       <source>&amp;Link selected text</source>
       <translation>&amp;Врска избрана текст</translation>
     </message>
@@ -3687,7 +3703,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2873"/>
-      <location filename="../mainwindow.cpp" line="5998"/>
+      <location filename="../mainwindow.cpp" line="6016"/>
       <source>Stored current note to disk</source>
       <translation>Зачувана тековна белешка на дискот</translation>
     </message>
@@ -3710,58 +3726,58 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7969"/>
+      <location filename="../mainwindow.cpp" line="7987"/>
       <source>show all notes (%1)</source>
       <translation>прикажи ги сите белешки (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7972"/>
-      <location filename="../mainwindow.cpp" line="8046"/>
+      <location filename="../mainwindow.cpp" line="7990"/>
+      <location filename="../mainwindow.cpp" line="8064"/>
       <source>All notes</source>
       <translation>Сите белешки</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9074"/>
+      <location filename="../mainwindow.cpp" line="9092"/>
       <source>&amp;Add tag</source>
       <translation>&amp;Додадете ознака</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9122"/>
+      <location filename="../mainwindow.cpp" line="9140"/>
       <source>Tag could not be created!</source>
       <translation>Ознаката не може да се создаде!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9301"/>
+      <location filename="../mainwindow.cpp" line="9319"/>
       <source>Move to this tag</source>
       <translation>Преминете на оваа ознака</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9336"/>
+      <location filename="../mainwindow.cpp" line="9354"/>
       <source>Tag this</source>
       <translation>Означете го ова</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9361"/>
+      <location filename="../mainwindow.cpp" line="9379"/>
       <source>Cannot move tag '%1' to this tag</source>
       <translation>Не можам да ја преместам ознаката "%1" на оваа ознака</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9410"/>
+      <location filename="../mainwindow.cpp" line="9428"/>
       <source>Moved tag '%1' to new tag</source>
       <translation>Преместена ознака "%1" во нова ознака</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8316"/>
+      <location filename="../mainwindow.cpp" line="8334"/>
       <source>show all notes tagged with '%1' (%2)</source>
       <translation>прикажи ги сите белешки обележани со '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9085"/>
+      <location filename="../mainwindow.cpp" line="9103"/>
       <source>&amp;Remove tags</source>
       <translation>&amp;Отстранете ги ознаките</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5476"/>
+      <location filename="../mainwindow.cpp" line="5494"/>
       <source>No selected todo lists!</source>
       <translation>Нема избрани листи на тедо!</translation>
     </message>
@@ -3893,7 +3909,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2874"/>
-      <location filename="../mainwindow.cpp" line="5999"/>
+      <location filename="../mainwindow.cpp" line="6017"/>
       <source>Current note could not be stored to disk</source>
       <translation>Тековната нота не може да се чува на диск</translation>
     </message>
@@ -3926,7 +3942,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4910"/>
+      <location filename="../mainwindow.cpp" line="4928"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation>
         <numerusform>%n белешката е обележана со "%2"</numerusform>
@@ -3934,7 +3950,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5698"/>
+      <location filename="../mainwindow.cpp" line="5716"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Пронајдена е &lt;strong&gt;%n&lt;/strong&gt; појава на &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3942,72 +3958,72 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6060"/>
+      <location filename="../mainwindow.cpp" line="6078"/>
       <source>Note headline</source>
       <translation>Наслов за белешка</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6270"/>
+      <location filename="../mainwindow.cpp" line="6288"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
       <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6684"/>
+      <location filename="../mainwindow.cpp" line="6702"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
       <translation>Блокирај &amp;избран текст за понуда</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7693"/>
+      <location filename="../mainwindow.cpp" line="7711"/>
       <source>Downloading images finished</source>
       <translation>Преземањето на слики заврши</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7843"/>
+      <location filename="../mainwindow.cpp" line="7861"/>
       <source>Increased font size to %1 pt</source>
       <translation>Зголемена големина на фонтот на %1 п. т</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7860"/>
+      <location filename="../mainwindow.cpp" line="7878"/>
       <source>Decreased font size to %1 pt</source>
       <translation>Намалена големината на фонтот на %1 п. т</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5442"/>
-      <location filename="../mainwindow.cpp" line="5457"/>
-      <location filename="../mainwindow.cpp" line="5480"/>
-      <location filename="../mainwindow.cpp" line="10570"/>
+      <location filename="../mainwindow.cpp" line="5460"/>
+      <location filename="../mainwindow.cpp" line="5475"/>
+      <location filename="../mainwindow.cpp" line="5498"/>
+      <location filename="../mainwindow.cpp" line="10588"/>
       <source>Open &amp;settings</source>
       <translation>Отворете ги &amp;поставките</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1685"/>
-      <location filename="../mainwindow.cpp" line="12459"/>
+      <location filename="../mainwindow.cpp" line="12477"/>
       <source>leave</source>
       <translation>замине</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7111"/>
+      <location filename="../mainwindow.cpp" line="7129"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation>Внесете ја вашата &lt;strong&gt; лозинка &lt;/strong&gt; за да ја криптирате белешката.&lt;br /&gt; Имајте на ум дека мора да ја &lt;strong&gt; запомните &lt;/strong&gt; вашата лозинка за да ја прочитате содржината на белешката &lt;br/&gt; и дека вие можете да &lt;strong&gt; само &lt;/strong&gt; го сторите тоа &lt;strong&gt;во QOwnNotes &lt;/strong&gt;!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7167"/>
+      <location filename="../mainwindow.cpp" line="7185"/>
       <source>Decrypt note and store it as plain text</source>
       <translation>Декриптирајте ја белешката и чувајте ја како обичен текст</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7172"/>
+      <location filename="../mainwindow.cpp" line="7190"/>
       <source>&amp;Decrypt</source>
       <translation>&amp;Дешифрирање</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7197"/>
+      <location filename="../mainwindow.cpp" line="7215"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation>&lt;br /&gt;Вие ќе можете да ја уредувате вашата шифрирана нота.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7266"/>
+      <location filename="../mainwindow.cpp" line="7284"/>
       <source>Export current note as Markdown file</source>
       <translation>Извези ја тековната белешка како датотека Означи</translation>
     </message>

@@ -3,6 +3,7 @@
 ## 20.10.11
 - in the issue assistant there now are tooltips to show how many characters are needed
   at minimum and it's not mandatory to post the log-output for issues any more
+- added more Catalan translation (thank you MGuerra)
 
 ## 20.10.10
 - there now is a new scripting command `mainWindow.reloadCurrentNoteByNoteId()`

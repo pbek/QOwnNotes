@@ -1433,6 +1433,22 @@
     </message>
   </context>
   <context>
+    <name>IssueAssistantDialog</name>
+    <message>
+      <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
+      <source>Minimum 8 characters</source>
+      <translation type="unfinished">Minimum 8 characters</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
+      <location filename="../dialogs/issueassistantdialog.ui" line="260"/>
+      <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
+      <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
+      <source>Minimum 10 characters</source>
+      <translation type="unfinished">Minimum 10 characters</translation>
+    </message>
+  </context>
+  <context>
     <name>LayoutWidget</name>
     <message>
       <location filename="../widgets/layoutwidget.ui" line="97"/>
@@ -1780,7 +1796,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
-      <location filename="../mainwindow.cpp" line="8804"/>
+      <location filename="../mainwindow.cpp" line="8822"/>
       <source>Add a tag to the current note</source>
       <translation>Thêm một thẻ vào ghi chú hiện tại</translation>
     </message>
@@ -1816,7 +1832,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1238"/>
-      <location filename="../mainwindow.cpp" line="6767"/>
+      <location filename="../mainwindow.cpp" line="6785"/>
       <source>Custom actions</source>
       <translation>Hành động tùy chỉnh</translation>
     </message>
@@ -1897,13 +1913,13 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1445"/>
-      <location filename="../mainwindow.cpp" line="10504"/>
+      <location filename="../mainwindow.cpp" line="10522"/>
       <source>Select &amp;all notes</source>
       <translation>Chọn &amp;tất cả các ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1454"/>
-      <location filename="../mainwindow.cpp" line="6678"/>
+      <location filename="../mainwindow.cpp" line="6696"/>
       <source>Insert &amp;link</source>
       <translation>Chèn &amp;đường dẫn</translation>
     </message>
@@ -1958,7 +1974,7 @@
       <translation>Tìm kiếm hoặc tạo ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8805"/>
+      <location filename="../mainwindow.cpp" line="8823"/>
       <source>Add a tag to the selected notes</source>
       <translation>Thêm một thẻ vào ghi chú đã chọn</translation>
     </message>
@@ -1969,7 +1985,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="886"/>
-      <location filename="../mainwindow.cpp" line="6729"/>
+      <location filename="../mainwindow.cpp" line="6747"/>
       <source>Export</source>
       <translation>Xuất khẩu</translation>
     </message>
@@ -1980,7 +1996,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="928"/>
-      <location filename="../mainwindow.cpp" line="6710"/>
+      <location filename="../mainwindow.cpp" line="6728"/>
       <source>Print</source>
       <translation>In</translation>
     </message>
@@ -2343,7 +2359,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2244"/>
-      <location filename="../mainwindow.cpp" line="11619"/>
+      <location filename="../mainwindow.cpp" line="11637"/>
       <source>Remove current workspace</source>
       <translation>Xóa không gian làm việc hiện tại</translation>
     </message>
@@ -2385,7 +2401,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2318"/>
-      <location filename="../mainwindow.cpp" line="6687"/>
+      <location filename="../mainwindow.cpp" line="6705"/>
       <source>Insert block &amp;quote</source>
       <translation>Chèn trích &amp;dẫn khối</translation>
     </message>
@@ -2412,7 +2428,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2365"/>
-      <location filename="../mainwindow.cpp" line="10480"/>
+      <location filename="../mainwindow.cpp" line="10498"/>
       <source>Open note in different window</source>
       <translation>Mở ghi chú trong cửa sổ khác nhau</translation>
     </message>
@@ -2433,7 +2449,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2405"/>
-      <location filename="../mainwindow.cpp" line="10488"/>
+      <location filename="../mainwindow.cpp" line="10506"/>
       <source>Show note git versions</source>
       <translation>Hiển thị phiên bản ghi chú git</translation>
     </message>
@@ -2516,7 +2532,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2567"/>
-      <location filename="../mainwindow.cpp" line="12545"/>
+      <location filename="../mainwindow.cpp" line="12563"/>
       <source>Automatically detect</source>
       <translation>Tự động phát hiện</translation>
     </message>
@@ -2724,10 +2740,10 @@ Restore current note?</source>
 Khôi phục lưu ý hiện tại?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5457"/>
-      <location filename="../mainwindow.cpp" line="5480"/>
-      <location filename="../mainwindow.cpp" line="7172"/>
-      <location filename="../mainwindow.cpp" line="10570"/>
+      <location filename="../mainwindow.cpp" line="5475"/>
+      <location filename="../mainwindow.cpp" line="5498"/>
+      <location filename="../mainwindow.cpp" line="7190"/>
+      <location filename="../mainwindow.cpp" line="10588"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Hủy bỏ</translation>
     </message>
@@ -2810,37 +2826,37 @@ Khôi phục lưu ý hiện tại?</translation>
       <translation>&amp;Lối thoát hiểm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3975"/>
+      <location filename="../mainwindow.cpp" line="3993"/>
       <source>Remove current note</source>
       <translation>Xóa ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3976"/>
+      <location filename="../mainwindow.cpp" line="3994"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Xóa ghi chú hiện tại: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4335"/>
+      <location filename="../mainwindow.cpp" line="4353"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
       <translation>Vui lòng nhập &lt;strong&gt; mật khẩu &lt;/strong&gt; của ghi chú được mã hóa này.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4358"/>
+      <location filename="../mainwindow.cpp" line="4376"/>
       <source>Note can't be decrypted!</source>
       <translation>Lưu ý không thể được giải mã!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4359"/>
+      <location filename="../mainwindow.cpp" line="4377"/>
       <source>It seems that your password is not valid!</source>
       <translation>Có vẻ như mật khẩu của bạn không hợp lệ!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4527"/>
+      <location filename="../mainwindow.cpp" line="4545"/>
       <source>Remove selected notes</source>
       <translation>Xóa ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4529"/>
+      <location filename="../mainwindow.cpp" line="4547"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -2851,477 +2867,477 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4617"/>
-      <location filename="../mainwindow.cpp" line="10787"/>
+      <location filename="../mainwindow.cpp" line="4635"/>
+      <location filename="../mainwindow.cpp" line="10805"/>
       <source>Remove selected folders</source>
       <translation>Xóa các thư mục đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4618"/>
+      <location filename="../mainwindow.cpp" line="4636"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
       <translation>
         <numerusform>Xóa &lt;strong&gt;%n &lt;/strong&gt; thư mục đã chọn? &lt;Ul&gt; &lt;li&gt;%1&lt;/ li&gt; &lt;/ul&gt; Tất cả các tệp và thư mục trong các thư mục này cũng sẽ bị xóa!</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4629"/>
+      <location filename="../mainwindow.cpp" line="4647"/>
       <source>Removed note subfolder: %1</source>
       <translation>Thư mục con đã xóa: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4649"/>
+      <location filename="../mainwindow.cpp" line="4667"/>
       <source>Remove selected tags</source>
       <translation>Xóa các thẻ đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4650"/>
+      <location filename="../mainwindow.cpp" line="4668"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
         <numerusform>Xóa &lt;strong&gt;%n&lt;/ strong&gt; thẻ đã chọn? Không có ghi chú sẽ được gỡ bỏ trong quá trình này.</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4702"/>
-      <location filename="../mainwindow.cpp" line="9590"/>
+      <location filename="../mainwindow.cpp" line="4720"/>
+      <location filename="../mainwindow.cpp" line="9608"/>
       <source>Move selected notes</source>
       <translation>Di chuyển các ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4703"/>
+      <location filename="../mainwindow.cpp" line="4721"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Di chuyển %n ghi chú đã chọn sang &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4806"/>
-      <location filename="../mainwindow.cpp" line="9699"/>
+      <location filename="../mainwindow.cpp" line="4824"/>
+      <location filename="../mainwindow.cpp" line="9717"/>
       <source>Copy selected notes</source>
       <translation>Sao chép ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4807"/>
+      <location filename="../mainwindow.cpp" line="4825"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Sao chép %n ghi chú đã chọn vào &lt;strong&gt;%2&lt;/ strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4837"/>
-      <location filename="../mainwindow.cpp" line="4986"/>
+      <location filename="../mainwindow.cpp" line="4855"/>
+      <location filename="../mainwindow.cpp" line="5004"/>
       <source>Done</source>
       <translation>Làm xong</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4838"/>
+      <location filename="../mainwindow.cpp" line="4856"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>%n ghi chú đã được sao chép vào &lt;strong&gt;%2 &lt;/ strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4851"/>
+      <location filename="../mainwindow.cpp" line="4869"/>
       <source>Tag selected notes</source>
       <translation>Tag ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4852"/>
+      <location filename="../mainwindow.cpp" line="4870"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Gắn thẻ %n (các) ghi chú đã chọn với &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5125"/>
+      <location filename="../mainwindow.cpp" line="5143"/>
       <source>Restart application</source>
       <translation>Khỏi động lại ưng dụng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5131"/>
+      <location filename="../mainwindow.cpp" line="5149"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
       <translation>Bạn có thể cần phải khởi động lại ứng dụng theo cách thủ công để thay đổi có hiệu lực.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5136"/>
+      <location filename="../mainwindow.cpp" line="5154"/>
       <source>You may need to restart the application to let the changes take effect.</source>
       <translation>Bạn có thể cần phải khởi động lại ứng dụng để thay đổi có hiệu lực.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5138"/>
+      <location filename="../mainwindow.cpp" line="5156"/>
       <source>Restart</source>
       <translation>Khởi động lại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5369"/>
+      <location filename="../mainwindow.cpp" line="5387"/>
       <source>PDF files</source>
       <translation>Tập tin PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5453"/>
+      <location filename="../mainwindow.cpp" line="5471"/>
       <source>Todo lists disabled!</source>
       <translation>Danh sách Todo bị vô hiệu hóa!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5454"/>
+      <location filename="../mainwindow.cpp" line="5472"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Bạn đã tắt danh sách việc cần làm. &lt;br /&gt; Vui lòng kiểm tra cấu hình &lt;strong&gt; Todo &lt;/ strong&gt; của bạn trong cài đặt!</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5702"/>
+      <location filename="../mainwindow.cpp" line="5720"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Đã tìm thấy &lt;strong&gt;%n &lt;/ strong&gt; xảy ra bất kỳ điều khoản nào của &lt;strong&gt;%1 &lt;/ strong&gt;</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6269"/>
-      <location filename="../mainwindow.cpp" line="6290"/>
+      <location filename="../mainwindow.cpp" line="6287"/>
+      <location filename="../mainwindow.cpp" line="6308"/>
       <source>Note was not found</source>
       <translation>Không tìm thấy ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6280"/>
+      <location filename="../mainwindow.cpp" line="6298"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Không tìm thấy ghi chú, tạo ghi chú mới &lt;strong&gt;%1&lt;/ strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6284"/>
+      <location filename="../mainwindow.cpp" line="6302"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</source>
       <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6329"/>
+      <location filename="../mainwindow.cpp" line="6347"/>
       <source>Failed to create note</source>
       <translation type="unfinished">Failed to create note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6330"/>
+      <location filename="../mainwindow.cpp" line="6348"/>
       <source>Note creation failed</source>
       <translation type="unfinished">Note creation failed</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6491"/>
+      <location filename="../mainwindow.cpp" line="6509"/>
       <source>Note folders</source>
       <translation>Thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6614"/>
+      <location filename="../mainwindow.cpp" line="6632"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
       <translation>Phiên bản lưu ý hiện đang được tải từ máy chủ của riêng bạn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6631"/>
+      <location filename="../mainwindow.cpp" line="6649"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
       <translation>Ghi chú rác hiện đang được tải từ máy chủ của riêng bạn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6697"/>
+      <location filename="../mainwindow.cpp" line="6715"/>
       <source>Copy code block</source>
       <translation>Sao chép khối mã</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6718"/>
+      <location filename="../mainwindow.cpp" line="6736"/>
       <source>Print selected text</source>
       <translation>In văn bản đã chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6724"/>
+      <location filename="../mainwindow.cpp" line="6742"/>
       <source>Print selected text (preview)</source>
       <translation>In văn bản đã chọn (xem trước)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6742"/>
+      <location filename="../mainwindow.cpp" line="6760"/>
       <source>Export selected text as PDF</source>
       <translation>Xuất văn bản đã chọn dưới dạng PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6748"/>
+      <location filename="../mainwindow.cpp" line="6766"/>
       <source>Export selected text as PDF (preview)</source>
       <translation>Xuất văn bản đã chọn dưới dạng PDF (xem trước)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7168"/>
+      <location filename="../mainwindow.cpp" line="7186"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation>Ghi chú của bạn sẽ được giải mã và lưu trữ dưới dạng văn bản thuần túy một lần nữa. Hãy nhớ rằng ghi chú không được mã hóa có thể sẽ được đồng bộ hóa với máy chủ của bạn và văn bản nhạy cảm có thể bị lộ! &lt;br /&gt; Bạn có muốn giải mã ghi chú của mình không?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7265"/>
+      <location filename="../mainwindow.cpp" line="7283"/>
       <source>Markdown files</source>
       <translation>Tập tin đánh dấu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7320"/>
+      <location filename="../mainwindow.cpp" line="7338"/>
       <source>Bookmarked note position at slot %1</source>
       <translation>Vị trí ghi chú được đánh dấu tại vị trí %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7335"/>
+      <location filename="../mainwindow.cpp" line="7353"/>
       <source>Jumped to bookmark position at slot %1</source>
       <translation>Chuyển đến vị trí đánh dấu tại vị trí %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7563"/>
-      <location filename="../mainwindow.cpp" line="7632"/>
+      <location filename="../mainwindow.cpp" line="7581"/>
+      <location filename="../mainwindow.cpp" line="7650"/>
       <source>Inserting image</source>
       <translation>Chèn hình ảnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7568"/>
-      <location filename="../mainwindow.cpp" line="7636"/>
+      <location filename="../mainwindow.cpp" line="7586"/>
+      <location filename="../mainwindow.cpp" line="7654"/>
       <source>Done inserting image</source>
       <translation>Xong chèn hình ảnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7570"/>
+      <location filename="../mainwindow.cpp" line="7588"/>
       <source>Inserting attachment</source>
       <translation>Chèn tệp đính kèm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7575"/>
+      <location filename="../mainwindow.cpp" line="7593"/>
       <source>Done inserting attachment</source>
       <translation>Xong chèn tệp đính kèm</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7587"/>
+      <location filename="../mainwindow.cpp" line="7605"/>
       <source>Copied %n note(s) to %1</source>
       <translation>
         <numerusform>Đã sao chép %n ghi chú vào %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7596"/>
+      <location filename="../mainwindow.cpp" line="7614"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation>
         <numerusform>Không thể sao chép %n ghi chú (rất có thể đã tồn tại)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7606"/>
+      <location filename="../mainwindow.cpp" line="7624"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
         <numerusform>Bỏ qua việc sao chép %n ghi chú (không đánh dấu hoặc tệp văn bản hoặc không thể đọc được)</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7619"/>
+      <location filename="../mainwindow.cpp" line="7637"/>
       <source>Saving temporary image</source>
       <translation>Lưu hình ảnh tạm thời</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7638"/>
+      <location filename="../mainwindow.cpp" line="7656"/>
       <source>Temporary file can't be opened</source>
       <translation>Không thể mở tập tin tạm thời</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7681"/>
+      <location filename="../mainwindow.cpp" line="7699"/>
       <source>Downloading %1</source>
       <translation>Đang tải xuống %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7871"/>
+      <location filename="../mainwindow.cpp" line="7889"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
       <translation>Đặt lại kích thước phông chữ thành %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8850"/>
+      <location filename="../mainwindow.cpp" line="8868"/>
       <source>Remove tag '%1' from the current note</source>
       <translation>Xóa thẻ '%1' khỏi ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8851"/>
+      <location filename="../mainwindow.cpp" line="8869"/>
       <source>Remove tag '%1' from the selected notes</source>
       <translation>Xóa thẻ '%1' khỏi ghi chú đã chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9082"/>
+      <location filename="../mainwindow.cpp" line="9100"/>
       <source>Rename tag</source>
       <translation>Đổi tên thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9083"/>
+      <location filename="../mainwindow.cpp" line="9101"/>
       <source>Assign color</source>
       <translation>Gán màu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9084"/>
+      <location filename="../mainwindow.cpp" line="9102"/>
       <source>Disable color</source>
       <translation>Tắt màu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9088"/>
+      <location filename="../mainwindow.cpp" line="9106"/>
       <source>&amp;Move tags to…</source>
       <translation>&amp;Di chuyển các thẻ đến…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9299"/>
+      <location filename="../mainwindow.cpp" line="9317"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
       <translation>Di chuyển đến gốc</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9866"/>
+      <location filename="../mainwindow.cpp" line="9884"/>
       <source>An url was opened at the current cursor position</source>
       <translation>Một url đã được mở tại vị trí con trỏ hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9969"/>
+      <location filename="../mainwindow.cpp" line="9987"/>
       <source>No equation was found in front of the cursor</source>
       <translation>Không tìm thấy phương trình nào trước con trỏ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9989"/>
+      <location filename="../mainwindow.cpp" line="10007"/>
       <source>Result for equation: %1 = %2</source>
       <translation>Kết quả cho phương trình: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10094"/>
+      <location filename="../mainwindow.cpp" line="10112"/>
       <source>The scripting engine was reloaded</source>
       <translation>Các công cụ kịch bản đã được tải lại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10128"/>
+      <location filename="../mainwindow.cpp" line="10146"/>
       <source>HTML files</source>
       <translation>Tệp HTML</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10416"/>
+      <location filename="../mainwindow.cpp" line="10434"/>
       <source>Jump to the note's subfolder</source>
       <translation>Chuyển đến thư mục con của ghi chú
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10473"/>
+      <location filename="../mainwindow.cpp" line="10491"/>
       <source>Open note in tab</source>
       <translation>Mở ghi chú trong tab
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12138"/>
+      <location filename="../mainwindow.cpp" line="12156"/>
       <source>A script update was found!</source>
       <translation>Một bản cập nhật kịch bản đã được tìm thấy!
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12144"/>
+      <location filename="../mainwindow.cpp" line="12162"/>
       <source>Script updates</source>
       <translation>Cập nhật tập lệnh
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12145"/>
+      <location filename="../mainwindow.cpp" line="12163"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
       <translation>Cập nhật cho tập lệnh của bạn đã được tìm thấy trong kho lưu trữ tập lệnh! Bạn có muốn cập nhật chúng?
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12160"/>
+      <location filename="../mainwindow.cpp" line="12178"/>
       <source>No script updates were found</source>
       <translation>Không tìm thấy cập nhật tập lệnh
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12776"/>
+      <location filename="../mainwindow.cpp" line="12794"/>
       <source>Toggle note stickiness</source>
       <translation>Chuyển đổi độ dính ghi chú
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12782"/>
+      <location filename="../mainwindow.cpp" line="12800"/>
       <source>Close other note tabs</source>
       <translation>Đóng các tab ghi chú khác</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10360"/>
-      <location filename="../mainwindow.cpp" line="10554"/>
+      <location filename="../mainwindow.cpp" line="10378"/>
+      <location filename="../mainwindow.cpp" line="10572"/>
       <source>Rename note</source>
       <translation>Đổi tên ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10362"/>
+      <location filename="../mainwindow.cpp" line="10380"/>
       <source>Allows you to rename the filename of the note</source>
       <translation>Cho phép bạn đổi tên tập tin của ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10376"/>
+      <location filename="../mainwindow.cpp" line="10394"/>
       <source>&amp;Move notes to…</source>
       <translation>&amp;Di chuyển ghi chú đến lọ…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10377"/>
+      <location filename="../mainwindow.cpp" line="10395"/>
       <source>&amp;Copy notes to…</source>
       <translation>&amp;Sao chép ghi chú vào lọ…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10420"/>
+      <location filename="../mainwindow.cpp" line="10438"/>
       <source>Move notes to subfolder…</source>
       <translation>Di chuyển ghi chú đến thư mục con…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10424"/>
+      <location filename="../mainwindow.cpp" line="10442"/>
       <source>Copy notes to subfolder…</source>
       <translation>Sao chép ghi chú vào thư mục con…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10432"/>
+      <location filename="../mainwindow.cpp" line="10450"/>
       <source>&amp;Tag selected notes with…</source>
       <translation>&amp;Gắn thẻ ghi chú đã chọn với…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10456"/>
+      <location filename="../mainwindow.cpp" line="10474"/>
       <source>&amp;Remove tag from selected notes…</source>
       <translation>&amp;Xóa thẻ khỏi ghi chú đã chọn…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10554"/>
+      <location filename="../mainwindow.cpp" line="10572"/>
       <source>Name:</source>
       <translation>Tên:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10566"/>
+      <location filename="../mainwindow.cpp" line="10584"/>
       <source>Note renaming not enabled!</source>
       <translation>Lưu ý đổi tên không được kích hoạt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10786"/>
+      <location filename="../mainwindow.cpp" line="10804"/>
       <source>Rename subfolder</source>
       <translation>Đổi tên thư mục con</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11390"/>
+      <location filename="../mainwindow.cpp" line="11408"/>
       <source>Create new workspace</source>
       <translation>Tạo không gian làm việc mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11391"/>
-      <location filename="../mainwindow.cpp" line="11661"/>
+      <location filename="../mainwindow.cpp" line="11409"/>
+      <location filename="../mainwindow.cpp" line="11679"/>
       <source>Workspace name:</source>
       <translation>Tên không gian làm việc:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11516"/>
+      <location filename="../mainwindow.cpp" line="11534"/>
       <source>full</source>
       <comment>full workspace</comment>
       <translation>đầy</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11523"/>
+      <location filename="../mainwindow.cpp" line="11541"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
       <translation>tối thiểu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11620"/>
+      <location filename="../mainwindow.cpp" line="11638"/>
       <source>Remove the current workspace?</source>
       <translation>Loại bỏ không gian làm việc hiện tại?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11660"/>
+      <location filename="../mainwindow.cpp" line="11678"/>
       <source>Rename workspace</source>
       <translation>Đổi tên không gian làm việc</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="11806"/>
+      <location filename="../mainwindow.cpp" line="11824"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation>
@@ -3329,42 +3345,42 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12077"/>
+      <location filename="../mainwindow.cpp" line="12095"/>
       <source>Disallow all note editing</source>
       <translation>Không cho phép chỉnh sửa ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12293"/>
+      <location filename="../mainwindow.cpp" line="12311"/>
       <source>Select text files to import</source>
       <translation>Chọn tệp văn bản để nhập</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12323"/>
+      <location filename="../mainwindow.cpp" line="12341"/>
       <source>Importing: %1</source>
       <translation>Nhập khẩu: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12388"/>
+      <location filename="../mainwindow.cpp" line="12406"/>
       <source>Note headline '%1' was copied to the clipboard</source>
       <translation>Lưu ý tiêu đề '%1' đã được sao chép vào bảng tạm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12482"/>
+      <location filename="../mainwindow.cpp" line="12500"/>
       <source>Leave full-screen mode</source>
       <translation>Để chế độ toàn màn hình</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12663"/>
+      <location filename="../mainwindow.cpp" line="12681"/>
       <source>Custom editor width</source>
       <translation>Chiều rộng biên tập tùy chỉnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12663"/>
+      <location filename="../mainwindow.cpp" line="12681"/>
       <source>Characters:</source>
       <translation>Nhân vật:</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8824"/>
+      <location filename="../mainwindow.cpp" line="8842"/>
       <source>%n notes selected</source>
       <translation>
         <numerusform>%n ghi chú được chọn</numerusform>
@@ -3372,7 +3388,7 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2450"/>
-      <location filename="../mainwindow.cpp" line="12078"/>
+      <location filename="../mainwindow.cpp" line="12096"/>
       <source>Allow all note editing</source>
       <translation>Cho phép tất cả chỉnh sửa ghi chú</translation>
     </message>
@@ -3382,114 +3398,114 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
       <translation>&amp;Nhãn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4926"/>
+      <location filename="../mainwindow.cpp" line="4944"/>
       <source>Remove tag from selected notes</source>
       <translation>Xóa thẻ khỏi ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4927"/>
+      <location filename="../mainwindow.cpp" line="4945"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
         <numerusform>Xóa thẻ &lt;strong&gt;%1 &lt;/ strong&gt; khỏi% n ghi chú đã chọn?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4987"/>
+      <location filename="../mainwindow.cpp" line="5005"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
         <numerusform>Thẻ &lt;strong&gt;%1 &lt;/ strong&gt; đã bị xóa khỏi %n ghi chú</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5032"/>
+      <location filename="../mainwindow.cpp" line="5050"/>
       <source>Current notes folder: </source>
       <translation>Thư mục ghi chú hiện tại:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5035"/>
+      <location filename="../mainwindow.cpp" line="5053"/>
       <source>Set the notes folder. Current notes folder: </source>
       <translation>Đặt thư mục ghi chú. Thư mục ghi chú hiện tại:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5237"/>
+      <location filename="../mainwindow.cpp" line="5255"/>
       <source>Print note</source>
       <translation>Ghi chú in</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5312"/>
+      <location filename="../mainwindow.cpp" line="5330"/>
       <source>Letter</source>
       <translation>Lá thư</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5342"/>
+      <location filename="../mainwindow.cpp" line="5360"/>
       <source>Portrait</source>
       <translation>Chân dung</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5342"/>
+      <location filename="../mainwindow.cpp" line="5360"/>
       <source>Landscape</source>
       <translation>Phong cảnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5347"/>
+      <location filename="../mainwindow.cpp" line="5365"/>
       <source>Orientation</source>
       <translation>Sự định hướng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5347"/>
+      <location filename="../mainwindow.cpp" line="5365"/>
       <source>Orientation:</source>
       <translation>Sự định hướng:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5370"/>
+      <location filename="../mainwindow.cpp" line="5388"/>
       <source>Export current note as PDF</source>
       <translation>Xuất ghi chú hiện tại dưới dạng PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5477"/>
+      <location filename="../mainwindow.cpp" line="5495"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Bạn chưa chọn bất kỳ danh sách việc cần làm nào. &lt;br /&gt; Vui lòng kiểm tra cấu hình &lt;strong&gt; Todo &lt;/strong&gt; của bạn trong cài đặt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6473"/>
+      <location filename="../mainwindow.cpp" line="6491"/>
       <source>Open QOwnNotes</source>
       <translation>Mở QOwnNote</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6060"/>
-      <location filename="../mainwindow.cpp" line="6523"/>
-      <location filename="../mainwindow.cpp" line="10356"/>
-      <location filename="../mainwindow.cpp" line="10784"/>
+      <location filename="../mainwindow.cpp" line="6078"/>
+      <location filename="../mainwindow.cpp" line="6541"/>
+      <location filename="../mainwindow.cpp" line="10374"/>
+      <location filename="../mainwindow.cpp" line="10802"/>
       <source>New note</source>
       <translation>Ghi chú mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6540"/>
+      <location filename="../mainwindow.cpp" line="6558"/>
       <source>Recent notes</source>
       <translation>Ghi chú gần đây</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6556"/>
+      <location filename="../mainwindow.cpp" line="6574"/>
       <source>Show todo lists</source>
       <translation>Hiển thị danh sách việc cần làm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6568"/>
+      <location filename="../mainwindow.cpp" line="6586"/>
       <source>Recent tasks</source>
       <translation>Nhiệm vụ gần đây</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6589"/>
+      <location filename="../mainwindow.cpp" line="6607"/>
       <source>Quit</source>
       <translation>Thoát</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8043"/>
+      <location filename="../mainwindow.cpp" line="8061"/>
       <source>show notes from all note subfolders (%1)</source>
       <translation>hiển thị ghi chú từ tất cả các thư mục con ghi chú (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8066"/>
+      <location filename="../mainwindow.cpp" line="8084"/>
       <source>show notes in note root folder (%1)</source>
       <translation>hiển thị ghi chú trong thư mục gốc ghi chú (%1)</translation>
     </message>
@@ -3497,120 +3513,120 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="790"/>
       <location filename="../mainwindow.cpp" line="2109"/>
-      <location filename="../mainwindow.cpp" line="8078"/>
+      <location filename="../mainwindow.cpp" line="8096"/>
       <source>Note folder</source>
       <translation>Thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9471"/>
-      <location filename="../mainwindow.cpp" line="9538"/>
+      <location filename="../mainwindow.cpp" line="9489"/>
+      <location filename="../mainwindow.cpp" line="9556"/>
       <source>Copy to note folder</source>
       <translation>Sao chép vào thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9471"/>
-      <location filename="../mainwindow.cpp" line="9539"/>
+      <location filename="../mainwindow.cpp" line="9489"/>
+      <location filename="../mainwindow.cpp" line="9557"/>
       <source>Move to note folder</source>
       <translation>Di chuyển đến thư mục ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9472"/>
-      <location filename="../mainwindow.cpp" line="9540"/>
+      <location filename="../mainwindow.cpp" line="9490"/>
+      <location filename="../mainwindow.cpp" line="9558"/>
       <source>Copy to this subfolder</source>
       <translation>Sao chép vào thư mục con này</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9473"/>
-      <location filename="../mainwindow.cpp" line="9541"/>
+      <location filename="../mainwindow.cpp" line="9491"/>
+      <location filename="../mainwindow.cpp" line="9559"/>
       <source>Move to this subfolder</source>
       <translation>Di chuyển đến thư mục con này</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9585"/>
+      <location filename="../mainwindow.cpp" line="9603"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Di chuyển %n (các) ghi chú đã chọn để ghi chú thư mục con &lt;strong&gt; %2 &lt;/ strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5138"/>
-      <location filename="../mainwindow.cpp" line="12307"/>
+      <location filename="../mainwindow.cpp" line="5156"/>
+      <location filename="../mainwindow.cpp" line="12325"/>
       <source>Cancel</source>
       <translation>Hủy bỏ</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9670"/>
+      <location filename="../mainwindow.cpp" line="9688"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation>
         <numerusform>%n ghi chú đã được di chuyển để ghi chú thư mục con "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9694"/>
+      <location filename="../mainwindow.cpp" line="9712"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Sao chép %n (các) ghi chú đã chọn để ghi chú thư mục con &lt;strong&gt;%2 &lt;/ strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9762"/>
+      <location filename="../mainwindow.cpp" line="9780"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation>
         <numerusform>%n ghi chú đã được sao chép để ghi chú thư mục con "%2"</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10478"/>
+      <location filename="../mainwindow.cpp" line="10496"/>
       <source>Open note in external editor</source>
       <translation>Mở ghi chú trong trình soạn thảo bên ngoài</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10482"/>
+      <location filename="../mainwindow.cpp" line="10500"/>
       <source>Show note in file manager</source>
       <translation>Hiển thị ghi chú trong trình quản lý tập tin</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10567"/>
+      <location filename="../mainwindow.cpp" line="10585"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
       <translation>Nếu bạn muốn đổi tên ghi chú của mình, bạn phải bật tùy chọn cho phép tên tệp ghi chú khác với tiêu đề.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10785"/>
+      <location filename="../mainwindow.cpp" line="10803"/>
       <source>New subfolder</source>
       <translation>Thư mục con mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10789"/>
+      <location filename="../mainwindow.cpp" line="10807"/>
       <source>Show folder in file manager</source>
       <translation>Hiển thị thư mục trong trình quản lý tập tin</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10834"/>
+      <location filename="../mainwindow.cpp" line="10852"/>
       <source>Create a new folder</source>
       <translation>Tạo một thư mục mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10835"/>
+      <location filename="../mainwindow.cpp" line="10853"/>
       <source>Folder name:</source>
       <translation>Tên thư mục:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8002"/>
+      <location filename="../mainwindow.cpp" line="8020"/>
       <source>show all untagged notes (%1)</source>
       <translation>hiển thị tất cả các ghi chú chưa được đánh dấu (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8004"/>
+      <location filename="../mainwindow.cpp" line="8022"/>
       <source>Untagged notes</source>
       <translation>Ghi chú chưa được đánh dấu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10129"/>
+      <location filename="../mainwindow.cpp" line="10147"/>
       <source>Export current note as HTML file</source>
       <translation>Xuất ghi chú hiện tại dưới dạng tệp HTML</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5321"/>
+      <location filename="../mainwindow.cpp" line="5339"/>
       <source>Page size</source>
       <translation>Kích thước trang</translation>
     </message>
@@ -3620,27 +3636,27 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
       <translation>thoát khỏi thanh công cụ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5321"/>
+      <location filename="../mainwindow.cpp" line="5339"/>
       <source>Page size:</source>
       <translation>Kích thước trang:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5438"/>
+      <location filename="../mainwindow.cpp" line="5456"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation>QOwnNotes sẽ theo dõi dữ liệu sử dụng ẩn danh, giúp quyết định phần nào của QOwnNotes để cải thiện tiếp theo cũng như tìm và sửa lỗi. Bạn có thể vô hiệu hóa hành vi đó trong cài đặt.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5442"/>
+      <location filename="../mainwindow.cpp" line="5460"/>
       <source>&amp;Ok</source>
       <translation>&amp;Được</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10366"/>
+      <location filename="../mainwindow.cpp" line="10384"/>
       <source>&amp;Remove notes</source>
       <translation>&amp;Xóa ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6678"/>
+      <location filename="../mainwindow.cpp" line="6696"/>
       <source>&amp;Link selected text</source>
       <translation>&amp;Liên kết văn bản đã chọn</translation>
     </message>
@@ -3656,7 +3672,7 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2873"/>
-      <location filename="../mainwindow.cpp" line="5998"/>
+      <location filename="../mainwindow.cpp" line="6016"/>
       <source>Stored current note to disk</source>
       <translation>Lưu ý hiện tại vào đĩa</translation>
     </message>
@@ -3678,58 +3694,58 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7969"/>
+      <location filename="../mainwindow.cpp" line="7987"/>
       <source>show all notes (%1)</source>
       <translation>hiển thị tất cả các ghi chú (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7972"/>
-      <location filename="../mainwindow.cpp" line="8046"/>
+      <location filename="../mainwindow.cpp" line="7990"/>
+      <location filename="../mainwindow.cpp" line="8064"/>
       <source>All notes</source>
       <translation>Tất cả ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9074"/>
+      <location filename="../mainwindow.cpp" line="9092"/>
       <source>&amp;Add tag</source>
       <translation>&amp;Thêm thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9122"/>
+      <location filename="../mainwindow.cpp" line="9140"/>
       <source>Tag could not be created!</source>
       <translation>Thẻ không thể được tạo!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9301"/>
+      <location filename="../mainwindow.cpp" line="9319"/>
       <source>Move to this tag</source>
       <translation>Di chuyển đến thẻ này</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9336"/>
+      <location filename="../mainwindow.cpp" line="9354"/>
       <source>Tag this</source>
       <translation>Gắn thẻ cái này</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9361"/>
+      <location filename="../mainwindow.cpp" line="9379"/>
       <source>Cannot move tag '%1' to this tag</source>
       <translation>Không thể di chuyển thẻ '%1' sang thẻ này</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9410"/>
+      <location filename="../mainwindow.cpp" line="9428"/>
       <source>Moved tag '%1' to new tag</source>
       <translation>Đã chuyển thẻ '%1' sang thẻ mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8316"/>
+      <location filename="../mainwindow.cpp" line="8334"/>
       <source>show all notes tagged with '%1' (%2)</source>
       <translation>hiển thị tất cả các ghi chú được gắn thẻ '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9085"/>
+      <location filename="../mainwindow.cpp" line="9103"/>
       <source>&amp;Remove tags</source>
       <translation>&amp;Xóa thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5476"/>
+      <location filename="../mainwindow.cpp" line="5494"/>
       <source>No selected todo lists!</source>
       <translation>Không có danh sách việc cần chọn!</translation>
     </message>
@@ -3861,7 +3877,7 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2874"/>
-      <location filename="../mainwindow.cpp" line="5999"/>
+      <location filename="../mainwindow.cpp" line="6017"/>
       <source>Current note could not be stored to disk</source>
       <translation>Ghi chú hiện tại không thể được lưu trữ vào đĩa</translation>
     </message>
@@ -3893,86 +3909,86 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4910"/>
+      <location filename="../mainwindow.cpp" line="4928"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation>
         <numerusform>%n ghi chú được gắn thẻ "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5698"/>
+      <location filename="../mainwindow.cpp" line="5716"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Đã tìm thấy &lt;strong&gt;%n &lt;/ strong&gt; xảy ra &lt;strong&gt;%1&lt;/ strong&gt;</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6060"/>
+      <location filename="../mainwindow.cpp" line="6078"/>
       <source>Note headline</source>
       <translation>Lưu ý tiêu đề</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6270"/>
+      <location filename="../mainwindow.cpp" line="6288"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
       <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6684"/>
+      <location filename="../mainwindow.cpp" line="6702"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
       <translation>Chặn &amp;trích dẫn văn bản đã chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7693"/>
+      <location filename="../mainwindow.cpp" line="7711"/>
       <source>Downloading images finished</source>
       <translation>Đang tải ảnh xong</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7843"/>
+      <location filename="../mainwindow.cpp" line="7861"/>
       <source>Increased font size to %1 pt</source>
       <translation>Tăng cỡ chữ lên %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7860"/>
+      <location filename="../mainwindow.cpp" line="7878"/>
       <source>Decreased font size to %1 pt</source>
       <translation>Giảm cỡ chữ xuống %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5442"/>
-      <location filename="../mainwindow.cpp" line="5457"/>
-      <location filename="../mainwindow.cpp" line="5480"/>
-      <location filename="../mainwindow.cpp" line="10570"/>
+      <location filename="../mainwindow.cpp" line="5460"/>
+      <location filename="../mainwindow.cpp" line="5475"/>
+      <location filename="../mainwindow.cpp" line="5498"/>
+      <location filename="../mainwindow.cpp" line="10588"/>
       <source>Open &amp;settings</source>
       <translation>Mở &amp;cài đặt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1685"/>
-      <location filename="../mainwindow.cpp" line="12459"/>
+      <location filename="../mainwindow.cpp" line="12477"/>
       <source>leave</source>
       <translation>rời khỏi</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7111"/>
+      <location filename="../mainwindow.cpp" line="7129"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation>Vui lòng nhập &lt;strong&gt; mật khẩu &lt;/ strong&gt; để mã hóa ghi chú. &lt;br/&gt; Hãy nhớ rằng bạn phải &lt;strong&gt; nhớ &lt;/ strong&gt; mật khẩu của mình để đọc nội dung của ghi chú &lt;br /&gt; và đó bạn chỉ có thể &lt;strong&gt; &lt;/ strong&gt; làm điều đó &lt;strong&gt; trong QOwnNotes &lt;/strong&gt;!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7167"/>
+      <location filename="../mainwindow.cpp" line="7185"/>
       <source>Decrypt note and store it as plain text</source>
       <translation>Giải mã ghi chú và lưu trữ dưới dạng văn bản thuần túy</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7172"/>
+      <location filename="../mainwindow.cpp" line="7190"/>
       <source>&amp;Decrypt</source>
       <translation>&amp;Giải mã</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7197"/>
+      <location filename="../mainwindow.cpp" line="7215"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation>&lt;br/&gt;Bạn sẽ có thể chỉnh sửa ghi chú được mã hóa của bạn.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7266"/>
+      <location filename="../mainwindow.cpp" line="7284"/>
       <source>Export current note as Markdown file</source>
       <translation>Xuất ghi chú hiện tại dưới dạng tệp Markdown</translation>
     </message>
