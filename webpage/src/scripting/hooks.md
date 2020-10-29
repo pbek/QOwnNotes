@@ -383,7 +383,7 @@ and
 onDetachedProcessCallback
 -------------------------
 
-This hook is called when a script thread of [startDetachedProcess](../methods-and-objects/#starting-an-external-program-in-the-background)
+This hook is called when a script thread of [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background)
 is done executing.
 
 ### Method call and parameters
