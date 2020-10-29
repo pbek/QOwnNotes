@@ -50,7 +50,7 @@ You may want to take a look at the example
 or
 [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/execute-command-after-note-update.qml).
 
-You also might want to take a look at the [onDetachedProcessCallback](../hooks/#ondetachedprocesscallback) hook.
+You also might want to take a look at the [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback) hook.
 
 ::: tip
 You can also assign local and global shortcuts to your custom actions
@@ -709,7 +709,7 @@ reference of what styles are available.
 
 If you want to inject styles into html preview to alter the way notes
 are previewed please look at
-[notetomarkdownhtmlhook](../hooks/#notetomarkdownhtmlhook).
+[notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 Reloading the scripting engine
 ------------------------------
@@ -871,7 +871,7 @@ script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
 ::: tip
-You can create a new note subfolder in the current subfolder by calling [`mainWindow.createNewNoteSubFolder`](../classes/#example-2).
+You can create a new note subfolder in the current subfolder by calling [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
 :::
 
 Showing an information message box
