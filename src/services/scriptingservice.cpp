@@ -2013,6 +2013,56 @@ QVariant ScriptingService::getApplicationSettingsVariable(
 }
 
 /**
+ * Fetches all subfolder ids for subfolders that are children of parentId
+ *
+ * @param parentId {int} id of parent subfolder
+ * @return QList<int> list of subfolder ids
+ */
+QList<int> ScriptingService::fetchSubFoldersByParentId(int parentId)
+{
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("scripting/") % QString(__func__));
+
+    QList<int> subFolderIds;
+
+    const auto subFolders = NoteSubFolder::fetchAllByParentId(parentId);
+    for (const auto &subFolder : subFolders) {
+        subFolderIds.push_back(subFolder.getId());
+    }
+
+    return subFolderIds;
+}
+
+/**
+ * Returns name of subFolder
+ *
+ * @param id {int} id of subfolder
+ * @return QString name of subfolder
+ */
+QString ScriptingService::getSubFoldersName(int id)
+{
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("scripting/") % QString(__func__));
+
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetchById(id);
+    return noteSubFolder.getName();
+}
+
+/**
+ * Fetches all note ids for notes that are children of noteSubFolderId
+ *
+ * @param noteSubFolderId {int} id of parent subfolder
+ * @return QList<int> list of note ids
+ */
+QList<int> ScriptingService::fetchNotesBySubFolderId(int noteSubFolderId)
+{
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("scripting/") % QString(__func__));
+
+    return Note::fetchAllIdsByNoteSubFolderId(noteSubFolderId).toList();
+}
+
+/**
  * Jumps to a note subfolder
  *
  * @param noteSubFolderPath {QString} path of the subfolder, relative to the

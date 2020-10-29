@@ -172,6 +172,12 @@ class ScriptingService : public QObject {
     Q_INVOKABLE QVariant getApplicationSettingsVariable(
         const QString &key, const QVariant &defaultValue = QVariant());
 
+    Q_INVOKABLE QList<int> fetchSubFoldersByParentId(int parentId);
+
+    Q_INVOKABLE QString getSubFoldersName(int id);
+
+    Q_INVOKABLE QList<int> fetchNotesBySubFolderId(int noteSubFolderId);
+
     Q_INVOKABLE bool jumpToNoteSubFolder(
         const QString &noteSubFolderPath,
         const QString &separator = QStringLiteral("/"));
