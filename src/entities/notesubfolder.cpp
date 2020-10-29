@@ -113,31 +113,6 @@ QString NoteSubFolder::pathData() const {
 }
 
 /**
- * Fetches a note sub folder by its id
- */
-NoteSubFolder NoteSubFolder::fetchById(int id)
-{
-    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
-    QSqlQuery query(db);
-
-    QVector<int> idList;
-    QString sql = QStringLiteral("SELECT * FROM noteSubFolder where id = :id");
-
-    query.prepare(sql);
-    query.bindValue(QStringLiteral(":id"), id);
-
-    if (!query.exec()) {
-        qWarning() << __func__ << ": " << query.lastError();
-    } else {
-        if (query.first()) {
-            return noteSubFolderFromQuery(query);
-        }
-    }
-
-    return NoteSubFolder();
-}
-
-/**
  * Fetches a note sub folder by its path data
  */
 NoteSubFolder NoteSubFolder::fetchByPathData(QString pathData,

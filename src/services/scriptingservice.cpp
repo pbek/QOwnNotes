@@ -2018,7 +2018,7 @@ QVariant ScriptingService::getApplicationSettingsVariable(
  * @param parentId {int} id of parent subfolder
  * @return QList<int> list of subfolder ids
  */
-QList<int> ScriptingService::fetchSubFoldersByParentId(int parentId)
+QList<int> ScriptingService::fetchNoteSubFoldersByParentId(int parentId)
 {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("scripting/") % QString(__func__));
@@ -2027,7 +2027,7 @@ QList<int> ScriptingService::fetchSubFoldersByParentId(int parentId)
 
     const auto subFolders = NoteSubFolder::fetchAllByParentId(parentId);
     for (const auto &subFolder : subFolders) {
-        subFolderIds.push_back(subFolder.getId());
+        subFolderIds.append(subFolder.getId());
     }
 
     return subFolderIds;
@@ -2039,12 +2039,12 @@ QList<int> ScriptingService::fetchSubFoldersByParentId(int parentId)
  * @param id {int} id of subfolder
  * @return QString name of subfolder
  */
-QString ScriptingService::getSubFoldersName(int id)
+QString ScriptingService::getSubFolderName(int id)
 {
     MetricsService::instance()->sendVisitIfEnabled(
         QStringLiteral("scripting/") % QString(__func__));
 
-    NoteSubFolder noteSubFolder = NoteSubFolder::fetchById(id);
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(id);
     return noteSubFolder.getName();
 }
 

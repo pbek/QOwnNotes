@@ -73,8 +73,6 @@ class NoteSubFolder {
 
     QString pathData() const;
 
-    static NoteSubFolder fetchById(int id);
-
     static NoteSubFolder fetchByPathData(
         QString pathData, const QString& separator = QStringLiteral("\n"));
 

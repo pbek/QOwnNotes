@@ -172,9 +172,9 @@ class ScriptingService : public QObject {
     Q_INVOKABLE QVariant getApplicationSettingsVariable(
         const QString &key, const QVariant &defaultValue = QVariant());
 
-    Q_INVOKABLE QList<int> fetchSubFoldersByParentId(int parentId);
+    Q_INVOKABLE QList<int> fetchNoteSubFoldersByParentId(int parentId);
 
-    Q_INVOKABLE QString getSubFoldersName(int id);
+    Q_INVOKABLE QString getSubFolderName(int id);
 
     Q_INVOKABLE QList<int> fetchNotesBySubFolderId(int noteSubFolderId);
 
