@@ -194,9 +194,6 @@ class ScriptingService : public QObject {
                                      const QString &codec = "UTF-8") const;
     Q_INVOKABLE bool fileExists(const QString &filePath) const;
 
-    Q_INVOKABLE NoteSubFolderApi *fetchNoteSubFolderById(int id);
-    Q_INVOKABLE QList<QObject*> fetchNoteSubFoldersByParentId(int parentId);
-
     Q_INVOKABLE QVector<int> fetchNoteIdsByNoteTextPart(
         const QString &text) const;
 

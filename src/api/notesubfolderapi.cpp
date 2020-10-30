@@ -48,3 +48,33 @@ QQmlListProperty<NoteApi> NoteSubFolderApi::notes() {
 #endif
 }
 
+/**
+ * Fetches a note subfolder by its id
+ *
+ * @param id int the id of the note subfolder
+ * @return NoteSubFolderApi*
+ */
+NoteSubFolderApi *NoteSubFolderApi::fetchNoteSubFolderById(int id)
+{
+    auto *noteSubFolder = new NoteSubFolderApi();
+    noteSubFolder->fetch(id);
+    return noteSubFolder;
+}
+
+/**
+ * Fetches note subfolders that are children of parentId
+ *
+ * @param parentId int the id of the parent note subfolder
+ * @return QList<QObject*>
+ */
+QList<QObject*> NoteSubFolderApi::fetchNoteSubFoldersByParentId(int parentId)
+{
+    QList<QObject *> noteSubFolderApis;
+
+    const auto noteSubFolders = NoteSubFolder::fetchAllByParentId(parentId);
+    for (const auto &noteSubFolder : noteSubFolders) {
+        noteSubFolderApis.append(NoteSubFolderApi::fromNoteSubFolder(noteSubFolder));
+    }
+
+    return noteSubFolderApis;
+}

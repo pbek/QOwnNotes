@@ -2015,27 +2015,6 @@ QVariant ScriptingService::getApplicationSettingsVariable(
 }
 
 /**
- * Fetches note subfolders that are children of parentId
- *
- * @param parentId int the id of the parent note subfolder
- * @return QList<QObject*>
- */
-QList<QObject*> ScriptingService::fetchNoteSubFoldersByParentId(int parentId)
-{
-    MetricsService::instance()->sendVisitIfEnabled(
-        QStringLiteral("scripting/") % QString(__func__));
-
-    QList<QObject *> noteSubFolderApis;
-
-    const auto noteSubFolders = NoteSubFolder::fetchAllByParentId(parentId);
-    for (const auto &noteSubFolder : noteSubFolders) {
-        noteSubFolderApis.append(NoteSubFolderApi::fromNoteSubFolder(noteSubFolder));
-    }
-
-    return noteSubFolderApis;
-}
-
-/**
  * Jumps to a note subfolder
  *
  * @param noteSubFolderPath {QString} path of the subfolder, relative to the
@@ -2159,7 +2138,6 @@ QString ScriptingService::readFromFile(const QString &filePath,
     return data;
 }
 
-
 /**
  * Check if a file exists
  * @param filePath
@@ -2171,22 +2149,6 @@ bool ScriptingService::fileExists(const QString &filePath) const {
     }
     QFile file(filePath);
     return file.exists();
-}
-
-/**
- * Fetches a note subfolder by its id
- *
- * @param id int the id of the note subfolder
- * @return NoteSubFolderApi*
- */
-NoteSubFolderApi *ScriptingService::fetchNoteSubFolderById(int id)
-{
-    MetricsService::instance()->sendVisitIfEnabled(
-        QStringLiteral("scripting/") % QString(__func__));
-
-    auto *noteSubFolder = new NoteSubFolderApi();
-    noteSubFolder->fetch(id);
-    return noteSubFolder;
 }
 
 /**
