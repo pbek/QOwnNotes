@@ -27,12 +27,12 @@ jobs:
           #export TAG=v${VERSION}.${GITHUB_RUN_ID}.${GITHUB_RUN_NUMBER}
           export TAG=v${VERSION}
           export RELEASE_TEXT=$(grep -Pzo "## ${VERSION}\n(\n|.)+?\n##" ../CHANGELOG.md | sed '$ d')
-          RELEASE_TEXT="${RELEASE_TEXT//'%'/'%25'}"
-          RELEASE_TEXT="${RELEASE_TEXT//$'\n'/'%0A'}"
-          RELEASE_TEXT="${RELEASE_TEXT//$'\r'/'%0D'}"
-          echo "::set-env name=VERSION::${VERSION}"
-          echo "::set-env name=TAG::${TAG}"
-          echo "::set-env name=RELEASE_TEXT::${RELEASE_TEXT}"
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+          echo "TAG=${TAG}" >> $GITHUB_ENV
+          # add multiline release text
+          echo "RELEASE_TEXT<<EOF" >> $GITHUB_ENV
+          echo "${RELEASE_TEXT}" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
       - name: Printenv
         run: |
           echo "VERSION=${VERSION}"
@@ -80,7 +80,7 @@ jobs:
       shell: bash
       run: |
         export VERSION=$(cat version.h | sed 's/[^0-9,.]//g')
-        echo "::set-env name=VERSION::${VERSION}"
+        echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
     #
     # Install Snapcraft & Qt
