@@ -41,6 +41,10 @@ QQmlListProperty<NoteApi> NoteSubFolderApi::notes() {
         _notes.append(noteApi);
     }
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
+    return {this, _notes};
+#else
     return {this, &_notes};
+#endif
 }
 
