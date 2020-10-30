@@ -199,6 +199,8 @@ set(SOURCE_FILES
     helpers/codetohtmlconverter.h
     api/noteapi.cpp
     api/noteapi.h
+    api/notesubfolderapi.cpp
+    api/notesubfolderapi.h
     api/tagapi.cpp
     api/tagapi.h
     api/scriptapi.cpp
