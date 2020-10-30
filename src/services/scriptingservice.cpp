@@ -54,9 +54,8 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     // deprecated
     qmlRegisterType<TagApi>("com.qownnotes.tagapi", 1, 0, "TagApi");
 
-    qmlRegisterType<NoteSubFolderApi>("QOwnNotesTypes", 1, 0, "NoteSubFolderApi");
-
     qmlRegisterType<NoteApi>("QOwnNotesTypes", 1, 0, "Note");
+    qmlRegisterType<NoteSubFolderApi>("QOwnNotesTypes", 1, 0, "NoteSubFolder");
     qmlRegisterType<TagApi>("QOwnNotesTypes", 1, 0, "Tag");
     qmlRegisterType<ScriptApi>("QOwnNotesTypes", 1, 0, "Script");
 
