@@ -15,6 +15,7 @@ class QQmlComponent;
 class QQmlEngine;
 class NoteApi;
 class Note;
+class NoteSubFolderApi;
 class QMimeData;
 
 #define PERSISTENT_VARIABLE_SETTINGS_PREFIX "PersistentScripting"
@@ -192,6 +193,9 @@ class ScriptingService : public QObject {
     Q_INVOKABLE QString readFromFile(const QString &filePath,
                                      const QString &codec = "UTF-8") const;
     Q_INVOKABLE bool fileExists(const QString &filePath) const;
+
+    Q_INVOKABLE NoteSubFolderApi *fetchNoteSubFolderById(int id);
+    Q_INVOKABLE QList<QObject*> fetchNoteSubFoldersByParentId(int parentId);
 
     Q_INVOKABLE QVector<int> fetchNoteIdsByNoteTextPart(
         const QString &text) const;

@@ -27,6 +27,7 @@
 #include <utility>
 
 #include "api/noteapi.h"
+#include "api/notesubfolderapi.h"
 #include "api/tagapi.h"
 #include "entities/notesubfolder.h"
 
@@ -52,6 +53,8 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     qmlRegisterType<NoteApi>("com.qownnotes.noteapi", 1, 0, "NoteApi");
     // deprecated
     qmlRegisterType<TagApi>("com.qownnotes.tagapi", 1, 0, "TagApi");
+
+    qmlRegisterType<NoteSubFolderApi>("QOwnNotesTypes", 1, 0, "NoteSubFolderApi");
 
     qmlRegisterType<NoteApi>("QOwnNotesTypes", 1, 0, "Note");
     qmlRegisterType<TagApi>("QOwnNotesTypes", 1, 0, "Tag");
@@ -2013,6 +2016,27 @@ QVariant ScriptingService::getApplicationSettingsVariable(
 }
 
 /**
+ * Fetches note subfolders that are children of parentId
+ *
+ * @param parentId int the id of the parent note subfolder
+ * @return QList<QObject*>
+ */
+QList<QObject*> ScriptingService::fetchNoteSubFoldersByParentId(int parentId)
+{
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("scripting/") % QString(__func__));
+
+    QList<QObject *> noteSubFolderApis;
+
+    const auto noteSubFolders = NoteSubFolder::fetchAllByParentId(parentId);
+    for (const auto &noteSubFolder : noteSubFolders) {
+        noteSubFolderApis.append(NoteSubFolderApi::fromNoteSubFolder(noteSubFolder));
+    }
+
+    return noteSubFolderApis;
+}
+
+/**
  * Jumps to a note subfolder
  *
  * @param noteSubFolderPath {QString} path of the subfolder, relative to the
@@ -2148,6 +2172,22 @@ bool ScriptingService::fileExists(const QString &filePath) const {
     }
     QFile file(filePath);
     return file.exists();
+}
+
+/**
+ * Fetches a note subfolder by its id
+ *
+ * @param id int the id of the note subfolder
+ * @return NoteSubFolderApi*
+ */
+NoteSubFolderApi *ScriptingService::fetchNoteSubFolderById(int id)
+{
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("scripting/") % QString(__func__));
+
+    auto *noteSubFolder = new NoteSubFolderApi();
+    noteSubFolder->fetch(id);
+    return noteSubFolder;
 }
 
 /**
