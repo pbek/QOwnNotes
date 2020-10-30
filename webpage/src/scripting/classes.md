@@ -45,6 +45,36 @@ note.renameNoteFile("new name");
 script.log(note.allowDifferentFileName());
 ```
 
+NoteSubFolder
+----
+
+### Properties and methods
+```cpp
+class NoteSubFolderApi {
+    Q_PROPERTY(int id)
+    Q_PROPERTY(QString name)
+    Q_PROPERTY(QQmlListProperty<NoteApi> notes)
+    Q_INVOKABLE static NoteSubFolderApi *fetchNoteSubFolderById(int id);
+    Q_INVOKABLE static QList<QObject*> fetchNoteSubFoldersByParentId(int parentId);
+};
+```
+
+### Example
+```js
+script.log(noteSubFolder.id);
+script.log(noteSubFolder.name);
+
+// iterate through notes in note subfolder
+for (var idx in noteSubFolder.notes) {
+    var note = noteSubFolder.notes[idx];
+}
+
+// print all subfolder names
+noteSubFolder.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
+    script.log(nsf.name);
+});
+```
+
 Tag
 ---
 
