@@ -24,7 +24,7 @@ NoteSubFolderApi *NoteSubFolderApi::fromNoteSubFolder(const NoteSubFolder &noteS
 }
 
 /**
- * Returns all linked notes
+ * Returns all notes of the note subfolder
  */
 QQmlListProperty<NoteApi> NoteSubFolderApi::notes() {
     _notes.clear();
