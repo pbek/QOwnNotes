@@ -9,6 +9,7 @@ HEADERS  += \
     $$APP_SRC_DIR/release.h \
     $$APP_SRC_DIR/services/databaseservice.h \
     $$APP_SRC_DIR/api/noteapi.h \
+    $$APP_SRC_DIR/api/notesubfolderapi.h \
     $$APP_SRC_DIR/api/tagapi.h \
     $$APP_SRC_DIR/api/scriptapi.h \
     $$APP_SRC_DIR/services/scriptingservice.h \
@@ -48,6 +49,7 @@ SOURCES += \
     $$PWD/test_*.cpp \
     $$APP_SRC_DIR/services/databaseservice.cpp \
     $$APP_SRC_DIR/api/noteapi.cpp \
+    $$APP_SRC_DIR/api/notesubfolderapi.cpp \
     $$APP_SRC_DIR/api/tagapi.cpp \
     $$APP_SRC_DIR/api/scriptapi.cpp \
     $$APP_SRC_DIR/services/scriptingservice.cpp \
