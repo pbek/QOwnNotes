@@ -15,6 +15,7 @@ class QQmlComponent;
 class QQmlEngine;
 class NoteApi;
 class Note;
+class NoteSubFolderApi;
 class QMimeData;
 
 #define PERSISTENT_VARIABLE_SETTINGS_PREFIX "PersistentScripting"

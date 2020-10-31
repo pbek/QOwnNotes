@@ -146,6 +146,7 @@ SOURCES += main.cpp\
     widgets/navigationwidget.cpp \
     widgets/notepreviewwidget.cpp \
     api/noteapi.cpp \
+    api/notesubfolderapi.cpp \
     api/tagapi.cpp \
     widgets/logwidget.cpp \
     widgets/combobox.cpp \
@@ -236,6 +237,7 @@ HEADERS  += mainwindow.h \
     widgets/navigationwidget.h \
     widgets/notepreviewwidget.h \
     api/noteapi.h \
+    api/notesubfolderapi.h \
     api/tagapi.h \
     widgets/logwidget.h \
     widgets/combobox.h \

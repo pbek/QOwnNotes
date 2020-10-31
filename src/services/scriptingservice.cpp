@@ -27,6 +27,7 @@
 #include <utility>
 
 #include "api/noteapi.h"
+#include "api/notesubfolderapi.h"
 #include "api/tagapi.h"
 #include "entities/notesubfolder.h"
 
@@ -54,6 +55,7 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     qmlRegisterType<TagApi>("com.qownnotes.tagapi", 1, 0, "TagApi");
 
     qmlRegisterType<NoteApi>("QOwnNotesTypes", 1, 0, "Note");
+    qmlRegisterType<NoteSubFolderApi>("QOwnNotesTypes", 1, 0, "NoteSubFolder");
     qmlRegisterType<TagApi>("QOwnNotesTypes", 1, 0, "Tag");
     qmlRegisterType<ScriptApi>("QOwnNotesTypes", 1, 0, "Script");
 
@@ -2135,7 +2137,6 @@ QString ScriptingService::readFromFile(const QString &filePath,
 
     return data;
 }
-
 
 /**
  * Check if a file exists
