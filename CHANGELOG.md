@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 20.11.0
+- there now is a new scripting class `NoteSubFolderApi` to fetch note subfolders and their notes
+  (for [#1165](https://github.com/pbek/QOwnNotes/issues/1165), thank you @fnkabit)
+    - for more information please take a look at the
+      [scripting documentation](https://www.qownnotes.org/scripting/classes.html#note)
+
 ## 20.10.11
 - in the issue assistant there now are tooltips to show how many characters are needed
   at minimum and it's not mandatory to post the log-output for issues any more
