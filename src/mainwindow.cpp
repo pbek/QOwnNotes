@@ -4598,6 +4598,8 @@ void MainWindow::removeSelectedNotes() {
         // something is happening after this method that reloads the note folder
         directoryWatcherWorkaround(false);
     }
+
+    loadNoteDirectoryList();
 }
 
 /**
