@@ -5,6 +5,8 @@
   (for [#1165](https://github.com/pbek/QOwnNotes/issues/1165), thank you @fnkabit)
     - for more information please take a look at the
       [scripting documentation](https://www.qownnotes.org/scripting/classes.html#note)
+- added more translation (thank you filipedias321, MGuerra, rakekniven, unchase,
+  zmni, gbabin, mlimacarlos, amirkbrpr)
 
 ## 20.10.11
 - in the issue assistant there now are tooltips to show how many characters are needed
