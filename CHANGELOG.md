@@ -4,7 +4,7 @@
 - there now is a new scripting class `NoteSubFolderApi` to fetch note subfolders and their notes
   (for [#1165](https://github.com/pbek/QOwnNotes/issues/1165), thank you @fnkabit)
     - for more information please take a look at the
-      [scripting documentation](https://www.qownnotes.org/scripting/classes.html#note)
+      [scripting documentation](https://www.qownnotes.org/scripting/classes.html#notesubfolder)
 - added more translation (thank you filipedias321, MGuerra, rakekniven, unchase,
   zmni, gbabin, mlimacarlos, amirkbrpr)
 
