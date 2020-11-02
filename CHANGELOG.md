@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 20.11.1
-- a possibly not updating note count on note removal was fixed
+- a possibly not updating note count when notes were removed was fixed
   (for [#1934](https://github.com/pbek/QOwnNotes/pull/1934), thank you @fnkabit)
 
 ## 20.11.0
