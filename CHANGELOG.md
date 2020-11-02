@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.11.1
+- a possibly not updating note count on note removal was fixed
+  (for [#1934](https://github.com/pbek/QOwnNotes/pull/1934), thank you @fnkabit)
+
 ## 20.11.0
 - there now is a new scripting class `NoteSubFolderApi` to fetch note subfolders and their notes
   (for [#1165](https://github.com/pbek/QOwnNotes/issues/1165), thank you @fnkabit)
