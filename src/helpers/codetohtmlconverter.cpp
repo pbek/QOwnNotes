@@ -1,6 +1,7 @@
 #include "codetohtmlconverter.h"
 
 #include <QStringBuilder>
+#include <QtCore/QRegularExpression>
 
 #include "libraries/qmarkdowntextedit/qownlanguagedata.h"
 
@@ -507,32 +508,30 @@ QString CodeToHtmlConverter::xmlHighlighter(const QStringRef &input) const {
                     ++i;
                 }
                 const QStringRef tag = input.mid(i, found - i);
-                bool hasEqual = false;
-                int equalPos = -1;
-                if (tag.contains(QLatin1Char('='))) {
-                    hasEqual = true;
-                    equalPos = input.indexOf(QLatin1Char('='), i);
-                }
-                if (hasEqual) {
-                    int spacePos = input.indexOf(QLatin1Char(' '), i);
-                    output +=
-                        setFormat(input.mid(i, spacePos - i), Format::Keyword);
 
-                    // add the space
-                    output += escape(input.at(spacePos));
-                    i = spacePos + 1;
+                QRegularExpression re(R"(([a-zA-Z]+(\s*=\s*"[^"]*")?))");
+                QRegularExpressionMatchIterator matchIt = re.globalMatch(tag);
 
-                    // highlight everything from space to equal
-                    output +=
-                        setFormat(input.mid(i, equalPos - i), Format::Builtin);
-                    // set i to equal
-                    i = equalPos;
-                } else {
-                    output +=
-                        setFormat(input.mid(i, found - i), Format::Keyword);
-                    i = found;
+                while (matchIt.hasNext()) {
+                    QRegularExpressionMatch match = matchIt.next();
+                    QString captured = match.captured(0);
+
+                    if (!captured.contains(QLatin1Char('='))) {
+                        output += setFormat(QStringRef(&captured), Format::Keyword);
+                    } else {
+                        int eqPos = captured.indexOf(QLatin1Char('='));
+                        output += (setFormat(QStringRef(&captured, 0, eqPos), Format::Keyword) +
+                                   setFormat(QStringRef(&captured, eqPos, captured.length() - eqPos), Format::String));
+                    }
+
+                    if (matchIt.hasNext()) {
+                        output += " ";
+                    }
                 }
-                output += escape(input.at(i));
+
+                output += (tag.endsWith(QLatin1Char('/')) ? " />" : ">");
+
+                i = found;
             }
         }
 
