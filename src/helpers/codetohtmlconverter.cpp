@@ -522,7 +522,7 @@ QString CodeToHtmlConverter::xmlHighlighter(const QStringRef &input) const {
                         int eqPos = captured.indexOf(QLatin1Char('='));
                         output += (setFormat(QStringRef(&captured, 0, eqPos), Format::Builtin) +
                                    "=" +
-                                   setFormat(QStringRef(&captured, eqPos + 1, captured.length() - eqPos), Format::String));
+                                   setFormat(QStringRef(&captured, eqPos + 1, captured.length() - eqPos - 1), Format::String));
                     }
 
                     if (matchIt.hasNext()) {
