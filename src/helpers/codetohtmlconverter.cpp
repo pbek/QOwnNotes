@@ -517,11 +517,12 @@ QString CodeToHtmlConverter::xmlHighlighter(const QStringRef &input) const {
                     QString captured = match.captured(0);
 
                     if (!captured.contains(QLatin1Char('='))) {
-                        output += setFormat(QStringRef(&captured), Format::Keyword);
+                        output += setFormat(QStringRef(&captured), Format::Builtin);
                     } else {
                         int eqPos = captured.indexOf(QLatin1Char('='));
-                        output += (setFormat(QStringRef(&captured, 0, eqPos), Format::Keyword) +
-                                   setFormat(QStringRef(&captured, eqPos, captured.length() - eqPos), Format::String));
+                        output += (setFormat(QStringRef(&captured, 0, eqPos), Format::Builtin) +
+                                   "=" +
+                                   setFormat(QStringRef(&captured, eqPos + 1, captured.length() - eqPos), Format::String));
                     }
 
                     if (matchIt.hasNext()) {
@@ -532,18 +533,6 @@ QString CodeToHtmlConverter::xmlHighlighter(const QStringRef &input) const {
                 output += (tag.endsWith(QLatin1Char('/')) ? " />" : ">");
 
                 i = found;
-            }
-        }
-
-        else if (input.at(i) == QLatin1Char('=')) {
-            int lastSpace = input.lastIndexOf(QLatin1Char(' '), i);
-            if (lastSpace == i - 1) {
-                lastSpace = input.lastIndexOf(QLatin1Char(' '), i - 2);
-            }
-            if (lastSpace > 0) {
-                output += setFormat(input.mid(lastSpace, i - lastSpace),
-                                    Format::Builtin);
-                output += escape(input.at(i));
             }
         }
 
