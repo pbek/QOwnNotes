@@ -3841,6 +3841,8 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
 
     // clear external image cache
     Note::externalImageHash()->clear();
+
+    ui->actionToggle_distraction_free_mode->setEnabled(true);
 }
 
 void MainWindow::updateCurrentTabData(const Note &note) const {
@@ -4809,6 +4811,8 @@ void MainWindow::unsetCurrentNote() {
     Q_UNUSED(blocker3)
     ui->encryptedNoteTextEdit->hide();
     ui->encryptedNoteTextEdit->clear();
+
+    ui->actionToggle_distraction_free_mode->setEnabled(false);
 
     // set the note text edits to readonly
     setNoteTextEditReadOnly(true);
