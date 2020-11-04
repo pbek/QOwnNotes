@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.11.2
+- a preview code block highlighting issue was fixed (for [#1933](https://github.com/pbek/QOwnNotes/issues/1933))
+
 ## 20.11.1
 - a possibly not updating note count when notes were removed was fixed
   (for [#1934](https://github.com/pbek/QOwnNotes/pull/1934), thank you @fnkabit)
