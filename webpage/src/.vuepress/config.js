@@ -191,7 +191,7 @@ module.exports = {
       },
       '/de/': {
         selectText: 'Sprachen',
-        label: 'Deutsch',
+        label: 'Deutsch (in Arbeit)',
         editLinkText: 'Hilf uns diese Seite zu verbessern!',
         algolia: {},
         nav: [
