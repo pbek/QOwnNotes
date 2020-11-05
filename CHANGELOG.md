@@ -7,7 +7,7 @@
 - a new scripting hook `insertAttachmentHook` was added that is executed when an
   attachment file is inserted into the current note (for [#1645](https://github.com/pbek/QOwnNotes/issues/1645))
     - please take a look at the
-      [handleNoteNameHook documentation](https://www.qownnotes.org/scripting/hooks.html#insertattachmenthook)
+      [insertAttachmentHook documentation](https://www.qownnotes.org/scripting/hooks.html#insertattachmenthook)
       for more information
 
 ## 20.11.1
