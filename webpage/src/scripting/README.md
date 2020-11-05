@@ -17,7 +17,7 @@ Script {
 ```
 
 You can place those QML files anywhere you like and **add use them in QOwnNotes**
-by adding them in the **Scripting settings**.
+by adding them in the **Scripting settings** (there is a button `Add script`/`Add local script`).
 
 ::: tip
 Take a look at the [example scripts](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples)
