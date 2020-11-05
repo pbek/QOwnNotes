@@ -53,17 +53,38 @@ You may want to take a look at the example
 insertMediaHook
 ---------------
 
+This function is called when a media file is inserted into the current note.
+
+If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
+
 ### Method call and parameters
 ```js
 /**
- * This function is called when media file is inserted into the note
- * If this function is defined in multiple scripts, then the first script that returns a non-empty string wins
- *
  * @param fileName string the file path of the source media file before it was copied to the media folder
- * @param mediaMarkdownText string the markdown text of the media file, e.g. ![my-image](file://media/505671508.jpg)
+ * @param markdownText string the markdown text of the media file, e.g. ![my-image](media/my-image-4101461585.jpg)
  * @return string the new markdown text of the media file
  */
-function insertMediaHook(fileName, mediaMarkdownText);
+function insertMediaHook(fileName, markdownText);
+```
+
+You may want to take a look at the example
+[example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).
+
+insertAttachmentHook
+--------------------
+
+This function is called when an attachment file is inserted into the current note.
+
+If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
+ 
+### Method call and parameters
+```js
+/**
+ * @param fileName string the file path of the source attachment file before it was copied to the attachment folder
+ * @param markdownText string the markdown text of the attachment file, e.g. [my-file.txt](attachments/my-file-4245650967.txt)
+ * @return string the new markdown text of the attachment file
+ */
+function insertAttachmentHook(fileName, markdownText);
 ```
 
 You may want to take a look at the example

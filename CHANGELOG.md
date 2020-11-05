@@ -4,6 +4,11 @@
 - a preview code block highlighting issue was fixed (for [#1933](https://github.com/pbek/QOwnNotes/issues/1933))
 - the *distraction free mode* is now disabled when no note is selected
   (for [#1936](https://github.com/pbek/QOwnNotes/pull/1936), thank you @fnkabit)
+- a new scripting hook `insertAttachmentHook` was added that is executed when an
+  attachment file is inserted into the current note (for [#1645](https://github.com/pbek/QOwnNotes/issues/1645))
+    - please take a look at the
+      [handleNoteNameHook documentation](https://www.qownnotes.org/scripting/hooks.html#insertattachmenthook)
+      for more information
 
 ## 20.11.1
 - a possibly not updating note count when notes were removed was fixed

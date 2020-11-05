@@ -7054,6 +7054,9 @@ bool MainWindow::insertAttachment(QFile *file, const QString &title) {
     QString text = currentNote.getInsertAttachmentMarkdown(file, title);
 
     if (!text.isEmpty()) {
+        ScriptingService *scriptingService = ScriptingService::instance();
+        // attempts to ask a script for another markdown text
+        text = scriptingService->callInsertAttachmentHook(file, text);
         qDebug() << __func__ << " - 'text': " << text;
 
         QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();

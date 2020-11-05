@@ -88,18 +88,31 @@ QtObject {
     }
     
     /**
-     * This function is called when media file is inserted into the note
+     * This function is called when a media file is inserted into the current note
      * If this function is defined in multiple scripts, then the first script that returns a non-empty string wins
      * 
      * @param fileName string the file path of the source media file before it was copied to the media folder
-     * @param mediaMarkdownText string the markdown text of the media file, e.g. ![my-image](file://media/505671508.jpg)
+     * @param markdownText string the markdown text of the media file, e.g. ![my-image](media/my-image-4101461585.jpg)
      * @return string the new markdown text of the media file
      */
-    function insertMediaHook(fileName, mediaMarkdownText) {
+    function insertMediaHook(fileName, markdownText) {
         script.log("mediafile was inserted: " + fileName);
         return "";
     }
-    
+
+    /**
+     * This function is called when an attachment file is inserted into the current note
+     * If this function is defined in multiple scripts, then the first script that returns a non-empty string wins
+     *
+     * @param fileName string the file path of the source attachment file before it was copied to the attachment folder
+     * @param markdownText string the markdown text of the attachment file, e.g. [my-file.txt](attachments/my-file-4245650967.txt)
+     * @return string the new markdown text of the attachment file
+     */
+    function insertAttachmentHook(fileName, markdownText) {
+        script.log("attachment was inserted: " + fileName);
+        return "";
+    }
+
     /**
      * This function is called when html or a media file is pasted to a note with `Ctrl + Shift + V`
      * 
