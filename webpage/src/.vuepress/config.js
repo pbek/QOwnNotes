@@ -204,7 +204,7 @@ module.exports = {
             link: '/de/installation/',
           },
           {
-            text: 'Changelog',
+            text: 'Änderungsprotokoll',
             link: '/de/changelog',
             collapsable: true,
           },
