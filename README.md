@@ -29,12 +29,19 @@ and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**,
 that works together with [**Nextcloud Notes**](https://github.com/Nextcloud/notes)
 and [**ownCloud Notes**](https://github.com/owncloud/notes).
 
-You are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device**, like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud / Nextcloud web-service**.
+You are able to **write down** your **thoughts** with **QOwnNotes** and
+**edit or search** for them later from your **mobile device**, like with
+[Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes)
+or the **Nextcloud / ownCloud web-service**.
 
-The notes are stored as **plain text markdown files** and are **synced with Nextcloud's/ownCloud's file sync** functionality.
-Of course other software, like [Syncthing](https://syncthing.net) or [Dropbox](https://www.dropbox.com) can be used too.
+The notes are stored as **plain text markdown files** and are
+**synced with Nextcloud's/ownCloud's file sync** functionality.
+Of course other software, like [Syncthing](https://syncthing.net) or
+[Dropbox](https://www.dropbox.com) can be used too.
 
-If you like the concept of having notes accessible in plain text files, like it is done in the Nextcloud / ownCloud notes apps to gain a maximum of **freedom** then QOwnNotes is for you.
+If you like the concept of having notes accessible in plain text files, like it
+is done in the Nextcloud / ownCloud notes apps to gain a maximum of **freedom**
+then QOwnNotes is for you.
 
 Visit the project page here: [QOwnNotes project page](https://www.qownnotes.org)
 
@@ -42,16 +49,22 @@ To manage your **todo lists** in the web and on your mobile devices, you need to
 install the Tasks backend on [Nextcloud](https://apps.nextcloud.com/apps/tasks)
 or [ownCloud](https://marketplace.owncloud.com/apps/tasks).
 
-To get more on-line features for your notes, like **versioning** and **trash** access, you might also want to install the [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) app on your server.
+To get more on-line features for your notes, like **versioning** and **trash** access,
+you might also want to install the [QOwnNotesAPI](https://github.com/pbek/qownnotesapi)
+app on your server.
 
-To access your ownCloud notes from your **mobile device** you may want to get these:
+To access your ownCloud notes from your **mobile device** you may want to get one of these:
+
 - For Android and OwnCloud: [MyOwnNotes](https://f-droid.org/app/org.aykit.MyOwnNotes)
 - For Android and Nextcloud: [Notes](https://f-droid.org/packages/it.niedermann.owncloud.notes)
 - For iOS: [CloudNotes](https://itunes.apple.com/app/cloudnotes-owncloud-notes/id813973264)
 
-On Android you could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* or [**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
+On Android you could also use any sync-tool like *Synchronize Ultimate* or *FolderSync*
+to sync your note files and use software like *neutriNotes* or
+[**Markor**](https://f-droid.org/packages/net.gsantner.markor/) to edit your notes.
 
-On iOS [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) may also work well (syncing notes via WebDAV).
+On iOS [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662)
+may also work well (syncing notes via WebDAV).
 
 ## Screenshot
 
