@@ -20,6 +20,7 @@ jobs:
       run: |
         unset DO_BUILD
         for changed_file in ${{ steps.files.outputs.all }}; do
+          echo "Changed file: ${changed_file}"
           if [[ ${changed_file} == "CHANGELOG.md" ]] || [[ ${changed_file} = screenshots* ]] || [[ ${changed_file} = webpage* ]] || [[ ${changed_file} = .github* ]] ;
           then
             echo "'${changed_file}' matches, we will build"
