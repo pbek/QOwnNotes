@@ -72,7 +72,7 @@ jobs:
       run: |
         unset DO_BUILD
         for changed_file in ${{ steps.files.outputs.all }}; do
-          if  [[ [[ ${changed_file} != webpage* ]] ;
+          if  [[ ${changed_file} != webpage* ]] ;
           then
             echo "'${changed_file}' matches, we will build"
             DO_BUILD='true'
