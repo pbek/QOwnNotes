@@ -14,6 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - id: files
+      uses: jitterbit/get-changed-files@v1
     - id: changes
       name: Check if we want to build the webpage
       run: |
