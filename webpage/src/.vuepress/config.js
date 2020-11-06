@@ -204,10 +204,6 @@ module.exports = {
             link: '/de/installation/',
           },
           {
-            text: 'Blog',
-            link: '/de/blog/',
-          },
-          {
             text: 'Changelog',
             link: '/de/changelog',
             collapsable: true,
@@ -301,10 +297,6 @@ module.exports = {
               'de/faq/preview-without-edit',
               'de/faq/references',
             ]
-          },
-          {
-            title: 'Blog',
-            children: utils.getChildren('src/de', 'blog', true)
           }
         ]
       }
