@@ -1,8 +1,12 @@
 #!/bin/bash
 #
 # Use this script in $ProjectFileDir$ to download the translations from Crowdin
+#
 # To update the translation files use:
 # cd src && /usr/bin/lupdate -verbose QOwnNotes.pro
+#
+# To upload new source files use:
+# crowdin upload
 #
 
 TRANSLATION_PATH="src/languages"
