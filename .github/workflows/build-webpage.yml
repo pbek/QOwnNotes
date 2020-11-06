@@ -14,7 +14,23 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js
+    - id: changes
+      name: Check if we want to build the webpage
+      run: |
+        unset DO_BUILD
+        for changed_file in ${{ steps.files.outputs.all }}; do
+          if  [[ ${changed_file} == "CHANGELOG.md" ]] || [[ ${changed_file} == screenshots* ]] || [[ ${changed_file} == webpage* ]] ;
+          then
+            echo "'${changed_file}' matches, we will build"
+            DO_BUILD='true'
+          fi
+        done
+        echo "DO_BUILD: ${DO_BUILD}"
+        echo ::set-output name=DO_BUILD::${DO_BUILD}
+    - if: steps.changes.outputs.DO_BUILD
+      name: Use Node.js
       uses: actions/setup-node@v1
-    - run: yarn install
-    - run: yarn run build
+    - if: steps.changes.outputs.DO_BUILD
+      run: yarn install
+    - if: steps.changes.outputs.DO_BUILD
+      run: yarn run build
