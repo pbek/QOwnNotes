@@ -1,16 +1,18 @@
 # Crowdin configuration file
 # see: https://support.crowdin.com/configuration-file/
 #
-# you will need the Java CLI client
+# you will need the CLI client
 # see: https://support.crowdin.com/cli-tool/
 #
 # Crowdin supports a lot of files: https://support.crowdin.com/supported-formats/
 #
 
 project_identifier: qownnotes
+project_id: 158883
 
-# the api key has to be provided by ~/.crowdin.yaml
-#api_key: XXXX
+# the api token has to be provided by ~/.crowdin.yaml
+# generate a personal token on https://crowdin.com/settings#api-key
+#api_token: XXXX
 
 preserve_hierarchy: true
 files:

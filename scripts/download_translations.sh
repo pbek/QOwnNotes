@@ -4,7 +4,8 @@
 TRANSLATION_PATH="src/languages"
 
 echo "Downloading translation from Crowdin..."
-java -jar /opt/crowdin-cli/crowdin-cli.jar download translations
+# see: https://support.crowdin.com/cli-tool/
+crowdin download
 echo
 
 # check if exit code was 0
