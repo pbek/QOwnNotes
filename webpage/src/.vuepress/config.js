@@ -52,7 +52,6 @@ module.exports = {
    */
   themeConfig: {
     repo: 'pbek/QOwnNotes',
-    editLinks: true,
     domain: 'https://www.qownnotes.org',
     author: { name: 'Patrizio Bekerle', twitter: '@PatrizioBekerle' },
     docsBranch: 'develop',
@@ -70,6 +69,7 @@ module.exports = {
         ariaLabel: 'Languages',
         // text for the edit-on-github link
         editLinkText: 'Help us improve this page!',
+        editLinks: true,
         // algolia docsearch options for current locale
         algolia: {
           apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
