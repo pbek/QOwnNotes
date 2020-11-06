@@ -76,8 +76,10 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 
 - **multiple note folders** can be used
 - you can **use your existing text or markdown files**, no need for an import most of the times
-- older **versions of your notes** can be restored from your Nextcloud / ownCloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
-- **trashed notes** can be restored from your Nextcloud / ownCloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
+- older **versions of your notes** can be restored from your Nextcloud / ownCloud server
+  (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
+- **trashed notes** can be restored from your Nextcloud / ownCloud server
+  (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
     - there also is a local trash
 - sub-string searching of notes is possible and search results are highlighted in the notes
 - application can be operated with **customizable keyboard shortcuts**
@@ -94,7 +96,9 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 	  page to install the app on Google Chrome
 	- visit the [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
 	  page to install the app on Mozilla Firefox
-- notes are getting their name from the first line of the note text (just like in the Nextcloud / ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
+- notes are getting their name from the first line of the note text (just like
+  in the Nextcloud / ownCloud notes web-application) and the note text files are
+  automatically renamed, if the the first line changes
     - this feature can also be turned off and you can use any filename you like
 - manage your Nextcloud / ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
 - **encryption of notes** (AES-256 is built in or you can use custom encryption methods like
@@ -112,9 +116,13 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - **Vim mode**
 - **distraction free mode**, **full-screen mode**, **typewriter mode**
 - Evernote import
-- QOwnNotes is **available in many different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
-	- [Your help](https://www.qownnotes.org/contributing/translation.html) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
-	- Join the fun at **[Crowdin](https://crowdin.com/project/qownnotes/invite)** to **help** with the **translations**
+- QOwnNotes is **available in over 60 different languages** like English, German,
+  French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
+	- [Your help](https://www.qownnotes.org/contributing/translation.html) is
+	  very much appreciated to improve these translations or to translate
+	  QOwnNotes in more languages
+	- Join the fun at **[Crowdin](https://crowdin.com/project/qownnotes/invite)**
+	  to **help** with the **translations**
 
 ## Building QOwnNotes
 
@@ -145,7 +153,8 @@ qmake
 make
 ```
 
-Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues)!
+Please feel free to contribute source code to this project, make suggestions or
+report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues)!
 
 You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
@@ -157,8 +166,16 @@ You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ## Disclaimer
 
-This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults." THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT.
+This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."
+THE PROVIDER makes no representations or warranties of any kind concerning the
+safety, suitability, lack of viruses, inaccuracies, typographical errors, or
+other harmful components of this SOFTWARE PRODUCT.
 
-There are inherent dangers in the use of any software, and you are solely responsible for determining whether this SOFTWARE PRODUCT is compatible with your equipment and other software installed on your equipment. You are also solely responsible for the protection of your equipment and backup of your data, and THE PROVIDER will not be liable for any damages you may suffer in connection with using, modifying, or distributing this SOFTWARE PRODUCT.
+There are inherent dangers in the use of any software, and you are solely
+responsible for determining whether this SOFTWARE PRODUCT is compatible with
+your equipment and other software installed on your equipment. You are also
+solely responsible for the protection of your equipment and backup of your data,
+and THE PROVIDER will not be liable for any damages you may suffer in connection
+with using, modifying, or distributing this SOFTWARE PRODUCT.
 
 [![Matomo Stats](https://p.bekerle.com/piwik.php?idsite=3&rec=1)](https://www.qownnotes.org)
