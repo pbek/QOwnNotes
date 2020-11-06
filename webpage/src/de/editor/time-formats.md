@@ -45,6 +45,10 @@ Sie können Ihr eigenes Zeitformat verwenden, wenn Sie die aktuelle Zeit in eine
 | `hh:mm:ss.zzz`     | 14:13:09.042     |
 | `h:m:s ap`         | 2:13:9 pm        |
 
-::: Tipp Info Weitere Informationen zu Zeitformaten finden Sie in der [ Qt-Dokumentation ](http://doc.qt.io/qt-5/qdatetime.html#toString). :::
+::: tip Info
+Weitere Informationen zu Zeitformaten finden Sie in der [ Qt-Dokumentation ](http://doc.qt.io/qt-5/qdatetime.html#toString).
+:::
 
-::: Trinkgeld Wenn Sie komplexere Vorgänge ausführen müssen, um die aktuelle Zeit auszugeben, sollten Sie eine benutzerdefinierte [ Aktion ](../scripting/methods-and-objects.md#registering-a-custom-action) erstellen. :::
+::: tip
+Wenn Sie komplexere Vorgänge ausführen müssen, um die aktuelle Zeit auszugeben, sollten Sie eine benutzerdefinierte [ Aktion ](../scripting/methods-and-objects.md#registering-a-custom-action) erstellen.
+:::

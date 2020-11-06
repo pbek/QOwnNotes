@@ -48,7 +48,9 @@ Vielleicht möchten Sie sich das Beispiel ansehen [custom-actions.qml](https://g
 
 Vielleicht möchten Sie auch einen Blick auf den Hook [ onDetachedProcessCallback ](hooks.html#ondetachedprocesscallback) werfen.
 
-::: Tip Sie können Ihren benutzerdefinierten Aktionen auch lokale und globale Verknüpfungen zuweisen in den * Shortcuts-Einstellungen*. :::
+::: tip
+Sie können Ihren benutzerdefinierten Aktionen auch lokale und globale Verknüpfungen zuweisen in den * Shortcuts-Einstellungen*.
+:::
 
 Starten Sie ein externes Programm und warten Sie auf die Ausgabe
 ----------------------------------------------------
@@ -944,7 +946,9 @@ script.jumpToNoteSubFolder ("ein Unterordner / Unter");
 ```
 
 
-::: Tip Sie können einen neuen Notizunterordner im aktuellen Unterordner erstellen, indem Sie aufrufen :::
+::: tip
+Sie können einen neuen Notizunterordner im aktuellen Unterordner erstellen, indem Sie aufrufen
+:::
 
 
 

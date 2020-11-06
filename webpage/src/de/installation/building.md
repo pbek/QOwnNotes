@@ -26,7 +26,9 @@ Sie können gerne Quellcode zu diesem Projekt beitragen, Vorschläge machen oder
 
 Besuchen Sie [ QOwnNotes auf GitHub](https://github.com/pbek/QOwnNotes).
 
-::: Tip Wenn Sie Quellcode zum Projekt beitragen möchten, senden Sie bitte Ihre Pull-Anfragen an den `develop` Zweig. :::
+::: tip
+Wenn Sie Quellcode zum Projekt beitragen möchten, senden Sie bitte Ihre Pull-Anfragen an den `develop` Zweig.
+:::
 
 ## Quellarchiv
 

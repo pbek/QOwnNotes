@@ -18,7 +18,9 @@ Sie finden die Erweiterung auch unter [ GitHub ](https://github.com/qownnotes/we
 
 Klicken Sie mit der rechten Maustaste auf eine Webseite oder einen ausgewählten Text, um die Funktion ** Web-Clipper ** zu verwenden. Dort können Sie auch einen neuen mit einem ** Screenshot ** der aktuellen Webseite erstellen.
 
-::: Tipp Der Web Clipper ist auch skriptfähig! Schauen Sie sich den [ websocketRawDataHook ](../scripting/hooks.md#websocketrawdatahook) an, wenn Sie steuern möchten, was Sie von Webseiten ausschneiden. :::
+::: tip
+Der Web Clipper ist auch skriptfähig! Schauen Sie sich den [ websocketRawDataHook ](../scripting/hooks.md#websocketrawdatahook) an, wenn Sie steuern möchten, was Sie von Webseiten ausschneiden.
+:::
 
 
 
@@ -28,7 +30,9 @@ Standardmäßig zeigt die Browsererweiterung alle ** Links der aktuellen Notiz *
 
 Sie können ** Ihre Lesezeichen auch in Notizen ** mit dem Notiz-Tag ` Lesezeichen ` verwalten (in den Einstellungen änderbar). Diese Links können auch Tags und eine Beschreibung enthalten, die in der Browsererweiterung angezeigt wird.
 
-::: Tip Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browser-Erweiterung in QOwnNotes importieren! :::
+::: tip
+Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browser-Erweiterung in QOwnNotes importieren!
+:::
 
 
 

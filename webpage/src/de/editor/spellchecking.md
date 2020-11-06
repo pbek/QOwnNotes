@@ -2,7 +2,8 @@
 
 Korrigieren Sie Ihre Rechtschreibfehler!
 
-::: Tipp Info QOwnNotes verfügt über einen integrierten ** Dictionary Manager </ 0> (im Menü * Bearbeiten *). mit denen Sie Wörterbücher herunterladen oder löschen können (falls vorhanden) Fehlen Sie Ihre Sprache (siehe unten, wie Sie das Hinzufügen eines Wörterbuchs anfordern können). Wenn Sie die Wörterbücher manuell herunterladen möchten, können Sie den folgenden Anweisungen folgen. :::</p>
+::: tip Info
+QOwnNotes verfügt über einen integrierten ** Dictionary Manager </ 0> (im Menü * Bearbeiten *). mit denen Sie Wörterbücher herunterladen oder löschen können (falls vorhanden) Fehlen Sie Ihre Sprache (siehe unten, wie Sie das Hinzufügen eines Wörterbuchs anfordern können). Wenn Sie die Wörterbücher manuell herunterladen möchten, können Sie den folgenden Anweisungen folgen. :::</p>
 
 - Under **Linux** you can install the Hunspell dictionaries for your language using your distro's pkg manager
     - Wenn Sie zusätzliche Sprachdateien hinzufügen müssen, können Sie dies in ` ~ / .local / share / hunspell </ 0> oder <code> / usr / share / hunspell </ 0> tun.</p></li>
@@ -16,7 +17,9 @@ Wörterbücher können aus [ QOwnNotes-Wörterbüchern ](https://github.com/qown
 
 Wenn sich das Wörterbuch für Ihre Sprache nicht im **Wörterbuch-Manager** oder unter dem oben genannten Link befindet, suchen Sie es im Internet oder erstellen Sie ein Problem. Wir werden es sicher in die nächste Version von QOwnNotes aufnehmen, wenn das Wörterbuch gefunden wird.
 
-::: Tipp Info Wenn Sie Ihre Sprache in dieser Tabelle nicht finden können, dann leider Ein Wörterbuch dafür ist in den LibreOffice-Dateien nicht vorhanden - wenn Sie möchten Um ein Wörterbuch zu erstellen, gehen Sie zu [ Entwicklung von Documentfoundation.org-Wörterbüchern ](https://wiki.documentfoundation.org/Development/Dictionaries) :::
+::: tip Info
+Wenn Sie Ihre Sprache in dieser Tabelle nicht finden können, dann leider Ein Wörterbuch dafür ist in den LibreOffice-Dateien nicht vorhanden - wenn Sie möchten Um ein Wörterbuch zu erstellen, gehen Sie zu [ Entwicklung von Documentfoundation.org-Wörterbüchern ](https://wiki.documentfoundation.org/Development/Dictionaries)
+:::
 
 | Sr | Language Code | Sprache                    |
 | -- | ------------- | -------------------------- |
@@ -73,4 +76,6 @@ Wenn sich das Wörterbuch für Ihre Sprache nicht im **Wörterbuch-Manager** ode
 | 52 | vi            | Vietnamese                 |
 | 53 | zu_ZA         | Zulu(spell dict not avail) |
 
-::: Tipp Credits [ Sonett ](https://github.com/KDE/sonnet) mit [ Hunspell ](https://hunspell.github.io/) wird zur Rechtschreibprüfung verwendet :::
+::: tip
+Credits [ Sonett ](https://github.com/KDE/sonnet) mit [ Hunspell ](https://hunspell.github.io/) wird zur Rechtschreibprüfung verwendet
+:::

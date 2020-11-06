@@ -24,7 +24,9 @@ sudo pacman -Syy qownnotes
 
 [Direkter Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
 
-::: Tip Natürlich können Sie dieses Repository auch mit anderen Arch Linux-basierten Distributionen wie Manjaro verwenden. :::
+::: tip
+Natürlich können Sie dieses Repository auch mit anderen Arch Linux-basierten Distributionen wie Manjaro verwenden.
+:::
 
 ## Arch User Repository (AUR)
 
@@ -38,4 +40,5 @@ Synchronisieren Sie Ihre Paketdatenbank und installieren Sie das Paket mit ` yay
 yay -S qownnotes
 ```
 
-::: Tip Wenn Sie die Erstellungszeit beschleunigen möchten, lesen Sie  CCACHE und AUR </ 0>. :::</p>
+::: tip
+Wenn Sie die Erstellungszeit beschleunigen möchten, lesen Sie  CCACHE und AUR </ 0>. :::</p>
