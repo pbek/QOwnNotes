@@ -1442,7 +1442,7 @@
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
       <source>Minimum 8 characters</source>
-      <translation type="unfinished">Minimum 8 characters</translation>
+      <translation>Mínimo de 8 caracteres</translation>
     </message>
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1450,7 +1450,7 @@
       <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
       <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
       <source>Minimum 10 characters</source>
-      <translation type="unfinished">Minimum 10 characters</translation>
+      <translation>Mínimo de 10 caracteres</translation>
     </message>
   </context>
   <context>
@@ -3016,17 +3016,17 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="6302"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
+      <translation>No se encontró la nota ¿Crear una nota nueva &lt;strong&gt;%1&lt;/strong&gt; en la ruta &lt;strong&gt;%2&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6347"/>
       <source>Failed to create note</source>
-      <translation type="unfinished">Failed to create note</translation>
+      <translation>No se pudo crear la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6348"/>
       <source>Note creation failed</source>
-      <translation type="unfinished">Note creation failed</translation>
+      <translation>Falló la creación de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6509"/>

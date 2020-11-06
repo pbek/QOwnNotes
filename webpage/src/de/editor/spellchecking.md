@@ -50,30 +50,30 @@ Wenn Sie Ihre Sprache in dieser Tabelle nicht finden können, dann leider Ein W�
 | 25 | id            | Indonesisch                |
 | 26 | it_IT         | Italienisch                |
 | 27 | kmr_Latn      | Kurdish (Turkey)           |
-| 28 | lo_LA         | Lao                        |
-| 29 | lt_LT         | Lithuanian                 |
-| 30 | lv_LV         | Latvian                    |
+| 28 | lo_LA         | Laotisch                   |
+| 29 | lt_LT         | Litauisch                  |
+| 30 | lv_LV         | Lettisch                   |
 | 31 | ne_NP         | Nepali                     |
-| 32 | nl_NL         | Dutch                      |
-| 33 | no            | Norwegian                  |
+| 32 | nl_NL         | Niederländisch             |
+| 33 | no            | Norwegisch                 |
 | 34 | oc_FR         | Occitan                    |
-| 35 | pl_PL         | Polish                     |
+| 35 | pl_PL         | Polnisch                   |
 | 36 | pt_BR         | Brazilian Portuguese       |
-| 37 | pt_PT         | Portuguese                 |
-| 38 | ro            | Romanian                   |
-| 39 | ru_RU         | Russian                    |
+| 37 | pt_PT         | Portugisisch               |
+| 38 | ro            | Rumänisch                  |
+| 39 | ru_RU         | Russisch                   |
 | 40 | si_LK         | Sinhalese                  |
-| 41 | sk_SK         | Slovak                     |
-| 42 | sl_Sl         | Slovenian                  |
-| 43 | sq_AL         | Albanian                   |
-| 44 | sr            | Serbian                    |
-| 45 | sv_SE         | Swedish                    |
+| 41 | sk_SK         | Slowakisch                 |
+| 42 | sl_Sl         | Slowenisch                 |
+| 43 | sq_AL         | Albanisch                  |
+| 44 | sr            | Serbisch                   |
+| 45 | sv_SE         | Schwedisch                 |
 | 46 | sw_TZ         | Swahili                    |
 | 47 | te_IN         | Telugu                     |
 | 48 | th_TH         | Thai                       |
-| 49 | tr_TR         | Turkish                    |
-| 51 | uk_UA         | Ukrainian                  |
-| 52 | vi            | Vietnamese                 |
+| 49 | tr_TR         | Türkisch                   |
+| 51 | uk_UA         | Ukrainisch                 |
+| 52 | vi            | Vietnamesisch              |
 | 53 | zu_ZA         | Zulu(spell dict not avail) |
 
 ::: tip

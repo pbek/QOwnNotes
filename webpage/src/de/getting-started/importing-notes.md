@@ -6,7 +6,7 @@ Es gibt einen Evernote-Importdialog, den Sie im Menü ` Hinweis / Import ` errei
 
 ## Tomboy
 
-Sie können Ihre Tomboy Notes mit einem Skript namens [ Posaune ](https://github.com/samba/trombone) importieren.
+Sie können Ihre Tomboy Notes mit einem Skript namens [Trombone](https://github.com/samba/trombone) importieren.
 
 Sie können python2 installieren, damit das Skript funktioniert. Es konvertiert Ihre Tomboy-Notizen in eine Evernote ` .enex ` -Datei, die Sie dann in QOwnNotes importieren können.
 
