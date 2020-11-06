@@ -2,7 +2,7 @@
 
 ## Debian 10.0
 
-Run the following shell commands trust the repository.
+Run the following shell commands to trust the repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/Release.key -O - | sudo apt-key add -
@@ -24,7 +24,7 @@ If you use this repository for other Debian Linux versions please make sure that
 
 ## Debian 9.0
 
-Run the following shell commands trust the repository.
+Run the following shell commands to trust the repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -
@@ -46,7 +46,7 @@ If you use this repository for other Debian Linux versions please make sure that
 
 ## Debian 8.0
 
-Run the following shell commands trust the repository.
+Run the following shell commands to trust the repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/Release.key -O - | sudo apt-key add -

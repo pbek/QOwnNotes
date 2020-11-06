@@ -46,7 +46,7 @@ Wenn Sie dieses Repository für andere Debian Linux-Versionen verwenden, stellen
 
 ## Debian 8.0
 
-Run the following shell commands trust the repository.
+Run the following shell commands to trust the repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/Release.key -O - | sudo apt-key add -
