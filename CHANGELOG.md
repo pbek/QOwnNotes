@@ -1,7 +1,8 @@
 # QOwnNotes Changelog
 
 ## 20.11.2
-- a preview code block highlighting issue was fixed (for [#1933](https://github.com/pbek/QOwnNotes/issues/1933))
+- a preview code block highlighting issue was fixed
+  (for [#1933](https://github.com/pbek/QOwnNotes/issues/1933), thank you @fnkabit)
 - the *distraction free mode* is now disabled when no note is selected
   (for [#1936](https://github.com/pbek/QOwnNotes/pull/1936), thank you @fnkabit)
 - a new scripting hook `insertAttachmentHook` was added that is executed when an
