@@ -73,7 +73,7 @@ jobs:
       run: |
         unset DO_BUILD
         for changed_file in ${{ steps.files.outputs.all }}; do
-          if [[ ${changed_file} = src* ]] || [[ ${changed_file} = .github* ]] ;
+          if [[ ${changed_file} = src* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
           then
             echo "'${changed_file}' matches, we will build"
             DO_BUILD='true'
