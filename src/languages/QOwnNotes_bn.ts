@@ -1442,7 +1442,7 @@
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
       <source>Minimum 8 characters</source>
-      <translation type="unfinished">Minimum 8 characters</translation>
+      <translation>অন্তত ৮ টি চিহ্ন </translation>
     </message>
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1450,7 +1450,7 @@
       <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
       <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
       <source>Minimum 10 characters</source>
-      <translation type="unfinished">Minimum 10 characters</translation>
+      <translation>অন্তত ১০ টি চিহ্ন </translation>
     </message>
   </context>
   <context>
@@ -3018,17 +3018,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6302"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
+      <translation>নোট পাওয়া যায়নি, নতুন নোট তৈরি করুন </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6347"/>
       <source>Failed to create note</source>
-      <translation type="unfinished">Failed to create note</translation>
+      <translation>নোট তৈরিতে ব্যর্থ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6348"/>
       <source>Note creation failed</source>
-      <translation type="unfinished">Note creation failed</translation>
+      <translation>নোট তৈরি ব্যর্থ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6509"/>
@@ -3953,7 +3953,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6288"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-      <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+      <translation>নোট খুঁজে পাওয়া যায়নি। উক্ত স্থানে স্বয়ংক্রিয়ভাবে নোট তৈরি করতে অক্ষম,  কারণ বর্তমান নোট ফোল্ডারের জন্য সাবফোল্ডার নিষ্ক্রিয় করা আছে। </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6702"/>
@@ -6099,7 +6099,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2140"/>
       <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-      <translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
+      <translation>QOwnNotes অনুবাদে সাহায্য করতে চাইলে অথবা বিদ্যমান অনুবাদ হালনাগাদ করতে চাইলে দয়া করে পড়ুনঃ কিভাবে আমি QOwnNotes অনুবাদে সাহায্য করতে পারি?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2497"/>
@@ -8169,7 +8169,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>QOwnNotes এর সাথে যুক্ত হোন</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>

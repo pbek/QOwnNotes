@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.11.3
+- added more Bengali and Spanish translation (thank you Basudeb_Dhaka, richarson)
+
 ## 20.11.2
 - a preview code block highlighting issue was fixed
   (for [#1933](https://github.com/pbek/QOwnNotes/issues/1933), thank you @fnkabit)
