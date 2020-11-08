@@ -13,11 +13,8 @@ TRANSLATION_PATH="src/languages"
 
 echo "Downloading translation from Crowdin..."
 # see: https://support.crowdin.com/cli-tool/
-crowdin download
+crowdin download || exit 1
 echo
-
-# check if exit code was 0
-rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
 
 # we have to do this because this currently doesn't work in crowdin-cli
 echo "Renaming translation files..."
