@@ -10316,11 +10316,7 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
         return;
     }
 
-    int noteId = current->data(0, Qt::UserRole).toInt();
-    Note note = Note::fetch(noteId);
     qDebug() << __func__;
-
-    setCurrentNote(std::move(note), true, false);
 
     // let's highlight the text from the search line edit and do a "in note
     // search"
@@ -12270,6 +12266,13 @@ void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
  * multiple notes
  */
 void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
+    qDebug() << __func__;
+    if (ui->noteTreeWidget->selectedItems().size() == 1) {
+        int noteId = ui->noteTreeWidget->selectedItems()[0]->data(0, Qt::UserRole).toInt();
+        Note note = Note::fetch(noteId);
+        setCurrentNote(std::move(note), true, false);
+    }
+
     // we also need to do this in setCurrentNote because of different timings
     reloadCurrentNoteTags();
 }
