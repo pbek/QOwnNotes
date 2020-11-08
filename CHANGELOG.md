@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 20.11.3
+- fixed a bug where after deselecting notes from a multiple selection, the last selected
+  note was not the current node (for [#1939](https://github.com/pbek/QOwnNotes/issues/1939), thank you @fnkabit)
 - added more Bengali and Spanish translation (thank you Basudeb_Dhaka, richarson)
 
 ## 20.11.2
