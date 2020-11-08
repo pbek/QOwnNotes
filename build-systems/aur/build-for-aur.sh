@@ -43,7 +43,7 @@ if [ -d $PROJECT_PATH ]; then
 fi
 
 mkdir $PROJECT_PATH
-cd $PROJECT_PATH
+cd $PROJECT_PATH || exit 1
 
 echo "Project path: $PROJECT_PATH"
 
@@ -52,7 +52,7 @@ git clone --depth=1 ssh://aur@aur.archlinux.org/qownnotes.git aur -b master
 
 # checkout the source code
 git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
-cd QOwnNotes
+cd QOwnNotes || exit 1
 
 gitCommitHash=`git rev-parse HEAD`
 echo "Current commit: $gitCommitHash"
@@ -62,7 +62,7 @@ if [ -z $QOWNNOTES_VERSION ]; then
     QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
 fi
 
-cd ../aur
+cd ../aur || exit 1
 cp ../QOwnNotes/build-systems/aur/PKGBUILD .
 cp ../QOwnNotes/build-systems/aur/.SRCINFO .
 

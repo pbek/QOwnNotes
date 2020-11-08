@@ -7,7 +7,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Upload source archive to TuxFamily, be aware that it usually can take a
 # minute until the files are accessible via https://download.tuxfamily.org/qownnotes/src
-$DIR/tuxfamily/build-tuxfamily-src.sh
+"$DIR/tuxfamily/build-tuxfamily-src.sh"
 
 # check if exit code was 0
 rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
@@ -18,7 +18,7 @@ rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
 # lets wait a bit to make sure SourceForce has their files in place
 #sleep 3
 
-cd $DIR
+cd "$DIR" || exit 1
 
 # kill the previous tmux session
 tmux kill-session -t deploy-qownnotes
@@ -56,12 +56,12 @@ qdbus >/tmp/q1              # Get the new list of konsoles
 KDS=$(diff /tmp/q{0,1} | grep konsole)  # Let's hope there's only one
 #echo $KDS
 KDS=${KDS:3}
-echo $KDS
+echo "$KDS"
 
 echo $KDS >/tmp/KDS
 echo >>/tmp/KDS
 
-qdbus $KDS >>/tmp/KDS || exit
+qdbus "$KDS" >>/tmp/KDS || exit
 echo >>/tmp/KDS
 
 # See note https://docs.kde.org/trunk5/en/applications/konsole/scripting.html about using /Konsole
