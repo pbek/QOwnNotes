@@ -4,7 +4,7 @@ Wenn Sie QOwnNotes mögen und für das Projekt **spenden** möchten, können Sie
 
 ## PayPal
 
-Sie können ** Geld über PayPal spenden **, indem Sie auf diese Schaltfläche klicken:
+Sie können ** Geld über PayPal spenden**, indem Sie auf diese Schaltfläche klicken:
 
 <form id="paypal-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_s-xclick">
@@ -16,7 +16,7 @@ Sie können ** Geld über PayPal spenden **, indem Sie auf diese Schaltfläche k
 
 ## Liberapay
 
-Sie können ** Geld über Liberapay spenden **, indem Sie auf diese Schaltfläche klicken:
+Sie können ** Geld über Liberapay spenden**, indem Sie auf diese Schaltfläche klicken:
 
 <a href="https://liberapay.com/pbek/donate"><img alt="Spenden Sie mit Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 

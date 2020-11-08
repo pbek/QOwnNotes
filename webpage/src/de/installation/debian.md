@@ -2,7 +2,7 @@
 
 ## Debian 10.0
 
-Führen Sie die folgenden Shell-Befehle aus, die dem Repository vertrauen.
+Führen Sie die folgenden Shell-Befehle aus, um dem Repository zu vertrauen.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_10/Release.key -O - | sudo apt-key add -
@@ -24,7 +24,7 @@ Wenn Sie dieses Repository für andere Debian Linux-Versionen verwenden, stellen
 
 ## Debian 9.0
 
-Führen Sie die folgenden Shell-Befehle aus, wenn Sie dem Repository vertrauen:
+Führen Sie die folgenden Shell-Befehle aus, um dem Repository zu vertrauen.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_9.0/Release.key -O - | sudo apt-key add -
@@ -46,7 +46,7 @@ Wenn Sie dieses Repository für andere Debian Linux-Versionen verwenden, stellen
 
 ## Debian 8.0
 
-Run the following shell commands trust the repository.
+Führen Sie die folgenden Shell-Befehle aus, um dem Repository zu vertrauen.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/Release.key -O - | sudo apt-key add -

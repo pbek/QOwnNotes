@@ -1,6 +1,6 @@
-# Einbezogen werden
+# Werden Sie Teil von QOwnNotes
 
-Die verschiedenen Möglichkeiten, sich mit QOwnNotes zu beschäftigen
+Ihre verschiedenen Möglichkeiten sich an QOwnNotes beteiligen:
 
 - Zeichnen Sie [ QOwnNotes auf ** GitHub ** ](https://github.com/pbek/QOwnNotes) mit einem Stern aus
 - Treten Sie der Gruppe [ ** QOwnNotes Telegram ** ](https://t.me/QOwnNotes) bei
