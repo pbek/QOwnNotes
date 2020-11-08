@@ -14,6 +14,8 @@
 
 BRANCH=develop
 #BRANCH=master
+
+# https://wiki.ubuntu.com/Releases
 UBUNTU_RELEASES=( "xenial" "bionic" "focal" "groovy" "hirsute" )
 
 
