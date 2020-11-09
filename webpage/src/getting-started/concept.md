@@ -130,6 +130,9 @@ This is an online service provided by QOwnNotes to check if there is a new relea
 It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes
 from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
 
+In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation
+of the legacy update checking api for older versions of QOwnNotes.
+
 ::: tip
 You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api).
 :::
