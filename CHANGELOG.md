@@ -3,6 +3,8 @@
 ## 20.11.4
 - the different *Jump to* actions in the *Windows menu* are now disabled if the panels
   they jump to are disabled (for [#1941](https://github.com/pbek/QOwnNotes/issues/1941), thank you @fnkabit)
+- updated the link to the `Markdown cheatsheet` to the new
+  [Markdown](https://www.qownnotes.org/getting-started/markdown.html) documentation
 
 ## 20.11.3
 - fixed a bug where after deselecting notes from a multiple selection, the last selected

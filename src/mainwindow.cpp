@@ -10998,8 +10998,7 @@ void MainWindow::on_actionToggle_text_case_triggered() {
  */
 void MainWindow::on_actionMarkdown_cheatsheet_triggered() {
     QDesktopServices::openUrl(
-        QUrl("https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes"
-             "/Markdown%20Cheatsheet.md"));
+        QUrl("https://www.qownnotes.org/getting-started/markdown.html"));
 }
 
 /**

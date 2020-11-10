@@ -118,6 +118,7 @@ module.exports = {
             children: [
               'getting-started/overview',
               'getting-started/concept',
+              'getting-started/markdown',
               'getting-started/importing-notes',
               'getting-started/cli-parameters',
               'getting-started/browser-extension',
@@ -172,7 +173,7 @@ module.exports = {
               'contributing/get-involved',
               'contributing/maintainers',
               'contributing/translation',
-              '/contributing/donate',
+              'contributing/donate',
               'contributing/sponsors',
             ]
           },
@@ -233,6 +234,7 @@ module.exports = {
             children: [
               'de/getting-started/overview',
               'de/getting-started/concept',
+              'de/getting-started/markdown',
               'de/getting-started/importing-notes',
               'de/getting-started/cli-parameters',
               'de/getting-started/browser-extension',
