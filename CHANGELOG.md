@@ -3,6 +3,9 @@
 ## 20.11.3
 - fixed a bug where after deselecting notes from a multiple selection, the last selected
   note was not the current node (for [#1939](https://github.com/pbek/QOwnNotes/issues/1939), thank you @fnkabit)
+- QOwnNotes is now available for **Ubuntu 21.04 Hirsute Hippo** via our PPA at Ubuntu Launchpad
+    - please visit the [Ubuntu installation page](https://www.qownnotes.org/installation/ubuntu.html)
+      for instructions
 - added more Bengali and Spanish translation (thank you Basudeb_Dhaka, richarson)
 
 ## 20.11.2
