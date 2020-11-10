@@ -74,24 +74,7 @@ jobs:
       run: |
         brew install bash
         sudo mv /usr/local/bin/bash /bin/bash
-    - if: contains( matrix.os, 'macos')
-      id: changes-macos
-      name: Check if we want to build QOwnNotes
-      shell: bash
-      run: |
-        unset DO_BUILD
-        mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
-        for changed_file in "${added_modified_files[@]}"; do
-          if [[ ${changed_file} = src* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
-          then
-            echo "'${changed_file}' matches, we will build"
-            DO_BUILD='true'
-          fi
-        done
-        echo "DO_BUILD: ${DO_BUILD}"
-        echo ::set-output name=DO_BUILD::${DO_BUILD}
-    - if: contains( matrix.os, 'macos') == false
-      id: changes
+    - id: changes
       name: Check if we want to build QOwnNotes
       shell: bash
       run: |
