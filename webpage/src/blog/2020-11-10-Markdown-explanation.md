@@ -15,4 +15,4 @@ If you are having troubles understanding Markdown the new [Markdown](../getting-
 
 You will also find a lot of related QOwnNotes tips on the page.
 
-Additionally you can also access this new page from the **Help** menu in QOwnNotes starting with version [20.11.4](http://../changelog.md#_20-11-4).
+Additionally you can also access this new page from the **Help** menu in QOwnNotes starting with version [20.11.4](http://../changelog.html#_20-11-4).
