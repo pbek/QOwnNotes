@@ -1342,10 +1342,13 @@ void MainWindow::updatePanelMenu() {
         // toggle the panel if the checkbox was triggered
         connect(action, &QAction::triggered, this, [this, dockWidget]() {
             togglePanelVisibility(dockWidget->objectName());
+            updateJumpToActionsAvailability();
         });
 
         ui->menuPanels->addAction(action);
     }
+
+    updateJumpToActionsAvailability();
 
     // update the preview in case it was disable previously
     if (_notePreviewDockWidget->isVisible()) {
@@ -12184,6 +12187,13 @@ void MainWindow::automaticScriptUpdateCheck() {
         }
     });
 #endif
+}
+
+void MainWindow::updateJumpToActionsAvailability()
+{
+    ui->actionJump_to_note_list_panel->setEnabled(ui->notesListFrame->isVisible());
+    ui->actionJump_to_note_subfolder_panel->setEnabled(ui->noteSubFolderFrame->isVisible());
+    ui->actionJump_to_tags_panel->setEnabled(ui->tagFrame->isVisible());
 }
 
 void MainWindow::noteTextEditResize(QResizeEvent *event) {
