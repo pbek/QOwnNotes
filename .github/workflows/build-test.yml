@@ -75,7 +75,7 @@ jobs:
         brew install bash
         echo /usr/local/bin/bash | sudo tee -a /etc/shells
     - if: contains( matrix.os, 'macos')
-      id: changes
+      id: changes-macos
       name: Check if we want to build QOwnNotes
       shell: /usr/local/bin/bash
       run: |
