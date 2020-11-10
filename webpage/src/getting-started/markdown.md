@@ -46,6 +46,28 @@ You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + B</kbd> for making text b
 and <kbd>Ctrl + I</kbd> for making it italic.
 :::
 
+## Underline
+
+There also is an optional setting to enable underline rendering in the *Preview settings*.
+
+```markdown
+_underline_
+```
+
+::: tip
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + U</kbd> to underline a text.
+:::
+
+## Strike out
+
+```markdown
+~~strike out~~
+```
+
+::: tip
+You can use the [shortcut](./shortcuts.md) <kbd>Alt + Shift + S</kbd> to strike out a text.
+:::
+
 ## Lists
 
 There are many ways to create lists.
@@ -183,13 +205,13 @@ Colons can be used to align columns.
 | zebra stripes | are neat      |    $1 |
 
 There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+You can also use inline Markdown.
+
+| Markdown | Less | Pretty |
+| --- | --- | --- |
+| *Still* | `renders` | **nicely** |
+| 1 | 2 | 3 |
 ```
 
 ::: tip
@@ -213,6 +235,8 @@ Quote break.
 ::: tip
 You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character
 in the *Editor settings*
+
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> for marking text as blockquote.
 :::
 
 ## Horizontal rule
@@ -238,8 +262,9 @@ ___
 
 ## Line breaks
 
-- Two newlines will get you a new paragraph.
-- One newline will get you a new line in the same paragraph
+- **Two newlines** will get you a **new paragraph**.
+- **One newline** will get you a **new line in the same paragraph**.
+- To have a **line break without a paragraph**, you will need to use **two trailing spaces**.
 
 ```markdown
 Here's a line for us to start with.
@@ -251,8 +276,6 @@ This line is only separated by two trailing spaces and a single newline, so it's
 ```
 
 ::: tip
-To have a **line break without a paragraph**, you will need to use **two trailing spaces**.
-
 Trailing spaces are highlighted by default in the editor.
 :::
 
@@ -295,3 +318,5 @@ description: Some description
 
 Some text
 ```
+
+The filename of this example note would be `Note headline starts here.md`.
