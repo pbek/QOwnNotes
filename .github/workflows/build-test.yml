@@ -73,11 +73,11 @@ jobs:
       name: Install bash 5.0 under macOS for mapfile
       run: |
         brew install bash
-        echo /usr/local/bin/bash | sudo tee -a /etc/shells
+        sudo mv /usr/local/bin/bash /bin/bash
     - if: contains( matrix.os, 'macos')
       id: changes-macos
       name: Check if we want to build QOwnNotes
-      shell: /usr/local/bin/bash
+      shell: bash
       run: |
         unset DO_BUILD
         mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
