@@ -17,11 +17,14 @@ jobs:
     - uses: actions/checkout@v2
     - id: files
       uses: jitterbit/get-changed-files@v1
+      with:
+        format: 'csv'
     - id: changes
       name: Check if we want to build and deploy the webpage
       run: |
         unset DO_BUILD
-        for changed_file in ${{ steps.files.outputs.all }}; do
+        mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
+        for changed_file in "${added_modified_files[@]}"; do
           if [[ ${changed_file} == "CHANGELOG.md" ]] || [[ ${changed_file} = screenshots* ]] || [[ ${changed_file} = webpage* ]] || [[ ${changed_file} = ".github/workflows/build-deploy-webpage.yml" ]] ;
           then
             echo "'${changed_file}' matches, we will build"

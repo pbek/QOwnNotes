@@ -67,12 +67,15 @@ jobs:
         submodules: true
     - id: files
       uses: jitterbit/get-changed-files@v1
+      with:
+        format: 'csv'
     - id: changes
       name: Check if we want to build QOwnNotes
       shell: bash
       run: |
         unset DO_BUILD
-        for changed_file in ${{ steps.files.outputs.all }}; do
+        mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
+        for changed_file in "${added_modified_files[@]}"; do
           if [[ ${changed_file} = src* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
           then
             echo "'${changed_file}' matches, we will build"
