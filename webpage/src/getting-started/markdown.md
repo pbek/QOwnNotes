@@ -148,12 +148,12 @@ You can also directly paste an image from the clipboard into your note with <kbd
 Inline `code` has `back-ticks around` it.
 ```
 
-Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces.
-
 ::: tip
 You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
 selected inline text or just inside of text to create an inline code block. 
 :::
+
+Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 
