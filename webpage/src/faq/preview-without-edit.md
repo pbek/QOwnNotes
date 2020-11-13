@@ -2,7 +2,7 @@
 
 You can do that by turning off that the **note edit panel** is the **central widget** in the **Panel settings**.
 
-Then best create a new workspace `Preview only` my clicking **Window / Workspace / Add new workspace** in the main menu. You will be able to switch between different panel layouts.
+Then best create a new workspace `Preview only` by clicking **Window / Workspace / Add new workspace** in the main menu. You will be able to switch between different panel layouts.
 
 Afterwards you can turn off the note edit panel in the **Window / Panels menu**.
 
