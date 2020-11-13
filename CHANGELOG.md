@@ -1,10 +1,13 @@
 # QOwnNotes Changelog
 
+## 20.11.5
+- the html heading code highlighting was fixed (for [#1933](https://github.com/pbek/QOwnNotes/issues/1933), thank you @fnkabit)
+ 
 ## 20.11.4
 - the different *Jump to* actions in the *Windows menu* are now disabled if the panels
   they jump to are disabled (for [#1941](https://github.com/pbek/QOwnNotes/issues/1941), thank you @fnkabit)
-- updated the link to the `Markdown cheatsheet` to the new
-  [Markdown](https://www.qownnotes.org/getting-started/markdown.html) documentation
+- the link to the `Markdown cheatsheet` to the new [Markdown](https://www.qownnotes.org/getting-started/markdown.html)
+  documentation was updated
 
 ## 20.11.3
 - fixed a bug where after deselecting notes from a multiple selection, the last selected
