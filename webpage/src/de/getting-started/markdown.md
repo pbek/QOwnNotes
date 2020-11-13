@@ -16,7 +16,7 @@ Use headings to structure your texts.
 ```
 
 ::: tip
-The **Navigation panel** shows shows the structure of your headings. 
+The **Navigation panel** shows shows the structure of your headings.
 :::
 
 Alternatively, for H1 and H2, an underline-ish style:
@@ -30,7 +30,7 @@ Alt-H2
 ```
 
 ::: tip
-By default QOwnNotes creates the **filename of a note** from the **heading 1** (h1). 
+By default QOwnNotes creates the **filename of a note** from the **heading 1** (h1).
 :::
 
 ## Emphasis
@@ -42,8 +42,29 @@ Strong emphasis, aka bold, with **asterisks**.
 ```
 
 ::: tip
-You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + B</kbd> for making text bold
-and <kbd>Ctrl + I</kbd> for making it italic.
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + B</kbd> for making text bold and <kbd>Ctrl + I</kbd> for making it italic.
+:::
+
+## Underline
+
+There also is an optional setting to enable underline rendering in the *Preview settings*.
+
+```markdown
+_underline_
+```
+
+::: tip
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + U</kbd> to underline a text.
+:::
+
+## Strike out
+
+```markdown
+~~strike out~~
+```
+
+::: tip
+You can use the [shortcut](./shortcuts.md) <kbd>Alt + Shift + S</kbd> to strike out a text.
 :::
 
 ## Lists
@@ -85,20 +106,16 @@ http://www.example.com or <http://www.example.com>
 ```
 
 ::: tip
-You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + L</kbd> to
-**create links to webpages or other notes**.
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + L</kbd> to **create links to webpages or other notes**.
 
-Using <kbd>Ctrl + Shift + X</kbd> will bring up a dialog that helps you to
-**insert attachments** into your note.
+Using <kbd>Ctrl + Shift + X</kbd> will bring up a dialog that helps you to **insert attachments** into your note.
 
-You can press <kbd>Ctrl + Space</kbd> while the cursor in on a link in the
-note edit to follow the link.
+You can press <kbd>Ctrl + Space</kbd> while the cursor in on a link in the note edit to follow the link.
 :::
 
 ### Bookmarks
 
-The bookmarks used by the [QOwnNotes Web Companion browser extension](./browser-extension.md)
-are using links in lists.
+The bookmarks used by the [QOwnNotes Web Companion browser extension](./browser-extension.md) are using links in lists.
 
 ```markdown
 - [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
@@ -113,8 +130,7 @@ Images can be embedded into QOwnNotes. They will be shown in the preview.
 ```
 
 ::: tip
-You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> to insert an image into a note.
-The image can also be in the clipboard, the dialog will detect it and show a preview.
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + I</kbd> to insert an image into a note. The image can also be in the clipboard, the dialog will detect it and show a preview.
 
 You can also directly paste an image from the clipboard into your note with <kbd>Ctrl + Shift + V</kbd>.
 :::
@@ -126,26 +142,24 @@ You can also directly paste an image from the clipboard into your note with <kbd
 Inline `code` has `back-ticks around` it.
 ```
 
-Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces.
-
 ::: tip
-You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
-selected inline text or just inside of text to create an inline code block. 
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on selected inline text or just inside of text to create an inline code block.
 :::
+
+Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces.
 
 ### 4-Spaces fence
 
 Add four spaces in front of your code to mark it as code block.
 
 ```markdown
-	s = "Code with space indent"
-	print s
+    s = "Code with space indent"
+    print s
 ```
 
 ### Backtick fence
 
 You can also use three backticks to create a code block.
-
 ~~~markdown
 ```
 Code goes here
@@ -166,7 +180,7 @@ There also is some syntax highlighting with code blocks in QOwnNotes.
 ```bash
 # I am a comment
 cd Notes
-```
+~~~
 ~~~
 
 ## Tables
@@ -183,18 +197,17 @@ Colons can be used to align columns.
 | zebra stripes | are neat      |    $1 |
 
 There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-```
+You can also use inline Markdown.
+
+| Markdown | Less | Pretty |
+| --- | --- | --- |
+| *Still* | `renders` | **nicely** |
+| 1 | 2 | 3 |
+~~~
 
 ::: tip
-Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you creating tables.
-You can even import CSV files in that dialog.
+Press <kbd>Alt + Shift + T</kbd> to activate a dialog that can help you creating tables. You can even import CSV files in that dialog.
 
 Use <kbd>Ctrl + Space</kbd> inside a markdown table to automatically format it.
 :::
@@ -211,14 +224,14 @@ Quote break.
 ```
 
 ::: tip
-You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character
-in the *Editor settings*
+You can tell QOwnNotes to fully highlight blockquotes or just the blockquote character in the *Editor settings*
+
+You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> for marking text as blockquote.
 :::
 
 ## Horizontal rule
 
-There are three ways to get a horizontal rule:
-hyphens, asterisks or underscores.
+There are three ways to get a horizontal rule: hyphens, asterisks or underscores.
 
 ```markdown
 Three or more...
@@ -238,8 +251,9 @@ ___
 
 ## Line breaks
 
-- Two newlines will get you a new paragraph.
-- One newline will get you a new line in the same paragraph
+- **Two newlines** will get you a **new paragraph**.
+- **One newline** will get you a **new line in the same paragraph**.
+- To have a **line break without a paragraph**, you will need to use **two trailing spaces**.
 
 ```markdown
 Here's a line for us to start with.
@@ -251,8 +265,6 @@ This line is only separated by two trailing spaces and a single newline, so it's
 ```
 
 ::: tip
-To have a **line break without a paragraph**, you will need to use **two trailing spaces**.
-
 Trailing spaces are highlighted by default in the editor.
 :::
 
@@ -281,9 +293,7 @@ You can check/un-check checkboxes in the preview.
 
 ## Frontmatter
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information.
-It will **not be shown in the preview** and will
-**not disturb the the automatic note filename generation**. 
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -295,3 +305,5 @@ description: Some description
 
 Some text
 ```
+
+The filename of this example note would be `Note headline starts here.md`.

@@ -2,7 +2,7 @@
 
 Sie können dies tun, indem Sie deaktivieren, dass das ** Notenbearbeitungsfeld ** das ** zentrale Widget ** in den ** Bedienfeldeinstellungen ** ist.
 
-Erstellen Sie dann am besten einen neuen Arbeitsbereich. ` Nur Vorschau ` Klicken Sie im Hauptmenü auf ** Fenster / Arbeitsbereich / Neuen Arbeitsbereich hinzufügen **. Sie können zwischen verschiedenen Bedienfeldlayouts wechseln.
+Then best create a new workspace `Preview only` by clicking **Window / Workspace / Add new workspace** in the main menu. Sie können zwischen verschiedenen Bedienfeldlayouts wechseln.
 
 Anschließend können Sie das Notizbearbeitungsfeld im Menü ** Fenster / Felder ** deaktivieren.
 

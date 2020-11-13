@@ -2,7 +2,8 @@
 
 ## 20.11.5
 - the html heading code highlighting was fixed (for [#1933](https://github.com/pbek/QOwnNotes/issues/1933), thank you @fnkabit)
- 
+- added more Spanish translation (thank you polkillas)
+
 ## 20.11.4
 - the different *Jump to* actions in the *Windows menu* are now disabled if the panels
   they jump to are disabled (for [#1941](https://github.com/pbek/QOwnNotes/issues/1941), thank you @fnkabit)
