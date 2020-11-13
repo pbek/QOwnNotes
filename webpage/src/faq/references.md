@@ -69,7 +69,7 @@ What other people said about QOwnNotes…
 - [QOwnNotes - A To-Do List Manager with Markdown and OwnCloud Support](https://www.fossmint.com/qownnotes-a-to-do-list-with-markdown-owncloud-support/)
 - [Joplin – A note-taking and to-do app with builds for desktop, mobile, terminal | Hacker News](https://news.ycombinator.com/item?id=15815040)
 - <http://www.thumbapps.org/2017/07/QOwnNotes-portable-text-markdown-editor-and-todo-list-manager.html>
-	- also have created their own `QOwnNotesPortable_17.06.6_Build_3071.paf`
+	- They also have created their own `QOwnNotesPortable_17.06.6_Build_3071.paf`
  [HOW TO INSTALL QOWNNOTES IN UBUNTU 16.04 - A NOTE TAKING SOFTWARE FOR LINUX](http://www.elinuxbook.com/install-qownnotes-in-ubuntu-16-04-a-note-taking-software-for-linux/)
 - [QOwnNotes A Great Note Taking App For Linux - LinuxAndUbuntu - Linux News | Apps Reviews | Linux Tutorials HowTo](http://www.linuxandubuntu.com/home/qownnotes-a-great-note-taking-app-for-linux)
 - [Solus Users Receive Linux Kernel 4.8.10 and Vivaldi 1.5, QOwnNotes Lands as Well](http://news.softpedia.com/news/solus-users-receive-linux-kernel-4-8-10-and-vivaldi-1-5-qownnotes-lands-as-well-510481.shtml)
@@ -143,7 +143,7 @@ What other people said about QOwnNotes…
 - [QOwnNotes - Notepad mit Nextcloud Anbindung | ITrig](http://www.itrig.de/index.php?/archives/2341-QOwnNotes-Notepad-mit-Nextcloud-Anbindung.html)
 - Chip Magazin (3.2.2020 im Handel)
 - [QOwnNotes for Debian – There and back again](https://www.preining.info/blog/2020/02/qownnotes-for-debian/)
-    - have been on <https://planet.debian.org/>
+    - this has been on <https://planet.debian.org/>
 - [Search for the near-perfect note taking software | Animesh Bulusu](https://animesh.blog/near-perfect-note-taking-software/)
 - [qownnotes (Wiki ubuntu-fr)](http://doc.ubuntu-fr.org/qownnotes)
 - [Taking Notes with Nextcloud, QOwnNotes, and Notebooks | Life Meets Code](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
