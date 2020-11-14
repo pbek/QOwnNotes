@@ -2635,6 +2635,13 @@ void SettingsDialog::on_noteFolderNameLineEdit_editingFinished() {
                        .remove(QStringLiteral("\n"))
                        .trimmed();
     text.truncate(50);
+
+    // fallback to directory name in case name edit is empty
+    if (text.isEmpty()) {
+        const QString localPath = ui->noteFolderLocalPathLineEdit->text();
+        text = QDir(localPath).dirName();
+    }
+
     _selectedNoteFolder.setName(text);
     _selectedNoteFolder.store();
 
