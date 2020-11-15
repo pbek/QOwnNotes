@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.11.6
+- the setting of an empty note folder name is now prevented
+  (for [#1949](https://github.com/pbek/QOwnNotes/pull/1949), thank you @fnkabit)
+
 ## 20.11.5
 - the html heading code highlighting was fixed (for [#1933](https://github.com/pbek/QOwnNotes/issues/1933), thank you @fnkabit)
 - added more Spanish translation (thank you polkillas)
