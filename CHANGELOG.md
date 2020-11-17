@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 20.11.7
+- there now are new scripting commands `script.noteTextEditSetCursorPosition()`
+  and `script.noteTextEditCursorPosition()` to set the text cursor in the note
+  text edit to a certain position and to get the current position
+  (for [#1950](https://github.com/pbek/QOwnNotes/issues/1950))
+    - for more information please take a look at the
+      [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#set-the-text-cursor-in-the-note-text-edit-to-a-certain-position)
+
 ## 20.11.6
 - the setting of an empty note folder name is now prevented
   (for [#1949](https://github.com/pbek/QOwnNotes/pull/1949), thank you @fnkabit)

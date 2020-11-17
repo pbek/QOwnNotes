@@ -81,6 +81,8 @@ class ScriptingService : public QObject {
     Q_INVOKABLE void noteTextEditSelectCurrentLine();
     Q_INVOKABLE void noteTextEditSelectCurrentWord();
     Q_INVOKABLE void noteTextEditSetSelection(int start, int end);
+    Q_INVOKABLE void noteTextEditSetCursorPosition(int position);
+    Q_INVOKABLE int noteTextEditCursorPosition();
     Q_INVOKABLE int noteTextEditSelectionStart();
     Q_INVOKABLE int noteTextEditSelectionEnd();
     Q_INVOKABLE QString

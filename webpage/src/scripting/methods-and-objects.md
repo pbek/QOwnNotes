@@ -535,6 +535,47 @@ int ScriptingService::noteTextEditSelectionEnd();
 script.log(script.noteTextEditSelectionEnd());
 ```
 
+Set the text cursor in the note text edit to a certain position
+---------------------------------------------------------------
+
+### Method call and parameters
+```cpp
+/**
+ * Sets the text cursor in the note text edit to a certain position
+ * 0 would be the beginning of the note
+ * special case: -1 would be the end of the note
+ *
+ * @param position
+ */
+void ScriptingService::noteTextEditSetCursorPosition(int position);
+```
+
+### Example
+```js
+// jump to the 11th character in the note
+script.noteTextEditSetCursorPosition(10);
+
+// jump to the end of the note
+script.noteTextEditSetCursorPosition(-1);
+```
+
+Get the current position of the text cursor in the note text edit
+-----------------------------------------------------------------
+
+### Method call and parameters
+```cpp
+/**
+ * Returns the current position of the text cursor in the note text edit
+ * 0 would be the beginning of the note
+ */
+int ScriptingService::noteTextEditCursorPosition();
+```
+
+### Example
+```js
+script.log(script.noteTextEditCursorPosition());
+```
+
 Read the current word from the note text edit
 ---------------------------------------------
 
