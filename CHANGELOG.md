@@ -7,6 +7,7 @@
   (for [#1950](https://github.com/pbek/QOwnNotes/issues/1950))
     - for more information please take a look at the
       [scripting documentation](https://www.qownnotes.org/scripting/methods-and-objects.html#set-the-text-cursor-in-the-note-text-edit-to-a-certain-position)
+- added more Greek translation (thank you Gregory.K)
 
 ## 20.11.6
 - the setting of an empty note folder name is now prevented
