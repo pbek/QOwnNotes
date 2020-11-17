@@ -22,7 +22,7 @@ cd qownnotes-slackbuilds/14.2/qownnotes
 ./dobuild.sh
 ```
 
-Danach können Sie das generierte Paket mit ` installpkg ` installieren.
+Danach können Sie das generierte Paket mit `installpkg` installieren.
 
 ## Slackware 14.1
 
@@ -42,6 +42,6 @@ cd qownnotes-slackbuilds/14.1/qownnotes
 ./dobuild.sh
 ```
 
-Danach können Sie das generierte Paket mit ` installpkg ` installieren.
+Danach können Sie das generierte Paket mit `installpkg` installieren.
 
-[QOwnNotes Slackbuild on GitHub](https://github.com/pbek/qownnotes-slackbuilds/)
+[QOwnNotes Slackbuild auf GitHub](https://github.com/pbek/qownnotes-slackbuilds/)

@@ -10,6 +10,6 @@
 
 <ProfileCard name="Amy Lang" img="https://crowdin-static.downloads.crowdin.com/avatar/14350272/large/0dd1087064bbd71fe114b5c2f0dc1914.jpeg" backgroundImg="/screenshots/screenshot-darkmode.png" functions="Head of translation" crowdin="rawfreeamy" />
 
-… und viele mehr finden Sie unter [ QOwnNotes on Crowdin ](https://crowdin.com/project/qownnotes/activity_stream)
+… und viele mehr finden Sie unter [QOwnNotes auf Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
 
-Wenn Sie bei der Übersetzung von QOwnNotes helfen möchten, besuchen Sie bitte [ Übersetzung ](translation.md).
+Wenn Sie bei der Übersetzung von QOwnNotes helfen möchten, besuchen Sie bitte [Übersetzung](translation.md).

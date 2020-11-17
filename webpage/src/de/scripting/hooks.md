@@ -51,9 +51,9 @@ Vielleicht möchten Sie sich das Beispiel ansehen [external-note-open.qml](https
 insertMediaHook
 ---------------
 
-This function is called when a media file is inserted into the current note.
+Diese Funktion wird aufgerufen, wenn eine Mediendatei in die aktuelle Notiz eingefügt wird.
 
-If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
+Wenn diese Funktion in mehreren Skripten definiert ist, gewinnt das erste Skript, das eine nicht leere Zeichenfolge zurückgibt.
 
 ### Methodenaufruf und Parameter
 ```js
@@ -65,14 +65,14 @@ If this function is defined in multiple scripts, then the first script that retu
 function insertMediaHook(fileName, markdownText);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).
+Vielleicht möchten Sie sich das Beispiel [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml)ansehen.
 
 insertAttachmentHook
 --------------------
 
-This function is called when an attachment file is inserted into the current note.
+Diese Funktion wird aufgerufen, wenn eine Anhangsdatei in die aktuelle Notiz eingefügt wird.
 
-If this function is defined in multiple scripts, then the first script that returns a non-empty string wins.
+Wenn diese Funktion in mehreren Skripten definiert ist, gewinnt das erste Skript, das eine nicht leere Zeichenfolge zurückgibt.
 
 ### Methodenaufruf und Parameter
 ```js
@@ -84,7 +84,7 @@ If this function is defined in multiple scripts, then the first script that retu
 function insertAttachmentHook(fileName, markdownText);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).
+Vielleicht möchten Sie sich das Beispiel [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml)ansehen.
 
 insertingFromMimeDataHook
 -------------------------
@@ -242,7 +242,7 @@ You may want to take a look at the example [encryption-keybase.qml](https://gith
 noteTaggingHook
 ---------------
 
-You can implement your own note tagging mechanism for example with special text in your note like `@tag1`, `@tag2`, `@tag3`.
+Sie können Ihren eigenen Notizkennzeichnungsmechanismus beispielsweise mit speziellem Text in Ihrer Notiz implementieren, z. B. `@ tag1`, `@tag2`, `@tag3`.
 
 ### Method call and parameters
 ```js
@@ -261,36 +261,34 @@ You can implement your own note tagging mechanism for example with special text 
 function noteTaggingHook(note, action, tagName, newTagName);
 ```
 
--   Sobald ein Skript aktiviert ist, das die neue Funktion ` noteTaggingHook </ 0> implementiert, wird das Note-Tagging von dieser Funktion verarbeitet</li>
-<li><p spaces-before="0">  Die folgenden Funktionen sollten über die QOwnNotes-Benutzeroberfläche funktionieren</p>
-
-<ul>
-<li><p spaces-before="0">  Importieren Sie zunächst Tags wie <code> @tag ` aus Ihren Notizen und überschreiben Sie Ihre aktuelle Tag-Zuweisung</p>
+-   Sobald ein Skript aktiviert ist, das die neue Funktion ` noteTaggingHook` implementiert, wird das Note-Tagging von dieser Funktion verarbeitet
+-   die folgenden Funktionen sollten über die QOwnNotes-Benutzeroberfläche funktionieren
+    -   importieren Sie zunächst Tags wie `@tag` aus Ihren Notizen und überschreiben Sie Ihre aktuelle Tag-Zuweisung
         -   Sie werden Ihren Tag-Baum nicht verlieren, sondern nur die frühere Zuordnung zu Notizen
         -   Sie können Tags weiterhin in andere Tags verschieben
-        -   Wenn mehr als ein Tag denselben Namen in Ihrem Tag-Baum hat, wird der erste Treffer zugewiesen
-    -   Durch Hinzufügen eines Tags zu einer Notiz wird das Tag zum Notiztext hinzugefügt
-    -   Durch Entfernen eines Tags aus einer Notiz wird das Tag aus dem Notiztext entfernt
+        -   wenn mehr als ein Tag denselben Namen in Ihrem Tag-Baum hat, wird der erste Treffer zugewiesen
+    -   durch Hinzufügen eines Tags zu einer Notiz wird das Tag zum Notiztext hinzugefügt
+    -   durch Entfernen eines Tags aus einer Notiz wird das Tag aus dem Notiztext entfernt
     -   removing of tags in the tag list will remove those tags from your notes
     -   renaming of tags in the tag list will rename those tags in your notes
     -   bulk tagging of notes in the note list will add those tags to your notes
     -   bulk removing of tags from notes in the note list will remove those tags from your notes
-    -   the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel</li> </ul>
+    -   Die Anwendung löst eine Reihe von `Aktionen zum Hinzufügen` und `Entfernen` aus für alle ausgewählten Tags und ihre untergeordneten Elemente in allen Notizen, wenn Tags verschoben werden im Tag-Panel
 
-You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
+Vielleicht möchten Sie sich das Beispiel ansehen: [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml), um Ihren eigenen Tagging-Mechanismus zu implementieren.
 
 ::: warning
-Make sure your `list` action is really fast, because it will be executed for every note every time the note folder is reloaded!
+Stellen Sie sicher, dass Ihre Aktion `list` sehr schnell ist, da sie bei jedem erneuten Laden des Notizordners für jede Notiz ausgeführt wird!
 :::
 
 noteTaggingByObjectHook
 ----------------------
 
-Similarly to [noteTaggingHook](#notetagginghook) you can implement your own note tagging mechanism, but you are not bound to tag names in the tag tree root. This way you can make use of the whole tag tree instead of only a tag list.
+Similarly to [noteTaggingHook](#notetagginghook) you can implement your own note tagging mechanism, but you are not bound to tag names in the tag tree root. Auf diese Weise können Sie den gesamten Tag-Baum anstelle von nur einer Tag-Liste verwenden.
 
-With `noteTaggingByObjectHook` you get a `TagApi` object as parameter, instead of a tag name. And as result for the `list` action you need to provide a list of tag ids.
+With `noteTaggingByObjectHook` you get a `TagApi` object as parameter, instead of a tag name. Als Ergebnis für die Aktion `Liste` müssen Sie eine Liste der Tag-IDs bereitstellen.
 
-This also means you need to create missing tags yourself to be able to provide a list of already existing tag ids for the `list` action.
+Dies bedeutet auch, dass Sie fehlende Tags selbst erstellen müssen, um eine Liste bereits vorhandener Tag-IDs für die Aktion `Liste` bereitstellen zu können.
 
 ### Methodenaufruf und Parameter
 ```js

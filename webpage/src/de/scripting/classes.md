@@ -29,7 +29,7 @@ class NoteApi {
 };
 ```
 
-Sie können die Methoden von verwenden von [ Datum ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) um mit ` fileCreated </ 1> oder <code> fileLastModified ` zu arbeiten.
+Sie können die Methoden von [ Datum](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) verwenden, um mit `fileCreated`oder` fileLastModified` zu arbeiten.
 
 ### Beispiel
 ```js

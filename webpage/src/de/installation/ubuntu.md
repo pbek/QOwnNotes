@@ -2,9 +2,9 @@
 
 ## Ubuntu Linux 18.04 oder neuer, elementares Betriebssystem, Linux Mint 18 oder neuer
 
-Installieren Sie ** QOwnNotes ** unter ** Ubuntu Linux ** (mindestens 18.04) mithilfe des PPA-Repositorys.
+Installieren Sie **QOwnNotes** unter **Ubuntu Linux** (mindestens 18.04) mithilfe des PPA-Repositorys.
 
-Beachten Sie, dass das Repository auch Pakete für ARM enthält, falls Sie QOwnNotes auf einem ** Raspberry Pi ** verwenden möchten.
+Beachten Sie, dass das Repository auch Pakete für ARM enthält, falls Sie QOwnNotes auf einem **Raspberry Pi** verwenden möchten.
 
 Öffnen Sie ein Terminal und geben Sie die folgenden Zeilen ein, um das Repository hinzuzufügen und QOwnNotes zu installieren.
 
@@ -18,7 +18,7 @@ sudo apt-get install qownnotes
 
 ## Ältere Ubuntu Linux-Distributionen und -Derivate
 
-Versuchen Sie am besten, das AppImage aus [ QOwnNotes Releases auf GitHub ](https://github.com/pbek/QOwnNotes/releases) zu verwenden.
+Versuchen Sie am besten, das AppImage aus [QOwnNotes Releases auf GitHub](https://github.com/pbek/QOwnNotes/releases) zu verwenden.
 
 Dann können Sie die Ausführungsberechtigungen für die Datei ändern:
 
@@ -30,7 +30,7 @@ Anschließend sollten Sie AppImage ausführen können, um dann QOwnNotes auszuf�
 
 ## OBS Repository
 
-Möglicherweise können Sie auch die QOwnNotes unter Ubuntu-Versionen verwenden, die auf Ubuntu Launchpad nicht mehr aktualisiert wurden. Anschließend können Sie die Repositorys des [ Open Build Service ](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) verwenden.
+Möglicherweise können Sie auch die QOwnNotes unter Ubuntu-Versionen verwenden, die auf Ubuntu Launchpad nicht mehr aktualisiert wurden. Anschließend können Sie die Repositorys des [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop) verwenden.
 
 Im Folgenden finden Sie Beispielaufrufe für das xUbuntu 16.10-Repository.
 

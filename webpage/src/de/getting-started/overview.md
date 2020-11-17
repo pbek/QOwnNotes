@@ -1,71 +1,71 @@
-# Überblick
+# Übersicht
 
 <template>
 <v-carousel cycle show-arrows-on-hover>
   <v-carousel-item>
-    <img src="/screenshots/screenshot.png" alt="QOwnNotes screenshot" />
+    <img src="/screenshots/screenshot.png" alt="QOwnNotes Screenshot" />
     <div class="sheet">
-      Edit your notes with markdown highlighting, colored tags and subfolders
+      Bearbeiten Sie Ihre Notizen mit Markdown-Hervorhebungen, farbigen Tags und Unterordnern
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-minimal.png" alt="Minimale Ansicht" />
     <div class="sheet">
-      Minimal default user interface that can be stripped even more
+      Minimale Standardbenutzeroberfläche, die noch weiter entfernt werden kann
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-vertical.png" alt="Vertikale Ansicht" />
     <div class="sheet">
-      View your notes in a vertical markdown view by moving the panels
+      Zeigen Sie Ihre Notizen in einer vertikalen Markdown-Ansicht an, indem Sie die Bedienfelder verschieben
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-portable-mode.png" alt="Portabler Modus" />
     <div class="sheet">
-      Portable mode for USB sticks
+      Tragbarer Modus für USB-Sticks
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-1col.png" alt="Eine Spalte" />
     <div class="sheet">
-      All panels can be placed wherever you want
+      Alle Bedienflächen können beliebig platziert werden
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-darkmode.png" alt="Screenshot-Dunkelmodus" />
     <div class="sheet">
-      Dark mode
+      Dunkelmodus
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-distraction-free-mode.png" alt="screenshot-distraction-free-mode" />
+    <img src="/screenshots/screenshot-distraction-free-mode.png" alt="Screenshot-ablenkungsfreier-Modus" />
     <div class="sheet">
-      Distraction free mode
+      Ablenkungsfreier Modus
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note-decrypted.png" alt="Note encryption" />
+    <img src="/screenshots/screenshot-encrypted-note-decrypted.png" alt="Notizenverschlüsselung" />
     <div class="sheet">
-      Optional AES note encryption (also scriptable)
+      Optionale AES-Notizenverschlüsselung (auch skriptfähig)
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-encrypted-note.png" alt="Encrypted note" />
+    <img src="/screenshots/screenshot-encrypted-note.png" alt="Verschlüsselte Notiz" />
     <div class="sheet">
-      Encrypted notes are still text
+      Verschlüsselte Notizen sind immer noch Text
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-diff.png" alt="screenshot diff" />
     <div class="sheet">
-      Show the difference between notes when it was changed externally
+      Zeigen Sie den Unterschied zwischen Notizen an, wenn diese extern geändert wurden
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-export-print.png" alt="screenshot-export-print" />
     <div class="sheet">
-      Note PDF export and printing
+      Notizen-PDF-Export und -Druck
     </div>
   </v-carousel-item>
   <v-carousel-item>
@@ -77,55 +77,55 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-other-workspace.png" alt="screenshot-other-workspace" />
     <div class="sheet">
-      You can have different workspaces
+      Ihnen stehen verschiedene Arbeitsbereiche zur Verfügung
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-qml.png" alt="screenshot-qml" />
     <div class="sheet">
-      Scriptable
+      Skriptfähig
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-russian.png" alt="screenshot-russian" />
     <div class="sheet">
-      Translated to many languages
+      In viele Sprachen übersetzt
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-search-in-all-notes.png" alt="screenshot-search-in-all-notes" />
     <div class="sheet">
-      Search over all notes
+      Durchsuchen Sie alle Notizen
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-search-in-current-note.png" alt="screenshot-search-in-current-note" />
     <div class="sheet">
-      Search in the current note
+      Suchen Sie in der aktuellen Notiz
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-settings-note-folders.png" alt="screenshot-settings-note-folders" />
     <div class="sheet">
-      Able to use multiple note folders
+      Kann mehrere Notizordner verwenden
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-todo.png" alt="screenshot-todo" />
     <div class="sheet">
-      Manage your Todo lists via CalDAV
+      Verwalten Sie Ihre Todo-Listen über CalDAV
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-trash.png" alt="screenshot-trash" />
     <div class="sheet">
-      Manage trashed notes on your Nextcloud server
+      Verwalten Sie verworfene Notizen auf Ihrem Nextcloud-Server
     </div>
   </v-carousel-item>
   <v-carousel-item>
     <img src="/screenshots/screenshot-versioning.png" alt="screenshot-versioning" />
     <div class="sheet">
-      Manage your note versions on your Nextcloud server
+      Verwalten Sie Ihre Notizversionen auf Ihrem Nextcloud-Server
     </div>
   </v-carousel-item>
 </v-carousel>
@@ -135,7 +135,7 @@
 
 ** Q ** für das verwendete [ Qt-Framework ](https://www.qt.io/)   
 ** Eigene **, weil Sie Ihre eigenen Notizen besitzen   
-** Notizen ** für die Notizen, die Sie machen
+** Notizen ** für die Notizen, die Sie erstellen
 
 <v-divider />
 
@@ -149,25 +149,25 @@ Treten Sie unserer [ Telegrammgruppe ](https://t.me/QOwnNotes) bei, um zu diskut
 
 ## Eigenschaften
 
-- Der **Notizenordner ** kann ** frei gewählt werden ** (mehrere Notizordner können verwendet werden)
+- Der **Notizenordner** kann **frei gewählt werden** (mehrere Notizordner können verwendet werden)
 - Sie können Ihre ** vorhandenen Text- oder Markdown-Dateien ** verwenden, ohne dass ein Import erforderlich ist
 - ** Die Suche nach Teilzeichenfolgen ** von Notizen ist möglich, und die Suchergebnisse werden in den Notizen hervorgehoben
 - ** Tastaturkürzel ** können angepasst werden
 - ** Skriptunterstützung ** und ein Online-Skript-Repository [** **](https://github.com/qownnotes/scripts), in dem Sie Skripte in der Anwendung installieren können
 - [ Browser-Erweiterung ](browser-extension.md), um Notizen aus dem ausgewählten Text hinzuzufügen, Screenshots zu erstellen oder Ihre Lesezeichen zu verwalten
 - ** Externe Änderungen ** von Notizdateien werden ** überwacht ** (Notizen oder Notizliste werden neu geladen)
-- Ältere ** Versionen ** Ihrer Notizen können ** von Ihrem ** Nextcloud / ownCloud ** -Server <0> wiederhergestellt werden</li>
-- ** Papierkorbnotizen ** können ** von Ihrem ** Nextcloud / ownCloud ** -Server wiederhergestellt ** werden
-- ** Unterschiede ** zwischen aktueller Note und extern geänderter Note werden ** in einem Dialog ** angezeigt
+- Ältere ** Versionen ** Ihrer Notizen können von Ihrem ** Nextcloud / ownCloud ** Server ** wiederhergestellt werden **
+- **Papierkorbnotizen** können von Ihrem **Nextcloud / ownCloud** Server **wiederhergestellt werden**
+- **Unterschiede** zwischen aktueller Notiz und extern geänderter Notiz werden in einem Dialog **angezeigt**
 - ** Markdown-Hervorhebung ** von Notizen und ein ** Markdown-Vorschaumodus **
 - Unterstützung für [** Rechtschreibprüfung **](../editor/spellchecking.md)
 - ** Kompatibel ** mit der Notes-Anwendung von ** Nextcloud / ownCloud ** und ** mobile ** und Nextcloud Text
 - Verwalten Sie Ihre Nextcloud / ownCloud-**Aufgabenlisten** (**Nextcloud-Aufgaben** oder **Tasks Plus**/ **Calendar Plus**) oder verwenden Sie einen anderen CalDAV-Server, um Ihre Aufgaben mit zu synchronisieren
 - Optionale **Verschlüsselung** von Notizen (AES-256 ist integriert oder Sie können benutzerdefinierte Verschlüsselungsmethoden wie **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) oder **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) verwenden.)
-- **Unterstützung für Themen im dunklen Modus**
-- ** Theming-Unterstützung ** für die Hervorhebung der ** Markdown-Syntax **
+- **Unterstützung für Schemata im Dunkelmodus**
+- ** Schemata-Unterstützung ** für die Hervorhebung der ** Markdown-Syntax **
 - Alle ** Panels können platziert werden, wo immer Sie möchten **, sie können sogar ** schweben ** oder ** stapeln ** (vollständig andockbar)
-- Unterstützung für ** Freedesktop-Themensymbole **. Sie können QOwnNotes mit Ihren ** nativen Desktop-Symbolen ** und mit Ihrem bevorzugten ** dunklen Desktop-Design ** verwenden
+- Unterstützung für ** Freedesktop-Schemasymbole**. Sie können QOwnNotes mit Ihren ** originalen Desktop-Symbolen ** und mit Ihrem bevorzugten ** dunklen Desktop-Design ** verwenden
 - Unterstützung für ** hierarchische Notizkennzeichnung ** und ** Notizunterordner **
 - Unterstützung für ** das Teilen von Notizen ** auf Ihrem ** ownCloud ** / ** Nextcloud ** -Server
 - ** Tragbarer Modus ** zum Mitnehmen von QOwnNotes auf USB-Sticks
@@ -175,7 +175,7 @@ Treten Sie unserer [ Telegrammgruppe ](https://t.me/QOwnNotes) bei, um zu diskut
 - ** Ablenkungsfreier Modus **, ** Vollbildmodus ** und ** Schreibmaschinenmodus **
 - **Evernote-Import**
 - ** Verfügbar in vielen verschiedenen Sprachen ** wie Englisch, Deutsch, Französisch, Polnisch, Chinesisch, Japanisch, Russisch, Portugiesisch, Ungarisch, Niederländisch und Spanisch
-  - [ Ihre Hilfe ](../contributing/translation.md) wird sehr geschätzt, um diese Übersetzungen zu verbessern oder QOwnNotes in mehr Sprachen zu übersetzen</ul>
+  - [ Ihre Hilfe ](../contributing/translation.md) wird sehr geschätzt, um diese Übersetzungen zu verbessern oder QOwnNotes in mehr Sprachen zu übersetzen
 
 <style>
 .sheet {
