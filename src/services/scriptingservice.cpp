@@ -1276,11 +1276,12 @@ int ScriptingService::noteTextEditCursorPosition() {
     if (mainWindow != Q_NULLPTR) {
         QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
+
         return c.position();
     }
-#else
-    return 0;
 #endif
+
+    return 0;
 }
 
 /**
