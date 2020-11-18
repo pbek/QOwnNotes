@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.11.8
+- the note language auto-detection performance was improved
+  (for [#1954](https://github.com/pbek/QOwnNotes/pull/1954), thank you @Waqar144)
+
 ## 20.11.7
 - there now are new scripting commands `script.noteTextEditSetCursorPosition()`
   and `script.noteTextEditCursorPosition()` to set the text cursor in the note
