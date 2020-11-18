@@ -1442,7 +1442,7 @@
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
       <source>Minimum 8 characters</source>
-      <translation type="unfinished">Minimum 8 characters</translation>
+      <translation>Ελάχιστο 8 χαρακτήρες</translation>
     </message>
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1450,7 +1450,7 @@
       <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
       <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
       <source>Minimum 10 characters</source>
-      <translation type="unfinished">Minimum 10 characters</translation>
+      <translation>Ελάχιστο 10 χαρακτήρες</translation>
     </message>
   </context>
   <context>
@@ -3022,17 +3022,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6302"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
+      <translation>Η σημείωση δε βρέθηκε, δημιουργία νέα σημείωσης &lt;strong&gt;%1&lt;/strong&gt; στη διαδρομή &lt;strong&gt;%2&lt;/strong&gt; ;</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6347"/>
       <source>Failed to create note</source>
-      <translation type="unfinished">Failed to create note</translation>
+      <translation>Αποτυχία να δημιουργηθεί σημείωση</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6348"/>
       <source>Note creation failed</source>
-      <translation type="unfinished">Note creation failed</translation>
+      <translation>Η δημιουργία σημείωσης απέτυχε</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6509"/>
@@ -3959,7 +3959,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6288"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-      <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+      <translation>Δεν ήταν δυνατή η εύρεση της σημείωσης.&lt;br /&gt;Αδυναμία αυτόματης δημιουργίας νέας σημείωσης, διότι η δημιουργία υποφακέλων είναι απενεργοποιημένη για τον τρέχοντα φάκελο σημειώσεων.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6702"/>
@@ -6477,7 +6477,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5315"/>
       <source>External git log command to show the git versions of a note</source>
-      <translation>Εξωτερική εντολή καταγραφής git για να εμφανιστούν οι εκδόσεις git μιας σημείωσης</translation>
+      <translation>Εξωτερική εντολή git log για εμφάνιση των "εκδόσεων" μιας σημείωσης</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5321"/>
@@ -7182,7 +7182,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2861"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation>Ρίξτε μια ματιά στη &lt;a href="%1"&gt; τεκμηρίωση δέσμης ενεργειών &lt;/a&gt; για να ξεκινήσετε γρήγορα.</translation>
+      <translation>Ρίξτε μια ματιά στη &lt;a href="%1"&gt; τεκμηρίωση δέσμης ενεργειών (scripting) &lt;/a&gt; για να ξεκινήσετε γρήγορα.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2865"/>
@@ -7417,7 +7417,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="459"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
-      <translation>η εσωτερική βάση δεδομένων sqlite και οι ρυθμίσεις θα αποθηκευτούν μέσα σε ένα φάκελο &lt;code&gt;Data&lt;/code&gt; στη θέση του δυαδικού</translation>
+      <translation>η εσωτερική βάση δεδομένων sqlite και οι ρυθμίσεις θα αποθηκευτούν μέσα σε ένα φάκελο &lt;code&gt;Data&lt;/code&gt; στη θέση του δυαδικού αρχείου</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7427,7 +7427,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="464"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation>οι φάκελοι σημειώσεων, οι διαδρομές δέσμης ενεργειών και η διαδρομή προς έναν εξωτερικό επεξεργαστή θα αποθηκευτούν αυτόματα σε σχέση με το φάκελο &lt;code&gt; Data &lt;/code&gt; έτσι ώστε να φορτωθούν οι σωστοί φάκελοι σημείων, scripts και εξωτερικός επεξεργαστής ανεξάρτητα από το πού βρίσκεται η εγκατάσταση QOwnNotes</translation>
+      <translation>οι φάκελοι σημειώσεων, τα scripts και η διαδρομή προς έναν εξωτερικό επεξεργαστή κειμένου θα αποθηκευτούν αυτόματα σε σχέση με το φάκελο &lt;code&gt; Data &lt;/code&gt;, έτσι ώστε να φορτωθούν οι σωστοί φάκελοι σημειώσεων, τα scripts και ο εξωτερικός επεξεργαστής κειμένου θα φορτωθεί ανεξάρτητα από το πού βρίσκεται η εγκατάσταση QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="474"/>
@@ -7463,7 +7463,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="480"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation>Θα βρείτε ένα &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; στη διαδρομή απελευθέρωσης για να ξεκινήσετε το QOwnNotes σε φορητή λειτουργία.</translation>
+      <translation>Θα βρείτε ένα αρχείο &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; στη διαδρομή - φάκελο του προγράμματος, για να ξεκινήσετε το QOwnNotes σε φορητή λειτουργία.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2276"/>
@@ -7711,7 +7711,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation>Το μέγεθος των χαρακτήρων παύλα στο διαχωριστικό</translation>
+      <translation>Το μέγεθος των χαρακτήρων "παύλα" στο διαχωριστικό</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="260"/>

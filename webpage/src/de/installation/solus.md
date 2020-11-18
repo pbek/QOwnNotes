@@ -1,8 +1,8 @@
-# Install on Solus
+# Auf Solus installieren
 
-There is a `qownnotes` package that is maintained by the [Solus Project](https://getsol.us/).
+Es gibt ein `qownnotes`-Paket, das vom [Solus-Projekt](https://getsol.us/) verwaltet wird.
 
-You can install it by typing:
+Sie können es installieren, indem Sie Folgendes eingeben:
 
 ```bash
 sudo eopkg install qownnotes

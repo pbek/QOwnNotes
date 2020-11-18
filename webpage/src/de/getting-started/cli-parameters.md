@@ -12,10 +12,10 @@ Sie können diese Parameter auf der Befehlszeilenschnittstelle verwenden:
 | `--allow-multiple-instances` | Ermöglicht das Starten mehrerer Instanzen von QOwnNotes, auch wenn dies in den Einstellungen nicht zulässig ist                                     |
 
 ::: tip
-Wenn Sie Probleme mit der Installation von QOwnNotes haben, möchten Sie möglicherweise starten die Anwendung mit neuen Einstellungen, ohne Ihre aktuellen Einstellungen zu verlieren der Parameter ` --session `.
+Wenn Sie bei der Installation von QOwnNotes auf Probleme stoßen, können Sie die Anwendung mit neuen Einstellungen starten, ohne Ihre aktuellen Einstellungen mithilfe des Parameters der ` Sitzung ` zu verlieren.
 
 ```bash
-QOwnNotes - Sitzung-Test
+QOwnNotes - Sitzungs-Test
 ```
 :::
 

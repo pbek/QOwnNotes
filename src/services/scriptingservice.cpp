@@ -1233,6 +1233,58 @@ void ScriptingService::noteTextEditSetSelection(int start, int end) {
 }
 
 /**
+ * Sets the text cursor in the note text edit to a certain position
+ * 0 would be the beginning of the note
+ * special case: -1 would be the end of the note
+ *
+ * @param position
+ */
+void ScriptingService::noteTextEditSetCursorPosition(int position) {
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("scripting/") % QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
+        position = std::min(position, textEdit->toPlainText().count());
+        QTextCursor c = textEdit->textCursor();
+
+        if (position < 0) {
+            c.movePosition(QTextCursor::End);
+        } else {
+            c.setPosition(position);
+        }
+
+        textEdit->setTextCursor(c);
+    }
+#else
+    Q_UNUSED(position)
+#endif
+}
+
+/**
+ * Returns the current position of the text cursor in the note text edit
+ * 0 would be the beginning of the note
+ */
+int ScriptingService::noteTextEditCursorPosition() {
+    MetricsService::instance()->sendVisitIfEnabled(
+        QStringLiteral("scripting/") % QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
+        QTextCursor c = textEdit->textCursor();
+
+        return c.position();
+    }
+#endif
+
+    return 0;
+}
+
+/**
  * Returns the start position of the current selection in the note text edit
  */
 int ScriptingService::noteTextEditSelectionStart() {

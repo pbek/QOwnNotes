@@ -7,15 +7,15 @@ Starting an external program in the background
 ### Method call and parameters
 ```cpp
 /**
-    * QML wrapper to start a detached process
-    *
-    * @param executablePath the path of the executable
-    * @param parameters a list of parameter strings
-    * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
-    * @param callbackParameter an additional parameter for loops or the like (optional)
-    * @param processData data written to the process if the callback is used (optional)
-    * @return true on success, false otherwise
-    */
+ * QML wrapper to start a detached process
+ *
+ * @param executablePath the path of the executable
+ * @param parameters a list of parameter strings
+ * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
+ * @param callbackParameter an additional parameter for loops or the like (optional)
+ * @param processData data written to the process if the callback is used (optional)
+ * @return true on success, false otherwise
+ */
 bool startDetachedProcess(QString executablePath, QStringList parameters,
                             QString callbackIdentifier, QVariant callbackParameter,
                             QByteArray processData);
@@ -63,12 +63,12 @@ Starting an external program and wait for the output
 ### Method call and parameters
 ```cpp
 /**
-    * QML wrapper to start a synchronous process
-    *
-    * @param executablePath the path of the executable
-    * @param parameters a list of parameter strings
-    * @param data the data that will be written to the process (optional)
-    * @return the text that was returned by the process
+ * QML wrapper to start a synchronous process
+ *
+ * @param executablePath the path of the executable
+ * @param parameters a list of parameter strings
+ * @param data the data that will be written to the process (optional)
+ * @return the text that was returned by the process
 QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
 ```
 
@@ -86,10 +86,10 @@ Getting the path of the current note folder
 ### Method call and parameters
 ```cpp
 /**
-    * QML wrapper to get the current note folder path
-    *
-    * @return the path of the current note folder
-    */
+ * QML wrapper to get the current note folder path
+ *
+ * @return the path of the current note folder
+ */
 QString currentNoteFolderPath();
 ```
 
@@ -107,10 +107,10 @@ Getting the current note
 ### Method call and parameters
 ```cpp
 /**
-    * QML wrapper to get the current note
-    *
-    * @returns {NoteApi} the the current note object
-    */
+ * QML wrapper to get the current note
+ *
+ * @returns {NoteApi} the the current note object
+ */
 NoteApi currentNote();
 ```
 
@@ -128,10 +128,10 @@ Logging to the log widget
 ### Method call and parameters
 ```cpp
 /**
-    * QML wrapper to log to the log widget
-    *
-    * @param text
-    */
+ * QML wrapper to log to the log widget
+ *
+ * @param text
+ */
 void log(QString text);
 ```
 
@@ -146,11 +146,11 @@ Downloading an url to a string
 ### Method call and parameters
 ```cpp
 /**
-    * QML wrapper to download an url and returning it as text
-    *
-    * @param url
-    * @return {QString} the content of the downloaded url
-    */
+ * QML wrapper to download an url and returning it as text
+ *
+ * @param url
+ * @return {QString} the content of the downloaded url
+ */
 QString downloadUrlToString(QUrl url);
 ```
 
@@ -168,13 +168,13 @@ Downloading an url to the media folder
 ### Method call and parameters
 ```cpp
 /**
-    * QML wrapper to download an url to the media folder and returning the media
-    * url or the markdown image text of the media relative to the current note
-    *
-    * @param {QString} url
-    * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
-    * @return {QString} the media markdown or url
-    */
+ * QML wrapper to download an url to the media folder and returning the media
+ * url or the markdown image text of the media relative to the current note
+ *
+ * @param {QString} url
+ * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
+ * @return {QString} the media markdown or url
+ */
 QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
 ```
 
@@ -192,13 +192,13 @@ Inserting a media file into the media folder
 ### Method call and parameters
 ```cpp
 /**
-    * QML wrapper to insert a media file into the media folder and returning
-    * the media url or the markdown image text of the media  relative to the current note
-    *
-    * @param {QString} mediaFilePath
-    * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
-    * @return {QString} the media markdown or url
-    */
+ * QML wrapper to insert a media file into the media folder and returning
+ * the media url or the markdown image text of the media  relative to the current note
+ *
+ * @param {QString} mediaFilePath
+ * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
+ * @return {QString} the media markdown or url
+ */
 QString ScriptingService::insertMediaFile(QString mediaFilePath,
                                         bool returnUrlOnly);
 ```
@@ -219,8 +219,8 @@ Refreshes the note preview.
 ### Method call and parameters
 ```cpp
 /**
-    * Regenerates the note preview
-    */
+ * Regenerates the note preview
+ */
 QString ScriptingService::regenerateNotePreview();
 ```
 
@@ -238,22 +238,22 @@ Registering a custom action
 ### Method call and parameters
 ```cpp
 /**
-    * Registers a custom action
-    *
-    * @param identifier the identifier of the action
-    * @param menuText the text shown in the menu
-    * @param buttonText the text shown in the button
-    *                   (no button will be viewed if empty)
-    * @param icon the icon file path or the name of a freedesktop theme icon
-    *             you will find a list of icons here:
-    *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
-    * @param useInNoteEditContextMenu if true use the action in the note edit
-    *                                 context menu (default: false)
-    * @param hideButtonInToolbar if true the button will not be shown in the
-    *                            custom action toolbar (default: false)
-    * @param useInNoteListContextMenu if true use the action in the note list
-    *                                 context menu (default: false)
-    */
+ * Registers a custom action
+ *
+ * @param identifier the identifier of the action
+ * @param menuText the text shown in the menu
+ * @param buttonText the text shown in the button
+ *                   (no button will be viewed if empty)
+ * @param icon the icon file path or the name of a freedesktop theme icon
+ *             you will find a list of icons here:
+ *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
+ * @param useInNoteEditContextMenu if true use the action in the note edit
+ *                                 context menu (default: false)
+ * @param hideButtonInToolbar if true the button will not be shown in the
+ *                            custom action toolbar (default: false)
+ * @param useInNoteListContextMenu if true use the action in the note list
+ *                                 context menu (default: false)
+ */
 void ScriptingService::registerCustomAction(QString identifier,
                                             QString menuText,
                                             QString buttonText,
@@ -288,11 +288,11 @@ Registering a label
 ### Method call and parameters
 ```cpp
 /**
-    * Registers a label to write to
-    *
-    * @param identifier the identifier of the label
-    * @param text the text shown in the label (optional)
-    */
+ * Registers a label to write to
+ *
+ * @param identifier the identifier of the label
+ * @param text the text shown in the label (optional)
+ */
 void ScriptingService::registerLabel(QString identifier, QString text);
 ```
 
@@ -319,11 +319,11 @@ Setting the text of a registered label
 ### Method call and parameters
 ```cpp
 /**
-    * Sets the text of a registered label
-    *
-    * @param identifier the identifier of the label
-    * @param text the text shown in the label
-    */
+ * Sets the text of a registered label
+ *
+ * @param identifier the identifier of the label
+ * @param text the text shown in the label
+ */
 void ScriptingService::setLabelText(QString identifier, QString text);
 ```
 
@@ -344,10 +344,10 @@ Creating a new note
 ### Method call and parameters
 ```cpp
 /**
-    * Creates a new note
-    *
-    * @param text the note text
-    */
+ * Creates a new note
+ *
+ * @param text the note text
+ */
 void ScriptingService::createNote(QString text);
 ```
 
@@ -365,10 +365,10 @@ Accessing the clipboard
 ### Method call and parameters
 ```cpp
 /**
-    * Returns the content of the clipboard as text or html
-    *
-    * @param asHtml returns the clipboard content as html instead of text
-    */
+ * Returns the content of the clipboard as text or html
+ *
+ * @param asHtml returns the clipboard content as html instead of text
+ */
 QString ScriptingService::clipboard(bool asHtml);
 ```
 
@@ -387,10 +387,10 @@ Write text to the note text edit
 ### Method call and parameters
 ```cpp
 /**
-    * Writes text to the current cursor position in the note text edit
-    *
-    * @param text
-    */
+ * Writes text to the current cursor position in the note text edit
+ *
+ * @param text
+ */
 void ScriptingService::noteTextEditWrite(QString text);
 ```
 
@@ -413,10 +413,10 @@ Read the selected text in the note text edit
 ### Method call and parameters
 ```cpp
 /**
-    * Reads the selected text in the note text edit
-    *
-    * @return
-    */
+ * Reads the selected text in the note text edit
+ *
+ * @return
+ */
 QString ScriptingService::noteTextEditSelectedText();
 ```
 
@@ -436,8 +436,8 @@ Select all text in the note text edit
 ### Method call and parameters
 ```cpp
 /**
-    * Selects all text in the note text edit
-    */
+ * Selects all text in the note text edit
+ */
 void ScriptingService::noteTextEditSelectAll();
 ```
 
@@ -455,8 +455,8 @@ Select the current line in the note text edit
 ### Method call and parameters
 ```cpp
 /**
-    * Selects the current line in the note text edit
-    */
+ * Selects the current line in the note text edit
+ */
 void ScriptingService::noteTextEditSelectCurrentLine();
 ```
 
@@ -471,8 +471,8 @@ Select the current word in the note text edit
 ### Method call and parameters
 ```cpp
 /**
-    * Selects the current line in the note text edit
-    */
+ * Selects the current line in the note text edit
+ */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```
 
@@ -487,11 +487,11 @@ Set the currently selected text in the note text edit
 ### Method call and parameters
 ```cpp
 /**
-    * Sets the currently selected text in the note text edit
-    *
-    * @param start
-    * @param end
-    */
+ * Sets the currently selected text in the note text edit
+ *
+ * @param start
+ * @param end
+ */
 void ScriptingService::noteTextEditSetSelection(int start, int end);
 ```
 
@@ -509,8 +509,8 @@ Get the start position of the current selection in the note text edit
 ### Method call and parameters
 ```cpp
 /**
-    * Returns the start position of the current selection in the note text edit
-    */
+ * Returns the start position of the current selection in the note text edit
+ */
 int ScriptingService::noteTextEditSelectionStart();
 ```
 
@@ -525,8 +525,8 @@ Get the end position of the current selection in the note text edit
 ### Method call and parameters
 ```cpp
 /**
-    * Returns the end position of the current selection in the note text edit
-    */
+ * Returns the end position of the current selection in the note text edit
+ */
 int ScriptingService::noteTextEditSelectionEnd();
 ```
 
@@ -535,19 +535,60 @@ int ScriptingService::noteTextEditSelectionEnd();
 script.log(script.noteTextEditSelectionEnd());
 ```
 
+Set the text cursor in the note text edit to a certain position
+---------------------------------------------------------------
+
+### Method call and parameters
+```cpp
+/**
+ * Sets the text cursor in the note text edit to a certain position
+ * 0 would be the beginning of the note
+ * special case: -1 would be the end of the note
+ *
+ * @param position
+ */
+void ScriptingService::noteTextEditSetCursorPosition(int position);
+```
+
+### Example
+```js
+// jump to the 11th character in the note
+script.noteTextEditSetCursorPosition(10);
+
+// jump to the end of the note
+script.noteTextEditSetCursorPosition(-1);
+```
+
+Get the current position of the text cursor in the note text edit
+-----------------------------------------------------------------
+
+### Method call and parameters
+```cpp
+/**
+ * Returns the current position of the text cursor in the note text edit
+ * 0 would be the beginning of the note
+ */
+int ScriptingService::noteTextEditCursorPosition();
+```
+
+### Example
+```js
+script.log(script.noteTextEditCursorPosition());
+```
+
 Read the current word from the note text edit
 ---------------------------------------------
 
 ### Method call and parameters
 ```cpp
 /**
-    * Reads the current word in the note text edit
-    *
-    * @param withPreviousCharacters also get more characters at the beginning
-    *                               to get characters like "@" that are not
-    *                               word-characters
-    * @return
-    */
+ * Reads the current word in the note text edit
+ *
+ * @param withPreviousCharacters also get more characters at the beginning
+ *                               to get characters like "@" that are not
+ *                               word-characters
+ * @return
+ */
 QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 ```
 
@@ -583,10 +624,10 @@ Tag the current note
 ### Method call and parameters
 ```cpp
 /**
-    * Tags the current note with a tag named tagName
-    *
-    * @param tagName
-    */
+ * Tags the current note with a tag named tagName
+ *
+ * @param tagName
+ */
 void ScriptingService::tagCurrentNote(QString tagName);
 ```
 
@@ -606,13 +647,13 @@ Create or fetch a tag by its name breadcrumb list
 ### Method call and parameters
 ```cpp
 /**
-    * Fetches or creates a tag by its "breadcrumb list" of tag names
-    * Element nameList[0] would be highest in the tree (with parentId: 0)
-    *
-    * @param nameList
-    * @param createMissing {bool} if true (default) all missing tags will be created
-    * @return TagApi object of deepest tag of the name breadcrumb list
-    */
+ * Fetches or creates a tag by its "breadcrumb list" of tag names
+ * Element nameList[0] would be highest in the tree (with parentId: 0)
+ *
+ * @param nameList
+ * @param createMissing {bool} if true (default) all missing tags will be created
+ * @return TagApi object of deepest tag of the name breadcrumb list
+ */
 TagApi *ScriptingService::getTagByNameBreadcrumbList(
     const QStringList &nameList, bool createMissing);
 ```
@@ -631,11 +672,11 @@ Search for tags by name
 ### Method call and parameters
 ```cpp
 /**
-    * Fetches all tags by doing a substring search on the name field
-    *
-    * @param name {QString} name to search for
-    * @return {QStringList} list of tag names
-    */
+ * Fetches all tags by doing a substring search on the name field
+ *
+ * @param name {QString} name to search for
+ * @return {QStringList} list of tag names
+ */
 QStringList ScriptingService::searchTagsByName(QString name);
 ```
 
@@ -654,13 +695,13 @@ Search for notes by note text
 ### Method call and parameters
 ```cpp
 /**
-    * Returns a list of note ids of all notes with a certain text in the note text
-    *
-    * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
-    * can only transfer the note ids
-    *
-    * @return {QList<int>} list of note ids
-    */
+ * Returns a list of note ids of all notes with a certain text in the note text
+ *
+ * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
+ * can only transfer the note ids
+ *
+ * @return {QList<int>} list of note ids
+ */
 QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
 ```
 
@@ -684,10 +725,10 @@ Add a custom stylesheet
 ### Method call and parameters
 ```cpp
 /**
-    * Adds a custom stylesheet to the application
-    *
-    * @param stylesheet
-    */
+ * Adds a custom stylesheet to the application
+ *
+ * @param stylesheet
+ */
 void ScriptingService::addStyleSheet(QString stylesheet);
 ```
 
@@ -717,8 +758,8 @@ Reloading the scripting engine
 ### Method call and parameters
 ```cpp
 /**
-    * Reloads the scripting engine
-    */
+ * Reloads the scripting engine
+ */
 void ScriptingService::reloadScriptingEngine();
 ```
 
@@ -734,12 +775,12 @@ Fetching a note by its file name
 ### Method call and parameters
 ```cpp
 /**
-    * Fetches a note by its file name
-    *
-    * @param fileName string the file name of the note (mandatory)
-    * @param noteSubFolderId integer id of the note subfolder
-    * @return NoteApi*
-    */
+ * Fetches a note by its file name
+ *
+ * @param fileName string the file name of the note (mandatory)
+ * @param noteSubFolderId integer id of the note subfolder
+ * @return NoteApi*
+ */
 NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
                                                 int noteSubFolderId);
 ```
@@ -756,11 +797,11 @@ Fetching a note by its id
 ### Method call and parameters
 ```cpp
 /**
-    * Fetches a note by its id
-    *
-    * @param id int the id of the note
-    * @return NoteApi*
-    */
+ * Fetches a note by its id
+ *
+ * @param id int the id of the note
+ * @return NoteApi*
+ */
 NoteApi* ScriptingService::fetchNoteById(int id);
 ```
 
@@ -779,13 +820,13 @@ Checking if a note exists by its file name
 ### Method call and parameters
 ```cpp
 /**
-    * Checks if a note file exists by its file name
-    *
-    * @param fileName string the file name of the note (mandatory)
-    * @param ignoreNoteId integer id of a note to ignore in the check
-    * @param noteSubFolderId integer id of the note subfolder
-    * @return bool
-    */
+ * Checks if a note file exists by its file name
+ *
+ * @param fileName string the file name of the note (mandatory)
+ * @param ignoreNoteId integer id of a note to ignore in the check
+ * @param noteSubFolderId integer id of the note subfolder
+ * @return bool
+ */
 bool ScriptingService::noteExistsByFileName(QString fileName,
                                             int ignoreNoteId,
                                             int noteSubFolderId);
@@ -806,11 +847,11 @@ Copying text into the clipboard
 ### Method call and parameters
 ```cpp
 /**
-    * Copies text into the clipboard as plain text or html mime data
-    *
-    * @param text string text to put into the clipboard
-    * @param asHtml bool if true the text will be set as html mime data
-    */
+ * Copies text into the clipboard as plain text or html mime data
+ *
+ * @param text string text to put into the clipboard
+ * @param asHtml bool if true the text will be set as html mime data
+ */
 void ScriptingService::setClipboardText(QString text, bool asHtml);
 ```
 
@@ -829,10 +870,10 @@ Jumping to a note
 ### Method call and parameters
 ```cpp
 /**
-    * Sets the current note if the note is visible in the note list
-    *
-    * @param note NoteApi note to jump to
-    */
+ * Sets the current note if the note is visible in the note list
+ *
+ * @param note NoteApi note to jump to
+ */
 void ScriptingService::setCurrentNote(NoteApi *note);
 ```
 
@@ -851,12 +892,12 @@ Jumping to a note subfolder
 ### Method call and parameters
 ```cpp
 /**
-    * Jumps to a note subfolder
-    *
-    * @param noteSubFolderPath {QString} path of the subfolder, relative to the note folder
-    * @param separator {QString} separator between parts of the path, default "/"
-    * @return true if jump was successful
-    */
+ * Jumps to a note subfolder
+ *
+ * @param noteSubFolderPath {QString} path of the subfolder, relative to the note folder
+ * @param separator {QString} separator between parts of the path, default "/"
+ * @return true if jump was successful
+ */
 bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
                                             QString separator);
 ```
@@ -880,11 +921,11 @@ Showing an information message box
 ### Method call and parameters
 ```cpp
 /**
-    * Shows an information message box
-    *
-    * @param text
-    * @param title (optional)
-    */
+ * Shows an information message box
+ *
+ * @param text
+ * @param title (optional)
+ */
 void ScriptingService::informationMessageBox(QString text, QString title);
 ```
 
@@ -900,17 +941,17 @@ Showing a question message box
 ### Method call and parameters
 ```cpp
 /**
-    * Shows a question message box
-    *
-    * For information about buttons see:
-    * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
-    *
-    * @param text
-    * @param title (optional)
-    * @param buttons buttons that should be shown (optional)
-    * @param defaultButton default button that will be selected (optional)
-    * @return id of pressed button
-    */
+ * Shows a question message box
+ *
+ * For information about buttons see:
+ * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+ *
+ * @param text
+ * @param title (optional)
+ * @param buttons buttons that should be shown (optional)
+ * @param defaultButton default button that will be selected (optional)
+ * @return id of pressed button
+ */
 int ScriptingService::questionMessageBox(
         QString text, QString title, int buttons, int defaultButton);
 ```
@@ -936,13 +977,13 @@ Showing an open file dialog
 ### Method call and parameters
 ```cpp
 /**
-    * Shows an open file dialog
-    *
-    * @param caption (optional)
-    * @param dir (optional)
-    * @param filter (optional)
-    * @return QString
-    */
+ * Shows an open file dialog
+ *
+ * @param caption (optional)
+ * @param dir (optional)
+ * @param filter (optional)
+ * @return QString
+ */
 QString ScriptingService::getOpenFileName(QString caption, QString dir,
                                             QString filter);
 ```
@@ -959,13 +1000,13 @@ Showing a save file dialog
 ### Method call and parameters
 ```cpp
 /**
-    * Shows a save file dialog
-    *
-    * @param caption (optional)
-    * @param dir (optional)
-    * @param filter (optional)
-    * @return QString
-    */
+ * Shows a save file dialog
+ *
+ * @param caption (optional)
+ * @param dir (optional)
+ * @param filter (optional)
+ * @return QString
+ */
 QString ScriptingService::getSaveFileName(QString caption, QString dir,
                                             QString filter);
 ```
@@ -1079,24 +1120,24 @@ Storing and loading persistent variables
 ### Method call and parameters
 ```cpp
 /**
-    * Stores a persistent variable
-    * These variables are accessible globally over all scripts
-    * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
-    *
-    * @param key {QString}
-    * @param value {QVariant}
-    */
+ * Stores a persistent variable
+ * These variables are accessible globally over all scripts
+ * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
+ *
+ * @param key {QString}
+ * @param value {QVariant}
+ */
 void ScriptingService::setPersistentVariable(const QString &key,
                                                 const QVariant &value);
 
 /**
-    * Loads a persistent variable
-    * These variables are accessible globally over all scripts
-    *
-    * @param key {QString}
-    * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
-    * @return
-    */
+ * Loads a persistent variable
+ * These variables are accessible globally over all scripts
+ *
+ * @param key {QString}
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
+ * @return
+ */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
                                                     const QVariant &defaultValue);
 ```
@@ -1123,12 +1164,12 @@ Loading application settings variables
 ### Method call and parameters
 ```cpp
 /**
-    * Loads an application settings variable
-    *
-    * @param key {QString}
-    * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
-    * @return
-    */
+ * Loads an application settings variable
+ *
+ * @param key {QString}
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
+ * @return
+ */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
                                                             const QVariant &defaultValue);
 ```
@@ -1151,11 +1192,11 @@ You can cache files at the default cache location of your system.
 ### Method call and parameters
 ```cpp
 /**
-    * Returns a cache directory for a script
-    *
-    * @param {QString} subDir the subfolder to create and use
-    * @return {QString} the cache dir path
-    */
+ * Returns a cache directory for a script
+ *
+ * @param {QString} subDir the subfolder to create and use
+ * @return {QString} the cache dir path
+ */
 QString ScriptingService::cacheDir(const QString &subDir) const;
 ```
 
@@ -1173,11 +1214,11 @@ You can clear the cache files of your script by passing its name to clearCacheDi
 ### Method call and parameters
 ```cpp
 /**
-    * Clears the cache directory for a script
-    *
-    * @param {QString} subDir the subfolder to clear
-    * @return {bool} true on success
-    */
+ * Clears the cache directory for a script
+ *
+ * @param {QString} subDir the subfolder to clear
+ * @return {bool} true on success
+ */
 bool ScriptingService::clearCacheDir(const QString &subDir) const;
 ```
 
@@ -1216,15 +1257,15 @@ Converting path separators to native ones
 ### Method call and parameters
 ```cpp
 /**
-    * Returns path with the '/' separators converted to separators that are
-    * appropriate for the underlying operating system.
-    *
-    * On Windows, toNativeDirSeparators("c:/winnt/system32") returns
-    * "c:\winnt\system32".
-    *
-    * @param path
-    * @return
-    */
+ * Returns path with the '/' separators converted to separators that are
+ * appropriate for the underlying operating system.
+ *
+ * On Windows, toNativeDirSeparators("c:/winnt/system32") returns
+ * "c:\winnt\system32".
+ *
+ * @param path
+ * @return
+ */
 QString ScriptingService::toNativeDirSeparators(QString path);
 ```
 
@@ -1240,13 +1281,13 @@ Converting path separators from native ones
 ### Method call and parameters
 ```cpp
 /**
-    * Returns path using '/' as file separator.
-    * On Windows, for instance, fromNativeDirSeparators("c:\\winnt\\system32")
-    * returns "c:/winnt/system32".
-    *
-    * @param path
-    * @return
-    */
+ * Returns path using '/' as file separator.
+ * On Windows, for instance, fromNativeDirSeparators("c:\\winnt\\system32")
+ * returns "c:/winnt/system32".
+ *
+ * @param path
+ * @return
+ */
 QString ScriptingService::fromNativeDirSeparators(QString path);
 ```
 
@@ -1262,10 +1303,10 @@ Getting the native directory separator
 ### Method call and parameters
 ```cpp
 /**
-    * Returns the native directory separator "/" or "\" on Windows
-    *
-    * @return
-    */
+ * Returns the native directory separator "/" or "\" on Windows
+ *
+ * @return
+ */
 QString ScriptingService::dirSeparator();
 ```
 
@@ -1281,10 +1322,10 @@ Getting a list of the paths of all selected notes
 ### Method call and parameters
 ```cpp
 /**
-    * Returns a list of the paths of all selected notes
-    *
-    * @return {QStringList} list of selected note paths
-    */
+ * Returns a list of the paths of all selected notes
+ *
+ * @return {QStringList} list of selected note paths
+ */
 QStringList ScriptingService::selectedNotesPaths();
 ```
 
@@ -1303,10 +1344,10 @@ Getting a list of the ids of all selected notes
 ### Method call and parameters
 ```cpp
 /**
-    * Returns a list of the ids of all selected notes
-    *
-    * @return {QList<int>} list of selected note ids
-    */
+ * Returns a list of the ids of all selected notes
+ *
+ * @return {QList<int>} list of selected note ids
+ */
 QList<int> ScriptingService::selectedNotesIds();
 ```
 
@@ -1325,12 +1366,12 @@ Triggering a menu action
 ### Method call and parameters
 ```cpp
 /**
-    * Triggers a menu action
-    *
-    * @param objectName {QString} object name of the action to trigger
-    * @param checked {QString} only trigger the action if checked-state is
-    *                          different than this parameter (optional, can be 0 or 1)
-    */
+ * Triggers a menu action
+ *
+ * @param objectName {QString} object name of the action to trigger
+ * @param checked {QString} only trigger the action if checked-state is
+ *                          different than this parameter (optional, can be 0 or 1)
+ */
 void ScriptingService::triggerMenuAction(QString objectName, QString checked);
 ```
 
@@ -1355,15 +1396,15 @@ Opening an input dialog with a select box
 ### Method call and parameters
 ```cpp
 /**
-    * Opens an input dialog with a select box
-    *
-    * @param title {QString} title of the dialog
-    * @param label {QString} label text of the dialog
-    * @param items {QStringList} list of items to select
-    * @param current {int} index of the item that should be selected (default: 0)
-    * @param editable {bool} if true the text in the dialog can be edited (default: false)
-    * @return {QString} text of the selected item
-    */
+ * Opens an input dialog with a select box
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param items {QStringList} list of items to select
+ * @param current {int} index of the item that should be selected (default: 0)
+ * @param editable {bool} if true the text in the dialog can be edited (default: false)
+ * @return {QString} text of the selected item
+ */
 QString ScriptingService::inputDialogGetItem(
         const QString &title, const QString &label, const QStringList &items,
         int current, bool editable);
@@ -1385,13 +1426,13 @@ Opening an input dialog with a line edit
 ### Method call and parameters
 ```cpp
 /**
-    * Opens an input dialog with a line edit
-    *
-    * @param title {QString} title of the dialog
-    * @param label {QString} label text of the dialog
-    * @param text {QString} text in the dialog (optional)
-    * @return
-    */
+ * Opens an input dialog with a line edit
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param text {QString} text in the dialog (optional)
+ * @return
+ */
 QString ScriptingService::inputDialogGetText(
         const QString &title, const QString &label, const QString &text);
 ```
@@ -1409,10 +1450,10 @@ Checking if a file exists
 ### Method call and parameters
 ```cpp
 /**
-    * Check if a file exists
-    * @param filePath
-    * @return
-    */
+ * Check if a file exists
+ * @param filePath
+ * @return
+ */
 bool ScriptingService::fileExists(QString &filePath);
 ```
 
@@ -1428,12 +1469,12 @@ Reading text from a file
 ### Method call and parameters
 ```cpp
 /**
-    * Read text from a file
-    *
-    * @param filePath {QString} path of the file to load
-    * @param codec {QString} file encoding (default: UTF-8)
-    * @return the file data or null if the file does not exist
-    */
+ * Read text from a file
+ *
+ * @param filePath {QString} path of the file to load
+ * @param codec {QString} file encoding (default: UTF-8)
+ * @return the file data or null if the file does not exist
+ */
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 
@@ -1452,13 +1493,13 @@ Writing text to a file
 ### Method call and parameters
 ```cpp
 /**
-    * Writes a text to a file
-    *
-    * @param filePath {QString}
-    * @param data {QString}
-    * @param createParentDirs {bool} optional (default: false)
-    * @return
-    */
+ * Writes a text to a file
+ *
+ * @param filePath {QString}
+ * @param data {QString}
+ * @param createParentDirs {bool} optional (default: false)
+ * @return
+ */
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 

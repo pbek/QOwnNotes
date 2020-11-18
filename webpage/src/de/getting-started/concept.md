@@ -33,7 +33,7 @@ graph TB
 
 ## QOwnNotes
 
-- QOwnNotes **stores notes** directly to your **note folder as markdown files**
+- QOwnNotes ** speichert Notizen ** direkt in Ihrem ** Notizordner als Markdown-Dateien **
 - Es kann direkt mit Ihrem Nextcloud / ownCloud-Server kommunizieren, um Notizen auszutauschen
 - Sie können auch über die [QOwnNotesApi Nextcloud-App](#qownnotesapi-nextcloud-app) auf Ihren Notizverlauf und Papierkorb auf Ihrem Nextcloud / ownCloud-Server zugreifen
 - Auf Todo-Listen auf Ihrem Nextcloud / ownCloud-Server kann über QOwnNotes zugegriffen werden

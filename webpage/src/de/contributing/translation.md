@@ -8,9 +8,9 @@ Vielen Dank für Ihre Hilfe!
 
 ![crowdin](/img/crowdin.png)
 
-** Crowdin ** ist eine beliebte Lokalisierungsverwaltungsplattform für mobile Apps, Web, Desktop-Software und zugehörige Assets.
+**Crowdin** ist eine beliebte Lokalisierungsverwaltungsplattform für mobile Apps, Web, Desktop-Software und zugehörige Assets.
 
-Sie können sich unter [ Crowdin ](https://crowdin.com/project/qownnotes/invite) und anmelden und ** QOwnNotes ** mit einfachen Tools in Ihre Sprache ** übersetzen **.
+Sie können sich unter [Crowdin](https://crowdin.com/project/qownnotes/invite) und anmelden und **QOwnNotes** mit einfachen Tools in Ihre Sprache **übersetzen**.
 
 **[QOwnNotes auf Crowdin](screenshot)**
 
@@ -20,25 +20,25 @@ Wenn Sie vorhandene Sprachen um neue Übersetzungen erweitern möchten, können 
 
 ## Korrekturlesen
 
-Wenn Sie ein sehr guter Sprecher einer bereits übersetzten Sprache sind, die noch nicht Korrektur gelesen wurde, sind wir dankbar für Ihre Hilfe, damit die QOwnNotes-Erfahrung zuverlässiger und bequemer wird.
+Wenn Sie ein sehr guter Benutzer einer bereits übersetzten Sprache sind, die noch nicht Korrektur gelesen wurde, sind wir dankbar für Ihre Hilfe, damit die QOwnNotes-Erfahrung für Sie und andere User sich zuverlässiger gestaltet.
 
-Klicken Sie hier, um zu sehen, ob Ihre Sprache zu den übersetzten gehört!
+Klicken Sie hier, um zu sehen, ob Ihre Sprache zu den bereits übersetzten gehört!
 
 [QOwnNotes auf Crowdin](screenshot)
 
-Sobald Sie den [ GitHub-Problem ](https://github.com/pbek/QOwnNotes/issues) des Projektbesitzers kontaktiert und die Erlaubnis zum Korrekturlesen in Ihrer Sprache erhalten haben, können Sie loslegen!
+Sobald Sie den Projektbesitzer hier: [GitHub-Probleme](https://github.com/pbek/QOwnNotes/issues) kontaktiert und die Erlaubnis zum Korrekturlesen in Ihrer Sprache erhalten haben, können Sie starten!
 
-Bitte beachten Sie bei der Arbeit am Projekt einige Dinge:
+Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt:
 
 1) Maximale Genauigkeit sorgt für die beste Benutzererfahrung.
 
-2) Verwenden Sie Ihre Stilwahl kreativ, sobald Ihre Übersetzung die Anforderung erfüllt, die identischste Übereinstimmung auszuwählen.
+2) Seien Sie kreativ in der Wortwahl, aber sorgen Sie für eine möglichst genaue Übersetzung.
 
 3) Es ist sinnvoll, dass die Übersetzung ähnlich präzise ist und denselben Formalitäten wie das Original folgt.
 
-4) Verwenden wir immer dieselben Übersetzungen für identische Quellausdrücke:
+4) Verwenden Sie immer dieselben Übersetzungen für identische Ausdrücke aus dem Quelltext:
 
-   Wenn `trashed notes` auf Deutsch `mit <0>gelöschte Notizen` übersetzt wurde, verwenden wir immer diesen Ausdruck. Eine Ausnahme wäre, wenn Sie grammatikalisch gebunden sind, eine Alternative zu verwenden.
+   Wenn `trashed notes` auf Deutsch mit`gelöschte Notizen` übersetzt wurde, verwenden Sie immer diesen Ausdruck. Eine Ausnahme davon ist, wenn Sie grammatikalisch oder sprachlich gebunden sind, eine Alternative zu verwenden.
 
    ![screenshot](/img/crowdin/screenshot-7.png)
 
@@ -46,13 +46,13 @@ Bitte beachten Sie bei der Arbeit am Projekt einige Dinge:
 
    Standardisieren Sie alle Vorkommen so gut wie möglich, damit identische Begriffe identische Übersetzungen erhalten.
 
-   ` "Notiz" ` sollte auf jeden Fall immer nur eine Übersetzung haben.
+   `Notiz` sollte auf jeden Fall immer nur eine Übersetzung haben.
 
 5) Für den Plural fügen Sie bitte jeweils die entsprechende Übersetzung in den entsprechenden Block ein.
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-6) Die `%1 ` -Tags müssen ohne Leerzeichen geschrieben werden. In LTR-Sprachen können Sie entweder die Tags aus dem Original einfügen oder sie in Ihre Übersetzung schreiben.
+6) Die `%1` -Tags müssen ohne Leerzeichen geschrieben werden. In LTR-Sprachen können Sie entweder die Tags aus dem Original einfügen oder sie in Ihre Übersetzung schreiben.
 
    ![screenshot](/img/crowdin/screenshot-1.png)
 
@@ -60,14 +60,14 @@ Bitte beachten Sie bei der Arbeit am Projekt einige Dinge:
 
    ![screenshot](/img/crowdin/screenshot-3.png)
 
-7) Verwenden Sie ` & ` vor jedem Buchstaben, der in einer Verknüpfung verwendet werden soll. Dies kann das gleiche wie im Original sein, muss es aber nicht.
+7) Verwenden Sie `&` vor jedem Buchstaben, der in einer Verknüpfung verwendet werden soll. Dies kann das gleiche wie im Original sein, muss aber nicht.
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
 ## /img/crowdin/screenshot-4.png
 
-Sie müssen sich mit der Sprache auseinandersetzen, die diese Software spricht, und viel über Begriffe und die Innenseiten des Projekts lernen.
+Sie setzen sich mit der Sprache auseinander, die diese Software spricht, und lernen viel über Begriffe und erhalten viel Insider-Wissen über das Projekt.
 
-Wenn Sie also bereit sind, beim Korrekturlesen der Übersetzung Ihrer Sprache zu helfen, begrüßt Sie [ Amy Lang ](https://crowdin.com/profile/rawfreeamy) als Übersetzerin mit über zehn Jahren Erfahrung zu einem kurzen Coaching in der Praxis und der Welt des Übersetzens und Korrekturlesens. Sie steht bei Fragen gerne bereit und lässt Sie das Beste aus Ihrer Erfahrung mit der QOwnNotes-Übersetzung herausholen.
+Wenn Sie also bereit sind, beim Korrekturlesen der Übersetzung Ihrer Sprache zu helfen, begrüßt Sie [Amy Lang](https://crowdin.com/profile/rawfreeamy) als Übersetzerin mit über zehn Jahren Erfahrung zu einem kurzen Coaching in der Praxis und der Welt des Übersetzens und Korrekturlesens. Sie steht bei Fragen gerne bereit und lässt Sie das Beste aus Ihrer Erfahrung mit der QOwnNotes-Übersetzung herausholen.
 
-Vielen dank für Deine Hilfe!
+Vielen dank für Ihre Hilfe!
