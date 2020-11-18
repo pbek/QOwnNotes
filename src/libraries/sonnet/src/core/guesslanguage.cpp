@@ -817,8 +817,8 @@ QVector<QString> GuessLanguagePrivate::createOrderedModel(const QString &content
     }
 
     //invert the map <freq, trigram>
-    QVector<QPair<int, QString>> ord;
-    ord.reserve(trigramCounts.size());
+    QVector<QPair<int, QString>> temp;
+    temp.reserve(trigramCounts.size());
 
     auto it = trigramCounts.constBegin();
     for (; it != trigramCounts.constEnd(); ++it) {
@@ -828,20 +828,21 @@ QVector<QString> GuessLanguagePrivate::createOrderedModel(const QString &content
         if (!hasTwoSpaces) {
             const int freq = it.value();
             const QString& trigram = it.key();
-            ord.append({freq, trigram});
+            temp.append({freq, trigram});
         }
     }
 
-    auto i = std::partition(ord.begin(), ord.end(), [](const QPair<int, QString>& a) { return a.first != 1; });
+    auto i = std::partition(temp.begin(), temp.end(), [](const QPair<int, QString>& a) { return a.first != 1; });
 
-    std::sort(ord.begin(), i, [](const QPair<int, QString>& a,
+    std::sort(temp.begin(), i, [](const QPair<int, QString>& a,
                                  const QPair<int, QString>& b) {
         return a.first > b.first;
     });
 
     QVector<QString> orderedTrigrams;
-    orderedTrigrams.reserve(ord.size());
-    for (const auto& tri : qAsConst(ord)) {
+    orderedTrigrams.reserve(temp.size());
+    const auto& constOrd = temp;
+    for (const auto& tri : constOrd) {
         orderedTrigrams.append(tri.second);
     }
 
