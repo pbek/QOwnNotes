@@ -20,7 +20,6 @@
 */
 
 #include <QtGlobal>
-#include <QCoreApplication>
 #include <QFile>
 #include <QStandardPaths>
 #include <QDataStream>
@@ -32,7 +31,6 @@
 #include "tokenizer_p.h"
 #include "core_debug.h"
 #include "spellerplugin_p.h"
-#include <QRegularExpression>
 
 /*
 All language tags should be valid according to IETF BCP 47, as codified in RFC 4646.
@@ -67,8 +65,8 @@ public:
 
     void loadModels();
     QList< QChar::Script > findRuns(const QString &text);
-    QList<QString> createOrderedModel(const QString &content);
-    int distance(const QList<QString> &model, const QHash<QString, int> &knownModel);
+    QVector<QString> createOrderedModel(const QString &content);
+    int distance(const QVector<QString> &model, const QHash<QString, int> &knownModel);
     QStringList guessFromTrigrams(const QString &sample, const QStringList &langs);
     QStringList identify(const QString &sample, const QList< QChar::Script > &scripts);
     QString guessFromDictionaries(const QString &sentence, const QStringList &candidates);
@@ -586,11 +584,7 @@ GuessLanguage::~GuessLanguage()
 
 QString GuessLanguage::identify(const QString &text, const QStringList &suggestionsListIn) const
 {
-    if (text.isEmpty() || text == QStringLiteral("  ")
-        || text == QStringLiteral("<!-- ") || text == QStringLiteral("-->")
-        || text == QStringLiteral("\t- ") || text.startsWith(QStringLiteral("`"))
-        || text.endsWith(QStringLiteral("`")) || text == QStringLiteral("- ")
-        || text == QStringLiteral("* ")) {
+    if (text.isEmpty()) {
         return QString();
     }
 
@@ -725,12 +719,13 @@ QList<QChar::Script> GuessLanguagePrivate::findRuns(const QString &text)
         return relevantScripts;
     }
 
-    for (const QChar::Script &script : scriptCounts.keys()) {
+    for (const QChar::Script script : scriptCounts.keys()) {
         // return run types that used for 40% or more of the string
-        if (scriptCounts[script] * 100 / totalCount >= 40) {
+        int scriptCount = scriptCounts[script];
+        if (scriptCount * 100 / totalCount >= 40) {
             relevantScripts << script;
             // always return basic latin if found more than 15%.
-        } else if (script == QChar::Script_Latin && scriptCounts[script] * 100 / totalCount >= 15) {
+        } else if (script == QChar::Script_Latin && scriptCount * 100 / totalCount >= 15) {
             relevantScripts << script;
         }
     }
@@ -765,37 +760,43 @@ QStringList GuessLanguagePrivate::guessFromTrigrams(const QString &sample,
 {
     QStringList ret;
 
-    const QList<QString> sampleTrigrams = createOrderedModel(sample);
+    const QVector<QString> sampleTrigrams = createOrderedModel(sample);
 
     // Sort by score
-    QMultiMap<int, QString> scores;
+    QVector<QPair<int, QString>> scores;
+    scores.reserve(s_knownModels.size());
     for (const QString &language : languages) {
-        if (s_knownModels.contains(language)) {
-            scores.insert(distance(sampleTrigrams, s_knownModels[language]), language);
+        const auto model = s_knownModels.value(language, {});
+        if (!model.isEmpty()) {
+            scores.append({distance(sampleTrigrams, model), language});
         }
     }
 
+    std::sort(scores.begin(), scores.end());
+
     // Skip if either no results or best result is completely unknown (distance >= maxdistance)
-    if (scores.isEmpty() || scores.firstKey() >= MAXGRAMS * sampleTrigrams.size()) {
+    if (scores.isEmpty() || scores.first().first >= MAXGRAMS * sampleTrigrams.size()) {
         qCDebug(SONNET_LOG_CORE) << "No scores for" << sample;
         return ret;
     }
 
     int counter = 0;
     double confidence = 0;
-    QMapIterator<int, QString> it(scores);
-    it.next();
 
-    QString prevItem = it.value();
-    int prevScore = it.key();
+    QVectorIterator<QPair<int, QString>> it(scores);
+    const auto el = it.next();
+
+    QString prevItem = el.second;
+    int prevScore = el.first;
+    ret.reserve(scores.size());
 
     while (it.hasNext() && counter < m_maxItems && confidence < m_minConfidence) {
-        it.next();
+        auto el = it.next();
         counter++;
-        confidence += (it.key() - prevScore)/(double)it.key();
+        confidence += (el.first - prevScore)/(double)el.first;
         ret += prevItem;
-        prevItem = it.value();
-        prevScore = it.key();
+        prevItem = el.second;
+        prevScore = el.first;
     }
     if (counter < m_maxItems && confidence < m_minConfidence) {
         ret += prevItem;
@@ -804,37 +805,59 @@ QStringList GuessLanguagePrivate::guessFromTrigrams(const QString &sample,
     return ret;
 }
 
-QList<QString> GuessLanguagePrivate::createOrderedModel(const QString &content)
+QVector<QString> GuessLanguagePrivate::createOrderedModel(const QString &content)
 {
     QHash<QString, int> trigramCounts;
-    QMap<int, QString> orderedTrigrams;
 
+    //collect trigrams
+    trigramCounts.reserve(content.size() - 2);
     for (int i = 0; i < (content.size() - 2); ++i) {
         QString tri = content.mid(i, 3).toLower();
         trigramCounts[tri]++;
     }
 
-    for (const QString &key : trigramCounts.keys()) {
-        const QChar *data = key.constData();
+    //invert the map <freq, trigram>
+    QVector<QPair<int, QString>> ord;
+    ord.reserve(trigramCounts.size());
+
+    auto it = trigramCounts.constBegin();
+    for (; it != trigramCounts.constEnd(); ++it) {
+        const QChar *data = it.key().constData();
         bool hasTwoSpaces = (data[1].isSpace() && (data[0].isSpace() || data[2].isSpace()));
 
         if (!hasTwoSpaces) {
-            orderedTrigrams.insertMulti(-trigramCounts[key], key);
+            const int freq = it.value();
+            const QString& trigram = it.key();
+            ord.append({freq, trigram});
         }
     }
 
-    return orderedTrigrams.values();
+    auto i = std::partition(ord.begin(), ord.end(), [](const QPair<int, QString>& a) { return a.first != 1; });
+
+    std::sort(ord.begin(), i, [](const QPair<int, QString>& a,
+                                 const QPair<int, QString>& b) {
+        return a.first > b.first;
+    });
+
+    QVector<QString> orderedTrigrams;
+    orderedTrigrams.reserve(ord.size());
+    for (const auto& tri : qAsConst(ord)) {
+        orderedTrigrams.append(tri.second);
+    }
+
+    return orderedTrigrams;
 }
 
-int GuessLanguagePrivate::distance(const QList<QString> &model, const QHash<QString,
+int GuessLanguagePrivate::distance(const QVector<QString> &model, const QHash<QString,
                                                                             int> &knownModel)
 {
     int counter = -1;
     int dist = 0;
 
     for (const QString &trigram : model) {
-        if (knownModel.contains(trigram)) {
-            dist += qAbs(++counter - knownModel.value(trigram));
+        int val = knownModel.value(trigram, -1);
+        if (val != -1) {
+            dist += qAbs(++counter - val);
         } else {
             dist += MAXGRAMS;
         }
