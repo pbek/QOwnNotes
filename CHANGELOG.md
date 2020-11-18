@@ -4,7 +4,7 @@
 - the note language auto-detection performance was improved
   (for [#1954](https://github.com/pbek/QOwnNotes/pull/1954), thank you @Waqar144)
 - the falsely shown note subfolder menu when clicking on an empty space in the
-  note list is now disabled
+  note list is now disabled (for [#1955](https://github.com/pbek/QOwnNotes/pull/1955))
 
 ## 20.11.7
 - there now are new scripting commands `script.noteTextEditSetCursorPosition()`
