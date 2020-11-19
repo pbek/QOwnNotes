@@ -10813,8 +10813,14 @@ void MainWindow::openNoteSubFolderContextMenu(const QPoint globalPos,
     QMenu menu;
     QAction *newNoteAction = menu.addAction(tr("New note"));
     QAction *newAction = menu.addAction(tr("New subfolder"));
-    QAction *renameAction = menu.addAction(tr("Rename subfolder"));
-    QAction *removeAction = menu.addAction(tr("Remove selected folders"));
+    QAction *renameAction(nullptr);
+    QAction *removeAction(nullptr);
+
+    if (NoteFolder::currentNoteFolder().getActiveNoteSubFolder().isFetched()) {
+        renameAction = menu.addAction(tr("Rename subfolder"));
+        removeAction = menu.addAction(tr("Remove selected folders"));
+    }
+
     QAction *showInFileManagerAction =
         menu.addAction(tr("Show folder in file manager"));
     menu.addAction(ui->action_Reload_note_folder);
