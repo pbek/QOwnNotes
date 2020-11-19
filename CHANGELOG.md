@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.11.9
+- the rename/remove subfolder context menu option are now not shown if no subfolder
+  was clicked in the subfolder panel (for [#1957](https://github.com/pbek/QOwnNotes/pull/1957), thank you @fnkabit)
+
 ## 20.11.8
 - the note language auto-detection performance was improved
   (for [#1954](https://github.com/pbek/QOwnNotes/pull/1954), thank you @Waqar144)
