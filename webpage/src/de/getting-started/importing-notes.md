@@ -16,7 +16,7 @@ Wenn Sie dies tun möchten, stellen Sie zunächst sicher, dass Python2 installie
 sudo apt install python2 python-is-python2
 ```
 
-Download the trombone file from GitHub, extract and jump into that folder:
+Laden Sie die Trombone-Datei von GitHub herunter, extrahieren Sie sie und springen Sie in diesen Ordner:
 
 ```bash
 cd ~/Downloads/trombone-master
@@ -25,13 +25,13 @@ sudo make
 sudo make install
 ```
 
-Then cd into the folder where your tomboy notes are:
+Dann cd in den Ordner, in dem sich Ihre Tomboy Notizen befinden:
 
 ```bash
  cd ~/.local/share/tomboy/
 ```
 
-Then run this:
+Führen Sie dann Folgendes aus:
 
 ```bash
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex

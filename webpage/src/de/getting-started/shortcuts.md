@@ -20,8 +20,8 @@
 - <kbd>Alt</kbd> + <kbd>Up</kbd> springt zur vorherigen sichtbaren Notiz
     - alternative Verknüpfung ist  <kbd>Ctrl</kbd> + <kbd>PgUp</kbd>
 - <kbd>Alt</kbd> + <kbd>Down</kbd> springt zur nächsten sichtbaren Note
-    - alternative Verknüpfung ist <kbd>Ctrl</kbd> + <kbd>PgDown</kbd>
-- <kbd>Alt</kbd> + <kbd>PgUp</kbd> springt zur vorherigen Notiz-Registerkarte
+    - alternative Verknüpfung ist <kbd>Ctrl</kbd> + <kbd>Seite nach Unten</kbd>
+- <kbd>Alt</kbd> + <kbd>Seite nach oben</kbd> springt zur vorherigen Notizenregisterkarte
 - <kbd>Alt</kbd> + <kbd>PgDn</kbd> springt zur nächsten Notizregisterkarte
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> schließt die aktuelle Notiz-Registerkarte
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> schaltet den ablenkungsfreien Modus um
@@ -78,253 +78,257 @@
 - <kbd>Strg</kbd> + <kbd>I</kbd> formatiert den ausgewählten Text kursiv
 - <kbd>Strg</kbd> + <kbd>U</kbd> formatiert den ausgewählten Text unterstrichen
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> streicht den ausgewählten Text durch
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> durchläuft die Buchstaben des ausgewählten Textes
 - <kbd>Tab</kbd> rückt den ausgewählten Text ein (funktioniert auch für mehrere Zeilen)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
 - <kbd>Tab</kbd> rückt das Listenelement nach einem ungeordneten Listenzeichen ein
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> hebt das Listenelement nach einem ungeordneten Listenzeichen auf
 - <kbd>Eingabe</kbd> in Listen erstellt ein neues Listenelement
 - <kbd>Alt</kbd> + <kbd>Links</kbd> springt im Notenverlauf ein Element rückwärts
-    - <kbd> Alt </kbd> + <kbd> Rechts </kbd> springt im Notenverlauf vorwärts
-- <kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> 1..9 </kbd> setzt ein Notenlesezeichen auf Lesezeichenplatz 1..9
-- <kbd> Strg </kbd> + <kbd> 0..9 </kbd> springt zum Noten-Lesezeichen im Lesezeichen-Slot 0..9
-- <kbd> Strg </kbd> + <kbd> 0..9 </kbd> springt zum Noten-Lesezeichen im Lesezeichen-Slot 0..9
-- <kbd> Strg </kbd> + <kbd> - </kbd> verringert die Schriftgröße des Notentextes um einen Punkt
-- <kbd> Strg </kbd> + <kbd> 0 </kbd> setzt die Schriftgröße des Notentextes zurück
-- <kbd> Strg </kbd> + <kbd> Leerzeichen </kbd> versucht, einfache Gleichungen wie ` (4 + 5) * 3 = </ 1> zu lösen
-Vervollständigt Text automatisch vor dem Cursor oder öffnet URLs</li>
-<li><kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> H </kbd> fügt eine Überschrift aus dem Dateinamen der Notiz oben in der Notiz ein</li>
-<li><kbd> Alt </kbd> + <kbd> ⇧ </kbd> + <kbd> X </kbd> teilt die aktuelle Note an der aktuellen Cursorposition in zwei Noten auf</li>
-<li><kbd> Alt </kbd> + <kbd> ⇧ </kbd> + <kbd> W </kbd> sucht im Web nach dem ausgewählten Text</li>
-<li><kbd> Strg </kbd> + <kbd> Nach oben </kbd> scrollt den Inhalt nach oben</li>
-<li><kbd> Strg </ 0> + <kbd> Nach unten </kbd> scrollt den Inhalt nach unten</li>
-<li><kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> verschiebt die aktuelle Zeile nach unten</li>
-<li><kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> Nach oben </kbd> verschiebt die aktuelle Zeile nach oben</li>
-<li><kbd> ⇧ </kbd> + <kbd> Return </kbd> fügt zwei Leerzeichen und ein Zeilenumbruchzeichen hinzu, um einen Markdown-Zeilenumbruch zu erzwingen</li>
-</ul>
+    - <kbd>Alt</kbd> + <kbd>Rechts</kbd> springt im Notenverlauf ein Element vorwärts
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> setzt ein Notizenlesezeichen auf Lesezeichenplatz 1..9
+- <kbd>Strg</kbd> + <kbd>0..9</kbd> springt zum Notizen-Lesezeichen im Lesezeichen-Slot 0..9
+- <kbd>Strg</kbd> + <kbd>0..9</kbd> springt zum Notizenlesezeichen im Lesezeichen-Slot 0..9
+- <kbd>Strg</kbd> + <kbd>-</kbd> verringert die Schriftgröße des Notizentextes um einen Punkt
+- <kbd>Strg</kbd> + <kbd>0</kbd> setzt die Schriftgröße des Notizentextes zurück
+- Versucht, einfache Gleichungen wie `(4+5)*3=` vor dem Cursor zu lösen, vervollständigt Text automatisch oder öffnet URLs
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>  fügt eine Überschrift aus dem Dateinamen der Notiz oben in der Notiz ein
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd>  teilt die aktuelle Note an der aktuellen Cursorposition in zwei Noten auf
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> sucht im Web nach dem ausgewählten Text
+- <kbd>Strg</kbd> + <kbd>Nach oben</kbd> scrollt den Inhalt nach oben
+- <kbd>Strg</kbd> + <kbd>Nach unten</kbd> scrollt den Inhalt nach unten
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>Nach unten</kbd> verschiebt die aktuelle Zeile nach unten
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>Nach oben</kbd> verschiebt die aktuelle Zeile nach oben
+- <kbd>⇧</kbd> + <kbd>Eingabe</kbd> fügt zwei Leerzeichen und ein Zeilenumbruchzeichen hinzu, um einen Markdown-Zeilenumbruch zu erzwingen
 
-<h3 spaces-before="0">Im Notizvorschaufenster</h3>
+### Im Notizvorschaufenster
 
-<ul>
-<li><p spaces-before="0">Mit <kbd> Strg </kbd> + <kbd> F </kbd> können Sie in der aktuellen Notiz suchen</p>
+- Mit <kbd>Strg</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
+    - Verwenden Sie die Tasten <kbd>Nach oben</kbd> und <kbd>Nach unten</kbd> oder <kbd>F3</kbd> und <kbd>⇧</kbd> + <kbd> F3</kbd>, um zum vorherigen und nächsten Treffer zu springen
+    - <kbd>Esc</kbd> schließt die Suchleiste
 
-<ul>
-<li><p spaces-before="0">Verwenden Sie die Tasten <kbd> Auf </ 0> und <kbd> Ab </ 0> oder <kbd> F3 </ 0> und <kbd> ⇧ </ 0> + <kbd> F3 </ 0> Tasten, um zum vorherigen und nächsten Treffer zu springen</p></li>
-<li><p spaces-before="0"><kbd> Esc </kbd> schließt die Suchleiste</p></li>
-</ul></li>
-</ul>
+### In der Todo-Liste
 
-<h3 spaces-before="0">In der Todo-Liste</h3>
+- <kbd>Strg</kbd> + <kbd>S</kbd> speichert das aktuelle Aufgabenelement
+- <kbd>Strg</kbd> + <kbd>I</kbd> speichert das aktuelle Aufgabenelement und fügt es in die aktuelle Notiz ein
+- <kbd>Strg</kbd> + <kbd>R</kbd> entfernt das aktuelle Aufgabenelement
 
-<ul>
-<li><kbd> Strg </kbd> + <kbd> S </kbd> speichert das aktuelle Aufgabenelement</li>
-<li><kbd> Strg </kbd> + <kbd> I </kbd> speichert das aktuelle Aufgabenelement und fügt es in die aktuelle Notiz ein</li>
-<li><kbd> Strg </kbd> + <kbd> R </kbd> entfernt das aktuelle Aufgabenelement</li>
-</ul>
 
-<h2 spaces-before="0">macOS</h2>
+## macOS
 
-<h3 spaces-before="0">Im Hauptfenster</h3>
+### Im Hauptfenster
 
-<ul>
-<li><kbd> ⌘ </kbd> + <kbd> N </kbd> erstellt eine neue Notiz mit dem aktuellen Datum und der aktuellen Uhrzeit im Namen</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> N </kbd> erstellt eine neue Notiz in einer neuen Registerkarte</li>
-<li><kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> Ermöglicht die Suche nach Notizen (im Namen der Notiz und ihres Inhalts)</li>
-<li><kbd>Ctrl</kbd> + <kbd>F</kbd> erlaubt Ihnen in allen Tags / Unterordnern nach Notizen suchen</li>
-<li><kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> wechselt zum vorherigen Arbeitsbereich</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> E </kbd> bearbeitet eine verschlüsselte Notiz</li>
-<li><kbd> Strg </kbd> + <kbd> R </kbd> entfernt die aktuelle Note</li>
-<li><kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> U </kbd> sucht nach Updates</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> T </ 0> öffnet die Aufgabenliste</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> O </kbd> öffnet die aktuelle Notiz in einem externen Editor</li>
-<li><kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> O </kbd> öffnet die aktuelle Notiz in einer Ansicht</li>
-<li><kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> F </kbd> öffnet den Ordner der aktuellen Notiz im Finder</li>
-<li><kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> E </kbd> aktiviert oder deaktiviert die Bearbeitung von Notizen</li>
-<li><kbd> Strg </kbd> + <kbd> Nach oben </kbd> springt zur vorherigen sichtbaren Note
+- <kbd>⌘</kbd> + <kbd>N</kbd> erstellt eine neue Notiz mit dem aktuellen Datum und der aktuellen Uhrzeit im Namen
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> erstellt eine neue Notiz in einer neuen Registerkarte
+- Mit <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> können Sie nach Notizen suchen (im Namen der Notiz und ihres Inhalts).
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> erlaubt Ihnen in allen Tags / Unterordnern nach Notizen suchen
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> wechselt zum vorherigen Arbeitsbereich
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> bearbeitet eine verschlüsselte Notiz
+- <kbd>Strg</kbd> + <kbd>R</kbd>  entfernt die aktuelle Note
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> sucht nach Updates
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> öffnet die Aufgabenliste
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> öffnet die aktuelle Notiz in einem externen Editor
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd>  öffnet die aktuelle Notiz in einer Ansicht
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd>  öffnet den Ordner der aktuellen Notiz im Finder
+- <kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> E </kbd> aktiviert oder deaktiviert die Bearbeitung von Notizen
+- <kbd>Strg</kbd> + <kbd>Nach oben</kbd> springt zur vorherigen sichtbaren Notiz
+    - Die alternative Verknüpfung lautet <kbd>⌘</kbd> + <kbd>PgUp</kbd>
+- <kbd>Strg</kbd> + <kbd>Nach unten</kbd>  springt zur nächsten sichtbaren Notiz
+    - die alternative Verknüpfung lautet  <kbd>⌘</kbd> + <kbd>PgDown</kbd>
+- <kbd>Alt</kbd> + <kbd>Seite nach oben</kbd> springt zur vorherigen Notizenregisterkarte
+- <kbd>Alt</kbd> + <kbd>Seite nach Unten</kbd> springt zur nächsten Notizenregisterkarte
+- <kbd>⌘</kbd> + <kbd>W</kbd> schließt die aktuelle Notizregisterkarte
+- <kbd>⌘</kbd> + <kbd>⇧ </kbd> + <kbd>D</kbd> schaltet den ablenkungsfreien Modus um
+    - Sie können es auch mit <kbd>Esc</kbd> schließen
+- <kbd>⌘</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Text
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Abschrift
+- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>V</kbd>  fügt Notizen, Bilder und HTML aus der Zwischenablage ein
+- <kbd>⌘</kbd> + <kbd>,</kbd> öffnet die Einstellungen
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> fügt einer Notiz ein neues Schlagwort hinzu
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> lädt den aktuellen Notizordner neu
+- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>F</kbd> können Sie einen anderen Notizordner auswählen
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> lädt die Skript-Engine neu
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> blendet die Hauptmenüleiste aus oder ein
+- Mit <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> können Sie nach Aktionen suchen
+- <kbd>⌘</kbd> + <kbd>S</kbd> speichert geänderte Notizen manuell
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> öffnet den Skript-Repository-Dialog
+- <kbd>F4</kbd> springt zum Notizenbearbeitungsfeld
+- <kbd>F5</kbd> springt zur Notizenliste
+- <kbd>F6</kbd> springt zum Schlagwort-Bereich
+- <kbd>F6</kbd> springt zum Unterordnerfenster für Notizen
+- <kbd>F10</kbd> aktiviert das Kontextmenü des aktuellen Widgets
+- <kbd>⌘</kbd> + <kbd>F11</kbd> schaltet den Vollbildmodus um
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopiert die Überschrift der aktuellen Notiz
 
-<ul>
-<li>Die alternative Verknüpfung lautet <kbd> ⌘ </kbd> + <kbd> PgUp </kbd></li>
-</ul></li>
-<li><kbd> Strg </kbd> + <kbd> Ab </kbd> springt zur nächsten sichtbaren Note
+### In der Notizsuchleiste
 
-<ul>
-<li>die alternative Verknüpfung lautet <kbd> ⌘ </kbd> + <kbd> PgDown </kbd></li>
-</ul></li>
-<li><kbd>Alt</kbd> + <kbd>PgUp</kbd> springt zur vorherigen Registerkarte "Notiz"</li>
-<li><kbd> Alt </kbd> + <kbd> PgDn </kbd> springt zur nächsten Notenregisterkarte</li>
-<li><kbd> ⌘ </kbd> + <kbd> W </kbd> schließt die aktuelle Notizregisterkarte</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> D </ 0> schaltet den ablenkungsfreien Modus um
+- <kbd>Nach unten</kbd> oder <kbd>Tab</kbd> richtet den Fokus auf die Notizenliste
+- <kbd>Eingabe</kbd> erstellt eine neue Notiz mit dem Text aus der Suchleiste als Überschrift
 
-<ul>
-<li>Sie können es auch mit <kbd> Esc </kbd> schließen</li>
-</ul></li>
-<li><kbd> ⌘ </kbd> + <kbd> P </kbd> druckt die aktuelle Notiz als Text</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> P </kbd> druckt die aktuelle Notiz als Abschrift</li>
-<li><kbd> ⌘ </kbd> + <kbd> Strg </kbd> + <kbd> V </kbd> fügt Notizen, Bilder und HTML aus der Zwischenablage ein</li>
-<li><kbd> ⌘ </kbd> + <kbd>, </kbd> öffnet die Einstellungen</li>
-<li><kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> A </kbd> fügt einer Notiz ein neues Tag hinzu</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> R </kbd> lädt den aktuellen Notizordner neu</li>
-<li>Mit <kbd> ⌘ </kbd> + <kbd> Strg </kbd> + <kbd> F </kbd> können Sie einen anderen Notizordner auswählen</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> S </kbd> lädt die Skript-Engine neu</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> M </kbd> blendet die Hauptmenüleiste aus oder ein</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> Mit A </kbd> können Sie nach Aktionen suchen</li>
-<li><kbd> ⌘ </kbd> + <kbd> S </kbd> speichert geänderte Notizen manuell</li>
-<li><kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> I </kbd> öffnet den Skript-Repository-Dialog</li>
-<li><kbd> F4 </kbd> springt zum Notizenbearbeitungsfeld</li>
-<li><kbd> F5 </kbd> springt zur Notenliste</li>
-<li><kbd> F6 </kbd> springt zum Tag-Bereich</li>
-<li><kbd> F6 </kbd> springt zum Unterordnerfenster für Notizen</li>
-<li><kbd> F10 </kbd> aktiviert das Kontextmenü des aktuellen Widgets</li>
-<li><kbd> ⌘ </kbd> + <kbd> F11 </kbd> schaltet den Vollbildmodus um</li>
-<li><kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> H </kbd> kopiert die Überschrift der aktuellen Notiz</li>
-</ul>
+### In der Notizliste
 
-<h3 spaces-before="0">In der Notizsuchleiste</h3>
+- <kbd>⌘</kbd> + <kbd>A</kbd> wählt alle Notizen aus (um sie mit einem Rechtsklick zu verschieben, zu kopieren oder zu entfernen)
+- Mit <kbd>Tab</kbd> oder <kbd>Return</kbd> können Sie die aktuelle Notiz bearbeiten
 
-<ul>
-<li><kbd> Nach unten </kbd> oder <kbd> Tab </kbd> legt den Fokus auf die Notizenliste</li>
-<li><kbd> Return </kbd> erstellt eine neue Notiz mit dem Text aus der Suchleiste als Überschrift</li>
-</ul>
+### Im Notiz-Textbearbeitungsfeld
 
-<h3 spaces-before="0">In der Notizliste</h3>
-
-<ul>
-<li><kbd> ⌘ </kbd> + <kbd> A </kbd> wählt alle Notizen aus (um sie mit einem Rechtsklick zu verschieben, zu kopieren oder zu entfernen)</li>
-<li>Mit <kbd> Tab </kbd> oder <kbd> Return </kbd> können Sie die aktuelle Notiz bearbeiten</li>
-</ul>
-
-<h3 spaces-before="0">Im Notiztext-Bearbeitungsfeld</h3>
-
-<ul>
-<li><kbd> ⌘ </kbd> + <kbd> Klicken Sie auf </kbd> auf einen Link, um ihn zu öffnen</li>
-<li><p spaces-before="0">Mit <kbd> ⌘ </kbd> + <kbd> F </kbd> können Sie in der aktuellen Notiz suchen</p>
-
-<ul>
-<li><p spaces-before="0">Verwenden Sie die Tasten <kbd> Auf </kbd> und <kbd> Ab </kbd> oder <kbd> F3 </kbd> und <kbd> ⇧ </ 0> + <kbd> F3 </kbd>, um zum  vorherigen und nächsten Treffer zu springen</p></li>
-<li><p spaces-before="0"><kbd> Esc </kbd> schließt die Suchleiste</p></li>
-</ul></li>
-<li>Mit <kbd> ⌘ </kbd> + <kbd> R </kbd> können Sie in der aktuellen Notiz suchen und ersetzen</li>
-<li><kbd> ⌘ </kbd> + <kbd> D </kbd> dupliziert die aktuelle Zeile oder den ausgewählten Text
-
-<ul>
-<li><kbd> ⌘ </kbd> + <kbd> Strg </kbd> + <kbd> Ab </kbd> macht dasselbe</li>
-</ul></li>
-<li><kbd> ⌘ </kbd> + <kbd> Rücktaste </kbd> löscht die aktuelle Zeile</li>
-<li><kbd> Strg </kbd> + <kbd> Rücktaste </kbd> löscht das aktuelle Wort</li>
-<li><kbd> ⌘ </kbd> + <kbd> L </kbd> öffnet einen Dialog zum Hinzufügen eines Links zu einer anderen Notiz oder URL (funktioniert auch bei ausgewähltem Text)</li>
-<li><kbd> ⌘ </kbd> + <kbd> T </kbd> fügt das aktuelle Datum im ISO 8601-Format ein</li>
-<li><kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> I </kbd> fügt ein Bild ein (Das Bild wird in den Ordner <code> media ` im aktuellen Notizenordner kopiert.)
-- <kbd> ⌘ </ 0> + <kbd> ⇧ </kbd> + <kbd> X </ 0> fügt einen Anhang ein (Die Datei wird in den Ordner <code> Anhänge </code> im aktuellen Notizenordner kopiert.)</li> 
-  
-  <li>
-    <kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> T </kbd> fügt eine Tabelle ein
-  </li>
-  
-  <li>
-    <kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> C </kbd> fügt an der aktuellen Position einen Codeblock ein
-  </li>
-  
-  <li>
-    <kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> B </kbd> fügt an der aktuellen Position ein Blockzitat ein
-  </li>
-  
-  <li>
-    <kbd> ⌘ </kbd> + <kbd> B </kbd> formatiert den ausgewählten Text fett
-  </li>
-  
-  <li>
-    <kbd> ⌘ </kbd> + <kbd> I </kbd> formatiert den ausgewählten Text kursiv
-  </li>
-  
-  <li>
-    <kbd> ⌘ </kbd> + <kbd> U </kbd> formatiert den ausgewählten Text unterstrichen
-  </li>
-  
-  <li>
-    <kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> S </ 0> streicht den ausgewählten Text aus</li> 
-    
-    <li>
-      <kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> U </kbd> durchläuft die Fälle des ausgewählten Textes
-    </li>
-    
-    <li>
-      <kbd> Tab </kbd> rückt den ausgewählten Text ein (funktioniert auch in mehreren Zeilen) <ul>
-        <li>
-          <kbd> ⇧ </kbd> + <kbd> Tab </kbd> hebt den ausgewählten Text auf
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <p spaces-before="0">
-        <kbd> Tab </kbd> nach einem ungeordneten Listenzeichen rückt das Listenelement ein
-      </p>
-      <ul>
-        <li>
-          <kbd> ⇧ </kbd> + <kbd> Tab </kbd> nach einem ungeordneten Listenzeichen hebt das Listenelement auf
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <p spaces-before="0">
-        <kbd> Zurück </kbd> in Listen erstellt ein neues Listenelement
-      </p>
-    </li>
-    
-    <li>
-      <kbd> ⌘ </kbd> + <kbd> Strg </kbd> + <kbd> Links </kbd> springt zurück in den Notenverlauf <ul>
-        <li>
-          <kbd> ⌘ </kbd> + <kbd> Strg </kbd> + <kbd> Rechts </kbd> springt im Notenverlauf vorwärts
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <kbd> ⌘ </kbd> + <kbd> ⇧ </ 0> + <kbd> 1..9 </kbd> setzt ein Notenlesezeichen auf Lesezeichenplatz 1..9</li> 
+- <kbd>⌘</kbd> + <kbd>Klicken Sie</kbd> auf einen Link, um ihn zu öffnen
+- Mit <kbd>⌘</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
+    - Verwenden Sie die Tasten <kbd> Auf </kbd> und <kbd> Ab </kbd> oder <kbd> F3 </kbd> und <kbd> ⇧ </ 0> + <kbd> F3 </kbd>, um zum  vorherigen und nächsten Treffer zu springen</p></li> 
       
       <li>
-        <kbd> ⌘ </kbd> + <kbd> 0..9 </kbd> springt zum Noten-Lesezeichen im Lesezeichen-Slot 0..9
+        <p spaces-before="0">
+          <kbd>Esc</kbd> schließt die Suchleiste
+        </p>
+      </li></ul></li> 
+      
+      <li>
+        Mit <kbd>⌘</kbd> + <kbd>R</kbd> können Sie in der aktuellen Notiz suchen und ersetzen
       </li>
       
       <li>
-        <kbd> ⌘ </kbd> + <kbd> + </kbd> erhöht die Schriftgröße des Notentextes um einen Punkt
+        <kbd>⌘</kbd> + <kbd>D</kbd> dupliziert die aktuelle Zeile oder den ausgewählten Text <ul>
+          <li>
+            <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>Ab</kbd> macht dasselbe
+          </li>
+        </ul>
       </li>
       
       <li>
-        <kbd> ⌘ </kbd> + <kbd> - </kbd> verringert die Schriftgröße des Notentextes um einen Punkt
+        <kbd>⌘</kbd> + <kbd>Rücktaste</kbd> löscht die aktuelle Zeile
       </li>
       
       <li>
-        <kbd> ⌘ </kbd> + <kbd> 0 </kbd> setzt die Schriftgröße des Notentextes zurück
+        <kbd>Strg</kbd> + <kbd>Rücktaste</kbd> löscht das aktuelle Wort
       </li>
       
       <li>
-        <kbd> ⌘ </kbd> + <kbd> Leerzeichen </kbd> versucht, einfache Gleichungen wie <code> (4 + 5) * 3 = </code> in der aktuellen Zeile vor dem Cursor zu lösen. Vervollständigt Text oder öffnet URLs
+        <kbd>⌘</kbd> + <kbd>L</kbd> öffnet einen Dialog zum Hinzufügen eines Links zu einer anderen Notiz oder URL (funktioniert auch bei ausgewähltem Text)
       </li>
       
       <li>
-        <kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> H </kbd> fügt eine Überschrift aus dem Dateinamen der Notiz oben in der Notiz ein
+        <kbd> ⌘ </kbd> + <kbd> T </kbd> fügt das aktuelle Datum im ISO 8601-Format ein
       </li>
       
       <li>
-        <kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> X </kbd> teilt die aktuelle Note an der aktuellen Cursorposition in zwei Noten auf
+        <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> fügt ein Bild ein (Das Bild wird in den Ordner <code>media</code> im aktuellen Notizenordner kopiert.)
       </li>
       
       <li>
-        <kbd> Strg </kbd> + <kbd> ⇧ </kbd> + <kbd> W </kbd> sucht im Web nach dem ausgewählten Text
+        <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> fügt einen Anhang ein (Die Datei wird in den Ordner <code>attachments</code>im aktuellen Notizenordner kopiert.)
       </li>
       
       <li>
-        <kbd> ⌘ </kbd> + <kbd> Nach oben </kbd> scrollt den Inhalt nach oben
+        <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> fügt eine Tabelle ein
       </li>
       
       <li>
-        <kbd> ⌘ </kbd> + <kbd> Nach unten </kbd> scrollt den Inhalt nach unten
+        <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd>  fügt an der aktuellen Position einen Codeblock ein
       </li>
       
       <li>
-        <kbd> ⇧ </kbd> + <kbd> Return </kbd> fügt zwei Leerzeichen und ein Zeilenumbruchzeichen hinzu, um einen Markdown-Zeilenumbruch zu erzwingen
+        <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> fügt an der aktuellen Position ein Blockzitat ein
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>B</kbd> formatiert den ausgewählten Text fett
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>I</kbd>formatiert den ausgewählten Text kursiv
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>U</kbd> formatiert den ausgewählten Text unterstrichen
+      </li>
+      
+      <li>
+        <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> streicht den ausgewählten Text durch
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> durchläuft die Buchstaben des ausgewählten Textes
+      </li>
+      
+      <li>
+        <kbd>Tab</kbd>  rückt den ausgewählten Text ein (funktioniert auch in mehreren Zeilen) <ul>
+          <li>
+            <kbd>⇧</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
+          </li>
+        </ul>
+      </li>
+      
+      <li>
+        <p spaces-before="0">
+          <kbd>Tab</kbd> nach einem ungeordneten Listenzeichen rückt das Listenelement ein
+        </p>
+        <ul>
+          <li>
+            <kbd>⇧</kbd> + <kbd>Tab</kbd> hebt die Einrückung nach einem ungeordneten Listenzeichen auf
+          </li>
+        </ul>
+      </li>
+      
+      <li>
+        <p spaces-before="0">
+          <kbd>Eingabe</kbd> in Listen erstellt ein neues Listenelement
+        </p>
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Links</kbd> springt im Notenverlauf ein Element rückwärts <ul>
+          <li>
+            <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>Rechts</kbd> springt im Notenverlauf vorwärts
+          </li>
+        </ul>
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> setzt ein Notizen-Lesezeichen auf Lesezeichenplatz 1..9
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>0..9</kbd> springt zum Notizen-Lesezeichen im Lesezeichen-Slot 0..9
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>+</kbd> erhöht die Schriftgröße des Notizentextes um einen Punkt
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>-</kbd> verringert die Schriftgröße des Notizentextes um einen Punkt
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>0</kbd> setzt die Schriftgröße des Notizentextes zurück
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>Leerzeichen</kbd> versucht, einfache Gleichungen wie <code>(4+5)*3=</code> in der aktuellen Zeile vor dem Cursor zu lösen. Vervollständigt Text oder öffnet URLs
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> fügt eine Überschrift aus dem Dateinamen der Notiz oben in der Notiz ein
+      </li>
+      
+      <li>
+        <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> teilt die aktuelle Notiz an der aktuellen Cursorposition in zwei Notizen auf
+      </li>
+      
+      <li>
+        <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> sucht im Web nach dem ausgewählten Text
+      </li>
+      
+      <li>
+        <kbd>Strg</kbd> + <kbd>Nach oben</kbd> scrollt den Inhalt nach oben
+      </li>
+      
+      <li>
+        <kbd>⌘</kbd> + <kbd>Nach unten</kbd> scrollt den Inhalt nach unten
+      </li>
+      
+      <li>
+        <kbd>⇧</kbd> + <kbd>Eingabe</kbd> fügt zwei Leerzeichen und ein Zeilenumbruchzeichen hinzu, um einen Markdown-Zeilenumbruch zu erzwingen
       </li></ul>
 
 <h3 spaces-before="0">
@@ -334,17 +338,17 @@ Vervollständigt Text automatisch vor dem Cursor oder öffnet URLs</li>
 <ul>
   <li>
     <p spaces-before="0">
-      Mit <kbd> ⌘ </kbd> + <kbd> F </kbd> können Sie in der aktuellen Notiz suchen
+      Mit <kbd>⌘</kbd> + <kbd>F</kbd> können Sie in der aktuellen Notiz suchen
     </p>
     <ul>
       <li>
         <p spaces-before="0">
-          use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+          Verwenden Sie die Tasten <kbd>Auf</kbd> und <kbd>Ab</kbd> oder <kbd>F3</kbd> und <kbd>⇧</kbd> + <kbd>F3</kbd> Tasten, um zum vorherigen und nächsten Treffer zu springen
         </p>
       </li>
       <li>
         <p spaces-before="0">
-          <kbd> Esc </kbd> schließt die Suchleiste
+          <kbd>Esc</kbd> schließt die Suchleiste
         </p>
       </li>
     </ul>
@@ -357,12 +361,12 @@ Vervollständigt Text automatisch vor dem Cursor oder öffnet URLs</li>
 
 <ul>
   <li>
-    <kbd> ⌘ </ 0> + <kbd> S </kbd> speichert das aktuelle Aufgabenelement</li> 
-    
-    <li>
-      <kbd> ⌘ </kbd> + <kbd> I </kbd> speichert das aktuelle Aufgabenelement und fügt es in die aktuelle Notiz ein
-    </li>
-    
-    <li>
-      <kbd> ⌘ </kbd> + <kbd> R </kbd> entfernt das aktuelle Aufgabenelement
-    </li></ul>
+    <kbd>⌘</kbd> + <kbd>S</kbd> speichert das aktuelle Aufgabenelement
+  </li>
+  <li>
+    <kbd>⌘</kbd> + <kbd>I</kbd> speichert das aktuelle Aufgabenelement und fügt es in die aktuelle Notiz ein
+  </li>
+  <li>
+    <kbd> ⌘ </kbd> + <kbd> R </kbd> entfernt das aktuelle Aufgabenelement
+  </li>
+</ul>

@@ -42,7 +42,7 @@ Starke Hervorhebung, auch: "fett", mit **Sternchen**.
 ```
 
 ::: tip
-Sie können die [ Tastenkombination ](./shortcuts.md) <kbd> Strg + B </kbd> verwenden, um Text fett hervorzuheben, und <kbd> Strg + I </kbd>, um ihn kursiv hervorzuheben.
+Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + B</kbd> verwenden, um Text fett hervorzuheben, und <kbd>Strg + I</kbd>, um ihn kursiv hervorzuheben.
 :::
 
 ## Unterstreichen
@@ -115,10 +115,10 @@ Sie können <kbd> Strg + Leertaste </kbd> drücken, während sich der Cursor auf
 
 ### Lesezeichen
 
-Die von der [ QOwnNotes Web Companion-Browsererweiterung ](./browser-extension.md) verwendeten Lesezeichen verwenden Links in Listen.
+Die von der [QOwnNotes Web Companion-Browsererweiterung](./browser-extension.md) verwendeten Lesezeichen verwenden Links in Listen.
 
 ```markdown
-- [Name der Webseite] (https://www.example.com) #Tag1 #Tag2 einige Beschreibungen und Tags
+- [Name der Webseite] (https://www.example.com) #tag1 #tag2 einige Beschreibungen und Tags
 ```
 
 ## Bilder
@@ -130,9 +130,9 @@ Bilder können in QOwnNotes eingebettet werden. Sie werden in der Vorschau angez
 ```
 
 ::: tip
-Sie können die [ Tastenkombination ](./shortcuts.md) <kbd> Strg + Umschalt + I </kbd> verwenden, um ein Bild in eine Notiz einzufügen. Das Bild kann sich auch in der Zwischenablage befinden. Das Dialogfeld erkennt es und zeigt eine Vorschau an.
+Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + Umschalt + I</kbd> verwenden, um ein Bild in eine Notiz einzufügen. Das Bild kann sich auch in der Zwischenablage befinden. Das Dialogfeld erkennt es und zeigt eine Vorschau an.
 
-Sie können ein Bild auch direkt aus der Zwischenablage mit <kbd> Strg + Umschalt + V </kbd> in Ihre Notiz einfügen.
+Sie können ein Bild auch direkt aus der Zwischenablage mit <kbd>Strg + Umschalt + V</kbd> in Ihre Notiz einfügen.
 :::
 
 
@@ -142,8 +142,7 @@ Sie können ein Bild auch direkt aus der Zwischenablage mit <kbd> Strg + Umschal
 Inline-`Code` hat `Back-Ticks`.
 ```
 
-::: tip
-You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on selected inline text or just inside of text to create an inline code block.
+Sie können die [Verknüpfung](./shortcuts.md) <kbd>Strg + Umschalt + C</kbd> für ausgewählten Inline-Text oder nur innerhalb von Text verwenden, um einen Inline-Codeblock zu erstellen.
 :::
 
 Codeblöcke werden entweder durch Zeilen mit drei Back-Ticks eingezäunt oder mit vier Leerzeichen eingerückt.
@@ -159,22 +158,22 @@ Fügen Sie vier Leerzeichen vor Ihrem Code hinzu, um ihn als Codeblock zu markie
 
 ### Code-Blöcke mit Backticks
 
-You can also use three backticks to create a code block.
+Sie können auch drei Backticks verwenden, um einen Codeblock zu erstellen.
 ~~~markdown
 ```
-Code wird hier geschrieben
-Code wird hier geschrieben
+Code wird hierhin geschrieben
+Code wird hierhin geschrieben
 ```
 ~~~
 
 ::: tip
-Sie können die [Verknüpfung] (./ shortcuts.md) <kbd> Strg + Umschalt + C </kbd> aktivieren
-mehrere ausgewählte Textzeilen oder eine leere Zeile, um einen Codeblock zu erstellen. 
+Sie können die Verknüpfung [shortcut](./shortcuts.md) <kbd>Strg + Umschalt + C</kbd> in mehreren ausgewählten Textzeilen oder in einer leeren Zeile verwenden, um einen Codeblock zu erstellen.
+ 
 :::
 
-### Backtick fence with code highlighting
+### Backtick-Zaun mit Code-Hervorhebung
 
-There also is some syntax highlighting with code blocks in QOwnNotes.
+Es gibt auch einige Syntaxhervorhebungen mit Codeblöcken in QOwnNotes.
 
 ~~~markdown
 ```bash
@@ -188,7 +187,7 @@ cd Notes
 Tabellen sind nicht Teil der Kern-Markdown-Spezifikation, werden jedoch von der QOwnNotes-Vorschau unterstützt. 
 
 ```markdown
-Colons can be used to align columns.
+Doppelpunkte können zum Ausrichten von Spalten verwendet werden.
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -207,9 +206,9 @@ Sie können auch Inline-Markdown verwenden.
 ~~~
 
 ::: tip
-Drücken Sie <kbd> Alt + Umschalt + T </kbd>, um ein Dialogfeld zu aktivieren, mit dem Sie Tabellen erstellen können. In diesem Dialog können Sie sogar CSV-Dateien importieren!
+Drücken Sie <kbd>Alt + Umschalt + T</kbd>, um ein Dialogfeld zu aktivieren, mit dem Sie Tabellen erstellen können. In diesem Dialog können Sie sogar CSV-Dateien importieren!
 
-Verwenden Sie <kbd> Strg + Leertaste </kbd> in einer Markdown-Tabelle, um sie automatisch zu formatieren.
+Verwenden Sie <kbd>Strg + Leertaste</kbd> in einer Markdown-Tabelle, um sie automatisch zu formatieren.
 :::
 
 ## Zitat-Blöcke
@@ -220,11 +219,11 @@ Verwenden Sie <kbd> Strg + Leertaste </kbd> in einer Markdown-Tabelle, um sie au
 
 Zitatpause.
 
-> Dies ist eine sehr lange Zeile, die beim Umbruch immer noch richtig zitiert wird. Oh Mann, lass uns weiter schreiben, um sicherzustellen, dass dies lang genug ist, um tatsächlich für alle zu wickeln. Oh, du kannst **Markdown** in ein Blockquote *setzen*. 
+> Dies ist eine sehr lange Zeile, die beim Umbruch immer noch richtig zitiert wird. Oh Mann, lass uns weiter schreiben, um sicherzustellen, dass dies lang genug ist, um tatsächlich für alle zu umgebrochen zu werden. Oh, du kannst **Markdown** in ein Blockquote *setzen*. 
 ```
 
 ::: tip
-Sie können QOwnNotes anweisen, Blockzitate oder nur das Blockzitatzeichen in den * Editoreinstellungen * vollständig hervorzuheben
+Sie können QOwnNotes anweisen, Blockzitate oder nur das Blockzitatzeichen in den *Editoreinstellungen* vollständig hervorzuheben
 
 Sie können die [ Verknüpfung ](./shortcuts.md) <kbd> Strg + Umschalt + B </kbd> verwenden, um Text als Blockzitat zu markieren.
 :::

@@ -1,6 +1,6 @@
 # Als AppImage installieren
 
-Sie können das neueste AppImage aus dem [ QOwnNotes AppImage-Repository ](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage) herunterladen.
+Sie können das neueste AppImage aus dem [QOwnNotes AppImage-Repository](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage) herunterladen.
 
 [Neueste QOwnNotes x86_64 AppImage](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage)
 

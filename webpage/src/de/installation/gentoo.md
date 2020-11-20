@@ -1,6 +1,6 @@
 # Installieren unter Gentoo Linux
 
-Fügen Sie das QOwnNotes-Repository mit dem folgenden Befehl hinzu (siehe [ eselect-repository ](https://wiki.gentoo.org/wiki/Eselect/Repository)).
+Fügen Sie das QOwnNotes-Repository mit dem folgenden Befehl hinzu (siehe [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository)).
 
 ```bash
 sudo eselect repository enable qownnotes-overlay

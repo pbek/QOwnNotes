@@ -5,15 +5,14 @@ onNoteStored
 
 ### Methodenaufruf und Parameter
 ```js
-/ **
-  * Diese Funktion wird aufgerufen, wenn eine Mediendatei in die Notiz eingefügt wird
-  * Wenn diese Funktion in mehreren Skripten definiert ist, gewinnt das erste Skript, das eine nicht leere Zeichenfolge zurückgibt
-  * *
-  * @param fileName string Der Dateipfad der Quellmediendatei, bevor sie in den Medienordner kopiert wurde
-  * @param mediaMarkdownText Zeichenfolge der Markdown-Text der Mediendatei, z. ! [mein-Bild] (Datei: //media/505671508.jpg)
-  * @return string der neue Markdown-Text der Mediendatei
-  * /
-Funktion insertMediaHook (Dateiname, mediaMarkdownText);
+/**
+ * This function is called when a note gets stored to disk
+ * You cannot modify stored notes, that would be a mess since
+ * you are most likely editing them by hand at the same time
+ *
+ * @param {NoteApi} note - the note object of the stored note
+ */
+function onNoteStored(note);
 ```
 
 Vielleicht möchten Sie sich das Beispiel ansehen [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/on-note-opened.qml).
@@ -25,10 +24,10 @@ noteOpenedHook
 ```js
 / **
   * Diese Funktion wird aufgerufen, nachdem eine Notiz geöffnet wurde
-  * *
+  *
   * @param {NoteApi} note - das geöffnete Notizobjekt
-  * /
-Funktion noteOpenedHook (note);
+  */
+function noteOpenedHook(note);
 ```
 
 Vielleicht möchten Sie sich das Beispiel ansehen [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/on-note-opened.qml).
@@ -43,7 +42,7 @@ noteDoubleClickedHook
   * *
   * @param {NoteApi} note - das Notizobjekt, auf das geklickt wurde
   * /
-Funktion noteDoubleClickedHook (note);
+function noteDoubleClickedHook (note);
 ```
 
 Vielleicht möchten Sie sich das Beispiel ansehen [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-open.qml).

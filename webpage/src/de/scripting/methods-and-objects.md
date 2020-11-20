@@ -592,7 +592,7 @@ if (script.platformIsLinux()) {
 }
 ```
 
-Tag the current note
+Verschlagworten Sie die aktuelle Notiz
 --------------------
 
 ### Methodenaufruf und Parameter
@@ -695,7 +695,7 @@ Vielleicht möchten Sie sich das Beispiel ansehen
 
 
 
-Add a custom stylesheet
+Fügen Sie ein benutzerdefiniertes Stylesheet hinzu
 -----------------------
 
 
@@ -736,7 +736,7 @@ Wenn Sie Stile in die HTML-Vorschau einfügen möchten, um die Vorschau von Noti
 
 
 
-Reloading the scripting engine
+Skript-Engine neu laden
 ------------------------------
 
 
@@ -803,7 +803,7 @@ script.fetchNoteByFileName("my note.md");
 
 
 
-Fetching a note by its id
+Abrufen einer Notiz anhand ihrer ID
 -------------------------
 
 
@@ -839,7 +839,7 @@ Vielleicht möchten Sie sich das Beispiel ansehen [export-notes-as-one-html.qml]
 
 
 
-Checking if a note exists by its file name
+Überprüfen Sie anhand des Dateinamens, ob eine Notiz vorhanden ist
 ------------------------------------------
 
 
@@ -879,7 +879,7 @@ You may want to take a look at the example
 
 
 
-Copying text into the clipboard
+Kopieren von Text in die Zwischenablage
 -------------------------------
 
 
@@ -915,7 +915,7 @@ Vielleicht möchten Sie sich das Beispiel ansehen [selected-markdown-to-bbcode.q
 
 
 
-Jumping to a note
+Zu einer Notiz springen
 -----------------
 
 
@@ -1080,7 +1080,7 @@ Showing an open file dialog
 
 
 
-### Method call and parameters
+### Methodenaufruf und Parameter
 
 
 ```cpp
@@ -1154,13 +1154,13 @@ You may want to take a look at the example [export-notes-as-one-html.qml](https:
 Registering script settings variables
 -------------------------------------
 
-Sie müssen Eigenschaften in Ihrem Skript definieren und in einer weiteren Eigenschaft mit dem Namen `settingsVariables ` registrieren.
+You need to define your settings variables as properties in your script and register them in a property named `settingsVariables`.
 
 Der Benutzer kann diese Eigenschaften dann in den Skripteinstellungen festlegen.
 
 
 
-### Example
+### Beispiel
 
 
 ```js
@@ -1356,7 +1356,7 @@ Sie können Dateien am Standard-Cache-Speicherort Ihres Systems zwischenspeicher
 
 
 
-### Method call and parameters
+### Methodenaufruf und Parameter
 
 
 ```cpp
@@ -1372,7 +1372,7 @@ QString ScriptingService::cacheDir(const QString &subDir) const;
 
 
 
-### Example
+### Beispiel
 
 
 ```js
@@ -1392,7 +1392,7 @@ Sie können die Cache-Dateien Ihres Skripts löschen, indem Sie den Namen an cle
 
 
 
-### Method call and parameters
+### Methodenaufruf und Parameter
 
 
 ```cpp
@@ -1408,7 +1408,7 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const;
 
 
 
-### Example
+### Beispiel
 
 
 ```js
@@ -1805,7 +1805,7 @@ QString ScriptingService::readFromFile(const QString &filePath, const QString &c
 
 
 
-### Example
+### Beispiel
 
 
 ```js
@@ -1827,7 +1827,7 @@ Writing text to a file
 
 
 
-### Method call and parameters
+### Methodenaufruf und Parameter
 
 
 ```cpp
@@ -1845,7 +1845,7 @@ bool ScriptingService::writeToFile(const QString &filePath, const QString &data,
 
 
 
-### Example
+### Beispiel
 
 
 ```js
@@ -1860,7 +1860,7 @@ Vielleicht möchten Sie sich das Beispiel ansehen [export-notes-as-one-html.qml]
 
 
 
-Working with websockets
+Arbeiten mit Websockets
 -----------------------
 
 Sie können QOwnNotes mithilfe von ` WebSocketServer ` fernsteuern.
