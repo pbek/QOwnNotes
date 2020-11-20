@@ -1023,8 +1023,8 @@ You may want to take a look at the example
 Registering script settings variables
 -------------------------------------
 
-You need to define properties in your script and register them in an
-further property named `settingsVariables`.
+You need to define your settings variables as properties in your script and
+register them in a property named `settingsVariables`.
 
 The user can then set these properties in the script settings.
 
