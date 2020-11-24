@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.11.10
+- added more Dutch, Hungarian, Urdu (Pakistan) translation (thank you Farhan1985, rawfreeamy)
+
 ## 20.11.9
 - the rename/remove subfolder context menu option are now not shown if no subfolder
   was clicked in the subfolder panel (for [#1957](https://github.com/pbek/QOwnNotes/pull/1957), thank you @fnkabit)
