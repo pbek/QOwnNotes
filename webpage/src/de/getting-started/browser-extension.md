@@ -6,23 +6,23 @@ image: /img/bookmarks.png
 
 ![Lesezeichen](/img/bookmarks.png)
 
-Besuchen Sie den [ Chrome Web Store ](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) oder die [ Firefox-Add-On-Seite ](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion), um die Browsererweiterung [** QOwnNotes Web Companion **](https://github.com/qownnotes/web-companion/) zu installieren.
+Besuchen Sie den [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) oder die [Firefox-Add-On-Seite](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion), um die Browsererweiterung [**QOwnNotes Web Companion**](https://github.com/qownnotes/web-companion/) zu installieren.
 
-Sie finden die Erweiterung auch unter [ GitHub](https://github.com/qownnotes/web-companion/).
+Sie finden die Erweiterung auch unter [GitHub](https://github.com/qownnotes/web-companion/).
 
 ## Web clipper
 
-Klicken Sie mit der rechten Maustaste auf eine Webseite oder einen ausgewählten Text, um die Funktion ** Web-Clipper ** zu verwenden. Dort können Sie auch einen neuen mit einem ** Screenshot ** der aktuellen Webseite erstellen.
+Klicken Sie mit der rechten Maustaste auf eine Webseite oder einen ausgewählten Text, um die Funktion **Web-Clipper** zu verwenden. Dort können Sie auch einen neuen mit einem **Screenshot** der aktuellen Webseite erstellen.
 
 ::: tip
-Der Web Clipper ist auch skriptfähig! Schauen Sie sich den [ websocketRawDataHook ](../scripting/hooks.md#websocketrawdatahook) an, wenn Sie steuern möchten, was Sie von Webseiten ausschneiden.
+Der Web Clipper ist auch skriptfähig! Schauen Sie sich den [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) an, wenn Sie steuern möchten, was Sie von Webseiten ausschneiden.
 :::
 
 ## Lesezeichen
 
-Standardmäßig zeigt die Browsererweiterung alle ** Links der aktuellen Notiz ** in einem Popup an, wenn Sie in Ihrem Browser auf das QOwnNotes-Symbol klicken. Diese Links erhalten einen `current` Tag.
+Standardmäßig zeigt die Browsererweiterung alle **Links der aktuellen Notiz** in einem Popup an, wenn Sie in Ihrem Browser auf das QOwnNotes-Symbol klicken. Diese Links erhalten einen `current` Tag.
 
-Sie können ** Ihre Lesezeichen auch in Notizen ** mit dem Notiz-Tag ` Lesezeichen ` verwalten (in den Einstellungen änderbar). Diese Links können auch Tags und eine Beschreibung enthalten, die in der Browsererweiterung angezeigt wird.
+Sie können **Ihre Lesezeichen auch in Notizen** mit dem Notiz-Tag `Lesezeichen` verwalten (in den Einstellungen änderbar). Diese Links können auch Tags und eine Beschreibung enthalten, die in der Browsererweiterung angezeigt wird.
 
 ::: tip
 Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browser-Erweiterung in QOwnNotes importieren!

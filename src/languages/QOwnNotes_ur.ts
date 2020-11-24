@@ -1442,7 +1442,7 @@
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
       <source>Minimum 8 characters</source>
-      <translation type="unfinished">Minimum 8 characters</translation>
+      <translation>کم از کم 8 حروف</translation>
     </message>
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1450,7 +1450,7 @@
       <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
       <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
       <source>Minimum 10 characters</source>
-      <translation type="unfinished">Minimum 10 characters</translation>
+      <translation>کم از کم 10 حروف</translation>
     </message>
   </context>
   <context>
@@ -2667,12 +2667,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Move down in note list</source>
-      <translation type="unfinished">Move down in note list</translation>
+      <translation>نوٹ کی فہرست میں نیچے کی طرف جائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Move up in note list</source>
-      <translation type="unfinished">Move up in note list</translation>
+      <translation>نوٹ کی فہرست میں اوپر کی طرف جائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2002"/>
@@ -3025,17 +3025,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6302"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
+      <translation>نوٹ نہیں مل سکا، اس &lt;strong&gt;%1&lt;/strong&gt; رابط پر &lt;strong&gt;%2&lt;/strong&gt; نیا نوٹ بنائیں؟</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6347"/>
       <source>Failed to create note</source>
-      <translation type="unfinished">Failed to create note</translation>
+      <translation>نوٹ بنانے میں کامیابی نہیں ملی</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6348"/>
       <source>Note creation failed</source>
-      <translation type="unfinished">Note creation failed</translation>
+      <translation>نوٹ بنانے کا عمل ناکام رہا</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6509"/>
@@ -3972,7 +3972,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6288"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-      <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+      <translation>نوٹ نہیں مل سکا۔ &lt;br /&gt; مقام پر خود بخود نوٹ بنانے سے قاصر ہیں، کیوں کہ حالیہ نوٹ فولڈر میں ذیلی فولڈرز غیر فعال ہیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6702"/>
@@ -6189,7 +6189,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2140"/>
       <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-      <translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
+      <translation>اگر آپ QOwnNotes کا ترجمہ کرنے یا کسی موجودہ ترجمے کو اپ ڈیٹ کرنے میں مدد کرنا چاہتے ہیں تو براہ کرم: &lt;a href="%1"&gt;میں QOwnNotes کا ترجمہ کرنے میں کس طرح مدد کرسکتا ہوں؟&lt;/a&gt; کو پڑھیں</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2497"/>
@@ -8284,7 +8284,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="%1"&gt; QOwnNotesمیں شرکت کریں&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>

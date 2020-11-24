@@ -1442,7 +1442,7 @@
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
       <source>Minimum 8 characters</source>
-      <translation type="unfinished">Minimum 8 characters</translation>
+      <translation>Legalább 8 karakter</translation>
     </message>
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1450,7 +1450,7 @@
       <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
       <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
       <source>Minimum 10 characters</source>
-      <translation type="unfinished">Minimum 10 characters</translation>
+      <translation>Legalább 10 karakter</translation>
     </message>
   </context>
   <context>
@@ -3016,17 +3016,17 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
     <message>
       <location filename="../mainwindow.cpp" line="6302"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
+      <translation>A jegyzet nem található. Hozzon létre új jegyzetet &lt;strong&gt;%1&lt;/strong&gt; a(z) &lt;strong&gt; %2 &lt;/strong&gt; útvonalon?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6347"/>
       <source>Failed to create note</source>
-      <translation type="unfinished">Failed to create note</translation>
+      <translation>Nem sikerült létrehozni a jegyzetet</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6348"/>
       <source>Note creation failed</source>
-      <translation type="unfinished">Note creation failed</translation>
+      <translation>A jegyzet létrehozása nem sikerült</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6509"/>
@@ -3950,7 +3950,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
     <message>
       <location filename="../mainwindow.cpp" line="6288"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-      <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+      <translation>Nem található a jegyzet. &lt;br /&gt; Nem lehet automatikusan létrehozni a jegyzetet a helyszínen, mert az almappák le vannak tiltva az aktuális jegyzetmappa számára.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6702"/>
