@@ -7993,7 +7993,6 @@ void MainWindow::reloadTagTree() {
         noteIdList << Note::fetchAllIdsByNoteSubFolderId(noteSubFolderId);
     }
 
-
     // create an item to view all notes
     int linkCount =
         _showNotesFromAllNoteSubFolders ? Note::countAll() : noteIdList.count();
@@ -8015,7 +8014,6 @@ void MainWindow::reloadTagTree() {
 
     // this time, the tags come first
     buildTagTreeForParentItem();
-
     // and get sorted
     if (settings.value(QStringLiteral("tagsPanelSort")).toInt() ==
         SORT_ALPHABETICAL) {
@@ -8336,7 +8334,6 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
             }
         }
     }
-
 
     const int linkCount = count;
     const QString toolTip = tr("show all notes tagged with '%1' (%2)")
@@ -10687,7 +10684,9 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
         filterNotes();
     }
 
-    reloadTagTree();
+    if (isTagsEnabled()) {
+        reloadTagTree();
+    }
 }
 
 void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged() {
@@ -10696,8 +10695,12 @@ void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged() {
     if (ui->noteSubFolderTreeWidget->selectedItems().count() <= 1) {
         return;
     }
+
     filterNotes();
-    reloadTagTree();
+
+    if (isTagsEnabled()) {
+        reloadTagTree();
+    }
 }
 
 void MainWindow::clearTagFilteringColumn() {
