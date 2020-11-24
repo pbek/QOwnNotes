@@ -66,8 +66,6 @@ class Note {
 
     static QVector<Note> fetchAll(int limit = -1);
 
-    static QVector<Note> fetchAllNotTagged(int activeNoteSubFolderId);
-
     static QVector<int> fetchAllNotTaggedIds();
 
     static int countAllNotTagged(int activeNoteSubFolderId = -1);

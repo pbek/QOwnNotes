@@ -954,8 +954,6 @@ private:
     void createNewNote(QString noteName = QString(),
                        bool withNameAppend = true);
 
-    bool selectedNotesHaveTags();
-
     void initTagButtonScrollArea();
 
     static QIcon getSystemTrayIcon();
