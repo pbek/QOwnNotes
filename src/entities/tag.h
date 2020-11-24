@@ -75,11 +75,12 @@ class Tag : protected TagHeader {
 
     bool isLinkedToNote(const Note &note) const;
 
-    int countLinkedNoteFileNames(const bool fromAllSubfolder,
-                                 const bool recursive) const;
+    static int countLinkedNoteFileNames(int tagId, bool fromAllSubfolders,
+                                        bool recursive);
 
-    int countLinkedNoteFileNamesForNoteSubFolder(
-        const NoteSubFolder &noteSubFolder, const bool recursive) const;
+    static int countLinkedNoteFileNamesForNoteSubFolder(
+        int tagId, const NoteSubFolder &noteSubFolder,
+        bool fromAllSubfolders, bool recursive);
 
     int getParentId() const;
 
@@ -138,7 +139,7 @@ class Tag : protected TagHeader {
 
     static int countAllParentId(const int parentId);
 
-    static int countAllOfNote(const Note &note);
+    static bool noteHasTags(const Note &note, const QString& path);
 
     static void setAsActive(const int tagId);
 

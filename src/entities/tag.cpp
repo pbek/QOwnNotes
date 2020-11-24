@@ -583,19 +583,20 @@ Tag Tag::fetchOneOfNoteWithColor(const Note &note) {
 }
 
 /**
- * Count all linked tags of a note
+ * Checks if a note has tags
  */
-int Tag::countAllOfNote(const Note &note) {
+bool Tag::noteHasTags(const Note &note, const QString& path) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare(
-        QStringLiteral("SELECT COUNT(*) AS cnt FROM noteTagLink "
-                       "WHERE note_file_name = :fileName AND "
-                       "note_sub_folder_path = :noteSubFolderPath"));
+          QStringLiteral("SELECT "
+                        "EXISTS (SELECT tag_id FROM noteTagLink "
+                        "WHERE note_file_name=:fileName AND "
+                        "note_sub_folder_path=:noteSubFolderPath) AS cnt"));
     query.bindValue(QStringLiteral(":fileName"), note.getName());
     query.bindValue(QStringLiteral(":noteSubFolderPath"),
-                    note.getNoteSubFolder().relativePath());
+                    path.isEmpty() ? note.getNoteSubFolder().relativePath() : path);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -603,7 +604,7 @@ int Tag::countAllOfNote(const Note &note) {
         int result = query.value(QStringLiteral("cnt")).toInt();
         DatabaseService::closeDatabaseConnection(db, query);
 
-        return result;
+        return result == 1;
     }
 
     DatabaseService::closeDatabaseConnection(db, query);
@@ -871,11 +872,16 @@ QStringList Tag::fetchAllNames() {
  * Count the linked note file names for a note sub folder
  */
 int Tag::countLinkedNoteFileNamesForNoteSubFolder(
-    const NoteSubFolder &noteSubFolder, const bool recursive) const {
+    int tagId, const NoteSubFolder &noteSubFolder,
+    bool fromAllSubfolders, const bool recursive) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
-    if (recursive) {
+    if (fromAllSubfolders) {
+        query.prepare(QStringLiteral(
+            "SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
+            "WHERE tag_id = :id"));
+    } else if (recursive) {
         query.prepare(QStringLiteral(
             "SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
             "WHERE tag_id = :id AND "
@@ -890,7 +896,7 @@ int Tag::countLinkedNoteFileNamesForNoteSubFolder(
         query.bindValue(QStringLiteral(":noteSubFolderPath"),
                         noteSubFolder.relativePath() + QLatin1Char('%'));
     }
-    query.bindValue(QStringLiteral(":id"), _id);
+    query.bindValue(QStringLiteral(":id"), tagId);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -909,8 +915,8 @@ int Tag::countLinkedNoteFileNamesForNoteSubFolder(
 /**
  * Count the linked note file names
  */
-int Tag::countLinkedNoteFileNames(const bool fromAllSubfolders,
-                                  const bool recursive) const {
+int Tag::countLinkedNoteFileNames(int tagId, bool fromAllSubfolders,
+                                  bool recursive) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -934,7 +940,7 @@ int Tag::countLinkedNoteFileNames(const bool fromAllSubfolders,
         query.bindValue(QStringLiteral(":noteSubFolderPath"),
                         NoteSubFolder::activeNoteSubFolder().relativePath());
     }
-    query.bindValue(QStringLiteral(":id"), _id);
+    query.bindValue(QStringLiteral(":id"), tagId);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
