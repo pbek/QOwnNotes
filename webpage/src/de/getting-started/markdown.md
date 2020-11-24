@@ -16,7 +16,7 @@ Verwenden Sie Überschriften, um Ihre Texte zu strukturieren.
 ```
 
 ::: tip
-Das ** Navigationsfeld ** zeigt die Struktur Ihrer Überschriften.
+Das **Navigation panel** zeigt die Struktur Ihrer Überschriften.
 :::
 
 Alternativ für H1 und H2; eine unterstrichene Schriftweise:
@@ -30,7 +30,7 @@ Alt-H2
 ```
 
 ::: tip
-Standardmäßig erstellt QOwnNotes den ** Dateinamen einer Notiz ** aus der ** Überschrift 1 ** (h1).
+Standardmäßig erstellt QOwnNotes den **filename of a note** aus der **heading 1** (h1).
 :::
 
 ## Hervorhebung
@@ -42,19 +42,19 @@ Starke Hervorhebung, auch: "fett", mit **Sternchen**.
 ```
 
 ::: tip
-Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + B</kbd> verwenden, um Text fett hervorzuheben, und <kbd>Strg + I</kbd>, um ihn kursiv hervorzuheben.
+Sie können die  [shortcut](./shortcuts.md) <kbd>Ctrl + B</kbd> verwenden, um Text fett hervorzuheben, und <kbd>Ctrl + I</kbd>, um ihn kursiv hervorzuheben.
 :::
 
 ## Unterstreichen
 
-Es gibt auch eine optionale Einstellung zum Aktivieren des Unterstreichungs-Hervorhebung in den * Vorschau-Einstellungen *.
+Es gibt auch eine optionale Einstellung zum Aktivieren des Unterstreichungs-Hervorhebung in den *Preview settings*.
 
 ```markdown
 _underline_
 ```
 
 ::: tip
-Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + U</kbd> verwenden, um einen Text zu unterstreichen.
+Sie können die [shortcut](./shortcuts.md) <kbd>Ctrl + U</kbd> verwenden, um einen Text zu unterstreichen.
 :::
 
 ## Durchstreichen
@@ -64,7 +64,7 @@ Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + U</kbd> verwende
 ```
 
 ::: tip
-Sie können die [Tastenkombination](./shortcuts.md) <kbd> Alt + Umschalt + S </kbd> verwenden, um einen Text durchzustreichen.
+Sie können die [shortcut](./shortcuts.md) <kbd>Alt + Shift + S</kbd> verwenden, um einen Text durchzustreichen.
 :::
 
 ## Listen
@@ -85,7 +85,7 @@ Es gibt viele Möglichkeiten, Listen zu erstellen.
 ```
 
 ::: tip
-Wenn Sie am Ende einer Liste die <kbd> Eingabetaste </kbd> drücken, wird ein neues Listenelement erstellt.
+Wenn Sie am Ende einer Liste die <kbd>Enter</kbd> drücken, wird ein neues Listenelement erstellt.
 :::
 
 ## Links
@@ -106,7 +106,7 @@ http://www.example.com oder <http://www.example.com>
 ```
 
 ::: tip
-Sie können die [ Tastenkombination ](./shortcuts.md) <kbd> Strg + L </kbd> verwenden ** Erstellen Sie Links zu Webseiten oder anderen Notizen **.
+Sie können die [shortcut](./shortcuts.md) <kbd>Ctrl + L</kbd> verwenden: **Erstellen Sie Links zu Webseiten oder anderen Notizen**.
 
 Wenn Sie <kbd> Strg + Umschalt + X </kbd> verwenden, wird ein Dialogfeld angezeigt, in dem Sie ** Anhänge ** in Ihre Notiz einfügen können.
 
@@ -195,7 +195,7 @@ Doppelpunkte können zum Ausrichten von Spalten verwendet werden.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-There must be at least 3 dashes separating each header cell.
+Es müssen mindestens 3 Striche vorhanden sein, die jede Kopfzelle trennen.
 
 Sie können auch Inline-Markdown verwenden.
 
@@ -269,7 +269,7 @@ Nachgestellte Leerzeichen werden im Editor standardmäßig hervorgehoben.
 
 ## Kommentare
 
-Comments are not shown in the preview.
+Kommentare werden in der Vorschau nicht angezeigt.
 
 ```markdown
 [Kommentar]: # (Dieser Kommentar wird nicht in der Vorschau angezeigt.)

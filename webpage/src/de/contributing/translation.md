@@ -14,13 +14,13 @@ Sie können sich unter [Crowdin](https://crowdin.com/project/qownnotes/invite) u
 
 **[QOwnNotes auf Crowdin](screenshot)**
 
-Schreiben Sie mir einfach eine Nachricht auf Crowdin oder als [ GitHub-Problem ](https://github.com/pbek/QOwnNotes/issues) Wenn Sie QOwnNotes in eine neue Sprache übersetzen möchten.
+Schreiben Sie mir einfach eine Nachricht auf Crowdin oder als [GitHub-Problem](https://github.com/pbek/QOwnNotes/issues), wenn Sie QOwnNotes in eine neue Sprache übersetzen möchten.
 
 Wenn Sie vorhandene Sprachen um neue Übersetzungen erweitern möchten, können Sie dies sofort tun.
 
 ## Korrekturlesen
 
-Wenn Sie ein sehr guter Benutzer einer bereits übersetzten Sprache sind, die noch nicht Korrektur gelesen wurde, sind wir dankbar für Ihre Hilfe, damit die QOwnNotes-Erfahrung für Sie und andere User sich zuverlässiger gestaltet.
+Wenn Sie ein sehr guter Benutzer einer bereits übersetzten Sprache sind, die noch nicht Korrektur gelesen wurde, sind wir dankbar für Ihre Hilfe, damit die QOwnNotes-Erfahrung für Sie und andere User zuverlässiger wird.
 
 Klicken Sie hier, um zu sehen, ob Ihre Sprache zu den bereits übersetzten gehört!
 
@@ -52,7 +52,7 @@ Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt:
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-6) Die `%1` -Tags müssen ohne Leerzeichen geschrieben werden. In LTR-Sprachen können Sie entweder die Tags aus dem Original einfügen oder sie in Ihre Übersetzung schreiben.
+6) Die `%1` -Tags müssen ohne Leerzeichen geschrieben werden. Sie können entweder die Tags aus dem Original einfügen, indem Sie an der entsprechenden Stelle auf sie klicken, oder sie in Ihre Übersetzung tippen.
 
    ![screenshot](/img/crowdin/screenshot-1.png)
 

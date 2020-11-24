@@ -41,14 +41,14 @@ Sie können Ihr eigenes Zeitformat verwenden, wenn Sie die aktuelle Zeit in eine
 | ------------------ | ---------------- |
 | `dd.MM.yyyy hh:mm` | 21.05.2001 14:13 |
 | `dd.MM.yyyy`       | 21.05.2001       |
-| `ddd MMMM d yy`    | Die Mai 21 01    |
+| `ddd MMMM d yy`    | Tue May 21 01    |
 | `hh:mm:ss.zzz`     | 14:13:09.042     |
 | `h:m:s ap`         | 2:13:9 pm        |
 
 ::: tip Info
-Weitere Informationen zu Zeitformaten finden Sie in der [Qt-Dokumentation](http://doc.qt.io/qt-5/qdatetime.html#toString).
+Weitere Informationen zu Zeitformaten finden Sie in der [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString).
 :::
 
 ::: tip
-Wenn Sie komplexere Vorgänge ausführen müssen, um die aktuelle Zeit auszugeben, sollten Sie eine benutzerdefinierte [ Aktion ](../scripting/methods-and-objects.md#registering-a-custom-action) erstellen.
+Wenn Sie komplexere Vorgänge ausführen müssen, um die aktuelle Zeit auszugeben, sollten Sie eine (benutzerdefinierte) [custom action](../scripting/methods-and-objects.md#registering-a-custom-action). erstellen.
 :::

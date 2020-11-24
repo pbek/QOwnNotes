@@ -64,7 +64,7 @@ Wenn diese Funktion in mehreren Skripten definiert ist, gewinnt das erste Skript
 function insertMediaHook(fileName, markdownText);
 ```
 
-Vielleicht möchten Sie sich das Beispiel [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml)ansehen.
+Vielleicht möchten Sie sich das Beispiel [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) ansehen.
 
 insertAttachmentHook
 --------------------
@@ -83,7 +83,7 @@ Wenn diese Funktion in mehreren Skripten definiert ist, gewinnt das erste Skript
 function insertAttachmentHook(fileName, markdownText);
 ```
 
-Vielleicht möchten Sie sich das Beispiel [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml)ansehen.
+Vielleicht möchten Sie sich das Beispiel [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) ansehen.
 
 insertingFromMimeDataHook
 -------------------------

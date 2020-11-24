@@ -215,7 +215,7 @@
       </li>
       
       <li>
-        <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> fügt einen Anhang ein (Die Datei wird in den Ordner <code>attachments</code>im aktuellen Notizenordner kopiert.)
+        <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> fügt einen Anhang ein (Die Datei wird in den Ordner <code>attachments</code> im aktuellen Notizenordner kopiert.)
       </li>
       
       <li>
@@ -235,7 +235,7 @@
       </li>
       
       <li>
-        <kbd>⌘</kbd> + <kbd>I</kbd>formatiert den ausgewählten Text kursiv
+        <kbd>⌘</kbd> + <kbd>I</kbd> formatiert den ausgewählten Text kursiv
       </li>
       
       <li>

@@ -1,6 +1,6 @@
 # QOwnNotes Scripting
 
-Ein QOwnNotes-Skript besteht hauptsächlich aus ** JavaScript ** in [ Qt-QML-Dateien ](https://doc.qt.io/qt-5/qtqml-index.html).
+Ein QOwnNotes-Skript besteht hauptsächlich aus **JavaScript** in [Qt-QML-Dateien](https://doc.qt.io/qt-5/qtqml-index.html).
 
 ```js
 import QtQml 2.0
@@ -16,22 +16,22 @@ Script {
 }
 ```
 
-You can place those QML files anywhere you like and **add use them in QOwnNotes** by adding them in the **Scripting settings** (there is a button `Add script`/`Add local script`).
+You can place those QML files anywhere you like and **add them in QOwnNotes** by adding them in the **Scripting settings** (there is a button `Add script`/`Add local script`).
 
 ::: tip
-Schauen Sie sich die [ Beispielskripte ](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples) an, um schnell loszulegen.
+Schauen Sie sich die [example scripts](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples) an, um schnell loszulegen.
 :::
 
-In den ** Skripteinstellungen ** können Sie Skripte auch direkt aus dem [** Skript-Repository **](https://github.com/qownnotes/scripts) installieren.
+In den **Scripting settings**  können Sie Skripte auch direkt aus dem [**Skript-Repository **](https://github.com/qownnotes/scripts)installieren.
 
-Bei Problemen, Fragen oder Funktionsanforderungen für Skripte aus dem ** Skript-Repository ** öffnen Sie bitte ein Problem auf der [ QOwnNotes-Skript-Repository-Problemseite ](https://github.com/qownnotes/scripts/issues).
+Bei Problemen, Fragen oder Funktionsanforderungen für Skripte aus dem **Script repository**  eröffnen Sie bitte ein Problemthema auf der [QOwnNotes script repository issue page](https://github.com/qownnotes/scripts/issues).
 
 ::: tip
-Wenn Sie ein Skript für das ** Skript-Repository ** vorschlagen möchten, befolgen Sie die Anweisungen unter [ QOwnNotes-Skript-Repository ](https://github.com/qownnotes/scripts).
+Wenn Sie ein Skript für das **Script repository** vorschlagen möchten, befolgen Sie die Anweisungen unter [QOwnNotes-script-repository](https://github.com/qownnotes/scripts).
 :::
 
-Wenn Sie Zugriff auf eine bestimmte Funktionalität in QOwnNotes benötigen oder Fragen oder Ideen haben, öffnen Sie bitte ein Problem auf der [ QOwnNotes-Problemseite ](https://github.com/pbek/QOwnNotes/issues).
+Wenn Sie Zugriff auf eine bestimmte Funktionalität in QOwnNotes benötigen oder Fragen oder Ideen haben, öffnen Sie bitte ein Problem auf der [QOwnNotes-Problemseite](https://github.com/pbek/QOwnNotes/issues).
 
 ::: tip
-Für die Protokollierung können Sie den Befehl ` script.log () ` verwenden, um sich beim Protokoll-Widget anzumelden.
+Für die Protokollierung können Sie den Befehl `script.log ()` verwenden, um sich beim Protokoll-Widget anzumelden.
 :::

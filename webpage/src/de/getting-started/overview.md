@@ -142,7 +142,7 @@
 [QOwnNotes](https://www.qownnotes.org/) ist die **Open Source** (GPL) -Nur-Text-Datei-**Markdown-Notizanwendung** für **GNU/ Linux**, **Mac OS X** und **Windows**, die (optional) mit der [**Notizenanwendung**](https://github.com/nextcloud/notes) von [Nextcloud](https://nextcloud.com/) und [ownCloud](https://owncloud.org/) zusammenarbeitet.
 
 ::: tip
-Treten Sie unserer [ Telegrammgruppe ](https://t.me/QOwnNotes) bei, um zu diskutieren, zu lernen und sich mit der QOwnNotes-Community zu verbinden.
+Treten Sie unserer [Telegram Group](https://t.me/QOwnNotes)  bei, um zu diskutieren, zu lernen und sich mit der QOwnNotes-Community zu verbinden.
 :::
 
 [Verstehen Sie das Konzept von QOwnNotes](concept.md)
