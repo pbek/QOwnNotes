@@ -7993,6 +7993,7 @@ void MainWindow::reloadTagTree() {
         noteIdList << Note::fetchAllIdsByNoteSubFolderId(noteSubFolderId);
     }
 
+
     // create an item to view all notes
     int linkCount =
         _showNotesFromAllNoteSubFolders ? Note::countAll() : noteIdList.count();
@@ -8011,8 +8012,10 @@ void MainWindow::reloadTagTree() {
         QIcon::fromTheme(QStringLiteral("edit-copy"),
                          QIcon(QStringLiteral(
                              ":icons/breeze-qownnotes/16x16/edit-copy.svg"))));
+
     // this time, the tags come first
     buildTagTreeForParentItem();
+
     // and get sorted
     if (settings.value(QStringLiteral("tagsPanelSort")).toInt() ==
         SORT_ALPHABETICAL) {
@@ -8299,7 +8302,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
     const QString name = tag._name;
     auto hideCount = QSettings().value("tagsPanelHideNoteCount", false).toBool();
 
-    QVector<int> linkedNoteIds;
+    int count = 0;
     if (!hideCount) {
         const QVector<int> tagIdListToCount = Tag::isTaggingShowNotesRecursively() ?
                     Tag::fetchTagIdsRecursivelyByParentId(tagId) : QVector<int>{tag._id};
@@ -8310,7 +8313,6 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
                 NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
 
         if (selectedSubFolderItems.count() > 1) {
-            linkedNoteIds.reserve(tagIdListToCount.size());
             for (const int tagIdToCount : tagIdListToCount) {
                 for (QTreeWidgetItem *folderItem : selectedSubFolderItems) {
                     int id = folderItem->data(0, Qt::UserRole).toInt();
@@ -8320,29 +8322,23 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(QTreeWidgetItem *parent,
                         continue;
                     }
 
-                    linkedNoteIds << Tag::fetchAllLinkedNoteIdsForFolder(
-                                         tagIdToCount,
-                                         folder, showNotesFromAllSubFolders,
-                                         isShowNotesRecursively);
+                    count = Tag::countLinkedNoteFileNamesForNoteSubFolder(
+                                tagIdToCount, folder,
+                                showNotesFromAllSubFolders, isShowNotesRecursively);
                 }
             }
         } else {
-            linkedNoteIds.reserve(tagIdListToCount.size());
             for (const int tagToCount : tagIdListToCount) {
-                linkedNoteIds << Tag::fetchAllLinkedNoteIds(
+                count =  Tag::countLinkedNoteFileNames(
                                      tagToCount,
                                      showNotesFromAllSubFolders,
                                      isShowNotesRecursively);
             }
         }
-
-        // remove duplicate note ids
-        linkedNoteIds.erase(
-                    std::unique(linkedNoteIds.begin(), linkedNoteIds.end()),
-                    linkedNoteIds.end());
     }
 
-    const int linkCount = linkedNoteIds.count();
+
+    const int linkCount = count;
     const QString toolTip = tr("show all notes tagged with '%1' (%2)")
                                 .arg(name, QString::number(linkCount));
     auto *item = new QTreeWidgetItem();
@@ -9797,33 +9793,6 @@ void MainWindow::copySelectedNotesToNoteSubFolder(
 }
 
 /**
- * Returns true if one of the selected notes has a linked tag
- *
- * @return
- */
-bool MainWindow::selectedNotesHaveTags() {
-    const auto items = ui->noteTreeWidget->selectedItems();
-    for (QTreeWidgetItem *item : items) {
-        if (item->data(0, Qt::UserRole + 1) != NoteType) {
-            continue;
-        }
-
-        const int noteId = item->data(0, Qt::UserRole).toInt();
-        const Note note = Note::fetch(noteId);
-
-        if (!note.isFetched()) {
-            continue;
-        }
-
-        if (Tag::countAllOfNote(note) > 0) {
-            return true;
-        }
-    }
-
-    return false;
-}
-
-/**
  * Opens the widget to replace text in the current note
  */
 void MainWindow::on_actionReplace_in_current_note_triggered() {
@@ -10725,10 +10694,6 @@ void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged() {
     const auto items = ui->noteSubFolderTreeWidget->selectedItems();
     // if no items selected or only one selected
     if (ui->noteSubFolderTreeWidget->selectedItems().count() <= 1) {
-        if (items.count() == 1) {
-            // on_noteSubFolderTreeWidget_currentItemChanged(items.first(),
-            // Q_NULLPTR);
-        }
         return;
     }
     filterNotes();
