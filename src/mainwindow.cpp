@@ -2928,7 +2928,7 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
     }
 
     // also update the text of the text edit if current note has changed
-    bool updateNoteText = !this->currentNote.exists();
+    bool updateNoteText = !Note::noteIdExists(this->currentNote.getId());
     qDebug() << "updateNoteText: " << updateNoteText;
 
     // restore old selected row (but don't update the note text)
@@ -3741,7 +3741,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
 
     // update cursor position of previous note
     const int noteId = note.getId();
-    if (currentNote.exists() && (currentNote.getId() != noteId)) {
+    if (Note::noteIdExists(currentNote.getId()) && (currentNote.getId() != noteId)) {
         this->noteHistory.updateCursorPositionOfNote(this->currentNote,
                                                      ui->noteTextEdit);
     }
@@ -3832,7 +3832,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
     }
 
     // add new note to history
-    if (addNoteToHistory && note.exists()) {
+    if (addNoteToHistory && Note::noteIdExists(note.getId())) {
         this->noteHistory.add(note, ui->noteTextEdit);
     }
 
@@ -3903,7 +3903,7 @@ void MainWindow::updateCurrentNoteTextHash() {
  * note file is not writable or the note is encrypted
  */
 void MainWindow::updateNoteTextEditReadOnly() {
-    setNoteTextEditReadOnly(!(currentNote.exists() &&
+    setNoteTextEditReadOnly(!(Note::noteIdExists(currentNote.getId()) &&
                               currentNote.fileWriteable() &&
                               Utils::Misc::isNoteEditingAllowed()));
 
@@ -3947,7 +3947,7 @@ void MainWindow::updateShareButton() {
  */
 void MainWindow::updateWindowTitle() {
     const QString &session = qApp->property("session").toString();
-    QString title = currentNote.exists() ?
+    QString title = Note::noteIdExists(currentNote.getId()) ?
         currentNote.getName() : QStringLiteral("#");
 
     if (NoteFolder::countAll() > 0) {
@@ -6631,7 +6631,7 @@ void MainWindow::on_action_Settings_triggered() {
 
 void MainWindow::on_actionShow_versions_triggered() {
     // check if we have selected a note
-    if (!currentNote.exists()) {
+    if (!Note::noteIdExists(currentNote.getId())) {
         return;
     }
 
@@ -7358,7 +7358,7 @@ void MainWindow::gotoNoteBookmark(int slot) {
     NoteHistoryItem item = noteBookmarks[slot];
 
     // check if the note (still) exists
-    if (item.getNote().exists()) {
+    if (Note::noteIdExists(item.getNote().getId())) {
         ui->noteTextEdit->setFocus();
         setCurrentNoteFromHistoryItem(item);
 
