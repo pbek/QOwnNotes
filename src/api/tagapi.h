@@ -15,4 +15,5 @@ class TagApi : public QObject, public Tag {
     Q_INVOKABLE TagApi *fetchByName(const QString &name, int parentId = 0);
     Q_INVOKABLE QStringList getParentTagNames();
     static TagApi* fromTag(const Tag& tag);
+    void copy(const Tag& t);
 };

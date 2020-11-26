@@ -8826,7 +8826,7 @@ void MainWindow::reloadCurrentNoteTags() {
     ui->newNoteTagButton->setToolTip(
         currentNoteOnly ? tr("Add a tag to the current note")
                         : tr("Add a tag to the selected notes"));
-    QVector<TagHeader> tagList;
+    QVector<Tag> tagList;
 
     ui->multiSelectActionFrame->setVisible(!currentNoteOnly);
     ui->noteEditorFrame->setVisible(currentNoteOnly);
@@ -8861,20 +8861,20 @@ void MainWindow::reloadCurrentNoteTags() {
     _lastNoteSelectionWasMultiple = !currentNoteOnly;
 
     // add all new remove-tag buttons
-    for (const TagHeader &tag : Utils::asConst(tagList)) {
+    for (const Tag &tag : Utils::asConst(tagList)) {
         QPushButton *button = new QPushButton(
-            Utils::Misc::shorten(tag._name, 25), ui->noteTagButtonFrame);
+            Utils::Misc::shorten(tag.getName(), 25), ui->noteTagButtonFrame);
         button->setIcon(QIcon::fromTheme(
             QStringLiteral("tag-delete"),
             QIcon(QStringLiteral(
                 ":icons/breeze-qownnotes/16x16/xml-attribute-delete.svg"))));
         button->setToolTip(
             currentNoteOnly
-                ? tr("Remove tag '%1' from the current note").arg(tag._name)
+                ? tr("Remove tag '%1' from the current note").arg(tag.getName())
                 : tr("Remove tag '%1' from the selected notes")
-                      .arg(tag._name));
+                      .arg(tag.getName()));
         button->setObjectName(QStringLiteral("removeNoteTag") +
-                              QString::number(tag._id));
+                              QString::number(tag.getId()));
 
         QObject::connect(button, &QPushButton::clicked, this,
                          &MainWindow::removeNoteTagClicked);
@@ -8902,7 +8902,7 @@ void MainWindow::reloadCurrentNoteTags() {
 void MainWindow::highlightCurrentNoteTagsInTagTree() {
     const int selectedNotesCount = getSelectedNotesCount();
     const bool currentNoteOnly = selectedNotesCount <= 1;
-    QVector<TagHeader> tagList;
+    QVector<Tag> tagList;
 
     if (currentNoteOnly) {
         tagList = Tag::fetchAllOfNote(currentNote);
@@ -8916,9 +8916,9 @@ void MainWindow::highlightCurrentNoteTagsInTagTree() {
 
     Utils::Gui::resetBoldStateOfAllTreeWidgetItems(ui->tagTreeWidget);
 
-    for (const TagHeader &tag : Utils::asConst(tagList)) {
+    for (const Tag &tag : Utils::asConst(tagList)) {
         QTreeWidgetItem *item = Utils::Gui::getTreeWidgetItemWithUserData(
-            ui->tagTreeWidget, tag._id);
+            ui->tagTreeWidget, tag.getId());
 
         if (item != nullptr) {
             // set tag item in tag tree widget to bold if note has tag
@@ -9639,7 +9639,7 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(
             }
 
             // fetch the tags to tag the note after moving it
-            const QVector<TagHeader> tags = Tag::fetchAllOfNote(note);
+            const QVector<Tag> tags = Tag::fetchAllOfNote(note);
 
             if (note.getId() == currentNote.getId()) {
                 // unset the current note
@@ -9656,8 +9656,8 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(
                 note.setNoteSubFolder(noteSubFolder);
 
                 // tag the note again
-                for (const TagHeader &tagHeader : tags) {
-                    Tag::fetch(tagHeader._id).linkToNote(note);
+                for (const Tag &tag : tags) {
+                    tag.linkToNote(note);
 //                    tag.linkToNote(note);
                 }
 
@@ -9740,7 +9740,7 @@ void MainWindow::copySelectedNotesToNoteSubFolder(
             }
 
             // fetch the tags to tag the note after copying it
-            const QVector<TagHeader> tags = Tag::fetchAllOfNote(note);
+            const QVector<Tag> tags = Tag::fetchAllOfNote(note);
 
             // copy note
             const bool result = note.copyToPath(noteSubFolder.fullPath());
@@ -9752,9 +9752,8 @@ void MainWindow::copySelectedNotesToNoteSubFolder(
                 note.setNoteSubFolder(noteSubFolder);
 
                 // tag the note again
-                for (const TagHeader &tag : tags) {
-                    Tag::fetch(tag._id).linkToNote(note);
-//                    tag.linkToNote(note);
+                for (const Tag &tag : tags) {
+                    tag.linkToNote(note);
                 }
 
                 // re-link images
@@ -11114,7 +11113,7 @@ void MainWindow::on_actionShow_menu_bar_triggered(bool checked) {
  */
 void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     QString name = currentNote.getName();
-    const QVector<TagHeader> tags = Tag::fetchAllOfNote(currentNote);
+    const QVector<Tag> tags = Tag::fetchAllOfNote(currentNote);
 
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
@@ -11146,8 +11145,8 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     textEdit->insertPlainText(selectedText);
 
     // link the tags of the old note to the new note
-    for (const TagHeader &tag : tags) {
-        Tag::fetch(tag._id).linkToNote(currentNote);
+    for (const Tag &tag : tags) {
+        tag.linkToNote(currentNote);
     }
 }
 
