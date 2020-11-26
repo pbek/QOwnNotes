@@ -7358,7 +7358,7 @@ void MainWindow::gotoNoteBookmark(int slot) {
     NoteHistoryItem item = noteBookmarks[slot];
 
     // check if the note (still) exists
-    if (item.getNote().exists()) {
+    if (item.getNote().isFetched()) {
         ui->noteTextEdit->setFocus();
         setCurrentNoteFromHistoryItem(item);
 

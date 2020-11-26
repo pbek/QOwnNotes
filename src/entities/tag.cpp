@@ -1173,7 +1173,7 @@ void Tag::removeBrokenLinks() {
                 Note::fetchByName(noteFileName, noteSubFolder.getId());
 
             // remove note tag link if note doesn't exist
-            if (!note.exists()) {
+            if (!note.isFetched()) {
                 const int id = query.value(QStringLiteral("id")).toInt();
                 removeNoteLinkById(id);
             }
