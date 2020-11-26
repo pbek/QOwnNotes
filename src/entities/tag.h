@@ -27,9 +27,9 @@ class Tag : protected TagHeader {
     Tag() noexcept;
     explicit Tag(int id) noexcept : TagHeader{id, QString()}, _parentId{0} {}
 
-//    bool operator==(const Tag &tag) const;
+    bool operator==(const Tag &tag) const;
 
-//    bool operator<(const Tag &tag) const;
+    bool operator<(const Tag &tag) const;
 
     friend QDebug operator<<(QDebug dbg, const Tag &tag);
 
@@ -109,7 +109,7 @@ class Tag : protected TagHeader {
 
     static Tag fetchByName(const QString &name, const int parentId);
 
-    static QVector<TagHeader> fetchAllOfNote(const Note &note);
+    static QVector<Tag> fetchAllOfNote(const Note &note);
 
     static QStringList fetchAllNames();
 
@@ -165,7 +165,7 @@ class Tag : protected TagHeader {
 
     static bool isTaggingShowNotesRecursively();
 
-    static QVector<TagHeader> fetchAllOfNotes(const QVector<Note> &notes);
+    static QVector<Tag> fetchAllOfNotes(const QVector<Note> &notes);
 
     static bool mergeFromDatabase(QSqlDatabase &db);
 

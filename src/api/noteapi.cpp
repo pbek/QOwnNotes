@@ -48,13 +48,13 @@ QQmlListProperty<TagApi> NoteApi::tags() {
     _tags.clear();
 
     Note note = Note::fetch(_id);
-    QVector<TagHeader> tags = Tag::fetchAllOfNote(note);
-    QVectorIterator<TagHeader> itr(tags);
+    QVector<Tag> tags = Tag::fetchAllOfNote(note);
+    QVectorIterator<Tag> itr(tags);
     while (itr.hasNext()) {
-        TagHeader tag = itr.next();
+        Tag tag = itr.next();
 
         auto* tagApi = new TagApi();
-        tagApi->fetch(tag._id);
+        tagApi->copy(tag);
         _tags.append(tagApi);
     }
 #if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
@@ -70,11 +70,11 @@ QQmlListProperty<TagApi> NoteApi::tags() {
 QStringList NoteApi::tagNames() const {
     QStringList tagNameList;
     Note note = Note::fetch(_id);
-    QVector<TagHeader> tags = Tag::fetchAllOfNote(note);
-    QVectorIterator<TagHeader> itr(tags);
+    QVector<Tag> tags = Tag::fetchAllOfNote(note);
+    QVectorIterator<Tag> itr(tags);
     while (itr.hasNext()) {
-        TagHeader tag = itr.next();
-        tagNameList.append(tag._name);
+        Tag tag = itr.next();
+        tagNameList.append(tag.getName());
     }
 
     return tagNameList;

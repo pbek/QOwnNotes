@@ -39,3 +39,11 @@ TagApi* TagApi::fromTag(const Tag& tag) {
     tagApi->fetch(tag.getId());
     return tagApi;
 }
+
+void TagApi::copy(const Tag &tag)
+{
+    this->_id = tag.getId();
+    _name = tag.getName();
+    _parentId = tag.getParentId();
+    _priority = tag.getPriority();
+}
