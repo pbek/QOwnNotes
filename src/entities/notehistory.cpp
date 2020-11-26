@@ -99,7 +99,7 @@ bool NoteHistoryItem::isValid() const {
 
 bool NoteHistoryItem::isNoteValid() const {
     Note note = getNote();
-    return note.exists();
+    return note.isFetched();
 }
 
 bool NoteHistoryItem::operator==(const NoteHistoryItem &item) const {

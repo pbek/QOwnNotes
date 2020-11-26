@@ -1552,7 +1552,7 @@ bool Note::handleNoteTextFileName() {
         const QString nameBase = name;
 
         // check if note with this filename already exists
-        while (Note::fetchByFileName(fileName).exists()) {
+        while (Note::fetchByFileName(fileName).isFetched()) {
             // find new filename for the note
             name =
                 nameBase + QStringLiteral(" ") + QString::number(++nameCount);
