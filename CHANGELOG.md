@@ -2,9 +2,10 @@
 
 ## 20.11.10
 - the note tagging was improved (for [#1960](https://github.com/pbek/QOwnNotes/pull/1960), thank you @Waqar144)
-    - the tag tree reloads are much faster now (2x faster), there should be no lag
-      even with huge trees with 3000+ note tag links
+    - the tag tree reloads are much faster now, even with huge trees with 3000+ note tag links
     - the tag tree is now not reloaded if the tag panel is not visible
+- there now is a button to check the disk database integrity in the *General settings*,
+  which will also fix some problems
 - added more Dutch, Hungarian, Urdu (Pakistan) translation (thank you Farhan1985, rawfreeamy)
 
 ## 20.11.9

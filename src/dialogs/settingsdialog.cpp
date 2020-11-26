@@ -4290,3 +4290,17 @@ void SettingsDialog::on_languageSearchLineEdit_textChanged(const QString &arg1) 
 void SettingsDialog::on_noteTextViewUseEditorStylesCheckBox_toggled(bool checked) {
     ui->previewFontsGroupBox->setDisabled(checked);
 }
+
+void SettingsDialog::on_databaseIntegrityCheckButton_clicked() {
+    if (DatabaseService::checkDiskDatabaseIntegrity()) {
+        Utils::Gui::information(
+            this, tr("Database"),
+            tr("The integrity of the disk database is valid."),
+            QStringLiteral("database-integrity-check-valid"));
+    } else {
+        Utils::Gui::warning(
+            this, tr("Database"),
+            tr("The integrity of the disk database is not valid!"),
+            QStringLiteral("database-integrity-check-not-valid"));
+    }
+}

@@ -4315,21 +4315,31 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  <property name="title">
                   <string>Database</string>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_2">
-                  <item>
-                   <widget class="QLabel" name="reinitializeDatabaseLabel">
-                    <property name="text">
-                     <string>Be warned that this will also remove your cached todo items and configured note folders and scripts!</string>
-                    </property>
-                    <property name="wordWrap">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
+                 <layout class="QGridLayout" name="gridLayout_76">
+                  <item row="1" column="0">
                    <widget class="QPushButton" name="reinitializeDatabaseButton">
                     <property name="text">
                      <string>Reinitialize Database</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QPushButton" name="databaseIntegrityCheckButton">
+                    <property name="toolTip">
+                     <string>Checks the disk database integrity and fixes problems</string>
+                    </property>
+                    <property name="text">
+                     <string>Check integrity</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QLabel" name="reinitializeDatabaseLabel">
+                    <property name="text">
+                     <string>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
                     </property>
                    </widget>
                   </item>
@@ -6401,8 +6411,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

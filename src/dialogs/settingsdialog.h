@@ -291,6 +291,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_noteTextViewUseEditorStylesCheckBox_toggled(bool checked);
 
+    void on_databaseIntegrityCheckButton_clicked();
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

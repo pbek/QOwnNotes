@@ -74,6 +74,12 @@ bool DatabaseService::reinitializeDiskDatabase() {
     return removeDiskDatabase() && createDiskConnection() && setupTables();
 }
 
+bool DatabaseService::checkDiskDatabaseIntegrity() {
+    const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
+    QSqlQuery query(db);
+    return query.exec(QStringLiteral("PRAGMA integrity_check"));
+}
+
 bool DatabaseService::createMemoryConnection() {
     QSqlDatabase dbMemory = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"),
                                                       QStringLiteral("memory"));
