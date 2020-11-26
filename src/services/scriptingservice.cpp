@@ -291,7 +291,7 @@ void ScriptingService::initComponents() {
     _scriptComponents.clear();
     _settingsVariables.clear();
 
-    //fetch enabled only
+    // fetch enabled only
     const QList<Script> scripts = Script::fetchAll(true);
 
     for (const Script& script : scripts) {
