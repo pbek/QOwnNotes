@@ -6328,10 +6328,10 @@ void MainWindow::openLocalUrl(QString urlString) {
                         }
 
                         NoteSubFolder subFolder = NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
-                        if (!subFolder.exists()) {
+                        if (!subFolder.isFetched()) {
                             createNewNoteSubFolder(folderName);
                             noteSubFolder = NoteSubFolder::fetchByNameAndParentId(folderName, noteSubFolder.getId());
-                            if (!noteSubFolder.exists()) {
+                            if (!noteSubFolder.isFetched()) {
                                 qWarning() << "Failed to create subfolder: " << folderName <<
                                               "when attempting to create path: " << relativeFilePath;
                                 subFolderCreationFailed = true;
