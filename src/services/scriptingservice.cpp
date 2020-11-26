@@ -290,8 +290,9 @@ void ScriptingService::initComponents() {
     clearCustomStyleSheets();
     _scriptComponents.clear();
     _settingsVariables.clear();
-    bool enabledOnly = true;
-    const QList<Script> scripts = Script::fetchAll(enabledOnly);
+
+    //fetch enabled only
+    const QList<Script> scripts = Script::fetchAll(true);
 
     for (const Script& script : scripts) {
         initComponent(script);
