@@ -1805,7 +1805,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
-      <location filename="../mainwindow.cpp" line="8822"/>
+      <location filename="../mainwindow.cpp" line="8827"/>
       <source>Add a tag to the current note</source>
       <translation>Pagdugang og tag sa kasamtangan nga nota</translation>
     </message>
@@ -1841,7 +1841,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1238"/>
-      <location filename="../mainwindow.cpp" line="6785"/>
+      <location filename="../mainwindow.cpp" line="6794"/>
       <source>Custom actions</source>
       <translation>Adwana sa mga buhat</translation>
     </message>
@@ -1922,13 +1922,13 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1445"/>
-      <location filename="../mainwindow.cpp" line="10522"/>
+      <location filename="../mainwindow.cpp" line="10499"/>
       <source>Select &amp;all notes</source>
       <translation>Pili &amp;tanan nga mga notahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1454"/>
-      <location filename="../mainwindow.cpp" line="6696"/>
+      <location filename="../mainwindow.cpp" line="6705"/>
       <source>Insert &amp;link</source>
       <translation>Musingit &amp;dugtong</translation>
     </message>
@@ -1983,7 +1983,7 @@
       <translation>Pangita og mag buhat sa notahan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8823"/>
+      <location filename="../mainwindow.cpp" line="8828"/>
       <source>Add a tag to the selected notes</source>
       <translation>Pagdugang og usa ka tag sa pinili nga mga nota</translation>
     </message>
@@ -1994,7 +1994,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="886"/>
-      <location filename="../mainwindow.cpp" line="6747"/>
+      <location filename="../mainwindow.cpp" line="6756"/>
       <source>Export</source>
       <translation>Eksport</translation>
     </message>
@@ -2005,7 +2005,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="928"/>
-      <location filename="../mainwindow.cpp" line="6728"/>
+      <location filename="../mainwindow.cpp" line="6737"/>
       <source>Print</source>
       <translation>Printa</translation>
     </message>
@@ -2368,7 +2368,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2244"/>
-      <location filename="../mainwindow.cpp" line="11637"/>
+      <location filename="../mainwindow.cpp" line="11621"/>
       <source>Remove current workspace</source>
       <translation>Tang-tangon ang pagkakaron nga workspace</translation>
     </message>
@@ -2410,7 +2410,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2318"/>
-      <location filename="../mainwindow.cpp" line="6705"/>
+      <location filename="../mainwindow.cpp" line="6714"/>
       <source>Insert block &amp;quote</source>
       <translation>Sapawan ang block &amp;quote</translation>
     </message>
@@ -2437,7 +2437,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2365"/>
-      <location filename="../mainwindow.cpp" line="10498"/>
+      <location filename="../mainwindow.cpp" line="10475"/>
       <source>Open note in different window</source>
       <translation>Ablihan ang lain lain nga note sa window</translation>
     </message>
@@ -2458,7 +2458,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2405"/>
-      <location filename="../mainwindow.cpp" line="10506"/>
+      <location filename="../mainwindow.cpp" line="10483"/>
       <source>Show note git versions</source>
       <translation>Ipakita ang notahan sa mga git bersyon</translation>
     </message>
@@ -2541,7 +2541,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2567"/>
-      <location filename="../mainwindow.cpp" line="12563"/>
+      <location filename="../mainwindow.cpp" line="12561"/>
       <source>Automatically detect</source>
       <translation>Awtomatik nga namatikdan</translation>
     </message>
@@ -2735,21 +2735,21 @@
       <translation>Pagkuha ug notes gikan sa Evernote</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2859"/>
+      <location filename="../mainwindow.cpp" line="2862"/>
       <source>Note was removed externally!</source>
       <translation>Notahan kay na natangtang dayon!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2860"/>
+      <location filename="../mainwindow.cpp" line="2863"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
       <translation>Sa pagkakaron na tangtang ang notahan sa gawas sa aplikasyon! ibalik sa pagkakaron ang notahan?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5475"/>
-      <location filename="../mainwindow.cpp" line="5498"/>
-      <location filename="../mainwindow.cpp" line="7190"/>
-      <location filename="../mainwindow.cpp" line="10588"/>
+      <location filename="../mainwindow.cpp" line="5484"/>
+      <location filename="../mainwindow.cpp" line="5507"/>
+      <location filename="../mainwindow.cpp" line="7202"/>
+      <location filename="../mainwindow.cpp" line="10565"/>
       <source>&amp;Cancel</source>
       <translation>tangtangngon</translation>
     </message>
@@ -2761,47 +2761,47 @@ Restore current note?</source>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3096"/>
+      <location filename="../mainwindow.cpp" line="3099"/>
       <source>new version %1 available</source>
       <translation>bag o nga model %1 magamit</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3213"/>
+      <location filename="../mainwindow.cpp" line="3216"/>
       <source>Abort</source>
       <translation>Abort</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3213"/>
+      <location filename="../mainwindow.cpp" line="3216"/>
       <source>Loading notes…</source>
       <translation>Nagdownload mga nota…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3427"/>
+      <location filename="../mainwindow.cpp" line="3430"/>
       <source>Removed duplicate conflicted database: %1</source>
       <translation>Gikuha ang nagkadungan nga nagkasumpaki nga database: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3428"/>
+      <location filename="../mainwindow.cpp" line="3431"/>
       <source>Could not remove duplicate conflicted database: %1</source>
       <translation>Dili matangtang ang sulundon nga nagkasumpaki nga database: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3434"/>
+      <location filename="../mainwindow.cpp" line="3437"/>
       <source>Removed merged conflicted database: %1</source>
       <translation>Giwagtang ang nagkasumpaki nga database: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3435"/>
+      <location filename="../mainwindow.cpp" line="3438"/>
       <source>Could not remove merged conflicted database: %1</source>
       <translation>Dili matangtang ang gisagol nga nagkasumpaki nga database: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3450"/>
+      <location filename="../mainwindow.cpp" line="3453"/>
       <source>Delete conflicted database copies</source>
       <translation>Pagwagtang sa nagkasumpaki nga mga kopya sa database</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3473"/>
+      <location filename="../mainwindow.cpp" line="3476"/>
       <source>Removed %n conflicted database copies</source>
       <translation>
         <numerusform>Giwagtang %n nagkasumpaki nga kopya sa database</numerusform>
@@ -2809,62 +2809,62 @@ Restore current note?</source>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3637"/>
+      <location filename="../mainwindow.cpp" line="3640"/>
       <source>Please select the folder where your notes will get stored</source>
       <translation>Mamalihoh pilia ang polder kong asa imong notaha' ay mabalik</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3663"/>
+      <location filename="../mainwindow.cpp" line="3666"/>
       <source>No folder was selected</source>
       <translation>Walay polder nga napili</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3665"/>
+      <location filename="../mainwindow.cpp" line="3668"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
       <translation>Pwedi ka mo pili sa imong ownCloud ng mga notahan para kini nga softwar mugana!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3667"/>
+      <location filename="../mainwindow.cpp" line="3670"/>
       <source>&amp;Retry</source>
       <translation>&amp;mag-otro</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3667"/>
+      <location filename="../mainwindow.cpp" line="3670"/>
       <source>&amp;Exit</source>
       <translation>&amp;gawsanan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3993"/>
+      <location filename="../mainwindow.cpp" line="3998"/>
       <source>Remove current note</source>
       <translation>Tangtangon sa pagkakaron ang suwatanan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3994"/>
+      <location filename="../mainwindow.cpp" line="3999"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Pahibalo tangtangon sa pagkakaron:&lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4353"/>
+      <location filename="../mainwindow.cpp" line="4358"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
       <translation>Palihog pinduta ang &lt;strong&gt;&lt;/strong&gt;sa encrypted note.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4376"/>
+      <location filename="../mainwindow.cpp" line="4381"/>
       <source>Note can't be decrypted!</source>
       <translation>Pahibalo dili ma decrypted!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4377"/>
+      <location filename="../mainwindow.cpp" line="4382"/>
       <source>It seems that your password is not valid!</source>
       <translation>Dili makita ang imong password kay dili pwedi!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4545"/>
+      <location filename="../mainwindow.cpp" line="4550"/>
       <source>Remove selected notes</source>
       <translation>Tangtangon ang mga nota nga napili</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4547"/>
+      <location filename="../mainwindow.cpp" line="4552"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -2874,13 +2874,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4635"/>
-      <location filename="../mainwindow.cpp" line="10805"/>
+      <location filename="../mainwindow.cpp" line="4642"/>
+      <location filename="../mainwindow.cpp" line="10788"/>
       <source>Remove selected folders</source>
       <translation>Tanggalon ang mga napili nga polder</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4636"/>
+      <location filename="../mainwindow.cpp" line="4643"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
       <translation>
         <numerusform>Tangtangon &lt;strong&gt;%n&lt;/strong&gt;napili nga mga polder?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;tanan nga mga polder og mga file dire sa mga polder kay tangtangon isip maayo!</numerusform>
@@ -2888,17 +2888,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4647"/>
+      <location filename="../mainwindow.cpp" line="4654"/>
       <source>Removed note subfolder: %1</source>
       <translation>Natang-tang nga note subfoler: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4667"/>
+      <location filename="../mainwindow.cpp" line="4674"/>
       <source>Remove selected tags</source>
       <translation>Tangtangon ang mga gipili nga tag</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4668"/>
+      <location filename="../mainwindow.cpp" line="4675"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
         <numerusform>Kuhaa ang &lt;strong&gt;%n&lt;/strong&gt; gipili nga tag? Walay notes nga tang-tangon sa kani nga proseso.</numerusform>
@@ -2906,13 +2906,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4720"/>
-      <location filename="../mainwindow.cpp" line="9608"/>
+      <location filename="../mainwindow.cpp" line="4727"/>
+      <location filename="../mainwindow.cpp" line="9613"/>
       <source>Move selected notes</source>
       <translation>Ibalhin ang gipili nga notes</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4721"/>
+      <location filename="../mainwindow.cpp" line="4728"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Ibalhin ang %n gipili na note(s) sa &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2920,13 +2920,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4824"/>
-      <location filename="../mainwindow.cpp" line="9717"/>
+      <location filename="../mainwindow.cpp" line="4833"/>
+      <location filename="../mainwindow.cpp" line="9722"/>
       <source>Copy selected notes</source>
       <translation>Kopyaha ang gipili nga mga notahan</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4825"/>
+      <location filename="../mainwindow.cpp" line="4834"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Copyahon %n napili nga note(s) sa &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2934,13 +2934,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4855"/>
-      <location filename="../mainwindow.cpp" line="5004"/>
+      <location filename="../mainwindow.cpp" line="4864"/>
+      <location filename="../mainwindow.cpp" line="5013"/>
       <source>Done</source>
       <translation>Nahumana</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4856"/>
+      <location filename="../mainwindow.cpp" line="4865"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>%n note(s) kung asa kadto gi copya &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -2948,12 +2948,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4869"/>
+      <location filename="../mainwindow.cpp" line="4878"/>
       <source>Tag selected notes</source>
       <translation>Tag sa mipili nga mga nota</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4870"/>
+      <location filename="../mainwindow.cpp" line="4879"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Ibalhin ang %n gipili na note(s) sa &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2961,42 +2961,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5143"/>
+      <location filename="../mainwindow.cpp" line="5152"/>
       <source>Restart application</source>
       <translation>Otrohon ang aplikasyon</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5149"/>
+      <location filename="../mainwindow.cpp" line="5158"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
       <translation>Kinahanglan na otrohon nimo ang aplikasyon nga mano mano sa mga pagsulay sa kuha sa epekto.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5154"/>
+      <location filename="../mainwindow.cpp" line="5163"/>
       <source>You may need to restart the application to let the changes take effect.</source>
       <translation>Kinahanglan otrohon ang aplikasyon para mabag o ang epekto.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5156"/>
+      <location filename="../mainwindow.cpp" line="5165"/>
       <source>Restart</source>
       <translation>I-restart</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5387"/>
+      <location filename="../mainwindow.cpp" line="5396"/>
       <source>PDF files</source>
       <translation>Mga PDF file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5471"/>
+      <location filename="../mainwindow.cpp" line="5480"/>
       <source>Todo lists disabled!</source>
       <translation>Wala’y lista ang mga lista ni Todo!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5472"/>
+      <location filename="../mainwindow.cpp" line="5481"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Gipugngan mo ang mga lista sa todo. &lt;br/&gt; Palihug susihon ang imong pagsulud sa &lt;strong&gt; Todo &lt;/strong&gt; sa mga setting!</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5720"/>
+      <location filename="../mainwindow.cpp" line="5729"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Giwagtang %n nagkasumpaki nga kopya sa database</numerusform>
@@ -3004,115 +3004,115 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6287"/>
-      <location filename="../mainwindow.cpp" line="6308"/>
+      <location filename="../mainwindow.cpp" line="6296"/>
+      <location filename="../mainwindow.cpp" line="6317"/>
       <source>Note was not found</source>
       <translation>Wala makita ang nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6298"/>
+      <location filename="../mainwindow.cpp" line="6307"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Ang nota wala makita, paghimo og bag-ong nota &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6302"/>
+      <location filename="../mainwindow.cpp" line="6311"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</source>
       <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6347"/>
+      <location filename="../mainwindow.cpp" line="6356"/>
       <source>Failed to create note</source>
       <translation type="unfinished">Failed to create note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6348"/>
+      <location filename="../mainwindow.cpp" line="6357"/>
       <source>Note creation failed</source>
       <translation type="unfinished">Note creation failed</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6509"/>
+      <location filename="../mainwindow.cpp" line="6518"/>
       <source>Note folders</source>
       <translation>Mga folder sa nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6632"/>
+      <location filename="../mainwindow.cpp" line="6641"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
       <translation>Pahibalo sa mga bersyon sa pagkakaron nga puno imong ownCloud server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6649"/>
+      <location filename="../mainwindow.cpp" line="6658"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
       <translation>Basura ng mga nota sa pagkakaron puno gikan sa imong ownCloud server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6715"/>
+      <location filename="../mainwindow.cpp" line="6724"/>
       <source>Copy code block</source>
       <translation>Kopyaha ang block code</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6736"/>
+      <location filename="../mainwindow.cpp" line="6745"/>
       <source>Print selected text</source>
       <translation>I-print ang gipili nga teksto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6742"/>
+      <location filename="../mainwindow.cpp" line="6751"/>
       <source>Print selected text (preview)</source>
       <translation>I-ang gipili nga teksto (ibalik)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6760"/>
+      <location filename="../mainwindow.cpp" line="6769"/>
       <source>Export selected text as PDF</source>
       <translation>Eksport sa gipili nga teksto isip PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6766"/>
+      <location filename="../mainwindow.cpp" line="6775"/>
       <source>Export selected text as PDF (preview)</source>
       <translation>Eksport ang gipili nga teksto isip PDF (ibalik)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7186"/>
+      <location filename="../mainwindow.cpp" line="7198"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation>Imong notahan kay ma descrypted og mabalik kung gi yano sa pag balik. taguan sa imong otok nga ang unencrypted note kay posibli ma synced sa imong server og sensitib nga teksto nga makita!&lt;br /&gt;ganahan baka ma descrypt imong note?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7283"/>
+      <location filename="../mainwindow.cpp" line="7295"/>
       <source>Markdown files</source>
       <translation>Nagpaubos ang mga file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7338"/>
+      <location filename="../mainwindow.cpp" line="7350"/>
       <source>Bookmarked note position at slot %1</source>
       <translation>Tatak sa talaan nga posisyon og puwesto%1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7353"/>
+      <location filename="../mainwindow.cpp" line="7365"/>
       <source>Jumped to bookmark position at slot %1</source>
       <translation>Milukso sa tatak nga posisyon sa puwesto %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7581"/>
-      <location filename="../mainwindow.cpp" line="7650"/>
+      <location filename="../mainwindow.cpp" line="7593"/>
+      <location filename="../mainwindow.cpp" line="7662"/>
       <source>Inserting image</source>
       <translation>Pagsal-ot og larawan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7586"/>
-      <location filename="../mainwindow.cpp" line="7654"/>
+      <location filename="../mainwindow.cpp" line="7598"/>
+      <location filename="../mainwindow.cpp" line="7666"/>
       <source>Done inserting image</source>
       <translation>Humana og sal ot</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7588"/>
+      <location filename="../mainwindow.cpp" line="7600"/>
       <source>Inserting attachment</source>
       <translation>Isapaw sa pataban</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7593"/>
+      <location filename="../mainwindow.cpp" line="7605"/>
       <source>Done inserting attachment</source>
       <translation>Nahimo nga pagsul ot sa kasuod</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7605"/>
+      <location filename="../mainwindow.cpp" line="7617"/>
       <source>Copied %n note(s) to %1</source>
       <translation>
         <numerusform>Gicopya %n mga nota sa %1</numerusform>
@@ -3120,7 +3120,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7614"/>
+      <location filename="../mainwindow.cpp" line="7626"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation>
         <numerusform>Napakyas sa kopya note(s) (lagmit na human ang existing)</numerusform>
@@ -3128,7 +3128,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7624"/>
+      <location filename="../mainwindow.cpp" line="7636"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
         <numerusform>Laktawi ang gi copya sa %n note(s) (walay pag osos og text file o dili mabasa)</numerusform>
@@ -3136,220 +3136,220 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7637"/>
+      <location filename="../mainwindow.cpp" line="7649"/>
       <source>Saving temporary image</source>
       <translation>Pagluwas sa temporaryo sa larawan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7656"/>
+      <location filename="../mainwindow.cpp" line="7668"/>
       <source>Temporary file can't be opened</source>
       <translation>Temporaryo nga file nga dili ma abri</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7699"/>
+      <location filename="../mainwindow.cpp" line="7711"/>
       <source>Downloading %1</source>
       <translation>Pag-download %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7889"/>
+      <location filename="../mainwindow.cpp" line="7901"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
       <translation>I-reset font sa gidak-on sa %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8868"/>
+      <location filename="../mainwindow.cpp" line="8873"/>
       <source>Remove tag '%1' from the current note</source>
       <translation>Kuhaa ang tag '%1' gikan sa kasamtangan nga nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8869"/>
+      <location filename="../mainwindow.cpp" line="8874"/>
       <source>Remove tag '%1' from the selected notes</source>
       <translation>Kuhaa ang tag '%1' gikan sa pinili nga nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9100"/>
+      <location filename="../mainwindow.cpp" line="9105"/>
       <source>Rename tag</source>
       <translation>Usbon ang ngalan sa tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9101"/>
+      <location filename="../mainwindow.cpp" line="9106"/>
       <source>Assign color</source>
       <translation>I-assign ang kolor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9102"/>
+      <location filename="../mainwindow.cpp" line="9107"/>
       <source>Disable color</source>
       <translation>Disable ang kolor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9106"/>
+      <location filename="../mainwindow.cpp" line="9111"/>
       <source>&amp;Move tags to…</source>
       <translation>&amp;Pagbalhin sa mga tag…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9317"/>
+      <location filename="../mainwindow.cpp" line="9322"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
       <translation>Mobalhin sa gamut</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9884"/>
+      <location filename="../mainwindow.cpp" line="9861"/>
       <source>An url was opened at the current cursor position</source>
       <translation>Usa ka url nga abri sa kasamtangan sa cursor posisyon</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9987"/>
+      <location filename="../mainwindow.cpp" line="9964"/>
       <source>No equation was found in front of the cursor</source>
       <translation>Walay equation nga makita sa atubangan sa cursor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10007"/>
+      <location filename="../mainwindow.cpp" line="9984"/>
       <source>Result for equation: %1 = %2</source>
       <translation>Resulta sa equation: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10112"/>
+      <location filename="../mainwindow.cpp" line="10089"/>
       <source>The scripting engine was reloaded</source>
       <translation>Ang pagsulat sa makina ay reloaded</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10146"/>
+      <location filename="../mainwindow.cpp" line="10123"/>
       <source>HTML files</source>
       <translation>HTML na mga file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10434"/>
+      <location filename="../mainwindow.cpp" line="10411"/>
       <source>Jump to the note's subfolder</source>
       <translation>Laktaw ngadto sa subfolder sa mubo nga sulat
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10491"/>
+      <location filename="../mainwindow.cpp" line="10468"/>
       <source>Open note in tab</source>
       <translation>Buksi ang nota sa tab
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12156"/>
+      <location filename="../mainwindow.cpp" line="12140"/>
       <source>A script update was found!</source>
       <translation>Nakit-an ang usa ka pag-update sa script!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12162"/>
+      <location filename="../mainwindow.cpp" line="12146"/>
       <source>Script updates</source>
       <translation>Ang mga update sa script</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12163"/>
+      <location filename="../mainwindow.cpp" line="12147"/>
       <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
       <translation>Ang mga pag-update sa imong mga script nakita sa repository sa script! Gusto ba nimo nga bag-ohon sila?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12178"/>
+      <location filename="../mainwindow.cpp" line="12162"/>
       <source>No script updates were found</source>
       <translation>Wala makita ang mga pag-update sa iskrip</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12794"/>
+      <location filename="../mainwindow.cpp" line="12792"/>
       <source>Toggle note stickiness</source>
       <translation>Pag-ilis sa pagkadikit sa sulat</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12800"/>
+      <location filename="../mainwindow.cpp" line="12798"/>
       <source>Close other note tabs</source>
       <translation>Pagsira sa ubang mga tala nga tala</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10378"/>
-      <location filename="../mainwindow.cpp" line="10572"/>
+      <location filename="../mainwindow.cpp" line="10355"/>
+      <location filename="../mainwindow.cpp" line="10549"/>
       <source>Rename note</source>
       <translation>Usba ang pangalan sa tala</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10380"/>
+      <location filename="../mainwindow.cpp" line="10357"/>
       <source>Allows you to rename the filename of the note</source>
       <translation>Nagtugot nimo nga makausab sa panglan sa kini nga filename para sa nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10394"/>
+      <location filename="../mainwindow.cpp" line="10371"/>
       <source>&amp;Move notes to…</source>
       <translation>&amp;Pagbalhin sa mga nota sa…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10395"/>
+      <location filename="../mainwindow.cpp" line="10372"/>
       <source>&amp;Copy notes to…</source>
       <translation>&amp;Kopya nga mga sulat sa…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10438"/>
+      <location filename="../mainwindow.cpp" line="10415"/>
       <source>Move notes to subfolder…</source>
       <translation>Pagbalhin mga nota sa subfolder…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10442"/>
+      <location filename="../mainwindow.cpp" line="10419"/>
       <source>Copy notes to subfolder…</source>
       <translation>Kopyaha ang mga nota sa subfolder…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10450"/>
+      <location filename="../mainwindow.cpp" line="10427"/>
       <source>&amp;Tag selected notes with…</source>
       <translation>&amp;Tag gipili nga mga nota uban sa…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10474"/>
+      <location filename="../mainwindow.cpp" line="10451"/>
       <source>&amp;Remove tag from selected notes…</source>
       <translation>&amp;Kuhaa ang tag gikan sa piniling mga nota…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10572"/>
+      <location filename="../mainwindow.cpp" line="10549"/>
       <source>Name:</source>
       <translation>Ngalan:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10584"/>
+      <location filename="../mainwindow.cpp" line="10561"/>
       <source>Note renaming not enabled!</source>
       <translation>Ang nota kay nagpabiling di makahimo!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10804"/>
+      <location filename="../mainwindow.cpp" line="10787"/>
       <source>Rename subfolder</source>
       <translation>Usba ang pangalan sa folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11408"/>
+      <location filename="../mainwindow.cpp" line="11392"/>
       <source>Create new workspace</source>
       <translation>paghimo ug bag-ong lugar sa trabahuan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11409"/>
-      <location filename="../mainwindow.cpp" line="11679"/>
+      <location filename="../mainwindow.cpp" line="11393"/>
+      <location filename="../mainwindow.cpp" line="11663"/>
       <source>Workspace name:</source>
       <translation>Pangalan sa lugar nga trabahuan:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11534"/>
+      <location filename="../mainwindow.cpp" line="11518"/>
       <source>full</source>
       <comment>full workspace</comment>
       <translation>puno</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11541"/>
+      <location filename="../mainwindow.cpp" line="11525"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
       <translation>gamay</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11638"/>
+      <location filename="../mainwindow.cpp" line="11622"/>
       <source>Remove the current workspace?</source>
       <translation>Tang-tangon sa kasamtang nga workspace?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11678"/>
+      <location filename="../mainwindow.cpp" line="11662"/>
       <source>Rename workspace</source>
       <translation>Ilisan ang pangalan sa workspace</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="11824"/>
+      <location filename="../mainwindow.cpp" line="11808"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation>
@@ -3358,42 +3358,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12095"/>
+      <location filename="../mainwindow.cpp" line="12079"/>
       <source>Disallow all note editing</source>
       <translation>Itugot ang tanang pag-usab sa sulat</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12311"/>
+      <location filename="../mainwindow.cpp" line="12309"/>
       <source>Select text files to import</source>
       <translation>Pagpili sa mga file sa text aron i-import</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12341"/>
+      <location filename="../mainwindow.cpp" line="12339"/>
       <source>Importing: %1</source>
       <translation>Pag-import: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12406"/>
+      <location filename="../mainwindow.cpp" line="12404"/>
       <source>Note headline '%1' was copied to the clipboard</source>
       <translation>Mubo nga sulat ang headline nga '%1' gikopya sa clipboard</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12500"/>
+      <location filename="../mainwindow.cpp" line="12498"/>
       <source>Leave full-screen mode</source>
       <translation>Biyai ang full-screen mode</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12681"/>
+      <location filename="../mainwindow.cpp" line="12679"/>
       <source>Custom editor width</source>
       <translation>Ang gilapdon sa Custom editor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="12681"/>
+      <location filename="../mainwindow.cpp" line="12679"/>
       <source>Characters:</source>
       <translation>Mga karakter:</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8842"/>
+      <location filename="../mainwindow.cpp" line="8847"/>
       <source>%n notes selected</source>
       <translation>
         <numerusform>%n nota nga gipili</numerusform>
@@ -3402,7 +3402,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2450"/>
-      <location filename="../mainwindow.cpp" line="12096"/>
+      <location filename="../mainwindow.cpp" line="12080"/>
       <source>Allow all note editing</source>
       <translation>Tugoti ang tanan nga pag-usab sa sulat</translation>
     </message>
@@ -3412,12 +3412,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>&amp;tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4944"/>
+      <location filename="../mainwindow.cpp" line="4953"/>
       <source>Remove tag from selected notes</source>
       <translation>Tang-tangon ang tag gikan sa napili nga mga nota</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4945"/>
+      <location filename="../mainwindow.cpp" line="4954"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
         <numerusform>Tang-tangon ang tag &lt;strong&gt;%1&lt;/strong&gt;gekan sa %n mga napili nga note(s)?</numerusform>
@@ -3425,7 +3425,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5005"/>
+      <location filename="../mainwindow.cpp" line="5014"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt;kay natangtang gikan sa %n nota(s)</numerusform>
@@ -3433,132 +3433,132 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5050"/>
+      <location filename="../mainwindow.cpp" line="5059"/>
       <source>Current notes folder: </source>
       <translation>Kasamtangan nga mga nota: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5053"/>
+      <location filename="../mainwindow.cpp" line="5062"/>
       <source>Set the notes folder. Current notes folder: </source>
       <translation>Itakda ang folder sa nota. kasamtangang polder sa nota: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5255"/>
+      <location filename="../mainwindow.cpp" line="5264"/>
       <source>Print note</source>
       <translation>Printahon ang note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5330"/>
+      <location filename="../mainwindow.cpp" line="5339"/>
       <source>Letter</source>
       <translation>Sulat</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5360"/>
+      <location filename="../mainwindow.cpp" line="5369"/>
       <source>Portrait</source>
       <translation>Portrait</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5360"/>
+      <location filename="../mainwindow.cpp" line="5369"/>
       <source>Landscape</source>
       <translation>Talan-awon</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5365"/>
+      <location filename="../mainwindow.cpp" line="5374"/>
       <source>Orientation</source>
       <translation>Orientasyon</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5365"/>
+      <location filename="../mainwindow.cpp" line="5374"/>
       <source>Orientation:</source>
       <translation>Orientasyon:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5388"/>
+      <location filename="../mainwindow.cpp" line="5397"/>
       <source>Export current note as PDF</source>
       <translation>Pagbaligya sa kasamtangan nga nota ingon sa PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5495"/>
+      <location filename="../mainwindow.cpp" line="5504"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Wala ka mo pili ug bisag unsa nga buhaton sa listahan.&lt;br /&gt; Palihug ug susi sa imong &lt;strong&gt;Todo&lt;/strong&gt;pagsumpo sa mga kahimtangan!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6491"/>
+      <location filename="../mainwindow.cpp" line="6500"/>
       <source>Open QOwnNotes</source>
       <translation>Ablihan ang QOwnNotes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6078"/>
-      <location filename="../mainwindow.cpp" line="6541"/>
-      <location filename="../mainwindow.cpp" line="10374"/>
-      <location filename="../mainwindow.cpp" line="10802"/>
+      <location filename="../mainwindow.cpp" line="6087"/>
+      <location filename="../mainwindow.cpp" line="6550"/>
+      <location filename="../mainwindow.cpp" line="10351"/>
+      <location filename="../mainwindow.cpp" line="10781"/>
       <source>New note</source>
       <translation>Bag-ong nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6558"/>
+      <location filename="../mainwindow.cpp" line="6567"/>
       <source>Recent notes</source>
       <translation>Bag-o lang nga nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6574"/>
+      <location filename="../mainwindow.cpp" line="6583"/>
       <source>Show todo lists</source>
       <translation>Ipakita ang tanang listahan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6586"/>
+      <location filename="../mainwindow.cpp" line="6595"/>
       <source>Recent tasks</source>
       <translation>Bag-o lang nga tahas</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6607"/>
+      <location filename="../mainwindow.cpp" line="6616"/>
       <source>Quit</source>
       <translation>Muondang</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8061"/>
+      <location filename="../mainwindow.cpp" line="8074"/>
       <source>show notes from all note subfolders (%1)</source>
       <translation>ipakita ang nota gekan sa tanang mga subfolder nga nota (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8084"/>
+      <location filename="../mainwindow.cpp" line="8097"/>
       <source>show notes in note root folder (%1)</source>
       <translation>ipakita ang mga nota nga naa sa root polder (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="790"/>
-      <location filename="../mainwindow.cpp" line="2109"/>
-      <location filename="../mainwindow.cpp" line="8096"/>
+      <location filename="../mainwindow.cpp" line="2112"/>
+      <location filename="../mainwindow.cpp" line="8109"/>
       <source>Note folder</source>
       <translation>Polder sa nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9489"/>
-      <location filename="../mainwindow.cpp" line="9556"/>
+      <location filename="../mainwindow.cpp" line="9494"/>
+      <location filename="../mainwindow.cpp" line="9561"/>
       <source>Copy to note folder</source>
       <translation>Kopyahon sa nota nga polder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9489"/>
-      <location filename="../mainwindow.cpp" line="9557"/>
+      <location filename="../mainwindow.cpp" line="9494"/>
+      <location filename="../mainwindow.cpp" line="9562"/>
       <source>Move to note folder</source>
       <translation>Ibalhin nga nota sa folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9490"/>
-      <location filename="../mainwindow.cpp" line="9558"/>
+      <location filename="../mainwindow.cpp" line="9495"/>
+      <location filename="../mainwindow.cpp" line="9563"/>
       <source>Copy to this subfolder</source>
       <translation>Kopyahon kini sa nga subfolder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9491"/>
-      <location filename="../mainwindow.cpp" line="9559"/>
+      <location filename="../mainwindow.cpp" line="9496"/>
+      <location filename="../mainwindow.cpp" line="9564"/>
       <source>Move to this subfolder</source>
       <translation>Kopyahon sa kini nga subfolder</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9603"/>
+      <location filename="../mainwindow.cpp" line="9608"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Ibalhin %n ang napili nga nota(s) sa nota nga subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3566,13 +3566,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5156"/>
-      <location filename="../mainwindow.cpp" line="12325"/>
+      <location filename="../mainwindow.cpp" line="5165"/>
+      <location filename="../mainwindow.cpp" line="12323"/>
       <source>Cancel</source>
       <translation>Tangtangon</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9688"/>
+      <location filename="../mainwindow.cpp" line="9693"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation>
         <numerusform>%n nota(s) kay nabalhin sa laing subfolder nga nota "%2"</numerusform>
@@ -3580,7 +3580,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9712"/>
+      <location filename="../mainwindow.cpp" line="9717"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Kopyahon %n ang napili nga nota(s) sa subfolder nga nota &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -3588,7 +3588,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9780"/>
+      <location filename="../mainwindow.cpp" line="9784"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation>
         <numerusform>%n nota(s) kay na kopya sa subfolder nga nota "%2"</numerusform>
@@ -3596,57 +3596,57 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10496"/>
+      <location filename="../mainwindow.cpp" line="10473"/>
       <source>Open note in external editor</source>
       <translation>Abrihon ang nota sa gawas nga editor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10500"/>
+      <location filename="../mainwindow.cpp" line="10477"/>
       <source>Show note in file manager</source>
       <translation>Ipakita ang nota sa file manager</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10585"/>
+      <location filename="../mainwindow.cpp" line="10562"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
       <translation>Kung gusto nimo otrohon ang pangalan sa nota kay imong mahimo nga pilianan para mag tugot sa filename nga malain gekan sa uloha.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10803"/>
+      <location filename="../mainwindow.cpp" line="10782"/>
       <source>New subfolder</source>
       <translation>Bag-ong subfolder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10807"/>
+      <location filename="../mainwindow.cpp" line="10792"/>
       <source>Show folder in file manager</source>
       <translation>Ipakita ang folder sa file manager</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10852"/>
+      <location filename="../mainwindow.cpp" line="10837"/>
       <source>Create a new folder</source>
       <translation>Paghimo ug bag-ong polder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10853"/>
+      <location filename="../mainwindow.cpp" line="10838"/>
       <source>Folder name:</source>
       <translation>Pangalan sa polder:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8020"/>
+      <location filename="../mainwindow.cpp" line="8033"/>
       <source>show all untagged notes (%1)</source>
       <translation>ipakita ang tanang nota nga naka untagged (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8022"/>
+      <location filename="../mainwindow.cpp" line="8035"/>
       <source>Untagged notes</source>
       <translation>Nota nga wala ma-tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10147"/>
+      <location filename="../mainwindow.cpp" line="10124"/>
       <source>Export current note as HTML file</source>
       <translation>Pagpagawas sa kasamtangang nota isip usa ka HTML file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5339"/>
+      <location filename="../mainwindow.cpp" line="5348"/>
       <source>Page size</source>
       <translation>Gidak-on sa pahina</translation>
     </message>
@@ -3656,27 +3656,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>paghunong sa toolbar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5339"/>
+      <location filename="../mainwindow.cpp" line="5348"/>
       <source>Page size:</source>
       <translation>Gidak-on sa pahina:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5456"/>
+      <location filename="../mainwindow.cpp" line="5465"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation>QOwnNotes kay mag track anonymous sa paggamit sa data, nga makatabang para mag desisyon kung onsa ang mga bahin sa QOwnNotes para ma bag-o para sa sunod ug pangita ug pag-ayo sa bugs. pwedi nimong I-disable ang kinaiya sa kana nga mga kahimtang.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5460"/>
+      <location filename="../mainwindow.cpp" line="5469"/>
       <source>&amp;Ok</source>
       <translation>&amp;ok</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10384"/>
+      <location filename="../mainwindow.cpp" line="10361"/>
       <source>&amp;Remove notes</source>
       <translation>&amp;kuhaa ang mga nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6696"/>
+      <location filename="../mainwindow.cpp" line="6705"/>
       <source>&amp;Link selected text</source>
       <translation>&amp;link sa napiling teksto</translation>
     </message>
@@ -3686,28 +3686,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>Imong mga task nga gikarga gikan sa imong server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2790"/>
+      <location filename="../mainwindow.cpp" line="2793"/>
       <source>Current note was modified externally</source>
       <translation>Sapagkakaron nga nota maoy giusab sa gawas</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2873"/>
-      <location filename="../mainwindow.cpp" line="6016"/>
+      <location filename="../mainwindow.cpp" line="2876"/>
+      <location filename="../mainwindow.cpp" line="6025"/>
       <source>Stored current note to disk</source>
       <translation>Napondo nga kasamtangan sa nota sa disk</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2891"/>
+      <location filename="../mainwindow.cpp" line="2894"/>
       <source>Note was modified externally: %1</source>
       <translation>Mobo nga suwat maoy giusab sa gawas: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2913"/>
+      <location filename="../mainwindow.cpp" line="2916"/>
       <source>Notes directory was modified externally</source>
       <translation>Mga nota nga ni direktoryo sa giusab sa pag-gawas</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2974"/>
+      <location filename="../mainwindow.cpp" line="2977"/>
       <source>Stored %n note(s) to disk</source>
       <translation>
         <numerusform>Gibutang %n nota(s) sa disk</numerusform>
@@ -3715,58 +3715,58 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7987"/>
+      <location filename="../mainwindow.cpp" line="7999"/>
       <source>show all notes (%1)</source>
       <translation>ipakita ang tanang mga nota (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7990"/>
-      <location filename="../mainwindow.cpp" line="8064"/>
+      <location filename="../mainwindow.cpp" line="8002"/>
+      <location filename="../mainwindow.cpp" line="8077"/>
       <source>All notes</source>
       <translation>Tanang mga nota</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9092"/>
+      <location filename="../mainwindow.cpp" line="9097"/>
       <source>&amp;Add tag</source>
       <translation>&amp;mag puno og tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9140"/>
+      <location filename="../mainwindow.cpp" line="9145"/>
       <source>Tag could not be created!</source>
       <translation>Tag ang dili mabuhat!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9319"/>
+      <location filename="../mainwindow.cpp" line="9324"/>
       <source>Move to this tag</source>
       <translation>Ibalhin kini sa tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9354"/>
+      <location filename="../mainwindow.cpp" line="9359"/>
       <source>Tag this</source>
       <translation>Tag kini</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9379"/>
+      <location filename="../mainwindow.cpp" line="9384"/>
       <source>Cannot move tag '%1' to this tag</source>
       <translation>Dili ma balhin ang tag '%1' niini nga tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9428"/>
+      <location filename="../mainwindow.cpp" line="9433"/>
       <source>Moved tag '%1' to new tag</source>
       <translation>Ibalhon ang tag '%1' sa bag-o nga tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8334"/>
+      <location filename="../mainwindow.cpp" line="8339"/>
       <source>show all notes tagged with '%1' (%2)</source>
       <translation>ipakita tanang mga nota nga na tag uban sa '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9103"/>
+      <location filename="../mainwindow.cpp" line="9108"/>
       <source>&amp;Remove tags</source>
       <translation>tang-tangon mga tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5494"/>
+      <location filename="../mainwindow.cpp" line="5503"/>
       <source>No selected todo lists!</source>
       <translation>Walay napili nga tanan nga mga lista!</translation>
     </message>
@@ -3851,79 +3851,79 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>Ipakita ang %1 nga panel</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1365"/>
+      <location filename="../mainwindow.cpp" line="1368"/>
       <source>Show %1</source>
       <translation>Ipakita ang %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1688"/>
+      <location filename="../mainwindow.cpp" line="1691"/>
       <source>Leave distraction free mode</source>
       <translation>Ayaw ibalhin ang libre nga pagkagubot</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1870"/>
+      <location filename="../mainwindow.cpp" line="1873"/>
       <source>Switch to note folder</source>
       <translation>Pagbalhin sa pahibalo folder
 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2265"/>
+      <location filename="../mainwindow.cpp" line="2268"/>
       <source>show notes in folder '%1' (%2)</source>
       <translation>ipakita ang mga nota sa folder '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2304"/>
+      <location filename="../mainwindow.cpp" line="2307"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
       <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;katapusang giusab: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2309"/>
+      <location filename="../mainwindow.cpp" line="2312"/>
       <source>&lt;br /&gt;path: %1</source>
       <translation>&lt;br /&gt;agianan: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2511"/>
+      <location filename="../mainwindow.cpp" line="2514"/>
       <source>Toolbar could not be loaded without name</source>
       <translation>Ang Toolbar dili ma-load nga walay ngalan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2817"/>
+      <location filename="../mainwindow.cpp" line="2820"/>
       <source>Overwriting external changes of: %1</source>
       <translation>Pagklaro sa mga pagbag-o sa gawas sa: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2838"/>
+      <location filename="../mainwindow.cpp" line="2841"/>
       <source>Loading external changes from: %1</source>
       <translation>Pagkarga sa mga pagbag-o sa gawas gikan sa: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2874"/>
-      <location filename="../mainwindow.cpp" line="6017"/>
+      <location filename="../mainwindow.cpp" line="2877"/>
+      <location filename="../mainwindow.cpp" line="6026"/>
       <source>Current note could not be stored to disk</source>
       <translation>Ang kasamtangan nga note kay dili mahimo nga mabutang sa disk</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3053"/>
+      <location filename="../mainwindow.cpp" line="3056"/>
       <source>Read-only</source>
       <translation>Basaha lamang</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3055"/>
+      <location filename="../mainwindow.cpp" line="3058"/>
       <source>Note editing is disabled, click to enable</source>
       <translation>Ang pag-usab sa pahibalo gibabagan, i-klik aron makaganansiya</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3072"/>
+      <location filename="../mainwindow.cpp" line="3075"/>
       <source>Line numbers</source>
       <translation>Line numbers</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3082"/>
+      <location filename="../mainwindow.cpp" line="3085"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
       <translation>I-click dinhi aron matan-aw kung unsa ang nausab ug mahimong ma-update sa pinakabag-o nga bersyon</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3452"/>
+      <location filename="../mainwindow.cpp" line="3455"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation>
         <numerusform>Pagpadayon uban ang awtomatikong pagtangtang sa &lt;strong&gt;%n&lt;/strong&gt; nagkasumpaki nga kopya sa database nga mahimo nga pag-block sa imong ownCloud nga proseso sa pag-sync?</numerusform>
@@ -3931,7 +3931,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4928"/>
+      <location filename="../mainwindow.cpp" line="4937"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation>
         <numerusform>%n note nga na-tag uban sa "%2"</numerusform>
@@ -3939,7 +3939,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5716"/>
+      <location filename="../mainwindow.cpp" line="5725"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Nakaplag &lt;strong&gt;%n&lt;/strong&gt; nga panghitabo sa &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
@@ -3947,72 +3947,72 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6078"/>
+      <location filename="../mainwindow.cpp" line="6087"/>
       <source>Note headline</source>
       <translation>Ulohan sa note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6288"/>
+      <location filename="../mainwindow.cpp" line="6297"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
       <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6702"/>
+      <location filename="../mainwindow.cpp" line="6711"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
       <translation>Block &amp;quote pinili nga nga teksto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7711"/>
+      <location filename="../mainwindow.cpp" line="7723"/>
       <source>Downloading images finished</source>
       <translation>Nahuman na ang pag-download sa mga larawan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7861"/>
+      <location filename="../mainwindow.cpp" line="7873"/>
       <source>Increased font size to %1 pt</source>
       <translation>Pagpadako sa font sa %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7878"/>
+      <location filename="../mainwindow.cpp" line="7890"/>
       <source>Decreased font size to %1 pt</source>
       <translation>Pagpagamay sa font sa %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5460"/>
-      <location filename="../mainwindow.cpp" line="5475"/>
-      <location filename="../mainwindow.cpp" line="5498"/>
-      <location filename="../mainwindow.cpp" line="10588"/>
+      <location filename="../mainwindow.cpp" line="5469"/>
+      <location filename="../mainwindow.cpp" line="5484"/>
+      <location filename="../mainwindow.cpp" line="5507"/>
+      <location filename="../mainwindow.cpp" line="10565"/>
       <source>Open &amp;settings</source>
       <translation>Open &amp; settings</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1685"/>
-      <location filename="../mainwindow.cpp" line="12477"/>
+      <location filename="../mainwindow.cpp" line="1688"/>
+      <location filename="../mainwindow.cpp" line="12475"/>
       <source>leave</source>
       <translation>mohawa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7129"/>
+      <location filename="../mainwindow.cpp" line="7141"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation>Palihug ibutang ang imong &lt;strong&gt;password&lt;/strong&gt; aron ma-encrypt ang note.&lt;br /&gt;Hinumdomi nga kinahanglan mong &lt;strong&gt;hinumdoman&lt;/strong&gt; ang imong password aron mabasa nimo ang sulod sa note&lt;br /&gt; ug ikaw &lt;strong&gt;lamang&lt;/strong&gt; ang makahimo ana &lt;strong&gt;sa QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7185"/>
+      <location filename="../mainwindow.cpp" line="7197"/>
       <source>Decrypt note and store it as plain text</source>
       <translation>I-decrypt ang nota ug itipig kini isip usa ka yana nga teksto</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7190"/>
+      <location filename="../mainwindow.cpp" line="7202"/>
       <source>&amp;Decrypt</source>
       <translation>&amp;Decrypt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7215"/>
+      <location filename="../mainwindow.cpp" line="7227"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation>&lt;br /&gt;Mahimo nimong mausab ang imong ge-encrypt nga nota.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7284"/>
+      <location filename="../mainwindow.cpp" line="7296"/>
       <source>Export current note as Markdown file</source>
       <translation>Pagpagawas ug kasamtangan nga nota isip usa ka Markdown file</translation>
     </message>
@@ -4387,37 +4387,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>default</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1315"/>
+      <location filename="../entities/note.cpp" line="1311"/>
       <source>Could not store note file: %1 - Error message: %2</source>
       <translation>Dili makatipig ug nota sa file: %1 - Sayup nga mensahe: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1393"/>
+      <location filename="../entities/note.cpp" line="1389"/>
       <source>Renamed note-file was removed: %1</source>
       <translation>Ang nailisan ug ngalan nga nota nga file kay gepahawa: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1401"/>
+      <location filename="../entities/note.cpp" line="1397"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
       <translation>Dili mahimo nga matangtang ang ge ilisan ug ngalan ang nota nga file: %1 - Sayup nga mensahe: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1547"/>
+      <location filename="../entities/note.cpp" line="1543"/>
       <source>Note</source>
       <translation>Nota</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="2595"/>
+      <location filename="../entities/note.cpp" line="2591"/>
       <source>Could not read image file: %1</source>
       <translation>Dili mahimo nga mo basa ug imahe sa file: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="3215"/>
+      <location filename="../entities/note.cpp" line="3211"/>
       <source>Note file path changed</source>
       <translation>Nausab ang landas sa file</translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="3216"/>
+      <location filename="../entities/note.cpp" line="3212"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation>
         <numerusform>Usa ka pagbag-o sa agianan sa nota nakita. Gusto ba nimong palitan ang tanan nga mga panghitabo sa mga link sa &lt;strong&gt;%1 &lt;/strong&gt; nga adunay &lt;strong&gt;%2 &lt;/strong&gt; ug mga link nga adunay filename &lt;strong&gt;%3 &lt;/strong&gt; sa &lt;strong&gt;%4 &lt;/strong&gt; &gt; sa &lt;strong&gt;%n &lt;/strong&gt; file nga nota?</numerusform>
@@ -4425,7 +4425,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="3761"/>
+      <location filename="../entities/note.cpp" line="3757"/>
       <source>…and %n more note(s)</source>
       <translation>
         <numerusform>... ug %n mas mubo nga sulat</numerusform>
@@ -4476,7 +4476,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>Ang sugo &lt;code&gt;%1 &lt;/ code&gt; napakyas!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="4220"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4227"/>
       <source>New connection</source>
       <translation>Bag-ong koneksyon</translation>
     </message>
@@ -4716,40 +4716,40 @@ If the trash is enabled on your ownCloud server you should be able to restore th
   <context>
     <name>QWidget</name>
     <message>
-      <location filename="../services/databaseservice.cpp" line="84"/>
+      <location filename="../services/databaseservice.cpp" line="90"/>
       <source>Cannot open memory database</source>
       <translation>Dili maabli ang memory database</translation>
     </message>
     <message>
-      <location filename="../services/databaseservice.cpp" line="85"/>
+      <location filename="../services/databaseservice.cpp" line="91"/>
       <source>Unable to establish a memory database connection.</source>
       <translation>Dili makahimo og koneksyon sa memory database.</translation>
     </message>
     <message>
-      <location filename="../services/databaseservice.cpp" line="101"/>
+      <location filename="../services/databaseservice.cpp" line="107"/>
       <source>Cannot open disk database</source>
       <translation>Dili mabuksan ang disk database</translation>
     </message>
     <message>
-      <location filename="../services/databaseservice.cpp" line="102"/>
-      <location filename="../services/databaseservice.cpp" line="126"/>
+      <location filename="../services/databaseservice.cpp" line="108"/>
+      <location filename="../services/databaseservice.cpp" line="132"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
       <translation>Dili matukod ang koneksyon sa database nga may file '%1'.
 Writeable ba ang mga folder ug file?</translation>
     </message>
     <message>
-      <location filename="../services/databaseservice.cpp" line="125"/>
+      <location filename="../services/databaseservice.cpp" line="131"/>
       <source>Cannot open note folder database</source>
       <translation>Dili mabuksan ang note folder database</translation>
     </message>
     <message>
-      <location filename="../services/databaseservice.cpp" line="873"/>
+      <location filename="../services/databaseservice.cpp" line="879"/>
       <source>Cannot open database</source>
       <translation>Dili maablihan ang database</translation>
     </message>
     <message>
-      <location filename="../services/databaseservice.cpp" line="874"/>
+      <location filename="../services/databaseservice.cpp" line="880"/>
       <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
       <translation>Dili ma-establisar ang usa ka koneksyon sa database nga adunay database folder folder aron pagsagol '%1'.
@@ -4940,7 +4940,7 @@ Gusto paba nimong padayunon ang pag-install?</translation>
   <context>
     <name>ScriptingService</name>
     <message>
-      <location filename="../services/scriptingservice.cpp" line="257"/>
+      <location filename="../services/scriptingservice.cpp" line="261"/>
       <source>file doesn't exist</source>
       <translation>ang file kay wala</translation>
     </message>
@@ -4971,7 +4971,7 @@ Gusto paba nimong padayunon ang pag-install?</translation>
     <name>SettingsDialog</name>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4287"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4288"/>
       <source>Settings</source>
       <translation>Mga kahimtangan</translation>
     </message>
@@ -5016,73 +5016,73 @@ Gusto paba nimong padayunon ang pag-install?</translation>
       <translation>Imohang serber sa ownCloud</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1088"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1089"/>
       <source>ownCloud server url:</source>
       <translation>url para sa imong serber sa ownCloud:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1110"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1111"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Palihug pagpasulod sa URL alang sa imong serber sa ownCloud, pananglitan: &lt;spanstyle=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1148"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1149"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Palihug pagpasulod sa username sa imong serber sa ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1183"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1184"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Palihug pagpasulod sa imong password alang sa imong username.&lt;br/&gt;Ang kasamtangang password kay matipig isip usa ka encrypted kauban ang ubang mga kahimtang, pero dili huyang iyang seguridad.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1254"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1255"/>
       <source>connection to web server</source>
       <translation>koneksyon sa web na serber</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1271"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1272"/>
       <source>ownCloud server detected</source>
       <translation>ang serber sa ownCloud kay nakita</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1305"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1306"/>
       <source>connection to QOwnNotesAPI</source>
       <translation>koneksyon sa QOwnNotesAPI</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1288"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1289"/>
       <source>username and password correct</source>
       <translation>ang username ug password kay sakto</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1244"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1261"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1278"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1295"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1312"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1329"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1346"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1245"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1262"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1279"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1296"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1313"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1330"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1347"/>
       <source>unknown</source>
       <translation>wala mailhi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1211"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1212"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pindoton dinhi aron masulayan ang koneksyon sa imong ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1322"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1323"/>
       <source>versions app enabled on server</source>
       <translation>mga bersyon sa app nga makahimo sa server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1339"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1340"/>
       <source>trash app enabled on server</source>
       <translation>ang basura sa nga makahimo sa server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1356"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1357"/>
       <source>notes path found on server</source>
       <translation>ang mga agianan sa nota nga makita sa server</translation>
     </message>
@@ -5117,7 +5117,7 @@ Gusto paba nimong padayunon ang pag-install?</translation>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;kinahanglan nga anaa kay duha ka ownCloud core apps &lt;span style=" font-weight:600;"&gt;&lt;span style=" font-weight:600;"&gt;mga bersyon &lt;/span&gt; og &lt;span style=" font-weight:600;"&gt;natangtang nga mga file&lt;/span&gt;makahimo sa imong ownCloud server (kinahanglan mao na ang default). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="988"/>
+      <location filename="../dialogs/settingsdialog.ui" line="989"/>
       <source>Error Message</source>
       <translation>Sayop nga mensahe</translation>
     </message>
@@ -5127,42 +5127,42 @@ Gusto paba nimong padayunon ang pag-install?</translation>
       <translation>Network</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1423"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1424"/>
       <source>Proxy Settings</source>
       <translation>Mga kahimtang sa proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1429"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1430"/>
       <source>No Proxy</source>
       <translation>Walay proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1439"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1440"/>
       <source>Use system proxy</source>
       <translation>gamiton ang proxy sa system</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1446"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1447"/>
       <source>Specify proxy manually as</source>
       <translation>Paghingalan sa proxy gi manu-manu nga</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1471"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1472"/>
       <source>Host</source>
       <translation>Host</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1522"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1523"/>
       <source>Proxy server requires authentication</source>
       <translation>Proxy server nga kinahanglan og pag-ila</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1579"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1580"/>
       <source>SSL Settings</source>
       <translation>Mga SSL sa setting</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1585"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1586"/>
       <source>Ignore SSL errors</source>
       <translation>Ayaw tagda ang mga sayop sa SSL</translation>
     </message>
@@ -5172,7 +5172,7 @@ Gusto paba nimong padayunon ang pag-install?</translation>
       <translation>Tanan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1840"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1841"/>
       <source>Default ownCloud calendar</source>
       <translation>Default ownCloud kalendaryo</translation>
     </message>
@@ -5182,65 +5182,65 @@ Gusto paba nimong padayunon ang pag-install?</translation>
       <translation>Interface</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1810"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1811"/>
       <source>Other CalDAV server</source>
       <translation>Uban nga CalDAV server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2978"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2979"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
       <translation>Isa raka kolor ang makuha, sa imong destop sila ang ang mo kontrol sa oban. kinahanghan otrohon ang aplikasyon para nia mahitabo nga mga kaosaban.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2981"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2982"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
       <translation>Maayo ang pagbalik sa kolor nga ngitngit sa pag mode destop nga mga tema</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2968"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2969"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
       <translation>Mahimo kina sa ngitngit nga mode, interface og mga imahen nga maau para maosab. kinahanglan maosab ang aplikasyon para maotro og niay aksyon.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2971"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2972"/>
       <source>Enable dark mode</source>
       <translation>Paganahon ang mode para sa dark</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2997"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3007"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3038"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3048"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2998"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3008"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3039"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3049"/>
       <source>You need to restart the application to let this setting take effect</source>
       <translation>Kinahanglan nimo i-restart ang aplikasyon para ang mga kahimtang kay mo gana</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3077"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3078"/>
       <source>Item sizes in the main window</source>
       <translation>Ang mga sukod sa gamit kay anaa sa unang window</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5060"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5071"/>
       <source>Markdown highlighting</source>
       <translation>Niubos ang pagpasiugda</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5066"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5077"/>
       <source>Enable markdown highlighting</source>
       <translation>Mopahimo ang pag-ubos sa highlighting</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2134"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2135"/>
       <source>Interface language</source>
       <translation>Interface sa pinulongan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2164"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2165"/>
       <source>Automatic</source>
       <translation>Awtomatikong</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2299"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2300"/>
       <source>English</source>
       <translation>English</translation>
     </message>
@@ -5250,119 +5250,119 @@ Gusto paba nimong padayunon ang pag-install?</translation>
       <translation>Mga paglaktaw</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4515"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4808"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4526"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4819"/>
       <source>Default font:</source>
       <translation>Default front:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4557"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4749"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4568"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4760"/>
       <source>Code font:</source>
       <translation>Code front:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3236"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3237"/>
       <source>Main window shortcuts</source>
       <translation>Mga paglaktaw para sa main window</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3829"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3830"/>
       <source>Do this at your own risk!</source>
       <translation>Butahati kini sa imong kaugalingon!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3832"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3833"/>
       <source>Ignore all external note folder changes</source>
       <translation>Ibalewala ang tanang mga kaosaban gawas sa folder nga nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4415"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4426"/>
       <source>Use GitHub line breaks</source>
       <translation>Paggamit ug GitHub para dili mahugno ang linya</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2277"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2278"/>
       <source>German</source>
       <translation>German</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2354"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2355"/>
       <source>French</source>
       <translation>French</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2618"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2619"/>
       <source>Polish</source>
       <translation>Polish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2640"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2641"/>
       <source>Portuguese</source>
       <translation>Portuguese</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2585"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2586"/>
       <source>Dutch</source>
       <translation>Dutch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2552"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2553"/>
       <source>Hungarian</source>
       <translation>Hungarian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2310"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2311"/>
       <source>Spanish</source>
       <translation>Spanish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2942"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2943"/>
       <source>Dark mode</source>
       <translation>Ngitngit nga pamaagi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1639"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1640"/>
       <source>Disable tracking of usage data</source>
       <translation>Disable tracking sa paggamit sa data</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1683"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1684"/>
       <source>Usage tracking is done on a private Piwik server.</source>
       <translation>Paggamit sa tracking kay nahuman sa usa ka pribado Piwik server.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1743"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1744"/>
       <source>Disable heartbeat</source>
       <translation>I-disable ang pagbuto sa kasing-kasing</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2673"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2674"/>
       <source>Russian</source>
       <translation>Russian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1592"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1593"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;mahimo nimong hunahunaon ang pagkuha og lebring SSL certificate gikan sa &lt;a href="https://letsencrypt.org/"&gt;adto ta sa encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2153"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2154"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
       <translation>Kung gusto nimo ilisan ang pinulongan kinahanglan nimo i-restart ang aplikasyon para mabag-o nga niay aksyon.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3658"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3659"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
       <translation>Kinahanglan nimo i-reload ang scripting engine kung ganahan nimo pausab ang script file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3661"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3662"/>
       <source>Reload scripting engine</source>
       <translation>I-reload ang scripting sa makina</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3651"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3652"/>
       <source>Validate script</source>
       <translation>Pagbalido sa script</translation>
     </message>
@@ -5372,120 +5372,122 @@ Gusto paba nimong padayunon ang pag-install?</translation>
       <translation>General</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3823"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3824"/>
       <source>Notes</source>
       <translation>Mga nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3849"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3850"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kon susihon nga ikaw kanunay nga gipahibalo mahitungod sa eksternal nga mga pag-usab, bisan kon ang kasamtangan nga nota wala ma-edit sa katapusang minuto. Ang girekomenda mao kay &lt;span style=" font-style:italic;"&gt;wala susiha&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3945"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5301"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5846"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3946"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5312"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5857"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
       <translation>Ikaw mahimong mag-sync sa mga kasamok sa pag-sync uban sa mas karaan nga mga bersyon sa ownCloud sync kon moadto sa layo nga ubos sa 10 sec.
 Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og mas taas nga bili kon mao.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2574"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2575"/>
       <source>Japanese</source>
       <translation>Japanese</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3949"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3950"/>
       <source>note save interval time [sec]</source>
       <translation>note i-save sa agianan ang oras [sec]</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3852"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3853"/>
       <source>Notify about all external modifications of the current note</source>
       <translation>Pahibaw-a ang tanang mga pagbag-o sa kasayuran sa kasamtangan nga nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4316"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4317"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2275"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2283"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4297"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4302"/>
       <source>Database</source>
       <translation>Database</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4332"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4323"/>
       <source>Reinitialize Database</source>
       <translation>Reinitialize Database</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4255"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4256"/>
       <source>Clear application data and exit</source>
       <translation>Tin-aw ang aplikasyon data og paggawas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4261"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4262"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
       <translation>Kini nga pislitanan kay gitugotan sa paghawan sa tanang mga setting, kuhaa ang lokal nga todo database ug paggawas sa QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4271"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4272"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2347"/>
       <source>Clear app data and exit</source>
       <translation>Tin-aw ang datos sa app ug paggawas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4050"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4051"/>
       <source>Update dialog</source>
       <translation>Pag-update sa dayalogo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4130"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4131"/>
       <source>Default note file extension</source>
       <translation>Default para timan-i ang file extension</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4215"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4216"/>
       <source>External editor</source>
       <translation>Gawas sa editor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4228"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4229"/>
       <source>path to external editor, leave empty for default</source>
       <translation>dalan padong gawas sa editor, pahawa kay walay nay sulod alang sa def</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4238"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5380"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4239"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5391"/>
       <source>set external editor</source>
       <translation>itakda ang gawas sa editor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1608"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1609"/>
       <source>App metrics</source>
       <translation>App metrics</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1626"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1627"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
       <translation>Anonymous ang paggamit sa data nga makatabang sa pagmando kung onsa ang mga bahin sa QOwnNotes para mabag-o ang sunod og pangitaon og ayuhon ang mga bug. palihog disable kong kini lamang dili gayud mahimo byaan.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1658"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1659"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
       <translation>Kini nga data naglakip sa anonymous nga impormayson nga mahitungod kung unsang mga bahin sa app nga gamiton.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1712"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1713"/>
       <source>App heartbeat</source>
       <translation>Ang dughan sa app</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1730"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1731"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
       <translation>Ang usa ka gamay nga hangyo sa kasingkasing kay gipadala matag karon ug unya samtang ang QOwnNotes kay nagdagan. Himoa ang usa ka developer nga malipayon pinaagi sa pagpahibalo kaniya nga adunay usa nga naggamit sa QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2464"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2465"/>
       <source>Italian</source>
       <translation>Italian</translation>
     </message>
@@ -5495,17 +5497,17 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Scripting</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3305"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3306"/>
       <source>Your scripts</source>
       <translation>Ang imong mga script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3389"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3390"/>
       <source>&amp;Remove script</source>
       <translation>&amp; Kuhaa ang script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3668"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3669"/>
       <source>Click here to select your QML script</source>
       <translation>I-click dinhi aron mapili ang imong QML script</translation>
     </message>
@@ -5587,7 +5589,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="773"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3479"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3480"/>
       <source>Name:</source>
       <translation>Ngalan:</translation>
     </message>
@@ -5627,56 +5629,56 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kinahanglan mo pa ang &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; ownCloud sync client &lt;/span&gt; &lt;/a&gt; (o laing kliyente sa pag-sync sa desktop) aron ma-sync ang imong mga nota! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1021"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1022"/>
       <source>Select a connection to edit</source>
       <translation>Pagpili usa ka koneksyon nga paga-edit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1028"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1031"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1029"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1032"/>
       <source>Add connection</source>
       <translation>Pagdugang koneksyon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1042"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1045"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1043"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1046"/>
       <source>Remove connection</source>
       <translation>Kuhaa ang koneksyon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1126"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1897"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1127"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1898"/>
       <source>Username:</source>
       <translation>Username:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1151"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1152"/>
       <source>Your ownCloud username</source>
       <translation>Ang imong ownCloud username</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1161"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1932"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1162"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1933"/>
       <source>Password:</source>
       <translation>Password:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1189"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1190"/>
       <source>Your ownCloud password</source>
       <translation>Ang imong ownCloud password</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1217"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1218"/>
       <source>&amp;Connect to ownCloud server</source>
       <translation>&amp; Pagkonek sa ownCloud server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1237"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1238"/>
       <source>Connection status</source>
       <translation>Status sa koneksyon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1059"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1060"/>
       <source>Connection name:</source>
       <translation>Ngalan sa koneksyon:</translation>
     </message>
@@ -5693,386 +5695,386 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1392"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1393"/>
       <source>Enable QOwnNotesAPI app</source>
       <translation>Ipaandar ang QOwnNotesAPI app</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1782"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1783"/>
       <source>Todo settings</source>
       <translation>Mga setting sa bata</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1788"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1789"/>
       <source>Enable todo calendar support</source>
       <translation>Pag-abag sa suporta sa kalendaryo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1973"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1974"/>
       <source>Which cloud connection do you want to use?</source>
       <translation>Unsang koneksyon sa pangan ang gusto nimong gamiton?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1985"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1986"/>
       <source>Select the calendars you want to use for the Todo list</source>
       <translation>Pilia ang mga kalendaryo nga imong gustong gamiton alang sa listahan sa Todo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2060"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2061"/>
       <source>Todo list settings</source>
       <translation>Listahan sa mga setting sa Todo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2066"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2067"/>
       <source>Saving an item also closes the Todo list</source>
       <translation>Ang pag-save sa usa ka butang usab magsira sa listahan sa Todo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2178"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2179"/>
       <source>Indonesian</source>
       <translation>Taga-Indonesia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2200"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2201"/>
       <source>Bengali</source>
       <translation>Taga-Bengali</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2211"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2212"/>
       <source>Bosnian</source>
       <translation>Bosnian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2222"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2223"/>
       <source>Bulgarian</source>
       <translation>Bulgaria</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2233"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2234"/>
       <source>Catalan</source>
       <translation>Taga-Catalan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2244"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2245"/>
       <source>Cebuano</source>
       <translation>Taga-Cebu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2266"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2267"/>
       <source>Danish</source>
       <translation>Danish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2288"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2289"/>
       <source>Basque</source>
       <translation>Basig</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2321"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2322"/>
       <source>Estonian</source>
       <translation>Estonian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2332"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2333"/>
       <source>Filipino</source>
       <translation>Taga-Pilipinas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2343"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2344"/>
       <source>Finnish</source>
       <translation>Finnish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2365"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2366"/>
       <source>Irish</source>
       <translation>Irish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2376"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2377"/>
       <source>Galician</source>
       <translation>Galician</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2387"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2388"/>
       <source>Greek</source>
       <translation>Griyego</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2398"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2399"/>
       <source>Hausa</source>
       <translation>Hausa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2409"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2410"/>
       <source>Hebrew</source>
       <translation>Hebreohanon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2420"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2421"/>
       <source>Hindi</source>
       <translation>Ayaw</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2442"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2443"/>
       <source>Hiligaynon</source>
       <translation>Hiligaynon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2453"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2454"/>
       <source>Icelandic</source>
       <translation>Islandiko</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2475"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2476"/>
       <source>Korean</source>
       <translation>Koreano</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2486"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2487"/>
       <source>Kurdish</source>
       <translation>Kurdada</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2508"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2509"/>
       <source>Latvian</source>
       <translation>Latvian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2519"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2520"/>
       <source>Lithuanian</source>
       <translation>Lithuanian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2530"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2531"/>
       <source>Macedonian</source>
       <translation>Macedonian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2563"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2564"/>
       <source>Norwegian</source>
       <translation>Norwegian nga</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2607"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2608"/>
       <source>Uzbek</source>
       <translation>Uzbek</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2651"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2652"/>
       <source>Punjabi</source>
       <translation>Punjabi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2596"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2597"/>
       <source>Persian</source>
       <translation>Persianhon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2662"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2663"/>
       <source>Romanian</source>
       <translation>Romanian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2684"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2685"/>
       <source>Serbian</source>
       <translation>Serbian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2695"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2696"/>
       <source>Albanian</source>
       <translation>Albaniano</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2728"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2729"/>
       <source>Slovak</source>
       <translation>Slovak</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2739"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2740"/>
       <source>Slovenian</source>
       <translation>Slovenian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2750"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2751"/>
       <source>Swedish</source>
       <translation>Taga-Sweden</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2761"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2762"/>
       <source>Tagalog</source>
       <translation>Ang tagalog</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2794"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2795"/>
       <source>Turkish</source>
       <translation>Taga-Turkey</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2827"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2828"/>
       <source>Urdu</source>
       <translation>Urdu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2860"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2861"/>
       <source>Chinese Simplified</source>
       <translation>Pinasimple nga Tsino</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2871"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2872"/>
       <source>Chinese Traditional</source>
       <translation>Tradisyonal nga Tsino</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2951"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2952"/>
       <source>Enable dark mode application icon and tray icon</source>
       <translation>Makahimo ang icon nga aplikasyon sa itom nga mode ug tray nga icon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2958"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2959"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
       <translation>Mahimo usab nimong pilion ang lain nga pamaagi sa kolor sa editor sa mga setting sa editor sa itom nga mode.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3061"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3062"/>
       <source>Enable dark mode icon theme</source>
       <translation>Pag-andam sa tema nga tema sa ngitngit nga mode</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2991"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2992"/>
       <source>System tray</source>
       <translation>Sistema nga tray</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3000"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3001"/>
       <source>Show system tray icon</source>
       <translation>Ipakita ang sistema tray nga icon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3010"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3011"/>
       <source>Start application hidden</source>
       <translation>Gitago ang sinugdan na aplikasyon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3020"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3021"/>
       <source>Interface style</source>
       <translation>Estilo sa interyor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3051"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3052"/>
       <source>Enforce system icon theme</source>
       <translation>Ipatuman ang tema icon nga tema</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3157"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3158"/>
       <source>Override interface font size</source>
       <translation>Pag-override sa gidak-on sa font sa interface</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3166"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3167"/>
       <source>Interface font size:</source>
       <translation>Gidak-on sa letra sa interface:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3378"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3379"/>
       <source>&amp;Add script…</source>
       <translation>&amp;Idugang ang script…</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4024"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4025"/>
       <source>Use legacy way to link to notes, images and attachments</source>
       <translation>Paggamit pamaagi nga kabilin aron makakonek sa mga nota, mga imahe ug mga gilakip</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3869"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3870"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
       <translation>Sa diha nga ang pagbukas sa mga nota ang posisyon sa cursor sulod sa tala ibalik na karon sa posisyon sa diha nga ang mubo nga sulat mao ang katapusan nga gibisitahan sa kasamtangan nga sesyon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3839"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3840"/>
       <source>By default the headline will generated automatically</source>
       <translation>Sa naka-default ang headline awtomatik nga maporma</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3842"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3843"/>
       <source>The shortcut to create a new note asks for a headline</source>
       <translation>Ang laktoranan para makahimo og usa ka bag-o nga nota nangayo alang sa usa ka headline</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3908"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3909"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
       <translation>Awtomatikong isira ang database sa porma sa note aron mapugngan ang mga problema sa mga himan sa pag-sync</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3911"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3912"/>
       <source>Automatically close the note folder database</source>
       <translation>Awtomatikong isira ang database sa tala sa tala</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4072"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4073"/>
       <source>Search engine</source>
       <translation>Pagpangita sa engine</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4094"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4095"/>
       <source>Message boxes</source>
       <translation>Mga kahon sa mensahe</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4100"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3960"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4101"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3967"/>
       <source>Reset message boxes</source>
       <translation>I-reset ang mga kahon sa mensahe</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4293"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="4026"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="4050"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4294"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4033"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4057"/>
       <source>Import settings</source>
       <translation>Mga setting sa import</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4300"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3992"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4301"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3999"/>
       <source>Export settings</source>
       <translation>Mga setting sa pag-export</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4438"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4449"/>
       <source>Open issue assistant</source>
       <translation>Opisyal nga abli nga isyu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4405"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4416"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Ang labing maayo nga paagi sa pag-post sa mga isyu mao ang paggamit sa assistant sa isyu pinaagi sa pagpugong sa &lt;span style = "font-weight: 600;"&gt; Open issue assistant &lt;/ span&gt; sa ubos. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4670"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4681"/>
       <source>Ignore code font size to allow zooming</source>
       <translation>Ayaw ibutang ang gidak-on sa letra sa font aron tugotan ang pag-zooming</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4664"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4675"/>
       <source>Rendering</source>
       <translation>Paghatag</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4684"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4695"/>
       <source>Enable underline rendering</source>
       <translation>Paghan-ay sa gihan-ay nga paghubad</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5094"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5105"/>
       <source>Fully highlight blockquotes</source>
       <translation>Hingpit sa pagpasiugda sa mga blockquote</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5164"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5175"/>
       <source>Note-edit cursor width:</source>
       <translation>Ang sulat-usba ang lapad sa cursor:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5113"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5124"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
       <translation>Pag-enrol sa Vim mode (pipila ka mga shortcut sa QOwnNotes dili molihok)</translation>
     </message>
@@ -6092,295 +6094,310 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Ablihi ang imong kaugalingon nga panid sa liga sa App Password</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2541"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2542"/>
       <source>Māori</source>
       <translation>Tinuud nga</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2189"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2190"/>
       <source>Malay</source>
       <translation>Malay</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2140"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2141"/>
       <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
       <translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2497"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2498"/>
       <source>Khmer</source>
       <translation>Khmer</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2706"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2707"/>
       <source>Shona</source>
       <translation>Shona</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2717"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2718"/>
       <source>Sinhala</source>
       <translation>Sinhala</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2772"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2773"/>
       <source>Thai</source>
       <translation type="unfinished">Thai</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2783"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2784"/>
       <source>Vietnamese</source>
       <translation>Vietnamese</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2805"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2806"/>
       <source>Xhosa</source>
       <translation>Xhosa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2838"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2839"/>
       <source>Yiddish</source>
       <translation type="unfinished">Yiddish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2849"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2850"/>
       <source>Zulu</source>
       <translation>Zulu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2905"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2906"/>
       <source>Search for language</source>
       <translation>Pagpangita alang sa sinultian
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3268"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3269"/>
       <source>Action name</source>
       <translation>Ngalan sa aksyon
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3273"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3274"/>
       <source>Local shortcut</source>
       <translation>Lokal
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3278"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3279"/>
       <source>Global shortcut</source>
       <translation>Global nga laktod</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3879"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3880"/>
       <source>Disable this if you want to launch the application without opening a note</source>
       <translation>I-disable kini kung gusto nimo ilansad ang aplikasyon nga wala’y pagbukas sa usa ka mubo nga sulat</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3882"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3883"/>
       <source>Open last accessed note at application startup</source>
       <translation>Ablihi ang katapusang gi-access nga sulat sa pagsugod sa aplikasyon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4412"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4330"/>
+      <source>Checks the disk database integrity and fixes problems</source>
+      <translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="4333"/>
+      <source>Check integrity</source>
+      <translation type="unfinished">Check integrity</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="4340"/>
+      <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
+      <translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="4423"/>
       <source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
       <translation> Ang GitHub dili kinahanglan duha ka mga wanang sa katapusan sa linya aron mahimo ang usa ka linya sa linya</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4435"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4446"/>
       <source>This is the best way to open an issue</source>
       <translation>Kini ang pinakamaayo nga paagi aron maablihan ang usa ka isyu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4449"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4460"/>
       <source>Please use this in the issue tracker</source>
       <translation>Palihug gamita kini sa isyu sa tracker</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4452"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4463"/>
       <source>&amp;Copy debug information to clipboard</source>
       <translation>&amp;Kopyaha ang impormasyon sa debug sa clipboard</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4463"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4474"/>
       <source>Please don't use this in the issue tracker</source>
       <translation>Palihug ayaw gamita kini sa isyu sa tracker</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4691"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4702"/>
       <source>Use editor highlighting styles also for the preview</source>
       <translation>Paggamit usab nga mga estilo nga nagpasiugda sa editor alang sa pag-preview</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4714"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4725"/>
       <source>Exporting</source>
       <translation>Pag-eksport</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4720"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4731"/>
       <source>Use internal export styling for the PDF export and printing of the preview</source>
       <translation>Paggamit istilo sa internal nga pag-export alang sa pag-export sa PDF ug pag-imprinta sa preview</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5028"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5039"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Mahimo nimong tan-awon ang tanan nga magamit nga &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; mga format sa oras &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5198"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5209"/>
       <source>Disable cursor blinking</source>
       <translation>Mga setting sa pag-export</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5205"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5216"/>
       <source>Automatically remove trailing spaces in the note text</source>
       <translation>Awtomatikong tangtangon ang mga agianan sa pagbiyahe sa teksto sa nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5215"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5226"/>
       <source>Tabs and Indents</source>
       <translation>Mga Tab ug Indents</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5223"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5234"/>
       <source>Use tab character instead of spaces</source>
       <translation>Paggamit karakter nga tab imbis nga mga luna</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5230"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5241"/>
       <source>Indent:</source>
       <translation>Giila</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5610"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5619"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5621"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5630"/>
       <source>Regular expressions of note subfolders to ignore, separated by ";"</source>
       <translation>Gamita ang mga subfolder sa nota
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5613"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5624"/>
       <source>Ignored subfolders</source>
       <translation>Ang mga regular nga ekspresyon sa mga subfold sa mubo nga sulat dili igsapayan, gibulag sa ";"
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5629"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5640"/>
       <source>Reset ignored subfolders</source>
       <translation>Gipasagdan nga mga subfolder
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5665"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5676"/>
       <source>Restore open note tabs at application startup and when note folders are switched</source>
       <translation>Ibalik ang bukas nga mga tab nga mubo nga sulat sa pagsugod sa aplikasyon ug kung ang mga folder nga mga sulat gibalhin</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5750"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5761"/>
       <source>Hide 'Note count' with tags (increases performance)</source>
       <translation>Itago ang 'Note count' nga adunay mga tag (nagdugang sa paghimo)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5786"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5797"/>
       <source>Show the number of matches in each note</source>
       <translation>Ipakita ang gidaghanon sa mga posporo sa matag mubo nga sulat</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5441"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5452"/>
       <source>Note list panel</source>
       <translation>Talaan sa lista sa listahan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5447"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5458"/>
       <source>Show notes in the note list with preview</source>
       <translation>Ipakita ang mga nota diha sa lista sa nota nga may preview</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5520"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5531"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
       <translation>Imbis sa usa ka lista nga talaan gamiton ang usa ka kahoy nga nota sa tanan nga mga subfolders (kung gi-on alang sa folder nga nota)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5796"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5807"/>
       <source>Note folder panel</source>
       <translation>Timan-i ang panel sa folder
 </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5802"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5813"/>
       <source>Show note folders as buttons instead of in a select box</source>
       <translation>Ipakita ang mga folder sa nota ingon mga butones imbes sa usa ka piling kahon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5944"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5955"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
       <translation>Ang mga panel mahimo nga ma-on ug i-off sa &lt;i&gt; Window / Panels &lt;/i&gt; ang main menu ug mahimo ka usab makatag-an sa lainlain nga &lt;i&gt; Mga Lugar sa trabaho &lt;/i&gt; alang sa lainlaing mga pag-configure sa panel.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6021"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6032"/>
       <source>Bookmarks</source>
       <translation>Mga Bookmark</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6027"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6038"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
       <translation>Ang mga mubong sulat niini nga tag gamiton aron makuha ang mga bookmark</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6030"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6041"/>
       <source>Tag name for bookmarks notes</source>
       <translation>Ang ngalan sa tag alang sa mga bookmark nagmarka</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6037"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6048"/>
       <source>Bookmarks tag:</source>
       <translation>Mga bookmark nga tag:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6044"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6055"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
       <translation>Sa baylo ang extension sa browser mopakita sa tanan nga mga link sa kasamtangan nga nota. Mahimo usab nimo nga ipakita kini nga espesyal nga bookmark nga mga link sa mga nota uban sa usa ka tag. Alang sa dugang kasayuran mahitungod sa bookmark link syntax i-klik ang &lt;a href="%1"&gt; dinhi &lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6057"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6068"/>
       <source>Bookmarks note name:</source>
       <translation>Mga bookmark nga nota nga ngalan:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6064"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6075"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
       <translation>Kini nga nota gamiton sa pagdugang sa bag-ong mga bookmark gikan sa extension sa browser</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6067"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6078"/>
       <source>Note name for adding new bookmarks</source>
       <translation>Timan-i ang ngalan sa pagdugang sa bag-ong mga bookmark</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6077"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6088"/>
       <source>Web socket server</source>
       <translation>Web server sa socket</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6083"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6094"/>
       <source>Socket server port:</source>
       <translation>Suksokanang server pantalan:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6117"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6128"/>
       <source>Show security token</source>
       <translation>Ipakita ang token sa seguridad</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6153"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6164"/>
       <source>Web socket server support</source>
       <translation>Suporta sa web socket server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6159"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6170"/>
       <source>Enable socket server</source>
       <translation>Pag-enable sa socket server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="6134"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6145"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
       <translation>I-install ang &lt;a href="%1"&gt; extension sa browser sa Web Companion &lt;/a&gt; gikan sa &lt;a href="%2"&gt; Chrome Web Store &lt;/a&gt; o &lt;a href="%3"&gt; Firefox Add- ons page &lt;/a&gt; nga gamiton ang QOwnNotes isip web clipper.</translation>
     </message>
@@ -6390,249 +6407,249 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Tugoti ang nota nga ngalan sa file nga lahi gikan sa headline. &lt;br&gt; Pagbantay nga ang ownCloud Notes nagkinahanglan sa pangalan sa file nga mahimong sama sa ulohan!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5649"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5660"/>
       <source>Note edit panel</source>
       <translation>Mubo nga sulat edit panel</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5655"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5666"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
       <translation>Kung kini nga baldado ikaw makahimo sa paghimo ug mas komplikado nga mga layout sa panel, apan ang tanang mga panel paga-usabon kung ang bintana adunay sukaranan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5658"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5669"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
       <translation>Gamita ang nota sa pag-edit panel ingon nga fixed central widget nga mausob kung ang bintana o ubang mga panid mausab</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5773"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5784"/>
       <source>Note search panel</source>
       <translation>Timan-i ang search panel</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5779"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5790"/>
       <source>Disable auto-completion of previous searches</source>
       <translation>Pagdili sa pagtapos sa auto sa nangagi nga mga pagpangita</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5675"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5686"/>
       <source>Navigation panel</source>
       <translation>Panel sa Navigation</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5681"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5692"/>
       <source>Hide navigation item search bar</source>
       <translation>Itago ang search item bar sa navigation</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5816"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5827"/>
       <source>Local trash settings</source>
       <translation>Mga lokal nga basurahan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5850"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5861"/>
       <source>Remove trashed notes after:</source>
       <translation>Kuhaa ang gibasura nga mga sulat human sa:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5857"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5868"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
       <translation> mga adlaw</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5876"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5887"/>
       <source>Automatically remove trashed notes after a certain time</source>
       <translation>Awtomatiko nga gekuha ang gitala nga mga nota human sa usa ka panahon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5902"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5913"/>
       <source>Local trash support</source>
       <translation>Lokal nga suporta sa basura</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5908"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5919"/>
       <source>Enable local trash</source>
       <translation>Pag-himo sa lokal nga basura</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5925"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5936"/>
       <source>Layout selector</source>
       <translation>Pagpili sa layout</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5931"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5942"/>
       <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
       <translation>Mahimo nimong ibutang ang usa ka bag-ong layout dinhi. Hinumdomi nga kanunay ka makahimo sa pag-usab sa posisyon sa mga panel gamit ang button nga &lt;i&gt; Unlock panels &lt;/ i&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5140"/>
-      <location filename="../dialogs/settingsdialog.ui" line="6103"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5151"/>
+      <location filename="../dialogs/settingsdialog.ui" line="6114"/>
       <source>Reset the cursor width</source>
       <translation>I-reset ang lapad sa cursor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5315"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5326"/>
       <source>External git log command to show the git versions of a note</source>
       <translation>Ang gawas sa git log na sugo aron ipakita ang git nga bersyon sa usa ka nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5321"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5332"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Ang pagsulod sa usa ka sugo nga gamiton aron ipakita ang git log (sama pananglitan "gitk")</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5341"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5352"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Kon imong kining gamiton nga kahimtang ikaw makakuha og usa ka bag-o nga entry sa menu aron sa pagpakita sa mga git nga mga bersyon kon imong i-klik ang nota.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5461"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5472"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
       <translation>Ipakita ang tanan nga mga nota sa usa ka tag na nakalakip ang mga nota sa ilang mga anak-tag</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5454"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5465"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
       <translation>Ipakita ang tanan nga mga nota diha sa usa ka polder nga naglakip sa mga subfolder (magtrabaho lamang kon ang mga subfolder gipasiga)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5191"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5202"/>
       <source>Highlight the current line</source>
       <translation>Ipasiugda ang kasamtangan nga linya</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5408"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5419"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
       <translation>Ayaw kalimti ang paghimo sa git support alang sa imong mga polder nga tala ug i-configure ang imong ngalan ug email address alang sa imong git client, pananglitan uban niining mga utlanan sa terminal:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5691"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5702"/>
       <source>Tags panel</source>
       <translation>Mga panel sa mga tag</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5494"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5573"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5720"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5505"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5584"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5731"/>
       <source>Order</source>
       <translation>Order</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5503"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5579"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5726"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5514"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5590"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5737"/>
       <source>Ascending</source>
       <translation>Pagtaas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5510"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5586"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5733"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5521"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5597"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5744"/>
       <source>Descending</source>
       <translation>Pag-ubos</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5468"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5543"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5697"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5479"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5554"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5708"/>
       <source>Sort</source>
       <translation>Han-ayon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5184"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5195"/>
       <source>Only use editor width setting in distraction free mode</source>
       <translation>Paggamit lamang sa editor width setting sa distraction free mode</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5474"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5549"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5703"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5485"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5560"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5714"/>
       <source>Alphabetical</source>
       <translation>Alpabetiko</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5710"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5721"/>
       <source>By last change / use</source>
       <translation>Sa katapusan nga pagbag-o / paggamit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5743"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5754"/>
       <source>Hide 'Find or create tag' search</source>
       <translation>Tagoa ang 'Pangita o paghimo og tag' nga pagpangita</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5530"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5541"/>
       <source>Note subfolders panel</source>
       <translation>Note subfolders panel</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5536"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5547"/>
       <source>Show with full path</source>
       <translation>Ipakita uban ang hingpit nga dalan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5481"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5556"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5492"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5567"/>
       <source>By last change</source>
       <translation>Sa katapusan nga pagbag-o</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5566"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5577"/>
       <source>Show root folder name</source>
       <translation>Ipakita ang ngalan sa root folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5596"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5607"/>
       <source>Hide 'Find or create note subfolder' search</source>
       <translation>Tagoa ang 'Pangita o paghimo og tala sa subfolder' nga pagpangita</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5603"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5614"/>
       <source>Display note subfolders as full tree</source>
       <translation>Ipakita ang mga subfolder nga nota isip puno nga kahoy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2876"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2883"/>
       <source>Search script repository</source>
       <translation>Pangita sa repository sa script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5331"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5342"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Mahimo nimo nga gamiton ang "%notePath%" alang sa dalan sa mubo nga sulat.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5354"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5365"/>
       <source>Git client</source>
       <translation>Git kliyente</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5370"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5381"/>
       <source>Path to git executable:</source>
       <translation>Dalan sa git executable:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5360"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5371"/>
       <source>Path to git client, leave empty for default</source>
       <translation>Dalan sa git client, biyai ang walay sulod alang sa default</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5279"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5290"/>
       <source>Commit interval</source>
       <translation>Pag-interval</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5285"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5296"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
       <translation>seg</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5305"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5316"/>
       <source>git commit interval time [sec]</source>
       <translation>gitala ang oras sa interval [s]</translation>
     </message>
@@ -6652,308 +6669,303 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Extension sa browser</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1804"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1805"/>
       <source>Which calendar backend do you want to use?</source>
       <translation>Unsa nga backend calendar ang gusto nimong gamiton?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1837"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1838"/>
       <source>For most current ownCloud and Nextcloud installations</source>
       <translation>Alang sa kadaghanan sa kasamtangan nga ownCloud ug Nextcloud pag-instalar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1817"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1818"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
       <translation>Alang sa mas karaan nga mga bersyon sa ownCloud diin ang default setting dili molihok</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1820"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1821"/>
       <source>Legacy ownCloud calendar</source>
       <translation>Kalendaryo ownCloud nga kalendaryo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1853"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1854"/>
       <source>CalDAV server settings</source>
       <translation>Mga setting sa CalDAV server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1862"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1863"/>
       <source>Calendar base url:</source>
       <translation>Ang url sa base kalendaryo:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1884"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1885"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
       <translation>Palihug ibutang ang CalDAV base url sa imong kalendaryo.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1954"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1955"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
       <translation>Palihug pasabta ang password alang sa imong username sa CalDAV. &lt;br/&gt; Sa pagkakaron ang password i-encrypt na sa laing settings, apan dili kaayo kasigurohan.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2255"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2256"/>
       <source>Czech</source>
       <translation>Sa Czech</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2629"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2630"/>
       <source>Brazilian Portuguese</source>
       <translation>Portuges sa Brazil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2816"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2817"/>
       <source>Ukrainian</source>
       <translation>Ukrainiano</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3780"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3781"/>
       <source>The name</source>
       <translation>Ang ngalan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4004"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4005"/>
       <source>Maximum height:</source>
       <translation>Pinakataas nga gitas-on:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3977"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3978"/>
       <source>Maximum width:</source>
       <translation>Maximum nga gilapdon:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3918"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3919"/>
       <source>Scale images down when inserted into notes</source>
       <translation>Mga hulagway nga hulagway sa dihang gisulod sa mga nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2431"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2432"/>
       <source>Croatian</source>
       <translation>Kroasia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3695"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3696"/>
       <source>Path to your QML file</source>
       <translation>Dalan sa imong QML file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3486"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3487"/>
       <source>Script name</source>
       <translation>Ngalan sa script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3508"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3509"/>
       <source>Description:</source>
       <translation>Paglaraw:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3590"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3591"/>
       <source>Version:</source>
       <translation>Bersyon:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3551"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3552"/>
       <source>Repository:</source>
       <translation>Repository:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3528"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3529"/>
       <source>Author(s):</source>
       <translation>(Mga) awtor:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3925"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3926"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
       <translation>Susiha kini kon gusto nimo nga dawaton ang tanang mga pagbag-o sa gawas samtang ikaw nag-usab sa kasamtangan nga nota.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3928"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3929"/>
       <source>Accept all external modifications of the current note</source>
       <translation>Dawata ang tanan nga mga pag-usab sa external sa kasamtangan nga note</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3862"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3863"/>
       <source>Use UNIX newline instead of native newline characters</source>
       <translation>Gamita ang UNIX newline imbis nga lumad nga mga karakter nga newline</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3872"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3873"/>
       <source>Restore cursor position when opening a note</source>
       <translation>Ibalik ang posisyon sa cursor sa dihang magbukas sa usa ka nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4322"/>
-      <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation>Ipasidan-an nga kini usab magwagtang sa imong mga butang nga gi-cache ug gi-configure nga mga folder ug mga script!</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4852"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4863"/>
       <source>Apply toolbar configuration</source>
       <translation>Ibutang ang configuration sa toolbar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4866"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4877"/>
       <source>Reset toolbars</source>
       <translation>I-reset ang mga toolbar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4894"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4905"/>
       <source>Enable logging to file</source>
       <translation>Pag-enable sa pag-log sa file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4901"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4912"/>
       <source>Clear log file</source>
       <translation>Tin-aw nga log file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4912"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4923"/>
       <source>Fake old version number to trigger update</source>
       <translation>Peke nga daan nga bersyon sa numero aron ma-trigger ang pag-update</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4940"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4951"/>
       <source>Log file path:</source>
       <translation>Agianan sa log file:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5002"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5013"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
       <translation>Dinhi mahimo nimong itakda ang imong kaugalingon nga format sa oras sa pagsulod sa kasamtangan nga panahon ngadto sa usa ka nota.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5005"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5016"/>
       <source>Insert current time</source>
       <translation>Pagsulod sa oras karon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5011"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5022"/>
       <source>Time format:</source>
       <translation>Pormat sa oras:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5018"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5029"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
       <translation>I-enter ang imong gihimo nga pormat sa oras, sama sa "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5107"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5118"/>
       <source>Editor options</source>
       <translation>Mga kapilian sa editor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5120"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5131"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
       <translation>Pag-enable sa awtomatik nga pagsira sa mga braket ug mga markdown formatting character</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5174"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5185"/>
       <source>You have to use the backspace key to remove the opening character</source>
       <translation>Kinahanglan nimong gamiton ang backspace key aron makuha ang opening character</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5177"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5188"/>
       <source>Enable automatic removal of matching closing characters</source>
       <translation>Pag-enable sa awtomatic nga pagtangtang sa mga katugbang nga panapos nga mga karakter</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1887"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1888"/>
       <source>Your CalDAV calendar base url</source>
       <translation>Ang imong CalDAV kalendaryo nga base sa url</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1919"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1920"/>
       <source>Please enter the username of your CalDAV server.</source>
       <translation>Palihug ibutang ang pangalan sa imong CalDAV server.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1922"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1923"/>
       <source>Your CalDAV username</source>
       <translation>Ang imong username sa CalDAV</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1960"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1961"/>
       <source>Your CalDAV password</source>
       <translation>Ang imong password sa CalDAV</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2007"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2008"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
       <translation>Kini ang mga hinungdan sa tanan nga listahan sa mga todo nga mga butan nga i-reload gikan sa imong server sa sunod higayon nga imong buksan ang dayalogo sa todo.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2010"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2011"/>
       <source>Empty calendar item cache</source>
       <translation>Walay sulod nga butang sa cache nga kalendaryo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2033"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2034"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
       <translation>I-klik dinhi aron i-reload ang listahan sa mga kalendaryo gikan sa imong server nga kalendaryo.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2039"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2040"/>
       <source>&amp;Reload calendar list</source>
       <translation>&amp; Pag-reload sa listahan sa kalendaryo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2948"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3058"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2949"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3059"/>
       <source>You may need to restart the application to let these changes take effect</source>
       <translation>Imo tingaling kinahanglanon nga i-restart ang aplikasyon aron mahimo kining mga kausaban</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3093"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3094"/>
       <source>Toolbar icon size:</source>
       <translation>Ang gidak-on sa icon sa Toolbar:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3083"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3084"/>
       <source>List and tree item height:</source>
       <translation>Listahan ug gitas-on nga butang sa kahoy:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3116"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3117"/>
       <source>Reset the icon size</source>
       <translation>I-reset ang gidak-on sa icon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3130"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3131"/>
       <source>Reset the item height</source>
       <translation>I-reset ang taas nga butang</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4677"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4688"/>
       <source>View text right to left (RTL)</source>
       <translation>Tan-awa ang teksto gikan sa tuo ngadto sa wala (RTL)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3254"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3255"/>
       <source>Search for shortcut</source>
       <translation>Pangitaa alang sa laktoranan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2050"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2051"/>
       <source>Ignore calendars that don't support todo items</source>
       <translation>Ibalewala ang mga kalendaryo nga wala mosuporta sa mga toda nga butang</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2882"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2883"/>
       <source>Arabic</source>
       <translation>Arabic</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3032"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3033"/>
       <source>Icons</source>
       <translation>Mga Icon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3041"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3042"/>
       <source>Use internal icon theme instead of system icon theme</source>
       <translation>Paggamit sa internal icon nga tema imbes nga system icon nga tema</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3644"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3645"/>
       <source>Script path:</source>
       <translation>Agianan sa script:</translation>
     </message>
@@ -6968,79 +6980,79 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Tugoti ang ngalan sa note file nga molahi sa headline</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3935"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3936"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
       <translation>Susiha kini kung gusto nimo nga ibalewala ang tanan nga mga kausaban sa external samtang ikaw nag-edit sa kasamtangan nga note.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3938"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3939"/>
       <source>Ignore all external modifications of the current note</source>
       <translation>Ibalewala ang tanan nga mga pagbag-o sa external sa kasamtangan nga nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3859"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3860"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
       <translation>Mahimo nimo kining gamiton alang sa panig-ingnan ubos sa Windows kung ikaw adunay mga kalisod sa mga bag-ong linya sa ownCloud / Nextcloud notes app</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4034"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4035"/>
       <source>App instance</source>
       <translation>App instance</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4040"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4041"/>
       <source>Only allow one app instance at the same time</source>
       <translation>Tugoti lamang ang usa ka app instance sa samang higayon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4136"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4137"/>
       <source>Add a custom file extension</source>
       <translation>Idugang ang usa ka custom file extension</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4150"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4151"/>
       <source>Remove a custom file extension</source>
       <translation>Kuhaa ang usa ka custom file extension</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4189"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4190"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
       <translation>Kon ikaw magdugang og mga custom extension pag-type lang sa extension, sama sa "taskpaper".</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4193"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4194"/>
       <source>Text file (txt)</source>
       <translation>Text file (txt)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4221"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4222"/>
       <source>Path to external editor:</source>
       <translation>Dalan ngadto sa external editor:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4056"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4057"/>
       <source>Don't show the update dialog automatically</source>
       <translation>Ayaw ipakita ang dialog sa pag-update nga awtomatik</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4509"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4736"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4520"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4747"/>
       <source>Fonts</source>
       <translation>Fonts</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4532"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4574"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4759"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4787"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4543"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4585"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4770"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4798"/>
       <source>Set a new font</source>
       <translation>Pagbutang og usa ka bag-ong font</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4543"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4588"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4773"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4818"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4554"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4599"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4784"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4829"/>
       <source>Reset font</source>
       <translation>I-reset ang font</translation>
     </message>
@@ -7050,19 +7062,19 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <translation>Debug</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4373"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4384"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2294"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="4269"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4276"/>
       <source>Debug information</source>
       <translation>Impormasyon sa Debug</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4379"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4390"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mahimo nimong &lt;span style=" font-weight:600;"&gt;kopyahon ug i-paste&lt;/span&gt;kining teksto (o mga bahin niining teksto) sa usa ka&lt;span style=" font-weight:600;"&gt;isyu&lt;/span&gt;sa&lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;mga isyu sa QOwnNotes nga page&lt;/a&gt; kon aduna kay&lt;span style=" font-weight:600;"&gt;mga pangutana o kalisud&lt;/span&gt;sa QOwnNotes. Ang datos nga sensitibo kaayo kay gitago niining impormasyon.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4466"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4477"/>
       <source>&amp;Save debug information</source>
       <translation>&amp; Pag-save sa impormasyon sa debug</translation>
     </message>
@@ -7157,78 +7169,88 @@ Nasayup ang koneksyon sa mensahe: </translation>
       <translation>Kuhaa ang kasamtangan nga nota sa folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2665"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2672"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation>Palihug pilia ang folder kung diin matipigan ang imong mga nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2700"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2707"/>
       <source>Loading folders from server</source>
       <translation>Ang nag-load nga mga folder gikan sa server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2715"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2722"/>
       <source>No more folders were found in the current folder</source>
       <translation>Wala nay mga folder nga nakita sa kasamtangan nga folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2788"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2795"/>
       <source>Loading folders in '%1' from server</source>
       <translation>Ang nag-load nga mga folder sa '%1' gikan sa server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2861"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2868"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
       <translation>Mahimong pagtan-aw sa &lt;a href="%1"&gt;Dokumentasyon sa pag-iskrip&lt;/a&gt; aron masugdan ug paspas.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2865"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2872"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
       <translation>Kon ikaw nanginahanglan ug access sa usa ka pag-andar sa QOwnNotes palihug ibutang ang usa ka isyu sa &lt;a href="%1"&gt; pahid sa isyu sa QOwnNotes&lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2887"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2894"/>
       <source>Check for script updates</source>
       <translation>Susiha ang mga update sa iskrip</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2894"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2901"/>
       <source>Add local script</source>
       <translation>Dugangi ug lokal na iskrip</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2898"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2905"/>
       <source>Add an existing, local script</source>
       <translation>Dugangi ug usa ka anaa nga lokal ng iskrip</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3991"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="4049"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3998"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4056"/>
       <source>INI files</source>
       <translation>INI sa mga file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="4027"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4034"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
       <translation>Gusto ba nimo nga mag-import sa mga setting? Ang imong kasamtangan nga mga kahimanan makuha ug dili ang tanan nga kahimtang mahimo nga mapasig-uli, sama sa mga setting sa note folder ug diin nga mga script nga imong gigamit. Ikaw kinahanglan usab nga mag-adjust sa pipila ka mga setting, ilabi na sa mga plataporma, apan ang imong mga nota magpabilin nga dili maayo!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="4037"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4044"/>
       <source>The application will be quit after the import.</source>
       <translation>Ang aplikasyon pag-undang human sa import.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="4038"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4045"/>
       <source>The application will be restarted after the import.</source>
       <translation>Ang aplikasyon ipasugod human sa import.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="4270"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4277"/>
       <source>The debug information was copied to the clipboard.</source>
       <translation>Ang kasayuran sa debug gikopya sa clipboard.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2881"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="4298"/>
+      <source>The integrity of the disk database is valid.</source>
+      <translation type="unfinished">The integrity of the disk database is valid.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="4303"/>
+      <source>The integrity of the disk database is not valid!</source>
+      <translation type="unfinished">The integrity of the disk database is not valid!</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="2888"/>
       <source>Find a script in the script repository</source>
       <translation>Pangita ang usa ka iskrip sa repository sa iskrip</translation>
     </message>
@@ -7274,105 +7296,105 @@ Nasayup ang koneksyon sa mensahe: </translation>
       <translation>Ang shortcut &lt;strong&gt;%1&lt;/ strong&gt; gi-assign na sa &lt;strong&gt;%2&lt;/strong&gt;! Gusto ka bang moambak sa shortcut?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2974"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2981"/>
       <source>Remove script</source>
       <translation>Kuhaa ang iskrip</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2975"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2982"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Kuhaa ang kasamtangang iskrip &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3025"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3032"/>
       <source>QML files</source>
       <translation>Mga QML file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3026"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3033"/>
       <source>Please select your QML file</source>
       <translation>Palihug pilia ang imong QML file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3115"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3122"/>
       <source>Open repository</source>
       <translation>Ablihi ang repository</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3173"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3180"/>
       <source>Your script seems to be valid</source>
       <translation>Ang imong iskrip daw nga balido</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3174"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3181"/>
       <source>There were script errors:
 %1</source>
       <translation>Adunay mga sayop sa iskrip:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3242"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3249"/>
       <source>File extension</source>
       <translation>Ekstensyon sa file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3242"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3249"/>
       <source>Enter your custom file extension:</source>
       <translation>Pagsulod sa imong kustombre nga ekstensyon sa file:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3571"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3578"/>
       <source>Calendar cache emptied</source>
       <translation>Ang cache sa kalkula walay sulod</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3572"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3579"/>
       <source>Your calendar cache was emptied.</source>
       <translation>Ang imong kalendaryo sa kalendaryo nawala.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3653"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3660"/>
       <source>Reset toolbars and exit</source>
       <translation>I-reset ang mga toolbar ug exit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3654"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3661"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
       <translation>Gusto ba nimo nga i-reset ang tanan nga mga toolbar? Ang aplikasyon pagasirhan sa proseso, ang default nga mga toolbar ipahiuli kon magsugod ka na usab niini.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3658"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3665"/>
       <source>Reset and &amp;exit</source>
       <translation>Reset ug exit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3816"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3823"/>
       <source>Log file cleared</source>
       <translation>Gihawan ang log file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3817"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3824"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
       <translation>Ang log file &lt;strong&gt;%1&lt;/strong&gt; kay nahawan.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3853"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3860"/>
       <source>Executable files</source>
       <translation>Mga executable file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3854"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3856"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3861"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3863"/>
       <source>All files</source>
       <translation>Tanan nga mga file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3864"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3871"/>
       <source>Please select the path of your git executable</source>
       <translation>Palihug pilia ang dalan sa imong git executable</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3961"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3968"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
       <translation>Buot ba nimo nga i-reset ang mga gipang-override nga mga kahon sa mensahe?</translation>
     </message>
@@ -7453,7 +7475,7 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2279"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2351"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3658"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3665"/>
       <source>&amp;Cancel</source>
       <translation>%Kanselahon</translation>
     </message>

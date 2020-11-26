@@ -6,7 +6,8 @@
     - the tag tree is now not reloaded if the tag panel is not visible
 - there now is a button to check the disk database integrity in the *General settings*,
   which will also fix some problems
-- added more Dutch, Hungarian, Urdu (Pakistan) translation (thank you Farhan1985, rawfreeamy)
+- added more translation (thank you Farhan1985, rawfreeamy, filipedias321,
+  Tommy903, amirkbrpr, silviact, rakekniven)
 
 ## 20.11.9
 - the rename/remove subfolder context menu option are now not shown if no subfolder
