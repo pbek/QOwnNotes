@@ -114,7 +114,7 @@ bool NoteApi::addTag(const QString& tagName) {
  */
 bool NoteApi::removeTag(QString tagName) {
     Tag tag = Tag::fetchByName(std::move(tagName));
-    if (!tag.exists()) {
+    if (!tag.isFetched()) {
         return false;
     }
 

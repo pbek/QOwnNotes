@@ -253,7 +253,7 @@ Note Note::fetchByRelativeFilePath(const QString &relativePath) {
     const auto noteSubFolder =
         NoteSubFolder::fetchByPathData(fileInfo.path(), QStringLiteral("/"));
 
-    if ((fileInfo.path() != ".") && !noteSubFolder.exists()) {
+    if ((fileInfo.path() != ".") && !noteSubFolder.isFetched()) {
         return Note();
     }
 
