@@ -149,6 +149,8 @@ void ScriptingService::initComponent(const Script &script) {
         }
     } else {
         qWarning() << "script errors: " << component->errors();
+        bool urlEmpty = component->errors().at(0).url().isEmpty();
+        if (urlEmpty) script.remove();
     }
 }
 
@@ -288,12 +290,11 @@ void ScriptingService::initComponents() {
     clearCustomStyleSheets();
     _scriptComponents.clear();
     _settingsVariables.clear();
-    QList<Script> scripts = Script::fetchAll();
+    bool enabledOnly = true;
+    const QList<Script> scripts = Script::fetchAll(enabledOnly);
 
-    Q_FOREACH (Script script, scripts) {
-        if (script.isEnabled()) {
-            initComponent(script);
-        }
+    for (const Script& script : scripts) {
+        initComponent(script);
     }
 }
 
