@@ -15,7 +15,7 @@ Sie können diese Parameter auf der Befehlszeilenschnittstelle verwenden:
 Wenn Sie bei der Installation von QOwnNotes auf Probleme stoßen, können Sie die Anwendung mit neuen Einstellungen starten, ohne Ihre aktuellen Einstellungen mithilfe des Parameters der `Sitzung` zu verlieren.
 
 ```bash
-QOwnNotes - Sitzungs-Test
+QOwnNotes --session test
 ```
 :::
 

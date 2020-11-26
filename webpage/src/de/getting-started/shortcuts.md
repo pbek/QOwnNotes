@@ -23,20 +23,20 @@
     - alternative Verknüpfung ist <kbd>Ctrl</kbd> + <kbd>Seite nach Unten</kbd>
 - <kbd>Alt</kbd> + <kbd>Seite nach oben</kbd> springt zur vorherigen Notizenregisterkarte
 - <kbd>Alt</kbd> + <kbd>PgDn</kbd> springt zur nächsten Notizregisterkarte
-- <kbd>Ctrl</kbd> + <kbd>W</kbd> schließt die aktuelle Notiz-Registerkarte
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> schaltet den ablenkungsfreien Modus um
+- <kbd>Strg</kbd> + <kbd>W</kbd> schließt die aktuelle Notiz-Registerkarte
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> schaltet den ablenkungsfreien Modus um
     - Sie können es auch mit <kbd>Esc</kbd> schließen
-- <kbd>Ctrl</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Text aus
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Abschrift aus
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> fügt Notizen, Bilder und HTML aus der Zwischenablage ein
-- <kbd>Ctrl</kbd> + <kbd>,</kbd> öffnet die Einstellungen
+- <kbd>Strg</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Text aus
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Abschrift aus
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> fügt Notizen, Bilder und HTML aus der Zwischenablage ein
+- <kbd>Strg</kbd> + <kbd>,</kbd> öffnet die Einstellungen
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> fügt einer Notiz ein neues Tag hinzu
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> lädt den aktuellen Notizordner neu
-- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> erlaubt Ihnen einen anderen Notizordner auswählen
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> lädt die Scripting-Engine neu
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> blendet die Hauptmenüleiste aus oder ein
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> erlaubt Ihnen nach Aktionen zu suchen
-- <kbd>Ctrl</kbd> + <kbd>S</kbd> speichert geänderte Notizen manuell
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> lädt den aktuellen Notizordner neu
+- <kbd>Strg</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> erlaubt Ihnen einen anderen Notizordner auswählen
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> lädt die Scripting-Engine neu
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> blendet die Hauptmenüleiste aus oder ein
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> erlaubt Ihnen nach Aktionen zu suchen
+- <kbd>Strg</kbd> + <kbd>S</kbd> speichert geänderte Notizen manuell
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> öffnet das Skript-Repository-Dialogfeld
 - <kbd>F4</kbd> springt zum Notizenbearbeitungsfeld
 - <kbd>F5</kbd> springt zur Notizenliste
@@ -142,11 +142,11 @@
     - Sie können es auch mit <kbd>Esc</kbd> schließen
 - <kbd>⌘</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Text
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> druckt die aktuelle Notiz als Abschrift
-- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>V</kbd>  fügt Notizen, Bilder und HTML aus der Zwischenablage ein
+- <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>V</kbd>  fügt Notizen, Bilder und HTML aus der Zwischenablage ein
 - <kbd>⌘</kbd> + <kbd>,</kbd> öffnet die Einstellungen
 - <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> fügt einer Notiz ein neues Schlagwort hinzu
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> lädt den aktuellen Notizordner neu
-- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>F</kbd> können Sie einen anderen Notizordner auswählen
+- <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>F</kbd> können Sie einen anderen Notizordner auswählen
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> lädt die Skript-Engine neu
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> blendet die Hauptmenüleiste aus oder ein
 - Mit <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> können Sie nach Aktionen suchen
@@ -219,7 +219,7 @@
       </li>
       
       <li>
-        <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> fügt eine Tabelle ein
+        <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> fügt eine Tabelle ein
       </li>
       
       <li>
@@ -243,7 +243,7 @@
       </li>
       
       <li>
-        <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> streicht den ausgewählten Text durch
+        <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> streicht den ausgewählten Text durch
       </li>
       
       <li>
@@ -276,7 +276,7 @@
       </li>
       
       <li>
-        <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Links</kbd> springt im Notenverlauf ein Element rückwärts <ul>
+        <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>Links</kbd> springt im Notenverlauf ein Element rückwärts <ul>
           <li>
             <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>Rechts</kbd> springt im Notenverlauf vorwärts
           </li>
@@ -312,11 +312,11 @@
       </li>
       
       <li>
-        <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> teilt die aktuelle Notiz an der aktuellen Cursorposition in zwei Notizen auf
+        <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> teilt die aktuelle Notiz an der aktuellen Cursorposition in zwei Notizen auf
       </li>
       
       <li>
-        <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> sucht im Web nach dem ausgewählten Text
+        <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> sucht im Web nach dem ausgewählten Text
       </li>
       
       <li>

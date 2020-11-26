@@ -60,10 +60,10 @@ Starten Sie ein externes Programm und warten Sie auf die Ausgabe
 /**
   * QML-Wrapper zum Starten eines synchronen Prozesses
   *
-  * @param executeablePath der Pfad der ausführbaren Datei
-  * @param parameters eine Liste von Parameterzeichenfolgen
-  * @param data die Daten, die in den Prozess geschrieben werden (optional)
-  * @return den Text, der vom Prozess zurückgegeben wurde
+  * @param executeablePath - der Pfad der ausführbaren Datei
+  * @param parameters - eine Liste von Parameterzeichenfolgen
+  * @param data - die Daten, die in den Prozess geschrieben werden (optional)
+  * @return - den Text, der vom Prozess zurückgegeben wurde
 QByteArray startSynchronousProcess (QString ausführbarer Pfad, QStringList-Parameter, QByteArray-Daten);
 ```
 
@@ -100,11 +100,11 @@ Abrufen der aktuellen Notiz
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * QML wrapper to get the current note
- *
- * @returns {NoteApi} the the current note object
- */
-NoteApi currentNote();
+     * QML-Wrapper, um die aktuelle Notiz zu erhalten
+     *
+     * @returns {NoteApi} das aktuelle Notizobjekt
+     */
+NoteApi currentNote ();
 ```
 
 ### Beispiel
@@ -120,11 +120,11 @@ Protokollierung beim Protokoll-Widget
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * QML wrapper to log to the log widget
- *
- * @param text
- */
-void log(QString text);
+     * QML-Wrapper zum Protokollieren im Protokoll-Widget
+     *
+     * @param Text
+     */
+void log (QString-Text);
 ```
 
 ### Beispiel
@@ -151,7 +151,7 @@ QString downloadUrlToString (QUrl url);
 var html = script.downloadUrlToString("https://www.qownnotes.org");
 ```
 
-You may want to take a look at the example [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
+Vielleicht möchten Sie sich das Beispiel ansehen: [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml).
 
 Herunterladen einer URL in den Medienordner
 --------------------------------------
@@ -225,7 +225,7 @@ Registrieren einer benutzerdefinierten Aktion
 
 ### Methodenaufruf und Parameter
 ```cpp
-/ **
+/**
     * Registriert eine benutzerdefinierte Aktion
     *
     * @param bezeichner der bezeichner der aktion
@@ -293,7 +293,7 @@ script.registerLabel ("counter-label");
 
 Die Beschriftungen werden im Skript-Dock-Widget angezeigt.
 
-You can use both plain text or html in the labels. Der Text kann ausgewählt werden und Links können angeklickt werden.
+Sie können sowohl einfachen Text als auch HTML in den Beschriftungen verwenden. Der Text kann ausgewählt werden und Links können angeklickt werden.
 
 Vielleicht möchten Sie sich dann das Beispielskript ansehen [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
@@ -703,13 +703,13 @@ void ScriptingService::addStyleSheet (QString-Stylesheet);
 
 ### Beispiel
 ```js
-// make the text in the note list bigger
-script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
+// mache den Text in der Notizliste größer
+script.addStyleSheet ("QTreeWidget # noteTreeWidget {Schriftgröße: 30px;}");
 ```
 
 Vielleicht möchten Sie sich das Beispiel ansehen [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml).
 
-You can get the object names from the `*.ui` files, for example [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+Sie können die Objektnamen aus den Dateien `*.ui ` abrufen, z.B. [ mainwindow.ui ](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
 
 Schauen Sie sich das [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) für eine Referenz hinsichtlich verfügbarer Stile.
 
@@ -728,11 +728,11 @@ void ScriptingService::reloadScriptingEngine();
 
 ### Beispiel
 ```js
-// reload the scripting engine
+// Laden Sie die Scripting Engine neu
 script.reloadScriptingEngine();
 ```
 
-Fetching a note by its file name
+Abrufen einer Notiz anhand ihres Dateinamens
 --------------------------------
 
 ### Methodenaufruf und Parameter
@@ -750,8 +750,8 @@ NoteApi * ScriptingService::fetchNoteByFileName (QString fileName,
 
 ### Beispiel
 ```js
-// fetch note by file name
-script.fetchNoteByFileName("my note.md");
+// Notiz nach Dateiname holen
+script.fetchNoteByFileName ("my note.md");
 ```
 
 Abrufen einer Notiz anhand ihrer ID
@@ -770,8 +770,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 
 ### Beispiel
 ```js
-// fetch note by id
-script.fetchNoteById(243);
+// Notiz mit ID abrufen
 ```
 
 Vielleicht möchten Sie sich das Beispiel ansehen [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
@@ -845,7 +844,7 @@ script.setCurrentNote(note);
 
 Vielleicht möchten Sie sich das Beispiel ansehen
 
-Jumping to a note subfolder
+Zu einem Notiz-Unterordner springen
 ---------------------------
 
 ### Methodenaufruf und Parameter
@@ -863,18 +862,18 @@ bool ScriptingService::jumpToNoteSubFolder (const QString & noteSubFolderPath,
 
 ### Beispiel
 ```js
-// jump to the note subfolder "a sub folder"
-script.jumpToNoteSubFolder("a sub folder");
+// springe zum Notiz-Unterordner "ein Unterordner"
+script.jumpToNoteSubFolder ("ein Unterordner");
 
-// jump to the note subfolder "sub" inside of "a sub folder"
-script.jumpToNoteSubFolder("a sub folder/sub");
+// springe zum Notiz-Unterordner "sub" innerhalb von "einem Unterordner"
+script.jumpToNoteSubFolder ("ein Unterordner / Unter");
 ```
 
 ::: tip
 Sie können einen neuen Notizunterordner im aktuellen Unterordner erstellen, indem Sie [`mainWindow.createNewNoteSubFolder`](classes.html#example-2) aufrufen.
 :::
 
-Showing an information message box
+Anzeigen eines Informationsmeldungsfelds
 ----------------------------------
 
 ### Methodenaufruf und Parameter
@@ -890,11 +889,11 @@ void ScriptingService::informationMessageBox (QString-Text, QString-Titel);
 
 ### Beispiel
 ```js
-// show a information message box
-script.informationMessageBox("The text I want to show", "Some optional title");
+// ein Informationsmeldungsfeld anzeigen
+script.informationMessageBox ("Der Text, den ich anzeigen möchte", "Einige optionale Titel");
 ```
 
-Showing a question message box
+Anzeigen eines Fragenmeldungsfelds
 ------------------------------
 
 ### Methodenaufruf und Parameter
@@ -917,18 +916,18 @@ int ScriptingService::questionMessageBox (
 
 ### Beispiel
 ```js
-// show a question message box with an apply and a help button
-// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
-var result = script.questionMessageBox(
-    "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
-script.log(result);
+// ein Frage-Meldungsfeld mit einer Schaltfläche zum Anwenden und einer Hilfe anzeigen
+// siehe: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+var result = script.questionMessageBox (
+     "Der Text, den ich anzeigen möchte", "Einige optionale Titel", 0x01000000 | 0x02000000, 0x02000000);
+script.log (Ergebnis);
 ```
 
 Informationen zu Schaltflächen finden Sie unter [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
 Vielleicht möchten Sie sich auch das Beispiel ansehen [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
-Showing an open file dialog
+Anzeigen eines geöffneten Dateidialogs
 ---------------------------
 
 ### Methodenaufruf und Parameter
@@ -1226,8 +1225,8 @@ Konvertieren von Pfadtrennzeichen von nativen
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Returns path using '/' as file separator.
- * Unter Windows beispielsweise fromNativeDirSeparators ("c: \\ winnt \\ system32")
+ * Gibt den Pfad mit '/' als Dateitrennzeichen zurück.
+ * Unter Windows beispielsweise fromNativeDirSeparators("c:\\winnt\\system32")
  * gibt "c:/winnt/system32" zurück.
  *
  * @param path
@@ -1456,7 +1455,7 @@ Arbeiten mit Websockets
 
 Sie können QOwnNotes mithilfe von ` WebSocketServer ` fernsteuern.
 
-Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). Du kannst die Socket Server Verbindung testen indem du dich mit [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345) zu ihr verbindest.
+Bitte schauen Sie sich das Beispiel an: [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). Du kannst die Socket Server Verbindung testen indem du dich mit [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345) zu ihr verbindest.
 
 Sie können Sockets auch mit `WebSocket` abhören. Bitte schauen Sie sich das Beispiel an: [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
 

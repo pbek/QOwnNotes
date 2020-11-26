@@ -64,7 +64,7 @@ Sie können die [shortcut](./shortcuts.md) <kbd>Ctrl + U</kbd> verwenden, um ein
 ```
 
 ::: tip
-Sie können die [shortcut](./shortcuts.md) <kbd>Alt + Shift + S</kbd> verwenden, um einen Text durchzustreichen.
+Sie können den [shortcut](./shortcuts.md) <kbd>Alt + Shift + S</kbd> verwenden, um einen Text durchzustreichen.
 :::
 
 ## Listen

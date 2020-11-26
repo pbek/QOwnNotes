@@ -37,6 +37,6 @@ Führen Sie dann Folgendes aus:
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-Wenn Sie Unicode-Fehler zu bestimmten Notizen erhalten, entfernen Sie einfach jede Notiz und führen Sie die Konvertierung erneut aus, bis die Meldung `Speichern ...` angezeigt wird. Sie haben eine Datei mit dem Namen `EXPORT.enex`, die dann in QOwnNotes importiert werden kann.
+Wenn Sie Unicode-Fehler zu bestimmten Notizen erhalten, entfernen Sie einfach jede Notiz und führen Sie die Konvertierung erneut aus, bis die Meldung `Speichern...` angezeigt wird. Sie haben eine Datei mit dem Namen `EXPORT.enex`, die dann in QOwnNotes importiert werden kann.
 
 Während des Imports in QOwnNotes können Sie alle zu importierenden Attribute außer dem Erstellungs- / Änderungsdatum deaktivieren, da Tomboy über diese Funktionen nicht verfügt.

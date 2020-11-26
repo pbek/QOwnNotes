@@ -133,16 +133,16 @@
 
 <v-divider />
 
-** Q ** für das verwendete [ Qt-Framework ](https://www.qt.io/)   
-** Eigene **, weil Sie Ihre eigenen Notizen besitzen   
-** Notizen ** für die Notizen, die Sie erstellen
+**Q** für das verwendete [Qt-Framework](https://www.qt.io/)   
+**Eigene**, weil Sie Ihre eigenen Notizen besitzen  
+**Notizen** für die Notizen, die Sie erstellen
 
 <v-divider />
 
 [QOwnNotes](https://www.qownnotes.org/) ist die **Open Source** (GPL) -Nur-Text-Datei-**Markdown-Notizanwendung** für **GNU/ Linux**, **Mac OS X** und **Windows**, die (optional) mit der [**Notizenanwendung**](https://github.com/nextcloud/notes) von [Nextcloud](https://nextcloud.com/) und [ownCloud](https://owncloud.org/) zusammenarbeitet.
 
 ::: tip
-Treten Sie unserer [Telegram Group](https://t.me/QOwnNotes)  bei, um zu diskutieren, zu lernen und sich mit der QOwnNotes-Community zu verbinden.
+Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes)  bei, um zu diskutieren, zu lernen und sich mit der QOwnNotes-Community zu verbinden.
 :::
 
 [Verstehen Sie das Konzept von QOwnNotes](concept.md)
@@ -150,32 +150,32 @@ Treten Sie unserer [Telegram Group](https://t.me/QOwnNotes)  bei, um zu diskutie
 ## Eigenschaften
 
 - Der **Notizenordner** kann **frei gewählt werden** (mehrere Notizordner können verwendet werden)
-- Sie können Ihre ** vorhandenen Text- oder Markdown-Dateien ** verwenden, ohne dass ein Import erforderlich ist
-- ** Die Suche nach Teilzeichenfolgen ** von Notizen ist möglich, und die Suchergebnisse werden in den Notizen hervorgehoben
-- ** Tastaturkürzel ** können angepasst werden
-- ** Skriptunterstützung ** und ein Online-Skript-Repository [** **](https://github.com/qownnotes/scripts), in dem Sie Skripte in der Anwendung installieren können
-- [ Browser-Erweiterung ](browser-extension.md), um Notizen aus dem ausgewählten Text hinzuzufügen, Screenshots zu erstellen oder Ihre Lesezeichen zu verwalten
-- ** Externe Änderungen ** von Notizdateien werden ** überwacht ** (Notizen oder Notizliste werden neu geladen)
-- Ältere ** Versionen ** Ihrer Notizen können von Ihrem ** Nextcloud / ownCloud ** Server ** wiederhergestellt werden **
-- **Papierkorbnotizen** können von Ihrem **Nextcloud / ownCloud** Server **wiederhergestellt werden**
+- Sie können Ihre **vorhandenen Text- oder Markdown-Dateien** verwenden, ohne dass ein Import erforderlich ist
+- **Die Suche nach Teilzeichenfolgen** von Notizen ist möglich, und die Suchergebnisse werden in den Notizen hervorgehoben
+- **Tastaturkürzel** können angepasst werden
+- **Skriptunterstützung** und ein Online-Skript-Repository[****](https://github.com/qownnotes/scripts), in dem Sie Skripte in der Anwendung installieren können
+- [Browser-Erweiterung](browser-extension.md), um Notizen aus dem ausgewählten Text hinzuzufügen, Screenshots zu erstellen oder Ihre Lesezeichen zu verwalten
+- **Externe Änderungen** von Notizdateien werden **überwacht** (Notizen oder Notizliste werden neu geladen)
+- Ältere **Versionen** Ihrer Notizen können von Ihrem **Nextcloud / ownCloud **Server** wiederhergestellt werden**
+- **Gelöschten Notizen** können von Ihrem **Nextcloud / ownCloud** Server **wiederhergestellt werden**
 - **Unterschiede** zwischen aktueller Notiz und extern geänderter Notiz werden in einem Dialog **angezeigt**
-- ** Markdown-Hervorhebung ** von Notizen und ein ** Markdown-Vorschaumodus **
-- Unterstützung für [** Rechtschreibprüfung **](../editor/spellchecking.md)
-- ** Kompatibel ** mit der Notes-Anwendung von ** Nextcloud / ownCloud ** und ** mobile ** und Nextcloud Text
+- **Markdown-Hervorhebung** von Notizen und ein **Markdown-Vorschaumodus**
+- Unterstützung für [**Rechtschreibprüfung**](../editor/spellchecking.md)
+- **Kompatibel** mit der Notes-Anwendung von **Nextcloud / ownCloud** und **mobile** und Nextcloud Text
 - Verwalten Sie Ihre Nextcloud / ownCloud-**Aufgabenlisten** (**Nextcloud-Aufgaben** oder **Tasks Plus**/ **Calendar Plus**) oder verwenden Sie einen anderen CalDAV-Server, um Ihre Aufgaben mit zu synchronisieren
 - Optionale **Verschlüsselung** von Notizen (AES-256 ist integriert oder Sie können benutzerdefinierte Verschlüsselungsmethoden wie **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) oder **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) verwenden.)
 - **Unterstützung für Schemata im Dunkelmodus**
-- ** Schemata-Unterstützung ** für die Hervorhebung der ** Markdown-Syntax **
-- Alle ** Panels können platziert werden, wo immer Sie möchten **, sie können sogar ** schweben ** oder ** stapeln ** (vollständig andockbar)
-- Unterstützung für ** Freedesktop-Schemasymbole**. Sie können QOwnNotes mit Ihren ** originalen Desktop-Symbolen ** und mit Ihrem bevorzugten ** dunklen Desktop-Design ** verwenden
-- Unterstützung für ** hierarchische Notizkennzeichnung ** und ** Notizunterordner **
-- Unterstützung für ** das Teilen von Notizen ** auf Ihrem ** ownCloud ** / ** Nextcloud ** -Server
-- ** Tragbarer Modus ** zum Mitnehmen von QOwnNotes auf USB-Sticks
+- **Schemata-Unterstützung** für die Hervorhebung der **Markdown-Syntax**
+- Alle **Panels können platziert werden, wo immer Sie möchten**, sie können sogar **schweben** oder **gestapelt werden** (vollständig andockbar).
+- Unterstützung für **Freedesktop-Schemasymbole**. Sie können QOwnNotes mit Ihren **originalen Desktop-Symbolen** und mit Ihrem bevorzugten **dunklen Desktop-Design** verwenden
+- Unterstützung für **hierarchische Notizkennzeichnung** und **Notizunterordner**
+- Unterstützung für **das Teilen von Notizen** auf Ihrem **ownCloud** / **Nextcloud** -Server
+- **Tragbarer Modus** zum Mitnehmen von QOwnNotes auf USB-Sticks
 - **Vim-Modus**
-- ** Ablenkungsfreier Modus **, ** Vollbildmodus ** und ** Schreibmaschinenmodus **
+- **Ablenkungsfreier Modus**, **Vollbildmodus** und **Schreibmaschinenmodus**
 - **Evernote-Import**
-- ** Verfügbar in vielen verschiedenen Sprachen ** wie Englisch, Deutsch, Französisch, Polnisch, Chinesisch, Japanisch, Russisch, Portugiesisch, Ungarisch, Niederländisch und Spanisch
-  - [ Ihre Hilfe ](../contributing/translation.md) wird sehr geschätzt, um diese Übersetzungen zu verbessern oder QOwnNotes in mehr Sprachen zu übersetzen
+- **Verfügbar in vielen verschiedenen Sprachen** wie Englisch, Deutsch, Französisch, Polnisch, Chinesisch, Japanisch, Russisch, Portugiesisch, Ungarisch, Niederländisch und Spanisch
+  - [Ihre Hilfe](../contributing/translation.md) wird sehr geschätzt, um diese Übersetzungen zu verbessern oder QOwnNotes in mehr Sprachen zu übersetzen
 
 <style>
 .sheet {
