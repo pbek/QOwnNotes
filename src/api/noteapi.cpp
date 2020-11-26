@@ -92,7 +92,7 @@ bool NoteApi::addTag(const QString& tagName) {
     }
 
     Note note = Note::fetch(_id);
-    if (!note.exists()) {
+    if (!note.isFetched()) {
         return false;
     }
 
@@ -119,7 +119,7 @@ bool NoteApi::removeTag(QString tagName) {
     }
 
     Note note = Note::fetch(_id);
-    if (!note.exists()) {
+    if (!note.isFetched()) {
         return false;
     }
 
@@ -135,7 +135,7 @@ bool NoteApi::removeTag(QString tagName) {
 bool NoteApi::renameNoteFile(const QString &newName) {
     Note note = Note::fetch(_id);
 
-    if (note.exists()) {
+    if (note.isFetched()) {
         return note.renameNoteFile(newName);
     }
 

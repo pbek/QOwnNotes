@@ -1719,7 +1719,7 @@ bool ScriptingService::noteExistsByFileName(const QString &fileName,
         return false;
     }
 
-    return note.exists();
+    return note.isFetched();
 }
 
 /**
