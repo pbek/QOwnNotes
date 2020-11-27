@@ -87,7 +87,7 @@ bool DatabaseService::createMemoryConnection() {
 
     if (!dbMemory.open()) {
         QMessageBox::critical(
-            0, QWidget::tr("Cannot open memory database"),
+            nullptr, QWidget::tr("Cannot open memory database"),
             QWidget::tr("Unable to establish a memory database connection."),
             QMessageBox::Ok);
         return false;
