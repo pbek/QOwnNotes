@@ -6266,7 +6266,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4330"/>
       <source>Checks the disk database integrity and fixes problems</source>
-      <translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
+      <translation>چیک کرتا ہے کے ڈیٹا بیس ٹھیک سے چل رہا ہے اور اگر کوئی مسئلہ ہو تو اسے ٹھیک کر دیتا ہے</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4333"/>
