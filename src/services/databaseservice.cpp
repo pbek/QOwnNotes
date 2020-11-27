@@ -77,7 +77,16 @@ bool DatabaseService::reinitializeDiskDatabase() {
 bool DatabaseService::checkDiskDatabaseIntegrity() {
     const QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
-    return query.exec(QStringLiteral("PRAGMA integrity_check"));
+
+    if (!query.exec(QStringLiteral("PRAGMA integrity_check"))) {
+        qWarning() << __func__ << ": " << query.lastError();
+
+        return false;
+    } else if (query.first()) {
+        return query.value(0).toString() == QStringLiteral("ok");
+    }
+
+    return false;
 }
 
 bool DatabaseService::createMemoryConnection() {
