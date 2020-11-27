@@ -83,7 +83,15 @@ bool DatabaseService::checkDiskDatabaseIntegrity() {
 
         return false;
     } else if (query.first()) {
-        return query.value(0).toString() == QStringLiteral("ok");
+        const auto result = query.value(0).toString();
+
+        if (result == QStringLiteral("ok")) {
+            return true;
+        }
+
+        qWarning() << __func__ << ": " << result;
+
+        return false;
     }
 
     return false;
