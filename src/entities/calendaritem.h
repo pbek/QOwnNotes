@@ -7,6 +7,7 @@
 #include <QUrl>
 
 #define ICS_DATETIME_FORMAT "yyyyMMddThhmmss"
+#define ICS_DATETIME_FORMAT_UTC "yyyyMMddThhmmssZ"
 
 class CalendarItem {
    public:
@@ -112,6 +113,7 @@ class CalendarItem {
                                        const QString &attributeName);
     bool removeICSDataBlock(const QString &block);
     bool addVALARMBlockToICS();
+    static QDateTime getDateTimeFromString(const QString &dateString);
 };
 
 #endif    // CALENDAR_ITEM_H

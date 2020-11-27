@@ -760,16 +760,12 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
     priority = icsDataHash.contains(QStringLiteral("PRIORITY"))
                    ? icsDataHash[QStringLiteral("PRIORITY")].toInt()
                    : 0;
-    created =
-        icsDataHash.contains(QStringLiteral("CREATED"))
-            ? QDateTime::fromString(icsDataHash[QStringLiteral("CREATED")],
-                                    ICS_DATETIME_FORMAT)
-            : QDateTime::currentDateTime();
+    created = icsDataHash.contains(QStringLiteral("CREATED"))
+        ? getDateTimeFromString(icsDataHash[QStringLiteral("CREATED")])
+        : QDateTime::currentDateTime();
     modified = icsDataHash.contains(QStringLiteral("LAST-MODIFIED"))
-                   ? QDateTime::fromString(
-                         icsDataHash[QStringLiteral("LAST-MODIFIED")],
-                         ICS_DATETIME_FORMAT)
-                   : QDateTime::currentDateTime();
+        ? getDateTimeFromString(icsDataHash[QStringLiteral("LAST-MODIFIED")])
+        : QDateTime::currentDateTime();
 
     // workaround to check if we have a alarm description, so that on empty
     // descriptions the alarm description isn't taken
@@ -785,25 +781,34 @@ bool CalendarItem::updateWithICSData(const QString &icsData) {
 
     // Nextcloud seems to store the reminder date in the DUE field
     alarmDate = icsDataHash.contains(QStringLiteral("DUE"))
-                    ? QDateTime::fromString(icsDataHash[QStringLiteral("DUE")],
-                                            ICS_DATETIME_FORMAT)
+                    ? getDateTimeFromString(icsDataHash[QStringLiteral("DUE")])
                     : QDateTime();
 
     if (!alarmDateString.isEmpty()) {
-        QDateTime dateTime =
-            QDateTime::fromString(alarmDateString, ICS_DATETIME_FORMAT);
-        // convert the UTC from the server to local time, because sqlite
-        // doesn't understand time zones
-        //        alarmDate = QDateTime(dateTime.date(), dateTime.time(),
-        //        Qt::UTC)
-        //                .toLocalTime();
-        alarmDate = dateTime;
+        alarmDate = getDateTimeFromString(alarmDateString);
     }
 
     //    qDebug() << __func__ << " - 'alarmDate': " << alarmDate;
     //    qDebug() << __func__ << " - 'alarmDate': " << alarmDate.isNull();
 
     return this->store();
+}
+
+QDateTime CalendarItem::getDateTimeFromString(const QString &dateString) {
+    // Nextcloud Tasks and QOwnNotes are using local dates
+    QDateTime dateTime = QDateTime::fromString(dateString, ICS_DATETIME_FORMAT);
+
+    // if the local ICS_DATETIME_FORMAT can't be parsed try the
+    // UTC ICS_DATETIME_FORMAT_UTC (e.g. used by OpenTasks or macOS Reminders)
+    // and convert it into a local datetime
+    // see: https://github.com/pbek/QOwnNotes/issues/1966
+    if (!dateTime.isValid()) {
+        dateTime = QDateTime::fromString(dateString, ICS_DATETIME_FORMAT_UTC);
+        dateTime = QDateTime(dateTime.date(), dateTime.time(), Qt::UTC)
+                       .toLocalTime();
+    }
+
+    return dateTime;
 }
 
 /**

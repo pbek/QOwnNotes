@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.11.11
+- the todo list CalDAV sync can now handle UTC dates from for example macOS Reminders or
+  [OpenTasks](https://opentasks.app/) (for [#1966](https://github.com/pbek/QOwnNotes/issues/1966))
+
 ## 20.11.10
 - the note tagging was improved (for [#1960](https://github.com/pbek/QOwnNotes/pull/1960), thank you @Waqar144)
     - the tag tree reloads are much faster now, even with huge trees with 3000+ note tag links
