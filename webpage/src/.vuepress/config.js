@@ -42,6 +42,10 @@ module.exports = {
     '/de/': {
       lang: 'de-DE',
       title: 'QOwnNotes',
+    },
+    '/nl/': {
+      lang: 'nl-NL',
+      title: 'QOwnNotes',
     }
   },
 
@@ -298,6 +302,118 @@ module.exports = {
             children: [
               'de/faq/preview-without-edit',
               'de/faq/references',
+            ]
+          }
+        ]
+      },
+      '/nl/': {
+        selectText: 'Talen',
+        label: 'Nederlands (in uitvoering)',
+        editLinkText: 'Help ons deze pagina te verbeteren!',
+        algolia: {},
+        nav: [
+          {
+            text: 'Aan de slag',
+            link: '/nl/getting-started/overview',
+          },
+          {
+            text: 'Installatie',
+            link: '/nl/installation/',
+          },
+          {
+            text: 'Changelog',
+            link: '/nl/changelog',
+            collapsable: true,
+          },
+          {
+            text: 'Contact',
+            ariaLabel: 'Contact Menu',
+            items: [
+              { text: 'Ask question', link: 'https://github.com/pbek/QOwnNotes/issues#support' },
+              { text: 'Ask for feature', link: 'https://github.com/pbek/QOwnNotes/issues#feature' },
+              { text: 'Report bug', link: 'https://github.com/pbek/QOwnNotes/issues#bug' },
+              { text: 'Telegram Channel', link: 'https://t.me/QOwnNotes' },
+              { text: 'Matrix/Riot.im Chat', link: 'https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org' },
+              { text: 'Gitter Chat', link: 'https://gitter.im/qownnotes/qownnotes' },
+              { text: 'IRC Channel', link: 'https://kiwiirc.com/client/irc.freenode.net/#qownnotes' },
+              { text: 'IRC Log', link: 'https://quodlibet.duckdns.org/irc/qownnotes/latest.log.html' },
+            ]
+          },
+          {
+            text: 'Doneren',
+            link: 'nl/contributing/donate',
+          }
+        ],
+        sidebar: [
+          {
+            title: 'Aan de slag',
+            children: [
+              'nl/getting-started/overview',
+              'nl/getting-started/concept',
+              'nl/getting-started/markdown',
+              'nl/getting-started/importing-notes',
+              'nl/getting-started/cli-parameters',
+              'nl/getting-started/browser-extension',
+              'nl/getting-started/qownnotesapi',
+              'nl/getting-started/searching',
+              'nl/getting-started/shortcuts',
+            ]
+          },
+          {
+            title: 'Installatie',
+            children: [
+              'nl/installation/',
+              'nl/installation/ubuntu',
+              'nl/installation/windows',
+              'nl/installation/macos',
+              'nl/installation/debian',
+              'nl/installation/opensuse',
+              'nl/installation/fedora',
+              'nl/installation/snap',
+              'nl/installation/flatpak',
+              'nl/installation/appimage',
+              'nl/installation/arch',
+              'nl/installation/solus',
+              'nl/installation/kaos',
+              'nl/installation/centos',
+              'nl/installation/raspberry-pi-os',
+              'nl/installation/gentoo',
+              'nl/installation/slackware',
+              'nl/installation/freebsd',
+              'nl/installation/building',
+            ]
+          },
+          {
+            title: 'Editor',
+            children: [
+              'nl/editor/spellchecking',
+              'nl/editor/time-formats',
+            ]
+          },
+          {
+            title: 'Skripten',
+            children: [
+              'nl/scripting/',
+              'nl/scripting/methods-and-objects',
+              'nl/scripting/hooks',
+              'nl/scripting/classes',
+            ]
+          },
+          {
+            title: 'Bijdragen',
+            children: [
+              'nl/contributing/get-involved',
+              'nl/contributing/maintainers',
+              'nl/contributing/translation',
+              'nl/contributing/donate',
+              'nl/contributing/sponsors',
+            ]
+          },
+          {
+            title: 'FAQ',
+            children: [
+              'nl/faq/preview-without-edit',
+              'nl/faq/references',
             ]
           }
         ]
