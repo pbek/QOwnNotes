@@ -6275,7 +6275,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4340"/>
       <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation>مراقب باشید که ایجاد دوباره پایگاه داده همچنین موارد انجام دادنی حافظه نهان و پوشه ها و اسکریپت های یادداشت پیکربندی شده را حذف می کند!</translation>
+      <translation>مراقب باشید که ایجاد دوباره پایگاه داده، موارد انجام دادنی حافظه نهان و پوشه ها و اسکریپت های یادداشت پیکر بندی شده را نیز حذف می کند!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4423"/>
