@@ -5,7 +5,7 @@ const markdownIt = require('markdown-it');
 const meta = require('markdown-it-meta');
 
 // Load all MD files in a specified directory and order by metadata 'order' value
-const getChildren = function(parent_path, dir, reverseOrder = false) {
+const getChildren = (parent_path, dir, reverseOrder = false) => {
     files = glob
         .sync(parent_path + (dir ? `/${dir}` : '') + '/**/*.md')
         .map(path => {
@@ -40,6 +40,17 @@ const getChildren = function(parent_path, dir, reverseOrder = false) {
     return result.map(file => file.path);
 };
 
+const getNavItemsForLanguage = (navItems, language) => {
+    let resultNavItems = [];
+
+    navItems.forEach((navItem) => {
+        resultNavItems.push(language + '/' + navItem);
+    });
+
+    return resultNavItems;
+}
+
 module.exports = {
     getChildren,
+    getNavItemsForLanguage,
 };

@@ -2,6 +2,77 @@ const { description } = require('../../package')
 const _ = require('lodash');
 const utils = require('./utils');
 
+// We don't want translation for these
+const contactNavItems = [
+  { text: 'Ask question', link: 'https://github.com/pbek/QOwnNotes/issues#support' },
+  { text: 'Ask for feature', link: 'https://github.com/pbek/QOwnNotes/issues#feature' },
+  { text: 'Report bug', link: 'https://github.com/pbek/QOwnNotes/issues#bug' },
+  { text: 'Telegram Channel', link: 'https://t.me/QOwnNotes' },
+  { text: 'Matrix/Riot.im Chat', link: 'https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org' },
+  { text: 'Gitter Chat', link: 'https://gitter.im/qownnotes/qownnotes' },
+  { text: 'IRC Channel', link: 'https://kiwiirc.com/client/irc.freenode.net/#qownnotes' },
+  { text: 'IRC Log', link: 'https://quodlibet.duckdns.org/irc/qownnotes/latest.log.html' },
+];
+
+const gettingStartedNavItems = [
+  'getting-started/overview',
+  'getting-started/concept',
+  'getting-started/markdown',
+  'getting-started/importing-notes',
+  'getting-started/cli-parameters',
+  'getting-started/browser-extension',
+  'getting-started/qownnotesapi',
+  'getting-started/searching',
+  'getting-started/shortcuts',
+];
+
+const installationNavItems = [
+  'installation/',
+  'installation/ubuntu',
+  'installation/windows',
+  'installation/macos',
+  'installation/debian',
+  'installation/opensuse',
+  'installation/fedora',
+  'installation/snap',
+  'installation/flatpak',
+  'installation/appimage',
+  'installation/arch',
+  'installation/solus',
+  'installation/kaos',
+  'installation/centos',
+  'installation/raspberry-pi-os',
+  'installation/gentoo',
+  'installation/slackware',
+  'installation/freebsd',
+  'installation/building',
+];
+
+const editorNavItems = [
+  'editor/spellchecking',
+  'editor/time-formats',
+];
+
+const scriptingNavItems = [
+  'scripting/',
+  'scripting/methods-and-objects',
+  'scripting/hooks',
+  'scripting/classes',
+];
+
+const contributingNavItems = [
+  'contributing/get-involved',
+  'contributing/maintainers',
+  'contributing/translation',
+  'contributing/donate',
+  'contributing/sponsors',
+];
+
+const faqNavItems = [
+  'faq/preview-without-edit',
+  'faq/references',
+];
+
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -100,16 +171,7 @@ module.exports = {
           {
             text: 'Contact',
             ariaLabel: 'Contact Menu',
-            items: [
-              { text: 'Ask question', link: 'https://github.com/pbek/QOwnNotes/issues#support' },
-              { text: 'Ask for feature', link: 'https://github.com/pbek/QOwnNotes/issues#feature' },
-              { text: 'Report bug', link: 'https://github.com/pbek/QOwnNotes/issues#bug' },
-              { text: 'Telegram Channel', link: 'https://t.me/QOwnNotes' },
-              { text: 'Matrix/Riot.im Chat', link: 'https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org' },
-              { text: 'Gitter Chat', link: 'https://gitter.im/qownnotes/qownnotes' },
-              { text: 'IRC Channel', link: 'https://kiwiirc.com/client/irc.freenode.net/#qownnotes' },
-              { text: 'IRC Log', link: 'https://quodlibet.duckdns.org/irc/qownnotes/latest.log.html' },
-            ]
+            items: contactNavItems
           },
           {
             text: 'Donate',
@@ -119,74 +181,27 @@ module.exports = {
         sidebar: [
           {
             title: 'Getting started',
-            children: [
-              'getting-started/overview',
-              'getting-started/concept',
-              'getting-started/markdown',
-              'getting-started/importing-notes',
-              'getting-started/cli-parameters',
-              'getting-started/browser-extension',
-              'getting-started/qownnotesapi',
-              'getting-started/searching',
-              'getting-started/shortcuts',
-            ]
+            children: gettingStartedNavItems
           },
           {
             title: 'Installation',
-            children: [
-              'installation/',
-              'installation/ubuntu',
-              'installation/windows',
-              'installation/macos',
-              'installation/debian',
-              'installation/opensuse',
-              'installation/fedora',
-              'installation/snap',
-              'installation/flatpak',
-              'installation/appimage',
-              'installation/arch',
-              'installation/solus',
-              'installation/kaos',
-              'installation/centos',
-              'installation/raspberry-pi-os',
-              'installation/gentoo',
-              'installation/slackware',
-              'installation/freebsd',
-              'installation/building',
-            ]
+            children: installationNavItems
           },
           {
             title: 'Editor',
-            children: [
-              'editor/spellchecking',
-              'editor/time-formats',
-            ]
+            children: editorNavItems
           },
           {
             title: 'Scripting',
-            children: [
-              'scripting/',
-              'scripting/methods-and-objects',
-              'scripting/hooks',
-              'scripting/classes',
-            ]
+            children: scriptingNavItems
           },
           {
             title: 'Contributing',
-            children: [
-              'contributing/get-involved',
-              'contributing/maintainers',
-              'contributing/translation',
-              'contributing/donate',
-              'contributing/sponsors',
-            ]
+            children: contributingNavItems
           },
           {
             title: 'FAQ',
-            children: [
-              'faq/preview-without-edit',
-              'faq/references',
-            ]
+            children: faqNavItems
           },
           {
             title: 'Blog',
@@ -216,16 +231,7 @@ module.exports = {
           {
             text: 'Kontakt',
             ariaLabel: 'Contact Menu',
-            items: [
-              { text: 'Ask question', link: 'https://github.com/pbek/QOwnNotes/issues#support' },
-              { text: 'Ask for feature', link: 'https://github.com/pbek/QOwnNotes/issues#feature' },
-              { text: 'Report bug', link: 'https://github.com/pbek/QOwnNotes/issues#bug' },
-              { text: 'Telegram Channel', link: 'https://t.me/QOwnNotes' },
-              { text: 'Matrix/Riot.im Chat', link: 'https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org' },
-              { text: 'Gitter Chat', link: 'https://gitter.im/qownnotes/qownnotes' },
-              { text: 'IRC Channel', link: 'https://kiwiirc.com/client/irc.freenode.net/#qownnotes' },
-              { text: 'IRC Log', link: 'https://quodlibet.duckdns.org/irc/qownnotes/latest.log.html' },
-            ]
+            items: contactNavItems
           },
           {
             text: 'Spenden',
@@ -235,74 +241,27 @@ module.exports = {
         sidebar: [
           {
             title: 'Loslegen',
-            children: [
-              'de/getting-started/overview',
-              'de/getting-started/concept',
-              'de/getting-started/markdown',
-              'de/getting-started/importing-notes',
-              'de/getting-started/cli-parameters',
-              'de/getting-started/browser-extension',
-              'de/getting-started/qownnotesapi',
-              'de/getting-started/searching',
-              'de/getting-started/shortcuts',
-            ]
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, "de")
           },
           {
             title: 'Installation',
-            children: [
-              'de/installation/',
-              'de/installation/ubuntu',
-              'de/installation/windows',
-              'de/installation/macos',
-              'de/installation/debian',
-              'de/installation/opensuse',
-              'de/installation/fedora',
-              'de/installation/snap',
-              'de/installation/flatpak',
-              'de/installation/appimage',
-              'de/installation/arch',
-              'de/installation/solus',
-              'de/installation/kaos',
-              'de/installation/centos',
-              'de/installation/raspberry-pi-os',
-              'de/installation/gentoo',
-              'de/installation/slackware',
-              'de/installation/freebsd',
-              'de/installation/building',
-            ]
+            children: utils.getNavItemsForLanguage(installationNavItems, "de")
           },
           {
             title: 'Editor',
-            children: [
-              'de/editor/spellchecking',
-              'de/editor/time-formats',
-            ]
+            children: utils.getNavItemsForLanguage(editorNavItems, "de")
           },
           {
             title: 'Skripten',
-            children: [
-              'de/scripting/',
-              'de/scripting/methods-and-objects',
-              'de/scripting/hooks',
-              'de/scripting/classes',
-            ]
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "de")
           },
           {
             title: 'Beitragen',
-            children: [
-              'de/contributing/get-involved',
-              'de/contributing/maintainers',
-              'de/contributing/translation',
-              'de/contributing/donate',
-              'de/contributing/sponsors',
-            ]
+            children: utils.getNavItemsForLanguage(contributingNavItems, "de")
           },
           {
             title: 'FAQ',
-            children: [
-              'de/faq/preview-without-edit',
-              'de/faq/references',
-            ]
+            children: utils.getNavItemsForLanguage(faqNavItems, "de")
           }
         ]
       },
@@ -328,16 +287,7 @@ module.exports = {
           {
             text: 'Contact',
             ariaLabel: 'Contact Menu',
-            items: [
-              { text: 'Ask question', link: 'https://github.com/pbek/QOwnNotes/issues#support' },
-              { text: 'Ask for feature', link: 'https://github.com/pbek/QOwnNotes/issues#feature' },
-              { text: 'Report bug', link: 'https://github.com/pbek/QOwnNotes/issues#bug' },
-              { text: 'Telegram Channel', link: 'https://t.me/QOwnNotes' },
-              { text: 'Matrix/Riot.im Chat', link: 'https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org' },
-              { text: 'Gitter Chat', link: 'https://gitter.im/qownnotes/qownnotes' },
-              { text: 'IRC Channel', link: 'https://kiwiirc.com/client/irc.freenode.net/#qownnotes' },
-              { text: 'IRC Log', link: 'https://quodlibet.duckdns.org/irc/qownnotes/latest.log.html' },
-            ]
+            items: contactNavItems
           },
           {
             text: 'Doneren',
@@ -347,74 +297,27 @@ module.exports = {
         sidebar: [
           {
             title: 'Aan de slag',
-            children: [
-              'nl/getting-started/overview',
-              'nl/getting-started/concept',
-              'nl/getting-started/markdown',
-              'nl/getting-started/importing-notes',
-              'nl/getting-started/cli-parameters',
-              'nl/getting-started/browser-extension',
-              'nl/getting-started/qownnotesapi',
-              'nl/getting-started/searching',
-              'nl/getting-started/shortcuts',
-            ]
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, "nl")
           },
           {
             title: 'Installatie',
-            children: [
-              'nl/installation/',
-              'nl/installation/ubuntu',
-              'nl/installation/windows',
-              'nl/installation/macos',
-              'nl/installation/debian',
-              'nl/installation/opensuse',
-              'nl/installation/fedora',
-              'nl/installation/snap',
-              'nl/installation/flatpak',
-              'nl/installation/appimage',
-              'nl/installation/arch',
-              'nl/installation/solus',
-              'nl/installation/kaos',
-              'nl/installation/centos',
-              'nl/installation/raspberry-pi-os',
-              'nl/installation/gentoo',
-              'nl/installation/slackware',
-              'nl/installation/freebsd',
-              'nl/installation/building',
-            ]
+            children: utils.getNavItemsForLanguage(installationNavItems, "nl")
           },
           {
             title: 'Editor',
-            children: [
-              'nl/editor/spellchecking',
-              'nl/editor/time-formats',
-            ]
+            children: utils.getNavItemsForLanguage(editorNavItems, "nl")
           },
           {
             title: 'Skripten',
-            children: [
-              'nl/scripting/',
-              'nl/scripting/methods-and-objects',
-              'nl/scripting/hooks',
-              'nl/scripting/classes',
-            ]
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "nl")
           },
           {
             title: 'Bijdragen',
-            children: [
-              'nl/contributing/get-involved',
-              'nl/contributing/maintainers',
-              'nl/contributing/translation',
-              'nl/contributing/donate',
-              'nl/contributing/sponsors',
-            ]
+            children: utils.getNavItemsForLanguage(contributingNavItems, "nl")
           },
           {
             title: 'FAQ',
-            children: [
-              'nl/faq/preview-without-edit',
-              'nl/faq/references',
-            ]
+            children: utils.getNavItemsForLanguage(faqNavItems, "nl")
           }
         ]
       }
