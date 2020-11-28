@@ -93,7 +93,7 @@
 - <kbd>Strg</kbd> + <kbd>0</kbd> setzt die Schriftgröße des Notizentextes zurück
 - Versucht, einfache Gleichungen wie `(4+5)*3=` vor dem Cursor zu lösen, vervollständigt Text automatisch oder öffnet URLs
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>  fügt eine Überschrift aus dem Dateinamen der Notiz oben in der Notiz ein
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd>  teilt die aktuelle Note an der aktuellen Cursorposition in zwei Noten auf
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd>  teilt die aktuelle Notiz an der aktuellen Cursorposition in zwei Notizen auf
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> sucht im Web nach dem ausgewählten Text
 - <kbd>Strg</kbd> + <kbd>Nach oben</kbd> scrollt den Inhalt nach oben
 - <kbd>Strg</kbd> + <kbd>Nach unten</kbd> scrollt den Inhalt nach unten
@@ -276,9 +276,9 @@
       </li>
       
       <li>
-        <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>Links</kbd> springt im Notenverlauf ein Element rückwärts <ul>
+        <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>Links</kbd> springt im Notizenverlauf ein Element rückwärts <ul>
           <li>
-            <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>Rechts</kbd> springt im Notenverlauf vorwärts
+            <kbd>⌘</kbd> + <kbd>Strg</kbd> + <kbd>Rechts</kbd> springt im Notizenverlauf vorwärts
           </li>
         </ul>
       </li>
@@ -367,6 +367,6 @@
     <kbd>⌘</kbd> + <kbd>I</kbd> speichert das aktuelle Aufgabenelement und fügt es in die aktuelle Notiz ein
   </li>
   <li>
-    <kbd> ⌘ </kbd> + <kbd> R </kbd> entfernt das aktuelle Aufgabenelement
+    <kbd>⌘</kbd> + <kbd>R</kbd> entfernt das aktuelle Aufgabenelement
   </li>
 </ul>

@@ -1,10 +1,10 @@
-# Spenden
+# Doneren
 
-Wenn Sie QOwnNotes mögen und für das Projekt **spenden** möchten, können Sie dies hier gerne tun.
+Als je QOwnNotes leuk vindt en je wilt **doneren** aan het project, doe dat dan gerust.
 
 ## PayPal
 
-Sie können **Geld über PayPal spenden**, indem Sie auf diese Schaltfläche klicken:
+U kunt **geld doneren via PayPal** door op deze knop te klikken:
 
 <form id="paypal-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_s-xclick">
@@ -16,19 +16,19 @@ Sie können **Geld über PayPal spenden**, indem Sie auf diese Schaltfläche kli
 
 ## Liberapay
 
-Sie können **Geld über Liberapay spenden**, indem Sie auf diese Schaltfläche klicken:
+U kunt **geld doneren via Liberapay** door op deze knop te klikken:
 
-<a href="https://liberapay.com/pbek/donate"><img alt="Spenden Sie mit Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+<a href="https://liberapay.com/pbek/donate"><img alt="Doneer met Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
 ## Bitcoin
 
-Sie können **Bitcoin BTC** an diese Bitcoin BTC-Adresse spenden:
+U kunt **Bitcoin BTC doneren** aan dit Bitcoin BTC-adres:
 
 ```
 395NiU7QKpNiayWgRrUEGZDn8Z1ebMx8CH
 ```
 
-Sie können **Bitcoin Cash** an diese Bitcoin Cash-Adresse spenden:
+U kunt **Bitcoin Cash doneren** aan dit Bitcoin Cash-adres:
 
 ```
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
@@ -36,13 +36,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## Etherium
 
-Sie können **Etherium ETH** an diese Etherium ETH-Adresse spenden:
+U kunt **Etherium ETH doneren** aan dit Etherium ETH-adres:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-Sie können **Ethereum ETC** an diese Ethereum ETC-Adresse spenden:
+U kunt **Etherium ETC doneren** aan dit Etherium ETC-adres:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

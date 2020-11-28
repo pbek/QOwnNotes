@@ -15,7 +15,7 @@ Sie können QOwnNotesAPI direkt in Ihrer **Nextcloud** - oder **ownCloud** -Inst
 Das Teilen von Notizen erfolgt über die von Nextcloud / ownCloud bereitgestellte API. Auf Aufgaben wird direkt über CalDAV zugegriffen.
 
 ::: tip
-Verwenden Sie Ihren **Nextcloud** / **ownCloud** **Synchronisierungsclient**, um **Ihre Notizen** zu synchronisieren. Ihre Notizen sind einfache Markdown-Dateien. Das Rad muss nicht zweimal erfunden werden. Es gibt auch Leute, die verschiedene Dienste zum Synchronisieren ihrer Notizdateien verwenden (wie Dropbox, Syncthing oder Resilio Sync).
+Verwenden Sie Ihren **Nextcloud** / **ownCloud** **Synchronisierungsclienten**, um **Ihre Notizen** zu synchronisieren. Ihre Notizen sind einfache Markdown-Dateien. Das Rad muss nicht zweimal erfunden werden. Es gibt auch Leute, die verschiedene Dienste zum Synchronisieren ihrer Notizdateien verwenden (wie Dropbox, Syncthing oder Resilio Sync).
 :::
 
 ## What QOwnNotesAPI does
@@ -27,4 +27,4 @@ Verwenden Sie Ihren **Nextcloud** / **ownCloud** **Synchronisierungsclient**, um
 
 - Synchronisieren Sie Ihre Notizen (bitte verwenden Sie Ihren ownCloud / Nextcloud-Synchronisierungsclient)
 - Notizen teilen (dies erfolgt direkt über die ownCloud / Nextcloud-API)
-- Zugriff auf Bilder über [ Nextcloud Text ](https://github.com/nextcloud/text) (Dies erfolgt direkt über die Nextcloud-API.)
+- Zugriff auf Bilder über [Nextcloud Text](https://github.com/nextcloud/text) (Dies erfolgt direkt über die Nextcloud-API.)

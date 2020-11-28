@@ -83,8 +83,8 @@ mv QOwnNotes_et_EE.ts QOwnNotes_et.ts
 
 popd || exit 1
 
-echo "Remove all translated webpage folders, but German..."
-find webpage/src -type d -regextype posix-egrep -regex ".+src\/(ar|bg|bn|bs|ca|ceb|cs|da|el|es|et|eu|fa|fi|fil|fr|ga|gl|ha|he|hi|hil|hr|hu|id|is|it|ja|km|ko|ku|lt|lv|mi|mk|ms|nl|no|pa|pcm|pl|pt|ro|ru|si|sk|sl|sn|sq|sr|sv|th|tl|tlh|tr|uk|ur|uz|vi|xh|yi|zh|zu)$" -exec rm -Rf "{}" \;
+echo "Remove all translated webpage folders, but German and Dutch..."
+find webpage/src -type d -regextype posix-egrep -regex ".+src\/(ar|bg|bn|bs|ca|ceb|cs|da|el|es|et|eu|fa|fi|fil|fr|ga|gl|ha|he|hi|hil|hr|hu|id|is|it|ja|km|ko|ku|lt|lv|mi|mk|ms|no|pa|pcm|pl|pt|ro|ru|si|sk|sl|sn|sq|sr|sv|th|tl|tlh|tr|uk|ur|uz|vi|xh|yi|zh|zu)$" -exec rm -Rf "{}" \;
 
 
 #
@@ -104,4 +104,4 @@ fixCrowdinTranslationProblems() {
 
 echo "Fix Crowdin translation bugs..."
 export -f fixCrowdinTranslationProblems
-find webpage/src -type f -regextype posix-egrep -regex ".+src\/(de)\/.+\.md" -exec bash -c 'fixCrowdinTranslationProblems "$0"' {} \;
+find webpage/src -type f -regextype posix-egrep -regex ".+src\/(de|nl)\/.+\.md" -exec bash -c 'fixCrowdinTranslationProblems "$0"' {} \;

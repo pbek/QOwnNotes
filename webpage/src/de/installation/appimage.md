@@ -10,4 +10,4 @@ Dann können Sie die Ausführungsberechtigungen für die Datei ändern:
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Anschließend sollten Sie AppImage ausführen können, um QOwnNotes auszuführen.
+Anschließend sollten Sie AppImage ausführen können, um QOwnNotes zu starten.

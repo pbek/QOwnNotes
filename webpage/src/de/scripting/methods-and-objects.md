@@ -102,7 +102,7 @@ Abrufen der aktuellen Notiz
 /**
      * QML-Wrapper, um die aktuelle Notiz zu erhalten
      *
-     * @returns {NoteApi} das aktuelle Notizobjekt
+     * @retourniert {NoteApi} das aktuelle Notizobjekt
      */
 NoteApi currentNote ();
 ```
@@ -163,7 +163,7 @@ Herunterladen einer URL in den Medienordner
      * URL oder der Markdown-Bildtext des Mediums relativ zur aktuellen Notiz
      *
      * @param {QString} URL
-     * @param {bool} returnUrlOnly wenn true, wird nur die Medien-URL zurückgegeben (Standardwert false)
+     * @param {bool} returnUrlOnly if true, wird nur die Medien-URL zurückgegeben (Standard false).
      * @return {QString} den Medienabschlag oder die URL
      */
 QString downloadUrlToMedia (QUrl url, bool returnUrlOnly);
@@ -231,16 +231,16 @@ Registrieren einer benutzerdefinierten Aktion
     * @param bezeichner der bezeichner der aktion
     * @param menuText den im Menü angezeigten Text
     * @param buttonText den in der Schaltfläche angezeigten Text
-    * (keine Schaltfläche wird angezeigt, wenn leer)
+    *               (keine Schaltfläche wird angezeigt, wenn leer)
     * @param icon Der Pfad der Symboldatei oder der Name eines Freedesktop-Themensymbols
     * Eine Liste der Symbole finden Sie hier:
     * https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
     * @param useInNoteEditContextMenu Wenn true, verwenden Sie die Aktion in der Notizbearbeitung
-    * Kontextmenü (Standard: false)
+    *                Kontextmenü (Standard: false)
     * @param hideButtonInToolbar Wenn true, wird die Schaltfläche nicht in der angezeigt
-    * Symbolleiste für benutzerdefinierte Aktionen (Standard: false)
+    *                Symbolleiste für benutzerdefinierte Aktionen (Standard: false)
     * @param useInNoteListContextMenu Wenn true, verwenden Sie die Aktion in der Notizliste
-    * Kontextmenü (Standard: false)
+    *                Kontextmenü (Standard: false)
     */
 void ScriptingService::registerCustomAction (QString-ID,
                                             QString menuText,
@@ -316,7 +316,7 @@ void ScriptingService::setLabelText (QString-ID, QString-Text);
 script.setLabelText("counter-label", "counter text");
 ```
 
-You can use both plain text or html in the labels. Der Text kann ausgewählt werden und Links können angeklickt werden.
+Sie können sowohl einfachen Text als auch HTML in den Beschriftungen verwenden. Der Text kann ausgewählt werden und Links können angeklickt werden.
 
 Vielleicht möchten Sie sich dann das Beispielskript ansehen [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
@@ -586,9 +586,9 @@ bool ScriptingService::platformIsWindows();
 
 ### Beispiel
 ```js
-if (script.platformIsLinux()) {
-    // only will be executed if under Linux
-}
+if (script.platformIsLinux ()) {
+     // wird nur unter Linux ausgeführt
+}}
 ```
 
 Verschlagworten Sie die aktuelle Notiz

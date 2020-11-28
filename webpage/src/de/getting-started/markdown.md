@@ -30,7 +30,7 @@ Alt-H2
 ```
 
 ::: tip
-Standardmäßig erstellt QOwnNotes den **filename of a note** aus der **heading 1** (h1).
+Standardmäßig erstellt QOwnNotes den **Dateinamen einer Notiz** aus der **Überschrift 1** (h1).
 :::
 
 ## Hervorhebung
@@ -42,7 +42,7 @@ Starke Hervorhebung, auch: "fett", mit **Sternchen**.
 ```
 
 ::: tip
-Sie können die  [shortcut](./shortcuts.md) <kbd>Ctrl + B</kbd> verwenden, um Text fett hervorzuheben, und <kbd>Ctrl + I</kbd>, um ihn kursiv hervorzuheben.
+Sie können die [Tastenkombination](./shortcuts.md) <kbd>Strg + B</kbd> verwenden, um Text fett hervorzuheben, und <kbd>Strg + I</kbd>, um ihn kursiv hervorzuheben.
 :::
 
 ## Unterstreichen
@@ -50,17 +50,17 @@ Sie können die  [shortcut](./shortcuts.md) <kbd>Ctrl + B</kbd> verwenden, um Te
 Es gibt auch eine optionale Einstellung zum Aktivieren des Unterstreichungs-Hervorhebung in den *Preview settings*.
 
 ```markdown
-_underline_
+_unterstreichen_
 ```
 
 ::: tip
-Sie können die [shortcut](./shortcuts.md) <kbd>Ctrl + U</kbd> verwenden, um einen Text zu unterstreichen.
+Sie können den [shortcut](./shortcuts.md) <kbd>Ctrl + U</kbd> verwenden, um einen Text zu unterstreichen.
 :::
 
 ## Durchstreichen
 
 ```markdown
-~~strike out~~
+~~durchstreichen~~
 ```
 
 ::: tip
@@ -85,7 +85,7 @@ Es gibt viele Möglichkeiten, Listen zu erstellen.
 ```
 
 ::: tip
-Wenn Sie am Ende einer Liste die <kbd>Enter</kbd> drücken, wird ein neues Listenelement erstellt.
+Wenn Sie am Ende einer Liste die <kbd>Enter</kbd> -Taste drücken, wird ein neues Listenelement erstellt.
 :::
 
 ## Links
@@ -106,11 +106,11 @@ http://www.example.com oder <http://www.example.com>
 ```
 
 ::: tip
-Sie können die [shortcut](./shortcuts.md) <kbd>Ctrl + L</kbd> verwenden: **Erstellen Sie Links zu Webseiten oder anderen Notizen**.
+Sie können den [shortcut](./shortcuts.md) <kbd>Ctrl + L</kbd> verwenden: **Erstellen Sie Links zu Webseiten oder anderen Notizen**.
 
-Wenn Sie <kbd> Strg + Umschalt + X </kbd> verwenden, wird ein Dialogfeld angezeigt, in dem Sie ** Anhänge ** in Ihre Notiz einfügen können.
+Wenn Sie <kbd>Strg + Umschalt + X</kbd> verwenden, wird ein Dialogfeld angezeigt, durch den Sie in Ihre Notiz **Anhänge einfügen** können.
 
-Sie können <kbd> Strg + Leertaste </kbd> drücken, während sich der Cursor auf einem Link in der Notizbearbeitung befindet, um dem Link zu folgen.
+Sie können <kbd>Strg + Leertaste</kbd> drücken, während sich der Cursor auf einem Link in der Notizbearbeitung befindet, um dem Link zu folgen.
 :::
 
 ### Lesezeichen
@@ -177,7 +177,7 @@ Es gibt auch einige Syntaxhervorhebungen mit Codeblöcken in QOwnNotes.
 
 ~~~markdown
 ```bash
-# I am a comment
+# Ich bin ein Kommentar
 cd Notes
 ~~~
 ~~~
@@ -219,7 +219,7 @@ Verwenden Sie <kbd>Strg + Leertaste</kbd> in einer Markdown-Tabelle, um sie auto
 
 Zitatpause.
 
-> Dies ist eine sehr lange Zeile, die beim Umbruch immer noch richtig zitiert wird. Oh Mann, lass uns weiter schreiben, um sicherzustellen, dass dies lang genug ist, um tatsächlich für alle zu umgebrochen zu werden. Oh, du kannst **Markdown** in ein Blockquote *setzen*. 
+> Dies ist eine sehr lange Zeile, die beim Umbruch immer noch richtig zitiert wird. Oh Mann, lass uns weiter schreiben, um sicherzustellen, dass dies lang genug ist, um tatsächlich für alle umgebrochen zu werden. Oh, du kannst **Markdown** in ein Blockquote *setzen*. 
 ```
 
 ::: tip

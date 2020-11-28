@@ -3,7 +3,7 @@
 Laden Sie das neueste **Windows-Archiv** von [QOwnNotes Releases auf GitHub](https://github.com/pbek/QOwnNotes/releases) herunter und entpacken Sie es an einen beliebigen Ort. Es ist keine Installation erforderlich!
 
 ::: warning
-Wenn Sie den **automatischen Updater** verwenden möchten, stellen Sie sicher, dass Sie ihn an einen Ort entpacken, auf den Ihr Benutzerkonto Schreibzugriff hat. Standardmäßig hat Ihr Benutzerkonto höchstwahrscheinlich (keinen Schreibzugriff) **doesn't have write access**  auf Orte wie `C:\Programme (x86)` oder `C:\Programme`.
+Wenn Sie den **automatischen Updater** verwenden möchten, stellen Sie sicher, dass Sie ihn an einen Ort entpacken, auf den Ihr Benutzerkonto Schreibzugriff hat. Standardmäßig hat Ihr Benutzerkonto höchstwahrscheinlich **keinen Schreibzugriff** auf Orte wie `C:\Programme (x86)` oder `C:\Programme`.
 :::
 
 Sie können dann `QOwnNotes.exe` direkt in Ihrem Ordner `QOwnNotes` ausführen. Eine Installation ist nicht erforderlich.

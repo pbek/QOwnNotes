@@ -29,7 +29,7 @@ class NoteApi {
 };
 ```
 
-Sie können die Methoden von [ Datum](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) verwenden, um mit `fileCreated`oder` fileLastModified` zu arbeiten.
+Sie können die Methoden von [Datum](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) verwenden, um mit `fileCreated` oder `fileLastModified` zu arbeiten.
 
 ### Beispiel
 ```js
@@ -112,7 +112,7 @@ class MainWindow {
 
 ### Beispiel
 ```js
-// Force a reload of the note list
+// Erzwingen Sie ein erneutes Laden der Notizliste
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
 // Erstellt einen neuen Notiz-Unterordner "My Fancy Folder" im aktuellen Unterordner

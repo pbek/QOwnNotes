@@ -12,14 +12,14 @@ QOwnNotes verfügt über einen integrierten **Wörterbuch-Manager** (im Menü *B
 
 - Unter **Windows** müssen Sie Hunspell-Wörterbücher für Ihre Sprache in einen Ordner kopieren, der sich in Ihrem QOwnNotes-Anwendungsordner oder in `C:\Users\[Benutzername]\dicts` befindet
     - Sie können Wörterbücher aus [LibreOffice-Wörterbüchern](https://github.com/LibreOffice/dictionaries) herunterladen
-    - Unter **macOS** müssen Sie Hunspell-Wörterbücher für Ihre Sprache nach `/Library/Spelling`oder`~/Library/Spelling` kopieren. Wenn das Verzeichnis nicht vorhanden ist, müssen Sie es erstellen.
+    - Unter **macOS** müssen Sie Hunspell-Wörterbücher für Ihre Sprache nach `/Library/Spelling` oder `~/Library/Spelling` kopieren. Wenn das Verzeichnis nicht vorhanden ist, müssen Sie es erstellen.
 
 Wörterbücher können aus [QOwnNotes-Wörterbüchern](https://github.com/qownnotes/dictionaries) heruntergeladen werden. Verwenden Sie die Tabelle am Ende dieses Dokuments, um Ihre Sprache und den entsprechenden Sprachcode zu finden.
 
-Wenn sich das Wörterbuch für Ihre Sprache nicht im **Wörterbuch-Manager** oder unter dem oben genannten Link befindet, suchen Sie es im Internet oder erstellen Sie ein Problem. Wir werden es sicher in die nächste Version von QOwnNotes aufnehmen, wenn das Wörterbuch gefunden wird.
+Wenn sich das Wörterbuch für Ihre Sprache nicht im **Wörterbuch-Manager** oder unter dem oben genannten Link befindet, suchen Sie es im Internet oder erstellen Sie ein Problem-Thema. Wir werden es sicher in die nächste Version von QOwnNotes aufnehmen, wenn das Wörterbuch gefunden wird.
 
 ::: tip Info
-Wenn Sie Ihre Sprache in dieser Tabelle nicht finden können, dann leider Ein Wörterbuch dafür ist in den LibreOffice-Dateien nicht vorhanden - wenn Sie möchten Um ein Wörterbuch zu erstellen, gehen Sie zu [Entwicklung von Documentfoundation.org-Wörterbüchern](https://wiki.documentfoundation.org/Development/Dictionaries)
+Wenn Sie Ihre Sprache in dieser Tabelle nicht finden können, ist in den LibreOffice-Dateien leider kein Wörterbuch dafür vorhanden. Wenn Sie ein Wörterbuch erstellen möchten, gehen Sie zu [Documentfoundation.org Dictionaries Development](https://wiki.documentfoundation.org/Development/Dictionaries)
 :::
 
 | Sr | Sprachkod | Sprache                                     |
@@ -54,7 +54,7 @@ Wenn Sie Ihre Sprache in dieser Tabelle nicht finden können, dann leider Ein W�
 | 28 | lo_LA     | Laotisch                                    |
 | 29 | lt_LT     | Litauisch                                   |
 | 30 | lv_LV     | Lettisch                                    |
-| 31 | ne_NP     | Nepali                                      |
+| 31 | ne_NP     | Nepalesisch                                 |
 | 32 | nl_NL     | Niederländisch                              |
 | 33 | no        | Norwegisch                                  |
 | 34 | oc_FR     | Occitanisch                                 |

@@ -93,14 +93,14 @@ insertingFromMimeDataHook
 /**
   * Diese Funktion wird aufgerufen, wenn HTML oder eine Mediendatei mit "Strg + Umschalt + V" in eine Notiz eingefügt wird
   *
-  * @param Text Text des QMimeData-Objekts
-  * @param html html des QMimeData-Objekts
+  * @param text Text des QMimeData-Objekts
+  * @param html Html des QMimeData-Objekts
   * @ gibt die Zeichenfolge zurück, die anstelle des Texts aus dem QMimeData-Objekt eingefügt werden soll
   */
 function insertingFromMimeDataHook(text, html);
 ```
 
-Vielleicht möchten Sie sich das Beispiel ansehen: [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) oder [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-text-from-5pm-mail.qml).
+Vielleicht möchten Sie sich ein Beispiel ansehen: [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml), [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/insert-headline-with-link-from-github-url.qml) oder [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-text-from-5pm-mail.qml).
 
 handleNoteTextFileNameHook
 --------------------------
@@ -156,7 +156,7 @@ function handleNoteNameHook(note);
 
 Vielleicht möchten Sie sich das Beispiel [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) ansehen.
 
-Es ist möglicherweise keine gute Idee, diesen Hook zu verwenden, wenn die Einstellung zur Verwendung des Dateinamens als Notenname aktiv ist.
+Es ist möglicherweise keine gute Idee, diesen Hook zu verwenden, wenn die Einstellung zur Verwendung des Dateinamens als Notizenname aktiv ist.
 
 
 
@@ -221,7 +221,7 @@ function preNoteToMarkdownHtmlHook(note, markdown, forExport);
 ```
 
 
-You may want to take a look at the example [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
+Vielleicht möchten Sie sich das Beispiel ansehen: [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
 
 
 
@@ -253,9 +253,9 @@ function noteToMarkdownHtmlHook(note, html, forExport);
 ```
 
 
-Vielleicht möchten Sie sich das Beispiel ansehen [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) oder [Vorschau-Styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
+Vielleicht möchten Sie sich das Beispiel ansehen [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) oder [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
 
-Weitere Informationen finden Sie im [ Unterstützten HTML-Code Teilmenge ](http://doc.qt.io/qt-5/richtext-html-subset.html) Dokumentation für eine Liste aller unterstützten CSS-Stile.
+Eine Liste aller unterstützten CSS-Stile finden Sie in der Dokumentation [Unterstützte HTML-Teilmenge](http://doc.qt.io/qt-5/richtext-html-subset.html).
 
 
 
@@ -287,7 +287,7 @@ function encryptionHook(text, password, decrypt);
 ```
 
 
-You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml) or [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml).
+Vielleicht möchten Sie sich ein Beispiel ansehen: [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml) oder [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml).
 
 
 
@@ -316,7 +316,7 @@ Sie können Ihren eigenen Notizkennzeichnungsmechanismus beispielsweise mit spez
   * @param newTagName Tag-Name, in den umbenannt werden soll, wenn action = "umbenennen"
   * @return note text string oder string-list of tag names (wenn action = "list")
   */
-Funktion noteTaggingHook (note, action, tagName, newTagName);
+function noteTaggingHook (note, action, tagName, newTagName);
 ```
 
 

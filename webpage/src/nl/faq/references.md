@@ -1,6 +1,6 @@
-# Wo finde ich, was andere über QOwnNotes gesagt haben?
+# Waar kan ik vinden wat andere mensen zeiden over QOwnNotes?
 
-Was andere über QOwnNotes gesagt haben…
+What other people said about QOwnNotes…
 
 - <http://qownnotes.findmysoft.com/>
 - [Pro-Linux: Informationen zu QOwnNotes](http://www.pro-linux.de/cgi-bin/DBApp/check.cgi?ShowApp..20415.100)
@@ -52,7 +52,7 @@ Was andere über QOwnNotes gesagt haben…
 - [QOwnNotes - ownCloudと連携も可能なMarkdownエディタ MOONGIFT](http://www.moongift.jp/2017/03/qownnotes-owncloud%E3%81%A8%E9%80%A3%E6%90%BA%E3%82%82%E5%8F%AF%E8%83%BD%E3%81%AAmarkdown%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/)
 - [QOwnNotes on LinuxHints](https://www.linuxhint.com/install-qownnotes-linux/)
 - [QOwnNotes：一款记录笔记和待办事项的应用，集成 ownCloud 云服务-软件 ◆ 分享|Linux.中国-开源社区](https://linux.cn/article-7769-1.html)
-- [QOwnNotes auf Chocolatey](https://chocolatey.org/packages/qownnotes)
+- [QOwnNotes on Chocolatey](https://chocolatey.org/packages/qownnotes)
 - [What comes after Evernote? A QOwnNotes review. | JawFodder](http://www.jawfodder.com/what-comes-after-evernote-a-qownnotes-review/)
 - [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/2017/05/03/taking-notes-nextcloud-qownnotes-notebooks/)
     - using [Notebooks](http://www.notebooksapp.com/) to sync Notes via WebDAV on iOS
@@ -261,7 +261,7 @@ Was andere über QOwnNotes gesagt haben…
 - [How do you keep notes? - DEV](https://dev.to/madza/how-do-you-keep-notes-2p48)
     - <https://dev.to/ecognito/comment/12ikk>
 
-## QOwnNotes auf anderen Betriebssystemen
+## QOwnNotes on other OSes
 
 - Alpine Linux: <https://pkgs.alpinelinux.org/packages?name=qownnotes&branch=edge>
 - nixos: <https://nixos.org/nixos/packages.html?channel=nixpkgs-unstable&query=qownnotes>
