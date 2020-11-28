@@ -50,7 +50,12 @@ const getNavItemsForLanguage = (navItems, language) => {
     return resultNavItems;
 }
 
+const getNavItemForLanguage = (navItem, language) => {
+    return '/' + language + navItem;
+}
+
 module.exports = {
     getChildren,
     getNavItemsForLanguage,
+    getNavItemForLanguage,
 };

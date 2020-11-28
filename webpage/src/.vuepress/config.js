@@ -73,6 +73,11 @@ const faqNavItems = [
   'faq/references',
 ];
 
+const gettingStartedNavItem = '/getting-started/overview';
+const installationNavItem = '/installation/';
+const changelogNavItem = '/changelog';
+const donateNavItem = '/contributing/donate';
+
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -153,11 +158,11 @@ module.exports = {
         nav: [
           {
             text: 'Getting started',
-            link: '/getting-started/overview',
+            link: gettingStartedNavItem,
           },
           {
             text: 'Installation',
-            link: '/installation/',
+            link: installationNavItem,
           },
           {
             text: 'Blog',
@@ -165,7 +170,7 @@ module.exports = {
           },
           {
             text: 'Changelog',
-            link: '/changelog',
+            link: changelogNavItem,
             collapsable: true,
           },
           {
@@ -175,7 +180,7 @@ module.exports = {
           },
           {
             text: 'Donate',
-            link: '/contributing/donate',
+            link: donateNavItem,
           }
         ],
         sidebar: [
@@ -217,15 +222,15 @@ module.exports = {
         nav: [
           {
             text: 'Loslegen',
-            link: '/de/getting-started/overview',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'de'),
           },
           {
             text: 'Installation',
-            link: '/de/installation/',
+            link: utils.getNavItemForLanguage(installationNavItem, 'de'),
           },
           {
             text: 'Änderungsprotokoll',
-            link: '/de/changelog',
+            link: changelogNavItem,
             collapsable: true,
           },
           {
@@ -235,7 +240,7 @@ module.exports = {
           },
           {
             text: 'Spenden',
-            link: 'de/contributing/donate',
+            link: utils.getNavItemForLanguage(donateNavItem, 'de'),
           }
         ],
         sidebar: [
@@ -273,15 +278,15 @@ module.exports = {
         nav: [
           {
             text: 'Aan de slag',
-            link: '/nl/getting-started/overview',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'nl'),
           },
           {
             text: 'Installatie',
-            link: '/nl/installation/',
+            link: utils.getNavItemForLanguage(installationNavItem, 'nl'),
           },
           {
             text: 'Changelog',
-            link: '/nl/changelog',
+            link: changelogNavItem,
             collapsable: true,
           },
           {
@@ -291,7 +296,7 @@ module.exports = {
           },
           {
             text: 'Doneren',
-            link: 'nl/contributing/donate',
+            link: utils.getNavItemForLanguage(donateNavItem, 'nl'),
           }
         ],
         sidebar: [
