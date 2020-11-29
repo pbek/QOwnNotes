@@ -6846,8 +6846,9 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
             // copy the text from a copy block around currentTextBlock to the
             // clipboard
             if (isCodeSpan) {
-                const auto codeSpanRange = ui->noteTextEdit->highlighter()->codeSpanRange(currentTextBlock.blockNumber(),
-                                                                                          noteTextEdit->cursorForPosition(pos).positionInBlock());
+                const auto codeSpanRange = ui->noteTextEdit->highlighter()->getSpanRange(MarkdownHighlighter::RangeType::CodeSpan,
+                                                                                         currentTextBlock.blockNumber(),
+                                                                                         noteTextEdit->cursorForPosition(pos).positionInBlock());
                 QApplication::clipboard()->setText(currentTextBlock.text().mid(codeSpanRange.first + 1,
                                                                                codeSpanRange.second - codeSpanRange.first - 1));
             } else {
