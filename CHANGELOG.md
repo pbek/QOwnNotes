@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 20.11.12
-- added more Persian translation (thank you amirkbrpr)
+- added more Persian, Urdu (Pakistan) translation (thank you amirkbrpr, Farhan1985)
 
 ## 20.11.11
 - the todo list CalDAV sync can now handle UTC dates from for example macOS Reminders or
