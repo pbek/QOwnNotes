@@ -9,7 +9,7 @@ actionLink: getting-started/overview
 features:
   - 
     title: Bezit uw notities
-    details: All notes are stored as plain-text markdown files on your computer, no "vendor lock-in"
+    details: Alle notities worden opgeslagen als markdown-bestanden in platte tekst op uw computer, geen 'vendor lock-in'
   - 
     title: Private cloud-ondersteuning
     details: Gebruik Nextcloud, ownCloud of andere services om online met uw notities te werken of synchroniseer ze op verschillende apparaten

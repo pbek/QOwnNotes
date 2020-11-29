@@ -6,19 +6,19 @@ Het starten van een extern programma op de achtergrond
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * QML wrapper to start a detached process
- *
- * @param executablePath the path of the executable
- * @param parameters a list of parameter strings
- * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
- * @param callbackParameter an additional parameter for loops or the like (optional)
- * @param processData data written to the process if the callback is used (optional)
- * @return true on success, false otherwise
- */
-bool startDetachedProcess(QString executablePath, QStringList parameters,
-                            QString callbackIdentifier, QVariant callbackParameter,
-                            QByteArray processData);
+/ **
+  * QML-wrapper om een losgekoppeld proces te starten
+  *
+  * @param executable Pad het pad naar het uitvoerbare bestand
+  * @param parameters een lijst met parameterreeksen
+  * @param callbackIdentifier een ID die moet worden gebruikt in de functie onDetachedProcessCallback () (optioneel)
+  * @param callbackParameter een extra parameter voor loops en dergelijke (optioneel)
+  * @param processData-gegevens die naar het proces worden geschreven als de callback wordt gebruikt (optioneel)
+  * @return true bij succes, anders false
+  * /
+bool startDetachedProcess (QString executablePath, QStringList parameters,
+                             QString callbackIdentifier, QVariant callbackParameter,
+                             QByteArray processData);
 ```
 
 ### Voorbeeld
@@ -57,14 +57,14 @@ Start een extern programma en wacht op de uitvoer
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * QML wrapper to start a synchronous process
- *
- * @param executablePath the path of the executable
- * @param parameters a list of parameter strings
- * @param data the data that will be written to the process (optional)
- * @return the text that was returned by the process
-QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
+/ **
+  * QML-wrapper om een synchroon proces te starten
+  *
+  * @param executable Pad het pad naar het uitvoerbare bestand
+  * @param parameters een lijst met parameterreeksen
+  * @param data de data die naar het proces worden geschreven (optioneel)
+  * @return de tekst die door het proces is geretourneerd
+QByteArray startSynchronousProcess (QString executablePath, QStringList-parameters, QByteArray-gegevens);
 ```
 
 ### Voorbeeld
@@ -80,11 +80,11 @@ Het pad ophalen van de huidige notitiemap
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * QML wrapper to get the current note folder path
- *
- * @return the path of the current note folder
- */
-QString currentNoteFolderPath();
+  * QML-wrapper om het huidige pad naar de notitiemap op te halen
+  *
+  * @return het pad van de huidige notitiemap
+  */
+QString currentNoteFolderPath ();
 ```
 
 ### Voorbeeld
@@ -100,11 +100,11 @@ De huidige notitie ophalen
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * QML wrapper to get the current note
- *
- * @returns {NoteApi} the the current note object
- */
-NoteApi currentNote();
+  * QML-wrapper om de huidige notitie te krijgen
+  *
+  * @ retourneert {NoteApi} het huidige nootobject
+  */
+OpmerkingApi currentNote ();
 ```
 
 ### Voorbeeld
@@ -120,11 +120,11 @@ Inloggen op de log-widget
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * QML wrapper to log to the log widget
- *
- * @param text
- */
-void log(QString text);
+  * QML-wrapper om in te loggen op de log-widget
+  *
+  * @param tekst
+  */
+ongeldig logboek (QString-tekst);
 ```
 
 ### Voorbeeld
@@ -138,12 +138,12 @@ Het downloaden van een url naar een string
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * QML wrapper to download an url and returning it as text
- *
- * @param url
- * @return {QString} the content of the downloaded url
- */
-QString downloadUrlToString(QUrl url);
+  * QML-wrapper om een url te downloaden en als tekst terug te sturen
+  *
+  * @param url
+  * @return {QString} de inhoud van de gedownloade url
+  */
+QString downloadUrlToString (QUrl url);
 ```
 
 ### Voorbeeld
@@ -159,14 +159,14 @@ Een url downloaden naar de mediamap
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * QML wrapper to download an url to the media folder and returning the media
- * url or the markdown image text of the media relative to the current note
- *
- * @param {QString} url
- * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
- * @return {QString} the media markdown or url
- */
-QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
+  * QML-wrapper om een url naar de mediamap te downloaden en de media terug te sturen
+  * url of de markdown-afbeeldingstekst van de media ten opzichte van de huidige notitie
+  *
+  * @param {QString} url
+  * @param {bool} returnUrlAlleen als waar alleen de media-URL wordt geretourneerd (standaard false)
+  * @return {QString} de media-markdown of url
+  */
+QString downloadUrlToMedia (QUrl url, bool returnUrlOnly);
 ```
 
 ### Voorbeeld
@@ -182,15 +182,15 @@ Een mediabestand invoegen in de mediamap
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * QML wrapper to insert a media file into the media folder and returning
- * the media url or the markdown image text of the media  relative to the current note
- *
- * @param {QString} mediaFilePath
- * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
- * @return {QString} the media markdown or url
- */
-QString ScriptingService::insertMediaFile(QString mediaFilePath,
-                                        bool returnUrlOnly);
+  * QML-wrapper om een mediabestand in de mediamap in te voegen en terug te keren
+  * de media-url of de afgeprijsde afbeeldingstekst van de media ten opzichte van de huidige notitie
+  *
+  * @param {QString} mediaFilePath
+  * @param {bool} returnUrlAlleen als waar alleen de media-URL wordt geretourneerd (standaard false)
+  * @return {QString} de media-markdown of url
+  */
+QString ScriptingService :: insertMediaFile (QString mediaFilePath,
+                                         bool returnUrlOnly);
 ```
 
 ### Voorbeeld
@@ -200,17 +200,17 @@ var markdown = script.insertMediaFile("/path/to/your/image.png");
 
 Misschien wilt u het voorbeeld eens bekijken [scribble.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scribble.qml).
 
-Regenerating the note preview
+Het notitievoorbeeld opnieuw genereren
 -----------------------------
 
 Refreshes the note preview.
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * Regenerates the note preview
- */
-QString ScriptingService::regenerateNotePreview();
+/ **
+  * Genereert het notitievoorbeeld opnieuw
+  * /
+QString ScriptingService :: regenerateNotePreview ();
 ```
 
 ### Voorbeeld
@@ -225,27 +225,27 @@ Registering a custom action
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * Registers a custom action
+**
+ * Registreert een aangepaste actie
  *
- * @param identifier the identifier of the action
- * @param menuText the text shown in the menu
- * @param buttonText the text shown in the button
- *                   (no button will be viewed if empty)
- * @param icon the icon file path or the name of a freedesktop theme icon
- *             you will find a list of icons here:
- *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
- * @param useInNoteEditContextMenu if true use the action in the note edit
- *                                 context menu (default: false)
- * @param hideButtonInToolbar if true the button will not be shown in the
- *                            custom action toolbar (default: false)
- * @param useInNoteListContextMenu if true use the action in the note list
- *                                 context menu (default: false)
+ * @param identifier de identifier van de actie
+ * @param menu Tekst de tekst die in het menu wordt weergegeven
+ * @param button Sms de tekst die in de knop wordt weergegeven
+ * (er wordt geen knop weergegeven als deze leeg is)
+ * @param icon het pictogrambestandspad of de naam van een freedesktop-themapictogram
+ * u vindt hier een lijst met pictogrammen:
+ * https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
+ * @param useInNoteEditContextMenu indien true, gebruik dan de actie in de notitiebewerking
+ * contextmenu (standaard: false)
+ * @param hideButtonInToolbar indien waar zal de knop niet getoond worden in het
+ * aangepaste actiewerkbalk (standaard: false)
+ * @param useInNoteListContextMenu indien waar, gebruik dan de actie in de notitielijst
+ * contextmenu (standaard: false)
  */
-void ScriptingService::registerCustomAction(QString identifier,
+void ScriptingService :: registerCustomAction (QString identifier,
                                             QString menuText,
-                                            QString buttonText,
-                                            QString icon,
+                                            QString-knop Tekst,
+                                            QString-pictogram,
                                             bool useInNoteEditContextMenu,
                                             bool hideButtonInToolbar,
                                             bool useInNoteListContextMenu);
@@ -253,17 +253,17 @@ void ScriptingService::registerCustomAction(QString identifier,
 
 ### Voorbeeld
 ```js
-// add a custom action without a button
-script.registerCustomAction("mycustomaction1", "Menu text");
+// voeg een aangepaste actie toe zonder een knop
+script.registerCustomAction ("mycustomaction1", "Menutekst");
 
-// add a custom action with a button
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
+// voeg een aangepaste actie toe met een knop
+script.registerCustomAction ("mycustomaction1", "Menutekst", "Knoptekst");
 
-// add a custom action with a button and freedesktop theme icon
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "task-new");
+// voeg een aangepaste actie toe met een knop en een freedesktop-themapictogram
+script.registerCustomAction ("mycustomaction1", "Menutekst", "Knoptekst", "taak-nieuw");
 
-// add a custom action with a button and an icon from a file
-script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
+// voeg een aangepaste actie toe met een knop en een pictogram uit een bestand
+script.registerCustomAction ("mycustomaction1", "Menutekst", "Knoptekst", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
 ```
 
 U kunt dan de identifier met functie `customActionInvoked` gebruiken in een script zoals [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
@@ -274,21 +274,23 @@ Een label registreren
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Registers a label to write to
- *
- * @param identifier the identifier of the label
- * @param text the text shown in the label (optional)
- */
-void ScriptingService::registerLabel(QString identifier, QString text);
+  * Registreert een label om naar te schrijven
+  *
+  * @param identifier de identifier van het label
+  * @param tekst de tekst die in het label wordt getoond (optioneel)
+  */
+void ScriptingService :: registerLabel (QString-ID, QString-tekst);
 ```
 
 ### Voorbeeld
 ```js
-script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.");
+script.registerLabel ("html-label", "<strong>Sterke</strong> HTML-tekst <br /> met drie regels <br /> en een <a href='https://www.qownnotes.org'> link naar een website </a>.");
 
-script.registerLabel("long-label", "an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text that will wrap");
+script.registerLabel ("long-label",
 
-script.registerLabel("counter-label");
+"een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst die");
+
+script.registerLabel ("counter-label");
 ```
 
 De labels zijn zichtbaar in de scriptdock-widget.
@@ -302,13 +304,13 @@ De tekst van een geregistreerd label instellen
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * Sets the text of a registered label
- *
- * @param identifier the identifier of the label
- * @param text the text shown in the label
- */
-void ScriptingService::setLabelText(QString identifier, QString text);
+/ **
+  * Stelt de tekst van een geregistreerd label in
+  *
+  * @param identifier de identifier van het label
+  * @param tekst de tekst die in het label wordt weergegeven
+  * /
+void ScriptingService :: setLabelText (QString-ID, QString-tekst);
 ```
 
 ### Voorbeeld
@@ -325,12 +327,12 @@ Een nieuwe notitie maken
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * Creates a new note
- *
- * @param text the note text
- */
-void ScriptingService::createNote(QString text);
+/ **
+  * Maakt een nieuwe notitie
+  *
+  * @param sms de notitietekst
+  * /
+void ScriptingService :: createNote (QString-tekst);
 ```
 
 ### Voorbeeld
@@ -346,11 +348,11 @@ Toegang tot het klembord
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns the content of the clipboard as text or html
- *
- * @param asHtml returns the clipboard content as html instead of text
- */
-QString ScriptingService::clipboard(bool asHtml);
+  * Retourneert de inhoud van het klembord als tekst of html
+  *
+  * @param asHtml geeft de inhoud van het klembord terug als html in plaats van tekst
+  */
+QString ScriptingService :: clipboard (bool asHtml);
 ```
 
 ### Voorbeeld
@@ -367,17 +369,17 @@ Schrijf tekst naar de tekst van de notitie
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Writes text to the current cursor position in the note text edit
- *
- * @param text
- */
-void ScriptingService::noteTextEditWrite(QString text);
+  * Schrijft tekst naar de huidige cursorpositie in de tekstbewerking van de notitie
+  *
+  * @param tekst
+  */
+void ScriptingService :: noteTextEditWrite (QString-tekst);
 ```
 
 ### Voorbeeld
 ```js
-// write text to the note text edit
-script.noteTextEditWrite("My custom text");
+// schrijf tekst naar de notitie tekst bewerken
+script.noteTextEditWrite ("Mijn aangepaste tekst");
 ```
 
 Misschien wilt u de aangepaste actie `transformTextRot13` bekijken in het voorbeeld [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
@@ -390,17 +392,17 @@ Lees de geselecteerde tekst in de tekstbewerking van de notitie
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Reads the selected text in the note text edit
- *
- * @return
- */
-QString ScriptingService::noteTextEditSelectedText();
+  * Leest de geselecteerde tekst in de tekstbewerking van de notitie
+  *
+  * @return
+  */
+QString ScriptingService :: noteTextEditSelectedText ();
 ```
 
 ### Voorbeeld
 ```js
-// read the selected text from the note text edit
-var text = script.noteTextEditSelectedText();
+// lees de geselecteerde tekst uit de notitietekst bewerk 
+var text = script.noteTextEditSelectedText ();
 ```
 
 Misschien wilt u de aangepaste actie `transformTextRot13` in voorbeeld [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) bekijken.
@@ -411,9 +413,9 @@ Selecteer alle tekst in de tekstbewerking van de notitie
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Selects all text in the note text edit
- */
-void ScriptingService::noteTextEditSelectAll();
+  * Selecteert alle tekst in de tekstbewerking van de notitie
+  */
+leegte ScriptingService :: noteTextEditSelectAll ();
 ```
 
 ### Voorbeeld
@@ -445,9 +447,9 @@ Selecteer de huidige woord in de tekstbewerking van de notitie
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Selects the current line in the note text edit
- */
-void ScriptingService::noteTextEditSelectCurrentWord();
+  * Selecteert de huidige regel in de tekstbewerking van de notitie
+  */
+void ScriptingService :: noteTextEditSelectCurrentWord ();
 ```
 
 ### Voorbeeld
@@ -461,20 +463,20 @@ Stel de momenteel geselecteerde tekst in bij het bewerken van de notitietekst
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Sets the currently selected text in the note text edit
- *
- * @param start
- * @param end
- */
-void ScriptingService::noteTextEditSetSelection(int start, int end);
+  * Stelt de momenteel geselecteerde tekst in de notitietekst in
+  *
+  * @param start
+  * @param einde
+  */
+void ScriptingService :: noteTextEditSetSelection (int start, int end);
 ```
 
 ### Voorbeeld
 ```js
-// expands the current selection by one character
-script.noteTextEditSetSelection(
-    script.noteTextEditSelectionStart() - 1,
-    script.noteTextEditSelectionEnd() + 1);
+// breidt de huidige selectie uit met één teken
+script.noteTextEditSetSelection (
+     script.noteTextEditSelectionStart () - 1,
+     script.noteTextEditSelectionEnd () + 1);
 ```
 
 Verkrijg de startpositie van de huidige selectie in de notitietekst
@@ -483,8 +485,8 @@ Verkrijg de startpositie van de huidige selectie in de notitietekst
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns the start position of the current selection in the note text edit
- */
+  * Geeft als resultaat de startpositie van de huidige selectie in de notitietekst
+  */
 int ScriptingService::noteTextEditSelectionStart();
 ```
 
@@ -515,21 +517,21 @@ Set the text cursor in the note text edit to a certain position
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Sets the text cursor in the note text edit to a certain position
- * 0 would be the beginning of the note
- * special case: -1 would be the end of the note
- *
- * @param position
- */
-void ScriptingService::noteTextEditSetCursorPosition(int position);
+  * Zet de tekstcursor in de tekstbewerking van de notitie op een bepaalde positie
+  * 0 zou het begin van de notitie zijn
+  * speciaal geval: -1 zou het einde van de notitie zijn
+  *
+  * @param positie
+  */
+void ScriptingService :: noteTextEditSetCursorPosition (int positie);
 ```
 
 ### Voorbeeld
 ```js
-// jump to the 11th character in the note
+// spring naar het 11e teken in de notitie
 script.noteTextEditSetCursorPosition(10);
 
-// jump to the end of the note
+// spring naar het einde van de notitie
 script.noteTextEditSetCursorPosition(-1);
 ```
 
@@ -539,9 +541,9 @@ Haal de huidige positie van de tekstcursor op in de tekstbewerking van de notiti
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns the current position of the text cursor in the note text edit
- * 0 would be the beginning of the note
- */
+  * Geeft de huidige positie van de tekstcursor terug in de notitietekst
+  * 0 zou het begin van de notitie zijn
+  */
 int ScriptingService::noteTextEditCursorPosition();
 ```
 
@@ -556,19 +558,19 @@ Read the current word from the note text edit
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Reads the current word in the note text edit
- *
- * @param withPreviousCharacters also get more characters at the beginning
- *                               to get characters like "@" that are not
- *                               word-characters
- * @return
- */
+  * Leest het huidige woord in de notitietekst
+  *
+  * @param withPreviousCharacters krijgen in het begin ook meer tekens
+  * om tekens als "@" te krijgen die dat niet zijn
+  * woordtekens
+  * @return
+  */
 QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 ```
 
 ### Voorbeeld
 ```js
-// read the current word in the note text edit
+// lees het huidige woord in de tekst van de notitie
 var text = script.noteTextEditCurrentWord();
 ```
 
@@ -586,9 +588,8 @@ bool ScriptingService::platformIsWindows();
 
 ### Voorbeeld
 ```js
-if (script.platformIsLinux()) {
-    // only will be executed if under Linux
-}
+// lees het huidige woord in de tekst van de notitie
+var text = script.noteTextEditCurrentWord();
 ```
 
 Tag de huidige notitie
@@ -597,17 +598,17 @@ Tag de huidige notitie
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Tags the current note with a tag named tagName
- *
- * @param tagName
- */
-void ScriptingService::tagCurrentNote(QString tagName);
+  * Label de huidige notitie met een tag met de naam tagName
+  *
+  * @param tagName
+  */
+void ScriptingService :: tagCurrentNote (QString tagnaam);
 ```
 
 ### Voorbeeld
 ```js
-// add a "favorite" tag to the current note
-script.tagCurrentNote("favorite");
+// voeg een "favoriete" tag toe aan de huidige notitie
+script.tagCurrentNote ("favoriet");
 ```
 
 Misschien wilt u de aangepaste actie `favoriteNote` in het voorbeeld [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml) bekijken.
@@ -631,10 +632,10 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 
 ### Voorbeeld
 ```js
-// creates all tags until the 3rd level and returns the tag object for
-// tag "level3", which would look like that in the tag tree:
-// level1 > level2 > level3
-var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
+// maakt alle tags tot het 3e niveau en retourneert het tag-object voor
+// tag "level3", die er zo uitziet in de tagboom:
+// level1 & gt; level2 & gt; niveau 3
+var tag = script.getTagByNameBreadcrumbList (["level1", "level2", "level3"]);
 ```
 
 Zoek naar tags op naam
@@ -643,17 +644,17 @@ Zoek naar tags op naam
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Fetches all tags by doing a substring search on the name field
- *
- * @param name {QString} name to search for
- * @return {QStringList} list of tag names
- */
-QStringList ScriptingService::searchTagsByName(QString name);
+  * Haalt alle tags op door een substring-zoekopdracht uit te voeren in het naamveld
+  *
+  * @param naam {QString} naam om naar te zoeken
+  * @return {QStringList} lijst met tagnamen
+  */
+QStringList ScriptingService :: searchTagsByName (QString-naam);
 ```
 
 ### Voorbeeld
 ```js
-// searches for all tags with the word game in it
+// zoekt naar alle tags met het woordspel erin
 var tags = script.searchTagsByName("game");
 ```
 
@@ -665,14 +666,14 @@ Zoek naar notities op notitietekst
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns a list of note ids of all notes with a certain text in the note text
- *
- * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
- * can only transfer the note ids
- *
- * @return {QList<int>} list of note ids
- */
-QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
+  * Retourneert een lijst met notitie-id's van alle notities met een bepaalde tekst in de notitietekst
+  *
+  * Helaas is er geen gemakkelijke manier om een QList <NoteApi*> in QML te gebruiken, dus wij
+  * kan alleen de notitie-ID's overdragen
+  *
+  * @return {QList <int>} lijst met notitie-id's
+  */
+QList <int> ScriptingService :: fetchNoteIdsByNoteTextPart (QString-tekst);
 ```
 
 ### Voorbeeld
@@ -682,8 +683,9 @@ var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
 noteIds.forEach(function (noteId){
     var note = script.fetchNoteById(noteId);
 
-    // do something with the note
+    // doe iets met de notitie
 });
+
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/unique-note-id.qml).
@@ -694,17 +696,17 @@ Voeg een aangepast stylesheet toe
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Adds a custom stylesheet to the application
- *
- * @param stylesheet
- */
-void ScriptingService::addStyleSheet(QString stylesheet);
+  * Voegt een aangepast stylesheet toe aan de applicatie
+  *
+  * @param stylesheet
+  */
+void ScriptingService :: addStyleSheet (QString-stylesheet);
 ```
 
 ### Voorbeeld
 ```js
-// make the text in the note list bigger
-script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
+// maak de tekst in de notitielijst groter
+script.addStyleSheet("QTreeWidget # noteTreeWidget {font-size: 30px;}");
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml).
@@ -713,7 +715,7 @@ U kunt de objectnamen uit de `*.ui` -bestanden halen, bijvoorbeeld [mainwindow.u
 
 Bekijk [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) voor een referentie van welke stijlen beschikbaar zijn.
 
-If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
+Als u stijlen in html-voorbeeld wilt injecteren om de manier waarop notities worden weergegeven te wijzigen, kijk dan naar [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 Herladen van de script-engine
 ------------------------------
@@ -721,14 +723,14 @@ Herladen van de script-engine
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Reloads the scripting engine
- */
+  * Herlaadt de script-engine
+  */
 void ScriptingService::reloadScriptingEngine();
 ```
 
 ### Voorbeeld
 ```js
-// reload the scripting engine
+// herlaad de script-engine
 script.reloadScriptingEngine();
 ```
 
@@ -738,14 +740,14 @@ Een notitie ophalen op basis van de bestandsnaam
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Fetches a note by its file name
- *
- * @param fileName string the file name of the note (mandatory)
- * @param noteSubFolderId integer id of the note subfolder
- * @return NoteApi*
- */
-NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
-                                                int noteSubFolderId);
+  * Haalt een notitie op met de bestandsnaam
+  *
+  * @param fileName string de bestandsnaam van de notitie (verplicht)
+  * @param noteSubFolderId geheel getal-id van de notitie-submap
+  * @return OpmerkingApi *
+  */
+NoteApi * ScriptingService::fetchNoteByFileName (QString bestandsnaam,
+                                                 int noteSubFolderId);
 ```
 
 ### Voorbeeld
@@ -760,17 +762,17 @@ Een notitie ophalen op basis van zijn ID
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Fetches a note by its id
- *
- * @param id int the id of the note
- * @return NoteApi*
- */
-NoteApi* ScriptingService::fetchNoteById(int id);
+  * Haalt een notitie op met zijn id
+  *
+  * @param id int de id van de notitie
+  * @return OpmerkingApi *
+  */
+NoteApi * ScriptingService :: fetchNoteById (int id);
 ```
 
 ### Voorbeeld
 ```js
-// fetch note by id
+// haal notitie op met id
 script.fetchNoteById(243);
 ```
 
@@ -782,21 +784,21 @@ Controleren of een notitie bestaat op basis van de bestandsnaam
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Checks if a note file exists by its file name
- *
- * @param fileName string the file name of the note (mandatory)
- * @param ignoreNoteId integer id of a note to ignore in the check
- * @param noteSubFolderId integer id of the note subfolder
- * @return bool
- */
-bool ScriptingService::noteExistsByFileName(QString fileName,
-                                            int ignoreNoteId,
-                                            int noteSubFolderId);
+  * Controleert of een notitiebestand bestaat op basis van de bestandsnaam
+  *
+  * @param fileName string de bestandsnaam van de notitie (verplicht)
+  * @param ignoreNoteId integer-id van een notitie die bij de controle moet worden genegeerd
+  * @param noteSubFolderId geheel getal-id van de notitie-submap
+  * @return bool
+  */
+bool ScriptingService :: noteExistsByFileName (QString bestandsnaam,
+                                             int ignoreNoteId,
+                                             int noteSubFolderId);
 ```
 
 ### Voorbeeld
 ```js
-// check if note exists, but ignore the id of "note"
+// controleer of opmerking bestaat, maar negeer de id van "note"
 script.noteExistsByFileName("my note.md", note.id);
 ```
 
@@ -807,18 +809,18 @@ Tekst naar het klembord kopiëren
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * Copies text into the clipboard as plain text or html mime data
- *
- * @param text string text to put into the clipboard
- * @param asHtml bool if true the text will be set as html mime data
- */
+/ **
+  * Kopieert tekst naar het klembord als platte tekst of html mime-gegevens
+  *
+  * @param tekstreeks tekst om op het klembord te plaatsen
+  * @param asHtml bool indien true wordt de tekst ingesteld als html mime-gegevens
+  * /
 void ScriptingService::setClipboardText(QString text, bool asHtml);
 ```
 
 ### Voorbeeld
 ```js
-// copy text to the clipboard
+// kopieer tekst naar het klembord
 script.setClipboardText("text to copy");
 ```
 
@@ -830,17 +832,17 @@ Naar een notitie springen
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Sets the current note if the note is visible in the note list
- *
- * @param note NoteApi note to jump to
- */
-void ScriptingService::setCurrentNote(NoteApi *note);
+  * Stelt de huidige notitie in als de notitie zichtbaar is in de notitielijst
+  *
+  * @param note Note Api-notitie om naar te springen
+  */
+void ScriptingService :: setCurrentNote (NoteApi * note);
 ```
 
 ### Voorbeeld
 ```js
-// jump to the note
-script.setCurrentNote(note);
+// spring naar de notitie
+script.setCurrentNote (opmerking);
 ```
 
 You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
@@ -850,24 +852,24 @@ Springen naar een submap van een notitie
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * Jumps to a note subfolder
- *
- * @param noteSubFolderPath {QString} path of the subfolder, relative to the note folder
- * @param separator {QString} separator between parts of the path, default "/"
- * @return true if jump was successful
- */
-bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
-                                            QString separator);
+/ **
+  * Springt naar een submap voor notities
+  *
+  * @param noteSubFolderPath {QString} pad van de submap, relatief aan de notitiemap
+  * @param scheidingsteken {QString} scheidingsteken tussen delen van het pad, standaard "/"
+  * @return waar als de sprong succesvol was
+  * /
+bool ScriptingService :: jumpToNoteSubFolder (const QString & amp; noteSubFolderPath,
+                                             QString-scheidingsteken);
 ```
 
 ### Voorbeeld
 ```js
-// jump to the note subfolder "a sub folder"
-script.jumpToNoteSubFolder("a sub folder");
+// spring naar de submap notitie "een submap"
+script.jumpToNoteSubFolder ("een submap");
 
-// jump to the note subfolder "sub" inside of "a sub folder"
-script.jumpToNoteSubFolder("a sub folder/sub");
+// spring naar de submap "sub" van de notitie in "een submap"
+script.jumpToNoteSubFolder ("een submap / sub");
 ```
 
 ::: tip
@@ -880,18 +882,18 @@ Een informatieberichtvenster weergeven
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Shows an information message box
- *
- * @param text
- * @param title (optional)
- */
-void ScriptingService::informationMessageBox(QString text, QString title);
+  * Toont een informatieberichtvenster
+  *
+  * @param tekst
+  * @param title (optioneel)
+  */
+void ScriptingService :: informationMessageBox (QString-tekst, QString-titel);
 ```
 
 ### Voorbeeld
 ```js
-// show a information message box
-script.informationMessageBox("The text I want to show", "Some optional title");
+// toon een informatieberichtvenster
+script.informationMessageBox ("De tekst die ik wil laten zien", "Een optionele titel");
 ```
 
 Er wordt een berichtvenster met een vraag weergegeven
@@ -900,16 +902,16 @@ Er wordt een berichtvenster met een vraag weergegeven
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Shows a question message box
- *
- * For information about buttons see:
- * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
- *
- * @param text
- * @param title (optional)
- * @param buttons buttons that should be shown (optional)
- * @param defaultButton default button that will be selected (optional)
- * @return id of pressed button
+  * Toont een vraagberichtvenster
+  *
+  * Zie voor informatie over knoppen:
+  * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+  *
+  * @param tekst
+  * @param title (optioneel)
+  * @param buttons knoppen die getoond moeten worden (optioneel)
+  * @param defaultButton standaardknop die wordt geselecteerd (optioneel)
+  * @return id van ingedrukte knop
  */
 int ScriptingService::questionMessageBox(
         QString text, QString title, int buttons, int defaultButton);
@@ -917,37 +919,37 @@ int ScriptingService::questionMessageBox(
 
 ### Voorbeeld
 ```js
-// show a question message box with an apply and a help button
-// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
-var result = script.questionMessageBox(
-    "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
-script.log(result);
+// toon een vraagberichtvenster met een sollicitatie- en een helpknop
+// zie: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+var resultaat = script.questionMessageBox (
+    "De tekst die ik wil laten zien", "Een optionele titel", 0x01000000 | 0x02000000, 0x02000000);
+script.log (resultaat);
 ```
 
-For information about buttons see [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
+Zie voor informatie over knoppen [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
-You may want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Zie voor informatie over knoppen [StandardButton](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
-Showing an open file dialog
+Een open bestandsdialoog weergeven
 ---------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * Shows an open file dialog
- *
- * @param caption (optional)
- * @param dir (optional)
- * @param filter (optional)
- * @return QString
- */
+**
+  * Toont een open bestandsdialoog
+  *
+  * @param caption (optioneel)
+  * @param dir (optioneel)
+  * @param filter (optioneel)
+  * @return QString
+  * /
 QString ScriptingService::getOpenFileName(QString caption, QString dir,
                                             QString filter);
 ```
 
 ### Voorbeeld
 ```js
-// show an open file dialog
+// toon een open bestandsdialoog
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 ```
 
@@ -957,20 +959,20 @@ Showing a save file dialog
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Shows a save file dialog
- *
- * @param caption (optional)
- * @param dir (optional)
- * @param filter (optional)
- * @return QString
- */
-QString ScriptingService::getSaveFileName(QString caption, QString dir,
-                                            QString filter);
+  * Toont een dialoogvenster voor het opslaan van bestanden
+  *
+  * @param caption (optioneel)
+  * @param dir (optioneel)
+  * @param filter (optioneel)
+  * @return QString
+  */
+QString ScriptingService::getSaveFileName (QString caption, QString dir,
+                                             QString-filter);
 ```
 
 ### Voorbeeld
 ```js
-// show a save file dialog
+// toon een dialoogvenster voor het opslaan van bestanden
 var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
 ```
 
@@ -985,7 +987,7 @@ De gebruiker kan deze eigenschappen vervolgens instellen in de scriptinstellinge
 
 ### Voorbeeld
 ```js
-// you have to define your registered variables so you can access them later
+// u moet uw geregistreerde variabelen definiëren zodat u ze later kunt openen
 property string myString;
 property bool myBoolean;
 property string myText;
@@ -993,57 +995,58 @@ property int myInt;
 property string myFile;
 property string mySelection;
 
-// register your settings variables so the user can set them in the script settings
-// use this property if you don't need
-//
-// unfortunately there is no QVariantHash in Qt, we only can use
-// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
-// least can be ordered arbitrarily)
-property variant settingsVariables: [
-    {
-        "identifier": "myString",
-        "name": "I am a line edit",
-        "description": "Please enter a valid string:",
-        "type": "string",
-        "default": "My default value",
-    },
-    {
-        "identifier": "myBoolean",
-        "name": "I am a checkbox",
-        "description": "Some description",
-        "text": "Check this checkbox",
-        "type": "boolean",
-        "default": true,
-    },
-    {
-        "identifier": "myText",
-        "name": "I am textbox",
-        "description": "Please enter your text:",
-        "type": "text",
-        "default": "This can be a really long text\nwith multiple lines.",
-    },
-    {
-        "identifier": "myInt",
-        "name": "I am a number selector",
-        "description": "Please enter a number:",
-        "type": "integer",
-        "default": 42,
-    },
-    {
-        "identifier": "myFile",
-        "name": "I am a file selector",
-        "description": "Please select the file:",
-        "type": "file",
-        "default": "pandoc",
-    },
-    {
-        "identifier": "mySelection",
-        "name": "I am an item selector",
-        "description": "Please select an item:",
-        "type": "selection",
-        "default": "option2",
-        "items": {"option1": "Text for option 1", "option2": "Text for option 2", "option3": "Text for option 3"},
-    }
+// registreer uw instellingsvariabelen zodat de gebruiker ze kan instellen in de scriptinstellingen
+// gebruik deze eigenschap als je dat niet nodig hebt
+
+// // helaas is er geen QVariantHash in Qt, we kunnen alleen
+// QVariantMap (dat geen willekeurige volgorde heeft) of QVariantList
+// (die op zijn minst willekeurig kan worden besteld)
+
+eigenschapsvariantinstellingen Variabelen: [
+     {
+         "identifier": "myString",
+         "name": "Ik ben een lijnbewerker",
+         "description": "Voer een geldige string in:",
+         "type": "string",
+         "default": "Mijn standaardwaarde",
+     },
+     {
+         "identifier": "myBoolean",
+         "name": "Ik ben een selectievakje",
+         "description": "Een beschrijving",
+         "text": "Vink dit selectievakje aan",
+         "type": "boolean",
+         "default": true,
+     },
+     {
+         "identifier": "myText",
+         "name": "Ik ben tekstvak",
+         "description": "Voer uw tekst in:",
+         "typ Text",
+         "default": "Dit kan een hele lange tekst zijn \ nmet meerdere regels.",
+     },
+     {
+         "identifier": "myInt",
+         "name": "Ik ben een nummerkiezer",
+         "description": "Voer een getal in:",
+         "type": "geheel getal",
+         "standaard": 42,
+     },
+     {
+         "identifier": "myFile",
+         "name": "Ik ben een bestandskiezer",
+         "description": "Selecteer het bestand:",
+         "type": "bestand",
+         "default": "pandoc",
+     },
+     {
+         "identifier": "mySelection",
+         "name": "Ik ben een itemkiezer",
+         "description": "Selecteer een item:",
+         "type": "selectie",
+         "default": "option2",
+         "items": {"option1": "Tekst voor optie 1", "option2": "Tekst voor optie 2", "option3": "Tekst voor optie 3"},
+     }
 ];
 ```
 
@@ -1073,24 +1076,24 @@ Storing and loading persistent variables
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Stores a persistent variable
- * These variables are accessible globally over all scripts
- * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
- *
- * @param key {QString}
- * @param value {QVariant}
- */
-void ScriptingService::setPersistentVariable(const QString &key,
-                                                const QVariant &value);
+  * Slaat een permanente variabele op
+  * Deze variabelen zijn wereldwijd toegankelijk via alle scripts
+  * Gebruik een betekenisvol voorvoegsel in uw sleutel, zoals "PersistentVariablesTest / myVar"
+  *
+  * @param sleutel {QString}
+  * @param waarde {QVariant}
+  */
+void ScriptingService :: setPersistentVariable (const QString & amp; key,
+                                                 const QVariant & waarde);
 
 /**
- * Loads a persistent variable
- * These variables are accessible globally over all scripts
- *
- * @param key {QString}
- * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
- * @return
- */
+  * Laadt een permanente variabele
+  * Deze variabelen zijn wereldwijd toegankelijk via alle scripts
+  *
+  * @param sleutel {QString}
+  * @param defaultValue {QVariant} retourwaarde als de instelling niet bestaat (optioneel)
+  * @return
+  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
                                                     const QVariant &defaultValue);
 ```
@@ -1104,22 +1107,22 @@ script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
 ```
 
-Please make sure to use a meaningful prefix in your key like `PersistentVariablesTest/myVar` because the variables are accessible from all scripts.
+Zorg ervoor dat u een betekenisvol voorvoegsel in uw sleutel gebruikt, zoals `PersistentVariablesTest/myVar`, omdat de variabelen toegankelijk zijn vanuit alle scripts.
 
 Misschien wilt u het voorbeeld eens bekijken [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
 
-Loading application settings variables
+Variabelen voor applicatie-instellingen laden
 --------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Loads an application settings variable
- *
- * @param key {QString}
- * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
- * @return
- */
+  * Laadt een variabele voor toepassingsinstellingen
+  *
+  * @param sleutel {QString}
+  * @param defaultValue {QVariant} retourwaarde als de instelling niet bestaat (optioneel)
+  * @return
+  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
                                                             const QVariant &defaultValue);
 ```
@@ -1130,43 +1133,43 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 ```
 
-Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` is only used if the setting doesn't exist at all.
+Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` wordt alleen gebruikt als de instelling helemaal niet bestaat.
 
 Een cachemap maken
 --------------------------
 
-You can cache files at the default cache location of your system.
+U kunt bestanden cachen op de standaard cachelocatie van uw systeem.
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns a cache directory for a script
- *
- * @param {QString} subDir the subfolder to create and use
- * @return {QString} the cache dir path
- */
+  * Retourneert een cachemap voor een script
+  *
+  * @param {QString} subDir de submap die moet worden gemaakt en gebruikt
+  * @return {QString} het pad naar de cache-map
+  */
 QString ScriptingService::cacheDir(const QString &subDir) const;
 ```
 
 ### Voorbeeld
 ```js
-// create the cache directory for my-script-id
+// maak de cachemap voor my-script-id
 var cacheDirForScript = script.cacheDir("my-script-id");
 ```
 
-Clearing a cache directory
+Een cachemap wissen
 --------------------------
 
-You can clear the cache files of your script by passing its name to clearCacheDir().
+U kunt de cachebestanden van uw script wissen door de naam door te geven aan clearCacheDir().
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Clears the cache directory for a script
- *
- * @param {QString} subDir the subfolder to clear
- * @return {bool} true on success
- */
+  * Wist de cachemap voor een script
+  *
+  * @param {QString} subDir de submap die moet worden gewist
+  * @return {bool} true bij succes
+  */
 bool ScriptingService::clearCacheDir(const QString &subDir) const;
 ```
 
@@ -1179,31 +1182,31 @@ script.clearCacheDir("my-script-id");
 Reading the path to the directory of your script
 ------------------------------------------------
 
-Als u het pad naar de directory waar uw script is geplaatst, nodig heeft om bijvoorbeeld andere bestanden te laden, moet u een `property string scriptDirPath;` registreren. This property will be set with the path to the script's directory.
+Als u het pad naar de directory waar uw script is geplaatst, nodig heeft om bijvoorbeeld andere bestanden te laden, moet u een `property string scriptDirPath;` registreren. Deze eigenschap wordt ingesteld met het pad naar de directory van het script.
 
 ### Voorbeeld
 ```js
-import QtQml 2.0
-import QOwnNotesTypes 1.0
+importeer QtQml 2.0
+importeer QOwnNotesTypes 1.0
 
 Script {
-    // the path to the script's directory will be set here
-    property string scriptDirPath;
+     // het pad naar de directory van het script wordt hier ingesteld
+     eigenschap string scriptDirPath;
 
-    function init() {
-        script.log(scriptDirPath);
-    }
+     functie init () {
+         script.log (scriptDirPath);
+     }
 }
 ```
 
-Converting path separators to native ones
+Padscheidingstekens omzetten in native
 -----------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns path with the '/' separators converted to separators that are
- * appropriate for the underlying operating system.
+  * Geeft pad terug met de '/' scheidingstekens geconverteerd naar scheidingstekens die zijn
+  * geschikt voor het onderliggende besturingssysteem.
  *
  * On Windows, toNativeDirSeparators("c:/winnt/system32") returns
  * "c:\winnt\system32".
@@ -1216,19 +1219,19 @@ QString ScriptingService::toNativeDirSeparators(QString path);
 
 ### Voorbeeld
 ```js
-// will return "c:\winnt\system32" on Windows
-script.log(script.toNativeDirSeparators("c:/winnt/system32"));
+// retourneert "c:\winnt\system32" op Windows
+script.log (script.toNativeDirSeparators ("c:/winnt/system32"));
 ```
 
-Converting path separators from native ones
+Padscheidingstekens omzetten van native
 -------------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns path using '/' as file separator.
- * On Windows, for instance, fromNativeDirSeparators("c:\\winnt\\system32")
- * returns "c:/winnt/system32".
+ * Geeft het pad terug met '/' als bestandseparator.
+ * Op Windows, bijvoorbeeld fromNativeDirSeparators("c:\\winnt\\system32")
+  * geeft "c: / winnt / system32" terug.
  *
  * @param path
  * @return
@@ -1242,110 +1245,111 @@ QString ScriptingService::fromNativeDirSeparators(QString path);
 script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
 ```
 
-Getting the native directory separator
+Het native directoryscheidingsteken ophalen
 --------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns the native directory separator "/" or "\" on Windows
- *
- * @return
- */
-QString ScriptingService::dirSeparator();
+  * Retourneert het native directoryscheidingsteken "/" of "\" in Windows
+  *
+  * @return
+  */
+QString ScriptingService :: dirSeparator ();
 ```
 
 ### Voorbeeld
 ```js
-// will return "\" on Windows
+// retourneert "\" in Windows
 script.log(script.dirSeparator());
 ```
 
-Getting a list of the paths of all selected notes
+Een lijst ophalen met de paden van alle geselecteerde notities
 -------------------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns a list of the paths of all selected notes
- *
- * @return {QStringList} list of selected note paths
- */
+  * Retourneert een lijst met de paden van alle geselecteerde notities
+  *
+  * @return {QStringList} lijst met geselecteerde notitiepaden
+  */
 QStringList ScriptingService::selectedNotesPaths();
 ```
 
 ### Voorbeeld
 ```js
-// returns a list of the paths of all selected notes
+// retourneert een lijst met de paden van alle geselecteerde notities
 script.log(script.selectedNotesPaths());
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
 
-Getting a list of the ids of all selected notes
+Een lijst ophalen met de id's van alle geselecteerde notities
 -----------------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Returns a list of the ids of all selected notes
- *
- * @return {QList<int>} list of selected note ids
- */
+  * Retourneert een lijst met de id's van alle geselecteerde notities
+  *
+  * @return {QList <int>} lijst met geselecteerde notitie-id's
+  */
 QList<int> ScriptingService::selectedNotesIds();
 ```
 
 ### Voorbeeld
 ```js
-// returns a list of the ids of all selected notes
+// retourneert een lijst met de paden van alle geselecteerde notities
 script.log(script.selectedNotesIds());
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Triggering a menu action
+Een menuactie activeren
 ------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Triggers a menu action
- *
- * @param objectName {QString} object name of the action to trigger
- * @param checked {QString} only trigger the action if checked-state is
- *                          different than this parameter (optional, can be 0 or 1)
+  * Activeert een menuactie
+  *
+  * @param objectName {QString} objectnaam van de actie die moet worden geactiveerd
+  * @param aangevinkt {QString} activeert alleen de actie als aangevinkt-status is
+  * anders dan deze parameter (optioneel, kan 0 of 1 zijn)
  */
 void ScriptingService::triggerMenuAction(QString objectName, QString checked);
+
 ```
 
 ### Voorbeeld
 ```js
-// toggle the read-only mode
+// schakel de alleen-lezen modus in
 script.triggerMenuAction("actionAllow_note_editing");
 
-// disable the read-only mode
+// schakel de alleen-lezen modus uit
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+U kunt de objectnamen van de menuactie ophalen uit [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
 
-Opening an input dialog with a select box
+Een invoerdialoog openen met een selectievak
 -----------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Opens an input dialog with a select box
- *
- * @param title {QString} title of the dialog
- * @param label {QString} label text of the dialog
- * @param items {QStringList} list of items to select
- * @param current {int} index of the item that should be selected (default: 0)
- * @param editable {bool} if true the text in the dialog can be edited (default: false)
- * @return {QString} text of the selected item
- */
+  * Opent een invoerdialoog met een selectievak
+  *
+  * @param titel {QString} titel van het dialoogvenster
+  * @param label {QString} labeltekst van het dialoogvenster
+  * @param items {QStringList} lijst met te selecteren items
+  * @param huidige {int} index van het item dat moet worden geselecteerd (standaard: 0)
+  * @param bewerkbaar {bool} indien true kan de tekst in het dialoogvenster worden bewerkt (standaard: false)
+  * @return {QString} tekst van het geselecteerde item
+  */
 QString ScriptingService::inputDialogGetItem(
         const QString &title, const QString &label, const QStringList &items,
         int current, bool editable);
@@ -1360,19 +1364,19 @@ script.log(result);
 
 Misschien wilt u het voorbeeld eens bekijken [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
-Opening an input dialog with a line edit
+Een invoerdialoog openen met een regelbewerking
 ----------------------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Opens an input dialog with a line edit
- *
- * @param title {QString} title of the dialog
- * @param label {QString} label text of the dialog
- * @param text {QString} text in the dialog (optional)
- * @return
- */
+  * Opent een invoerdialoog met een lijnbewerking
+  *
+  * @param titel {QString} titel van het dialoogvenster
+  * @param label {QString} labeltekst van het dialoogvenster
+  * @param tekst {QString} tekst in het dialoogvenster (optioneel)
+  * @return
+  */
 QString ScriptingService::inputDialogGetText(
         const QString &title, const QString &label, const QString &text);
 ```
@@ -1384,16 +1388,16 @@ var result = script.inputDialogGetText(
 script.log(result);
 ```
 
-Checking if a file exists
+Controleren of er een bestand bestaat
 -------------------------
 
 ### Methodeaanroep en parameters
 ```cpp
-/**
- * Check if a file exists
- * @param filePath
- * @return
- */
+**
+  * Controleer of er een bestand bestaat
+  * @param filePath
+  * @return
+  */
 bool ScriptingService::fileExists(QString &filePath);
 ```
 
@@ -1403,7 +1407,7 @@ var result = script.fileExists(filePath);
 script.log(result);
 ```
 
-Reading text from a file
+Tekst uit een bestand lezen
 ------------------------
 
 ### Methodeaanroep en parameters
@@ -1427,19 +1431,19 @@ if(script.fileExists(filePath)){
 ```
 
 
-Writing text to a file
+Tekst naar een bestand schrijven
 ----------------------
 
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Writes a text to a file
- *
- * @param filePath {QString}
- * @param data {QString}
- * @param createParentDirs {bool} optional (default: false)
- * @return
- */
+  * Schrijft een tekst naar een bestand
+  *
+  * @param filePath {QString}
+  * @param-gegevens {QString}
+  * @param createParentDirs {bool} optioneel (standaard: false)
+  * @return
+  */
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
@@ -1451,13 +1455,13 @@ script.log(result);
 
 Misschien wilt u het voorbeeld eens bekijken [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
-Working with websockets
+Werken met websockets
 -----------------------
 
-You can remote control QOwnNotes by using `WebSocketServer`.
+U kunt QOwnNotes op afstand bedienen met `WebSocketServer`.
 
-Bekijk het voorbeeld eens [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). You can test the socket server by connecting to it on [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+Bekijk het voorbeeld eens [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). U kunt de socketserver testen door er verbinding mee te maken op [Websocket-test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 
-You can also listen to sockets with `WebSocket`. Kijk alstublieft naar de voorbeeld [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
+U kunt ook naar sockets luisteren met `WebSocket`. Kijk alstublieft naar de voorbeeld [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
 
-Keep in mind that you need to have Qt's QML `websocket` library installed to use this. U kunt bijvoorbeeld onder Ubuntu Linux installeren `qml-module-qtwebsockets`.
+Onthoud dat u Qt's QML `websocket`-bibliotheek moet hebben geïnstalleerd om dit te gebruiken. U kunt bijvoorbeeld onder Ubuntu Linux installeren `qml-module-qtwebsockets`.

@@ -225,7 +225,7 @@ Offerte pauze.
 ::: tip
 U kunt QOwnNotes vertellen om blockquotes of alleen het blockquote-teken volledig te markeren in de *Editor settings*
 
-You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> for marking text as blockquote.
+U kunt de [sneltoets](./shortcuts.md) <kbd>Ctrl + Shift + B</kbd> gebruiken om tekst als blokcitaat te markeren.
 :::
 
 ## Horizontale lijn
@@ -250,9 +250,9 @@ ___
 
 ## Line breaks
 
-- **Twee nieuwe regels**leveren u een** nieuwe alinea** op.
+- **Twee nieuwe regels** leveren u een **nieuwe alinea** op.
 - **Een nieuwe regel** levert een **nieuwe regel in dezelfde alinea** op.
-- **Sortöréshez bekezdés nélkül**, **két zárójelet kell használnia**.
+- Om een **regeleinde zonder alinea** te hebben, moet u **twee spaties achteraan** gebruiken.
 
 ```markdown
 Hier is een regel om mee te beginnen.
@@ -292,7 +292,7 @@ U kunt selectievakjes in het voorbeeld in- of uitschakelen.
 
 ## Frontmatter
 
-In QOwnNotes kun je een frontmatter (bijvoorbeeld YAML) gebruiken om wat extra meta-informatie toe te voegen. Het wordt **niet getoond in het voorbeeld ** en zal **het automatisch genereren van de bestandsnaam van notities** niet verstoren.
+In QOwnNotes kun je een frontmatter (bijvoorbeeld YAML) gebruiken om wat extra meta-informatie toe te voegen. Het wordt **niet getoond in het voorbeeld** en zal **het automatisch genereren van de bestandsnaam van notities** niet verstoren.
 
 ```markdown
 ---

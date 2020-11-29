@@ -2,7 +2,7 @@
 
 ## pacman
 
-Add the following lines to your `/etc/pacman.conf` with `sudo nano /etc/pacman.conf`:
+Voeg de volgende regels toe aan je `/etc/pacman.conf` with `sudo nano /etc/pacman.conf`:
 
 ```ini
 [home_pbek_QOwnNotes_Arch_Extra]

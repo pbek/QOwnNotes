@@ -33,7 +33,7 @@ graph TB
 
 ## QOwnNotes
 
-- QOwnNotes **stores notes** directly to your **note folder as markdown files**
+- QOwnNotes **slaat notities** rechtstreeks op in uw **notitiemap als markdown-bestanden**
 - Het kan rechtstreeks met uw Nextcloud / ownCloud-server praten om notities te delen
 - Je hebt ook toegang tot je notitiegeschiedenis en prullenbak op je Nextcloud / ownCloud-server via de [QOwnNotesApi Nextcloud-app](#qownnotesapi-nextcloud-app)
 - Todo-lijsten op uw Nextcloud / ownCloud-server zijn toegankelijk vanuit QOwnNotes
@@ -45,7 +45,7 @@ graph TB
 - Je **bezit** al je notities en media / bijlagen!
 - Uw aantekeningen worden op uw desktopcomputer opgeslagen als **plain-text Markdown files**
 - U kunt naast QOwnNotes elke gewenste teksteditor gebruiken om uw notitiebestanden te bekijken of te bewerken
-- **Sync your notes** with other devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/) or [ownCloud](https://owncloud.org/) sync client to your server
+- **Synchroniseer uw notities** met andere apparaten (desktop en mobiel) met uw [Nextcloud](https://nextcloud.com/) of [ownCloud](https://owncloud.org/) synchronisatieclient naar uw server
 
 
 ## QOwnNotes-browserextensie
@@ -58,7 +58,7 @@ Bezoek de [QOwnNotes Web Companion-browserextension](browser-extension.md) voor 
 
 ## Nextcloud desktop-synchronisatieclient
 
-**Sync your notities** met andere apparaten (desktop &amp mobiel) met uw [Nextcloud](https://nextcloud.com/) of [ownCloud](https://owncloud.org/) synchronisatieclient naar uw server.
+**Synchroniseer uw notities** met andere apparaten (desktop en mobiel) met uw [Nextcloud](https://nextcloud.com/) of [ownCloud](https://owncloud.org/) synchronisatieclient naar uw server
 
 ::: tip
 Natuurlijk kunnen andere oplossingen, zoals **Dropbox**, **Syncthing**, **Seafile** of BitTorrent Sync worden gebruikt om uw notities en andere bestanden te synchroniseren.
@@ -70,7 +70,7 @@ Je kunt ook **git** gebruiken om te synchroniseren met tools zoals [gitomatic](h
 
 Om online met uw notities te werken, kunt u servers zoals [Nextcloud](https://nextcloud.com/) gebruiken of [ownCloud](https://owncloud.org/).
 
-You can host your own server or use hosted solutions.
+U kunt uw eigen server hosten of gehoste oplossingen gebruiken.
 
 ::: tip
 Natuurlijk kunnen ook andere oplossingen, zoals ** Dropbox **, ** Syncthing **, ** Seafile ** of BitTorrent Sync worden gebruikt om uw notities en andere bestanden te hosten
@@ -85,10 +85,10 @@ Bezoek [QOwnNotesAPI Nextcloud App](qownnotesapi.md) voor meer informatie.
 
 ## Nextcloud Notes-server-app
 
-Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes in the **web**.
+Gebruik [**Nextcloud Notes**](https://github.com/nextcloud/notes) om uw notities op het **web** te bewerken.
 
 ::: warning
-Keep in mind that Nextcloud Notes currently only supports up to one level of subfolders. Houd er rekening mee dat Nextcloud Notes momenteel slechts maximaal één niveau aan submappen ondersteunt.
+Houd er rekening mee dat Nextcloud Notes momenteel slechts maximaal één niveau aan submappen ondersteunt.
 :::
 
 ## Nextcloud Notes mobiele app

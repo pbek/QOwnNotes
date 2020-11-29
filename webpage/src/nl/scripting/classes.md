@@ -29,7 +29,7 @@ class NoteApi {
 };
 ```
 
-A módszereket a [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)-töl használhatod, hogy működjön a `fileCreated` vagy a `fileLastModified` fájlokkal.
+U kunt de methoden van [Datum](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) gebruiken om met `fileCreated` of `fileLastModified` te werken.
 
 ### Voorbeeld
 ```js
@@ -73,7 +73,7 @@ noteSubFolder.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
 });
 ```
 
-Label
+Tag
 ---
 
 ### Eigenschappen en methoden

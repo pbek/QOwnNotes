@@ -131,17 +131,17 @@ handleNoteNameHook
 
 ### Methodeaanroep en parameters
 ```js
-/**
- * This function is called when the note name is determined for a note
- *
- * It allows you to modify the name of the note that is viewed
- *
- * Return an empty string if the name of the note should not be modified
- *
- * @param {NoteApi} note - the note object of the stored note
- * @return {string} the name of the note
- */
-function handleNoteNameHook(note);
+/ **
+  * Deze functie wordt aangeroepen wanneer de nootnaam voor een noot wordt bepaald
+  *
+  * Hiermee kunt u de naam wijzigen van de notitie die wordt bekeken
+  *
+  * Retourneer een lege tekenreeks als de naam van de notitie niet moet worden gewijzigd
+  *
+  * @param {NoteApi} note - het notitieobject van de opgeslagen notitie
+  * @return {string} de naam van de notitie
+  * /
+functie handleNoteNameHook (opmerking);
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).
@@ -153,44 +153,44 @@ handleNewNoteHeadlineHook
 
 ### Methodeaanroep en parameters
 ```js
-/**
- * This function is called before a note note is created
- *
- * It allows you to modify the headline of the note before it is created
- * Note that you have to take care about a unique note name, otherwise
- * the new note will not be created, it will just be found in the note list
- *
- * You can use this method for creating note templates
- *
- * @param headline text that would be used to create the headline
- * @return {string} the headline of the note
- */
-function handleNewNoteHeadlineHook(headline);
+/ **
+  * Deze functie wordt aangeroepen voordat een nootnoot wordt aangemaakt
+  *
+  * Hiermee kunt u de kop van de notitie wijzigen voordat deze wordt gemaakt
+  * Merk op dat u anders moet zorgen voor een unieke naam van de notitie
+  * de nieuwe notitie wordt niet aangemaakt, deze staat alleen in de notitielijst
+  *
+  * U kunt deze methode gebruiken om notitiesjablonen te maken
+  *
+  * @param koptekst die zou worden gebruikt om de koptekst te maken
+  * @return {string} de kop van de notitie
+  * /
+functie handleNewNoteHeadlineHook (headline);
 ```
 
-You may want to take a look at the example [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml).
+Misschien wil je het voorbeeld [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml) bekijken.
 
 preNoteToMarkdownHtmlHook
 -------------------------
 
 ### Methodeaanroep en parameters
 ```js
-/**
- * This function is called before the markdown html of a note is generated
- *
- * It allows you to modify what is passed to the markdown to html converter
- *
- * The method can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
- * to its graphical representation for the preview
- *
- * The note will not be changed in this process
- *
- * @param {NoteApi} note - the note object
- * @param {string} markdown - the markdown that is about to being converted to html
- * @param {string} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified markdown or an empty string if nothing should be modified
- */
-function preNoteToMarkdownHtmlHook(note, markdown, forExport);
+/ **
+  * Deze functie wordt aangeroepen voordat de markdown-html van een notitie wordt gegenereerd
+  *
+  * Hiermee kunt u wijzigen wat wordt doorgegeven aan de markdown naar html-converter
+  *
+  * De methode kan bijvoorbeeld in meerdere scripts worden gebruikt om code weer te geven (zoals LaTeX-wiskunde of zeemeermin)
+  * naar de grafische weergave voor de preview
+  *
+  * De notitie wordt tijdens dit proces niet gewijzigd
+  *
+  * @param {NoteApi} note - het notitieobject
+  * @param {string} markdown - de markdown die op het punt staat te worden omgezet naar html
+  * @param {string} forExport - true als de html wordt gebruikt voor een export, false voor de preview
+  * @return {string} de gewijzigde markdown of een lege string als er niets gewijzigd mag worden
+  * /
+functie preNoteToMarkdownHtmlHook (note, markdown, forExport);
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
@@ -200,171 +200,171 @@ noteToMarkdownHtmlHook
 
 ### Methodeaanroep en parameters
 ```js
-/**
- * This function is called when the markdown html of a note is generated
- *
- * It allows you to modify this html
- * This is for example called before by the note preview
- *
- * The method can be used in multiple scripts to modify the html of the preview
- *
- * @param {NoteApi} note - the note object
- * @param {string} html - the html that is about to being rendered
- * @param {string} forExport - true if the html is used for an export, false for the preview
- * @return {string} the modified html or an empty string if nothing should be modified
- */
-function noteToMarkdownHtmlHook(note, html, forExport);
+/ **
+  * Deze functie wordt aangeroepen wanneer de markdown-html van een notitie wordt gegenereerd
+  *
+  * Hiermee kunt u deze html wijzigen
+  * Dit wordt bijvoorbeeld eerder aangeroepen door het notitievoorbeeld
+  *
+  * De methode kan in meerdere scripts worden gebruikt om de html van de preview te wijzigen
+  *
+  * @param {NoteApi} note - het notitieobject
+  * @param {string} html - de html die op het punt staat te worden weergegeven
+  * @param {string} forExport - true als de html wordt gebruikt voor een export, false voor de preview
+  * @return {string} de gewijzigde html of een lege string als er niets gewijzigd mag worden
+  * /
+functie noteToMarkdownHtmlHook (opmerking, html, forExport);
 ```
 
-You may want to take a look at the example [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) or [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
+Misschien wilt u het voorbeeld eens bekijken [voorbeeld.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) of [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/preview-styling.qml).
 
-Please refer to the [Supported HTML Subset](http://doc.qt.io/qt-5/richtext-html-subset.html) documentation for a list of all supported css styles.
+Raadpleeg de [ondersteunde HTML Subset](http://doc.qt.io/qt-5/richtext-html-subset.html) documentatie voor een lijst met alle ondersteunde css-stijlen.
 
 encryptionHook
 --------------
 
-### Method call and parameters
+### Methodeaanroep en parameters
 ```js
-/**
- * This function is called when text has to be encrypted or decrypted
- *
- * @param text string the text to encrypt or decrypt
- * @param password string the password
- * @param decrypt bool if false encryption is demanded, if true decryption is demanded
- * @return the encrypted decrypted text
- */
-function encryptionHook(text, password, decrypt);
+/ **
+  * Deze functie wordt aangeroepen wanneer tekst moet worden gecodeerd of gedecodeerd
+  *
+  * @param text string de tekst die moet worden versleuteld of ontsleuteld
+  * @param wachtwoord tekenreeks het wachtwoord
+  * @param decrypt bool als valse codering vereist is, als echte decodering vereist is
+  * @return de versleutelde ontsleutelde tekst
+  * /
+functie encryptionHook (tekst, wachtwoord, decoderen);
 ```
 
-You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml) or [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml).
+Misschien wilt u het voorbeeld eens bekijken [encryptie-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml), [encryptie-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml) of [encryptie-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml).
 
 noteTaggingHook
 ---------------
 
-You can implement your own note tagging mechanism for example with special text in your note like `@tag1`, `@tag2`, `@tag3`.
+U kunt uw eigen tagging-mechanisme voor notities implementeren met bijvoorbeeld speciale tekst in uw notitie, zoals `@tag1`, `@tag2`, `@tag3`.
 
-### Method call and parameters
+### Methodeaanroep en parameters
 ```js
-/**
- * Handles note tagging for a note
- *
- * This function is called when tags are added to, removed from or renamed in
- * a note or the tags of a note should be listed
- *
- * @param note
- * @param action can be "add", "remove", "rename" or "list"
- * @param tagName tag name to be added, removed or renamed
- * @param newTagName tag name to be renamed to if action = "rename"
- * @return note text string or string-list of tag names (if action = "list")
- */
-function noteTaggingHook(note, action, tagName, newTagName);
+/ **
+  * Verwerkt notitie-tagging voor een notitie
+  *
+  * Deze functie wordt aangeroepen wanneer tags worden toegevoegd aan, verwijderd uit of hernoemd in
+  * een notitie of de tags van een notitie moeten worden vermeld
+  *
+  * @param opmerking
+  * @param-actie kan zijn "toevoegen", "verwijderen", "hernoemen" of "lijst"
+  * @param tagName tag naam die moet worden toegevoegd, verwijderd of hernoemd
+  * @param newTagName tagnaam die moet worden hernoemd als action = "hernoemen"
+  * @return opmerking tekstreeks of string-lijst met tagnamen (if action = "list")
+  * /
+functie noteTaggingHook (note, action, tagName, newTagName);
 ```
 
--   as soon as a script is activated that implements the new function `noteTaggingHook` note tagging will be handled by that function
--   following features should work via the QOwnNotes user interface
-    -   initially importing tags like `@tag` from your notes and overwriting your current tag assignment
-        -   you will not loose your tags tree, just the former assignment to notes
-        -   you can still move tags into other tags
-        -   if more than one tag has the same name in your tag tree the first hit will be assigned
-    -   adding a tag to a note will add the tag to the note text
-    -   removing a tag from a note will remove the tag from the note text
-    -   removing of tags in the tag list will remove those tags from your notes
-    -   renaming of tags in the tag list will rename those tags in your notes
-    -   bulk tagging of notes in the note list will add those tags to your notes
-    -   bulk removing of tags from notes in the note list will remove those tags from your notes
-    -   the application will trigger a series of `add` and `remove` actions for all selected tags and their children on all notes if tags are moved in the tag panel
+-   zodra een script is geactiveerd dat de nieuwe functie `noteTaggingHook` implementeert, wordt het taggen van opmerkingen door die functie afgehandeld
+-   zodra een script is geactiveerd dat de nieuwe functie <0>noteTaggingHook</0> implementeert, wordt het taggen van opmerkingen door die afgehandeld
+    -   in eerste instantie tags zoals `@tag` uit je notities importeren en je huidige tag-toewijzing overschrijven
+        -   u zult uw tagsboom niet verliezen, alleen de vorige toewijzing aan notities
+        -   u kunt nog steeds tags naar andere tags verplaatsen
+        -   als meer dan één tag dezelfde naam heeft in uw tagboom, wordt de eerste treffer toegewezen
+    -   door een tag aan een notitie toe te voegen, wordt de tag aan de notitietekst toegevoegd
+    -   door een tag aan een notitie toe te voegen, wordt de tag aan de notitietekst toegevoegd
+    -   als u tags in de taglijst verwijdert, worden die tags uit uw notities verwijderd
+    -   het hernoemen van tags in de tag-lijst zal de naam van die tags in uw notities
+    -   bulksgewijs taggen van notities in de notitielijst zal die tags aan uw notities
+    -   het bulksgewijs verwijderen van tags uit notities in de notitielijst zal die tags uit uw notities verwijderen
+    -   de applicatie activeert een reeks `toevoegen` en `verwijderen` acties voor alle geselecteerde tags en hun kinderen op alle notities als tags worden verplaatst in het tagpaneel
 
-You may want to take a look at the example [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) to implement your own tagging mechanism.
+Misschien wil je het voorbeeld [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) bekijken om je eigen tagging-mechanisme te implementeren.
 
 ::: warning
-Make sure your `list` action is really fast, because it will be executed for every note every time the note folder is reloaded!
+Zorg ervoor dat uw `lijst` -actie echt snel is, want deze wordt voor elke notitie uitgevoerd telkens wanneer de notitiemap opnieuw wordt geladen!
 :::
 
 noteTaggingByObjectHook
 ----------------------
 
-Similarly to [noteTaggingHook](#notetagginghook) you can implement your own note tagging mechanism, but you are not bound to tag names in the tag tree root. This way you can make use of the whole tag tree instead of only a tag list.
+Net als bij [noteTaggingHook](#notetagginghook) kunt u uw eigen mechanisme voor het taggen van notities implementeren, maar u bent niet gebonden aan het taggen van namen in de root van de tagboom. Op deze manier kunt u gebruik maken van de hele tagboom in plaats van alleen een taglijst.
 
-With `noteTaggingByObjectHook` you get a `TagApi` object as parameter, instead of a tag name. And as result for the `list` action you need to provide a list of tag ids.
+Met `noteTaggingByObjectHook` krijg je een `TagApi` -object als parameter, in plaats van een tagnaam. En als resultaat voor de `list` -actie moet u een lijst met tag-id's.
 
-This also means you need to create missing tags yourself to be able to provide a list of already existing tag ids for the `list` action.
+Dit betekent ook dat u zelf ontbrekende tags moet maken om een lijst met reeds bestaande tag-ID's voor de `list` -actie te kunnen leveren.
 
-### Method call and parameters
+### Methodeaanroep en parameters
 ```js
-/**
- * Handles note tagging for a note
- *
- * This function is called when tags are added to, removed from or renamed in
- * a note or the tags of a note should be listed
- *
- * @param note
- * @param action can be "add", "remove", "rename" or "list"
- * @param tag to be added, removed or renamed
- * @param newTagName tag name to be renamed to if action = "rename"
- * @return note text string or string-list of tag ids (if action = "list")
- */
-function noteTaggingByObjectHook(note, action, tag, newTagName);
+/ **
+  * Verwerkt notitie-tagging voor een notitie
+  *
+  * Deze functie wordt aangeroepen wanneer tags worden toegevoegd aan, verwijderd uit of hernoemd in
+  * een notitie of de tags van een notitie moeten worden vermeld
+  *
+  * @param opmerking
+  * @param-actie kan zijn "toevoegen", "verwijderen", "hernoemen" of "lijst"
+  * @param-tag die moet worden toegevoegd, verwijderd of hernoemd
+  * @param newTagName tagnaam die moet worden hernoemd als action = "hernoemen"
+  * @return notitie tekstreeks of string-lijst met tag-ID's (if action = "list")
+  * /
+functie noteTaggingByObjectHook (opmerking, actie, tag, newTagName);
 ```
 
-You may want to take a look at the example [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml) to implement your own tagging mechanism.
+Misschien wil je het voorbeeld [note-tagging-by-object.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging-by-object.qml) bekijken om je eigen tagging-mechanisme te implementeren.
 
 autocompletionHook
 ------------------
 
-You can return a list of strings to be added to the autocompletion list when the autocompletion is invoked (for example by pressing <kbd>Ctrl + Space</kbd>).
+U kunt een lijst met tekenreeksen retourneren die aan de autocomplete-lijst moeten worden toegevoegd wanneer ze automatisch worden aangeroepen (bijvoorbeeld door op <kbd>Ctrl + Space</kbd> te drukken).
 
-### Method call and parameters
+### Methodeaanroep en parameters
 ```js
-/**
- * Calls the autocompletionHook function for all script components
- * This function is called when autocompletion is invoked in a note
- *
- * @return QStringList of text for the autocomplete list
- */
-function callAutocompletionHook();
+/ **
+  * Roept de functie autocompletionHook aan voor alle scriptcomponenten
+  * Deze functie wordt aangeroepen wanneer automatische aanvulling wordt aangeroepen in een notitie
+  *
+  * @return QStringLijst met tekst voor de autocomplete lijst
+  * /
+functie callAutocompletionHook ();
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+Misschien wilt u het voorbeeld eens bekijken [automatisch aanvullen.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
 websocketRawDataHook
 --------------------
 
-This hook is called when data is sent from the QOwnNotes Web Companion browser extension via the web browser's context menu.
+Deze hook wordt aangeroepen wanneer gegevens worden verzonden vanuit de QOwnNotes Web Companion-browserextensie via het contextmenu van de webbrowser.
 
 ### Method call and parameters
 ```js
-/**
- * @param requestType can be "page" or "selection"
- * @param pageUrl the url of the webpage where the request was made
- * @param pageTitle the page title of the webpage where the request was made
- * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
- * @param screenshotDataUrl the data url of the screenshot if the webpage where the request was made
- * @return true if data was handled by a hook
- */
-bool ScriptingService::callHandleWebsocketRawDataHook(
-    const QString &requestType, const QString &pageUrl,
-    const QString &pageTitle, const QString &rawData,
-    const QString &screenshotDataUrl);
+/ **
+  * @param requestType kan "pagina" of "selectie" zijn
+  * @param pageUrl de url van de webpagina waar het verzoek is gedaan
+  * @param page Titel de paginatitel van de webpagina waar het verzoek is gedaan
+  * @param rawData de gegevens die zijn verzonden, html voor requestType "page" of platte tekst voor requestType "selection"
+  * @param screenshotDataUrl de data-url van de screenshot als de webpagina waar het verzoek is gedaan
+  * @return waar als gegevens werden afgehandeld door een haak
+  * /
+bool ScriptingService :: callHandleWebsocketRawDataHook (
+     const QString & amp; requestType, const QString & amp; pageUrl,
+     const QString & amp; pageTitle, const QString & amp; rawData,
+     const QString & amp; screenshotDataUrl);
 ```
 
-You may want to take a look at the examples [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-new-note.qml) and [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
+Misschien wilt u de voorbeelden eens bekijken [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-new-note.qml) en [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
 
 onDetachedProcessCallback
 -------------------------
 
-This hook is called when a script thread of [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background) is done executing.
+Deze hook wordt aangeroepen wanneer een scriptthread van [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background) klaar is met uitvoeren.
 
-### Method call and parameters
+### Methodeaanroep en parameters
 ```js
 /**
- * This function is called when a script thread is done executing.
- * Hint: thread[1]==0 helps to determine if a bulk of started processes for a certain identifier is done.
+  * Deze functie wordt aangeroepen wanneer een scriptthread klaar is met uitvoeren.
+ * Hint: thread [1] == 0 helpt om te bepalen of een groot deel van de gestarte processen voor een bepaalde identifier is voltooid.
  *
- * @param {QString} callbackIdentifier - the provided id when calling startDetachedProcess()
- * @param {QString} resultSet - the result of the process
- * @param {QVariantList} cmd - the entire command array [0-executablePath, 1-parameters, 2-exitCode]
- * @param {QVariantList} thread - the thread information array [0-passed callbackParameter, 1-remaining threads for this identifier]
- */
-function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
+  * @param {QString} callbackIdentifier - de opgegeven id bij het aanroepen van startDetachedProcess ()
+  * @param {QString} resultSet - het resultaat van het proces
+  * @param {QVariantList} cmd - de volledige commando-array [0-executablePath, 1-parameters, 2-exitCode]
+  * @param {QVariantList} thread - de thread-informatie-array [0-doorgegeven callbackParameter, 1-resterende threads voor deze identifier]
+  * /
+functie onDetachedProcessCallback (callbackIdentifier, resultSet, cmd, thread);
 ```
-You may want to take a look at the example [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml).
+Misschien wilt u het voorbeeld eens bekijken [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml).

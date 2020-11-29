@@ -7,16 +7,16 @@ import QtQml 2.0
 import QOwnNotesTypes 1.0
 
 Script {
-    /**
-        * Will be run when the scripting engine initializes
-        */
-    function init() {
-        script.log("Hello world!");
-    }
+     /**
+         * Wordt uitgevoerd wanneer de script-engine wordt geïnitialiseerd
+         */
+     functie init () {
+         script.log ("Hallo wereld!");
+     }
 }
 ```
 
-You can place those QML files anywhere you like and **add them in QOwnNotes** by adding them in the **Scripting settings** (there is a button `Add script`/`Add local script`).
+U kunt die QML-bestanden waar u maar wilt plaatsen en **toevoegen in QOwnNotes** door ze toe te voegen in de **Scripting-instellingen** (er is een knop `Script toevoegen`/`Lokaal script toevoegen`).
 
 ::: tip
 Bekijk de [example scripts](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples) om snel aan de slag te gaan.

@@ -3,10 +3,9 @@
 
 ![qownnotesapi](/img/qownnotesapi.png)
 
-[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) can handle the **access** to **trashed notes** and **note versions** for you.
+[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) kan de **toegang** tot **weggegooide notities** en **notitieversies **voor u afhandelen.
 
-::: tip
-You can enable QOwnNotesAPI directly in your **Nextcloud** or **ownCloud** instance by searching for `qownnotes` in your server's **Apps page** at `https://<your-cloud-domain>/settings/apps`.
+U kunt QOwnNotesAPI rechtstreeks inschakelen in uw **Nextcloud** of **ownCloud**-instantie door te zoeken naar `qownnotes` in de **Apps page** op `https://<your-cloud-domain>/settings/apps` van uw server.
 
 - [Nextcloud Apps-pagina](https://apps.nextcloud.com/apps/qownnotesapi)
 - [ownCloud Apps page](https://marketplace.owncloud.com/apps/qownnotesapi)
@@ -15,7 +14,7 @@ You can enable QOwnNotesAPI directly in your **Nextcloud** or **ownCloud** insta
 Het delen van notities gebeurt via de API van Nextcloud / ownCloud. Taken zijn rechtstreeks toegankelijk via CalDAV.
 
 ::: tip
-Use your **Nextcloud** / **ownCloud** **sync client** to **sync your notes**, your notes are simple markdown files. Het wiel hoeft niet twee keer uit te vinden. En er zijn ook mensen die verschillende services gebruiken om hun notitiebestanden te synchroniseren (zoals Dropbox, Syncthing of Resilio Sync).
+Gebruik uw **Nextcloud** / **ownCloud** **synchronisatieclient** om **uw notities te synchroniseren**, uw notities zijn eenvoudige markdown-bestanden. Het wiel hoeft niet twee keer uit te vinden. En er zijn ook mensen die verschillende services gebruiken om hun notitiebestanden te synchroniseren (zoals Dropbox, Syncthing of Resilio Sync).
 :::
 
 ## What QOwnNotesAPI does

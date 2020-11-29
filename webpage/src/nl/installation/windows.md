@@ -10,28 +10,28 @@ U kunt dan direct `QOwnNotes.exe` starten vanuit uw `QOwnNotes` -map, er is geen
 
 ### Draagbare modus
 
-A `QOwnNotesPortable.bat` használatával futtathatja a QOwnNotes **hordozható módban**, ahol mindent (a jegyzeteket is beleértve) csak a `QOwnNotes` mappájában tárolunk.
+Gebruik `QOwnNotesPortable.bat` om QOwnNotes in **draagbare modus** uit te voeren, waar alles (inclusief uw notities) alleen wordt opgeslagen in uw map `QOwnNotes`.
 
 ::: tip
-You don't need the portable node if you just don't have Administration permissions to your computer. A QOwnNotes programot nem kell telepíteni!
+U hebt het draagbare knooppunt niet nodig als u gewoon geen beheerdersrechten voor uw computer hebt. QOwnNotes hoeft niet te worden geïnstalleerd!
 :::
 
 ## Windows XP
 
-A Qt elvetette az 5.8-as verziójú Windows XP támogatását, de a QOwnNotes mostantól a Qt 5.7-gyel is fel van építve, hogy a Windows XP felhasználói továbbra is használhassák.
+Qt heeft de ondersteuning voor Windows XP met versie 5.8 laten vallen, maar QOwnNotes is nu ook gebouwd met Qt 5.7 zodat Windows XP-gebruikers het nog steeds kunnen gebruiken.
 
-Bár magának meg kell keresnie az [ AppVeyor ](https://ci.appveyor.com/project/pbek/qownnotes/history) legfrissebb master buildjét, válassza a *Qt 5.7 environment-et*-et és töltse le az *artefaktum*-ot.
+Hoewel je zelf de laatste master-build van [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/history) moet zoeken, kies je de *Qt 5.7-omgeving* en download je het *artefact*.
 
 ::: tip Info
-Az automatikus frissítési mechanizmus nem működik az AppVeyor Windows XP rendszerhez készült verziójával! Magának le kell töltenie az új kiadásokat.
+Het automatische updatemechanisme werkt niet met de AppVeyor-build voor Windows XP! U zult zelf nieuwe releases moeten downloaden.
 :::
 
 ## Chocolatey
 
-Van egy közösség által karbantartott QOwnNotes csomag a [Chocolatey](https://chocolatey.org/packages/qownnotes/) címen.
+Er is een door de gemeenschap onderhouden pakket van QOwnNotes op [Chocolatey](https://chocolatey.org/packages/qownnotes/).
 
 U kunt het installeren met:
 
 ```shell
-choco telepítse qownnotes
+choco install qownnotes
 ```

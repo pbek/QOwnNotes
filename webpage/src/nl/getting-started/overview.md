@@ -133,37 +133,37 @@
 
 <v-divider />
 
-**Q** for the [Qt framework](https://www.qt.io/) that is used  
-**Own** because you own your own notes  
-**Notes** for the notes you take
+**Q** voor het [Qt framework](https://www.qt.io/) dat wordt gebruikt  
+**Own** omdat je je eigen notities   
+bezit **Notes** voor de notities die u maakt
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) is the **open source** (GPL) plain-text file **markdown note taking** application for **GNU/Linux**, **Mac OS X** and **Windows**, that (optionally) works together with the [**notes application**](https://github.com/nextcloud/notes) of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
+[QOwnNotes](https://www.qownnotes.org/) is het **open source** (GPL) platte tekstbestand **markdown notitie**-applicatie **voor GNU / Linux**, **Mac OS X** en **Windows**, die (optioneel) samenwerkt met de [**notitietoepassing**](https://github.com/nextcloud/notes) van [Nextcloud](https://nextcloud.com/) en [ownCloud](https://owncloud.org/) (opent nieuw venster).
 
 ::: tip
-Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect with the QOwnNotes community.
+Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, te leren en contact te maken met de QOwnNotes-gemeenschap.
 :::
 
 [Begrijp het concept van QOwnNotes](concept.md)
 
 ## Kenmerken
 
-- The **notes folder** can be **freely chosen** (multiple note folders can be used)
-- You can use your **existing text or markdown files**, no need for an import most of the times
-- **Sub-string searching** of notes is possible and search results are highlighted in the notes
-- **Keyboard shortcuts** are customizable
-- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
-- [Browser extension](browser-extension.md) to add notes from the selected text, make screenshots or manage your bookmarks
-- **External changes** of note files are **watched** (notes or note list are reloaded)
-- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
+- De **notitiemap** kan **vrij gekozen worden** (meerdere notitiemappen kunnen worden gebruikt)
+- U kunt uw **bestaande tekst- of markdown-bestanden** gebruiken, meestal is importeren niet nodig
+- **Substring zoeken** van notities is mogelijk en zoekresultaten worden gemarkeerd in de notities
+- **Sneltoetsen** kunnen worden aangepast
+- **Ondersteuning voor scripts** en een online [**scriptrepository**](https://github.com/qownnotes/scripts) waar u scripts in de applicatie kunt installeren
+- [Browserextensie](browser-extension.md) om notities van de geselecteerde tekst toe te voegen, screenshots te maken of uw bladwijzers te beheren
+- **Externe wijzigingen** van notitiebestanden worden **bekeken** (notities of notitielijst worden opnieuw geladen)
+- Oudere **versies** van uw notities kunnen **hersteld** worden vanaf uw **Nextcloud / ownCloud** server
 - **Notities naar prullenbak** kunnen worden **hersteld** vanaf uw **Nextcloud / ownCloud** -server
-- **Differences** tussen huidige notitie en extern gewijzigde notitie worden **showed** in een dialoogvenster
-- **Markdown highlighting** of notes and a **markdown preview mode**
-- [**Spellchecking**](../editor/spellchecking.md) support
-- **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
+- **Verschillen** tussen huidige notitie en extern gewijzigde notitie worden **getoond** in een dialoogvenster
+- **Markdown-markering** van notities en een **markdown-voorbeeldmodus**
+- [**Spellingcontrole**](../editor/spellchecking.md) ondersteuning
+- **Compatibel** met de Notes-applicatie van **Nextcloud / ownCloud** en **mobiel** en Nextcloud Text
 - Beheer je Nextcloud / ownCloud **takenlijsten** (**Nextcloud-taken** of **Tasks Plus** / **Calendar Plus**) of gebruik een andere **CalDAV-server** om uw taken mee te synchroniseren
-- Optional **encryption** of notes (AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
+- Optioneel **encryption** van opmerkingen (AES-256 is ingebouwd of u kunt aangepaste versleutelingsmethoden gebruiken zoals **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) of **PGP** ([encryptie-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
 - **Thema-ondersteuning voor donkere modus**
 - **Theming support**  voor de **markdown syntaxisaccentuering **
 - Alle **panelen kunnen worden geplaatst waar u maar wilt**, ze kunnen zelfs **zweven** of **stapelen** (volledig dockbaar)
@@ -172,10 +172,10 @@ Join our [Telegram Group](https://t.me/QOwnNotes) to discuss, learn, and connect
 - Ondersteuning voor **het delen van notities** op uw **ownCloud** / **Nextcloud** -server
 - **Portable mode** om QOwnNotes mee te nemen op USB-sticks
 - **Vim mode**
-- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
+- **Distraction free mode**, **Full-screen mode** en **Typewriter mode**
 - **Evernote import**
-- ** Beschikbaar in veel verschillende talen ** zoals Engels, Duits, Frans, Pools, Chinees, Japans, Russisch, Portugees, Hongaars, Nederlands en Spaans
-  - [Your help](../contributing/translation.md) wordt zeer op prijs gesteld om deze vertalingen te verbeteren of om QOwnNotes in meer talen te vertalen
+- **Beschikbaar in veel verschillende talen** zoals Engels, Duits, Frans, Pools, Chinees, Japans, Russisch, Portugees, Hongaars, Nederlands en Spaans
+  - [Uw hulp](../contributing/translation.md) wordt zeer op prijs gesteld om deze vertalingen te verbeteren of om QOwnNotes in meer talen te vertalen
 
 <style>
 .sheet {

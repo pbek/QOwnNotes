@@ -37,6 +37,6 @@ Voer dan dit uit:
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-If you get unicode errors about specific notes, just remove each note and run the conversion again until it gives a message saying `Saving...` . You will have a file called `EXPORT.enex` which can then be imported into QOwnNotes.
+Als u unicode-fouten krijgt over specifieke opmerkingen, verwijdert u gewoon elke notitie en voert u de conversie opnieuw uit totdat er een bericht verschijnt met de melding `Saving...`. Je hebt een bestand met de naam `EXPORT.enex` dat vervolgens kan worden geïmporteerd in QOwnNotes.
 
-During the import into QOwnNotes you might uncheck all of the attributes to import except maybe the creation/modification date, since Tomboy does not have those features.
+Tijdens het importeren in QOwnNotes kunt u alle te importeren attributen uitschakelen, behalve misschien de aanmaak- / wijzigingsdatum, aangezien Tomboy deze functies niet heeft.
