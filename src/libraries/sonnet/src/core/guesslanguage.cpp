@@ -895,17 +895,28 @@ QString GuessLanguagePrivate::guessFromDictionaries(const QString &sentence,
     QMap<QString, int> correctHits;
 
     WordTokenizer tokenizer(sentence);
-    while (tokenizer.hasNext()) {
-        QStringRef word = tokenizer.next();
-        if (!tokenizer.isSpellcheckable()) {
-            continue;
-        }
+    int maxCorrect = tokenizer.count() % 2 == 0 ? tokenizer.count() / 2 : tokenizer.count() / 2 + 1;
+    int count = 0;
+    for (int i = 0; i < spellers.count(); ++i) {
+        const auto& speller = spellers[i];
+        const QString language = speller->language();
+        while (tokenizer.hasNext()) {
+            QStringRef word = tokenizer.next();
+            if (!tokenizer.isSpellcheckable()) {
+                continue;
+            }
 
-        for (int i = 0; i < spellers.count(); ++i) {
-            if (spellers[i]->isCorrect(word.toString())) {
-                correctHits[spellers[i]->language()]++;
+            if (speller->isCorrect(word.toString())) {
+                correctHits[language]++;
+                count++;
+                if (count >= maxCorrect)
+                    break;
             }
         }
+        if (count >= maxCorrect)
+            break;
+        count = 0;
+        tokenizer.reset();
     }
 
     if (correctHits.isEmpty()) {

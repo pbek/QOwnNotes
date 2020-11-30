@@ -110,6 +110,8 @@ public:
 
     /** If ignore uppercase is true, then any word containing only uppercase letters will be considered unsuitable for spell check */
     void setIgnoreUppercase(bool val);
+    int count() const;
+    void reset();
 private:
     bool isUppercase(const QStringRef &word) const;
     BreakTokenizerPrivate *const d;
