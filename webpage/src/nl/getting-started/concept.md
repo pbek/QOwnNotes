@@ -73,7 +73,7 @@ Om online met uw notities te werken, kunt u servers zoals [Nextcloud](https://ne
 U kunt uw eigen server hosten of gehoste oplossingen gebruiken.
 
 ::: tip
-Natuurlijk kunnen ook andere oplossingen, zoals ** Dropbox **, ** Syncthing **, ** Seafile ** of BitTorrent Sync worden gebruikt om uw notities en andere bestanden te hosten
+Natuurlijk kunnen ook andere oplossingen, zoals **Dropbox**, **Syncthing**, **Seafile** of BitTorrent Sync worden gebruikt om uw notities en andere bestanden te hosten
 
 ## QOwnNotesAPI Nextcloud app
 
@@ -108,7 +108,7 @@ U kunt ook een synchronisatietool zoals *Synchronize Ultimate* of *FolderSync* g
 - [CloudNotes for iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (3rd party)
 
 ::: tip
-U kunt ook [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) gebruiken en uw notities synchroniseren via WebDAV, er is een goede tutorial op [ Notities maken met Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks):::
+U kunt ook [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) gebruiken en uw notities synchroniseren via WebDAV, er is een goede tutorial op [Notities maken met Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks):::
 
 ## api.qownnotes.org
 
@@ -116,7 +116,7 @@ Dit is een online service die wordt aangeboden door QOwnNotes om te controleren 
 
 Het praat met GitHub en controleert op de laatste uitgave, krijgt een geschikte download-url en compileert de veranderingen uit het changelog vergeleken met de versie van QOwnNotes die je momenteel gebruikt als html om te tonen in het update-dialoogvenster.
 
-Daarnaast biedt het ook de [ Release RSS Feed ](http://api.qownnotes.org/rss/app-releases) en een implementatie van de legacy update-check api voor oudere versies van QOwnNotes.
+Daarnaast biedt het ook de [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) en een implementatie van de legacy update-check api voor oudere versies van QOwnNotes.
 
 :: tip Je hebt toegang tot de broncode voor [ api.qownnotes.org ](https://api.qownnotes.org)op[GitHub](https://github.com/qownnotes/api).
 :::

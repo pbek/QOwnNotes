@@ -6,7 +6,7 @@ image: /img/bookmarks.png
 
 ![bookmarks](/img/bookmarks.png)
 
-Bezoek de [ Chrome Web Store ](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) van de [ Firefox Add-ons-pagina](https: // add- ons. mozilla.org/firefox/addon/qownnotes-web-companion) op de [**QOwnNotes Web Companion browser extension**](https://github.com/qownnotes/web-companion/).
+Bezoekt u het [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) of de [Firefox Add-ons page ](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) om de [**QOwnNotes Web Companion browser extension**](https://github.com/qownnotes/web-companion/) te installeren.
 
 U kunt de extensie ook vinden op [ GitHub ](https://github.com/qownnotes/web-companion/).
 

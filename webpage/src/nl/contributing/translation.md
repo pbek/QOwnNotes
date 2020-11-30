@@ -20,7 +20,7 @@ Als u nieuwe vertalingen aan bestaande talen wilt toevoegen, kunt u dit meteen d
 
 ## Proeflezen
 
-Als u een zeer goede spreker bent van een reeds vertaalde taal die nog niet is nagelezen, dan zijn wij u dankbaar voor uw hulp om de QOwnNotes-ervaring betrouwbaarder en gemakkelijker te maken.
+If you are a very good speaker of an already translated language that has not been proofread yet, we are grateful for your help making the QOwnNotes experience more reliable and convenient.
 
 Klik hier om te zien of uw taal een van de vertaalde talen is!
 
@@ -52,7 +52,7 @@ Overweeg een paar dingen terwijl u aan het project werkt:
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-6) De `%1` -tags moeten zonder spatie worden geschreven, in LTR-talen kunt u de tags van het origineel invoegen of ze in uw vertaling schrijven.
+6) The `%1` tags need to be written without a space, in RTL languages you can either insert the tags from the original or write them into your translation.
 
    ![screenshot](/img/crowdin/screenshot-1.png)
 

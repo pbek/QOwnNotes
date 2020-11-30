@@ -250,9 +250,9 @@ ___
 
 ## Zeilenumbrüche
 
-- ** Mit zwei Zeilenumbrüchen ** erhalten Sie einen ** neuen Absatz **.
-- ** Mit einer neuen Zeile ** erhalten Sie eine ** neue Zeile im selben Absatz **.
-- Um einen Zeilenumbruch ** ohne Absatz ** zu erzielen, müssen Sie ** zwei nachgestellte Leerzeichen ** verwenden.
+- **Mit zwei Zeilenumbrüchen** erhalten Sie einen **neuen Absatz**.
+- **Mit einer neuen Zeile** erhalten Sie eine **neue Zeile im selben Absatz**.
+- Um einen Zeilenumbruch **ohne Absatz** zu erzielen, müssen Sie **zwei nachgestellte Leerzeichen** verwenden.
 
 ```markdown
 Hier ist eine Zeile, mit der wir beginnen sollten.
@@ -292,7 +292,7 @@ Sie können Kontrollkästchen in der Vorschau aktivieren / deaktivieren.
 
 ## Inhaltsübersicht
 
-In QOwnNotes können Sie eine Frontmatter (z.B. YAML) verwenden, um zusätzliche Metainformationen hinzuzufügen. Es wird ** nicht in der Vorschau angezeigt ** und ** stört die automatische Generierung von Notizendateinamen ** nicht.
+In QOwnNotes können Sie eine Frontmatter (z.B. YAML) verwenden, um zusätzliche Metainformationen hinzuzufügen. Es wird **nicht in der Vorschau angezeigt** und **stört die automatische Generierung von Notizendateinamen** nicht.
 
 ```markdown
 ---

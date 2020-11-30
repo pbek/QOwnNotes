@@ -2,7 +2,7 @@
 
 ## Linux / Windows
 
-### In the main window
+### In het hoofdvenster
 
 - <kbd>Ctrl</kbd> + <kbd>N</kbd> maakt een nieuwe notitie met de huidige datum en tijd in de naam
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> maakt een nieuwe notitie op een nieuw tabblad
@@ -32,7 +32,7 @@
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> opent de instellingen
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> voegt een nieuwe tag toe aan een notitie
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> laadt de huidige notitiemap opnieuw
-- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> lets you select a different note folder
+- <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> laat je een andere notitiemap selecteren
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> herlaadt de script-engine
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> verbergt of toont de hoofdmenubalk
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> laat je zoeken naar acties
@@ -78,9 +78,9 @@
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> maakt de geselecteerde tekst cursief
 - <kbd>Ctrl</kbd> + <kbd>U</kbd> formatteert de geselecteerde tekst onderstreept
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
-- <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> doorloopt de gevallen van de geselecteerde tekst
+- <kbd>Tab</kbd> laat de geselecteerde tekst inspringen (werkt ook op meerdere regels)
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> laat de geselecteerde tekst ongedaan maken
 - <kbd>Tab</kbd> na een ongeordend lijstteken laat het lijstitem inspringen
     - <kbd>⇧</kbd> + <kbd>Tab</kbd>  nadat een ongeordend lijstteken de inspringing van het lijstitem ongedaan heeft gemaakt
 - <kbd>Return</kbd> in lijsten maakt een nieuw lijstitem aan
@@ -121,7 +121,7 @@
 - <kbd>⌘</kbd> + <kbd>N</kbd> maakt een nieuwe notitie met de huidige datum en tijd in de naam
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> maakt een nieuwe notitie op een nieuw tabblad
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> laat je zoeken naar notities (in de naam van de notitie en de inhoud ervan)
-- <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search for notes in all tags / subfolders
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> laat je zoeken naar notities in alle tags / submappen
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> schakelt over naar de vorige werkruimte
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> bewerkt een versleutelde notitie
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> verwijdert de huidige notitie

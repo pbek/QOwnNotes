@@ -1,39 +1,39 @@
-# Time formats
+# Tijdformaten
 
 U kunt uw eigen tijdnotatie gebruiken wanneer u de huidige tijd in een notitie invoegt.
 
 ## Uitdrukkingen voor de datum
 
-| Uitdrukking | Output                                                        |
-| ----------- | ------------------------------------------------------------- |
-| `d`         | the day as number without a leading zero (1 to 31)            |
-| `dd`        | the day as number with a leading zero (01 to 31)              |
-| `ddd`       | the abbreviated localized day name (e.g. `Mon` to `Sun`).     |
-| `dddd`      | the long localized day name (e.g. `Monday` to `Sunday`).      |
-| `M`         | the month as number without a leading zero (1-12)             |
-| `MM`        | the month as number with a leading zero (01-12)               |
-| `MMM`       | the abbreviated localized month name (e.g. `Jan` to `Dec`).   |
-| `MMMM`      | the long localized month name (e.g. `January` to `December`). |
-| `yy`        | the year as two digit number (00-99)                          |
-| `yyyy`      | the year as four digit number                                 |
+| Uitdrukking | Output                                                            |
+| ----------- | ----------------------------------------------------------------- |
+| `d`         | de dag als getal zonder voorloopnul (1 tot 31)                    |
+| `dd`        | de dag als nummer met voorloopnul (01 tot 31)                     |
+| `ddd`       | de afgekorte gelokaliseerde dagnaam (bijv.`ma`tot`zo`).           |
+| `dddd`      | de lange gelokaliseerde dagnaam (bijv. `maandag` tot `zondag`).   |
+| `M`         | de maand als getal zonder voorloopnul (1-12)                      |
+| `MM`        | de maand als getal met voorloopnul (01-12)                        |
+| `MMM`       | de afgekorte gelokaliseerde maandnaam (bijv. `jan` tot `dec`).    |
+| `MMMM`      | de lange gelokaliseerde maandnaam (bijv. `januari`tot`december`). |
+| `yy`        | het jaar als tweecijferig nummer (00-99)                          |
+| `yyyy`      | het jaar als viercijferig getal                                   |
 
-## Expressions for the time
+## Uitdrukkingen voor die tijd
 
-| Expression  | Output                                                                |
-| ----------- | --------------------------------------------------------------------- |
-| `h`         | the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display) |
-| `hh`        | the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)  |
-| `H`         | the hour without a leading zero (0 to 23, even with AM/PM display)    |
-| `HH`        | the hour with a leading zero (00 to 23, even with AM/PM display)      |
-| `m`         | the minute without a leading zero (0 to 59)                           |
-| `mm`        | the minute with a leading zero (00 to 59)                             |
-| `s`         | the second without a leading zero (0 to 59)                           |
-| `ss`        | the second with a leading zero (00 to 59)                             |
-| `z`         | the milliseconds without leading zeroes (0 to 999)                    |
-| `zzz`       | the milliseconds with leading zeroes (000 to 999)                     |
-| `AP` or `A` | use AM/PM display. A/AP will be replaced by either `AM` or `PM`.      |
-| `ap` or `a` | use am/pm display. a/ap will be replaced by either `am` or `pm`.      |
-| `t`         | the timezone (for example `CEST`)                                     |
+| Uitdrukking | Uitvoer                                                                   |
+| ----------- | ------------------------------------------------------------------------- |
+| `h`         | het uur zonder voorloopnul (0 tot 23 of 1 tot 12 bij AM / PM-weergave)    |
+| `hh`        | het uur met een voorloopnul (00 tot 23 of 01 tot 12 als AM / PM-weergave) |
+| `H`         | het uur zonder voorloopnul (0 tot 23, zelfs met AM / PM-weergave)         |
+| `HH`        | het uur met een voorloopnul (00 tot 23, zelfs met AM / PM-weergave)       |
+| `m`         | de minuut zonder voorloopnul (0 tot 59)                                   |
+| `mm`        | de minuut met een voorloopnul (00 tot 59)                                 |
+| `s`         | de tweede zonder voorloopnul (0 tot 59)                                   |
+| `ss`        | de tweede met een voorloopnul (00 tot 59)                                 |
+| `z`         | de milliseconden zonder voorloopnullen (0 tot 999)                        |
+| `zzz`       | de milliseconden met voorloopnullen (000 tot 999)                         |
+| `AP` or `A` | gebruik AM / PM-weergave. A/ AP wordt vervangen door `AM` or `PM`.        |
+| `ap` of `a` | gebruik de am/ pm-weergave. a/ap will be replaced by either `am` or `pm`. |
+| `t`         | the timezone (for example `CEST`)                                         |
 
 ## Example format strings
 

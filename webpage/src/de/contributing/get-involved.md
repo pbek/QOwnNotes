@@ -2,10 +2,10 @@
 
 Ihre verschiedenen Möglichkeiten sich an QOwnNotes beteiligen:
 
-- Zeichnen Sie [QOwnNotes auf **GitHub**](https://github.com/pbek/QOwnNotes) mit einem Stern aus
+- Zeichnen Sie [QOwnNotes auf **GitHub**](https://github.com/pbek/QOwnNotes) mit Sternchen aus
 - Treten Sie der Gruppe [**QOwnNotes Telegram**](https://t.me/QOwnNotes) bei
 - Treten Sie dem [**QOwnNotes Matrix** Raum](https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org) bei
-- Join the [**#qownnotes IRC** channel](https://kiwiirc.com/client/irc.freenode.net/#qownnotes) on Freenode
+- Schießen Sie sich dem [**#qownnotes IRC** channel](https://kiwiirc.com/client/irc.freenode.net/#qownnotes) auf Freenode an
 - Treten Sie dem [**qownnotes Gitter** Raum](https://gitter.im/qownnotes/qownnotes) bei
 - Like [QOwnNotes auf **Facebook**](https://www.facebook.com/QOwnNotes/)
 - Folgen Sie [QOwnNotes auf **Twitter**](https://twitter.com/QOwnNotes)

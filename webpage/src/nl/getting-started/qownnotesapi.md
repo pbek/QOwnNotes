@@ -3,7 +3,7 @@
 
 ![qownnotesapi](/img/qownnotesapi.png)
 
-[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) kan de **toegang** tot **weggegooide notities** en **notitieversies **voor u afhandelen.
+[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) kan de **toegang** tot **weggegooide notities** en **notitieversies** voor u afhandelen.
 
 U kunt QOwnNotesAPI rechtstreeks inschakelen in uw **Nextcloud** of **ownCloud**-instantie door te zoeken naar `qownnotes` in de **Apps page** op `https://<your-cloud-domain>/settings/apps` van uw server.
 

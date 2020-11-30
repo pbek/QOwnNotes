@@ -134,15 +134,15 @@
 <v-divider />
 
 **Q** für das verwendete [Qt-Framework](https://www.qt.io/)   
-**Eigene**, weil Sie Ihre eigenen Notizen besitzen  
-**Notizen** für die Notizen, die Sie erstellen
+**Own**, weil Sie Ihre eigenen Notizen besitzen  
+**Notes** für die Notizen, die Sie erstellen
 
 <v-divider />
 
 [QOwnNotes](https://www.qownnotes.org/) ist die **Open Source** (GPL) -Nur-Text-Datei-**Markdown-Notizanwendung** für **GNU/ Linux**, **Mac OS X** und **Windows**, die (optional) mit der [**Notizenanwendung**](https://github.com/nextcloud/notes) von [Nextcloud](https://nextcloud.com/) und [ownCloud](https://owncloud.org/) zusammenarbeitet.
 
 ::: tip
-Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes)  bei, um zu diskutieren, zu lernen und sich mit der QOwnNotes-Community zu verbinden.
+Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutieren, zu lernen und sich mit der QOwnNotes-Community zu verbinden.
 :::
 
 [Verstehen Sie das Konzept von QOwnNotes](concept.md)
@@ -153,7 +153,7 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes)  bei, um zu diskuti
 - Sie können Ihre **vorhandenen Text- oder Markdown-Dateien** verwenden, ohne dass ein Import erforderlich ist
 - **Die Suche nach Teilzeichenfolgen** von Notizen ist möglich, und die Suchergebnisse werden in den Notizen hervorgehoben
 - **Tastaturkürzel** können angepasst werden
-- **Skriptunterstützung** und ein Online-Skript-Repository[****](https://github.com/qownnotes/scripts), in dem Sie Skripte in der Anwendung installieren können
+- **Skriptunterstützung** und ein [**Online-Skript-Repository**](https://github.com/qownnotes/scripts), in dem Sie Skripte in der Anwendung installieren können
 - [Browser-Erweiterung](browser-extension.md), um Notizen aus dem ausgewählten Text hinzuzufügen, Screenshots zu erstellen oder Ihre Lesezeichen zu verwalten
 - **Externe Änderungen** von Notizdateien werden **überwacht** (Notizen oder Notizliste werden neu geladen)
 - Ältere **Versionen** Ihrer Notizen können von Ihrem **Nextcloud / ownCloud **Server** wiederhergestellt werden**

@@ -61,7 +61,7 @@ Weitere Informationen finden Sie unter [QOwnNotes Web Companion-Browsererweiteru
 **Synchronisieren Sie Ihre Notizen** mit anderen Geräten (Desktop & Mobile) mit Ihrer [Nextcloud](https://nextcloud.com/) oder [ownCloud](https://owncloud.org/) Client mit Ihrem Server synchronisieren.
 
 ::: tip
-Natürlich können auch andere Lösungen wie **Dropbox**, **Syncthing**, **Seafile** oder BitTorrent Sync verwendet werden auch, um Ihre Notizen und andere Dateien zu synchronisieren.
+Natürlich können auch andere Lösungen wie **Dropbox**, **Syncthing**, **Seafile** oder BitTorrent Sync verwendet werden, um Ihre Notizen und andere Dateien zu synchronisieren.
 
 Sie können auch **git** verwenden, um mit Tools wie [gitomatic](https://github.com/muesli/gitomatic/) zu synchronisieren.
 :::
@@ -73,7 +73,7 @@ Um online mit Ihren Notizen zu arbeiten, können Sie Server wie [Nextcloud](http
 Sie können Ihren eigenen Server hosten oder gehostete Lösungen verwenden.
 
 ::: tip
-Natürlich können auch andere Lösungen wie **Dropbox**, **Syncthing**, **Seafile** oder BitTorrent Sync verwendet werden auch, um Ihre Notizen und andere Dateien zu hosten
+Natürlich können auch andere Lösungen wie **Dropbox**, **Syncthing**, **Seafile** oder BitTorrent Sync verwendet werden, um Ihre Notizen und andere Dateien zu hosten
 :::
 
 ## QOwnNotesAPI Nextcloud app

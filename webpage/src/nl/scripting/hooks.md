@@ -1,4 +1,4 @@
-# Haken
+# Hooks
 
 onNoteStored
 ------------
@@ -76,11 +76,11 @@ Als deze functie in meerdere scripts is gedefinieerd, wint het eerste script dat
 ### Methodeaanroep en parameters
 ```js
 /**
- * @param fileName string the file path of the source attachment file before it was copied to the attachment folder
- * @param markdownText string the markdown text of the attachment file, e.g. [my-file.txt](attachments/my-file-4245650967.txt)
- * @return string the new markdown text of the attachment file
- */
-function insertAttachmentHook(fileName, markdownText);
+  * @param fileName string het bestandspad van het bronbijlagebestand voordat het naar de bijlagemap werd gekopieerd
+  * @param markdownText string de markdown-tekst van het bijlagebestand, bijv. [mijn-bestand.txt] (bijlagen / mijn-bestand-4245650967.txt)
+  * @return string de nieuwe markdown-tekst van het bijlagebestand
+  */
+functie insertAttachmentHook (bestandsnaam, markdownText);
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [ voorbeeld.qml ](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).
@@ -90,13 +90,13 @@ insertingFromMimeDataHook
 
 ### Methodeaanroep en parameters
 ```js
-/ **
+/**
   * Deze functie wordt aangeroepen wanneer html of een mediabestand in een notitie wordt geplakt met `Ctrl + Shift + V`
   *
   * @ parametertekst tekst van het QMimeData-object
   * @param html html van het QMimeData-object
   * @ retourneert de tekenreeks die moet worden ingevoegd in plaats van de tekst uit het QMimeData-object
-  * /
+  */
 functie insertingFromMimeDataHook (tekst, html);
 ```
 
@@ -108,20 +108,20 @@ handleNoteTextFileNameHook
 ### Methodeaanroep en parameters
 ```js
 /**
- * This function is called when a note gets stored to disk if
- * "Allow note file name to be different from headline" is enabled
- * in the settings
+  * Deze functie wordt aangeroepen wanneer een notitie op schijf wordt opgeslagen als
+  * "Toestaan dat de naam van het notitiebestand anders is dan de kop" is ingeschakeld
+  * in de instellingen
+  *
+  * Hiermee kunt u de naam van het notitiebestand wijzigen
+  * Houd er rekening mee dat u zelf voor dubbele namen moet zorgen!
  *
- * It allows you to modify the name of the note file
- * Keep in mind that you have to care about duplicate names yourself!
- *
- * Return an empty string if the file name of the note should
- * not be modified
- *
- * @param {NoteApi} note - the note object of the stored note
- * @return {string} the file name of the note
- */
-function handleNoteTextFileNameHook(note);
+  * Retourneer een lege tekenreeks als de bestandsnaam van de notitie zou moeten
+  * niet worden gewijzigd
+  *
+  * @param {NoteApi} note - het notitieobject van de opgeslagen notitie
+  * @return {string} de bestandsnaam van de notitie
+  */
+functie handleNoteTextFileNameHook (opmerking);
 ```
 
 Misschien wilt u het voorbeeld eens bekijken [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml) of [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
@@ -175,7 +175,7 @@ preNoteToMarkdownHtmlHook
 
 ### Methodeaanroep en parameters
 ```js
-/ **
+/**
   * Deze functie wordt aangeroepen voordat de markdown-html van een notitie wordt gegenereerd
   *
   * Hiermee kunt u wijzigen wat wordt doorgegeven aan de markdown naar html-converter
@@ -189,7 +189,7 @@ preNoteToMarkdownHtmlHook
   * @param {string} markdown - de markdown die op het punt staat te worden omgezet naar html
   * @param {string} forExport - true als de html wordt gebruikt voor een export, false voor de preview
   * @return {string} de gewijzigde markdown of een lege string als er niets gewijzigd mag worden
-  * /
+  */
 functie preNoteToMarkdownHtmlHook (note, markdown, forExport);
 ```
 
@@ -200,7 +200,7 @@ noteToMarkdownHtmlHook
 
 ### Methodeaanroep en parameters
 ```js
-/ **
+/**
   * Deze functie wordt aangeroepen wanneer de markdown-html van een notitie wordt gegenereerd
   *
   * Hiermee kunt u deze html wijzigen
@@ -212,7 +212,7 @@ noteToMarkdownHtmlHook
   * @param {string} html - de html die op het punt staat te worden weergegeven
   * @param {string} forExport - true als de html wordt gebruikt voor een export, false voor de preview
   * @return {string} de gewijzigde html of een lege string als er niets gewijzigd mag worden
-  * /
+  */
 functie noteToMarkdownHtmlHook (opmerking, html, forExport);
 ```
 
@@ -225,14 +225,14 @@ encryptionHook
 
 ### Methodeaanroep en parameters
 ```js
-/ **
+/**
   * Deze functie wordt aangeroepen wanneer tekst moet worden gecodeerd of gedecodeerd
   *
   * @param text string de tekst die moet worden versleuteld of ontsleuteld
   * @param wachtwoord tekenreeks het wachtwoord
   * @param decrypt bool als valse codering vereist is, als echte decodering vereist is
   * @return de versleutelde ontsleutelde tekst
-  * /
+  */
 functie encryptionHook (tekst, wachtwoord, decoderen);
 ```
 
@@ -274,7 +274,7 @@ functie noteTaggingHook (note, action, tagName, newTagName);
     -   het bulksgewijs verwijderen van tags uit notities in de notitielijst zal die tags uit uw notities verwijderen
     -   de applicatie activeert een reeks `toevoegen` en `verwijderen` acties voor alle geselecteerde tags en hun kinderen op alle notities als tags worden verplaatst in het tagpaneel
 
-Misschien wil je het voorbeeld [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) bekijken om je eigen tagging-mechanisme te implementeren.
+Vielleicht möchten Sie sich das Beispiel ansehen [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/note-tagging.qml) um Ihren eigenen Tagging-Mechanismus zu implementieren.
 
 ::: warning
 Zorg ervoor dat uw `lijst` -actie echt snel is, want deze wordt voor elke notitie uitgevoerd telkens wanneer de notitiemap opnieuw wordt geladen!
@@ -315,12 +315,12 @@ U kunt een lijst met tekenreeksen retourneren die aan de autocomplete-lijst moet
 
 ### Methodeaanroep en parameters
 ```js
-/ **
+/**
   * Roept de functie autocompletionHook aan voor alle scriptcomponenten
   * Deze functie wordt aangeroepen wanneer automatische aanvulling wordt aangeroepen in een notitie
   *
   * @return QStringLijst met tekst voor de autocomplete lijst
-  * /
+  */
 functie callAutocompletionHook ();
 ```
 
@@ -331,7 +331,7 @@ websocketRawDataHook
 
 Deze hook wordt aangeroepen wanneer gegevens worden verzonden vanuit de QOwnNotes Web Companion-browserextensie via het contextmenu van de webbrowser.
 
-### Method call and parameters
+### Methodeaanroep en parameters
 ```js
 / **
   * @param requestType kan "pagina" of "selectie" zijn
@@ -358,7 +358,7 @@ Deze hook wordt aangeroepen wanneer een scriptthread van [startDetachedProcess](
 ```js
 /**
   * Deze functie wordt aangeroepen wanneer een scriptthread klaar is met uitvoeren.
- * Hint: thread [1] == 0 helpt om te bepalen of een groot deel van de gestarte processen voor een bepaalde identifier is voltooid.
+ * Hint: thread [1]==0 helpt om te bepalen of een groot deel van de gestarte processen voor een bepaalde identifier is voltooid.
  *
   * @param {QString} callbackIdentifier - de opgegeven id bij het aanroepen van startDetachedProcess ()
   * @param {QString} resultSet - het resultaat van het proces

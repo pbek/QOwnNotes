@@ -6,7 +6,7 @@ Het starten van een extern programma op de achtergrond
 
 ### Methodeaanroep en parameters
 ```cpp
-/ **
+/**
   * QML-wrapper om een losgekoppeld proces te starten
   *
   * @param executable Pad het pad naar het uitvoerbare bestand
@@ -15,7 +15,7 @@ Het starten van een extern programma op de achtergrond
   * @param callbackParameter een extra parameter voor loops en dergelijke (optioneel)
   * @param processData-gegevens die naar het proces worden geschreven als de callback wordt gebruikt (optioneel)
   * @return true bij succes, anders false
-  * /
+  */
 bool startDetachedProcess (QString executablePath, QStringList parameters,
                              QString callbackIdentifier, QVariant callbackParameter,
                              QByteArray processData);
@@ -57,7 +57,7 @@ Start een extern programma en wacht op de uitvoer
 
 ### Methodeaanroep en parameters
 ```cpp
-/ **
+/**
   * QML-wrapper om een synchroon proces te starten
   *
   * @param executable Pad het pad naar het uitvoerbare bestand
@@ -203,14 +203,14 @@ Misschien wilt u het voorbeeld eens bekijken [scribble.qml](https://github.com/p
 Het notitievoorbeeld opnieuw genereren
 -----------------------------
 
-Refreshes the note preview.
+Vernieuwt het notitievoorbeeld.
 
 ### Methodeaanroep en parameters
 ```cpp
-/ **
+/**
   * Genereert het notitievoorbeeld opnieuw
-  * /
-QString ScriptingService :: regenerateNotePreview ();
+  */
+QString ScriptingService::regenerateNotePreview();
 ```
 
 ### Voorbeeld
@@ -304,12 +304,12 @@ De tekst van een geregistreerd label instellen
 
 ### Methodeaanroep en parameters
 ```cpp
-/ **
+/**
   * Stelt de tekst van een geregistreerd label in
   *
   * @param identifier de identifier van het label
   * @param tekst de tekst die in het label wordt weergegeven
-  * /
+  */
 void ScriptingService :: setLabelText (QString-ID, QString-tekst);
 ```
 
@@ -327,11 +327,11 @@ Een nieuwe notitie maken
 
 ### Methodeaanroep en parameters
 ```cpp
-/ **
+/**
   * Maakt een nieuwe notitie
   *
   * @param sms de notitietekst
-  * /
+  */
 void ScriptingService :: createNote (QString-tekst);
 ```
 
@@ -423,7 +423,7 @@ leegte ScriptingService :: noteTextEditSelectAll ();
 script.noteTextEditSelectAll();
 ```
 
-You can use this together with `noteTextEditWrite` to overwrite the whole text of the current note.
+U kunt dit samen met `noteTextEditWrite` gebruiken om de hele tekst van de huidige notitie te overschrijven.
 
 Selecteer de huidige regel in de tekstbewerking van de notitie
 ---------------------------------------------
@@ -552,7 +552,7 @@ int ScriptingService::noteTextEditCursorPosition();
 script.log(script.noteTextEditCursorPosition());
 ```
 
-Read the current word from the note text edit
+Lees het huidige woord uit de tekst van de notitie
 ---------------------------------------------
 
 ### Methodeaanroep en parameters
@@ -836,7 +836,7 @@ Naar een notitie springen
   *
   * @param note Note Api-notitie om naar te springen
   */
-void ScriptingService :: setCurrentNote (NoteApi * note);
+void ScriptingService::setCurrentNote(NoteApi *note);
 ```
 
 ### Voorbeeld
@@ -852,13 +852,13 @@ Springen naar een submap van een notitie
 
 ### Methodeaanroep en parameters
 ```cpp
-/ **
+/**
   * Springt naar een submap voor notities
   *
   * @param noteSubFolderPath {QString} pad van de submap, relatief aan de notitiemap
   * @param scheidingsteken {QString} scheidingsteken tussen delen van het pad, standaard "/"
   * @return waar als de sprong succesvol was
-  * /
+  */
 bool ScriptingService :: jumpToNoteSubFolder (const QString & amp; noteSubFolderPath,
                                              QString-scheidingsteken);
 ```
@@ -953,7 +953,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 ```
 
-Showing a save file dialog
+Een zekere bestandsdialoog weergeven
 --------------------------
 
 ### Methodeaanroep en parameters
@@ -1050,15 +1050,15 @@ eigenschapsvariantinstellingen Variabelen: [
 ];
 ```
 
-In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+Bovendien kun je de `settingsVariables` overschrijven met een speciale functie `registerSettingsVariables()` zoals deze:
 
 ### Voorbeeld
 ```js
 /**
- * Registers the settings variables again
- *
- * Use this method if you want to use code to override your variables, like setting
- * default values depended on the operating system.
+  * Registreert de instellingsvariabelen opnieuw
+  *
+  * Gebruik deze methode als u code wilt gebruiken om uw variabelen te overschrijven, zoals instelling
+  * standaardwaarden zijn afhankelijk van het besturingssysteem.
  */
 function registerSettingsVariables() {
     if (script.platformIsWindows()) {
@@ -1070,7 +1070,7 @@ function registerSettingsVariables() {
 
 Misschien wilt u het voorbeeld eens bekijken [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
 
-Storing and loading persistent variables
+Persistente variabelen opslaan en laden
 ----------------------------------------
 
 ### Methodeaanroep en parameters
@@ -1133,7 +1133,7 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 ```
 
-Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` wordt alleen gebruikt als de instelling helemaal niet bestaat.
+Houd er rekening mee dat instellingen eigenlijk leeg kunnen zijn, daar moet u zelf voor zorgen. `defaultValue` wordt alleen gebruikt als de instelling helemaal niet bestaat.
 
 Een cachemap maken
 --------------------------
@@ -1179,7 +1179,7 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const;
 script.clearCacheDir("my-script-id");
 ```
 
-Reading the path to the directory of your script
+Het pad naar de directory van uw script lezen
 ------------------------------------------------
 
 Als u het pad naar de directory waar uw script is geplaatst, nodig heeft om bijvoorbeeld andere bestanden te laden, moet u een `property string scriptDirPath;` registreren. Deze eigenschap wordt ingesteld met het pad naar de directory van het script.
@@ -1413,12 +1413,12 @@ Tekst uit een bestand lezen
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Read text from a file
- *
- * @param filePath {QString} path of the file to load
- * @param codec {QString} file encoding (default: UTF-8)
- * @return the file data or null if the file does not exist
- */
+  * Lees tekst uit een bestand
+  *
+  * @param filePath {QString} pad van het te laden bestand
+  * @param codec {QString} bestandscodering (standaard: UTF-8)
+  * @return de bestandsgegevens of null als het bestand niet bestaat
+  */
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 

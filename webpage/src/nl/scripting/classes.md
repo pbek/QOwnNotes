@@ -33,14 +33,14 @@ U kunt de methoden van [Datum](https://developer.mozilla.org/en-US/docs/Web/Java
 
 ### Voorbeeld
 ```js
-script.log(note.fileCreated.toISOString());
-script.log(note.fileLastModified.getFullYear());
+script.log (note.fileCreated.toISOString());
+script.log (note.fileLastModified.getFullYear());
 
-// renames a note to "new name.md"
-note.renameNoteFile("new name");
+// hernoemt een notitie naar "nieuwe naam.md"
+note.renameNoteFile ("nieuwe naam");
 
-// check if it is allowed to have a different note file name than the headline
-script.log(note.allowDifferentFileName());
+// controleer of het is toegestaan om een andere notitiebestandsnaam te hebben dan de kop
+script.log (note.allowDifferentFileName());
 ```
 
 NoteSubFolder
@@ -59,17 +59,17 @@ class NoteSubFolderApi {
 
 ### Voorbeeld
 ```js
-script.log(noteSubFolder.id);
-script.log(noteSubFolder.name);
+script.log (noteSubFolder.id);
+script.log (noteSubFolder.name);
 
-// iterate through notes in note subfolder
-for (var idx in noteSubFolder.notes) {
-    var note = noteSubFolder.notes[idx];
+// doorloop notities in de submap van notities
+voor (var idx in noteSubFolder.notes) {
+     var note = noteSubFolder.notes [idx];
 }
 
-// print all subfolder names
-noteSubFolder.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
-    script.log(nsf.name);
+// print alle submapnamen
+noteSubFolder.fetchNoteSubFoldersByParentId (parentId) .forEach (function (nsf) {
+     script.log (nsf.name);
 });
 ```
 
@@ -78,12 +78,12 @@ Tag
 
 ### Eigenschappen en methoden
 ```cpp
-class TagApi {
-    Q_PROPERTY(int id)
-    Q_PROPERTY(QString name)
-    Q_PROPERTY(int parentId)
-    Q_INVOKABLE TagApi fetchByName(const QString &name, int parentId = 0)
-    Q_INVOKABLE QStringList getParentTagNames()
+klasse TagApi {
+     Q_PROPERTY (int id)
+     Q_PROPERTY (QString-naam)
+     Q_PROPERTY (int parentId)
+     Q_INVOKABLE TagApi fetchByName (const QString &name, int parentId = 0)
+     Q_INVOKABLE QStringList getParentTagNames ()
 };
 ```
 
@@ -92,32 +92,32 @@ MainWindow
 
 ### Eigenschappen en methoden
 ```cpp
-class MainWindow {
-    Q_INVOKABLE void reloadTagTree();
-    Q_INVOKABLE void reloadNoteSubFolderTree();
-    Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
-            bool forceBuild = false, bool forceLoad = false);
-    Q_INVOKABLE void focusNoteTextEdit();
-    // Creates a new note subfolder in the current subfolder
-    Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
-    // Inserts html in the current note as markdown
-    // This method also downloads remote images and transforms "data:image"
-    // urls to local images stored in the media directory
-    Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
-    // Reloads the current note by id
-    // This is useful when the path or filename of the current note changed
-    Q_INVOKABLE void reloadCurrentNoteByNoteId();
+klasse MainWindow {
+     Q_INVOKABLE void reloadTagTree ();
+     Q_INVOKABLE void reloadNoteSubFolderTree ();
+     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList (
+             bool forceBuild = false, bool forceLoad = false);
+     Q_INVOKABLE void focusNoteTextEdit();
+     // Maakt een nieuwe submap voor notities in de huidige submap
+     Q_INVOKABLE bool createNewNoteSubFolder (QString folderName = "");
+     // Voegt html in de huidige notitie in als markdown
+     // Deze methode downloadt ook externe afbeeldingen en transformeert "data: image"
+     // urls naar lokale afbeeldingen die zijn opgeslagen in de mediamap
+     Q_INVOKABLE ongeldig insertHtmlAsMarkdownIntoCurrentNote (QString html);
+     // Laadt de huidige notitie opnieuw op id
+     // Dit is handig wanneer het pad of de bestandsnaam van de huidige notitie is gewijzigd
+     Q_INVOKABLE leegtevoid reloadCurrentNoteByNoteId ();
 };
 ```
 
 ### Voorbeeld
 ```js
-// Force a reload of the note list
+// Forceer een herladen van de notitielijst
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
+// Creëert een nieuwe notitie submap "Mijn mooie map" in de huidige submap
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserts html in the current note as markdown
+// Voegt html in de huidige notitie in als markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 ```
