@@ -6728,8 +6728,11 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
     const QTextBlock &currentTextBlock =
         noteTextEdit->cursorForPosition(pos).block();
     const int userState = currentTextBlock.userState();
+    const bool isCodeSpan = ui->noteTextEdit->highlighter()->isPosInACodeSpan(currentTextBlock.blockNumber(),
+                                                                              noteTextEdit->cursorForPosition(pos).positionInBlock());
+
     copyCodeBlockAction->setEnabled(
-        MarkdownHighlighter::isCodeBlock(userState));
+        MarkdownHighlighter::isCodeBlock(userState) || isCodeSpan);
 
     menu->addSeparator();
 
@@ -6842,7 +6845,15 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
         } else if (selectedItem == copyCodeBlockAction) {
             // copy the text from a copy block around currentTextBlock to the
             // clipboard
-            Utils::Gui::copyCodeBlockText(currentTextBlock);
+            if (isCodeSpan) {
+                const auto codeSpanRange = ui->noteTextEdit->highlighter()->getSpanRange(MarkdownHighlighter::RangeType::CodeSpan,
+                                                                                         currentTextBlock.blockNumber(),
+                                                                                         noteTextEdit->cursorForPosition(pos).positionInBlock());
+                QApplication::clipboard()->setText(currentTextBlock.text().mid(codeSpanRange.first + 1,
+                                                                               codeSpanRange.second - codeSpanRange.first - 1));
+            } else {
+                Utils::Gui::copyCodeBlockText(currentTextBlock);
+            }
         }
     }
 }
