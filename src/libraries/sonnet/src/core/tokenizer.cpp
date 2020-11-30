@@ -54,6 +54,10 @@ public:
     void invalidate();
     void shiftBreaks(int from, int offset);
     void replace(int pos, int len, const QString &newWord);
+    void reset()
+    {
+        itemPosition = -1;
+    }
 
     QStringRef currentItem() const;
 
@@ -224,6 +228,16 @@ bool WordTokenizer::isUppercase(const QStringRef &word) const
 void WordTokenizer::setIgnoreUppercase(bool val)
 {
     d->ignoreUppercase = val;
+}
+
+int WordTokenizer::count() const
+{
+    return d->breaks().size();
+}
+
+void WordTokenizer::reset()
+{
+    d->reset();
 }
 
 void WordTokenizer::replace(int pos, int len, const QString &newWord)
