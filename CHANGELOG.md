@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 20.12.0
+- you can now also copy in-line code blocks in the note text edit with the context menu
+  (for [#1967](https://github.com/pbek/QOwnNotes/issues/1967), thank you @fnkabit)
 - improved spellcheck auto-detection performance (for [#1969](https://github.com/pbek/QOwnNotes/pull/1969), thank you @Waqar144)
 - added more Persian, Urdu (Pakistan), Portuguese, Brazilian translation (thank you amirkbrpr, Farhan1985, danilosf)
 
