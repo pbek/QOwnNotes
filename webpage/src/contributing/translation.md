@@ -23,7 +23,7 @@ If you want to add new translations to existing languages you can do so right aw
 
 ## Proofreading
 
-If you are a very good speaker of an already translated language that has not be proofread yet, we are grateful for your help making the QOwnNotes experience more reliable and convenient.
+If you are a very good speaker of an already translated language that has not been proofread yet, we are grateful for your help making the QOwnNotes experience more reliable and convenient.
 
 Click here to see if your language is among the translated ones! 
 
@@ -56,7 +56,7 @@ Please consider a few things while working on the project:
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-6) The `%1` tags need to be written without a space, in LTR languages you can either insert the tags
+6) The `%1` tags need to be written without a space, in RTL languages you can either insert the tags
     from the original or write them into your translation.
 
    ![screenshot](/img/crowdin/screenshot-1.png)
