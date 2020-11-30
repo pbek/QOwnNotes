@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
-## 20.11.12
+## 20.12.0
+- improved spellcheck auto-detection performance (for [#1969](https://github.com/pbek/QOwnNotes/pull/1969), thank you @Waqar144)
 - added more Persian, Urdu (Pakistan) translation (thank you amirkbrpr, Farhan1985)
 
 ## 20.11.11
