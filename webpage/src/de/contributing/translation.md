@@ -20,7 +20,7 @@ Wenn Sie vorhandene Sprachen um neue Übersetzungen erweitern möchten, können 
 
 ## Korrekturlesen
 
-Wenn Sie ein sehr guter Benutzer einer bereits übersetzten Sprache sind, die noch nicht Korrektur gelesen wurde, sind wir dankbar für Ihre Hilfe, damit die QOwnNotes-Erfahrung für Sie und andere User zuverlässiger wird.
+Wenn Sie ein sehr guter Benutzer einer bereits übersetzten Sprache sind, die noch nicht Korrektur gelesen wurde, sind wir dankbar für Ihre Mithilfe, um das QOwnNotes-Erlebnis zuverlässiger und komfortabler zu machen.
 
 Klicken Sie hier, um zu sehen, ob Ihre Sprache zu den bereits übersetzten gehört!
 
@@ -70,4 +70,4 @@ Sie setzen sich mit der Sprache auseinander, die diese Software spricht, und ler
 
 Wenn Sie also bereit sind, beim Korrekturlesen der Übersetzung Ihrer Sprache zu helfen, begrüßt Sie [Amy Lang](https://crowdin.com/profile/rawfreeamy) als Übersetzerin mit über zehn Jahren Erfahrung zu einem kurzen Coaching in der Praxis und der Welt des Übersetzens und Korrekturlesens. Sie steht bei Fragen gerne bereit und lässt Sie das Beste aus Ihrer Erfahrung mit der QOwnNotes-Übersetzung herausholen.
 
-Vielen dank für Ihre Hilfe!
+Vielen Dank für Ihre Hilfe!

@@ -58,7 +58,7 @@ Weitere Informationen finden Sie unter [QOwnNotes Web Companion-Browsererweiteru
 
 ## Nextcloud Desktop Sync Client
 
-**Synchronisieren Sie Ihre Notizen** mit anderen Geräten (Desktop & Mobile) mit Ihrer [Nextcloud](https://nextcloud.com/) oder [ownCloud](https://owncloud.org/) Client mit Ihrem Server synchronisieren.
+**Synchronisieren Sie Ihre Notizen** mit anderen Geräten (Desktop & Mobile) mittels Ihres [Nextcloud](https://nextcloud.com/) oder [ownCloud](https://owncloud.org/) Sync-Clients für Ihren Server.
 
 ::: tip
 Natürlich können auch andere Lösungen wie **Dropbox**, **Syncthing**, **Seafile** oder BitTorrent Sync verwendet werden, um Ihre Notizen und andere Dateien zu synchronisieren.
