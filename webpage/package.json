@@ -21,10 +21,10 @@
     "markdown-it": "^12.0.1",
     "markdown-it-meta": "^0.0.1",
     "vuepress": "^1.6.0",
+    "vuepress-plugin-feed": "^0.1.8",
     "vuepress-plugin-matomo": "^1.0.2",
     "vuepress-plugin-mermaidjs": "^1.8.0",
     "vuepress-plugin-seo": "^0.1.4",
-    "vuepress-plugin-feed": "^0.1.8",
     "vuepress-plugin-sitemap": "^2.3.1"
   },
   "dependencies": {
