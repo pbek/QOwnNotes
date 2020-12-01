@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.12.1
+- the `fileCreated` date will now also be set for new note before the note folder
+  is reloaded (for [#117](https://github.com/qownnotes/scripts/issues/117))
+
 ## 20.12.0
 - you can now also copy in-line code blocks in the note text edit with the context menu
   (for [#1967](https://github.com/pbek/QOwnNotes/issues/1967), thank you @fnkabit)

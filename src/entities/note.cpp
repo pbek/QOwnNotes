@@ -1362,7 +1362,7 @@ bool Note::storeNoteTextFileToDisk() {
     this->_hasDirtyData = false;
     this->_fileLastModified = QDateTime::currentDateTime();
 
-    if (!fileExists) {
+    if (!fileExists || !this->_fileCreated.isValid()) {
         this->_fileCreated = this->_fileLastModified;
     }
 
