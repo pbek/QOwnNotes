@@ -1,6 +1,9 @@
 # Donate
 
-If you like QOwnNotes and want to **donate** to the project feel free to do so.
+QOwnNotes doesn't generate any revenue (non-profit).
+
+If you like QOwnNotes and want to **donate** to the project to help paying for
+hosting, domain, etc. feel free to do so.
 
 ## PayPal
 
