@@ -59,7 +59,7 @@ jobs:
       matrix:
         # Ubuntu 16.04 because of https://github.com/probonopd/linuxdeployqt/issues/340
         # Ubuntu 18.04 because of samuelmeuli/action-snapcraft
-        os: [ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-16.04, ubuntu-18.04, macos-latest, windows-latest]
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
@@ -68,8 +68,6 @@ jobs:
           - os: ubuntu-16.04
             qt-version: '5.13.2'
           - os: ubuntu-18.04
-            qt-version: '5.13.2'
-          - os: ubuntu-latest
             qt-version: '5.13.2'
           - os: macos-latest
             qt-version: '5.13.2'
