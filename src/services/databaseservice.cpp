@@ -841,6 +841,16 @@ bool DatabaseService::setupTables() {
         version = 34;
     }
 
+    if (version < 35) {
+        // migrate setting with typo
+        settings.setValue(
+            QStringLiteral("Editor/removeTrailingSpaces"),
+            settings.value(QStringLiteral("Editor/removeTrainingSpaces")).toBool());
+        settings.remove(QStringLiteral("Editor/removeTrainingSpaces"));
+
+        version = 35;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"),
                    QString::number(version));

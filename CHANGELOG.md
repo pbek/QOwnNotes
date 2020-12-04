@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 20.12.2
+- setting `Editor/removeTrainingSpaces` with typo was migrated to `Editor/removeTrailingSpaces`
+
 ## 20.12.1
 - the `fileCreated` date will now also be set for new notes before the note folder
   is reloaded (for [#117](https://github.com/qownnotes/scripts/issues/117))

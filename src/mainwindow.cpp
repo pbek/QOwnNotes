@@ -2982,7 +2982,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
 
         if (currentNoteChanged) {
             // strip trailing spaces of the current note (if enabled)
-            if (QSettings().value(QStringLiteral("Editor/removeTrainingSpaces"))
+            if (QSettings().value(QStringLiteral("Editor/removeTrailingSpaces"))
                     .toBool()) {
                 const bool wasStripped = currentNote.stripTrailingSpaces(
                     activeNoteTextEdit()->textCursor().position());

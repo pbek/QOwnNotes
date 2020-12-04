@@ -755,8 +755,8 @@ void SettingsDialog::storeSettings() {
                       ui->autoBracketClosingCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/autoBracketRemoval"),
                       ui->autoBracketRemovalCheckBox->isChecked());
-    settings.setValue(QStringLiteral("Editor/removeTrainingSpaces"),
-                      ui->removeTrainingSpacesCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/removeTrailingSpaces"),
+                      ui->removeTrailingSpacesCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/highlightCurrentLine"),
                       ui->highlightCurrentLineCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/editorWidthInDFMOnly"),
@@ -1146,8 +1146,8 @@ void SettingsDialog::readSettings() {
     ui->autoBracketRemovalCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/autoBracketRemoval"), true)
             .toBool());
-    ui->removeTrainingSpacesCheckBox->setChecked(
-        settings.value(QStringLiteral("Editor/removeTrainingSpaces")).toBool());
+    ui->removeTrailingSpacesCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/removeTrailingSpaces")).toBool());
     ui->highlightCurrentLineCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/highlightCurrentLine"), true)
             .toBool());

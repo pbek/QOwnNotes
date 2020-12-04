@@ -5210,7 +5210,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="8" column="0" colspan="4">
-                 <widget class="QCheckBox" name="removeTrainingSpacesCheckBox">
+                 <widget class="QCheckBox" name="removeTrailingSpacesCheckBox">
                   <property name="text">
                    <string>Automatically remove trailing spaces in the note text</string>
                   </property>
