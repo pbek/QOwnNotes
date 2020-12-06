@@ -1,7 +1,9 @@
 # QOwnNotes Changelog
 
 ## 20.12.2
-- setting `Editor/removeTrainingSpaces` with typo was migrated to `Editor/removeTrailingSpaces`
+- the macOS and AppImage releases of QOwnNotes are now built with Qt 5.15.2
+  (for [#1972](https://github.com/pbek/QOwnNotes/issues/1972))
+- the setting `Editor/removeTrainingSpaces` with a typo was migrated to `Editor/removeTrailingSpaces`
 
 ## 20.12.1
 - the `fileCreated` date will now also be set for new notes before the note folder
