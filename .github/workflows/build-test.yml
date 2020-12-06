@@ -67,10 +67,6 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: true
-    - id: files
-      uses: jitterbit/get-changed-files@v1
-      with:
-        format: 'csv'
     - if: contains( matrix.os, 'macos')
       name: Install bash 5.0 under macOS for mapfile
       run: |
@@ -80,15 +76,7 @@ jobs:
       name: Check if we want to build QOwnNotes
       shell: bash
       run: |
-        unset DO_BUILD
-        mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
-        for changed_file in "${added_modified_files[@]}"; do
-          if [[ ${changed_file} = src* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
-          then
-            echo "'${changed_file}' matches, we will build"
-            DO_BUILD='true'
-          fi
-        done
+        DO_BUILD='true'
         echo "DO_BUILD: ${DO_BUILD}"
         echo ::set-output name=DO_BUILD::${DO_BUILD}
 
