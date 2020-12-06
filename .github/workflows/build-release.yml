@@ -203,7 +203,7 @@ jobs:
         #copy ..\..\Qt\5.13.2\mingw73_64\bin\libstdc++-6.dll .
         # for some reason AppVeyor or windeployqt uses a copy of the German
         # translation file as English one, which screws up the English user interface
-        del translations\qt_en.qm
+        #del translations\qt_en.qm
         Compress-Archive -Path * -DestinationPath ..\QOwnNotes.zip
 
     #
