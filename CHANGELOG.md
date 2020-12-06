@@ -3,6 +3,8 @@
 ## 20.12.2
 - the macOS and AppImage releases of QOwnNotes are now built with Qt 5.15.2
   (for [#1972](https://github.com/pbek/QOwnNotes/issues/1972))
+- the Windows releases of QOwnNotes are now built with Qt 5.15.2, please report
+  any troubles (for [#1976](https://github.com/pbek/QOwnNotes/issues/1976))
 - the setting `Editor/removeTrainingSpaces` with a typo was migrated to `Editor/removeTrailingSpaces`
 
 ## 20.12.1
