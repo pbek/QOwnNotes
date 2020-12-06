@@ -179,5 +179,5 @@ jobs:
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.13.2' ) && steps.changes.outputs.DO_BUILD
       uses: actions/upload-artifact@v2
       with:
-        name: QOwnNotes
+        name: QOwnNotes-Windows
         path: QOwnNotes.zip

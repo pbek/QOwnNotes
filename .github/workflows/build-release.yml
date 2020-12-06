@@ -172,8 +172,7 @@ jobs:
 
     - if: contains( matrix.os, 'windows')
       name: Build for Windows
-      run: |
-        .\scripts\github\windows-build-zip.ps1
+      run: '& ..\build-systems\github\windows\windows-build-zip.ps1'
 
     #
     # Release QOwnNotes
