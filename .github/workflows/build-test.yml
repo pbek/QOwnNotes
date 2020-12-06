@@ -175,7 +175,7 @@ jobs:
 
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.13.2' ) && steps.changes.outputs.DO_BUILD
       name: Build QOwnNotes Windows Release
-      run: & ..\build-systems\github\windows\windows-build-zip.ps1
+      run: '& ..\build-systems\github\windows\windows-build-zip.ps1'
     - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.13.2' ) && steps.changes.outputs.DO_BUILD
       uses: actions/upload-artifact@v2
       with:
