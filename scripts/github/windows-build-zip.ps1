@@ -1,5 +1,5 @@
 ##################################################################################
-# This script build QOwnNotes and creates a ZIP including all necessary libraries
+# This script builds QOwnNotes and creates a ZIP including all necessary libraries
 ##################################################################################
 
 #dir -s ..\..\Qt
