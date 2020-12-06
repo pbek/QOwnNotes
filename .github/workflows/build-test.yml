@@ -20,11 +20,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [windows-latest]
+#        os: [ubuntu-latest, macos-latest, windows-latest]
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
-        qt-version: ['5.3', '5.4', '5.7', '5.13.2', '5.14.2', '5.15.2']
+        qt-version: ['5.15.2']
+#        qt-version: ['5.3', '5.4', '5.7', '5.13.2', '5.14.2', '5.15.2']
         experimental: [false]
         exclude:
           # xcode not found
@@ -173,10 +175,10 @@ jobs:
       # Build QOwnNotes Windows Release and store it as artifact
       #
 
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.13.2' ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ) && steps.changes.outputs.DO_BUILD
       name: Build QOwnNotes Windows Release
       run: '& ..\build-systems\github\windows\windows-build-zip.ps1'
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.13.2' ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ) && steps.changes.outputs.DO_BUILD
       uses: actions/upload-artifact@v2
       with:
         name: QOwnNotes-Windows
