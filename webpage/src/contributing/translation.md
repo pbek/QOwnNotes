@@ -16,7 +16,7 @@ You can sign up at [Crowdin](https://crowdin.com/project/qownnotes/invite) and
 
 **[QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/invite)**
 
-Just drop me a message on Crowdin or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues)
+Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues)
 if you want to translate QOwnNotes to a new language.
 
 If you want to add new translations to existing languages you can do so right away.
@@ -29,7 +29,7 @@ Click here to see if your language is among the translated ones!
 
 [QOwnNotes on Crowdin](https://translate.qownnotes.org/)
 
-Once you’ve contacted the project owner [GitHub issue](https://github.com/pbek/QOwnNotes/issues) and received permission to proofread in your language, you’re ready to go!
+Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
 
 Please consider a few things while working on the project:
 
@@ -46,7 +46,7 @@ Please consider a few things while working on the project:
 
    ![screenshot](/img/crowdin/screenshot-7.png)
 
-   In order to find all the identical expressions, search Crowdin and see all the occurences of one term
+   In order to find all the identical expressions, search Crowdin and see all the occurrences of one term
 
    Standardize all occurrences as good as you can, so that identical terms get identical translations.
 
