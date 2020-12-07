@@ -81,7 +81,7 @@ jobs:
         unset DO_BUILD
         mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
         for changed_file in "${added_modified_files[@]}"; do
-          if [[ ${changed_file} = src* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
+          if [[ ${changed_file} = src* ]] || ${changed_file} = "build-systems/github/*" ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
           then
             echo "'${changed_file}' matches, we will build"
             DO_BUILD='true'
@@ -164,7 +164,7 @@ jobs:
       # Build QOwnNotes
       #
 
-    - if: steps.changes.outputs.DO_BUILD && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.13.2' ))
+    - if: steps.changes.outputs.DO_BUILD && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ))
       name: Build QOwnNotes
       run: |
         lrelease QOwnNotes.pro && qmake && make
@@ -173,10 +173,10 @@ jobs:
       # Build QOwnNotes Windows Release and store it as artifact
       #
 
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.13.2' ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ) && steps.changes.outputs.DO_BUILD
       name: Build QOwnNotes Windows Release
-      run: '& ..\build-systems\github\windows\windows-build-zip.ps1'
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.13.2' ) && steps.changes.outputs.DO_BUILD
+      run: '& ..\build-systems\github\windows\build-zip.ps1'
+    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ) && steps.changes.outputs.DO_BUILD
       uses: actions/upload-artifact@v2
       with:
         name: QOwnNotes-Windows

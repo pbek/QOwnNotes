@@ -63,16 +63,16 @@ jobs:
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
-        qt-version: ['5.13.2', '5.15.2']
-        exclude:
-          - os: ubuntu-16.04
-            qt-version: '5.13.2'
-          - os: ubuntu-18.04
-            qt-version: '5.13.2'
-          - os: macos-latest
-            qt-version: '5.13.2'
-          - os: windows-latest
-            qt-version: '5.15.2'
+        qt-version: ['5.15.2']
+#        exclude:
+#          - os: ubuntu-16.04
+#            qt-version: '5.13.2'
+#          - os: ubuntu-18.04
+#            qt-version: '5.13.2'
+#          - os: macos-latest
+#            qt-version: '5.13.2'
+#          - os: windows-latest
+#            qt-version: '5.15.2'
     steps:
     - uses: actions/checkout@v2	
       with:	
@@ -172,7 +172,7 @@ jobs:
 
     - if: contains( matrix.os, 'windows')
       name: Build for Windows
-      run: '& ..\build-systems\github\windows\windows-build-zip.ps1'
+      run: '& ..\build-systems\github\windows\build-zip.ps1'
 
     #
     # Release QOwnNotes
