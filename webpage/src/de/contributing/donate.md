@@ -1,6 +1,8 @@
 # Spenden
 
-Wenn Sie QOwnNotes mögen und für das Projekt **spenden** möchten, können Sie dies hier gerne tun.
+QOwnNotes generiert keine Einnahmen (gemeinnützig).
+
+Wenn Sie QOwnNotes mögen und für das Projekt zur Finanzierung von Hosting, Domäne usw. **spenden** möchten , können Sie dies hier gerne tun.
 
 ## PayPal
 

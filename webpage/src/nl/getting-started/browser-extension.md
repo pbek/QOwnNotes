@@ -12,7 +12,7 @@ U kunt de extensie ook vinden op [ GitHub ](https://github.com/qownnotes/web-com
 
 ## Webclipper
 
-Klik met de rechtermuisknop op een webpagina of geselecteerde tekst om de **webclipper** -functionaliteit te gebruiken. Daar kunt u ook een nieuwe maken met een ** screenshot ** van de huidige webpagina.
+Klik met de rechtermuisknop op een webpagina of geselecteerde tekst om de **webclipper** -functionaliteit te gebruiken. There you can also create a new note with a **screenshot** of the current webpage.
 
 ::: tip
 De webclipper is ook scriptbaar! Bekijk de [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) als je wilt bepalen wat je van webpagina's knipt.

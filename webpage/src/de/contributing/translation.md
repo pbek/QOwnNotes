@@ -14,7 +14,7 @@ Sie können sich unter [Crowdin](https://crowdin.com/project/qownnotes/invite) u
 
 **[QOwnNotes auf Crowdin](screenshot)**
 
-Schreiben Sie mir einfach eine Nachricht auf Crowdin oder als [GitHub-Problem,](https://github.com/pbek/QOwnNotes/issues) wenn Sie QOwnNotes in eine neue Sprache übersetzen möchten.
+Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) if you want to translate QOwnNotes to a new language.
 
 Wenn Sie vorhandene Sprachen um neue Übersetzungen erweitern möchten, können Sie dies sofort tun.
 
@@ -26,7 +26,7 @@ Klicken Sie hier, um zu sehen, ob Ihre Sprache zu den bereits übersetzten gehö
 
 [QOwnNotes auf Crowdin](screenshot)
 
-Sobald Sie den Projektbesitzer hier: [GitHub-Probleme](https://github.com/pbek/QOwnNotes/issues) kontaktiert und die Erlaubnis zum Korrekturlesen in Ihrer Sprache erhalten haben, können Sie starten!
+Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
 
 Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt:
 
@@ -42,7 +42,7 @@ Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt:
 
    ![screenshot](/img/crowdin/screenshot-7.png)
 
-   Um alle identischen Ausdrücke zu finden, durchsuchen Sie Crowdin und sehen Sie alle Vorkommen eines Begriffs
+   In order to find all the identical expressions, search Crowdin and see all the occurrences of one term
 
    Standardisieren Sie alle Vorkommen so gut wie möglich, damit identische Begriffe identische Übersetzungen erhalten.
 

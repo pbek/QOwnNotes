@@ -14,7 +14,7 @@ U kunt zich aanmelden bij [Crowdin](https://crowdin.com/project/qownnotes/invite
 
 **[QOwnNotes op Crowdin](https://crowdin.com/project/qownnotes/invite)**
 
-Stuur me gewoon een bericht op Crowdin of als een [GitHub-probleem](https://github.com/pbek/QOwnNotes/issues) als je QOwnNotes naar een nieuwe taal wilt vertalen.
+Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) if you want to translate QOwnNotes to a new language.
 
 Als u nieuwe vertalingen aan bestaande talen wilt toevoegen, kunt u dit meteen doen.
 
@@ -26,7 +26,7 @@ Klik hier om te zien of uw taal een van de vertaalde talen is!
 
 [QOwnNotes op Crowdin](https://translate.qownnotes.org/)
 
-Zodra u contact heeft opgenomen met de projecteigenaar [GitHub-probleem](https://github.com/pbek/QOwnNotes/issues) en toestemming heeft gekregen om in uw taal te proeflezen, bent u klaar om te beginnen!
+Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
 
 Overweeg een paar dingen terwijl u aan het project werkt:
 
@@ -42,7 +42,7 @@ Overweeg een paar dingen terwijl u aan het project werkt:
 
    ![screenshot](/img/crowdin/screenshot-7.png)
 
-   Om alle identieke uitdrukkingen te vinden, zoekt u in Crowdin en ziet u alle gevallen van één term
+   In order to find all the identical expressions, search Crowdin and see all the occurrences of one term
 
    Standaardiseer alle exemplaren zo goed mogelijk, zodat identieke termen identieke vertalingen krijgen.
 

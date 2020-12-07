@@ -12,7 +12,7 @@ Sie finden die Erweiterung auch unter [GitHub](https://github.com/qownnotes/web-
 
 ## Web clipper
 
-Klicken Sie mit der rechten Maustaste auf eine Webseite oder einen ausgewählten Text, um die Funktion **Web-Clipper** zu verwenden. Dort können Sie auch einen neuen mit einem **Screenshot** der aktuellen Webseite erstellen.
+Klicken Sie mit der rechten Maustaste auf eine Webseite oder einen ausgewählten Text, um die Funktion **Web-Clipper** zu verwenden. There you can also create a new note with a **screenshot** of the current webpage.
 
 ::: tip
 Der Web Clipper ist auch skriptfähig! Schauen Sie sich den [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) an, wenn Sie steuern möchten, was Sie von Webseiten ausschneiden.
