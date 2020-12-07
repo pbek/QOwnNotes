@@ -1029,7 +1029,7 @@
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
       <translation>
-        <numerusform>％n 行 ％1 了 ％2 次。</numerusform>
+        <numerusform>%n 行 %1e 了%2 次。</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2760,22 +2760,22 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3430"/>
       <source>Removed duplicate conflicted database: %1</source>
-      <translation>已删除重复的冲突数据库：％1</translation>
+      <translation>删除重复的冲突数据库：%1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3431"/>
       <source>Could not remove duplicate conflicted database: %1</source>
-      <translation>无法删除重复的冲突数据库：％1</translation>
+      <translation>无法删除重复的冲突数据库： %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3437"/>
       <source>Removed merged conflicted database: %1</source>
-      <translation>已删除已合并的冲突数据库：％1</translation>
+      <translation>已删除已合并的冲突数据库：%1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3438"/>
       <source>Could not remove merged conflicted database: %1</source>
-      <translation>无法删除已合并的冲突数据库：％1</translation>
+      <translation>无法删除已合并的冲突数据库：%1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3453"/>
@@ -2973,7 +2973,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5729"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
-        <numerusform>发现任何 &lt;strong&gt;％1&lt;/strong&gt; 出现  &lt;strong&gt;％n&lt;/strong&gt; 次</numerusform>
+        <numerusform>发现任何 &lt;strong&gt;%1&lt;/strong&gt; 出现  &lt;strong&gt;%n&lt;/strong&gt; 次</numerusform>
       </translation>
     </message>
     <message>
@@ -2985,7 +2985,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6307"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>找不到笔记，是否要创建新笔记 &lt;strong&gt;％1&lt;/strong&gt;？</translation>
+      <translation>找不到笔记，是否要创建新笔记 &lt;strong&gt;%1&lt;/strong&gt;？</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6311"/>
@@ -3129,12 +3129,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8873"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation>从当前笔记中删除标签 '％1'</translation>
+      <translation>从当前笔记中删除标签 '%1'</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8874"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation>从所选笔记中删除标签 '％1'</translation>
+      <translation>从所选笔记中删除标签 '%1'</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9105"/>
@@ -3832,12 +3832,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2307"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt;最后编辑时间: %2</translation>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;最后编辑时间: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2312"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation>&lt; br / &gt; 路径： %1</translation>
+      <translation>&lt;br /&gt; 路径： %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2514"/>
@@ -3898,7 +3898,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5725"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
-        <numerusform>找到 &lt;strong&gt;％n&lt;/ strong&gt; 个 &lt;strong&gt;％1&lt;/ strong&gt; </numerusform>
+        <numerusform>找到 &lt;strong&gt;%n&lt;/strong&gt; 个 &lt;strong&gt;%1&lt;/strong&gt; </numerusform>
       </translation>
     </message>
     <message>
@@ -4229,7 +4229,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1201"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation>ownCloud 服务器错误: &lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt;请检查你的ownCloud配置。</translation>
+      <translation>ownCloud 服务器错误: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;请检查你的ownCloud配置。</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1221"/>
@@ -4372,7 +4372,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../entities/note.cpp" line="3212"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation>
-        <numerusform>检测到笔记路径已更改。 您是否要用 &lt;strong&gt;％2&lt;/ strong&gt; 替换所有出现的&lt;strong&gt;％1&lt;/strong&gt; 链接 ，并在 &lt;strong&gt;％n&lt;/strong&gt; 个笔记文件中用 &lt;strong&gt;％4&lt;/strong&gt; 替换文件名为 &lt;strong&gt;％3&lt;/strong&gt; 的链接 ？</numerusform>
+        <numerusform>检测到笔记路径已更改。 您是否要用 &lt;strong&gt;%2&lt;/strong&gt; 替换所有出现的&lt;strong&gt;%1&lt;/strong&gt; 链接 ，并在 &lt;strong&gt;%n&lt;/strong&gt; 个笔记文件中用 &lt;strong&gt;%4&lt;/strong&gt; 替换文件名为 &lt;strong&gt;%3&lt;/strong&gt; 的链接 ？</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -4421,7 +4421,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/git.cpp" line="77"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation>命令 &lt;code&gt;％1&lt;/code&gt; 失败！</translation>
+      <translation>命令 &lt;code&gt;%1&lt;/code&gt; 失败！</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4227"/>
@@ -4457,12 +4457,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notesubfolder.cpp" line="551"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
-      <translation>无法创建名称为&lt;b&gt;％1 &lt;/b&gt;的文件夹，因为该文件夹在应用程序内部使用！</translation>
+      <translation>无法创建名称为&lt;b&gt;%1&lt;/b&gt;的文件夹，因为该文件夹在应用程序内部使用！</translation>
     </message>
     <message>
       <location filename="../entities/notesubfolder.cpp" line="576"/>
       <source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
-      <translation>无法创建名称为&lt;b&gt;％1&lt;/b&gt;的文件夹，因为该文件夹位于忽略的子文件夹列表中！ 您可以在&lt;i&gt;面板设置&lt;/i&gt;中进行更改。</translation>
+      <translation>无法创建名称为&lt;b&gt;%1&lt;/b&gt;的文件夹，因为该文件夹位于忽略的子文件夹列表中！ 您可以在&lt;i&gt;面板设置&lt;/i&gt;中进行更改。</translation>
     </message>
   </context>
   <context>
@@ -4470,7 +4470,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="604"/>
       <source>No suggestions for %1</source>
-      <translation>没有 ％1 的建议</translation>
+      <translation>没有 %1 的建议</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="616"/>
@@ -4697,7 +4697,7 @@ Are the folder and the file writeable?</source>
       <location filename="../services/databaseservice.cpp" line="880"/>
       <source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-      <translation>无法与笔记文件夹数据库建立数据库连接以合并'％1'。
+      <translation>无法与笔记文件夹数据库建立数据库连接以合并'%1'。
 文件夹和文件是否可写？</translation>
     </message>
   </context>
@@ -7220,7 +7220,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1795"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation>&lt;strong&gt;％1&lt;/strong&gt; 快捷键已分配给&lt;strong&gt;％2&lt;/strong&gt; ！ 您要跳到该快捷键吗？</translation>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt; 快捷键已分配给&lt;strong&gt;%2&lt;/strong&gt; ！ 您要跳到该快捷键吗？</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2981"/>
@@ -8081,7 +8081,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation>删除已回收的笔记失败，状态码为 ％1</translation>
+      <translation>删除已删除的便笺失败，状态码为%1</translation>
     </message>
   </context>
   <context>
@@ -8288,7 +8288,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/updateservice.cpp" line="256"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation>无可用更新，&lt;br/&gt;&lt;strong&gt;%1&lt;/strong&gt; 是最新版本。</translation>
+      <translation>无可用更新，&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; 是最新版本。</translation>
     </message>
   </context>
   <context>
@@ -8324,17 +8324,17 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="67"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation>QOwnNotes 服务器监听端口 ％1</translation>
+      <translation>QOwnNotes 服务器监听端口 %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="74"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation>无法在端口％1上启动 QOwnNotes 服务器！</translation>
+      <translation>无法在端口 %1上启动 QOwnNotes 服务器！</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="120"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation>％1已连接到 QOwnNotes 服务器！</translation>
+      <translation>%1已连接到 QOwnNotes 服务器！</translation>
     </message>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="238"/>
@@ -8346,7 +8346,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="386"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation>％1已从 QOwnNotes 服务器断开连接</translation>
+      <translation>%1已从 QOwnNotes 服务器断开连接</translation>
     </message>
   </context>
   <context>

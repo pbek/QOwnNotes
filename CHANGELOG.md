@@ -3,6 +3,8 @@
 ## 20.12.3
 - the Windows releases of QOwnNotes are now built with Qt 5.15.2
   (for [#1976](https://github.com/pbek/QOwnNotes/issues/1976))
+- added more Chinese Simplified, Russian translation (thank you unchase,
+  ReverseDmitry, iclementine)
 
 ## 20.12.2
 - the macOS, Snap and AppImage releases of QOwnNotes are now built with Qt 5.15.2
