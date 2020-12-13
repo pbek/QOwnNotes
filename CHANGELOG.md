@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 20.12.5
+- if you are searching for text in the note list now for the search term is also
+  searched again inside the notes when you click on other notes in the the note list
+  (for [#1980](https://github.com/pbek/QOwnNotes/issues/1980))
+
 ## 20.12.4
 - the scripting engine was fixed for Windows 10
   (for [#1979](https://github.com/pbek/QOwnNotes/issues/1979))

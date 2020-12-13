@@ -10294,12 +10294,6 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
 
         return;
     }
-
-    qDebug() << __func__;
-
-    // let's highlight the text from the search line edit and do a "in note
-    // search"
-    searchForSearchLineTextInNoteTextEdit();
 }
 
 void MainWindow::openCurrentNoteInTab() {
@@ -12267,7 +12261,14 @@ void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
     if (ui->noteTreeWidget->selectedItems().size() == 1) {
         int noteId = ui->noteTreeWidget->selectedItems()[0]->data(0, Qt::UserRole).toInt();
         Note note = Note::fetch(noteId);
+        bool currentNoteChanged = currentNote.getId() != noteId;
         setCurrentNote(std::move(note), true, false);
+
+        // let's highlight the text from the search line edit and do a "in note
+        // search" if the current note has changed
+        if (currentNoteChanged) {
+            searchForSearchLineTextInNoteTextEdit();
+        }
     }
 
     // we also need to do this in setCurrentNote because of different timings
