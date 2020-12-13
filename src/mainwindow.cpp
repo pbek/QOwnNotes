@@ -3813,26 +3813,22 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
 
     QSettings settings;
 
-    if (!ui->searchLineEdit->text().isEmpty()) {
-        searchForSearchLineTextInNoteTextEdit();
-    } else {
 #ifdef Q_OS_MAC
-        const bool restoreCursorPositionDefault = false;
+    const bool restoreCursorPositionDefault = false;
 #else
-        const bool restoreCursorPositionDefault = true;
+    const bool restoreCursorPositionDefault = true;
 #endif
 
-        const bool restoreCursorPosition =
-            settings
-                .value(QStringLiteral("restoreCursorPosition"),
-                       restoreCursorPositionDefault)
-                .toBool();
+    const bool restoreCursorPosition =
+        settings
+            .value(QStringLiteral("restoreCursorPosition"),
+                   restoreCursorPositionDefault)
+            .toBool();
 
-        // restore the last position in the note text edit
-        if (restoreCursorPosition) {
-            noteHistory.getLastItemOfNote(note).restoreTextEditPosition(
-                ui->noteTextEdit);
-        }
+    // restore the last position in the note text edit
+    if (restoreCursorPosition) {
+        noteHistory.getLastItemOfNote(note).restoreTextEditPosition(
+            ui->noteTextEdit);
     }
 
     // add new note to history
