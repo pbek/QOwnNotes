@@ -2,7 +2,7 @@
 
 ## 20.12.6
 - different cases in note names for different notes are now prohibited to prevent problems
-  on case-insensitive filesystems, like NFTS (for [#1988](https://github.com/pbek/QOwnNotes/issues/1988))
+  on case-insensitive filesystems, like NTFS (for [#1988](https://github.com/pbek/QOwnNotes/issues/1988))
 
 ## 20.12.5
 - if you are searching for text in the note list now for the search term is also
