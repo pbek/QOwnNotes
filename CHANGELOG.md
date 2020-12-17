@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.12.7
+- now storing notes in different cases is also prohibited to prevent more problems on 
+  case-insensitive filesystems, like NTFS (for [#1988](https://github.com/pbek/QOwnNotes/issues/1988))
+
 ## 20.12.6
 - different cases in note names for different notes are now prohibited to prevent problems
   on case-insensitive filesystems, like NTFS (for [#1988](https://github.com/pbek/QOwnNotes/issues/1988))

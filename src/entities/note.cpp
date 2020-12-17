@@ -1548,19 +1548,23 @@ bool Note::handleNoteTextFileName() {
         qDebug() << __func__ << " - 'name' was changed: " << name;
         QString fileName = generateNoteFileNameFromName(name);
 
-        int nameCount = 0;
-        const QString nameBase = name;
+        // only try to find a new name if the filename in lowercase has changed
+        // to prevent troubles on case-insensitive filesystems like NTFS
+        if (fileName.toLower() != this->_fileName.toLower()) {
+            int nameCount = 0;
+            const QString nameBase = name;
 
-        // check if note with this filename already exists
-        while (Note::fetchByFileName(fileName).isFetched()) {
-            // find new filename for the note
-            name =
-                nameBase + QStringLiteral(" ") + QString::number(++nameCount);
-            fileName = generateNoteFileNameFromName(name);
-            qDebug() << __func__ << " - 'override fileName': " << fileName;
+            // check if note with this filename already exists
+            while (Note::fetchByFileName(fileName).isFetched()) {
+                // find new filename for the note
+                name = nameBase + QStringLiteral(" ") +
+                       QString::number(++nameCount);
+                fileName = generateNoteFileNameFromName(name);
+                qDebug() << __func__ << " - 'override fileName': " << fileName;
 
-            if (nameCount > 1000) {
-                break;
+                if (nameCount > 1000) {
+                    break;
+                }
             }
         }
 

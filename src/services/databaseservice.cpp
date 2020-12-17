@@ -427,7 +427,7 @@ bool DatabaseService::setupTables() {
         QStringLiteral("CREATE TABLE IF NOT EXISTS note ("
                        "id INTEGER PRIMARY KEY,"
                        "name VARCHAR(255) COLLATE NOCASE,"
-                       "file_name VARCHAR(255),"
+                       "file_name VARCHAR(255) COLLATE NOCASE,"
                        "file_size INT64 DEFAULT 0,"
                        "note_sub_folder_id int,"
                        "note_text TEXT,"
