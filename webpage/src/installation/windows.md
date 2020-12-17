@@ -18,7 +18,7 @@ Use `QOwnNotesPortable.bat` to run QOwnNotes in **portable mode** where everythi
 stored in your `QOwnNotes` folder.
 
 ::: tip
-You don't need the portable node if you just don't have Administration permissions
+You don't need the portable mode if you just don't have Administration permissions
 to your computer. QOwnNotes doesn't need to be installed!
 :::
 
