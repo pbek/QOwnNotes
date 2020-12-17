@@ -3,6 +3,8 @@
 ## 20.12.7
 - now storing notes in different cases is also prohibited to prevent more problems on 
   case-insensitive filesystems, like NTFS (for [#1988](https://github.com/pbek/QOwnNotes/issues/1988))
+- added more Slovenian, Ukrainian, Urdu (Pakistan), Polish, Sinhala translation
+  (thank you radovanm, nelkobud, farhan1985, martastan, helabasa)
 
 ## 20.12.6
 - different cases in note names for different notes are now prohibited to prevent problems
