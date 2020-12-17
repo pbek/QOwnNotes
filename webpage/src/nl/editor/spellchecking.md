@@ -39,10 +39,10 @@ Als u uw taal niet in deze tabel kunt vinden, bestaat er helaas geen woordenboek
 | 13 | de        | Duits                        |
 | 14 | el_GR     | Grieks                       |
 | 15 | en        | Engels                       |
-| 16 | es        | Spanish                      |
-| 17 | et_EE     | Estonian                     |
-| 18 | gd_GB     | Gaelic                       |
-| 19 | gl        | Galician                     |
+| 16 | es        | Spaans                       |
+| 17 | et_EE     | Estlands                     |
+| 18 | gd_GB     | Gaelisch                     |
+| 19 | gl        | Galizian                     |
 | 20 | gu_IN     | Gujarati                     |
 | 21 | gug       | Guarani                      |
 | 22 | he_IL     | Hebreeuws                    |
@@ -56,14 +56,14 @@ Als u uw taal niet in deze tabel kunt vinden, bestaat er helaas geen woordenboek
 | 30 | lv_LV     | Lets                         |
 | 31 | ne_NP     | Nepali                       |
 | 32 | nl_NL     | Nederlands                   |
-| 33 | no        | Norwegian                    |
-| 34 | oc_FR     | Occitan                      |
-| 35 | pl_PL     | Polish                       |
+| 33 | no        | Noors                        |
+| 34 | oc_FR     | Occitaans                    |
+| 35 | pl_PL     | Pools                        |
 | 36 | pt_BR     | Braziliaans Portugees        |
-| 37 | pt_PT     | Portuguese                   |
-| 38 | ro        | Romanian                     |
-| 39 | ru_RU     | Russian                      |
-| 40 | si_LK     | Sinhalese                    |
+| 37 | pt_PT     | Portugees                    |
+| 38 | ro        | Roemeens                     |
+| 39 | ru_RU     | Russisch                     |
+| 40 | si_LK     | Singalees                    |
 | 41 | sk_SK     | Slowaaks                     |
 | 42 | Slovenian | Sloveens                     |
 | 43 | sq_AL     | Albanian                     |

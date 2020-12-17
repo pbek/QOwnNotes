@@ -3,11 +3,11 @@
 Wat andere mensen zeiden over QOwnNotes ...
 
 - <http://qownnotes.findmysoft.com/>
-- [Pro-Linux: Informationen zu QOwnNotes](http://www.pro-linux.de/cgi-bin/DBApp/check.cgi?ShowApp..20415.100)
-- [Educators for free and open source resources: Note taking software](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
+- [Pro-Linux: Informatie naar QOwnNotes](http://www.pro-linux.de/cgi-bin/DBApp/check.cgi?ShowApp..20415.100)
+- [Opvoeders voor gratis en open source bronnen: software voor het maken van aantekeningen](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
 - **Linux Voice 25**
     - <http://shop.linuxvoice.com/products/single-issues?src=menu>
-    - [QOwnNotes got featured in Linux Voice 25](https://www.qownnotes.org/blog/2016-03-25-QOwnNotes-got-featured-in-Linux-Voice-25.html)
+    - [QOwnNotes is te zien in Linux Voice 25](https://www.qownnotes.org/blog/2016-03-25-QOwnNotes-got-featured-in-Linux-Voice-25.html)
 - **Linux Action Show 410 / Desktop App Pick**
     - <http://www.jupiterbroadcasting.com/98121/floating-on-owncloud-9-las-410/>
     - <http://jupiterbroadcasting.com/laspicks/desktop-apps.php>

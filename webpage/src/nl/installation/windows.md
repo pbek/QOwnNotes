@@ -13,7 +13,7 @@ U kunt dan direct `QOwnNotes.exe` starten vanuit uw `QOwnNotes` -map, er is geen
 Gebruik `QOwnNotesPortable.bat` om QOwnNotes in **draagbare modus** uit te voeren, waar alles (inclusief uw notities) alleen wordt opgeslagen in uw map `QOwnNotes`.
 
 ::: tip
-U hebt het draagbare knooppunt niet nodig als u gewoon geen beheerdersrechten voor uw computer hebt. QOwnNotes hoeft niet te worden geïnstalleerd!
+You don't need the portable mode if you just don't have Administration permissions to your computer. QOwnNotes hoeft niet te worden geïnstalleerd!
 :::
 
 ## Windows XP

@@ -1,12 +1,12 @@
 # Doneren
 
-QOwnNotes doesn't generate any revenue (non-profit).
+QOwnNotes genereert geen inkomsten (non-profit).
 
-If you like QOwnNotes and want to **donate** to the project to help paying for hosting, domain, etc. feel free to do so.
+Als je QOwnNotes leuk vindt en **wilt doneren** aan het project om te helpen betalen hosting, domein, etc. voel je vrij om dat te doen.
 
 ## PayPal
 
-You can **donate money via PayPal** by clicking this button:
+U kunt **geld doneren via PayPal** door op deze knop te klikken:
 
 <form id="paypal-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_s-xclick">
@@ -18,19 +18,19 @@ You can **donate money via PayPal** by clicking this button:
 
 ## Liberapay
 
-You can **donate money via Liberapay** by clicking this button:
+U kunt **geld doneren via Liberapay** door op deze knop te klikken:
 
-<a href="https://liberapay.com/pbek/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+<a href="https://liberapay.com/pbek/donate"><img alt="Doneer met Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
 ## Bitcoin
 
-You can **donate Bitcoin BTC** to this Bitcoin BTC address:
+U kunt **Bitcoin BTC doneren** aan dit Bitcoin BTC-adres:
 
 ```
 395NiU7QKpNiayWgRrUEGZDn8Z1ebMx8CH
 ```
 
-You can **donate Bitcoin Cash** to this Bitcoin Cash address:
+U kunt **Bitcoin Cash doneren** aan dit Bitcoin Cash-adres:
 
 ```
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
@@ -38,13 +38,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## Etherium
 
-You can **donate Etherium ETH** to this Etherium ETH address:
+U kunt **Etherium ETH doneren** aan dit Etherium ETH-adres:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-You can **donate Etherium ETC** to this Etherium ETC address:
+U kunt **Etherium ETC doneren** aan dit Etherium ETC-adres:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

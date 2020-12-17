@@ -14,19 +14,19 @@ U kunt zich aanmelden bij [Crowdin](https://crowdin.com/project/qownnotes/invite
 
 **[QOwnNotes op Crowdin](https://crowdin.com/project/qownnotes/invite)**
 
-Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) if you want to translate QOwnNotes to a new language.
+[Stuur de projecteigenaar gewoon een bericht op Crowdin](https://crowdin.com/profile/pbek) of als een [GitHub-probleem](https://github.com/pbek/QOwnNotes/issues) als je QOwnNotes naar een nieuwe taal wilt vertalen.
 
 Als u nieuwe vertalingen aan bestaande talen wilt toevoegen, kunt u dit meteen doen.
 
 ## Proeflezen
 
-If you are a very good speaker of an already translated language that has not been proofread yet, we are grateful for your help making the QOwnNotes experience more reliable and convenient.
+Als u een zeer goede spreker bent van een reeds vertaalde taal die nog niet is nagelezen, dan zijn wij u dankbaar voor uw hulp om de QOwnNotes-ervaring betrouwbaarder en gemakkelijker te maken.
 
 Klik hier om te zien of uw taal een van de vertaalde talen is!
 
 [QOwnNotes op Crowdin](https://translate.qownnotes.org/)
 
-Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
+Zodra u [contact heeft opgenomen met de projecteigenaar op Crowdin](https://crowdin.com/profile/pbek) en toestemming heeft gekregen om in uw taal te proeflezen, bent u klaar om te gaan!
 
 Overweeg een paar dingen terwijl u aan het project werkt:
 
@@ -42,7 +42,7 @@ Overweeg een paar dingen terwijl u aan het project werkt:
 
    ![screenshot](/img/crowdin/screenshot-7.png)
 
-   In order to find all the identical expressions, search Crowdin and see all the occurrences of one term
+   Om alle identieke uitdrukkingen te vinden, zoekt u in Crowdin en ziet u alle keren dat een term voorkomt
 
    Standaardiseer alle exemplaren zo goed mogelijk, zodat identieke termen identieke vertalingen krijgen.
 
@@ -52,7 +52,7 @@ Overweeg een paar dingen terwijl u aan het project werkt:
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-6) The `%1` tags need to be written without a space, in RTL languages you can either insert the tags from the original or write them into your translation.
+6) De `%1` -tags moeten zonder spatie worden geschreven, in RTL-talen kunt u de tags van het origineel invoegen of ze in uw vertaling schrijven.
 
    ![screenshot](/img/crowdin/screenshot-1.png)
 

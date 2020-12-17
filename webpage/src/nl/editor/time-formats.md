@@ -4,7 +4,7 @@ U kunt uw eigen tijdnotatie gebruiken wanneer u de huidige tijd in een notitie i
 
 ## Uitdrukkingen voor de datum
 
-| Uitdrukking | Output                                                            |
+| Uitdrukking | Uitvoer                                                           |
 | ----------- | ----------------------------------------------------------------- |
 | `d`         | de dag als getal zonder voorloopnul (1 tot 31)                    |
 | `dd`        | de dag als nummer met voorloopnul (01 tot 31)                     |
@@ -32,12 +32,12 @@ U kunt uw eigen tijdnotatie gebruiken wanneer u de huidige tijd in een notitie i
 | `z`         | de milliseconden zonder voorloopnullen (0 tot 999)                        |
 | `zzz`       | de milliseconden met voorloopnullen (000 tot 999)                         |
 | `AP` or `A` | gebruik AM / PM-weergave. A/ AP wordt vervangen door `AM` or `PM`.        |
-| `ap` of `a` | gebruik de am/ pm-weergave. a/ap will be replaced by either `am` or `pm`. |
+| `ap` of `a` | gebruik de am/ pm-weergave. a/ ap wordt vervangen door `am` or `pm`.      |
 | `t`         | the timezone (for example `CEST`)                                         |
 
-## Example format strings
+## Voorbeeld opmaakstrings
 
-| Format             | Result           |
+| Indeling           | Resultaat        |
 | ------------------ | ---------------- |
 | `dd.MM.yyyy hh:mm` | 21.05.2001 14:13 |
 | `dd.MM.yyyy`       | 21.05.2001       |
@@ -46,9 +46,9 @@ U kunt uw eigen tijdnotatie gebruiken wanneer u de huidige tijd in een notitie i
 | `h:m:s ap`         | 2:13:9 pm        |
 
 ::: tip Info
-Take a look at the [Qt documentation](http://doc.qt.io/qt-5/qdatetime.html#toString) for more information about time formats.
+Bekijk de [Qt-documentatie](http://doc.qt.io/qt-5/qdatetime.html#toString) voor meer informatie over tijdformaten.
 :::
 
 ::: tip
-If you need to make more complex operations to output the current time please consider creating a [custom action](../scripting/methods-and-objects.md#registering-a-custom-action).
+Als u meer complexe bewerkingen moet uitvoeren om de huidige tijd weer te geven, overweeg dan om een [aangepaste actie](../scripting/methods-and-objects.md#registering-a-custom-action) te maken.
 :::
