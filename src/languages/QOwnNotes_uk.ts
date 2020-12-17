@@ -155,7 +155,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
       <source>English (British)</source>
-      <translation>Англійська (англійська)</translation>
+      <translation>Англійська (британська)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
@@ -1050,11 +1050,11 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
-      <translation type="unfinished">
-        <numerusform>%n рядків.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
+      <translation>
+        <numerusform>%n рядок скопійовано до буферу.</numerusform>
+        <numerusform>%n рядки скопійовано до буферу.</numerusform>
+        <numerusform>%n рядків скопійовано до буферу.</numerusform>
+        <numerusform>%n рядків скопійовано до буферу.</numerusform>
       </translation>
     </message>
     <message>
@@ -1452,7 +1452,7 @@
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
       <source>Minimum 8 characters</source>
-      <translation type="unfinished">Minimum 8 characters</translation>
+      <translation>Мінімум 8 символів</translation>
     </message>
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1460,7 +1460,7 @@
       <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
       <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
       <source>Minimum 10 characters</source>
-      <translation type="unfinished">Minimum 10 characters</translation>
+      <translation>Мінімум 10 символів</translation>
     </message>
   </context>
   <context>
@@ -2928,10 +2928,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4675"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>Видалити &lt;strong&gt;%n&lt;/strong&gt; вибраний тег? В цьому процесі нотатки видалятись не будуть.</numerusform>
         <numerusform>Видалити &lt;strong&gt;%n&lt;/strong&gt; вибрані теги? В цьому процесі нотатки видалятись не будуть.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+        <numerusform>Видалити &lt;strong&gt;%n&lt;/strong&gt; вибраних тегів? В цьому процесі нотатки видалятись не будуть.</numerusform>
         <numerusform>Видалити &lt;strong&gt;%n&lt;/strong&gt; вибраних тегів? В цьому процесі нотатки видалятись не будуть.</numerusform>
       </translation>
     </message>
@@ -2944,10 +2944,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4728"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>Перемістити %n вибрану нотатку до &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Перемістити %n вибрані нотатки до &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Перемістити %n вибраних нотаток до &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Перемістити %n вибраних нотаток до &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
@@ -2960,10 +2960,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4834"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>Копіювати %n вибрану нотатку до &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Копіювати %n вибрані нотатки до &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Копіювати %n вибраних нотаток до &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Копіювати %n вибраних нотаток до &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
@@ -2976,10 +2976,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4865"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>%n нотатка скопійована до &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
         <numerusform>%n нотатки було скопійовано до &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n нотаток було скопійовано до &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
         <numerusform>%n нотаток було скопійовано до &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
@@ -2991,10 +2991,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4879"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>Помітити %n вибрану нотатку тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Помітити %n вибрані нотатки тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Помітити %n вибраних нотаток тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Помітити %n вибраних нотаток тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
@@ -3057,17 +3057,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6311"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
+      <translation>Нотатку не знайдено. Створити нову нотатку &lt;strong&gt;%1&lt;/strong&gt; за шляхом &lt;strong&gt;%2&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6356"/>
       <source>Failed to create note</source>
-      <translation type="unfinished">Failed to create note</translation>
+      <translation>Не вдалося створити нотатку</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6357"/>
       <source>Note creation failed</source>
-      <translation type="unfinished">Note creation failed</translation>
+      <translation>Помилка створення нотатки</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6518"/>
@@ -3154,20 +3154,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7617"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>Скопійовано %n нотатку до %1</numerusform>
         <numerusform>Скопійовано %n нотатки до %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+        <numerusform>Скопійовано %n нотаток до %1</numerusform>
         <numerusform>Скопійовано %n нотаток до %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7626"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>Не вдалося скопіювати %n нотатку (скоріше за все вона, вже існує)</numerusform>
         <numerusform>Не вдалося скопіювати %n нотатки (скоріше за все вони(а), вже існують)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+        <numerusform>Не вдалося скопіювати %n нотаток (найімовірніше, вони вже існують)</numerusform>
         <numerusform>Не вдалося скопіювати %n нотаток (скоріше за все вони(а), вже існують)</numerusform>
       </translation>
     </message>
@@ -4029,7 +4029,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6297"/>
       <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-      <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
+      <translation>Не вдалося знайти нотатку.&lt;br /&gt;Неможливо автоматично створити нотатку в цьому місці через вимкнені підтеки для поточної теки нотаток.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6711"/>
@@ -6265,17 +6265,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4330"/>
       <source>Checks the disk database integrity and fixes problems</source>
-      <translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
+      <translation>Перевіряє цілісніть дисковї бази даних та вирішує проблеми</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4333"/>
       <source>Check integrity</source>
-      <translation type="unfinished">Check integrity</translation>
+      <translation>Перевірити цілісність</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4340"/>
       <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
+      <translation>Майте на увазі, що реініціалізація бази даних також видалить кешовані завдання та сконфігурованні теки нотаток та скриптів!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4423"/>
@@ -7323,12 +7323,12 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4298"/>
       <source>The integrity of the disk database is valid.</source>
-      <translation type="unfinished">The integrity of the disk database is valid.</translation>
+      <translation>Дискова база даних є цілісною.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4303"/>
       <source>The integrity of the disk database is not valid!</source>
-      <translation type="unfinished">The integrity of the disk database is not valid!</translation>
+      <translation>Дискова база даних не є цілісною!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2888"/>

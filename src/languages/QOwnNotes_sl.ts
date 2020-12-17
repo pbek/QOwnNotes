@@ -1082,7 +1082,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>Pisavo</translation>
+      <translation>Pisava</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
@@ -1133,7 +1133,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <source>Copy</source>
-      <translation>Izvod</translation>
+      <translation>Kopiraj</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
@@ -1144,7 +1144,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation>Uvoz</translation>
+      <translation>Uvozi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
@@ -1159,7 +1159,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Ospredju:</translation>
+      <translation>Ospredje:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
@@ -1184,7 +1184,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Text preset</source>
-      <translation>Besedilo prednastavitev</translation>
+      <translation>Prednastavitev besedila</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
@@ -1204,7 +1204,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="225"/>
       <source>Header, level 1</source>
-      <translation>Glava, ravni 1</translation>
+      <translation>Glava, raven 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="202"/>
@@ -1214,7 +1214,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>Image</source>
-      <translation>Slike</translation>
+      <translation>Slika</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
@@ -1453,7 +1453,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
       <source>Minimum 8 characters</source>
-      <translation type="unfinished">Minimum 8 characters</translation>
+      <translation>Najmanj 8 znakov</translation>
     </message>
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1461,7 +1461,7 @@ Atributi opombe</translation>
       <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
       <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
       <source>Minimum 10 characters</source>
-      <translation type="unfinished">Minimum 10 characters</translation>
+      <translation>Najmanj 10 znakov</translation>
     </message>
   </context>
   <context>
@@ -1872,7 +1872,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../mainwindow.ui" line="1292"/>
       <source>&amp;Quit</source>
-      <translation>&amp;Nehal</translation>
+      <translation>&amp;Izhod</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1307"/>
@@ -1882,7 +1882,7 @@ Atributi opombe</translation>
     <message>
       <location filename="../mainwindow.ui" line="1316"/>
       <source>&amp;Find note</source>
-      <translation>&amp;Našli opomba</translation>
+      <translation>&amp;Najdi opombo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1328"/>

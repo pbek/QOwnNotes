@@ -640,12 +640,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="152"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>උර්දු</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="153"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>උස්බෙක්</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="154"/>
@@ -660,7 +660,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="156"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>වියට්නාම</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="158"/>
@@ -675,7 +675,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="160"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>සුලූ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="294"/>
@@ -4038,7 +4038,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="71"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>පෙරදසුන</translation>
     </message>
   </context>
   <context>
@@ -4401,7 +4401,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="1543"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>සටහන</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2591"/>
@@ -6117,7 +6117,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2773"/>
       <source>Thai</source>
-      <translation type="unfinished">Thai</translation>
+      <translation>තායි</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2784"/>

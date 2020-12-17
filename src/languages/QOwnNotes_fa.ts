@@ -5498,7 +5498,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4051"/>
       <source>Update dialog</source>
-      <translation>بروزرسانی گفتگو</translation>
+      <translation>بروزرسانی کادر گفتگو</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4131"/>
@@ -6994,7 +6994,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2008"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-      <translation>این باعث می شود دفعه دیگر که گفتگوی انجام دادنی خود را باز می کنید، همه موارد لیست انجام دادنی از سرور شما مجدداً بارگذاری شود.</translation>
+      <translation>این باعث می شود دفعه دیگر که کادر گفتگوی انجام دادنی خود را باز می کنید، همه موارد لیست انجام دادنی از سرور شما مجدداً بارگذاری شود.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2011"/>
@@ -7135,7 +7135,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4057"/>
       <source>Don't show the update dialog automatically</source>
-      <translation>عدم نمایش خودکار گفتگوی بروزرسانی</translation>
+      <translation>عدم نمایش خودکار کادر گفتگوی بروزرسانی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4520"/>
@@ -8375,12 +8375,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="81"/>
       <source>&amp;Disable dialog</source>
-      <translation>&amp;غیرفعال کردن گفتگو</translation>
+      <translation>&amp;غیرفعال کردن کادر گفتگو</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>Don't show this dialog automatically</source>
-      <translation>عدم نمایش خودکار این گفتگو</translation>
+      <translation>عدم نمایش خودکار این کادر گفتگو</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="90"/>
