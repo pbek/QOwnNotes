@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 20.12.8
+- fixed an issue with decrypting notes after encrypting for the first time, but
+  never saving them (for [#1992](https://github.com/pbek/QOwnNotes/issues/1992))
+
 ## 20.12.7
 - now storing notes in different cases is also prohibited to prevent more problems on 
   case-insensitive filesystems, like NTFS (for [#1988](https://github.com/pbek/QOwnNotes/issues/1988))

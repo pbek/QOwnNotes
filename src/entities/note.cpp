@@ -2874,7 +2874,7 @@ QString Note::fetchDecryptedNoteText() const {
     // changed, but not stored yet
     // in that case we want to return the already decrypted text, because that
     // text is the most current one
-    if (_hasDirtyData) {
+    if (_hasDirtyData && !_decryptedNoteText.isEmpty()) {
         return _decryptedNoteText;
     }
 
