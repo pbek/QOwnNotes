@@ -165,7 +165,7 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 - **Markdown highlighting** of notes and a **markdown preview mode**
 - [**Spellchecking**](../editor/spellchecking.md) support
 - **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use an other **CalDAV server** to sync your tasks to
+- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
 - Optional **encryption** of notes (AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
 - **Dark mode theme support**
 - **Theming support** for the **markdown syntax highlighting**

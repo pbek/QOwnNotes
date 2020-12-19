@@ -1054,7 +1054,7 @@ bool Tag::linkToNote(const Note &note) const {
 
     if (!query.exec()) {
         // we should not show this warning, because we don't check if a
-        // link to a note already exists before we try to create an other link
+        // link to a note already exists before we try to create another link
         //        qWarning() << __func__ << ": " << query.lastError();
 
         DatabaseService::closeDatabaseConnection(db, query);

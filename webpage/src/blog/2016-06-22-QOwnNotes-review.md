@@ -36,4 +36,4 @@ This is an extremely full-featured and well thought-out program. It definitely f
 Footnote
 --------
 
-You can see his original post at [GitHub](https://github.com/pbek/QOwnNotes/issues/225) and an other posting on [Reddit](https://www.reddit.com/r/LinuxActionShow/comments/4p6ibh/qownnotes_very_powerful_markdown_editor).
+You can see his original post at [GitHub](https://github.com/pbek/QOwnNotes/issues/225) and another posting on [Reddit](https://www.reddit.com/r/LinuxActionShow/comments/4p6ibh/qownnotes_very_powerful_markdown_editor).

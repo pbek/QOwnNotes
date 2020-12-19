@@ -3163,7 +3163,7 @@ QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl &url) {
     QString path = url.toLocalFile();
     qDebug() << __func__ << " - 'path': " << path;
 
-    // translates the "a path/../an other path" to "an other path"
+    // translates the "a path/../another path" to "another path"
     // needed for Note::fetchByRelativeFilePath!
     const QFileInfo fileInfo(path);
 #ifdef Q_OS_WIN32

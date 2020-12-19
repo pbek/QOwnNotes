@@ -2,7 +2,7 @@ import QtQml 2.0
 import QOwnNotesTypes 1.0
 
 /**
- * This script allows you to configure an external editor (or an other application) that should open
+ * This script allows you to configure an external editor (or another application) that should open
  * a note when it is double clicked in the note list
  */
 Script {
