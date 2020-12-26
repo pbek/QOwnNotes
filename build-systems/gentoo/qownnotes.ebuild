@@ -1,4 +1,4 @@
-# Copyright 2014-2020 Patrizio Bekerle
+# Copyright 2014-2021 Patrizio Bekerle
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
