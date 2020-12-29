@@ -22,6 +22,25 @@ zypper install qownnotes
 ```
 [Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_13.2)
 
+## openSUSE Leap 15.3
+
+Run the following shell commands as root to trust the repository.
+
+```bash
+su -
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.3/repodata/repomd.xml.key
+```
+
+Run the following shell commands as root to add the repository and install QOwnNotes from there.
+
+```bash
+zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.3/home:pbek:QOwnNotes.repo
+zypper refresh
+zypper install qownnotes
+```
+
+[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Leap_15.3)
+
 ## openSUSE Leap 15.2
 
 Run the following shell commands as root to trust the repository.
