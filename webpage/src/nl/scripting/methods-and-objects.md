@@ -284,13 +284,11 @@ void ScriptingService :: registerLabel (QString-ID, QString-tekst);
 
 ### Voorbeeld
 ```js
-script.registerLabel ("html-label", "<strong>Sterke</strong> HTML-tekst <br /> met drie regels <br /> en een <a href='https://www.qownnotes.org'> link naar een website </a>.");
+script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.");
 
-script.registerLabel ("long-label",
+script.registerLabel("long-label", "another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text, another very long text that will wrap");
 
-"een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst, een andere zeer lange tekst die");
-
-script.registerLabel ("counter-label");
+script.registerLabel("counter-label");
 ```
 
 De labels zijn zichtbaar in de scriptdock-widget.

@@ -40,8 +40,8 @@
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> öffnet das Skript-Repository-Dialogfeld
 - <kbd>F4</kbd> springt zum Notizenbearbeitungsfeld
 - <kbd>F5</kbd> springt zur Notizenliste
-- <kbd>F6</kbd> springt zum Schlagwörter-Bereich
-- <kbd>F6</kbd> springt zum Unterordnerfenster für Notizen
+- <kbd>F6</kbd> jumps to the note subfolder panel
+- <kbd>F7</kbd> jumps to the tags panel
 - <kbd>F10</kbd> aktiviert das Kontextmenü des aktuellen Widgets
 - <kbd>F11</kbd> schaltet den Vollbildmodus um
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopiert die Überschrift der aktuellen Notiz
@@ -154,8 +154,8 @@
 - <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> öffnet den Skript-Repository-Dialog
 - <kbd>F4</kbd> springt zum Notizenbearbeitungsfeld
 - <kbd>F5</kbd> springt zur Notizenliste
-- <kbd>F6</kbd> springt zum Schlagwort-Bereich
-- <kbd>F6</kbd> springt zum Unterordnerfenster für Notizen
+- <kbd>F6</kbd> jumps to the note subfolder panel
+- <kbd>F7</kbd> jumps to the tags panel
 - <kbd>F10</kbd> aktiviert das Kontextmenü des aktuellen Widgets
 - <kbd>⌘</kbd> + <kbd>F11</kbd> schaltet den Vollbildmodus um
 - <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopiert die Überschrift der aktuellen Notiz

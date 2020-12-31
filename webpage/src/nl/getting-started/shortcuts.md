@@ -40,8 +40,8 @@
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> opent het dialoogvenster Scriptrepository
 - <kbd>F4</kbd> springt naar het notitiebewerkingspaneel
 - <kbd>F5</kbd> springt naar de notitielijst
-- <kbd>F6</kbd> springt naar het tagspaneel
-- <kbd>F6</kbd> springt naar het notitiesubfolderpaneel
+- <kbd>F6</kbd> jumps to the note subfolder panel
+- <kbd>F7</kbd> jumps to the tags panel
 - <kbd>F10</kbd> activeert het contextmenu van de huidige widget
 - <kbd>F11</kbd> schakelt de volledige schermmodus in
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopieert de kop van de huidige notitie
@@ -154,8 +154,8 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> opent het dialoogvenster Scriptrepository
 - <kbd>F4</kbd> springt naar het notitiebewerkingspaneel
 - <kbd>F5</kbd> jumps to the note list
-- <kbd>F6</kbd> springt naar het tagspaneel
-- <kbd>F6</kbd> springt naar het notitiesubfolderpaneel
+- <kbd>F6</kbd> jumps to the note subfolder panel
+- <kbd>F7</kbd> jumps to the tags panel
 - <kbd>F10</kbd> activeert het contextmenu van de huidige widget
 - <kbd>⌘</kbd> + <kbd>F11</kbd> schakelt de modus voor volledig scherm in
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopieert de kop van de huidige notitie

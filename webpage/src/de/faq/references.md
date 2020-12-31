@@ -264,6 +264,6 @@ Was andere über QOwnNotes gesagt haben…
 ## QOwnNotes auf anderen Betriebssystemen
 
 - Alpine Linux: <https://pkgs.alpinelinux.org/packages?name=qownnotes&branch=edge>
-- nixos: <https://nixos.org/nixos/packages.html?channel=nixpkgs-unstable&query=qownnotes>
+- nixos: <https://search.nixos.org/packages?query=qownnotes>
     - <https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/office/qownnotes/default.nix>
 
