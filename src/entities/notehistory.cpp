@@ -244,11 +244,11 @@ void NoteHistory::updateCursorPositionOfNote(Note note,
         add(note, textEdit);
     }
 
-    int position = noteHistory->indexOf(item);
+    int index = noteHistory->indexOf(item);
 
     // check if we really found the item
-    if (position > -1) {
-        noteHistory->replace(position, item);
+    if (index > -1) {
+        noteHistory->replace(index, item);
     }
 }
 

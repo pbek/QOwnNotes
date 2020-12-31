@@ -12738,6 +12738,7 @@ void MainWindow::on_actionPrevious_note_tab_triggered() {
     }
 
     ui->noteEditTabWidget->setCurrentIndex(index);
+    focusNoteTextEdit();
 }
 
 void MainWindow::on_actionNext_note_tab_triggered() {
@@ -12748,6 +12749,7 @@ void MainWindow::on_actionNext_note_tab_triggered() {
     }
 
     ui->noteEditTabWidget->setCurrentIndex(index);
+    focusNoteTextEdit();
 }
 
 void MainWindow::on_actionClose_current_note_tab_triggered() {
