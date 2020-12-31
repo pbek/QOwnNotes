@@ -8099,12 +8099,12 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="59"/>
       <source>&amp;Delete</source>
-      <translation type="unfinished">&amp;Delete</translation>
+      <translation>Esborrar</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="60"/>
       <source>Delete selected note on server</source>
-      <translation type="unfinished">Delete selected note on server</translation>
+      <translation>Esborrar la nota seleccionada al servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="68"/>
@@ -8114,22 +8114,22 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="190"/>
       <source>Delete note on server</source>
-      <translation type="unfinished">Delete note on server</translation>
+      <translation>Esborrar la nota al servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="191"/>
       <source>Delete selected trashed note on server?</source>
-      <translation type="unfinished">Delete selected trashed note on server?</translation>
+      <translation>Voleu esborrar del servidor la nota seleccionada que teniu a la paperera?</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="213"/>
       <source>Error while deleting note</source>
-      <translation type="unfinished">Error while deleting note</translation>
+      <translation>Error esborrant la nota</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="214"/>
       <source>Deleting trashed note failed with status code: %1</source>
-      <translation type="unfinished">Deleting trashed note failed with status code: %1</translation>
+      <translation>L'esborrat de la nota ha fallat amb el codi d'estat: %1</translation>
     </message>
   </context>
   <context>

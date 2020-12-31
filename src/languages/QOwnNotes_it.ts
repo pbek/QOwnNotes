@@ -1442,7 +1442,7 @@
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
       <source>Minimum 8 characters</source>
-      <translation type="unfinished">Minimum 8 characters</translation>
+      <translation>Minimo 8 caratteri</translation>
     </message>
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1450,7 +1450,7 @@
       <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
       <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
       <source>Minimum 10 characters</source>
-      <translation type="unfinished">Minimum 10 characters</translation>
+      <translation>Minimo 10 caratteri</translation>
     </message>
   </context>
   <context>
@@ -6168,17 +6168,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4330"/>
       <source>Checks the disk database integrity and fixes problems</source>
-      <translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
+      <translation>Verifica l'integrità del database e risolvi i problemi riscontrati</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4333"/>
       <source>Check integrity</source>
-      <translation type="unfinished">Check integrity</translation>
+      <translation>Verifica integrità</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4340"/>
       <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
+      <translation>Attenzione, la reinizializzazione del database comporta anche l'eliminazione dei compiti memorizzati nella cache, delle cartelle configurate per le note e degli script!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4423"/>
@@ -7222,12 +7222,12 @@ Messaggio di errore: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4298"/>
       <source>The integrity of the disk database is valid.</source>
-      <translation type="unfinished">The integrity of the disk database is valid.</translation>
+      <translation>L'integrità del disco del database è valida.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4303"/>
       <source>The integrity of the disk database is not valid!</source>
-      <translation type="unfinished">The integrity of the disk database is not valid!</translation>
+      <translation>L'integrità del disco del database non è valida.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2888"/>

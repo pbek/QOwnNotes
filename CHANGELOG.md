@@ -5,6 +5,7 @@
   (for [#2001](https://github.com/pbek/QOwnNotes/issues/2001))
   - the cursor position in the notes is remembered when switching to another tab
     and restored when you come back to the tab
+- added more translation (thank you rawfreeamy, amirkbrpr, mguerra, martastan, cberetta, unchase)
 
 ## 20.12.9
 - the in-note search performance was improved
