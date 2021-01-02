@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 20.1.0
+## 21.1.0
 - if you switch between previous and next note tabs now the note text edit is focused
   (for [#2001](https://github.com/pbek/QOwnNotes/issues/2001))
   - the cursor position in the notes is remembered when switching to another tab
