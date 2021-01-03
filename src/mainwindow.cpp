@@ -5637,6 +5637,10 @@ void MainWindow::filterNotes(bool searchForText) {
     if (searchForText) {
         // let's highlight the text from the search line edit
         searchForSearchLineTextInNoteTextEdit();
+
+        // prevent that the last occurrence of the search term is found
+        // first, instead the first occurrence should be found first
+        ui->noteTextEdit->searchWidget()->doSearchDown();
     }
 }
 
@@ -12268,6 +12272,10 @@ void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
         // search" if the current note has changed
         if (currentNoteChanged) {
             searchForSearchLineTextInNoteTextEdit();
+
+            // prevent that the last occurrence of the search term is found
+            // first, instead the first occurrence should be found first
+            ui->noteTextEdit->searchWidget()->doSearchDown();
         }
     }
 
