@@ -4,6 +4,7 @@
 - now the first occurrence of the search term is found first in the note text,
   when searching for notes in the note search panel (instead of the the last
   occurrence) (for [#1981](https://github.com/pbek/QOwnNotes/issues/1981))
+- added more translation (thank you amirkbrpr, afischer211, rawfreeamy, zmni, martastan, silviact)
 
 ## 21.1.0
 - if you switch between previous and next note tabs now the note text edit is focused
