@@ -33,19 +33,19 @@ You can now synchronize your package database and install the package with `pacm
 sudo pacman -Syy qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
+[Directe download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
 
 ::: tip
-Of course you can also use this repository with other Arch Linux based distributions, like Manjaro.
+Je kunt deze repository natuurlijk ook gebruiken met andere op Arch Linux gebaseerde distributies, zoals Manjaro.
 :::
 
 ## Arch User Repository (AUR)
 
-Alternatively there also is an official package for QOwnNotes on AUR, it is called `qownnotes`.
+Als alternatief is er ook een officieel pakket voor QOwnNotes op AUR, het heet `qownnotes`.
 
-You will find it here: [QOwnNotes on AUR](https://aur.archlinux.org/packages/qownnotes)
+U vindt het hier: [QOwnNotes op AUR](https://aur.archlinux.org/packages/qownnotes)
 
-Synchronize your package database and install the package with `yay`:
+Synchroniseer uw pakketdatabase en installeer het pakket met `yay`:
 
 ```bash
 yay -S qownnotes

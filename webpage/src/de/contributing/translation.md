@@ -14,19 +14,22 @@ Sie können sich unter [Crowdin](https://crowdin.com/project/qownnotes/invite) u
 
 **[QOwnNotes auf Crowdin](screenshot)**
 
-Just [drop the project owner a message on Crowdin](https://crowdin.com/profile/pbek) or as a [GitHub issue](https://github.com/pbek/QOwnNotes/issues) if you want to translate QOwnNotes to a new language.
+Schreiben Sie dem Projekt-Eigentümer einfach eine Nachricht auf [Crowdin](https://crowdin.com/profile/pbek) oder als
+GitHub issue](https://github.com/pbek/QOwnNotes/issues), wenn Sie QOwnNotes in eine neue Sprache übersetzen möchten.
 
 Wenn Sie vorhandene Sprachen um neue Übersetzungen erweitern möchten, können Sie dies sofort tun.
+
+
 
 ## Korrekturlesen
 
 Wenn Sie ein sehr guter Benutzer einer bereits übersetzten Sprache sind, die noch nicht Korrektur gelesen wurde, sind wir dankbar für Ihre Mithilfe, um das QOwnNotes-Erlebnis zuverlässiger und komfortabler zu machen.
 
-Klicken Sie hier, um zu sehen, ob Ihre Sprache zu den bereits übersetzten gehört!
+Klicken Sie hier, um zu sehen, ob Ihre Sprache zu den bereits übersetzten gehört! 
 
 [QOwnNotes auf Crowdin](screenshot)
 
-Once you’ve [contacted the project owner on Crowdin](https://crowdin.com/profile/pbek) and received permission to proofread in your language, you’re ready to go!
+Sobald Sie den [Projekt-Eigentümer auf Crowdin kontaktiert haben](https://crowdin.com/profile/pbek) und die Erlaubnis zum Korrekturlesen in Ihrer Sprache erhalten haben, können Sie loslegen!
 
 Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt:
 
@@ -38,31 +41,33 @@ Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt:
 
 4) Verwenden Sie immer dieselben Übersetzungen für identische Ausdrücke aus dem Quelltext:
 
-   Wenn `trashed notes` auf Deutsch mit`gelöschte Notizen` übersetzt wurde, verwenden Sie immer diesen Ausdruck. Eine Ausnahme davon ist, wenn Sie grammatikalisch oder sprachlich gebunden sind, eine Alternative zu verwenden.
+Wenn `trashed notes` auf Deutsch mit`gelöschte Notizen` übersetzt wurde, verwenden Sie immer diesen Ausdruck. Eine Ausnahme davon ist, wenn Sie grammatikalisch oder sprachlich gebunden sind, eine Alternative zu verwenden.
 
-   ![screenshot](/img/crowdin/screenshot-7.png)
+![screenshot](/img/crowdin/screenshot-7.png)
 
-   In order to find all the identical expressions, search Crowdin and see all the occurrences of one term
+Um alle identischen Ausdrücke zu finden, durchsuchen Sie Crowdin und sehen Sie alle Vorkommen eines Begriffs
 
-   Standardisieren Sie alle Vorkommen so gut wie möglich, damit identische Begriffe identische Übersetzungen erhalten.
+Standardisieren Sie alle Vorkommen so gut wie möglich, damit identische Begriffe identische Übersetzungen erhalten.
 
-   `Notiz` sollte auf jeden Fall immer nur eine Übersetzung haben.
+`Notiz` sollte auf jeden Fall immer nur eine Übersetzung haben.
 
 5) Für den Plural fügen Sie bitte jeweils die entsprechende Übersetzung in den entsprechenden Block ein.
 
-   ![screenshot](/img/crowdin/screenshot-4.png)
+![screenshot](/img/crowdin/screenshot-4.png)
 
 6) Die `%1` -Schlagworte müssen ohne Leerzeichen geschrieben werden. Sie können entweder die Schlagworte aus dem Original einfügen, indem Sie an der entsprechenden Stelle auf sie klicken, oder sie in Ihre Übersetzung tippen.
 
-   ![screenshot](/img/crowdin/screenshot-1.png)
+![screenshot](/img/crowdin/screenshot-1.png)
 
-   ![screenshot](/img/crowdin/screenshot-5.png)
+![screenshot](/img/crowdin/screenshot-5.png)
 
-   ![screenshot](/img/crowdin/screenshot-3.png)
+![screenshot](/img/crowdin/screenshot-3.png)
 
 7) Verwenden Sie `&` vor jedem Buchstaben, der in einer Verknüpfung verwendet werden soll. Dies kann das gleiche wie im Original sein, muss aber nicht.
 
-   ![screenshot](/img/crowdin/screenshot-4.png)
+![screenshot](/img/crowdin/screenshot-4.png)
+
+
 
 ## /img/crowdin/screenshot-4.png
 
