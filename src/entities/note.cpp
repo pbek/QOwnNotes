@@ -3652,9 +3652,11 @@ QString Note::getNotePreviewText(bool asHtml, int lines) const {
     noteText.replace(QRegularExpression(QStringLiteral("\r\n")),
                      QStringLiteral("\n"));
 
-    // remove headlines
-    noteText.remove(QRegularExpression(QStringLiteral("^.+\n=+\n+")));
-    noteText.remove(QRegularExpression(QStringLiteral("^# .+\n+")));
+    if (!allowDifferentFileName()) {
+        // remove headlines
+        noteText.remove(QRegularExpression(QStringLiteral("^.+\n=+\n+")));
+        noteText.remove(QRegularExpression(QStringLiteral("^# .+\n+")));
+    }
 
     // remove multiple line breaks
     noteText.replace(QRegularExpression(QStringLiteral("\n\n+")),

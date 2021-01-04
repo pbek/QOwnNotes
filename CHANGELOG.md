@@ -4,6 +4,9 @@
 - now the extra-selections of the search results in the note text are also
   highlighted when searching for notes in the note search panel
   (for [#1981](https://github.com/pbek/QOwnNotes/issues/1981))
+- now the main heading in the experimental note list preview is shown if the main
+  headings is allowed to be different than the note name in the current note folder  
+  (for [#2004](https://github.com/pbek/QOwnNotes/issues/2004))
 
 ## 21.1.1
 - now the first occurrence of the search term is found first in the note text,
