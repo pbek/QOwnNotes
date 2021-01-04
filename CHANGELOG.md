@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.1.2
+- now the extra-selections of the search results in the note text are also
+  highlighted when searching for notes in the note search panel
+  (for [#1981](https://github.com/pbek/QOwnNotes/issues/1981))
+
 ## 21.1.1
 - now the first occurrence of the search term is found first in the note text,
   when searching for notes in the note search panel (instead of the the last

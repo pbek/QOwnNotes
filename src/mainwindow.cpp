@@ -12276,6 +12276,7 @@ void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
             // prevent that the last occurrence of the search term is found
             // first, instead the first occurrence should be found first
             ui->noteTextEdit->searchWidget()->doSearchDown();
+            ui->noteTextEdit->searchWidget()->updateSearchExtraSelections();
         }
     }
 
