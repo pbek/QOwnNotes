@@ -46,6 +46,7 @@ class ScriptingService : public QObject {
                                          const QString &action,
                                          const Tag &tag = Tag(),
                                          const QString &newTagName = QString());
+    void callWindowStateChangeHook(const QString &windowStateStr);
     bool noteTaggingHookExists() const;
     bool handleNoteNameHookExists() const;
     bool methodExists(const QString &methodName) const;

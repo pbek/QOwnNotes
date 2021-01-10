@@ -496,6 +496,26 @@ QVariant ScriptingService::callNoteTaggingByObjectHook(
     return QVariant();
 }
 
+void ScriptingService::callWindowStateChangeHook(const QString &windowStateStr)
+{
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        QObject *object = scriptComponent.object;
+
+        if (methodExistsForObject(object,
+                                  QStringLiteral("windowStateChangedHook(QVariant)"))) {
+
+            QMetaObject::invokeMethod(
+                object, "windowStateChangedHook",
+                Q_ARG(QVariant,
+                      QVariant::fromValue(windowStateStr)));
+        }
+    }
+}
+
 /**
  * Checks if a noteTaggingHook or noteTaggingByObjectHook function exists in a script
  * @return true if a function was found
