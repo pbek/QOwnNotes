@@ -8630,7 +8630,7 @@ void MainWindow::changeEvent(QEvent *event)
         ScriptingService::instance()->callWindowStateChangeHook(windowStateString);
     }
 
-    QWidget::changeEvent(event);
+    QMainWindow::changeEvent(event);
 }
 
 /**

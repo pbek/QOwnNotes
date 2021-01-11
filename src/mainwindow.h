@@ -161,8 +161,6 @@ class MainWindow : public QMainWindow {
     void linkTagNameToCurrentNote(const QString &tagName,
                                   bool linkToSelectedNotes = false);
 
-    void changeEvent(QEvent *event) override;
-
     Q_INVOKABLE void reloadTagTree();
 
     Q_INVOKABLE void reloadNoteSubFolderTree();
@@ -199,6 +197,8 @@ class MainWindow : public QMainWindow {
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
 
    protected:
+    void changeEvent(QEvent *event) override;
+
     void closeEvent(QCloseEvent *event);
 
     bool eventFilter(QObject *obj, QEvent *event);
