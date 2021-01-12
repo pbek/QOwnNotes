@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 21.1.3
+- there now are new scripting commands `mainWindow.getWorkspaceUuidList()`,
+  `mainWindow.getWorkspaceUuid()` and `mainWindow.setCurrentWorkspace()` to
+  access workspaces and a new hook `windowStateChangedHook` to notice window
+  state changes (for [#2007](https://github.com/pbek/QOwnNotes/issues/2007), thank you @fnkabit)
+  - for more information please take a look at the
+    [MainWindow scripting documentation](https://www.qownnotes.org/scripting/classes.html#mainwindow)
+    and the [Hook scripting documentation](https://www.qownnotes.org/scripting/hooks.html#windowstatechangedhook)
+
 ## 21.1.2
 - now the extra-selections of the search results in the note text are also
   highlighted when searching for notes in the note search panel

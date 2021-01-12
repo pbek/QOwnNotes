@@ -188,7 +188,7 @@ class MainWindow : public QMainWindow {
 
     void resetBrokenTagNotesLinkFlag();
 
-    Q_INVOKABLE QString getWorkspaceUuuid(const QString &workspaceName);
+    Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
 
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
 

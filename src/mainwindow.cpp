@@ -7757,7 +7757,7 @@ void MainWindow::resetBrokenTagNotesLinkFlag() {
     if (_brokenTagNoteLinksRemoved) _brokenTagNoteLinksRemoved = false;
 }
 
-QString MainWindow::getWorkspaceUuuid(const QString &workspaceName)
+QString MainWindow::getWorkspaceUuid(const QString &workspaceName)
 {
     return _workspaceNameUuidMap.value(workspaceName, "");
 }
