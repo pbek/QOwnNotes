@@ -422,3 +422,16 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 ```
 You may want to take a look at the example
 [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml).
+
+windowStateChangedHook
+--------------
+
+### Method call and parameters
+```js
+/**
+ * This function is called after a WindowStateChange event was triggered
+ *
+ * @param {QString} windowState - the new window state, parameter value can be "minimized", "maximized", "fullscreen", "active" or "nostate"
+ */
+function windowStateChangedHook(windowState);
+```
