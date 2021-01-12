@@ -390,10 +390,7 @@ extension via the web browser's context menu.
  * @param screenshotDataUrl the data url of the screenshot if the webpage where the request was made
  * @return true if data was handled by a hook
  */
-bool ScriptingService::callHandleWebsocketRawDataHook(
-    const QString &requestType, const QString &pageUrl,
-    const QString &pageTitle, const QString &rawData,
-    const QString &screenshotDataUrl);
+fucntion callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
 You may want to take a look at the examples
@@ -420,6 +417,7 @@ is done executing.
  */
 function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 ```
+
 You may want to take a look at the example
 [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml).
 
@@ -435,3 +433,6 @@ windowStateChangedHook
  */
 function windowStateChangedHook(windowState);
 ```
+
+You may want to take a look at the example
+[window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/window-state-changed.qml).

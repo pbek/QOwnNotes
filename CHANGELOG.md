@@ -8,6 +8,8 @@
   - for more information please take a look at the
     [MainWindow scripting documentation](https://www.qownnotes.org/scripting/classes.html#mainwindow)
     and the [Hook scripting documentation](https://www.qownnotes.org/scripting/hooks.html#windowstatechangedhook)
+  - there also is a new script `Dynamic Workspace` in the script repository that
+    you can use to toggle workspaces when you maximize the window
 
 ## 21.1.2
 - now the extra-selections of the search results in the note text are also
