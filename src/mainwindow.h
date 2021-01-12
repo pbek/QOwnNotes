@@ -188,9 +188,17 @@ class MainWindow : public QMainWindow {
 
     void resetBrokenTagNotesLinkFlag();
 
+    Q_INVOKABLE QString getWorkspaceUuuid(const QString &workspaceName);
+
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
 
+    Q_INVOKABLE QStringList getWorkspaceUuidList();
+
+    Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
+
    protected:
+    void changeEvent(QEvent *event) override;
+
     void closeEvent(QCloseEvent *event);
 
     bool eventFilter(QObject *obj, QEvent *event);
@@ -500,8 +508,6 @@ class MainWindow : public QMainWindow {
 
     void on_actionRename_current_workspace_triggered();
 
-    void setCurrentWorkspace(const QString &uuid);
-
     void on_actionSwitch_to_previous_workspace_triggered();
 
     void on_actionShow_all_panels_triggered();
@@ -690,6 +696,7 @@ private:
     QToolBar *_quitToolbar;
     bool _noteViewIsRegenerated;
     QHash<int, NoteHistoryItem> _activeNoteFolderNotePositions;
+    QHash<QString, QString> _workspaceNameUuidMap;
     bool _searchLineEditFromCompleter;
     bool _isNotesDirectoryWasModifiedDisabled;
     bool _isNotesWereModifiedDisabled;
@@ -979,8 +986,6 @@ private:
     void storeCurrentWorkspace();
 
     void initWorkspaceComboBox();
-
-    static QStringList getWorkspaceUuidList();
 
     void updateWindowToolbar();
 

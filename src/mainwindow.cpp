@@ -1203,6 +1203,8 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
         initWorkspaceComboBox();
 
         ui->menuWorkspaces->clear();
+
+        _workspaceNameUuidMap.clear();
     }
 
     const QSignalBlocker blocker(_workspaceComboBox);
@@ -1227,6 +1229,8 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
                                         QStringLiteral("/name"))
                                  .toString();
         const QString objectName = QStringLiteral("restoreWorkspace-") + uuid;
+
+        _workspaceNameUuidMap.insert(name, uuid);
 
         _workspaceComboBox->addItem(name, uuid);
 
@@ -7753,6 +7757,11 @@ void MainWindow::resetBrokenTagNotesLinkFlag() {
     if (_brokenTagNoteLinksRemoved) _brokenTagNoteLinksRemoved = false;
 }
 
+QString MainWindow::getWorkspaceUuuid(const QString &workspaceName)
+{
+    return _workspaceNameUuidMap.value(workspaceName, "");
+}
+
 /**
  * Evaluates if file is a media file
  */
@@ -8594,6 +8603,34 @@ void MainWindow::linkTagNameToCurrentNote(const QString &tagName,
 
     // turn off the workaround again
     directoryWatcherWorkaround(false, true);
+}
+
+void MainWindow::changeEvent(QEvent *event)
+{
+    if (event->type() == QEvent::WindowStateChange) {
+        QString windowStateString;
+        switch(windowState()) {
+        case Qt::WindowMinimized:
+            windowStateString = "minimized";
+            break;
+        case Qt::WindowMaximized:
+            windowStateString = "maximized";
+            break;
+        case Qt::WindowFullScreen:
+            windowStateString = "fullscreen";
+            break;
+        case Qt::WindowActive:
+            windowStateString = "active";
+            break;
+        default:
+            windowStateString = "nostate";
+            break;
+        }
+
+        ScriptingService::instance()->callWindowStateChangeHook(windowStateString);
+    }
+
+    QMainWindow::changeEvent(event);
 }
 
 /**
