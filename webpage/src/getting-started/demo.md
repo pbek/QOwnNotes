@@ -1,6 +1,7 @@
-# Demo
+# QOwnNotes Demo
 
-You can try out **QOwnNotes** without installing it by following these instructions:
+You can try out **QOwnNotes** in your web-browser without installing it by
+following these instructions:
 
 1) Click on this [Play With Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/pbek/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) link.
 2) Click the **Start** button (see screenshot bullet **1**) and login with your Docker account
@@ -9,13 +10,13 @@ You can try out **QOwnNotes** without installing it by following these instructi
 ![screenshot01](/img/demo/playwithdocker01.png)
 
 3) Wait until the container is created and spun up. Then you should be able to
-   click on `6080` on the top (see screenshot bullet **2**).
+   click on **6080** on the top (see screenshot bullet **2**).
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 
-4) A new browser tab should open producing a desktop. Click on the bottom left
-   symbol on the screen (in the task bar), hover over *Accessories* and click on
-   *QOwnNotes* (see screenshot bullet **3**).
+4) A new browser tab should open producing a desktop. Click on the **bottom left symbol**
+   on the screen (in the task bar), hover over **Accessories** and click on
+   **QOwnNotes** (see screenshot bullet **3**).
 
 ![screenshot03](/img/demo/playwithdocker03.png)
 
