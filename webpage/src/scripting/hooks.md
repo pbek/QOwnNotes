@@ -390,7 +390,7 @@ extension via the web browser's context menu.
  * @param screenshotDataUrl the data url of the screenshot if the webpage where the request was made
  * @return true if data was handled by a hook
  */
-fucntion callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
+function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
 You may want to take a look at the examples
