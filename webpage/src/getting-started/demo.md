@@ -4,7 +4,7 @@ You can try out **QOwnNotes** in your web-browser without installing it by
 following these instructions:
 
 1) Click on this [Play With Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/pbek/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) link.
-2) Click the **Start** button (see screenshot bullet **1**) and login with your Docker account
+2) Click the **Login / Start** button (see screenshot bullet **1**) and login with your Docker account
    (you need to create one if you don't already have one).
 
 ![screenshot01](/img/demo/playwithdocker01.png)
