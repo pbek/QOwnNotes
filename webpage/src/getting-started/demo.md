@@ -10,7 +10,9 @@ following these instructions:
 ![screenshot01](/img/demo/playwithdocker01.png)
 
 3) Wait until the container is created and spun up. Then you should be able to
-   click on **6080** on the top (see screenshot bullet **2**).
+   click on **6080** on the top (see screenshot bullet **2**). If you get an
+   error please wait a bit more and try to click *6080* again, it takes a while
+   for the desktop environment to load.
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 
