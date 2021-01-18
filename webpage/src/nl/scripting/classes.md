@@ -92,32 +92,41 @@ MainWindow
 
 ### Eigenschappen en methoden
 ```cpp
-klasse MainWindow {
-     Q_INVOKABLE void reloadTagTree ();
-     Q_INVOKABLE void reloadNoteSubFolderTree ();
-     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList (
-             bool forceBuild = false, bool forceLoad = false);
-     Q_INVOKABLE void focusNoteTextEdit();
-     // Maakt een nieuwe submap voor notities in de huidige submap
-     Q_INVOKABLE bool createNewNoteSubFolder (QString folderName = "");
-     // Voegt html in de huidige notitie in als markdown
-     // Deze methode downloadt ook externe afbeeldingen en transformeert "data: image"
-     // urls naar lokale afbeeldingen die zijn opgeslagen in de mediamap
-     Q_INVOKABLE ongeldig insertHtmlAsMarkdownIntoCurrentNote (QString html);
-     // Laadt de huidige notitie opnieuw op id
-     // Dit is handig wanneer het pad of de bestandsnaam van de huidige notitie is gewijzigd
-     Q_INVOKABLE leegtevoid reloadCurrentNoteByNoteId ();
+class MainWindow {
+    Q_INVOKABLE void reloadTagTree();
+    Q_INVOKABLE void reloadNoteSubFolderTree();
+    Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
+            bool forceBuild = false, bool forceLoad = false);
+    Q_INVOKABLE void focusNoteTextEdit();
+    // Creates a new note subfolder in the current subfolder
+    Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
+    // Inserts html in the current note as markdown
+    // This method also downloads remote images and transforms "data:image"
+    // urls to local images stored in the media directory
+    Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
+    // Reloads the current note by id
+    // This is useful when the path or filename of the current note changed
+    Q_INVOKABLE void reloadCurrentNoteByNoteId();
+    // Returns the list of workspace UUIDs
+    Q_INVOKABLE QStringList getWorkspaceUuidList();
+    // Returns the UUID of a workspace, passing in the workspace name
+    Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
+    // Sets the current workspace by UUID
+    Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
 };
 ```
 
 ### Voorbeeld
 ```js
-// Forceer een herladen van de notitielijst
+// Force a reload of the note list
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creëert een nieuwe notitie submap "Mijn mooie map" in de huidige submap
+// Creates a new note subfolder "My fancy folder" in the current subfolder
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Voegt html in de huidige notitie in als markdown
+// Inserts html in the current note as markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
+
+// Set 'Edit' workspace as current workspace
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 ```

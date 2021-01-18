@@ -125,6 +125,7 @@ function handleNoteTextFileNameHook(note);
 ```
 
 Vielleicht möchten Sie sich das Beispiel ansehen
+
  example.qml </ 0> oder [ use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).</p> 
 
 
@@ -429,17 +430,14 @@ Dieser Hook wird aufgerufen, wenn Daten von der QOwnNotes Web Companion-Browsere
 
 ```js
 /**
-  * @param requestType kann "Seite" oder "Auswahl" sein.
-  * @param pageUrl die URL der Webseite, auf der die Anfrage gestellt wurde
-  * @param pageTitle der Seitentitel der Webseite, auf der die Anfrage gestellt wurde
-  * @param rawData die übertragenen Daten, HTML für requestType "Seite" oder Klartext für requestType "Auswahl"
-  * @param screenhotDataUrl die Daten-URL des Screenshots, wenn die Webseite, auf der die Anfrage gestellt wurde
-  * @return true, wenn Daten von einem Hook verarbeitet wurden
-  * /
-bool ScriptingService :: callHandleWebsocketRawDataHook (
-     const QString & amp; requestType, const QString & amp; pageUrl,
-     const QString & amp; pageTitle, const QString & amp; rawData,
-     const QString & amp; screenhotDataUrl);
+ * @param requestType can be "page" or "selection"
+ * @param pageUrl the url of the webpage where the request was made
+ * @param pageTitle the page title of the webpage where the request was made
+ * @param rawData the data that was transmitted, html for requestType "page" or plain text for requestType "selection"
+ * @param screenshotDataUrl the data url of the screenshot if the webpage where the request was made
+ * @return true if data was handled by a hook
+ */
+function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
 
@@ -474,3 +472,27 @@ Funktion onDetachedProcessCallback (callbackIdentifier, resultSet, cmd, thread);
 
 
 Vielleicht möchten Sie sich das Beispiel ansehen [ callback-example.qml ](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml).
+
+
+
+
+
+windowStateChangedHook
+--------------
+
+
+
+### Methodenaufruf und Parameter
+
+
+```js
+/**
+  * Diese Funktion wird aufgerufen, nachdem ein WindowStateChange-Ereignis ausgelöst wurde
+  *
+  * @param {QString} windowState - Der neue Fensterstatus, Parameterwert kann "minimiert", "maximiert", "Vollbild", "aktiv" oder "nostate" sein.
+  */
+Funktion windowStateChangedHook (windowState);
+```
+
+
+Vielleicht möchten Sie sich das Beispiel ansehen [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/window-state-changed.qml).

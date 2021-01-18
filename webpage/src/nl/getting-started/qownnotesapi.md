@@ -17,7 +17,7 @@ Het delen van notities gebeurt via de API van Nextcloud / ownCloud. Taken zijn r
 Gebruik uw **Nextcloud** / **ownCloud** **synchronisatieclient** om **uw notities te synchroniseren**, uw notities zijn eenvoudige markdown-bestanden. Het wiel hoeft niet twee keer uit te vinden. En er zijn ook mensen die verschillende services gebruiken om hun notitiebestanden te synchroniseren (zoals Dropbox, Syncthing of Resilio Sync).
 :::
 
-## What QOwnNotesAPI does
+## Wat QOwnNotesAPI doet
 
 - Toegang tot uw weggegooide notities
 - Toegang tot uw notitieversies

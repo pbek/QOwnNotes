@@ -1,4 +1,4 @@
-# Shortcuts
+# Snelkoppelingen
 
 ## Linux / Windows
 
@@ -25,7 +25,7 @@
 - <kbd>Alt</kbd> + <kbd>PgDn</kbd> springt naar het volgende notitietabblad
 - <kbd>Ctrl</kbd> + <kbd>W</kbd> sluit het huidige notitietabblad
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> schakelt de afleidingsvrije modus in
-    - you can also close it with <kbd>Esc</kbd>
+    - u kunt het ook sluiten met <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> drukt de huidige notitie af als tekst
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> drukt de huidige notitie af als markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> plakt notities, afbeeldingen en html van het klembord
@@ -40,8 +40,8 @@
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> opent het dialoogvenster Scriptrepository
 - <kbd>F4</kbd> springt naar het notitiebewerkingspaneel
 - <kbd>F5</kbd> springt naar de notitielijst
-- <kbd>F6</kbd> jumps to the note subfolder panel
-- <kbd>F7</kbd> jumps to the tags panel
+- <kbd>F6</kbd> springt naar het notitiesubfolderpaneel
+- <kbd>F7</kbd> springt naar het tagspaneel
 - <kbd>F10</kbd> activeert het contextmenu van de huidige widget
 - <kbd>F11</kbd> schakelt de volledige schermmodus in
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopieert de kop van de huidige notitie
@@ -77,7 +77,7 @@
 - <kbd>Ctrl</kbd> + <kbd>B</kbd> maakt de geselecteerde tekst vet op
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> maakt de geselecteerde tekst cursief
 - <kbd>Ctrl</kbd> + <kbd>U</kbd> formatteert de geselecteerde tekst onderstreept
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> schrapt de geselecteerde tekst
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> doorloopt de gevallen van de geselecteerde tekst
 - <kbd>Tab</kbd> laat de geselecteerde tekst inspringen (werkt ook op meerdere regels)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> laat de geselecteerde tekst ongedaan maken
@@ -154,8 +154,8 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> opent het dialoogvenster Scriptrepository
 - <kbd>F4</kbd> springt naar het notitiebewerkingspaneel
 - <kbd>F5</kbd> jumps to the note list
-- <kbd>F6</kbd> jumps to the note subfolder panel
-- <kbd>F7</kbd> jumps to the tags panel
+- <kbd>F6</kbd> springt naar het notitiesubfolderpaneel
+- <kbd>F7</kbd> springt naar het tagspaneel
 - <kbd>F10</kbd> activeert het contextmenu van de huidige widget
 - <kbd>⌘</kbd> + <kbd>F11</kbd> schakelt de modus voor volledig scherm in
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopieert de kop van de huidige notitie
@@ -210,7 +210,7 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> zoekt naar de geselecteerde tekst op internet
 - <kbd>⌘</kbd> + <kbd>Up</kbd> schuift de inhoud omhoog
-- <kbd>⌘</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>⌘</kbd> + <kbd>Down</kbd> schuift de inhoud omlaag
 - <kbd>⇧</kbd> + <kbd>Return</kbd> voegt twee spaties en een teken voor een nieuwe regel toe om een nieuwe regel af te drukken
 
 ### In het notitievoorbeeldpaneel

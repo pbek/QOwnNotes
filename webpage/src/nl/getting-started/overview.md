@@ -162,7 +162,7 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 - **Markdown-markering** van notities en een **markdown-voorbeeldmodus**
 - [**Spellingcontrole**](../editor/spellchecking.md) ondersteuning
 - **Compatibel** met de Notes-applicatie van **Nextcloud / ownCloud** en **mobiel** en Nextcloud Text
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
+- Beheer je Nextcloud / ownCloud **takenlijsten** (**Nextcloud-taken** of **Tasks Plus** / **Calendar Plus**) of gebruik een andere **CalDAV-server** om uw taken mee te synchroniseren
 - Optioneel **encryption** van opmerkingen (AES-256 is ingebouwd of u kunt aangepaste versleutelingsmethoden gebruiken zoals **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) of **PGP** ([encryptie-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
 - **Thema-ondersteuning voor donkere modus**
 - **Theming support**  voor de **markdown syntaxisaccentuering **

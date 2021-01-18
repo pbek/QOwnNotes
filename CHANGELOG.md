@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.1.4
+- added more translation (thank you amirkbrpr, afischer211, rawfreeamy, amyd.lang,
+  rakekniven, mguerra, gregory.k)
+
 ## 21.1.3
 - there now are new scripting commands `mainWindow.getWorkspaceUuidList()`,
   `mainWindow.getWorkspaceUuid()` and `mainWindow.setCurrentWorkspace()` to

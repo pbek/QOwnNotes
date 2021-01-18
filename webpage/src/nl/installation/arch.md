@@ -27,7 +27,7 @@ pub   rsa2048 2019-07-31 [SC] [expires: 2021-10-10]
 uid           home:pbek OBS Project <home:pbek@build.opensuse.org>
 ```
 
-You can now synchronize your package database and install the package with `pacman`:
+U kunt nu uw pakketdatabase synchroniseren en het pakket installeren met `pacman`:
 
 ```bash
 sudo pacman -Syy qownnotes
@@ -52,5 +52,5 @@ yay -S qownnotes
 ```
 
 ::: tip
-If you want to speed up build time you may want to read [CCACHE and AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/).
+Als je de bouwtijd wilt versnellen, wil je misschien [CCACHE en AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/) lezen.
 :::

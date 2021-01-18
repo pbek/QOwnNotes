@@ -4,7 +4,7 @@ Was andere über QOwnNotes gesagt haben…
 
 - <http://qownnotes.findmysoft.com/>
 - [Pro-Linux: Informationen zu QOwnNotes](http://www.pro-linux.de/cgi-bin/DBApp/check.cgi?ShowApp..20415.100)
-- [Educators for free and open source resources: Note taking software](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
+- [Kostenlose und Open Source-Ressourcen für Pädagogen: Notizen-Software](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
 - **Linux Voice 25**
     - <http://shop.linuxvoice.com/products/single-issues?src=menu>
     - [QOwnNotes got featured in Linux Voice 25](https://www.qownnotes.org/blog/2016-03-25-QOwnNotes-got-featured-in-Linux-Voice-25.html)
@@ -19,7 +19,7 @@ Was andere über QOwnNotes gesagt haben…
 - [QOwnNotes Download](http://www.softpedia.com/get/Office-tools/Diary-Organizers-Calendar/QOwnNotes.shtml)
 - [The Old Reader](https://theoldreader.com/profile/gennagr)
 - [QOwnNotes - FreewareHome](http://freewarehome.com/index.php?post/2016/06/09/QOwnNotes)
-- [QOwnNotes - very powerful Markdown editor, alternative to Haroopad : LinuxActionShow](https://www.reddit.com/r/LinuxActionShow/comments/4p6ibh/qownnotes_very_powerful_markdown_editor/)
+- [QOwnNotes - sehr leistungsfähiger Markdown-Editor, Alternative zu Haroopad: LinuxActionShow](https://www.reddit.com/r/LinuxActionShow/comments/4p6ibh/qownnotes_very_powerful_markdown_editor/)
 - [Quick review of QOwnNotes](https://github.com/pbek/QOwnNotes/issues/225)
 - [linux-apps.com - QOwnNotes](https://www.linux-apps.com/p/1131235/)
 - [QOwnNotes review in British magazine Linux Format](https://www.qownnotes.org/blog/2016-07-11-QOwnNotes-review-in-British-magazine-Linux-Format.html)
@@ -34,7 +34,7 @@ Was andere über QOwnNotes gesagt haben…
 - <http://blog.csdn.net/qyvlik/article/details/51460736>
 - <http://jdev.tw/blog/4836/markdown-text-editor-qownnotes>
 - [Un gestor de notas para Linux Mint y Ubuntu multiplataforma](https://www.atareao.es/ubuntu/un-gestor-de-notas-para-linux-mint-y-ubuntu/)
-- [QOwnNotes at The Portable Freeware Collection](http://www.portablefreeware.com/forums/viewtopic.php?f=4&t=23143)
+- [QOwnNotes in der Portable Freeware Collection](http://www.portablefreeware.com/forums/viewtopic.php?f=4&t=23143)
 - [QOwnNotes on Softpedia](http://mac.softpedia.com/get/Utilities/QOwnNotes.shtml)
 - [QOwnNotes on Neowin](https://www.neowin.net/news/qownnotes-16118-build-2489)
 - [QOwnNotes at Solus OS](https://dev.solus-project.com/T1687)
