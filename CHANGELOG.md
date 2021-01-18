@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 21.1.4
+- the `Return` key will now be handled the same as the `Enter` key in the note text edit
+  for things like automatically creating list items (for [#2013](https://github.com/pbek/QOwnNotes/issues/2013), thank you @fnkabit)
 - added more translation (thank you amirkbrpr, afischer211, rawfreeamy, amyd.lang,
   rakekniven, mguerra, gregory.k)
 
