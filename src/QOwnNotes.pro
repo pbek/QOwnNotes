@@ -173,7 +173,9 @@ SOURCES += main.cpp\
     widgets/layoutwidget.cpp \
     dialogs/serverbookmarksimportdialog.cpp \
     dialogs/websockettokendialog.cpp \
-    dialogs/imagedialog.cpp
+    dialogs/imagedialog.cpp \
+    dialogs/commandbar.cpp \
+    models/commandmodel.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -268,7 +270,9 @@ HEADERS  += mainwindow.h \
     widgets/layoutwidget.h \
     dialogs/serverbookmarksimportdialog.h \
     dialogs/websockettokendialog.h \
-    dialogs/imagedialog.h
+    dialogs/imagedialog.h \
+    dialogs/commandbar.h \
+    models/commandmodel.h
 
 FORMS    += mainwindow.ui \
     dialogs/attachmentdialog.ui \
