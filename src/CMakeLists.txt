@@ -159,11 +159,15 @@ set(SOURCE_FILES
     dialogs/imagedialog.cpp
     dialogs/imagedialog.h
     dialogs/imagedialog.ui
+    dialogs/commandbar.cpp
+    dialogs/commandbar.h
     dialogs/attachmentdialog.cpp
     dialogs/attachmentdialog.h
     dialogs/attachmentdialog.ui
     dialogs/filedialog.cpp
     dialogs/filedialog.h
+    models/commandmodel.cpp
+    models/commandmodel.h
     entities/calendaritem.cpp
     entities/calendaritem.h
     entities/note.cpp
