@@ -13,7 +13,7 @@
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 using StringType = QStringView;
 #else
-using StringType = QStringRef;
+using StringType = QString;
 #endif
 
 /**
