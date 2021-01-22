@@ -11,6 +11,7 @@
 #include <QVBoxLayout>
 #include <QCoreApplication>
 #include <QMenu>
+#include <QAbstractTextDocumentLayout>
 
 #include "models/commandmodel.h"
 #include "utils/misc.h"
@@ -121,7 +122,9 @@ public:
         if (!rtl)
             painter->translate(25, 0);
 
-        doc.drawContents(painter);
+        QAbstractTextDocumentLayout::PaintContext ctx;
+        ctx.palette.setColor(QPalette::Text, options.palette.text().color());
+        doc.documentLayout()->draw(painter, ctx);
 
         painter->restore();
     }
