@@ -114,6 +114,7 @@
 #include "ui_mainwindow.h"
 #include "version.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
+#include "dialogs/commandbar.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -561,6 +562,8 @@ MainWindow::MainWindow(QWidget *parent)
             &MainWindow::on_action_Quit_triggered);
 
     automaticScriptUpdateCheck();
+
+    _commandBar = new CommandBar(this);
 }
 
 /**
@@ -11760,6 +11763,7 @@ void MainWindow::on_actionShow_all_panels_triggered() {
  * Opens the find action dialog
  */
 void MainWindow::on_actionFind_action_triggered() {
+#if 0
     if (_actionDialog == Q_NULLPTR) {
         _actionDialog = new ActionDialog(ui->menuBar, this);
     } else {
@@ -11769,6 +11773,21 @@ void MainWindow::on_actionFind_action_triggered() {
     _actionDialog->show();
     _actionDialog->activateWindow();
     _actionDialog->raise();
+#endif
+    auto menuBar = this->menuBar();
+    const auto menus = menuBar->actions();
+
+    QVector<QPair<QString, QList<QAction*>>> actions;
+    for (auto subMenu : menus) {
+        if (auto menu = subMenu->menu()) {
+            const auto menuActions = menu->actions();
+            actions.append({menu->title(), menuActions});
+        }
+    }
+
+    _commandBar->updateBar(actions);
+    _commandBar->show();
+    _commandBar->setFocus();
 }
 
 /**

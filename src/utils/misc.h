@@ -142,6 +142,7 @@ bool isPreviewUseEditorStyles();
 QString previewFontString();
 QString previewCodeFontString();
 bool fileExists(const QString &path);
+QString removeAcceleratorMarker(const QString &label_);
 }    // namespace Misc
 }    // namespace Utils
 

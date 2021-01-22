@@ -70,6 +70,7 @@ class UpdateService;
 class FakeVimHandler;
 class WebSocketServerService;
 class QOwnNotesMarkdownTextEdit;
+class CommandBar;
 
 // forward declaration because of "xxx does not name a type"
 class TodoDialog;
@@ -767,6 +768,7 @@ private:
     bool _scriptUpdateFound = false;
     bool _isMaximizedBeforeFullScreen = false;
     bool _isMinimizedBeforeFullScreen = false;
+    CommandBar* _commandBar;
 
     void createSystemTrayIcon();
 
