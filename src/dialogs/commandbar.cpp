@@ -11,6 +11,7 @@
 #include <QVBoxLayout>
 #include <QCoreApplication>
 #include <QMenu>
+#include <QAbstractTextDocumentLayout>
 
 #include "models/commandmodel.h"
 #include "utils/misc.h"
@@ -121,7 +122,9 @@ public:
         if (!rtl)
             painter->translate(25, 0);
 
-        doc.drawContents(painter);
+        QAbstractTextDocumentLayout::PaintContext ctx;
+        ctx.palette.setColor(QPalette::Text, options.palette.text().color());
+        doc.documentLayout()->draw(painter, ctx);
 
         painter->restore();
     }
@@ -277,7 +280,8 @@ void CommandBar::updateBar(const QVector<QPair<QString, QList<QAction *> > > &ac
     QVector<QPair<QString, QAction*>> actionList;
     for (auto act : actions) {
         for (const auto action : Utils::asConst(act.second)) {
-            actionList.append({act.first, action});
+            if (!action->text().isEmpty())
+                actionList.append({act.first, action});
         }
     }
 
