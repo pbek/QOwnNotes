@@ -280,7 +280,8 @@ void CommandBar::updateBar(const QVector<QPair<QString, QList<QAction *> > > &ac
     QVector<QPair<QString, QAction*>> actionList;
     for (auto act : actions) {
         for (const auto action : Utils::asConst(act.second)) {
-            actionList.append({act.first, action});
+            if (!action->text().isEmpty())
+                actionList.append({act.first, action});
         }
     }
 
