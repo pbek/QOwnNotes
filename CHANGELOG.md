@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.1.5
+- the `Use softwrap in note editor and preview` setting now also works for code blocks in
+  the preview, the pdf export and for printing (for [#2017](https://github.com/pbek/QOwnNotes/issues/2017))
+
 ## 21.1.4
 - the `Return` key will now be handled the same as the `Enter` key in the note text edit
   for things like automatically creating list items (for [#2013](https://github.com/pbek/QOwnNotes/issues/2013), thank you @fnkabit)

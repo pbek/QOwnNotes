@@ -2472,7 +2472,8 @@ QString Note::textToMarkdownHtml(QString str, const QString &notesPath,
     // do some more code formatting
     // the "pre" styles are for the full-width code block background color
     codeStyleSheet += QString(
-                          "pre { display: block; background-color: %1 } "
+                          "pre { display: block; background-color: %1;"
+                          " white-space: normal } "
                           "code { padding: 3px; overflow: auto;"
                           " line-height: 1.45em; background-color: %1;"
                           " border-radius: 5px; color: %2; }")
