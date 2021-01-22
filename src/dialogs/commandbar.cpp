@@ -271,7 +271,7 @@ void CommandBar::updateBar(const QVector<QPair<QString, QList<QAction *> > > &ac
 {
     QVector<QPair<QString, QAction*>> actionList;
     for (auto act : actions) {
-        for (const auto action : act.second) {
+        for (const auto action : Utils::asConst(act.second)) {
             actionList.append({act.first, action});
         }
     }
@@ -340,7 +340,7 @@ void CommandBar::slotReturnPressed()
                 menuActions = menu->actions();
             }
 
-            for (auto menuAction : menuActions) {
+            for (auto menuAction : Utils::asConst(menuActions)) {
                 if (menuAction) {
                     list.append({Utils::Misc::removeAcceleratorMarker(act->text()), menuAction});
                 }
