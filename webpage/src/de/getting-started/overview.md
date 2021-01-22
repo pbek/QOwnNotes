@@ -162,7 +162,7 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 - **Markdown-Hervorhebung** von Notizen und ein **Markdown-Vorschaumodus**
 - Unterstützung für [**Rechtschreibprüfung**](../editor/spellchecking.md)
 - **Kompatibel** mit der Notes-Anwendung von **Nextcloud / ownCloud** und **mobile** und Nextcloud Text
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
+- Verwalten Sie Ihre Nextcloud / ownCloud **Aufgabenlisten** (**Nextcloud-Aufgaben** oder **Tasks Plus** / **Calendar Plus**) oder verwenden Sie einen anderen **CalDAV-Server**, mit dem Sie Ihre Aufgaben synchronisieren können
 - Optionale **Verschlüsselung** von Notizen (AES-256 ist integriert oder Sie können benutzerdefinierte Verschlüsselungsmethoden wie **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) oder **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) verwenden.)
 - **Unterstützung für Schemata im Dunkelmodus**
 - **Schemata-Unterstützung** für die Hervorhebung der **Markdown-Syntax**

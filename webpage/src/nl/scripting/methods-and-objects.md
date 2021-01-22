@@ -429,8 +429,8 @@ Selecteer de huidige regel in de tekstbewerking van de notitie
 ### Methodeaanroep en parameters
 ```cpp
 /**
- * Selects the current line in the note text edit
- */
+  * Selecteert de huidige regel in de notitietekst
+  */
 void ScriptingService::noteTextEditSelectCurrentLine();
 ```
 
@@ -750,7 +750,7 @@ NoteApi * ScriptingService::fetchNoteByFileName (QString bestandsnaam,
 
 ### Voorbeeld
 ```js
-// fetch note by file name
+// haal notitie op met bestandsnaam
 script.fetchNoteByFileName("my note.md");
 ```
 

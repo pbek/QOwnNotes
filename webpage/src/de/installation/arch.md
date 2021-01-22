@@ -17,7 +17,7 @@ wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/
 sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB
 ```
 
-If the command `sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB` fails with a message like: `ERROR: FFC43FC94539B8B0 could not be locally signed.`, you could first find out the actual *keyid* of the downloaded key, i.e. with the command (and output):
+Wenn der Befehl `sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB` mit der folgenden Meldung fehlschlägt:`FEHLER: FFC43FC94539B8B0 konnte nicht lokal signiert werden.`, Sie konnten zuerst den tatsächlichen Wert ermitteln *keyid* des heruntergeladenen Schlüssels, d.h. mit dem Befehl (und der Ausgabe):
 
 ```bash
 gpg /path/to/downloaded/home_pbek_QOwnNotes_Arch_Extra.key
@@ -33,24 +33,24 @@ You can now synchronize your package database and install the package with `pacm
 sudo pacman -Syy qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
+[Direkter Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Arch_Extra)
 
 ::: tip
-Of course you can also use this repository with other Arch Linux based distributions, like Manjaro.
+Natürlich können Sie dieses Repository auch mit anderen Arch Linux-basierten Distributionen wie Manjaro verwenden.
 :::
 
 ## Arch User Repository (AUR)
 
-Alternatively there also is an official package for QOwnNotes on AUR, it is called `qownnotes`.
+Alternativ gibt es auch ein offizielles Paket für QOwnNotes auf AUR, es heißt `qownnotes`.
 
-You will find it here: [QOwnNotes on AUR](https://aur.archlinux.org/packages/qownnotes)
+Sie finden es hier: [QOwnNotes on AUR](https://aur.archlinux.org/packages/qownnotes)
 
-Synchronize your package database and install the package with `yay`:
+Synchronisieren Sie Ihre Paketdatenbank und installieren Sie das Paket mit `yay`:
 
 ```bash
 yay -S qownnotes
 ```
 
 ::: tip
-If you want to speed up build time you may want to read [CCACHE and AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/).
+Wenn Sie die Erstellungszeit beschleunigen möchten, lesen Sie [CCACHE and AUR](https://www.reddit.com/r/archlinux/comments/6vez44/a_small_tip_if_you_compile_from_aur/).
 :::

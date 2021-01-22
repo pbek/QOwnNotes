@@ -1,16 +1,16 @@
 # QOwnNotes Demo
 
-You can try out **QOwnNotes** in your web-browser without installing it by following these instructions:
+U kunt **QOwnNotes** uitproberen in uw webbrowser zonder het te installeren door deze instructies te volgen:
 
-1) Click on this [Play With Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) link. 2) Click the **Login / Start** button (see screenshot bullet **1**) and login with your Docker account (you need to create one if you don't already have one).
+1) Klik op deze [Spelen met Docker](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/qownnotes/docker-desktop/main/examples/docker-compose.play-with-docker.yml&stack_name=desktop) -link. 2) Klik op de knop **Login / Start** (zie screenshot bullet **1**) en log in met je Docker-account (je moet er een maken als je er nog geen hebt).
 
 ![screenshot01](/img/demo/playwithdocker01.png)
 
-3) Wait until the container is created and spun up. Then you should be able to click on **6080** on the top (see screenshot bullet **2**). If you get an error please wait a bit more and try to click *6080* again, it takes a while for the desktop environment to load.
+3) Wacht tot de container is gemaakt en rondgedraaid. Dan zou je bovenaan op **6080** moeten kunnen klikken (zie screenshot bullet **2**). Als u een foutmelding krijgt, wacht dan nog even en probeer nogmaals op *6080* te klikken, het duurt even voordat de desktopomgeving is geladen.
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 
-4) A new browser tab should open producing a desktop. Click on the **bottom left symbol** on the screen (in the task bar), hover over **Accessories** and click on **QOwnNotes** (see screenshot bullet **3**).
+4) Er zou een nieuw browsertabblad moeten worden geopend om een bureaublad te produceren. Klik op het **symbool linksonder** zweef op het scherm (in de taakbalk) over **Accessoires** en klik op **QOwnNotes** (zie screenshot bullet **3**).
 
 ![screenshot03](/img/demo/playwithdocker03.png)
 
