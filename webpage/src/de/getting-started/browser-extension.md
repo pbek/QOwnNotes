@@ -24,6 +24,8 @@ Standardmäßig zeigt die Browsererweiterung alle **Links der aktuellen Notiz** 
 
 Sie können **Ihre Lesezeichen auch in Notizen** mit dem Notiz-Tag `Lesezeichen` verwalten (in den Einstellungen änderbar). Diese Links können auch Tags und eine Beschreibung enthalten, die in der Browsererweiterung angezeigt wird.
 
+Neue Lesezeichen werden in einer Notiz namens `Lesezeichen` gespeichert (in den Einstellungen änderbar).
+
 ::: tip
 Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browser-Erweiterung in QOwnNotes importieren!
 :::

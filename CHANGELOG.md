@@ -1,7 +1,8 @@
 # QOwnNotes Changelog
 
 ## 21.1.7
-- fix line wraps in code blocks in the preview (for [#2017](https://github.com/pbek/QOwnNotes/issues/2017))
+- fixed line wraps in code blocks in the preview (for [#2017](https://github.com/pbek/QOwnNotes/issues/2017))
+- added more French, Dutch, German, Hungarian, Persian translation (thank you rawfreeamy, amirkbrpr, rakekniven)
 
 ## 21.1.6
 - there now is a new and slick *Action dialog* with fuzzy filtering replacing the old dialog
