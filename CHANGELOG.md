@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.1.6
+- there now is a new and slick action dialog with fuzzy filtering replacing the old dialog
+  (for [#2018](https://github.com/pbek/QOwnNotes/pull/2018), thank you @Waqar144)
+  - you can reach the dialog with the shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd>
+
 ## 21.1.5
 - the `Use softwrap in note editor and preview` setting now also works for code blocks in
   the preview, the pdf export and for printing (for [#2017](https://github.com/pbek/QOwnNotes/issues/2017))
