@@ -15,7 +15,7 @@ class CommandBar : public QMenu
 public:
     explicit CommandBar(QWidget *parent = nullptr);
 
-    void updateBar(const QVector<QPair<QString, QList<QAction*>>>& actions);
+    void updateBar(const QVector<QPair<QString, QAction*>>& actions);
 
     void updateViewGeometry();
 

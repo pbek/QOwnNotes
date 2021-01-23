@@ -11759,6 +11759,22 @@ void MainWindow::on_actionShow_all_panels_triggered() {
     filterNotes();
 }
 
+static void loadAllActions(QMenu* menu, QVector<QPair<QString, QAction*>>& outActions) {
+    if (!menu)
+        return;
+    const auto menuActions = menu->actions();
+    QVector<QPair<QString, QAction*>> actions;
+    actions.reserve(menuActions.size());
+    for (auto action : menuActions) {
+        if (auto submenu = action->menu()) {
+            loadAllActions(submenu, outActions);
+        } else {
+            if (!action->text().isEmpty())
+                outActions.append({menu->title(), action});
+        }
+    }
+}
+
 /**
  * Opens the find action dialog
  */
@@ -11777,11 +11793,10 @@ void MainWindow::on_actionFind_action_triggered() {
     auto menuBar = this->menuBar();
     const auto menus = menuBar->actions();
 
-    QVector<QPair<QString, QList<QAction*>>> actions;
+    QVector<QPair<QString, QAction*>> actions;
     for (auto subMenu : menus) {
         if (auto menu = subMenu->menu()) {
-            const auto menuActions = menu->actions();
-            actions.append({menu->title(), menuActions});
+            loadAllActions(menu, actions);
         }
     }
 

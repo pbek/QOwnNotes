@@ -275,17 +275,9 @@ CommandBar::CommandBar(QWidget *parent)
     setHidden(true);
 }
 
-void CommandBar::updateBar(const QVector<QPair<QString, QList<QAction *> > > &actions)
+void CommandBar::updateBar(const QVector<QPair<QString, QAction *> > &actions)
 {
-    QVector<QPair<QString, QAction*>> actionList;
-    for (auto act : actions) {
-        for (const auto action : Utils::asConst(act.second)) {
-            if (!action->text().isEmpty())
-                actionList.append({act.first, action});
-        }
-    }
-
-    m_model->refresh(std::move(actionList));
+    m_model->refresh(actions);
     reselectFirst();
 
     updateViewGeometry();
