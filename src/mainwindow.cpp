@@ -12559,10 +12559,10 @@ void MainWindow::on_actionImport_bookmarks_from_server_triggered() {
     ownCloud->fetchBookmarks();
 }
 
-void MainWindow::on_actionRiot_triggered() {
+void MainWindow::on_actionElementMatrix_triggered() {
     QDesktopServices::openUrl(
-        QUrl(QStringLiteral("https://riot.im/app/#/room/"
-                            "!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org")));
+        QUrl(QStringLiteral("https://app.element.io/#/room/"
+                            "#qownnotes:matrix.org")));
 }
 
 void MainWindow::on_actionToggle_fullscreen_triggered() {

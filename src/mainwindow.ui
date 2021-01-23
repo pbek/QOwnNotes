@@ -996,7 +996,7 @@ p, li { white-space: pre-wrap; }
        <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
      </property>
      <addaction name="actionTelegram"/>
-     <addaction name="actionRiot"/>
+     <addaction name="actionElementMatrix"/>
      <addaction name="actionGitter"/>
      <addaction name="actionOpen_IRC_Channel"/>
     </widget>
@@ -2193,19 +2193,19 @@ p, li { white-space: pre-wrap; }
     <string>Open the Telegram group</string>
    </property>
   </action>
-  <action name="actionRiot">
+  <action name="actionElementMatrix">
    <property name="icon">
     <iconset theme="im-user-online" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
    </property>
    <property name="text">
-    <string notr="true">Riot</string>
+    <string notr="true">Element (Matrix)</string>
    </property>
    <property name="toolTip">
-    <string extracomment="&quot;Riot&quot; as in the chat service">Open the Riot room</string>
+    <string extracomment="&quot;Element&quot; as in the chat service">Open the QOwnNotes Element Matrix room</string>
    </property>
    <property name="statusTip">
-    <string extracomment="&quot;Riot&quot; as in the chat service">Open the Riot room</string>
+    <string extracomment="&quot;Element&quot; as in the chat service">Open the QOwnNotes Element Matrix room</string>
    </property>
   </action>
   <action name="actionGitter">

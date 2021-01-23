@@ -8,7 +8,7 @@ const contactNavItems = [
   { text: 'Ask for feature', link: 'https://github.com/pbek/QOwnNotes/issues#feature' },
   { text: 'Report bug', link: 'https://github.com/pbek/QOwnNotes/issues#bug' },
   { text: 'Telegram Channel', link: 'https://t.me/QOwnNotes' },
-  { text: 'Matrix/Riot.im Chat', link: 'https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org' },
+  { text: 'Matrix/Element.io Room', link: 'https://app.element.io/#/room/#qownnotes:matrix.org' },
   { text: 'Gitter Chat', link: 'https://gitter.im/qownnotes/qownnotes' },
   { text: 'IRC Channel', link: 'https://kiwiirc.com/client/irc.freenode.net/#qownnotes' },
   { text: 'IRC Log', link: 'https://quodlibet.duckdns.org/irc/qownnotes/latest.log.html' },
