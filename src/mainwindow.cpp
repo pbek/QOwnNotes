@@ -11760,17 +11760,22 @@ void MainWindow::on_actionShow_all_panels_triggered() {
 }
 
 static void loadAllActions(QMenu* menu, QVector<QPair<QString, QAction*>>& outActions) {
-    if (!menu)
+    if (!menu) {
         return;
+    }
+
     const auto menuActions = menu->actions();
     QVector<QPair<QString, QAction*>> actions;
     actions.reserve(menuActions.size());
+
     for (auto action : menuActions) {
         if (auto submenu = action->menu()) {
             loadAllActions(submenu, outActions);
         } else {
-            if (!action->text().isEmpty())
+            if (!action->text().isEmpty() && !action->objectName().isEmpty() &&
+                action->isVisible()) {
                 outActions.append({menu->title(), action});
+            }
         }
     }
 }
