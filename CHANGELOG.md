@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 21.1.6
-- there now is a new and slick action dialog with fuzzy filtering replacing the old dialog
+- there now is a new and slick *Action dialog* with fuzzy filtering replacing the old dialog
   (for [#2018](https://github.com/pbek/QOwnNotes/pull/2018), thank you @Waqar144)
   - you can reach the dialog with the shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd>
 
