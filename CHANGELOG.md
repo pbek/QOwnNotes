@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.1.7
+- fix line wraps in code blocks in the preview (for [#2017](https://github.com/pbek/QOwnNotes/issues/2017))
+
 ## 21.1.6
 - there now is a new and slick *Action dialog* with fuzzy filtering replacing the old dialog
   (for [#2018](https://github.com/pbek/QOwnNotes/pull/2018), thank you @Waqar144)
