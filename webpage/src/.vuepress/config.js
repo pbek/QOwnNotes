@@ -124,6 +124,10 @@ module.exports = {
     '/nl/': {
       lang: 'nl-NL',
       title: 'QOwnNotes',
+    },
+    '/hu/': {
+      lang: 'hu-HU',
+      title: 'QOwnNotes',
     }
   },
 
@@ -390,5 +394,6 @@ module.exports = {
   ],
   markdown: {
     lineNumbers: true
-  }
-}
+ }
+   ]
+      },
