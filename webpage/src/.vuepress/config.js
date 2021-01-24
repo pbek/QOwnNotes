@@ -392,3 +392,59 @@ module.exports = {
     lineNumbers: true
   }
 }
+      '/hu/': {
+        selectText: 'Nyelvek',
+        label: 'Magyar',
+        editLinkText: 'Segíts jobbá tenni ezt az oldalt!',
+        algolia: {},
+        nav: [
+          {
+            text: 'Startoljunk',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'de'),
+          },
+          {
+            text: 'Telepítés',
+            link: utils.getNavItemForLanguage(installationNavItem, 'de'),
+          },
+          {
+            text: 'Changelog',
+            link: changelogNavItem,
+            collapsable: true,
+          },
+          {
+            text: 'Kapcsolat',
+            ariaLabel: 'Contact Menu',
+            items: contactNavItems
+          },
+          {
+            text: 'Spenden',
+            link: utils.getNavItemForLanguage(donateNavItem, 'hu'),
+          }
+        ],
+        sidebar: [
+          {
+            title: 'Loslegen',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, "hu")
+          },
+          {
+            title: 'Installation',
+            children: utils.getNavItemsForLanguage(installationNavItems, "hu")
+          },
+          {
+            title: 'Editor',
+            children: utils.getNavItemsForLanguage(editorNavItems, "hu")
+          },
+          {
+            title: 'Skripten',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "hu")
+          },
+          {
+            title: 'Adomány',
+            children: utils.getNavItemsForLanguage(contributingNavItems, "hu")
+          },
+          {
+            title: 'FAQ',
+            children: utils.getNavItemsForLanguage(faqNavItems, "hu")
+          }
+        ]
+      },
