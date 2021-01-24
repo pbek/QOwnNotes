@@ -274,7 +274,7 @@ module.exports = {
       },
       '/nl/': {
         selectText: 'Talen',
-        label: 'Nederlands (in uitvoering)',
+        label: 'Nederlands',
         editLinkText: 'Help ons deze pagina te verbeteren!',
         algolia: {},
         nav: [
