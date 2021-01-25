@@ -6960,7 +6960,10 @@ QTextDocument *MainWindow::getDocumentForPreviewExport() {
         Utils::Misc::useInternalExportStylingForPreview(), decrypt);
     html = Utils::Misc::parseTaskList(html, false);
 
-    auto doc = ui->noteTextView->document()->clone();
+    // Windows 10 has troubles with the QTextDocument from the QTextBrowser
+    // see: https://github.com/pbek/QOwnNotes/issues/2015
+//    auto doc = ui->noteTextView->document()->clone();
+    auto doc = new QTextDocument(this);
     doc->setHtml(html);
 
     return doc;
