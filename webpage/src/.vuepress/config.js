@@ -124,7 +124,15 @@ module.exports = {
     '/nl/': {
       lang: 'nl-NL',
       title: 'QOwnNotes',
-    }
+    },
+    '/hu/': {
+      lang: 'hu-HU',
+      title: 'QOwnNotes',
+    },
+    '/fa/': {
+      lang: 'fa-IR',
+      title: 'QOwnNotes',
+    },
   },
 
   /**
@@ -269,6 +277,118 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "de")
+          }
+        ]
+      },
+      '/hu/': {
+        selectText: 'Nyelvek',
+        label: 'Magyar',
+        editLinkText: 'Segíts jobbá tenni ezt az oldalt!',
+        algolia: {},
+        nav: [
+          {
+            text: 'Startoljunk',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'de'),
+          },
+          {
+            text: 'Telepítés',
+            link: utils.getNavItemForLanguage(installationNavItem, 'de'),
+          },
+          {
+            text: 'Changelog',
+            link: changelogNavItem,
+            collapsable: true,
+          },
+          {
+            text: 'Kapcsolat',
+            ariaLabel: 'Contact Menu',
+            items: contactNavItems
+          },
+          {
+            text: 'Spenden',
+            link: utils.getNavItemForLanguage(donateNavItem, 'hu'),
+          }
+        ],
+        sidebar: [
+          {
+            title: 'Loslegen',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, "hu")
+          },
+          {
+            title: 'Installation',
+            children: utils.getNavItemsForLanguage(installationNavItems, "hu")
+          },
+          {
+            title: 'Editor',
+            children: utils.getNavItemsForLanguage(editorNavItems, "hu")
+          },
+          {
+            title: 'Skripten',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "hu")
+          },
+          {
+            title: 'Adomány',
+            children: utils.getNavItemsForLanguage(contributingNavItems, "hu")
+          },
+          {
+            title: 'FAQ',
+            children: utils.getNavItemsForLanguage(faqNavItems, "hu")
+          }
+        ]
+      },
+      '/fa/': {
+        selectText: 'زبان ها',
+        label: 'فارسی',
+        editLinkText: 'برای بهبود این سایت به ما کمک کنید!',
+        algolia: {},
+        nav: [
+          {
+            text: 'شروع شدن',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'fa'),
+          },
+          {
+            text: 'نصب و راه اندازی',
+            link: utils.getNavItemForLanguage(installationNavItem, 'fa'),
+          },
+          {
+            text: 'تغییرات',
+            link: changelogNavItem,
+            collapsable: true,
+          },
+          {
+            text: 'مخاطب',
+            ariaLabel: 'Contact Menu',
+            items: contactNavItems
+          },
+          {
+            text: 'اهدا کردن',
+            link: utils.getNavItemForLanguage(donateNavItem, 'fa'),
+          }
+        ],
+        sidebar: [
+          {
+            title: 'شروع شدن',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, 'fa')
+          },
+          {
+            title: 'نصب و راه اندازی',
+            children: utils.getNavItemsForLanguage(installationNavItems, 'fa')
+          },
+          {
+            title: 'ویرایشگر',
+            children: utils.getNavItemsForLanguage(editorNavItems, 'fa')
+          },
+          {
+            title: 'اسکریپت ها',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, 'fa')
+          },
+          {
+            title: 'مشارکت',
+            children: utils.getNavItemsForLanguage(contributingNavItems, 'fa')
+          },
+          {
+            title: 'سالات متداول',
+            children: utils.getNavItemsForLanguage(faqNavItems, 'fa')
           }
         ]
       },
