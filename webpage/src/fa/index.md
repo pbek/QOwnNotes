@@ -5,7 +5,7 @@ home: صحیح
 heroImage: /screenshots/screenshot.png
 tagline: یادداشت مارک داون پرونده با متن ساده و به صورت متن باز و رایگان که به انضمام نکست کلود یا اون کلود بکار می رود
 actionText: شروع سریع⬅
-actionLink: در حال شروع/مرور کلی
+actionLink: getting-started/overview
 features:
   - 
     title: یادداشت های خود را داشته باشید
