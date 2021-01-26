@@ -8119,7 +8119,7 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress@^1.6.0:
+vuepress@^1.8.0:
   version "1.8.0"
   resolved "https://registry.npmjs.org/vuepress/-/vuepress-1.8.0.tgz#0139d466b33fbfdb628abb76d555368b85cf9772"
   integrity sha512-YvNitvoEc+JSJRv1W+IoRnvOTFyTWyUMuGuF2kTIbiSwIHb1hNinc3lqNSeBQJy7IBqyEzK5fnTq1mlynh4gwA==
