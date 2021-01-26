@@ -98,35 +98,35 @@ class MainWindow {
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
     Q_INVOKABLE void focusNoteTextEdit();
-    // Creates a new note subfolder in the current subfolder
+    // Maakt een nieuwe submap voor notities in de huidige submap
     Q_INVOKABLE bool createNewNoteSubFolder(QString folderName = "");
-    // Inserts html in the current note as markdown
-    // This method also downloads remote images and transforms "data:image"
-    // urls to local images stored in the media directory
+    // Voegt html in de huidige notitie in als markdown
+    // Deze methode downloadt ook afbeeldingen op afstand en transformeert "data: image"
+    // urls naar lokale afbeeldingen die zijn opgeslagen in de mediamap
     Q_INVOKABLE void insertHtmlAsMarkdownIntoCurrentNote(QString html);
-    // Reloads the current note by id
-    // This is useful when the path or filename of the current note changed
+    // Herlaadt de huidige notitie op id
+    // Dit is handig als het pad of de bestandsnaam van de huidige notitie is gewijzigd
     Q_INVOKABLE void reloadCurrentNoteByNoteId();
-    // Returns the list of workspace UUIDs
+    // Retourneert de lijst met werkruimte-UUID's
     Q_INVOKABLE QStringList getWorkspaceUuidList();
-    // Returns the UUID of a workspace, passing in the workspace name
+    // Retourneert de UUID van een werkruimte, waarbij de naam van de werkruimte wordt doorgegeven
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
-    // Sets the current workspace by UUID
+    // Stelt de huidige werkruimte in op UUID
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
 };
 ```
 
 ### Voorbeeld
 ```js
-// Force a reload of the note list
+// Forceer een herladen van de notitielijst
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
+// Creëert een nieuwe notitie submap "Mijn mooie map" in de huidige submap
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserts html in the current note as markdown
+// Voegt html in de huidige notitie in als markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Set 'Edit' workspace as current workspace
-mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
+// Stel de werkruimte 'Bewerken' in als de huidige werkruimte
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"))
 ```

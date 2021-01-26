@@ -2629,7 +2629,7 @@
       <location filename="../mainwindow.ui" line="2208"/>
       <source>Open the QOwnNotes Element Matrix room</source>
       <extracomment>"Element" as in the chat service</extracomment>
-      <translation type="unfinished">Open the QOwnNotes Element Matrix room</translation>
+      <translation>Obriu la sala QOwnNotes Element Matrix</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2220"/>

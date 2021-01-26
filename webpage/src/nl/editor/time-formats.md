@@ -33,7 +33,7 @@ U kunt uw eigen tijdnotatie gebruiken wanneer u de huidige tijd in een notitie i
 | `zzz`       | de milliseconden met voorloopnullen (000 tot 999)                         |
 | `AP` or `A` | gebruik AM / PM-weergave. A/ AP wordt vervangen door `AM` or `PM`.        |
 | `ap` of `a` | gebruik de am/ pm-weergave. a/ ap wordt vervangen door `am` or `pm`.      |
-| `t`         | the timezone (for example `CEST`)                                         |
+| `t`         | de tijdzone (bijvoorbeeld `CEST`)                                         |
 
 ## Voorbeeld opmaakstrings
 

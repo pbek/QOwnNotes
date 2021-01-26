@@ -4,7 +4,7 @@ Was andere über QOwnNotes gesagt haben…
 
 - <http://qownnotes.findmysoft.com/>
 - [Pro-Linux: Informationen zu QOwnNotes](http://www.pro-linux.de/cgi-bin/DBApp/check.cgi?ShowApp..20415.100)
-- [Kostenlose und Open Source-Ressourcen für Pädagogen: Notizen-Software](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
+- [Educators for free and open source resources: Note taking software](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
 - **Linux Voice 25**
     - <http://shop.linuxvoice.com/products/single-issues?src=menu>
     - [QOwnNotes got featured in Linux Voice 25](https://www.qownnotes.org/blog/2016-03-25-QOwnNotes-got-featured-in-Linux-Voice-25.html)

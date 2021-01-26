@@ -24,7 +24,7 @@ Standaard toont de browserextensie alle **links van de huidige notitie** in een 
 
 U kunt ook **uw bladwijzers in notities beheren** met de notitietag `bladwijzers` (wijzigbaar in de instellingen). Deze links kunnen ook tags en een beschrijving hebben die in de browserextensie wordt weergegeven.
 
-New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
+Nieuwe bladwijzers worden opgeslagen in een notitie genaamd `Bladwijzers` (ook te wijzigen in de instellingen).
 
 ::: tip
 U kunt ook uw browserbladwijzers importeren in QOwnNotes met de webpartner-browserextensie!

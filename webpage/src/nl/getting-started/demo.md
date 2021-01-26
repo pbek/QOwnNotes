@@ -14,6 +14,6 @@ U kunt **QOwnNotes** uitproberen in uw webbrowser zonder het te installeren door
 
 ![screenshot03](/img/demo/playwithdocker03.png)
 
-5) The **QOwnNotes** install dialog should open, click through it and press *Finish* to see the QOwnNotes main window.
+5) De **QOwnNotes** installatiedialoog zou moeten openen, klik erdoorheen en druk op *Voltooien* om het hoofdvenster van QOwnNotes te zien.
 
 ![screenshot04](/img/demo/playwithdocker04.png)

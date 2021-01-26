@@ -125,7 +125,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="115"/>
       <source>Enter your query text</source>
-      <translation>Masukkan kueri teks anda</translation>
+      <translation>Masukkan kueri teks Anda</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="118"/>
@@ -725,7 +725,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation>Silakan pilih berkas enex Evernote yang ingin anda impor:</translation>
+      <translation>Silakan pilih berkas enex Evernote yang akan Anda impor:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
@@ -1468,7 +1468,7 @@
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="87"/>
       <source>Do you want to use the selected layout?</source>
-      <translation>Apakah anda ingin menggunakan tata letak yang dipilih?</translation>
+      <translation>Apakah Anda ingin menggunakan tata letak yang dipilih?</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="90"/>
