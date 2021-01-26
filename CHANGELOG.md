@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 21.1.8
-- Windows 10 pdf export issues were fixed (for [#2015](https://github.com/pbek/QOwnNotes/issues/2015))
+- Windows 10 pdf export issues are now fixed (for [#2015](https://github.com/pbek/QOwnNotes/issues/2015))
 
 ## 21.1.7
 - fixed line wraps in code blocks in the preview (for [#2017](https://github.com/pbek/QOwnNotes/issues/2017))
