@@ -22,3 +22,91 @@ ul ul, ol ol, ul ol, ol ul
 
 .v-subheader.blog
   padding: 0
+
+// add RTL styles
+// taken from: https://github.com/abbasifard/vuepress-rtl/blob/master/src/rtl.styl
+html:lang(fa)
+  a.sidebar-link
+    border-left medium none color
+    border-right 0.25rem solid transparent
+
+  .sidebar .sidebar-sub-headers
+    padding-left 0
+    padding-right 1rem
+
+  a.sidebar-link
+    border-left medium none color
+    border-right 0.25rem solid transparent
+    &.active
+      border-left-color #fff
+      border-right-color $accentColor
+    .sidebar-group &
+      padding-left 0
+      padding-right 2rem
+    .sidebar-sub-headers &
+      border-left medium none color
+      border-right none
+
+  .custom-block
+    &.tip, &.warning, &.danger
+      border-left-width 0
+      border-right-width .5rem
+      border-left-style none
+      border-right-style solid
+
+  .sidebar-heading
+    padding-left 0
+    padding-right 1.5rem
+
+  .nav-links
+    .nav-item
+      margin-left 0
+      margin-right 1.5rem
+    .repo-link
+      margin-left 0
+      margin-right 1.5rem
+
+  .page-nav.content
+    .next
+      float left
+
+  .dropdown-wrapper
+    .dropdown-title
+      .arrow
+        margin-left 0
+        margin-right 0.4rem
+
+  .content pre, .content pre[class*="language-"]
+    direction ltr
+
+  body
+    direction rtl
+
+  .page
+    padding-left 0 !important
+    padding-right $sidebarWidth
+    text-align right
+    direction rtl
+
+  .sidebar
+    left auto !important
+    right 0
+    border-right medium none color
+    border-left 1px solid $borderColor
+    direction rtl
+
+  a.header-anchor
+    float right !important
+    margin-left 0 !important
+    margin-right -0.87em
+    padding-right 0 !important
+    padding-left 0.23em
+
+  .search-box
+    margin-right 0 !important
+    margin-left 0.5rem
+
+  .navbar
+    .links
+      left 1.5rem
+      right auto
