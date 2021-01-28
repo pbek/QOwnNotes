@@ -290,7 +290,7 @@ With `noteTaggingByObjectHook` you get a `TagApi` object as parameter, instead o
 
 This also means you need to create missing tags yourself to be able to provide a list of already existing tag ids for the `list` action.
 
-### Method call and parameters
+### Parámetros y llamada al método
 ```js
 /**
  * Handles note tagging for a note
@@ -314,7 +314,7 @@ autocompletionHook
 
 You can return a list of strings to be added to the autocompletion list when the autocompletion is invoked (for example by pressing <kbd>Ctrl + Space</kbd>).
 
-### Method call and parameters
+### Parámetros y llamada al método
 ```js
 /**
  * Calls the autocompletionHook function for all script components
@@ -325,14 +325,14 @@ You can return a list of strings to be added to the autocompletion list when the
 function callAutocompletionHook();
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+Es posible que desee echar un vistazo al ejemplo [ autocompletado.qml ](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
 websocketRawDataHook
 --------------------
 
-This hook is called when data is sent from the QOwnNotes Web Companion browser extension via the web browser's context menu.
+Este enlace se llama cuando se envían datos desde la extensión del navegador QOwnNotes Web Companion a través del menú contextual del navegador web.
 
-### Method call and parameters
+### Parámetros y llamada al método
 ```js
 /**
  * @param requestType can be "page" or "selection"
@@ -345,17 +345,17 @@ This hook is called when data is sent from the QOwnNotes Web Companion browser e
 function callHandleWebsocketRawDataHook(requestType, pageUrl, pageTitle, rawData, screenshotDataUrl);
 ```
 
-You may want to take a look at the examples [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-new-note.qml) and [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
+Es posible que desee echar un vistazo a los ejemplos [websocket-raw-data-new-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-new-note.qml) y [websocket-raw-data-selection-in-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-raw-data-selection-in-note.qml).
 
 onDetachedProcessCallback
 -------------------------
 
-This hook is called when a script thread of [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background) is done executing.
+Este gancho se llama cuando un hilo de script de [startDetachedProcess](methods-and-objects.html#starting-an-external-program-in-the-background) termina de ejecutarse.
 
-### Method call and parameters
+### Parámetros y llamada al método
 ```js
 /**
- * This function is called when a script thread is done executing.
+  * Esta función se llama cuando se termina de ejecutar un hilo de script.
  * Hint: thread[1]==0 helps to determine if a bulk of started processes for a certain identifier is done.
  *
  * @param {QString} callbackIdentifier - the provided id when calling startDetachedProcess()
@@ -366,12 +366,12 @@ This hook is called when a script thread of [startDetachedProcess](methods-and-o
 function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 ```
 
-You may want to take a look at the example [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml).
+Es posible que desee echar un vistazo al ejemplo [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml).
 
 windowStateChangedHook
 --------------
 
-### Method call and parameters
+### Parámetros y llamada al método
 ```js
 /**
  * This function is called after a WindowStateChange event was triggered
@@ -381,4 +381,4 @@ windowStateChangedHook
 function windowStateChangedHook(windowState);
 ```
 
-You may want to take a look at the example [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/window-state-changed.qml).
+Es posible que desee echar un vistazo al ejemplo [window-state-changed.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/window-state-changed.qml).

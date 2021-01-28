@@ -1176,12 +1176,12 @@ bool ScriptingService::clearCacheDir(const QString &subDir) const;
 script.clearCacheDir("my-script-id");
 ```
 
-Reading the path to the directory of your script
+خواندن مسیر به فهرست اسکریپت
 ------------------------------------------------
 
-If you need to get the path to the directory where your script is placed to for example load other files you have to register a `property string scriptDirPath;`. This property will be set with the path to the script's directory.
+در صورت نیاز به دریافت مسیر به فهرستی که اسکریپت شما مثلاً برای بارگذاری سایر پرونده ها در آن قرار دارد، شما باید یک `رشته ویژگی scriptDirPath;` ثبت کنید. این ویژگی به همراه مسیر به فهرست اسکریپت اعمال می شود.
 
-### Example
+### مثال
 ```js
 import QtQml 2.0
 import QOwnNotesTypes 1.0
@@ -1196,10 +1196,10 @@ Script {
 }
 ```
 
-Converting path separators to native ones
+تبدیل جداکننده های مسیر به موارد محلی
 -----------------------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Returns path with the '/' separators converted to separators that are
@@ -1214,16 +1214,16 @@ Converting path separators to native ones
 QString ScriptingService::toNativeDirSeparators(QString path);
 ```
 
-### Example
+### مثال
 ```js
 // will return "c:\winnt\system32" on Windows
 script.log(script.toNativeDirSeparators("c:/winnt/system32"));
 ```
 
-Converting path separators from native ones
+تبدیل جداکننده های مسیر از موارد محلی
 -------------------------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Returns path using '/' as file separator.
@@ -1236,16 +1236,16 @@ Converting path separators from native ones
 QString ScriptingService::fromNativeDirSeparators(QString path);
 ```
 
-### Example
+### مثال
 ```js
 // will return "c:/winnt/system32" on Windows
 script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
 ```
 
-Getting the native directory separator
+دریافت جداکننده فهرست محلی
 --------------------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Returns the native directory separator "/" or "\" on Windows
@@ -1255,16 +1255,16 @@ Getting the native directory separator
 QString ScriptingService::dirSeparator();
 ```
 
-### Example
+### مثال
 ```js
 // will return "\" on Windows
 script.log(script.dirSeparator());
 ```
 
-Getting a list of the paths of all selected notes
+دریافت لیستی از مسیرهای همه یادداشت های منتخب
 -------------------------------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Returns a list of the paths of all selected notes
@@ -1274,18 +1274,18 @@ Getting a list of the paths of all selected notes
 QStringList ScriptingService::selectedNotesPaths();
 ```
 
-### Example
+### مثال
 ```js
 // returns a list of the paths of all selected notes
 script.log(script.selectedNotesPaths());
 ```
 
-You may want to take a look at the example [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
+به عنوان مثال می توانید [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml) را ملاحظه کنید.
 
-Getting a list of the ids of all selected notes
+دریافت لیستی از شناسه های کاربری همه یادداشت های منتخب
 -----------------------------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Returns a list of the ids of all selected notes
@@ -1295,13 +1295,13 @@ Getting a list of the ids of all selected notes
 QList<int> ScriptingService::selectedNotesIds();
 ```
 
-### Example
+### مثال
 ```js
 // returns a list of the ids of all selected notes
 script.log(script.selectedNotesIds());
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+به عنوان مثال می توانید به [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml) مراجعه کنید.
 
 Triggering a menu action
 ------------------------
