@@ -3,7 +3,7 @@
 You can use your own time format when inserting the current time into a
 note.
 
-## Expressions for the date
+## Expressions for date
 
 | Expression   | Output                                                        |
 | ------------ | ------------------------------------------------------------- |
@@ -18,7 +18,7 @@ note.
 | `yy`         | the year as two digit number (00-99)                          |
 | `yyyy`       | the year as four digit number                                 |
 
-## Expressions for the time
+## Expressions for time
 
 | Expression   | Output                                                                    |
 | ------------ | ------------------------------------------------------------------------- |
