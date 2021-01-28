@@ -130,6 +130,14 @@ module.exports = {
       title: 'QOwnNotes',
     },
     '/fa/': {
+      lang: 'fr-FR',
+      title: 'QOwnNotes',
+          },
+    '/es/': {
+      lang: 'es-ES',
+      title: 'QOwnNotes',
+          },
+    '/fa/': {
       lang: 'fa-IR',
       title: 'QOwnNotes',
     },
@@ -280,22 +288,78 @@ module.exports = {
           }
         ]
       },
-      '/hu/': {
-        selectText: 'Nyelvek',
-        label: 'Magyar',
-        editLinkText: 'Segíts jobbá tenni ezt az oldalt!',
+      '/es/': {
+        selectText: 'Idiomas',
+        label: 'Español',
+        editLinkText: '¡Ayúdanos a mejorar este sitio!',
         algolia: {},
         nav: [
           {
-            text: 'Startoljunk',
-            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'de'),
+            text: 'Empezando',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'es'),
+          },
+          {
+            text: 'Instalación',
+            link: utils.getNavItemForLanguage(installationNavItem, 'es'),
+          },
+          {
+            text: 'Registro de cambios',
+            link: changelogNavItem,
+            collapsable: true,
+          },
+          {
+            text: 'Contacto',
+            ariaLabel: 'Contact Menu',
+            items: contactNavItems
+          },
+          {
+            text: 'Donar',
+            link: utils.getNavItemForLanguage(donateNavItem, 'es'),
+          }
+        ],
+        sidebar: [
+          {
+            title: 'Empezando',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, "es")
+          },
+          {
+            title: 'Instalación',
+            children: utils.getNavItemsForLanguage(installationNavItems, "es")
+          },
+          {
+            title: 'Editor',
+            children: utils.getNavItemsForLanguage(editorNavItems, "es")
+          },
+          {
+            title: 'Guiones',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "es")
+          },
+          {
+            title: 'Contribuir',
+            children: utils.getNavItemsForLanguage(contributingNavItems, "es")
+          },
+          {
+            title: 'FAQ',
+            children: utils.getNavItemsForLanguage(faqNavItems, "es")
+          }
+        ]
+      },
+      '/hu/': {
+        selectText: 'Nyelvek',
+        label: 'Magyar',
+        editLinkText: 'Segítsen javítani ezt az oldalt!',
+        algolia: {},
+        nav: [
+          {
+            text: 'Startolunk',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'hu'),
           },
           {
             text: 'Telepítés',
-            link: utils.getNavItemForLanguage(installationNavItem, 'de'),
+            link: utils.getNavItemForLanguage(installationNavItem, 'hu'),
           },
           {
-            text: 'Changelog',
+            text: 'Változások',
             link: changelogNavItem,
             collapsable: true,
           },
@@ -305,25 +369,25 @@ module.exports = {
             items: contactNavItems
           },
           {
-            text: 'Spenden',
+            text: 'Adomány',
             link: utils.getNavItemForLanguage(donateNavItem, 'hu'),
           }
         ],
         sidebar: [
           {
-            title: 'Loslegen',
+            title: 'Startol',
             children: utils.getNavItemsForLanguage(gettingStartedNavItems, "hu")
           },
           {
-            title: 'Installation',
+            title: 'Telepítés',
             children: utils.getNavItemsForLanguage(installationNavItems, "hu")
           },
           {
-            title: 'Editor',
+            title: 'Szerkesztő',
             children: utils.getNavItemsForLanguage(editorNavItems, "hu")
           },
           {
-            title: 'Skripten',
+            title: 'Szkriptek',
             children: utils.getNavItemsForLanguage(scriptingNavItems, "hu")
           },
           {
@@ -333,6 +397,62 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "hu")
+          }
+        ]
+      },
+       '/fr/': {
+        selectText: 'Langues',
+        label: 'français',
+        editLinkText: 'Aidez-nous à améliorer ce site!',
+        algolia: {},
+        nav: [
+          {
+            text: 'Commencer',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'fr'),
+          },
+          {
+            text: 'Installation',
+            link: utils.getNavItemForLanguage(installationNavItem, 'fr'),
+          },
+          {
+            text: 'Changelog',
+            link: changelogNavItem,
+            collapsable: true,
+          },
+          {
+            text: 'Contact',
+            ariaLabel: 'Contact Menu',
+            items: contactNavItems
+          },
+          {
+            text: 'Faire un don',
+            link: utils.getNavItemForLanguage(donateNavItem, 'fr'),
+          }
+        ],
+        sidebar: [
+          {
+            title: 'Commencer',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, "fr")
+          },
+          {
+            title: 'Installation',
+            children: utils.getNavItemsForLanguage(installationNavItems, "fr")
+          },
+          {
+            title: 'Éditeur',
+            children: utils.getNavItemsForLanguage(editorNavItems, "fr")
+          },
+          {
+            title: 'Les scripts',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "fr")
+          },
+          {
+            title: 'Contribuer',
+            children: utils.getNavItemsForLanguage(contributingNavItems, "fr")
+          },
+          {
+            title: 'FAQ',
+            children: utils.getNavItemsForLanguage(faqNavItems, "fr")
           }
         ]
       },
@@ -450,7 +570,6 @@ module.exports = {
       }
     }
   },
-
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/plugin/
    */
