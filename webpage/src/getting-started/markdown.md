@@ -16,7 +16,7 @@ Use headings to structure your texts.
 ```
 
 ::: tip
-The **Navigation panel** shows shows the structure of your headings. 
+The **Navigation panel** shows the structure of your headings. 
 :::
 
 Alternatively, for H1 and H2, an underline-ish style:
