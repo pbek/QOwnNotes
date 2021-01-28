@@ -33,14 +33,14 @@ graph TB
 
 ## QOwnNotes
 
-- QOwnNotes **stores notes** directly to your **note folder as markdown files**
-- It can talk directly to your Nextcloud / ownCloud server to share notes
-- You can also access your note history and trash on your Nextcloud / ownCloud server
+- QOwnNotes **stores notes** to your **note folder as markdown files**
+- It can talk to your Nextcloud / ownCloud server **to publicly share notes** with other people 
+- You can also **access your note history and trash** on your Nextcloud / ownCloud server
   via the [QOwnNotesApi Nextcloud app](#qownnotesapi-nextcloud-app)
 - Todo lists on your Nextcloud / ownCloud server can be accessed from within QOwnNotes
-- QOwnNotes **does not sync** your notes and media / attachment files, file syncing
-  is a hard business, there are already good solutions for it
-  (see [Nextcloud desktop sync client](#nextcloud-desktop-sync-client))
+- **QOwnNotes does not sync your notes** and media / attachment files!
+    - File syncing is a complex endeavor, there are already great file syncing solutions
+      out there (see [Nextcloud desktop sync client](#nextcloud-desktop-sync-client))
 
 
 ## Markdown note files
