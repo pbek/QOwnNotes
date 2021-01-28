@@ -121,15 +121,7 @@ module.exports = {
       lang: 'de-DE',
       title: 'QOwnNotes',
     },
-    '/nl/': {
-      lang: 'nl-NL',
-      title: 'QOwnNotes',
-    },
-    '/hu/': {
-      lang: 'hu-HU',
-      title: 'QOwnNotes',
-    },
-    '/fa/': {
+    '/fr/': {
       lang: 'fr-FR',
       title: 'QOwnNotes',
           },
@@ -139,6 +131,14 @@ module.exports = {
           },
     '/fa/': {
       lang: 'fa-IR',
+      title: 'QOwnNotes',
+    },
+    '/nl/': {
+      lang: 'nl-NL',
+      title: 'QOwnNotes',
+    },
+    '/hu/': {
+      lang: 'hu-HU',
       title: 'QOwnNotes',
     },
   },
@@ -402,7 +402,7 @@ module.exports = {
       },
        '/fr/': {
         selectText: 'Langues',
-        label: 'français',
+        label: 'Français',
         editLinkText: 'Aidez-nous à améliorer ce site!',
         algolia: {},
         nav: [

@@ -85,7 +85,7 @@ popd || exit 1
 
 echo "Remove all translated webpage folders, but German, Hungarian, Persian and Dutch..."
 # Remove all active languages here!
-find webpage/src -type d -regextype posix-egrep -regex ".+src\/(ar|bg|bn|bs|ca|ceb|cs|da|el|es|et|eu|fi|fil|fr|ga|gl|ha|he|hi|hil|hr|id|is|it|ja|km|ko|ku|lt|lv|mi|mk|ms|no|pa|pcm|pl|pt|ro|ru|si|sk|sl|sn|sq|sr|sv|th|tl|tlh|tr|uk|ur|uz|vi|xh|yi|zh|zu)$" -exec rm -Rf "{}" \;
+find webpage/src -type d -regextype posix-egrep -regex ".+src\/(ar|bg|bn|bs|ca|ceb|cs|da|el|et|eu|fi|fil|ga|gl|ha|he|hi|hil|hr|id|is|it|ja|km|ko|ku|lt|lv|mi|mk|ms|no|pa|pcm|pl|pt|ro|ru|si|sk|sl|sn|sq|sr|sv|th|tl|tlh|tr|uk|ur|uz|vi|xh|yi|zh|zu)$" -exec rm -Rf "{}" \;
 
 
 #
@@ -106,4 +106,4 @@ fixCrowdinTranslationProblems() {
 echo "Fix Crowdin translation bugs..."
 export -f fixCrowdinTranslationProblems
 # Add all active languages here!
-find webpage/src -type f -regextype posix-egrep -regex ".+src\/(de|nl|fa|hr)\/.+\.md" -exec bash -c 'fixCrowdinTranslationProblems "$0"' {} \;
+find webpage/src -type f -regextype posix-egrep -regex ".+src\/(de|nl|fa|hr|es|fr)\/.+\.md" -exec bash -c 'fixCrowdinTranslationProblems "$0"' {} \;

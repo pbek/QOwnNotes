@@ -367,7 +367,7 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread);
 
 شاید بخواهید مثال [callback-example.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml) را ملاحظه کنید.
 
-هوک تغییر یافته توسط حالت پنجره
+windowStateChangedHook
 --------------
 
 ### فراخوانی شگرد و پارامترها
