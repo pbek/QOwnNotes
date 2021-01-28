@@ -19,3 +19,5 @@ Four new translations were integrated into the webpage! A big thank you to all t
 - [QOwnNotes webpage in Persian](www.qownnotes.org/fa)
 
 If you want to help with the translation please visit the [Translation documentation](../contributing/translation.md)
+
+![Persian webpage](/img/blog/webpage-persian.png)
