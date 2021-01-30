@@ -153,7 +153,7 @@
 - Puede usar sus **archivos de texto o rebajas existentes**, sin necesidad de importar la mayoría de las veces
 - **La búsqueda de subcadena** de notas es posible y los resultados de la búsqueda se resaltan en las notas
 - **Los atajos de teclado** son personalizables
-- **Soporte de secuencias de comandos ** y un [**repositorio de secuencias de comandos**](https://github.com/qownnotes/scripts) en línea donde puede instalar secuencias de comandos dentro de la aplicación
+- **Soporte de secuencias de comandos** y un [**repositorio de secuencias de comandos**](https://github.com/qownnotes/scripts) en línea donde puede instalar secuencias de comandos dentro de la aplicación
 - [Extensión del navegador](browser-extension.md) para agregar notas del texto seleccionado, hacer capturas de pantalla o administrar sus marcadores
 - **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
 - Las **versiones anteriores** de sus notas se pueden **restaurar** desde su servidor **Nextcloud / ownCloud**
