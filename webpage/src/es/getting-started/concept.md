@@ -80,7 +80,7 @@ Por supuesto, otras soluciones, como **Dropbox**, **Syncthing**, **Seafile** o B
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) le permite acceder a su **notas enviadas a la papelera** y **versiones de notas** del lado del servidor.
 
-:: tip Visite [Aplicación QOwnNotesAPI Nextcloud](qownnotesapi.md) para obtener más información.
+::: tip Visite [Aplicación QOwnNotesAPI Nextcloud](qownnotesapi.md) para obtener más información.
 :::
 
 ## Aplicación de servidor Nextcloud Notes
