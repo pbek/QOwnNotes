@@ -351,7 +351,7 @@ module.exports = {
         algolia: {},
         nav: [
           {
-            text: 'Startolunk',
+            text: 'Az első lépések',
             link: utils.getNavItemForLanguage(gettingStartedNavItem, 'hu'),
           },
           {
@@ -375,7 +375,7 @@ module.exports = {
         ],
         sidebar: [
           {
-            title: 'Startol',
+            title: 'Az első lépések',
             children: utils.getNavItemsForLanguage(gettingStartedNavItems, "hu")
           },
           {
