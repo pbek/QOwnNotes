@@ -1984,13 +1984,13 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
    </property>
    <property name="text">
-    <string notr="true">IRC</string>
+    <string notr="true">IRC (Kiwi)</string>
    </property>
    <property name="toolTip">
-    <string>Open the #qownnotes IRC channel, you have to stay online to get a response</string>
+    <string>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</string>
    </property>
    <property name="statusTip">
-    <string>Open the #qownnotes IRC channel, you have to stay online to get a response</string>
+    <string>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</string>
    </property>
   </action>
   <action name="actionInsert_headline_from_note_filename">
@@ -2199,13 +2199,13 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
    </property>
    <property name="text">
-    <string notr="true">Element (Matrix)</string>
+    <string notr="true">Matrix (Element)</string>
    </property>
    <property name="toolTip">
-    <string extracomment="&quot;Element&quot; as in the chat service">Open the QOwnNotes Element Matrix room</string>
+    <string extracomment="&quot;Element&quot; as in the chat service">Open the QOwnNotes Matrix (Element) room</string>
    </property>
    <property name="statusTip">
-    <string extracomment="&quot;Element&quot; as in the chat service">Open the QOwnNotes Element Matrix room</string>
+    <string extracomment="&quot;Element&quot; as in the chat service">Open the QOwnNotes Matrix (Element) room</string>
    </property>
   </action>
   <action name="actionGitter">
