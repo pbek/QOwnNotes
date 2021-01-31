@@ -295,7 +295,10 @@ module.exports = {
         selectText: 'Idiomas',
         label: 'Español',
         editLinkText: '¡Ayúdanos a mejorar este sitio!',
-        algolia: {},
+        algolia: {
+          apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+          indexName: 'qownnotes'
+        },
         nav: [
           {
             text: 'Empezando',
@@ -351,7 +354,10 @@ module.exports = {
         selectText: 'Nyelvek',
         label: 'Magyar',
         editLinkText: 'Segítsen javítani ezt az oldalt!',
-        algolia: {},
+        algolia: {
+          apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+          indexName: 'qownnotes'
+        },
         nav: [
           {
             text: 'Az első lépések',
@@ -407,7 +413,10 @@ module.exports = {
         selectText: 'Langues',
         label: 'Français',
         editLinkText: 'Aidez-nous à améliorer ce site!',
-        algolia: {},
+         algolia: {
+           apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+           indexName: 'qownnotes'
+         },
         nav: [
           {
             text: 'Commencer',
@@ -463,7 +472,10 @@ module.exports = {
         selectText: 'زبان ها',
         label: 'فارسی',
         editLinkText: 'برای بهبود این سایت به ما کمک کنید!',
-        algolia: {},
+        algolia: {
+          apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+          indexName: 'qownnotes'
+        },
         nav: [
           {
             text: 'شروع شدن',
@@ -519,7 +531,10 @@ module.exports = {
         selectText: 'Talen',
         label: 'Nederlands',
         editLinkText: 'Help ons deze pagina te verbeteren!',
-        algolia: {},
+        algolia: {
+          apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+          indexName: 'qownnotes'
+        },
         nav: [
           {
             text: 'Aan de slag',
