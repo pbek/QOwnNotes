@@ -236,7 +236,10 @@ module.exports = {
         selectText: 'Sprachen',
         label: 'Deutsch',
         editLinkText: 'Hilf uns diese Seite zu verbessern!',
-        algolia: {},
+        algolia: {
+          apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+          indexName: 'qownnotes'
+        },
         nav: [
           {
             text: 'Loslegen',
