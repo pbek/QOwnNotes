@@ -806,8 +806,8 @@ void OwnCloudService::shareNote(const Note &note, ShareDialog *dialog) {
 
     QByteArray postData;
     // set to public link
-    postData.append(QStringLiteral("shareType=3&"));
-    postData.append(QStringLiteral("path=") % QUrl::toPercentEncoding(path));
+    postData.append(QStringLiteral("shareType=3&").toLatin1());
+    postData.append((QStringLiteral("path=") % QUrl::toPercentEncoding(path)).toLatin1());
 
     qDebug() << __func__ << " - 'url': " << url;
     qDebug() << __func__ << " - 'postData': " << postData;
