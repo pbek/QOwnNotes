@@ -44,10 +44,10 @@ void Utils::Git::commitCurrentNoteFolder() {
     auto* process = new QProcess();
     process->setWorkingDirectory(NoteFolder::currentLocalPath());
 
-    if (!executeGitCommand("init", process) ||
-        !executeGitCommand("config commit.gpgsign false", process) ||
-        !executeGitCommand("add -A", process) ||
-        !executeGitCommand("commit -m \"QOwnNotes commit\"", process)) {
+    if (!executeGitCommand(QStringList{"init"}, process) ||
+        !executeGitCommand(QStringList{"config", "commit.gpgsign", "false"}, process) ||
+        !executeGitCommand(QStringList{"add", "-A"}, process) ||
+        !executeGitCommand(QStringList{"commit", "-m", "QOwnNotes commit"}, process)) {
     }
 
     delete (process);
@@ -60,21 +60,22 @@ void Utils::Git::commitCurrentNoteFolder() {
  * @param process
  * @return
  */
-bool Utils::Git::executeCommand(const QString& command, QProcess* process,
-                                bool withErrorDialog) {
+bool Utils::Git::executeCommand(const QString& command, const QStringList& arguments,
+                                QProcess* process, bool withErrorDialog) {
     if (process == Q_NULLPTR) {
         process = new QProcess();
     }
 
-    process->start(command);
+    process->start(command, arguments);
 
     if (!process->waitForFinished()) {
-        qWarning() << "Command '" + command + "' failed";
+        qWarning() << "Command '" + command + "' (" << arguments << ") failed";
 
         if (withErrorDialog) {
             Utils::Gui::warning(
                 Q_NULLPTR, QObject::tr("Command failed!"),
-                QObject::tr("The command <code>%1</code> failed!").arg(command),
+                QObject::tr("The command <code>%1</code> with arguments <code>%2</code> failed!")
+                    .arg(command, arguments.join(QStringLiteral(", "))),
                 "command-failed");
         }
 
@@ -90,7 +91,8 @@ bool Utils::Git::executeCommand(const QString& command, QProcess* process,
     QByteArray errorMessage = process->readAllStandardError();
 
     if (!errorMessage.isEmpty()) {
-        qWarning() << "Error message by '" + command + "': " + errorMessage;
+        qWarning() << "Error message by '" + command + "' (" << arguments
+                   << "): " + errorMessage;
     }
 
     return true;
@@ -103,10 +105,9 @@ bool Utils::Git::executeCommand(const QString& command, QProcess* process,
  * @param process
  * @return
  */
-bool Utils::Git::executeGitCommand(const QString& arguments, QProcess* process,
+bool Utils::Git::executeGitCommand(const QStringList& arguments, QProcess* process,
                                    bool withErrorDialog) {
-    return executeCommand("\"" + gitCommand() + "\" " + arguments, process,
-                          withErrorDialog);
+    return executeCommand(gitCommand(), arguments, process, withErrorDialog);
 }
 
 /**

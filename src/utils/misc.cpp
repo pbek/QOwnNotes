@@ -1102,34 +1102,33 @@ void writeStreamElement<QString>(QDataStream &os, const QString s) {
     os << s;
 }
 
+/**
+ * Save printer settings to a stream
+ */
 QDataStream &Utils::Misc::dataStreamWrite(QDataStream &os,
                                           const QPrinter &printer) {
     writeStreamElement(os, printer.printerName());
-    writeStreamElement(os, printer.pageSize());
+    writeStreamElement(os, printer.pageLayout().pageSize().id());
     writeStreamElement(os, printer.collateCopies());
     writeStreamElement(os, printer.colorMode());
     writeStreamElement(os, printer.copyCount());
     writeStreamElement(os, printer.creator());
     writeStreamElement(os, printer.docName());
-    writeStreamElement(os, printer.doubleSidedPrinting());
     writeStreamElement(os, printer.duplex());
     writeStreamElement(os, printer.fontEmbeddingEnabled());
     writeStreamElement(os, printer.fullPage());
-    writeStreamElement(os, printer.orientation());
+    writeStreamElement(os, printer.pageLayout().orientation());
     writeStreamElement(os, printer.outputFileName());
     writeStreamElement(os, printer.outputFormat());
     writeStreamElement(os, printer.pageOrder());
-    writeStreamElement(os, printer.paperSize());
     writeStreamElement(os, printer.paperSource());
     writeStreamElement(os, printer.printProgram());
     writeStreamElement(os, printer.printRange());
     writeStreamElement(os, printer.printerName());
     writeStreamElement(os, printer.resolution());
-    writeStreamElement(os, printer.winPageSize());
 
-    qreal left, top, right, bottom;
-    printer.getPageMargins(&left, &top, &right, &bottom, QPrinter::Millimeter);
-    os << left << top << right << bottom;
+    auto margins = printer.pageLayout().margins(QPageLayout::Unit::Millimeter);
+    os << margins.left() << margins.top() << margins.right() << margins.bottom();
 
     Q_ASSERT_X(
         os.status() == QDataStream::Ok, __FUNCTION__,
@@ -1155,34 +1154,40 @@ QString readStreamElement<QString>(QDataStream &is) {
     return s;
 }
 
+/**
+ * Load printer settings from a stream
+ */
 QDataStream &Utils::Misc::dataStreamRead(QDataStream &is, QPrinter &printer) {
     printer.setPrinterName(readStreamElement<QString>(is));
-    printer.setPageSize(readStreamElement<QPrinter::PaperSize>(is));
+
+    QPageSize pageSize(readStreamElement<QPageSize::PageSizeId>(is));
+    auto pageLayout = printer.pageLayout();
+    pageLayout.setPageSize(pageSize);
+    printer.setPageLayout(pageLayout);
+
     printer.setCollateCopies(readStreamElement<bool>(is));
     printer.setColorMode(readStreamElement<QPrinter::ColorMode>(is));
     printer.setCopyCount(readStreamElement<int>(is));
     printer.setCreator(readStreamElement<QString>(is));
     printer.setDocName(readStreamElement<QString>(is));
-    printer.setDoubleSidedPrinting(readStreamElement<bool>(is));
     printer.setDuplex(readStreamElement<QPrinter::DuplexMode>(is));
     printer.setFontEmbeddingEnabled(readStreamElement<bool>(is));
     printer.setFullPage(readStreamElement<bool>(is));
-    printer.setOrientation(readStreamElement<QPrinter::Orientation>(is));
+    printer.setPageOrientation(readStreamElement<QPageLayout::Orientation>(is));
     printer.setOutputFileName(readStreamElement<QString>(is));
     printer.setOutputFormat(readStreamElement<QPrinter::OutputFormat>(is));
     printer.setPageOrder(readStreamElement<QPrinter::PageOrder>(is));
-    printer.setPaperSize(readStreamElement<QPrinter::PaperSize>(is));
     printer.setPaperSource(readStreamElement<QPrinter::PaperSource>(is));
     printer.setPrintProgram(readStreamElement<QString>(is));
     printer.setPrintRange(readStreamElement<QPrinter::PrintRange>(is));
     printer.setPrinterName(readStreamElement<QString>(is));
     printer.setResolution(readStreamElement<int>(is));
-    printer.setWinPageSize(readStreamElement<int>(is));
 
     qreal left, top, right, bottom;
     is >> left >> top >> right >> bottom;
 
-    printer.setPageMargins(left, top, right, bottom, QPrinter::Millimeter);
+    QMarginsF margins(left, top, right, bottom);
+    printer.setPageMargins(margins, QPageLayout::Unit::Millimeter);
 
     Q_ASSERT_X(
         is.status() == QDataStream::Ok, __FUNCTION__,

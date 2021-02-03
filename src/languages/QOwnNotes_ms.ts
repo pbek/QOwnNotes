@@ -4440,8 +4440,12 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
     </message>
     <message>
         <location filename="../utils/git.cpp" line="77"/>
+        <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-        <translation>Perintah &lt;code&gt;%1 &lt;/ code&gt; gagal!</translation>
+        <translation type="vanished">Perintah &lt;code&gt;%1 &lt;/ code&gt; gagal!</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="4227"/>

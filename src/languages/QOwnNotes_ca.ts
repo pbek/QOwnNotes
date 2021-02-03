@@ -4467,8 +4467,12 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     </message>
     <message>
         <location filename="../utils/git.cpp" line="77"/>
+        <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-        <translation>L&apos;ordre &lt;code&gt;%1&lt;/code&gt; ha fallat!</translation>
+        <translation type="vanished">L&apos;ordre &lt;code&gt;%1&lt;/code&gt; ha fallat!</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="4227"/>

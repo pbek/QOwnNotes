@@ -4484,8 +4484,12 @@ Kui prügikast on teie endaCloudi serveris lubatud, peaksite saama selle sealt t
     </message>
     <message>
         <location filename="../utils/git.cpp" line="77"/>
+        <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-        <translation>Käsk &lt;code&gt;%1&lt;/code&gt; ebaõnnestus!</translation>
+        <translation type="vanished">Käsk &lt;code&gt;%1&lt;/code&gt; ebaõnnestus!</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="4227"/>

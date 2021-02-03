@@ -4437,8 +4437,12 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     </message>
     <message>
         <location filename="../utils/git.cpp" line="77"/>
+        <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-        <translation>&lt;code&gt;%1&lt;/code&gt; 명령에 실패했습니다!</translation>
+        <translation type="vanished">&lt;code&gt;%1&lt;/code&gt; 명령에 실패했습니다!</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="4227"/>

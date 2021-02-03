@@ -4518,8 +4518,12 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
     </message>
     <message>
         <location filename="../utils/git.cpp" line="77"/>
+        <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-        <translation>Naredba &lt;code&gt;%1 &lt;/code&gt; nije uspjela!</translation>
+        <translation type="vanished">Naredba &lt;code&gt;%1 &lt;/code&gt; nije uspjela!</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="4227"/>

@@ -4502,8 +4502,12 @@ Tanlangan papkalarni &lt;strong&gt;%n&lt;/strong&gt; o&apos;chirish kerakmi!</nu
     </message>
     <message>
         <location filename="../utils/git.cpp" line="77"/>
+        <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-        <translation>&lt;code&gt;%1 &lt;/code&gt; buyrug&apos;i bajarilmadi!</translation>
+        <translation type="vanished">&lt;code&gt;%1 &lt;/code&gt; buyrug&apos;i bajarilmadi!</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="4227"/>

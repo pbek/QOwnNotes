@@ -4491,8 +4491,12 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     </message>
     <message>
         <location filename="../utils/git.cpp" line="77"/>
+        <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-        <translation>Kommandot &lt;code&gt;%1 &lt;/code&gt; misslyckades!</translation>
+        <translation type="vanished">Kommandot &lt;code&gt;%1 &lt;/code&gt; misslyckades!</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="4227"/>
