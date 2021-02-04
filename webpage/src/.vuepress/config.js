@@ -158,6 +158,7 @@ module.exports = {
     editLinkText: 'Help us improve this page!',
     lastUpdated: false,
     logo: '/favicon.png',
+    activeHeaderLinks: false,
     locales: {
       '/': {
         // text for the language dropdown
