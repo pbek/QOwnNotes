@@ -53,16 +53,16 @@ jobs:
           # botan 32bit error
           - os: windows-latest
             qt-version: '5.7'
-#        include:
-#          - os: ubuntu-latest
-#            qt-version: '6.0.0'
-#            experimental: true
-#          - os: macos-latest
-#            qt-version: '6.0.0'
-#            experimental: true
-#          - os: windows-latest
-#            qt-version: '6.0.0'
-#            experimental: true
+        include:
+          - os: ubuntu-latest
+            qt-version: '6.0.1'
+            experimental: true
+          - os: macos-latest
+            qt-version: '6.0.1'
+            experimental: true
+          - os: windows-latest
+            qt-version: '6.0.1'
+            experimental: true
     steps:
     - uses: actions/checkout@v2
       with:
