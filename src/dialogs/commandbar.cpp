@@ -47,11 +47,12 @@ protected:
 
         int score = 0;
         const auto idx = sourceModel()->index(sourceRow, 0, sourceParent);
+        const QString str = idx.data().toString();
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
-        const auto actionName = idx.data().toString().splitRef(QLatin1Char(':')).at(1);
+        const QStringRef actionName = str.splitRef(QLatin1Char(':')).at(1);
         const bool res = fts::fuzzy_match_sequential(m_pattern, actionName, score);
 #else
-        const auto actionName = idx.data().toString().split(QLatin1Char(':')).at(1);
+        const QString actionName = str.split(QLatin1Char(':')).at(1);
         const bool res = fts::fuzzy_match_sequential(m_pattern, actionName, score);
 #endif
         sourceModel()->setData(idx, score, CommandModel::Score);
