@@ -1,5 +1,5 @@
 
-QT       += core gui testlib sql widgets xml network qml xmlpatterns printsupport
+QT       += core gui testlib sql widgets xml network qml printsupport
 
 lessThan(QT_MAJOR_VERSION, 6) {
     QT += xmlpatterns
