@@ -15,7 +15,7 @@
 
 #include "models/commandmodel.h"
 #include "utils/misc.h"
-#include "libraries/fuzzy/fts_fuzzy_match.h"
+#include "libraries/fuzzy/kfuzzymatcher.h"
 
 class CommandBarFilterModel : public QSortFilterProxyModel
 {
@@ -45,18 +45,16 @@ protected:
         if (m_pattern.isEmpty())
             return true;
 
-        int score = 0;
         const auto idx = sourceModel()->index(sourceRow, 0, sourceParent);
         const QString str = idx.data().toString();
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
         const QStringRef actionName = str.splitRef(QLatin1Char(':')).at(1);
-        const bool res = fts::fuzzy_match_sequential(m_pattern, actionName, score);
 #else
         const QString actionName = str.split(QLatin1Char(':')).at(1);
-        const bool res = fts::fuzzy_match_sequential(m_pattern, actionName, score);
 #endif
-        sourceModel()->setData(idx, score, CommandModel::Score);
-        return res;
+        const auto res = KFuzzyMatcher::match(m_pattern, actionName);
+        sourceModel()->setData(idx, res.score, CommandModel::Score);
+        return res.matched;
     }
 
 private:
@@ -83,7 +81,8 @@ public:
         const auto strs = index.data().toString().split(QLatin1Char(':'));
         QString str = strs.at(1);
         const QString nameColor = option.palette.color(QPalette::Link).name();
-        fts::to_fuzzy_matched_display_string(m_filterString, str, QStringLiteral("<b style=\"color:%1;\">").arg(nameColor), QStringLiteral("</b>"));
+        str = KFuzzyMatcher::toFuzzyMatchedDisplayString(m_filterString, str, QStringLiteral("<b style=\"color:%1;\">").arg(nameColor), QStringLiteral("</b>"));
+//        fts::to_fuzzy_matched_display_string(m_filterString, str, QStringLiteral("<b style=\"color:%1;\">").arg(nameColor), QStringLiteral("</b>"));
 
         const QString component = QStringLiteral("<span style=\"color: gray;\">") + strs.at(0) + QStringLiteral(": </span>");
 

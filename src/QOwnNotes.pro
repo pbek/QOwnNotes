@@ -181,7 +181,8 @@ SOURCES += main.cpp\
     dialogs/websockettokendialog.cpp \
     dialogs/imagedialog.cpp \
     dialogs/commandbar.cpp \
-    models/commandmodel.cpp
+    models/commandmodel.cpp \
+    libraries/fuzzy/kfuzzymatcher.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -278,7 +279,8 @@ HEADERS  += mainwindow.h \
     dialogs/websockettokendialog.h \
     dialogs/imagedialog.h \
     dialogs/commandbar.h \
-    models/commandmodel.h
+    models/commandmodel.h \
+    libraries/fuzzy/kfuzzymatcher.h
 
 FORMS    += mainwindow.ui \
     dialogs/attachmentdialog.ui \
