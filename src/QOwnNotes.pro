@@ -4,7 +4,11 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets sql svg network xml xmlpatterns printsupport qml websockets concurrent
+QT       += core gui widgets sql svg network xml printsupport qml websockets concurrent
+
+lessThan(QT_MAJOR_VERSION, 6) {
+    QT += xmlpatterns
+}
 
 # quick is enabled for more scripting options
 # Windows and macOS seem to ignore that
