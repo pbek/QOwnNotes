@@ -92,7 +92,7 @@ QString currentNoteFolderPath();
 var path = script.currentNoteFolderPath();
 ```
 
-برای مثال می توانید نگاهی به [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml) بیندازید.
+برای مثال می توانید نگاهی به مثال [absolute-media-links.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/absolute-media-links.qml) بیندازید.
 
 دستیابی به یادداشت کنونی
 ------------------------
@@ -176,7 +176,7 @@ var markdown = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\f
 
 به عنوان مثال می توانید به [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/paste-latex-image.qml) مراجعه کنید.
 
-در پرونده رسانه در پوشه رسانه
+درج پرونده رسانه در پوشه رسانه
 --------------------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -361,7 +361,7 @@ var clipboardHtml = script.clipboard(true);
 
 شاید بخواهید به مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) نگاهی بیندازید.
 
-برای ویرایش متن یادداشت مطلبی بنویسید
+نوشتن متن برای ویرایش متن یادداشت
 --------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -380,7 +380,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 script.noteTextEditWrite("My custom text");
 ```
 
-سپس در صورت تمایل می توانید فعالیت سفارشی `transformTextRot13` را در مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) ملاحظه کنید.
+در صورت تمایل می توانید فعالیت سفارشی `transformTextRot13` را در مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) ملاحظه کنید.
 
 شما می توانید از این به همراه `noteTextEditSelectAll` برای بازنویسی کل متن یادداشت کنونی استفاده کنید.
 
@@ -403,7 +403,7 @@ QString ScriptingService::noteTextEditSelectedText();
 var text = script.noteTextEditSelectedText();
 ```
 
-سپس در صورت تمایل می توانید فعالیت سفارشی `transformTextRot13` را در مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) ملاحظه کنید.
+در صورت تمایل می توانید فعالیت سفارشی `transformTextRot13` را در مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) ملاحظه کنید.
 
 خواندن کل متن در ویرایش متن یادداشت
 -------------------------------------
@@ -493,7 +493,7 @@ int ScriptingService::noteTextEditSelectionStart();
 script.log(script.noteTextEditSelectionStart());
 ```
 
-قرار گرفتن در موقعیت پایان انتخاب کنونی در ویرایش متن یادداشت
+قرار گرفتن در موقعیت پایانی انتخاب کنونی در ویرایش متن یادداشت
 -------------------------------------------------------------------
 
 ### فراخوانی شگرد و پارامترها
@@ -1303,10 +1303,10 @@ script.log(script.selectedNotesIds());
 
 به عنوان مثال می توانید به [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml) مراجعه کنید.
 
-Triggering a menu action
+راه اندازی منو اکشن
 ------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Triggers a menu action
@@ -1318,7 +1318,7 @@ Triggering a menu action
 void ScriptingService::triggerMenuAction(QString objectName, QString checked);
 ```
 
-### Example
+### مثال
 ```js
 // toggle the read-only mode
 script.triggerMenuAction("actionAllow_note_editing");
@@ -1327,14 +1327,14 @@ script.triggerMenuAction("actionAllow_note_editing");
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
-You may want to take a look at the example [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
+برای نمونه می توانید به [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml) نگاهی بیندازید.
 
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+شما می توانید اسامی هدف منو اکشن را از [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui)دریافت کنید.
 
-Opening an input dialog with a select box
+گشودن کادر گفتگوی ورود با صندوق انتخاب
 -----------------------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Opens an input dialog with a select box
@@ -1351,19 +1351,19 @@ QString ScriptingService::inputDialogGetItem(
         int current, bool editable);
 ```
 
-### Example
+### مثال
 ```js
 var result = script.inputDialogGetItem(
     "combo box", "Please select an item", ["Item 1", "Item 2", "Item 3"]);
 script.log(result);
 ```
 
-You may want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+شما می توانید مثال [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml) را ملاحظه کنید.
 
-Opening an input dialog with a line edit
+گشودن کادر گفتگوی ورود با ویرایش خط
 ----------------------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Opens an input dialog with a line edit
@@ -1377,17 +1377,17 @@ QString ScriptingService::inputDialogGetText(
         const QString &title, const QString &label, const QString &text);
 ```
 
-### Example
+### مثال
 ```js
 var result = script.inputDialogGetText(
     "line edit", "Please enter a name", "current text");
 script.log(result);
 ```
 
-Checking if a file exists
+بررسی امکان وجود پرونده
 -------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Check if a file exists
@@ -1397,16 +1397,16 @@ Checking if a file exists
 bool ScriptingService::fileExists(QString &filePath);
 ```
 
-### Example
+### مثال
 ```js
 var result = script.fileExists(filePath);
 script.log(result);
 ```
 
-Reading text from a file
+خواندن متن از پرونده
 ------------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Read text from a file
@@ -1418,7 +1418,7 @@ Reading text from a file
 QString ScriptingService::readFromFile(const QString &filePath, const QString &codec)
 ```
 
-### Example
+### مثال
 ```js
 if(script.fileExists(filePath)){
     var data = script.readFromFile(filePath);
@@ -1427,10 +1427,10 @@ if(script.fileExists(filePath)){
 ```
 
 
-Writing text to a file
+نوشتن متن در پرونده
 ----------------------
 
-### Method call and parameters
+### فراخوانی شگرد و پارامترها
 ```cpp
 /**
  * Writes a text to a file
@@ -1443,21 +1443,21 @@ Writing text to a file
 bool ScriptingService::writeToFile(const QString &filePath, const QString &data, bool createParentDirs);
 ```
 
-### Example
+### مثال
 ```js
 var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+به عنوان مثال می توانید به [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml) مراجعه کنید.
 
-Working with websockets
+کار با وب سوکت ها
 -----------------------
 
-You can remote control QOwnNotes by using `WebSocketServer`.
+با استفاده از `WebSocketServer` می ‌توانید QOwnNotes را از راه دور کنترل کنید.
 
-Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). You can test the socket server by connecting to it on [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+برای نمونه می توانید به مثال [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml) نگاهی بیندازید. شما می توانید سرور سوکت را با اتصال به آن در [تست وب سوکت](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345) بررسی کنید.
 
-You can also listen to sockets with `WebSocket`. Please take look at the example [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
+همچنین می توانید سوکت ها را با `وب سوکت` بشنوید. لطفاً مثال [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml) را ملاحظه نمایید.
 
-Keep in mind that you need to have Qt's QML `websocket` library installed to use this. For example under Ubuntu Linux you can install `qml-module-qtwebsockets`.
+به خاطر داشته باشید که شما باید کتابخانه `وب سوکت` QML متعلق به Qt را به صورت نصب شده داشته باشید تا بتوانید از آن استفاده کنید. برای مثال در سیستم عامل لینوکس اوبونتو شما می توانید `qml-module-qtwebsockets` را نصب کنید.

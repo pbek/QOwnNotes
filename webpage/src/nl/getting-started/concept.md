@@ -33,11 +33,12 @@ graph TB
 
 ## QOwnNotes
 
-- QOwnNotes **slaat notities** rechtstreeks op in uw **notitiemap als markdown-bestanden**
-- Het kan rechtstreeks met uw Nextcloud / ownCloud-server praten om notities te delen
-- Je hebt ook toegang tot je notitiegeschiedenis en prullenbak op je Nextcloud / ownCloud-server via de [QOwnNotesApi Nextcloud-app](#qownnotesapi-nextcloud-app)
+- QOwnNotes **slaat notities** op in uw **notitiemap als markdown-bestanden**
+- Het kan met uw Nextcloud / ownCloud-server **praten om openbaar notities te delen** met andere mensen
+- Je hebt ook **toegang tot je notitiegeschiedenis en prullenbak** op je Nextcloud / ownCloud-server via de [QOwnNotesApi Nextcloud-app](#qownnotesapi-nextcloud-app)
 - Todo-lijsten op uw Nextcloud / ownCloud-server zijn toegankelijk vanuit QOwnNotes
-- QOwnNotes **synchroniseert niet** uw notities en media / bijlagebestanden, het synchroniseren van bestanden is een moeilijke zaak, er zijn al goede oplossingen voor (zie [Nextcloud desktop sync client](#nextcloud-desktop-sync-client))
+- **QOwnNotes synchroniseert uw notities niet** en media- / bijlagebestanden!
+    - Bestandssynchronisatie is een complexe onderneming, er zijn al geweldige oplossingen voor het synchroniseren van bestanden beschikbaar (zie [Nextcloud desktop-synchronisatieclient](#nextcloud-desktop-sync-client))
 
 
 ## Markdown-notitiebestanden

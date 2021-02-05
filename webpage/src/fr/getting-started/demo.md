@@ -10,7 +10,7 @@ Vous pouvez essayer **QOwnNotes** dans votre navigateur Web sans l’installer e
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 
-4) Un nouvel onglet de navigateur devrait s'ouvrir pour produire un bureau. Click on the **bottom left symbol** on the screen (in the task bar), hover over **Accessories** and click on **QOwnNotes** (see screenshot bullet **3**).
+4) Un nouvel onglet de navigateur devrait s'ouvrir pour produire un bureau. Cliquez sur le symbole **en bas à gauche** à l'écran (dans la barre des tâches), survolez **Accessoires** et cliquez sur **QOwnNotes** (voir puce de capture d'écran **3**).
 
 ![screenshot03](/img/demo/playwithdocker03.png)
 

@@ -16,7 +16,7 @@ Gebruik koppen om uw teksten te structureren.
 ```
 
 ::: tip
-Het **Navigatiepaneel** toont de structuur van uw koppen.
+Le **panneau de navigation** montre la structure de vos en-têtes.
 :::
 
 Als alternatief, voor H1 en H2, een onderstreepte stijl:

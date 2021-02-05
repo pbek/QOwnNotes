@@ -153,7 +153,7 @@
 - Puede usar sus **archivos de texto o rebajas existentes**, sin necesidad de importar la mayoría de las veces
 - **La búsqueda de subcadena** de notas es posible y los resultados de la búsqueda se resaltan en las notas
 - **Los atajos de teclado** son personalizables
-- **Soporte de secuencias de comandos ** y un [**repositorio de secuencias de comandos**](https://github.com/qownnotes/scripts) en línea donde puede instalar secuencias de comandos dentro de la aplicación
+- **Soporte de secuencias de comandos** y un [**repositorio de secuencias de comandos**](https://github.com/qownnotes/scripts) en línea donde puede instalar secuencias de comandos dentro de la aplicación
 - [Extensión del navegador](browser-extension.md) para agregar notas del texto seleccionado, hacer capturas de pantalla o administrar sus marcadores
 - **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
 - Las **versiones anteriores** de sus notas se pueden **restaurar** desde su servidor **Nextcloud / ownCloud**
@@ -161,7 +161,7 @@
 - **Las diferencias** entre la nota actual y la nota modificada externamente se **se muestran** en un diálogo
 - **Markdown resaltando** de notas y un **modo de vista previa de Markdown**
 - <0 Soporte de corrección ortográfica</strong></a>
-- **Compatible** con la aplicación Notes de **Nextcloud / ownClou** y **mobil** y Nextcloud Text
+- **Compatible** con la aplicación Notes de **Nextcloud / ownCloud** y **mobil** y Nextcloud Text
 - Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
 - Optional **encryption** of notes (AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
 - **Soporte de tema de modo oscuro**

@@ -33,11 +33,12 @@ graph TB
 
 ## QOwnNotes
 
-- QOwnNotes **almacena notas** directamente en su carpeta de notas **como archivos de rebajas**
-- Puede hablar directamente con su servidor Nextcloud / ownCloud para compartir notas
-- También puede acceder a su historial de notas y a la papelera en su servidor Nextcloud / ownCloud a través de la aplicación [QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app)
+- QOwnNotes **almacena notas** en su carpeta de notas **como archivos de rebajas**
+- Puede hablar con su servidor Nextcloud / ownCloud **para compartir notas** públicamente con otras personas
+- También puede **acceder a su historial de notas y a la papelera** en su servidor Nextcloud / ownCloud a través de la [aplicación QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app)
 - Se puede acceder a las listas de tareas en su servidor Nextcloud / ownCloud desde QOwnNotes
-- QOwnNotes **no sincroniza** sus notas y archivos multimedia / adjuntos, la sincronización de archivos es una tarea difícil, ya existen buenas soluciones para ello (consulte [Cliente de sincronización de escritorio Nextcloud](#nextcloud-desktop-sync-client))
+- **¡QOwnNotes no sincroniza sus notas** y archivos multimedia / adjuntos!
+    - La sincronización de archivos es una tarea compleja, ya existen excelentes soluciones de sincronización de archivos (consulte [Cliente de sincronización de escritorio de Nextcloud](#nextcloud-desktop-sync-client))
 
 
 ## Archivos de notas de rebajas
@@ -80,7 +81,8 @@ Por supuesto, otras soluciones, como **Dropbox**, **Syncthing**, **Seafile** o B
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) le permite acceder a su **notas enviadas a la papelera** y **versiones de notas** del lado del servidor.
 
-:: tip Visite [Aplicación QOwnNotesAPI Nextcloud](qownnotesapi.md) para obtener más información.
+::: tip
+Visite [Aplicación QOwnNotesAPI Nextcloud](qownnotesapi.md) para obtener más información.
 :::
 
 ## Aplicación de servidor Nextcloud Notes
@@ -97,7 +99,7 @@ Para acceder a sus notas de Nextcloud / ownCloud desde su **dispositivo móvil**
 
 ### Android
 
-- [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (3rd party)
+- [ Nextcloud Notes para Android ](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (terceros)
 
 ::: tip
 También puedes usar una herramienta como *Synchronize Ultimate* o *FolderSync* para sincronizar tus archivos de notas, y usar software como *neutriNotes* para editarlas.
@@ -105,7 +107,7 @@ También puedes usar una herramienta como *Synchronize Ultimate* o *FolderSync* 
 
 ### iOS
 
-- [CloudNotes for iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (3rd party)
+- [CloudNotes para iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (tercero)
 
 ::: tip
 También puede utilizar [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) y sincronice sus notas a través de WebDAV, hay un buen tutorial en [Cómo tomar notas con Nextcloud, QOwnNotes y Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)

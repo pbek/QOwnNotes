@@ -17,7 +17,7 @@ U kunt uw eigen tijdnotatie gebruiken wanneer u de huidige tijd in een notitie i
 | `yy`        | het jaar als tweecijferig nummer (00-99)                          |
 | `yyyy`      | het jaar als viercijferig getal                                   |
 
-## Uitdrukkingen voor die tijd
+## Uitdrukkingen voor tijd
 
 | Uitdrukking | Uitvoer                                                                   |
 | ----------- | ------------------------------------------------------------------------- |

@@ -2,7 +2,7 @@
 
 Használhatja saját időformátumát, amikor az aktuális időt beszúrja egy jegyzetbe.
 
-## Kifejezések a dátumra
+## Expressions for date
 
 | Kifejezés | Kibocsátás                                                 |
 | --------- | ---------------------------------------------------------- |
@@ -17,7 +17,7 @@ Használhatja saját időformátumát, amikor az aktuális időt beszúrja egy j
 | `yy`      | az év kétjegyű számként (00-99)                            |
 | `yyyy`    | az év négyjegyű számként                                   |
 
-## Kifejezések az időre
+## Expressions for time
 
 | Kifejezés   | Output                                                            |
 | ----------- | ----------------------------------------------------------------- |

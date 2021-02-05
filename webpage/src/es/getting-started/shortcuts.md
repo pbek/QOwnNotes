@@ -60,7 +60,7 @@
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> en un enlace para abrirlo
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> te permite buscar en la nota actual
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+    - utilice las teclas <kbd>Arriba</kbd> y <kbd>Abajo</kbd> o <kbd>F3</kbd> y <kbd>⇧</kbd> + <kbd>F3</kbd> teclas para saltar a las coincidencias anteriores y siguientes
     - <kbd>Esc</kbd> cierra la barra de búsqueda
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> te permite buscar y reemplazar en la nota actual
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplica la línea actual o el texto seleccionado

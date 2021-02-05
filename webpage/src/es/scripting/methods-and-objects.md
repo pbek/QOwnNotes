@@ -7,18 +7,18 @@ Iniciar un programa externo en segundo plano
 ### Parámetros y llamada al método
 ```cpp
 /**
- * QML wrapper to start a detached process
- *
- * @param executablePath the path of the executable
- * @param parameters a list of parameter strings
- * @param callbackIdentifier an identifier to be used in the onDetachedProcessCallback() function (optional)
- * @param callbackParameter an additional parameter for loops or the like (optional)
- * @param processData data written to the process if the callback is used (optional)
- * @return true on success, false otherwise
- */
-bool startDetachedProcess(QString executablePath, QStringList parameters,
-                            QString callbackIdentifier, QVariant callbackParameter,
-                            QByteArray processData);
+  * Envoltorio QML para iniciar un proceso separado
+  *
+  * @param ejecutablePath la ruta del ejecutable
+  * @param parameters una lista de cadenas de parámetros
+  * @param callbackIdentifier un identificador que se utilizará en la función onDetachedProcessCallback () (opcional)
+  * @param callbackParameter un parámetro adicional para bucles o similares (opcional)
+  * @param processData datos escritos en el proceso si se usa la devolución de llamada (opcional)
+  * @return verdadero en caso de éxito, falso en caso contrario
+  */
+bool startDetachedProcess (QString ejecutablePath, parámetros QStringList,
+                             QString callbackIdentifier, QVariant callbackParameter,
+                             QByteArray processData);
 ```
 
 ### Ejemplo
@@ -58,13 +58,13 @@ Iniciar un programa externo y esperar la salida
 ### Parámetros y llamada al método
 ```cpp
 /**
- * QML wrapper to start a synchronous process
- *
- * @param executablePath the path of the executable
- * @param parameters a list of parameter strings
- * @param data the data that will be written to the process (optional)
- * @return the text that was returned by the process
-QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
+  * Envoltorio QML para iniciar un proceso sincrónico
+  *
+  * @param ejecutablePath la ruta del ejecutable
+  * @param parameters una lista de cadenas de parámetros
+  * @param data los datos que se escribirán en el proceso (opcional)
+  * @return el texto que fue devuelto por el proceso
+QByteArray startSynchronousProcess (QString ejecutablePath, parámetros QStringList, datos QByteArray);
 ```
 
 ### Ejemplo
@@ -80,11 +80,11 @@ Obtener la ruta de la carpeta de notas actual
 ### Parámetros y llamada al método
 ```cpp
 /**
- * QML wrapper to get the current note folder path
- *
- * @return the path of the current note folder
- */
-QString currentNoteFolderPath();
+  * Envoltorio QML para obtener la ruta de la carpeta de notas actual
+  *
+  * @return la ruta de la carpeta de notas actual
+  */
+QString currentNoteFolderPath ();
 ```
 
 ### Ejemplo
@@ -100,10 +100,10 @@ Obtener la nota actual
 ### Parámetros y llamada al método
 ```cpp
 /**
- * QML wrapper to get the current note
- *
- * @returns {NoteApi} the the current note object
- */
+  * Envoltorio QML para obtener la nota actual
+  *
+  * @returns {NoteApi} el objeto de nota actual
+  */
 NoteApi currentNote();
 ```
 
@@ -120,11 +120,11 @@ Iniciar sesión en el widget de registro
 ### Parámetros y llamada al método
 ```cpp
 /**
- * QML wrapper to log to the log widget
- *
- * @param text
- */
-void log(QString text);
+  * Envoltorio QML para iniciar sesión en el widget de registro
+  *
+  * @param texto
+  */
+registro vacío (texto QString);
 ```
 
 ### Ejemplo
@@ -159,13 +159,13 @@ Descarga de una URL a la carpeta multimedia
 ### Parámetros y llamada al método
 ```cpp
 /**
- * QML wrapper to download an url to the media folder and returning the media
- * url or the markdown image text of the media relative to the current note
- *
- * @param {QString} url
- * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
- * @return {QString} the media markdown or url
- */
+  * Envoltorio QML para descargar una URL a la carpeta de medios y devolver los medios
+  * URL o el texto de la imagen de rebaja de los medios en relación con la nota actual
+  *
+  * @param {QString} URL
+  * @param {bool} returnUrlOnly si es verdadero, solo se devolverá la URL del medio (por defecto es falso)
+  * @return {QString} el descuento de medios o la URL
+  */
 QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
 ```
 
@@ -182,15 +182,15 @@ Insertar un archivo multimedia en la carpeta multimedia
 ### Parámetros y llamada al método
 ```cpp
 /**
- * QML wrapper to insert a media file into the media folder and returning
- * the media url or the markdown image text of the media  relative to the current note
- *
- * @param {QString} mediaFilePath
- * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
- * @return {QString} the media markdown or url
- */
-QString ScriptingService::insertMediaFile(QString mediaFilePath,
-                                        bool returnUrlOnly);
+  * Envoltorio QML para insertar un archivo multimedia en la carpeta multimedia y regresar
+  * la URL de medios o el texto de la imagen de rebaja de los medios en relación con la nota actual
+  *
+  * @param {QString} mediaFilePath
+  * @param {bool} returnUrlOnly si es verdadero, solo se devolverá la URL del medio (por defecto es falso)
+  * @return {QString} el descuento de medios o la URL
+  */
+QString ScriptingService :: insertMediaFile (QString mediaFilePath,
+                                         bool returnUrlOnly);
 ```
 
 ### Ejemplo
@@ -226,26 +226,26 @@ Registro de una acción personalizada
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Registers a custom action
+ * Registra una acción personalizada
  *
- * @param identifier the identifier of the action
- * @param menuText the text shown in the menu
- * @param buttonText the text shown in the button
- *                   (no button will be viewed if empty)
- * @param icon the icon file path or the name of a freedesktop theme icon
- *             you will find a list of icons here:
- *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
- * @param useInNoteEditContextMenu if true use the action in the note edit
- *                                 context menu (default: false)
- * @param hideButtonInToolbar if true the button will not be shown in the
- *                            custom action toolbar (default: false)
- * @param useInNoteListContextMenu if true use the action in the note list
- *                                 context menu (default: false)
+ * @param identifier el identificador de la acción
+ * @param menuText el texto que se muestra en el menú
+ * @param button Envía el texto que se muestra en el botón
+ * (no se verá ningún botón si está vacío)
+ * @param icon la ruta del archivo del icono o el nombre de un icono de tema de freedesktop
+ * encontrará una lista de iconos aquí:
+ * https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
+ * @param useInNoteEditContextMenu si es verdadero, use la acción en la edición de notas
+ * menú contextual (predeterminado: falso)
+ * @param hideButtonInToolbar si es verdadero, el botón no se mostrará en el
+ * barra de herramientas de acción personalizada (predeterminado: falso)
+ * @param useInNoteListContextMenu si es verdadero, use la acción en la lista de notas
+ * menú contextual (predeterminado: falso)
  */
-void ScriptingService::registerCustomAction(QString identifier,
+void ScriptingService :: registerCustomAction (identificador QString,
                                             QString menuText,
                                             QString buttonText,
-                                            QString icon,
+                                            Icono de QString,
                                             bool useInNoteEditContextMenu,
                                             bool hideButtonInToolbar,
                                             bool useInNoteListContextMenu);
@@ -253,20 +253,20 @@ void ScriptingService::registerCustomAction(QString identifier,
 
 ### Ejemplo
 ```js
-// add a custom action without a button
+// agrega una acción personalizada sin un botón
 script.registerCustomAction("mycustomaction1", "Menu text");
 
-// add a custom action with a button
+// agrega una acción personalizada con un botón
 script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
 
-// add a custom action with a button and freedesktop theme icon
+// agregue una acción personalizada con un botón y un ícono de tema de escritorio libre
 script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "task-new");
 
-// add a custom action with a button and an icon from a file
+// agrega una acción personalizada con un botón y un ícono de un archivo
 script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
 ```
 
-You may then want to use the identifier with function `customActionInvoked` in a script like [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+A continuación, es posible que desee utilizar el identificador con función `customActionInvoked` en un script como [acciones-personalizadas.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 Registrar una etiqueta
 -------------------
@@ -274,11 +274,11 @@ Registrar una etiqueta
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Registers a label to write to
- *
- * @param identifier the identifier of the label
- * @param text the text shown in the label (optional)
- */
+  * Registra una etiqueta para escribir
+  *
+  * @param identifier el identificador de la etiqueta
+  * @param text el texto que se muestra en la etiqueta (opcional)
+  */
 void ScriptingService::registerLabel(QString identifier, QString text);
 ```
 
@@ -303,11 +303,11 @@ Configurar el texto de una etiqueta registrada
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Sets the text of a registered label
- *
- * @param identifier the identifier of the label
- * @param text the text shown in the label
- */
+  * Establece el texto de una etiqueta registrada
+  *
+  * @param identifier el identificador de la etiqueta
+  * @param envía el texto que se muestra en la etiqueta
+  */
 void ScriptingService::setLabelText(QString identifier, QString text);
 ```
 
@@ -429,9 +429,9 @@ Seleccione la línea actual en la edición de texto de la nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Selects the current line in the note text edit
- */
-void ScriptingService::noteTextEditSelectCurrentLine();
+  * Selecciona la línea actual en la edición de texto de la nota
+  */
+void ScriptingService :: noteTextEditSelectCurrentLine();
 ```
 
 ### Ejemplo
@@ -445,9 +445,9 @@ Seleccione la palabra actual en la edición de texto de la nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Selects the current line in the note text edit
- */
-void ScriptingService::noteTextEditSelectCurrentWord();
+  * Selecciona la línea actual en la edición de texto de la nota
+  */
+void ScriptingService :: noteTextEditSelectCurrentWord();
 ```
 
 ### Ejemplo
@@ -461,11 +461,11 @@ Establecer el texto seleccionado actualmente en la edición de texto de nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Sets the currently selected text in the note text edit
- *
- * @param start
- * @param end
- */
+  * Establece el texto seleccionado actualmente en la edición de texto de nota
+  *
+  * @param inicio
+  * @param end
+  */
 void ScriptingService::noteTextEditSetSelection(int start, int end);
 ```
 
@@ -483,8 +483,8 @@ Obtener la posición inicial de la selección actual en la edición de texto de 
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns the start position of the current selection in the note text edit
- */
+  * Devuelve la posición inicial de la selección actual en la edición de texto de nota
+  */
 int ScriptingService::noteTextEditSelectionStart();
 ```
 
@@ -515,21 +515,21 @@ Coloque el cursor de texto en la edición de texto de la nota en una posición d
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Sets the text cursor in the note text edit to a certain position
- * 0 would be the beginning of the note
- * special case: -1 would be the end of the note
- *
- * @param position
- */
+  * Establece el cursor de texto en la edición de texto de la nota en una posición determinada
+  * 0 sería el comienzo de la nota
+  * caso especial: -1 sería el final de la nota
+  *
+  * posición @param
+  */
 void ScriptingService::noteTextEditSetCursorPosition(int position);
 ```
 
 ### Ejemplo
 ```js
-// jump to the 11th character in the note
+// saltar al undécimo carácter de la nota
 script.noteTextEditSetCursorPosition(10);
 
-// jump to the end of the note
+// saltar al final de la nota
 script.noteTextEditSetCursorPosition(-1);
 ```
 
@@ -539,10 +539,10 @@ Obtener la posición actual del cursor de texto en la edición de texto de la no
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns the current position of the text cursor in the note text edit
- * 0 would be the beginning of the note
- */
-int ScriptingService::noteTextEditCursorPosition();
+  * Devuelve la posición actual del cursor de texto en la edición de texto de la nota
+  * 0 sería el comienzo de la nota
+  */
+int ScriptingService :: noteTextEditCursorPosition();
 ```
 
 ### Ejemplo
@@ -556,19 +556,19 @@ Leer la palabra actual desde el editor de texto de notas
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Reads the current word in the note text edit
- *
- * @param withPreviousCharacters also get more characters at the beginning
- *                               to get characters like "@" that are not
- *                               word-characters
- * @return
- */
+  * Lee la palabra actual en la edición de texto de la nota
+  *
+  * @param withPreviousCharacters también obtiene más caracteres al principio
+  * para obtener caracteres como "@" que no son
+  * caracteres de palabra
+  * @regreso
+  */
 QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 ```
 
 ### Ejemplo
 ```js
-// read the current word in the note text edit
+// leer la palabra actual en el texto de la nota editar
 var text = script.noteTextEditCurrentWord();
 ```
 
@@ -586,8 +586,8 @@ bool ScriptingService::platformIsWindows();
 
 ### Ejemplo
 ```js
-if (script.platformIsLinux()) {
-    // only will be executed if under Linux
+if (script.platformIsLinux ()) {
+     // solo se ejecutará si está bajo Linux
 }
 ```
 
@@ -597,16 +597,16 @@ Etiquetar la nota actual
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Tags the current note with a tag named tagName
- *
- * @param tagName
- */
+  * Etiqueta la nota actual con una etiqueta llamada tagName
+  *
+  * @param tagName
+  */
 void ScriptingService::tagCurrentNote(QString tagName);
 ```
 
 ### Ejemplo
 ```js
-// add a "favorite" tag to the current note
+// agrega una etiqueta de "favorito" a la nota actual
 script.tagCurrentNote("favorite");
 ```
 
@@ -618,23 +618,23 @@ Crear o recuperar una etiqueta por su nombre lista de ruta de navegación
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Fetches or creates a tag by its "breadcrumb list" of tag names
- * Element nameList[0] would be highest in the tree (with parentId: 0)
- *
- * @param nameList
- * @param createMissing {bool} if true (default) all missing tags will be created
- * @return TagApi object of deepest tag of the name breadcrumb list
- */
+  * Obtiene o crea una etiqueta por su "lista de ruta de navegación" de nombres de etiquetas
+  * Element nameList [0] sería el más alto en el árbol (con parentId: 0)
+  *
+  * @param nameList
+  * @param createMissing {bool} si es verdadero (predeterminado) se crearán todas las etiquetas faltantes
+  * @return TagApi objeto de la etiqueta más profunda de la lista de ruta de navegación de nombres
+  */
 TagApi *ScriptingService::getTagByNameBreadcrumbList(
     const QStringList &nameList, bool createMissing);
 ```
 
 ### Ejemplo
 ```js
-// creates all tags until the 3rd level and returns the tag object for
-// tag "level3", which would look like that in the tag tree:
-// level1 > level2 > level3
-var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
+// crea todas las etiquetas hasta el tercer nivel y devuelve el objeto de etiqueta para
+// etiqueta "level3", que se vería así en el árbol de etiquetas:
+// nivel1 > nivel2 > nivel3
+var tag = script.getTagByNameBreadcrumbList (["nivel1", "nivel2", "nivel3"]);
 ```
 
 Buscar etiquetas por nombre
@@ -643,18 +643,17 @@ Buscar etiquetas por nombre
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Fetches all tags by doing a substring search on the name field
- *
- * @param name {QString} name to search for
- * @return {QStringList} list of tag names
- */
+  * Obtiene todas las etiquetas haciendo una búsqueda de subcadenas en el campo de nombre
+  *
+  * @param name {QString} nombre para buscar
+  * @return {QStringList} lista de nombres de etiquetas
+  */
 QStringList ScriptingService::searchTagsByName(QString name);
 ```
 
 ### Ejemplo
 ```js
-// searches for all tags with the word game in it
-var tags = script.searchTagsByName("game");
+// busca todas las etiquetas que contengan el juego de palabras var tags = script.searchTagsByName("game");
 ```
 
 Es posible que desee echar un vistazo al ejemplo [ autocompletado.qml ](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
@@ -665,13 +664,13 @@ Buscar notas por texto de nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns a list of note ids of all notes with a certain text in the note text
- *
- * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
- * can only transfer the note ids
- *
- * @return {QList<int>} list of note ids
- */
+  * Devuelve una lista de ID de nota de todas las notas con un texto determinado en el texto de la nota
+  *
+  * Desafortunadamente, no hay una manera fácil de usar QList<NoteApi*> en QML, por lo que
+  * solo se pueden transferir los ID de las notas
+  *
+  * @return {QList<int>} lista de ID de notas
+  */
 QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
 ```
 
@@ -703,7 +702,7 @@ void ScriptingService::addStyleSheet(QString stylesheet);
 
 ### Ejemplo
 ```js
-// make the text in the note list bigger
+// agranda el texto en la lista de notas
 script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 ```
 
@@ -721,14 +720,14 @@ Recarga del motor de secuencias de comandos
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Reloads the scripting engine
- */
+  * Recarga el motor de secuencias de comandos
+  */
 void ScriptingService::reloadScriptingEngine();
 ```
 
 ### Ejemplo
 ```js
-// reload the scripting engine
+// recarga el motor de secuencias de comandos
 script.reloadScriptingEngine();
 ```
 
@@ -738,14 +737,14 @@ Obteniendo una nota por su nombre de archivo
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Fetches a note by its file name
- *
- * @param fileName string the file name of the note (mandatory)
- * @param noteSubFolderId integer id of the note subfolder
- * @return NoteApi*
- */
-NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
-                                                int noteSubFolderId);
+  * Obtiene una nota por su nombre de archivo
+  *
+  * @param fileName cadena el nombre del archivo de la nota (obligatorio)
+  * @param noteSubFolderId ID entero de la subcarpeta de notas
+  * @return NoteApi *
+  */
+NoteApi * ScriptingService :: fetchNoteByFileName (QString fileName,
+                                                 int noteSubFolderId);
 ```
 
 ### Ejemplo
@@ -760,17 +759,17 @@ Obteniendo una nota por su identificación
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Fetches a note by its id
- *
- * @param id int the id of the note
- * @return NoteApi*
- */
+  * Obtiene una nota por su identificación
+  *
+  * @param id int el id de la nota
+  * @return NoteApi*
+  */
 NoteApi* ScriptingService::fetchNoteById(int id);
 ```
 
 ### Ejemplo
 ```js
-// fetch note by id
+// buscar nota por id
 script.fetchNoteById(243);
 ```
 
@@ -782,13 +781,13 @@ Comprobando si una nota existe por su nombre de archivo
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Checks if a note file exists by its file name
- *
- * @param fileName string the file name of the note (mandatory)
- * @param ignoreNoteId integer id of a note to ignore in the check
- * @param noteSubFolderId integer id of the note subfolder
- * @return bool
- */
+  * Comprueba si existe un archivo de notas por su nombre de archivo
+  *
+  * @param fileName cadena el nombre del archivo de la nota (obligatorio)
+  * @param ignoreNoteId ID entero de una nota para ignorar en el cheque
+  * @param noteSubFolderId ID entero de la subcarpeta de notas
+  * @return bool
+  */
 bool ScriptingService::noteExistsByFileName(QString fileName,
                                             int ignoreNoteId,
                                             int noteSubFolderId);
@@ -796,7 +795,7 @@ bool ScriptingService::noteExistsByFileName(QString fileName,
 
 ### Ejemplo
 ```js
-// check if note exists, but ignore the id of "note"
+// verifica si la nota existe, pero ignora el id de "nota"
 script.noteExistsByFileName("my note.md", note.id);
 ```
 
@@ -808,17 +807,17 @@ Copiar texto en el portapapeles
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Copies text into the clipboard as plain text or html mime data
- *
- * @param text string text to put into the clipboard
- * @param asHtml bool if true the text will be set as html mime data
- */
+  * Copia texto en el portapapeles como texto sin formato o datos mime html
+  *
+  * @param texto de cadena de texto para poner en el portapapeles
+  * @param asHtml bool si es verdadero, el texto se establecerá como datos mime html
+  */
 void ScriptingService::setClipboardText(QString text, bool asHtml);
 ```
 
 ### Ejemplo
 ```js
-// copy text to the clipboard
+// copiar texto al portapapeles
 script.setClipboardText("text to copy");
 ```
 
@@ -830,16 +829,16 @@ Saltando a una nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Sets the current note if the note is visible in the note list
- *
- * @param note NoteApi note to jump to
- */
-void ScriptingService::setCurrentNote(NoteApi *note);
+  * Establece la nota actual si la nota está visible en la lista de notas
+  *
+  * @param note NoteApi nota para saltar
+  */
+void ScriptingService::setCurrentNote (NoteApi *nota);
 ```
 
 ### Ejemplo
 ```js
-// jump to the note
+// saltar a la nota
 script.setCurrentNote(note);
 ```
 
@@ -851,22 +850,22 @@ Saltar a una subcarpeta de notas
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Jumps to a note subfolder
- *
- * @param noteSubFolderPath {QString} path of the subfolder, relative to the note folder
- * @param separator {QString} separator between parts of the path, default "/"
- * @return true if jump was successful
- */
+  * Salta a una subcarpeta de notas
+  *
+  * @param noteSubFolderPath {QString} ruta de la subcarpeta, relativa a la carpeta de notas
+  * @param separator {QString} separador entre partes de la ruta, predeterminado "/"
+  * @return verdadero si el salto fue exitoso
+  */
 bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
                                             QString separator);
 ```
 
 ### Ejemplo
 ```js
-// jump to the note subfolder "a sub folder"
+// saltar a la subcarpeta de notas "una subcarpeta"
 script.jumpToNoteSubFolder("a sub folder");
 
-// jump to the note subfolder "sub" inside of "a sub folder"
+// saltar a la subcarpeta de notas "sub" dentro de "una subcarpeta"
 script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
@@ -880,18 +879,18 @@ Mostrar un cuadro de mensaje de información
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Shows an information message box
- *
- * @param text
- * @param title (optional)
- */
+  * Muestra un cuadro de mensaje de información
+  *
+  * @param texto
+  * @param title (opcional)
+  */
 void ScriptingService::informationMessageBox(QString text, QString title);
 ```
 
 ### Ejemplo
 ```js
-// show a information message box
-script.informationMessageBox("The text I want to show", "Some optional title");
+// muestra un cuadro de mensaje de información
+script.informationMessageBox ("El texto que quiero mostrar", "Algún título opcional");
 ```
 
 Mostrando un cuadro de mensaje de pregunta
@@ -900,19 +899,19 @@ Mostrando un cuadro de mensaje de pregunta
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Shows a question message box
- *
- * For information about buttons see:
- * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
- *
- * @param text
- * @param title (optional)
- * @param buttons buttons that should be shown (optional)
- * @param defaultButton default button that will be selected (optional)
- * @return id of pressed button
- */
-int ScriptingService::questionMessageBox(
-        QString text, QString title, int buttons, int defaultButton);
+  * Muestra un cuadro de mensaje de pregunta
+  *
+  * Para obtener información sobre los botones, consulte:
+  * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+  *
+  * @param texto
+  * @param title (opcional)
+  * Botones de @param botones que deben mostrarse (opcional)
+  * @param defaultButton botón predeterminado que se seleccionará (opcional)
+  * @return id del botón presionado
+  */
+int ScriptingService :: questionMessageBox (
+         QString text, QString title, int buttons, int defaultButton);
 ```
 
 ### Ejemplo
@@ -985,20 +984,7 @@ Luego, el usuario puede establecer estas propiedades en la configuración del sc
 
 ### Ejemplo
 ```js
-// you have to define your registered variables so you can access them later
-property string myString;
-property bool myBoolean;
-property string myText;
-property int myInt;
-property string myFile;
-property string mySelection;
-
-// register your settings variables so the user can set them in the script settings
-// use this property if you don't need
-//
-// unfortunately there is no QVariantHash in Qt, we only can use
-// QVariantMap (that has no arbitrary ordering) or QVariantList (which at
-// least can be ordered arbitrarily)
+// tienes que definir tus variables registradas para poder acceder a ellas más tarde
 property variant settingsVariables: [
     {
         "identifier": "myString",
@@ -1052,10 +1038,10 @@ Además, puede anular las `settingsVariables` con una función especial `registe
 ### Ejemplo
 ```js
 /**
- * Registers the settings variables again
- *
- * Use this method if you want to use code to override your variables, like setting
- * default values depended on the operating system.
+  * Registra las variables de configuración nuevamente
+  *
+  * Use este método si desea usar código para anular sus variables, como configurar
+  * los valores predeterminados dependen del sistema operativo.
  */
 function registerSettingsVariables() {
     if (script.platformIsWindows()) {
@@ -1073,35 +1059,35 @@ Almacenar y cargar variables persistentes
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Stores a persistent variable
- * These variables are accessible globally over all scripts
- * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
- *
- * @param key {QString}
- * @param value {QVariant}
- */
-void ScriptingService::setPersistentVariable(const QString &key,
-                                                const QVariant &value);
+  * Almacena una variable persistente
+  * Estas variables son accesibles globalmente en todos los scripts
+  * Utilice un prefijo significativo en su clave como "PersistentVariablesTest / myVar"
+  *
+  * @param key {QString}
+  * @param value {QVariant}
+  */
+void ScriptingService :: setPersistentVariable (const QString & clave,
+                                                 const QVariant & value);
 
 /**
  * Loads a persistent variable
  * These variables are accessible globally over all scripts
- *
- * @param key {QString}
- * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
- * @return
- */
+  *
+  * @param key {QString}
+  * @param defaultValue {QVariant} valor de retorno si la configuración no existe (opcional)
+  * @regreso
+  * /
 QVariant ScriptingService::getPersistentVariable(const QString &key,
                                                     const QVariant &defaultValue);
 ```
 
 ### Ejemplo
 ```js
-// store persistent variable
+// almacenar variable persistente
 script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 
-// load and log persistent variable
-script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
+// cargar y registrar variable persistente
+script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "no hay nada todavía"));
 ```
 
 Asegúrese de usar un prefijo significativo en su clave como `PersistentVariablesTest / myVar` porque las variables son accesibles desde todos los scripts.
@@ -1114,10 +1100,10 @@ Loading application settings variables
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Loads an application settings variable
- *
- * @param key {QString}
- * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
+  * Carga una variable de configuración de la aplicación
+  *
+  * @param key {QString}
+  * @param defaultValue {QVariant} valor de retorno si la configuración no existe (opcional)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
@@ -1126,8 +1112,8 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 
 ### Ejemplo
 ```js
-// load and log an application settings variable
-script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
+// cargar y registrar una variable de configuración de la aplicación
+script.log(script.getApplicationSettingsVariable ("gitExecutablePath"));
 ```
 
 Tenga en cuenta que la configuración en realidad puede estar vacía, debe ocuparse de eso usted mismo. `defaultValue` solo se usa si la configuración no existe en absoluto.
@@ -1140,17 +1126,17 @@ Puede almacenar en caché los archivos en la ubicación de caché predeterminada
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns a cache directory for a script
- *
- * @param {QString} subDir the subfolder to create and use
- * @return {QString} the cache dir path
- */
+  * Devuelve un directorio de caché para un script
+  *
+  * @param {QString} subDir la subcarpeta para crear y usar
+  * @return {QString} la ruta del directorio de caché
+  */
 QString ScriptingService::cacheDir(const QString &subDir) const;
 ```
 
 ### Ejemplo
 ```js
-// create the cache directory for my-script-id
+// crea el directorio de caché para my-script-id
 var cacheDirForScript = script.cacheDir("my-script-id");
 ```
 
@@ -1162,12 +1148,12 @@ Puede borrar los archivos de caché de su script pasando su nombre a clearCacheD
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Clears the cache directory for a script
- *
- * @param {QString} subDir the subfolder to clear
- * @return {bool} true on success
- */
-bool ScriptingService::clearCacheDir(const QString &subDir) const;
+  * Borra el directorio de caché de un script
+  *
+  * @param {QString} subDir la subcarpeta para borrar
+  * @return {bool} verdadero en caso de éxito
+  */
+bool ScriptingService :: clearCacheDir (const QString & subDir) const;
 ```
 
 ### Ejemplo
@@ -1183,16 +1169,16 @@ Si necesita obtener la ruta al directorio donde se coloca su script para, por ej
 
 ### Ejemplo
 ```js
-import QtQml 2.0
-import QOwnNotesTypes 1.0
+importar QtQml 2.0
+importar QOwnNotesTypes 1.0
 
 Script {
-    // the path to the script's directory will be set here
-    property string scriptDirPath;
+     // la ruta al directorio del script se establecerá aquí
+     property string scriptDirPath;
 
-    function init() {
-        script.log(scriptDirPath);
-    }
+     function init () {
+         script.log (scriptDirPath);
+     }
 }
 ```
 
@@ -1202,8 +1188,8 @@ Conversión de separadores de ruta en nativos
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns path with the '/' separators converted to separators that are
- * appropriate for the underlying operating system.
+  * Devuelve la ruta con los separadores '/' convertidos en separadores que son
+  * apropiado para el sistema operativo subyacente.
  *
  * On Windows, toNativeDirSeparators("c:/winnt/system32") returns
  * "c:\winnt\system32".

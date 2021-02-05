@@ -15,7 +15,7 @@ Használja a fejléceket a szövegek strukturálásához.
 ###### H6
 ```
 
-::: tip A **Navigation panel**  mutatja a címsorok felépítését. :::
+::: tip A **Navigációs panel** mutatja a címsorok felépítését. :::
 
 Alternatív megoldásként H1 és H2 esetében aláhúzás-stílus stílus:
 

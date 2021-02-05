@@ -77,5 +77,5 @@ Si el diccionario para su idioma no está en el **Administrador de diccionarios*
 | 53 | zu_ZA               | Zulu(spell dict not avail) |
 
 ::: tip
-Credits [Sonnet](https://github.com/KDE/sonnet) with [Hunspell](https://hunspell.github.io/) is used for spellchecking
+Credits [Sonnet](https://github.com/KDE/sonnet) con [Hunspell](https://hunspell.github.io/) se utiliza para corregir la ortografía
 :::

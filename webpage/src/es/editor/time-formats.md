@@ -1,4 +1,4 @@
-# Time formats
+# Formatos de hora:
 
 Puede utilizar su propio formato de hora al insertar la hora actual en una nota.
 
@@ -15,11 +15,11 @@ Puede utilizar su propio formato de hora al insertar la hora actual en una nota.
 | `MMM`     | the abbreviated localized month name (e.g. `Jan` to `Dec`).   |
 | `MMMM`    | the long localized month name (e.g. `January` to `December`). |
 | `yy`      | the year as two digit number (00-99)                          |
-| `yyyy`    | the year as four digit number                                 |
+| `yyyy`    | el año como número de cuatro dígitos                          |
 
 ## Expresiones por tiempo
 
-| Expression  | Salida                                                                |
+| Expresión   | Salida                                                                |
 | ----------- | --------------------------------------------------------------------- |
 | `h`         | the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display) |
 | `hh`        | the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)  |
@@ -35,7 +35,7 @@ Puede utilizar su propio formato de hora al insertar la hora actual en una nota.
 | `ap` or `a` | use am/pm display. a/ap will be replaced by either `am` or `pm`.      |
 | `t`         | the timezone (for example `CEST`)                                     |
 
-## Example format strings
+## Exemple de chaînes de format
 
 | Formato            | Resultado        |
 | ------------------ | ---------------- |

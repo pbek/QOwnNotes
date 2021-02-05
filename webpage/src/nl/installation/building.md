@@ -24,7 +24,7 @@ make
 
 Voel je vrij om broncode bij te dragen aan dit project, suggesties te doen of problemen te melden op de [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues).
 
-Visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
+Bezoek [QOwnNotes op GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
 Als u broncode aan het project wilt bijdragen, dient u uw pull-verzoeken in bij de `develop` branch.

@@ -17,7 +17,7 @@ Vous pouvez utiliser votre propre format d'heure lors de l'insertion de l'heure 
 | `yy`       | the year as two digit number (00-99)                          |
 | `yyyy`     | the year as four digit number                                 |
 
-## Expressions pour l'époque
+## Expressions for time
 
 | Expression  | Production                                                            |
 | ----------- | --------------------------------------------------------------------- |
@@ -35,9 +35,9 @@ Vous pouvez utiliser votre propre format d'heure lors de l'insertion de l'heure 
 | `ap` or `a` | use am/pm display. a/ap will be replaced by either `am` or `pm`.      |
 | `t`         | the timezone (for example `CEST`)                                     |
 
-## Example format strings
+## Exemple de chaînes de format
 
-| Format             | Result           |
+| Format             | Résultat         |
 | ------------------ | ---------------- |
 | `dd.MM.yyyy hh:mm` | 21.05.2001 14:13 |
 | `dd.MM.yyyy`       | 21.05.2001       |

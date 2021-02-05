@@ -16,7 +16,7 @@ Usa títulos para estructurar tus textos.
 ```
 
 ::: tip
-El **panel de navegación** muestra muestra la estructura de sus títulos.
+El **panel de navegación** muestra la estructura de sus títulos.
 :::
 
 Alternativamente, para H1 y H2, un estilo de subrayado:
@@ -36,9 +36,9 @@ Por defecto, QOwnNotes crea el **nombre de archivo de una nota** desde el **enca
 ## Énfasis
 
 ```markdown
-Emphasis, aka italics, with *asterisks*.
+Énfasis, también conocido como cursiva, con *asteriscos*.
 
-Strong emphasis, aka bold, with **asterisks**.
+Fuerte énfasis, también conocido como negrita, con **asteriscos**.
 ```
 
 ::: tip
@@ -93,13 +93,13 @@ Si presiona <kbd>Ingrese</kbd> al final de una lista, se creará un nuevo elemen
 Hay muchas formas de crear listas.
 
 ```markdown
-[I'm an inline-style link](https://www.google.com)
+[Soy un enlace de estilo en línea] (https://www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[Soy un enlace de estilo en línea con título] (https://www.google.com "Página principal de Google")
 
-[You can use numbers for reference-style link definitions][1]
+[Puede utilizar números para las definiciones de enlaces de estilo de referencia] [1]
 
-URLs and URLs in angle brackets will automatically get turned into links in the preview. 
+Las URL y las URL entre paréntesis angulares se convertirán automáticamente en enlaces en la vista previa. 
 http://www.example.com or <http://www.example.com>
 
 [1]: https://www.qownnotes.org
@@ -153,11 +153,11 @@ Blocks of code are either fenced by lines with three back-ticks, or are indented
 Agregue cuatro espacios delante de su código para marcarlo como bloque de código.
 
 ```markdown
-    s = "Code with space indent"
+    s = "Código con sangría de espacio"
     print s
 ```
 
-### Backtick fence
+### Valla de tachuela
 
 También puede utilizar tres comillas invertidas para crear un bloque de código.
 ~~~markdown
@@ -176,10 +176,10 @@ varias líneas de texto seleccionadas o en una línea vacía para crear un bloqu
 
 También hay algo de resaltado de sintaxis con bloques de código en QOwnNotes.
 
-~~~markdown
-```bash
-# I am a comment
-cd Notes
+~~~ rebaja
+bash
+# Soy un comentario
+cd notas
 ~~~
 ~~~
 

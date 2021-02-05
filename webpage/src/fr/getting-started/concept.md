@@ -33,11 +33,12 @@ graph TB
 
 ## QOwnNotes
 
-- QOwnNotes **stocke les notes** directement dans votre dossier de notes **sous forme de fichiers de démarque**
-- Il peut parler directement à votre serveur Nextcloud / ownCloud pour partager des notes
-- Vous pouvez également accéder à l'historique de vos notes et à la corbeille sur votre serveur Nextcloud / ownCloud via l'application [QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app)
+- QOwnNotes **stocke les note** dans votre dossier de notes **sous forme de fichiers de démarque**
+- Il peut parler à votre serveur Nextcloud / ownCloud **pour partager publiquement des notes** avec d'autres personnes
+- Vous pouvez également **accéder à l'historique de vos notes et à la corbeille** sur votre serveur Nextcloud / ownCloud via l'application [QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app)
 - Les listes Todo sur votre serveur Nextcloud / ownCloud sont accessibles depuis QOwnNotes
-- QOwnNotes **ne synchronise pas** vos notes et fichiers multimédias / pièces jointes, la synchronisation de fichiers est une affaire difficile, il existe déjà de bonnes solutions pour cela (voir [Client de synchronisation de bureau Nextcloud](#nextcloud-desktop-sync-client))
+- **QOwnNotes ne synchronise pas vos notes** et vos fichiers multimédias / pièces jointes!
+    - La synchronisation de fichiers est une entreprise complexe, il existe déjà d'excellentes solutions de synchronisation de fichiers (voir [Client de synchronisation de bureau Nextcloud](#nextcloud-desktop-sync-client))
 
 
 ## Fichiers de notes de démarque

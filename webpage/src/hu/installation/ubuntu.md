@@ -1,6 +1,6 @@
 # Telepítse az Ubuntu Linux-ra, az elemi operációs rendszerre és a Linux Mint-re
 
-## Ubuntu Linux 18.04 or newer, elementary OS, Linux Mint 18 or newer
+## Ubuntu Linux 18.04 vagy újabb, elemi operációs rendszer, Linux Mint 18 vagy újabb
 
 Telepítse a **QOwnNotes** t az **Ubuntu Linux** ra (minimum 18.04) a PPA adattár használatával.
 
