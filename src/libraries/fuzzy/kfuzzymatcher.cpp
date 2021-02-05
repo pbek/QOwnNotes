@@ -21,7 +21,7 @@ using String = QString;
  * Custom toLower function which is much faster than
  * c.toLower() directly
  */
-static inline constexpr QChar toLower(QChar c)
+static inline QChar toLower(QChar c)
 {
     return c.isLower() ? c : c.toLower();
 }
