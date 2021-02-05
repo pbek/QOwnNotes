@@ -9,10 +9,9 @@
 #include "kfuzzymatcher.h"
 
 #include <QString>
-#include <QStringView>
-
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+#include <QStringView>
 using String = QStringView;
 #else
 using String = QString;

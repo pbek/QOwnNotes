@@ -10,9 +10,9 @@
 #include <qglobal.h>
 
 class QString;
-class QStringView;
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+class QStringView;
 using StringType = QStringView;
 #else
 using StringType = const QString&;
