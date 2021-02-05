@@ -279,6 +279,7 @@ set(SOURCE_FILES
     libraries/sonnet/src/core/textbreaks_p.h
     libraries/sonnet/src/core/tokenizer.cpp
     libraries/sonnet/src/core/tokenizer_p.h
+    libraries/fuzzy/kfuzzymatcher.cpp
 
     threads/scriptthread.cpp
     threads/scriptthread.h
