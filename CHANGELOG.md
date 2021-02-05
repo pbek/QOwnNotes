@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.2.0
+- fixed a lot of Qt 5.15 deprecation warnings (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
+
 ## 21.1.8
 - Windows 10 pdf export issues are now fixed (for [#2015](https://github.com/pbek/QOwnNotes/issues/2015))
 - added more translation (thank you amirkbrpr, zmni, afischer211, rawfreeamy, mguerra, gregory.k)
