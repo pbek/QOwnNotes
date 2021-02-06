@@ -8,7 +8,7 @@
 
 EAPI=7
 
-inherit qmake-utils eutils
+inherit qmake-utils eutils desktop
 
 DESCRIPTION="A plain-text file markdown note taking with Nextcloud/ownCloud integration"
 HOMEPAGE="https://www.qownnotes.org/"
@@ -54,7 +54,15 @@ src_install() {
 	doins languages/*.qm
 
 	insinto /usr/share/applications
-	doicon -s 128 images/icons/128x128/apps/QOwnNotes.png
-	doicon -s scalable images/icons/scalable/apps/QOwnNotes.svg
+	doicon -s 128 "images/icons/128x128/apps/QOwnNotes.png"
+	doicon -s 16 "images/icons/16x16/apps/QOwnNotes.png"
+	doicon -s 24 "images/icons/24x24/apps/QOwnNotes.png"
+	doicon -s 256 "images/icons/256x256/apps/QOwnNotes.png"
+	doicon -s 32 "images/icons/32x32/apps/QOwnNotes.png"
+	doicon -s 48 "images/icons/48x48/apps/QOwnNotes.png"
+	doicon -s 512 "images/icons/512x512/apps/QOwnNotes.png"
+	doicon -s 64 "images/icons/64x64/apps/QOwnNotes.png"
+	doicon -s 96 "images/icons/96x96/apps/QOwnNotes.png"
+	doicon -s scalable "images/icons/scalable/apps/QOwnNotes.svg"
 	doins PBE.QOwnNotes.desktop
 }
