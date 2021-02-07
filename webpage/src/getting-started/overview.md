@@ -159,6 +159,7 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 - Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
 - **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
 - **External changes** of note files are **watched** (notes or note list are reloaded)
+- Support for **hierarchical note tagging** and **note subfolders**
 - Optional **encryption** of notes (AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
 - The **notes folder** can be **freely chosen** (multiple note folders can be used)
 - **Sub-string searching** of notes is possible and search results are highlighted in the notes
@@ -166,21 +167,20 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 - [**Spellchecking**](../editor/spellchecking.md) support
 - **Portable mode** for carrying QOwnNotes around on USB sticks
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
+- **Vim mode**
+
 
 ## Appearance
 - **Dark mode theme support**
 - **Theming support** for the **markdown syntax highlighting**
 - All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
 - Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
-- Support for **hierarchical note tagging** and **note subfolders**
 - **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
 - **Differences** between current note and externally changed note are **showed** in a dialog
 - **Markdown highlighting** of notes and a **markdown preview mode**
-- **Portable mode** for carrying QOwnNotes around on USB sticks
-- **Vim mode**
 
 ## Languages
-- **Available in many different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
+- **Available in more than 60 different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
   - [Your help](../contributing/translation.md) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
 
 <style>
