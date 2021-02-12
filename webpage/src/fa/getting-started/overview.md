@@ -71,7 +71,7 @@
   <v-carousel-item>
     <img src="/screenshots/screenshot-freedesktop-theme.png" alt="نماگرفت-پوسته-freedesktop" />
     <div class="sheet">
-      شمایل ها توسط پوسته Freedesktop
+      شمایل ها از پوسته Freedesktop
     </div>
   </v-carousel-item>
   <v-carousel-item>

@@ -2321,7 +2321,7 @@
       <location filename="../mainwindow.ui" line="1990"/>
       <location filename="../mainwindow.ui" line="1993"/>
       <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</translation>
+      <translation>Obriu el canal d'IRC #qownnotes IRC (Kiwi), heu d'estar en línia per obtenir una resposta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2057"/>
@@ -2359,7 +2359,7 @@
       <location filename="../mainwindow.ui" line="2208"/>
       <source>Open the QOwnNotes Matrix (Element) room</source>
       <extracomment>"Element" as in the chat service</extracomment>
-      <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
+      <translation>Obriu la sala Matrix de QOwnNotes (Element)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2235"/>
@@ -4459,7 +4459,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message>
       <location filename="../utils/git.cpp" line="77"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
+      <translation>L'ordre &lt;code&gt;%1&lt;/code&gt; amb arguments &lt;code&gt;%2&lt;/code&gt; ha fallat!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4227"/>

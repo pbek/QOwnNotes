@@ -2327,7 +2327,7 @@
       <location filename="../mainwindow.ui" line="1990"/>
       <location filename="../mainwindow.ui" line="1993"/>
       <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</translation>
+      <translation>Ανοίξτε το κανάλι #qownnotes στο IRC (Kiwi), πρέπει να παραμείνετε συνδεδεμένοι για να πάρετε μια απάντηση</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2057"/>
@@ -2365,7 +2365,7 @@
       <location filename="../mainwindow.ui" line="2208"/>
       <source>Open the QOwnNotes Matrix (Element) room</source>
       <extracomment>"Element" as in the chat service</extracomment>
-      <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
+      <translation>Ανοίξτε την QOwnNotes αίθουσα συνομιλίας στο Matrix (Element)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2235"/>
@@ -4477,7 +4477,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/git.cpp" line="77"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
+      <translation>Η εντολή &lt;code&gt;%1&lt;/code&gt; με παραμέτρους &lt;code&gt;%2&lt;/code&gt; απέτυχε!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4227"/>
