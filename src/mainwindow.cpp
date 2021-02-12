@@ -9925,6 +9925,11 @@ void MainWindow::on_actionAutocomplete_triggered() {
         return;
     }
 
+    // attempt to toggle a checkbox at the cursor position
+    if (Utils::Gui::toggleCheckBoxAtCursor(textEdit)) {
+        return;
+    }
+
     QMenu menu;
 
     double resultValue;

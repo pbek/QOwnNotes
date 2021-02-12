@@ -484,6 +484,45 @@ void Utils::Gui::copyCodeBlockText(const QTextBlock &initialBlock) {
 }
 
 /**
+ * Attempts to toggle a checkbox at the cursor position
+ *
+ * @param textEdit
+ */
+bool Utils::Gui::toggleCheckBoxAtCursor(QPlainTextEdit *textEdit) {
+    auto cursor = textEdit->textCursor();
+    const int pos = cursor.position();
+
+    // select the full range of "- [ ]" text in front and after cursor
+    cursor.movePosition(QTextCursor::Left,
+                        QTextCursor::MoveAnchor, 5);
+    cursor.movePosition(QTextCursor::Right,
+                        QTextCursor::KeepAnchor, 10);
+
+    bool result = false;
+    auto text = cursor.selectedText();
+
+    // try to toggle the checkbox
+    if (text.contains(QStringLiteral("- [ ]"))) {
+        text.replace(QStringLiteral("- [ ]"),
+                     QStringLiteral("- [x]"));
+        result = true;
+    } else if (text.contains(QStringLiteral("- [x]"))) {
+        text.replace(QStringLiteral("- [x]"),
+                     QStringLiteral("- [ ]"));
+        result = true;
+    }
+
+    // insert the new checkbox text if it was toggled
+    if (result) {
+        cursor.insertText(text);
+        cursor.setPosition(pos);
+        textEdit->setTextCursor(cursor);
+    }
+
+    return result;
+}
+
+/**
  * Automatically formats a markdown table in a text edit
  *
  * @param textEdit

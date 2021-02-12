@@ -117,6 +117,7 @@ QFont fontDialogGetFont(
 
 void copyCodeBlockText(const QTextBlock &initialBlock);
 
+bool toggleCheckBoxAtCursor(QPlainTextEdit *textEdit);
 bool autoFormatTableAtCursor(QPlainTextEdit *textEdit);
 
 void updateInterfaceFontSize(int fontSize = -1);

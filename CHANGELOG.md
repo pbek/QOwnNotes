@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.2.1
+- you now can also toggle a checkbox at the cursor position with <kbd>Ctrl + Space</kbd>
+  in the note text edit (for [#2048](https://github.com/pbek/QOwnNotes/issues/2048))
+
 ## 21.2.0
 - fixed a lot of Qt 5.15 deprecation warnings (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
 - the **Find action** dialog was further improved (for [#2036](https://github.com/pbek/QOwnNotes/pull/2036), thank you @Waqar144)
