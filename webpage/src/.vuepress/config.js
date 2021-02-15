@@ -512,7 +512,7 @@ module.exports = {
           },
           {
             title: 'ویرایشگر',
-            children: utils.getNavItemsForLanguage(editorNavItems, "'fa")
+            children: utils.getNavItemsForLanguage(editorNavItems, 'fa')
           },
           {
             title: 'اسکریپت نویسی',
