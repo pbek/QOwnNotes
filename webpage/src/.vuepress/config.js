@@ -472,38 +472,38 @@ module.exports = {
       '/fa/': {
         selectText: 'زبان ها',
         label: 'فارسی',
-        editLinkText: 'برای بهبود این سایت به ما کمک کنید!',
+        editLinkText: 'در اصلاح این صفحه ما را یاری کنید!',
         algolia: {
           apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
           indexName: 'qownnotes'
         },
         nav: [
           {
-            text: 'شروع شدن',
+            text: 'شروع',
             link: utils.getNavItemForLanguage(gettingStartedNavItem, 'fa'),
           },
           {
-            text: 'نصب و راه اندازی',
+            text: 'نصب',
             link: utils.getNavItemForLanguage(installationNavItem, 'fa'),
           },
           {
-            text: 'تغییرات',
+            text: 'گزارش تغییرات',
             link: changelogNavItem,
             collapsable: true,
           },
           {
-            text: 'مخاطب',
+            text: 'تماس',
             ariaLabel: 'Contact Menu',
             items: contactNavItems
           },
           {
-            text: 'اهدا کردن',
+            text: 'کمک مالی',
             link: utils.getNavItemForLanguage(donateNavItem, 'fa'),
           }
         ],
         sidebar: [
           {
-            title: 'شروع شدن',
+            title: 'شروع',
             children: utils.getNavItemsForLanguage(gettingStartedNavItems, 'fa')
           },
           {
@@ -512,10 +512,10 @@ module.exports = {
           },
           {
             title: 'ویرایشگر',
-            children: utils.getNavItemsForLanguage(editorNavItems, 'fa')
+            children: utils.getNavItemsForLanguage(editorNavItems, "'fa")
           },
           {
-            title: 'اسکریپت ها',
+            title: 'اسکریپت نویسی',
             children: utils.getNavItemsForLanguage(scriptingNavItems, 'fa')
           },
           {
@@ -523,7 +523,7 @@ module.exports = {
             children: utils.getNavItemsForLanguage(contributingNavItems, 'fa')
           },
           {
-            title: 'سالات متداول',
+            title: 'سؤالات متداول',
             children: utils.getNavItemsForLanguage(faqNavItems, 'fa')
           }
         ]
