@@ -10,7 +10,7 @@
 
 ## هوم برو
 
-یک بسته نگهداری شده توسط انجمن از QOwnNotes در [هوم برو](https://formulae.brew.sh/cask/qownnotes) موجود می باشد.
+یک بسته نگهداری شده جمعی از QOwnNotes در [هوم برو](https://formulae.brew.sh/cask/qownnotes) موجود می باشد.
 
 می توانید آن را با عبارت زیر نصب کنید:
 

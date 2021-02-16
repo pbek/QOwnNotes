@@ -69,42 +69,46 @@ A jegyzetek online kezeléséhez használhat olyan szervereket, mint a [Nextclou
 
 Hosztolhatja saját szerverét, vagy használhat hosztolt megoldásokat.
 
-::: tip Természetesen más megoldások, például a **Dropbox**, a **szinkronizálás**, a **Seafile** vagy a BitTorrent Sync is használhatók a jegyzetek és más fájlok tárolására
+There is a [community-maintained list of Nextcloud providers](https://github.com/nextcloud/providers#providers), as well as a [list of devices with Nextcloud](https://nextcloud.com/devices/).
+
+[Portknox](https://portknox.net) has reported they have [QOwnNotesAPI installed](https://portknox.net/en/app_listing).
+
+::: tip Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to host your notes and other files. :::
 
 ## QOwnNotesAPI Nextcloud app
 
-A [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) segítségével hozzáférhet a kiszolgálóoldali **kukába helyezett jegyzetek** és **jegyzetek verzióihoz**.
+[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) lets you access your server-side **trashed notes** and **note versions**.
 
-::: tip További információkért keresse fel a [QOwnNotesAPI Nextcloud alkalmazást](qownnotesapi.md). :::
+::: tip Please visit [QOwnNotesAPI Nextcloud App](qownnotesapi.md) for more information. :::
 
 ## Nextcloud Notes szerver alkalmazás
 
-A [**Nextcloud Notes**](https://github.com/nextcloud/notes) használatával szerkesztheti a jegyzeteit az **interneten**.
+Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes in the **web**.
 
-::: warning Ne feledje, hogy a Nextcloud Notes jelenleg csak egy szintű almappákat támogat. :::
+::: warning Keep in mind that Nextcloud Notes currently only supports up to one level of subfolders. :::
 
 ## Nextcloud Notes mobilalkalmazás
 
-Különböző alkalmazásokat használhat a Nextcloud / ownCloud jegyzetek eléréséhez **mobileszközéről**.
+To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps.
 
 ### Android
 
 - [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (harmadik fél)
 
-Használhat bármilyen szinkronizáló eszközt is, például a *Ultimate Synchronize* vagy a *FolderSync* eszközt a jegyzetfájlok szinkronizálásához, és a jegyzetek szerkesztéséhez használhat olyan szoftvereket, mint a *neutriNotes*. :::
+::: tip You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* to edit your notes. :::
 
 ### iOS
 
 - [CloudNotes iOS rendszerhez](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (harmadik fél)
 
-Használhatja a [Jegyzetfüzet](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662)et is, és szinkronizálhatja a jegyzeteit a WebDAV-on keresztül. Van egy jó útmutató a [Jegyzetek készítése a Nextcloud, a QOwnNotes és a Jegyzetfüzetek témához](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+::: tip You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks) :::
 
 ## api.qownnotes.org
 
-Ez egy online szolgáltatás, amelyet a QOwnNotes nyújt annak ellenőrzésére, hogy elérhető-e az alkalmazás új kiadása.
+This is an online service provided by QOwnNotes to check if there is a new release of the application available.
 
-Beszél a GitHub-tal, és megvizsgálja a legújabb kiadást, beszerez egy megfelelő letöltési URL-t, és összeállítja a változásnapló változásait a QOwnNotes verziójához képest, amelyet jelenleg html-ként használ a frissítési párbeszédpanelen való megjelenítéshez.
+It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
 
-Ezenkívül biztosítja a [RSS-kiadás kiadását](http://api.qownnotes.org/rss/app-releases) és a QOwnNotes régebbi verzióinak örökölt frissítési ellenőrző api megvalósítását is.
+In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation of the legacy update checking api for older versions of QOwnNotes.
 
-::: tip Az [api.qownnotes.org](https://api.qownnotes.org) forráskódját a [GitHub](https://github.com/qownnotes/api) oldalon érheti el. :::
+::: tip You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api). :::

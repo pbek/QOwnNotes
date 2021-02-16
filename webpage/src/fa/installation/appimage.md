@@ -1,13 +1,11 @@
 # نصب به صورت AppImage
 
-می توانید آخرین نسخه AppImage را از [مخزن QOwnNotes AppImage](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage) بارگیری نمایید.
+You can download the latest AppImage from the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases). It should be named like `QOwnNotes-x86_64.AppImage` on that page.
 
-[آخرین نسخه QOwnNotes x86_64 AppImage](https://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/AppImage/QOwnNotes-latest-x86_64.AppImage)
-
-سپس می توانید مجوزهای اجرا را در پرونده تغییر دهید:
+Then you can change the execute-permissions on the file:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-پس از آن حتماً قادر به اجرای AppImage برای استفاده از QOwnNotes خواهید بود.
+Afterwards you should be able to execute the AppImage to run QOwnNotes.

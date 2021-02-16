@@ -73,8 +73,12 @@ Para trabajar con sus notas en línea, puede utilizar servidores como [Nextcloud
 
 Puede alojar su propio servidor o utilizar soluciones alojadas.
 
+There is a [community-maintained list of Nextcloud providers](https://github.com/nextcloud/providers#providers), as well as a [list of devices with Nextcloud](https://nextcloud.com/devices/).
+
+[Portknox](https://portknox.net) has reported they have [QOwnNotesAPI installed](https://portknox.net/en/app_listing).
+
 ::: tip
-Por supuesto, otras soluciones, como **Dropbox**, **Syncthing**, **Seafile** o BitTorrent Sync también se pueden utilizar para alojar sus notas y otros archivos.
+Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to host your notes and other files.
 :::
 
 ## QOwnNotesAPI Nextcloud app

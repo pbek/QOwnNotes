@@ -148,33 +148,36 @@
 [Comprender el concepto de QOwnNotes](concept.md)
 
 ## Características
-
-- La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar varias carpetas de notas)
 - Puede usar sus **archivos de texto o rebajas existentes**, sin necesidad de importar la mayoría de las veces
-- **La búsqueda de subcadena** de notas es posible y los resultados de la búsqueda se resaltan en las notas
-- **Los atajos de teclado** son personalizables
-- **Soporte de secuencias de comandos** y un [**repositorio de secuencias de comandos**](https://github.com/qownnotes/scripts) en línea donde puede instalar secuencias de comandos dentro de la aplicación
-- [Extensión del navegador](browser-extension.md) para agregar notas del texto seleccionado, hacer capturas de pantalla o administrar sus marcadores
-- **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
+- **Importación de Evernote**
+- **Compatible** con la aplicación Notes de **Nextcloud / ownCloud** y **mobil** y Nextcloud Text
+- Soporte para **compartir notas** en su servidor **ownCloud** / **Nextcloud**
+- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
 - Las **versiones anteriores** de sus notas se pueden **restaurar** desde su servidor **Nextcloud / ownCloud**
 - **Las notas enviadas a la papelera** se pueden **restaurar** desde su servidor **Nextcloud / ownCloud**
-- **Las diferencias** entre la nota actual y la nota modificada externamente se **se muestran** en un diálogo
-- **Markdown resaltando** de notas y un **modo de vista previa de Markdown**
-- <0 Soporte de corrección ortográfica</strong></a>
-- **Compatible** con la aplicación Notes de **Nextcloud / ownCloud** y **mobil** y Nextcloud Text
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
+- **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
+- Soporte para **etiquetado jerárquico de notas** y **subcarpetas de notas**
 - Optional **encryption** of notes (AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
+- La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar varias carpetas de notas)
+- **La búsqueda de subcadena** de notas es posible y los resultados de la búsqueda se resaltan en las notas
+- [Extensión del navegador](browser-extension.md) para agregar notas del texto seleccionado, hacer capturas de pantalla o administrar sus marcadores
+- <0 Soporte de corrección ortográfica</strong></a>
+- **Modo portátil** para llevar QOwnNotes en memorias USB
+- **Soporte de secuencias de comandos** y un [**repositorio de secuencias de comandos**](https://github.com/qownnotes/scripts) en línea donde puede instalar secuencias de comandos dentro de la aplicación
+- **Modo Vim**
+
+
+## Appearance
 - **Soporte de tema de modo oscuro**
 - **Soporte de temas** para la sintaxis de rebajas **resaltando**
 - Todos los paneles **pueden colocarse donde desee**, incluso pueden **flotar** o **apilar** (totalmente acoplables)
 - Soporte para **iconos de tema de escritorio gratuito**, puede usar QOwnNotes con sus **iconos de escritorio nativos** y con su **tema de escritorio oscuro favorito**
-- Soporte para **etiquetado jerárquico de notas** y **subcarpetas de notas**
-- Soporte para **compartir notas** en su servidor **ownCloud** / **Nextcloud**
-- **Modo portátil** para llevar QOwnNotes en memorias USB
-- **Modo Vim**
 - **Modo sin distracciones**, **Modo de pantalla completa** y **Modo de máquina de escribir**
-- **Importación de Evernote**
-- **Disponible en muchos idiomas diferentes** como inglés, alemán, francés, polaco, chino, japonés, ruso, portugués, húngaro, holandés y español
+- **Las diferencias** entre la nota actual y la nota modificada externamente se **se muestran** en un diálogo
+- **Markdown resaltando** de notas y un **modo de vista previa de Markdown**
+
+## Lenguajes
+- **Available in more than 60 different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
   - [Su ayuda](../contributing/translation.md) es muy apreciada para mejorar estas traducciones o para traducir QOwnNotes en más idiomas.
 
 <style>

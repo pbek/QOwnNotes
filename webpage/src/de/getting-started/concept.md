@@ -73,36 +73,40 @@ Um online mit Ihren Notizen zu arbeiten, können Sie Server wie [Nextcloud](http
 
 Sie können Ihren eigenen Server hosten oder gehostete Lösungen verwenden.
 
+There is a [community-maintained list of Nextcloud providers](https://github.com/nextcloud/providers#providers), as well as a [list of devices with Nextcloud](https://nextcloud.com/devices/).
+
+[Portknox](https://portknox.net) has reported they have [QOwnNotesAPI installed](https://portknox.net/en/app_listing).
+
 ::: tip
-Natürlich können auch andere Lösungen wie **Dropbox**, **Syncthing**, **Seafile** oder BitTorrent Sync verwendet werden, um Ihre Notizen und andere Dateien zu hosten
+Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to host your notes and other files.
 :::
 
 ## QOwnNotesAPI Nextcloud app
 
-Mit [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) können Sie auf Ihre zugreifen serverseitige **verworfene Notizen** und **Notizenversionen**.
+[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) lets you access your server-side **trashed notes** and **note versions**.
 
 ::: tip
-Bitte besuchen Sie [QOwnNotesAPI Nextcloud App](qownnotesapi.md) für weitere Informationen.
+Please visit [QOwnNotesAPI Nextcloud App](qownnotesapi.md) for more information.
 :::
 
 ## Nextcloud Notes Server App
 
-Verwenden Sie [**Nextcloud Notes**](https://github.com/nextcloud/notes), um Ihre Notizen im **Web** zu bearbeiten.
+Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes in the **web**.
 
 ::: warning
-Beachten Sie, dass Nextcloud Notes derzeit nur bis zu einer Ebene von Unterordnern unterstützt.
+Keep in mind that Nextcloud Notes currently only supports up to one level of subfolders.
 :::
 
 ## Mobile App von Nextcloud Notes
 
-Um von Ihrem **Mobilgerät** aus auf Ihre Nextcloud / ownCloud-Notizen zuzugreifen, können Sie verschiedene Apps verwenden.
+To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps.
 
 ### Android
 
 - [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (3rd party)
 
 ::: tip
-Sie können auch ein beliebiges Synchronisierungstool wie *Synchronize Ultimate* oder *FolderSync* verwenden, um Ihre Notizdateien zu synchronisieren und verwenden Sie Software wie *neutriNotes*, um Ihre Notizen zu bearbeiten.
+You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* to edit your notes.
 :::
 
 ### iOS
@@ -110,17 +114,17 @@ Sie können auch ein beliebiges Synchronisierungstool wie *Synchronize Ultimate*
 - [CloudNotes für iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (Drittanbieter)
 
 ::: tip
-Sie können auch [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) verwenden Wenn Sie Ihre Notizen über WebDAV synchronisieren möchten, finden Sie unter [Notizen mit Nextcloud, QOwnNotes und Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
 :::
 
 ## api.qownnotes.org
 
-Dies ist ein Onlinedienst von QOwnNotes, mit dem überprüft werden kann, ob eine neue Version der Anwendung verfügbar ist.
+This is an online service provided by QOwnNotes to check if there is a new release of the application available.
 
-Es spricht mit GitHub und sucht nach der neuesten Version, erhält eine geeignete Download-URL und kompiliert die Änderungen aus dem Änderungsprotokoll im Vergleich zu der Version von QOwnNotes, die Sie derzeit als HTML verwenden, um sie im Aktualisierungsdialog anzuzeigen.
+It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
 
-Darüber hinaus bietet es den [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) und eine Implementierung der API zur Überprüfung älterer Legacy-Updates für ältere Versionen von QOwnNotes.
+In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation of the legacy update checking api for older versions of QOwnNotes.
 
 ::: tip
-Sie können auf den Quellcode für [api.qownnotes.org](https://api.qownnotes.org) auf [GitHub](https://github.com/qownnotes/api) zugreifen.
+You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api).
 :::

@@ -73,8 +73,13 @@ graph TB
 
 می‌توانید سرور خود را میزبانی کرده یا از راهکارهای میزبانی شده استفاده کنید.
 
+[لیست نگهداری شده جمعی از طرف ارائه‌دهندگان نکست کلود](https://github.com/nextcloud/providers#providers) و نیز [لیست ابزارهای همراه نکست کلود](https://nextcloud.com/devices/) در دسترس قرار دارند.
+
+[Portknox](https://portknox.net) گزارش کرده است که آنها [QOwnNotesAPI را نصب کرده اند](https://portknox.net/en/app_listing).
+
 ::: tip
 البته راهکارهای دیگری مانند **Dropbox**، **Syncthing**، **Seafile**، یا BitTorrent Sync را نیز می توان برای میزبانی یادداشت ها و سایر پرونده های شما بکار برد.
+:::
 
 ## برنامه QOwnNotesAPI Nextcloud
 

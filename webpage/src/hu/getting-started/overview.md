@@ -146,34 +146,37 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 [Értse meg a QOwnNotes fogalmát](concept.md)
 
 ## Funkciók
-
-- A **jegyzetek mappa** **szabadon választható** (több jegyzetmappa is használható)
-- Használhatja a **meglévő szöveges vagy jelölőfájljait**, legtöbbször nincs szükség importálásra
-- A jegyzetek **alsztring keresése** lehetséges, és a keresési eredmények kiemelésre kerülnek a jegyzetekben
-- A **billentyűparancsok** testreszabhatók
-- **A szkriptek támogatása** és az online [**szkriptek tárháza**](https://github.com/qownnotes/scripts), ahol parancsfájlokat telepíthet az alkalmazásba
-- [Böngészőbővítmény](browser-extension.md) a jegyzetek hozzáadásához a kijelölt szövegből, képernyőképek készítéséhez vagy a könyvjelzők kezeléséhez
-- A jegyzetfájlok **külső változásai** ** figyelésre kerülnek** (a jegyzetek vagy a jegyzetlista újratöltődnek)
-- A jegyzetek régebbi **verziói** **visszaállíthatók** a **Nextcloud / ownCloud** szerverről
-- **A kukába helyezett jegyzetek** **visszaállíthatók** a **Nextcloud / ownCloud** szerverről
-- **Az aktuális és a külsőleg megváltozott jegyzet közötti különbségeket** egy párbeszédpanelen **mutatják**
-- A jegyzetek **jelölésének kiemelése** és egy **jelölés előnézeti mód**
-- [**Helyesírás-ellenőrzés**](../editor/spellchecking.md) támogatás
-- **Kompatibilis** a **Nextcloud / ownCloud** és a **mobile** és a Nextcloud Text Notes alkalmazásával
-- A Nextcloud / ownCloud **témalistáinak kezelése** (**Nextcloud-feladatok** vagy **Tasks Plus** / **Calendar Plus**) vagy használjon egy másik **CalDAV szervert** a feladatok szinkronizálásához
-- Opcionális jegyzetek **titkosítása** (beépített AES-256 vagy használhat egyedi titkosítási módszereket, például **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) vagy **PGP** ([titkosítás-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
-- **Sötét módú téma támogatás**
-- **Támogatás** a **jelölés szintaxis kiemeléséhez**
-- Minden **panel tetszőlegesen elhelyezhető**, akár **lebeghet** vagy **teljesen dokkolható**
-- Támogatja a **freedesktop téma ikonokat**, használhatja a QOwnNotes programot a **natív asztali ikonokkal** és a kedvenc **sötét asztali témájával**
-- A **hierarchikus jegyzetcímkézés** és a **jegyzetmappák** támogatása
-- Támogatás a **jegyzetek megosztásához** a **ownCloud** / **Nextcloud** kiszolgálón
-- **Hordozható mód** a QOwnNotes hordozásához USB-meghajtókon
-- **Vim mód**
-- **Figyelemelterelés mentes mód**, **teljes képernyős mód** és **Írógép mód**
+- You can use your **existing text or markdown files**, no need for an import most of the times
 - **Evernote import**
-- **Számos különböző nyelven érhető el**, mint például angol, német, francia, lengyel, kínai, japán, orosz, portugál, magyar, holland és spanyol
-  - [Segítségét](../contributing/translation.md) nagyra értékelik ezen fordítások fejlesztése vagy a QOwnNotes több nyelvre történő lefordítása érdekében
+- **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
+- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
+- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
+- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
+- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
+- **External changes** of note files are **watched** (notes or note list are reloaded)
+- Support for **hierarchical note tagging** and **note subfolders**
+- Optional **encryption** of notes (AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
+- The **notes folder** can be **freely chosen** (multiple note folders can be used)
+- **Sub-string searching** of notes is possible and search results are highlighted in the notes
+- [Browser extension](browser-extension.md) to add notes from the selected text, make screenshots or manage your bookmarks
+- [**Spellchecking**](../editor/spellchecking.md) support
+- **Portable mode** for carrying QOwnNotes around on USB sticks
+- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
+- **Vim mode**
+
+
+## Appearance
+- **Dark mode theme support**
+- **Theming support** for the **markdown syntax highlighting**
+- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
+- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
+- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
+- **Differences** between current note and externally changed note are **showed** in a dialog
+- **Markdown highlighting** of notes and a **markdown preview mode**
+
+## Languages
+- **Available in more than 60 different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
+  - [Your help](../contributing/translation.md) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
 
 <style>
 .sheet {

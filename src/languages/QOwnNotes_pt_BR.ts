@@ -1832,7 +1832,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1149"/>
       <source>Editor width</source>
-      <translation>Editor de largura</translation>
+      <translation>Largura do editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1238"/>

@@ -28,7 +28,7 @@ Qt با نسخه 5.8 از ویندوز XP پشتیبانی نمی کند ولی 
 
 ## چاکلتلی
 
-یک بسته نگهداری شده توسط انجمن از QOwnNotes در  [Chocolatey](https://chocolatey.org/packages/qownnotes/) موجود می باشد.
+یک بسته نگهداری شده جمعی از QOwnNotes در  [Chocolatey](https://chocolatey.org/packages/qownnotes/) موجود می باشد.
 
 می توانید آن را با عبارت زیر نصب کنید:
 

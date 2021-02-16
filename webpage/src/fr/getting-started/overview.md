@@ -148,33 +148,36 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 [Comprendre le concept de QOwnNotes](concept.md)
 
 ## Traits
-
-- Le **dossier de notes** peut être **librement choisi**(plusieurs dossiers de notes peuvent être utilisés)
-- Vous pouvez utiliser vos **fichiers texte ou markdown existants**, pas besoin d'importer la plupart du temps
-- **La recherche de sous-chaînes** de notes est possible et les résultats de la recherche sont mis en évidence dans les notes
-- **Les raccourcis clavier** sont personnalisables
-- **Prise en charge des scripts** et un [**référentiel de scripts**](https://github.com/qownnotes/scripts) en ligne où vous pouvez installer des scripts à l'intérieur de l'application
-- [Extension de navigateur](browser-extension.md) pour ajouter des notes à partir du texte sélectionné, faire des captures d'écran ou gérer vos signets
-- **Les modifications externes** des fichiers de notes sont **surveillées** (les notes ou la liste de notes sont rechargées)
-- Les ** versions** plus anciennes de vos notes peuvent être **restaurées** à partir de votre serveur **Nextcloud / ownCloud**
-- **Les notes mises dans la corbeille** peuvent être **restaurées** depuis votre serveur **Nextcloud / ownCloud**
-- **Les différences** entre la note actuelle et la note modifiée de l'extérieur sont **affichées** dans une boîte de dialogue
-- **Mise en évidence de Markdown** des notes et un **mode de prévisualisation de Markdown**
-- [**Spellchecking**](../editor/spellchecking.md) soutien
-- **Compatible** avec l'application Notes de **Nextcloud / ownCloud** et **mobile** et Nextcloud Text
-- Gérez vos **listes de tâches** Nextcloud / ownCloud  (**tâches Nextcloud** ou **tâches Plus** / **calendrier Plus**) ou utilisez un autre **Serveur CalDAV** pour synchroniser vos tâches avec
+- You can use your **existing text or markdown files**, no need for an import most of the times
+- **Evernote import**
+- **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
+- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
+- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
+- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
+- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
+- **External changes** of note files are **watched** (notes or note list are reloaded)
+- Support for **hierarchical note tagging** and **note subfolders**
 - **cryptage** facultatif des notes (AES-256 est intégré ou vous pouvez utiliser des méthodes de cryptage personnalisées telles que **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) ou **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
+- Le **dossier de notes** peut être **librement choisi**(plusieurs dossiers de notes peuvent être utilisés)
+- **La recherche de sous-chaînes** de notes est possible et les résultats de la recherche sont mis en évidence dans les notes
+- [Extension de navigateur](browser-extension.md) pour ajouter des notes à partir du texte sélectionné, faire des captures d'écran ou gérer vos signets
+- [**Spellchecking**](../editor/spellchecking.md) soutien
+- **Mode portable** pour transporter QOwnNotes sur des clés USB
+- **Prise en charge des scripts** et un [**référentiel de scripts**](https://github.com/qownnotes/scripts) en ligne où vous pouvez installer des scripts à l'intérieur de l'application
+- **Vim mode**
+
+
+## Appearance
 - **Prise en charge du thème du mode sombre**
 - **Prise en charge de la thématisation** pour la mise en évidence de la syntaxe de démarque****
-- Tous les panneaux **peuvent être placés où vous voulez**, ils peuvent même **flotter** ou **empiler** (entièrement ancrable)
+- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
 - Prise en charge des **icônes de thème freedesktop**, vous pouvez utiliser QOwnNotes avec vos **icônes de bureau natives** et avec votre **thème de bureau sombre préféré**
-- Prise en charge du **balisage hiérarchique des notes** et **sous-dossiers de notes**
-- Prise en charge du **partage de notes** sur votre serveur **ownCloud** / **Nextcloud**
-- **Mode portable** pour transporter QOwnNotes sur des clés USB
-- **Vim mode**
 - **Distraction free mode**, **Full-screen mode** en **Typewriter mode**
-- **Evernote import**
-- **Disponible dans de nombreuses langues** comme l'anglais, l'allemand, le français, le polonais, le chinois, le japonais, le russe, le portugais, le hongrois, le néerlandais et l'espagnol
+- **Les différences** entre la note actuelle et la note modifiée de l'extérieur sont **affichées** dans une boîte de dialogue
+- **Mise en évidence de Markdown** des notes et un **mode de prévisualisation de Markdown**
+
+## Langues
+- **Available in more than 60 different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
   - [Votre aide](../contributing/translation.md) est très appréciée pour améliorer ces traductions ou pour traduire QOwnNotes dans plus de langues
 
 <style>
