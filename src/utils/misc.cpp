@@ -496,13 +496,23 @@ QString Utils::Misc::defaultNotesPath() {
         path.append(".test");
 #endif
 
+        // check if ownCloud path is found
         QDir dir(path);
         if (!dir.exists()) {
+            // set Nextcloud path if ownCloud wasn't found
             path = QDir::homePath() % Utils::Misc::dirSeparator() %
                    QStringLiteral("Nextcloud");
         }
+
+        // check if Nextcloud path is found
+        dir = QDir(path);
+        if (!dir.exists()) {
+            // set home directory path if Nextcloud wasn't found
+            path = QDir::homePath();
+        }
     }
 
+    // add "Notes" to the base path
     path += Utils::Misc::dirSeparator() % QStringLiteral("Notes");
 
     // remove the snap path for Snapcraft builds

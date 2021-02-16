@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.2.2
+- when setting your initial note folder and no Nextcloud or ownCloud folders are found
+  now a `Notes` folder is suggested in your home directory (for [#2054](https://github.com/pbek/QOwnNotes/issues/2054))
+
 ## 21.2.1
 - you now can also toggle a checkbox at the cursor position with <kbd>Ctrl + Space</kbd>
   in the note text edit (for [#2048](https://github.com/pbek/QOwnNotes/issues/2048))
