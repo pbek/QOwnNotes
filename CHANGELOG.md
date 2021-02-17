@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.2.3
+- the restoring of workspaces after a window resize was improved
+  (for [#2056](https://github.com/pbek/QOwnNotes/pull/2056), thank you @fnkabit)
+
 ## 21.2.2
 - when setting your initial note folder and no Nextcloud or ownCloud folders are found
   now a `Notes` folder is suggested in your home directory (for [#2054](https://github.com/pbek/QOwnNotes/issues/2054))
