@@ -11533,7 +11533,7 @@ void MainWindow::setCurrentWorkspace(const QString &uuid) {
     settings.setValue(QStringLiteral("currentWorkspace"), uuid);
 
     // restore the new workspace
-    restoreCurrentWorkspace();
+    QTimer::singleShot(0, this, SLOT(restoreCurrentWorkspace()));
 
     // update the menu and combo box (but don't rebuild it)
     updateWorkspaceLists(false);
