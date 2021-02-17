@@ -36,9 +36,9 @@ Puede **donar Bitcoin Cash** a esta dirección de Bitcoin Cash:
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 ```
 
-## Etherium
+## Ethereum
 
-Puede **donar Etherium ETH** a esta dirección Etherium ETH:
+Puede **donar Ethereum ETH** a esta dirección Ethereum ETH:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9

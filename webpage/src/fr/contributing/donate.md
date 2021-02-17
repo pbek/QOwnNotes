@@ -36,9 +36,9 @@ Vous pouvez **faire un don Cash** à cette adresse Cash BTC:
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 ```
 
-## Etherium
+## Ethereum
 
-Vous pouvez **faire un don d'Etherium ETH** à cette adresse Etherium ETH:
+Vous pouvez **faire un don d'Ethereum ETH** à cette adresse Ethereum ETH:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9

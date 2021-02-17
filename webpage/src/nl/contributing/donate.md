@@ -36,15 +36,15 @@ U kunt **Bitcoin Cash doneren** aan dit Bitcoin Cash-adres:
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 ```
 
-## Etherium
+## Ethereum
 
-U kunt **Etherium ETH doneren** aan dit Etherium ETH-adres:
+U kunt **Ethereum ETH doneren** aan dit Ethereum ETH-adres:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-U kunt **Etherium ETC doneren** aan dit Etherium ETC-adres:
+U kunt **Ethereum ETC doneren** aan dit Ethereum ETC-adres:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

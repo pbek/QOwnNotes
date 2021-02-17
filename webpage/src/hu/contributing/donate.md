@@ -36,15 +36,15 @@ A gombra kattintva **pénzt adományozhat a Liberapay-on keresztül**:
 qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 ```
 
-## Etherium
+## Ethereum
 
-**Etherium ETH-t adományozhat** erre a Etherium ETH címre:
+**Ethereum ETH-t adományozhat** erre a Ethereum ETH címre:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-**Etherium ETC-t adományozhat** erre a Etherium ETC címre:
+**Ethereum ETC-t adományozhat** erre a Ethereum ETC címre:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D
