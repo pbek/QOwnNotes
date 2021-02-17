@@ -513,7 +513,7 @@ class MainWindow : public QMainWindow {
 
     void on_actionShow_all_panels_triggered();
 
-    void restoreCurrentWorkspace();
+    Q_SLOT void restoreCurrentWorkspace();
 
     void togglePanelVisibility(const QString &objectName);
 
