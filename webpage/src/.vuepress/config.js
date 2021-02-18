@@ -639,7 +639,7 @@ module.exports = {
       {
         feed_options: {
           title: 'QOwnNotes Blog',
-          description: "News about QOwnNotes, the open source markdown note taking application for Linux, Mac OS X and Windows, that works together with Nextcloud Notes",
+          description: "News about QOwnNotes, the open source markdown note taking application for Linux, macOS and Windows, that works together with Nextcloud Notes",
         },
         canonical_base: 'https://www.qownnotes.org',
         sort: entries => _.reverse( _.sortBy( entries, 'date' ) ),

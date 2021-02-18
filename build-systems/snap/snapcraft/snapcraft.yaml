@@ -6,7 +6,7 @@ confinement: strict
 base: core18
 description: |
   QOwnNotes is the open source (GPL) plain-text file markdown note taking app
-  for GNU/Linux, Mac OS X and Windows, that (optionally) works together with the
+  for GNU/Linux, macOS and Windows, that (optionally) works together with the
   notes application of Nextcloud/ownCloud.
   https://www.qownnotes.org/
 

@@ -139,7 +139,7 @@
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) est l’application **open source** (GPL) en texte brut **prise de notes de démarquage** pour **GNU / Linux**, **Mac OS X** et **Windows**, qui fonctionnent (en option) avec [**l'application notes**](https://github.com/nextcloud/notes) de [Nextcloud](https://nextcloud.com/) et [ownCloud](https://owncloud.org/).
+[QOwnNotes](https://www.qownnotes.org/) est l’application **open source** (GPL) en texte brut **prise de notes de démarquage** pour **GNU / Linux**, **macOS** et **Windows**, qui fonctionnent (en option) avec [**l'application notes**](https://github.com/nextcloud/notes) de [Nextcloud](https://nextcloud.com/) et [ownCloud](https://owncloud.org/).
 
 ::: tip
 Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprendre et vous connecter avec la communauté QOwnNotes.

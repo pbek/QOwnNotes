@@ -1,6 +1,6 @@
 ---
 title: QOwnNotes
-description: Nyílt forráskódú jegyzetfüzet készítése Linux, Mac OS X és Windows rendszerekhez, amely a Nextcloud Notes alkalmazással együtt működik
+description: Nyílt forráskódú jegyzetfüzet készítése Linux, macOS és Windows rendszerekhez, amely a Nextcloud Notes alkalmazással együtt működik
 home: true
 heroImage: /screenshots/screenshot.png
 tagline: Ingyenes nyílt forráskódú, egyszerű szöveges fájlok jelölése jegyzetelés a Nextcloud / ownCloud integrációval

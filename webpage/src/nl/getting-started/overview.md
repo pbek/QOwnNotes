@@ -139,7 +139,7 @@ bezit **Notes** voor de notities die u maakt
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) is het **open source** (GPL) platte tekstbestand **markdown notitie**-applicatie **voor GNU / Linux**, **Mac OS X** en **Windows**, die (optioneel) samenwerkt met de [**notitietoepassing**](https://github.com/nextcloud/notes) van [Nextcloud](https://nextcloud.com/) en [ownCloud](https://owncloud.org/) (opent nieuw venster).
+[QOwnNotes](https://www.qownnotes.org/) is het **open source** (GPL) platte tekstbestand **markdown notitie**-applicatie **voor GNU / Linux**, **macOS** en **Windows**, die (optioneel) samenwerkt met de [**notitietoepassing**](https://github.com/nextcloud/notes) van [Nextcloud](https://nextcloud.com/) en [ownCloud](https://owncloud.org/) (opent nieuw venster).
 
 ::: tip
 Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, te leren en contact te maken met de QOwnNotes-gemeenschap.

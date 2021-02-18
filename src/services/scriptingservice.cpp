@@ -1634,7 +1634,7 @@ bool ScriptingService::platformIsLinux() {
 }
 
 /**
- * Returns true if the current platform is Mac OS X
+ * Returns true if the current platform is macOS
  */
 bool ScriptingService::platformIsOSX() {
     MetricsService::instance()->sendVisitIfEnabled(

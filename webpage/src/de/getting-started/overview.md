@@ -139,7 +139,7 @@
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) ist die **Open Source** (GPL) -Nur-Text-Datei-**Markdown-Notizanwendung** für **GNU/ Linux**, **Mac OS X** und **Windows**, die (optional) mit der [**Notizenanwendung**](https://github.com/nextcloud/notes) von [Nextcloud](https://nextcloud.com/) und [ownCloud](https://owncloud.org/) zusammenarbeitet.
+[QOwnNotes](https://www.qownnotes.org/) ist die **Open Source** (GPL) -Nur-Text-Datei-**Markdown-Notizanwendung** für **GNU/ Linux**, **macOS** und **Windows**, die (optional) mit der [**Notizenanwendung**](https://github.com/nextcloud/notes) von [Nextcloud](https://nextcloud.com/) und [ownCloud](https://owncloud.org/) zusammenarbeitet.
 
 ::: tip
 Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutieren, zu lernen und sich mit der QOwnNotes-Community zu verbinden.

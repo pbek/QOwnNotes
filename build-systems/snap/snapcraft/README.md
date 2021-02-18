@@ -9,7 +9,7 @@
 [ownCloud Apps page](https://apps.owncloud.com/content/show.php?content=168497)
 
 
-[QOwnNotes](https://www.qownnotes.org) is the **open source notepad** with **markdown support** and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default [**notes application**](https://github.com/owncloud/notes) of [**ownCloud**](http://owncloud.org/).
+[QOwnNotes](https://www.qownnotes.org) is the **open source notepad** with **markdown support** and **todo list manager** for **GNU/Linux**, **macOS** and **Windows**, that works together with the default [**notes application**](https://github.com/owncloud/notes) of [**ownCloud**](http://owncloud.org/).
 
 ## Building the qownnotes snap
 
