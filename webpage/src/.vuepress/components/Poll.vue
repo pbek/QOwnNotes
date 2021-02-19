@@ -96,5 +96,7 @@
 
   #poll .v-input {
     padding-top: 5px;
+    /* Force LTR so the first part of the question is readable */
+    direction: ltr;
   }
 </style>
