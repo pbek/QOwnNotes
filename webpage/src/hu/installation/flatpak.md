@@ -1,6 +1,6 @@
 # Telepítés Flatpak néven
 
-Van egy harmadik-fél-Flatpak a `org.qownnotes.QOwnNotes`on és a [ Flathub ](https://flathub.org/apps/details/org.qownnotes.QOwnNotes)on.
+Van egy közösség által fenntartott Flatpak a `org.qownnotes.QOwnNotes`on és a [ Flathub ](https://flathub.org/apps/details/org.qownnotes.QOwnNotes)on.
 
 Telepítéséhez írja be:
 

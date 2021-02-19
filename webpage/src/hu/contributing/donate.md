@@ -38,13 +38,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## Ethereum
 
-**Ethereum ETH-t adományozhat** erre a Ethereum ETH címre:
+**Adományozhatja az Ethereum ETH-t** erre az Ethereum ETH címre:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-**Ethereum ETC-t adományozhat** erre a Ethereum ETC címre:
+**Adományozhatja az Ethereum ETC-t** erre az Ethereum ETC címre:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

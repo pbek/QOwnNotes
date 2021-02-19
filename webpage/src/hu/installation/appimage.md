@@ -1,11 +1,11 @@
 # Telepítés AppImage néven
 
-You can download the latest AppImage from the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases). It should be named like `QOwnNotes-x86_64.AppImage` on that page.
+You can download the latest AppImage from the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases). Meg kell nevezni a következő néven: `QOwnNotes-x86_64.AppImage`.
 
-Then you can change the execute-permissions on the file:
+Ezután megváltoztathatja a fájl végrehajtási engedélyeit:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Afterwards you should be able to execute the AppImage to run QOwnNotes.
+Ezután képesnek kell lennie az AppImage futtatására a QOwnNotes futtatásához.

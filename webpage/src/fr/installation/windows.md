@@ -13,7 +13,7 @@ Vous pouvez ensuite exécuter directement `QOwnNotes.exe` à partir de votre dos
 Utilisez `QOwnNotesPortable.bat` pour exécuter QOwnNotes en **mode portable** où tout (y compris vos notes) ne sera stocké que dans votre dossier `QOwnNotes`.
 
 ::: tip
-You don't need the portable mode if you just don't have Administration permissions to your computer. QOwnNotes n'a pas besoin d'être installé!
+Vous n'avez pas besoin du mode portable si vous ne disposez tout simplement pas des autorisations d'administration sur votre ordinateur. QOwnNotes n'a pas besoin d'être installé!
 :::
 
 ## Windows XP

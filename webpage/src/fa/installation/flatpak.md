@@ -1,6 +1,6 @@
 # نصب به صورت فلت پک
 
-یک فلت پک شخص ثالث `org.qownnotes.QOwnNotes` در [فلت هاب](https://flathub.org/apps/details/org.qownnotes.QOwnNotes) موجود می باشد.
+There is a community maintained Flatpak `org.qownnotes.QOwnNotes` on [Flathub](https://flathub.org/apps/details/org.qownnotes.QOwnNotes).
 
 می توانید آن را با تایپ عبارت زیر نصب کنید:
 

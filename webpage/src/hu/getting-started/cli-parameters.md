@@ -2,7 +2,7 @@
 
 Ezeket a paramétereket a parancssori felületen használhatja:
 
-| Parameter                    | Description                                                                                                                              |
+| Paraméter                    | Leírás                                                                                                                                   |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | `--help`                     | Megjeleníti a súgó képernyőt                                                                                                             |
 | `--portable`                 | Hordozható üzemmódban fut az alkalmazás                                                                                                  |

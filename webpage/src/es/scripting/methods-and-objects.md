@@ -341,7 +341,7 @@ script.createNote("My note headline\n===\n\nMy text");
 Es posible que desee echar un vistazo al ejemplo [acciones-personalizadas.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-If you turned off that your note headline determines the note filename then you have to rename your note file yourself afterwards, like this:
+Si desactivó que el título de su nota determina el nombre del archivo de la nota, luego debe cambiar el nombre de su archivo de nota usted mismo, así:
 
 ```js
 var note = script.currentNote();
@@ -355,11 +355,11 @@ Accediendo al portapapeles
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns the content of the clipboard as text or html
- *
- * @param asHtml returns the clipboard content as html instead of text
- */
-QString ScriptingService::clipboard(bool asHtml);
+  * Devuelve el contenido del portapapeles como texto o html
+  *
+  * @param asHtml devuelve el contenido del portapapeles como html en lugar de texto
+  */
+QString ScriptingService :: portapapeles (bool asHtml);
 ```
 
 ### Ejemplo
@@ -368,7 +368,7 @@ var clipboardText = script.clipboard();
 var clipboardHtml = script.clipboard(true);
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Es posible que desee echar un vistazo al ejemplo [acciones-personalizadas.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 Escribir texto en la edición de texto de la nota
 --------------------------------
@@ -391,7 +391,7 @@ script.noteTextEditWrite("My custom text");
 
 Es posible que desee ver la acción personalizada `transformTextRot13` en el ejemplo [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-You can use this together with `noteTextEditSelectAll` to overwrite the whole text of the current note.
+Puede usar esto junto con `noteTextEditSelectAll` para sobrescribir todo el texto de la nota actual.
 
 Leer el texto seleccionado en la edición de texto de la nota
 --------------------------------------------
@@ -412,7 +412,7 @@ QString ScriptingService::noteTextEditSelectedText();
 var text = script.noteTextEditSelectedText();
 ```
 
-You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Es posible que desee ver la acción personalizada `transformTextRot13` en el ejemplo [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 Seleccionar todo el texto en la edición de texto de la nota
 -------------------------------------
@@ -430,7 +430,7 @@ void ScriptingService::noteTextEditSelectAll();
 script.noteTextEditSelectAll();
 ```
 
-You can use this together with `noteTextEditWrite` to overwrite the whole text of the current note.
+Puede usar esto junto con `noteTextEditWrite` para sobrescribir todo el texto de la nota actual.
 
 Seleccione la línea actual en la edición de texto de la nota
 ---------------------------------------------
@@ -438,9 +438,9 @@ Seleccione la línea actual en la edición de texto de la nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Selects the current line in the note text edit
- */
-void ScriptingService::noteTextEditSelectCurrentLine();
+  * Selecciona la línea actual en la edición de texto de la nota
+  */
+void ScriptingService :: noteTextEditSelectCurrentLine();
 ```
 
 ### Ejemplo
@@ -454,9 +454,9 @@ Seleccione la palabra actual en la edición de texto de la nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Selects the current line in the note text edit
- */
-void ScriptingService::noteTextEditSelectCurrentWord();
+  * Selecciona la línea actual en la edición de texto de la nota
+  */
+void ScriptingService :: noteTextEditSelectCurrentWord();
 ```
 
 ### Ejemplo
@@ -470,11 +470,11 @@ Establecer el texto seleccionado actualmente en la edición de texto de nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Sets the currently selected text in the note text edit
- *
- * @param start
- * @param end
- */
+  * Establece el texto seleccionado actualmente en la edición de texto de nota
+  *
+  * @param inicio
+  * @param end
+  */
 void ScriptingService::noteTextEditSetSelection(int start, int end);
 ```
 
@@ -492,8 +492,8 @@ Obtener la posición inicial de la selección actual en la edición de texto de 
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns the start position of the current selection in the note text edit
- */
+  * Devuelve la posición inicial de la selección actual en la edición de texto de nota
+  */
 int ScriptingService::noteTextEditSelectionStart();
 ```
 
@@ -508,8 +508,8 @@ Obtener la posición final de la selección actual en la edición de texto de la
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns the end position of the current selection in the note text edit
- */
+  * Devuelve la posición final de la selección actual en la edición de texto de nota
+  */
 int ScriptingService::noteTextEditSelectionEnd();
 ```
 
@@ -524,21 +524,21 @@ Coloque el cursor de texto en la edición de texto de la nota en una posición d
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Sets the text cursor in the note text edit to a certain position
- * 0 would be the beginning of the note
- * special case: -1 would be the end of the note
- *
- * @param position
- */
+  * Establece el cursor de texto en la edición de texto de la nota en una posición determinada
+  * 0 sería el comienzo de la nota
+  * caso especial: -1 sería el final de la nota
+  *
+  * posición @param
+  */
 void ScriptingService::noteTextEditSetCursorPosition(int position);
 ```
 
 ### Ejemplo
 ```js
-// jump to the 11th character in the note
+// saltar al undécimo carácter de la nota
 script.noteTextEditSetCursorPosition(10);
 
-// jump to the end of the note
+// saltar al final de la nota
 script.noteTextEditSetCursorPosition(-1);
 ```
 
@@ -548,10 +548,10 @@ Obtener la posición actual del cursor de texto en la edición de texto de la no
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns the current position of the text cursor in the note text edit
- * 0 would be the beginning of the note
- */
-int ScriptingService::noteTextEditCursorPosition();
+  * Devuelve la posición actual del cursor de texto en la edición de texto de la nota
+  * 0 sería el comienzo de la nota
+  */
+int ScriptingService :: noteTextEditCursorPosition();
 ```
 
 ### Ejemplo
@@ -565,19 +565,19 @@ Leer la palabra actual desde el editor de texto de notas
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Reads the current word in the note text edit
- *
- * @param withPreviousCharacters also get more characters at the beginning
- *                               to get characters like "@" that are not
- *                               word-characters
- * @return
- */
+  * Lee la palabra actual en la edición de texto de la nota
+  *
+  * @param withPreviousCharacters también obtiene más caracteres al principio
+  * para obtener caracteres como "@" que no son
+  * caracteres de palabra
+  * @regreso
+  */
 QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 ```
 
 ### Ejemplo
 ```js
-// read the current word in the note text edit
+// leer la palabra actual en el texto de la nota editar
 var text = script.noteTextEditCurrentWord();
 ```
 
@@ -595,8 +595,8 @@ bool ScriptingService::platformIsWindows();
 
 ### Ejemplo
 ```js
-if (script.platformIsLinux()) {
-    // only will be executed if under Linux
+if (script.platformIsLinux ()) {
+     // solo se ejecutará si está bajo Linux
 }
 ```
 
@@ -1104,7 +1104,7 @@ Asegúrese de usar un prefijo significativo en su clave como `PersistentVariable
 
 Quizás también quieras echar un vistazo al ejemplo [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
 
-Loading application settings variables
+Cargando variables de configuración de la aplicación
 --------------------------------------
 
 ### Parámetros y llamada al método
@@ -1126,44 +1126,44 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 script.log(script.getApplicationSettingsVariable ("gitExecutablePath"));
 ```
 
-Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` is only used if the setting doesn't exist at all.
+Tenga en cuenta que la configuración en realidad puede estar vacía, debe ocuparse de eso usted mismo. `defaultValue` solo se usa si la configuración no existe en absoluto.
 
 Creando un directorio de caché
 --------------------------
 
-You can cache files at the default cache location of your system.
+Puede almacenar en caché los archivos en la ubicación de caché predeterminada de su sistema.
 
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns a cache directory for a script
- *
- * @param {QString} subDir the subfolder to create and use
- * @return {QString} the cache dir path
- */
+  * Devuelve un directorio de caché para un script
+  *
+  * @param {QString} subDir la subcarpeta para crear y usar
+  * @return {QString} la ruta del directorio de caché
+  */
 QString ScriptingService::cacheDir(const QString &subDir) const;
 ```
 
 ### Ejemplo
 ```js
-// create the cache directory for my-script-id
+// crea el directorio de caché para my-script-id
 var cacheDirForScript = script.cacheDir("my-script-id");
 ```
 
 Borrar un directorio de caché
 --------------------------
 
-You can clear the cache files of your script by passing its name to clearCacheDir().
+Puede borrar los archivos de caché de su script pasando su nombre a clearCacheDir().
 
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Clears the cache directory for a script
- *
- * @param {QString} subDir the subfolder to clear
- * @return {bool} true on success
- */
-bool ScriptingService::clearCacheDir(const QString &subDir) const;
+  * Borra el directorio de caché de un script
+  *
+  * @param {QString} subDir la subcarpeta para borrar
+  * @return {bool} verdadero en caso de éxito
+  */
+bool ScriptingService :: clearCacheDir (const QString & subDir) const;
 ```
 
 ### Ejemplo
@@ -1175,7 +1175,7 @@ script.clearCacheDir("my-script-id");
 Leer la ruta al directorio de su script
 ------------------------------------------------
 
-If you need to get the path to the directory where your script is placed to for example load other files you have to register a `property string scriptDirPath;`. This property will be set with the path to the script's directory.
+Si necesita obtener la ruta al directorio donde se coloca su script para, por ejemplo, cargar otros archivos, debe registrar un `cadena de propiedad scriptDirPath;`. Esta propiedad se establecerá con la ruta al directorio del script.
 
 ### Ejemplo
 ```js
@@ -1198,8 +1198,8 @@ Conversión de separadores de ruta en nativos
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Returns path with the '/' separators converted to separators that are
- * appropriate for the underlying operating system.
+  * Devuelve la ruta con los separadores '/' convertidos en separadores que son
+  * apropiado para el sistema operativo subyacente.
  *
  * On Windows, toNativeDirSeparators("c:/winnt/system32") returns
  * "c:\winnt\system32".
@@ -1276,7 +1276,7 @@ QStringList ScriptingService::selectedNotesPaths();
 script.log(script.selectedNotesPaths());
 ```
 
-You may want to take a look at the example [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
+Es posible que desee echar un vistazo al ejemplo [external-note-diff.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/external-note-diff.qml).
 
 Obtener una lista de los identificadores de todas las notas seleccionadas
 -----------------------------------------------
@@ -1297,7 +1297,7 @@ QList<int> ScriptingService::selectedNotesIds();
 script.log(script.selectedNotesIds());
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Es posible que desee echar un vistazo al ejemplo [exportar notas como uno-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Activar una acción de menú
 ------------------------
@@ -1323,9 +1323,9 @@ script.triggerMenuAction("actionAllow_note_editing");
 script.triggerMenuAction("actionAllow_note_editing", 1);
 ```
 
-You may want to take a look at the example [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
+Es posible que desee echar un vistazo al ejemplo [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+Puede obtener los nombres de los objetos de la acción del menú en [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
 
 Opening an input dialog with a select box
 -----------------------------------------
@@ -1354,7 +1354,7 @@ var result = script.inputDialogGetItem(
 script.log(result);
 ```
 
-You may want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Es posible que desee echar un vistazo al ejemplo [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
 Abrir un diálogo de entrada con una edición de línea
 ----------------------------------------

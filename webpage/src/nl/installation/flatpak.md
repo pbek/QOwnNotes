@@ -1,6 +1,6 @@
 # Installeer als Flatpak
 
-Er is een 3rd party Flatpak  `org.qownnotes.QOwnNotes` op [Flathub](https://flathub.org/apps/details/org.qownnotes.QOwnNotes).
+Er is een community die wordt onderhouden met Flatpak `org.qownnotes.QOwnNotes` op [Flathub](https://flathub.org/apps/details/org.qownnotes.QOwnNotes).
 
 U kunt het installeren door te typen:
 

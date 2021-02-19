@@ -57,11 +57,11 @@ Si cette fonction est définie dans plusieurs scripts, le premier script qui ren
 ### Appel de méthode et paramètres
 ```js
 /**
- * @param fileName string the file path of the source media file before it was copied to the media folder
- * @param markdownText string the markdown text of the media file, e.g. ![my-image](media/my-image-4101461585.jpg)
- * @return string the new markdown text of the media file
- */
-function insertMediaHook(fileName, markdownText);
+  * @param fileName string le chemin du fichier du fichier multimédia source avant sa copie dans le dossier multimédia
+  * @param markdownText string le texte de démarque du fichier multimédia, par exemple ! [mon-image] (média / mon-image-4101461585.jpg)
+  * @return string le nouveau texte de démarque du fichier multimédia
+  */
+function insertMediaHook (fileName, markdownText);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [exemple.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).
@@ -76,11 +76,11 @@ Si cette fonction est définie dans plusieurs scripts, le premier script qui ren
 ### Appel de méthode et paramètres
 ```js
 /**
- * @param fileName string the file path of the source attachment file before it was copied to the attachment folder
- * @param markdownText string the markdown text of the attachment file, e.g. [my-file.txt](attachments/my-file-4245650967.txt)
- * @return string the new markdown text of the attachment file
- */
-function insertAttachmentHook(fileName, markdownText);
+  * @param fileName string le chemin du fichier de la pièce jointe source avant sa copie dans le dossier de la pièce jointe
+  * @param markdownText string le texte de démarque du fichier joint, par exemple [my-file.txt] (pièces jointes / mon-fichier-4245650967.txt)
+  * @return string le nouveau texte de démarque du fichier joint
+  */
+function insertAttachmentHook (fileName, markdownText);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [exemple.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).

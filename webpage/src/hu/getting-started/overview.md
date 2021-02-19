@@ -139,7 +139,7 @@
 
 <v-divider />
 
-A [QOwnNotes](https://www.qownnotes.org/) a **nyílt forráskódú** (GPL) sima szövegű fájl **macOS** és **Windows**, amelyek (opcionálisan) együtt működnek a [Nextcloud](https://nextcloud.com/) és a [ownCloud [**Notes alkalmazásával**](https://github.com/nextcloud/notes)](https://owncloud.org/).
+A [QOwnNotes](https://www.qownnotes.org/) a **nyílt forráskódú** (GPL) sima szövegű fájl **Mac OS X** és **Windows**, amelyek (opcionálisan) együtt működnek a [Nextcloud](https://nextcloud.com/) és a [ownCloud [**Notes alkalmazásával**](https://github.com/nextcloud/notes)](https://owncloud.org/).
 
 Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, tanulás és egymással kapcsolatba lépésünk érdekében a QOwnNotes közösséggel. :::
 
@@ -172,11 +172,11 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 - Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
 - **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
 - **Differences** between current note and externally changed note are **showed** in a dialog
-- **Markdown highlighting** of notes and a **markdown preview mode**
+- A jegyzetek **markdown kiemelése** és egy **markdown előnézeti mód**
 
-## Languages
-- **Available in more than 60 different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
-  - [Your help](../contributing/translation.md) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
+## Nyelvek
+- **Több mint 60 különböző nyelven érhető el**, mint például angol, német, francia, lengyel, kínai, japán, orosz, portugál, magyar, holland és spanyol
+  - [Segítségét](../contributing/translation.md) nagyra értékelik ezen fordítások fejlesztése vagy a QOwnNotes több nyelvre történő lefordítása érdekében
 
 <style>
 .sheet {

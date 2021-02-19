@@ -38,13 +38,13 @@ qpk3m6putywwad9sycz9hny5azs7dz67x5jrqmcelq
 
 ## Ethereum
 
-Vous pouvez **faire un don d'Ethereum ETH** à cette adresse Ethereum ETH:
+Puede **donar Ethereum ETH** a esta dirección de Ethereum ETH:
 
 ```
 0x992aD2066640C5bF175c7c5649a41827dF6f87C9
 ```
 
-Vous pouvez **faire un don Ethereum ETC** à cette adresse ETC Ethereum:
+Puede **donar Ethereum ETC** a esta dirección de Ethereum ETC:
 
 ```
 0xcC809a58637372EaC340E53767649cdc5C53cA0D

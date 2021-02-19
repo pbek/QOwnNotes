@@ -1,6 +1,6 @@
 # Installer en tant qu'AppImage
 
-You can download the latest AppImage from the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases). It should be named like `QOwnNotes-x86_64.AppImage` on that page.
+Vous pouvez télécharger la dernière AppImage à partir de la [page des versions de QOwnNotes](https://github.com/pbek/QOwnNotes/releases). Il doit être nommé comme `QOwnNotes-x86_64.AppImage` sur cette page.
 
 Ensuite, vous pouvez modifier les autorisations d'exécution sur le fichier:
 

@@ -1,6 +1,6 @@
 # Als Flatpak installieren
 
-Auf [Flathub](https://flathub.org/apps/details/org.qownnotes.QOwnNotes) befindet sich ein Flatpak `org.qownnotes.QOwnNotes` von Drittanbietern.
+Es gibt ein von der Gemeinschaft gepflegtes Flatpak `org.qownnotes.QOwnNotes` auf [Flathub](https://flathub.org/apps/details/org.qownnotes.QOwnNotes).
 
 Sie können es installieren, indem Sie Folgendes eingeben:
 
