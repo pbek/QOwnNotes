@@ -9913,6 +9913,11 @@ void MainWindow::regenerateNotePreview() {
 void MainWindow::on_actionAutocomplete_triggered() {
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
 
+    // attempt to toggle a checkbox at the cursor position
+    if (Utils::Gui::toggleCheckBoxAtCursor(textEdit)) {
+        return;
+    }
+
     // try to open a link at the cursor position
     if (textEdit->openLinkAtCursorPosition()) {
         showStatusBarMessage(
@@ -9922,11 +9927,6 @@ void MainWindow::on_actionAutocomplete_triggered() {
 
     // attempt a markdown table auto-format
     if (Utils::Gui::autoFormatTableAtCursor(textEdit)) {
-        return;
-    }
-
-    // attempt to toggle a checkbox at the cursor position
-    if (Utils::Gui::toggleCheckBoxAtCursor(textEdit)) {
         return;
     }
 

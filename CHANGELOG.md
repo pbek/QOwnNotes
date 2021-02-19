@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 21.2.3
+- the toggling of a checkbox at the cursor position has now a higher priority at the
+  <kbd>Ctrl + Space</kbd> shortcut (for [#2048](https://github.com/pbek/QOwnNotes/issues/2048))
 - the restoring of workspaces after a window resize was improved
   (for [#2056](https://github.com/pbek/QOwnNotes/pull/2056), thank you @fnkabit)
 
