@@ -1,4 +1,4 @@
-# Install on Arch Linux
+# Instalar en Arch Linux
 
 ## pacman
 

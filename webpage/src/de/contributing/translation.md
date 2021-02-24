@@ -52,7 +52,7 @@ Bitte beachten Sie die folgenden Hinweise zu Ihrer Arbeit am Projekt:
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-6) Die `%1` -Schlagworte müssen ohne Leerzeichen geschrieben werden. Sie können entweder die Schlagworte aus dem Original einfügen, indem Sie an der entsprechenden Stelle auf sie klicken, oder sie in Ihre Übersetzung tippen.
+6) Die `%1` Schlagworte müssen ohne Leerzeichen eingegeben werden. Sie können entweder die Schlagworte aus dem Original einfügen, indem Sie an der entsprechenden Stelle auf sie klicken, oder sie in Ihre Übersetzung eingeben.
 
    ![screenshot](/img/crowdin/screenshot-1.png)
 

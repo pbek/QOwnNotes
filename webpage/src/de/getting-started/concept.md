@@ -91,22 +91,22 @@ Please visit [QOwnNotesAPI Nextcloud App](qownnotesapi.md) for more information.
 
 ## Nextcloud Notes Server App
 
-Use [**Nextcloud Notes**](https://github.com/nextcloud/notes) to edit your notes in the **web**.
+Verwenden Sie [**Nextcloud Notes**](https://github.com/nextcloud/notes), um Ihre Notizen im **Web** zu bearbeiten.
 
 ::: warning
-Keep in mind that Nextcloud Notes currently only supports up to one level of subfolders.
+Beachten Sie, dass Nextcloud Notes derzeit nur bis zu einer Ebene von Unterordnern unterstützt.
 :::
 
 ## Mobile App von Nextcloud Notes
 
-To access your Nextcloud / ownCloud notes from your **mobile device** you can use different apps.
+Um von Ihrem **Mobilgerät** aus auf Ihre Nextcloud / ownCloud-Notizen zuzugreifen, können Sie verschiedene Apps verwenden.
 
 ### Android
 
 - [Nextcloud Notes for Android](https://play.google.com/store/apps/details?id=it.niedermann.owncloud.notes) (3rd party)
 
 ::: tip
-You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to sync your note files and use software like *neutriNotes* to edit your notes.
+Sie können auch ein beliebiges Synchronisierungstool wie *Synchronize Ultimate* oder *FolderSync* verwenden, um Ihre Notizdateien zu synchronisieren und verwenden Sie Software wie *neutriNotes*, um Ihre Notizen zu bearbeiten.
 :::
 
 ### iOS
@@ -114,17 +114,17 @@ You could also use any sync-tool like *Synchronize Ultimate* or *FolderSync* to 
 - [CloudNotes für iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8) (Drittanbieter)
 
 ::: tip
-You can also use [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) and sync your notes via WebDAV, there is a good tutorial at [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
+Sie können auch [Notebooks](https://itunes.apple.com/us/app/notebooks-write-and-organize/id780438662) verwenden Wenn Sie Ihre Notizen über WebDAV synchronisieren möchten, finden Sie unter [Notizen mit Nextcloud, QOwnNotes und Notebooks](https://lifemeetscode.com/blog/taking-notes-with-nextcloud-qownnotes-and-notebooks)
 :::
 
 ## api.qownnotes.org
 
-This is an online service provided by QOwnNotes to check if there is a new release of the application available.
+Dies ist ein Onlinedienst von QOwnNotes, mit dem überprüft werden kann, ob eine neue Version der Anwendung verfügbar ist.
 
-It is talking to GitHub and checks for the latest release, gets a suited download url and compiles the changes from the changelog compared to the version of QOwnNotes you are currently using as html to show in the update dialog.
+Es spricht mit GitHub und sucht nach der neuesten Version, erhält eine geeignete Download-URL und kompiliert die Änderungen aus dem Änderungsprotokoll im Vergleich zu der Version von QOwnNotes, die Sie derzeit als HTML verwenden, um sie im Aktualisierungsdialog anzuzeigen.
 
-In addition, it also provides the [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) and an implementation of the legacy update checking api for older versions of QOwnNotes.
+Darüber hinaus bietet es den [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) und eine Implementierung der API zur Überprüfung älterer Legacy-Updates für ältere Versionen von QOwnNotes.
 
 ::: tip
-You can access the source code for [api.qownnotes.org](https://api.qownnotes.org) on [GitHub](https://github.com/qownnotes/api).
+Sie können auf den Quellcode für [api.qownnotes.org](https://api.qownnotes.org) auf [GitHub](https://github.com/qownnotes/api) zugreifen.
 :::

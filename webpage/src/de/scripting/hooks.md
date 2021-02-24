@@ -301,7 +301,7 @@ Sie können Ihren eigenen Notizkennzeichnungsmechanismus beispielsweise mit spez
 
 
 
-### Method call and parameters
+### Methodenaufruf und Parameter
 
 
 ```js
