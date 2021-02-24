@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.2.4
+- fixed an issue with showing the application window with a global shortcut for the
+  `Show/Hide application` action (for [#2061](https://github.com/pbek/QOwnNotes/issues/2061))
+
 ## 21.2.3
 - the toggling of a checkbox at the cursor position has now a higher priority at the
   <kbd>Ctrl + Space</kbd> shortcut (for [#2048](https://github.com/pbek/QOwnNotes/issues/2048))

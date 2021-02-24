@@ -594,8 +594,12 @@ void MainWindow::initGlobalKeyboardShortcuts() {
         connect(hotKey, &QHotkey::activated, this, [this, action]() {
             qDebug() << "Global shortcut action triggered: " << action->objectName();
 
-            // bring application window to the front
-            showWindow();
+            // Don't call showWindow() for the "Show/Hide application" action
+            // because it will call it itself
+            if (action->objectName() != "actionShow_Hide_application") {
+                // bring application window to the front
+                showWindow();
+            }
 
             action->trigger();
         });
