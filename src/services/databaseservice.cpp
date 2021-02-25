@@ -851,6 +851,16 @@ bool DatabaseService::setupTables() {
         version = 35;
     }
 
+    if (version < 36) {
+        // remove possibly corrupted printer dialog settings from
+        // https://github.com/pbek/QOwnNotes/commit/ef0475692a4baf6f0b30bb200c0ee10157e7c2a6
+        // so they can be generated new
+        settings.remove(QStringLiteral("Printer/NotePrinting"));
+        settings.remove(QStringLiteral("Printer/NotePDFExport"));
+
+        version = 36;
+    }
+
     if (version != oldVersion) {
         setAppData(QStringLiteral("database_version"),
                    QString::number(version));
