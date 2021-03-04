@@ -34,11 +34,11 @@ graph TB
 ## QOwnNotes
 
 - QOwnNotes **speichert Notizen** in Ihren **Notizordner als Markdown-Dateien**
-- It can talk to your Nextcloud / ownCloud server **to publicly share notes** with other people
-- You can also **access your note history and trash** on your Nextcloud / ownCloud server via the [QOwnNotesApi Nextcloud app](#qownnotesapi-nextcloud-app)
+- Es kann mit Ihrem Nextcloud / ownCloud-Server **kommunizieren, um Notizen** öffentlich mit anderen Personen zu teilen
+- Sie können auch **über die [QOwnNotesApi Nextcloud-App](#qownnotesapi-nextcloud-app) auf Ihren Notizverlauf und Papierkorb** auf Ihrem Nextcloud / ownCloud-Server zugreifen
 - Auf Todo-Listen auf Ihrem Nextcloud / ownCloud-Server kann über QOwnNotes zugegriffen werden
-- **QOwnNotes does not sync your notes** and media / attachment files!
-    - File syncing is a complex endeavor, there are already great file syncing solutions out there (see [Nextcloud desktop sync client](#nextcloud-desktop-sync-client))
+- **QOwnNotes synchronisiert Ihre Notizen** und Medien- / Anhangsdateien nicht!
+    - Die Dateisynchronisierung ist ein komplexes Unterfangen. Es gibt bereits großartige Dateisynchronisierungslösungen (siehe [Nextcloud Desktop Sync Client](#nextcloud-desktop-sync-client)).
 
 
 ## Markdown-Notizdateien
@@ -73,20 +73,20 @@ Um online mit Ihren Notizen zu arbeiten, können Sie Server wie [Nextcloud](http
 
 Sie können Ihren eigenen Server hosten oder gehostete Lösungen verwenden.
 
-There is a [community-maintained list of Nextcloud providers](https://github.com/nextcloud/providers#providers), as well as a [list of devices with Nextcloud](https://nextcloud.com/devices/).
+Es gibt eine [von der Community gepflegte Liste der Nextcloud-Anbieter](https://github.com/nextcloud/providers#providers) sowie eine [Liste der Geräte mit Nextcloud](https://nextcloud.com/devices/).
 
-[Portknox](https://portknox.net) has reported they have [QOwnNotesAPI installed](https://portknox.net/en/app_listing).
+[Portknox](https://portknox.net) hat gemeldet, dass [QOwnNotesAPI installiert ist](https://portknox.net/en/app_listing).
 
 ::: tip
-Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to host your notes and other files.
+Natürlich können auch andere Lösungen wie **Dropbox**, **Syncthing**, **Seafile** oder BitTorrent Sync verwendet werden, um Ihre Notizen und andere Dateien zu hosten.
 :::
 
 ## QOwnNotesAPI Nextcloud app
 
-[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) lets you access your server-side **trashed notes** and **note versions**.
+Mit [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) können Sie auf Ihre zugreifen serverseitige **verworfene Notizen** und **Notizenversionen**.
 
 ::: tip
-Please visit [QOwnNotesAPI Nextcloud App](qownnotesapi.md) for more information.
+Bitte besuchen Sie [QOwnNotesAPI Nextcloud App](qownnotesapi.md) für weitere Informationen.
 :::
 
 ## Nextcloud Notes Server App

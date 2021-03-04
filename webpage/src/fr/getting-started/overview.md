@@ -149,7 +149,7 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 
 ## Traits
 - Vous pouvez utiliser vos **fichiers texte ou markdown existants**, pas besoin d'importer la plupart du temps
-- **Evernote import**
+- **Import Evernote**
 - **Compatible** avec l'application Notes de **Nextcloud / ownCloud** et **mobile** et Nextcloud Text
 - Prise en charge du **partage de notes** sur votre serveur **ownCloud** / **Nextcloud**
 - Gérez vos **listes de tâches** Nextcloud / ownCloud  (**tâches Nextcloud** ou **tâches Plus** / **calendrier Plus**) ou utilisez un autre **Serveur CalDAV** pour synchroniser vos tâches avec
@@ -164,7 +164,7 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 - [**Spellchecking**](../editor/spellchecking.md) soutien
 - **Mode portable** pour transporter QOwnNotes sur des clés USB
 - **Prise en charge des scripts** et un [**référentiel de scripts**](https://github.com/qownnotes/scripts) en ligne où vous pouvez installer des scripts à l'intérieur de l'application
-- **Vim mode**
+- **Mode Vim**
 
 
 ## Appearance

@@ -1,4 +1,4 @@
-# Onderhouders
+# Maintainers
 
 ## Mainteneurs
 

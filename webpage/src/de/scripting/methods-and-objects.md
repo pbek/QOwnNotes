@@ -1140,7 +1140,7 @@ QVariant ScriptingService::getApplicationSettingsVariable (const QString &key,
 script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 ```
 
-Denken Sie daran, dass die Einstellungen tatsächlich leer sein können. Sie sorgen sich darum selbst. `defaultValue` wird nur verwendet, wenn die Einstellung überhaupt nicht vorhanden ist.
+Denken Sie daran, dass die Einstellungen tatsächlich leer sein können und Sie sich selbst darum kümmern müssen. `defaultValue` wird nur verwendet, wenn die Einstellung überhaupt nicht vorhanden ist.
 
 Erstellen eines Cache-Verzeichnisses
 --------------------------

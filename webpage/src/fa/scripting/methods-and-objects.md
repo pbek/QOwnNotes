@@ -341,7 +341,7 @@ script.createNote("My note headline\n===\n\nMy text");
 شاید بخواهید به مثال [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) نگاهی بیندازید.
 
 ::: tip
-If you turned off that your note headline determines the note filename then you have to rename your note file yourself afterwards, like this:
+اگر شما این گزینه را غیر فعال کنید که سرخط یادداشت شما نام پرونده یادداشت را تعیین می‌کند، در این صورت باید پرونده یادداشت خود را همچون نمونه پیش رو تغییر نام دهید:
 
 ```js
 var note = script.currentNote();
@@ -1074,7 +1074,7 @@ function registerSettingsVariables() {
 }
 ```
 
-You may also want to take a look at the example [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
+شما همچنین می توانید مثال [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml) را بررسی کنید.
 
 ذخیره سازی و بارگذاری متغیرهای ماندگار
 ----------------------------------------
@@ -1113,9 +1113,9 @@ script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
 ```
 
-Please make sure to use a meaningful prefix in your key like `PersistentVariablesTest/myVar` because the variables are accessible from all scripts.
+لطفاً اطمینان حاصل کنید که از پیشوند معنی داری مانند `PersistentVariablesTest/myVar` در کلید خود استفاده می کنید زیرا متغیرها از همه اسکریپت ها در دسترس هستند.
 
-You may also want to take a look at the example [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
+شما همچنین می توانید مثال [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml) را ملاحظه کنید.
 
 بارگذاری متغیرهای تنظیمات برنامه
 --------------------------------------
@@ -1139,12 +1139,12 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 ```
 
-Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` is only used if the setting doesn't exist at all.
+به خاطر داشته باشید که تنظیمات در واقع می توانند خالی باشند؛ در این صورت شما باید احتیاط لازم را به عمل آورید. در صورتی که به طور کلی تنظیمات در دسترس نباشند، تنها `defaultValue` مورد استفاده قرار می گیرد.
 
 ایجاد فهرست حافظه نهان
 --------------------------
 
-You can cache files at the default cache location of your system.
+شما می توانید پرونده‌ها را در مکان پیش فرض حافظه نهان سیستم خود پنهان کنید.
 
 ### فراخوانی شگرد و پارامترها
 ```cpp
@@ -1166,7 +1166,7 @@ var cacheDirForScript = script.cacheDir("my-script-id");
 پاکسازی فهرست حافظه نهان
 --------------------------
 
-You can clear the cache files of your script by passing its name to clearCacheDir().
+شما می توانید پرونده های حافظه نهان اسکریپت خود را با وارد کردن نام آن در clearCacheDir() پاکسازی کنید.
 
 ### فراخوانی شگرد و پارامترها
 ```cpp
@@ -1188,7 +1188,7 @@ script.clearCacheDir("my-script-id");
 خواندن مسیر به فهرست اسکریپت
 ------------------------------------------------
 
-If you need to get the path to the directory where your script is placed to for example load other files you have to register a `property string scriptDirPath;`. This property will be set with the path to the script's directory.
+در صورت نیاز به دریافت مسیر به فهرستی که اسکریپت شما مثلاً برای بارگذاری سایر پرونده ها در آن قرار دارد، شما باید یک `رشته ویژگی scriptDirPath;` ثبت کنید. این ویژگی به همراه مسیر به فهرست اسکریپت اعمال می شود.
 
 ### مثال
 ```js
