@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.3.0
+- added more Chinese Simplified translation (thank you warfast)
+
 ## 21.2.5
 - fixed a problem with exporting notes as PDF or printing them for installations
   of QOwnNotes previous from version 21.2.0 (for [#2062](https://github.com/pbek/QOwnNotes/issues/2062)) 

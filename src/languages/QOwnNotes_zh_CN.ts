@@ -1434,7 +1434,7 @@
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
       <source>Minimum 8 characters</source>
-      <translation type="unfinished">Minimum 8 characters</translation>
+      <translation>最少8个字符</translation>
     </message>
     <message>
       <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1442,7 +1442,7 @@
       <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
       <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
       <source>Minimum 10 characters</source>
-      <translation type="unfinished">Minimum 10 characters</translation>
+      <translation>最少10个字符</translation>
     </message>
   </context>
   <context>
@@ -2315,7 +2315,7 @@
       <location filename="../mainwindow.ui" line="1990"/>
       <location filename="../mainwindow.ui" line="1993"/>
       <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</translation>
+      <translation>打开 #qownnotes IRC 频道，你必须保持在线以获得回复</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2057"/>
@@ -2995,12 +2995,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6367"/>
       <source>Failed to create note</source>
-      <translation type="unfinished">Failed to create note</translation>
+      <translation>无法创建记事本</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6368"/>
       <source>Note creation failed</source>
-      <translation type="unfinished">Note creation failed</translation>
+      <translation>记事本创建失败</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6529"/>
@@ -6123,17 +6123,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4329"/>
       <source>Checks the disk database integrity and fixes problems</source>
-      <translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
+      <translation>检查磁盘数据库的完整性并修复问题。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4332"/>
       <source>Check integrity</source>
-      <translation type="unfinished">Check integrity</translation>
+      <translation>检查完整性</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4339"/>
       <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
+      <translation>请注意，这也将删除缓存中的待办事项和已配置的笔记文件夹与脚本！</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4422"/>
@@ -7172,12 +7172,12 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4298"/>
       <source>The integrity of the disk database is valid.</source>
-      <translation type="unfinished">The integrity of the disk database is valid.</translation>
+      <translation>磁盘数据库完整性有效。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="4303"/>
       <source>The integrity of the disk database is not valid!</source>
-      <translation type="unfinished">The integrity of the disk database is not valid!</translation>
+      <translation>磁盘数据库完整性有效。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2888"/>
