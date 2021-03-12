@@ -5,6 +5,7 @@
 - there now is a new QOwnNotesAPI release 21.3.0 for ownCloud in the ownCloud marketplace
   that added a workaround for the failing username detection in ownCloud 10.3+
   (for [#1725](https://github.com/pbek/QOwnNotes/issues/1725))
+- added more translation (thank you carmenc, rawfreeamy)
 
 ## 21.3.0
 - added more Chinese Simplified translation (thank you warfast)

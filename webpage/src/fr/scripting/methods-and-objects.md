@@ -782,7 +782,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 ### Exemple
 ```js
 // récupère la note par identifiant
-script.fetchNoteById (243);
+script.fetchNoteById(243);
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
@@ -830,7 +830,7 @@ void ScriptingService::setClipboardText(QString text, bool asHtml);
 ### Exemple
 ```js
 // copie du texte dans le presse-papiers
-script.setClipboardText ("texte à copier");
+script.setClipboardText("text to copy");
 ```
 
 Vous voudrez peut-être jeter un coup d'œil à l'exemple [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).

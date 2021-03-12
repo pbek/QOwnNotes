@@ -8,7 +8,7 @@
 
 ## Übersetzungen
 
-<ProfileCard name="Amy Lang" img="https://crowdin-static.downloads.crowdin.com/avatar/14350272/large/0dd1087064bbd71fe114b5c2f0dc1914.jpeg" backgroundImg="/screenshots/screenshot-darkmode.png" functions="Head of translation" crowdin="rawfreeamy" />
+<ProfileCard name="Amy Lang" img="https://secure.gravatar.com/avatar/3dc87f329e6146780ea72c79db9c5b57" backgroundImg="/screenshots/screenshot-darkmode.png" functions="Head of translation" crowdin="rawfreeamy" />
 
 … und viele mehr finden Sie unter [QOwnNotes auf Crowdin](https://crowdin.com/project/qownnotes/activity_stream)
 

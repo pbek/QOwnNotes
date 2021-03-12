@@ -1,6 +1,6 @@
 ---
 title: QOwnNotes
-description: یادداشت مارک داون متن باز به کار رفته برای لینوکس، مکینتاش و ویندوز که باهم با یادداشت‌های نکست کلود کار می کنند
+description: Open source markdown note taking for Linux, macOS and Windows, that works together with Nextcloud Notes
 home: true
 heroImage: /screenshots/screenshot.png
 tagline: یادداشت مارک داون پرونده با متن ساده و به صورت متن باز و رایگان که به انضمام نکست کلود یا اون کلود بکار می رود

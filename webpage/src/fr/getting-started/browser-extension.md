@@ -22,7 +22,7 @@ Le clipper Web est également scriptable! Jetez un œil au [websocketRawDataHook
 
 Par défaut, l'extension de navigateur affichera tous les liens ** de la note actuelle** dans une fenêtre contextuelle lorsque vous cliquez sur l'icône QOwnNotes dans votre navigateur. Ces liens recevront une balise `current`.
 
-Vous pouvez également ** gérer vos signets dans les notes** avec la balise de note `signets` (modifiable dans les paramètres). Ces liens peuvent également avoir des balises et une description qui seront affichées dans l'extension du navigateur.
+Vous pouvez également **gérer vos signets dans les notes** avec la balise de note `signets` (modifiable dans les paramètres). Ces liens peuvent également avoir des balises et une description qui seront affichées dans l'extension du navigateur.
 
 Les nouveaux signets sont stockés dans une note appelée `Signets` (également modifiable dans les paramètres).
 
