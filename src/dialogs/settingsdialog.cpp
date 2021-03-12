@@ -324,7 +324,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
 
 void SettingsDialog::resetOKLabelData() {
     for (int i = 0; i <= 8; i++) {
-        setOKLabelData(i, QStringLiteral("unknown"), Unknown);
+        setOKLabelData(i, tr("unknown"), Unknown);
     }
 }
 

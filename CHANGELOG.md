@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.3.1
+- the status messages in the Nextcloud / ownCloud settings are now translatable
+
 ## 21.3.0
 - added more Chinese Simplified translation (thank you warfast)
 

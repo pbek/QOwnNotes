@@ -227,9 +227,9 @@ void OwnCloudService::slotAuthenticationRequired(
 
 #ifndef INTEGRATION_TESTS
     if (settingsDialog != Q_NULLPTR) {
-        settingsDialog->setOKLabelData(3, QStringLiteral("incorrect"),
+        settingsDialog->setOKLabelData(3, tr("incorrect"),
                                        SettingsDialog::Failure);
-        settingsDialog->setOKLabelData(4, QStringLiteral("not connected"),
+        settingsDialog->setOKLabelData(4, tr("not connected"),
                                        SettingsDialog::Failure);
     }
 #endif
@@ -305,25 +305,25 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             qDebug() << "Reply from capabilities page";
 
             if (data.startsWith(QStringLiteral("<?xml version="))) {
-                settingsDialog->setOKLabelData(3, QStringLiteral("ok"),
+                settingsDialog->setOKLabelData(3, tr("ok"),
                                                SettingsDialog::OK);
-                settingsDialog->setOKLabelData(1, QStringLiteral("ok"),
+                settingsDialog->setOKLabelData(1, tr("ok"),
                                                SettingsDialog::OK);
             } else {
-                settingsDialog->setOKLabelData(3, QStringLiteral("not correct"),
+                settingsDialog->setOKLabelData(3, tr("not correct"),
                                                SettingsDialog::Failure);
             }
         } else if (urlPath.endsWith(ownCloudTestPath)) {
             qDebug() << "Reply from ownCloud test page";
 
             if (data.startsWith(QStringLiteral("<?xml version="))) {
-                settingsDialog->setOKLabelData(2, QStringLiteral("ok"),
+                settingsDialog->setOKLabelData(2, tr("ok"),
                                                SettingsDialog::OK);
-                settingsDialog->setOKLabelData(1, QStringLiteral("ok"),
+                settingsDialog->setOKLabelData(1, tr("ok"),
                                                SettingsDialog::OK);
             } else {
                 settingsDialog->setOKLabelData(
-                    2, QStringLiteral("not detected"), SettingsDialog::Failure);
+                    2, tr("not detected"), SettingsDialog::Failure);
             }
         } else if (urlPath.endsWith(restoreTrashedNotePath)) {
             qDebug() << "Reply from ownCloud restore trashed note page";
@@ -423,10 +423,10 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             qDebug() << "Reply from main server url";
 
             if (!data.isEmpty()) {
-                settingsDialog->setOKLabelData(1, QStringLiteral("ok"),
+                settingsDialog->setOKLabelData(1, tr("ok"),
                                                SettingsDialog::OK);
             } else {
-                settingsDialog->setOKLabelData(1, QStringLiteral("not found"),
+                settingsDialog->setOKLabelData(1, tr("not found"),
                                                SettingsDialog::Failure);
             }
         }
@@ -463,9 +463,9 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
 #ifndef INTEGRATION_TESTS
     // reset to "unknown" in case we can't test if versions
     // and trash app are enabled
-    settingsDialog->setOKLabelData(6, QStringLiteral("unknown"),
+    settingsDialog->setOKLabelData(6, tr("unknown"),
                                    SettingsDialog::Unknown);
-    settingsDialog->setOKLabelData(7, QStringLiteral("unknown"),
+    settingsDialog->setOKLabelData(7, tr("unknown"),
                                    SettingsDialog::Unknown);
 
     if (!serverVersion.isEmpty()) {
@@ -474,12 +474,10 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
 
         if (minAppVersion > serverAppVersion) {
             settingsDialog->setOKLabelData(4,
-                                           QStringLiteral("version ") %
-                                               appVersion %
-                                               QStringLiteral(" too low"),
+                                           tr("version %1 too low").arg(appVersion),
                                            SettingsDialog::Warning);
         } else {
-            settingsDialog->setOKLabelData(4, QStringLiteral("ok"),
+            settingsDialog->setOKLabelData(4, tr("ok"),
                                            SettingsDialog::OK);
         }
 
@@ -494,18 +492,18 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
                                        .toBool();
 
             if (versionsAppEnabled) {
-                settingsDialog->setOKLabelData(6, QStringLiteral("ok"),
+                settingsDialog->setOKLabelData(6, tr("ok"),
                                                SettingsDialog::OK);
             } else {
-                settingsDialog->setOKLabelData(6, QStringLiteral("not enabled"),
+                settingsDialog->setOKLabelData(6, tr("not enabled"),
                                                SettingsDialog::Failure);
             }
 
             if (trashAppEnabled) {
-                settingsDialog->setOKLabelData(7, QStringLiteral("ok"),
+                settingsDialog->setOKLabelData(7, tr("ok"),
                                                SettingsDialog::OK);
             } else {
-                settingsDialog->setOKLabelData(7, QStringLiteral("not enabled"),
+                settingsDialog->setOKLabelData(7, tr("not enabled"),
                                                SettingsDialog::Failure);
             }
         }
@@ -520,16 +518,16 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
                                                   : QStringLiteral("not found");
 
             if (notesPathExists) {
-                settingsDialog->setOKLabelData(8, QStringLiteral("ok"),
+                settingsDialog->setOKLabelData(8, tr("ok"),
                                                SettingsDialog::OK);
             } else {
-                settingsDialog->setOKLabelData(8, QStringLiteral("not found"),
+                settingsDialog->setOKLabelData(8, tr("not found"),
                                                SettingsDialog::Failure);
                 qDebug() << __func__ << " - 'data': " << data;
             }
         }
     } else {
-        settingsDialog->setOKLabelData(4, QStringLiteral("not connected"),
+        settingsDialog->setOKLabelData(4, tr("not connected"),
                                        SettingsDialog::Failure);
     }
 
