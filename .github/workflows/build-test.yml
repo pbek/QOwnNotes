@@ -26,21 +26,9 @@ jobs:
         # Linux:   https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/
         # macOS:   https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
-        qt-version: ['5.3', '5.4', '5.7', '5.13.2', '5.14.2', '5.15.2']
+        qt-version: ['5.9', '5.13.2', '5.14.2', '5.15.2']
         experimental: [false]
-        exclude:
-          # xcode not found
-          - os: macos-latest
-            qt-version: '5.3'
-          # xcode not found
-          - os: macos-latest
-            qt-version: '5.4'
-          # win64_mingw73 not found
-          - os: windows-latest
-            qt-version: '5.3'
-          # win64_mingw73 not found
-          - os: windows-latest
-            qt-version: '5.4'
+#        exclude:
           # Qt installation times out too often
 #          - os: windows-latest
 #            qt-version: '5.13.2'
@@ -51,8 +39,6 @@ jobs:
 #          - os: windows-latest
 #            qt-version: '5.15.1'
           # botan 32bit error
-          - os: windows-latest
-            qt-version: '5.7'
         include:
           - os: ubuntu-latest
             qt-version: '6.0.1'
