@@ -4248,13 +4248,13 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../services/owncloudservice.cpp" line="230"/>
       <source>incorrect</source>
-      <translation type="unfinished">incorrect</translation>
+      <translation>Incorrect</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="232"/>
       <location filename="../services/owncloudservice.cpp" line="530"/>
       <source>not connected</source>
-      <translation type="unfinished">not connected</translation>
+      <translation>pas connecté</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="247"/>
@@ -4277,40 +4277,40 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../services/owncloudservice.cpp" line="503"/>
       <location filename="../services/owncloudservice.cpp" line="521"/>
       <source>ok</source>
-      <translation type="unfinished">ok</translation>
+      <translation>d'accord</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="313"/>
       <source>not correct</source>
-      <translation type="unfinished">not correct</translation>
+      <translation>Pas correcte</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="326"/>
       <source>not detected</source>
-      <translation type="unfinished">not detected</translation>
+      <translation>non-détecté</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="429"/>
       <location filename="../services/owncloudservice.cpp" line="524"/>
       <source>not found</source>
-      <translation type="unfinished">not found</translation>
+      <translation>pas trouvé</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="466"/>
       <location filename="../services/owncloudservice.cpp" line="468"/>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>inconnu</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="477"/>
       <source>version %1 too low</source>
-      <translation type="unfinished">version %1 too low</translation>
+      <translation>version %1 trop basse</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="498"/>
       <location filename="../services/owncloudservice.cpp" line="506"/>
       <source>not enabled</source>
-      <translation type="unfinished">not enabled</translation>
+      <translation>pas activé</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="580"/>

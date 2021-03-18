@@ -5,6 +5,7 @@
   warnings while checking if a note is encrypted are ignored in the *Log panel*
 - now a sha256sum checksum file is generated for the AppImage version of QOwnNotes,
   which is part of the release (for [#2070](https://github.com/pbek/QOwnNotes/issues/2070))
+- added more translation (thank you rawfreeamy, mguerra, amirkbrpr)
 
 ## 21.3.1
 - the status messages in the Nextcloud / ownCloud settings are now translatable

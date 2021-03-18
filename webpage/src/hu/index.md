@@ -1,6 +1,6 @@
 ---
 title: QOwnNotes
-description: Open source markdown note taking for Linux, macOS and Windows, that works together with Nextcloud Notes
+description: Nyílt forráskódú jegyzetjegyzet készítése Linux, macOS és Windows rendszerhez, amely a Nextcloud Notes alkalmazással együtt működik
 home: true
 heroImage: /screenshots/screenshot.png
 tagline: Ingyenes, nyílt forráskódú, egyszerű szöveges fájl markdown jegyzetelés Nextcloud / ownCloud integrációval

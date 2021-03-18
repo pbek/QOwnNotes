@@ -4249,7 +4249,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
     <message>
       <location filename="../services/owncloudservice.cpp" line="230"/>
       <source>incorrect</source>
-      <translation>falsch</translation>
+      <translation>inkorrekt</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="232"/>
@@ -4283,7 +4283,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
     <message>
       <location filename="../services/owncloudservice.cpp" line="313"/>
       <source>not correct</source>
-      <translation>falsch</translation>
+      <translation>nicht korrekt</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="326"/>

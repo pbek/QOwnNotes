@@ -4247,13 +4247,13 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../services/owncloudservice.cpp" line="230"/>
       <source>incorrect</source>
-      <translation type="unfinished">incorrect</translation>
+      <translation>errato</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="232"/>
       <location filename="../services/owncloudservice.cpp" line="530"/>
       <source>not connected</source>
-      <translation type="unfinished">not connected</translation>
+      <translation>non collegato</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="247"/>
@@ -4276,40 +4276,40 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
       <location filename="../services/owncloudservice.cpp" line="503"/>
       <location filename="../services/owncloudservice.cpp" line="521"/>
       <source>ok</source>
-      <translation type="unfinished">ok</translation>
+      <translation>ok</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="313"/>
       <source>not correct</source>
-      <translation type="unfinished">not correct</translation>
+      <translation>non corretto</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="326"/>
       <source>not detected</source>
-      <translation type="unfinished">not detected</translation>
+      <translation>non rilevato</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="429"/>
       <location filename="../services/owncloudservice.cpp" line="524"/>
       <source>not found</source>
-      <translation type="unfinished">not found</translation>
+      <translation>non trovato</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="466"/>
       <location filename="../services/owncloudservice.cpp" line="468"/>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>sconosciuto</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="477"/>
       <source>version %1 too low</source>
-      <translation type="unfinished">version %1 too low</translation>
+      <translation>versione %1 troppo bassa</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="498"/>
       <location filename="../services/owncloudservice.cpp" line="506"/>
       <source>not enabled</source>
-      <translation type="unfinished">not enabled</translation>
+      <translation>non abilitato</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="580"/>

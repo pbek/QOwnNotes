@@ -1,6 +1,6 @@
 ---
 title: QOwnNotes
-description: Open source markdown note taking for Linux, macOS and Windows, that works together with Nextcloud Notes
+description: Prise de notes de démarquage open source pour Linux, MacOS et Windows, qui fonctionne avec Nextcloud Notes
 home: true
 heroImage: /screenshots/screenshot.png
 tagline: Prise de notes de démarquage de fichier en texte brut open source gratuite avec l'intégration Nextcloud / ownCloud

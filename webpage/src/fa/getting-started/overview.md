@@ -139,7 +139,7 @@
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) is the **open source** (GPL) plain-text file **markdown note taking** application for **GNU/Linux**, **macOS** and **Windows**, that (optionally) works together with the [**notes application**](https://github.com/nextcloud/notes) of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
+[QOwnNotes](https://www.qownnotes.org/) برنامه **یادداشت برداری مارک داون** پرونده با متن ساده و **متن باز** (GPL) برای سیستم عامل های **لینوکس (GNU)**، **مکینتاش X** و **ویندوز** است که (به طور اختیاری) با هم با [**برنامه یادداشت**](https://github.com/nextcloud/notes) [نکست کلود](https://nextcloud.com/) و [اون کلود](https://owncloud.org/) کار می کند.
 
 ::: tip
 برای بحث، آموزش و ارتباط با انجمن QOwnNotes به [گروه تلگرامی](https://t.me/QOwnNotes) ما بپیوندید.

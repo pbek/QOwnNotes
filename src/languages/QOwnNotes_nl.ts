@@ -4248,13 +4248,13 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../services/owncloudservice.cpp" line="230"/>
       <source>incorrect</source>
-      <translation type="unfinished">incorrect</translation>
+      <translation>niet correct</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="232"/>
       <location filename="../services/owncloudservice.cpp" line="530"/>
       <source>not connected</source>
-      <translation type="unfinished">not connected</translation>
+      <translation>niet verbonden</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="247"/>
@@ -4277,40 +4277,42 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       <location filename="../services/owncloudservice.cpp" line="503"/>
       <location filename="../services/owncloudservice.cpp" line="521"/>
       <source>ok</source>
-      <translation type="unfinished">ok</translation>
+      <translation>OK</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="313"/>
       <source>not correct</source>
-      <translation type="unfinished">not correct</translation>
+      <translation>niet correct</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="326"/>
       <source>not detected</source>
-      <translation type="unfinished">not detected</translation>
+      <translation>niet gedetecteerd
+</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="429"/>
       <location filename="../services/owncloudservice.cpp" line="524"/>
       <source>not found</source>
-      <translation type="unfinished">not found</translation>
+      <translation>niet gevonden</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="466"/>
       <location filename="../services/owncloudservice.cpp" line="468"/>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>onbekend</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="477"/>
       <source>version %1 too low</source>
-      <translation type="unfinished">version %1 too low</translation>
+      <translation>versie %1 te laag
+</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="498"/>
       <location filename="../services/owncloudservice.cpp" line="506"/>
       <source>not enabled</source>
-      <translation type="unfinished">not enabled</translation>
+      <translation>niet aangezet</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="580"/>
