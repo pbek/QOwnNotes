@@ -159,6 +159,8 @@ jobs:
         chmod a+x linuxdeployqt-continuous-x86_64.AppImage
         # export VERSION=... # linuxdeployqt uses this for naming the file
         ./linuxdeployqt-continuous-x86_64.AppImage appdir/usr/share/applications/*.desktop -appimage -verbose=2
+        mv "QOwnNotes-${VERSION}-x86_64.AppImage" QOwnNotes-x86_64.AppImage
+        sha256sum QOwnNotes-x86_64.AppImage > QOwnNotes-x86_64.AppImage.sha256sum
 
     - if: contains( matrix.os, 'macos')
       name: Build for macOS
@@ -215,8 +217,18 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ needs.create_release.outputs.upload_url }}
-        asset_path: ./src/QOwnNotes-${{ env.VERSION }}-x86_64.AppImage
+        asset_path: ./src/QOwnNotes-x86_64.AppImage
         asset_name: QOwnNotes-x86_64.AppImage
+        asset_content_type: application/vnd.appimage
+    - if: contains( matrix.os, 'ubuntu-16')
+      name: Release AppImage sha256sum for Linux
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.create_release.outputs.upload_url }}
+        asset_path: ./src/QOwnNotes-x86_64.AppImage.sha256sum
+        asset_name: QOwnNotes-x86_64.AppImage.sha256sum
         asset_content_type: application/vnd.appimage
 
     - if: contains( matrix.os, 'macos')
