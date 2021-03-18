@@ -379,7 +379,7 @@ class Note {
     unsigned int _sharePermissions;
     bool _hasDirtyData;
 
-    QRegularExpression getEncryptedNoteTextRegularExpression() const;
+    static QRegularExpression getEncryptedNoteTextRegularExpression() ;
     QString getEncryptedNoteText() const;
 
     static const QString getNoteURL(const QString &baseName);

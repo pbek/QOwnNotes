@@ -2781,7 +2781,7 @@ QStringList Note::getNoteTextLines() const {
 /**
  * Returns the regular expression to match encrypted text
  */
-QRegularExpression Note::getEncryptedNoteTextRegularExpression() const {
+QRegularExpression Note::getEncryptedNoteTextRegularExpression() {
     // match the encrypted string
     QRegularExpression re(QRegularExpression::escape(
                               QStringLiteral(NOTE_TEXT_ENCRYPTION_PRE_STRING)) +
