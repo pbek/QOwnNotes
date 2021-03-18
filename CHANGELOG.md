@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.3.2
+- now the misleading `[Botan Error]  Invalid CBC padding` and `Invalid version or not a cyphertext`
+  warnings while checking if a note is encrypted are ignored in the *Log panel*
+
 ## 21.3.1
 - the status messages in the Nextcloud / ownCloud settings are now translatable
 - there now is a new QOwnNotesAPI release 21.3.0 for ownCloud in the ownCloud marketplace

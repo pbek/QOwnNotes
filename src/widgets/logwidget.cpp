@@ -133,6 +133,8 @@ void LogWidget::log(LogWidget::LogType logType, const QString &text) {
          text.contains(QLatin1String(
              "Using QCharRef with an index pointing outside")) ||
          text.contains(QLatin1String("load glyph failed err=")) ||
+         text.contains(QLatin1String("[Botan Error]  Invalid CBC padding")) ||
+         text.contains(QLatin1String("Invalid version or not a cyphertext")) ||
          text.contains(QLatin1String(
              "QFileSystemWatcher::removePaths: list is empty")))) {
         return;
