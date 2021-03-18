@@ -2833,7 +2833,7 @@ bool Note::canDecryptNoteText() const {
 
     // check if a hook changed the text
     if (decryptedNoteText.isEmpty()) {
-            // decrypt the note text with Botan
+        // decrypt the note text with Botan
         BotanWrapper botanWrapper;
         botanWrapper.setPassword(_cryptoPassword);
         botanWrapper.setSalt(QStringLiteral(BOTAN_SALT));
