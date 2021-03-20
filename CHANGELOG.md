@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.3.3
+- added a note about creating an app password in the *Nextcloud / ownCloid settings*
+
 ## 21.3.2
 - now the misleading `[Botan Error]  Invalid CBC padding` and `Invalid version or not a cyphertext`
   warnings while checking if a note is encrypted are ignored in the *Log panel*
