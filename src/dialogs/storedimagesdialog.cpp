@@ -75,7 +75,9 @@ void StoredImagesDialog::refreshMediaFiles() {
             QString filePath = getFilePath(item);
             QFileInfo info(filePath);
             item->setToolTip(
-                0, tr("Last modified at %1").arg(info.lastModified().toString()));
+                0, tr("Last modified at %1").arg(info.lastModified().toString()) +
+                    QStringLiteral("\n") +
+                    Utils::Misc::toHumanReadableByteSize(info.size()));
 
             ui->fileTreeWidget->addTopLevelItem(item);
         }
