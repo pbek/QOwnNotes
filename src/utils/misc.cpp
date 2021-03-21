@@ -2130,6 +2130,7 @@ QString Utils::Misc::findAvailableFileName(const QString &fileName,
         qDebug() << __func__ << " - 'override fileName': " << newFileName;
 
         if (nameCount > 1000) {
+            newFileName = makeFileNameRandom(fileName, overrideSuffix);
             break;
         }
     }
