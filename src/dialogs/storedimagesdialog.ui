@@ -41,6 +41,27 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
+      <item row="0" column="0">
+       <widget class="LineEdit" name="searchLineEdit">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+	border: none;
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-right: 0px;
+}
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Find image</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
       <item row="1" column="0">
        <widget class="QTreeWidget" name="fileTreeWidget">
         <property name="selectionMode">
@@ -57,6 +78,16 @@
           <string notr="true">1</string>
          </property>
         </column>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="checkBox">
+        <property name="toolTip">
+         <string>Only show images that are not used in notes</string>
+        </property>
+        <property name="text">
+         <string>Only show orphaned images</string>
+        </property>
        </widget>
       </item>
       <item row="2" column="0">
@@ -91,16 +122,6 @@
         <property name="icon">
          <iconset theme="list-remove" resource="../breeze-qownnotes.qrc">
           <normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QCheckBox" name="checkBox">
-        <property name="toolTip">
-         <string>Only show images that are not used in notes</string>
-        </property>
-        <property name="text">
-         <string>Only show orphaned images</string>
         </property>
        </widget>
       </item>
@@ -152,6 +173,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">widgets/lineedit.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
  </resources>

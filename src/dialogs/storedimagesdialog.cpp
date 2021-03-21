@@ -45,10 +45,10 @@ void StoredImagesDialog::refreshMediaFiles() {
         QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
     mediaFiles.removeDuplicates();
 
-    QVector<Note> noteList = Note::fetchAll();
-    int noteListCount = noteList.count();
-
     if (_orphanedImagesOnly) {
+        QVector<Note> noteList = Note::fetchAll();
+        int noteListCount = noteList.count();
+
         ui->progressBar->setMaximum(noteListCount);
         ui->progressBar->show();
 
@@ -213,4 +213,10 @@ void StoredImagesDialog::on_insertButton_clicked() {
 void StoredImagesDialog::on_checkBox_toggled(bool checked) {
     _orphanedImagesOnly = checked;
     refreshMediaFiles();
+}
+
+void StoredImagesDialog::on_searchLineEdit_textChanged(const QString &arg1) {
+    Utils::Gui::searchForTextInTreeWidget(ui->fileTreeWidget, arg1,
+      Utils::Gui::TreeWidgetSearchFlags(
+        Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
 }

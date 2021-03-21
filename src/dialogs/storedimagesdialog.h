@@ -28,6 +28,8 @@ class StoredImagesDialog : public MasterDialog {
 
     void on_checkBox_toggled(bool checked);
 
+    void on_searchLineEdit_textChanged(const QString &arg1);
+
 private:
     Ui::StoredImagesDialog *ui;
     bool _orphanedImagesOnly = false;

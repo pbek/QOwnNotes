@@ -10,6 +10,7 @@
       file (like `my-image-1.jpg`) and increased until a filename is available
 - instead of the *Orphaned images dialog* there now is the new *Stored images dialog*
   which also allows managing non-orphaned images (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+    - you are now also able to search for images by name
 
 ## 21.3.2
 - now the misleading `[Botan Error]  Invalid CBC padding` and `Invalid version or not a cyphertext`
