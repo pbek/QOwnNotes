@@ -159,7 +159,7 @@ SOURCES += main.cpp\
     dialogs/sharedialog.cpp \
     widgets/fontcolorwidget.cpp \
     dialogs/evernoteimportdialog.cpp \
-    dialogs/orphanedimagesdialog.cpp \
+    dialogs/storedimagesdialog.cpp \
     dialogs/orphanedattachmentsdialog.cpp \
     dialogs/actiondialog.cpp \
     dialogs/tabledialog.cpp \
@@ -253,7 +253,7 @@ HEADERS  += mainwindow.h \
     dialogs/sharedialog.h \
     widgets/fontcolorwidget.h \
     dialogs/evernoteimportdialog.h \
-    dialogs/orphanedimagesdialog.h \
+    dialogs/storedimagesdialog.h \
     dialogs/orphanedattachmentsdialog.h \
     dialogs/actiondialog.h \
     dialogs/tabledialog.h \
@@ -302,7 +302,7 @@ FORMS    += mainwindow.ui \
     dialogs/sharedialog.ui \
     widgets/fontcolorwidget.ui \
     dialogs/evernoteimportdialog.ui \
-    dialogs/orphanedimagesdialog.ui \
+    dialogs/storedimagesdialog.ui \
     dialogs/orphanedattachmentsdialog.ui \
     dialogs/actiondialog.ui \
     dialogs/tabledialog.ui \

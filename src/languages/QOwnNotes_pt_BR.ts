@@ -4186,49 +4186,49 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
     </message>
 </context>
 <context>
-    <name>OrphanedImagesDialog</name>
+    <name>StoredImagesDialog</name>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
         <source>Orphaned images</source>
         <translation>Imagens órfãs</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="80"/>
         <source>Delete selected images</source>
         <translation>Excluir imagens selecionadas</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="83"/>
         <source>Delete</source>
         <translation>Excluir</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="94"/>
         <source>Add selected images to note</source>
         <translation>Adicionar as imagens selecionadas para a nota</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="97"/>
         <source>Add to note</source>
         <translation>Adicionar para nota</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="146"/>
         <source>Images that are not used in notes:</source>
         <translation>Imagens que não são usadas nas notas:</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="62"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="62"/>
         <source>Last modified at %1</source>
         <translation>Última modificação em %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="123"/>
         <source>Delete selected files</source>
         <translation>Excluir arquivos selecionados</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="124"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="124"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Excluir &lt;strong&gt;%n&lt;/strong&gt; arquivos selecionados?</numerusform>

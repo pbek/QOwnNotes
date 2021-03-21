@@ -4150,49 +4150,49 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
 </context>
 <context>
-    <name>OrphanedImagesDialog</name>
+    <name>StoredImagesDialog</name>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
         <source>Orphaned images</source>
         <translation>孤立的图像</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="80"/>
         <source>Delete selected images</source>
         <translation>删除所选图像</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="83"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="94"/>
         <source>Add selected images to note</source>
         <translation>将所选图像添加到笔记</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="97"/>
         <source>Add to note</source>
         <translation>添加到笔记</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="146"/>
         <source>Images that are not used in notes:</source>
         <translation>在笔记中未使用的图像:</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="62"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="62"/>
         <source>Last modified at %1</source>
         <translation>最近修改时间 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="123"/>
         <source>Delete selected files</source>
         <translation>删除所选文件</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="124"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="124"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>删除 &lt;strong&gt;%n&lt;/strong&gt; 个所选文件吗?</numerusform>

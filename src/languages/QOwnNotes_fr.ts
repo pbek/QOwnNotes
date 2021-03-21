@@ -4193,49 +4193,49 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     </message>
 </context>
 <context>
-    <name>OrphanedImagesDialog</name>
+    <name>StoredImagesDialog</name>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
         <source>Orphaned images</source>
         <translation>Images orphelines</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="80"/>
         <source>Delete selected images</source>
         <translation>Supprimer les images sélectionnées</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="83"/>
         <source>Delete</source>
         <translation>Supprimer</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="94"/>
         <source>Add selected images to note</source>
         <translation>Ajouter les images sélectionnées à la note</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="97"/>
         <source>Add to note</source>
         <translation>Ajouter à la note</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="146"/>
         <source>Images that are not used in notes:</source>
         <translation>Images qui ne sont pas utilisées dans les notes&#xa0;:</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="62"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="62"/>
         <source>Last modified at %1</source>
         <translation>Denière modification à %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="123"/>
         <source>Delete selected files</source>
         <translation>Supprimer les fichiers sélectionnés</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="124"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="124"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Supprimer %n fichier sélectionné ?</numerusform>

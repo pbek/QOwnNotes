@@ -95,7 +95,7 @@
 #include "dialogs/linkdialog.h"
 #include "dialogs/notediffdialog.h"
 #include "dialogs/orphanedattachmentsdialog.h"
-#include "dialogs/orphanedimagesdialog.h"
+#include "dialogs/storedimagesdialog.h"
 #include "dialogs/passworddialog.h"
 #include "dialogs/settingsdialog.h"
 #include "dialogs/tododialog.h"
@@ -516,7 +516,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     _actionDialog = Q_NULLPTR;
     _todoDialog = Q_NULLPTR;
-    _orphanedImagesDialog = Q_NULLPTR;
+    _storedImagesDialog = Q_NULLPTR;
     _orphanedAttachmentsDialog = Q_NULLPTR;
     _issueAssistantDialog = Q_NULLPTR;
 
@@ -11356,9 +11356,9 @@ void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
  * Shows a dialog to delete orphaned images
  */
 void MainWindow::on_actionDelete_orphaned_images_triggered() {
-    delete (_orphanedImagesDialog);
-    _orphanedImagesDialog = new OrphanedImagesDialog(this);
-    _orphanedImagesDialog->show();
+    delete (_storedImagesDialog);
+    _storedImagesDialog = new StoredImagesDialog(this);
+    _storedImagesDialog->show();
 }
 
 /**

@@ -4193,49 +4193,49 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     </message>
 </context>
 <context>
-    <name>OrphanedImagesDialog</name>
+    <name>StoredImagesDialog</name>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
         <source>Orphaned images</source>
         <translation>Zwevende afbeeldingen</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="80"/>
         <source>Delete selected images</source>
         <translation>Geselecteerde afbeeldingen verwijderen</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="83"/>
         <source>Delete</source>
         <translation>Verwijderen</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="94"/>
         <source>Add selected images to note</source>
         <translation>Voeg geselecteerde afbeeldingen aan de notitie toe</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="97"/>
         <source>Add to note</source>
         <translation>Notitie toevoegen</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="146"/>
         <source>Images that are not used in notes:</source>
         <translation>Afbeeldingen die niet worden gebruikt in notities:</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="62"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="62"/>
         <source>Last modified at %1</source>
         <translation>Laatst gewijzigd op %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="123"/>
         <source>Delete selected files</source>
         <translation>Verwijder geselecteerde bestanden</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="124"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="124"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; geselecteerde bestanden verwijderen?</numerusform>

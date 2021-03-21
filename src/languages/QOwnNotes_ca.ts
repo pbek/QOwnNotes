@@ -4185,49 +4185,49 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     </message>
 </context>
 <context>
-    <name>OrphanedImagesDialog</name>
+    <name>StoredImagesDialog</name>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
         <source>Orphaned images</source>
         <translation>Imatges òrfenes</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="80"/>
         <source>Delete selected images</source>
         <translation>Elimina la imatges seleccionada</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="83"/>
         <source>Delete</source>
         <translation>Esborra</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="94"/>
         <source>Add selected images to note</source>
         <translation>Afegir imatges seleccionades a la nota</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="97"/>
         <source>Add to note</source>
         <translation>Afegir a la nota</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="146"/>
         <source>Images that are not used in notes:</source>
         <translation>Imatges no usades a les notes:</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="62"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="62"/>
         <source>Last modified at %1</source>
         <translation>Modificada per última vegada el %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="123"/>
         <source>Delete selected files</source>
         <translation>Elimina els fitxers seleccionats</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="124"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="124"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Voleu esborrar &lt;strong&gt;%n&lt;/strong&gt; fitxer seleccionat?</numerusform>

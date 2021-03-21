@@ -1,4 +1,4 @@
-#include "orphanedimagesdialog.h"
+#include "storedimagesdialog.h"
 
 #include <entities/note.h>
 #include <entities/notefolder.h>
@@ -13,11 +13,11 @@
 #include <QTreeWidgetItem>
 #include <QtWidgets/QMessageBox>
 
-#include "ui_orphanedimagesdialog.h"
+#include "ui_storedimagesdialog.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 
-OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent)
-    : MasterDialog(parent), ui(new Ui::OrphanedImagesDialog) {
+StoredImagesDialog::StoredImagesDialog(QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::StoredImagesDialog) {
     ui->setupUi(this);
     ui->fileTreeWidget->installEventFilter(this);
 
@@ -72,7 +72,7 @@ OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent)
     }
 }
 
-OrphanedImagesDialog::~OrphanedImagesDialog() { delete ui; }
+StoredImagesDialog::~StoredImagesDialog() { delete ui; }
 
 /**
  * Shows the currently selected image
@@ -80,7 +80,7 @@ OrphanedImagesDialog::~OrphanedImagesDialog() { delete ui; }
  * @param current
  * @param previous
  */
-void OrphanedImagesDialog::on_fileTreeWidget_currentItemChanged(
+void StoredImagesDialog::on_fileTreeWidget_currentItemChanged(
     QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
 
@@ -100,7 +100,7 @@ void OrphanedImagesDialog::on_fileTreeWidget_currentItemChanged(
  * @param item
  * @return
  */
-QString OrphanedImagesDialog::getFilePath(QTreeWidgetItem *item) {
+QString StoredImagesDialog::getFilePath(QTreeWidgetItem *item) {
     if (item == Q_NULLPTR) {
         return QString();
     }
@@ -113,7 +113,7 @@ QString OrphanedImagesDialog::getFilePath(QTreeWidgetItem *item) {
 /**
  * Deletes selected images
  */
-void OrphanedImagesDialog::on_deleteButton_clicked() {
+void StoredImagesDialog::on_deleteButton_clicked() {
     int selectedItemsCount = ui->fileTreeWidget->selectedItems().count();
 
     if (selectedItemsCount == 0) {
@@ -146,7 +146,7 @@ void OrphanedImagesDialog::on_deleteButton_clicked() {
  * @param event
  * @return
  */
-bool OrphanedImagesDialog::eventFilter(QObject *obj, QEvent *event) {
+bool StoredImagesDialog::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
@@ -164,7 +164,7 @@ bool OrphanedImagesDialog::eventFilter(QObject *obj, QEvent *event) {
     return MasterDialog::eventFilter(obj, event);
 }
 
-void OrphanedImagesDialog::on_insertButton_clicked() {
+void StoredImagesDialog::on_insertButton_clicked() {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow == Q_NULLPTR) {

@@ -132,9 +132,9 @@ set(SOURCE_FILES
     dialogs/serverbookmarksimportdialog.cpp
     dialogs/serverbookmarksimportdialog.h
     dialogs/serverbookmarksimportdialog.ui
-    dialogs/orphanedimagesdialog.cpp
-    dialogs/orphanedimagesdialog.h
-    dialogs/orphanedimagesdialog.ui
+    dialogs/storedimagesdialog.cpp
+    dialogs/storedimagesdialog.h
+    dialogs/storedimagesdialog.ui
     dialogs/orphanedattachmentsdialog.cpp
     dialogs/orphanedattachmentsdialog.h
     dialogs/orphanedattachmentsdialog.ui

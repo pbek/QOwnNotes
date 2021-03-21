@@ -4161,49 +4161,49 @@ Perlu diingat bahawa anda perlu &lt;strong&gt; ingat &lt;/ strong&gt; kata lalua
     </message>
 </context>
 <context>
-    <name>OrphanedImagesDialog</name>
+    <name>StoredImagesDialog</name>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
         <source>Orphaned images</source>
         <translation>Imej-imej yatim piatu</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="80"/>
         <source>Delete selected images</source>
         <translation>Padamkan imej yang dipilih</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="83"/>
         <source>Delete</source>
         <translation>Padam</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="94"/>
         <source>Add selected images to note</source>
         <translation>Tambah imej yang dipilih untuk diperhatikan</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="97"/>
         <source>Add to note</source>
         <translation>Tambah perhatian</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
+        <location filename="../dialogs/storedImagesDialog.ui" line="146"/>
         <source>Images that are not used in notes:</source>
         <translation>Imej yang tidak digunakan dalam nota:</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="62"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="62"/>
         <source>Last modified at %1</source>
         <translation>Terakhir diubah suai pada %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="123"/>
         <source>Delete selected files</source>
         <translation>Padam fail yang dipilih</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="124"/>
+        <location filename="../dialogs/storedImagesDialog.cpp" line="124"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Padamkan &lt;strong&gt;%n&lt;/ strong&gt; fail yang dipilih?</numerusform>

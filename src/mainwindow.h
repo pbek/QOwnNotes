@@ -61,7 +61,7 @@ class ActionDialog;
 class TodoDialog;
 class QPrinter;
 class LogWidget;
-class OrphanedImagesDialog;
+class StoredImagesDialog;
 class OrphanedAttachmentsDialog;
 class IssueAssistantDialog;
 class NoteHistory;
@@ -740,7 +740,7 @@ private:
     ActionDialog *_actionDialog;
     TodoDialog *_todoDialog;
     IssueAssistantDialog *_issueAssistantDialog;
-    OrphanedImagesDialog *_orphanedImagesDialog;
+    StoredImagesDialog *_storedImagesDialog;
     OrphanedAttachmentsDialog *_orphanedAttachmentsDialog;
     SettingsDialog *_settingsDialog;
     bool _noteExternallyRemovedCheckEnabled;

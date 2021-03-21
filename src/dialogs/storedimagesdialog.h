@@ -5,15 +5,15 @@
 class QTreeWidgetItem;
 
 namespace Ui {
-class OrphanedImagesDialog;
+class StoredImagesDialog;
 }
 
-class OrphanedImagesDialog : public MasterDialog {
+class StoredImagesDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit OrphanedImagesDialog(QWidget *parent = 0);
-    ~OrphanedImagesDialog();
+    explicit StoredImagesDialog(QWidget *parent = 0);
+    ~StoredImagesDialog();
 
    protected:
     bool eventFilter(QObject *obj, QEvent *event);
@@ -27,7 +27,7 @@ class OrphanedImagesDialog : public MasterDialog {
     void on_insertButton_clicked();
 
    private:
-    Ui::OrphanedImagesDialog *ui;
+    Ui::StoredImagesDialog *ui;
 
     QString getFilePath(QTreeWidgetItem *item);
 };

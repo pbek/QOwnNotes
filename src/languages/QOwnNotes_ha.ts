@@ -4204,49 +4204,49 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
     </message>
 </context>
 <context>
-    <name>OrphanedImagesDialog</name>
+    <name>StoredImagesDialog</name>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
         <source>Orphaned images</source>
         <translation>Hotunan marayu</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="80"/>
         <source>Delete selected images</source>
         <translation>Share hotunan da aka zaba</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="83"/>
         <source>Delete</source>
         <translation>Share</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="94"/>
         <source>Add selected images to note</source>
         <translation>Sanya hotunan da aka zaba don lura</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="97"/>
         <source>Add to note</source>
         <translation>Toara bayani</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="146"/>
         <source>Images that are not used in notes:</source>
         <translation>Hotunan da ba a amfani da su cikin bayanin kula ba:</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="62"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="62"/>
         <source>Last modified at %1</source>
         <translation>Anyi gyaran ƙarshe na %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="123"/>
         <source>Delete selected files</source>
         <translation>Share fayilolin da aka zaɓa</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="124"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="124"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Goge&lt;strong&gt;%n&lt;/strong&gt; fayilolin da aka zaɓa?</numerusform>
