@@ -2,6 +2,12 @@
 
 ## 21.3.3
 - added a note about creating an app password in the *Nextcloud / ownCloud settings*
+- if you now insert an image or attachment directly from a file the original
+  file name will be used if the file doesn't exist in the media/attachments
+  folder (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+    - previously a random string was added to the basename to make it unique
+    - if the file already exists a number will be added to the basename of the
+      file (like `my-image-1.jpg`) and increased until a filename is available
 
 ## 21.3.2
 - now the misleading `[Botan Error]  Invalid CBC padding` and `Invalid version or not a cyphertext`

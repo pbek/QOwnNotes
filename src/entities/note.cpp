@@ -3322,7 +3322,8 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
 
         // find a random name for the new file
         const QString newFileName =
-            Utils::Misc::makeFileNameRandom(file->fileName(), suffix);
+            Utils::Misc::findAvailableFileName(file->fileName(),
+                                               mediaDir.path(), suffix);
 
         const QString newFilePath =
             mediaDir.path() + QDir::separator() + newFileName;
@@ -3407,7 +3408,7 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
 
         // find a random name for the new file
         const QString newFileName =
-            Utils::Misc::makeFileNameRandom(file->fileName());
+            Utils::Misc::findAvailableFileName(file->fileName(), dir.path());
 
         const QString newFilePath =
             dir.path() + QDir::separator() + newFileName;

@@ -2103,6 +2103,41 @@ QString Utils::Misc::makeFileNameRandom(const QString &fileName,
 }
 
 /**
+ * Returns a non-existing filename (like "my-image.jpg") in directoryPath
+ * If the filename is already taken a number will be appended (like "my-image-1.jpg")
+ */
+QString Utils::Misc::findAvailableFileName(const QString &fileName,
+                                           const QString &directoryPath,
+                                           const QString &overrideSuffix) {
+    const QFileInfo fileInfo(fileName);
+    QString baseName = fileInfo.baseName();
+    baseName.truncate(32);
+    const QString newSuffix = fileInfo.suffix();
+    QString newBaseName = baseName;
+    QString newFileName = newBaseName + QStringLiteral(".") + newSuffix;
+    QString newFilePath = directoryPath + QDir::separator() + newFileName;
+    QFile file(newFilePath);
+    int nameCount = 0;
+
+    // check if file with this filename already exists
+    while (file.exists()) {
+        // find new filename for the file
+        newBaseName = baseName + QStringLiteral("-") +
+               QString::number(++nameCount);
+        newFileName = newBaseName + QStringLiteral(".") + newSuffix;
+        newFilePath = directoryPath + QDir::separator() + newFileName;
+        file.setFileName(newFilePath);
+        qDebug() << __func__ << " - 'override fileName': " << newFileName;
+
+        if (nameCount > 1000) {
+            break;
+        }
+    }
+
+    return newFileName;
+}
+
+/**
  * Strips all trailing spaces from str and returns the stripped text
  *
  * @param str
