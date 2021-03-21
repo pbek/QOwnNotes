@@ -26,8 +26,12 @@ class StoredImagesDialog : public MasterDialog {
 
     void on_insertButton_clicked();
 
-   private:
-    Ui::StoredImagesDialog *ui;
+    void on_checkBox_toggled(bool checked);
 
-    QString getFilePath(QTreeWidgetItem *item);
+private:
+    Ui::StoredImagesDialog *ui;
+    bool _orphanedImagesOnly = false;
+
+    static QString getFilePath(QTreeWidgetItem *item);
+    void refreshMediaFiles();
 };

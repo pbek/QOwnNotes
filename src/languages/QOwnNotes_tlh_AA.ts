@@ -2351,8 +2351,8 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2178"/>
-      <source>Manage orphaned image files</source>
-      <translation type="unfinished">Manage orphaned image files</translation>
+      <source>Manage stored image files</source>
+      <translation type="unfinished">Manage stored image files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2190"/>
@@ -4196,8 +4196,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <name>StoredImagesDialog</name>
     <message>
       <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
-      <source>Orphaned images</source>
-      <translation type="unfinished">Orphaned images</translation>
+      <source>Stored images</source>
+      <translation type="unfinished">Stored images</translation>
     </message>
     <message>
       <location filename="../dialogs/storedImagesDialog.ui" line="80"/>

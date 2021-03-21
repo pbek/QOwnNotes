@@ -2342,9 +2342,8 @@
         <translation>텍스트 파일에서 노트 가져오기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2178"/>
         <source>Manage orphaned image files</source>
-        <translation>고립된 이미지 파일 관리</translation>
+        <translation type="vanished">고립된 이미지 파일 관리</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2190"/>
@@ -2628,6 +2627,11 @@
         <location filename="../mainwindow.ui" line="1957"/>
         <source>Reload scripting engine</source>
         <translation>스크립팅 엔진 리로드</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="2178"/>
+        <source>Manage stored image files</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2220"/>
@@ -4158,56 +4162,6 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
     </message>
 </context>
 <context>
-    <name>StoredImagesDialog</name>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
-        <source>Orphaned images</source>
-        <translation>고립된 이미지</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="80"/>
-        <source>Delete selected images</source>
-        <translation>선택된 이미지 삭제</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="83"/>
-        <source>Delete</source>
-        <translation>삭제하기</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="94"/>
-        <source>Add selected images to note</source>
-        <translation>선택된 이미지를 노트에 추가</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="97"/>
-        <source>Add to note</source>
-        <translation>노트에 추가</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="146"/>
-        <source>Images that are not used in notes:</source>
-        <translation>노트에 사용되지 않은 이미지:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.cpp" line="62"/>
-        <source>Last modified at %1</source>
-        <translation>%1에서 마지막으로 수정됨</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.cpp" line="123"/>
-        <source>Delete selected files</source>
-        <translation>선택된 파일 삭제</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../dialogs/storedImagesDialog.cpp" line="124"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-        <translation>
-            <numerusform>선택된 파일 &lt;strong&gt; %n&lt;/strong&gt;개를 삭제하시겠습니까?</numerusform>
-        </translation>
-    </message>
-</context>
-<context>
     <name>OwnCloudService</name>
     <message>
         <location filename="../services/owncloudservice.cpp" line="230"/>
@@ -4441,7 +4395,7 @@ ownCloud 서버의 휴지통이 활성화된 경우 휴지통에서 복원할 �
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3763"/>
+        <location filename="../entities/note.cpp" line="3764"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>…그리고 %n개의 더 많은 노트</numerusform>
@@ -7688,6 +7642,69 @@ Your notes will stay intact!</source>
         <source>%1 (%2)</source>
         <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
         <translation>%1 (%2)</translation>
+    </message>
+</context>
+<context>
+    <name>StoredImagesDialog</name>
+    <message>
+        <source>Orphaned images</source>
+        <translation type="vanished">고립된 이미지</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
+        <source>Stored images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Delete selected images</source>
+        <translation>선택된 이미지 삭제</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
+        <source>Delete</source>
+        <translation>삭제하기</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Only show orphaned images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
+        <source>Add selected images to note</source>
+        <translation>선택된 이미지를 노트에 추가</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
+        <source>Add to note</source>
+        <translation>노트에 추가</translation>
+    </message>
+    <message>
+        <source>Images that are not used in notes:</source>
+        <translation type="vanished">노트에 사용되지 않은 이미지:</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <source>Last modified at %1</source>
+        <translation>%1에서 마지막으로 수정됨</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <source>Delete selected files</source>
+        <translation>선택된 파일 삭제</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation>
+            <numerusform>선택된 파일 &lt;strong&gt; %n&lt;/strong&gt;개를 삭제하시겠습니까?</numerusform>
+        </translation>
     </message>
 </context>
 <context>

@@ -2352,7 +2352,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2178"/>
-        <source>Manage orphaned image files</source>
+        <source>Manage stored image files</source>
         <translation>Verwaiste Bilddateien verwalten</translation>
     </message>
     <message>
@@ -4194,57 +4194,6 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
     </message>
 </context>
 <context>
-    <name>StoredImagesDialog</name>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
-        <source>Orphaned images</source>
-        <translation>Verwaiste Bilder</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="80"/>
-        <source>Delete selected images</source>
-        <translation>Ausgewählte Bilder löschen</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="83"/>
-        <source>Delete</source>
-        <translation>Löschen</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="94"/>
-        <source>Add selected images to note</source>
-        <translation>Ausgewählte Bilder zur Notiz hinzufügen</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="97"/>
-        <source>Add to note</source>
-        <translation>Zur Notiz hinzufügen</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="146"/>
-        <source>Images that are not used in notes:</source>
-        <translation>Bilder, die nicht in Notizen verwendet werden:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.cpp" line="62"/>
-        <source>Last modified at %1</source>
-        <translation>Zuletzt geändert am %1</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.cpp" line="123"/>
-        <source>Delete selected files</source>
-        <translation>Ausgewählte Dateien löschen</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../dialogs/storedImagesDialog.cpp" line="124"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-        <translation>
-            <numerusform>Ausgewählte Datei löschen?</numerusform>
-            <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Dateien löschen?</numerusform>
-        </translation>
-    </message>
-</context>
-<context>
     <name>OwnCloudService</name>
     <message>
         <location filename="../services/owncloudservice.cpp" line="230"/>
@@ -4479,7 +4428,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3763"/>
+        <location filename="../entities/note.cpp" line="3764"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>…und eine weitere Notiz</numerusform>
@@ -7717,6 +7666,66 @@ Your notes will stay intact!</source>
         <source>%1 (%2)</source>
         <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
         <translation>%1 (%2)</translation>
+    </message>
+</context>
+<context>
+    <name>StoredImagesDialog</name>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
+        <source>Stored images</source>
+        <translation>Verwaiste Bilder</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Delete selected images</source>
+        <translation>Ausgewählte Bilder löschen</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
+        <source>Delete</source>
+        <translation>Löschen</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Only show orphaned images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
+        <source>Add selected images to note</source>
+        <translation>Ausgewählte Bilder zur Notiz hinzufügen</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
+        <source>Add to note</source>
+        <translation>Zur Notiz hinzufügen</translation>
+    </message>
+    <message>
+        <source>Images that are not used in notes:</source>
+        <translation type="vanished">Bilder, die nicht in Notizen verwendet werden:</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <source>Last modified at %1</source>
+        <translation>Zuletzt geändert am %1</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <source>Delete selected files</source>
+        <translation>Ausgewählte Dateien löschen</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation>
+            <numerusform>Ausgewählte Datei löschen?</numerusform>
+            <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Dateien löschen?</numerusform>
+        </translation>
     </message>
 </context>
 <context>

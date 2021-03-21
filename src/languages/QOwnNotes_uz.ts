@@ -2351,7 +2351,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2178"/>
-        <source>Manage orphaned image files</source>
+        <source>Manage stored image files</source>
         <translation>Etim rasm fayllarini boshqarish</translation>
     </message>
     <message>
@@ -4214,57 +4214,6 @@ Tanlangan papkalarni &lt;strong&gt;%n&lt;/strong&gt; o&apos;chirish kerakmi!</nu
     </message>
 </context>
 <context>
-    <name>StoredImagesDialog</name>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
-        <source>Orphaned images</source>
-        <translation>Yetim rasmlar</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="80"/>
-        <source>Delete selected images</source>
-        <translation>Tanlangan rasmlarni o&apos;chirish</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="83"/>
-        <source>Delete</source>
-        <translation>Yo&apos;q qilish</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="94"/>
-        <source>Add selected images to note</source>
-        <translation>Belgilangan rasmlarni qaydga qo&apos;shing</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="97"/>
-        <source>Add to note</source>
-        <translation>Izohga qo&apos;shish</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="146"/>
-        <source>Images that are not used in notes:</source>
-        <translation>Izohlarda foydalanilmagan rasmlar:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.cpp" line="62"/>
-        <source>Last modified at %1</source>
-        <translation>So‘nggi marta %1 da o‘zgartirilgan</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.cpp" line="123"/>
-        <source>Delete selected files</source>
-        <translation>Tanlangan fayllarni o&apos;chirish</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../dialogs/storedImagesDialog.cpp" line="124"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-        <translation>
-            <numerusform>&lt;strong&gt;%n &lt;/strong&gt; tanlangan fayl o&apos;chirilsinmi?</numerusform>
-            <numerusform>&lt;strong&gt;%n &lt;/strong&gt; tanlangan fayllar yo&apos;q qilinsinmi?</numerusform>
-        </translation>
-    </message>
-</context>
-<context>
     <name>OwnCloudService</name>
     <message>
         <location filename="../services/owncloudservice.cpp" line="230"/>
@@ -4503,7 +4452,7 @@ Tanlangan papkalarni &lt;strong&gt;%n&lt;/strong&gt; o&apos;chirish kerakmi!</nu
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3763"/>
+        <location filename="../entities/note.cpp" line="3764"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>Shakl: bitta... va yana %n eslatma</numerusform>
@@ -7762,6 +7711,70 @@ Qaydlaringiz saqlanib qoladi!</translation>
         <source>%1 (%2)</source>
         <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
         <translation>%1 (%2)</translation>
+    </message>
+</context>
+<context>
+    <name>StoredImagesDialog</name>
+    <message>
+        <source>Orphaned images</source>
+        <translation type="vanished">Yetim rasmlar</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
+        <source>Stored images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Delete selected images</source>
+        <translation>Tanlangan rasmlarni o&apos;chirish</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
+        <source>Delete</source>
+        <translation>Yo&apos;q qilish</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Only show orphaned images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
+        <source>Add selected images to note</source>
+        <translation>Belgilangan rasmlarni qaydga qo&apos;shing</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
+        <source>Add to note</source>
+        <translation>Izohga qo&apos;shish</translation>
+    </message>
+    <message>
+        <source>Images that are not used in notes:</source>
+        <translation type="vanished">Izohlarda foydalanilmagan rasmlar:</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <source>Last modified at %1</source>
+        <translation>So‘nggi marta %1 da o‘zgartirilgan</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <source>Delete selected files</source>
+        <translation>Tanlangan fayllarni o&apos;chirish</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation>
+            <numerusform>&lt;strong&gt;%n &lt;/strong&gt; tanlangan fayl o&apos;chirilsinmi?</numerusform>
+            <numerusform>&lt;strong&gt;%n &lt;/strong&gt; tanlangan fayllar yo&apos;q qilinsinmi?</numerusform>
+        </translation>
     </message>
 </context>
 <context>

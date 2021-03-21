@@ -2175,7 +2175,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/archive-remove.svg</normaloff>:/icons/breeze-qownnotes/16x16/archive-remove.svg</iconset>
    </property>
    <property name="text">
-    <string>Manage orphaned image files</string>
+    <string>Manage stored image files</string>
    </property>
   </action>
   <action name="actionTelegram">

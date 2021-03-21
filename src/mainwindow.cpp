@@ -11353,7 +11353,7 @@ void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
 }
 
 /**
- * Shows a dialog to delete orphaned images
+ * Shows a dialog to delete stored images
  */
 void MainWindow::on_actionDelete_orphaned_images_triggered() {
     delete (_storedImagesDialog);

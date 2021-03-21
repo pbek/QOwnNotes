@@ -2351,7 +2351,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2178"/>
-      <source>Manage orphaned image files</source>
+      <source>Manage stored image files</source>
       <translation>Pagdumala sa mga naulahi nga mga file sa imahen</translation>
     </message>
     <message>
@@ -4200,7 +4200,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <name>StoredImagesDialog</name>
     <message>
       <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
-      <source>Orphaned images</source>
+      <source>Stored images</source>
       <translation>Orphaned nga imahe</translation>
     </message>
     <message>

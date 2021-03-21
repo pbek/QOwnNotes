@@ -28,51 +28,65 @@ StoredImagesDialog::StoredImagesDialog(QWidget *parent)
         return;
     }
 
-    QStringList orphanedFiles = mediaDir.entryList(
+    refreshMediaFiles();
+}
+
+StoredImagesDialog::~StoredImagesDialog() { delete ui; }
+
+void StoredImagesDialog::refreshMediaFiles() {
+    QDir mediaDir(NoteFolder::currentMediaPath());
+
+    if (!mediaDir.exists()) {
+        ui->progressBar->setValue(ui->progressBar->maximum());
+        return;
+    }
+
+    QStringList mediaFiles = mediaDir.entryList(
         QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
-    orphanedFiles.removeDuplicates();
+    mediaFiles.removeDuplicates();
 
     QVector<Note> noteList = Note::fetchAll();
     int noteListCount = noteList.count();
 
-    ui->progressBar->setMaximum(noteListCount);
-    ui->progressBar->show();
+    if (_orphanedImagesOnly) {
+        ui->progressBar->setMaximum(noteListCount);
+        ui->progressBar->show();
 
-    Q_FOREACH (Note note, noteList) {
-        QStringList mediaFileList = note.getMediaFileList();
+        Q_FOREACH (Note note, noteList) {
+                QStringList mediaFileList = note.getMediaFileList();
 
-        // remove all found images from the orphaned files list
-        Q_FOREACH (QString fileName, mediaFileList) {
-            orphanedFiles.removeAll(fileName);
-        }
+                // remove all found images from the orphaned files list
+                Q_FOREACH (QString fileName, mediaFileList) {
+                        mediaFiles.removeAll(fileName);
+                    }
 
-        ui->progressBar->setValue(ui->progressBar->value() + 1);
+                ui->progressBar->setValue(ui->progressBar->value() + 1);
+            }
     }
 
     ui->progressBar->hide();
+    ui->fileTreeWidget->clear();
 
-    Q_FOREACH (QString fileName, orphanedFiles) {
-        QTreeWidgetItem *item = new QTreeWidgetItem();
-        item->setText(0, fileName);
-        item->setData(0, Qt::UserRole, fileName);
+    Q_FOREACH (QString fileName, mediaFiles) {
+            auto *item = new QTreeWidgetItem();
+            item->setText(0, fileName);
+            item->setData(0, Qt::UserRole, fileName);
 
-        QString filePath = getFilePath(item);
-        QFileInfo info(filePath);
-        item->setToolTip(
-            0, tr("Last modified at %1").arg(info.lastModified().toString()));
+            QString filePath = getFilePath(item);
+            QFileInfo info(filePath);
+            item->setToolTip(
+                0, tr("Last modified at %1").arg(info.lastModified().toString()));
 
-        ui->fileTreeWidget->addTopLevelItem(item);
-    }
+            ui->fileTreeWidget->addTopLevelItem(item);
+        }
 
     // jump to the first item
-    if (orphanedFiles.count() > 0) {
-        QKeyEvent *event =
+    if (mediaFiles.count() > 0) {
+        auto *event =
             new QKeyEvent(QEvent::KeyPress, Qt::Key_Home, Qt::NoModifier);
         QApplication::postEvent(ui->fileTreeWidget, event);
     }
 }
-
-StoredImagesDialog::~StoredImagesDialog() { delete ui; }
 
 /**
  * Shows the currently selected image
@@ -194,4 +208,9 @@ void StoredImagesDialog::on_insertButton_clicked() {
         textEdit->insertPlainText(imageLink);
         delete item;
     }
+}
+
+void StoredImagesDialog::on_checkBox_toggled(bool checked) {
+    _orphanedImagesOnly = checked;
+    refreshMediaFiles();
 }

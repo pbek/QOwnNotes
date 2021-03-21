@@ -2351,8 +2351,8 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2178"/>
-        <source>Manage orphaned image files</source>
-        <translation type="unfinished">Manage orphaned image files</translation>
+        <source>Manage stored image files</source>
+        <translation type="unfinished">Manage stored image files</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2190"/>
@@ -4188,57 +4188,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
 </context>
 <context>
-    <name>StoredImagesDialog</name>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
-        <source>Orphaned images</source>
-        <translation>Ulilang mga imahe</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="80"/>
-        <source>Delete selected images</source>
-        <translation>Tanggalin ang napiling mga imahe</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="83"/>
-        <source>Delete</source>
-        <translation>Tanggalin</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="94"/>
-        <source>Add selected images to note</source>
-        <translation type="unfinished">Add selected images to note</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="97"/>
-        <source>Add to note</source>
-        <translation type="unfinished">Add to note</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="146"/>
-        <source>Images that are not used in notes:</source>
-        <translation>Mga imahing na hindi ginagamit sa mga tala:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="62"/>
-        <source>Last modified at %1</source>
-        <translation>Huling binago noong %1</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="123"/>
-        <source>Delete selected files</source>
-        <translation>Tanggalin ang napiling mga file</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="124"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-        <translation type="unfinished">
-            <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-            <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-        </translation>
-    </message>
-</context>
-<context>
     <name>OwnCloudService</name>
     <message>
         <location filename="../services/owncloudservice.cpp" line="230"/>
@@ -4473,7 +4422,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3763"/>
+        <location filename="../entities/note.cpp" line="3764"/>
         <source>…and %n more note(s)</source>
         <translation type="unfinished">
             <numerusform>…and %n more note(s)</numerusform>
@@ -7706,6 +7655,66 @@ ang yong mga tala ay manatili ng buo!</translation>
         <source>%1 (%2)</source>
         <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
         <translation type="unfinished">%1 (%2)</translation>
+    </message>
+</context>
+<context>
+    <name>StoredImagesDialog</name>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
+        <source>Stored images</source>
+        <translation>Ulilang mga imahe</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Delete selected images</source>
+        <translation>Tanggalin ang napiling mga imahe</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
+        <source>Delete</source>
+        <translation>Tanggalin</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Only show orphaned images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
+        <source>Add selected images to note</source>
+        <translation type="unfinished">Add selected images to note</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
+        <source>Add to note</source>
+        <translation type="unfinished">Add to note</translation>
+    </message>
+    <message>
+        <source>Images that are not used in notes:</source>
+        <translation type="vanished">Mga imahing na hindi ginagamit sa mga tala:</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <source>Last modified at %1</source>
+        <translation>Huling binago noong %1</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <source>Delete selected files</source>
+        <translation>Tanggalin ang napiling mga file</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation type="unfinished">
+            <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+            <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+        </translation>
     </message>
 </context>
 <context>

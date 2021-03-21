@@ -8,6 +8,8 @@
     - previously a random string was added to the basename to make it unique
     - if the file already exists a number will be added to the basename of the
       file (like `my-image-1.jpg`) and increased until a filename is available
+- instead of the *Orphaned images dialog* there now is the new *Stored images dialog*
+  which also allows managing non-orphaned images (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
 
 ## 21.3.2
 - now the misleading `[Botan Error]  Invalid CBC padding` and `Invalid version or not a cyphertext`

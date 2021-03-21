@@ -2342,7 +2342,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2178"/>
-        <source>Manage orphaned image files</source>
+        <source>Manage stored image files</source>
         <translation>Quản lý tập tin hình ảnh mồ côi</translation>
     </message>
     <message>
@@ -4173,56 +4173,6 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
     </message>
 </context>
 <context>
-    <name>StoredImagesDialog</name>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
-        <source>Orphaned images</source>
-        <translation>Hình ảnh mồ côi</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="80"/>
-        <source>Delete selected images</source>
-        <translation>Xóa hình ảnh đã chọn</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="83"/>
-        <source>Delete</source>
-        <translation>Xóa bỏ</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="94"/>
-        <source>Add selected images to note</source>
-        <translation>Thêm hình ảnh được chọn để ghi chú</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="97"/>
-        <source>Add to note</source>
-        <translation>Thêm vào ghi chú</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="146"/>
-        <source>Images that are not used in notes:</source>
-        <translation>Hình ảnh không được sử dụng trong ghi chú:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.cpp" line="62"/>
-        <source>Last modified at %1</source>
-        <translation>Sửa đổi lần cuối ở %1</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.cpp" line="123"/>
-        <source>Delete selected files</source>
-        <translation>Xóa các tập tin đã chọn</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../dialogs/storedImagesDialog.cpp" line="124"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-        <translation>
-            <numerusform>Xóa (các) tệp đã chọn &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
-        </translation>
-    </message>
-</context>
-<context>
     <name>OwnCloudService</name>
     <message>
         <location filename="../services/owncloudservice.cpp" line="230"/>
@@ -4456,7 +4406,7 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3763"/>
+        <location filename="../entities/note.cpp" line="3764"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>... thêm và %n ghi chú thêm</numerusform>
@@ -7712,6 +7662,65 @@ Ghi chú của bạn sẽ được giữ nguyên!</translation>
         <source>%1 (%2)</source>
         <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
         <translation>%1 (%2)</translation>
+    </message>
+</context>
+<context>
+    <name>StoredImagesDialog</name>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
+        <source>Stored images</source>
+        <translation>Hình ảnh mồ côi</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Delete selected images</source>
+        <translation>Xóa hình ảnh đã chọn</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
+        <source>Delete</source>
+        <translation>Xóa bỏ</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Only show orphaned images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
+        <source>Add selected images to note</source>
+        <translation>Thêm hình ảnh được chọn để ghi chú</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
+        <source>Add to note</source>
+        <translation>Thêm vào ghi chú</translation>
+    </message>
+    <message>
+        <source>Images that are not used in notes:</source>
+        <translation type="vanished">Hình ảnh không được sử dụng trong ghi chú:</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <source>Last modified at %1</source>
+        <translation>Sửa đổi lần cuối ở %1</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <source>Delete selected files</source>
+        <translation>Xóa các tập tin đã chọn</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation>
+            <numerusform>Xóa (các) tệp đã chọn &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        </translation>
     </message>
 </context>
 <context>

@@ -2342,7 +2342,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2178"/>
-        <source>Manage orphaned image files</source>
+        <source>Manage stored image files</source>
         <translation>管理未被採用的圖片</translation>
     </message>
     <message>
@@ -4162,56 +4162,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
 </context>
 <context>
-    <name>StoredImagesDialog</name>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="14"/>
-        <source>Orphaned images</source>
-        <translation>未被採用的圖片</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="80"/>
-        <source>Delete selected images</source>
-        <translation>刪除所選圖片</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="83"/>
-        <source>Delete</source>
-        <translation>刪除</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="94"/>
-        <source>Add selected images to note</source>
-        <translation>加入選取的圖片到筆記中</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="97"/>
-        <source>Add to note</source>
-        <translation>加入至筆記</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.ui" line="146"/>
-        <source>Images that are not used in notes:</source>
-        <translation>未在筆記中使用的圖片：</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.cpp" line="62"/>
-        <source>Last modified at %1</source>
-        <translation>最後於 %1 修改</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedImagesDialog.cpp" line="123"/>
-        <source>Delete selected files</source>
-        <translation>刪除選取的檔案</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../dialogs/storedImagesDialog.cpp" line="124"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-        <translation>
-            <numerusform>刪除&lt;strong&gt;％n &lt;/ strong&gt;個選定的文件？</numerusform>
-        </translation>
-    </message>
-</context>
-<context>
     <name>OwnCloudService</name>
     <message>
         <location filename="../services/owncloudservice.cpp" line="230"/>
@@ -4445,7 +4395,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3763"/>
+        <location filename="../entities/note.cpp" line="3764"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>…以及%n則筆記</numerusform>
@@ -7692,6 +7642,65 @@ Your notes will stay intact!</source>
         <source>%1 (%2)</source>
         <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
         <translation>%1 (%2)</translation>
+    </message>
+</context>
+<context>
+    <name>StoredImagesDialog</name>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
+        <source>Stored images</source>
+        <translation>未被採用的圖片</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Delete selected images</source>
+        <translation>刪除所選圖片</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
+        <source>Delete</source>
+        <translation>刪除</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Only show orphaned images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
+        <source>Add selected images to note</source>
+        <translation>加入選取的圖片到筆記中</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
+        <source>Add to note</source>
+        <translation>加入至筆記</translation>
+    </message>
+    <message>
+        <source>Images that are not used in notes:</source>
+        <translation type="vanished">未在筆記中使用的圖片：</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <source>Last modified at %1</source>
+        <translation>最後於 %1 修改</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <source>Delete selected files</source>
+        <translation>刪除選取的檔案</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+        <translation>
+            <numerusform>刪除&lt;strong&gt;％n &lt;/ strong&gt;個選定的文件？</numerusform>
+        </translation>
     </message>
 </context>
 <context>
