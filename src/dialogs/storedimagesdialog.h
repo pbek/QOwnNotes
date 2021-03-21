@@ -1,6 +1,7 @@
 #pragma once
 
 #include "masterdialog.h"
+#include "entities/note.h"
 
 class QTreeWidgetItem;
 
@@ -33,6 +34,7 @@ class StoredImagesDialog : public MasterDialog {
 private:
     Ui::StoredImagesDialog *ui;
     bool _orphanedImagesOnly = false;
+    QHash<QString, QVector<Note>> _fileNoteList;
 
     static QString getFilePath(QTreeWidgetItem *item);
     void refreshMediaFiles();

@@ -100,10 +100,10 @@
       <item row="5" column="0">
        <widget class="QPushButton" name="insertButton">
         <property name="toolTip">
-         <string>Add selected images to note</string>
+         <string>Add selected images to the current note</string>
         </property>
         <property name="text">
-         <string>Add to note</string>
+         <string>Add to current note</string>
         </property>
         <property name="icon">
          <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
@@ -165,6 +165,55 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
+      <item row="1" column="0">
+       <widget class="QFrame" name="notesFrame">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Used in notes:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTreeWidget" name="noteTreeWidget">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::NoSelection</enum>
+           </property>
+           <property name="rootIsDecorated">
+            <bool>false</bool>
+           </property>
+           <property name="sortingEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="headerHidden">
+            <bool>true</bool>
+           </property>
+           <column>
+            <property name="text">
+             <string notr="true">Note</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
       <item row="0" column="0">
        <widget class="QGraphicsView" name="graphicsView"/>
       </item>

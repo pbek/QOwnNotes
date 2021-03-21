@@ -7633,51 +7633,74 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
-        <source>Delete selected images</source>
-        <translation>删除所选图像</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
-        <source>Delete</source>
-        <translation>删除</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
-        <source>Only show images that are not used in notes</source>
+        <location filename="../dialogs/storedimagesdialog.ui" line="58"/>
+        <source>Find image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Add selected images to the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="106"/>
+        <source>Add to current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="117"/>
+        <source>Delete selected images</source>
+        <translation>删除所选图像</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="120"/>
+        <source>Delete</source>
+        <translation>删除</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="177"/>
+        <source>Used in notes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
         <source>Only show orphaned images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
         <source>Add selected images to note</source>
-        <translation>将所选图像添加到笔记</translation>
+        <translation type="vanished">将所选图像添加到笔记</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
         <source>Add to note</source>
-        <translation>添加到笔记</translation>
+        <translation type="vanished">添加到笔记</translation>
     </message>
     <message>
         <source>Images that are not used in notes:</source>
         <translation type="vanished">在笔记中未使用的图像:</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="84"/>
         <source>Last modified at %1</source>
         <translation>最近修改时间 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="140"/>
+        <source>Path: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="179"/>
         <source>Delete selected files</source>
         <translation>删除所选文件</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="180"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>删除 &lt;strong&gt;%n&lt;/strong&gt; 个所选文件吗?</numerusform>

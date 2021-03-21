@@ -7649,51 +7649,74 @@ Nota anda akan kekal utuh!</translation>
         <translation>Imej-imej yatim piatu</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
-        <source>Delete selected images</source>
-        <translation>Padamkan imej yang dipilih</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
-        <source>Delete</source>
-        <translation>Padam</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
-        <source>Only show images that are not used in notes</source>
+        <location filename="../dialogs/storedimagesdialog.ui" line="58"/>
+        <source>Find image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Add selected images to the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="106"/>
+        <source>Add to current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="117"/>
+        <source>Delete selected images</source>
+        <translation>Padamkan imej yang dipilih</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="120"/>
+        <source>Delete</source>
+        <translation>Padam</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="177"/>
+        <source>Used in notes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
         <source>Only show orphaned images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
         <source>Add selected images to note</source>
-        <translation>Tambah imej yang dipilih untuk diperhatikan</translation>
+        <translation type="vanished">Tambah imej yang dipilih untuk diperhatikan</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
         <source>Add to note</source>
-        <translation>Tambah perhatian</translation>
+        <translation type="vanished">Tambah perhatian</translation>
     </message>
     <message>
         <source>Images that are not used in notes:</source>
         <translation type="vanished">Imej yang tidak digunakan dalam nota:</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="84"/>
         <source>Last modified at %1</source>
         <translation>Terakhir diubah suai pada %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="140"/>
+        <source>Path: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="179"/>
         <source>Delete selected files</source>
         <translation>Padam fail yang dipilih</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="180"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Padamkan &lt;strong&gt;%n&lt;/ strong&gt; fail yang dipilih?</numerusform>

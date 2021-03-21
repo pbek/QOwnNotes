@@ -7793,51 +7793,74 @@ Vaše beležke bodo ostale nedotaknjene!</translation>
         <translation>Sirote slike</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
-        <source>Delete selected images</source>
-        <translation>Izbrišite izbrane slike</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
-        <source>Delete</source>
-        <translation>Izbrisati</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
-        <source>Only show images that are not used in notes</source>
+        <location filename="../dialogs/storedimagesdialog.ui" line="58"/>
+        <source>Find image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Add selected images to the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="106"/>
+        <source>Add to current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="117"/>
+        <source>Delete selected images</source>
+        <translation>Izbrišite izbrane slike</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="120"/>
+        <source>Delete</source>
+        <translation>Izbrisati</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="177"/>
+        <source>Used in notes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
         <source>Only show orphaned images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
         <source>Add selected images to note</source>
-        <translation>Dodaj izbrane slike omeniti</translation>
+        <translation type="vanished">Dodaj izbrane slike omeniti</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
         <source>Add to note</source>
-        <translation>Dodati opomba</translation>
+        <translation type="vanished">Dodati opomba</translation>
     </message>
     <message>
         <source>Images that are not used in notes:</source>
         <translation type="vanished">Slike, ki se ne uporabljajo v opombe:</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="84"/>
         <source>Last modified at %1</source>
         <translation>Zadnje spremembe na %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="140"/>
+        <source>Path: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="179"/>
         <source>Delete selected files</source>
         <translation>Izbriši izbrane datoteke</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="180"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Ali želite izbrisati &lt;strong&gt;%n &lt;/strong&gt; izbrane datoteke?</numerusform>

@@ -12,6 +12,7 @@
   which also allows managing non-orphaned images (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
     - you are now also able to search for images by name
     - the file size of the images will now also be shown in the tooltip of the file list
+    - if notes are using the current image a list of those notes will be shown
 
 ## 21.3.2
 - now the misleading `[Botan Error]  Invalid CBC padding` and `Invalid version or not a cyphertext`

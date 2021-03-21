@@ -7757,51 +7757,74 @@ Fanfaidh do nótaí slán!</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
-        <source>Delete selected images</source>
-        <translation>Scrios íomhánna roghnaithe</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
-        <source>Delete</source>
-        <translation>Scrios</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
-        <source>Only show images that are not used in notes</source>
+        <location filename="../dialogs/storedimagesdialog.ui" line="58"/>
+        <source>Find image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Add selected images to the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="106"/>
+        <source>Add to current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="117"/>
+        <source>Delete selected images</source>
+        <translation>Scrios íomhánna roghnaithe</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="120"/>
+        <source>Delete</source>
+        <translation>Scrios</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="177"/>
+        <source>Used in notes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
         <source>Only show orphaned images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
         <source>Add selected images to note</source>
-        <translation>Cuir íomhánna roghnaithe le tabhairt faoi deara</translation>
+        <translation type="vanished">Cuir íomhánna roghnaithe le tabhairt faoi deara</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
         <source>Add to note</source>
-        <translation>Cuir le nóta é</translation>
+        <translation type="vanished">Cuir le nóta é</translation>
     </message>
     <message>
         <source>Images that are not used in notes:</source>
         <translation type="vanished">Íomhánna nach n-úsáidtear i nótaí:</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="84"/>
         <source>Last modified at %1</source>
         <translation>Modhnaithe is déanaí ag %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="140"/>
+        <source>Path: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="179"/>
         <source>Delete selected files</source>
         <translation>Scrios comhaid roghnaithe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="180"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Scrios &lt;strong&gt;%n&lt;/strong&gt; chomhad roghnaithe?</numerusform>

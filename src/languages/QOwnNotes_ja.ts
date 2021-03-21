@@ -7680,51 +7680,74 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
-        <source>Delete selected images</source>
-        <translation>選択した画像を削除します</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
-        <source>Delete</source>
-        <translation>削除</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="100"/>
-        <source>Only show images that are not used in notes</source>
+        <location filename="../dialogs/storedimagesdialog.ui" line="58"/>
+        <source>Find image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+        <source>Add selected images to the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="106"/>
+        <source>Add to current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="117"/>
+        <source>Delete selected images</source>
+        <translation>選択した画像を削除します</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="120"/>
+        <source>Delete</source>
+        <translation>削除</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="177"/>
+        <source>Used in notes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+        <source>Only show images that are not used in notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
         <source>Only show orphaned images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="72"/>
         <source>Add selected images to note</source>
-        <translation>選択した画像を現在のノートに挿入します</translation>
+        <translation type="vanished">選択した画像を現在のノートに挿入します</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
         <source>Add to note</source>
-        <translation>ノートに挿入</translation>
+        <translation type="vanished">ノートに挿入</translation>
     </message>
     <message>
         <source>Images that are not used in notes:</source>
         <translation type="vanished">ノートで使用されていない画像:</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="78"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="84"/>
         <source>Last modified at %1</source>
         <translation>更新日時: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="137"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="140"/>
+        <source>Path: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="179"/>
         <source>Delete selected files</source>
         <translation>選択ファイルの削除</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="138"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="180"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>選択した&lt;strong&gt;%n&lt;/strong&gt;つのファイルを削除しますか？</numerusform>

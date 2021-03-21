@@ -2,6 +2,7 @@
 
 #include <entities/note.h>
 #include <entities/notefolder.h>
+#include <entities/notesubfolder.h>
 #include <mainwindow.h>
 #include <utils/gui.h>
 
@@ -45,24 +46,29 @@ void StoredImagesDialog::refreshMediaFiles() {
         QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
     mediaFiles.removeDuplicates();
 
-    if (_orphanedImagesOnly) {
-        QVector<Note> noteList = Note::fetchAll();
-        int noteListCount = noteList.count();
+    QVector<Note> noteList = Note::fetchAll();
+    int noteListCount = noteList.count();
+    _fileNoteList.clear();
 
-        ui->progressBar->setMaximum(noteListCount);
-        ui->progressBar->show();
+    ui->progressBar->setMaximum(noteListCount);
+    ui->progressBar->show();
 
-        Q_FOREACH (Note note, noteList) {
-                QStringList mediaFileList = note.getMediaFileList();
+    Q_FOREACH (Note note, noteList) {
+            QStringList mediaFileList = note.getMediaFileList();
+            // we don't want to keep the whole note text
+            note.setNoteText("");
 
-                // remove all found images from the orphaned files list
-                Q_FOREACH (QString fileName, mediaFileList) {
+            // remove all found images from the orphaned files list
+            Q_FOREACH (QString fileName, mediaFileList) {
+                    if (_orphanedImagesOnly) {
                         mediaFiles.removeAll(fileName);
                     }
 
-                ui->progressBar->setValue(ui->progressBar->value() + 1);
-            }
-    }
+                    _fileNoteList[fileName].append(note);
+                }
+
+            ui->progressBar->setValue(ui->progressBar->value() + 1);
+        }
 
     ui->progressBar->hide();
     ui->fileTreeWidget->clear();
@@ -82,6 +88,9 @@ void StoredImagesDialog::refreshMediaFiles() {
             ui->fileTreeWidget->addTopLevelItem(item);
         }
 
+    // Re-apply search text
+    on_searchLineEdit_textChanged(ui->searchLineEdit->text());
+
     // jump to the first item
     if (mediaFiles.count() > 0) {
         auto *event =
@@ -100,6 +109,12 @@ void StoredImagesDialog::on_fileTreeWidget_currentItemChanged(
     QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
 
+    if (current == nullptr) {
+        ui->notesFrame->hide();
+
+        return;
+    }
+
     auto *scene = new QGraphicsScene(this);
     QString filePath = getFilePath(current);
 
@@ -108,6 +123,31 @@ void StoredImagesDialog::on_fileTreeWidget_currentItemChanged(
     }
 
     ui->graphicsView->setScene(scene);
+
+    // Show which notes use the current file
+    const QString fileName = current->text(0);
+    if (_fileNoteList.contains(fileName)) {
+        auto notes = _fileNoteList[fileName];
+        ui->noteTreeWidget->clear();
+
+        Q_FOREACH(Note note, notes) {
+                QTreeWidgetItem *item = new QTreeWidgetItem();
+                item->setText(0, note.getName());
+                item->setData(0, Qt::UserRole, note.getId());
+
+                NoteSubFolder noteSubFolder = note.getNoteSubFolder();
+                if (noteSubFolder.isFetched()) {
+                    item->setToolTip(0, tr("Path: %1").arg(
+                        noteSubFolder.relativePath()));
+                }
+
+                ui->noteTreeWidget->addTopLevelItem(item);
+            }
+
+        ui->notesFrame->show();
+    } else {
+        ui->notesFrame->hide();
+    }
 }
 
 /**
