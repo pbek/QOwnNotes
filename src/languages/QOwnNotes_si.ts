@@ -7750,13 +7750,48 @@ Your notes will stay intact!</source>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="329"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="320"/>
+        <source>File doesn&apos;t exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="321"/>
+        <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="333"/>
+        <source>File exists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="334"/>
+        <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="344"/>
+        <source>File renaming failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="345"/>
+        <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="367"/>
         <source>&amp;Rename image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="330"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="368"/>
         <source>&amp;Delete images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="369"/>
+        <source>&amp;Add images to current note</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
