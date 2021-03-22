@@ -2111,7 +2111,7 @@ QString Utils::Misc::findAvailableFileName(const QString &fileName,
                                            const QString &overrideSuffix) {
     const QFileInfo fileInfo(fileName);
     QString baseName = fileInfo.baseName();
-    baseName.truncate(32);
+    baseName.truncate(200);
     const QString newSuffix = fileInfo.suffix();
     QString newBaseName = baseName;
     QString newFileName = newBaseName + QStringLiteral(".") + newSuffix;

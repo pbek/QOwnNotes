@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.3.4
+- the filename-clipping of the basename of inserted images was increased to
+  200 characters (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+
 ## 21.3.3
 - added a note about creating an app password in the *Nextcloud / ownCloud settings*
 - if you now insert an image or attachment directly from a file the original
