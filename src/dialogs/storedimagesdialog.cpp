@@ -362,9 +362,11 @@ void StoredImagesDialog::on_fileTreeWidget_customContextMenuRequested(
     // allow these actions only if items are selected
     QAction *renameAction = nullptr;
     QAction *removeAction = nullptr;
+    QAction *addAction = nullptr;
     if (hasSelected) {
         renameAction = menu.addAction(tr("&Rename image"));
         removeAction = menu.addAction(tr("&Delete images"));
+        addAction = menu.addAction(tr("&Add images to current note"));
     }
 
     QAction *selectedItem = menu.exec(globalPos);
@@ -379,5 +381,7 @@ void StoredImagesDialog::on_fileTreeWidget_customContextMenuRequested(
         on_deleteButton_clicked();
     } else if (selectedItem == renameAction) {
         ui->fileTreeWidget->editItem(item);
+    } else if (selectedItem == addAction) {
+        on_insertButton_clicked();
     }
 }
