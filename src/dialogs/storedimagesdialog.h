@@ -31,6 +31,16 @@ class StoredImagesDialog : public MasterDialog {
 
     void on_searchLineEdit_textChanged(const QString &arg1);
 
+    void on_fileTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
+    void on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
+    void on_refreshButton_clicked();
+
+    void on_fileTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
+
+    void on_fileTreeWidget_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::StoredImagesDialog *ui;
     bool _orphanedImagesOnly = false;

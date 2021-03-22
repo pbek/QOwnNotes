@@ -3,6 +3,12 @@
 ## 21.3.4
 - the filename-clipping of the basename of inserted images was increased to
   200 characters (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+- more improvements to the new *Stored images dialog* have been made
+  (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+    - there now is a *Refresh* button to reload the image file list
+    - you can now also double-click on an item in the image list to insert it
+      into the current note
+  - you can now double-click on an item in the note list to open the note
 
 ## 21.3.3
 - added a note about creating an app password in the *Nextcloud / ownCloud settings*

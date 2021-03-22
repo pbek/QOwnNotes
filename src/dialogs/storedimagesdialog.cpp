@@ -8,6 +8,7 @@
 
 #include <QDebug>
 #include <QDir>
+#include <QMenu>
 #include <QFileInfo>
 #include <QGraphicsPixmapItem>
 #include <QKeyEvent>
@@ -21,6 +22,7 @@ StoredImagesDialog::StoredImagesDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::StoredImagesDialog) {
     ui->setupUi(this);
     ui->fileTreeWidget->installEventFilter(this);
+    ui->noteTreeWidget->installEventFilter(this);
 
     QDir mediaDir(NoteFolder::currentMediaPath());
 
@@ -77,6 +79,7 @@ void StoredImagesDialog::refreshMediaFiles() {
             auto *item = new QTreeWidgetItem();
             item->setText(0, fileName);
             item->setData(0, Qt::UserRole, fileName);
+            item->setFlags(item->flags() | Qt::ItemIsEditable);
 
             QString filePath = getFilePath(item);
             QFileInfo info(filePath);
@@ -261,4 +264,83 @@ void StoredImagesDialog::on_searchLineEdit_textChanged(const QString &arg1) {
     Utils::Gui::searchForTextInTreeWidget(ui->fileTreeWidget, arg1,
       Utils::Gui::TreeWidgetSearchFlags(
         Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
+}
+
+/**
+ * Insert the image into the current note on double click on file list
+ *
+ * @param item
+ * @param column
+ */
+void StoredImagesDialog::on_fileTreeWidget_itemDoubleClicked(
+    QTreeWidgetItem *item, int column) {
+    Q_UNUSED(item)
+    Q_UNUSED(column)
+    on_insertButton_clicked();
+}
+
+/**
+ * Open the selected note on double click on note list
+ *
+ * @param item
+ * @param column
+ */
+void StoredImagesDialog::on_noteTreeWidget_itemDoubleClicked(
+        QTreeWidgetItem *item, int column) {
+    Q_UNUSED(column)
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow == Q_NULLPTR) {
+        Q_UNUSED(item)
+        return;
+    }
+
+    mainWindow->setCurrentNoteFromNoteId(item->data(0, Qt::UserRole).toInt());
+}
+
+void StoredImagesDialog::on_refreshButton_clicked() {
+    refreshMediaFiles();
+}
+
+void StoredImagesDialog::on_fileTreeWidget_itemChanged(
+        QTreeWidgetItem *item, int column) {
+    Q_UNUSED(column)
+
+    QString fileName = item->data(0, Qt::UserRole).toString();
+    QString newFileName = item->text(0);
+
+    // TODO: implement renaming
+    qDebug() << __func__ << " - 'fileName': " << fileName;
+    qDebug() << __func__ << " - 'newFileName': " << newFileName;
+}
+
+void StoredImagesDialog::on_fileTreeWidget_customContextMenuRequested(
+    const QPoint &pos) {
+    // don't open the most of the context menu if no tags are selected
+    const bool hasSelected = ui->fileTreeWidget->selectedItems().count() > 0;
+
+    const QPoint globalPos = ui->fileTreeWidget->mapToGlobal(pos);
+    QMenu menu;
+
+    // allow these actions only if items are selected
+    QAction *renameAction = nullptr;
+    QAction *removeAction = nullptr;
+    if (hasSelected) {
+        renameAction = menu.addAction(tr("&Rename image"));
+        removeAction = menu.addAction(tr("&Delete images"));
+    }
+
+    QAction *selectedItem = menu.exec(globalPos);
+
+    if (selectedItem == nullptr) {
+        return;
+    }
+
+    QTreeWidgetItem *item = ui->fileTreeWidget->currentItem();
+
+    if (selectedItem == removeAction) {
+        on_deleteButton_clicked();
+    } else if (selectedItem == renameAction) {
+        ui->fileTreeWidget->editItem(item);
+    }
 }
