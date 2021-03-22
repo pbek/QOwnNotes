@@ -9,6 +9,8 @@
     - you can now also double-click on an item in the image list to insert it
       into the current note
   - you can now double-click on an item in the note list to open the note
+  - a context menu was added for the image file list
+  - you are now able to rename image files with the context menu or by pressing <kbd>F2</kbd>
 
 ## 21.3.3
 - added a note about creating an app password in the *Nextcloud / ownCloud settings*

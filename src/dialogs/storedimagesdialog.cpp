@@ -308,10 +308,47 @@ void StoredImagesDialog::on_fileTreeWidget_itemChanged(
 
     QString fileName = item->data(0, Qt::UserRole).toString();
     QString newFileName = item->text(0);
-
-    // TODO: implement renaming
+    const QSignalBlocker blocker(ui->fileTreeWidget);
+    Q_UNUSED(blocker)
     qDebug() << __func__ << " - 'fileName': " << fileName;
     qDebug() << __func__ << " - 'newFileName': " << newFileName;
+
+    const QString filePath = NoteFolder::currentMediaPath() +
+                             QDir::separator() + fileName;
+    QFile file(filePath);
+    if (!file.exists()) {
+        QMessageBox::warning(this, tr("File doesn't exist"),
+                             tr("The file <strong>%1</strong> doesn't exist, "
+                                "you cannot rename it!").arg(filePath));
+        item->setText(0, fileName);
+
+        return;
+    }
+
+    const QString newFilePath = NoteFolder::currentMediaPath() +
+                                QDir::separator() + newFileName;
+    QFile newFile(newFilePath);
+
+    if (newFile.exists()) {
+        QMessageBox::warning(this, tr("File exists"),
+                             tr("File <strong>%1</strong> already exists, "
+                                "you need to remove it before choosing "
+                                "<strong>%2</strong> as new filename!")
+                                 .arg(newFilePath, newFileName));
+        item->setText(0, fileName);
+
+        return;
+    }
+
+    if (!file.rename(newFilePath)) {
+        QMessageBox::warning(this, tr("File renaming failed"),
+                             tr("Renaming of file <strong>%1</strong> failed!").arg(filePath));
+        item->setText(0, fileName);
+
+        return;
+    }
+
+    // TODO: Search for file in notes and rename image links
 }
 
 void StoredImagesDialog::on_fileTreeWidget_customContextMenuRequested(
