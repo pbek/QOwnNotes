@@ -139,7 +139,7 @@
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) is the **open source** (GPL) plain-text file **markdown note taking** application for **GNU/Linux**, **macOS** and **Windows**, that (optionally) works together with the [**notes application**](https://github.com/nextcloud/notes) of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
+[QOwnNotes](https://www.qownnotes.org/) ist die **Open Source** (GPL) -Nur-Text-Datei-**Markdown-Notizanwendung** für **GNU/ Linux**, **MacOS** und **Windows**, die (optional) mit der [**Notizenanwendung**](https://github.com/nextcloud/notes) von [Nextcloud](https://nextcloud.com/) und [ownCloud](https://owncloud.org/) zusammenarbeitet.
 
 ::: tip
 Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutieren, zu lernen und sich mit der QOwnNotes-Community zu verbinden.
@@ -148,37 +148,37 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 [Verstehen Sie das Konzept von QOwnNotes](concept.md)
 
 ## Eigenschaften
-- You can use your **existing text or markdown files**, no need for an import most of the times
-- **Evernote import**
-- **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
-- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
-- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
-- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
-- **External changes** of note files are **watched** (notes or note list are reloaded)
-- Support for **hierarchical note tagging** and **note subfolders**
-- Optional **encryption** of notes (AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
-- The **notes folder** can be **freely chosen** (multiple note folders can be used)
-- **Sub-string searching** of notes is possible and search results are highlighted in the notes
-- [Browser extension](browser-extension.md) to add notes from the selected text, make screenshots or manage your bookmarks
-- [**Spellchecking**](../editor/spellchecking.md) support
-- **Portable mode** for carrying QOwnNotes around on USB sticks
-- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
-- **Vim mode**
+- Sie können Ihre **vorhandenen Text- oder Markdown-Dateien** verwenden, ohne dass ein Import erforderlich ist
+- **Evernote-Import**
+- **Kompatibel** mit der Notes-Anwendung von **Nextcloud / ownCloud** und **mobile** und Nextcloud Text
+- Unterstützung für **das Teilen von Notizen** auf Ihrem **ownCloud** / **Nextcloud** -Server
+- Verwalten Sie Ihre Nextcloud / ownCloud **Aufgabenlisten** (**Nextcloud-Aufgaben** oder **Tasks Plus** / **Calendar Plus**) oder verwenden Sie einen anderen **CalDAV-Server**, mit dem Sie Ihre Aufgaben synchronisieren können
+- Ältere **Versionen** Ihrer Notizen können von Ihrem **Nextcloud / ownCloud **Server** wiederhergestellt werden**
+- **Gelöschten Notizen** können von Ihrem **Nextcloud / ownCloud** Server **wiederhergestellt werden**
+- **Externe Änderungen** von Notizdateien werden **überwacht** (Notizen oder Notizliste werden neu geladen)
+- Unterstützung für **hierarchische Notizkennzeichnung** und **Notizunterordner**
+- Optionale **Verschlüsselung** von Notizen (AES-256 ist integriert oder Sie können benutzerdefinierte Verschlüsselungsmethoden wie **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) oder **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) verwenden.)
+- Der **Notizenordner** kann **frei gewählt werden** (mehrere Notizordner können verwendet werden)
+- **Die Suche nach Teilzeichenfolgen** von Notizen ist möglich, und die Suchergebnisse werden in den Notizen hervorgehoben
+- [Browser-Erweiterung](browser-extension.md), um Notizen aus dem ausgewählten Text hinzuzufügen, Screenshots zu erstellen oder Ihre Lesezeichen zu verwalten
+- Unterstützung für [**Rechtschreibprüfung**](../editor/spellchecking.md)
+- **Tragbarer Modus** zum Mitnehmen von QOwnNotes auf USB-Sticks
+- **Skriptunterstützung** und ein [**Online-Skript-Repository**](https://github.com/qownnotes/scripts), in dem Sie Skripte in der Anwendung installieren können
+- **Vim-Modus**
 
 
-## Appearance
-- **Dark mode theme support**
-- **Theming support** for the **markdown syntax highlighting**
-- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
-- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
-- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
-- **Differences** between current note and externally changed note are **showed** in a dialog
-- **Markdown highlighting** of notes and a **markdown preview mode**
+## Aussehen
+- **Unterstützung für Schemata im Dunkelmodus**
+- **Schemata-Unterstützung** für die Hervorhebung der **Markdown-Syntax**
+- Alle **Panels können platziert werden, wo immer Sie möchten**, sie können sogar **schweben** oder **gestapelt werden** (vollständig andockbar).
+- Unterstützung für **Freedesktop-Schemasymbole**. Sie können QOwnNotes mit Ihren **originalen Desktop-Symbolen** und mit Ihrem bevorzugten **dunklen Desktop-Design** verwenden
+- **Ablenkungsfreier Modus**, **Vollbildmodus** und **Schreibmaschinenmodus**
+- **Unterschiede** zwischen aktueller Notiz und extern geänderter Notiz werden in einem Dialog **angezeigt**
+- **Markdown-Hervorhebung** von Notizen und ein **Markdown-Vorschaumodus**
 
-## Languages
-- **Available in more than 60 different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
-  - [Your help](../contributing/translation.md) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
+## Sprachen
+- **Verfügbar in mehr als 60 verschiedenen Sprachen** wie Englisch, Deutsch, Französisch, Polnisch, Chinesisch, Japanisch, Russisch, Portugiesisch, Ungarisch, Niederländisch und Spanisch
+  - [Ihre Hilfe](../contributing/translation.md) wird sehr geschätzt, um diese Übersetzungen zu verbessern oder QOwnNotes in mehr Sprachen zu übersetzen
 
 <style>
 .sheet {

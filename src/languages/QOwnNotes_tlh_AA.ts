@@ -7680,67 +7680,117 @@ Your notes will stay intact!</translation>
       <translation type="unfinished">Stored images</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.ui" line="58"/>
+      <location filename="../dialogs/storedimagesdialog.ui" line="68"/>
       <source>Find image</source>
       <translation type="unfinished">Find image</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.ui" line="103"/>
+      <location filename="../dialogs/storedimagesdialog.ui" line="102"/>
       <source>Add selected images to the current note</source>
       <translation type="unfinished">Add selected images to the current note</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.ui" line="106"/>
+      <location filename="../dialogs/storedimagesdialog.ui" line="105"/>
       <source>Add to current note</source>
       <translation type="unfinished">Add to current note</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.ui" line="117"/>
+      <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
       <source>Delete selected images</source>
       <translation type="unfinished">Delete selected images</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.ui" line="120"/>
+      <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
       <source>Delete</source>
       <translation type="unfinished">Delete</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.ui" line="177"/>
+      <location filename="../dialogs/storedimagesdialog.ui" line="147"/>
+      <source>Refresh</source>
+      <translation type="unfinished">Refresh</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/storedimagesdialog.ui" line="194"/>
       <source>Used in notes:</source>
       <translation type="unfinished">Used in notes:</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.ui" line="86"/>
+      <location filename="../dialogs/storedimagesdialog.ui" line="137"/>
       <source>Only show images that are not used in notes</source>
       <translation type="unfinished">Only show images that are not used in notes</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.ui" line="89"/>
+      <location filename="../dialogs/storedimagesdialog.ui" line="140"/>
       <source>Only show orphaned images</source>
       <translation type="unfinished">Only show orphaned images</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.cpp" line="84"/>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="87"/>
       <source>Last modified at %1</source>
       <translation type="unfinished">Last modified at %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.cpp" line="140"/>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="143"/>
       <source>Path: %1</source>
       <translation type="unfinished">Path: %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/storedimagesdialog.cpp" line="179"/>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="182"/>
       <source>Delete selected files</source>
       <translation type="unfinished">Delete selected files</translation>
     </message>
     <message numerus="yes">
-      <location filename="../dialogs/storedimagesdialog.cpp" line="180"/>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="183"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation type="unfinished">
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
       </translation>
+    </message>
+    <message>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="320"/>
+      <source>File doesn't exist</source>
+      <translation type="unfinished">File doesn't exist</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="321"/>
+      <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+      <translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="333"/>
+      <source>File exists</source>
+      <translation type="unfinished">File exists</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="334"/>
+      <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
+      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="344"/>
+      <source>File renaming failed</source>
+      <translation type="unfinished">File renaming failed</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="345"/>
+      <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+      <translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="367"/>
+      <source>&amp;Rename image</source>
+      <translation type="unfinished">&amp;Rename image</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="368"/>
+      <source>&amp;Delete images</source>
+      <translation type="unfinished">&amp;Delete images</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/storedimagesdialog.cpp" line="369"/>
+      <source>&amp;Add images to current note</source>
+      <translation type="unfinished">&amp;Add images to current note</translation>
     </message>
   </context>
   <context>
