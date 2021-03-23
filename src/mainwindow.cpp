@@ -2195,7 +2195,7 @@ bool MainWindow::addNoteToNoteTreeWidget(const Note &note,
 
     // add a note item to the tree
     auto *noteItem = new QTreeWidgetItem();
-    setTreeWidgetItemToolTipForNote(noteItem, note);
+    Utils::Gui::setTreeWidgetItemToolTipForNote(noteItem, note);
     noteItem->setText(0, name);
     noteItem->setData(0, Qt::UserRole, note.getId());
     noteItem->setData(0, Qt::UserRole + 1, NoteType);
@@ -2297,35 +2297,6 @@ QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
     }
 
     return item;
-}
-
-/**
- * Sets the tree widget tooltip for a note
- */
-void MainWindow::setTreeWidgetItemToolTipForNote(
-    QTreeWidgetItem *item, const Note &note,
-    QDateTime *overrideFileLastModified) {
-    if (item == nullptr) {
-        return;
-    }
-
-    QDateTime modified = note.getFileLastModified();
-    QDateTime *fileLastModified = (overrideFileLastModified != nullptr)
-                                      ? overrideFileLastModified
-                                      : &modified;
-
-    QString toolTipText =
-        tr("<strong>%1</strong><br />last modified: %2")
-            .arg(note.getFileName(), fileLastModified->toString());
-
-    NoteSubFolder noteSubFolder = note.getNoteSubFolder();
-    if (noteSubFolder.isFetched()) {
-        toolTipText += tr("<br />path: %1").arg(noteSubFolder.relativePath());
-    }
-
-    item->setToolTip(0, toolTipText);
-
-    // TODO: handle item widget too
 }
 
 /**
@@ -3714,14 +3685,14 @@ void MainWindow::setCurrentNoteFromNoteId(const int noteId) {
  * Reloads the current note by id
  * This is useful when the path or filename of the current note changed
  */
-void MainWindow::reloadCurrentNoteByNoteId() {
+void MainWindow::reloadCurrentNoteByNoteId(bool updateNoteText) {
     // get current cursor position
     auto cursor = activeNoteTextEdit()->textCursor();
     const int pos = cursor.position();
 
     // update the current note
     currentNote = Note::fetch(currentNote.getId());
-    setCurrentNote(std::move(currentNote), false);
+    setCurrentNote(std::move(currentNote), updateNoteText);
 
     // restore old cursor position
     cursor.setPosition(pos);
@@ -5593,8 +5564,8 @@ void MainWindow::handleNoteTextChanged() {
     Q_UNUSED(blocker)
 
     // update the note list tooltip of the note
-    setTreeWidgetItemToolTipForNote(ui->noteTreeWidget->currentItem(),
-                                    currentNote, &currentNoteLastEdited);
+    Utils::Gui::setTreeWidgetItemToolTipForNote(
+        ui->noteTreeWidget->currentItem(), currentNote, &currentNoteLastEdited);
 }
 
 void MainWindow::on_action_Quit_triggered() {

@@ -191,7 +191,7 @@ class MainWindow : public QMainWindow {
 
     Q_INVOKABLE QString getWorkspaceUuid(const QString &workspaceName);
 
-    Q_INVOKABLE void reloadCurrentNoteByNoteId();
+    Q_INVOKABLE void reloadCurrentNoteByNoteId(bool updateNoteText = false);
 
     Q_INVOKABLE QStringList getWorkspaceUuidList();
 
@@ -219,6 +219,8 @@ class MainWindow : public QMainWindow {
     void allowNoteEditing();
 
     void disallowNoteEditing();
+
+    void openCurrentNoteInTab();
 
    private slots:
 
@@ -645,8 +647,6 @@ class MainWindow : public QMainWindow {
 
     void on_noteEditTabWidget_tabCloseRequested(int index);
 
-    void openCurrentNoteInTab();
-
     void on_actionPrevious_note_tab_triggered();
 
     void on_actionNext_note_tab_triggered();
@@ -918,10 +918,6 @@ private:
     void initEditorSoftWrap();
 
     bool isToolbarVisible();
-
-    static void setTreeWidgetItemToolTipForNote(
-        QTreeWidgetItem *item, const Note &note,
-        QDateTime *overrideFileLastModified = nullptr);
 
     QTreeWidgetItem *firstVisibleNoteTreeWidgetItem();
 

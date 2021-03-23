@@ -989,3 +989,33 @@ bool Utils::Gui::isTabWidgetTabSticky(QTabWidget *tabWidget, int index) {
 
     return widget->property("sticky").toBool();
 }
+
+/**
+ * Sets the tree widget tooltip for a note
+ */
+void Utils::Gui::setTreeWidgetItemToolTipForNote(
+    QTreeWidgetItem *item, const Note &note,
+    QDateTime *overrideFileLastModified) {
+    if (item == nullptr) {
+        return;
+    }
+
+    QDateTime modified = note.getFileLastModified();
+    QDateTime *fileLastModified = (overrideFileLastModified != nullptr)
+                                  ? overrideFileLastModified
+                                  : &modified;
+
+    QString toolTipText =
+        QObject::tr("<strong>%1</strong><br />last modified: %2")
+            .arg(note.getFileName(), fileLastModified->toString());
+
+    NoteSubFolder noteSubFolder = note.getNoteSubFolder();
+    if (noteSubFolder.isFetched()) {
+        toolTipText += QObject::tr("<br />path: %1").arg(
+            noteSubFolder.relativePath());
+    }
+
+    item->setToolTip(0, toolTipText);
+
+    // TODO: handle item widget too
+}

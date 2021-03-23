@@ -109,6 +109,8 @@ class Note {
 
     friend QDebug operator<<(QDebug dbg, const Note &note);
 
+    bool operator==(const Note &note) const;
+
     void createFromFile(QFile &file, int noteSubFolderId = 0,
                         bool withNoteNameHook = false);
 

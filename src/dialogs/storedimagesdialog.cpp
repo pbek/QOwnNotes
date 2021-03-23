@@ -13,6 +13,7 @@
 #include <QGraphicsPixmapItem>
 #include <QKeyEvent>
 #include <QTreeWidgetItem>
+#include <QTimer>
 #include <QtWidgets/QMessageBox>
 
 #include "ui_storedimagesdialog.h"
@@ -60,13 +61,15 @@ void StoredImagesDialog::refreshMediaFiles() {
             // we don't want to keep the whole note text
             note.setNoteText("");
 
-            // remove all found images from the orphaned files list
             Q_FOREACH (QString fileName, mediaFileList) {
+                    // remove all found images from the files list if _orphanedImagesOnly is enabled
                     if (_orphanedImagesOnly) {
                         mediaFiles.removeAll(fileName);
                     }
 
-                    _fileNoteList[fileName].append(note);
+                    if (!_fileNoteList[fileName].contains(note)) {
+                        _fileNoteList[fileName].append(note);
+                    }
                 }
 
             ui->progressBar->setValue(ui->progressBar->value() + 1);
@@ -94,6 +97,8 @@ void StoredImagesDialog::refreshMediaFiles() {
     // Re-apply search text
     on_searchLineEdit_textChanged(ui->searchLineEdit->text());
 
+    ui->fileTreeWidget->sortItems(0, Qt::AscendingOrder);
+
     // jump to the first item
     if (mediaFiles.count() > 0) {
         auto *event =
@@ -110,7 +115,13 @@ void StoredImagesDialog::refreshMediaFiles() {
  */
 void StoredImagesDialog::on_fileTreeWidget_currentItemChanged(
     QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    Q_UNUSED(current);
     Q_UNUSED(previous);
+    loadCurrentFileDetails();
+}
+
+void StoredImagesDialog::loadCurrentFileDetails() {
+    QTreeWidgetItem *current = ui->fileTreeWidget->currentItem();
 
     if (current == nullptr) {
         ui->notesFrame->hide();
@@ -134,9 +145,10 @@ void StoredImagesDialog::on_fileTreeWidget_currentItemChanged(
         ui->noteTreeWidget->clear();
 
         Q_FOREACH(Note note, notes) {
-                QTreeWidgetItem *item = new QTreeWidgetItem();
+                auto *item = new QTreeWidgetItem();
                 item->setText(0, note.getName());
                 item->setData(0, Qt::UserRole, note.getId());
+                Utils::Gui::setTreeWidgetItemToolTipForNote(item, note);
 
                 NoteSubFolder noteSubFolder = note.getNoteSubFolder();
                 if (noteSubFolder.isFetched()) {
@@ -182,7 +194,7 @@ void StoredImagesDialog::on_deleteButton_clicked() {
     if (Utils::Gui::question(this, tr("Delete selected files"),
                              tr("Delete <strong>%n</strong> selected file(s)?",
                                 "", selectedItemsCount),
-                             QStringLiteral("delete-files")) !=
+                             QStringLiteral("delete-image-files")) !=
         QMessageBox::Yes) {
         return;
     }
@@ -224,14 +236,11 @@ bool StoredImagesDialog::eventFilter(QObject *obj, QEvent *event) {
 }
 
 void StoredImagesDialog::on_insertButton_clicked() {
-#ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
+
     if (mainWindow == Q_NULLPTR) {
         return;
     }
-#else
-    return;
-#endif
 
     int selectedItemsCount = ui->fileTreeWidget->selectedItems().count();
 
@@ -251,7 +260,7 @@ void StoredImagesDialog::on_insertButton_clicked() {
         QString imageLink =
             "![" + fileInfo.baseName() + "](" + mediaUrlString + ")\n";
         textEdit->insertPlainText(imageLink);
-        delete item;
+        refreshMediaFiles();
     }
 }
 
@@ -296,6 +305,7 @@ void StoredImagesDialog::on_noteTreeWidget_itemDoubleClicked(
     }
 
     mainWindow->setCurrentNoteFromNoteId(item->data(0, Qt::UserRole).toInt());
+    mainWindow->openCurrentNoteInTab();
 }
 
 void StoredImagesDialog::on_refreshButton_clicked() {
@@ -306,21 +316,21 @@ void StoredImagesDialog::on_fileTreeWidget_itemChanged(
         QTreeWidgetItem *item, int column) {
     Q_UNUSED(column)
 
-    QString fileName = item->data(0, Qt::UserRole).toString();
+    QString oldFileName = item->data(0, Qt::UserRole).toString();
     QString newFileName = item->text(0);
     const QSignalBlocker blocker(ui->fileTreeWidget);
     Q_UNUSED(blocker)
-    qDebug() << __func__ << " - 'fileName': " << fileName;
+    qDebug() << __func__ << " - 'oldFileName': " << oldFileName;
     qDebug() << __func__ << " - 'newFileName': " << newFileName;
 
-    const QString filePath = NoteFolder::currentMediaPath() +
-                             QDir::separator() + fileName;
-    QFile file(filePath);
-    if (!file.exists()) {
+    const QString oldFilePath = NoteFolder::currentMediaPath() +
+                                QDir::separator() + oldFileName;
+    QFile oldFile(oldFilePath);
+    if (!oldFile.exists()) {
         QMessageBox::warning(this, tr("File doesn't exist"),
-                             tr("The file <strong>%1</strong> doesn't exist, "
-                                "you cannot rename it!").arg(filePath));
-        item->setText(0, fileName);
+                             tr("The oldFile <strong>%1</strong> doesn't exist, "
+                                "you cannot rename it!").arg(oldFilePath));
+        item->setText(0, oldFileName);
 
         return;
     }
@@ -335,20 +345,71 @@ void StoredImagesDialog::on_fileTreeWidget_itemChanged(
                                 "you need to remove it before choosing "
                                 "<strong>%2</strong> as new filename!")
                                  .arg(newFilePath, newFileName));
-        item->setText(0, fileName);
+        item->setText(0, oldFileName);
 
         return;
     }
 
-    if (!file.rename(newFilePath)) {
+    if (!oldFile.rename(newFilePath)) {
         QMessageBox::warning(this, tr("File renaming failed"),
-                             tr("Renaming of file <strong>%1</strong> failed!").arg(filePath));
-        item->setText(0, fileName);
+                             tr("Renaming of oldFile <strong>%1</strong> failed!").arg(oldFilePath));
+        item->setText(0, oldFileName);
 
         return;
     }
 
-    // TODO: Search for file in notes and rename image links
+    const auto affectedNotes = _fileNoteList[oldFileName];
+    const int affectedNotesCount = affectedNotes.count();
+
+    if (affectedNotesCount == 0) {
+        refreshAndJumpToFileName(newFileName);
+        return;
+    }
+
+    if (Utils::Gui::questionNoSkipOverride(
+        Q_NULLPTR, QObject::tr("Image oldFile name changed"),
+        QObject::tr("%n note(s) are using this image. Would you also "
+                    "like to rename those images in the notes?",
+                    "", affectedNotesCount),
+        QStringLiteral("note-replace-images")) != QMessageBox::Yes) {
+        refreshAndJumpToFileName(newFileName);
+        return;
+    }
+
+    // search for image with oldFileName in notes and rename image links
+    for (Note note : affectedNotes) {
+        // re-fetch note to get the note text
+        note.refetch();
+
+        QString text = note.getNoteText();
+        text.replace(QRegularExpression(R"((!\[.*?\])\((.*?media\/.*?)()" +
+            QRegularExpression::escape(oldFileName) + ")\\)"),
+     "\\1(\\2" + newFileName + ")");
+
+        note.storeNewText(text);
+    }
+
+    refreshAndJumpToFileName(newFileName);
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != Q_NULLPTR) {
+        // update the current note in case image paths were updated in it
+        mainWindow->reloadCurrentNoteByNoteId(true);
+    }
+}
+
+void StoredImagesDialog::refreshAndJumpToFileName(const QString &fileName) {
+    // refresh the media files to get the new data
+    refreshMediaFiles();
+
+    // look for the item to jump back to
+    auto item = Utils::Gui::getTreeWidgetItemWithUserData(
+        ui->fileTreeWidget, fileName);
+
+    // set the previous item with a timer (didn't work without timer)
+    QTimer::singleShot(0, this, [this, item] () {
+        ui->fileTreeWidget->setCurrentItem(item);
+    });
 }
 
 void StoredImagesDialog::on_fileTreeWidget_customContextMenuRequested(

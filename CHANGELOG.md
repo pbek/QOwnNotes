@@ -3,6 +3,15 @@
 ## 21.3.5
 - the warning `fromIccProfile: failed minimal tag size sanity` is now ignored in
   the *Log panel* (for [#2078](https://github.com/pbek/QOwnNotes/issues/2078))
+- more improvements to the new *Stored images dialog* have been made
+  (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+    - you are now able to to decide to also update the image file names in
+      all notes after renaming an image
+    - the image file list is now sorted alphabetically
+    - there now is an informative tooltip for each note in the note list
+    - when double-clicking on an item in the note list the note will now be
+      opened in a new tab
+    - various issues with duplicate notes and refreshing were fixed
 
 ## 21.3.4
 - the filename-clipping of the basename of inserted images was increased to

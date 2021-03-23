@@ -13,11 +13,11 @@ class StoredImagesDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit StoredImagesDialog(QWidget *parent = 0);
-    ~StoredImagesDialog();
+    explicit StoredImagesDialog(QWidget *parent = nullptr);
+    ~StoredImagesDialog() override;
 
    protected:
-    bool eventFilter(QObject *obj, QEvent *event);
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
    private slots:
     void on_fileTreeWidget_currentItemChanged(QTreeWidgetItem *current,
@@ -48,4 +48,6 @@ private:
 
     static QString getFilePath(QTreeWidgetItem *item);
     void refreshMediaFiles();
+    void loadCurrentFileDetails();
+    void refreshAndJumpToFileName(const QString &fileName);
 };

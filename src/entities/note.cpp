@@ -3815,3 +3815,8 @@ QDebug operator<<(QDebug dbg, const Note &note) {
                   << note._hasDirtyData;
     return dbg.space();
 }
+
+bool Note::operator==(const Note &note) const {
+    return _id == note.getId() && _fileName == note.getFileName() &&
+           _noteSubFolderId == note.getNoteSubFolderId();
+}

@@ -136,5 +136,7 @@ void setTabWidgetTabSticky(QTabWidget *tabWidget, int index, bool sticky);
 bool isTabWidgetTabSticky(QTabWidget *tabWidget, int index);
 void updateTabWidgetTabData(QTabWidget *tabWidget, int index, const Note &note);
 void reloadNoteTabs(QTabWidget *tabWidget);
+void setTreeWidgetItemToolTipForNote(QTreeWidgetItem *item, const Note &note,
+                                     QDateTime *overrideFileLastModified = nullptr);
 }    // namespace Gui
 }    // namespace Utils
