@@ -142,7 +142,7 @@ void OrphanedAttachmentsDialog::on_deleteButton_clicked() {
     if (Utils::Gui::question(this, tr("Delete selected files"),
                              tr("Delete <strong>%n</strong> selected file(s)?",
                                 "", selectedItemsCount),
-                             QStringLiteral("delete-files")) !=
+                             QStringLiteral("delete-attachment-files")) !=
         QMessageBox::Yes) {
         return;
     }
