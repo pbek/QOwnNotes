@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.3.5
+- the warning `fromIccProfile: failed minimal tag size sanity` is now ignored in
+  the *Log panel* (for [#2078](https://github.com/pbek/QOwnNotes/issues/2078))
+
 ## 21.3.4
 - the filename-clipping of the basename of inserted images was increased to
   200 characters (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
