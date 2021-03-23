@@ -367,7 +367,7 @@ void StoredImagesDialog::on_fileTreeWidget_itemChanged(
     }
 
     if (Utils::Gui::questionNoSkipOverride(
-        Q_NULLPTR, QObject::tr("Image oldFile name changed"),
+        Q_NULLPTR, QObject::tr("File name changed"),
         QObject::tr("%n note(s) are using this image. Would you also "
                     "like to rename those images in the notes?",
                     "", affectedNotesCount),

@@ -4495,12 +4495,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="372"/>
-        <source>Image oldFile name changed</source>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="370"/>
+        <source>File name changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="373"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="371"/>
         <source>%n note(s) are using this image. Would you also like to rename those images in the notes?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -7863,34 +7863,34 @@ Your notes will stay intact!</source>
         <translation>اصلاحات اخیر در %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="157"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="155"/>
         <source>Path: %1</source>
         <translation>مسیر: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="196"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="194"/>
         <source>Delete selected files</source>
         <translation>حذف پرونده های منتخب</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="197"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="195"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>آیا می خواهید &lt;strong&gt;%n&lt;/strong&gt; پرونده منتخب را حذف کنید؟</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="332"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="330"/>
         <source>File doesn&apos;t exist</source>
         <translation type="unfinished">File doesn&apos;t exist</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="333"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="331"/>
         <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="357"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="355"/>
         <source>Renaming of oldFile &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7899,17 +7899,17 @@ Your notes will stay intact!</source>
         <translation type="obsolete">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="345"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="343"/>
         <source>File exists</source>
         <translation type="unfinished">File exists</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="346"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="344"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
         <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="356"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="354"/>
         <source>File renaming failed</source>
         <translation type="unfinished">File renaming failed</translation>
     </message>
@@ -7918,17 +7918,17 @@ Your notes will stay intact!</source>
         <translation type="obsolete">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="430"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="428"/>
         <source>&amp;Rename image</source>
         <translation>&amp;تغییر نام تصویر</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="431"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="429"/>
         <source>&amp;Delete images</source>
         <translation>&amp;حذف تصاویر</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="432"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="430"/>
         <source>&amp;Add images to current note</source>
         <translation type="unfinished">&amp;Add images to current note</translation>
     </message>
