@@ -406,10 +406,12 @@ void StoredImagesDialog::refreshAndJumpToFileName(const QString &fileName) {
     auto item = Utils::Gui::getTreeWidgetItemWithUserData(
         ui->fileTreeWidget, fileName);
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
     // set the previous item with a timer (didn't work without timer)
     QTimer::singleShot(0, this, [this, item] () {
         ui->fileTreeWidget->setCurrentItem(item);
     });
+#endif
 }
 
 void StoredImagesDialog::on_fileTreeWidget_customContextMenuRequested(
