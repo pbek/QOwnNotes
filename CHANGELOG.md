@@ -12,6 +12,8 @@
     - when double-clicking on an item in the note list the note will now be
       opened in a new tab
     - various issues with duplicate notes and refreshing were fixed
+- added more translation (thank you rawfreeamy, amirkbrpr, rakekniven,
+  gregory.k, mlaarebi)
 
 ## 21.3.4
 - the filename-clipping of the basename of inserted images was increased to
