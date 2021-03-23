@@ -33,5 +33,5 @@ class OrphanedAttachmentsDialog : public MasterDialog {
    private:
     Ui::OrphanedAttachmentsDialog *ui;
 
-    QString getFilePath(QTreeWidgetItem *item);
+    static QString getFilePath(QTreeWidgetItem *item);
 };

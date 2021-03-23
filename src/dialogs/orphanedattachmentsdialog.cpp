@@ -56,7 +56,7 @@ OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent)
     ui->progressBar->hide();
 
     Q_FOREACH (QString fileName, orphanedFiles) {
-        QTreeWidgetItem *item = new QTreeWidgetItem();
+        auto *item = new QTreeWidgetItem();
         item->setText(0, fileName);
         item->setData(0, Qt::UserRole, fileName);
 
@@ -70,7 +70,7 @@ OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent)
 
     // jump to the first item
     if (orphanedFiles.count() > 0) {
-        QKeyEvent *event =
+        auto *event =
             new QKeyEvent(QEvent::KeyPress, Qt::Key_Home, Qt::NoModifier);
         QApplication::postEvent(ui->fileTreeWidget, event);
     }
