@@ -25,6 +25,7 @@
       to open the note in a new tab
 - the new *Stored images dialog* and *Stored attachments dialog* were moved one
   level up in the *Edit menu* because of their added functionality
+  (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
 - added more translation (thank you gregory.k, afischer211, amirkbrpr)
 
 ## 21.3.5
