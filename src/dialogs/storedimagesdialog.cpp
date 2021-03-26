@@ -25,13 +25,6 @@ StoredImagesDialog::StoredImagesDialog(QWidget *parent)
     ui->fileTreeWidget->installEventFilter(this);
     ui->noteTreeWidget->installEventFilter(this);
 
-    QDir mediaDir(NoteFolder::currentMediaPath());
-
-    if (!mediaDir.exists()) {
-        ui->progressBar->setValue(ui->progressBar->maximum());
-        return;
-    }
-
     refreshMediaFiles();
 }
 
@@ -288,15 +281,13 @@ void StoredImagesDialog::on_fileTreeWidget_itemDoubleClicked(
     on_insertButton_clicked();
 }
 
-/**
- * Open the selected note on double click on note list
- *
- * @param item
- * @param column
- */
-void StoredImagesDialog::on_noteTreeWidget_itemDoubleClicked(
-        QTreeWidgetItem *item, int column) {
-    Q_UNUSED(column)
+void StoredImagesDialog::openCurrentNote() {
+    QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
+
+    if (item == nullptr) {
+        return;
+    }
+
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow == Q_NULLPTR) {
@@ -306,6 +297,19 @@ void StoredImagesDialog::on_noteTreeWidget_itemDoubleClicked(
 
     mainWindow->setCurrentNoteFromNoteId(item->data(0, Qt::UserRole).toInt());
     mainWindow->openCurrentNoteInTab();
+}
+
+/**
+ * Open the selected note on double click on note list
+ *
+ * @param item
+ * @param column
+ */
+void StoredImagesDialog::on_noteTreeWidget_itemDoubleClicked(
+        QTreeWidgetItem *item, int column) {
+    Q_UNUSED(item)
+    Q_UNUSED(column)
+    openCurrentNote();
 }
 
 void StoredImagesDialog::on_refreshButton_clicked() {
@@ -352,7 +356,7 @@ void StoredImagesDialog::on_fileTreeWidget_itemChanged(
 
     if (!oldFile.rename(newFilePath)) {
         QMessageBox::warning(this, tr("File renaming failed"),
-                             tr("Renaming of oldFile <strong>%1</strong> failed!").arg(oldFilePath));
+                             tr("Renaming of file <strong>%1</strong> failed!").arg(oldFilePath));
         item->setText(0, oldFileName);
 
         return;
@@ -446,5 +450,30 @@ void StoredImagesDialog::on_fileTreeWidget_customContextMenuRequested(
         ui->fileTreeWidget->editItem(item);
     } else if (selectedItem == addAction) {
         on_insertButton_clicked();
+    }
+}
+
+void StoredImagesDialog::on_noteTreeWidget_customContextMenuRequested(
+    const QPoint &pos) {
+    // don't open the most of the context menu if no tags are selected
+    const bool hasSelected = ui->noteTreeWidget->selectedItems().count() > 0;
+
+    const QPoint globalPos = ui->noteTreeWidget->mapToGlobal(pos);
+    QMenu menu;
+
+    // allow these actions only if items are selected
+    QAction *openAction = nullptr;
+    if (hasSelected) {
+        openAction = menu.addAction(tr("&Open note"));
+    }
+
+    QAction *selectedItem = menu.exec(globalPos);
+
+    if (selectedItem == nullptr) {
+        return;
+    }
+
+    if (selectedItem == openAction) {
+        openCurrentNote();
     }
 }

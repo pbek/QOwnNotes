@@ -41,6 +41,8 @@ class StoredImagesDialog : public MasterDialog {
 
     void on_fileTreeWidget_customContextMenuRequested(const QPoint &pos);
 
+    void on_noteTreeWidget_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::StoredImagesDialog *ui;
     bool _orphanedImagesOnly = false;
@@ -50,4 +52,5 @@ private:
     void refreshMediaFiles();
     void loadCurrentFileDetails();
     void refreshAndJumpToFileName(const QString &fileName);
+    void openCurrentNote();
 };

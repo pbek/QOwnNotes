@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 21.3.6
+- more improvements to the new *Stored images dialog* have been made
+  (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+    - there now is a context menu in the note list
+    - fixed a typo in the file list context menu
+    - small margin adaptions were made in the UI
+
 ## 21.3.5
 - the warning `fromIccProfile: failed minimal tag size sanity` is now ignored in
   the *Log panel* (for [#2078](https://github.com/pbek/QOwnNotes/issues/2078))
