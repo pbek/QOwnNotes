@@ -4434,16 +4434,22 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
     </message>
     <message numerus="yes">
         <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
-        <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the notes?</source>
+        <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
         <source>%n note(s) are using this image. Would you also like to rename those images in the notes?</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
             <numerusform>%n note(s) are using this image. Would you also like to rename those images in the notes?</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
+        <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -7743,8 +7749,12 @@ Catatan Anda akan tetap utuh!</translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
+        <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-        <translation type="unfinished">The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+        <translation type="obsolete">The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.cpp" line="424"/>
@@ -7852,13 +7862,17 @@ Catatan Anda akan tetap utuh!</translation>
         <translation type="unfinished">File doesn&apos;t exist</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
         <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-        <translation type="unfinished">The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+        <translation type="obsolete">The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
     </message>
     <message>
         <source>Renaming of oldFile &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="obsolete">Renaming of oldFile &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
+        <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedimagesdialog.cpp" line="347"/>

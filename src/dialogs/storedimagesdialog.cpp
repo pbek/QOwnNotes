@@ -332,7 +332,7 @@ void StoredImagesDialog::on_fileTreeWidget_itemChanged(
     QFile oldFile(oldFilePath);
     if (!oldFile.exists()) {
         QMessageBox::warning(this, tr("File doesn't exist"),
-                             tr("The oldFile <strong>%1</strong> doesn't exist, "
+                             tr("The file <strong>%1</strong> doesn't exist, "
                                 "you cannot rename it!").arg(oldFilePath));
         item->setText(0, oldFileName);
 
@@ -373,7 +373,7 @@ void StoredImagesDialog::on_fileTreeWidget_itemChanged(
     if (Utils::Gui::questionNoSkipOverride(
         Q_NULLPTR, QObject::tr("File name changed"),
         QObject::tr("%n note(s) are using this image. Would you also "
-                    "like to rename those images in the notes?",
+                    "like to rename those images in the note(s)?",
                     "", affectedNotesCount),
         QStringLiteral("note-replace-images")) != QMessageBox::Yes) {
         refreshAndJumpToFileName(newFileName);

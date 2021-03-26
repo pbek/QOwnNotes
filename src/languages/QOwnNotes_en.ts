@@ -4441,7 +4441,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message numerus="yes">
         <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
-        <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the notes?</source>
+        <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -4449,7 +4449,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message numerus="yes">
         <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
-        <source>%n note(s) are using this image. Would you also like to rename those images in the notes?</source>
+        <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -7726,7 +7726,7 @@ Your notes will stay intact!</source>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-        <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+        <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7837,7 +7837,7 @@ Your notes will stay intact!</source>
     </message>
     <message>
         <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-        <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+        <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

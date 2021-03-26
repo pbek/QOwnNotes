@@ -4452,18 +4452,25 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     </message>
     <message numerus="yes">
         <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
-        <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the notes?</source>
+        <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
         <source>%n note(s) are using this image. Would you also like to rename those images in the notes?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Une note utilise cette image. Souhaitez-vous également renommer ces images dans la note?</numerusform>
             <numerusform>%n notes utilisent cette image. Souhaitez-vous également renommer ces images dans les notes?</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
+        <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -7756,8 +7763,12 @@ Vos notes resteront intactes!</translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
+        <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-        <translation type="unfinished">L&apos;oldFile &lt;strong&gt;%1&lt;/strong&gt; n&apos;existe pas, vous ne pouvez pas le renommer!</translation>
+        <translation type="obsolete">L&apos;oldFile &lt;strong&gt;%1&lt;/strong&gt; n&apos;existe pas, vous ne pouvez pas le renommer!</translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.cpp" line="424"/>
@@ -7866,13 +7877,17 @@ Vos notes resteront intactes!</translation>
         <translation>Le fichier n&apos;existe pas</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
         <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-        <translation>L&apos;oldFile &lt;strong&gt;%1&lt;/strong&gt; n&apos;existe pas, vous ne pouvez pas le renommer!</translation>
+        <translation type="vanished">L&apos;oldFile &lt;strong&gt;%1&lt;/strong&gt; n&apos;existe pas, vous ne pouvez pas le renommer!</translation>
     </message>
     <message>
         <source>Renaming of oldFile &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="vanished">Échec du changement de nom de l&apos;oldFile &lt;strong&gt;%1&lt;/strong&gt;!</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
+        <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedimagesdialog.cpp" line="347"/>
