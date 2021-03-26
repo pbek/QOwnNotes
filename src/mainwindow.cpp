@@ -26,14 +26,15 @@
 #include <dialogs/sharedialog.h>
 #include <dialogs/tabledialog.h>
 #include <dialogs/tagadddialog.h>
+#include <diff_match_patch.h>
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
 #include <entities/tag.h>
 #include <entities/trashitem.h>
 #include <helpers/clientproxy.h>
 #include <helpers/fakevimproxy.h>
-#include <helpers/toolbarcontainer.h>
 #include <helpers/flowlayout.h>
+#include <helpers/toolbarcontainer.h>
 #include <services/cryptoservice.h>
 #include <services/scriptingservice.h>
 #include <utils/git.h>
@@ -42,6 +43,7 @@
 #include <utils/schema.h>
 #include <widgets/logwidget.h>
 #include <widgets/notetreewidgetitem.h>
+
 #include <QAbstractEventDispatcher>
 #include <QActionGroup>
 #include <QClipboard>
@@ -91,19 +93,19 @@
 
 #include "build_number.h"
 #include "dialogs/aboutdialog.h"
+#include "dialogs/commandbar.h"
 #include "dialogs/issueassistantdialog.h"
 #include "dialogs/linkdialog.h"
 #include "dialogs/notediffdialog.h"
-#include "dialogs/orphanedattachmentsdialog.h"
-#include "dialogs/storedimagesdialog.h"
 #include "dialogs/passworddialog.h"
 #include "dialogs/settingsdialog.h"
+#include "dialogs/storedattachmentsdialog.h"
+#include "dialogs/storedimagesdialog.h"
 #include "dialogs/tododialog.h"
 #include "entities/calendaritem.h"
 #include "helpers/qownnotesmarkdownhighlighter.h"
-#include <diff_match_patch.h>
-#include "libraries/fakevim/fakevim/fakevimhandler.h"
 #include "libraries/fakevim/fakevim/fakevimactions.h"
+#include "libraries/fakevim/fakevim/fakevimhandler.h"
 #include "libraries/sonnet/src/core/speller.h"
 #include "release.h"
 #include "services/databaseservice.h"
@@ -114,7 +116,6 @@
 #include "ui_mainwindow.h"
 #include "version.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
-#include "dialogs/commandbar.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -517,7 +518,7 @@ MainWindow::MainWindow(QWidget *parent)
     _actionDialog = Q_NULLPTR;
     _todoDialog = Q_NULLPTR;
     _storedImagesDialog = Q_NULLPTR;
-    _orphanedAttachmentsDialog = Q_NULLPTR;
+    _storedAttachmentsDialog = Q_NULLPTR;
     _issueAssistantDialog = Q_NULLPTR;
 
     // track cursor position changes for the line number label
@@ -12347,9 +12348,9 @@ void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
  * Shows a dialog to delete orphaned attachments
  */
 void MainWindow::on_actionManage_orphaned_attachments_triggered() {
-    delete (_orphanedAttachmentsDialog);
-    _orphanedAttachmentsDialog = new OrphanedAttachmentsDialog(this);
-    _orphanedAttachmentsDialog->show();
+    delete (_storedAttachmentsDialog);
+    _storedAttachmentsDialog = new StoredAttachmentsDialog(this);
+    _storedAttachmentsDialog->show();
 }
 
 void MainWindow::on_noteOperationsButton_clicked() {

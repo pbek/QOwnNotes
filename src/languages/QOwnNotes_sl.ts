@@ -4197,74 +4197,74 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
   </context>
   <context>
-    <name>OrphanedAttachmentsDialog</name>
+    <name>StoredAttachmentsDialog</name>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
       <translation>Nezavestne priloge</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
       <translation>Izbrišite izbrane priloge</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
       <translation>Izbrisati</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
       <translation>Dodajte izbrane priloge</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
       <translation>Dodati opomba</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
       <translation>Odpri &amp;prilogo</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
       <translation>Odpri &amp;mapo</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
       <translation>Velikost datoteke:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
       <translation>Vrsta datoteke:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
       <translation>Pot datoteke:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
       <translation>Priloge, ki se ne uporabljajo v opombe:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="66"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="66"/>
       <source>Last modified at %1</source>
       <translation>Zadnje spremembe na %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="142"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="142"/>
       <source>Delete selected files</source>
       <translation>Izbriši izbrane datoteke</translation>
     </message>
     <message numerus="yes">
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="143"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="143"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
         <numerusform>Ali želite izbrisati &lt;strong&gt;%n &lt;/strong&gt; izbrane datoteke?</numerusform>

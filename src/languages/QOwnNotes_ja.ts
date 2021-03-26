@@ -4087,74 +4087,74 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     </message>
   </context>
   <context>
-    <name>OrphanedAttachmentsDialog</name>
+    <name>StoredAttachmentsDialog</name>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
       <translation>孤立した添付ファイル</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
       <translation>選択した添付ファイルを削除します</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
       <translation>削除</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
       <translation>選択した添付ファイルを現在のノートに挿入します</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
       <translation>ノートに挿入</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
       <translation>添付を開く(&amp;A)</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
       <translation>フォルダーを開く(&amp;F)</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
       <translation>ファイルサイズ:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
       <translation>ファイルの種類:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
       <translation>ファイルの場所:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
       <translation>ノートで使用されていない添付ファイル:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="66"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="66"/>
       <source>Last modified at %1</source>
       <translation>更新日時: %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="142"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="142"/>
       <source>Delete selected files</source>
       <translation>選択ファイルの削除</translation>
     </message>
     <message numerus="yes">
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="143"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="143"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
         <numerusform>選択したファイルを&lt;strong&gt;%n&lt;/strong&gt;つ削除しますか？</numerusform>

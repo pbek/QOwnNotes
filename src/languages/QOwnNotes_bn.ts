@@ -4109,74 +4109,74 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
   </context>
   <context>
-    <name>OrphanedAttachmentsDialog</name>
+    <name>StoredAttachmentsDialog</name>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
       <translation>এতিম সংযুক্তি</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
       <translation>নির্বাচিত সংযুক্তিগুলি মুছুন</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
       <translation>মুছে ফেলুন</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
       <translation>নোটটিতে নির্বাচিত সংযুক্তি যুক্ত করুন</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
       <translation>নোট যোগ করুন</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
       <translation>সংযুক্তি &amp;খুলুন</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
       <translation>ফোল্ডার &amp;খোলা</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
       <translation>ফাইলের আকার:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
       <translation>ফাইলের ধরন:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
       <translation>ফাইল পাথ:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
       <translation>সংযুক্তি যা নোটগুলিতে ব্যবহৃত হয় না:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="66"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="66"/>
       <source>Last modified at %1</source>
       <translation>%1 এ সর্বশেষ সংশোধন করা হয়েছে</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="142"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="142"/>
       <source>Delete selected files</source>
       <translation>নির্বাচিত ফাইলগুলি মুছে ফেলুন</translation>
     </message>
     <message numerus="yes">
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="143"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="143"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; নির্বাচিত ফাইল মুছবেন?</numerusform>

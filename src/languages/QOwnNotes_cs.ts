@@ -4183,74 +4183,74 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     </message>
   </context>
   <context>
-    <name>OrphanedAttachmentsDialog</name>
+    <name>StoredAttachmentsDialog</name>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
       <translation>Osamocené přílohy</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
       <translation>Odstranit vybrané přílohy</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
       <translation>Odstranit</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
       <translation>Přidat vybrané přílohy, které chcete poznamenat</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
       <translation>Přidat k poznámce</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
       <translation>Otevřete přílohu</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
       <translation>Otevřená složka</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
       <translation>Velikost souboru:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
       <translation>Typ souboru:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
       <translation>Cesta souboru:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
       <translation>Přílohy, které se nepoužívají v poznámkách:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="66"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="66"/>
       <source>Last modified at %1</source>
       <translation>Naposledy změněno na %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="142"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="142"/>
       <source>Delete selected files</source>
       <translation>Odstranit vybrané soubory</translation>
     </message>
     <message numerus="yes">
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="143"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="143"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
         <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybraný soubor?</numerusform>

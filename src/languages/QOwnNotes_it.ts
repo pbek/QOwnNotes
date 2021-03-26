@@ -4106,74 +4106,74 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     </message>
   </context>
   <context>
-    <name>OrphanedAttachmentsDialog</name>
+    <name>StoredAttachmentsDialog</name>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
       <translation>Allegati orfani</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
       <translation>Elimina allegati selezionati</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
       <translation>Elimina</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
       <translation>Aggiungi allegati selezionati a nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
       <translation>Aggiungi a nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
       <translation>Apri &amp;allegato</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
       <translation>Apri &amp;cartella</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
       <translation>Dimensione del file:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
       <translation>Tipo di file:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
       <translation>Percorso del file:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
+      <location filename="../dialogs/storedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
       <translation>Allegati non usati nelle note:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="66"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="66"/>
       <source>Last modified at %1</source>
       <translation>Ultima modifica: %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="142"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="142"/>
       <source>Delete selected files</source>
       <translation>Elimina file selezionati</translation>
     </message>
     <message numerus="yes">
-      <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="143"/>
+      <location filename="../dialogs/storedattachmentsdialog.cpp" line="143"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
         <numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; il file selezionato?</numerusform>

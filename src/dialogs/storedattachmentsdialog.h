@@ -5,15 +5,15 @@ class QTreeWidgetItem;
 class QEvent;
 
 namespace Ui {
-class OrphanedAttachmentsDialog;
+class StoredAttachmentsDialog;
 }
 
-class OrphanedAttachmentsDialog : public MasterDialog {
+class StoredAttachmentsDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit OrphanedAttachmentsDialog(QWidget *parent = 0);
-    ~OrphanedAttachmentsDialog();
+    explicit StoredAttachmentsDialog(QWidget *parent = 0);
+    ~StoredAttachmentsDialog();
 
    protected:
     bool eventFilter(QObject *obj, QEvent *event);
@@ -31,7 +31,7 @@ class OrphanedAttachmentsDialog : public MasterDialog {
     void on_openFolderButton_clicked();
 
    private:
-    Ui::OrphanedAttachmentsDialog *ui;
+    Ui::StoredAttachmentsDialog *ui;
 
     static QString getFilePath(QTreeWidgetItem *item);
 };

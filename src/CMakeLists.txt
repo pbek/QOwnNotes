@@ -135,9 +135,9 @@ set(SOURCE_FILES
     dialogs/storedimagesdialog.cpp
     dialogs/storedimagesdialog.h
     dialogs/storedimagesdialog.ui
-    dialogs/orphanedattachmentsdialog.cpp
-    dialogs/orphanedattachmentsdialog.h
-    dialogs/orphanedattachmentsdialog.ui
+        dialogs/storedattachmentsdialog.cpp
+        dialogs/storedattachmentsdialog.h
+    dialogs/storedattachmentsdialog.ui
     dialogs/scriptrepositorydialog.cpp
     dialogs/scriptrepositorydialog.h
     dialogs/scriptrepositorydialog.ui

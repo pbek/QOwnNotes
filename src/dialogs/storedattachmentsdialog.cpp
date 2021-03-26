@@ -1,4 +1,4 @@
-#include "orphanedattachmentsdialog.h"
+#include "storedattachmentsdialog.h"
 
 #include <entities/note.h>
 #include <entities/notefolder.h>
@@ -16,11 +16,11 @@
 #include <QtCore/QMimeType>
 #include <QtWidgets/QMessageBox>
 
-#include "ui_orphanedattachmentsdialog.h"
+#include "ui_storedattachmentsdialog.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 
-OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent)
-    : MasterDialog(parent), ui(new Ui::OrphanedAttachmentsDialog) {
+StoredAttachmentsDialog::StoredAttachmentsDialog(QWidget *parent)
+    : MasterDialog(parent), ui(new Ui::StoredAttachmentsDialog) {
     ui->setupUi(this);
     ui->infoFrame->setEnabled(false);
     ui->fileTreeWidget->installEventFilter(this);
@@ -76,7 +76,7 @@ OrphanedAttachmentsDialog::OrphanedAttachmentsDialog(QWidget *parent)
     }
 }
 
-OrphanedAttachmentsDialog::~OrphanedAttachmentsDialog() { delete ui; }
+StoredAttachmentsDialog::~StoredAttachmentsDialog() { delete ui; }
 
 /**
  * Shows the currently selected attachment
@@ -84,7 +84,7 @@ OrphanedAttachmentsDialog::~OrphanedAttachmentsDialog() { delete ui; }
  * @param current
  * @param previous
  */
-void OrphanedAttachmentsDialog::on_fileTreeWidget_currentItemChanged(
+void StoredAttachmentsDialog::on_fileTreeWidget_currentItemChanged(
     QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
 
@@ -118,7 +118,7 @@ void OrphanedAttachmentsDialog::on_fileTreeWidget_currentItemChanged(
  * @param item
  * @return
  */
-QString OrphanedAttachmentsDialog::getFilePath(QTreeWidgetItem *item) {
+QString StoredAttachmentsDialog::getFilePath(QTreeWidgetItem *item) {
     if (item == Q_NULLPTR) {
         return QString();
     }
@@ -132,7 +132,7 @@ QString OrphanedAttachmentsDialog::getFilePath(QTreeWidgetItem *item) {
 /**
  * Deletes selected attachments
  */
-void OrphanedAttachmentsDialog::on_deleteButton_clicked() {
+void StoredAttachmentsDialog::on_deleteButton_clicked() {
     int selectedItemsCount = ui->fileTreeWidget->selectedItems().count();
 
     if (selectedItemsCount == 0) {
@@ -165,7 +165,7 @@ void OrphanedAttachmentsDialog::on_deleteButton_clicked() {
  * @param event
  * @return
  */
-bool OrphanedAttachmentsDialog::eventFilter(QObject *obj, QEvent *event) {
+bool StoredAttachmentsDialog::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
@@ -183,7 +183,7 @@ bool OrphanedAttachmentsDialog::eventFilter(QObject *obj, QEvent *event) {
     return MasterDialog::eventFilter(obj, event);
 }
 
-void OrphanedAttachmentsDialog::on_insertButton_clicked() {
+void StoredAttachmentsDialog::on_insertButton_clicked() {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow == Q_NULLPTR) {
@@ -215,7 +215,7 @@ void OrphanedAttachmentsDialog::on_insertButton_clicked() {
     }
 }
 
-void OrphanedAttachmentsDialog::on_openFileButton_clicked() {
+void StoredAttachmentsDialog::on_openFileButton_clicked() {
     QTreeWidgetItem *item = ui->fileTreeWidget->currentItem();
 
     if (item == nullptr) {
@@ -226,7 +226,7 @@ void OrphanedAttachmentsDialog::on_openFileButton_clicked() {
     Utils::Misc::openPath(filePath);
 }
 
-void OrphanedAttachmentsDialog::on_openFolderButton_clicked() {
+void StoredAttachmentsDialog::on_openFolderButton_clicked() {
     QTreeWidgetItem *item = ui->fileTreeWidget->currentItem();
 
     if (item == nullptr) {

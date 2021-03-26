@@ -62,7 +62,7 @@ class TodoDialog;
 class QPrinter;
 class LogWidget;
 class StoredImagesDialog;
-class OrphanedAttachmentsDialog;
+class StoredAttachmentsDialog;
 class IssueAssistantDialog;
 class NoteHistory;
 class NoteDiffDialog;
@@ -741,7 +741,7 @@ private:
     TodoDialog *_todoDialog;
     IssueAssistantDialog *_issueAssistantDialog;
     StoredImagesDialog *_storedImagesDialog;
-    OrphanedAttachmentsDialog *_orphanedAttachmentsDialog;
+    StoredAttachmentsDialog *_storedAttachmentsDialog;
     SettingsDialog *_settingsDialog;
     bool _noteExternallyRemovedCheckEnabled;
     QList<QAction *> _noteTextEditContextMenuActions;
