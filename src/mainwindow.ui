@@ -2488,7 +2488,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
    </property>
    <property name="text">
-    <string>Manage orphaned attachments</string>
+    <string>Manage stored attachments</string>
    </property>
   </action>
   <action name="actionJump_to_note_subfolder_panel">

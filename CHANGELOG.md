@@ -6,6 +6,23 @@
     - there now is a context menu in the note list
     - fixed a typo in the file list context menu
     - small margin adaptions were made in the UI
+- instead of the *Orphaned attachments dialog* there now is the new
+  *Stored attachments dialog* which also allows managing non-orphaned attachments
+  (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+    - you are now also able to search for attachments by name
+    - you are now able to rename attachment files with the context menu or by
+      pressing <kbd>F2</kbd>
+    - there now is a context menu for the attachment file list
+    - the file size of the attachments will now also be shown in the tooltip of
+      the file list
+    - you can now also double-click on an item in the attachment list to insert
+      it into the current note
+    - there now is a *Refresh* button to reload the attachment file list
+    - the filepath of the attachment file is now truncated if there is not enough
+      space in the dialog, but you are still able to select and copy the full path
+    - if notes are using the current attachment a list of those notes will be shown
+    - you can double-click on an item in the note list or use the context menu
+      to open the note in a new tab
 
 ## 21.3.5
 - the warning `fromIccProfile: failed minimal tag size sanity` is now ignored in

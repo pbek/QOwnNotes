@@ -1,6 +1,8 @@
 #pragma once
 
 #include "masterdialog.h"
+#include "entities/note.h"
+
 class QTreeWidgetItem;
 class QEvent;
 
@@ -30,8 +32,30 @@ class StoredAttachmentsDialog : public MasterDialog {
 
     void on_openFolderButton_clicked();
 
-   private:
+    void on_fileTreeWidget_customContextMenuRequested(const QPoint &pos);
+
+    void on_fileTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
+    void on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
+    void on_checkBox_toggled(bool checked);
+
+    void on_refreshButton_clicked();
+
+    void on_fileTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
+
+    void on_searchLineEdit_textChanged(const QString &arg1);
+
+    void on_noteTreeWidget_customContextMenuRequested(const QPoint &pos);
+
+private:
     Ui::StoredAttachmentsDialog *ui;
+    bool _orphanedAttachmentsOnly = false;
+    QHash<QString, QVector<Note>> _fileNoteList;
 
     static QString getFilePath(QTreeWidgetItem *item);
+    void refreshAttachmentFiles();
+    void loadCurrentFileDetails();
+    void refreshAndJumpToFileName(const QString &fileName);
+    void openCurrentNote();
 };

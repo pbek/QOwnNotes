@@ -2,6 +2,7 @@
 
 #include <entities/note.h>
 #include <entities/notefolder.h>
+#include <entities/notesubfolder.h>
 #include <mainwindow.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
@@ -11,6 +12,8 @@
 #include <QFileInfo>
 #include <QGraphicsPixmapItem>
 #include <QKeyEvent>
+#include <QMenu>
+#include <QTimer>
 #include <QTreeWidgetItem>
 #include <QtCore/QMimeDatabase>
 #include <QtCore/QMimeType>
@@ -25,6 +28,12 @@ StoredAttachmentsDialog::StoredAttachmentsDialog(QWidget *parent)
     ui->infoFrame->setEnabled(false);
     ui->fileTreeWidget->installEventFilter(this);
 
+    refreshAttachmentFiles();
+}
+
+StoredAttachmentsDialog::~StoredAttachmentsDialog() { delete ui; }
+
+void StoredAttachmentsDialog::refreshAttachmentFiles() {
     QDir attachmentsDir(NoteFolder::currentAttachmentsPath());
 
     if (!attachmentsDir.exists()) {
@@ -32,51 +41,68 @@ StoredAttachmentsDialog::StoredAttachmentsDialog(QWidget *parent)
         return;
     }
 
-    QStringList orphanedFiles = attachmentsDir.entryList(
+    QStringList attachmentFiles = attachmentsDir.entryList(
         QStringList(QStringLiteral("*")), QDir::Files, QDir::Time);
-    orphanedFiles.removeDuplicates();
+    attachmentFiles.removeDuplicates();
 
     QVector<Note> noteList = Note::fetchAll();
     int noteListCount = noteList.count();
+    _fileNoteList.clear();
 
     ui->progressBar->setMaximum(noteListCount);
     ui->progressBar->show();
 
-    Q_FOREACH (const Note &note, noteList) {
-        QStringList attachmentsFileList = note.getAttachmentsFileList();
+    Q_FOREACH (Note note, noteList) {
+            QStringList attachmentsFileList = note.getAttachmentsFileList();
+            // we don't want to keep the whole note text
+            note.setNoteText("");
 
-        // remove all found attachments from the orphaned files list
-        Q_FOREACH (const QString &fileName, attachmentsFileList) {
-            orphanedFiles.removeAll(fileName);
+            // remove all found attachments from the orphaned files list
+            Q_FOREACH (const QString &fileName, attachmentsFileList) {
+                    // remove all found attachments from the files list if _orphanedAttachmentsOnly is enabled
+                    if (_orphanedAttachmentsOnly) {
+                        attachmentFiles.removeAll(fileName);
+                    }
+
+                    if (!_fileNoteList[fileName].contains(note)) {
+                        _fileNoteList[fileName].append(note);
+                    }
+                }
+
+            ui->progressBar->setValue(ui->progressBar->value() + 1);
         }
 
-        ui->progressBar->setValue(ui->progressBar->value() + 1);
-    }
-
     ui->progressBar->hide();
+    ui->fileTreeWidget->clear();
 
-    Q_FOREACH (QString fileName, orphanedFiles) {
-        auto *item = new QTreeWidgetItem();
-        item->setText(0, fileName);
-        item->setData(0, Qt::UserRole, fileName);
+    Q_FOREACH (QString fileName, attachmentFiles) {
+            auto *item = new QTreeWidgetItem();
+            item->setText(0, fileName);
+            item->setData(0, Qt::UserRole, fileName);
+            item->setFlags(item->flags() | Qt::ItemIsEditable);
 
-        QString filePath = getFilePath(item);
-        QFileInfo info(filePath);
-        item->setToolTip(
-            0, tr("Last modified at %1").arg(info.lastModified().toString()));
+            QString filePath = getFilePath(item);
+            QFileInfo info(filePath);
+            item->setToolTip(
+                0, tr("Last modified at %1").arg(info.lastModified().toString()) +
+                   QStringLiteral("\n") +
+                   Utils::Misc::toHumanReadableByteSize(info.size()));
 
-        ui->fileTreeWidget->addTopLevelItem(item);
-    }
+            ui->fileTreeWidget->addTopLevelItem(item);
+        }
+
+    // Re-apply search text
+    on_searchLineEdit_textChanged(ui->searchLineEdit->text());
+
+    ui->fileTreeWidget->sortItems(0, Qt::AscendingOrder);
 
     // jump to the first item
-    if (orphanedFiles.count() > 0) {
+    if (attachmentFiles.count() > 0) {
         auto *event =
             new QKeyEvent(QEvent::KeyPress, Qt::Key_Home, Qt::NoModifier);
         QApplication::postEvent(ui->fileTreeWidget, event);
     }
 }
-
-StoredAttachmentsDialog::~StoredAttachmentsDialog() { delete ui; }
 
 /**
  * Shows the currently selected attachment
@@ -86,13 +112,20 @@ StoredAttachmentsDialog::~StoredAttachmentsDialog() { delete ui; }
  */
 void StoredAttachmentsDialog::on_fileTreeWidget_currentItemChanged(
     QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    Q_UNUSED(current);
     Q_UNUSED(previous);
+    loadCurrentFileDetails();
+}
+
+void StoredAttachmentsDialog::loadCurrentFileDetails() {
+    QTreeWidgetItem *current = ui->fileTreeWidget->currentItem();
 
     if (current == nullptr) {
         ui->infoFrame->setEnabled(false);
         ui->pathLabel->clear();
         ui->typeLabel->clear();
         ui->sizeLabel->clear();
+        ui->notesFrame->hide();
 
         return;
     }
@@ -110,6 +143,32 @@ void StoredAttachmentsDialog::on_fileTreeWidget_currentItemChanged(
     ui->sizeLabel->setText(fileSizeText);
 
     ui->infoFrame->setEnabled(true);
+
+    // Show which notes use the current file
+    const QString fileName = current->text(0);
+    if (_fileNoteList.contains(fileName)) {
+        auto notes = _fileNoteList[fileName];
+        ui->noteTreeWidget->clear();
+
+        Q_FOREACH(Note note, notes) {
+                auto *item = new QTreeWidgetItem();
+                item->setText(0, note.getName());
+                item->setData(0, Qt::UserRole, note.getId());
+                Utils::Gui::setTreeWidgetItemToolTipForNote(item, note);
+
+                NoteSubFolder noteSubFolder = note.getNoteSubFolder();
+                if (noteSubFolder.isFetched()) {
+                    item->setToolTip(0, tr("Path: %1").arg(
+                        noteSubFolder.relativePath()));
+                }
+
+                ui->noteTreeWidget->addTopLevelItem(item);
+            }
+
+        ui->notesFrame->show();
+    } else {
+        ui->notesFrame->hide();
+    }
 }
 
 /**
@@ -184,14 +243,10 @@ bool StoredAttachmentsDialog::eventFilter(QObject *obj, QEvent *event) {
 }
 
 void StoredAttachmentsDialog::on_insertButton_clicked() {
-#ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow == Q_NULLPTR) {
         return;
     }
-#else
-    return;
-#endif
 
     int selectedItemsCount = ui->fileTreeWidget->selectedItems().count();
 
@@ -211,7 +266,7 @@ void StoredAttachmentsDialog::on_insertButton_clicked() {
         QString attachmentLink =
             "[" + fileInfo.baseName() + "](" + attachmentsUrlString + ")\n";
         textEdit->insertPlainText(attachmentLink);
-        delete item;
+        refreshAttachmentFiles();
     }
 }
 
@@ -235,4 +290,217 @@ void StoredAttachmentsDialog::on_openFolderButton_clicked() {
 
     QString filePath = getFilePath(item);
     Utils::Misc::openFolderSelect(filePath);
+}
+
+void StoredAttachmentsDialog::on_fileTreeWidget_customContextMenuRequested(
+    const QPoint &pos) {
+    // don't open the most of the context menu if no tags are selected
+    const bool hasSelected = ui->fileTreeWidget->selectedItems().count() > 0;
+
+    const QPoint globalPos = ui->fileTreeWidget->mapToGlobal(pos);
+    QMenu menu;
+
+    // allow these actions only if items are selected
+    QAction *renameAction = nullptr;
+    QAction *removeAction = nullptr;
+    QAction *openAction = nullptr;
+    QAction *addAction = nullptr;
+    if (hasSelected) {
+        openAction = menu.addAction(tr("&Open attachment"));
+        renameAction = menu.addAction(tr("&Rename attachment"));
+        removeAction = menu.addAction(tr("&Delete attachments"));
+        addAction = menu.addAction(tr("&Add attachments to current note"));
+    }
+
+    QAction *selectedItem = menu.exec(globalPos);
+
+    if (selectedItem == nullptr) {
+        return;
+    }
+
+    QTreeWidgetItem *item = ui->fileTreeWidget->currentItem();
+
+    if (selectedItem == removeAction) {
+        on_deleteButton_clicked();
+    } else if (selectedItem == renameAction) {
+        ui->fileTreeWidget->editItem(item);
+    } else if (selectedItem == addAction) {
+        on_insertButton_clicked();
+    } else if (selectedItem == openAction) {
+        on_openFileButton_clicked();
+    }
+}
+
+void StoredAttachmentsDialog::refreshAndJumpToFileName(const QString &fileName) {
+    // refresh the attachment files to get the new data
+    refreshAttachmentFiles();
+
+    // look for the item to jump back to
+    auto item = Utils::Gui::getTreeWidgetItemWithUserData(
+        ui->fileTreeWidget, fileName);
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
+    // set the previous item with a timer (didn't work without timer)
+    QTimer::singleShot(0, this, [this, item] () {
+        ui->fileTreeWidget->setCurrentItem(item);
+    });
+#endif
+}
+
+void StoredAttachmentsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
+    Utils::Gui::searchForTextInTreeWidget(ui->fileTreeWidget, arg1,
+          Utils::Gui::TreeWidgetSearchFlags(
+              Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
+}
+
+void StoredAttachmentsDialog::on_fileTreeWidget_itemDoubleClicked(
+    QTreeWidgetItem *item, int column) {
+    Q_UNUSED(item)
+    Q_UNUSED(column)
+    on_insertButton_clicked();
+}
+
+void StoredAttachmentsDialog::openCurrentNote() {
+    QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
+
+    if (item == nullptr) {
+        return;
+    }
+
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow == Q_NULLPTR) {
+        Q_UNUSED(item)
+        return;
+    }
+
+    mainWindow->setCurrentNoteFromNoteId(item->data(0, Qt::UserRole).toInt());
+    mainWindow->openCurrentNoteInTab();
+}
+
+void StoredAttachmentsDialog::on_noteTreeWidget_itemDoubleClicked(
+    QTreeWidgetItem *item, int column) {
+    Q_UNUSED(item)
+    Q_UNUSED(column)
+    openCurrentNote();
+}
+
+void StoredAttachmentsDialog::on_checkBox_toggled(bool checked) {
+    _orphanedAttachmentsOnly = checked;
+    refreshAttachmentFiles();
+}
+
+void StoredAttachmentsDialog::on_refreshButton_clicked() {
+    refreshAttachmentFiles();
+}
+
+void StoredAttachmentsDialog::on_fileTreeWidget_itemChanged(
+    QTreeWidgetItem *item, int column) {
+    Q_UNUSED(column)
+
+    QString oldFileName = item->data(0, Qt::UserRole).toString();
+    QString newFileName = item->text(0);
+    const QSignalBlocker blocker(ui->fileTreeWidget);
+    Q_UNUSED(blocker)
+    qDebug() << __func__ << " - 'oldFileName': " << oldFileName;
+    qDebug() << __func__ << " - 'newFileName': " << newFileName;
+
+    const QString oldFilePath = NoteFolder::currentAttachmentsPath() +
+                                QDir::separator() + oldFileName;
+    QFile oldFile(oldFilePath);
+    if (!oldFile.exists()) {
+        QMessageBox::warning(this, tr("File doesn't exist"),
+                             tr("The oldFile <strong>%1</strong> doesn't exist, "
+                                "you cannot rename it!").arg(oldFilePath));
+        item->setText(0, oldFileName);
+
+        return;
+    }
+
+    const QString newFilePath = NoteFolder::currentAttachmentsPath() +
+                                QDir::separator() + newFileName;
+    QFile newFile(newFilePath);
+
+    if (newFile.exists()) {
+        QMessageBox::warning(this, tr("File exists"),
+                             tr("File <strong>%1</strong> already exists, "
+                                "you need to remove it before choosing "
+                                "<strong>%2</strong> as new filename!")
+                                 .arg(newFilePath, newFileName));
+        item->setText(0, oldFileName);
+
+        return;
+    }
+
+    if (!oldFile.rename(newFilePath)) {
+        QMessageBox::warning(this, tr("File renaming failed"),
+                             tr("Renaming of file <strong>%1</strong> failed!").arg(oldFilePath));
+        item->setText(0, oldFileName);
+
+        return;
+    }
+
+    const auto affectedNotes = _fileNoteList[oldFileName];
+    const int affectedNotesCount = affectedNotes.count();
+
+    if (affectedNotesCount == 0) {
+        refreshAndJumpToFileName(newFileName);
+        return;
+    }
+
+    if (Utils::Gui::questionNoSkipOverride(
+        Q_NULLPTR, QObject::tr("File name changed"),
+        QObject::tr("%n note(s) are using this attachment. Would you also "
+                    "like to rename those attachments in the notes?",
+                    "", affectedNotesCount),
+        QStringLiteral("note-replace-attachments")) != QMessageBox::Yes) {
+        refreshAndJumpToFileName(newFileName);
+        return;
+    }
+
+    // search for attachment with oldFileName in notes and rename attachment links
+    for (Note note : affectedNotes) {
+        // re-fetch note to get the note text
+        note.refetch();
+
+        QString text = note.getNoteText();
+        text.replace(QRegularExpression(R"((\[.*?\])\((.*?attachments\/.*?)()" +
+            QRegularExpression::escape(oldFileName) + ")\\)"),
+     "\\1(\\2" + newFileName + ")");
+
+        note.storeNewText(text);
+    }
+
+    refreshAndJumpToFileName(newFileName);
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != Q_NULLPTR) {
+        // update the current note in case attachment paths were updated in it
+        mainWindow->reloadCurrentNoteByNoteId(true);
+    }
+}
+
+void StoredAttachmentsDialog::on_noteTreeWidget_customContextMenuRequested(
+    const QPoint &pos) {
+    // don't open the most of the context menu if no tags are selected
+    const bool hasSelected = ui->noteTreeWidget->selectedItems().count() > 0;
+
+    const QPoint globalPos = ui->noteTreeWidget->mapToGlobal(pos);
+    QMenu menu;
+
+    // allow these actions only if items are selected
+    QAction *openAction = nullptr;
+    if (hasSelected) {
+        openAction = menu.addAction(tr("&Open note"));
+    }
+
+    QAction *selectedItem = menu.exec(globalPos);
+
+    if (selectedItem == nullptr) {
+        return;
+    }
+
+    if (selectedItem == openAction) {
+        openCurrentNote();
+    }
 }
