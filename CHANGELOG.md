@@ -25,6 +25,7 @@
       to open the note in a new tab
 - the new *Stored images dialog* and *Stored attachments dialog* were moved one
   level up in the *Edit menu* because of their added functionality
+- added more translation (thank you gregory.k, afischer211, amirkbrpr)
 
 ## 21.3.5
 - the warning `fromIccProfile: failed minimal tag size sanity` is now ignored in
