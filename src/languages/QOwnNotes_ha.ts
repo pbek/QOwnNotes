@@ -2040,27 +2040,27 @@
         <translation>Karin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1070"/>
+        <location filename="../mainwindow.ui" line="1068"/>
         <source>Edit</source>
         <translation>Shirya</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1083"/>
+        <location filename="../mainwindow.ui" line="1081"/>
         <source>Versioning</source>
         <translation>Ana sanyawa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1094"/>
+        <location filename="../mainwindow.ui" line="1092"/>
         <source>Encryption</source>
         <translation>Enciko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1106"/>
+        <location filename="../mainwindow.ui" line="1104"/>
         <source>Languages</source>
         <translation>Harsuna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1111"/>
+        <location filename="../mainwindow.ui" line="1109"/>
         <source>Spelling backend</source>
         <translation>Harshen rubutu</translation>
     </message>
@@ -4318,37 +4318,37 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
         <translation>tsoho</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1311"/>
+        <location filename="../entities/note.cpp" line="1309"/>
         <source>Could not store note file: %1 - Error message: %2</source>
         <translation>Ba za a iya adana fayil ɗin bayanin kula ba: %1 - Saƙon kuskure: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1389"/>
+        <location filename="../entities/note.cpp" line="1387"/>
         <source>Renamed note-file was removed: %1</source>
         <translation>An cire bayanin kula mai suna: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1397"/>
+        <location filename="../entities/note.cpp" line="1395"/>
         <source>Could not remove renamed note-file: %1 - Error message: %2</source>
         <translation>Ba za a iya cire sunan sake bayanin kula ba: %1 - Saƙon kuskure: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1543"/>
+        <location filename="../entities/note.cpp" line="1541"/>
         <source>Note</source>
         <translation>Lura</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2595"/>
+        <location filename="../entities/note.cpp" line="2593"/>
         <source>Could not read image file: %1</source>
         <translation>Ba za a iya karanta fayil ɗin hoto ba: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3215"/>
+        <location filename="../entities/note.cpp" line="3213"/>
         <source>Note file path changed</source>
         <translation>Bayanin fayil ɗin bayanin kula ya canza</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3216"/>
+        <location filename="../entities/note.cpp" line="3214"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>An gano canji na bayanin kula. Kuna so maye gurbin duk hanyar da ta kasance ta hanyar haɗin %1&lt;/strong&gt; tare da &lt;strong&gt;%2 &lt;/strong&gt; da kuma hanyoyin sadarwa tare da filename &lt;strong&gt;%3 &lt;/strong&gt; tare da &lt;strong&gt;%4 &lt;/strong&gt; &gt; a cikin &lt;strong&gt;%n&lt;/strong&gt; bayanin fayil?</numerusform>
@@ -4356,7 +4356,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3764"/>
+        <location filename="../entities/note.cpp" line="3762"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>… da %n karin bayanin kula</numerusform>
@@ -4457,13 +4457,13 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="451"/>
         <location filename="../dialogs/storedimagesdialog.cpp" line="374"/>
         <source>File name changed</source>
         <translation type="unfinished">File name changed</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
         <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the notes?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -7645,9 +7645,8 @@ Bayanan kula ku za su zauna lafiya!</translation>
 <context>
     <name>StoredAttachmentsDialog</name>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
         <source>Orphaned attachments</source>
-        <translation>Abubuwan da aka makala marayu</translation>
+        <translation type="vanished">Abubuwan da aka makala marayu</translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="375"/>
@@ -7663,6 +7662,11 @@ Bayanan kula ku za su zauna lafiya!</translation>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
         <source>Add selected attachments to note</source>
         <translation>Sanya aka makala wadanda aka zaba don lura</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
+        <source>Stored attachments</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
@@ -7724,22 +7728,22 @@ Bayanan kula ku za su zauna lafiya!</translation>
         <translation type="vanished">Haɗe-haɗe waɗanda ba a amfani da su cikin bayanin kula ba:</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="87"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
         <source>Last modified at %1</source>
         <translation>Anyi gyaran ƙarshe na %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="161"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
         <source>Path: %1</source>
         <translation type="unfinished">Path: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
         <source>Delete selected files</source>
         <translation>Share fayilolin da aka zaɓa</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="202"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Goge&lt;strong&gt;%n&lt;/strong&gt; fayil aka zaba?</numerusform>
@@ -7747,57 +7751,57 @@ Bayanan kula ku za su zauna lafiya!</translation>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="308"/>
         <source>&amp;Open attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
         <source>&amp;Rename attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
         <source>&amp;Delete attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
         <source>&amp;Add attachments to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="411"/>
         <source>File doesn&apos;t exist</source>
         <translation type="unfinished">File doesn&apos;t exist</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
         <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished">The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="424"/>
         <source>File exists</source>
         <translation type="unfinished">File exists</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
         <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="435"/>
         <source>File renaming failed</source>
         <translation type="unfinished">File renaming failed</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
         <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="493"/>
         <source>&amp;Open note</source>
         <translation type="unfinished"></translation>
     </message>

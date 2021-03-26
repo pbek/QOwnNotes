@@ -2040,27 +2040,27 @@
         <translation>Sobra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1070"/>
+        <location filename="../mainwindow.ui" line="1068"/>
         <source>Edit</source>
         <translation>I-edit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1083"/>
+        <location filename="../mainwindow.ui" line="1081"/>
         <source>Versioning</source>
         <translation>Bersyon</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1094"/>
+        <location filename="../mainwindow.ui" line="1092"/>
         <source>Encryption</source>
         <translation>Encryption</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1106"/>
+        <location filename="../mainwindow.ui" line="1104"/>
         <source>Languages</source>
         <translation type="unfinished">Languages</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1111"/>
+        <location filename="../mainwindow.ui" line="1109"/>
         <source>Spelling backend</source>
         <translation type="unfinished">Spelling backend</translation>
     </message>
@@ -4302,37 +4302,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>default</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1311"/>
+        <location filename="../entities/note.cpp" line="1309"/>
         <source>Could not store note file: %1 - Error message: %2</source>
         <translation>Hindi maaring ibalik note file: %1- Error messa: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1389"/>
+        <location filename="../entities/note.cpp" line="1387"/>
         <source>Renamed note-file was removed: %1</source>
         <translation>Palitan ang note-file ay tanggalin: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1397"/>
+        <location filename="../entities/note.cpp" line="1395"/>
         <source>Could not remove renamed note-file: %1 - Error message: %2</source>
         <translation>Hindi matanggal ang pangalan na pinalitan ng note-file: %1- Error mensahe: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1543"/>
+        <location filename="../entities/note.cpp" line="1541"/>
         <source>Note</source>
         <translation type="unfinished">Note</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2595"/>
+        <location filename="../entities/note.cpp" line="2593"/>
         <source>Could not read image file: %1</source>
         <translation>Hindi mabasa ang imahe ng file: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3215"/>
+        <location filename="../entities/note.cpp" line="3213"/>
         <source>Note file path changed</source>
         <translation type="unfinished">Note file path changed</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3216"/>
+        <location filename="../entities/note.cpp" line="3214"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
@@ -4340,7 +4340,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3764"/>
+        <location filename="../entities/note.cpp" line="3762"/>
         <source>…and %n more note(s)</source>
         <translation type="unfinished">
             <numerusform>…and %n more note(s)</numerusform>
@@ -4440,13 +4440,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="451"/>
         <location filename="../dialogs/storedimagesdialog.cpp" line="374"/>
         <source>File name changed</source>
         <translation type="unfinished">File name changed</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
         <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the notes?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -7610,9 +7610,8 @@ ang yong mga tala ay manatili ng buo!</translation>
 <context>
     <name>StoredAttachmentsDialog</name>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
         <source>Orphaned attachments</source>
-        <translation type="unfinished">Orphaned attachments</translation>
+        <translation type="obsolete">Orphaned attachments</translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="375"/>
@@ -7628,6 +7627,11 @@ ang yong mga tala ay manatili ng buo!</translation>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
         <source>Add selected attachments to note</source>
         <translation type="unfinished">Add selected attachments to note</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
+        <source>Stored attachments</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
@@ -7689,22 +7693,22 @@ ang yong mga tala ay manatili ng buo!</translation>
         <translation type="obsolete">Attachments that are not used in notes:</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="87"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
         <source>Last modified at %1</source>
         <translation type="unfinished">Last modified at %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="161"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
         <source>Path: %1</source>
         <translation type="unfinished">Path: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
         <source>Delete selected files</source>
         <translation type="unfinished">Delete selected files</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="202"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation type="unfinished">
             <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
@@ -7712,57 +7716,57 @@ ang yong mga tala ay manatili ng buo!</translation>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="308"/>
         <source>&amp;Open attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
         <source>&amp;Rename attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
         <source>&amp;Delete attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
         <source>&amp;Add attachments to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="411"/>
         <source>File doesn&apos;t exist</source>
         <translation type="unfinished">File doesn&apos;t exist</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
         <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished">The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="424"/>
         <source>File exists</source>
         <translation type="unfinished">File exists</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
         <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="435"/>
         <source>File renaming failed</source>
         <translation type="unfinished">File renaming failed</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
         <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="493"/>
         <source>&amp;Open note</source>
         <translation type="unfinished"></translation>
     </message>

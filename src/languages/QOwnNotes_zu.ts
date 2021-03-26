@@ -2040,27 +2040,27 @@
         <translation>Okwengeziwe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1070"/>
+        <location filename="../mainwindow.ui" line="1068"/>
         <source>Edit</source>
         <translation>Hlela</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1083"/>
+        <location filename="../mainwindow.ui" line="1081"/>
         <source>Versioning</source>
         <translation>Ukuhumusha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1094"/>
+        <location filename="../mainwindow.ui" line="1092"/>
         <source>Encryption</source>
         <translation>Ukubethela</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1106"/>
+        <location filename="../mainwindow.ui" line="1104"/>
         <source>Languages</source>
         <translation>Izilimi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1111"/>
+        <location filename="../mainwindow.ui" line="1109"/>
         <source>Spelling backend</source>
         <translation>Isipele sokubuyisela emuva</translation>
     </message>
@@ -4312,37 +4312,37 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
         <translation>okuzenzakalelayo</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1311"/>
+        <location filename="../entities/note.cpp" line="1309"/>
         <source>Could not store note file: %1 - Error message: %2</source>
         <translation>Ayikwazanga ukugcina ifayile yenothi: %1 - Umyalezo wephutha: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1389"/>
+        <location filename="../entities/note.cpp" line="1387"/>
         <source>Renamed note-file was removed: %1</source>
         <translation>Ifayela lamanothi eliqanjwe kabusha lisusiwe: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1397"/>
+        <location filename="../entities/note.cpp" line="1395"/>
         <source>Could not remove renamed note-file: %1 - Error message: %2</source>
         <translation>Ayikwazanga ukususa ifayela-inothi eliqanjwe kabusha: %1 - Umyalezo wephutha: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1543"/>
+        <location filename="../entities/note.cpp" line="1541"/>
         <source>Note</source>
         <translation type="unfinished">Note</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2595"/>
+        <location filename="../entities/note.cpp" line="2593"/>
         <source>Could not read image file: %1</source>
         <translation>Ayikwazanga ukufunda ifayela lesithombe: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3215"/>
+        <location filename="../entities/note.cpp" line="3213"/>
         <source>Note file path changed</source>
         <translation>Indlela yefayela yenothi iguquliwe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3216"/>
+        <location filename="../entities/note.cpp" line="3214"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>Kutholwe ushintsho lwendlela yenothi. Ungathanda ukumiselela konke kuvela kwe &lt;strong&gt;%1 &lt;/strong&gt; izixhumanisi nge &lt;strong&gt;%2 &lt;/strong&gt; nokuxhumeka ngegama lefayela le &lt;strong&gt;%3 &lt;/strong&gt; nge &lt;strong&gt;%4&lt;/strong&gt; &gt; efayilini eli &lt;strong&gt;%n&lt;/strong&gt;?
@@ -4352,7 +4352,7 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3764"/>
+        <location filename="../entities/note.cpp" line="3762"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>… Nenothi eli-%n ngaphezulu
@@ -4453,13 +4453,13 @@ Sicela ubheke ukucushwa kwakho kwe- &lt;strong&gt; Todo &lt;/strong&gt; kuzilung
         <translation>Ifolda enegama elithi &lt;b&gt;%1&lt;/b&gt; alinakwakhiwa, ngoba kuluhlu lwamafolda anganakwa! Ungakushintsha lokho kuzilungiselelo ze &lt;i&gt; Panels &lt;/i&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="451"/>
         <location filename="../dialogs/storedimagesdialog.cpp" line="374"/>
         <source>File name changed</source>
         <translation type="unfinished">File name changed</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
         <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the notes?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -7654,9 +7654,8 @@ Amanothi akho azohlala ethembekile!</translation>
 <context>
     <name>StoredAttachmentsDialog</name>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
         <source>Orphaned attachments</source>
-        <translation>Okunamathiselwe okunezintandane</translation>
+        <translation type="vanished">Okunamathiselwe okunezintandane</translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="375"/>
@@ -7672,6 +7671,11 @@ Amanothi akho azohlala ethembekile!</translation>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
         <source>Add selected attachments to note</source>
         <translation>Faka okunamathiselwe okukhethiwe ukuze uqaphele</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
+        <source>Stored attachments</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
@@ -7733,22 +7737,22 @@ Amanothi akho azohlala ethembekile!</translation>
         <translation type="vanished">Izinamathiseli ezingasetshenziswa kumanothi:</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="87"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
         <source>Last modified at %1</source>
         <translation>Kugcine ukuguqulwa ngo- %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="161"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
         <source>Path: %1</source>
         <translation type="unfinished">Path: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
         <source>Delete selected files</source>
         <translation>Susa amafayela akhethiwe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="202"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Susa ifayela le-&lt;strong&gt;%n&lt;/strong&gt; nefayili elikhethiwe?</numerusform>
@@ -7756,57 +7760,57 @@ Amanothi akho azohlala ethembekile!</translation>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="308"/>
         <source>&amp;Open attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
         <source>&amp;Rename attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
         <source>&amp;Delete attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
         <source>&amp;Add attachments to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="411"/>
         <source>File doesn&apos;t exist</source>
         <translation type="unfinished">File doesn&apos;t exist</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
         <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished">The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="424"/>
         <source>File exists</source>
         <translation type="unfinished">File exists</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
         <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="435"/>
         <source>File renaming failed</source>
         <translation type="unfinished">File renaming failed</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
         <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="493"/>
         <source>&amp;Open note</source>
         <translation type="unfinished"></translation>
     </message>

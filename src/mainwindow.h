@@ -497,7 +497,7 @@ class MainWindow : public QMainWindow {
 
     void on_actionImport_notes_from_Evernote_triggered();
 
-    void on_actionDelete_orphaned_images_triggered();
+    void on_actionManage_stored_images_triggered();
 
     void on_actionGitter_triggered();
 
@@ -587,7 +587,7 @@ class MainWindow : public QMainWindow {
 
     void on_noteTreeWidget_itemSelectionChanged();
 
-    void on_actionManage_orphaned_attachments_triggered();
+    void on_actionManage_stored_attachments_triggered();
 
     void on_noteOperationsButton_clicked();
 

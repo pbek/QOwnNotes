@@ -2028,27 +2028,27 @@
         <translation>额外</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1070"/>
+        <location filename="../mainwindow.ui" line="1068"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1083"/>
+        <location filename="../mainwindow.ui" line="1081"/>
         <source>Versioning</source>
         <translation>版本</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1094"/>
+        <location filename="../mainwindow.ui" line="1092"/>
         <source>Encryption</source>
         <translation>加密</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1106"/>
+        <location filename="../mainwindow.ui" line="1104"/>
         <source>Languages</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1111"/>
+        <location filename="../mainwindow.ui" line="1109"/>
         <source>Spelling backend</source>
         <translation>拼写后端</translation>
     </message>
@@ -4265,44 +4265,44 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>默认</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1311"/>
+        <location filename="../entities/note.cpp" line="1309"/>
         <source>Could not store note file: %1 - Error message: %2</source>
         <translation>无法存储笔记文件: %1 - 错误消息: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1389"/>
+        <location filename="../entities/note.cpp" line="1387"/>
         <source>Renamed note-file was removed: %1</source>
         <translation>重命名的笔记文件已经被删除: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1397"/>
+        <location filename="../entities/note.cpp" line="1395"/>
         <source>Could not remove renamed note-file: %1 - Error message: %2</source>
         <translation>无法删除重命名的笔记文件： %1 - 错误消息： %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1543"/>
+        <location filename="../entities/note.cpp" line="1541"/>
         <source>Note</source>
         <translation>笔记</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2595"/>
+        <location filename="../entities/note.cpp" line="2593"/>
         <source>Could not read image file: %1</source>
         <translation>无法读取图像文件: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3215"/>
+        <location filename="../entities/note.cpp" line="3213"/>
         <source>Note file path changed</source>
         <translation>笔记文件路径已更改</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3216"/>
+        <location filename="../entities/note.cpp" line="3214"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>检测到笔记路径已更改。 您是否要用 &lt;strong&gt;%2&lt;/strong&gt; 替换所有出现的&lt;strong&gt;%1&lt;/strong&gt; 链接 ，并在 &lt;strong&gt;%n&lt;/strong&gt; 个笔记文件中用 &lt;strong&gt;%4&lt;/strong&gt; 替换文件名为 &lt;strong&gt;%3&lt;/strong&gt; 的链接 ？</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3764"/>
+        <location filename="../entities/note.cpp" line="3762"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>…以及 ％n 个笔记</numerusform>
@@ -4401,13 +4401,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>无法创建名称为&lt;b&gt;%1&lt;/b&gt;的文件夹，因为该文件夹位于忽略的子文件夹列表中！ 您可以在&lt;i&gt;面板设置&lt;/i&gt;中进行更改。</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="451"/>
         <location filename="../dialogs/storedimagesdialog.cpp" line="374"/>
         <source>File name changed</source>
         <translation type="unfinished">File name changed</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
         <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the notes?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -7569,9 +7569,8 @@ Your notes will stay intact!</source>
 <context>
     <name>StoredAttachmentsDialog</name>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
         <source>Orphaned attachments</source>
-        <translation>孤立的附件</translation>
+        <translation type="vanished">孤立的附件</translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="375"/>
@@ -7587,6 +7586,11 @@ Your notes will stay intact!</source>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
         <source>Add selected attachments to note</source>
         <translation>将选定的附件添加到笔记</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
+        <source>Stored attachments</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
@@ -7648,79 +7652,79 @@ Your notes will stay intact!</source>
         <translation type="vanished">笔记中未使用的附件：</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="87"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
         <source>Last modified at %1</source>
         <translation>最近修改时间 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="161"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
         <source>Path: %1</source>
         <translation type="unfinished">Path: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
         <source>Delete selected files</source>
         <translation>删除所选文件</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="202"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>删除 &lt;strong&gt;%n&lt;/strong&gt; 个所选文件吗?</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="308"/>
         <source>&amp;Open attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
         <source>&amp;Rename attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
         <source>&amp;Delete attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
         <source>&amp;Add attachments to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="411"/>
         <source>File doesn&apos;t exist</source>
         <translation type="unfinished">File doesn&apos;t exist</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
         <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished">The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="424"/>
         <source>File exists</source>
         <translation type="unfinished">File exists</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
         <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="435"/>
         <source>File renaming failed</source>
         <translation type="unfinished">File renaming failed</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
         <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="493"/>
         <source>&amp;Open note</source>
         <translation type="unfinished"></translation>
     </message>

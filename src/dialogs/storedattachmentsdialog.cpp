@@ -57,7 +57,6 @@ void StoredAttachmentsDialog::refreshAttachmentFiles() {
             // we don't want to keep the whole note text
             note.setNoteText("");
 
-            // remove all found attachments from the orphaned files list
             Q_FOREACH (const QString &fileName, attachmentsFileList) {
                     // remove all found attachments from the files list if _orphanedAttachmentsOnly is enabled
                     if (_orphanedAttachmentsOnly) {

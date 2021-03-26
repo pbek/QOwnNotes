@@ -11325,9 +11325,9 @@ void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
 }
 
 /**
- * Shows a dialog to delete stored images
+ * Shows a dialog to manage stored images
  */
-void MainWindow::on_actionDelete_orphaned_images_triggered() {
+void MainWindow::on_actionManage_stored_images_triggered() {
     delete (_storedImagesDialog);
     _storedImagesDialog = new StoredImagesDialog(this);
     _storedImagesDialog->show();
@@ -12345,9 +12345,9 @@ void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
 }
 
 /**
- * Shows a dialog to delete orphaned attachments
+ * Shows a dialog to delete stored attachments
  */
-void MainWindow::on_actionManage_orphaned_attachments_triggered() {
+void MainWindow::on_actionManage_stored_attachments_triggered() {
     delete (_storedAttachmentsDialog);
     _storedAttachmentsDialog = new StoredAttachmentsDialog(this);
     _storedAttachmentsDialog->show();

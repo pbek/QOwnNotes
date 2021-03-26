@@ -23,6 +23,8 @@
     - if notes are using the current attachment a list of those notes will be shown
     - you can double-click on an item in the note list or use the context menu
       to open the note in a new tab
+- the new *Stored images dialog* and *Stored attachments dialog* were moved one
+  level up in the *Edit menu* because of their added functionality
 
 ## 21.3.5
 - the warning `fromIccProfile: failed minimal tag size sanity` is now ignored in

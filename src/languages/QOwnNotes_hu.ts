@@ -2031,27 +2031,27 @@
         <translation>Extra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1070"/>
+        <location filename="../mainwindow.ui" line="1068"/>
         <source>Edit</source>
         <translation>Szerkesztés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1083"/>
+        <location filename="../mainwindow.ui" line="1081"/>
         <source>Versioning</source>
         <translation>Verziókezelés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1094"/>
+        <location filename="../mainwindow.ui" line="1092"/>
         <source>Encryption</source>
         <translation>Titkosítás</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1106"/>
+        <location filename="../mainwindow.ui" line="1104"/>
         <source>Languages</source>
         <translation>Nyelvek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1111"/>
+        <location filename="../mainwindow.ui" line="1109"/>
         <source>Spelling backend</source>
         <translation>Helyesírás háttérprogram</translation>
     </message>
@@ -4270,44 +4270,44 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
         <translation>alapértelmezett</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1311"/>
+        <location filename="../entities/note.cpp" line="1309"/>
         <source>Could not store note file: %1 - Error message: %2</source>
         <translation>Fájl nem tárolható: %1 - Hibaüzenet: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1389"/>
+        <location filename="../entities/note.cpp" line="1387"/>
         <source>Renamed note-file was removed: %1</source>
         <translation>Átnevezett jegyzet fájl el lett távolítva: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1397"/>
+        <location filename="../entities/note.cpp" line="1395"/>
         <source>Could not remove renamed note-file: %1 - Error message: %2</source>
         <translation>Nem sikerült eltávolítani az átnevezett jegyzet-fájlt: %1 - hibaüzenet: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1543"/>
+        <location filename="../entities/note.cpp" line="1541"/>
         <source>Note</source>
         <translation>Jegyzet</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2595"/>
+        <location filename="../entities/note.cpp" line="2593"/>
         <source>Could not read image file: %1</source>
         <translation>Nem sikerült beolvasni a kép fájlt: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3215"/>
+        <location filename="../entities/note.cpp" line="3213"/>
         <source>Note file path changed</source>
         <translation>Megjegyzés fájl elérési útja megváltozott</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3216"/>
+        <location filename="../entities/note.cpp" line="3214"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>A jegyzék elérési útjának megváltozását észleltem. A &lt;strong&gt;%1 &lt;/strong&gt; hivatkozások minden előfordulását ki szeretné cserélni a &lt;strong&gt;%2 &lt;/strong&gt; -ra, a &lt;strong&gt;%3 &lt;/strong&gt; fájlnévvel ellátott linkekre pedig &lt;strong&gt;%4 &lt;/strong&gt; &gt; a &lt;strong&gt;%n &lt;/strong&gt; megjegyzés fájlban?</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3764"/>
+        <location filename="../entities/note.cpp" line="3762"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>... és %n több jegyzet</numerusform>
@@ -4406,13 +4406,13 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
         <translation>A &lt;b&gt;%1 &lt;/b&gt; névű mappát nem lehet létrehozni, mert az a figyelmen kívül hagyott almappák listáján található! Ezt megváltoztathatja a &lt;i&gt; Panelek beállításai &lt;/i&gt; alatt.</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="451"/>
         <location filename="../dialogs/storedimagesdialog.cpp" line="374"/>
         <source>File name changed</source>
         <translation type="unfinished">File name changed</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
         <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the notes?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -7582,9 +7582,8 @@ A jegyzetek érintetlenül maradnak!</translation>
 <context>
     <name>StoredAttachmentsDialog</name>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
         <source>Orphaned attachments</source>
-        <translation>Elárvult csatolmányok</translation>
+        <translation type="vanished">Elárvult csatolmányok</translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="375"/>
@@ -7600,6 +7599,11 @@ A jegyzetek érintetlenül maradnak!</translation>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
         <source>Add selected attachments to note</source>
         <translation>A kiválasztott képeket hozzáadja a jegyzethez</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
+        <source>Stored attachments</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
@@ -7661,79 +7665,79 @@ A jegyzetek érintetlenül maradnak!</translation>
         <translation type="vanished">Képek, melyeket nem használ a jegyzetekben:</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="87"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
         <source>Last modified at %1</source>
         <translation>Legutóbbi módosítás: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="161"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
         <source>Path: %1</source>
         <translation type="unfinished">Útvonal: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
         <source>Delete selected files</source>
         <translation>Kijelölt fájlok törlése</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="202"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
         <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
         <translation>
             <numerusform>Törli a(z) &lt;strong&gt;%n &lt;/strong&gt; kiválasztott fájlt?</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="308"/>
         <source>&amp;Open attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
         <source>&amp;Rename attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
         <source>&amp;Delete attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
         <source>&amp;Add attachments to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="411"/>
         <source>File doesn&apos;t exist</source>
         <translation type="unfinished">A fájl nem létezik</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
         <source>The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
         <translation type="unfinished">The oldFile &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="424"/>
         <source>File exists</source>
         <translation type="unfinished">A fájl létezik</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
         <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
         <translation type="unfinished">A(z) &lt;strong&gt;%1&lt;/strong&gt; fájl már létezik, el kell távolítania, mielőtt új fájlnévként választaná a &lt;strong&gt;%2&lt;/strong&gt; fájlt!</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="435"/>
         <source>File renaming failed</source>
         <translation type="unfinished">A fájlok átnevezése nem sikerült</translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
         <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
+        <location filename="../dialogs/storedattachmentsdialog.cpp" line="493"/>
         <source>&amp;Open note</source>
         <translation type="unfinished"></translation>
     </message>

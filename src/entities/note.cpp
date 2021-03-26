@@ -398,7 +398,6 @@ QStringList Note::getMediaFileList() {
     QRegularExpression re(QStringLiteral(R"(!\[.*?\]\(.*media/(.+?)\))"));
     QRegularExpressionMatchIterator i = re.globalMatch(_noteText);
 
-    // remove all found images from the orphaned files list
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         const QString fileName = match.captured(1);
@@ -453,7 +452,6 @@ QStringList Note::getAttachmentsFileList() const {
         QStringLiteral(R"(\[.*?\]\(.*attachments/(.+?)\))"));
     QRegularExpressionMatchIterator i = re.globalMatch(text);
 
-    // remove all found attachments from the orphaned files list
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         const QString fileName = match.captured(1);

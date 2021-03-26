@@ -1060,8 +1060,6 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionCopy_headline"/>
      <addaction name="actionSearch_text_on_the_web"/>
      <addaction name="actionAutocomplete"/>
-     <addaction name="actionDelete_orphaned_images"/>
-     <addaction name="actionManage_orphaned_attachments"/>
      <addaction name="actionSplit_note_at_cursor_position"/>
      <addaction name="actionActivate_context_menu"/>
     </widget>
@@ -1124,6 +1122,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="menuVersioning"/>
     <addaction name="menuEncryption"/>
+    <addaction name="actionManage_stored_images"/>
+    <addaction name="actionManage_stored_attachments"/>
     <addaction name="menuExtra"/>
     <addaction name="separator"/>
     <addaction name="actionCheck_spelling"/>
@@ -2169,7 +2169,7 @@ p, li { white-space: pre-wrap; }
     <string>Import notes from text files</string>
    </property>
   </action>
-  <action name="actionDelete_orphaned_images">
+  <action name="actionManage_stored_images">
    <property name="icon">
     <iconset theme="archive-remove" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/archive-remove.svg</normaloff>:/icons/breeze-qownnotes/16x16/archive-remove.svg</iconset>
@@ -2482,7 +2482,7 @@ p, li { white-space: pre-wrap; }
     <string notr="true">F4</string>
    </property>
   </action>
-  <action name="actionManage_orphaned_attachments">
+  <action name="actionManage_stored_attachments">
    <property name="icon">
     <iconset theme="mail-attachment" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
