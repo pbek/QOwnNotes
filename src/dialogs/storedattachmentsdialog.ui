@@ -336,10 +336,10 @@
       <item row="6" column="0">
        <widget class="QPushButton" name="insertButton">
         <property name="toolTip">
-         <string>Add selected attachments to note</string>
+         <string>Add selected attachments to the current note</string>
         </property>
         <property name="text">
-         <string>Add to note</string>
+         <string>Add to current note</string>
         </property>
         <property name="icon">
          <iconset theme="list-add" resource="../breeze-qownnotes.qrc">

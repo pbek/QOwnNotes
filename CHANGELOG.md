@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.3.7
+- some button text in more new *Stored attachments dialog* was updated to match
+  the text in the *Stored images dialog* (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+
 ## 21.3.6
 - more improvements to the new *Stored images dialog* have been made
   (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
