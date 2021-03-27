@@ -5,8 +5,9 @@
   the text in the *Stored images dialog* (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
 - more improvements to the new *Stored images dialog* have been made
   (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
-  - there now is an *Open image* button to open the current image externally
-  - there now is an *Open folder* button to open the folder of the current image
+    - there now is an *Open image* button to open the current image externally
+    - there now is an *Open folder* button to open the folder of the current image
+- added more Dutch, German, Persian translation (thank you rawfreeamy, rakekniven, amirkbrpr)
 
 ## 21.3.6
 - more improvements to the new *Stored images dialog* have been made
