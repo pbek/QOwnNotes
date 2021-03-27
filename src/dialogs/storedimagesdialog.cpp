@@ -477,3 +477,25 @@ void StoredImagesDialog::on_noteTreeWidget_customContextMenuRequested(
         openCurrentNote();
     }
 }
+
+void StoredImagesDialog::on_openFileButton_clicked() {
+    QTreeWidgetItem *item = ui->fileTreeWidget->currentItem();
+
+    if (item == nullptr) {
+        return;
+    }
+
+    QString filePath = getFilePath(item);
+    Utils::Misc::openPath(filePath);
+}
+
+void StoredImagesDialog::on_openFolderButton_clicked() {
+    QTreeWidgetItem *item = ui->fileTreeWidget->currentItem();
+
+    if (item == nullptr) {
+        return;
+    }
+
+    QString filePath = getFilePath(item);
+    Utils::Misc::openFolderSelect(filePath);
+}

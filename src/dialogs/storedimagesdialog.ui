@@ -51,24 +51,32 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
-      <item row="0" column="0">
-       <widget class="LineEdit" name="searchLineEdit">
-        <property name="styleSheet">
-         <string notr="true">QLineEdit {
-	border: none;
-	padding: 2px 5px 2px 27px;
-	background-image: url(:/images/search-notes.svg);
-	background-repeat: no-repeat;
-	background-position: center left;
-	margin-right: 0px;
-}
-</string>
+      <item row="2" column="0">
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>0</number>
         </property>
-        <property name="placeholderText">
-         <string>Find image</string>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QPushButton" name="openFolderButton">
+        <property name="text">
+         <string>Open &amp;folder</string>
         </property>
-        <property name="clearButtonEnabled">
-         <bool>true</bool>
+        <property name="icon">
+         <iconset theme="folder" resource="../breeze-dark-qownnotes.qrc">
+          <normaloff>:/icons/breeze-dark-qownnotes/16x16/folder.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/folder.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QPushButton" name="openFileButton">
+        <property name="text">
+         <string>Open image</string>
+        </property>
+        <property name="icon">
+         <iconset theme="mail-attachment" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
         </property>
        </widget>
       </item>
@@ -94,6 +102,16 @@
           <string notr="true">1</string>
          </property>
         </column>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="checkBox">
+        <property name="toolTip">
+         <string>Only show images that are not used in notes</string>
+        </property>
+        <property name="text">
+         <string>Only show orphaned images</string>
+        </property>
        </widget>
       </item>
       <item row="6" column="0">
@@ -124,24 +142,28 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
-       <widget class="QProgressBar" name="progressBar">
-        <property name="value">
-         <number>0</number>
+      <item row="0" column="0">
+       <widget class="LineEdit" name="searchLineEdit">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+	border: none;
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-right: 0px;
+}
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Find image</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
-       <widget class="QCheckBox" name="checkBox">
-        <property name="toolTip">
-         <string>Only show images that are not used in notes</string>
-        </property>
-        <property name="text">
-         <string>Only show orphaned images</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
+      <item row="9" column="0">
        <widget class="QPushButton" name="refreshButton">
         <property name="text">
          <string>Refresh</string>
@@ -260,6 +282,7 @@
  </customwidgets>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

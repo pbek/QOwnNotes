@@ -43,6 +43,10 @@ class StoredImagesDialog : public MasterDialog {
 
     void on_noteTreeWidget_customContextMenuRequested(const QPoint &pos);
 
+    void on_openFileButton_clicked();
+
+    void on_openFolderButton_clicked();
+
 private:
     Ui::StoredImagesDialog *ui;
     bool _orphanedImagesOnly = false;

@@ -7612,11 +7612,6 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
-        <source>Add selected attachments to note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
         <source>Stored attachments</source>
         <translation type="unfinished"></translation>
@@ -7642,8 +7637,13 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
+        <source>Add selected attachments to the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="342"/>
-        <source>Add to note</source>
+        <source>Add to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7763,47 +7763,57 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="68"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="159"/>
         <source>Find image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="102"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="120"/>
         <source>Add selected images to the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="105"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
+        <source>Open &amp;folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
+        <source>Open image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="123"/>
         <source>Add to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="134"/>
         <source>Delete selected images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="137"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="147"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="169"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="206"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="228"/>
         <source>Used in notes:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="137"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="110"/>
         <source>Only show images that are not used in notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="140"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="113"/>
         <source>Only show orphaned images</source>
         <translation type="unfinished"></translation>
     </message>
