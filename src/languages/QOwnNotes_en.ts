@@ -4311,22 +4311,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1541"/>
+        <location filename="../entities/note.cpp" line="1537"/>
         <source>Note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2593"/>
+        <location filename="../entities/note.cpp" line="2589"/>
         <source>Could not read image file: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="3213"/>
+        <location filename="../entities/note.cpp" line="3210"/>
         <source>Note file path changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3214"/>
+        <location filename="../entities/note.cpp" line="3211"/>
         <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -4334,7 +4334,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3762"/>
+        <location filename="../entities/note.cpp" line="3759"/>
         <source>…and %n more note(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -7602,12 +7602,12 @@ Your notes will stay intact!</source>
 <context>
     <name>StoredAttachmentsDialog</name>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="375"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="378"/>
         <source>Delete selected attachments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="378"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="381"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7653,11 +7653,16 @@ Your notes will stay intact!</source>
     </message>
     <message>
         <location filename="../dialogs/storedattachmentsdialog.ui" line="364"/>
+        <source>Open the attachments folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="367"/>
         <source>Open &amp;folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedattachmentsdialog.ui" line="389"/>
+        <location filename="../dialogs/storedattachmentsdialog.ui" line="392"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7763,57 +7768,67 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="159"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
         <source>Find image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="120"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="126"/>
         <source>Add selected images to the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
+        <source>Open the media folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="67"/>
         <source>Open &amp;folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="75"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="78"/>
+        <source>Open image externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.ui" line="81"/>
         <source>Open image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="123"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="129"/>
         <source>Add to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="134"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="140"/>
         <source>Delete selected images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="137"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="143"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="169"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="175"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="228"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
         <source>Used in notes:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="110"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
         <source>Only show images that are not used in notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.ui" line="113"/>
+        <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
         <source>Only show orphaned images</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7871,22 +7886,27 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="434"/>
-        <source>&amp;Rename image</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/storedimagesdialog.cpp" line="435"/>
-        <source>&amp;Delete images</source>
+        <source>&amp;Open image externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/storedimagesdialog.cpp" line="436"/>
+        <source>&amp;Rename image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="437"/>
+        <source>&amp;Delete images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="438"/>
         <source>&amp;Add images to current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/storedimagesdialog.cpp" line="467"/>
+        <location filename="../dialogs/storedimagesdialog.cpp" line="471"/>
         <source>&amp;Open note</source>
         <translation type="unfinished"></translation>
     </message>

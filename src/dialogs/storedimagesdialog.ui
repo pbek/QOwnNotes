@@ -60,6 +60,9 @@
       </item>
       <item row="8" column="0">
        <widget class="QPushButton" name="openFolderButton">
+        <property name="toolTip">
+         <string>Open the media folder</string>
+        </property>
         <property name="text">
          <string>Open &amp;folder</string>
         </property>
@@ -71,6 +74,9 @@
       </item>
       <item row="7" column="0">
        <widget class="QPushButton" name="openFileButton">
+        <property name="toolTip">
+         <string>Open image externally</string>
+        </property>
         <property name="text">
          <string>Open image</string>
         </property>
@@ -281,8 +287,8 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

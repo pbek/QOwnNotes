@@ -3,6 +3,13 @@
 ## 21.3.8
 - a leading html comment block will now be ignored in the automatic note
   filename generation (for [#2084](https://github.com/pbek/QOwnNotes/issues/2084))
+- more improvements to the new *Stored images dialog* have been made
+  (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+  - added a an *Open image* context menu entry
+  - added some tooltip texts
+- more improvements to the new *Stored attachments dialog* have been made
+  (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
+  - added some tooltip texts
 
 ## 21.3.7
 - some button text in more new *Stored attachments dialog* was updated to match

@@ -360,6 +360,9 @@
       </item>
       <item row="8" column="0">
        <widget class="QPushButton" name="openFolderButton">
+        <property name="toolTip">
+         <string>Open the attachments folder</string>
+        </property>
         <property name="text">
          <string>Open &amp;folder</string>
         </property>
@@ -407,8 +410,8 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
