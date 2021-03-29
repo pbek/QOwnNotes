@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.3.8
+- a leading html comment block will now be ignored in the automatic note
+  filename generation (for [#2084](https://github.com/pbek/QOwnNotes/issues/2084))
+
 ## 21.3.7
 - some button text in more new *Stored attachments dialog* was updated to match
   the text in the *Stored images dialog* (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))

@@ -1495,8 +1495,25 @@ bool Note::modifyNoteTextFileNameFromQMLHook() {
  * @return (bool) true if filename was changed
  */
 bool Note::handleNoteTextFileName() {
+    QString noteText = _noteText;
+
+    // remove frontmatter from start of markdown text
+    if (noteText.startsWith(QLatin1String("---"))) {
+        noteText.remove(
+            QRegularExpression(QStringLiteral(R"(^---\n.+?\n---\n)"),
+                               QRegularExpression::DotMatchesEverythingOption));
+    }
+
+    // remove html comment from start of markdown text
+    if (noteText.startsWith(QLatin1String("<!--"))) {
+        noteText.remove(
+            QRegularExpression(QStringLiteral(R"(^<!--.+?-->\n)"),
+                               QRegularExpression::DotMatchesEverythingOption));
+    }
+
     // split the text into a string list
-    const QStringList noteTextLines = getNoteTextLines();
+    const QStringList noteTextLines = noteText.trimmed().split(
+        QRegularExpression(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
     const int noteTextLinesCount = noteTextLines.count();
 
     // do nothing if there is no text
@@ -1508,27 +1525,6 @@ bool Note::handleNoteTextFileName() {
     // do nothing if the first line is empty
     if (name.isEmpty()) {
         return false;
-    }
-
-    // check if we have a frontmatter
-    if (name == QStringLiteral("---") && noteTextLinesCount > 1) {
-        bool foundEnd = false;
-
-        for (int i = 1; i < noteTextLinesCount; i++) {
-            const QString &line = noteTextLines.at(i).trimmed();
-
-            if (foundEnd) {
-                if (!line.isEmpty()) {
-                    // set the name to the first non-empty line after the
-                    // frontmatter
-                    name = line;
-                    break;
-                }
-            } else if (line == QStringLiteral("---")) {
-                // we found the end of the frontmatter
-                foundEnd = true;
-            }
-        }
     }
 
     // remove a leading "# " for markdown headlines
@@ -2773,7 +2769,8 @@ QString Note::encryptNoteText() {
  * @return
  */
 QStringList Note::getNoteTextLines() const {
-    return _noteText.split(QRegExp(QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+    return _noteText.split(QRegularExpression(
+        QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
 }
 
 /**
