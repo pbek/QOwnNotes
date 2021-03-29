@@ -276,9 +276,13 @@ ___
 ```markdown
 [comment]: # (این توضیح در پیش نمایش ظاهر نخواهد شد)<!-- توضیحات HTML نیز پنهان هستند -->```
 
+::: tip
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
+:::
+
 ## لیست های صندوق بررسی
 
-شما می توانید لیست های ساده انجام دادنی را با لیست های صندوق بررسی ایجاد کنید.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] انجام شده
@@ -286,12 +290,12 @@ ___
 ```
 
 ::: tip
-شما قادر خواهید بود صندوق های بررسی را در پیش نمایش علامت بزنید یا علامت آنها را بردارید.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## پیش‌ گفتار
 
-در QOwnNotes می توانید از یک پیش گفتار (مانند YAML) برای افزودن مقداری متا اطلاعات اضافی استفاده کنید. **در پیش نمایش نشان داده نمی شود** و **برای تشکیل نام پرونده یادداشت خودکار اختلال ایجاد نمی کند**.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -304,4 +308,4 @@ ___
 مقداری متن
 ```
 
-نام پرونده این یادداشت نمونه `سرخط یادداشت از اینجا آغاز می شود.md`خواهد بود.
+The filename of this example note would be `Note headline starts here.md`.

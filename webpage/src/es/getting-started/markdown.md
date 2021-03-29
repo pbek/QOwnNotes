@@ -278,9 +278,13 @@ Los comentarios no se muestran en la vista previa.
 <! - Los comentarios HTML también están ocultos - >
 ```
 
+::: tip
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
+:::
+
 ## Listas de casillas de verificación
 
-Puede crear listas de tareas pendientes simples con listas de casillas de verificación.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] done
@@ -288,12 +292,12 @@ Puede crear listas de tareas pendientes simples con listas de casillas de verifi
 ```
 
 ::: tip
-Puede marcar / desmarcar las casillas de verificación en la vista previa.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## Frontmatter
 
-En QOwnNotes puede usar un frontmatter (por ejemplo, YAML) para agregar algo de metainformación adicional. **No se mostrará en la vista previa** y **no perturbará la generación automática de nombres de archivo de notas**.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -306,4 +310,4 @@ descripción: Alguna descripción
 Algún texto
 ```
 
-El nombre de archivo de esta nota de ejemplo sería `El título de la nota comienza aquí.md`.
+The filename of this example note would be `Note headline starts here.md`.

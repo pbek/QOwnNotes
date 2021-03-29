@@ -277,9 +277,13 @@ Opmerkingen worden niet weergegeven in het voorbeeld.
 <! - HTML-opmerkingen zijn ook verborgen - &t;
 ```
 
+::: tip
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
+:::
+
 ## Checkbox-lijsten
 
-U kunt eenvoudige takenlijsten maken met lijsten met selectievakjes.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] done
@@ -287,12 +291,12 @@ U kunt eenvoudige takenlijsten maken met lijsten met selectievakjes.
 ```
 
 ::: tip
-U kunt selectievakjes in het voorbeeld in- of uitschakelen.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## Frontmatter
 
-In QOwnNotes kun je een frontmatter (bijvoorbeeld YAML) gebruiken om wat extra meta-informatie toe te voegen. Het wordt **niet getoond in het voorbeeld** en zal **het automatisch genereren van de bestandsnaam van notities** niet verstoren.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -305,4 +309,4 @@ description: Enige beschrijving
 Wat tekst
 ```
 
-De bestandsnaam van deze voorbeeldnotitie zou ` Notitiekop begint hier.md ` zijn.
+The filename of this example note would be `Note headline starts here.md`.

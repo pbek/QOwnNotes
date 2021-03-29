@@ -289,9 +289,13 @@ Les commentaires ne sont pas affichés dans l'aperçu.
 <! - Les commentaires HTML sont également masqués ->
 ```
 
+::: tip
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
+:::
+
 ## Listes de cases à cocher
 
-Vous pouvez créer des listes de tâches simples avec des listes de cases à cocher.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] done
@@ -299,12 +303,12 @@ Vous pouvez créer des listes de tâches simples avec des listes de cases à coc
 ```
 
 ::: tip
-Vous pouvez cocher / décocher les cases dans l'aperçu.
+You can check/un-check checkboxes in the preview.
 :::
 
 ## Frontmatter
 
-Dans QOwnNotes, vous pouvez utiliser un frontmatter (par exemple YAML) pour ajouter des méta-informations supplémentaires. Il ne sera **pas affiché dans l'aperçu** et ne perturbera **pas la génération automatique de nom de fichier de note**.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -317,4 +321,4 @@ description: Une description
 Du texte
 ```
 
-Le nom de fichier de cet exemple de note serait `Le titre de la note commence ici.md`.
+The filename of this example note would be `Note headline starts here.md`.

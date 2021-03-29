@@ -5,11 +5,13 @@
   filename generation (for [#2084](https://github.com/pbek/QOwnNotes/issues/2084))
 - more improvements to the new *Stored images dialog* have been made
   (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
-  - added a an *Open image* context menu entry
-  - added some tooltip texts
+    - added a an *Open image* context menu entry
+    - added some tooltip texts
 - more improvements to the new *Stored attachments dialog* have been made
   (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
-  - added some tooltip texts
+    - added some tooltip texts
+- added more translation (thank you mguerra, whenwesober, rakekniven, gregory.k,
+  rogepix, amirkbrpr)
 
 ## 21.3.7
 - some button text in more new *Stored attachments dialog* was updated to match

@@ -253,20 +253,22 @@ A jegyzet nem jelenik meg az előnézetben.
 <!-- HTML comments are also hidden -->
 ```
 
+::: tip A leading html comment block in a note will also be ignored in the automatic note filename generation. :::
+
 ## Checkbox lists
 
-Létrehozhat egyszerű todo listákat jelölőnégyzet listákkal.
+You can create simple todo lists with checkbox lists.
 
 ```markdown
 - [x] done
 - [ ] todo
 ```
 
-::: tip Az előnézetben bejelölheti / eltávolíthatja a jelölőnégyzeteket. :::
+::: tip You can check/un-check checkboxes in the preview. :::
 
 ## Frontmatter
 
-A QOwnNotes alkalmazásban frontmatterrel (pl. YAML) adhat további meta-információkat. **nem jelenik meg az előnézetben**, és **nem zavarja az automatikus jegyzetfájlnév előállítását**.
+In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
 
 ```markdown
 ---
@@ -279,4 +281,4 @@ leírás: Néhány leírás
 Némi szöveg
 ```
 
-Ennek a példafájlnak a neve `Note headline starts here.md` lenne.
+The filename of this example note would be `Note headline starts here.md`.
