@@ -289,6 +289,10 @@ Comments are not shown in the preview.
 <!-- HTML comments are also hidden -->
 ```
 
+::: tip
+A leading html comment block in a note will also be ignored in the automatic note filename generation.
+:::
+
 ## Checkbox lists
 
 You can create simple todo lists with checkbox lists.

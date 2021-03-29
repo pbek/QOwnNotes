@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 21.3.8
-- a leading html comment block will now be ignored in the automatic note
+- a leading html comment block in a note will now be ignored in the automatic note
   filename generation (for [#2084](https://github.com/pbek/QOwnNotes/issues/2084))
 - more improvements to the new *Stored images dialog* have been made
   (for [#2073](https://github.com/pbek/QOwnNotes/issues/2073))
