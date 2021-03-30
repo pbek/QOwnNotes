@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.3.9
+- added the **new editor color schema** *Serious*
+  (for [#2085](https://github.com/pbek/QOwnNotes/issues/2085), thank you @marcoXbresciani)
+
 ## 21.3.8
 - a leading html comment block in a note will now be ignored in the automatic note
   filename generation (for [#2084](https://github.com/pbek/QOwnNotes/issues/2084))
