@@ -253,8 +253,9 @@ void StoredImagesDialog::on_insertButton_clicked() {
         QString imageLink =
             "![" + fileInfo.baseName() + "](" + mediaUrlString + ")\n";
         textEdit->insertPlainText(imageLink);
-        refreshMediaFiles();
     }
+
+    refreshMediaFiles();
 }
 
 void StoredImagesDialog::on_checkBox_toggled(bool checked) {

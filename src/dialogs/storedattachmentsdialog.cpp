@@ -265,8 +265,9 @@ void StoredAttachmentsDialog::on_insertButton_clicked() {
         QString attachmentLink =
             "[" + fileInfo.baseName() + "](" + attachmentsUrlString + ")\n";
         textEdit->insertPlainText(attachmentLink);
-        refreshAttachmentFiles();
     }
+
+    refreshAttachmentFiles();
 }
 
 void StoredAttachmentsDialog::on_openFileButton_clicked() {

@@ -3,6 +3,9 @@
 ## 21.3.9
 - added the **new editor color schema** *Serious*
   (for [#2085](https://github.com/pbek/QOwnNotes/issues/2085), thank you @marcoXbresciani)
+- a possible crash with multiple selected images/attachments are inserted into 
+  the current note in the stored images/attachments dialogs was fixed
+  (for [#2086](https://github.com/pbek/QOwnNotes/issues/2086))
 
 ## 21.3.8
 - a leading html comment block in a note will now be ignored in the automatic note
