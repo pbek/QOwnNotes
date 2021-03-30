@@ -7669,7 +7669,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.ui" line="364"/>
       <source>Open the attachments folder</source>
-      <translation type="unfinished">Open the attachments folder</translation>
+      <translation>Ordner für Anhänge öffnen</translation>
     </message>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.ui" line="367"/>
@@ -7795,7 +7795,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
       <source>Open the media folder</source>
-      <translation type="unfinished">Open the media folder</translation>
+      <translation>Medienordner öffnen</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="67"/>
@@ -7805,7 +7805,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="78"/>
       <source>Open image externally</source>
-      <translation type="unfinished">Open image externally</translation>
+      <translation>Bild extern öffnen</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="81"/>
@@ -7903,7 +7903,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="435"/>
       <source>&amp;Open image externally</source>
-      <translation type="unfinished">&amp;Open image externally</translation>
+      <translation>&amp;Bild extern öffnen</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="436"/>

@@ -6,6 +6,7 @@
 - a possible crash with multiple selected images/attachments are inserted into 
   the current note in the stored images/attachments dialogs was fixed
   (for [#2086](https://github.com/pbek/QOwnNotes/issues/2086))
+- added more German, Persian translation (thank you rakekniven, amirkbrpr)
 
 ## 21.3.8
 - a leading html comment block in a note will now be ignored in the automatic note
