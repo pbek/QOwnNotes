@@ -3,8 +3,6 @@ QT       += core gui testlib sql widgets xml network qml printsupport
 
 lessThan(QT_MAJOR_VERSION, 6) {
     QT += xmlpatterns
-} else {
-    QT += core5compat
 }
 
 #QT       -= gui

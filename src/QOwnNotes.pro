@@ -8,8 +8,6 @@ QT       += core gui widgets sql svg network xml printsupport qml websockets con
 
 lessThan(QT_MAJOR_VERSION, 6) {
     QT += xmlpatterns
-} else {
-    QT += core5compat
 }
 
 # quick is enabled for more scripting options

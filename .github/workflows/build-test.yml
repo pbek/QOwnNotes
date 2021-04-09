@@ -126,7 +126,6 @@ jobs:
       uses: jurplel/install-qt-action@v2
       with:
         version: ${{ matrix.qt-version }}
-        modules: 'qt5compat'
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
 
       #
