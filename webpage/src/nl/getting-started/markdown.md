@@ -181,10 +181,43 @@ Er is ook enige syntaxisaccentuering met codeblokken in QOwnNotes.
 cd Notes
 ~~~
 ~~~
+Currently supported languages (and code block identifiers) are:
+* BASh scripting, `bash`
+* C, `c`
+* C++, `cpp`
+* C++, `cxx`
+* C++, `c++`
+* C#, `c#`
+* CMake, `cmake`
+* C#, `csharp`
+* CSS, `css`
+* Go, `go`
+* HTML, `html`
+* INI, `ini`
+* Java, `java`
+* JavaScript, `javascript`
+* JavaScript, `js`
+* JSON, `json`
+* Makefile, `make`
+* PHP, `php`
+* Python, `py`
+* Python, `python`
+* QML, `qml`
+* Rust, `rust`
+* Shell scripting, `sh`
+* SQL, `sql`
+* TypeScript, `ts`
+* TypeScript, `typescript`
+* V, `v`
+* Vex, `vex`
+* XML, `xml`
+* YAML, `yml`
+* YAML, `yaml`
 
-## Tabellen
 
-Tabellen maken geen deel uit van de kernspecificatie van Markdown, maar het QOwnNotes-voorbeeld ondersteunt ze. 
+## Tables
+
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ```markdown
 Colons can be used to align columns.
@@ -278,12 +311,12 @@ Opmerkingen worden niet weergegeven in het voorbeeld.
 ```
 
 ::: tip
-A leading html comment block in a note will also be ignored in the automatic note filename generation.
+Een leidend html-commentaarblok in een notitie wordt ook genegeerd bij het automatisch genereren van notitiebestandsnamen.
 :::
 
 ## Checkbox-lijsten
 
-You can create simple todo lists with checkbox lists.
+U kunt eenvoudige takenlijsten maken met lijsten met selectievakjes.
 
 ```markdown
 - [x] done
@@ -291,12 +324,12 @@ You can create simple todo lists with checkbox lists.
 ```
 
 ::: tip
-You can check/un-check checkboxes in the preview.
+U kunt selectievakjes in het voorbeeld in- of uitschakelen.
 :::
 
 ## Frontmatter
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
+In QOwnNotes kun je een frontmatter (bijvoorbeeld YAML) gebruiken om wat extra meta-informatie toe te voegen. Het wordt **niet getoond in het voorbeeld** en zal **het automatisch genereren van de bestandsnaam van notities** niet verstoren.
 
 ```markdown
 ---
@@ -309,4 +342,4 @@ description: Enige beschrijving
 Wat tekst
 ```
 
-The filename of this example note would be `Note headline starts here.md`.
+De bestandsnaam van deze voorbeeldnotitie zou ` Notitiekop begint hier.md ` zijn.

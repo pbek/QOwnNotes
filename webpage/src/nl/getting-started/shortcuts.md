@@ -42,9 +42,10 @@
 - <kbd>F5</kbd> springt naar de notitielijst
 - <kbd>F6</kbd> springt naar het notitiesubfolderpaneel
 - <kbd>F7</kbd> springt naar het tagspaneel
-- <kbd>F10</kbd> activeert het contextmenu van de huidige widget
-- <kbd>F11</kbd> schakelt de volledige schermmodus in
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopieert de kop van de huidige notitie
+- <kbd>F8</kbd> jumps to the navigation panel
+- <kbd>F10</kbd> activates the context menu of the current widget
+- <kbd>F11</kbd> toggles full-screen mode
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### In de notitie-zoekbalk
 
@@ -156,9 +157,10 @@
 - <kbd>F5</kbd> jumps to the note list
 - <kbd>F6</kbd> springt naar het notitiesubfolderpaneel
 - <kbd>F7</kbd> springt naar het tagspaneel
-- <kbd>F10</kbd> activeert het contextmenu van de huidige widget
-- <kbd>⌘</kbd> + <kbd>F11</kbd> schakelt de modus voor volledig scherm in
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopieert de kop van de huidige notitie
+- <kbd>F8</kbd> jumps to the navigation panel
+- <kbd>F10</kbd> activates the context menu of the current widget
+- <kbd>⌘</kbd> + <kbd>F11</kbd> toggles full-screen mode
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### In de notitie-zoekbalk
 

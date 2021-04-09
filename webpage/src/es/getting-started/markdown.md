@@ -182,10 +182,43 @@ bash
 cd notas
 ~~~
 ~~~
+Currently supported languages (and code block identifiers) are:
+* BASh scripting, `bash`
+* C, `c`
+* C++, `cpp`
+* C++, `cxx`
+* C++, `c++`
+* C#, `c#`
+* CMake, `cmake`
+* C#, `csharp`
+* CSS, `css`
+* Go, `go`
+* HTML, `html`
+* INI, `ini`
+* Java, `java`
+* JavaScript, `javascript`
+* JavaScript, `js`
+* JSON, `json`
+* Makefile, `make`
+* PHP, `php`
+* Python, `py`
+* Python, `python`
+* QML, `qml`
+* Rust, `rust`
+* Shell scripting, `sh`
+* SQL, `sql`
+* TypeScript, `ts`
+* TypeScript, `typescript`
+* V, `v`
+* Vex, `vex`
+* XML, `xml`
+* YAML, `yml`
+* YAML, `yaml`
 
-## Mesas
 
-Las tablas no forman parte de la especificación principal de Markdown, pero la vista previa de QOwnNotes las admite. 
+## Tables
+
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 `` rebaja
 Se pueden utilizar dos puntos para alinear columnas.
@@ -278,13 +311,12 @@ Los comentarios no se muestran en la vista previa.
 <! - Los comentarios HTML también están ocultos - >
 ```
 
-::: tip
-A leading html comment block in a note will also be ignored in the automatic note filename generation.
+::: Astuce Un bloc de commentaire html en tête dans une note sera également ignoré dans la génération automatique du nom de fichier de la note.
 :::
 
 ## Listas de casillas de verificación
 
-You can create simple todo lists with checkbox lists.
+Puede crear listas de tareas pendientes simples con listas de casillas de verificación.
 
 ```markdown
 - [x] done
@@ -292,12 +324,12 @@ You can create simple todo lists with checkbox lists.
 ```
 
 ::: tip
-You can check/un-check checkboxes in the preview.
+Puede marcar / desmarcar las casillas de verificación en la vista previa.
 :::
 
 ## Frontmatter
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
+En QOwnNotes puede usar un frontmatter (por ejemplo, YAML) para agregar algo de metainformación adicional. **No se mostrará en la vista previa** y **no perturbará la generación automática de nombres de archivo de notas**.
 
 ```markdown
 ---
@@ -310,4 +342,4 @@ descripción: Alguna descripción
 Algún texto
 ```
 
-The filename of this example note would be `Note headline starts here.md`.
+El nombre de archivo de esta nota de ejemplo sería `El título de la nota comienza aquí.md`.

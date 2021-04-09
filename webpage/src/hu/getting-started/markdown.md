@@ -163,10 +163,43 @@ Van néhány szintaxis kiemelés a kódblokkokkal a QOwnNotes-ban.
 cd Notes
 ~~~
 ~~~
+Currently supported languages (and code block identifiers) are:
+* BASh scripting, `bash`
+* C, `c`
+* C++, `cpp`
+* C++, `cxx`
+* C++, `c++`
+* C#, `c#`
+* CMake, `cmake`
+* C#, `csharp`
+* CSS, `css`
+* Go, `go`
+* HTML, `html`
+* INI, `ini`
+* Java, `java`
+* JavaScript, `javascript`
+* JavaScript, `js`
+* JSON, `json`
+* Makefile, `make`
+* PHP, `php`
+* Python, `py`
+* Python, `python`
+* QML, `qml`
+* Rust, `rust`
+* Shell scripting, `sh`
+* SQL, `sql`
+* TypeScript, `ts`
+* TypeScript, `typescript`
+* V, `v`
+* Vex, `vex`
+* XML, `xml`
+* YAML, `yml`
+* YAML, `yaml`
 
-## Táblázatok
 
-A táblázatok nem részei a Markdown alapvető specifikációinak, de a QOwnNotes előnézet támogatja őket. 
+## Tables
+
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ```markdown
 A kettőspontok használhatók az oszlopok igazítására.
@@ -253,22 +286,22 @@ A jegyzet nem jelenik meg az előnézetben.
 <!-- HTML comments are also hidden -->
 ```
 
-::: tip A leading html comment block in a note will also be ignored in the automatic note filename generation. :::
+::: tipp A jegyzetek vezető html megjegyzésblokkja az automatikus jegyzetfájl-generálás során sem kerül figyelembe. :::
 
 ## Checkbox lists
 
-You can create simple todo lists with checkbox lists.
+Létrehozhat egyszerű todo listákat jelölőnégyzet listákkal.
 
 ```markdown
 - [x] done
 - [ ] todo
 ```
 
-::: tip You can check/un-check checkboxes in the preview. :::
+::: tip Az előnézetben bejelölheti / eltávolíthatja a jelölőnégyzeteket. :::
 
 ## Frontmatter
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
+A QOwnNotes alkalmazásban frontmatterrel (pl. YAML) adhat további meta-információkat. **nem jelenik meg az előnézetben**, és **nem zavarja az automatikus jegyzetfájlnév előállítását**.
 
 ```markdown
 ---
@@ -281,4 +314,4 @@ leírás: Néhány leírás
 Némi szöveg
 ```
 
-The filename of this example note would be `Note headline starts here.md`.
+Ennek a példafájlnak a neve `Note headline starts here.md` lenne.

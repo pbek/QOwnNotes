@@ -42,9 +42,10 @@
 - <kbd>F5</kbd> springt zur Notizenliste
 - <kbd>F6</kbd> jumps to the note subfolder panel
 - <kbd>F7</kbd> jumps to the tags panel
-- <kbd>F10</kbd> aktiviert das Kontextmenü des aktuellen Widgets
-- <kbd>F11</kbd> schaltet den Vollbildmodus um
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopiert die Überschrift der aktuellen Notiz
+- <kbd>F8</kbd> jumps to the navigation panel
+- <kbd>F10</kbd> activates the context menu of the current widget
+- <kbd>F11</kbd> toggles full-screen mode
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### In der Notizsuchleiste
 
@@ -156,9 +157,10 @@
 - <kbd>F5</kbd> springt zur Notizenliste
 - <kbd>F6</kbd> jumps to the note subfolder panel
 - <kbd>F7</kbd> jumps to the tags panel
-- <kbd>F10</kbd> aktiviert das Kontextmenü des aktuellen Widgets
-- <kbd>⌘</kbd> + <kbd>F11</kbd> schaltet den Vollbildmodus um
-- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> kopiert die Überschrift der aktuellen Notiz
+- <kbd>F8</kbd> jumps to the navigation panel
+- <kbd>F10</kbd> activates the context menu of the current widget
+- <kbd>⌘</kbd> + <kbd>F11</kbd> toggles full-screen mode
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### In der Notizsuchleiste
 

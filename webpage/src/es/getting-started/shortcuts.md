@@ -42,9 +42,10 @@
 - <kbd>F5</kbd> salta a la lista de notas
 - <kbd>F6</kbd> salta al panel de subcarpetas de notas
 - <kbd>F7</kbd> salta al panel de etiquetas
-- <kbd>F10</kbd> activa el menú contextual del widget actual
-- <kbd>F11</kbd> alterna el modo de pantalla completa
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copia el título de la nota actual
+- <kbd>F8</kbd> jumps to the navigation panel
+- <kbd>F10</kbd> activates the context menu of the current widget
+- <kbd>F11</kbd> toggles full-screen mode
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### En la barra de búsqueda de notas
 
@@ -156,9 +157,10 @@
 - <kbd>F5</kbd> salta a la lista de notas
 - <kbd>F6</kbd> salta al panel de subcarpetas de notas
 - <kbd>F7</kbd> salta al panel de etiquetas
-- <kbd>F10</kbd> activa el menú contextual del widget actual
-- <kbd>⌘</kbd> + <kbd>F11</kbd> alterna el modo de pantalla completa
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copia el título de la nota actual
+- <kbd>F8</kbd> jumps to the navigation panel
+- <kbd>F10</kbd> activates the context menu of the current widget
+- <kbd>⌘</kbd> + <kbd>F11</kbd> toggles full-screen mode
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### En la barra de búsqueda de notas
 

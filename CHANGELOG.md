@@ -9,6 +9,8 @@
     - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
 - fixed more Qt 6 build errors (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
+- added more translation (thank you yoshua-chan, rakekniven, mguerra, rogepix,
+  gregory.k, ihatemyself, gbabin, whenwesober, rawfreeamy)
 
 ## 21.3.9
 - added the **new editor color schema** *Serious*

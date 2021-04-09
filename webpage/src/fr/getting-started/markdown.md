@@ -181,10 +181,43 @@ Il y a aussi une coloration syntaxique avec des blocs de code dans QOwnNotes.
 cd Notes
 ~~~
 ~~~
+Currently supported languages (and code block identifiers) are:
+* BASh scripting, `bash`
+* C, `c`
+* C++, `cpp`
+* C++, `cxx`
+* C++, `c++`
+* C#, `c#`
+* CMake, `cmake`
+* C#, `csharp`
+* CSS, `css`
+* Go, `go`
+* HTML, `html`
+* INI, `ini`
+* Java, `java`
+* JavaScript, `javascript`
+* JavaScript, `js`
+* JSON, `json`
+* Makefile, `make`
+* PHP, `php`
+* Python, `py`
+* Python, `python`
+* QML, `qml`
+* Rust, `rust`
+* Shell scripting, `sh`
+* SQL, `sql`
+* TypeScript, `ts`
+* TypeScript, `typescript`
+* V, `v`
+* Vex, `vex`
+* XML, `xml`
+* YAML, `yml`
+* YAML, `yaml`
 
-## Les tables
 
-Les tableaux ne font pas partie de la spécification Markdown principale, mais l'aperçu de QOwnNotes les prend en charge. 
+## Tables
+
+Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
 ``` démarque
 Les deux points peuvent être utilisés pour aligner les colonnes.
@@ -289,13 +322,12 @@ Les commentaires ne sont pas affichés dans l'aperçu.
 <! - Les commentaires HTML sont également masqués ->
 ```
 
-::: tip
-A leading html comment block in a note will also be ignored in the automatic note filename generation.
+::: Astuce Un bloc de commentaire html en tête dans une note sera également ignoré dans la génération automatique du nom de fichier de la note.
 :::
 
 ## Listes de cases à cocher
 
-You can create simple todo lists with checkbox lists.
+Vous pouvez créer des listes de tâches simples avec des listes de cases à cocher.
 
 ```markdown
 - [x] done
@@ -303,12 +335,12 @@ You can create simple todo lists with checkbox lists.
 ```
 
 ::: tip
-You can check/un-check checkboxes in the preview.
+Vous pouvez cocher / décocher les cases dans l'aperçu.
 :::
 
 ## Frontmatter
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
+Dans QOwnNotes, vous pouvez utiliser un en-tête (par exemple YAML) pour ajouter des méta-informations supplémentaires. Il ne sera **pas affiché dans l'aperçu** et ne perturbera **pas la génération automatique de nom de fichier de note**.
 
 ```markdown
 ---
@@ -321,4 +353,4 @@ description: Une description
 Du texte
 ```
 
-The filename of this example note would be `Note headline starts here.md`.
+Le nom de fichier de cet exemple de note serait `Le titre de la note commence ici.md`.
