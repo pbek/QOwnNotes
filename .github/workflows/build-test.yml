@@ -32,6 +32,9 @@ jobs:
           # Failing SSL Tests
           - os: ubuntu-latest
             qt-version: '5.9.9'
+          # tests.exe not found
+          - os: windows-latest
+            qt-version: '5.9.9'
           # Qt installation times out too often
 #          - os: windows-latest
 #            qt-version: '5.13.2'
