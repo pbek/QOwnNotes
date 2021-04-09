@@ -8,6 +8,7 @@
   search field was hidden (for [#2093](https://github.com/pbek/QOwnNotes/issues/2093))
     - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
       for a list of all shortcuts
+- fixed more Qt 6 build errors (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
 
 ## 21.3.9
 - added the **new editor color schema** *Serious*
