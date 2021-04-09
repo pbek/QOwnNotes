@@ -46,9 +46,15 @@ void TestNotes::initTestCase() {
     QFile file(noteFileName);
     if (file.open(QIODevice::ReadWrite)) {
         QTextStream stream(&file);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
         stream << noteName << Qt::endl
                << "============" << Qt::endl
                << Qt::endl
+#else
+        stream << noteName << endl
+               << "============" << endl
+               << endl
+#endif
                << "Some text";
         file.close();
     }
