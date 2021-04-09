@@ -104,13 +104,7 @@ jobs:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw73
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: false == contains( matrix.os, 'windows') && !startsWith( matrix.qt-version, '6.' ) && steps.changes.outputs.DO_BUILD
-      name: Install Qt
-      uses: jurplel/install-qt-action@v2
-      with:
-        version: ${{ matrix.qt-version }}
-        cached: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: false == contains( matrix.os, 'windows') && startsWith( matrix.qt-version, '6.' ) && steps.changes.outputs.DO_BUILD
+    - if: false == contains( matrix.os, 'windows') && steps.changes.outputs.DO_BUILD
       name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
