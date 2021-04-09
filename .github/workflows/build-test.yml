@@ -101,19 +101,19 @@ jobs:
         arch: win32_mingw53
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
         aqtversion: '==0.9.4'
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ) && steps.changes.outputs.DO_BUILD
-      name: Install Qt 5.15.2 on Windows
-      uses: jurplel/install-qt-action@v2
-      with:
-        version: ${{ matrix.qt-version }}
-        arch: win64_mingw81
-        cached: ${{ steps.cache-qt.outputs.cache-hit }}
-    - if: contains( matrix.os, 'windows') && ( matrix.qt-version != '5.9.9' ) && ( matrix.qt-version != '5.15.2' ) && steps.changes.outputs.DO_BUILD
+    - if: contains( matrix.os, 'windows') && ( ( matrix.qt-version == '5.13.2' ) || ( matrix.qt-version == '5.14.2' ) ) && steps.changes.outputs.DO_BUILD
       name: Install Qt on Windows
       uses: jurplel/install-qt-action@v2
       with:
         version: ${{ matrix.qt-version }}
         arch: win64_mingw73
+        cached: ${{ steps.cache-qt.outputs.cache-hit }}
+    - if: contains( matrix.os, 'windows') && ( ( matrix.qt-version == '5.15.2' ) || ( matrix.qt-version == '6.1.0' )) && steps.changes.outputs.DO_BUILD
+      name: Install Qt > 5.15.2 on Windows
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: ${{ matrix.qt-version }}
+        arch: win64_mingw81
         cached: ${{ steps.cache-qt.outputs.cache-hit }}
     - if: false == contains( matrix.os, 'windows') && steps.changes.outputs.DO_BUILD
       name: Install Qt
