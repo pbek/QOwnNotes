@@ -1352,7 +1352,9 @@ bool Note::storeNoteTextFileToDisk() {
     //    qDebug() << __func__ << " - 'html': " << html;
 
     QTextStream out(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     out.setCodec("UTF-8");
+#endif
     out << text;
     file.flush();
     file.close();
@@ -1645,7 +1647,9 @@ bool Note::updateNoteTextFromDisk() {
     }
 
     QTextStream in(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     in.setCodec("UTF-8");
+#endif
     this->_noteText = in.readAll();
     file.close();
 
@@ -1944,7 +1948,9 @@ void Note::createFromFile(QFile &file, int noteSubFolderId,
                           bool withNoteNameHook) {
     if (file.open(QIODevice::ReadOnly)) {
         QTextStream in(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         in.setCodec("UTF-8");
+#endif
 
         // qDebug() << file.size() << in.readAll();
         const QString noteText = in.readAll();

@@ -2199,7 +2199,9 @@ bool ScriptingService::writeToFile(const QString &filePath,
     if (!file.open(QFile::WriteOnly | QFile::Truncate)) return false;
 
     QTextStream out(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     out.setCodec("UTF-8");
+#endif
     out << data;
     file.close();
     return true;
@@ -2224,7 +2226,11 @@ QString ScriptingService::readFromFile(const QString &filePath,
     }
 
     QTextStream in(&file);
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    in.setEncoding(QStringConverter::Latin1);
+#else
     in.setCodec(codec.toLatin1());
+#endif
     QString data = in.readAll();
     file.close();
 

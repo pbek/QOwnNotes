@@ -7315,7 +7315,9 @@ void MainWindow::on_action_Export_note_as_markdown_triggered() {
                 return;
             }
             QTextStream out(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             out.setCodec("UTF-8");
+#endif
             out << ui->noteTextEdit->toPlainText();
             file.flush();
             file.close();
@@ -10181,7 +10183,9 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
                 return;
             }
             QTextStream out(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             out.setCodec("UTF-8");
+#endif
             out << currentNote.toMarkdownHtml(NoteFolder::currentLocalPath(),
                                               getMaxImageWidth(), true, true,
                                               true);
