@@ -28,7 +28,10 @@ jobs:
         # Windows: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/
         qt-version: ['5.9.9', '5.13.2', '5.14.2', '5.15.2']
         experimental: [false]
-#        exclude:
+        exclude:
+          # Failing SSL Tests
+          - os: ubuntu-latest
+            qt-version: '5.9.9'
           # Qt installation times out too often
 #          - os: windows-latest
 #            qt-version: '5.13.2'
