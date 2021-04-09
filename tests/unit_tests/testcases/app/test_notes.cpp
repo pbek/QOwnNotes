@@ -46,9 +46,9 @@ void TestNotes::initTestCase() {
     QFile file(noteFileName);
     if (file.open(QIODevice::ReadWrite)) {
         QTextStream stream(&file);
-        stream << noteName << endl
-               << "============" << endl
-               << endl
+        stream << noteName << Qt::endl
+               << "============" << Qt::endl
+               << Qt::endl
                << "Some text";
         file.close();
     }
