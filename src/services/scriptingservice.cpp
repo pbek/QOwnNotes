@@ -2227,7 +2227,9 @@ QString ScriptingService::readFromFile(const QString &filePath,
 
     QTextStream in(&file);
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    in.setEncoding(QStringConverter::Latin1);
+    if (codec == "latin1") {
+        in.setEncoding(QStringConverter::Latin1);
+    }
 #else
     in.setCodec(codec.toLatin1());
 #endif
