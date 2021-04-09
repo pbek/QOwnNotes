@@ -178,7 +178,7 @@ void TestNotes::testCodeToHtmlConversionPython() {
         "# this is a comment\n";
 
     CodeToHtmlConverter c("python");
-    QString outputPython = c.process(pythonCode.midRef(0, pythonCode.length()));
+    QString outputPython = c.process(pythonCode.mid(0, pythonCode.length()));
 
     QString expectedOutputPython = QStringLiteral(
         "<span class=\"code-other\">import</span> hello\n"
@@ -194,7 +194,7 @@ void TestNotes::testCodeToHtmlConversionHashComment() {
         QStringLiteral("#hello my qownnotes blah blah\n");
     CodeToHtmlConverter c2(QStringLiteral("bash"));
     QString outputHashStyleComment =
-        c2.process(hashStyleComment.midRef(0, hashStyleComment.length()));
+        c2.process(hashStyleComment.mid(0, hashStyleComment.length()));
     QString expectedOutputHashStyleComment = QStringLiteral(
         "<span class=\"code-comment\">#hello my qownnotes blah blah</span>\n");
 
@@ -211,9 +211,9 @@ void TestNotes::testCodeToHtmlConversionSingleLineComment() {
     CodeToHtmlConverter py(QStringLiteral("py"));
 
     QString outputSingleLineComment =
-        cpp.process(comment.midRef(0, comment.length()));
+        cpp.process(comment.mid(0, comment.length()));
     QString outputCommentPy =
-        py.process(commentpy.midRef(0, commentpy.length()));
+        py.process(commentpy.mid(0, commentpy.length()));
 
     QString expectedOutputSingleLineComment = QStringLiteral(
         "<span class=\"code-comment\">&#47;&#47;hello my qownnotes blah blah "
@@ -239,16 +239,16 @@ void TestNotes::testCodeToHtmlConversionMultiLineComment() {
     CodeToHtmlConverter css("css");
 
     QString outputMultiLineComment =
-        c.process(comment.midRef(0, comment.length()));
+        c.process(comment.mid(0, comment.length()));
     QString outputTrueMultiLine = c.process(
-        commentTrueMultiLine.midRef(0, commentTrueMultiLine.length()));
+        commentTrueMultiLine.mid(0, commentTrueMultiLine.length()));
     QString outputTrueMultiLineNoEnd =
-        c.process(commentTrueMultiLineNoEnd.midRef(
+        c.process(commentTrueMultiLineNoEnd.mid(
             0, commentTrueMultiLineNoEnd.length()));
     QString outputNotAComment =
-        c.process(notAComment.midRef(0, notAComment.length()));
+        c.process(notAComment.mid(0, notAComment.length()));
     QString outputCSSNotAComment =
-        css.process(notAComment.midRef(0, notAComment.length()));
+        css.process(notAComment.mid(0, notAComment.length()));
 
     QString expectedMultiLineComment = QStringLiteral(
         "<span class=\"code-comment\">&#47;*hello my qownnotes blah blah "
@@ -284,17 +284,17 @@ void TestNotes::testCodeToHtmlNumericLiterals() {
 
     CodeToHtmlConverter c(QStringLiteral("c"));
     CodeToHtmlConverter css(QStringLiteral("css"));
-    QString ar = c.process(a.midRef(0, a.length()));
-    QString a1r = c.process(a1.midRef(0, a1.length()));
-    QString a2r = c.process(a2.midRef(0, a2.length()));
-    QString a3r = c.process(a3.midRef(0, a3.length()));
-    QString badResult = c.process(bad.midRef(0, bad.length()));
-    QString badResult1 = c.process(bad1.midRef(0, bad1.length()));
-    QString badResult2 = c.process(bad2.midRef(0, bad2.length()));
-    QString badResult3 = c.process(bad3.midRef(0, bad3.length()));
-    QString badResult4 = c.process(bad4.midRef(0, bad4.length()));
-    QString a5r = c.process(a5.midRef(0, a5.length()));
-    QString a7r = css.process(a7.midRef(0, a7.length()));
+    QString ar = c.process(a.mid(0, a.length()));
+    QString a1r = c.process(a1.mid(0, a1.length()));
+    QString a2r = c.process(a2.mid(0, a2.length()));
+    QString a3r = c.process(a3.mid(0, a3.length()));
+    QString badResult = c.process(bad.mid(0, bad.length()));
+    QString badResult1 = c.process(bad1.mid(0, bad1.length()));
+    QString badResult2 = c.process(bad2.mid(0, bad2.length()));
+    QString badResult3 = c.process(bad3.mid(0, bad3.length()));
+    QString badResult4 = c.process(bad4.mid(0, bad4.length()));
+    QString a5r = c.process(a5.mid(0, a5.length()));
+    QString a7r = css.process(a7.mid(0, a7.length()));
 
     QString e = "<span class=\"code-literal\">123</span>";
     QString e1 =
@@ -337,15 +337,15 @@ void TestNotes::testCodeToHtmlNumericEquations() {
     QString a9 = "[(1+2-3)+4/5] array[5] list{3}";
 
     CodeToHtmlConverter c(QStringLiteral("c"));
-    QString a1r = c.process(a1.midRef(0, a1.length()));
-    QString a2r = c.process(a2.midRef(0, a2.length()));
-    QString a3r = c.process(a3.midRef(0, a3.length()));
-    QString a4r = c.process(a4.midRef(0, a4.length()));
-    QString a5r = c.process(a5.midRef(0, a5.length()));
-    QString a6r = c.process(a6.midRef(0, a6.length()));
-    QString a7r = c.process(a7.midRef(0, a7.length()));
-    QString a8r = c.process(a8.midRef(0, a8.length()));
-    QString a9r = c.process(a9.midRef(0, a9.length()));
+    QString a1r = c.process(a1.mid(0, a1.length()));
+    QString a2r = c.process(a2.mid(0, a2.length()));
+    QString a3r = c.process(a3.mid(0, a3.length()));
+    QString a4r = c.process(a4.mid(0, a4.length()));
+    QString a5r = c.process(a5.mid(0, a5.length()));
+    QString a6r = c.process(a6.mid(0, a6.length()));
+    QString a7r = c.process(a7.mid(0, a7.length()));
+    QString a8r = c.process(a8.mid(0, a8.length()));
+    QString a9r = c.process(a9.mid(0, a9.length()));
 
     QString e1 =
         "<span class=\"code-literal\">123</span>+<span "
@@ -408,19 +408,19 @@ void TestNotes::testCodeToHtmlStringLiterals() {
 
     CodeToHtmlConverter c(QStringLiteral("c"));
     // R = result
-    QString sR = c.process(s.midRef(0, s.length()));
-    QString saR = c.process(sa.midRef(0, sa.length()));
-    QString sbR = c.process(sb.midRef(0, sb.length()));
-    QString seR = c.process(se.midRef(0, se.length()));
-    QString sfR = c.process(sf.midRef(0, sf.length()));
-    QString snR = c.process(sn.midRef(0, sn.length()));
-    QString srR = c.process(sr.midRef(0, sr.length()));
-    QString stR = c.process(st.midRef(0, st.length()));
-    QString svR = c.process(sv.midRef(0, sv.length()));
-    QString sslashR = c.process(sslash.midRef(0, sslash.length()));
-    QString sqR = c.process(sq.midRef(0, sq.length()));
-    QString squoteR = c.process(squote.midRef(0, squote.length()));
-    QString charBefR = c.process(charBef.midRef(0, charBef.length()));
+    QString sR = c.process(s.mid(0, s.length()));
+    QString saR = c.process(sa.mid(0, sa.length()));
+    QString sbR = c.process(sb.mid(0, sb.length()));
+    QString seR = c.process(se.mid(0, se.length()));
+    QString sfR = c.process(sf.mid(0, sf.length()));
+    QString snR = c.process(sn.mid(0, sn.length()));
+    QString srR = c.process(sr.mid(0, sr.length()));
+    QString stR = c.process(st.mid(0, st.length()));
+    QString svR = c.process(sv.mid(0, sv.length()));
+    QString sslashR = c.process(sslash.mid(0, sslash.length()));
+    QString sqR = c.process(sq.mid(0, sq.length()));
+    QString squoteR = c.process(squote.mid(0, squote.length()));
+    QString charBefR = c.process(charBef.mid(0, charBef.length()));
 
     // e = expected
     QString e =
@@ -505,9 +505,9 @@ void TestNotes::testOctal() {
 
     CodeToHtmlConverter c(QStringLiteral("c"));
 
-    QString octal = c.process(o1.midRef(0, o1.length()));
-    QString octalFail1 = c.process(ofail1.midRef(0, ofail1.length()));
-    QString octalFail2 = c.process(ofail2.midRef(0, ofail2.length()));
+    QString octal = c.process(o1.mid(0, o1.length()));
+    QString octalFail1 = c.process(ofail1.mid(0, ofail1.length()));
+    QString octalFail2 = c.process(ofail2.mid(0, ofail2.length()));
 
     QVERIFY(octal == eOctal);
     QVERIFY(octalFail1 == eOctalFail1);
@@ -520,8 +520,8 @@ void TestNotes::testHex() {
 
     CodeToHtmlConverter c(QStringLiteral("c"));
 
-    QString hR = c.process(h1.midRef(0, h1.length()));
-    QString hfailR = c.process(hfail.midRef(0, hfail.length()));
+    QString hR = c.process(h1.mid(0, h1.length()));
+    QString hfailR = c.process(hfail.mid(0, hfail.length()));
 
     QString eh = QStringLiteral(
         "<span class=\"code-string\">&quot;Waqar</span><span "
@@ -539,7 +539,7 @@ void TestNotes::testHex() {
 void TestNotes::testHTMLescape() {
     QString str = "/ & < >";
     CodeToHtmlConverter c1("");
-    QString result = c1.process(str.midRef(0, str.length()));
+    QString result = c1.process(str.mid(0, str.length()));
     QString expected = "&#47; &amp; &lt; &gt;";
     QVERIFY(result == expected);
 }
