@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.4.0
+- added the **new editor color schema** *Gruvbox*
+  (for [#2085](https://github.com/pbek/QOwnNotes/issues/2092), thank you @Yoshua-chan)
+
 ## 21.3.9
 - added the **new editor color schema** *Serious*
   (for [#2085](https://github.com/pbek/QOwnNotes/issues/2085), thank you @marcoXbresciani)
