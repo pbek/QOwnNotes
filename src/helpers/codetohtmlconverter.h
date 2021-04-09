@@ -38,33 +38,33 @@ class CodeToHtmlConverter {
 
    public:
     CodeToHtmlConverter(const QString &lang) Q_DECL_NOTHROW;
-    Q_REQUIRED_RESULT QString process(const QStringRef &input) const;
+    Q_REQUIRED_RESULT QString process(const QString &input) const;
 
    private:
     Lang _currentLang;
 
     Q_REQUIRED_RESULT static QString escape(QChar c);
-    Q_REQUIRED_RESULT static QString escapeString(const QStringRef &s);
-    Q_REQUIRED_RESULT static QString setFormat(const QStringRef &str,
+    Q_REQUIRED_RESULT static QString escapeString(const QString &s);
+    Q_REQUIRED_RESULT static QString setFormat(const QString &str,
                                                Format format);
     static void initCodeLangs() Q_DECL_NOTHROW;
 
-    Q_REQUIRED_RESULT int highlightNumericLit(const QStringRef &input,
+    Q_REQUIRED_RESULT int highlightNumericLit(const QString &input,
                                               QString &output, int i) const;
     Q_REQUIRED_RESULT static int highlightStringLiterals(
-        const QStringRef &input, QChar strType, QString &output, int i);
-    Q_REQUIRED_RESULT static int highlightComment(const QStringRef &input,
+        const QString &input, QChar strType, QString &output, int i);
+    Q_REQUIRED_RESULT static int highlightComment(const QString &input,
                                                   QString &output, int i,
                                                   bool isSingleLine = true);
     Q_REQUIRED_RESULT static int highlightWord(int i, const LangData &data,
-                                               const QStringRef &input,
+                                               const QString &input,
                                                QString &output, Format f);
-    Q_REQUIRED_RESULT QString xmlHighlighter(const QStringRef &input) const;
-    Q_REQUIRED_RESULT QString cssHighlighter(const QStringRef &input,
+    Q_REQUIRED_RESULT QString xmlHighlighter(const QString &input) const;
+    Q_REQUIRED_RESULT QString cssHighlighter(const QString &input,
                                              const LangData &types,
                                              const LangData &keywords) const;
-    Q_REQUIRED_RESULT QString ymlHighlighter(const QStringRef &input) const;
-    Q_REQUIRED_RESULT QString iniHighlighter(const QStringRef &input) const;
+    Q_REQUIRED_RESULT QString ymlHighlighter(const QString &input) const;
+    Q_REQUIRED_RESULT QString iniHighlighter(const QString &input) const;
 
     /**
      * @brief returns true if c is octal

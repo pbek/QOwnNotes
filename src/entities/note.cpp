@@ -2224,8 +2224,7 @@ static void highlightCode(QString &str, const QString &type, int cbCount) {
             // find the codeBlock end
             int next = str.indexOf(type, currentCbPos);
             // extract the codeBlock
-            const QStringRef codeBlock =
-                str.midRef(currentCbPos, next - currentCbPos);
+            const QString codeBlock = str.mid(currentCbPos, next - currentCbPos);
 
             QString highlightedCodeBlock;
             if (!(codeBlock.isEmpty() && lang.isEmpty())) {

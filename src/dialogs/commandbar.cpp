@@ -47,11 +47,7 @@ protected:
 
         const auto idx = sourceModel()->index(sourceRow, 0, sourceParent);
         const QString str = idx.data().toString();
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
-        const QStringRef actionName = str.splitRef(QLatin1Char(':')).at(1);
-#else
         const QString actionName = str.split(QLatin1Char(':')).at(1);
-#endif
         const auto res = KFuzzyMatcher::match(m_pattern, actionName);
         sourceModel()->setData(idx, res.score, CommandModel::Score);
         return res.matched;
