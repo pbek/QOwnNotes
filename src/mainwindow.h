@@ -663,6 +663,8 @@ class MainWindow : public QMainWindow {
 
     void showNoteEditTabWidgetContextMenu(const QPoint &point);
 
+    void on_actionJump_to_navigation_panel_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

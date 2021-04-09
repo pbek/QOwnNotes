@@ -1201,6 +1201,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionJump_to_note_list_panel"/>
      <addaction name="actionJump_to_note_subfolder_panel"/>
      <addaction name="actionJump_to_tags_panel"/>
+     <addaction name="actionJump_to_navigation_panel"/>
     </widget>
     <addaction name="menuShow"/>
     <addaction name="menuJumpTo"/>
@@ -2651,6 +2652,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+U</string>
+   </property>
+  </action>
+  <action name="actionJump_to_navigation_panel">
+   <property name="text">
+    <string>Jump to navigation panel</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">F8</string>
    </property>
   </action>
  </widget>

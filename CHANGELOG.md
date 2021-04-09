@@ -3,6 +3,11 @@
 ## 21.4.0
 - added the **new editor color schema** *Gruvbox*
   (for [#2085](https://github.com/pbek/QOwnNotes/issues/2092), thank you @Yoshua-chan)
+- there is now a new shortcut <kbd>F8</kbd> to jump to the *navigation panel* that
+  jumps to its search field if it is enabled or to the the navigation tree if the
+  search field was hidden (for [#2093](https://github.com/pbek/QOwnNotes/issues/2093))
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
+      for a list of all shortcuts
 
 ## 21.3.9
 - added the **new editor color schema** *Serious*

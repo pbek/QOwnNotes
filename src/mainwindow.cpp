@@ -12896,3 +12896,11 @@ void MainWindow::showNoteEditTabWidgetContextMenu(const QPoint &point) {
 
     menu->exec(ui->noteEditTabWidget->tabBar()->mapToGlobal(point));
 }
+
+void MainWindow::on_actionJump_to_navigation_panel_triggered() {
+    if (ui->navigationLineEdit->isVisible()) {
+        ui->navigationLineEdit->setFocus();
+    } else {
+        ui->navigationWidget->setFocus();
+    }
+}
