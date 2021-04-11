@@ -12,7 +12,6 @@ using LangData = QMultiHash<char, QLatin1String>;
  *  The api we need start for qt 5.14
  */
 #if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
-class QStringView;
 using StringView = QStringView;
 #else
 using StringView = const QStringRef&;
@@ -58,6 +57,7 @@ class CodeToHtmlConverter {
     Q_REQUIRED_RESULT static QString escape(QChar c);
     Q_REQUIRED_RESULT static QString escapeString(StringView s);
     Q_REQUIRED_RESULT static QString setFormat(StringView str, Format format);
+    Q_REQUIRED_RESULT static QString setFormat(const QString &str, Format format);
     static void initCodeLangs() Q_DECL_NOTHROW;
 
     Q_REQUIRED_RESULT int highlightNumericLit(StringView input,
@@ -93,6 +93,11 @@ class CodeToHtmlConverter {
     }
 
     static QHash<QString, Lang> _langStringToEnum;
+
+    /** For Test Cases Only **/
+    Q_REQUIRED_RESULT QString process(const QString& input) const;
+
+    friend class TestNotes;
 };
 
 #endif    // CODETOHTMLCONVERTER_H
