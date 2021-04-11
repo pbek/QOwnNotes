@@ -51,7 +51,7 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
 }
 
 QString CodeToHtmlConverter::process(const QString &input) const {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
     return process(StringView(input));
 #else
     return process(StringView(&input));
@@ -821,7 +821,7 @@ QString CodeToHtmlConverter::setFormat(StringView str,
 
 QString CodeToHtmlConverter::setFormat(const QString &str, CodeToHtmlConverter::Format format)
 {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
     return setFormat(StringView(str), format);
 #else
     return setFormat(StringView(&str), format);

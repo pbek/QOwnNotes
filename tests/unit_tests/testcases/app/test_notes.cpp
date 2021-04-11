@@ -207,24 +207,6 @@ void TestNotes::testCodeToHtmlConversionHashComment() {
     QVERIFY(outputHashStyleComment == expectedOutputHashStyleComment);
 }
 
-/**
- *  The api we need start for qt 5.14
- */
-#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
-class QStringView;
-using StringView = QStringView;
-#else
-using StringView = const QStringRef&;
-#endif
-
-static StringView mid(const QString& str, int start, int length) {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
-    return str.mid(start, length);
-#else
-    return str.midRef(start, length);
-#endif
-}
-
 void TestNotes::testCodeToHtmlConversionSingleLineComment() {
     QString comment =
         QStringLiteral("//hello my qownnotes blah blah single line\n");

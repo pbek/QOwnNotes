@@ -2230,7 +2230,7 @@ static void highlightCode(QString &str, const QString &type, int cbCount) {
             // find the codeBlock end
             int next = str.indexOf(type, currentCbPos);
             // extract the codeBlock
-#if QT_VERSION <= QT_VERSION_CHECK(5, 14, 0)
+#if QT_VERSION <= QT_VERSION_CHECK(5, 15, 0)
             const QStringRef codeBlock =
                 str.midRef(currentCbPos, next - currentCbPos);
 #else
