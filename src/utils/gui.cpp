@@ -564,7 +564,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
             prevBlockText.split(QStringLiteral("|"));
         tableTextList.prepend(stringList);
         startPosition = block.position();
-        maxColumns = std::max(maxColumns, stringList.count());
+        maxColumns = std::max(maxColumns, (int)stringList.count());
     }
 
     // check the next blocks
@@ -585,7 +585,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
             nextBlockText.split(QStringLiteral("|"));
         tableTextList.append(stringList);
         endPosition = block.position() + nextBlockText.count();
-        maxColumns = std::max(maxColumns, stringList.count());
+        maxColumns = std::max(maxColumns, (int)stringList.count());
     }
 
     const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
@@ -610,7 +610,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
              }
 
              const QString &text = lineTextList.at(col).trimmed();
-             maxTextLength = std::max(text.count(), maxTextLength);
+             maxTextLength = std::max((int)text.count(), maxTextLength);
          }
 
          colLength << maxTextLength;

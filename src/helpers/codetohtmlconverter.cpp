@@ -51,6 +51,14 @@ void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
 }
 
 QString CodeToHtmlConverter::process(const QString &input) const {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+    return process(StringView(input));
+#else
+    return process(StringView(&input));
+#endif
+}
+
+QString CodeToHtmlConverter::process(StringView input) const {
     if (input.isEmpty()) {
         return QLatin1String("");
     }
@@ -218,8 +226,8 @@ QString CodeToHtmlConverter::process(const QString &input) const {
     return output;
 }
 
-int CodeToHtmlConverter::highlightNumericLit(const QString &input,
-                                             QString &output, int i) const {
+int CodeToHtmlConverter::highlightNumericLit(StringView input, QString &output,
+                                             int i) const {
     bool isPreAllowed = false;
     if (i == 0)
         isPreAllowed = true;
@@ -348,7 +356,7 @@ int CodeToHtmlConverter::highlightNumericLit(const QString &input,
     }
 }
 
-int CodeToHtmlConverter::highlightStringLiterals(const QString &input,
+int CodeToHtmlConverter::highlightStringLiterals(StringView input,
                                                  QChar strType, QString &output,
                                                  int i) {
     int start = i;
@@ -444,9 +452,8 @@ int CodeToHtmlConverter::highlightStringLiterals(const QString &input,
     return i;
 }
 
-int CodeToHtmlConverter::highlightComment(const QString &input,
-                                          QString &output, int i,
-                                          bool isSingleLine) {
+int CodeToHtmlConverter::highlightComment(StringView input, QString &output,
+                                          int i, bool isSingleLine) {
     int endPos = -1;
     if (isSingleLine) {
         endPos = input.indexOf(QLatin1Char('\n'), i);
@@ -468,13 +475,13 @@ int CodeToHtmlConverter::highlightComment(const QString &input,
 }
 
 int CodeToHtmlConverter::highlightWord(int i, const LangData &data,
-                                       const QString &input, QString &output,
+                                       StringView input, QString &output,
                                        CodeToHtmlConverter::Format f) {
     if (data.isEmpty()) return i;
     // check if we are at the beginning OR if this is the start of a word
     // AND the current char is present in the data structure
     if (i == 0 || (!input.at(i - 1).isLetterOrNumber() &&
-                   input.at(i-1) != QLatin1Char('_'))) {
+                   input.at(i - 1) != QLatin1Char('_'))) {
         const auto wordList = data.values(input.at(i).toLatin1());
         for (const auto &word : wordList) {
             if (word == input.mid(i, word.size())) {
@@ -491,7 +498,7 @@ int CodeToHtmlConverter::highlightWord(int i, const LangData &data,
     return i;
 }
 
-QString CodeToHtmlConverter::xmlHighlighter(const QString &input) const {
+QString CodeToHtmlConverter::xmlHighlighter(StringView input) const {
     if (input.isEmpty()) return QLatin1String("");
     const auto textLen = input.length();
     QString output = QLatin1String("");
@@ -507,7 +514,8 @@ QString CodeToHtmlConverter::xmlHighlighter(const QString &input) const {
                     output += escape(input.at(i));
                     ++i;
                 }
-                const QString tag = input.mid(i, found - i);
+
+                StringView tag = input.mid(i, found - i);
 
                 QRegularExpression re(R"(([a-zA-Z0-9]+(\s*=\s*"[^"]*")?))");
                 QRegularExpressionMatchIterator matchIt = re.globalMatch(tag);
@@ -520,9 +528,10 @@ QString CodeToHtmlConverter::xmlHighlighter(const QString &input) const {
                         output += setFormat(captured, Format::Builtin);
                     } else {
                         int eqPos = captured.indexOf(QLatin1Char('='));
-                        output += (setFormat(captured.left(eqPos), Format::Builtin) +
-                                   "=" +
-                                   setFormat(captured.mid(eqPos + 1, captured.length() - eqPos - 1), Format::String));
+                        output +=
+                            setFormat(captured.left(eqPos), Format::Builtin) + "=" +
+                            setFormat(captured.mid(eqPos + 1, captured.length() - eqPos - 1),
+                                 Format::String);
                     }
 
                     if (matchIt.hasNext()) {
@@ -549,7 +558,7 @@ QString CodeToHtmlConverter::xmlHighlighter(const QString &input) const {
             }
             // extract it
             // next + 1 because we have to include the ' or "
-            const QString str = input.mid(i, (next + 1) - i);
+            StringView str = input.mid(i, (next + 1) - i);
             output += setFormat(str, Format::String);
             if (isEndline) output += QLatin1Char('\n');
             i = next;
@@ -564,7 +573,7 @@ QString CodeToHtmlConverter::xmlHighlighter(const QString &input) const {
  * @brief CSS highlighter
  * @return
  */
-QString CodeToHtmlConverter::cssHighlighter(const QString &input,
+QString CodeToHtmlConverter::cssHighlighter(StringView input,
                                             const LangData &types,
                                             const LangData &keywords) const {
     if (input.isEmpty()) return QLatin1String("");
@@ -645,7 +654,7 @@ QString CodeToHtmlConverter::cssHighlighter(const QString &input,
  * @brief YAML highlighter
  * @return
  */
-QString CodeToHtmlConverter::ymlHighlighter(const QString &input) const {
+QString CodeToHtmlConverter::ymlHighlighter(StringView input) const {
     if (input.isEmpty()) return QLatin1String("");
     const auto textLen = input.length();
 
@@ -674,7 +683,7 @@ QString CodeToHtmlConverter::ymlHighlighter(const QString &input) const {
                 i = colon;
                 const int endLine = input.indexOf(QLatin1Char('\n'), i);
                 if (endLine > 0) {
-                    const QString line = input.mid(i, endLine - i);
+                    StringView line = input.mid(i, endLine - i);
                     if (line.contains(QLatin1Char('#'))) {
                         int hashPos = input.indexOf(QLatin1Char('#'), i);
                         // first add everything till the # into output
@@ -700,7 +709,7 @@ QString CodeToHtmlConverter::ymlHighlighter(const QString &input) const {
     return output;
 }
 
-QString CodeToHtmlConverter::iniHighlighter(const QString &input) const {
+QString CodeToHtmlConverter::iniHighlighter(StringView input) const {
     if (input.isEmpty()) return QLatin1String("");
     const auto textLen = input.length();
     QString output;
@@ -772,7 +781,7 @@ QString CodeToHtmlConverter::escape(QChar c) {
     return c;
 }
 
-QString CodeToHtmlConverter::escapeString(const QString &s) {
+QString CodeToHtmlConverter::escapeString(StringView s) {
     QString ret = QLatin1String("");
     ret.reserve(s.length());
     for (int i = 0; i < s.length(); ++i) {
@@ -781,7 +790,7 @@ QString CodeToHtmlConverter::escapeString(const QString &s) {
     return ret;
 }
 
-QString CodeToHtmlConverter::setFormat(const QString &str,
+QString CodeToHtmlConverter::setFormat(StringView str,
                                        CodeToHtmlConverter::Format format) {
     switch (format) {
         case Type:
@@ -807,5 +816,14 @@ QString CodeToHtmlConverter::setFormat(const QString &str,
                    escapeString(str) % QStringLiteral("</span>");
     }
 
-    return str;
+    return str.toString();
+}
+
+QString CodeToHtmlConverter::setFormat(const QString &str, CodeToHtmlConverter::Format format)
+{
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+    return setFormat(StringView(str), format);
+#else
+    return setFormat(StringView(&str), format);
+#endif
 }

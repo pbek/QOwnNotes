@@ -65,6 +65,7 @@
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
 #include <QRandomGenerator>
+#include <QStandardPaths>
 #endif
 
 enum SearchEngines {
@@ -924,7 +925,7 @@ QByteArray Utils::Misc::downloadUrl(const QUrl &url) {
 
     QNetworkRequest networkRequest = QNetworkRequest(url);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
                                 true);
 #endif

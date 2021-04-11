@@ -17,10 +17,9 @@
 #define QOWNSPELLCHECKER_H
 
 #include <libraries/sonnet/src/core/speller.h>
+#include "libraries/sonnet/src/core/languagefilter_p.h"
 
 #include "LanguageCache.h"
-#include "libraries/sonnet/src/core/languagefilter_p.h"
-#include "libraries/sonnet/src/core/tokenizer_p.h"
 
 class QOwnSpellChecker {
    public:

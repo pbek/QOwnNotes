@@ -218,8 +218,7 @@ void TestNotes::testCodeToHtmlConversionSingleLineComment() {
 
     QString outputSingleLineComment =
         cpp.process(comment.mid(0, comment.length()));
-    QString outputCommentPy =
-        py.process(commentpy.mid(0, commentpy.length()));
+    QString outputCommentPy = py.process(commentpy.mid(0, commentpy.length()));
 
     QString expectedOutputSingleLineComment = QStringLiteral(
         "<span class=\"code-comment\">&#47;&#47;hello my qownnotes blah blah "
@@ -246,11 +245,10 @@ void TestNotes::testCodeToHtmlConversionMultiLineComment() {
 
     QString outputMultiLineComment =
         c.process(comment.mid(0, comment.length()));
-    QString outputTrueMultiLine = c.process(
-        commentTrueMultiLine.mid(0, commentTrueMultiLine.length()));
-    QString outputTrueMultiLineNoEnd =
-        c.process(commentTrueMultiLineNoEnd.mid(
-            0, commentTrueMultiLineNoEnd.length()));
+    QString outputTrueMultiLine =
+        c.process(commentTrueMultiLine.mid(0, commentTrueMultiLine.length()));
+    QString outputTrueMultiLineNoEnd = c.process(
+        commentTrueMultiLineNoEnd.mid(0, commentTrueMultiLineNoEnd.length()));
     QString outputNotAComment =
         c.process(notAComment.mid(0, notAComment.length()));
     QString outputCSSNotAComment =
@@ -266,7 +264,8 @@ void TestNotes::testCodeToHtmlConversionMultiLineComment() {
         "<span class=\"code-comment\">&#47;*hello my \nqownnotes blah \nblah "
         "single line</span>\n");
     QString expectedNotAComment = QStringLiteral("isnot&#47; a &#47;comment");
-    QString expectedCSSNotAComment = QStringLiteral("isnot&#47; a &#47;comment");
+    QString expectedCSSNotAComment =
+        QStringLiteral("isnot&#47; a &#47;comment");
 
     QVERIFY(outputMultiLineComment == expectedMultiLineComment);
     QVERIFY(outputTrueMultiLine == expectedTrueMultiLine);
@@ -315,8 +314,7 @@ void TestNotes::testCodeToHtmlNumericLiterals() {
     QString expectedBad4 = "12pxa";
     QString e5 = "<span class=\"code-literal\">0x123</span>";
 
-    QString e7 =
-        "<span class=\"code-literal\">12</span>em;";
+    QString e7 = "<span class=\"code-literal\">12</span>em;";
 
     QVERIFY(ar == e);
     QVERIFY(a1r == e1);
