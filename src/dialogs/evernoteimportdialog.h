@@ -34,13 +34,11 @@ class EvernoteImportDialog : public MasterDialog {
     Ui::EvernoteImportDialog *ui;
     int _importCount;
 
-    void importNotes(const QString &data);
+    void setupMetaDataTreeWidgetItems();
 
-    int countNotes(const QString &data);
+    void storeMetaDataTreeWidgetItemsCheckedState();
 
     void initNoteCount(const QString &data);
-
-    QString importImages(const Note &note, QString content, QXmlQuery query);
 
     QString getMarkdownForMediaFileData(Note note,
                                         const MediaFileData &mediaFileData);
@@ -48,20 +46,26 @@ class EvernoteImportDialog : public MasterDialog {
     QString getMarkdownForAttachmentFileData(
         Note note, const MediaFileData &mediaFileData);
 
+    QTreeWidgetItem *addMetaDataTreeWidgetItem(
+        const QString &name, const QString &attributeName = QString(),
+        QTreeWidgetItem *parentItem = nullptr);
+
+    bool isMetaDataChecked();
+
+
+    /** These require xml patterns **/
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    void importNotes(const QString &data);
+
+    int countNotes(const QString &data);
+
+    QString importImages(const Note &note, QString content, QXmlQuery query);
+
     void tagNote(QXmlQuery &query, Note &note);
 
     QString importAttachments(const Note &note, QString content,
                               QXmlQuery query);
 
-    QTreeWidgetItem *addMetaDataTreeWidgetItem(
-        const QString &name, const QString &attributeName = QString(),
-        QTreeWidgetItem *parentItem = nullptr);
-
-    void setupMetaDataTreeWidgetItems();
-
-    bool isMetaDataChecked();
-
     QString generateMetaDataMarkdown(QXmlQuery query);
-
-    void storeMetaDataTreeWidgetItemsCheckedState();
+#endif
 };

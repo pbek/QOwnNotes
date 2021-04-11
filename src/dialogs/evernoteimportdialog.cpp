@@ -13,8 +13,12 @@
 #include <QRegularExpressionMatchIterator>
 #include <QSettings>
 #include <QTemporaryFile>
-#include <QXmlQuery>
-#include <QXmlResultItems>
+
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    #include <QXmlQuery>
+    #include <QXmlResultItems>
+#endif
+
 #include <utility>
 
 #include "filedialog.h"
@@ -80,6 +84,22 @@ void EvernoteImportDialog::on_fileButton_clicked() {
 }
 
 /**
+ * Initializes the progress bar with the count of notes from the XML in data
+ *
+ * @param data
+ */
+void EvernoteImportDialog::initNoteCount(const QString &data) {
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    int count = countNotes(data);
+
+    ui->progressBar->setMaximum(count);
+    ui->progressBar->show();
+#endif
+}
+
+/** Disabled Till we have an xmlpatterns alternative **/
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+/**
  * Counts the notes from the XML in data
  *
  * @param data
@@ -100,18 +120,6 @@ int EvernoteImportDialog::countNotes(const QString &data) {
     }
 
     return count;
-}
-
-/**
- * Initializes the progress bar with the count of notes from the XML in data
- *
- * @param data
- */
-void EvernoteImportDialog::initNoteCount(const QString &data) {
-    int count = countNotes(data);
-
-    ui->progressBar->setMaximum(count);
-    ui->progressBar->show();
 }
 
 /**
@@ -415,51 +423,6 @@ QString EvernoteImportDialog::importAttachments(const Note &note,
 }
 
 /**
- * Returns the markdown code for an image file data entry
- *
- * @param mediaFileData
- * @return
- */
-QString EvernoteImportDialog::getMarkdownForMediaFileData(
-    Note note, const EvernoteImportDialog::MediaFileData &mediaFileData) {
-    QString data = mediaFileData.data;
-    QString imageSuffix = mediaFileData.suffix;
-
-    return note.importMediaFromBase64(data, imageSuffix);
-}
-
-/**
- * Returns the markdown code for an attachment file data entry
- *
- * @param mediaFileData
- * @return
- */
-QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
-    Note note, const EvernoteImportDialog::MediaFileData &mediaFileData) {
-    QString data = mediaFileData.data;
-    QString suffix = mediaFileData.suffix;
-    QString fileName = mediaFileData.fileName;
-
-    // create a temporary file for the attachment
-    auto *tempFile =
-        new QTemporaryFile(QDir::tempPath() + QDir::separator() +
-                           QStringLiteral("media-XXXXXX.") + suffix);
-
-    if (!tempFile->open()) {
-        return QString();
-    }
-
-    // write file data to the temporary file
-    tempFile->write(QByteArray::fromBase64(data.toLatin1()));
-
-    // store the temporary file in the media folder and return the
-    // markdown code
-    QString markdownCode = note.getInsertAttachmentMarkdown(tempFile, fileName);
-
-    return markdownCode;
-}
-
-/**
  * Imports the notes from the XML in data
  *
  * @param data
@@ -631,6 +594,48 @@ void EvernoteImportDialog::tagNote(QXmlQuery &query, Note &note) {
 }
 
 /**
+ * Generates the metadata markdown table for a note
+ */
+QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
+    QString resultText;
+    QString tableText;
+    QList<QTreeWidgetItem *> items = ui->metaDataTreeWidget->findItems(
+        QStringLiteral("*"),
+        Qt::MatchWrap | Qt::MatchWildcard | Qt::MatchRecursive);
+
+    Q_FOREACH (QTreeWidgetItem *item, items) {
+        if (item->checkState(0) != Qt::Checked) {
+            continue;
+        }
+
+        QString name = item->text(0);
+        QString attributeName = item->data(0, Qt::UserRole).toString();
+
+        QString attribute;
+        query.setQuery(attributeName + QStringLiteral("/text()"));
+        query.evaluateTo(&attribute);
+        attribute = attribute.trimmed();
+
+        if (attribute.isEmpty()) {
+            continue;
+        }
+
+        tableText += QStringLiteral("| ") + name + (" | ") + attribute +
+                     QStringLiteral(" |\n");
+    }
+
+    if (!tableText.isEmpty()) {
+        resultText = "| " + tr("Attribute") + " | " + tr("Value") +
+                     " |\n"
+                     "|---|---|\n" +
+                     tableText;
+    }
+
+    return resultText + QStringLiteral("\n");
+}
+#endif
+
+/**
  * Adds a metadata tree widget item
  *
  * @param name
@@ -765,47 +770,6 @@ bool EvernoteImportDialog::isMetaDataChecked() {
 }
 
 /**
- * Generates the metadata markdown table for a note
- */
-QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
-    QString resultText;
-    QString tableText;
-    QList<QTreeWidgetItem *> items = ui->metaDataTreeWidget->findItems(
-        QStringLiteral("*"),
-        Qt::MatchWrap | Qt::MatchWildcard | Qt::MatchRecursive);
-
-    Q_FOREACH (QTreeWidgetItem *item, items) {
-        if (item->checkState(0) != Qt::Checked) {
-            continue;
-        }
-
-        QString name = item->text(0);
-        QString attributeName = item->data(0, Qt::UserRole).toString();
-
-        QString attribute;
-        query.setQuery(attributeName + QStringLiteral("/text()"));
-        query.evaluateTo(&attribute);
-        attribute = attribute.trimmed();
-
-        if (attribute.isEmpty()) {
-            continue;
-        }
-
-        tableText += QStringLiteral("| ") + name + (" | ") + attribute +
-                     QStringLiteral(" |\n");
-    }
-
-    if (!tableText.isEmpty()) {
-        resultText = "| " + tr("Attribute") + " | " + tr("Value") +
-                     " |\n"
-                     "|---|---|\n" +
-                     tableText;
-    }
-
-    return resultText + QStringLiteral("\n");
-}
-
-/**
  * Reads the enex files and imports the notes
  */
 void EvernoteImportDialog::on_importButton_clicked() {
@@ -826,10 +790,57 @@ void EvernoteImportDialog::on_importButton_clicked() {
 
     QString data = file.readAll();
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     QCoreApplication::processEvents();
     initNoteCount(data);
     QCoreApplication::processEvents();
     importNotes(data);
+#endif
 
     ui->importButton->setEnabled(true);
+}
+
+/**
+ * Returns the markdown code for an image file data entry
+ *
+ * @param mediaFileData
+ * @return
+ */
+QString EvernoteImportDialog::getMarkdownForMediaFileData(
+    Note note, const EvernoteImportDialog::MediaFileData &mediaFileData) {
+    QString data = mediaFileData.data;
+    QString imageSuffix = mediaFileData.suffix;
+
+    return note.importMediaFromBase64(data, imageSuffix);
+}
+
+/**
+ * Returns the markdown code for an attachment file data entry
+ *
+ * @param mediaFileData
+ * @return
+ */
+QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
+    Note note, const EvernoteImportDialog::MediaFileData &mediaFileData) {
+    QString data = mediaFileData.data;
+    QString suffix = mediaFileData.suffix;
+    QString fileName = mediaFileData.fileName;
+
+    // create a temporary file for the attachment
+    auto *tempFile =
+        new QTemporaryFile(QDir::tempPath() + QDir::separator() +
+                           QStringLiteral("media-XXXXXX.") + suffix);
+
+    if (!tempFile->open()) {
+        return QString();
+    }
+
+    // write file data to the temporary file
+    tempFile->write(QByteArray::fromBase64(data.toLatin1()));
+
+    // store the temporary file in the media folder and return the
+    // markdown code
+    QString markdownCode = note.getInsertAttachmentMarkdown(tempFile, fileName);
+
+    return markdownCode;
 }
