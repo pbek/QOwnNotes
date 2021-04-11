@@ -56,7 +56,7 @@ public:
 //  bool isGrammarCheckable() const;
     void setBuffer(const QString &buffer) override;
     bool hasNext() const override;
-    QStringRef next() override;
+    Token next() override;
     QString buffer() const override;
     void replace(int position, int len, const QString &newWord) override;
 private:

@@ -645,20 +645,7 @@ void GuessLanguage::setLimits(int maxItems, double minConfidence)
 void GuessLanguagePrivate::loadModels()
 {
     QString triMapFile;
-/*        = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                QStringLiteral("kf5/sonnet/trigrams.map"));
-                                // QStringLiteral("trigrams.map"));
 
-    if (triMapFile.isEmpty()) {
-#ifdef Q_OS_WIN
-        triMapFile = QStringLiteral("%1/data/kf5/sonnet/trigrams.map").arg(
-                    QCoreApplication::applicationDirPath());
-#else
-        triMapFile = QStringLiteral("%1/../share/kf5/sonnet/trigrams.map").arg(
-            QCoreApplication::applicationDirPath());
-#endif
-    }
-*/
     triMapFile = QStringLiteral(":/libraries/sonnet/src/trigrams.map");
     qCDebug(SONNET_LOG_CORE) << "Loading trigrams from" << triMapFile;
 
@@ -901,7 +888,7 @@ QString GuessLanguagePrivate::guessFromDictionaries(const QString &sentence,
         const auto& speller = spellers[i];
         const QString language = speller->language();
         while (tokenizer.hasNext()) {
-            QStringRef word = tokenizer.next();
+            Token word = tokenizer.next();
             if (!tokenizer.isSpellcheckable()) {
                 continue;
             }
