@@ -23,8 +23,13 @@
 #include <QStringBuilder>
 #include <QTimer>
 #include <QUrlQuery>
-#include <QXmlQuery>
-#include <QXmlResultItems>
+
+// Disabled for Qt-6
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    #include <QXmlQuery>
+    #include <QXmlResultItems>
+#endif
+
 
 #include "cryptoservice.h"
 #include "dialogs/serverbookmarksimportdialog.h"
@@ -1716,6 +1721,7 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
         return;
     }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     //    qDebug() << __func__ << " - 'data': " << data;
 
     QRegularExpression re(QRegularExpression::escape(sharePath) %
@@ -1775,6 +1781,8 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
         shareDialog->updateDialog();
     }
 #endif
+
+#endif // QT_6_VERSION_CHECK
 }
 
 /**
@@ -1788,6 +1796,7 @@ void OwnCloudService::updateNoteShareStatusFromShare(QString &data) {
         return;
     }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     QXmlQuery query;
     query.setFocus(data);
     query.setQuery(QStringLiteral("ocs/meta/status/text()"));
@@ -1807,6 +1816,7 @@ void OwnCloudService::updateNoteShareStatusFromShare(QString &data) {
 
     query.setQuery(QStringLiteral("ocs/data"));
     updateNoteShareStatus(query, true);
+#endif
 }
 
 /**
@@ -1820,6 +1830,7 @@ void OwnCloudService::updateNoteShareStatusFromFetchAll(QString &data) {
         return;
     }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     QXmlQuery query;
     query.setFocus(data);
     query.setQuery(QStringLiteral("ocs/data/element"));
@@ -1829,8 +1840,10 @@ void OwnCloudService::updateNoteShareStatusFromFetchAll(QString &data) {
     }
 
     updateNoteShareStatus(query);
+#endif
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
                                             bool updateShareDialog) {
     QXmlResultItems results;
@@ -1925,6 +1938,7 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
         }
     }
 }
+#endif
 
 void OwnCloudService::loadDirectory(QString &data) {
     QDomDocument doc;
@@ -2047,7 +2061,7 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
     // 5 sec timeout for the request
     timer.start(5000);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     r.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
 #endif
 
@@ -2164,7 +2178,7 @@ QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString &path) {
     QNetworkRequest networkRequest = QNetworkRequest(url);
     addAuthHeader(&networkRequest);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
                                 true);
 #endif

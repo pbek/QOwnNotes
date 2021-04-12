@@ -120,7 +120,7 @@ void ScriptRepositoryDialog::searchScript(int page) {
     QNetworkRequest networkRequest(url);
     _page = page;
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
                                 true);
 #endif
@@ -152,7 +152,7 @@ void ScriptRepositoryDialog::searchForUpdates() {
         QUrl url = script.repositoryInfoJsonUrl();
         QNetworkRequest networkRequest(url);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
         networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
                                     true);
 #endif
@@ -242,7 +242,7 @@ void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) {
         QUrl url(_rawContentUrlPrefix + path);
         QNetworkRequest networkRequest(url);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
         networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
                                     true);
 #endif

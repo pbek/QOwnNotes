@@ -158,8 +158,11 @@ class OwnCloudService : public QObject {
 
     void handleNoteShareReply(QString &data);
 
+// Disabled till there is alternative in Qt6
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     void updateNoteShareStatus(QXmlQuery &query,
                                bool updateShareDialog = false);
+#endif
 
     void handleUpdateNoteShareReply(const QString &urlPart,
                                     const QString &data);
