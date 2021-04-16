@@ -10,6 +10,10 @@ Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes
 
 You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
 
+::: tip Info
+QOwnNotes needs to be running for the Web Companion browser extension to work.
+:::
+
 ## Web clipper
 
 Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new note with a **screenshot** of the current webpage.
