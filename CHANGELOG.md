@@ -3,6 +3,7 @@
 ## 21.4.1
 - in vim mode now also the setup indent size is used as shift width
   (for [#2099](https://github.com/pbek/QOwnNotes/issues/2099))
+- fixed more Qt 6 build errors (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304), thank you @Waqar144)
 
 ## 21.4.0
 - added the **new editor color schema** *Gruvbox*
