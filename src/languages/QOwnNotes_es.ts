@@ -2497,7 +2497,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2492"/>
       <source>Manage stored attachments</source>
-      <translation type="unfinished">Manage stored attachments</translation>
+      <translation>Administrar adjuntos almacenados</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2497"/>
@@ -2599,7 +2599,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2659"/>
       <source>Jump to navigation panel</source>
-      <translation type="unfinished">Jump to navigation panel</translation>
+      <translation>Saltar al panel de navegación</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1909"/>
@@ -2640,7 +2640,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2179"/>
       <source>Manage stored image files</source>
-      <translation type="unfinished">Manage stored image files</translation>
+      <translation>Gestionar archivos de imagen almacenados</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2221"/>
@@ -4449,14 +4449,14 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
       <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
       <source>File name changed</source>
-      <translation type="unfinished">File name changed</translation>
+      <translation>El nombre del archivo ha cambiado</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
       <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-        <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
+      <translation>
+        <numerusform>%n nota(s) están usando este adjunto. ¿Quieres renombrar también esos adjuntos en la(s) nota(s)?</numerusform>
+        <numerusform>%n nota(s) están usando este adjunto. ¿Quieres renombrar también estos adjuntos en la(s) nota(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -7625,27 +7625,27 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.ui" line="381"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Eliminar</translation>
     </message>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
       <source>Stored attachments</source>
-      <translation type="unfinished">Stored attachments</translation>
+      <translation>Adjuntos almacenados</translation>
     </message>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
       <source>Used in notes:</source>
-      <translation type="unfinished">Used in notes:</translation>
+      <translation>Usados en notas:</translation>
     </message>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
       <source>Find attachment</source>
-      <translation type="unfinished">Find attachment</translation>
+      <translation>Encontrar adjunto</translation>
     </message>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
       <source>Only show images that are not used in notes</source>
-      <translation type="unfinished">Only show images that are not used in notes</translation>
+      <translation>Mostrar solo imágenes que no son usadas en notas</translation>
     </message>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>

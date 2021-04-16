@@ -2357,7 +2357,7 @@
       <location filename="../mainwindow.ui" line="2209"/>
       <source>Open the QOwnNotes Matrix (Element) room</source>
       <extracomment>"Element" as in the chat service</extracomment>
-      <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
+      <translation>Open de QOwnNotes Matrix (Element) kamer</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2236"/>
@@ -2598,7 +2598,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2659"/>
       <source>Jump to navigation panel</source>
-      <translation type="unfinished">Jump to navigation panel</translation>
+      <translation>Spring naar navigatiepaneel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1909"/>
@@ -4452,22 +4452,22 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
       <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
       <source>File name changed</source>
-      <translation type="unfinished">File name changed</translation>
+      <translation>Bestandsnaam gewijzigd</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
       <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-        <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
+      <translation>
+        <numerusform>Een notities maakt gebruik van deze bijlage. Wilt u die bijlagen ook hernoemen in de notitie?</numerusform>
+        <numerusform>%n notities maken gebruik van deze bijlage. Wilt u die bijlagen ook hernoemen in de notities?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
       <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-        <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
+      <translation>
+        <numerusform>Een opmerking maakt gebruik van deze afbeelding. Wilt u die bijlagen ook hernoemen in de notitie?</numerusform>
+        <numerusform>%n notities gebruiken deze afbeelding. Wilt u die bijlagen ook hernoemen in de notities?</numerusform>
       </translation>
     </message>
   </context>
@@ -7644,7 +7644,7 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
       <source>Stored attachments</source>
-      <translation type="unfinished">Stored attachments</translation>
+      <translation>Opgeslagen bijlagen</translation>
     </message>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
@@ -7762,7 +7762,7 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
       <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-      <translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+      <translation>Het bestand &lt;strong&gt;%1&lt;/strong&gt; bestaat niet, u kunt het niet hernoemen!</translation>
     </message>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
@@ -7800,12 +7800,12 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
       <source>Find image</source>
-      <translation type="unfinished">Find image</translation>
+      <translation>Zoek afbeelding</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="126"/>
       <source>Add selected images to the current note</source>
-      <translation type="unfinished">Add selected images to the current note</translation>
+      <translation>Voeg geselecteerde afbeeldingen toe aan de huidige notitie</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
@@ -7830,7 +7830,7 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="129"/>
       <source>Add to current note</source>
-      <translation type="unfinished">Add to current note</translation>
+      <translation>Toevoegen aan huidige notitie</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="140"/>
@@ -7845,12 +7845,12 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="175"/>
       <source>Refresh</source>
-      <translation type="unfinished">Refresh</translation>
+      <translation>Vernieuwen</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
       <source>Used in notes:</source>
-      <translation type="unfinished">Used in notes:</translation>
+      <translation>Gebruikt in opmerkingen:</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
@@ -7870,7 +7870,7 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="148"/>
       <source>Path: %1</source>
-      <translation type="unfinished">Path: %1</translation>
+      <translation>Pad: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="187"/>
@@ -7888,27 +7888,27 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
       <source>File doesn't exist</source>
-      <translation type="unfinished">File doesn't exist</translation>
+      <translation>Bestand bestaat niet</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
       <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-      <translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+      <translation>Het bestand &lt;strong&gt;%1&lt;/strong&gt; bestaat niet, u kunt het niet hernoemen!</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
       <source>File exists</source>
-      <translation type="unfinished">File exists</translation>
+      <translation>Bestand bestaat</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="349"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+      <translation>Bestand &lt;strong&gt;%1&lt;/strong&gt; bestaat al, u moet het verwijderen voordat u &lt;strong&gt;%2&lt;/strong&gt; als nieuwe bestandsnaam kiest!</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="359"/>
       <source>File renaming failed</source>
-      <translation type="unfinished">File renaming failed</translation>
+      <translation>Het hernoemen van bestanden is mislukt</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="360"/>
@@ -7923,17 +7923,17 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="437"/>
       <source>&amp;Rename image</source>
-      <translation type="unfinished">&amp;Rename image</translation>
+      <translation>&amp;Hernoem afbeelding</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="438"/>
       <source>&amp;Delete images</source>
-      <translation type="unfinished">&amp;Delete images</translation>
+      <translation>&amp;Verwijder afbeeldingen</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="439"/>
       <source>&amp;Add images to current note</source>
-      <translation type="unfinished">&amp;Add images to current note</translation>
+      <translation>&amp;Voeg afbeeldingen toe aan de huidige notitie</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="472"/>

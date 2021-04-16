@@ -7786,12 +7786,12 @@ Le proprie note non verranno modificate!</translation>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
       <source>Stored images</source>
-      <translation type="unfinished">Stored images</translation>
+      <translation>Immagini salvate</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
       <source>Find image</source>
-      <translation type="unfinished">Find image</translation>
+      <translation>Trova immagine</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="126"/>
@@ -7801,7 +7801,7 @@ Le proprie note non verranno modificate!</translation>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
       <source>Open the media folder</source>
-      <translation type="unfinished">Open the media folder</translation>
+      <translation>Apri cartella media</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.ui" line="67"/>

@@ -42,10 +42,10 @@
 - <kbd>F5</kbd> passe à la liste des notes
 - <kbd>F6</kbd> passe au panneau du sous-dossier de notes
 - <kbd>F7</kbd> passe au panneau des balises
-- <kbd>F8</kbd> jumps to the navigation panel
-- <kbd>F10</kbd> activates the context menu of the current widget
-- <kbd>F11</kbd> toggles full-screen mode
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
+- <kbd>F8</kbd> passe au panneau de navigation
+- <kbd>F10</kbd> active le menu contextuel du widget courant
+- <kbd>F11</kbd> bascule en mode plein écran
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copie le titre de la note actuelle
 
 ### Dans la barre de recherche de notes
 
@@ -157,10 +157,10 @@
 - <kbd>F5</kbd> passe à la liste des notes
 - <kbd>F6</kbd> passe au panneau du sous-dossier de notes
 - <kbd>F7</kbd> passe au panneau des balises
-- <kbd>F8</kbd> jumps to the navigation panel
-- <kbd>F10</kbd> activates the context menu of the current widget
-- <kbd>⌘</kbd> + <kbd>F11</kbd> toggles full-screen mode
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
+- <kbd>F8</kbd> passe au panneau de navigation
+- <kbd>F10</kbd> active le menu contextuel du widget courant
+- <kbd>⌘</kbd> + <kbd>F11</kbd> bascule en mode plein écran
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copie le titre de la note actuelle
 
 ### Dans la barre de recherche de notes
 

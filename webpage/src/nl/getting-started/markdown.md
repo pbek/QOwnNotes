@@ -181,17 +181,17 @@ Er is ook enige syntaxisaccentuering met codeblokken in QOwnNotes.
 cd Notes
 ~~~
 ~~~
-Currently supported languages (and code block identifiers) are:
+Momenteel ondersteunde talen (en codeblok-ID's) zijn:
 * BASh scripting, `bash`
 * C, `c`
-* C++, `cpp`
-* C++, `cxx`
-* C++, `c++`
-* C#, `c#`
+* C ++, `cpp`
+* C ++, `cxx`
+* C ++, `c ++`
+* C #, `c #`
 * CMake, `cmake`
-* C#, `csharp`
+* C #, `csharp`
 * CSS, `css`
-* Go, `go`
+* Ga, `ga`
 * HTML, `html`
 * INI, `ini`
 * Java, `java`
@@ -203,21 +203,21 @@ Currently supported languages (and code block identifiers) are:
 * Python, `py`
 * Python, `python`
 * QML, `qml`
-* Rust, `rust`
+* Roest, `roest`
 * Shell scripting, `sh`
 * SQL, `sql`
 * TypeScript, `ts`
-* TypeScript, `typescript`
+* TypeScript, `typoscript`
 * V, `v`
-* Vex, `vex`
+* Kwaad, `kwelling`
 * XML, `xml`
 * YAML, `yml`
 * YAML, `yaml`
 
 
-## Tables
+## Tabellen
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+Tabellen maken geen deel uit van de kernspecificatie van Markdown, maar het QOwnNotes-voorbeeld ondersteunt ze. 
 
 ```markdown
 Colons can be used to align columns.

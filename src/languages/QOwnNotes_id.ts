@@ -2595,7 +2595,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2659"/>
       <source>Jump to navigation panel</source>
-      <translation type="unfinished">Jump to navigation panel</translation>
+      <translation>Loncat ke panel navigasi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1909"/>

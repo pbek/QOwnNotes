@@ -10,24 +10,28 @@ Accédez au [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnot
 
 Vous pouvez également trouver l'extension sur [GitHub](https://github.com/qownnotes/web-companion/).
 
+::: tip Info
+QOwnNotes needs to be running for the Web Companion browser extension to work.
+:::
+
 ## Clipper Web
 
-Cliquez avec le bouton droit sur une page Web ou le texte sélectionné pour utiliser la fonctionnalité **web-clipper**. Là, vous pouvez également créer une nouvelle note avec une **capture d'écran** de la page Web actuelle.
+Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new note with a **screenshot** of the current webpage.
 
 ::: tip
-Le clipper Web est également scriptable! Jetez un œil au [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) si vous souhaitez contrôler ce que vous découpez à partir de pages Web.
+The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) if you want to control what you clip from webpages.
 :::
 
 ## Favoris
 
-Par défaut, l'extension de navigateur affichera tous les liens ** de la note actuelle** dans une fenêtre contextuelle lorsque vous cliquez sur l'icône QOwnNotes dans votre navigateur. Ces liens recevront une balise `current`.
+By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
 
-Vous pouvez également **gérer vos signets dans les notes** avec la balise de note `signets` (modifiable dans les paramètres). Ces liens peuvent également avoir des balises et une description qui seront affichées dans l'extension du navigateur.
+You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
 
-Les nouveaux signets sont stockés dans une note appelée `Signets` (également modifiable dans les paramètres).
+New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
 
 ::: tip
-Vous pouvez également importer les signets de votre navigateur dans QOwnNotes avec l'extension de navigateur Web compagnon!
+You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
 :::
 
 ### Syntaxe des liens de signets
@@ -40,4 +44,4 @@ Vous pouvez également importer les signets de votre navigateur dans QOwnNotes a
 * [Webpage name](https://www.example.com) the alternative list character also works
 ```
 
-Vous pouvez rechercher un nom, des balises URL ou une description dans l'extension de navigateur.
+You are able to search for name, url tags or description in the browser extension.

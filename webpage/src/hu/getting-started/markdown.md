@@ -163,17 +163,17 @@ Van néhány szintaxis kiemelés a kódblokkokkal a QOwnNotes-ban.
 cd Notes
 ~~~
 ~~~
-Currently supported languages (and code block identifiers) are:
-* BASh scripting, `bash`
+A jelenleg támogatott nyelvek (és kódblokk-azonosítók) a következők:
+* BASh szkriptek, `bash`
 * C, `c`
-* C++, `cpp`
-* C++, `cxx`
-* C++, `c++`
-* C#, `c#`
+* C ++, `cpp`
+* C ++, `cxx`
+* C ++, `c ++ '
+* C #, `c #`
 * CMake, `cmake`
-* C#, `csharp`
+* C #, `csharp`
 * CSS, `css`
-* Go, `go`
+* Menj, menj
 * HTML, `html`
 * INI, `ini`
 * Java, `java`
@@ -185,11 +185,11 @@ Currently supported languages (and code block identifiers) are:
 * Python, `py`
 * Python, `python`
 * QML, `qml`
-* Rust, `rust`
-* Shell scripting, `sh`
+* Rozsda, `rozsda`
+* Shell szkriptek, `sh`
 * SQL, `sql`
 * TypeScript, `ts`
-* TypeScript, `typescript`
+* TypeScript, `gépírás`
 * V, `v`
 * Vex, `vex`
 * XML, `xml`
@@ -197,9 +197,9 @@ Currently supported languages (and code block identifiers) are:
 * YAML, `yaml`
 
 
-## Tables
+## Táblázatok
 
-Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
+A táblázatok nem részei a Markdown alapvető specifikációinak, de a QOwnNotes előnézet támogatja őket. 
 
 ```markdown
 A kettőspontok használhatók az oszlopok igazítására.

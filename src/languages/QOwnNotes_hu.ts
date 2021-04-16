@@ -2599,7 +2599,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2659"/>
       <source>Jump to navigation panel</source>
-      <translation type="unfinished">Jump to navigation panel</translation>
+      <translation>Ugrás a navigációs panelre</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1909"/>
@@ -4144,7 +4144,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
       <location filename="../services/owncloudservice.cpp" line="503"/>
       <location filename="../services/owncloudservice.cpp" line="521"/>
       <source>ok</source>
-      <translation>oké</translation>
+      <translation>rendben</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="313"/>
@@ -4448,7 +4448,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
       <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
       <source>File name changed</source>
-      <translation type="unfinished">File name changed</translation>
+      <translation>A fájl neve megváltozott</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
@@ -7920,7 +7920,7 @@ A jegyzetek érintetlenül maradnak!</translation>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="438"/>
       <source>&amp;Delete images</source>
-      <translation>&amp;Képek törlése</translation>
+      <translation>Képek &amp;törlése</translation>
     </message>
     <message>
       <location filename="../dialogs/storedimagesdialog.cpp" line="439"/>

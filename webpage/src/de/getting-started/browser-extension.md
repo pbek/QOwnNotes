@@ -10,24 +10,28 @@ Besuchen Sie den [Chrome Web Store](https://chrome.google.com/webstore/detail/qo
 
 Sie finden die Erweiterung auch unter [GitHub](https://github.com/qownnotes/web-companion/).
 
+::: tip Info
+QOwnNotes needs to be running for the Web Companion browser extension to work.
+:::
+
 ## Web clipper
 
-Klicken Sie mit der rechten Maustaste auf eine Webseite oder einen ausgewählten Text, um die Funktion **Web-Clipper** zu verwenden. Dort können Sie auch eine neue Notiz mit einem ** Screenshot ** der aktuellen Webseite erstellen.
+Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new note with a **screenshot** of the current webpage.
 
 ::: tip
-Der Web Clipper ist auch skriptfähig! Schauen Sie sich den [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) an, wenn Sie steuern möchten, was Sie von Webseiten ausschneiden.
+The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) if you want to control what you clip from webpages.
 :::
 
 ## Lesezeichen
 
-Standardmäßig zeigt die Browsererweiterung alle **Links der aktuellen Notiz** in einem Popup an, wenn Sie in Ihrem Browser auf das QOwnNotes-Symbol klicken. Diese Links erhalten einen `current` Tag.
+By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
 
-Sie können **Ihre Lesezeichen auch in Notizen** mit dem Notiz-Tag `Lesezeichen` verwalten (in den Einstellungen änderbar). Diese Links können auch Tags und eine Beschreibung enthalten, die in der Browsererweiterung angezeigt wird.
+You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
 
-Neue Lesezeichen werden in einer Notiz namens `Lesezeichen` gespeichert (in den Einstellungen änderbar).
+New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
 
 ::: tip
-Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browser-Erweiterung in QOwnNotes importieren!
+You can also import your browser bookmarks into QOwnNotes with the web companion browser extension!
 :::
 
 ### Syntax von Lesezeichen-Links
@@ -40,4 +44,4 @@ Sie können Ihre Browser-Lesezeichen auch mit der Web-Companion-Browser-Erweiter
 * [Name der Webseite] (https://www.example.com) das alternative Listenzeichen funktioniert ebenfalls
 ```
 
-Sie können in der Browsererweiterung nach Namen, URL-Tags oder Beschreibungen suchen.
+You are able to search for name, url tags or description in the browser extension.

@@ -311,12 +311,12 @@ Kommentare werden in der Vorschau nicht angezeigt.
 ```
 
 ::: tip
-A leading html comment block in a note will also be ignored in the automatic note filename generation.
+Ein führender HTML-Kommentarblock in einer Notiz wird bei der automatischen Generierung von Notizdateinamen ebenfalls ignoriert.
 :::
 
 ## Kontrollkästchenlisten
 
-You can create simple todo lists with checkbox lists.
+Sie können einfache Aufgabenlisten mit Kontrollkästchenlisten erstellen.
 
 ```markdown
 - [x] done
@@ -324,12 +324,12 @@ You can create simple todo lists with checkbox lists.
 ```
 
 ::: tip
-You can check/un-check checkboxes in the preview.
+Sie können Kontrollkästchen in der Vorschau aktivieren / deaktivieren.
 :::
 
 ## Inhaltsübersicht
 
-In QOwnNotes you can use a frontmatter (e.g. YAML) to add some extra meta information. It will **not be shown in the preview** and will **not disturb the the automatic note filename generation**.
+In QOwnNotes können Sie eine Frontmatter (z.B. YAML) verwenden, um zusätzliche Metainformationen hinzuzufügen. Es wird **nicht in der Vorschau angezeigt** und **stört die automatische Generierung von Notizendateinamen** nicht.
 
 ```markdown
 ---
@@ -342,4 +342,4 @@ Beschreibung: Ein wenig Beschreibung
 Etwas Text
 ```
 
-The filename of this example note would be `Note headline starts here.md`.
+Der Dateiname dieser Beispielnotiz lautet `. Die Überschrift der Notiz beginnt hier.md `.

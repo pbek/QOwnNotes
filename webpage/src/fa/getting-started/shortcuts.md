@@ -42,10 +42,10 @@
 - <kbd>F5</kbd> به لیست یادداشت پرش می کند
 - <kbd>F6</kbd> به پنل زیرپوشه یادداشت پرش می کند
 - <kbd>F7</kbd> به پنل برچسب ها پرش می کند
-- <kbd>F8</kbd> jumps to the navigation panel
-- <kbd>F10</kbd> activates the context menu of the current widget
-- <kbd>F11</kbd> toggles full-screen mode
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
+- <kbd>F8</kbd>پرش به پنل جهت یابی
+- <kbd>F10</kbd> منوی زمینه ابزارک کنونی را فعال سازی می کند
+- <kbd>F11</kbd> به حالت تمام صفحه تغییر وضعیت می دهد
+- <kbd>H</kbd> + <kbd>⇧</kbd> + <kbd>Alt</kbd> سرخط یادداشت کنونی را رونوشت برداری می کند
 
 ### در نوار جستجوی یادداشت
 
@@ -157,10 +157,10 @@
 - <kbd>F5</kbd> به لیست یادداشت پرش می کند
 - <kbd>F6</kbd> به پنل زیرپوشه یادداشت پرش می کند
 - <kbd>F7</kbd> به پنل برچسب ها پرش می کند
-- <kbd>F8</kbd> jumps to the navigation panel
-- <kbd>F10</kbd> activates the context menu of the current widget
-- <kbd>⌘</kbd> + <kbd>F11</kbd> toggles full-screen mode
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
+- <kbd>F8</kbd>پرش به پنل جهت یابی
+- <kbd>F10</kbd> منوی زمینه ابزارک کنونی را فعال سازی می کند
+- <kbd>⌘</kbd> + <kbd>F11</kbd> به حالت تمام صفحه تغییر وضعیت می دهد
+- <kbd>H</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> سر خط یادداشت کنونی را رونوشت برداری می کند
 
 ### در نوار جستجوی یادداشت
 

@@ -42,10 +42,10 @@
 - <kbd>F5</kbd> ugrik a jegyzetlistára
 - <kbd>F6</kbd> a jegyzet almappája panelre ugrik
 - <kbd>F7</kbd> a címkék panelre ugrik
-- <kbd>F8</kbd> jumps to the navigation panel
-- <kbd>F10</kbd> activates the context menu of the current widget
-- <kbd>F11</kbd> toggles full-screen mode
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
+- <kbd>F8</kbd> a navigációs panelre ugrik
+- <kbd>F10</kbd> aktiválja az aktuális eszköz helyi menüjét
+- <kbd>F11</kbd> a teljes képernyős mód váltása
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> az aktuális jegyzet címsorát másolja
 
 ### A jegyzet keresősávban
 
@@ -157,10 +157,10 @@
 - <kbd>F5</kbd> ugrik a jegyzetlistára
 - <kbd>F6</kbd> a jegyzet almappája panelre ugrik
 - <kbd>F7</kbd> a címkék panelre ugrik
-- <kbd>F8</kbd> jumps to the navigation panel
-- <kbd>F10</kbd> activates the context menu of the current widget
-- <kbd>⌘</kbd> + <kbd>F11</kbd> toggles full-screen mode
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
+- <kbd>F8</kbd> a navigációs panelre ugrik
+- <kbd>F10</kbd> aktiválja az aktuális eszköz helyi menüjét
+- <kbd>⌘</kbd> + <kbd>F11</kbd> a teljes képernyős mód váltása
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> az aktuális jegyzet címsorát másolja
 
 ### A jegyzet keresősávban
 

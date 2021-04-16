@@ -2599,7 +2599,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2659"/>
       <source>Jump to navigation panel</source>
-      <translation type="unfinished">Jump to navigation panel</translation>
+      <translation>Aller au panneau de navigation</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1909"/>
@@ -4449,7 +4449,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
       <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
       <source>File name changed</source>
-      <translation type="unfinished">File name changed</translation>
+      <translation>Le nom du fichier a changé</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
