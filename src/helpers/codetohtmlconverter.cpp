@@ -518,7 +518,7 @@ QString CodeToHtmlConverter::xmlHighlighter(StringView input) const {
                 StringView tag = input.mid(i, found - i);
 
                 QRegularExpression re(R"(([a-zA-Z0-9]+(\s*=\s*"[^"]*")?))");
-                QRegularExpressionMatchIterator matchIt = re.globalMatch(tag);
+                QRegularExpressionMatchIterator matchIt = re.globalMatch(TO_QSTRING(tag));
 
                 while (matchIt.hasNext()) {
                     QRegularExpressionMatch match = matchIt.next();

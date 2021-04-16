@@ -7,7 +7,6 @@
 
 using LangData = QMultiHash<char, QLatin1String>;
 
-
 /**
  *  The api we need start for qt 5.15
  */
@@ -17,6 +16,11 @@ using StringView = QStringView;
 using StringView = const QStringRef&;
 #endif
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 5, 0)
+#define TO_QSTRING(s) s.toString();
+#else
+#define TO_QSTRING(s) s
+#endif
 
 class CodeToHtmlConverter {
     enum Format { Type, Keyword, Literal, String, Comment, Builtin, Other };
