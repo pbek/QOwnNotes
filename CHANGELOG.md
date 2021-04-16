@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.4.1
+- in vim mode now also the setup indent size is used as shift width
+  (for [#2099](https://github.com/pbek/QOwnNotes/issues/2099))
+
 ## 21.4.0
 - added the **new editor color schema** *Gruvbox*
   (for [#2085](https://github.com/pbek/QOwnNotes/issues/2092), thank you @Yoshua-chan)
