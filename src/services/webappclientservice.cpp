@@ -22,6 +22,8 @@
 #include <utils/misc.h>
 #include <QJsonDocument>
 #include <QSettings>
+#include <QtWebSockets>
+#include <QSslError>
 #include <QWebSocket>
 
 #include "metricsservice.h"
@@ -35,10 +37,12 @@ WebAppClientService::WebAppClientService(QObject *parent)
     if (!Utils::Misc::isWebAppSupportEnabled()) {
         return;
     }
+    
+    _webSocket = new QWebSocket();
 
-    connect(&_webSocket, &QWebSocket::connected, this, &WebAppClientService::onConnected);
-    connect(&_webSocket, &QWebSocket::sslErrors, this, &WebAppClientService::onSslErrors);
-    connect(&_webSocket, &QWebSocket::textMessageReceived, this, &WebAppClientService::onTextMessageReceived);
+    connect(_webSocket, &QWebSocket::connected, this, &WebAppClientService::onConnected);
+    connect(_webSocket, &QWebSocket::sslErrors, this, &WebAppClientService::onSslErrors);
+    connect(_webSocket, &QWebSocket::textMessageReceived, this, &WebAppClientService::onTextMessageReceived);
 
     open();
 }
@@ -47,11 +51,11 @@ void WebAppClientService::open() {
     _url = getServerUrl() + "/ws/" + getOrGenerateToken();
     // we don't want to show the token in the log
     qDebug() << "Opening socket connection to " << getServerUrl();
-    _webSocket.open(_url);
+    _webSocket->open(_url);
 }
 
 void WebAppClientService::close() {
-    _webSocket.close();
+    _webSocket->close();
     _url = "";
 }
 
@@ -81,13 +85,12 @@ QString WebAppClientService::getDefaultServerUrl() {
 }
 
 WebAppClientService::~WebAppClientService() {
-    _webSocket.close();
+    _webSocket->close();
 }
 
 void WebAppClientService::onConnected() {
     Utils::Misc::printInfo(tr("QOwnNotes is now connected via websocket to %1")
                                .arg(getServerUrl()));
-
 }
 
 void WebAppClientService::onTextMessageReceived(const QString &message) {

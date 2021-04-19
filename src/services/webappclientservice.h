@@ -15,9 +15,9 @@
 #pragma once
 
 #include <QObject>
-#include <QWebSocket>
 
 class QWebSocket;
+class QSslError;
 class QString;
 
 class WebAppClientService : public QObject {
@@ -34,10 +34,10 @@ class WebAppClientService : public QObject {
 
    private slots:
     static void onConnected();
-    void onTextMessageReceived(const QString &message);
+    static void onTextMessageReceived(const QString &message);
     static void onSslErrors(const QList<QSslError>& errors);
 
    private:
-    QWebSocket _webSocket;
-    QUrl _url;
+    QWebSocket *_webSocket{};
+    QString _url;
 };
