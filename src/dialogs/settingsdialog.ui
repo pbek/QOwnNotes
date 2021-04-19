@@ -285,6 +285,18 @@
            </item>
            <item>
             <property name="text">
+             <string>Web application</string>
+            </property>
+            <property name="whatsThis">
+             <string notr="true">20</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
              <string>General</string>
             </property>
             <property name="whatsThis">
@@ -397,7 +409,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>1</number>
+            <number>20</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -6126,7 +6138,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <item>
                     <widget class="QToolButton" name="webSocketServerServicePortResetButton">
                      <property name="toolTip">
-                      <string>Reset the cursor width</string>
+                      <string>Reset the socket server port</string>
                      </property>
                      <property name="text">
                       <string notr="true">…</string>
@@ -6188,6 +6200,192 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </item>
                </layout>
               </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="webApplicationPage">
+            <layout class="QGridLayout" name="gridLayout_79">
+             <item row="1" column="0">
+              <widget class="QFrame" name="webAppFrame">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_77">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="Label" name="webCompannionLabel_2">
+                  <property name="text">
+                   <string>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</string>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                  <property name="openExternalLinks">
+                   <bool>true</bool>
+                  </property>
+                  <property name="textInteractionFlags">
+                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QGroupBox" name="webAppGroupBox">
+                  <property name="title">
+                   <string>QOwnNotes web application</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_80">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_35">
+                     <property name="text">
+                      <string>Server URL:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1" colspan="3">
+                    <widget class="QLineEdit" name="webAppServerUrlLineEdit">
+                     <property name="placeholderText">
+                      <string notr="true">https://app.qownnotes.org</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_36">
+                     <property name="text">
+                      <string>Security token:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1" colspan="6">
+                    <widget class="QLabel" name="label_37">
+                     <property name="text">
+                      <string>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</string>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="4">
+                    <widget class="QToolButton" name="webAppShowTokenButton">
+                     <property name="toolTip">
+                      <string>Show security token</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true">…</string>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="document-decrypt" resource="../breeze-qownnotes.qrc">
+                       <normaloff>:/icons/breeze-qownnotes/16x16/document-decrypt.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-decrypt.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1" colspan="6">
+                    <widget class="QLabel" name="label_38">
+                     <property name="text">
+                      <string>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</string>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1" colspan="3">
+                    <widget class="QLineEdit" name="webAppTokenLineEdit">
+                     <property name="echoMode">
+                      <enum>QLineEdit::Password</enum>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="5">
+                    <widget class="QToolButton" name="webAppCopyTokenButton">
+                     <property name="toolTip">
+                      <string>Copy security token to clipboard</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true">…</string>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="edit-copy" resource="../breeze-qownnotes.qrc">
+                       <normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="6">
+                    <widget class="QToolButton" name="webAppGenerateTokenButton">
+                     <property name="toolTip">
+                      <string>Generate new security token</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true">…</string>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
+                       <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="4">
+                    <widget class="QToolButton" name="webAppServerUrlResetButton">
+                     <property name="toolTip">
+                      <string>Reset the URL to default</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true">…</string>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                       <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="groupBox_37">
+               <property name="title">
+                <string>QOwnNotes web application support</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_31">
+                <item>
+                 <widget class="QCheckBox" name="enableWebApplicationCheckBox">
+                  <property name="text">
+                   <string>Enable web application support</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <spacer name="verticalSpacer_19">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </widget>

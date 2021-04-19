@@ -11,6 +11,7 @@
 #include <services/metricsservice.h>
 #include <services/scriptingservice.h>
 #include <services/websocketserverservice.h>
+#include <services/webappclientservice.h>
 #include <utils/gui.h>
 #include <utils/misc.h>
 #include <widgets/scriptsettingwidget.h>
@@ -252,6 +253,12 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
     connect(ui->ignoreNoteSubFoldersLineEdit, SIGNAL(textChanged(QString)),
             this, SLOT(needRestart()));
     connect(ui->enableSocketServerCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->enableWebApplicationCheckBox, SIGNAL(toggled(bool)), this,
+            SLOT(needRestart()));
+    connect(ui->webAppServerUrlLineEdit, SIGNAL(textChanged(QString)), this,
+            SLOT(needRestart()));
+    connect(ui->webAppTokenLineEdit, SIGNAL(textChanged(QString)), this,
             SLOT(needRestart()));
     //    connect(ui->layoutWidget, SIGNAL(settingsStored()),
     //            this, SLOT(needRestart()));
@@ -704,6 +711,8 @@ void SettingsDialog::storeSettings() {
                       ui->localTrashClearTimeSpinBox->value());
     settings.setValue(QStringLiteral("enableSocketServer"),
                       ui->enableSocketServerCheckBox->isChecked());
+    settings.setValue(QStringLiteral("enableWebAppSupport"),
+                      ui->enableWebApplicationCheckBox->isChecked());
 
     // make the path relative to the portable data path if we are in
     // portable mode
@@ -941,6 +950,11 @@ void SettingsDialog::storeSettings() {
     settings.setValue(
         QStringLiteral("webSocketServerService/bookmarksNoteName"),
         ui->bookmarksNoteNameLineEdit->text());
+
+    settings.setValue(QStringLiteral("webAppClientService/serverUrl"),
+                      ui->webAppServerUrlLineEdit->text());
+    settings.setValue(QStringLiteral("webAppClientService/token"),
+                      ui->webAppTokenLineEdit->text());
 }
 
 /**
@@ -1103,6 +1117,9 @@ void SettingsDialog::readSettings() {
     ui->enableSocketServerCheckBox->setChecked(
         Utils::Misc::isSocketServerEnabled());
     on_enableSocketServerCheckBox_toggled();
+    ui->enableWebApplicationCheckBox->setChecked(
+        Utils::Misc::isWebAppSupportEnabled());
+    on_enableWebApplicationCheckBox_toggled();
 
 #ifdef Q_OS_MAC
     bool restoreCursorPositionDefault = false;
@@ -1437,6 +1454,9 @@ void SettingsDialog::readSettings() {
         WebSocketServerService::getBookmarksTag());
     ui->bookmarksNoteNameLineEdit->setText(
         WebSocketServerService::getBookmarksNoteName());
+
+    ui->webAppServerUrlLineEdit->setText(WebAppClientService::getServerUrl());
+    ui->webAppTokenLineEdit->setText(WebAppClientService::getOrGenerateToken());
 }
 
 /**
@@ -4305,4 +4325,29 @@ void SettingsDialog::on_databaseIntegrityCheckButton_clicked() {
             tr("The integrity of the disk database is not valid!"),
             QStringLiteral("database-integrity-check-not-valid"));
     }
+}
+
+void SettingsDialog::on_webAppServerUrlResetButton_clicked() {
+    ui->webAppServerUrlLineEdit->setText(
+        WebAppClientService::getDefaultServerUrl());
+}
+
+void SettingsDialog::on_webAppShowTokenButton_clicked() {
+    ui->webAppTokenLineEdit->setEchoMode(
+        ui->webAppTokenLineEdit->echoMode() == QLineEdit::EchoMode::Password ?
+            QLineEdit::EchoMode::Normal : QLineEdit::EchoMode::Password);
+}
+
+void SettingsDialog::on_webAppCopyTokenButton_clicked() {
+    QApplication::clipboard()->setText(ui->webAppTokenLineEdit->text());
+}
+
+void SettingsDialog::on_webAppGenerateTokenButton_clicked() {
+    ui->webAppTokenLineEdit->setText(Utils::Misc::generateRandomString(32));
+    ui->webAppTokenLineEdit->setEchoMode(QLineEdit::EchoMode::Normal);
+}
+
+void SettingsDialog::on_enableWebApplicationCheckBox_toggled() {
+    bool checked = ui->enableWebApplicationCheckBox->isChecked();
+    ui->webAppFrame->setEnabled(checked);
 }

@@ -339,6 +339,8 @@ set(SOURCE_FILES
     helpers/fakevimproxy.cpp
     services/websocketserverservice.cpp
     services/websocketserverservice.h
+    services/webappclientservice.cpp
+    services/webappclientservice.h
     entities/bookmark.h entities/bookmark.cpp)
 
 if(NOT APPLE)

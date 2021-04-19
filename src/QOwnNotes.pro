@@ -139,6 +139,7 @@ SOURCES += main.cpp\
     services/cryptoservice.cpp \
     services/scriptingservice.cpp \
     services/websocketserverservice.cpp \
+    services/webappclientservice.cpp \
     dialogs/masterdialog.cpp \
     utils/misc.cpp \
     utils/git.cpp \
@@ -220,6 +221,7 @@ HEADERS  += mainwindow.h \
     services/updateservice.h \
     services/scriptingservice.h \
     services/websocketserverservice.h \
+    services/webappclientservice.h \
     helpers/htmlentities.h \
     helpers/clientproxy.h \
     helpers/toolbarcontainer.h \

@@ -58,7 +58,8 @@ class SettingsDialog : public MasterDialog {
         PanelsPage,
         LocalTrashPage,
         LayoutPage,
-        WebCompanionPage
+        WebCompanionPage,
+        WebApplicationPage
     };
 
     explicit SettingsDialog(int page = 0, QWidget *parent = 0);
@@ -292,6 +293,16 @@ class SettingsDialog : public MasterDialog {
     void on_noteTextViewUseEditorStylesCheckBox_toggled(bool checked);
 
     void on_databaseIntegrityCheckButton_clicked();
+
+    void on_webAppServerUrlResetButton_clicked();
+
+    void on_webAppShowTokenButton_clicked();
+
+    void on_webAppCopyTokenButton_clicked();
+
+    void on_webAppGenerateTokenButton_clicked();
+
+    void on_enableWebApplicationCheckBox_toggled();
 
 private:
     Ui::SettingsDialog *ui;

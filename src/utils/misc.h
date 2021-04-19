@@ -109,6 +109,7 @@ void loadPrinterSettings(QPrinter *printer, const QString &settingsKey);
 bool isNoteEditingAllowed();
 bool useInternalExportStylingForPreview();
 bool isSocketServerEnabled();
+bool isWebAppSupportEnabled();
 QString unescapeHtml(QString html);
 QString htmlspecialchars(QString text);
 void printInfo(const QString &text);

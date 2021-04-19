@@ -1313,6 +1313,15 @@ bool Utils::Misc::isSocketServerEnabled() {
 }
 
 /**
+ * Returns if "enableWebAppSupport" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::isWebAppSupportEnabled() {
+    return QSettings().value(QStringLiteral("enableWebAppSupport"), false).toBool();
+}
+
+/**
  * Returns if "darkModeIconTheme" is turned on
  *
  * @return

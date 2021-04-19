@@ -113,6 +113,7 @@
 #include "services/owncloudservice.h"
 #include "services/updateservice.h"
 #include "services/websocketserverservice.h"
+#include "services/webappclientservice.h"
 #include "ui_mainwindow.h"
 #include "version.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
