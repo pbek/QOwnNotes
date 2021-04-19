@@ -612,6 +612,10 @@ void MainWindow::initWebSocketServerService() {
     _webSocketServerService = new WebSocketServerService();
 }
 
+void MainWindow::initWebAppClientService() {
+    _webAppClientService = new WebAppClientService();
+}
+
 void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
     auto handler = new FakeVim::Internal::FakeVimHandler(noteTextEdit, this);
     handler->installEventFilter();
@@ -2536,6 +2540,9 @@ void MainWindow::restoreToolbars() {
 
     // update the toolbar menu
     updateToolbarMenu();
+
+    // initialize web app websocket connection
+    QTimer::singleShot(250, this, SLOT(initWebAppClientService()));
 }
 
 /**

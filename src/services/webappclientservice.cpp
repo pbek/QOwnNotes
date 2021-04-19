@@ -14,8 +14,13 @@
 
 #include "webappclientservice.h"
 
-#include <utils/misc.h>
+#ifndef INTEGRATION_TESTS
+#include <mainwindow.h>
+#include <utils/gui.h>
+#endif
 
+#include <utils/misc.h>
+#include <QJsonDocument>
 #include <QSettings>
 #include <QWebSocket>
 
@@ -31,15 +36,17 @@ WebAppClientService::WebAppClientService(QObject *parent)
         return;
     }
 
-//    connect(&_webSocket, &QWebSocket::connected, this, &WebAppClientService::onConnected);
-//    connect(&_webSocket, &QWebSocket::disconnected, this, &WebAppClientService::closed);
+    connect(&_webSocket, &QWebSocket::connected, this, &WebAppClientService::onConnected);
+    connect(&_webSocket, &QWebSocket::sslErrors, this, &WebAppClientService::onSslErrors);
+    connect(&_webSocket, &QWebSocket::textMessageReceived, this, &WebAppClientService::onTextMessageReceived);
 
     open();
 }
 
 void WebAppClientService::open() {
-    _url = getServerUrl() + "/ws";
-    qDebug() << "Opening socket connection to " << _url;
+    _url = getServerUrl() + "/ws/" + getOrGenerateToken();
+    // we don't want to show the token in the log
+    qDebug() << "Opening socket connection to " << getServerUrl();
     _webSocket.open(_url);
 }
 
@@ -67,9 +74,9 @@ QString WebAppClientService::getOrGenerateToken() {
 
 QString WebAppClientService::getDefaultServerUrl() {
 #ifdef QT_NO_DEBUG
-    return "https://app.qownnotes.org";
+    return "wss://app.qownnotes.org";
 #else
-    return "http://localhost:8080";
+    return "ws://localhost:8080";
 #endif
 }
 
@@ -77,8 +84,44 @@ WebAppClientService::~WebAppClientService() {
     _webSocket.close();
 }
 
-void WebAppClientService::onConnected() {}
+void WebAppClientService::onConnected() {
+    Utils::Misc::printInfo(tr("QOwnNotes is now connected via websocket to %1")
+                               .arg(getServerUrl()));
 
-void WebAppClientService::onTextMessageReceived(QString message) {
-    qDebug() << __func__ << " - 'message': " << message;
+}
+
+void WebAppClientService::onTextMessageReceived(const QString &message) {
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(message.toUtf8());
+    QJsonObject jsonObject = jsonResponse.object();
+    const QString command = jsonObject.value(QStringLiteral("command")).toString();
+    MetricsService::instance()->sendVisitIfEnabled("webapp/command/" + command);
+
+    if (command == "showWarning") {
+        const QString msg = jsonObject.value(QStringLiteral("msg")).toString();
+        qWarning() << "Web app warning: " << msg;
+
+#ifndef INTEGRATION_TESTS
+        Utils::Gui::warning(
+            nullptr, tr("Web app warning"), msg,
+            "wepappclientservice-warning");
+#endif
+    } else if (command == "insertFile") {
+#ifndef INTEGRATION_TESTS
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow == Q_NULLPTR) {
+            return;
+        }
+
+        const QString fileDataUrl = jsonObject.value(QStringLiteral("file")).toString();
+
+        // TODO: insert image into current note
+        qDebug() << __func__ << " - 'fileDataUrl': " << fileDataUrl;
+#endif
+    } else {
+        qWarning() << "Unknown message from web app: " << message;
+    }
+}
+
+void WebAppClientService::onSslErrors(const QList<QSslError> &errors) {
+    qCritical() << errors;
 }

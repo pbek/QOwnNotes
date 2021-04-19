@@ -33,8 +33,9 @@ class WebAppClientService : public QObject {
     void close();
 
    private slots:
-    void onConnected();
-    void onTextMessageReceived(QString message);
+    static void onConnected();
+    void onTextMessageReceived(const QString &message);
+    static void onSslErrors(const QList<QSslError>& errors);
 
    private:
     QWebSocket _webSocket;
