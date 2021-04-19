@@ -1218,8 +1218,7 @@ void Utils::Misc::storePrinterSettings(QPrinter *printer,
     QByteArray byteArr;
     QDataStream os(&byteArr, QIODevice::WriteOnly);
     dataStreamWrite(os, *printer);
-    QSettings settings;
-    settings.setValue(settingsKey, byteArr.toHex());
+    QSettings().setValue(settingsKey, byteArr.toHex());
 }
 
 /**
@@ -1248,8 +1247,7 @@ void Utils::Misc::loadPrinterSettings(QPrinter *printer,
  * @return
  */
 bool Utils::Misc::isNoteEditingAllowed() {
-    QSettings settings;
-    return settings.value(QStringLiteral("allowNoteEditing"), true).toBool();
+    return QSettings().value(QStringLiteral("allowNoteEditing"), true).toBool();
 }
 
 /**
@@ -1258,9 +1256,7 @@ bool Utils::Misc::isNoteEditingAllowed() {
  * @return
  */
 bool Utils::Misc::useInternalExportStylingForPreview() {
-    QSettings settings;
-    return settings
-        .value(
+    return QSettings().value(
             QStringLiteral("MainWindow/noteTextView.useInternalExportStyling"),
             true)
         .toBool();
@@ -1272,8 +1268,7 @@ bool Utils::Misc::useInternalExportStylingForPreview() {
  * @return
  */
 QString Utils::Misc::previewFontString() {
-    QSettings settings;
-    return settings.value(isPreviewUseEditorStyles() ?
+    return QSettings().value(isPreviewUseEditorStyles() ?
         QStringLiteral("MainWindow/noteTextEdit.font") :
         QStringLiteral("MainWindow/noteTextView.font")).toString();
 }
@@ -1284,8 +1279,7 @@ QString Utils::Misc::previewFontString() {
  * @return
  */
 QString Utils::Misc::previewCodeFontString() {
-    QSettings settings;
-    return settings.value(isPreviewUseEditorStyles() ?
+    return QSettings().value(isPreviewUseEditorStyles() ?
         QStringLiteral("MainWindow/noteTextEdit.code.font") :
         QStringLiteral("MainWindow/noteTextView.code.font")).toString();
 }
@@ -1296,20 +1290,18 @@ QString Utils::Misc::previewCodeFontString() {
  * @return
  */
 bool Utils::Misc::isPreviewUseEditorStyles() {
-    const QSettings settings;
-    return settings.value(
+    return QSettings().value(
         QStringLiteral("MainWindow/noteTextView.useEditorStyles"),
                        true).toBool();
 }
 
 /**
- * Returns if "allowNoteEditing" is turned on
+ * Returns if "enableSocketServer" is turned on
  *
  * @return
  */
 bool Utils::Misc::isSocketServerEnabled() {
-    const QSettings settings;
-    return settings.value(QStringLiteral("enableSocketServer"), true).toBool();
+    return QSettings().value(QStringLiteral("enableSocketServer"), true).toBool();
 }
 
 /**
@@ -1339,8 +1331,7 @@ bool Utils::Misc::isDarkModeIconTheme() {
  * @return
  */
 bool Utils::Misc::doAutomaticNoteFolderDatabaseClosing() {
-    const QSettings settings;
-    return settings.value(QStringLiteral("automaticNoteFolderDatabaseClosing"))
+    return QSettings().value(QStringLiteral("automaticNoteFolderDatabaseClosing"))
         .toBool();
 }
 
@@ -1350,8 +1341,7 @@ bool Utils::Misc::doAutomaticNoteFolderDatabaseClosing() {
  * @return
  */
 bool Utils::Misc::isNoteListPreview() {
-    const QSettings settings;
-    return settings.value(QStringLiteral("noteListPreview")).toBool();
+    return QSettings().value(QStringLiteral("noteListPreview")).toBool();
 }
 
 /**
@@ -1360,8 +1350,7 @@ bool Utils::Misc::isNoteListPreview() {
  * @return
  */
 bool Utils::Misc::isEnableNoteTree() {
-    QSettings settings;
-    return settings.value(QStringLiteral("enableNoteTree")).toBool();
+    return QSettings().value(QStringLiteral("enableNoteTree")).toBool();
 }
 
 /**
@@ -1370,8 +1359,7 @@ bool Utils::Misc::isEnableNoteTree() {
  * @return
  */
 QString Utils::Misc::indentCharacters() {
-    const QSettings settings;
-    return settings.value("Editor/useTabIndent").toBool()
+    return QSettings().value("Editor/useTabIndent").toBool()
                ? QStringLiteral("\t")
                : QStringLiteral(" ").repeated(indentSize());
 }
@@ -1382,8 +1370,7 @@ QString Utils::Misc::indentCharacters() {
  * @return
  */
 int Utils::Misc::indentSize() {
-    const QSettings settings;
-    return settings.value("Editor/indentSize", 4).toInt();
+    return QSettings().value("Editor/indentSize", 4).toInt();
 }
 
 /**
@@ -1795,7 +1782,10 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     // hide values of these keys
     QStringList keyHiddenList = {"cryptoKey",
                                  "ownCloud/todoCalendarCalDAVPassword",
-                                 "PiwikClientId", "networking/proxyPassword"};
+                                 "PiwikClientId", "networking/proxyPassword",
+                                 "webSocketServerService/token",
+                                 "webAppClientService/token"
+    };
 
     // under OS X we have to ignore some keys
 #ifdef Q_OS_MAC
