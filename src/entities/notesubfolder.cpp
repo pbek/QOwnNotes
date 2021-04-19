@@ -554,6 +554,8 @@ bool NoteSubFolder::willFolderBeIgnored(const QString& folderName,
                     .arg(folderName),
                 "note-subfolder-hidden-internal");
         }
+#else
+        Q_UNUSED(showWarning)
 #endif
 
         return true;
