@@ -3502,7 +3502,7 @@ QString Note::importMediaFromBase64(QString &data, const QString &imageSuffix) {
     }
 
     // create a temporary file for the image
-    QTemporaryFile *tempFile =
+    auto *tempFile =
         new QTemporaryFile(QDir::tempPath() + QDir::separator() +
                            QStringLiteral("media-XXXXXX.") + imageSuffix);
 
@@ -3516,7 +3516,7 @@ QString Note::importMediaFromBase64(QString &data, const QString &imageSuffix) {
 
     // store the temporary image in the media folder and return the markdown
     // code
-    const QString markdownCode = getInsertMediaMarkdown(tempFile);
+    QString markdownCode = getInsertMediaMarkdown(tempFile);
 
     delete tempFile;
 
