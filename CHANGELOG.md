@@ -16,6 +16,7 @@
     - you can find the source code of the web service at [web-app](https://github.com/qownnotes/web-app)
     - you can also host this web service yourself, the freshly built docker
       container is at [qownnotes-web-app](https://hub.docker.com/repository/docker/pbeke/qownnotes-web-app)
+- added more translation (thank you whenwesober, fitoschido, rawfreeamy, mguerra, amirkbrpr)
 
 ## 21.4.1
 - in vim mode the setup indent size is now also used as shift width

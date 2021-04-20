@@ -747,7 +747,7 @@ Obteniendo una nota por su nombre de archivo
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Fetches a note by its file name
+ * Obtiene una nota por su nombre de archivo
  *
  * @param fileName string the file name of the note (mandatory)
  * @param noteSubFolderId integer id of the note subfolder
@@ -759,7 +759,7 @@ NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
 
 ### Ejemplo
 ```js
-// fetch note by file name
+// buscar nota por nombre de archivo
 script.fetchNoteByFileName("my note.md");
 ```
 
@@ -769,11 +769,11 @@ Obteniendo una nota por su identificación
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Fetches a note by its id
- *
- * @param id int the id of the note
- * @return NoteApi*
- */
+  * Obtiene una nota por su identificación
+  *
+  * @param id int el id de la nota
+  * @return NoteApi*
+  */
 NoteApi* ScriptingService::fetchNoteById(int id);
 ```
 
@@ -839,11 +839,11 @@ Saltando a una nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Sets the current note if the note is visible in the note list
- *
- * @param note NoteApi note to jump to
- */
-void ScriptingService::setCurrentNote(NoteApi *note);
+  * Establece la nota actual si la nota está visible en la lista de notas
+  *
+  * @param note NoteApi nota para saltar
+  */
+void ScriptingService::setCurrentNote (NoteApi *nota);
 ```
 
 ### Ejemplo
@@ -926,10 +926,10 @@ int ScriptingService :: questionMessageBox (
 
 ### Ejemplo
 ```js
-// show a question message box with an apply and a help button
-// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+// mostrar un cuadro de mensaje de pregunta con una solicitud y un botón de ayuda
+// ver: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox(
-    "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
+"El texto que quiero mostrar", "Algún título opcional", 0x01000000|0x02000000, 0x02000000);
 script.log(result);
 ```
 

@@ -21,8 +21,8 @@ QOwnNotes --session test
 
 Puede ejecutar la aplicación en la interfaz de línea de comandos de manera diferente en diferentes sistemas operativos:
 
-| Sistema Operativo | Comando                                                |
-| ----------------- | ------------------------------------------------------ |
-| Linux             | `QOwnNotes` (or `qownnotes` if installed as snap)      |
-| macOS             | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes` |
-| Windows           | `QOwnNotes.exe`                                        |
+| Sistema Operativo | Comando                                                    |
+| ----------------- | ---------------------------------------------------------- |
+| Linux             | `QOwnNotes` (o `qownnotes` si se instala como complemento) |
+| macOS             | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes`     |
+| Windows           | `QOwnNotes.exe`                                            |

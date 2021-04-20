@@ -46,7 +46,7 @@ graph TB
 - ¡Tú eres **dueño** de todas tus notas y archivos multimedia / adjuntos!
 - Sus notas se almacenan como **archivos de Markdown de texto sin formato** en su computadora de escritorio
 - Puede utilizar cualquier editor de texto que desee junto a QOwnNotes para ver o editar sus archivos de notas
-- **Sync your notes** with other devices (desktop & mobile) with your [Nextcloud](https://nextcloud.com/) or [ownCloud](https://owncloud.org/) sync client to your server
+- **Sincroniza tus notas** con otros dispositivos (escritorio y móvil) con tu cliente de sincronización [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) con tu servidor
 
 
 ## Extensión del navegador QOwnNotes
@@ -73,12 +73,12 @@ Para trabajar con sus notas en línea, puede utilizar servidores como [Nextcloud
 
 Puede alojar su propio servidor o utilizar soluciones alojadas.
 
-There is a [community-maintained list of Nextcloud providers](https://github.com/nextcloud/providers#providers), as well as a [list of devices with Nextcloud](https://nextcloud.com/devices/).
+Hay una [lista mantenida por la comunidad de proveedores de Nextcloud](https://github.com/nextcloud/providers#providers), así como una [lista de dispositivos con Nextcloud](https://nextcloud.com/devices/).
 
-[Portknox](https://portknox.net) has reported they have [QOwnNotesAPI installed](https://portknox.net/en/app_listing).
+[Portknox](https://portknox.net) ha informado que tienen [QOwnNotesAPI instalado](https://portknox.net/en/app_listing).
 
 ::: tip
-Of course other solutions, like **Dropbox**, **Syncthing**, **Seafile** or BitTorrent Sync can be used too to host your notes and other files.
+Por supuesto, otras soluciones, como **Dropbox**, **Syncthing**, **Seafile** o BitTorrent Sync también se pueden utilizar para alojar sus notas y otros archivos.
 :::
 
 ## QOwnNotesAPI Nextcloud app

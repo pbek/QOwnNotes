@@ -1,6 +1,6 @@
 # Instalar como Flatpak
 
-There is a community maintained Flatpak `org.qownnotes.QOwnNotes` on [Flathub](https://flathub.org/apps/details/org.qownnotes.QOwnNotes).
+Hay un Flatpak `org.qownnotes.QOwnNotes` mantenido por la comunidad en [Flathub](https://flathub.org/apps/details/org.qownnotes.QOwnNotes).
 
 Puede instalarlo escribiendo:
 

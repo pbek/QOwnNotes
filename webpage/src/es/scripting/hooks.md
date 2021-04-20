@@ -76,11 +76,11 @@ Si esta función se define en varios scripts, entonces gana el primer script que
 ### Parámetros y llamada al método
 ```js
 /**
- * @param fileName string the file path of the source attachment file before it was copied to the attachment folder
- * @param markdownText string the markdown text of the attachment file, e.g. [my-file.txt](attachments/my-file-4245650967.txt)
- * @return string the new markdown text of the attachment file
- */
-function insertAttachmentHook(fileName, markdownText);
+  * @param fileName cadena la ruta del archivo adjunto de origen antes de que se copiara a la carpeta de adjuntos
+  * @param markdownText cadena el texto de la rebaja del archivo adjunto, p. ej. [mi-archivo.txt] (adjuntos / mi-archivo-4245650967.txt)
+  * @return cadena el nuevo texto de rebaja del archivo adjunto
+  */
+function insertAttachmentHook (fileName, markdownText);
 ```
 
 Es posible que desee echar un vistazo al ejemplo [ejemplo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/example.qml).
@@ -169,7 +169,7 @@ handleNewNoteHeadlineHook
 function handleNewNoteHeadlineHook(headline);
 ```
 
-You may want to take a look at the example [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml).
+Es posible que desee echar un vistazo al ejemplo [título-nuevo-de-nota-personalizado.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-new-note-headline.qml).
 
 preNoteToMarkdownHtmlHook
 -------------------------
@@ -237,7 +237,7 @@ encryptionHook
 function encryptionHook(text, password, decrypt);
 ```
 
-You may want to take a look at the example [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml) or [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml).
+Es posible que desee echar un vistazo al ejemplo [encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-keybase.qml), [encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-pgp.qml) or [encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/encryption-rot13.qml).
 
 noteTaggingHook
 ---------------

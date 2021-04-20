@@ -152,12 +152,12 @@
 - **Importación de Evernote**
 - **Compatible** con la aplicación Notes de **Nextcloud / ownCloud** y **mobil** y Nextcloud Text
 - Soporte para **compartir notas** en su servidor **ownCloud** / **Nextcloud**
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
+- Administre sus **listas de tareas** de Nextcloud / ownCloud (**tareas de Nextcloud** o **Tasks Plus** / **Calendar Plus**) o use otro **servidor CalDAV** para sincronizar sus tareas con
 - Las **versiones anteriores** de sus notas se pueden **restaurar** desde su servidor **Nextcloud / ownCloud**
 - **Las notas enviadas a la papelera** se pueden **restaurar** desde su servidor **Nextcloud / ownCloud**
 - **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
 - Soporte para **etiquetado jerárquico de notas** y **subcarpetas de notas**
-- Optional **encryption** of notes (AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
+- **Cifrado** opcional de notas (AES-256 está integrado o puede utilizar métodos de cifrado personalizados como **[ Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) o **PGP** ([encriptación-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
 - La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar varias carpetas de notas)
 - **La búsqueda de subcadena** de notas es posible y los resultados de la búsqueda se resaltan en las notas
 - [Extensión del navegador](browser-extension.md) para agregar notas del texto seleccionado, hacer capturas de pantalla o administrar sus marcadores
@@ -177,7 +177,7 @@
 - **Markdown resaltando** de notas y un **modo de vista previa de Markdown**
 
 ## Lenguajes
-- **Available in more than 60 different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
+- **Disponible en más de 60 idiomas diferentes** como inglés, alemán, francés, polaco, chino, japonés, ruso, portugués, húngaro, holandés y español
   - [Su ayuda](../contributing/translation.md) es muy apreciada para mejorar estas traducciones o para traducir QOwnNotes en más idiomas.
 
 <style>

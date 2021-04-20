@@ -10,23 +10,23 @@ Látogasson el a [Chrome Internetes áruházba](https://chrome.google.com/websto
 
 A kiterjesztést a [GitHub](https://github.com/qownnotes/web-companion/) oldalon is megtalálja.
 
-::: tip Info QOwnNotes needs to be running for the Web Companion browser extension to work. :::
+::: tip Info A Web Companion böngészőbővítmény működéséhez a QOwnNotes programnak futnia kell. :::
 
 ## Web clipper
 
-Right-click on a webpage or selected text to use the **web-clipper** functionality. There you can also create a new note with a **screenshot** of the current webpage.
+Kattintson a jobb gombbal egy weboldalra vagy a kiválasztott szövegre a ** web-clipper** funkció használatához. Itt új jegyzetet is létrehozhat az aktuális weboldal **képernyőkép** jével.
 
-::: tip The web clipper is also scriptable! Take a look at the [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) if you want to control what you clip from webpages. :::
+::: tip A webleíró is szkriptelhető! Vessen egy pillantást a [websocketRawDataHook](../scripting/hooks.md#websocketrawdatahook) oldalra, ha szeretné szabályozni, hogy mit is klipel a weboldalakról. :::
 
 ## Könyvjelzők
 
-By default the browser extension will show all **links of the current note** in a popup when you click the QOwnNotes icon in your browser. These links will get a tag `current`.
+Alapértelmezés szerint a böngészőbővítmény egy felugró ablakban megjeleníti az aktuális **jegyzet összes linkjét**, amikor a böngészőben a QOwnNotes ikonra kattint. Ezek a linkek egy `current` címkét kapnak.
 
-You can also **manage your bookmarks in notes** with the note tag `bookmarks` (changeable in the settings). These links can also have tags and a description that will be shown in the browser extension.
+A ** könyvjelzőket jegyzetekben is kezelheti** a `bookmarks` (a beállításokban módosítható) jegyzetcímkével. Ezek a linkek címkékkel és leírással is rendelkezhetnek, amelyek a böngésző kiterjesztésében jelennek meg.
 
-New bookmarks are stored in a note called `Bookmarks` (also changeable in the settings).
+Az új könyvjelzőket a `Könyvjelzők` nevű jegyzet tárolja (a beállításokban is változtatható).
 
-::: tip You can also import your browser bookmarks into QOwnNotes with the web companion browser extension! :::
+::: tip A böngésző könyvjelzőit a webkísérő böngésző kiterjesztéssel is importálhatja a QOwnNotes programba! :::
 
 ### A könyvjelző linkek szintaxisa
 
@@ -38,4 +38,4 @@ New bookmarks are stored in a note called `Bookmarks` (also changeable in the se
 * [Webpage name](https://www.example.com) az alternatív lista karakter is működik
 ```
 
-You are able to search for name, url tags or description in the browser extension.
+A böngésző kiterjesztésében kereshet nevet, URL-címkéket vagy leírást.

@@ -33,14 +33,14 @@ Puede utilizar los métodos de [Date](https://developer.mozilla.org/en-US/docs/W
 
 ### Ejemplo
 ```js
-script.log(note.fileCreated.toISOString());
-script.log(note.fileLastModified.getFullYear());
+script.log (note.fileCreated.toISOString ());
+script.log (note.fileLastModified.getFullYear ());
 
-// renames a note to "new name.md"
-note.renameNoteFile("new name");
+// cambia el nombre de una nota a "new name.md"
+note.renameNoteFile ("nuevo nombre");
 
-// check if it is allowed to have a different note file name than the headline
-script.log(note.allowDifferentFileName());
+// verifica si está permitido tener un nombre de archivo de nota diferente al del título
+script.log (note.allowDifferentFileName ());
 ```
 
 NoteSubFolder
@@ -76,7 +76,7 @@ noteSubFolder.fetchNoteSubFoldersByParentId (parentId).forEach (function (nsf) {
 Etiqueta
 ---
 
-### Properties and methods
+### Propiedades y métodos
 ```cpp
 class TagApi {
     Q_PROPERTY(int id)
