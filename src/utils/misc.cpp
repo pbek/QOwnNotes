@@ -2007,9 +2007,7 @@ QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag,
     // cache
     const QString replace = QStringLiteral("data:") % type.name() %
                             QStringLiteral(";base64,") % data.toBase64();
-    const QString inlineImageTag = imageTag.replace(url, replace);
-
-    return inlineImageTag;
+    return imageTag.replace(url, replace);
 }
 
 QString Utils::Misc::createUuidString() {
@@ -2027,7 +2025,7 @@ QString Utils::Misc::createUuidString() {
  * @return
  */
 QString Utils::Misc::localDictionariesPath() {
-    const QString path = Utils::Misc::appDataPath() % QStringLiteral("/dicts");
+    QString path = Utils::Misc::appDataPath() % QStringLiteral("/dicts");
     QDir dir;
 
     // create path if it doesn't exist yet
