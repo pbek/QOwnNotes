@@ -5,15 +5,15 @@
   web companion browser extension now an attempt will be made to decide the file extension
   from the mime type of the image (for [#2105](https://github.com/pbek/QOwnNotes/issues/2105))
 - there now is a new settings page **Web application** to add support for the new
-  <https://app.qownnotes.org/> web service that allows users to **send photos** from
-  their **mobile phone** (over the internet) to their local **QOwnNotes desktop app**
-  (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
+  [app.qownnotes.org](https://app.qownnotes.org/) web service that allows users to
+  **send photos** from their **mobile phone** (over the internet) to their local
+  **QOwnNotes desktop app** (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
     - this feature and the web service is currently in alpha state, feel free to
       test and report what your think in above issue
     - the communication between QOwnNotes and the web service is transport encrypted
     - don't forget to copy your secret token from the settings page to the web
       service to be able to communicate with your local instance of QOwnNotes
-    - you can find the sourcecode of the web service at [web-app](https://github.com/qownnotes/web-app)
+    - you can find the source code of the web service at [web-app](https://github.com/qownnotes/web-app)
     - you can also host this web service yourself, the freshly built docker
       container is at [qownnotes-web-app](https://hub.docker.com/repository/docker/pbeke/qownnotes-web-app)
 
