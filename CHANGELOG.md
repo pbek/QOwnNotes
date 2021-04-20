@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.4.2
+- when inserting media files into the current note note like via pasting or the QOwnNotes
+  web companion browser extension now an attempt will be made to decide the file extension
+  from the mime type of the image (for [#2105](https://github.com/pbek/QOwnNotes/issues/2105))
+
 ## 21.4.1
 - in vim mode the setup indent size is now also used as shift width
   (for [#2099](https://github.com/pbek/QOwnNotes/issues/2099))

@@ -7701,16 +7701,11 @@ void MainWindow::insertHtmlAsMarkdownIntoCurrentNote(QString html) {
         QRegularExpressionMatch match = i.next();
         const QString imageTag = match.captured(0);
         const QString imageUrlText = match.captured(1).trimmed();
-        QString markdownCode;
+        // try to import a media file into the current note
+        QString markdownCode = currentNote.importMediaFromDataUrl(imageUrlText);
 
-        // check if image is an inline image
-        if (imageUrlText.startsWith(QLatin1String("data:image/"),
-                                    Qt::CaseInsensitive)) {
-            QStringList parts = imageUrlText.split(QStringLiteral(";base64,"));
-            if (parts.count() == 2) {
-                markdownCode = currentNote.importMediaFromBase64(parts[1]);
-            }
-        } else {
+        // if no inline-image was detected try to download the url
+        if (markdownCode.isEmpty()) {
             const QUrl imageUrl = QUrl(imageUrlText);
 
             qDebug() << __func__ << " - 'imageUrl': " << imageUrl;

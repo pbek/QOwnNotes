@@ -3524,6 +3524,24 @@ QString Note::importMediaFromBase64(QString &data, const QString &imageSuffix) {
 }
 
 /**
+ * Tries to import a media file into the note and returns the code for the
+ * markdown image tag
+ */
+QString Note::importMediaFromDataUrl(const QString &dataUrl) {
+    if (dataUrl.startsWith(QLatin1String("data:image/"),
+                           Qt::CaseInsensitive)) {
+        QStringList parts = dataUrl.split(QStringLiteral(";base64,"));
+        if (parts.count() == 2) {
+            QString fileExtension = Utils::Misc::fileExtensionForMimeType(
+                parts[0].mid(5));
+            return importMediaFromBase64(parts[1], fileExtension);
+        }
+    }
+
+    return "";
+}
+
+/**
  * Scales down an image file if needed
  * The image file will be overwritten in the process
  *

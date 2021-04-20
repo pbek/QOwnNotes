@@ -280,6 +280,8 @@ class Note {
     QString importMediaFromBase64(
         QString &data, const QString &imageSuffix = QStringLiteral("dat"));
 
+    QString importMediaFromDataUrl(const QString &dataUrl);
+
     bool canWriteToNoteFile();
 
     static QString generateNoteFileNameFromName(const QString &name);

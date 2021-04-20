@@ -2252,3 +2252,23 @@ QString Utils::Misc::removeAcceleratorMarker(const QString &label_)
 
     return label;
 }
+
+/**
+ * Tries to find a suiting file extension for a mime type
+ *
+ * @param mimeType
+ * @return
+ */
+QString Utils::Misc::fileExtensionForMimeType(const QString &mimeType) {
+    if (mimeType == "image/jpg" || mimeType == "image/jpeg") {
+        return "jpg";
+    } else if (mimeType == "image/png") {
+        return "png";
+    } else if (mimeType == "image/gif") {
+        return "gif";
+    } else if (mimeType == "application/pdf") {
+        return "pdf";
+    }
+
+    return "";
+}

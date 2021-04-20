@@ -147,6 +147,7 @@ QString previewFontString();
 QString previewCodeFontString();
 bool fileExists(const QString &path);
 QString removeAcceleratorMarker(const QString &label_);
+QString fileExtensionForMimeType(const QString &mimeType);
 }    // namespace Misc
 }    // namespace Utils
 
