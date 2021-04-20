@@ -117,8 +117,8 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
 
         const QString fileDataUrl = jsonObject.value(QStringLiteral("file")).toString();
 
-        // TODO: insert image into current note
-        qDebug() << __func__ << " - 'fileDataUrl': " << fileDataUrl;
+        // insert image into current note
+        mainWindow->insertDataUrlAsFileIntoCurrentNote(fileDataUrl);
 #endif
     } else {
         qWarning() << "Unknown message from web app: " << message;

@@ -12911,3 +12911,21 @@ void MainWindow::on_actionJump_to_navigation_panel_triggered() {
         ui->navigationWidget->setFocus();
     }
 }
+
+/**
+ * Imports a DataUrl as file into QOwnNotes and inserts it into the current note
+ * This currently only supports images
+ * @param dataUrl
+ * @return
+ */
+bool MainWindow::insertDataUrlAsFileIntoCurrentNote(const QString &dataUrl) {
+    QString markdownCode = currentNote.importMediaFromDataUrl(dataUrl);
+
+    if (markdownCode.isEmpty()) {
+        return false;
+    }
+
+    insertNoteText(markdownCode);
+
+    return true;
+}

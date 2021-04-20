@@ -198,6 +198,8 @@ class MainWindow : public QMainWindow {
 
     Q_INVOKABLE void setCurrentWorkspace(const QString &uuid);
 
+    Q_INVOKABLE bool insertDataUrlAsFileIntoCurrentNote(const QString &dataUrl);
+
    protected:
     void changeEvent(QEvent *event) override;
 
