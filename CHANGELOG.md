@@ -2,7 +2,7 @@
 
 ## 21.4.3
 - more improvements for the wep application integration have been made
-  (for [#2105](https://github.com/pbek/QOwnNotes/issues/2105))
+  (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
     - you can now edit the security token manually
     - the link to the QOwnNotes web app was fixed in the settings dialog
     - the web app client service will now check the socket connection periodically
