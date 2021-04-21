@@ -6224,7 +6224,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  <number>0</number>
                 </property>
                 <item row="0" column="0">
-                 <widget class="Label" name="webCompannionLabel_2">
+                 <widget class="Label" name="webAppLabel">
                   <property name="text">
                    <string>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</string>
                   </property>
@@ -6302,11 +6302,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    </item>
                    <item row="2" column="1" colspan="3">
                     <widget class="QLineEdit" name="webAppTokenLineEdit">
+                     <property name="inputMask">
+                      <string notr="true">NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="maxLength">
+                      <number>32</number>
+                     </property>
                      <property name="echoMode">
                       <enum>QLineEdit::Password</enum>
-                     </property>
-                     <property name="readOnly">
-                      <bool>true</bool>
                      </property>
                     </widget>
                    </item>
@@ -6625,8 +6631,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
