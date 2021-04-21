@@ -37,10 +37,11 @@ WebAppClientService::WebAppClientService(QObject *parent)
     if (!Utils::Misc::isWebAppSupportEnabled()) {
         return;
     }
-    
+
     _webSocket = new QWebSocket();
 
     connect(_webSocket, &QWebSocket::connected, this, &WebAppClientService::onConnected);
+    connect(_webSocket, &QWebSocket::disconnected, this, &WebAppClientService::onDisconnected);
     connect(_webSocket, &QWebSocket::sslErrors, this, &WebAppClientService::onSslErrors);
     connect(_webSocket, &QWebSocket::textMessageReceived, this, &WebAppClientService::onTextMessageReceived);
 
@@ -90,6 +91,11 @@ WebAppClientService::~WebAppClientService() {
 
 void WebAppClientService::onConnected() {
     Utils::Misc::printInfo(tr("QOwnNotes is now connected via websocket to %1")
+                               .arg(getServerUrl()));
+}
+
+void WebAppClientService::onDisconnected() {
+    Utils::Misc::printInfo(tr("QOwnNotes is now disconnected from websocket to %1")
                                .arg(getServerUrl()));
 }
 
