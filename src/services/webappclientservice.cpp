@@ -44,6 +44,8 @@ WebAppClientService::WebAppClientService(QObject *parent)
     connect(_webSocket, &QWebSocket::disconnected, this, &WebAppClientService::onDisconnected);
     connect(_webSocket, &QWebSocket::sslErrors, this, &WebAppClientService::onSslErrors);
     connect(_webSocket, &QWebSocket::textMessageReceived, this, &WebAppClientService::onTextMessageReceived);
+    connect(&_timerHeartbeat, SIGNAL(timeout()), this, SLOT(onSendHeartbeatText()));
+    connect(&_timerReconnect, SIGNAL(timeout()), this, SLOT(onReconnect()));
 
     open();
 }
@@ -86,15 +88,26 @@ QString WebAppClientService::getDefaultServerUrl() {
 }
 
 WebAppClientService::~WebAppClientService() {
+    _timerHeartbeat.stop();
+    _timerReconnect.stop();
     _webSocket->close();
 }
 
 void WebAppClientService::onConnected() {
+    _timerHeartbeat.start(_heartbeatTime);
+    _timerReconnect.stop();
+    _reconnectFailedCount = 0;
+    _heartbeatFailedCount = 0;
+
     Utils::Misc::printInfo(tr("QOwnNotes is now connected via websocket to %1")
                                .arg(getServerUrl()));
 }
 
 void WebAppClientService::onDisconnected() {
+    // try to connect again after a time
+    _timerHeartbeat.stop();
+    _timerReconnect.start(_reconnectTime);
+
     Utils::Misc::printInfo(tr("QOwnNotes is now disconnected from websocket to %1")
                                .arg(getServerUrl()));
 }
@@ -135,4 +148,33 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
 
 void WebAppClientService::onSslErrors(const QList<QSslError> &errors) {
     qCritical() << errors;
+}
+
+void WebAppClientService::onSendHeartbeatText() {
+    const QString &heartbeatText = "qon-ping";
+    auto sendByte =	_webSocket->sendTextMessage(heartbeatText);
+
+    if (sendByte != heartbeatText.toLocal8Bit().length()) {
+        _heartbeatFailedCount++;
+        qDebug() << "WebAppClientService heartbeat failed";
+
+        if (_heartbeatFailedCount >= _reconnectHeartbeatTimerCount) {
+            _timerHeartbeat.stop();
+            _timerReconnect.start(_reconnectTime);
+        }
+    }
+}
+
+void WebAppClientService::onReconnect() {
+    // close websocket
+    _webSocket->close();
+
+    if (_reconnectFailedCount >= _reconnectHeartbeatTimerCount) {
+        _timerReconnect.stop();
+    } else {
+        qDebug() << "WebAppClientService attempts a reconnect";
+
+        open();
+        _reconnectFailedCount++;
+    }
 }

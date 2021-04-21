@@ -15,6 +15,7 @@
 #pragma once
 
 #include <QObject>
+#include <QTimer>
 
 class QWebSocket;
 class QSslError;
@@ -33,12 +34,21 @@ class WebAppClientService : public QObject {
     void close();
 
    private slots:
-    static void onConnected();
-    static void onDisconnected();
+    void onConnected();
+    void onDisconnected();
     void onTextMessageReceived(const QString &message);
     static void onSslErrors(const QList<QSslError>& errors);
+    void onSendHeartbeatText();
+    void onReconnect();
 
    private:
     QWebSocket *_webSocket{};
     QString _url;
+    const int _heartbeatTime = 600000; // heartbeat data transmission time interval in ms
+    const int _reconnectHeartbeatTimerCount = 10; // needs heartbeat reconnection transmission failures
+    const int _reconnectTime = 20000; // reconnection time interval in ms
+    int _heartbeatFailedCount = 0; // send heartbeat failures
+    int _reconnectFailedCount = 0; // reconnection failures
+    QTimer _timerHeartbeat; // send heartbeat timer
+    QTimer _timerReconnect; // reconnection timer
 };
