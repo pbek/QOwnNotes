@@ -17,7 +17,7 @@ using StringView = const QStringRef&;
 #endif
 
 #if QT_VERSION < QT_VERSION_CHECK(5, 5, 0)
-#define TO_QSTRING(s) s.toString();
+#define TO_QSTRING(s) s.toString()
 #else
 #define TO_QSTRING(s) s
 #endif
