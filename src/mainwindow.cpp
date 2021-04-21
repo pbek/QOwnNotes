@@ -6282,9 +6282,19 @@ void MainWindow::openLocalUrl(QString urlString) {
             // remove file extension
             QFileInfo fileInfo(fileName);
             fileName = fileInfo.baseName();
-
             QString relativeFilePath =
                     Note::fileUrlInCurrentNoteFolderToRelativePath(filePath);
+            QString currentNoteRelativeSubFolderPath =
+                currentNote.getNoteSubFolder().relativePath();
+
+            // remove the current relative sub-folder path from the relative path
+            // of the future note to be able to create the correct path afterwards
+            if (!currentNoteRelativeSubFolderPath.isEmpty()) {
+                relativeFilePath.remove(QRegularExpression(
+                    "^" +
+                    QRegularExpression::escape(currentNoteRelativeSubFolderPath) +
+                    "\\/"));
+            }
 
             if (!relativeFilePath.isEmpty() && !NoteFolder::isCurrentHasSubfolders()) {
                 Utils::Gui::warning(
@@ -6304,8 +6314,8 @@ void MainWindow::openLocalUrl(QString urlString) {
                         .arg(fileName);
             } else {
                 promptQuestion = tr("Note was not found, create new note "
-                                    "<strong>%1</strong> at path <strong>%2</strong> ?")
-                        .arg(fileName).arg(relativeFilePath);
+                                    "<strong>%1</strong> at path <strong>%2</strong>?")
+                        .arg(fileName, relativeFilePath);
             }
 
             // ask if we want to create a new note if note wasn't found
@@ -6313,11 +6323,11 @@ void MainWindow::openLocalUrl(QString urlString) {
                                                    promptQuestion,
                                                    QStringLiteral("open-url-create-note")) == QMessageBox::Yes) {
 
-                NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
+                NoteSubFolder noteSubFolder = currentNote.getNoteSubFolder();
                 bool subFolderCreationFailed(false);
 
                 if (!relativeFilePath.isEmpty()) {
-                    for (QString folderName : relativeFilePath.split("/")) {
+                    for (const QString& folderName : relativeFilePath.split("/")) {
                         if (folderName.isEmpty()) {
                             break;
                         }
