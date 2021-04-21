@@ -35,7 +35,7 @@ class WebAppClientService : public QObject {
    private slots:
     static void onConnected();
     static void onDisconnected();
-    static void onTextMessageReceived(const QString &message);
+    void onTextMessageReceived(const QString &message);
     static void onSslErrors(const QList<QSslError>& errors);
 
    private:

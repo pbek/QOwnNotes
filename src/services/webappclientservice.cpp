@@ -125,6 +125,8 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
 
         // insert image into current note
         mainWindow->insertDataUrlAsFileIntoCurrentNote(fileDataUrl);
+
+        _webSocket->sendTextMessage("{\"command\": \"confirmInsert\"}");
 #endif
     } else {
         qWarning() << "Unknown message from web app: " << message;
