@@ -318,6 +318,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
         "https://chrome.google.com/webstore/detail/qownnotes-web-companion/"
         "pkgkfnampapjbopomdpnkckbjdnpkbkp",
         "https://addons.mozilla.org/firefox/addon/qownnotes-web-companion"));
+    ui->webAppLabel->setText(ui->webAppLabel->text().arg(
+        "https://app.qownnotes.org/"));
     ui->bookmarkTagLabel->setText(ui->bookmarkTagLabel->text().arg(
         "https://www.qownnotes.org/getting-started/browser-extension.html"));
     ui->helpTranslateLabel->setText(ui->helpTranslateLabel->text().arg(

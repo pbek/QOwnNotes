@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 21.4.3
+- more improvements for the wep application integration have been made
+  (for [#2105](https://github.com/pbek/QOwnNotes/issues/2105))
+    - the link to the QOwnNotes web app was fixed in the settings dialog
 - fixed the creation of subfolders when clicking a note link that wasn't found
   with a note with subfolders when the current note is also in a subfolder  
   (for [#2106](https://github.com/pbek/QOwnNotes/issues/2106))
