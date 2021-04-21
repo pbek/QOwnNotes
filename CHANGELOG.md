@@ -10,6 +10,7 @@
 - fixed the creation of subfolders when clicking a note link that wasn't found
   with a note with subfolders when the current note is also in a subfolder  
   (for [#2106](https://github.com/pbek/QOwnNotes/issues/2106))
+- added more Italian, Polish, German translation (thank you rawfreeamy)
 
 ## 21.4.2
 - when inserting media files into the current note note like via pasting or the QOwnNotes
