@@ -6,7 +6,7 @@
     - you can now edit the security token manually
     - the link to the QOwnNotes web app was fixed in the settings dialog
     - the web app client service will now check the socket connection periodically
-      and will attempt to reconnect if the connection is lost
+      and will attempt to reconnect if the connection was lost
 - fixed the creation of subfolders when clicking a note link that wasn't found
   with a note with subfolders when the current note is also in a subfolder  
   (for [#2106](https://github.com/pbek/QOwnNotes/issues/2106))
