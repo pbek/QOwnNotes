@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 21.4.4
+- more improvements for the wep application integration have been made
+  (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
+    - now a confirmation is requested before an image received from the
+      QOwnNotes web application is inserted into the current note
 - added more translation (thank you rawfreeamy, rakekniven, marcoxbresciani,
   amirkbrpr, marterra)
 

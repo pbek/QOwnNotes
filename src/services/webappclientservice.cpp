@@ -136,8 +136,13 @@ void WebAppClientService::onTextMessageReceived(const QString &message) {
 
         const QString fileDataUrl = jsonObject.value(QStringLiteral("file")).toString();
 
-        // insert image into current note
-        mainWindow->insertDataUrlAsFileIntoCurrentNote(fileDataUrl);
+        if (Utils::Gui::question(mainWindow, tr("Image received"),
+                                 tr("Insert image received from QOwnNotes web application?"),
+                                 QStringLiteral("webapp-insert-image")) ==
+            QMessageBox::Yes) {
+            // insert image into current note
+            mainWindow->insertDataUrlAsFileIntoCurrentNote(fileDataUrl);
+        }
 
         _webSocket->sendTextMessage("{\"command\": \"confirmInsert\"}");
 #endif
