@@ -121,14 +121,18 @@ module.exports = {
       lang: 'de-DE',
       title: 'QOwnNotes',
     },
+    '/it/': {
+      lang: 'it-IT',
+      title: 'QOwnNotes',
+    },
     '/fr/': {
       lang: 'fr-FR',
       title: 'QOwnNotes',
-          },
+    },
     '/es/': {
       lang: 'es-ES',
       title: 'QOwnNotes',
-          },
+    },
     '/fa/': {
       lang: 'fa-IR',
       title: 'QOwnNotes',
@@ -466,6 +470,65 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "fr")
+          }
+        ]
+      },
+      '/it/': {
+        selectText: 'Lingue',
+        label: 'Italiano',
+        editLinkText: 'Aiutaci a migliorare questo sito!',
+        algolia: {
+          apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+          indexName: 'qownnotes'
+        },
+        nav: [
+          {
+            text: 'Iniziare',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'it'),
+          },
+          {
+            text: 'Installazione',
+            link: utils.getNavItemForLanguage(installationNavItem, 'it'),
+          },
+          {
+            text: 'Log delle modifiche',
+            link: changelogNavItem,
+            collapsable: true,
+          },
+          {
+            text: 'Contatto',
+            ariaLabel: 'Contact Menu',
+            items: contactNavItems
+          },
+          {
+            text: 'Donare',
+            link: utils.getNavItemForLanguage(donateNavItem, 'it'),
+          }
+        ],
+        sidebar: [
+          {
+            title: 'Iniziare',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, "it")
+          },
+          {
+            title: 'Installazione',
+            children: utils.getNavItemsForLanguage(installationNavItems, "it")
+          },
+          {
+            title: 'Editor',
+            children: utils.getNavItemsForLanguage(editorNavItems, "it")
+          },
+          {
+            title: 'Script',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "it")
+          },
+          {
+            title: 'Contribuire',
+            children: utils.getNavItemsForLanguage(contributingNavItems, "it")
+          },
+          {
+            title: 'FAQ',
+            children: utils.getNavItemsForLanguage(faqNavItems, "it")
           }
         ]
       },
