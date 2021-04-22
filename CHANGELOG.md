@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.4.4
+- added more translation (thank you rawfreeamy, rakekniven, marcoxbresciani,
+  amirkbrpr, marterra)
+
+
 ## 21.4.3
 - more improvements for the wep application integration have been made
   (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))

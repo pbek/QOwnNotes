@@ -2599,7 +2599,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2659"/>
       <source>Jump to navigation panel</source>
-      <translation>Passa al pannello di navigazione</translation>
+      <translation>Vai al pannello di navigazione</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1909"/>
@@ -3945,7 +3945,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="6316"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+      <translation>Nota non trovata; creare nuova nota &lt;strong&gt;%1&lt;/strong&gt; nel percorso &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6716"/>
@@ -4454,7 +4454,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
       <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
       <translation>
-        <numerusform>Una nota sta usando questo allegato. Rinominare anche quegli allegati nella nota?</numerusform>
+        <numerusform>%n note stanno usando questo allegato. Rinominare anche gli allegati in quelle note?</numerusform>
         <numerusform>%n note utilizzano questo allegato. Rinominare anche quegli allegati nelle note?</numerusform>
       </translation>
     </message>
@@ -4462,7 +4462,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
       <location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
       <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
       <translation>
-        <numerusform>Una nota sta usando questa immagine. Rinominare anche quelle immagini nella nota?</numerusform>
+        <numerusform>%n note stanno usando questa immagine. Rinominare anche le immagini in quelle note?</numerusform>
         <numerusform>%n  note stanno usando questa immagine. Vuoi rinominare anche quelle immagini nelle note?</numerusform>
       </translation>
     </message>
@@ -7786,7 +7786,7 @@ Le proprie note non verranno modificate!</translation>
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
       <translation>
-        <numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; i file selezionati?</numerusform>
+        <numerusform>Eliminare i &lt;strong&gt;%n&lt;/strong&gt; file selezionati?</numerusform>
         <numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; i file selezionati?</numerusform>
       </translation>
     </message>
@@ -7823,7 +7823,7 @@ Le proprie note non verranno modificate!</translation>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
       <source>File exists</source>
-      <translation>il file esiste</translation>
+      <translation>Il file esiste</translation>
     </message>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
@@ -7833,7 +7833,7 @@ Le proprie note non verranno modificate!</translation>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
       <source>File renaming failed</source>
-      <translation>Ridenominazione del file non riuscita</translation>
+      <translation>Impossibile rinominare file</translation>
     </message>
     <message>
       <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
@@ -8717,17 +8717,17 @@ Non sarà possibile annullare l'operazione!</translation>
     <message>
       <location filename="../services/webappclientservice.cpp" line="93"/>
       <source>QOwnNotes is now connected via websocket to %1</source>
-      <translation type="unfinished">QOwnNotes is now connected via websocket to %1</translation>
+      <translation>QOwnNotes è collegato via websocket a %1</translation>
     </message>
     <message>
       <location filename="../services/webappclientservice.cpp" line="98"/>
       <source>QOwnNotes is now disconnected from websocket to %1</source>
-      <translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
+      <translation>QOwnNotes è scollegato da websocket verso %1</translation>
     </message>
     <message>
       <location filename="../services/webappclientservice.cpp" line="114"/>
       <source>Web app warning</source>
-      <translation type="unfinished">Web app warning</translation>
+      <translation>Avviso app Web</translation>
     </message>
   </context>
   <context>

@@ -2758,9 +2758,9 @@ Restore current note?</source>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
-      <translation type="unfinished">
-        <numerusform>stored %n note(s) to disk</numerusform>
-        <numerusform>stored %n note(s) to disk</numerusform>
+      <translation>
+        <numerusform>%n یادداشت در دیسک ذخیره شده است</numerusform>
+        <numerusform>%n یادداشت در دیسک ذخیره شده است</numerusform>
       </translation>
     </message>
     <message>
@@ -3951,7 +3951,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6316"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+      <translation>یادداشت یافت نشد. آیا می خواهید یادداشت جدیدی &lt;strong&gt;%1&lt;/strong&gt;در مسیر&lt;strong&gt;%2&lt;/strong&gt; ایجاد کنید؟</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6716"/>
@@ -8896,17 +8896,17 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/webappclientservice.cpp" line="93"/>
       <source>QOwnNotes is now connected via websocket to %1</source>
-      <translation type="unfinished">QOwnNotes is now connected via websocket to %1</translation>
+      <translation>اکنون ارتباط QOwnNotes با %1 از طریق وب سوکت برقرار شده است</translation>
     </message>
     <message>
       <location filename="../services/webappclientservice.cpp" line="98"/>
       <source>QOwnNotes is now disconnected from websocket to %1</source>
-      <translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
+      <translation>اکنون ارتباط QOwnNotes با %1 از سمت وب سوکت قطع شده است</translation>
     </message>
     <message>
       <location filename="../services/webappclientservice.cpp" line="114"/>
       <source>Web app warning</source>
-      <translation type="unfinished">Web app warning</translation>
+      <translation>هشدار برنامه تحت وب</translation>
     </message>
   </context>
   <context>

@@ -8721,7 +8721,7 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
       <location filename="../services/webappclientservice.cpp" line="98"/>
       <source>QOwnNotes is now disconnected from websocket to %1</source>
-      <translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
+      <translation>QOwnNotes ist jetzt vom Websocket zu %1 getrennt</translation>
     </message>
     <message>
       <location filename="../services/webappclientservice.cpp" line="114"/>
