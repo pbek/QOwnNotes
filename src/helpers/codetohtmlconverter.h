@@ -8,9 +8,9 @@
 using LangData = QMultiHash<char, QLatin1String>;
 
 /**
- *  The api we need start for qt 5.15
+ *  The api we need start for qt 5.15.2
  */
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 2)
 using StringView = QStringView;
 #else
 using StringView = const QStringRef&;
