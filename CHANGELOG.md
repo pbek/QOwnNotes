@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.4.5
+- now toggling of checkboxes at the cursor position with <kbd>Ctrl + Space</kbd>
+  also supports lists with `* [ ]`, `+ [ ]` and numbered lists, like `1. [ ]` in
+  the note text edit (for [#2048](https://github.com/pbek/QOwnNotes/issues/2048))
+
 ## 21.4.4
 - more improvements for the wep application integration have been made
   (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))

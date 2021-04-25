@@ -500,15 +500,23 @@ bool Utils::Gui::toggleCheckBoxAtCursor(QPlainTextEdit *textEdit) {
 
     bool result = false;
     auto text = cursor.selectedText();
+    auto reUnchecked = QRegularExpression(R"(([-\+\*]) \[ \])");
+    auto reChecked = QRegularExpression(R"(([-\+\*]) \[x\])");
+    auto reNumberUnchecked = QRegularExpression(R"(([\d+]\.) \[ \])");
+    auto reNumberChecked = QRegularExpression(R"(([\d+]\.) \[x\])");
 
     // try to toggle the checkbox
-    if (text.contains(QStringLiteral("- [ ]"))) {
-        text.replace(QStringLiteral("- [ ]"),
-                     QStringLiteral("- [x]"));
+    if (reUnchecked.match(text).hasMatch()) {
+        text.replace(reUnchecked, QStringLiteral("\\1 [x]"));
         result = true;
-    } else if (text.contains(QStringLiteral("- [x]"))) {
-        text.replace(QStringLiteral("- [x]"),
-                     QStringLiteral("- [ ]"));
+    } else if (reChecked.match(text).hasMatch()) {
+        text.replace(reChecked, QStringLiteral("\\1 [ ]"));
+        result = true;
+    } else if (reNumberUnchecked.match(text).hasMatch()) {
+        text.replace(reNumberUnchecked, QStringLiteral("\\1 [x]"));
+        result = true;
+    } else if (reNumberChecked.match(text).hasMatch()) {
+        text.replace(reNumberChecked, QStringLiteral("\\1 [ ]"));
         result = true;
     }
 
