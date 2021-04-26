@@ -1,0 +1,244 @@
+```html
+<head>
+<title>QOwnNotes in a Nutshell</title>
+</head>
+
+
+
+<style type="text/css">
+table {
+	width: 95%;
+}
+
+th {
+	background-color: #666;
+	color: #fff;
+}
+
+tr {
+	background-color: #fffbf0;
+	color: #000;
+}
+
+tr:nth-child(odd) {
+	background-color: #e4ebf2;
+}
+
+tr:hover {
+	background-color: #dfac20;
+	color: #fff;
+}
+
+
+-->
+</style>
+
+
+<h3>QOwnNotes in a nutshell - 
+A comparison between features</h3>
+<main>
+<strong>QOwnNotes
+<a href="https://www.qownnotes.org/">https://www.qownnotes.org/</a></strong></p>
+<ul>
+<li>File format: open, local, individual text/markdown files, <i><b>universal compatibility</b></i></li>
+<li>Export to PDF, HTML, markdown (<i><b>export is actually NOT needed due to open universal individual file structure</b></i>)</li>
+<li>Import from Evernote, text</li>
+<li><i><b>Active development, very responsive primary developer</b></i></li>
+<li>Good <i><b>activity on Github</b></i>, but no known active external community - needs an external community</li>
+<li>Lightweight and fast, native compiled code (C++/Qt), no heavy dependencies, no electron</li>
+<li>Cloud agnostic, <i><b>leaves the syncing to a cloud provider of your choice</b></i></li>
+<li>No mobile app, but all standardized files can be edited by many kinds of apps on any platform (including Nextcloud or ownCloud notes app)</li>
+<li>Extensible/ <i>scriptable</i> with many examples</li>
+<li>Built-in local encryption per note option (this is rare in this class of app)</li>
+<li>Good <i><b>flexible tabbed MD editor</b></i> with thoughtful and useful features like simple autocomplete for equations, auto note re-linking to renamed notes, tags, workspaces with various useful panels, optional versioning, todos, etc...</li>
+<li><i><b>Very good management of image</b></i> (and soon attachment) filenames with renaming and full replace of renamed files in markdown text</li>
+<li>Very well-rounded, IDE-like approach</li>
+<li>Missing anchors (AFAIK)</li>
+<li>Missing editable image properties</li>
+<li>Missing context-sensitive editing options (i.e. edit with... options for images and attachments) - possible solution via scripting</li>
+<li>Some minor issues with lag from rendering previews of large complex notes (reported to devs, they are aware and hopefully working on it)</li>
+</ul>
+<p>Let's compare the above to a collection of features of other Notetaking Apps:
+	<table>
+		<tbody>
+			<tr>
+				<th>Notetaking Apps</th>
+				<th>Features</th>
+			</tr>
+			<tr>
+				<td><p><strong>
+<p><strong><br>Standard Notes</strong><br>
+<a href="https://standardnotes.org/">https://standardnotes.org/</a>
+				</b></td>
+				<td>
+			<ul>
+<li>File format: text files in cloud, theoretically/potentially universal compatibility (however, note that some of the extended editors create a variety of text formats that would have to be parsed or converted later after export, so this is NOT true universal compatibility if certain editors are used); not suitable for simultaneous use with external apps, so not nearly as flexible as local approach of QOwnNotes, Zim, and Zettlr, for example</li>
+<li>Export from what I have tested so far is a simply a text download that looks like an easily readable XML file with all text in one combined file</li>
+<li>Import from Evernote, plaintext, markdown, Google Keep</li>
+<li>Active development</li>
+<li>Good, responsive community on Reddit</li>
+<li>Very simple, solid, cloud-centric</li>
+<li>Solid mobile apps</li>
+<li>Very good security, encryption, 2FA</li>
+<li>Paid extended plans</li>
+<li>Tags</li>
+<li>Numerous excellent editors (extensions) that come with the paid extended plans that allow for simple text, tasks, markdown, spreadsheets, 2FA tokens, code, rich text; however the downside of this is that you then become reliant on those editors, making it more difficult to export content easily that requires those editors</li>
+<li>No current native image or attachment embedding or hosting, however rich text editor will interface with external services for images/attachments (not a great workflow for this!) via FileSafe</li>
+<li>Email backups, themes, sync to third party services and other nice extensions/  features for paid extended plans</li>
+<li>No inter-note linking (as of March 2021, although confirmed they are considering it for development)</li>
+<li>Missing anchors (AFAIK)</li>
+<li>Missing editable image properties (and missing native images in general, as mentioned)</li>
+<li>Missing context-sensitive editing options (i.e. edit with... options for images and attachments)</li>
+</ul>
+</td>
+			</tr>
+			<tr>
+				<td><p><strong>
+<p><strong>Zim Desktop Wiki</strong><br>
+<a href="https://zim-wiki.org/">https://zim-wiki.org/</a></strong></p></td>
+				<td><ul>
+<li>File format: open, local, individual text files with easy to read markdown-like/docuwiki-like syntax, universal compatibility</li>
+<li>Export to to HTML, markdown, RST, etc. (export is actually NOT needed due to open universal individual file structure)</li>
+<li>Import from text (maybe other options, need to check)</li>
+<li>Active development, been around for many years of continued development with a good track record</li>
+<li>Mainly written in Python</li>
+<li>Stable and reliable with high count of notes -- known examples of 10,000+ notes</li>
+<li>Stable and reliable with very large notes with many images</li>
+<li>Several very useful plugins for task lists, equation editor, version control, tables, etc.</li>
+<li>Commonly listed in distro app libraries/software managers -- i.e. easily available in Ubuntu, Linux Mint Software Manager, etc.</li>
+<li>Fast wiki-like linking to and auto-creation of subpages, etc.</li>
+<li>Properties of images allow for setting image display dimensions (not common in these kinds of apps)</li>
+<li>Context-sensitive editing options (i.e. edit with... options for images and attachments)</li>
+<li>Handles images and attachments inside subfolders as opposed to one universal media or attachments folder</li>
+<li>Very extensible with scripts/plugins, plenty of examples</li>
+<li>Tags have useful &quot;@&quot; embedded format, so you can tag inside the document - can serve as a sort of crude anchor too</li>
+<li>Search backlinks (not common in these kinds of apps)</li>
+<li>No internal encryption options</li>
+<li>No mobile app, but basically standardized files, fairly easy to edit with many kinds of apps on any platform</li>
+<li>Missing anchors (however can use embedded @ tags as a sort of rough workaround)</li>
+<li>Third party script for Zotero integration (haven't tested it yet)</li>
+</ul></td>
+			</tr>
+			<tr>
+				<td><p><strong><br>Zettlr<p>
+<a href="https://www.zettlr.com/">https://www.zettlr.com/</a></strong></p></td>
+				<td><ul>
+<li>File format: open, local, individual text/markdown files, universal compatibility</li>
+<li>Export to PDF, HTML, markdown, DOC, RTF, etc. (export is actually NOT needed due to open universal individual file structure)</li>
+<li>Import from many source formats -- uses Pandoc for conversion</li>
+<li>Active development, active community</li>
+<li>Makes effort to be especially Zettelkasten-workflow friendly</li>
+<li>No mobile app</li>
+<li>Nice visual design</li>
+<li>Electron based</li>
+<li>Tags</li>
+<li>Writing stats and word counter</li>
+<li>Citation support</li>
+<li>Very good documentation</li>
+<li>Zotero integration</li>
+<li>Pomodoro timer</li>
+<li>No local encryption (AFAIK, need to confirm)</li>
+<li>Missing anchors (AFAIK)</li>
+<li>Missing editable image properties, although better-than-average image import dialog</li>
+<li>Missing context-sensitive editing options (i.e. edit with... options for images and attachments)</li>
+</ul></td>
+			</tr>
+			<tr>
+				<td><p><strong><br>Joplin<br>
+<a href="https://joplinapp.org/">https://joplinapp.org/</a></p></strong></td>
+				<td><ul>
+<li>File format: local sqlite database, the format of the note records is markdown; however, the local database makes Joplin not suitable for simultaneous use with external apps except one-by-one with external editor option, so not nearly as flexible as QOwnNotes, Zim, and Zettlr, for example</li>
+<li>Export to PDF, HTML, markdown</li>
+<li>Import from markdown, Evernote</li>
+<li>Active development, active community, easy to get community support, above average userbase from what I can tell</li>
+<li>Close direct competitor to QOwnNotes, Zim, and Zettlr in many ways, but uses local sqlite database</li>
+<li>Electron based</li>
+<li>Single database for notes instead of individual md or wiki-like text pages (again, problematic for some workflows)</li>
+<li>Mobile apps</li>
+<li>Terminal app</li>
+<li>Okay web clipper</li>
+<li>Various sync options</li>
+<li>Encryption for sync (however, no local encryption)</li>
+<li>Very good preview panel with built-in PDF viewer, math expressions, mermaid diagrams, more...</li>
+<li>Very extensible with scripts/plugins, plenty of examples</li>
+<li>Missing anchors (AFAIK)</li>
+<li>Missing editable image properties</li>
+<li>Missing context-sensitive editing options (i.e. edit with... options for images and attachments)</li>
+<li>Cannot manage/change filenames of images/attachments, and in fact Joplin gives cryptic UUID filenames to local imported images, compared to some other apps which offer more control/flexibility with filenames and/or paths</li>
+<li>Limited management of note attachments (can only delete, no context, no orphan management (except auto delete orphans after period of time AFAIK), no link to note from attachment manager)</li>
+</ul></td>
+			</tr>
+			<tr>
+				<td><p><strong><br>CherryTree
+<a href="https://www.giuspen.com/cherrytree/">
+https://www.giuspen.com/cherrytree/</a></strong></p></td>
+				<td><ul>
+<li>File format: local sqlite database or large single XML file option, the format of the note records is a simple markup kind of rich text or something similar, however, the local database/xml makes CherryTree not suitable for simultaneous use with external apps except one-by-one with external editor option, so not nearly as flexible as QOwnNotes, Zim, and Zettlr, for example</li>
+<li>Export to PDF, HTML, plaintext (BTW, the HTML export is one of the better HTML exporters of this group of apps IMO)</li>
+<li>Import from numerous, very flexible import options</li>
+<li>Active development, but no known active external community (old forum was discontinued for some reason -- they need to restart community)</li>
+<li>Completely rewritten in C++/GTK3 as of Sep 2020 (version 0.99.13) - prior version was Python2/GTK2 - final Python version was 0.39.4</li>
+<li>Flexible hierarchical system</li>
+<li>Images that are copied/pasted are encoded right into the xml or sqlite database (which causes rapid increase of db filesize if you use many images) - this is very different than the way Joplin handles images, for example, which handles them by storing them externally, which is far better for db filesize and flexibility with external apps</li>
+<li>Excellent well-rounded features compete well with most other similar note apps</li>
+<li>Password protection of note db, which in one sense is an advantage since all content is protected at rest, including attached/embedded images and attachments, which many of the other apps do NOT do</li>
+<li>Anchors</li>
+<li>Commonly listed in distro app libraries/software managers -- i.e. easily available in Ubuntu, Linux Mint Software Manager, etc.</li>
+</ul></td>
+			</tr>
+			<tr>
+				<td><p><strong><br>Notable<br>
+<a href="https://notable.app/#">https://notable.app/</a></strong></p></td>
+				<td><p>Lots of great features for excellent notebook/markdown editor with nice design, tags, tons of potential, tested and impressed, competes well with the above applications... however, not open source any more after v1.5.1 (see <a href="https://github.com/notable/notable/blob/master/SOURCE_CODE.md">https://github.com/notable/notable/blob/master/SOURCE_CODE.md</a>). Current version is 1.8.4. Would have been a real contender, except no longer open source.</p></td>
+			</tr>
+			<tr>
+				<td><p><strong><br>RedNotebook</strong><br>
+<a href="https://rednotebook.sourceforge.io/">https://rednotebook.sourceforge.io/</a></td>
+				<td><p>Have not spent much time with this yet, but worth some effort to research more. Seems to cover the basic requirements very well, competitive with other similar apps, is actively developed, and appears to have a good track record over a long time of consistent progress... also has some nice additional features like word cloud.</p></td>
+			</tr>
+			<tr>
+				<td><p><strong><br>Boost Note <p>
+<a href="https://boostnote.io/">https://boostnote.io/</a></strong>
+</td>
+				<td><p>
+Boost Note has tons of potential,
+they have launched Boost Note for Teams with paid cloud hosting and extra features. Electron based. However, it's not entirely clear to me who is behind Boost Note overall, and I'd like to understand more of the background of the company and the developers who started it. The service itself appears to be governed by a user agreement that lists the jurisdiction as Japan/Tokyo. They look like they are moving strongly to a paid business model, so I'm not sure of its open source future. However, still worth researching and testing at some point. The features look very promising.</p></td>
+			</tr>
+			<tr>
+				<td><p><strong><br>TiddlyWiki <p>
+<a href="https://tiddlywiki.com/">https://tiddlywiki.com/</a></strong></td>
+				<td><p>A very clever -- maybe even brilliant -- concept, single-page HTML/CSS/JavaScript application that contains all the notes within itself. Ingenious idea, however not universal format for individual external file compatibility, concerns about future compatibility with itself and future browsers, etc., but deserves more research. Pushes boundaries of what an app is IMO.</p></td>
+			</tr>
+			<tr>
+				<td><p><strong><br>TagSpaces <p>
+<a href="https://www.tagspaces.org/">https://www.tagspaces.org/</a></strong></td>
+				<td><p>Bills itself as a hierarchical note taking application with focus on building large personal knowledgebases. Electron based. The concept reminds me of CherryTree mixed with Joplin mixed with QOwnNotes. Many potentially deep features that look very competitive. Relation maps, good import and export, web clipper, interesting note cloning feature (need to look at more closely), hoisting, sync features, scripting, etc... Seems actively developed since Dec 2017. Data is stored in an sqlite database. Worth more research.</p></td>
+			</tr>
+			<tr>
+				<td><p><strong><br>Logseq<p>
+<a href="https://logseq.com/">https://logseq.com/</a></strong></td>
+				<td><p>Recommended to me to look into for future reference. The project seems in the early stages though.</p></td>
+			</tr>
+			<tr>
+				<td><p><strong><br>VNote<p>
+<a href="https://tamlok.gitee.io/vnote/en_us/">https://tamlok.gitee.io/vnote/en_us/</a></strong></td>
+				<td><p>Had a lot of potential, but unfortunately, VNote has been refactored as VNoteX in 2019, which indicates trajectory of project. VNoteX is closed source. VNote itself will supposedly continue to be open source, however, this does not inspire long-term confidence about the developer's direction/intentions when it comes to open source. Even the file format for 3.0 is not compatible with prior versions and I also found broken links inside the documentation, so does not inspire confidence overall about polish, consistency, attention to detail. However, the concept looks very strong so worth keeping on list to follow development in future.</p>
+				</td>
+			</tr><tr>
+			    <td><p><strong><br>nvUltra<p>
+<a href="https://nvultra.com/">https://nvultra.com/</a></strong></td>
+				<td>Still in beta, heard that it has lots of potential, worth keeping on list to investigate more in future.</td>
+			</tr>
+			<tr>
+				<td><b><br>Let's add further Notetaking Apps</b></td>
+				<td><p>Send an E-Mail to <a>amydoralang@aol.de</a> if you have made an analysis of another note-taking app to compare</td>
+			</tr>
+		</tbody>
+	</table>
+<p>	
+	<h3>This page was created with the QOwnNotes App, Version 21.4.5</h3>
+<hr>
+</body>
+</html>
+</body></html>
+</main>
