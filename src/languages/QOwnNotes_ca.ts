@@ -3938,7 +3938,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
 <message>
 <location filename="../mainwindow.cpp" line="6316"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>No s'ha trobat la nota, voleu crear &lt;strong&gt;%1&lt;/strong&gt; a &lt;strong&gt;%2&lt;/strong&gt; ?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6716"/>
@@ -8712,27 +8712,27 @@ Això no es pot desfer!</translation>
 <message>
 <location filename="../services/webappclientservice.cpp" line="102"/>
 <source>QOwnNotes is now connected via websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now connected via websocket to %1</translation>
+<translation>QOwnNotes és ara connectat via websocket a %1</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="111"/>
 <source>QOwnNotes is now disconnected from websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now disconnected from websocket to %1</translation>
+<translation>QOwnNotes s'ha desconnectat de websocket a %1</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="127"/>
 <source>Web app warning</source>
-<translation type="unfinished">Web app warning</translation>
+<translation>Avís de la webapp</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="139"/>
 <source>Image received</source>
-<translation type="unfinished">Image received</translation>
+<translation>Imatge rebuda</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="140"/>
 <source>Insert image received from QOwnNotes web application?</source>
-<translation type="unfinished">Insert image received from QOwnNotes web application?</translation>
+<translation>Inserir l'imatge rebuda de l'aplicació web de QOwnNotes?</translation>
 </message>
 </context>
 <context>
