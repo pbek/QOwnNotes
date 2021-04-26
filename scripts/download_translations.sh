@@ -8,6 +8,10 @@
 # To upload new source files use:
 # crowdin upload
 #
+# Needed tools:
+# - crowdin cli: https://support.crowdin.com/cli-tool/
+# - minify: apt install minify
+#
 
 TRANSLATION_PATH="src/languages"
 
@@ -80,6 +84,11 @@ mv QOwnNotes_bs_BA.ts QOwnNotes_bs.ts
 mv QOwnNotes_mk_MK.ts QOwnNotes_mk.ts
 mv QOwnNotes_ko_KR.ts QOwnNotes_ko.ts
 mv QOwnNotes_et_EE.ts QOwnNotes_et.ts
+
+# crowdin changes all whitespaces at every download, so we want to
+# minify all (but the source) translation files to save space
+echo "Minify translation files..."
+find ./*.ts -type f ! -name QOwnNotes_en.ts -exec minify {} --type xml -o {} \;
 
 popd || exit 1
 
