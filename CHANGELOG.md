@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.4.6
+- a possible problem with generating the header tree in the navigation panel when
+  starting the application minimized was fixed (for [#2110](https://github.com/pbek/QOwnNotes/issues/2110))
+
 ## 21.4.5
 - now toggling of checkboxes at the cursor position with <kbd>Ctrl + Space</kbd>
   also supports lists with `* [ ]`, `+ [ ]` and numbered lists, like `1. [ ]` in

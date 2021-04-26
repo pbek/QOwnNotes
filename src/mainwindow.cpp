@@ -6485,6 +6485,10 @@ void MainWindow::showWindow() {
     activateWindow();    // for Windows
     setWindowState((windowState() & ~Qt::WindowMinimized) | Qt::WindowActive);
     raise();             // for MacOS
+
+    // parse the current note for the navigation panel in case it wasn't parsed
+    // while the mainwindow was hidden (https://github.com/pbek/QOwnNotes/issues/2110)
+    startNavigationParser();
 }
 
 /**
