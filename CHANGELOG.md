@@ -12,7 +12,7 @@
 - added more translation (thank you amirkbrpr, rakekniven, rawfreeamy)
 
 ## 21.4.4
-- more improvements for the wep application integration have been made
+- more improvements for the web application integration have been made
   (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
     - now a confirmation is requested before an image received from the
       QOwnNotes web application is inserted into the current note
@@ -20,7 +20,7 @@
   amirkbrpr, marterra)
 
 ## 21.4.3
-- more improvements for the wep application integration have been made
+- more improvements for the web application integration have been made
   (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
     - you can now edit the security token manually
     - the link to the QOwnNotes web app was fixed in the settings dialog
