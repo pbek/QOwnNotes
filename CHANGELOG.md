@@ -45,8 +45,8 @@
     - don't forget to copy your secret token from the settings page to the web
       service to be able to communicate with your local instance of QOwnNotes
     - you can find the source code of the web service at [web-app](https://github.com/qownnotes/web-app)
-    - you can also host this web service yourself, the freshly built docker
-      container is at [qownnotes-web-app](https://hub.docker.com/repository/docker/pbeke/qownnotes-web-app)
+    - you can also host this web service yourself, the freshly built docker images
+      are at [qownnotes-web-app](https://hub.docker.com/repository/docker/pbeke/qownnotes-web-app)
 - added more translation (thank you whenwesober, fitoschido, rawfreeamy, mguerra, amirkbrpr)
 
 ## 21.4.1
