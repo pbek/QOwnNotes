@@ -1,7 +1,7 @@
 ---
 title: Send photos from your mobile phone to QOwnNotes on the desktop
 image: /img/blog/web-application-settings.png
-description: There now is a simple way to send photos from your mobile phone to QOwnNotes on the desktop via a new web application on app.qownnotes.org.
+description: There now is a simple way to insert photos from your mobile phone in a note in QOwnNotes on your desktop via a new web application on app.qownnotes.org.
 date: 2021-05-02
 order: 20210502000000
 ---
@@ -10,10 +10,10 @@ order: 20210502000000
 
 <BlogDate v-bind:fm="$frontmatter" />
 
-There now is a simple way to send photos from your mobile phone to QOwnNotes on the desktop via a new **web application**
-on [app.qownnotes.org](https://app.qownnotes.org/).
+There now is a simple way to insert photos from your mobile phone into the current note in QOwnNotes
+on your desktop via a new **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
 
- ![QOwnNotes Web Application browser](/img/blog/web-application-browser.png "Send photos from your mobile phone to QOwnNotes on the desktop")
+![QOwnNotes Web Application browser](/img/blog/web-application-browser.png "Send photos from your mobile phone to QOwnNotes on the desktop")
 
 The web application on your phone communicates with your QOwnNotes desktop application over the internet.
 The communication between QOwnNotes and the web service is **transport encrypted**.
