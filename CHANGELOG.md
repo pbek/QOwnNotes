@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.5.0
+- a PPA for Ubuntu 21.10 (Impish Indri) was added, a repository for Fedora 34
+  was added and another attempt to fix the Fedora 33 build was made
+
 ## 21.4.6
 - a possible problem with generating the header tree in the navigation panel when
   starting the application minimized was fixed (for [#2110](https://github.com/pbek/QOwnNotes/issues/2110))
