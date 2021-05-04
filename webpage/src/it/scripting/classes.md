@@ -1,6 +1,6 @@
 # Classi esposte
 
-Nota
+Note
 ----
 
 ### Proprietà e metodi
@@ -29,17 +29,17 @@ class NoteApi {
 };
 ```
 
-Puoi utilizzare i metodi da [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) per lavorare con `fileCreated` o `fileLastModified`.
+Puoi utilizzare i metodi di [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) per lavorare con `fileCreated` o `fileLastModified`.
 
 ### Esempio
 ```js
 script.log(note.fileCreated.toISOString());
 script.log(note.fileLastModified.getFullYear());
 
-// renames a note to "new name.md"
+// rinomina una nota in "new name.md"
 note.renameNoteFile("new name");
 
-// check if it is allowed to have a different note file name than the headline
+// controlla se è possibile avere un nome di file diverso dal titolo
 script.log(note.allowDifferentFileName());
 ```
 
@@ -62,12 +62,12 @@ class NoteSubFolderApi {
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);
 
-// iterate through notes in note subfolder
+// esegui un ciclo su tutte le note nella sottocartella note
 for (var idx in noteSubFolder.notes) {
     var note = noteSubFolder.notes[idx];
 }
 
-// print all subfolder names
+// stampa i nomi di tutte le sottocartelle
 noteSubFolder.fetchNoteSubFoldersByParentId(parentId).forEach(function(nsf) {
     script.log(nsf.name);
 });
@@ -118,15 +118,15 @@ class MainWindow {
 
 ### Esempio
 ```js
-// Force a reload of the note list
+// Forza il caricamento della lista note
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
+// Crea una nuova  sottocartella note "My fancy folder" nella sottocartella corrente
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserts html in the current note as markdown
+// Inserisce HTML nella nota corrente come markdown
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Set 'Edit' workspace as current workspace
+// Imposta lo spazio di lavoro 'Edit' come spazio di lavoro corrente
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 ```

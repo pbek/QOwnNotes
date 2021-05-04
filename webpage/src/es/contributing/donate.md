@@ -1,6 +1,6 @@
 # Donar
 
-QOwnNotes no genera ingresos (sin fines de lucro).
+QOwnNotes no genera ingresos (sin ánimo de lucro).
 
 Si le gusta QOwnNotes y desea **donar** al proyecto para ayudar a pagar el alojamiento, el dominio, etc., no dude en hacerlo.
 

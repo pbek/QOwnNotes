@@ -28,12 +28,12 @@
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="20"/>
 <source>Image filename or URL</source>
-<translation>Nome immagine o URL</translation>
+<translation>Nome o URL immagine</translation>
 </message>
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="26"/>
 <source>Path to file or URL</source>
-<translation>Percorso al file o URL</translation>
+<translation>Percorso o URL del file</translation>
 </message>
 <message>
 <location filename="../dialogs/attachmentdialog.ui" line="36"/>
@@ -565,7 +565,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="134"/>
 <source>Shona</source>
-<translation>Shono</translation>
+<translation>Shona</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="135"/>
@@ -650,7 +650,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="154"/>
 <source>Venda</source>
-<translation>Vendo</translation>
+<translation>Venda</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="155"/>
@@ -699,14 +699,14 @@
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="312"/>
 <source>Could not store downloaded file:
 %1</source>
-<translation>Non è stato possibile salvare il file scaricato:
+<translation>Impossibile salvare il file scaricato:
 %1</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="424"/>
 <source>Could not remove dictionary file:
 %1</source>
-<translation>Non è stato possibile rimuovere il file del dizionario:
+<translation>Impossibile rimuovere il file del dizionario:
 %1</translation>
 </message>
 </context>
@@ -940,7 +940,7 @@
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
 <source>%n lines moved.</source>
 <translation>
-<numerusform>%n linee spostate.</numerusform>
+<numerusform>%n linea spostata.</numerusform>
 <numerusform>%n linee spostate.</numerusform>
 </translation>
 </message>
@@ -1005,22 +1005,22 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6337"/>
 <source>Search hit BOTTOM, continuing at TOP.</source>
-<translation>La ricerca è arrivata alla FINE, prosecuzione dall'INIZIO.</translation>
+<translation>Cerca dal BASSO, continuando in ALTO.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6338"/>
 <source>Search hit TOP, continuing at BOTTOM.</source>
-<translation>La ricerca è arrivata all'INIZIO, prosecuzione dalla FINE.</translation>
+<translation>Cerca in ALTO, continua in BASSO.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6343"/>
 <source>Search hit BOTTOM without match for: %1</source>
-<translation>La ricerca è arrivata alla FINE senza riscontri per: %1</translation>
+<translation>La ricerca è arrivata alla FINE senza risultati per: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
 <source>Search hit TOP without match for: %1</source>
-<translation>La ricerca è arrivata all'INIZIONsenza riscontri per: %1</translation>
+<translation>La ricerca è arrivata all'INIZIO senza riscontri per: %1</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
@@ -1035,7 +1035,7 @@
 <source>%n lines %1ed %2 time.</source>
 <comment>%1 can be '&gt;' or '&lt;'</comment>
 <translation>
-<numerusform>%n linea %1ed %2 volte.</numerusform>
+<numerusform>%n linea %1ta %2 volte.</numerusform>
 <numerusform>%n linee %1ed %2 volte.</numerusform>
 </translation>
 </message>
@@ -1055,7 +1055,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7779"/>
 <source>Already at newest change.</source>
-<translation>Già alla modifica più nuova.</translation>
+<translation>Già alla modifica più recente.</translation>
 </message>
 </context>
 <context>
@@ -1112,7 +1112,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="271"/>
 <source>If you have created a nice color schema please export it and share it with everyone!</source>
-<translation>Se hai creato una bella combinazione di colori, che ne diresti di esportarla e condividerla con tutti?</translation>
+<translation>Se hai creato un bello schema di colori, che ne diresti di esportarlo e condividerlo con tutti?</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.ui" line="155"/>
@@ -1243,7 +1243,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="216"/>
 <source>Code (num literal)</source>
-<translation>Codice (num letterale)</translation>
+<translation>Codice (numero)</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
@@ -1374,12 +1374,12 @@
 <message>
 <location filename="../dialogs/imagedialog.ui" line="40"/>
 <source>Image filename or URL</source>
-<translation>Nome immagine o URL</translation>
+<translation>Nome o URL file immagine</translation>
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="46"/>
 <source>Path to file or URL</source>
-<translation>Percorso al file o URL</translation>
+<translation>Percorso o URL del file</translation>
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="121"/>
@@ -1399,7 +1399,7 @@
 <message>
 <location filename="../dialogs/imagedialog.ui" line="30"/>
 <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-<translation>Il percorso o l'Url verranno inseriti direttamente, i percorsi dei file verranno creati in relazione alla nota corrente</translation>
+<translation>Il percorso o l'URL verranno inseriti direttamente, i percorsi dei file verranno creati in relazione alla nota corrente</translation>
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
@@ -1578,7 +1578,7 @@
 <message>
 <location filename="../dialogs/linkdialog.ui" line="83"/>
 <source>Select local file or directory to link to</source>
-<translation>Seleziona un file locale o una directory a cui puntare</translation>
+<translation>Seleziona un file o una directory locali a cui puntare</translation>
 </message>
 <message>
 <location filename="../dialogs/linkdialog.ui" line="94"/>
@@ -1686,7 +1686,7 @@
 <location filename="../dialogs/localtrashdialog.cpp" line="196"/>
 <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
-<numerusform>Ripristinare le &lt;strong&gt;%n&lt;/strong&gt; note selezionate?</numerusform>
+<numerusform>Ripristinare la &lt;strong&gt;%n&lt;/strong&gt; nota selezionata?</numerusform>
 <numerusform>Ripristinare le &lt;strong&gt;%n&lt;/strong&gt; note selezionate?</numerusform>
 </translation>
 </message>
@@ -1720,7 +1720,7 @@
 <location filename="../dialogs/localtrashdialog.cpp" line="266"/>
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
 <translation>
-<numerusform>&lt;strong&gt;%n&lt;/strong&gt; la nota è stata rimossa</numerusform>
+<numerusform>La nota è stata rimossa</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note sono state rimosse</numerusform>
 </translation>
 </message>
@@ -1789,7 +1789,7 @@
 <message>
 <location filename="../mainwindow.ui" line="699"/>
 <source>Add tag</source>
-<translation>Aggiungi tag</translation>
+<translation>Aggiungi etichetta</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="411"/>
@@ -1868,7 +1868,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1329"/>
 <source>&amp;Remove current note</source>
-<translation>&amp;Rimuovi la nota attuale</translation>
+<translation>&amp;Elimina la nota corrente</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1353"/>
@@ -1908,7 +1908,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1426"/>
 <source>Show note &amp;versions</source>
-<translation>Mostra le versioni delle note</translation>
+<translation>Mostra le &amp;versioni delle note</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1429"/>
@@ -1935,7 +1935,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1458"/>
 <source>Insert link to an url or a note</source>
-<translation>Inserisci un link URL o ad una nota</translation>
+<translation>Inserisci collegamento a un URL o a una nota</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1470"/>
@@ -2119,7 +2119,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1380"/>
 <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-<translation>Invia domande, richieste di funzionalità o problemi con l'aiuto dell'assitsente dei problemi</translation>
+<translation>Invia domande, richieste di funzionalità o problemi con l'aiuto dell'assistente dei problemi</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1438"/>
@@ -2160,12 +2160,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1564"/>
 <source>&amp;Export note as PDF (preview)</source>
-<translation>&amp;Esporta nota come PDT (anteprima)</translation>
+<translation>&amp;Esporta nota come PDF (anteprima)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1567"/>
 <source>Export note as PDF (preview)</source>
-<translation>Esporta nota come PDT (anteprima)</translation>
+<translation>Esporta nota come PDF (anteprima)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1576"/>
@@ -2185,7 +2185,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1612"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Inserisci immagine (l'immagine verrà copiata nella sotto-cartella "media" nell'attuale cartella delle note)</translation>
+<translation>Inserisci immagine (l'immagine verrà copiata nella sotto-cartella "media" nella cartella delle note corrente)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1624"/>
@@ -2195,17 +2195,17 @@
 <message>
 <location filename="../mainwindow.ui" line="1633"/>
 <source>&amp;Encrypt note</source>
-<translation>&amp;Cripta la nota</translation>
+<translation>&amp;Cifra la nota</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1642"/>
 <source>Edit encrypted note</source>
-<translation>Modifica nota criptata</translation>
+<translation>Modifica nota cifrata</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1654"/>
 <source>Decrypt note</source>
-<translation>Decripta la nota</translation>
+<translation>Decifra la nota</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1663"/>
@@ -2265,13 +2265,13 @@
 <message>
 <location filename="../mainwindow.ui" line="1796"/>
 <source>Paste html or media</source>
-<translation>Incolla html o media</translation>
+<translation>Incolla HTML o media</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1799"/>
 <location filename="../mainwindow.ui" line="1802"/>
 <source>Paste images, notes and html from the clipboard</source>
-<translation>Incolla immagini, note e HTML dagli Appunti</translation>
+<translation>Incolla immagini, note e HTML dagli appunti</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1814"/>
@@ -2306,7 +2306,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1886"/>
 <source>&amp;Add tag to note</source>
-<translation>&amp;Aggiungi tag alla nota</translation>
+<translation>&amp;Aggiungi etichetta alla nota</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1898"/>
@@ -2450,12 +2450,12 @@
 <message>
 <location filename="../mainwindow.ui" line="2389"/>
 <source>Ascending</source>
-<translation>Ascendente</translation>
+<translation>Crescente</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2397"/>
 <source>Descending</source>
-<translation>Discendente</translation>
+<translation>Decrescente</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2406"/>
@@ -2811,7 +2811,7 @@ Restore current note?</source>
 <message>
 <location filename="../mainwindow.cpp" line="3631"/>
 <source>Please select the folder where your notes will get stored</source>
-<translation>Selezionare la cartella dove verranno salvate le node</translation>
+<translation>Selezionare la cartella dove verranno salvate le note</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="3657"/>
@@ -2846,12 +2846,12 @@ Restore current note?</source>
 <message>
 <location filename="../mainwindow.cpp" line="4349"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-<translation>Inserire la &lt;strong&gt;password&lt;/strong&gt; di questa nota criptata.</translation>
+<translation>Inserisci la &lt;strong&gt;password&lt;/strong&gt; di questa nota cifrata.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4372"/>
 <source>Note can't be decrypted!</source>
-<translation>La nota non può essere decriptata!</translation>
+<translation>La nota non può essere decifrata!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4373"/>
@@ -2899,13 +2899,13 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="4665"/>
 <source>Remove selected tags</source>
-<translation>Elimina i tag selezionati</translation>
+<translation>Elimina le etichette selezionate</translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="4666"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
-<numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; tag selezionati? Nessuna nota sarà eliminata in questo processo.</numerusform>
+<numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; etichetta selezionata? Nessuna nota sarà eliminata in questo processo.</numerusform>
 <numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; i tag selezionati? Nessuna nota sarà eliminata in questo processo.</numerusform>
 </translation>
 </message>
@@ -2919,7 +2919,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <location filename="../mainwindow.cpp" line="4719"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
-<numerusform>Spostare %n note selezionate in &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Spostare %n nota selezionata in &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Spostare le %n note selezionate in &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
@@ -2933,7 +2933,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <location filename="../mainwindow.cpp" line="4825"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
-<numerusform>Copiare %n note selezionate in &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Copiare %n nota selezionata in &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Copiare %n note selezionate in &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
@@ -2954,13 +2954,13 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="4869"/>
 <source>Tag selected notes</source>
-<translation>Applica tag alle note selezionate</translation>
+<translation>Applica etichetta alle note selezionate</translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="4870"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
-<numerusform>Applica tag a %n nota selezionata con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Applica etichetta a %n nota selezionata con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Taggare %n note selezionate con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
@@ -2987,7 +2987,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="5387"/>
 <source>PDF files</source>
-<translation>File pdf</translation>
+<translation>File PDF</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5471"/>
@@ -3003,15 +3003,15 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <location filename="../mainwindow.cpp" line="5724"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
-<numerusform>Trova &lt;strong&gt;%n&lt;/strong&gt; occorrenza(e) di qualsiasi termine di &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-<numerusform>Trova &lt;strong&gt;%n&lt;/strong&gt; occorrenza(e) di qualsiasi termine di &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Trova &lt;strong&gt;%n&lt;/strong&gt; occorrenza di qualsiasi termine di &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Trova &lt;strong&gt;%n&lt;/strong&gt; occorrenze di qualsiasi termine di &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6301"/>
 <location filename="../mainwindow.cpp" line="6322"/>
 <source>Note was not found</source>
-<translation>Non è stato possibile trovare la nota</translation>
+<translation>Impossibile trovare la nota</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6312"/>
@@ -3940,7 +3940,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="6302"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
-<translation>Impossibile trovare la nota.&lt;br /&gt;Impossibile creare la nota automaticamente nel percorso indicato, perché le sottocartelle sono disabilitate per la cartella attuale.</translation>
+<translation>Impossibile trovare la nota.&lt;br /&gt;Impossibile creare la nota automaticamente nel percorso indicato, perché le sottocartelle sono disabilitate per la cartella corrente.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6316"/>
@@ -4462,8 +4462,8 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
 <translation>
-<numerusform>%n note stanno usando questa immagine. Rinominare anche le immagini in quelle note?</numerusform>
-<numerusform>%n  note stanno usando questa immagine. Vuoi rinominare anche quelle immagini nelle note?</numerusform>
+<numerusform>%n nota sta usando questa immagine. Rinominare anche le immagini in quella nota?</numerusform>
+<numerusform>%n note stanno usando questa immagine. Vuoi rinominare anche quelle immagini nelle note?</numerusform>
 </translation>
 </message>
 </context>
@@ -6051,7 +6051,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
 <source>Web application</source>
-<translation>applicazione web</translation>
+<translation>Applicazione web</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
@@ -6252,7 +6252,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation>Puoi utilizzare l '&lt;a href="%1"&gt;app Web QOwnNotes&lt;/a&gt; per poter inserire foto in QOwnNotes sul desktop.</translation>
+<translation>Puoi utilizzare l '&lt;a href="%1"&gt;app Web QOwnNotes&lt;/a&gt; per inserire foto in QOwnNotes sul desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6387,7 +6387,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6141"/>
 <source>Reset the socket server port</source>
-<translation>Abilita il supporto dell'applicazione web</translation>
+<translation>Reimposta la porta del server socket</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6155"/>
@@ -7705,7 +7705,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
 <source>Used in notes:</source>
-<translation>Utilizzato nelle note:</translation>
+<translation>Usato nelle note:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
@@ -7715,7 +7715,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
 <source>Only show images that are not used in notes</source>
-<translation>Mostra solo le immagini che non vengono utilizzate nelle note</translation>
+<translation>Mostra solo le immagini non usate nelle note</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
@@ -7786,8 +7786,8 @@ Le proprie note non verranno modificate!</translation>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation>
+<numerusform>Eliminare il file selezionato?</numerusform>
 <numerusform>Eliminare i &lt;strong&gt;%n&lt;/strong&gt; file selezionati?</numerusform>
-<numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; i file selezionati?</numerusform>
 </translation>
 </message>
 <message>
@@ -7833,17 +7833,17 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
 <source>File renaming failed</source>
-<translation>Impossibile rinominare file</translation>
+<translation>Impossibile rinominare il file</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation>Ridenominazione del file &lt;strong&gt;%1&lt;/strong&gt; non riuscita!</translation>
+<translation>Impossibile rinominare il file &lt;strong&gt;%1&lt;/strong&gt;!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
 <source>&amp;Open note</source>
-<translation>Nota a&amp;perta</translation>
+<translation>&amp;Apri nota</translation>
 </message>
 </context>
 <context>
@@ -7906,12 +7906,12 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
 <source>Used in notes:</source>
-<translation>Utilizzato nelle note:</translation>
+<translation>Usato nelle note:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
 <source>Only show images that are not used in notes</source>
-<translation>Mostra solo le immagini che non vengono utilizzate nelle note</translation>
+<translation>Mostra solo le immagini non usate nelle note</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
@@ -7937,8 +7937,8 @@ Le proprie note non verranno modificate!</translation>
 <location filename="../dialogs/storedimagesdialog.cpp" line="188"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation>
-<numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; i file selezionati?</numerusform>
-<numerusform>Eliminare &lt;strong&gt;%n&lt;/strong&gt; i file selezionati?</numerusform>
+<numerusform>Eliminare il file selezionato?</numerusform>
+<numerusform>Eliminare i &lt;strong&gt;%n&lt;/strong&gt; file selezionati?</numerusform>
 </translation>
 </message>
 <message>
@@ -7954,7 +7954,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
 <source>File exists</source>
-<translation>il file esiste</translation>
+<translation>Il file esiste</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="349"/>
@@ -7964,12 +7964,12 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="359"/>
 <source>File renaming failed</source>
-<translation>Ridenominazione del file non riuscita</translation>
+<translation>Impossibile rinominare il file</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="360"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation>Ridenominazione del file &lt;strong&gt;%1&lt;/strong&gt; non riuscita!</translation>
+<translation>Impossibile rinominare il file &lt;strong&gt;%1&lt;/strong&gt;!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="436"/>
@@ -7994,7 +7994,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="472"/>
 <source>&amp;Open note</source>
-<translation>Nota a&amp;perta</translation>
+<translation>&amp;Apri nota</translation>
 </message>
 </context>
 <context>
@@ -8727,7 +8727,7 @@ Non sarà possibile annullare l'operazione!</translation>
 <message>
 <location filename="../services/webappclientservice.cpp" line="127"/>
 <source>Web app warning</source>
-<translation>Avviso app Web</translation>
+<translation>Avviso app web</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="139"/>

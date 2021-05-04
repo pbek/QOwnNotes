@@ -1,6 +1,6 @@
 # Fai una donazione
 
-QOwnNotes non genera incassi (senza scopo di lucro).
+QOwnNotes non genera introiti (senza scopo di lucro).
 
 Se vi piace QOwnNotes, siete liberi di **fare una donazione** al progetto per contribuire alle spese per l'hosting, il dominio ecc.
 

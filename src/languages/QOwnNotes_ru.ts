@@ -2346,7 +2346,7 @@
 <location filename="../mainwindow.ui" line="1991"/>
 <location filename="../mainwindow.ui" line="1994"/>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-<translation type="unfinished">Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</translation>
+<translation>Откройте  #qownnotes IRC (Kiwi)-канал, вы должны оставаться в сети, чтобы получить ответ. </translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2058"/>
@@ -2379,7 +2379,7 @@
 <location filename="../mainwindow.ui" line="2209"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
 <extracomment>"Element" as in the chat service</extracomment>
-<translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
+<translation>Откройте комнату QOwnNotes Matrix (Element)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2236"/>
@@ -2516,7 +2516,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2492"/>
 <source>Manage stored attachments</source>
-<translation type="unfinished">Manage stored attachments</translation>
+<translation>Управление сохраненными вложениями</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2497"/>
@@ -2618,7 +2618,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2659"/>
 <source>Jump to navigation panel</source>
-<translation type="unfinished">Jump to navigation panel</translation>
+<translation>Перейти к панели навигации</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1909"/>
@@ -2659,7 +2659,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2179"/>
 <source>Manage stored image files</source>
-<translation type="unfinished">Manage stored image files</translation>
+<translation>Управление сохраненными файлами изображений</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2221"/>
@@ -4019,7 +4019,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="6316"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>Заметка не найдена, создать новую заметку &lt;strong&gt;%1&lt;/strong&gt; по пути &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6716"/>
@@ -4189,13 +4189,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/owncloudservice.cpp" line="235"/>
 <source>incorrect</source>
-<translation type="unfinished">incorrect</translation>
+<translation>неверный</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="237"/>
 <location filename="../services/owncloudservice.cpp" line="535"/>
 <source>not connected</source>
-<translation type="unfinished">not connected</translation>
+<translation>Не подключен</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="252"/>
@@ -4218,40 +4218,40 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../services/owncloudservice.cpp" line="508"/>
 <location filename="../services/owncloudservice.cpp" line="526"/>
 <source>ok</source>
-<translation type="unfinished">ok</translation>
+<translation>ОК</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="318"/>
 <source>not correct</source>
-<translation type="unfinished">not correct</translation>
+<translation>неправильно</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="331"/>
 <source>not detected</source>
-<translation type="unfinished">not detected</translation>
+<translation>не обнаружен</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="434"/>
 <location filename="../services/owncloudservice.cpp" line="529"/>
 <source>not found</source>
-<translation type="unfinished">not found</translation>
+<translation>не найден</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="471"/>
 <location filename="../services/owncloudservice.cpp" line="473"/>
 <source>unknown</source>
-<translation type="unfinished">unknown</translation>
+<translation>неизвестно</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="482"/>
 <source>version %1 too low</source>
-<translation type="unfinished">version %1 too low</translation>
+<translation>версия %1 слишком низкая</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="503"/>
 <location filename="../services/owncloudservice.cpp" line="511"/>
 <source>not enabled</source>
-<translation type="unfinished">not enabled</translation>
+<translation>не включено</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="585"/>
@@ -4464,12 +4464,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/gui.cpp" line="1009"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt; дата последнего изменения: %2</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1014"/>
 <source>&lt;br /&gt;path: %1</source>
-<translation type="unfinished">&lt;br /&gt;path: %1</translation>
+<translation>&lt;br /&gt;путь: %1</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4479,7 +4479,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../utils/git.cpp" line="77"/>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-<translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
+<translation>Команда &lt;code&gt;%1&lt;/code&gt; с аргументами &lt;code&gt;%2&lt;/code&gt; не выполнена!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4251"/>
@@ -4526,7 +4526,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
 <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
 <source>File name changed</source>
-<translation type="unfinished">File name changed</translation>
+<translation>Имя файла изменено</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
@@ -6135,7 +6135,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
 <source>Web application</source>
-<translation type="unfinished">Web application</translation>
+<translation>веб приложение</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
@@ -6336,32 +6336,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<translation>Вы можете использовать &lt;a href="%1"&gt;веб-приложение QOwnNotes&lt;/a&gt;, чтобы иметь возможность вставлять фотографии в QOwnNotes на своем рабочем столе.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
 <source>QOwnNotes web application</source>
-<translation type="unfinished">QOwnNotes web application</translation>
+<translation>QOwnNotes веб-приложение</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6251"/>
 <source>Server URL:</source>
-<translation type="unfinished">Server URL:</translation>
+<translation>URL-адрес сервера:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6265"/>
 <source>Security token:</source>
-<translation type="unfinished">Security token:</translation>
+<translation>Токен безопасности:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6272"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
-<translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
+<translation>Вам необходимо ввести этот токен в веб-приложение QOwnNotes, чтобы иметь возможность общаться с вашим настольным приложением QOwnNotes.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6296"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation type="unfinished">A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</translation>
+<translation>Будет открыто веб-соединение с этим сервером, которое будет действовать как мост между веб-приложением QOwnNotes и настольным приложением QOwnNotes.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6322"/>
@@ -7853,17 +7853,17 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>Последние изменения в %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>Путь: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>Удалить выбранные файлы</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
@@ -7878,57 +7878,57 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
 <source>&amp;Open attachment</source>
-<translation type="unfinished">&amp;Open attachment</translation>
+<translation>Открыть &amp;вложение</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
 <source>&amp;Rename attachment</source>
-<translation type="unfinished">&amp;Rename attachment</translation>
+<translation>&amp;Переименовать вложение</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
 <source>&amp;Delete attachments</source>
-<translation type="unfinished">&amp;Delete attachments</translation>
+<translation>&amp;Удалить вложения</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
 <source>&amp;Add attachments to current note</source>
-<translation type="unfinished">&amp;Add attachments to current note</translation>
+<translation>&amp;Добавить вложения к текущей заметке</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>Файл не существует</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>Файл &lt;strong&gt;%1&lt;/strong&gt; не существует, вы не можете его переименовать!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>Файл существует</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+<translation>Файл &lt;strong&gt;%1&lt;/strong&gt; уже существует, вам необходимо удалить его, прежде чем выбрать &lt;strong&gt;%2&lt;/strong&gt; в качестве нового имени файла!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>Не удалось переименовать файл</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>Не удалось переименовать файл &lt;strong&gt;%1&lt;/strong&gt;!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>&amp;Открыть заметку</translation>
 </message>
 </context>
 <context>
@@ -7951,22 +7951,22 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
 <source>Open the media folder</source>
-<translation type="unfinished">Open the media folder</translation>
+<translation>Откройте папку мультимедиа</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="67"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>Открыть &amp;папку</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="78"/>
 <source>Open image externally</source>
-<translation type="unfinished">Open image externally</translation>
+<translation>Открыть изображение извне</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="81"/>
 <source>Open image</source>
-<translation type="unfinished">Open image</translation>
+<translation>Открыть изображение</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="129"/>
@@ -7986,12 +7986,12 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="175"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>Обновить</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
 <source>Used in notes:</source>
-<translation type="unfinished">Used in notes:</translation>
+<translation>Используется в примечаниях:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
@@ -8001,7 +8001,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
 <source>Only show orphaned images</source>
-<translation type="unfinished">Only show orphaned images</translation>
+<translation>Показывать только потерянные изображения</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="83"/>
@@ -8021,11 +8021,11 @@ Your notes will stay intact!</source>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="188"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-<translation type="unfinished">
+<translation>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранныйх файлов?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранныйх файлов?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранныйх файлов?</numerusform>
 </translation>
 </message>
 <message>

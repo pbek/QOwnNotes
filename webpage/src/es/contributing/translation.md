@@ -40,7 +40,7 @@ Tenga en cuenta algunas cosas mientras trabaja en el proyecto:
 
    Si `notas en la papelera` es `gelöschte Dateien` en alemán, siempre lo traducirías usando esta expresión. La excepción sería cuando gramaticalmente esté obligado a usar una alternativa, pero manténgalo simple.
 
-   ![screenshot](/img/crowdin/screenshot-7.png)
+   ![captura de pantalla](/img/crowdin/screenshot-7.png)
 
    Para encontrar todas las expresiones idénticas, efectúe una búsqueda en Crowdin para ver todas las ocurrencias de un término determinado
 
@@ -50,19 +50,19 @@ Tenga en cuenta algunas cosas mientras trabaja en el proyecto:
 
 5) Para plural, agregue la traducción correspondiente cada uno en el bloque correspondiente.
 
-   ![screenshot](/img/crowdin/screenshot-4.png)
+   ![captura de pantalla](/img/crowdin/screenshot-4.png)
 
 6) Las etiquetas `%1` deben escribirse sin espacios, en los idiomas RTL puede insertar las etiquetas del original o escribirlas en su traducción.
 
-   ![screenshot](/img/crowdin/screenshot-1.png)
+   ![captura de pantalla](/img/crowdin/screenshot-1.png)
 
-   ![screenshot](/img/crowdin/screenshot-5.png)
+   ![captura de pantalla](/img/crowdin/screenshot-5.png)
 
-   ![screenshot](/img/crowdin/screenshot-3.png)
+   ![captura de pantalla](/img/crowdin/screenshot-3.png)
 
 7) Use `&` delante de cualquier letra que deba usarse en un atajo, puede ser la misma que en el original pero no es necesario.
 
-   ![screenshot](/img/crowdin/screenshot-4.png)
+   ![captura de pantalla](/img/crowdin/screenshot-4.png)
 
 ## ¡Traducir y corregir es divertido!
 

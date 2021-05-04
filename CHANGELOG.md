@@ -3,6 +3,8 @@
 ## 21.5.0
 - a PPA for Ubuntu 21.10 (Impish Indri) was added, a repository for Fedora 34
   was added and another attempt to fix the Fedora 33 build was made
+- added more translation (thank you unchase, golublarysa, polkillas, smarquespt,
+  rawfreeamy, starship10, marcoxbresciani)
 
 ## 21.4.6
 - a possible problem with generating the header tree in the navigation panel when

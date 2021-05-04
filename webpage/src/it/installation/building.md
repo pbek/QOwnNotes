@@ -4,7 +4,7 @@
 
 Puoi anche creare QOwnNotes da solo dal codice sorgente.
 
-Controlla il codice direttamente dal repository git:
+Ottieni il codice direttamente dal repository git:
 
 ```bash
 git clone https://github.com/pbek/QOwnNotes.git -b master
@@ -12,7 +12,7 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Quindi scarica [Qt Creator](https://www.qt.io/download-open-source), apri il file di progetto `src / QOwnNotes.pro` e fai clic su **Build** / **Build Project QOwnNotes** .
+Quindi scarica [Qt Creator](https://www.qt.io/download-open-source), apri il file di progetto `src/QOwnNotes.pro` e fai clic su **Build** / **Build Project QOwnNotes** .
 
 Oppure puoi crearlo direttamente nel tuo terminale:
 
@@ -27,7 +27,7 @@ Sentiti libero di contribuire con il codice sorgente a questo progetto, dare sug
 Visita [QOwnNotes su GitHub](https://github.com/pbek/QOwnNotes).
 
 ::: tip
-Se vuoi contribuire con il codice sorgente al progetto, invia le tue richieste pull al ramo `sviluppo`.
+Se vuoi contribuire con il codice sorgente al progetto, invia le tue richieste pull al ramo `develop`.
 :::
 
 ## Archivio sorgente
