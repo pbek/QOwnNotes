@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.5.1
+- fixed more Qt 6 build errors (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304), thank you @Waqar144)
+
 ## 21.5.0
 - a PPA for Ubuntu 21.10 (Impish Indri) was added, a repository for Fedora 34
   was added and another attempt to fix the Fedora 33 build was made
