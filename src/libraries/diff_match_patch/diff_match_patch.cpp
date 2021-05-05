@@ -944,6 +944,10 @@ int diff_match_patch::diff_cleanupSemanticScore(const QString &one,
     return 6;
   }
 
+  // Define some regex patterns for matching boundaries.
+  static QRegularExpression BLANKLINEEND = QRegularExpression("\\n\\r?\\n$");
+  static QRegularExpression BLANKLINESTART = QRegularExpression("^\\r?\\n\\r?\\n");
+
   // Each port of this function behaves slightly differently due to
   // subtle differences in each language's definition of things like
   // 'whitespace'.  Since this function's purpose is largely cosmetic,
@@ -957,8 +961,8 @@ int diff_match_patch::diff_cleanupSemanticScore(const QString &one,
   bool whitespace2 = nonAlphaNumeric2 && char2.isSpace();
   bool lineBreak1 = whitespace1 && char1.category() == QChar::Other_Control;
   bool lineBreak2 = whitespace2 && char2.category() == QChar::Other_Control;
-  bool blankLine1 = lineBreak1 && BLANKLINEEND.indexIn(one) != -1;
-  bool blankLine2 = lineBreak2 && BLANKLINESTART.indexIn(two) != -1;
+  bool blankLine1 = lineBreak1 && one.indexOf(BLANKLINEEND) != -1;
+  bool blankLine2 = lineBreak2 && two.indexOf(BLANKLINESTART) != -1;
 
   if (blankLine1 || blankLine2) {
     // Five points for blank lines.
@@ -978,11 +982,6 @@ int diff_match_patch::diff_cleanupSemanticScore(const QString &one,
   }
   return 0;
 }
-
-
-// Define some regex patterns for matching boundaries.
-QRegExp diff_match_patch::BLANKLINEEND = QRegExp("\\n\\r?\\n$");
-QRegExp diff_match_patch::BLANKLINESTART = QRegExp("^\\r?\\n\\r?\\n");
 
 
 void diff_match_patch::diff_cleanupEfficiency(QList<Diff> &diffs) {
@@ -2038,37 +2037,45 @@ QList<Patch> diff_match_patch::patch_fromText(const QString &textline) {
   if (textline.isEmpty()) {
     return patches;
   }
-  QStringList text = textline.split("\n", QString::SkipEmptyParts);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
+  QStringList text = textline.split('\n', Qt::SkipEmptyParts);
+#else
+  QStringList text = textline.split('\n', QString::SkipEmptyParts);
+#endif
+
   Patch patch;
-  QRegExp patchHeader("^@@ -(\\d+),?(\\d*) \\+(\\d+),?(\\d*) @@$");
+  static const QRegularExpression patchHeaderRe("^@@ -(\\d+),?(\\d*) \\+(\\d+),?(\\d*) @@$");
+//   QRegExp patchHeader("^@@ -(\\d+),?(\\d*) \\+(\\d+),?(\\d*) @@$");
   char sign;
   QString line;
   while (!text.isEmpty()) {
-    if (!patchHeader.exactMatch(text.front())) {
+    auto patchHeader = patchHeaderRe.match(text.front());
+    if (!patchHeader.hasMatch()) {
       throw QString("Invalid patch string: %1").arg(text.front());
     }
 
     patch = Patch();
-    patch.start1 = patchHeader.cap(1).toInt();
-    if (patchHeader.cap(2).isEmpty()) {
+    patch.start1 = patchHeader.captured(1).toInt();
+    if (patchHeader.captured(2).isEmpty()) {
       patch.start1--;
       patch.length1 = 1;
-    } else if (patchHeader.cap(2) == "0") {
+    } else if (patchHeader.captured(2) == "0") {
       patch.length1 = 0;
     } else {
       patch.start1--;
-      patch.length1 = patchHeader.cap(2).toInt();
+      patch.length1 = patchHeader.captured(2).toInt();
     }
 
-    patch.start2 = patchHeader.cap(3).toInt();
-    if (patchHeader.cap(4).isEmpty()) {
+    patch.start2 = patchHeader.captured(3).toInt();
+    if (patchHeader.captured(4).isEmpty()) {
       patch.start2--;
       patch.length2 = 1;
-    } else if (patchHeader.cap(4) == "0") {
+    } else if (patchHeader.captured(4) == "0") {
       patch.length2 = 0;
     } else {
       patch.start2--;
-      patch.length2 = patchHeader.cap(4).toInt();
+      patch.length2 = patchHeader.captured(4).toInt();
     }
     text.removeFirst();
 

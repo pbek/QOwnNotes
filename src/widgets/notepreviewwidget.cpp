@@ -23,7 +23,12 @@
 #include <QMenu>
 #include <QMovie>
 #include <QProxyStyle>
-#include <QRegExp>
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
+    #include <QRegExp>
+#else
+    #include <QRegularExpression>
+#endif
 
 #include "utils/misc.h"
 
@@ -99,20 +104,42 @@ bool NotePreviewWidget::eventFilter(QObject *obj, QEvent *event) {
  * @return Urls to gif files
  */
 QStringList NotePreviewWidget::extractGifUrls(const QString &text) const {
+
+    QSet<QString> urlSet;
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
     static QRegExp regex(R"(<img[^>]+src=\"(file:\/\/\/[^\"]+\.gif)\")",
                          Qt::CaseInsensitive);
 
-    QStringList urls;
     int pos = 0;
     while (true) {
         pos = regex.indexIn(text, pos);
         if (pos == -1) break;
         QString url = regex.cap(1);
-        if (!urls.contains(url)) urls.append(url);
+        urlSet.insert(url);
         pos += regex.matchedLength();
     }
+#else
+    static const QRegularExpression regex(R"(<img[^>]+src=\"(file:\/\/\/[^\"]+\.gif)\")", QRegularExpression::CaseInsensitiveOption);
+    int pos = 0;
 
-    return urls;
+    while (true) {
+        QRegularExpressionMatch match;
+        pos = text.indexOf(regex, pos, &match);
+        if (pos == -1 || !match.hasMatch())
+            break;
+        QString url = match.captured(1);
+        urlSet.insert(url);
+        pos += match.capturedLength();
+    }
+
+#endif
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 14, 0))
+    return urlSet.toList();
+#else
+    return QStringList(urlSet.begin(), urlSet.end());
+#endif
 }
 
 /**
