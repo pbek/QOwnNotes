@@ -6371,18 +6371,41 @@ void MainWindow::openLocalUrl(QString urlString) {
         const auto text = ui->noteTextEdit->toPlainText();
 
         int index = url.host().midRef(1).toInt();
+#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
         QRegExp re(R"((^|\n)\s*[-*+]\s\[([xX ]?)\])", Qt::CaseInsensitive);
+#else
+        static const QRegularExpression re(R"((^|\n)\s*[-*+]\s\[([xX ]?)\])", QRegularExpression::CaseInsensitiveOption);
+#endif
         int pos = 0;
         while (true) {
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
             pos = re.indexIn(text, pos);
+#else
+            QRegularExpressionMatch match;
+            pos = text.indexOf(re, pos, &match);
+#endif
             if (pos == -1)    // not found
                 return;
             auto cursor = ui->noteTextEdit->textCursor();
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
+            int matchedLength = re.matchedLength();
             cursor.setPosition(pos + re.matchedLength() - 1);
+#else
+            int matchedLength = match.capturedLength();
+            qDebug() << __func__ << "match.capturedLength(): " << match.capturedLength();
+            cursor.setPosition(pos + match.capturedLength() - 1);
+#endif
             if (cursor.block().userState() ==
                 MarkdownHighlighter::HighlighterState::List) {
                 if (index == 0) {
+
+#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
                     auto ch = re.cap(2);
+#else
+                    auto ch = match.captured(2);
+#endif
                     if (ch.isEmpty())
                         cursor.insertText(QStringLiteral("x"));
                     else {
@@ -6399,7 +6422,7 @@ void MainWindow::openLocalUrl(QString urlString) {
                 }
                 --index;
             }
-            pos += re.matchedLength();
+            pos += matchedLength;
         }
     } else if (scheme == QStringLiteral("file") && urlWasNotValid) {
         // open urls that previously were not valid

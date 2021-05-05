@@ -12,6 +12,12 @@
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QStatusBar>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+    #include<QRegularExpression>
+#else
+    #include<QRegExp>
+#endif
+
 FakeVimProxy::FakeVimProxy(QWidget *widget, MainWindow *mw, QObject *parent)
     : QObject(parent), m_widget(widget), m_mainWindow(mw) {}
 
@@ -36,7 +42,11 @@ void FakeVimProxy::highlightMatches(const QString &pattern) {
 
     // Highlight matches.
     QTextDocument *doc = ed->document();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+    QRegularExpression re(pattern);
+#else
     QRegExp re(pattern);
+#endif
     cur = doc->find(re);
 
     m_searchSelection.clear();

@@ -152,12 +152,6 @@ class diff_match_patch {
   // The number of bits in an int.
   short Match_MaxBits;
 
- private:
-  // Define some regex patterns for matching boundaries.
-  static QRegExp BLANKLINEEND;
-  static QRegExp BLANKLINESTART;
-
-
  public:
 
   diff_match_patch();
