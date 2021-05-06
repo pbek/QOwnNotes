@@ -13,6 +13,7 @@ Run the following shell commands as root to add the repository and install QOwnN
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
+[qownnotes]
 name=OBS repo for QOwnNotes (Fedora \$releasever - \$basearch)
 type=rpm-md
 baseurl=http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
