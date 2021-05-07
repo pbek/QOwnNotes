@@ -2,6 +2,11 @@
 
 ## 21.5.1
 - fixed more Qt 6 build errors (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304), thank you @Waqar144)
+- version 0.1.6 of the **QOwnNotes Web application** [app.qownnotes.org](https://app.qownnotes.org/)
+  was released that features an image preview and allows rotating images before sending them
+  to your **QOwnNotes desktop app** (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
+    - in case you don't see the version number in the headline of the app page
+      you need to clear the browser cache for the `app.qownnotes.org` webpage
 
 ## 21.5.0
 - a PPA for Ubuntu 21.10 (Impish Indri) was added, a repository for Fedora 34
