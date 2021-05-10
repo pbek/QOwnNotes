@@ -969,7 +969,10 @@ void Utils::Gui::updateTabWidgetTabData(QTabWidget *tabWidget, int index,
         text.prepend(QStringLiteral("\u2690 "));
     }
 
-    tabWidget->setTabText(index, text);
+    // you need to use "&&" to show a "&" in the tab text
+    // see https://github.com/pbek/QOwnNotes/issues/2135
+    tabWidget->setTabText(index, text.replace("&", "&&"));
+
     tabWidget->setTabToolTip(index, isSticky ?
             QObject::tr("Double-click to unstick note from tab") :
             QObject::tr("Double-click to stick note to tab"));

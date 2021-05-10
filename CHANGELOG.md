@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.5.2
+- a problem with showing a `&` character in the tab text of notes was fixed
+  (for [#2135](https://github.com/pbek/QOwnNotes/issues/2135))
+
 ## 21.5.1
 - fixed more Qt 6 build errors (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304), thank you @Waqar144)
 - version 0.1.6 of the **QOwnNotes Web application** [app.qownnotes.org](https://app.qownnotes.org/)
