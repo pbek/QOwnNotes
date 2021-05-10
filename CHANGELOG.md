@@ -3,6 +3,8 @@
 ## 21.5.2
 - a problem with showing a `&` character in the tab text of notes was fixed
   (for [#2135](https://github.com/pbek/QOwnNotes/issues/2135))
+- a problem with a resetting note sub-folder panel when clicking links to notes
+  in sub-folders was fixed (for [#2128](https://github.com/pbek/QOwnNotes/issues/2128))
 
 ## 21.5.1
 - fixed more Qt 6 build errors (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304), thank you @Waqar144)

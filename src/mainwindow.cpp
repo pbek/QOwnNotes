@@ -6246,7 +6246,6 @@ void MainWindow::openLocalUrl(QString urlString) {
         Note note;
 
         if (isNoteFileUrl) {
-            ui->noteSubFolderTreeWidget->reset();
             note = Note::fetchByFileUrl(url);
         } else {
             // try to fetch a note from the url string
