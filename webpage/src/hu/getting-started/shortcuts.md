@@ -68,39 +68,40 @@
     - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> ugyanezt teszi
 - <kbd>Alt</kbd> + <kbd>Backspace</kbd> törli az aktuális sort
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> törli az aktuális szót
-- <kbd>Ctrl</kbd> + <kbd>L</kbd> megnyit egy párbeszédablakot, amely linket ad egy másik jegyzethez vagy URL-hez (a kijelölt szövegre is használható)
-- <kbd>Ctrl</kbd> + <kbd>T</kbd> beszúrja az aktuális dátumot ISO 8601 formátumba
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> beszúr egy képet (a kép átmásolásra kerül az aktuális jegyzetek mappában található `media` mappába)
-- A <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> mellékletet illeszt be (a fájl át lesz másolva az aktuális jegyzetek `mellékletek` mappájába mappa)
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> beszúr egy táblázatot
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> kódblokkot szúr be az aktuális pozícióba
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> blokk idézetet szúr be az aktuális pozícióba
+- <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
+- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
 - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold
-- <kbd>Ctrl</kbd> + <kbd>I</kbd> a kijelölt szöveget dőlt formázza
-- <kbd>Ctrl</kbd> + <kbd>U</kbd> formázza a kijelölt szöveget aláhúzással
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> kitörli a kijelölt szöveget
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> végigvezet a kiválasztott szöveg esetein
-- <kbd>Tab</kbd> behúzza a kijelölt szöveget (több soron is működik)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> behúzza a kijelölt szöveget
-- <kbd>Tab</kbd> rendezetlen lista karakter után behúzza a lista elemét
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> rendezetlen lista karakter után behúzza a lista elemét
-- <kbd>Return</kbd> listákban létrehoz egy új listaelemet
-- <kbd>Alt</kbd> + <kbd>Left</kbd> visszaugrik a jegyzettörténetbe
-    - előreugrik a jegyzettörténetben
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> jegyzet könyvjelzőt állít be az 1..9 könyvjelző nyílásba
-- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> ugrik a jegyzet könyvjelzőhöz a 0..9 könyvjelzőhelyen
+- <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic
+- <kbd>Ctrl</kbd> + <kbd>U</kbd> formats the selected text underline
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
+- <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
+- <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
+    - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
+- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
 - <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
-- <kbd>Ctrl</kbd> + <kbd>-</kbd> egy ponttal csökkenti a jegyzet szövegének betűméretét
-- <kbd>Ctrl</kbd> + <kbd>0</kbd> visszaállítja a jegyzet szövegének betűméretét
-- A <kbd>⌘</kbd> + <kbd> szóköz</kbd> megpróbál olyan egyszerű egyenleteket megoldani, mint `(4+5)*3=`a kurzor előtt, automatikusan kiegészíti a szöveget vagy megnyitja az URL-eket
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> címsort szúr be a jegyzet tetején lévő jegyzet fájlnévből
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> az aktuális jegyzetet két jegyzetre osztja a kurzor aktuális helyzetében
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> a kijelölt szöveget az interneten keresi
-- <kbd>Ctrl</kbd> + <kbd>Up</kbd> felfelé görgeti a tartalmat
-- <kbd>Ctrl</kbd> + <kbd>Down</kbd> lefelé görgeti a tartalmat
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> lefelé mozgatja az aktuális sort
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> feljebb mozgatja az aktuális sort
-- <kbd>⇧</kbd> + <kbd>Return</kbd> két szóközt és egy újsor karaktert ad hozzá a markdown új sor kényszerítéséhez
+- <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
+- <kbd>Ctrl</kbd> + <kbd>0</kbd> resets the note text font size
+- <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in front of the cursor, auto-completes text or opens urls
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
+- <kbd>Ctrl</kbd> + <kbd>Up</kbd> scrolls the content up
+- <kbd>Ctrl</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> moves the current line down
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> moves the current line up
+- <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### A jegyzet előnézeti paneljén
 
@@ -183,37 +184,38 @@
     - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Down</kbd> ugyanezt teszi
 - <kbd>⌘</kbd> + <kbd>Backspace</kbd> törli az aktuális sort
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> törli az aktuális szót
-- <kbd>⌘</kbd> + <kbd>L</kbd> megnyit egy párbeszédablakot, amely linket ad egy másik jegyzethez vagy URL-hez (a kijelölt szövegre is használható)
-- <kbd>⌘</kbd> + <kbd>T</kbd> beszúrja az aktuális dátumot ISO 8601 formátumba
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> beszúr egy képet (a kép átmásolásra kerül az aktuális jegyzetek mappában található `media` mappába)
-- A <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> mellékletet illeszt be (a fájl át lesz másolva az aktuális jegyzetek `mellékletek` mappájába mappa)
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> beszúr egy táblázatot
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> kódblokkot szúr be az aktuális pozícióba
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> blokk idézetet szúr be az aktuális pozícióba
-- <kbd>⌘</kbd> + <kbd>B</kbd> a kijelölt szöveget félkövér formázza
-- <kbd>⌘</kbd> + <kbd>I</kbd> a kijelölt szöveget dőlt formázza
-- <kbd>⌘</kbd> + <kbd>U</kbd> formázza a kijelölt szöveget aláhúzással
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> kitörli a kijelölt szöveget
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> végigvezet a kiválasztott szöveg esetein
-- <kbd>Tab</kbd> behúzza a kijelölt szöveget (több soron is működik)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> behúzza a kijelölt szöveget
-- <kbd>Tab</kbd> egy rendezetlen lista karakter után behúzza a lista elemét
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> rendezetlen lista karakter után behúzza a lista elemét
-- <kbd>Return</kbd> listákban létrehoz egy új listaelemet
-- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> visszaugrik a kottatörténetbe
-    - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> előreugrik a hangtörténetben
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> jegyzet könyvjelzőt állít be az 1..9 könyvjelző nyílásba
+- <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
+- <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
+- <kbd>⌘</kbd> + <kbd>B</kbd> formats the selected text bold
+- <kbd>⌘</kbd> + <kbd>I</kbd> formats the selected text italic
+- <kbd>⌘</kbd> + <kbd>U</kbd> formats the selected text underline
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
+- <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
+- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
+    - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
 - <kbd>⌘</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
-- <kbd>⌘</kbd> + <kbd>+</kbd> egy ponttal növeli a jegyzet szövegének betűméretét
-- <kbd>⌘</kbd> + <kbd>-</kbd> egy ponttal csökkenti a jegyzet szövegének betűméretét
-- <kbd>⌘</kbd> + <kbd>0</kbd> visszaállítja a jegyzet szövegének betűméretét
-- A <kbd>⌘</kbd> + <kbd> szóköz</kbd> olyan egyszerű egyenleteket próbál megfejteni, mint például a kurzor előtti aktuális sorban az `(4 + 5) * 3 =`, automatikusan kiegészíti a szöveget vagy megnyit URL-eket
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> címsort szúr be a jegyzet tetején lévő jegyzet fájlnévből
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> az aktuális hangot két jegyzetre osztja a kurzor aktuális helyzetében
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> a kijelölt szöveget az interneten keresi
-- <kbd>⌘</kbd> + <kbd>Up</kbd> felfelé görgeti a tartalmat
-- <kbd>⌘</kbd> + <kbd>Down</kbd> lefelé görgeti a tartalmat
-- <kbd>⇧</kbd> + <kbd>Return</kbd> két szóközt és egy újsor karaktert ad hozzá a markdown új sor kényszerítéséhez
+- <kbd>⌘</kbd> + <kbd>+</kbd> increases the note text font size by one point
+- <kbd>⌘</kbd> + <kbd>-</kbd> decreases the note text font size by one point
+- <kbd>⌘</kbd> + <kbd>0</kbd> resets the note text font size
+- <kbd>⌘</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor, auto-completes text or opens urls
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
+- <kbd>⌘</kbd> + <kbd>Up</kbd> scrolls the content up
+- <kbd>⌘</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### A jegyzet előnézeti paneljén
 

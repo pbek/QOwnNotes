@@ -68,39 +68,40 @@
     - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> doet hetzelfde
 - <kbd>Alt</kbd> + <kbd>Backspace</kbd> verwijdert de huidige regel
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> verwijdert het huidige woord
-- <kbd>Ctrl</kbd> + <kbd>L</kbd> opent een dialoogvenster om een link naar een andere notitie of een URL toe te voegen (werkt ook met geselecteerde tekst)
-- <kbd>Ctrl</kbd> + <kbd>T</kbd> voegt de huidige datum in ISO 8601-indeling in
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> voegt een afbeelding in (de afbeelding wordt gekopieerd naar de map `media` in de huidige notitiemap)
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> voegt een bijlage in (het bestand wordt gekopieerd naar de map `attachments` in de huidige notitiemap)
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> voegt een tafel in
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> voegt een codeblok in op de huidige positie
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> voegt een blokcitaat in op de huidige positie
-- <kbd>Ctrl</kbd> + <kbd>B</kbd> maakt de geselecteerde tekst vet op
-- <kbd>Ctrl</kbd> + <kbd>I</kbd> maakt de geselecteerde tekst cursief
-- <kbd>Ctrl</kbd> + <kbd>U</kbd> formatteert de geselecteerde tekst onderstreept
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> schrapt de geselecteerde tekst
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> doorloopt de gevallen van de geselecteerde tekst
-- <kbd>Tab</kbd> laat de geselecteerde tekst inspringen (werkt ook op meerdere regels)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> laat de geselecteerde tekst ongedaan maken
-- <kbd>Tab</kbd> na een ongeordend lijstteken laat het lijstitem inspringen
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd>  nadat een ongeordend lijstteken de inspringing van het lijstitem ongedaan heeft gemaakt
-- <kbd>Return</kbd> in lijsten maakt een nieuw lijstitem aan
-- <kbd>Alt</kbd> + <kbd>Left</kbd> springt terug in de nootgeschiedenis
-    - <kbd>Alt</kbd> + <kbd>Right</kbd> springt vooruit in de nootgeschiedenis
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> zet een notitiebladwijzer op bladwijzerslot 1..9
-- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> springt naar de notitiebladwijzer op bladwijzerslot 0..9
-- <kbd>Ctrl</kbd> + <kbd>+</kbd> vergroot de lettergrootte van de notitietekst met één punt
-- <kbd>Ctrl</kbd> + <kbd>-</kbd> verkleint de lettergrootte van de notitietekst met één punt
-- <kbd>Ctrl</kbd> + <kbd>0</kbd> stelt de lettergrootte van de notitietekst opnieuw in
-- <kbd>Ctrl</kbd> + <kbd>Space</kbd> probeert eenvoudige vergelijkingen op te lossen zoals `(4+5)*3=` voor de cursor, vult automatisch tekst aan of opent URL's
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> voegt een kop in van de bestandsnaam van de notitie bovenaan de notitie
+- <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
+- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
+- <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold
+- <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic
+- <kbd>Ctrl</kbd> + <kbd>U</kbd> formats the selected text underline
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
+- <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
+- <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
+    - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
+- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
+- <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
+- <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
+- <kbd>Ctrl</kbd> + <kbd>0</kbd> resets the note text font size
+- <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in front of the cursor, auto-completes text or opens urls
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> zoekt naar de geselecteerde tekst op internet
-- <kbd>Ctrl</kbd> + <kbd>Up</kbd> schuift de inhoud omhoog
-- <kbd>Ctrl</kbd> + <kbd>Down</kbd> schuift de inhoud omlaag
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> verplaatst de huidige regel naar beneden
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> verplaatst de huidige line-up
-- <kbd>⇧</kbd> + <kbd>Return</kbd> voegt twee spaties en een teken voor een nieuwe regel toe om een nieuwe regel af te drukken
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
+- <kbd>Ctrl</kbd> + <kbd>Up</kbd> scrolls the content up
+- <kbd>Ctrl</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> moves the current line down
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> moves the current line up
+- <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### In het notitievoorbeeldpaneel
 
@@ -183,37 +184,38 @@
     - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Down</kbd> does the same
 - <kbd>⌘</kbd> + <kbd>Backspace</kbd> verwijdert de huidige regel
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> verwijdert het huidige woord
-- <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a link to another note or an URL (also works on selected text)
-- <kbd>⌘</kbd> + <kbd>T</kbd> voegt de huidige datum in ISO 8601-indeling in
-- <kbd> ⌘ </kbd> + <kbd> ⇧ </kbd> + <kbd> I </kbd> voegt een afbeelding in (de afbeelding wordt gekopieerd naar de map `media` in de huidige notitiemap)
-- voegt een bijlage in (het bestand wordt gekopieerd naar de map `attachments` in de huidige notitiemap)
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> voegt een tafel in
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> voegt een codeblok in op de huidige positie
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> voegt een blokcitaat in op de huidige positie
-- <kbd>⌘</kbd> + <kbd>B</kbd> maakt de geselecteerde tekst vet op
-- <kbd>⌘</kbd> + <kbd>I</kbd> maakt de geselecteerde tekst cursief
-- <kbd>⌘</kbd> + <kbd>U</kbd> formatteert de geselecteerde tekst onderstreept
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> schrapt de geselecteerde tekst
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> doorloopt de gevallen van de geselecteerde tekst
-- <kbd>Tab</kbd> laat de geselecteerde tekst inspringen (werkt ook op meerdere regels)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> laat de geselecteerde tekst ongedaan maken
-- <kbd>Tab</kbd> nadat een ongeordend lijstteken het lijstitem inspringt
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> nadat een ongeordend lijstteken de inspringing van het lijstitem ongedaan heeft gemaakt
-- <kbd>Return</kbd> in lijsten maakt een nieuw lijstitem aan
-- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> springt terug in de nootgeschiedenis
-    - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> springt vooruit in de nootgeschiedenis
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> zet een notitiebladwijzer op bladwijzerslot 1..9
-- <kbd>⌘</kbd> + <kbd>0..9</kbd> springt naar de notitiebladwijzer op bladwijzerslot 0..9
-- <kbd>⌘</kbd> + <kbd>+</kbd> vergroot de lettergrootte van de notitietekst met één punt
-- <kbd>⌘</kbd> + <kbd>-</kbd> verkleint de lettergrootte van de notitietekst met één punt
-- <kbd>⌘</kbd> + <kbd>0</kbd> reset de lettergrootte van de notitietekst
-- <kbd>Ctrl </kbd> + <kbd>Spatie</kbd> probeert eenvoudige vergelijkingen op te lossen zoals `(4+5)*3=` voor de cursor, vult automatisch tekst aan of opent URL's
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> voegt een kop in van de bestandsnaam van de notitie bovenaan de notitie
+- <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
+- <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
+- <kbd>⌘</kbd> + <kbd>B</kbd> formats the selected text bold
+- <kbd>⌘</kbd> + <kbd>I</kbd> formats the selected text italic
+- <kbd>⌘</kbd> + <kbd>U</kbd> formats the selected text underline
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
+- <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
+- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
+    - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
+- <kbd>⌘</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
+- <kbd>⌘</kbd> + <kbd>+</kbd> increases the note text font size by one point
+- <kbd>⌘</kbd> + <kbd>-</kbd> decreases the note text font size by one point
+- <kbd>⌘</kbd> + <kbd>0</kbd> resets the note text font size
+- <kbd>⌘</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor, auto-completes text or opens urls
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> zoekt naar de geselecteerde tekst op internet
-- <kbd>⌘</kbd> + <kbd>Up</kbd> schuift de inhoud omhoog
-- <kbd>⌘</kbd> + <kbd>Down</kbd> schuift de inhoud omlaag
-- <kbd>⇧</kbd> + <kbd>Return</kbd> voegt twee spaties en een teken voor een nieuwe regel toe om een nieuwe regel af te drukken
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
+- <kbd>⌘</kbd> + <kbd>Up</kbd> scrolls the content up
+- <kbd>⌘</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### In het notitievoorbeeldpaneel
 

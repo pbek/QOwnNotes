@@ -68,39 +68,40 @@
     - <kbd>Alt</kbd> + <kbd>Ctrl</kbd> + <kbd>پایین</kbd> همین کار را انجام می دهد
 - <kbd>Backspace</kbd> + <kbd>Alt</kbd> خط کنونی را حذف می کند
 - <kbd>Backspace</kbd> + <kbd>Ctrl</kbd> کلمه کنونی را حذف می کند
-- <kbd>L</kbd> + <kbd>Ctrl</kbd> برای افزودن پیوند به یادداشت یا URL دیگری، کادر گفتگو باز می کند (در متن منتخب نیز کار می کند)
-- <kbd>T</kbd> + <kbd>Ctrl</kbd> تاریخ کنونی را به صورت قالب ISO 8601 درج می کند
-- <kbd>I</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> تصویری درج می کند که به پوشه `رسانه` در پوشه یادداشت های کنونی رونوشت برداری می شود
-- <kbd>X</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> پیوستی درج می کند که به پوشه `پیوست ها` در پوشه یادداشت های کنونی رونوشت برداری می شود
-- <kbd>T</kbd> + <kbd>⇧</kbd> + <kbd>Alt</kbd> جدول درج می کند
-- <kbd>C</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> در موقعیت کنونی یک کد بلاک درج می کند
-- <kbd>B</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> در موقعیت کنونی یک بلوک نقل قول درج می کند
-- <kbd>B</kbd> + <kbd>Ctrl</kbd> متن منتخب را به صورت توپر قالب بندی می کند
-- <kbd>I</kbd> + <kbd>Ctrl</kbd> متن منتخب را به صورت خوابیده قالب بندی می کند
-- <kbd>U</kbd> + <kbd>Ctrl</kbd> متن منتخب را به صورت زیر خط دار قالب بندی می کند
-- <kbd>S</kbd> + <kbd>⇧</kbd> + <kbd>Alt</kbd> متن منتخب را حذف می کند
-- <kbd>U</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> از میان منابع متن منتخب می چرخد
-- <kbd>Tab</kbd> متن منتخب را برجسته می سازد (در چندین خط نیز کار می کند)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> متن منتخب را از حالت برجسته خارج می کند
-- <kbd>Tab</kbd> پس از یک نویسه لیست مرتب نشده مورد لیست را برجسته می سازد
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> پس از یک نویسه لیست مرتب نشده مورد لیست را از حالت برجسته خارج می کند
-- <kbd>Return</kbd> در لیست ها مورد لیست جدیدی ایجاد می کند
-- <kbd>Alt</kbd> + <kbd>چپ</kbd> در تاریخچه یادداشت پرش به عقب می کند
-    - <kbd>Alt</kbd> + <kbd>راست</kbd> در تاریخچه یادداشت پرش به جلو می کند
-- <kbd>1..9</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> نشانک یادداشت را در شکاف نشانک 1..9 تنظیم می کند
-- <kbd>9..0</kbd> + <kbd>Ctrl</kbd> به نشانک یادداشت در شکاف نشانک 9..0 پرش می کند
-- <kbd>Ctrl</kbd> + <kbd>+</kbd> اندازه قلم متن یادداشت را به صورت تک نقطه ای افزایش می دهد
-- <kbd>Ctrl</kbd> + <kbd>-</kbd> اندازه قلم متن یادداشت را به صورت تک نقطه ای کاهش می دهد
-- <kbd>0</kbd> + <kbd>Ctrl</kbd> اندازه قلم متن یادداشت را بازنشانی می کند
-- <kbd>Ctrl</kbd> + <kbd>فاصله</kbd> درصدد حل معادلات ساده ای مانند `(4+5)*3=` در جلوی مکان نما برآمده، به طور خودکار متن را کامل کرده یا URLها را باز می کند
-- <kbd>H</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> سرخطی از نام پرونده یادداشت را در بالای یادداشت درج می کند
-- <kbd>X</kbd> + <kbd>⇧</kbd> + <kbd>Alt</kbd> یادداشت کنونی را به دو یادداشت در موقعیت مکان نمای کنونی تقسیم می کند
-- <kbd>W</kbd> + <kbd>⇧</kbd> + <kbd>Alt</kbd> متن منتخب را در وب جستجو می کند
-- <kbd>Ctrl</kbd> + <kbd>بالا</kbd> مطلب را به بالا پیمایش می کند
-- <kbd>Ctrl</kbd> + <kbd>پایین</kbd> مطلب را به پایین پیمایش می کند
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>پایین</kbd> خط کنونی را به سمت پایین جابجا می کند
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>بالا</kbd> خط کنونی را به سمت بالا جابجا می کند
-- <kbd>⇧</kbd> + <kbd>Return</kbd> برای تقویت خط نوی مارک داون، دو فاصله و یک نویسه خط نو را اضافه می کند
+- <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
+- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
+- <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold
+- <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic
+- <kbd>Ctrl</kbd> + <kbd>U</kbd> formats the selected text underline
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
+- <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
+- <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
+    - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
+- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
+- <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
+- <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
+- <kbd>Ctrl</kbd> + <kbd>0</kbd> resets the note text font size
+- <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in front of the cursor, auto-completes text or opens urls
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
+- <kbd>Ctrl</kbd> + <kbd>Up</kbd> scrolls the content up
+- <kbd>Ctrl</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> moves the current line down
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> moves the current line up
+- <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### در پنل پیش نمایش یادداشت
 
@@ -183,37 +184,38 @@
     - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>پایین</kbd> همین کار را انجام می دهد
 - <kbd>⌘</kbd> + <kbd>Backspace</kbd> خط کنونی را حذف می کند
 - <kbd>Backspace</kbd> + <kbd>Ctrl</kbd> کلمه کنونی را حذف می کند
-- <kbd>⌘</kbd> + <kbd>L</kbd> برای افزودن پیوند به یک یادداشت یا URL دیگر، کادر گفتگو باز می کند (با متن منتخب نیز کار می کند)
-- <kbd>⌘</kbd> + <kbd>T</kbd> تاریخ کنونی را به صورت قالب ISO 8601 درج می کند
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> تصویری درج می کند که به پوشه `رسانه` در پوشه یادداشت های کنونی رونوشت برداری می شود
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> پیوستی درج می کند که به پوشه `پیوست ها` در پوشه یادداشت های کنونی رونوشت برداری می شود
-- <kbd>T</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> جدول درج می کند
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> در موقعیت کنونی یک کد بلاک درج می کند
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> در موقعیت کنونی یک بلوک نقل قول درج می کند
-- <kbd>⌘</kbd> + <kbd>B</kbd> متن منتخب را به صورت توپر قالب بندی می کند
-- <kbd>⌘</kbd> + <kbd>I</kbd> متن منتخب را به صورت خوابیده قالب بندی می کند
-- <kbd>⌘</kbd> + <kbd>U</kbd> متن منتخب را به صورت زیر خط دار قالب بندی می کند
-- <kbd>S</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> متن منتخب را حذف می کند
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> از میان منابع متن منتخب می چرخد
-- <kbd>Tab</kbd> متن منتخب را برجسته می سازد (در چندین خط نیز کار می کند)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> متن منتخب را از حالت برجسته خارج می کند
-- <kbd>Tab</kbd> پس از یک نویسه لیست مرتب نشده مورد لیست را برجسته می سازد
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> پس از یک نویسه لیست مرتب نشده مورد لیست را از حالت برجسته خارج می کند
-- <kbd>Return</kbd> در لیست ها مورد لیست جدیدی ایجاد می کند
-- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>چپ</kbd> در تاریخچه یادداشت پرش به عقب می کند
-    - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>راست</kbd> در تاریخچه یادداشت پرش به جلو می کند
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> نشانک یادداشت را در شکاف نشانک 9..1 تنظیم می کند
-- <kbd>⌘</kbd> + <kbd>0..9</kbd> به نشانک یادداشت در شکاف نشانک 9..0 پرش می کند
-- <kbd>⌘</kbd> + <kbd>+</kbd> اندازه قلم متن یادداشت را به صورت تک نقطه ای افزایش می دهد
-- <kbd>⌘</kbd> + <kbd>-</kbd> اندازه قلم متن یادداشت را به صورت تک نقطه ای کاهش می دهد
-- <kbd>⌘</kbd> + <kbd>0</kbd> اندازه قلم متن یادداشت را بازنشانی می کند
-- <kbd>⌘</kbd> + <kbd>فاصله</kbd> درصدد حل معادلات ساده ای مانند `(4+5)*3=` در جلوی مکان نما برآمده، به طور خودکار متن را کامل کرده یا URLها را باز می کند
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> سرخطی از نام پرونده یادداشت را در بالای یادداشت درج می کند
-- <kbd>X</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> یادداشت کنونی را به دو یادداشت در موقعیت مکان نمای کنونی تقسیم می کند
-- <kbd>W</kbd> + <kbd>⇧</kbd> + <kbd>Ctrl</kbd> متن منتخب را در وب جستجو می کند
-- <kbd>⌘</kbd> + <kbd>بالا</kbd> مطلب را به بالا پیمایش می کند
-- <kbd>⌘</kbd> + <kbd>پایین</kbd> مطلب را به پایین پیمایش می کند
-- <kbd>⇧</kbd> + <kbd>Return</kbd> برای تقویت خط نوی مارک داون دو فاصله و یک نویسه خط نو را اضافه می کند
+- <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
+- <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
+- <kbd>⌘</kbd> + <kbd>B</kbd> formats the selected text bold
+- <kbd>⌘</kbd> + <kbd>I</kbd> formats the selected text italic
+- <kbd>⌘</kbd> + <kbd>U</kbd> formats the selected text underline
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
+- <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
+- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
+    - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
+- <kbd>⌘</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
+- <kbd>⌘</kbd> + <kbd>+</kbd> increases the note text font size by one point
+- <kbd>⌘</kbd> + <kbd>-</kbd> decreases the note text font size by one point
+- <kbd>⌘</kbd> + <kbd>0</kbd> resets the note text font size
+- <kbd>⌘</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor, auto-completes text or opens urls
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
+- <kbd>⌘</kbd> + <kbd>Up</kbd> scrolls the content up
+- <kbd>⌘</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### در پنل پیش نمایش یادداشت
 

@@ -6,13 +6,14 @@ Voer de volgende shell-opdrachten uit als root om de repository te vertrouwen.
 
 ```bash
 su -
-rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_33/repodata/repomd.xml.key
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
 Voer de volgende shell-opdrachten uit als root om de repository toe te voegen en vanaf daar QOwnNotes te installeren.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
+[qownnotes]
 name=OBS repo for QOwnNotes (Fedora \$releasever - \$basearch)
 type=rpm-md
 baseurl=http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -25,4 +26,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_33) (deze voorbeeldlink is voor Fedora 33)
+[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (this example link is for Fedora 34)

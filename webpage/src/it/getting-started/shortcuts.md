@@ -129,111 +129,114 @@
     <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> cancella la parola corrente
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>L</kbd> apre una finestra di dialogo per aggiungere un collegamento a un'altra nota o un URL (funziona anche sul testo selezionato)
+    <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>T</kbd> inserisce la data corrente nel formato ISO 8601
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserisce un'immagine (l'immagine verrà copiata nella cartella <code>media</code> nella cartella note corrente)
+    <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+  </li>
+  <li>
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the <code>media</code> folder in the current notes folder)
   </li>
   <li>
     <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the <code>attachments</code> folder in the current notes folder)
   </li>
   <li>
-    <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserisce una tabella
+    <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserisce un blocco di codice nella posizione corrente
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserisce una citazione in blocco nella posizione corrente
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>B</kbd> formatta il testo selezionato in grassetto
+    <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>I</kbd> formatta il testo selezionato in corsivo
+    <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>U</kbd> formatta la sottolineatura del testo selezionato
+    <kbd>Ctrl</kbd> + <kbd>U</kbd> formats the selected text underline
   </li>
   <li>
-    <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> cancella il testo selezionato
+    <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> scorre i casi del testo selezionato
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
   </li>
   <li>
-    <kbd>Tab</kbd> fa rientrare il testo selezionato (funziona anche su più righe) <ul>
+    <kbd>Tab</kbd> indents the selected text (also works on multiple lines) <ul>
       <li>
-        <kbd>⇧</kbd> + <kbd>Tab</kbd> annulla il rientro del testo selezionato
+        <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
       </li>
     </ul>
   </li>
   <li>
     <p spaces-before="0">
-      <kbd>Tab</kbd> dopo un carattere di elenco non ordinato fa rientrare l'elemento dell'elenco
+      <kbd>Tab</kbd> after an unordered list character indents the list item
     </p>
     <ul>
       <li>
-        <kbd>⇧</kbd> + <kbd>Tab</kbd> dopo un carattere di elenco non ordinato annulla il rientro della voce dell'elenco
+        <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
       </li>
     </ul>
   </li>
   <li>
     <p spaces-before="0">
-      <kbd>Return</kbd> negli elenchi crea un nuovo elemento dell'elenco
+      <kbd>Return</kbd> in lists creates a new list item
     </p>
   </li>
   <li>
-    <kbd>Alt</kbd> + <kbd>Sinistra</kbd> torna indietro nella cronologia delle note <ul>
+    <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history <ul>
       <li>
-        <kbd>Alt</kbd> + <kbd>Right</kbd> salta in avanti nella cronologia delle note
+        <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
       </li>
     </ul>
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> imposta un segnalibro nota nello slot segnalibro 1..9
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>0..9</kbd> salta al segnalibro della nota nello slot del segnalibro 0..9
+    <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>+</kbd> aumenta la dimensione del carattere del testo della nota di un punto
+    <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>-</kbd> riduce la dimensione del carattere del testo della nota di un punto
+    <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>0</kbd> ripristina la dimensione del carattere del testo della nota
+    <kbd>Ctrl</kbd> + <kbd>0</kbd> resets the note text font size
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>Spazio</kbd> cerca di risolvere semplici equazioni come <code>(4+5)*3=</code> davanti al cursore, completa automaticamente il testo o apre gli URL
+    <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like <code>(4+5)*3=</code> in front of the cursor, auto-completes text or opens urls
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserisce un titolo dal nome del file della nota all'inizio della nota
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
   </li>
   <li>
-    <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> divide la nota corrente in due note nella posizione corrente del cursore
+    <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
   </li>
   <li>
-    <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> cerca il testo selezionato sul web
+    <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>Up</kbd> scorre il contenuto verso l'alto
+    <kbd>Ctrl</kbd> + <kbd>Up</kbd> scrolls the content up
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>Giù</kbd> scorre il contenuto verso il basso
+    <kbd>Ctrl</kbd> + <kbd>Down</kbd> scrolls the content down
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> sposta la riga corrente verso il basso
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> moves the current line down
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> sposta in alto la riga corrente
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> moves the current line up
   </li>
   <li>
-    <kbd>⇧</kbd> + <kbd>Return</kbd> aggiunge due spazi e un carattere di nuova riga per forzare una nuova riga di markdown
+    <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
   </li>
 </ul>
 
@@ -488,105 +491,108 @@
     <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> elimina la parola corrente
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>L</kbd> apre una finestra di dialogo per aggiungere un collegamento a un'altra nota o un URL (funziona anche sul testo selezionato)
+    <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>T</kbd> inserisce la data corrente nel formato ISO 8601
+    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserisce un'immagine (l'immagine verrà copiata nella cartella <code>media</code> nella cartella note corrente)
+    <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+  </li>
+  <li>
+    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the <code>media</code> folder in the current notes folder)
   </li>
   <li>
     <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the <code>attachments</code> folder in the current notes folder)
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserisce una tabella
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserisce un blocco di codice nella posizione corrente
+    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserisce una citazione in blocco nella posizione corrente
+    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>B</kbd> formatta il testo selezionato in grassetto
+    <kbd>⌘</kbd> + <kbd>B</kbd> formats the selected text bold
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>I</kbd> formatta il testo selezionato in corsivo
+    <kbd>⌘</kbd> + <kbd>I</kbd> formats the selected text italic
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>U</kbd> formatta la sottolineatura del testo selezionato
+    <kbd>⌘</kbd> + <kbd>U</kbd> formats the selected text underline
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> cancella il testo selezionato
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> scorre i casi del testo selezionato
+    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
   </li>
   <li>
-    <kbd>Tab</kbd> fa rientrare il testo selezionato (funziona anche su più righe) <ul>
+    <kbd>Tab</kbd> indents the selected text (also works on multiple lines) <ul>
       <li>
-        <kbd>⇧</kbd> + <kbd>Tab</kbd> annulla il rientro del testo selezionato
+        <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
       </li>
     </ul>
   </li>
   <li>
     <p spaces-before="0">
-      <kbd>Tab</kbd> dopo un carattere di elenco non ordinato fa rientrare l'elemento dell'elenco
+      <kbd>Tab</kbd> after an unordered list character indents the list item
     </p>
     <ul>
       <li>
-        <kbd>⇧</kbd> + <kbd>Tab</kbd> dopo un carattere di elenco non ordinato annulla il rientro della voce dell'elenco
+        <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
       </li>
     </ul>
   </li>
   <li>
     <p spaces-before="0">
-      <kbd>Return</kbd> negli elenchi crea un nuovo elemento dell'elenco
+      <kbd>Return</kbd> in lists creates a new list item
     </p>
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> salta indietro nella cronologia delle note <ul>
+    <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history <ul>
       <li>
-        <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> salta in avanti nella cronologia delle note
+        <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
       </li>
     </ul>
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> imposta un segnalibro della nota nello slot del segnalibro 1..9
+    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>0..9</kbd> salta al segnalibro della nota nello slot del segnalibro 0..9
+    <kbd>⌘</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>+</kbd> aumenta la dimensione del carattere del testo della nota di un punto
+    <kbd>⌘</kbd> + <kbd>+</kbd> increases the note text font size by one point
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>-</kbd> riduce la dimensione del carattere del testo della nota di un punto
+    <kbd>⌘</kbd> + <kbd>-</kbd> decreases the note text font size by one point
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>0</kbd> ripristina la dimensione del carattere del testo della nota
+    <kbd>⌘</kbd> + <kbd>0</kbd> resets the note text font size
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>Spazio</kbd>cerca di risolvere semplici equazioni come <code>(4+5)*3=</code> nella riga corrente davanti al cursore, completa automaticamente il testo o apre gli URL
+    <kbd>⌘</kbd> + <kbd>Space</kbd> tries to solve simple equations like <code>(4+5)*3=</code> in the current line in front of the cursor, auto-completes text or opens urls
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserisce un titolo dal nome del file della nota all'inizio della nota
+    <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> divide la nota corrente in due note nella posizione corrente del cursore
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> cerca il testo selezionato sul web
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>Up</kbd> scorre il contenuto verso l'alto
+    <kbd>⌘</kbd> + <kbd>Up</kbd> scrolls the content up
   </li>
   <li>
-    <kbd>⌘</kbd> + <kbd>Giù</kbd> scorre il contenuto verso il basso
+    <kbd>⌘</kbd> + <kbd>Down</kbd> scrolls the content down
   </li>
   <li>
-    <kbd>⇧</kbd> + <kbd>Return</kbd> aggiunge due spazi e un carattere di nuova riga per forzare una nuova riga di markdown
+    <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
   </li>
 </ul>
 

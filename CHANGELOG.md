@@ -3,6 +3,7 @@
 ## 21.5.3
 - there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> that opens
   the link dialog on the tab to add a note link (for [#2137](https://github.com/pbek/QOwnNotes/issues/2137))
+- added more Sinhala, Polish translation (thank you helabasa, rawfreeamy)
 
 ## 21.5.2
 - a problem with showing a `&` character in the tab text of notes was fixed
