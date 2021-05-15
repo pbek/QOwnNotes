@@ -12,7 +12,12 @@ class LinkDialog : public MasterDialog {
     Q_OBJECT
 
    public:
-    explicit LinkDialog(const QString &dialogTitle = QString(),
+    enum LinkDialogPages {
+        TextLinkPage,
+        NoteLinkPage
+    };
+
+    explicit LinkDialog(int page, const QString &dialogTitle = QString(),
                         QWidget *parent = nullptr);
     ~LinkDialog();
 

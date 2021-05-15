@@ -1149,7 +1149,7 @@ void MainWindow::initToolbars() {
     addToolBar(_formattingToolbar);
 
     _insertingToolbar = new QToolBar(tr("inserting toolbar"), this);
-    _insertingToolbar->addAction(ui->actionInsert_Link_to_note);
+    _insertingToolbar->addAction(ui->actionInsert_text_link);
     _insertingToolbar->addAction(ui->actionInsert_image);
     _insertingToolbar->addAction(ui->actionInsert_current_time);
     _insertingToolbar->setObjectName(QStringLiteral("insertingToolbar"));
@@ -5174,9 +5174,9 @@ QOwnNotesMarkdownTextEdit *MainWindow::activeNoteTextEdit() {
 /**
  * @brief Handles the linking of text
  */
-void MainWindow::handleTextNoteLinking() {
+void MainWindow::handleTextNoteLinking(int page) {
     QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
-    auto *dialog = new LinkDialog(QString(), this);
+    auto *dialog = new LinkDialog(page, QString(), this);
 
     QString selectedText = textEdit->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
@@ -6735,7 +6735,7 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
     const QString linkTextActionName =
         isTextSelected ? tr("&Link selected text") : tr("Insert &link");
     QAction *linkTextAction = menu->addAction(linkTextActionName);
-    linkTextAction->setShortcut(ui->actionInsert_Link_to_note->shortcut());
+    linkTextAction->setShortcut(ui->actionInsert_text_link->shortcut());
     linkTextAction->setEnabled(isAllowNoteEditing);
 
     QString blockQuoteTextActionName =
@@ -6901,9 +6901,14 @@ bool MainWindow::isNoteTextSelected() {
     return !selectedText.isEmpty();
 }
 
-void MainWindow::on_actionInsert_Link_to_note_triggered() {
-    // handle the linking of text with a note
-    handleTextNoteLinking();
+void MainWindow::on_actionInsert_text_link_triggered() {
+    // handle the linking of text
+    handleTextNoteLinking(LinkDialog::TextLinkPage);
+}
+
+void MainWindow::on_actionInsert_note_link_triggered() {
+    // handle the linking of a note
+    handleTextNoteLinking(LinkDialog::NoteLinkPage);
 }
 
 void MainWindow::on_action_DuplicateText_triggered() {

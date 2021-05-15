@@ -1026,7 +1026,8 @@ p, li { white-space: pre-wrap; }
       <iconset theme="mail-attachment" resource="breeze-qownnotes.qrc">
        <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
      </property>
-     <addaction name="actionInsert_Link_to_note"/>
+     <addaction name="actionInsert_text_link"/>
+     <addaction name="actionInsert_note_link"/>
      <addaction name="actionInsert_image"/>
      <addaction name="actionInsert_attachment"/>
      <addaction name="actionInsert_table"/>
@@ -1446,19 +1447,16 @@ p, li { white-space: pre-wrap; }
     <string>Select &amp;all notes</string>
    </property>
   </action>
-  <action name="actionInsert_Link_to_note">
+  <action name="actionInsert_text_link">
    <property name="icon">
     <iconset theme="text-frame-link" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/text-frame-link.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-frame-link.svg</iconset>
    </property>
    <property name="text">
-    <string>Insert &amp;link</string>
-   </property>
-   <property name="toolTip">
-    <string>Insert link to an url or a note</string>
+    <string>Insert text &amp;link</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+L</string>
+    <string>Ctrl+L</string>
    </property>
   </action>
   <action name="action_Find_text_in_note">
@@ -2660,6 +2658,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">F8</string>
+   </property>
+  </action>
+  <action name="actionInsert_note_link">
+   <property name="icon">
+    <iconset theme="text-frame-link" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/text-frame-link.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-frame-link.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Insert &amp;note link</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+L</string>
    </property>
   </action>
  </widget>

@@ -277,7 +277,7 @@ class MainWindow : public QMainWindow {
 
     void pasteMediaIntoNote();
 
-    void on_actionInsert_Link_to_note_triggered();
+    void on_actionInsert_text_link_triggered();
 
     void on_action_DuplicateText_triggered();
 
@@ -670,6 +670,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionJump_to_navigation_panel_triggered();
 
+    void on_actionInsert_note_link_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -816,7 +818,7 @@ private:
 
     void updateCurrentFolderTooltip();
 
-    void handleTextNoteLinking();
+    void handleTextNoteLinking(int page = 0);
 
     void updateNoteTextFromDisk(Note note);
 

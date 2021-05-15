@@ -16,9 +16,10 @@
 
 #include "ui_linkdialog.h"
 
-LinkDialog::LinkDialog(const QString &dialogTitle, QWidget *parent)
+LinkDialog::LinkDialog(int page, const QString &dialogTitle, QWidget *parent)
     : MasterDialog(parent), ui(new Ui::LinkDialog) {
     ui->setupUi(this);
+    ui->tabWidget->setCurrentIndex(page);
     ui->urlEdit->setFocus();
     // disallow ] characters, because they will break markdown links
     ui->nameLineEdit->setValidator(new QRegularExpressionValidator(QRegularExpression(R"([^\]]*)")));
