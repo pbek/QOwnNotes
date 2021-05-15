@@ -25,7 +25,17 @@ tmux kill-session -t deploy-qownnotes
 
 # start a new deployment session with all deployment scripts from .tmuxinator.yml
 # you'll need https://github.com/tmuxinator/tmuxinator
-tmuxinator deploy-qownnotes
+tmuxinator start deploy-qownnotes
+
+exit
+
+# fallback if tmuxinator doesn't work
+../ubuntu-launchpad/build-for-launchpad.sh
+../obs/build-for-obs.sh
+aur/build-for-aur.sh
+gentoo/build-for-gentoo.sh
+slackware/build-for-slackware.sh
+snap/build-for-launchpad-snap.sh
 
 exit
 
