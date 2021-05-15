@@ -3,6 +3,16 @@
 ## 21.5.3
 - there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> that opens
   the link dialog on the tab to add a note link (for [#2137](https://github.com/pbek/QOwnNotes/issues/2137))
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/getting-started/shortcuts.html)
+      for a list of all shortcuts
+- version 0.1.10 of the **QOwnNotes Web application** [app.qownnotes.org](https://app.qownnotes.org/)
+  was released (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
+    - heic/heif images can now also be loaded by converting them to jpg images
+    - the form elements in the mobile layout were improved
+    - you can now set the maximum image height and width
+    - you can now set the output image format
+    - in case you don't see the version number in the headline of the app page
+      you need to clear the browser cache for the `app.qownnotes.org` webpage
 - added more Sinhala, Polish translation (thank you helabasa, rawfreeamy)
 
 ## 21.5.2
