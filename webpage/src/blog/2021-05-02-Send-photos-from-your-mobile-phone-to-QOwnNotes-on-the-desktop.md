@@ -20,7 +20,7 @@ The communication between QOwnNotes and the web service is **transport encrypted
 
 There was a new settings page **Web application** to add support for the web application added in **QOwnNotes 21.4.2**.
 
- ![QOwnNotes Web Application settings](/img/blog/web-application-settings.png "Setup communication to web application")
+![QOwnNotes Web Application settings](/img/blog/web-application-settings.png "Setup communication to web application")
 
 Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes.
 
