@@ -11,6 +11,7 @@ on your desktop via the **web application** on [app.qownnotes.org](https://app.q
 
 The web application on your phone communicates with your QOwnNotes desktop application over the internet.
 The communication between QOwnNotes and the web service is **transport encrypted**.
+No images will be stored on the server.
 
 There was a settings page **Web application** to add support for the web application.
 
