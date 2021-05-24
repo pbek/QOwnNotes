@@ -6959,7 +6959,7 @@ void MainWindow::on_actionInsert_current_time_triggered() {
     c.insertText(text);
 }
 
-void MainWindow::on_actionOpen_List_triggered() { openTodoDialog(); }
+void MainWindow::on_actionShow_Todo_List_triggered() { openTodoDialog(); }
 
 /**
  * @brief Exports the current note as PDF (markdown)

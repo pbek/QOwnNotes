@@ -1136,7 +1136,7 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>To&amp;do</string>
     </property>
-    <addaction name="actionOpen_List"/>
+    <addaction name="actionShow_Todo_List"/>
    </widget>
    <widget class="QMenu" name="menuWindow">
     <property name="title">
@@ -1282,7 +1282,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionShow_trash"/>
    <addaction name="actionShare_note"/>
    <addaction name="separator"/>
-   <addaction name="actionOpen_List"/>
+   <addaction name="actionShow_Todo_List"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Quit">
@@ -1541,7 +1541,7 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+T</string>
    </property>
   </action>
-  <action name="actionOpen_List">
+  <action name="actionShow_Todo_List">
    <property name="icon">
     <iconset theme="view-calendar-tasks" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/view-calendar-tasks.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-calendar-tasks.svg</iconset>

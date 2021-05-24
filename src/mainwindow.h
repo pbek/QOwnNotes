@@ -291,7 +291,7 @@ class MainWindow : public QMainWindow {
 
     void on_actionInsert_current_time_triggered();
 
-    void on_actionOpen_List_triggered();
+    void on_actionShow_Todo_List_triggered();
 
     void frequentPeriodicChecker();
 
