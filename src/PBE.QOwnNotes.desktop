@@ -9,3 +9,14 @@ Terminal=false
 StartupNotify=true
 Categories=Utility;TextEditor;
 StartupWMClass=QOwnNotes
+Actions=NewNote;ShowTodoList;
+
+[Desktop Action NewNote]
+Name=New note
+Icon=document-new
+Exec=QOwnNotes --action action_New_note
+
+[Desktop Action ShowTodoList]
+Name=Show todo list
+Icon=view-calendar-tasks
+Exec=QOwnNotes --action actionShow_Todo_List
