@@ -558,14 +558,26 @@ int main(int argc, char *argv[]) {
 
     // if only one app instance is allowed use SingleApplication
     if (allowOnlyOneAppInstance) {
-        SingleApplication app(
-            argc, argv, false, SingleApplication::Mode::User, 1000, []() {
-                qWarning() << QCoreApplication::translate(
-                    "main",
-                    "Another instance of QOwnNotes was already started! "
-                    "You can turn off the single instance mode in the settings"
-                    " or use the parameter --allow-multiple-instances.");
-            });
+        SingleApplication app(argc, argv, true);
+
+        // quit app if it was already started
+        if (app.isSecondary()) {
+            qWarning() << QCoreApplication::translate(
+                "main",
+                "Another instance of QOwnNotes was already started! "
+                "You can turn off the single instance mode in the settings"
+                " or use the parameter --allow-multiple-instances.");
+
+            // send message if an action was set
+            if (!action.isEmpty()) {
+                app.sendMessage(QString("startupAction:" + action).toUtf8());
+            }
+
+            app.exit(0);
+
+            return 0;
+        }
+
         setAppProperties(app, release, arguments, true, snap, portable, action);
 #ifndef QT_DEBUG
         loadReleaseTranslations(app, translatorRelease, locale);
@@ -585,6 +597,18 @@ int main(int argc, char *argv[]) {
         MainWindow w;
         w.show();
 
+        // receive messages from the primary app
+        QObject::connect(&app, &SingleApplication::receivedMessage, [&](quint32 instanceId, QByteArray message) {
+            qDebug() << __func__ << " - 'message': " << message;
+
+            // trigger the startup menu action
+            if (message.startsWith("startupAction:")) {
+                message.remove(0, 14);
+                app.setProperty("startupAction", message);
+                w.triggerStartupMenuAction();
+            }
+        });
+
         // raise the main window if app was started a 2nd time in single
         // application mode
         QObject::connect(&app, &SingleApplication::instanceStarted, [&] {
@@ -602,9 +626,6 @@ int main(int argc, char *argv[]) {
             if (w.isMinimized()) {
                 w.showNormal();
             }
-
-            // trigger cli parameter menu action if there was any set
-            w.triggerStartupMenuAction();
         });
 
         return app.exec();

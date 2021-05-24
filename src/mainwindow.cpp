@@ -583,16 +583,19 @@ void MainWindow::triggerStartupMenuAction() {
 
     QAction *action = findAction(actionName);
 
-    if (action != nullptr) {
-        qDebug() << "Running menu action: " << actionName;
-        action->trigger();
-    } else {
-        Utils::Gui::warning(
-            this, tr("Action not found!"),
-            tr("Could not find menu action <code>%1</code>! "
-               "Did you spell it correctly?").arg(actionName),
-            "menu-action-not-found");
-    }
+    // use a single-shot timer to prevent crashes when called by SingleApplication::receivedMessage
+    QTimer::singleShot(0, this, [this, actionName, action]() {
+        if (action != nullptr) {
+            qDebug() << "Running menu action: " << actionName;
+            action->trigger();
+        } else {
+            Utils::Gui::warning(
+                this, tr("Action not found!"),
+                tr("Could not find menu action <code>%1</code>! "
+                   "Did you spell it correctly?").arg(actionName),
+                "menu-action-not-found");
+        }
+    });
 }
 
 /**
