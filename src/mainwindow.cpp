@@ -566,6 +566,20 @@ MainWindow::MainWindow(QWidget *parent)
     automaticScriptUpdateCheck();
 
     _commandBar = new CommandBar(this);
+
+    // trigger cli parameter menu action
+    const auto actionName = qApp->property("action").toString();
+    QAction *action = findAction(actionName);
+    if (action != nullptr) {
+        qDebug() << "Running menu action: " << actionName;
+        action->trigger();
+    } else {
+        Utils::Gui::warning(
+            this, tr("Action not found!"),
+            tr("Could not find menu action <code>%1</code>! "
+               "Did you spell it correctly?").arg(actionName),
+            "menu-action-not-found");
+    }
 }
 
 /**

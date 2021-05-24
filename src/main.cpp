@@ -128,6 +128,13 @@ bool mainStartupMisc(const QStringList &arguments) {
             "internal files."),
         "name");
     parser.addOption(sessionOption);
+    const QCommandLineOption actionOption(
+        QStringLiteral("action"),
+        QCoreApplication::translate(
+            "main",
+            "Triggers a menu action after the application was started."),
+        "name");
+    parser.addOption(actionOption);
 
     // just parse the arguments, we want no error handling
     parser.parse(arguments);
@@ -359,12 +366,13 @@ void tempLogMessageOutput(QtMsgType type, const QMessageLogContext &context,
 template <typename T>
 inline void setAppProperties(T &app, const QString &release,
                              const QStringList &arguments, bool singleApp,
-                             bool snap, bool portable) {
+                             bool snap, bool portable, const QString &action) {
     app.setProperty("release", release);
     app.setProperty("portable", portable);
     if (singleApp) app.setProperty("singleApplication", true);
     app.setProperty("snap", snap);
     app.setProperty("arguments", arguments);
+    app.setProperty("action", action);
 }
 
 int main(int argc, char *argv[]) {
@@ -390,6 +398,7 @@ int main(int argc, char *argv[]) {
     QStringList arguments;
     QString appNameAdd = QString();
     QString session = QString();
+    QString action = QString();
 
 #ifdef QT_DEBUG
     appNameAdd = QStringLiteral("Debug");
@@ -429,6 +438,11 @@ int main(int argc, char *argv[]) {
             if (argc > (i + 1)) {
                 session = QString(argv[i + 1]).trimmed();
                 appNameAdd += QStringLiteral("-") + session;
+            }
+        } else if (arg == QStringLiteral("--action")) {
+            // check if there is a 2nd parameter with the action name
+            if (argc > (i + 1)) {
+                action = QString(argv[i + 1]).trimmed();
             }
         }
     }
@@ -552,7 +566,7 @@ int main(int argc, char *argv[]) {
                     "You can turn off the single instance mode in the settings"
                     " or use the parameter --allow-multiple-instances.");
             });
-        setAppProperties(app, release, arguments, true, snap, portable);
+        setAppProperties(app, release, arguments, true, snap, portable, action);
 #ifndef QT_DEBUG
         loadReleaseTranslations(app, translatorRelease, locale);
 #endif
@@ -595,7 +609,7 @@ int main(int argc, char *argv[]) {
         // use a normal QApplication if multiple instances of the app are
         // allowed
         QApplication app(argc, argv);
-        setAppProperties(app, release, arguments, false, snap, portable);
+        setAppProperties(app, release, arguments, false, snap, portable, action);
 
 #ifndef QT_DEBUG
         loadReleaseTranslations(app, translatorRelease, locale);
