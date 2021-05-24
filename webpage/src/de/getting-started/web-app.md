@@ -4,21 +4,18 @@ image: /img/blog/web-application-settings.png
 
 # QOwnNotes Web App
 
-You can insert photos from your mobile phone into the current note in QOwnNotes
-on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
+Sie können Fotos von Ihrem Mobiltelefon über die **Webanwendung** auf [app.qownnotes.org](https://app.qownnotes.org/) in die aktuelle Notiz in QOwnNotes auf Ihrem Desktop einfügen.
 
-![QOwnNotes Web Application browser](/img/blog/web-application-browser.png "Send photos from your mobile phone to QOwnNotes on the desktop")
+![QOwnNotes Webanwendungsbrowser](/img/blog/web-application-browser.png "Senden Sie Fotos von Ihrem Mobiltelefon an QOwnNotes auf dem Desktop")
 
-The web application on your phone communicates with your QOwnNotes desktop application over the internet.
-The communication between QOwnNotes and the web service is **transport encrypted**.
+Die Webanwendung auf Ihrem Telefon kommuniziert über das Internet mit Ihrer QOwnNotes-Desktopanwendung. Die Kommunikation zwischen QOwnNotes und dem Webdienst ist **transportverschlüsselt**. No images will be stored on the server.
 
-There was a settings page **Web application** to add support for the web application.
+Es gab eine Einstellungsseite **Webanwendung**, um Unterstützung für die Webanwendung hinzuzufügen.
 
-![QOwnNotes Web Application settings](/img/blog/web-application-settings.png "Setup communication to web application")
+![QOwnNotes Webanwendungseinstellungen](/img/blog/web-application-settings.png "Richten Sie die Kommunikation zur Webanwendung ein")
 
-Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes.
+Vergessen Sie nicht, **Ihr geheimes Token** von der QOwnNotes-Einstellungsseite nach [app.qownnotes zu kopieren. org](https://app.qownnotes.org/), um mit Ihrer lokalen Instanz von QOwnNotes kommunizieren zu können.
 
-You can find the source code of the web application at [web-app on GitHub](https://github.com/qownnotes/web-app).
+Den Quellcode der Webanwendung finden Sie unter [Webanwendung auf GitHub](https://github.com/qownnotes/web-app).
 
-You can also host this web service yourself, the freshly built docker images are available at
-[qownnotes-web-app on DockerHub](https://hub.docker.com/repository/docker/pbeke/qownnotes-web-app).
+Sie können diesen Webdienst auch selbst hosten. Die frisch erstellten Docker-Bilder finden Sie unter [qownnotes-web-app auf DockerHub](https://hub.docker.com/repository/docker/pbeke/qownnotes-web-app).

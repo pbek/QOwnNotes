@@ -13,6 +13,7 @@ graph TB
     end
 
     nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
+    qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
     qon-->ncs
     sync-->ncs
@@ -28,6 +29,7 @@ graph TB
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
@@ -125,4 +127,12 @@ Het praat met GitHub en controleert op de laatste uitgave, krijgt een geschikte 
 Daarnaast biedt het ook de [Release RSS Feed](http://api.qownnotes.org/rss/app-releases) en een implementatie van de legacy update-check api voor oudere versies van QOwnNotes.
 
 :: tip Je hebt toegang tot de broncode voor [ api.qownnotes.org ](https://api.qownnotes.org)op[GitHub](https://github.com/qownnotes/api).
+:::
+
+## QOwnNotes-webapp
+
+U kunt foto's van uw mobiele telefoon invoegen in de huidige notitie in QOwnNotes op uw desktop via de **webapplicatie** op [app.qownnotes.org](https://app.qownnotes.org/).
+
+::: tip
+Bezoek [QOwnNotes Web App](web-app.md) voor meer informatie.
 :::

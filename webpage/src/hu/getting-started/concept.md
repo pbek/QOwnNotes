@@ -13,6 +13,7 @@ graph TB
     end
 
     nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
+    qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
     qon-->ncs
     sync-->ncs
@@ -28,6 +29,7 @@ graph TB
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
@@ -112,3 +114,9 @@ Beszél a GitHub-tal, és megvizsgálja a legújabb kiadást, beszerez egy megfe
 Ezenkívül biztosítja a [RSS-kiadás kiadását](http://api.qownnotes.org/rss/app-releases) és a QOwnNotes régebbi verzióinak örökölt frissítési ellenőrző api megvalósítását is.
 
 ::: tip Az [api.qownnotes.org](https://api.qownnotes.org) forráskódját a [GitHub](https://github.com/qownnotes/api) oldalon érheti el. :::
+
+## QOwnNotes webalkalmazás
+
+A mobiltelefonról származó fotókat beillesztheti az asztali QOwnNotes aktuális jegyzetébe az **webalkalmazás** segítségével az [app.qownnotes.org](https://app.qownnotes.org/) oldalon.
+
+::: tip További információkért keresse fel a [QOwnNotes webalkalmazást](web-app.md). :::

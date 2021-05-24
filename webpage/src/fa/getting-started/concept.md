@@ -13,6 +13,7 @@ graph TB
     end
 
     nc-notes-mob("Nextcloud Notes mobile app")-->nc-notes-app
+    qon-web-app("QOwnNotes web application")-->qon
     qon-->qon-api
     qon-->ncs
     sync-->ncs
@@ -28,6 +29,7 @@ graph TB
     click qon-api "/getting-started/concept.html#qownnotesapi-nextcloud-app" "QOwnNotesAPI Nextcloud app to access your server-side trash and note versions"
     click nc-notes-app "/getting-started/concept.html#nextcloud-notes-server-app" "Nextcloud Notes server app to manage your notes in the web"
     click nc-notes-mob "/getting-started/concept.html#nextcloud-notes-mobile-app" "Nextcloud Notes mobile app to manage your notes on your mobile phone"
+    click qon-web-app "/getting-started/concept.html#qownnotes-web-app" "QOwnNotes Web App to send photos from your mobile phone"
     click qon-web-api "/getting-started/concept.html#api-qownnotes-org"
 ```
 
@@ -127,4 +129,12 @@ graph TB
 
 ::: tip
 شما می توانید به کد منبع مربوط به [api.qownnotes.org](https://api.qownnotes.org) در [گیت هاب](https://github.com/qownnotes/api) دسترسی داشته باشید.
+:::
+
+## برنامه تحت وب QOwnNotes
+
+شما می توانید تصاویر تلفن همراه خود را در یادداشت کنونی QOwnNotes در دسکتاپ خود از طریق **برنامه تحت وب** در [app.qownnotes.org](https://app.qownnotes.org/) درج کنید.
+
+::: tip
+برای اطلاعات بیشتر لطفاً [برنامه تحت وب QOwnNotes](web-app.md) را ملاحظه کنید.
 :::

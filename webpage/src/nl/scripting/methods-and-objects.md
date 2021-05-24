@@ -1340,7 +1340,9 @@ script.triggerMenuAction("actionAllow_note_editing", 1);
 
 Misschien wilt u het voorbeeld eens bekijken [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
-U kunt de objectnamen van de menuactie ophalen uit [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+::: tip
+You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time.
+:::
 
 Een invoerdialoog openen met een selectievak
 -----------------------------------------

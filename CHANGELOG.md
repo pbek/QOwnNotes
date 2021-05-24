@@ -8,6 +8,8 @@
     - this parameter also works with scripted custom actions 
     - for more information please take a look at
       [Trigger menu actions after startup](https://www.qownnotes.org/getting-started/cli-parameters.html#trigger-menu-actions-after-startup)
+- added more translation (thank you yanjun_sun, amirkbrpr, rawfreeamy, whenwesober,
+  mguerra, rogepix, seanos, gbabin)
 
 ## 21.5.3
 - there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> that opens

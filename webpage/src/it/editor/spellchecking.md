@@ -23,14 +23,14 @@ Se non riesci a trovare la tua lingua in questa tabella, sfortunatamente non esi
 
 | Sr | Language Code | Language                           |
 | -- | ------------- | ---------------------------------- |
-| 1  | af_ZA         | Afrikaans (South Africa)           |
-| 2  | an_ES         | Aragonese - Spain (ES)             |
+| 1  | af_ZA         | Afrikaans (Sud Africa)             |
+| 2  | an_ES         | Aragonese - Spagna (ES)            |
 | 3  | ar            | Arabo                              |
 | 4  | be_BY         | Bielorusso                         |
 | 5  | bg_BG         | Bulgaro                            |
 | 6  | bn_BD         | Bengalese                          |
 | 7  | bo            | Tibetano                           |
-| 8  | br_FR         | Breton - France                    |
+| 8  | br_FR         | Bretone - Francia                  |
 | 9  | bs_BA         | Bosniaco                           |
 | 10 | ca            | Catalano                           |
 | 11 | cs_CZ         | Ceco                               |
@@ -62,7 +62,7 @@ Se non riesci a trovare la tua lingua in questa tabella, sfortunatamente non esi
 | 37 | pt_PT         | Portoghese                         |
 | 38 | ro            | Rumeno                             |
 | 39 | ru_RU         | Russo                              |
-| 40 | si_LK         | Sinhalese                          |
+| 40 | si_LK         | Singalese                          |
 | 41 | sk_SK         | Slovacco                           |
 | 42 | sl_Sl         | Sloveno                            |
 | 43 | sq_AL         | Albanese                           |

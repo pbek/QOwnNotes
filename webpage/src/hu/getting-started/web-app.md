@@ -2,23 +2,20 @@
 image: /img/blog/web-application-settings.png
 ---
 
-# QOwnNotes Web App
+# QOwnNotes webalkalmazás
 
-You can insert photos from your mobile phone into the current note in QOwnNotes
-on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
+A mobiltelefonról származó fotókat beillesztheti az asztali QOwnNotes aktuális jegyzetébe az **webalkalmazás** segítségével az [app.qownnotes.org](https://app.qownnotes.org/) oldalon.
 
-![QOwnNotes Web Application browser](/img/blog/web-application-browser.png "Send photos from your mobile phone to QOwnNotes on the desktop")
+![QOwnNotes webalkalmazás böngésző](/img/blog/web-application-browser.png "Küldjön fényképeket mobiltelefonjáról az asztali QOwnNotes-ra")
 
-The web application on your phone communicates with your QOwnNotes desktop application over the internet.
-The communication between QOwnNotes and the web service is **transport encrypted**.
+A telefonon található webalkalmazás az interneten keresztül kommunikál a QOwnNotes asztali alkalmazásával. A QOwnNotes és a webszolgáltatás közötti kommunikáció ** szállítás titkosított **. No images will be stored on the server.
 
-There was a settings page **Web application** to add support for the web application.
+A webalkalmazás támogatásának megadásához volt egy beállítási oldal **Webalkalmazás**.
 
-![QOwnNotes Web Application settings](/img/blog/web-application-settings.png "Setup communication to web application")
+![QOwnNotes webalkalmazás beállításai](/img/blog/web-application-settings.png "A kommunikáció beállítása a webalkalmazáshoz")
 
-Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes.
+Ne felejtse el **másolni a titkos tokent** a QOwnNotes beállítások oldaláról az [app.qownnotes fájlba.org](https://app.qownnotes.org/), hogy kommunikálni tudjon a QOwnNotes helyi példányával.
 
-You can find the source code of the web application at [web-app on GitHub](https://github.com/qownnotes/web-app).
+A webalkalmazás forráskódját a [webalkalmazás a GitHub webhelyen találja meg](https://github.com/qownnotes/web-app).
 
-You can also host this web service yourself, the freshly built docker images are available at
-[qownnotes-web-app on DockerHub](https://hub.docker.com/repository/docker/pbeke/qownnotes-web-app).
+Ezt a webszolgáltatást saját maga is üzemeltetheti, a frissen épített dokkoló képek a [ qownnotes-web-app oldalon érhetők el a DockerHubon](https://hub.docker.com/repository/docker/pbeke/qownnotes-web-app).
