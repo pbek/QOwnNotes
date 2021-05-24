@@ -49,15 +49,14 @@ Just search for the English menu title. Note that these texts can change over ti
 
 To trigger [scripting actions](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-a-custom-action)
 use `customAction_` followed by the identifier of the custom action.
+The identifier of the custom action is the first parameter of the `script.registerCustomAction`
+call in the script.
 
 For example to run the custom action `myAction` start QOwnNotes like this:
 
 ```bash
 QOwnNotes --action customAction_myAction
 ```
-
-The identifier of the custom action is the first parameter of the `script.registerCustomAction`
-call in the script.
 
 ::: tip
 If you run QOwnNotes a second time with the action parameter and only have allowed
