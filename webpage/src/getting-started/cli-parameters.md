@@ -56,3 +56,8 @@ QOwnNotes --action customAction_myAction
 
 The identifier of the custom action is the first parameter of the `script.registerCustomAction`
 call in the script.
+
+::: tip
+If you run QOwnNotes a second time with the action parameter and only have allowed
+one application instance, then the menu action will be triggered in the first instance.
+:::

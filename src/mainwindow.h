@@ -111,6 +111,8 @@ class MainWindow : public QMainWindow {
 
     ~MainWindow();
 
+    void triggerStartupMenuAction();
+
     void setCurrentNoteText(QString text);
 
     Note getCurrentNote();

@@ -567,9 +567,22 @@ MainWindow::MainWindow(QWidget *parent)
 
     _commandBar = new CommandBar(this);
 
-    // trigger cli parameter menu action
-    const auto actionName = qApp->property("action").toString();
+    // trigger cli parameter menu action if there was any set
+    triggerStartupMenuAction();
+}
+
+/**
+ * Triggers the cli parameter menu action if there was any set
+ */
+void MainWindow::triggerStartupMenuAction() {
+    const auto actionName = qApp->property("startupAction").toString();
+
+    if (actionName.isEmpty()) {
+        return;
+    }
+
     QAction *action = findAction(actionName);
+
     if (action != nullptr) {
         qDebug() << "Running menu action: " << actionName;
         action->trigger();

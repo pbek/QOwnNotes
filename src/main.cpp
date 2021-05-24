@@ -372,7 +372,7 @@ inline void setAppProperties(T &app, const QString &release,
     if (singleApp) app.setProperty("singleApplication", true);
     app.setProperty("snap", snap);
     app.setProperty("arguments", arguments);
-    app.setProperty("action", action);
+    app.setProperty("startupAction", action);
 }
 
 int main(int argc, char *argv[]) {
@@ -602,6 +602,9 @@ int main(int argc, char *argv[]) {
             if (w.isMinimized()) {
                 w.showNormal();
             }
+
+            // trigger cli parameter menu action if there was any set
+            w.triggerStartupMenuAction();
         });
 
         return app.exec();
