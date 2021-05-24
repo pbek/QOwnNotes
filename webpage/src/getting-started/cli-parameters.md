@@ -47,7 +47,9 @@ You can get the object names of the menu action from
 Just search for the English menu title. Note that these texts can change over time.
 :::
 
-To trigger scripting actions use `customAction_` followed by the identifier of the custom action.
+To trigger [scripting actions](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-a-custom-action)
+use `customAction_` followed by the identifier of the custom action.
+
 For example to run the custom action `myAction` start QOwnNotes like this:
 
 ```bash
