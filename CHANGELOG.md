@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 21.5.4
+- there now is a new cli parameter `--action <name>` that triggers a menu action after
+  the application was started (for [#2143](https://github.com/pbek/QOwnNotes/issues/2143))
+    - for example `QOwnNotes --action actionShow_Todo_List` will open the todo
+      list dialog after startup
+    - this parameter also works with scripted custom actions 
+    - for more information please take a look at
+      [Trigger menu actions after startup](https://www.qownnotes.org/getting-started/cli-parameters.html#trigger-menu-actions-after-startup)
+
 ## 21.5.3
 - there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> that opens
   the link dialog on the tab to add a note link (for [#2137](https://github.com/pbek/QOwnNotes/issues/2137))
