@@ -47,7 +47,7 @@ You can get the object names of the menu action from
 Just search for the English menu title. Note that these texts can change over time.
 :::
 
-To trigger [scripting actions](https://www.qownnotes.org/scripting/methods-and-objects.html#registering-a-custom-action)
+To trigger [scripting actions](../methods-and-objects.md#registering-a-custom-action)
 use `customAction_` followed by the identifier of the custom action.
 The identifier of the custom action is the first parameter of the `script.registerCustomAction`
 call in the script.

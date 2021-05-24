@@ -282,6 +282,12 @@ You may then want to use the identifier with function
 `customActionInvoked` in a script like
 [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
+::: tip
+You can also trigger a custom action after the application was started with the
+parameter `--action customAction_<identifier>`. For more information please take a look at
+[Trigger menu actions after startup](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
+:::
+
 Registering a label
 -------------------
 
