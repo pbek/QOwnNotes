@@ -4,6 +4,8 @@
 - the cli parameter `--action <name>` that triggers a menu action after the application
   was started now also works in single application mode when the application is
   started a second time (for [#2143](https://github.com/pbek/QOwnNotes/issues/2143))
+    - additionally, desktop actions to create a new note and to open the todo list
+      dialog were added to the desktop files for Linux (thank you @fabianski7)
 
 ## 21.5.4
 - there now is a new cli parameter `--action <name>` that triggers a menu action after
