@@ -6,6 +6,8 @@
   started a second time (for [#2143](https://github.com/pbek/QOwnNotes/issues/2143))
     - additionally, desktop actions to create a new note and to open the todo list
       dialog were added to the desktop files for Linux (thank you @fabianski7)
+- now the `>` character will also be checked at automatic bracket closing when
+  it was already entered (for [#2144](https://github.com/pbek/QOwnNotes/issues/2144))
 
 ## 21.5.4
 - there now is a new cli parameter `--action <name>` that triggers a menu action after
