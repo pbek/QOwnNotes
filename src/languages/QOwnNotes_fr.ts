@@ -6001,13 +6001,13 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <location filename="../dialogs/settingsdialog.cpp" line="4057"/>
 <location filename="../dialogs/settingsdialog.cpp" line="4081"/>
 <source>Import settings</source>
-<translation>Paramètres d’importation</translation>
+<translation>Importer les paramètres</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4328"/>
 <location filename="../dialogs/settingsdialog.cpp" line="4023"/>
 <source>Export settings</source>
-<translation>Paramètres d’exportation</translation>
+<translation>Exporter les paramètres</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4476"/>

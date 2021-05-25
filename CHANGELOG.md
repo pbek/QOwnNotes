@@ -8,6 +8,7 @@
       dialog were added to the desktop files for Linux (thank you @fabianski7)
 - now the `>` character will also be checked at automatic bracket closing when
   it was already entered (for [#2144](https://github.com/pbek/QOwnNotes/issues/2144))
+- added more translation (thank you starship10, baptistou, rawfreeamy)
 
 ## 21.5.4
 - there now is a new cli parameter `--action <name>` that triggers a menu action after
