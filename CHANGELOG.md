@@ -4,6 +4,7 @@
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 21.6.0 to fix a problem with cut-off security tokens when
   they start with a number (for [#33](https://github.com/qownnotes/web-companion/issues/33))
+- fixed build process on Qt 5.3
 
 ## 21.5.5
 - the cli parameter `--action <name>` that triggers a menu action after the application
