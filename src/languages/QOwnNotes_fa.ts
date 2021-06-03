@@ -3790,12 +3790,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="578"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>عملیات یافت نشد!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="579"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>آیا قادر به یافتن منو اکشن &lt;code&gt;%1&lt;/code&gt; نیستید؟ آیا آن را از نظر املایی به درستی وارد کرده اید؟</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="786"/>

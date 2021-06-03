@@ -10,7 +10,7 @@
 | `--نسخه برداری از تنظیمات`  | روگرفتی از تنظیمات و سایر اطلاعات مربوط به برنامه و محیط را در مارک داون گیت هاب چاپ می کند و از برنامه خارج می شود |
 | `--دوره <name>`       | برنامه را در یک زمینه متفاوت برای تنظیمات و پرونده های داخلی اجرا می کند                                            |
 | `--پذیرفتن-نمونه های-متعدد` | به شروع نمونه های متعددی از QOwnNotes اجازه می دهد، حتی اگر در تنظیمات مجاز نباشند.                                 |
-| `--action <name>`     | Triggers a menu action after the application was started (see below)                                                |
+| `--عملیات <name>`     | Triggers a menu action after the application was started (see below)                                                |
 
 ::: tip
 اگر با نصب QOwnNotes به مشکل برخورد کردید، شاید بخواهید با استفاده از پارامتر `--دوره` برنامه را با تنظیمات جدید و بدون از دست دادن تنظیمات فعلی خود آغاز کنید.
@@ -39,7 +39,7 @@ QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time.
+شما می توانید اسامی هدف منو اکشن را از [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui)دریافت کنید. Just search for the English menu title. Note that these texts can change over time.
 :::
 
 To trigger [scripting actions](../scripting/methods-and-objects.md#registering-a-custom-action) use `customAction_` followed by the identifier of the custom action. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.
@@ -51,5 +51,5 @@ QOwnNotes --action customAction_myAction
 ```
 
 ::: tip
-If you run QOwnNotes a second time with the action parameter and only have allowed one application instance, then the menu action will be triggered in the first instance.
+درصورتی که QOwnNotes را برای بار دوم با پارامتر عملیاتی اجرا کرده و تنها یک طرح برنامه را مجاز نموده باشید، عملیات منو در طرح نخست اعمال خواهد شد.
 :::
