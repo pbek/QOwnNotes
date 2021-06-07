@@ -40,7 +40,7 @@ LogWidget::LogWidget(QWidget *parent)
 
     // turn off markdown highlighting
     ui->logTextEdit->setHighlightingEnabled(false);
-    ui->logTextEdit->setSpellcheckingEnabled(false);
+    ui->logTextEdit->setSpellCheckingEnabled(false);
 
     // load the dialog settings
     ui->debugCheckBox->setChecked(

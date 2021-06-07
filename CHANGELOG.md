@@ -3,6 +3,8 @@
 ## 21.6.1
 - the code block syntax highlighting for python triple quotes was improved
   (for [#2147](https://github.com/pbek/QOwnNotes/pull/2147), thank you @Waqar144)
+- spell checking is now disabled in encrypted notes as long as the encrypted text
+  is shown (for [#2156](https://github.com/pbek/QOwnNotes/issues/2156))
 
 ## 21.6.0
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)

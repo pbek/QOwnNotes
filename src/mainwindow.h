@@ -846,7 +846,7 @@ private:
 
     void printTextDocument(QTextDocument *textDocument);
 
-    void updateEncryptNoteButtons();
+    void updateNoteEncryptionUI();
 
     void askForEncryptedNotePasswordIfNeeded(
         const QString &additionalText = QString());

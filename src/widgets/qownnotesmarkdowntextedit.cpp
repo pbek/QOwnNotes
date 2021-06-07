@@ -392,8 +392,12 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     QMarkdownTextEdit::setText(text);
 }
 
-void QOwnNotesMarkdownTextEdit::setSpellcheckingEnabled(bool enabled) {
+void QOwnNotesMarkdownTextEdit::setSpellCheckingEnabled(bool enabled) {
     QOwnSpellChecker::instance()->setActive(enabled);
+}
+
+bool QOwnNotesMarkdownTextEdit::isSpellCheckingEnabled() {
+    return QOwnSpellChecker::instance()->isActive();
 }
 
 void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent *event) {

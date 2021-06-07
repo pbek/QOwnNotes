@@ -2759,7 +2759,7 @@ void MainWindow::updateNoteTextFromDisk(Note note) {
     note.updateNoteTextFromDisk();
     note.store();
     this->currentNote = note;
-    updateEncryptNoteButtons();
+    updateNoteEncryptionUI();
 
     {
         const QSignalBlocker blocker(this->ui->noteTextEdit);
@@ -3817,7 +3817,7 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText,
         ui->noteTextEdit->show();
     }
 
-    updateEncryptNoteButtons();
+    updateNoteEncryptionUI();
     // we also need to do this in on_noteTreeWidget_itemSelectionChanged
     // because of different timings
     reloadCurrentNoteTags();
@@ -5590,7 +5590,7 @@ void MainWindow::noteTextEditTextWasUpdated() {
 
         ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
 
-        updateEncryptNoteButtons();
+        updateNoteEncryptionUI();
         handleNoteTextChanged();
     }
 }
@@ -7260,13 +7260,30 @@ void MainWindow::on_action_Encrypt_note_triggered() {
 /**
  * Enables or disables the encrypt note buttons
  */
-void MainWindow::updateEncryptNoteButtons() {
+void MainWindow::updateNoteEncryptionUI() {
     currentNote.refetch();
     const bool hasEncryptedNoteText = currentNote.hasEncryptedNoteText();
 
     ui->action_Encrypt_note->setEnabled(!hasEncryptedNoteText);
     ui->actionEdit_encrypted_note->setEnabled(hasEncryptedNoteText);
     ui->actionDecrypt_note->setEnabled(hasEncryptedNoteText);
+
+    // disable spell checker for encrypted text
+    const bool checkSpellingEnabled =
+        QSettings().value(QStringLiteral("checkSpelling"), true).toBool();
+    const bool spellCheckerShouldBeActive = !hasEncryptedNoteText && checkSpellingEnabled;
+
+    // check if the spellchecking state is not as it should be
+    if (spellCheckerShouldBeActive != ui->noteTextEdit->isSpellCheckingEnabled()) {
+        ui->noteTextEdit->setSpellCheckingEnabled(spellCheckerShouldBeActive);
+        ui->noteTextEdit->highlighter()->rehighlight();
+
+        // for some reason the encryptedNoteTextEdit is also affected and needs
+        // to be set again
+        if (hasEncryptedNoteText) {
+            ui->encryptedNoteTextEdit->setSpellCheckingEnabled(checkSpellingEnabled);
+        }
+    }
 }
 
 /**
@@ -12698,6 +12715,12 @@ void MainWindow::on_actionCheck_spelling_toggled(bool checked) {
     settings.setValue(QStringLiteral("checkSpelling"), checked);
     ui->noteTextEdit->updateSettings();
     ui->encryptedNoteTextEdit->updateSettings();
+
+    // if spell checking was turned on still turn it off for the current note
+    // if encrypted text is shown
+    if (checked) {
+        updateNoteEncryptionUI();
+    }
 }
 
 void MainWindow::loadDictionaryNames() {
