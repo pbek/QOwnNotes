@@ -156,9 +156,6 @@ QString CodeToHtmlConverter::process(StringView input) const {
         } else if (input.at(i) == QLatin1Char('\'') ||
                    input.at(i) == QLatin1Char('"')) {
             i = highlightStringLiterals(input, input.at(i), output, i);
-            // escape text at i, otherwise it gets skipped and won't be present
-            // in output
-            if (i < textLen) output += escape(input.at(i));
         } else if (input.at(i).isDigit()) {
             i = highlightNumericLit(input, output, i);
         } else if (comment.isNull() && input.at(i) == QLatin1Char('/')) {
@@ -447,8 +444,13 @@ int CodeToHtmlConverter::highlightStringLiterals(StringView input,
         }
         ++i;
     }
-    if (!foundEnd) --i;
     output += setFormat(input.mid(start, i - start), Format::String);
+
+    // decrement i, this ensures that
+    // - if current pos wasn't a string we are back to the string start char
+    // - if it was a string, we will be at string end char thus not skipping the next character in the next loop iteration
+    --i;
+
     return i;
 }
 
