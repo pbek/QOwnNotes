@@ -9147,7 +9147,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="133"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>پس از اینکه برنامه شروع به کار کرد، یک منو اکشن را راه اندازی کنید.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="553"/>

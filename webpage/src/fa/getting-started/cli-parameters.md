@@ -10,7 +10,7 @@
 | `--نسخه برداری از تنظیمات`  | روگرفتی از تنظیمات و سایر اطلاعات مربوط به برنامه و محیط را در مارک داون گیت هاب چاپ می کند و از برنامه خارج می شود |
 | `--دوره <name>`       | برنامه را در یک زمینه متفاوت برای تنظیمات و پرونده های داخلی اجرا می کند                                            |
 | `--پذیرفتن-نمونه های-متعدد` | به شروع نمونه های متعددی از QOwnNotes اجازه می دهد، حتی اگر در تنظیمات مجاز نباشند.                                 |
-| `--عملیات <name>`     | Triggers a menu action after the application was started (see below)                                                |
+| `--عملیات <name>`     | پس از اینکه برنامه شروع به کار کرد، یک منو اکشن را راه اندازی کنید (قسمت زیر را ملاحظه کنید).                       |
 
 ::: tip
 اگر با نصب QOwnNotes به مشکل برخورد کردید، شاید بخواهید با استفاده از پارامتر `--دوره` برنامه را با تنظیمات جدید و بدون از دست دادن تنظیمات فعلی خود آغاز کنید.
@@ -28,21 +28,21 @@ QOwnNotes --تست دوره
 | سیستم عامل مکینتاش | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes`     |
 | ویندوز             | `QOwnNotes.exe`                                            |
 
-## Trigger menu actions after startup
+## پس از شروع به کار، منو اکشن ها را راه اندازی کنید
 
-With the parameter `--action <name>` you can trigger menu actions after the application was started.
+با پارامتر `--action <name>` می توانید پس از شروع به کار برنامه منو اکشن ها را راه اندازی کنید.
 
-For example to open the todo list dialog after startup use:
+برای مثال، برای باز کردن کادر گفتگوی لیست انجام دادنی پس از شروع به کار از این کد استفاده کنید:
 
 ```bash
 QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-شما می توانید اسامی هدف منو اکشن را از [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui)دریافت کنید. Just search for the English menu title. Note that these texts can change over time.
+شما می توانید اسامی هدف منو اکشن را از [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui)دریافت کنید. تنها عنوان منوی انگلیسی را جستجو کنید. توجه داشته باشید که این متن ها با گذشت زمان می توانند تغییر کنند.
 :::
 
-To trigger [scripting actions](../scripting/methods-and-objects.md#registering-a-custom-action) use `customAction_` followed by the identifier of the custom action. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.
+به منظور راه اندازی [عملیات اسکریپت نویسی](../scripting/methods-and-objects.md#registering-a-custom-action)، از `customAction_` و پس از آن از شناساگر عملیات سفارشی استفاده کنید. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.
 
 For example to run the custom action `myAction` start QOwnNotes like this:
 
