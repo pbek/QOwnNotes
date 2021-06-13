@@ -25,6 +25,8 @@ tmux kill-session -t deploy-qownnotes
 
 # start a new deployment session with all deployment scripts from .tmuxinator.yml
 # you'll need https://github.com/tmuxinator/tmuxinator
+# install: sudo gem install tmuxinator
+# update: sudo gem update tmuxinator
 tmuxinator start deploy-qownnotes
 
 exit
