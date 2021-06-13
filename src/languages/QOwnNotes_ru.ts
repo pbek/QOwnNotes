@@ -2142,12 +2142,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1456"/>
 <source>Insert text &amp;link</source>
-<translation type="unfinished">Insert text &amp;link</translation>
+<translation>Вставить текстовую &amp;ссылку</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1459"/>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1476"/>
@@ -2627,12 +2627,12 @@
 <message>
 <location filename="../mainwindow.ui" line="2669"/>
 <source>Insert &amp;note link</source>
-<translation type="unfinished">Insert &amp;note link</translation>
+<translation>Вставить &amp;ссылку на заметку</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2672"/>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1907"/>
@@ -3852,12 +3852,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="578"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>Команда не найдена!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="579"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>Не удалось найти команду меню &lt;code&gt;%1&lt;/code&gt;! Проверьте правильность написания.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="786"/>
@@ -4555,11 +4555,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
+<translation>
+<numerusform>Заметка использует это вложение. Переименовать также это вложение в заметке?</numerusform>
+<numerusform>%n заметки используют это вложение. Переименовать также эти вложения в заметках?</numerusform>
+<numerusform>%n заметок используют это вложение. Переименовать также эти вложения в заметках?</numerusform>
+<numerusform>%n заметок используют это вложение. Переименовать также эти вложения в заметках?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -7892,11 +7892,11 @@ Your notes will stay intact!</source>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-<translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<translation>
+<numerusform>Удалить выбранный файл?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файла?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
 </translation>
 </message>
 <message>
@@ -9057,7 +9057,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="133"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>Запускает команду меню после запуска приложения</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="553"/>

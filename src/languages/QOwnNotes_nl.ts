@@ -3785,12 +3785,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <message>
 <location filename="../mainwindow.cpp" line="578"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>Actie niet gevonden!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="579"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>Kon menuactie &lt;code&gt;%1&lt;/code&gt; niet vinden! Heb je het goed gespeld?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="786"/>
@@ -8976,7 +8976,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <message>
 <location filename="../main.cpp" line="133"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>Activeert een menuactie nadat de toepassing is gestart.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="553"/>

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.6.2
+- added more Hungarian, German, Dutch, Persian, Russian translation (thank you
+  rawfreeamy, mariiaalt, amirkbrpr)
+
 ## 21.6.1
 - the code block syntax highlighting for python triple quotes was improved
   (for [#2147](https://github.com/pbek/QOwnNotes/pull/2147), thank you @Waqar144)

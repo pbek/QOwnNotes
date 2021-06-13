@@ -26,4 +26,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (این پیوند نمونه برای فدورا 34 است)
+[بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (این پیوند نمونه مربوط به فدورا 34 است)

@@ -3786,12 +3786,12 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
 <message>
 <location filename="../mainwindow.cpp" line="578"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>Aktion nicht gefunden!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="579"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>Menüaktion &lt;code&gt;%1&lt;/code&gt; konnte nicht gefunden werden! Haben Sie es richtig geschrieben?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="786"/>
@@ -8967,7 +8967,7 @@ Kann nicht rückgängig gemacht werden!</translation>
 <message>
 <location filename="../main.cpp" line="133"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>Löst eine Menüaktion aus, nachdem die Anwendung gestartet wurde.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="553"/>
