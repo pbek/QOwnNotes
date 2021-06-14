@@ -2,7 +2,7 @@
 
 There are QOwnNotes repositories for **Fedora 28 and higher**.
 
-## Actual install method :
+## On systems with config-manager dnf plugin
 
 Run the following shell commands as root to add the repository.
 
@@ -13,11 +13,15 @@ dnf makecache
 dnf install qownotes
 ```
 
-NOTE : You may need to accept the repo key before you can download from it
+::: tip
+You may need to accept the repo key before you can download from it.
+:::
 
-## Legacy install method :
+## Legacy install method
 
-If your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root :
+Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+
+Run the following shell commands as root to trust the repository.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key

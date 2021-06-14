@@ -7,27 +7,29 @@
 
 ## On every openSUSE version
 
-You can install QOwnNotes using the [opi](https://github.com/openSUSE/opi) tool
+You can install QOwnNotes using the [OBS Package Installer](https://github.com/openSUSE/opi) tool.
 
-Run the following shell commands as root to install `opi` and install QOwnNotes from there.
+Run the following shell commands as root to install `opi`:
 
 ```bash
 zypper install opi
 ```
+
+Then install QOwnNotes with it:
 
 ```bash
 opi qownnotes
 ```
 
 ::: warning
-This tool will query the entire OBS service so  
-Be sure to choose `qownnotes` and not `qownnotes-lang` if asked
+This tool will query the entire OBS service so be sure to choose `qownnotes`,
+and not `qownnotes-lang` if asked.
 
-And check that the choosen repo is the official one **`home:pbek:QOwnNotes`** and not a third-party one
+Also check that the chosen repo is the official `home:pbek:QOwnNotes` and not a third-party one.
 :::
 
 ::: tip
-You need to choose to keep the repo after installation to get updates
+You need to choose the option to keep the repository after installation to get updates.
 :::
 
 ## openSUSE 13.2
