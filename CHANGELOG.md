@@ -3,6 +3,7 @@
 ## 21.6.3
 - updated the link of the IRC chat menu entry to Libera.Chat because the Freenode
   IRC channel had a "hostile takeover"
+- added more Italian translation (thank you marcoxbresciani)
 
 ## 21.6.2
 - added more Hungarian, German, Dutch, Persian, Russian translation (thank you
