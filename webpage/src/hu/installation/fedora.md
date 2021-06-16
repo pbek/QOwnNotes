@@ -2,14 +2,30 @@
 
 Vannak QOwnNotes tárak a **Fedora 28 és újabb verziókhoz**.
 
-Futtassa a következő shell parancsokat rootként, hogy megbízhasson a tárban.
+## On systems with config-manager dnf plugin
+
+Run the following shell commands as root to add the repository.
 
 ```bash
-su -
+dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
+
+dnf makecache
+dnf install qownotes
+```
+
+::: tip You may need to accept the repo key before you can download from it. :::
+
+## Legacy install method
+
+Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+
+Run the following shell commands as root to trust the repository.
+
+```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
-Futtassa rootként a következő shell parancsokat a lerakat hozzáadásához és a QOwnNotes telepítéséhez onnan.
+Run the following shell commands as root to add the repository and install QOwnNotes from there.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL

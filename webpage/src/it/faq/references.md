@@ -7,7 +7,7 @@ Cosa hanno detto gli altri su QOwnNotes ...
 - [Educators for free and open source resources: Note taking software](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
 - **Linux Voice 25**
     - <http://shop.linuxvoice.com/products/single-issues?src=menu>
-    - [QOwnNotes got featured in Linux Voice 25](https://www.qownnotes.org/blog/2016-03-25-QOwnNotes-got-featured-in-Linux-Voice-25.html)
+    - [QOwnNotes è stato recensito su Linux Voice 25](https://www.qownnotes.org/blog/2016-03-25-QOwnNotes-got-featured-in-Linux-Voice-25.html)
 - **Linux Action Show 410 / Desktop App Pick**
     - <http://www.jupiterbroadcasting.com/98121/floating-on-owncloud-9-las-410/>
     - <http://jupiterbroadcasting.com/laspicks/desktop-apps.php>
@@ -22,12 +22,12 @@ Cosa hanno detto gli altri su QOwnNotes ...
 - [QOwnNotes - very powerful Markdown editor, alternative to Haroopad : LinuxActionShow](https://www.reddit.com/r/LinuxActionShow/comments/4p6ibh/qownnotes_very_powerful_markdown_editor/)
 - [Quick review of QOwnNotes](https://github.com/pbek/QOwnNotes/issues/225)
 - [linux-apps.com - QOwnNotes](https://www.linux-apps.com/p/1131235/)
-- [QOwnNotes review in British magazine Linux Format](https://www.qownnotes.org/blog/2016-07-11-QOwnNotes-review-in-British-magazine-Linux-Format.html)
+- [Recensione di QOwnNotes sulla rivista inglese Linux Format](https://www.qownnotes.org/blog/2016-07-11-QOwnNotes-review-in-British-magazine-Linux-Format.html)
 - **[Ubuntu Community Q&A](https://youtu.be/St46dvUruSg?t=3m27s)**
 - [Софт для Linux: графические программы на основе библиотеки Qt - QOwnNotes](http://linsoft.info/soft/qownnotes.html)
 - [qOwnNotes - pumprock.net](https://pumprock.net/aperalesf/note/w18MhAa6SY6ffK93PAd_lQ)
 - [beOpen | QOwnNotes 16.07.2](http://beopen.bplaced.net/2016/07/qownnotes-16-07-2/)
-- **[Linux Magazin article in issue 2016/09](http://www.linux-magazin.de/Ausgaben/2016/09/Tooltipps)**
+- **[Articolo su Linux Magazin numero 2016/09](http://www.linux-magazin.de/Ausgaben/2016/09/Tooltipps)**
 - [QOwnNotes Is A Note Taking And Todo List App That Integrates With ownCloud ~ Web Upd8: Ubuntu / Linux blog](http://www.webupd8.org/2016/09/qownnotes-is-note-taking-and-todo-list.html)
 - [Manage your notes in your ownCloud with QownNotes](https://felixhefner.de/manage-your-notes-in-your-owncloud-with-qownnotes/)
 - <http://www.hksilicon.com/articles/1127258?lang=cn>

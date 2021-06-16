@@ -2,14 +2,32 @@
 
 Il existe des référentiels QOwnNotes pour **Fedora 28 et supérieur**.
 
-Exécutez les commandes shell suivantes en tant que root pour approuver le référentiel.
+## On systems with config-manager dnf plugin
+
+Run the following shell commands as root to add the repository.
 
 ```bash
-su -
+dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
+
+dnf makecache
+dnf install qownotes
+```
+
+::: tip
+You may need to accept the repo key before you can download from it.
+:::
+
+## Legacy install method
+
+Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+
+Run the following shell commands as root to trust the repository.
+
+```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
-Exécutez les commandes shell suivantes en tant que root pour ajouter le référentiel et installer QOwnNotes à partir de là.
+Run the following shell commands as root to add the repository and install QOwnNotes from there.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL

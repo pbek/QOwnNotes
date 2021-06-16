@@ -1,4 +1,4 @@
-# Traduzioni
+# Traduzione
 
 Come posso aiutare a tradurre QOwnNotes?
 
@@ -38,7 +38,7 @@ Si prega di considerare alcune cose mentre si lavora al progetto:
 
 4) Usiamo sempre le stesse traduzioni su espressioni di origine identiche:
 
-   Se `note cestinate` è `gelöschte Dateien` in tedesco, lo tradurresti sempre usando questa espressione. Un'eccezione sarebbe quando grammaticalmente sei obbligato a usare un'alternativa, ma mantienilo semplice.
+   Se `note cestinate` è `gelöschte Dateien` in tedesco, sarà tradotto sempre usando questa espressione. Ci sarà un'eccezione quando si è grammaticalmente obbligati a usare un'alternativa, ma è opportuno cercare di mantenere semplice il tutto.
 
    ![screenshot](/img/crowdin/screenshot-7.png)
 
@@ -46,7 +46,7 @@ Si prega di considerare alcune cose mentre si lavora al progetto:
 
    Standardizza tutte le occorrenze nel miglior modo possibile, in modo che termini identici ottengano traduzioni identiche.
 
-   `Nota` dovrebbe definitivamente avere solo una traduzione.
+   `Nota` dovrebbe chiaramente avere una sola traduzione.
 
 5) Per il plurale, aggiungere la traduzione appropriata ciascuna nel blocco corrispondente.
 
@@ -64,9 +64,9 @@ I tag `%1` vanno scritti senza spazio; in lingue RTL (scritte da destra a sinist
 
    ![screenshot](/img/crowdin/screenshot-4.png)
 
-## Tradurre e correggere sono divertenti!
+## Tradurre e correggere è divertente!
 
-Puoi gestire la lingua parlata da questo software e imparare molto sui termini e sulle parti interne del progetto.
+Puoi avere a che fare colla lingua parlata da questo software e imparare molto sui termini e sulle parti interne del progetto.
 
 Se sei così pronto ad aiutare la correzione di bozze della traduzione nella tua lingua, [Fabijenna](https://crowdin.com/profile/rawfreeamy), come traduttrice ed editrice da vent'anni, ti dà il benvenuto a un coaching di 30 minuti nella scienza e nella pratica della traduzione e della correzione di bozze, dove puoi porle domande di cui potresti non essere sicuro e ottenere il massimo dalla tua esperienza di correzione.
 

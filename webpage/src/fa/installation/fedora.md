@@ -2,14 +2,32 @@
 
 مخزن های QOwnNotes برای **فدورا 28 و بالاتر** موجود هستند.
 
-فرمان های پوسته زیر را به صورت ریشه برای اطمینان از مخزن اجرا کنید:
+## On systems with config-manager dnf plugin
+
+Run the following shell commands as root to add the repository.
 
 ```bash
-su -
+dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
+
+dnf makecache
+dnf install qownotes
+```
+
+::: tip
+You may need to accept the repo key before you can download from it.
+:::
+
+## Legacy install method
+
+Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+
+Run the following shell commands as root to trust the repository.
+
+```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
-فرمان های پوسته زیر را برای افزودن مخزن به صورت ریشه اجرا کرده و QOwnNotes را از آنجا نصب کنید.
+Run the following shell commands as root to add the repository and install QOwnNotes from there.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -26,4 +44,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (این پیوند نمونه مربوط به فدورا 34 است)
+[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (this example link is for Fedora 34)

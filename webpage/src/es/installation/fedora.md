@@ -2,14 +2,32 @@
 
 Hay repositorios QOwnNotes para **Fedora 28 y superior**.
 
-Ejecute los siguientes comandos de shell como root para confiar en el repositorio.
+## En sistemas con el complemento config-manager de dnf
+
+Ejecute las órdenes de consola siguientes con permisos administrativos para añadir el repositorio.
 
 ```bash
-su -
+dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
+
+dnf makecache
+dnf install qownotes
+```
+
+::: tip
+Tal vez necesite aceptar la clave del repositorio para poder descargar desde este.
+:::
+
+## Método de instalación heredado
+
+Utilice este método si su versión de Fedora no admite el complemento `config-manager` de dnf. Ejecute las órdenes siguientes con permisos administrativos.
+
+Ejecute las órdenes de consola siguientes con permisos administrativos para marcar el repositorio como de confianza.
+
+```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
-Ejecute los siguientes comandos de shell como root para agregar el repositorio e instalar QOwnNotes desde allí.
+Ejecute las órdenes de consola siguientes con permisos administrativos para añadir el repositorio e instalar QOwnNotes desde allí.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL
@@ -26,4 +44,4 @@ dnf clean expire-cache
 dnf install qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (this example link is for Fedora 34)
+[Descarga directa](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/Fedora_34) (este enlace de ejemplo es para Fedora 34)
