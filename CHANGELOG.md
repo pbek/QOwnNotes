@@ -5,6 +5,8 @@
   for note folders with sub-folders (for [#2162](https://github.com/pbek/QOwnNotes/issues/2162))
 - the note preview can now also highlight code blocks with uppercase identifiers
   (for [#2161](https://github.com/pbek/QOwnNotes/issues/2161))
+- now the shorter <https://web.libera.chat/#qownnotes> link is used for the 
+  IRC channel in the chat menu
 
 ## 21.6.3
 - updated the link of the IRC chat menu entry to Libera.Chat because the Freenode
