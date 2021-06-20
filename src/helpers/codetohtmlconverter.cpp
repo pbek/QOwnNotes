@@ -11,7 +11,7 @@ QHash<QString, CodeToHtmlConverter::Lang>
 CodeToHtmlConverter::CodeToHtmlConverter(const QString &lang) Q_DECL_NOTHROW {
     if (_langStringToEnum.isEmpty()) initCodeLangs();
 
-    _currentLang = _langStringToEnum.value(lang);
+    _currentLang = _langStringToEnum.value(lang.toLower());
 }
 
 void CodeToHtmlConverter::initCodeLangs() Q_DECL_NOTHROW {
