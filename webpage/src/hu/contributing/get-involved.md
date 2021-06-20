@@ -5,8 +5,8 @@ A QOwnNotes részvételének különféle módjai
 - Jelölje be a [QOwnNotesnak a**GitHub**-on ](https://github.com/pbek/QOwnNotes) a Csillagot!
 - Csatlakozzon a [** QOwnNotes Telegram** csoporthoz](https://t.me/QOwnNotes)!
 - Csatlakozzon a [**QOwnNotes Matrix** szobához](https://app.element.io/#/room/#qownnotes:matrix.org)
-- Csatlakozzon a Freenode [**#qownnotes IRC**csatornájához](https://kiwiirc.com/nextclient/irc.libera.chat/#qownnotes)
-- Csatlakozzon a Freenode [**#qownnotes IRC**csatornájához](https://gitter.im/qownnotes/qownnotes)
+- Csatlakozzon a Libera.Chat [**#qownnotes IRC**csatornájához](https://web.libera.chat/#qownnotes)
+- Csatlakozzon a [**qownnotes Gitter** szoba](https://gitter.im/qownnotes/qownnotes)
 - Mint a [QOwnNotes a **Facebookon**](https://www.facebook.com/QOwnNotes/)
 - Kövesse a [QOwnNotes alkalmazást a **Twitter**](https://twitter.com/QOwnNotes) oldalon
 - Feliratkozás a [QOwnNotes** blog RSS-hírcsatornájára**](https://feeds.feedburner.com/QOwnNotesBlog)
