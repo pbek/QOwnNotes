@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.6.4
+- fixed a problem when turning on the sub-folders panel after it was turned off
+  for note folders with sub-folders (for [#2162](https://github.com/pbek/QOwnNotes/issues/2162))
+
 ## 21.6.3
 - updated the link of the IRC chat menu entry to Libera.Chat because the Freenode
   IRC channel had a "hostile takeover"

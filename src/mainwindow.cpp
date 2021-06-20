@@ -1456,9 +1456,9 @@ void MainWindow::togglePanelVisibility(const QString &objectName) {
         _noteSubFolderDockWidgetVisible = newVisibility;
 
         // don't allow the note subfolder dock widget to be visible if the
-        // note folder has no subfolders activated
+        // note folder has no subfolders activated or if the note tree feature is enabled
         if (newVisibility) {
-            newVisibility = NoteFolder::isCurrentNoteTreeEnabled();
+            newVisibility = NoteFolder::isCurrentShowSubfolders() && !Utils::Misc::isEnableNoteTree();
         }
     }
 
