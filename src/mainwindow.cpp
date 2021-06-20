@@ -10297,7 +10297,7 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
  */
 void MainWindow::on_actionOpen_IRC_Channel_triggered() {
     QDesktopServices::openUrl(QUrl(QStringLiteral(
-        "https://kiwiirc.com/nextclient/irc.libera.chat/#qownnotes")));
+        "https://web.libera.chat/#qownnotes")));
 }
 
 /**
