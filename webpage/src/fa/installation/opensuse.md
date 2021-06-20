@@ -9,7 +9,7 @@
 
 شما می توانید QOwnNotes را با استفاده از ابزار [OBS Package Installer](https://github.com/openSUSE/opi) نصب کنید.
 
-فرمان های پوسته زیر را به صورت ریشه برای برای نصب `opi`اجرا کنید:
+فرمان پوسته ای زیر را به صورت ریشه برای نصب `opi`اجرا کنید:
 
 ```bash
 zypper install opi
@@ -24,16 +24,16 @@ opi qownnotes
 ::: warning
 این ابزار کل سرویس OBS را جستجو خواهد کرد؛ بنابراین در صورت جویا شدن از انتخاب `qownnotes` و نه `qownnotes-lang` اطمینان حاصل نمایید.
 
-Also check that the chosen repo is the official `home:pbek:QOwnNotes` and not a third-party one.
+همچنین بررسی کنید که مخزن انتخاب شده، `home:pbek:QOwnNotes` اصلی باشد نه یک مورد شخص ثالث.
 :::
 
 ::: tip
-You need to choose the option to keep the repository after installation to get updates.
+شما باید این گزینه را انتخاب کنید تا مخزن را پس از نصب برای دریافت به روز رسانی ها حفظ کنید.
 :::
 
 ## اوپن سوزه 13.2
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+فرمان های پوسته ای زیر را برای افزودن مخزن به صورت ریشه اجرا کرده و QOwnNotes را از آنجا نصب کنید.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_13.2/home:pbek:QOwnNotes.repo
