@@ -362,9 +362,13 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
                 QStringLiteral("O").repeated(characterAmount));
 #endif
 
-            // apply a factor to correct the faulty calculated margin
+            // Apply a factor to correct the faulty calculated margin
+            // Use a different factor for monospaced fonts
+            // Currently there doesn't seem to be a better way to check for
+            // monospaced fonts but to search for the work "mono"
             // TODO(pbek): I don't know better way to get around this yet
-            proposedEditorWidth /= 1.332;
+            proposedEditorWidth /= font().family().contains("mono", Qt::CaseInsensitive) ?
+                 0.95 : 1.332;
 
             // calculate the margin to be applied
             margin = (width - proposedEditorWidth) / 2;
