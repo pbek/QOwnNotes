@@ -4,18 +4,18 @@
 
 ## Espressioni per la data
 
-| Espressione | Risultato                                                               |
-| ----------- | ----------------------------------------------------------------------- |
-| `d`         | il giorno come numero senza zero iniziale (da 1 a 31)                   |
-| `dd`        | il giorno come numero con uno zero iniziale (da 01 a 31)                |
-| `ddd`       | il nome del giorno abbreviato localizzato (ad es. da `Lun` a `Dom`).    |
-| `dddd`      | il nome del giorno localizzato lungo (ad es. da `lunedì` a `domenica`). |
-| `M`         | il mese come numero senza zero iniziale (1-12)                          |
-| `MM`        | il mese come numero con uno zero iniziale (01-12)                       |
-| `MMM`       | il nome abbreviato del mese localizzato (p.es. da `Gen` a `Dic`).       |
-| `MMMM`      | il nome del mese localizzato lungo (p. es. da `Gennaio` a `Dicembre`).  |
-| `yy`        | l'anno come numero a due cifre (00-99)                                  |
-| `yyyy`      | l'anno come numero a quattro cifre                                      |
+| Espressione | Risultato                                                                 |
+| ----------- | ------------------------------------------------------------------------- |
+| `d`         | il giorno come numero senza zero iniziale (da 1 a 31)                     |
+| `dd`        | il giorno come numero con uno zero iniziale (da 01 a 31)                  |
+| `ddd`       | il nome abbreviato del giorno, localizzato (p.es. da `Lun` a `Dom`).      |
+| `dddd`      | il nome intero del giorno, localizzato (ad es. da `lunedì` a `domenica`). |
+| `M`         | il mese come numero senza zero iniziale (1-12)                            |
+| `MM`        | il mese come numero con uno zero iniziale (01-12)                         |
+| `MMM`       | il nome abbreviato del mese, localizzato (p.es. da `Gen` a `Dic`).        |
+| `MMMM`      | il nome intero del mese, localizzato (p. es. da `Gennaio` a `Dicembre`).  |
+| `yy`        | l'anno come numero a due cifre (00-99)                                    |
+| `yyyy`      | l'anno come numero a quattro cifre                                        |
 
 ## Espressioni per il tempo
 

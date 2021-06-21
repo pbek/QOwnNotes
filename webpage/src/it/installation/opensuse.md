@@ -5,26 +5,25 @@
 <!-- <Content :page-key="getPageKey($site.pages, '/installation/ubuntu.md')" /> -->
 
 
-## On every openSUSE version
+## Su tutte le versioni openSUSE
 
-You can install QOwnNotes using the [OBS Package Installer](https://github.com/openSUSE/opi) tool.
+Puoi installare QOwnNotes usando lo strumento [OBS Package Installer](https://github.com/openSUSE/opi)
 
-Run the following shell commands as root to install `opi`:
+Eseguire i seguenti comandi della shell come root per installare `opi`:
 
 ```bash
 zypper install opi
 ```
 
-Then install QOwnNotes with it:
+E poi installa QOwnNotes con questo:
 
 ```bash
 opi qownnotes
 ```
 
-::: warning
-This tool will query the entire OBS service so be sure to choose `qownnotes`, and not `qownnotes-lang` if asked.
+Lo strumento interrogherà l'intero servizio OBS per essere sicuro di scegliere `qownnotes`, e non `qownnotes-lang` se richiesto.
 
-Also check that the chosen repo is the official `home:pbek:QOwnNotes` and not a third-party one.
+Controlla anche che il repository scelto sia quello ufficiale `home:pbek:QOwnNotes` e non uno di terze parti.
 :::
 
 ::: tip
@@ -75,7 +74,7 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Leap_15.1)
+[Download diretto](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Leap_15.1)
 
 ## openSUSE Leap 15.0
 
@@ -156,7 +155,7 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Tumbleweed)
+[Download diretto](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Tumbleweed)
 
 
 ## SLE 12 SP3 Backports
@@ -169,7 +168,7 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/SLE_12_SP3_Backports)
+[Download diretto](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/SLE_12_SP3_Backports)
 
 ## SLE 15
 
