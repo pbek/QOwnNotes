@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.6.5
+- when you are changing the editor font in the settings you will get now a dialog box that
+  you might need to restart the application (for [#2163](https://github.com/pbek/QOwnNotes/issues/2163))
+
 ## 21.6.4
 - fixed a problem when turning on the sub-folders panel after it was turned off
   for note folders with sub-folders (for [#2162](https://github.com/pbek/QOwnNotes/issues/2162))
