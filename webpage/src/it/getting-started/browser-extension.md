@@ -8,7 +8,7 @@ image: /img/bookmarks.png
 
 Visita il [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) o la [pagina dei componenti aggiuntivi di Firefox](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) per installare l '[** estensione del browser QOwnNotes Web Companion **](https://github.com/qownnotes/web-companion/).
 
-Puoi anche trovare l'estensione su [GitHub](https://github.com/qownnotes/web-companion/).
+Puoi trovare l'estensione anche su [GitHub](https://github.com/qownnotes/web-companion/).
 
 ::: tip Info
 QOwnNotes deve essere in esecuzione affinché l'estensione del browser Web Companion funzioni.
@@ -24,9 +24,9 @@ Il web clipper è anche scriptabile! Dai un'occhiata a [websocketRawDataHook](..
 
 ## Segnalibri
 
-Per impostazione predefinita, l'estensione del browser mostrerà tutti i collegamenti ** della nota corrente** in un popup quando fai clic sull'icona QOwnNotes nel tuo browser. La tesi a sinistra vuole ottenere un tag `current`.
+Per impostazione predefinita, l'estensione del browser mostrerà tutti i **collegamenti della nota corrente** in un popup quando fai clic sull'icona QOwnNotes nel tuo browser. Questi collegamenti avranno l'etichetta `corrente`.
 
-Puoi anche **gestire i tuoi segnalibri nelle note** con il tag nota `segnalibri` (modificabile nelle impostazioni). Questi collegamenti possono anche avere tag e una descrizione che verrà mostrata nell'estensione del browser.
+Puoi anche **gestire i tuoi segnalibri nelle note** con l'etichetta `segnalibri` (modificabile nelle impostazioni). Questi collegamenti possono anche avere etichette e una descrizione che verrà mostrata nell'estensione del browser.
 
 I nuovi segnalibri vengono memorizzati in una nota chiamata `Segnalibri` (anch'essa modificabile nelle impostazioni).
 
@@ -34,14 +34,14 @@ I nuovi segnalibri vengono memorizzati in una nota chiamata `Segnalibri` (anch'e
 Puoi anche importare i segnalibri del tuo browser in QOwnNotes con l'estensione browser web companion!
 :::
 
-### Syntax of bookmark links
+### Sintassi dei collegamenti segnalibri
 
 ```markdown
-- [Webpage name](https://www.example.com)
-- [Webpage name](https://www.example.com) #tag1 #tag2
-- [Webpage name](https://www.example.com) some description only
-- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
-* [Webpage name](https://www.example.com) the alternative list character also works
+- [Nome pagina web](https://www.example.com)
+- [Nome pagina web](https://www.example.com) #etichetta1 #etichetta2
+- [Nome pagina web](https://www.example.com) solo descrizione
+- [Nome pagina web](https://www.example.com) #etichetta1 #etichetta2 descrizione e etichette
+* [Nome pagina web](https://www.example.com) funziona anche il carattere lista alternativo
 ```
 
-Puoi cercare nome, tag URL o descrizione nell'estensione del browser.
+Puoi cercare nome, etichetta URL o descrizione nell'estensione del browser.

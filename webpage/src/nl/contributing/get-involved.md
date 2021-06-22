@@ -5,7 +5,7 @@ De verschillende manieren om betrokken te raken bij QOwnNotes
 - Star [QOwnNotes op **GitHub**](https://github.com/pbek/QOwnNotes)
 - Word lid van de [ **QOwnNotes Telegram**-groep](https://t.me/QOwnNotes)
 - Word lid van de [**QOwnNotes Matrix**-ruimte](https://app.element.io/#/room/#qownnotes:matrix.org)
-- Sluit je aan bij het[**#qownnotes IRC** kanaal](https://web.libera.chat/#qownnotes) op Libera.Chat
+- Join the [**#qownnotes IRC** channel](https://web.libera.chat/#qownnotes) on Libera.Chat
 - Word lid van de [**qownnotes Gitter** kamer](https://gitter.im/qownnotes/qownnotes)
 - Like [QOwnNotes op **Facebook**](https://www.facebook.com/QOwnNotes/)
 - Volg [QOwnNotes op**Twitter**](https://twitter.com/QOwnNotes)
