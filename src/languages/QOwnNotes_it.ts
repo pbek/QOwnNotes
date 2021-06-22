@@ -6593,7 +6593,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5222"/>
 <source>Only use editor width setting in distraction free mode</source>
-<translation>Usa solo l'impostazione della larghezza dell'editor nella modalità anti-distrazione</translation>
+<translation>Usa l'impostazione della larghezza dell'editor solo nella modalità anti-distrazione</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5512"/>

@@ -2117,12 +2117,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1456"/>
 <source>Insert text &amp;link</source>
-<translation type="unfinished">Insert text &amp;link</translation>
+<translation>Inseriu text a l'enllaç</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1459"/>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1476"/>
@@ -2602,12 +2602,12 @@
 <message>
 <location filename="../mainwindow.ui" line="2669"/>
 <source>Insert &amp;note link</source>
-<translation type="unfinished">Insert &amp;note link</translation>
+<translation>Inseiru un enllaç a la &amp;nota</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2672"/>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1907"/>
