@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.6.6
+- the monospaced font detection was improved by comparing the width of `iiiii`
+  to `WWWWW` (for [#2163](https://github.com/pbek/QOwnNotes/issues/2163))
+
 ## 21.6.5
 - when you are changing the editor font in the settings you will get now a dialog box that
   you might need to restart the application (for [#2163](https://github.com/pbek/QOwnNotes/issues/2163))

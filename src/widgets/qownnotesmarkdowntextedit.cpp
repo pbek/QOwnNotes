@@ -364,11 +364,8 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
 
             // Apply a factor to correct the faulty calculated margin
             // Use a different factor for monospaced fonts
-            // Currently there doesn't seem to be a better way to check for
-            // monospaced fonts but to search for the work "mono"
             // TODO(pbek): I don't know better way to get around this yet
-            proposedEditorWidth /= font().family().contains("mono", Qt::CaseInsensitive) ?
-                 0.95 : 1.332;
+            proposedEditorWidth /= usesMonospacedFont() ? 0.95 : 1.332;
 
             // calculate the margin to be applied
             margin = (width - proposedEditorWidth) / 2;
@@ -382,6 +379,25 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
     } else {
         setViewportMargins(10, 10, 10, 0);
     }
+}
+
+/**
+ * Try to determine if the used font is monospaced
+ *
+ * @return
+ */
+bool QOwnNotesMarkdownTextEdit::usesMonospacedFont() {
+    QFontMetrics metrics(font());
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+    int widthNarrow = metrics.width(QStringLiteral("iiiii"));
+    int widthWide = metrics.width(QStringLiteral("WWWWW"));
+#else
+    int widthNarrow = metrics.horizontalAdvance(QStringLiteral("iiiii"));
+    int widthWide = metrics.horizontalAdvance(QStringLiteral("WWWWW"));
+#endif
+
+    return widthNarrow == widthWide;
 }
 
 QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {

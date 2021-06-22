@@ -33,6 +33,7 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
     void setText(const QString &text);
     static void setSpellCheckingEnabled(bool enabled);
     bool isSpellCheckingEnabled();
+    bool usesMonospacedFont();
 
    protected:
     // we must not override _highlighter or Windows will create a
