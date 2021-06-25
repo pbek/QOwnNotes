@@ -26,7 +26,7 @@ class FakeVimProxy : public QObject {
 
     void highlightMatches(const QString &pattern);
 
-    void changeStatusMessage(const QString &contents, int cursorPos);
+    void changeStatusMessage(const QString &contents, int cursorPos, int anchorPos, int messageLevel);
 
     void changeExtraInformation(const QString &info);
 

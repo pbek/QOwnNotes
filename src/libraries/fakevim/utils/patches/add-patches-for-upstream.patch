@@ -1,0 +1,103 @@
+From 7d2323e1d13d0e53832d65038e926266bc9d9af3 Mon Sep 17 00:00:00 2001
+From: Lukas Holecek <hluk@email.cz>
+Date: Wed, 3 Mar 2021 08:52:06 +0100
+Subject: [PATCH] Add patches for upstream
+
+---
+ fakevim/fakevimactions.h | 14 +++++++++-----
+ fakevim/fakevimhandler.h | 12 +++++++++---
+ 2 files changed, 18 insertions(+), 8 deletions(-)
+
+diff --git a/fakevim/fakevimactions.h b/fakevim/fakevimactions.h
+index 69131c7..c93cc6b 100644
+--- a/fakevim/fakevimactions.h
++++ b/fakevim/fakevimactions.h
+@@ -25,8 +25,12 @@
+ 
+ #pragma once
+ 
+-#ifndef FAKEVIM_STANDALONE
+-#   include <utils/aspects.h>
++#define FAKEVIM_STANDALONE
++
++#ifdef FAKEVIM_STANDALONE
++#   include "private/fakevim_export.h"
++#else
++#   include <utils/savedaction.h>
+ #endif
+ 
+ #include <QCoreApplication>
+@@ -39,7 +43,7 @@ namespace FakeVim {
+ namespace Internal {
+ 
+ #ifdef FAKEVIM_STANDALONE
+-class FvBaseAspect
++class FAKEVIM_EXPORT FvBaseAspect
+ {
+ public:
+     FvBaseAspect();
+@@ -95,7 +99,7 @@ using FvStringAspect = Utils::StringAspect;
+ 
+ #endif
+ 
+-class FakeVimSettings final : public FvAspectContainer
++class FAKEVIM_EXPORT FakeVimSettings final : public FvAspectContainer
+ {
+     Q_DECLARE_TR_FUNCTIONS(FakeVim)
+ 
+@@ -166,7 +170,7 @@ class FakeVimSettings final : public FvAspectContainer
+     QHash<FvBaseAspect *, QString> m_aspectToName;
+ };
+ 
+-FakeVimSettings *fakeVimSettings();
++FAKEVIM_EXPORT FakeVimSettings *fakeVimSettings();
+ 
+ } // namespace Internal
+ } // namespace FakeVim
+diff --git a/fakevim/fakevimhandler.h b/fakevim/fakevimhandler.h
+index 9ba321f..33a63f7 100644
+--- a/fakevim/fakevimhandler.h
++++ b/fakevim/fakevimhandler.h
+@@ -25,6 +25,12 @@
+ 
+ #pragma once
+ 
++#define FAKEVIM_STANDALONE
++
++#ifdef FAKEVIM_STANDALONE
++#   include "private/fakevim_export.h"
++#endif
++
+ #include <QObject>
+ #include <QTextEdit>
+ 
+@@ -45,7 +51,7 @@ enum RangeMode
+     RangeBlockAndTailMode // Ctrl-v for D and X
+ };
+ 
+-struct Range
++struct FAKEVIM_EXPORT Range
+ {
+     Range() = default;
+     Range(int b, int e, RangeMode m = RangeCharMode);
+@@ -57,7 +63,7 @@ struct Range
+     RangeMode rangemode = RangeCharMode;
+ };
+ 
+-struct ExCommand
++struct FAKEVIM_EXPORT ExCommand
+ {
+     ExCommand() = default;
+     ExCommand(const QString &cmd, const QString &args = QString(),
+@@ -102,7 +108,7 @@ class Signal
+     std::vector<Callable> m_callables;
+ };
+ 
+-class FakeVimHandler : public QObject
++class FAKEVIM_EXPORT FakeVimHandler : public QObject
+ {
+     Q_OBJECT
+ 
+-- 
+2.29.2
+
