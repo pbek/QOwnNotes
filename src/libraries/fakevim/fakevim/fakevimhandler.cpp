@@ -104,6 +104,16 @@
 #   define UNDO_DEBUG(s)
 #endif
 
+// Added by waqar144
+// Purpose: We support Qt <= 5.8
+#ifndef Q_FALLTHROUGH
+#  if (defined(Q_CC_GNU) && Q_CC_GNU >= 700) && !defined(Q_CC_INTEL)
+#    define Q_FALLTHROUGH() __attribute__((fallthrough))
+#  else
+#    define Q_FALLTHROUGH() (void)0
+#  endif
+#endif
+
 namespace FakeVim {
 namespace Internal {
 
@@ -399,7 +409,7 @@ static bool eatString(const QString &prefix, QString *str)
     return true;
 }
 
-static QRegularExpression vimPatternToQtPattern(const QString &needle)
+static QString vimPatternToQtPattern_QString(const QString &needle, bool &initIgnoreCase)
 {
     /* Transformations (Vim regexp -> QRegularExpression):
      *   \a -> [A-Za-z]
@@ -548,6 +558,31 @@ static QRegularExpression vimPatternToQtPattern(const QString &needle)
     else if (brace)
         pattern.append('[');
 
+    initIgnoreCase = initialIgnoreCase;
+    return pattern;
+}
+
+#if QT_VERSION < QT_VERSION_CHECK(5,5,0)
+static QRegExp vimPatternToQtPattern(const QString &needle)
+#else
+static QRegularExpression vimPatternToQtPattern(const QString &needle)
+#endif
+{
+    bool initialIgnoreCase = false;
+    const auto pattern = vimPatternToQtPattern_QString(needle, initialIgnoreCase);
+
+#if QT_VERSION < QT_VERSION_CHECK(5,5,0)
+    return QRegExp(pattern, initialIgnoreCase ? Qt::CaseInsensitive : Qt::CaseSensitive);
+#else
+    return QRegularExpression(pattern, initialIgnoreCase ? QRegularExpression::CaseInsensitiveOption
+                                                         : QRegularExpression::NoPatternOption);
+#endif
+}
+
+static QRegularExpression vimPatternToQtPattern_QRegularExpression(const QString &needle)
+{
+    bool initialIgnoreCase = false;
+    const auto pattern = vimPatternToQtPattern_QString(needle, initialIgnoreCase);
     return QRegularExpression(pattern, initialIgnoreCase ? QRegularExpression::CaseInsensitiveOption
                                                          : QRegularExpression::NoPatternOption);
 }
@@ -558,14 +593,23 @@ static bool afterEndOfLine(const QTextDocument *doc, int position)
         && doc->findBlock(position).length() > 1;
 }
 
+#if QT_VERSION < QT_VERSION_CHECK(5,5,0)
+static void searchForward(QTextCursor *tc, const QRegExp &needleExp, int *repeat)
+#else
 static void searchForward(QTextCursor *tc, const QRegularExpression &needleExp, int *repeat)
+#endif
 {
     const QTextDocument *doc = tc->document();
     const int startPos = tc->position();
 
     QTextDocument::FindFlags flags = {};
+#if QT_VERSION < QT_VERSION_CHECK(5,5,0)
+    if (needleExp.caseSensitivity())
+        flags |= QTextDocument::FindCaseSensitively;
+#else
     if (!(needleExp.patternOptions() & QRegularExpression::CaseInsensitiveOption))
         flags |= QTextDocument::FindCaseSensitively;
+#endif
 
     // Search from beginning of line so that matched text is the same.
     tc->movePosition(StartOfLine);
@@ -600,6 +644,55 @@ static void searchForward(QTextCursor *tc, const QRegularExpression &needleExp, 
         tc->movePosition(Left);
 }
 
+#if QT_VERSION < QT_VERSION_CHECK(5,5,0)
+static void searchBackward(QTextCursor *tc, const QRegExp &needleExp, int *repeat)
+{
+    // Search from beginning of line so that matched text is the same.
+    QTextBlock block = tc->block();
+    QString line = block.text();
+
+    int i = needleExp.indexIn(line);
+    while (i != -1 && i < tc->positionInBlock()) {
+        --*repeat;
+        const int offset = i + qMax(1, needleExp.matchedLength());
+        i = needleExp.indexIn(line, offset);
+        if (i == line.size())
+            i = -1;
+    }
+
+    if (i == tc->positionInBlock())
+        --*repeat;
+
+    while (*repeat > 0) {
+        block = block.previous();
+        if (!block.isValid())
+            break;
+        line = block.text();
+        i = needleExp.indexIn(line, 0);
+        while (i != -1) {
+            --*repeat;
+            const int offset = i + qMax(1, needleExp.matchedLength());
+            i = needleExp.indexIn(line, offset);
+            if (i == line.size())
+                i = -1;
+        }
+    }
+
+    if (!block.isValid()) {
+        *tc = QTextCursor();
+        return;
+    }
+
+        i = needleExp.indexIn(line, 0);
+    while (*repeat < 0) {
+        const int offset = i + qMax(1, needleExp.matchedLength());
+        i = needleExp.indexIn(line, offset);
+        ++*repeat;
+    }
+    tc->setPosition(block.position() + i);
+    tc->setPosition(tc->position() + needleExp.matchedLength(), KeepAnchor);
+}
+#else
 static void searchBackward(QTextCursor *tc, const QRegularExpression &needleExp, int *repeat)
 {
     // Search from beginning of line so that matched text is the same.
@@ -648,11 +741,16 @@ static void searchBackward(QTextCursor *tc, const QRegularExpression &needleExp,
     tc->setPosition(block.position() + i);
     tc->setPosition(tc->position() + match.capturedLength(), KeepAnchor);
 }
+#endif
 
 // Commands [[, []
 static void bracketSearchBackward(QTextCursor *tc, const QString &needleExp, int repeat)
 {
+#if QT_VERSION < QT_VERSION_CHECK(5,5,0)
+    const QRegExp re(needleExp);
+#else
     const QRegularExpression re(needleExp);
+#endif
     QTextCursor tc2 = *tc;
     tc2.setPosition(tc2.position() - 1);
     searchBackward(&tc2, re, &repeat);
@@ -665,7 +763,12 @@ static void bracketSearchBackward(QTextCursor *tc, const QString &needleExp, int
 static void bracketSearchForward(QTextCursor *tc, const QString &needleExp, int repeat,
                                  bool searchWithCommand)
 {
+#if QT_VERSION < QT_VERSION_CHECK(5,5,0)
+    QRegExp re(searchWithCommand ? QString("^\\}|^\\{") : needleExp);
+#else
     QRegularExpression re(searchWithCommand ? QString("^\\}|^\\{") : needleExp);
+#endif
+
     QTextCursor tc2 = *tc;
     tc2.setPosition(tc2.position() + 1);
     searchForward(&tc2, re, &repeat);
@@ -5961,7 +6064,7 @@ bool FakeVimHandler::Private::handleExSubstituteCommand(const ExCommand &cmd)
     if (g.lastSubstituteFlags.contains('i'))
         needle.prepend("\\c");
 
-    const QRegularExpression pattern = vimPatternToQtPattern(needle);
+    const QRegularExpression pattern = vimPatternToQtPattern_QRegularExpression(needle);
 
     QTextBlock lastBlock;
     QTextBlock firstBlock;
@@ -6150,7 +6253,8 @@ bool FakeVimHandler::Private::handleExRegisterCommand(const ExCommand &cmd)
     }
     QString info;
     info += "--- Registers ---\n";
-    for (char reg : qAsConst(regs)) {
+    const auto& registers = regs;
+    for (char reg : registers) {
         QString value = quoteUnprintable(registerContents(reg));
         info += QString("\"%1   %2\n").arg(reg).arg(value);
     }
@@ -6754,7 +6858,12 @@ void FakeVimHandler::Private::searchBalanced(bool forward, QChar needle, QChar o
 QTextCursor FakeVimHandler::Private::search(const SearchData &sd, int startPos, int count,
     bool showMessages)
 {
+#if QT_VERSION < QT_VERSION_CHECK(5,5,0)
+    const QRegExp needleExp = vimPatternToQtPattern(sd.needle);
+#else
     const QRegularExpression needleExp = vimPatternToQtPattern(sd.needle);
+#endif
+
 
     if (!needleExp.isValid()) {
         if (showMessages) {
