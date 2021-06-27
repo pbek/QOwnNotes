@@ -3760,7 +3760,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="579"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>找不到菜單操作 &lt;code&gt;%1&lt;/code&gt;！ 拼寫是否正確呢？</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="786"/>
@@ -4451,15 +4451,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
+<translation>
+<numerusform>%n 條筆記正在使用此附件。 您還想重命名筆記中的這些附件嗎？</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
+<translation>
+<numerusform>%n 條筆記正在使用此圖片。 您還想重命名筆記中的這些圖像嗎？</numerusform>
 </translation>
 </message>
 </context>
@@ -6048,17 +6048,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
 <source>Web application</source>
-<translation type="unfinished">Web application</translation>
+<translation>Web應用程序</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
 <source>If your password doesn't work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
+<translation>如果您的密碼無效，請創建一個應用密碼（右側的按鈕）</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
 <source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
+<translation>如果您想幫助翻譯 QOwnNotes 或更新現有翻譯，請閱讀：&lt;a href="%1"&gt;我如何幫助翻譯 QOwnNotes？&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6133,17 +6133,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4357"/>
 <source>Checks the disk database integrity and fixes problems</source>
-<translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
+<translation>檢查磁盤數據庫完整性並修復問題</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4360"/>
 <source>Check integrity</source>
-<translation type="unfinished">Check integrity</translation>
+<translation>檢查完整性</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4367"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-<translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
+<translation>請注意，重新初始化數據庫也會刪除緩存的待辦事項和配置的筆記文件夾和腳本！</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
@@ -6249,17 +6249,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<translation>您可以使用 &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; 將照片插入桌面上的 QOwnNotes。</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
 <source>QOwnNotes web application</source>
-<translation type="unfinished">QOwnNotes web application</translation>
+<translation>QOwnNotes Web 應用程序</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6251"/>
 <source>Server URL:</source>
-<translation type="unfinished">Server URL:</translation>
+<translation>服務器網址：</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6265"/>

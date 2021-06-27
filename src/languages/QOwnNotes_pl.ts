@@ -2141,12 +2141,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1456"/>
 <source>Insert text &amp;link</source>
-<translation type="unfinished">Insert text &amp;link</translation>
+<translation>Wstaw tekst &amp;link</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1459"/>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1476"/>
@@ -2627,12 +2627,12 @@
 <message>
 <location filename="../mainwindow.ui" line="2669"/>
 <source>Insert &amp;note link</source>
-<translation type="unfinished">Insert &amp;note link</translation>
+<translation>Wstaw link &amp;note</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2672"/>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1907"/>
@@ -3854,12 +3854,12 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <location filename="../mainwindow.cpp" line="578"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>Działanie nie zostało odnalezione!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="579"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>Nie odnaleziono menu działania &lt;code&gt;%1&lt;/code&gt;! Sprawdź czy nie ma tu żadnej literówki.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="786"/>
@@ -9059,7 +9059,7 @@ Nie można tego cofnąć!</translation>
 <message>
 <location filename="../main.cpp" line="133"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>Włącza menu działania po uruchomienia aplikacji.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="553"/>

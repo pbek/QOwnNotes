@@ -3,6 +3,7 @@
 ## 21.6.7
 - the fakevim library was updated and adapted to work with qmake and cmake and integrated
   into QOwnNotes (for [#2134](https://github.com/pbek/QOwnNotes/issues/2134), thank you @Waqar144)
+- added more Spanish, Chinese Traditional, Polish translation thank you hubertm, rawfreeamy)
 
 ## 21.6.6
 - the monospaced font detection was improved by comparing the width of `iiiii`

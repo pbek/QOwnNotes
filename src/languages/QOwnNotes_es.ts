@@ -3784,12 +3784,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <location filename="../mainwindow.cpp" line="578"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>¡Acción no encontrada!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="579"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>¡No se pudo encontrar la acción de menú &lt;code&gt;% 1 &lt;/code&gt;! ¿Usted escribe correctamente?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="786"/>
@@ -8962,7 +8962,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="133"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>Activa una acción de menú después de que se inició la aplicación.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="553"/>
