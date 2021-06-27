@@ -73,7 +73,7 @@ void FakeVimProxy::highlightMatches(const QString &pattern) {
     updateExtraSelections();
 }
 
-void FakeVimProxy::changeStatusMessage(const QString &contents, int cursorPos) {
+void FakeVimProxy::changeStatusMessage(const QString &contents, int cursorPos, int anchorPos, int messageLevel) {
     m_statusMessage =
         cursorPos == -1
             ? contents
@@ -189,8 +189,7 @@ void FakeVimProxy::indentRegion(int beginBlock, int endBlock, QChar typedChar) {
     auto *ed = qobject_cast<QPlainTextEdit *>(m_widget);
     if (!ed) return;
 
-    const auto indentSize =
-        theFakeVimSetting(FakeVim::Internal::ConfigShiftWidth)->value().toInt();
+    const qint64 indentSize = FakeVim::Internal::fakeVimSettings()->shiftWidth.value();
 
     QTextDocument *doc = ed->document();
     QTextBlock startBlock = doc->findBlockByNumber(beginBlock);
@@ -211,9 +210,9 @@ void FakeVimProxy::indentRegion(int beginBlock, int endBlock, QChar typedChar) {
             const auto previousLine =
                 previousBlock.isValid() ? previousBlock.text() : QString();
 
-            int indent = firstNonSpace(previousLine);
+            qint64 indent = firstNonSpace(previousLine);
             if (typedChar == '}')
-                indent = std::max(0, indent - indentSize);
+                indent = std::max(0, int(indent - indentSize));
             else if (previousLine.endsWith(QLatin1String("{")))
                 indent += indentSize;
             const auto indentString = QStringLiteral(" ").repeated(indent);

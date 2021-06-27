@@ -64,6 +64,7 @@
 #include <QMessageBox>
 #include <QMimeData>
 #include <QPageSetupDialog>
+#include <QPointer>
 #include <QPrintDialog>
 #include <QPrinter>
 #include <QProcess>
@@ -656,49 +657,126 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
     handler->installEventFilter();
     handler->setupWidget();
 
-    auto proxy = new FakeVimProxy(noteTextEdit, this, handler);
+    QPointer<FakeVimProxy> proxy = new FakeVimProxy(noteTextEdit, this, handler);
+
+    using namespace FakeVim::Internal;
 
     QSettings settings;
     bool setExpandTab = !settings.value(QStringLiteral("Editor/useTabIndent")).toBool();
-    FakeVim::Internal::theFakeVimSettings()->item("et")->setValue(setExpandTab);
-    FakeVim::Internal::theFakeVimSettings()->item("ts")->setValue(Utils::Misc::indentSize());
-    FakeVim::Internal::theFakeVimSettings()->item("sw")->setValue(Utils::Misc::indentSize());
+    fakeVimSettings()->item("et")->setValue(setExpandTab);
+    fakeVimSettings()->item("ts")->setValue(Utils::Misc::indentSize());
+    fakeVimSettings()->item("sw")->setValue(Utils::Misc::indentSize());
 
-    QObject::connect(handler,
-                     &FakeVim::Internal::FakeVimHandler::commandBufferChanged,
-                     proxy, &FakeVimProxy::changeStatusMessage);
-    QObject::connect(
-        handler, &FakeVim::Internal::FakeVimHandler::extraInformationChanged,
-        proxy, &FakeVimProxy::changeExtraInformation);
-    QObject::connect(handler,
-                     &FakeVim::Internal::FakeVimHandler::statusDataChanged,
-                     proxy, &FakeVimProxy::changeStatusData);
-    QObject::connect(handler,
-                     &FakeVim::Internal::FakeVimHandler::highlightMatches,
-                     proxy, &FakeVimProxy::highlightMatches);
-    QObject::connect(
-        handler, &FakeVim::Internal::FakeVimHandler::handleExCommandRequested,
-        proxy, &FakeVimProxy::handleExCommand);
-    QObject::connect(
-        handler, &FakeVim::Internal::FakeVimHandler::requestSetBlockSelection,
-        proxy, &FakeVimProxy::requestSetBlockSelection);
-    QObject::connect(
-        handler,
-        &FakeVim::Internal::FakeVimHandler::requestDisableBlockSelection, proxy,
-        &FakeVimProxy::requestDisableBlockSelection);
-    QObject::connect(
-        handler, &FakeVim::Internal::FakeVimHandler::requestHasBlockSelection,
-        proxy, &FakeVimProxy::requestHasBlockSelection);
+    {
+        auto h = [proxy](const QString &contents, int cursorPos, int anchorPos, int msgLvl) {
+            if (!proxy) {
+                return;
+            }
+            proxy->changeStatusMessage(contents, cursorPos, anchorPos, msgLvl);
+        };
+        handler->commandBufferChanged.connect(h);
+    }
 
-    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::indentRegion,
-                     proxy, &FakeVimProxy::indentRegion);
-    QObject::connect(
-        handler, &FakeVim::Internal::FakeVimHandler::checkForElectricCharacter,
-        proxy, &FakeVimProxy::checkForElectricCharacter);
+    {
+        auto h = [proxy](const QString &msg) {
+            if (!proxy) {
+                return;
+            }
+            proxy->changeExtraInformation(msg);
+        };
+        handler->extraInformationChanged.connect(h);
+    }
 
+    {
+        auto h = [proxy](const QString &msg) {
+            if (!proxy) {
+                return;
+            }
+            proxy->changeStatusData(msg);
+        };
+        handler->statusDataChanged.connect(h);
+    }
+
+    {
+        auto h = [proxy](const QString &msg) {
+            if (!proxy) {
+                return;
+            }
+            proxy->highlightMatches(msg);
+        };
+        handler->highlightMatches.connect(h);
+    }
+
+    {
+        auto h = [proxy](bool *handled, const ExCommand &cmd) {
+            if (!proxy) {
+                if (handled) {
+                    *handled = false;
+                }
+                return;
+            }
+            proxy->handleExCommand(handled, cmd);
+        };
+        handler->handleExCommandRequested.connect(h);
+    }
+
+    {
+        auto h = [proxy](const QTextCursor &cursor) {
+            if (!proxy) {
+                return;
+            }
+            proxy->requestSetBlockSelection(cursor);
+        };
+        handler->requestSetBlockSelection.connect(h);
+    }
+
+    {
+        auto h = [proxy]() {
+            if (!proxy) {
+                return;
+            }
+            proxy->requestDisableBlockSelection();
+        };
+        handler->requestDisableBlockSelection.connect(h);
+    }
+
+    {
+
+        auto h = [proxy](bool *on) {
+            if (!proxy) {
+                if (on)
+                    *on = false;
+                return;
+            }
+            proxy->requestHasBlockSelection(on);
+        };
+        handler->requestHasBlockSelection.connect(h);
+    }
+
+    {
+        auto h = [proxy](int beginLine, int endLine, QChar typedChar) {
+            if (!proxy) {
+                return;
+            }
+            proxy->indentRegion(beginLine, endLine, typedChar);
+        };
+        handler->indentRegion.connect(h);
+    }
+
+    {
+        auto h = [proxy](bool *result, QChar c) {
+            if (!proxy) {
+                return;
+            }
+            proxy->checkForElectricCharacter(result, c);
+        };
+        handler->checkForElectricCharacter.connect(h);
+    }
+
+    // regular signal
     QObject::connect(
-        proxy, &FakeVimProxy::handleInput, handler,
-        [handler](const QString &text) { handler->handleInput(text); });
+                proxy, &FakeVimProxy::handleInput, handler,
+                [handler](const QString &text) { handler->handleInput(text); });
 }
 
 /**
