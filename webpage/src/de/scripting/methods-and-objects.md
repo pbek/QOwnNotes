@@ -269,7 +269,7 @@ script.registerCustomAction ("mycustomaction1", "Menu text", "Button text", "/us
 Möglicherweise möchten Sie dann den Bezeichner mit Funktion verwenden `customActionInvoked` in einem Skript wie [ custom-action.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-You can also trigger a custom action after the application was started with the parameter `--action customAction_<identifier>`. For more information please take a look at [Trigger menu actions after startup](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
+Sie können eine benutzerdefinierte Aktion auch nach dem Start der Anwendung mit dem Parameter `--action customAction_<identifier>` auslösen. Weitere Informationen finden Sie unter [Menüaktionen nach dem Start auslösen](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
 :::
 
 Ein Label registrieren
@@ -403,7 +403,7 @@ Lesen Sie den ausgewählten Text in der Notiztextbearbeitung
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Reads the selected text in the note text edit
+ * Liest den ausgewählten Text in der Notiztextbearbeitung
  *
  * @return
  */
@@ -412,8 +412,8 @@ QString ScriptingService::noteTextEditSelectedText();
 
 ### Beispiel
 ```js
-// read the selected text from the note text edit
-var text = script.noteTextEditSelectedText();
+// lese den ausgewählten Text aus der Notiztextbearbeitung
+var text = script.noteTextEditSelectedText ();
 ```
 
 Möglicherweise möchten Sie die benutzerdefinierte Aktion `transformTextRot13` im Beispiel [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) anzeigen.
@@ -424,7 +424,7 @@ Wählen Sie den gesamten Text in der Notiztextbearbeitung aus
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Selects all text in the note text edit
+ * Wählt den gesamten Text in der Notiztextbearbeitung aus
  */
 void ScriptingService::noteTextEditSelectAll();
 ```
@@ -442,7 +442,7 @@ Wählen Sie die aktuelle Zeile in der Notiztextbearbeitung aus
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Selects the current line in the note text edit
+ * Wählt die aktuelle Zeile in der Notiztextbearbeitung aus
  */
 void ScriptingService::noteTextEditSelectCurrentLine();
 ```
@@ -458,7 +458,7 @@ Wählen Sie das aktuelle Wort in der Notiztextbearbeitung aus
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Selects the current line in the note text edit
+ * Wählt die aktuelle Zeile in der Notiztextbearbeitung aus
  */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```
@@ -484,7 +484,7 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 
 ### Beispiel
 ```js
-// expands the current selection by one character
+// erweitert die aktuelle Auswahl um ein Zeichen
 script.noteTextEditSetSelection(
     script.noteTextEditSelectionStart() - 1,
     script.noteTextEditSelectionEnd() + 1);
@@ -496,7 +496,7 @@ Holen Sie sich die Startposition der aktuellen Auswahl in der Notiztextbearbeitu
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Returns the start position of the current selection in the note text edit
+ * Gibt die Startposition der aktuellen Auswahl in der Notiztextbearbeitung zurück
  */
 int ScriptingService::noteTextEditSelectionStart();
 ```
@@ -539,10 +539,10 @@ void ScriptingService::noteTextEditSetCursorPosition(int position);
 
 ### Beispiel
 ```js
-// jump to the 11th character in the note
+// zum 11. Zeichen in der Notiz springen
 script.noteTextEditSetCursorPosition(10);
 
-// jump to the end of the note
+// zum Ende der Notiz springen
 script.noteTextEditSetCursorPosition(-1);
 ```
 
@@ -810,8 +810,8 @@ bool ScriptingService::noteExistsByFileName(QString fileName,
 
 ### Beispiel
 ```js
-// check if note exists, but ignore the id of "note"
-script.noteExistsByFileName("my note.md", note.id);
+// prüfe ob eine Notiz existiert, aber ignoriere die ID von "note"
+script.noteExistsByFileName("meine note.md", note.id);
 ```
 
 Vielleicht möchten Sie sich das Beispiel ansehen [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
@@ -877,11 +877,11 @@ bool ScriptingService::jumpToNoteSubFolder (const QString & noteSubFolderPath,
 
 ### Beispiel
 ```js
-// jump to the note subfolder "a sub folder"
-script.jumpToNoteSubFolder("a sub folder");
+// zum Notiz-Unterordner "ein Unterordner" springen
+script.jumpToNoteSubFolder("ein Unterordner");
 
-// jump to the note subfolder "sub" inside of "a sub folder"
-script.jumpToNoteSubFolder("a sub folder/sub");
+// zum Notiz-Unterordner "sub" innerhalb von "einem Unterordner" springen
+script.jumpToNoteSubFolder("ein Unterordner/ein Unterordner");
 ```
 
 ::: tip
@@ -931,11 +931,11 @@ int ScriptingService::questionMessageBox (
 
 ### Beispiel
 ```js
-// show a question message box with an apply and a help button
-// see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+// ein Fragenachrichtenfeld mit einem Anwenden- und einem Hilfe-Button anzeigen
+// siehe: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
 var result = script.questionMessageBox(
-    "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
-script.log(result);
+     "Der Text, den ich anzeigen möchte", "Einige optionaler Titel", 0x01000000|0x02000000, 0x02000000);
+script.log(Ergebnis);
 ```
 
 Informationen zu Schaltflächen finden Sie unter [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
@@ -948,15 +948,15 @@ Anzeigen eines geöffneten Dateidialogs
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Shows an open file dialog
- *
- * @param caption (optional)
- * @param dir (optional)
- * @param filter (optional)
- * @return QString
- */
+  * Zeigt einen Datei-Öffnen-Dialog an
+  *
+  * @param-Beschriftung (optional)
+  * @param dir (optional)
+  * @param-Filter (optional)
+  * @return QString
+  */
 QString ScriptingService::getOpenFileName(QString caption, QString dir,
-                                            QString filter);
+                                             QString-Filter);
 ```
 
 ### Beispiel
@@ -971,15 +971,15 @@ Anzeigen eines Dialogfelds zum Speichern von Dateien
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Shows a save file dialog
- *
- * @param caption (optional)
- * @param dir (optional)
- * @param filter (optional)
- * @return QString
- */
+  * Zeigt einen Dialog zum Speichern der Datei an
+  *
+  * @param-Beschriftung (optional)
+  * @param dir (optional)
+  * @param-Filter (optional)
+  * @return QString
+  */
 QString ScriptingService::getSaveFileName(QString caption, QString dir,
-                                            QString filter);
+                                             QString-Filter);
 ```
 
 ### Beispiel
@@ -1087,19 +1087,18 @@ Speichern und Laden persistenter Variablen
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Stores a persistent variable
- * These variables are accessible globally over all scripts
- * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
+  * Speichert eine persistente Variable
+  * Diese Variablen sind global über alle Skripte zugänglich
+  * Bitte verwenden Sie ein aussagekräftiges Präfix in Ihrem Schlüssel wie "PersistentVariablesTest/myVar"
  *
  * @param key {QString}
  * @param value {QVariant}
  */
 void ScriptingService::setPersistentVariable(const QString &key,
                                                 const QVariant &value);
-
 /**
- * Loads a persistent variable
- * These variables are accessible globally over all scripts
+  * Lädt eine persistente Variable
+  * Diese Variablen sind global über alle Skripte zugänglich
  *
  * @param key {QString}
  * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
@@ -1344,7 +1343,7 @@ script.triggerMenuAction("actionAllow_note_editing", 1);
 Vielleicht möchten Sie sich das Beispiel ansehen [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Suchen Sie einfach nach dem englischen Menütitel. Note that these texts can change over time.
+Die Objektnamen der Menüaktion erhalten Sie von [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Suchen Sie einfach nach dem englischen Menütitel. Beachten Sie, dass sich diese Texte im Laufe der Zeit ändern können.
 :::
 
 Öffnen eines Eingabedialogs mit einem Auswahlfeld

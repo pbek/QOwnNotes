@@ -1,6 +1,6 @@
-# Installa su Ubuntu Linux, sistema operativo elementare e Linux Mint
+# Installa su Ubuntu Linux, Elementary OS e Linux Mint
 
-## Ubuntu Linux 18.04 o più recente, sistema operativo elementare, Linux Mint 18 o più recente
+## Ubuntu Linux 18.04 o più recente, Elementary OS, Linux Mint 18 o più recente
 
 Installa **QOwnNotes** su **Ubuntu Linux** (minimo 18.04) utilizzando il repository PPA.
 
@@ -18,29 +18,29 @@ sudo apt-get install qownnotes
 
 ## Vecchie distribuzioni e derivati di Ubuntu Linux
 
-È meglio provare a utilizzare l'AppImage da [QOwnNotes Releases su GitHub](https://github.com/pbek/QOwnNotes/releases).
+È meglio provare a utilizzare l'AppImage da QOwnNotes [Releases](https://github.com/pbek/QOwnNotes/releases) su GitHub.
 
-Quindi puoi modificare i permessi di esecuzione sul file:
+Quindi puoi modificare i permessi di esecuzione del file:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Successivamente dovresti essere in grado di eseguire l'AppImage per eseguire QOwnNotes.
+Dopodiché, dovresti essere in grado di eseguire l'AppImage per lanciare QOwnNotes.
 
-## OBS Repository
+## Repository OBS
 
 Potresti anche essere in grado di utilizzare QOwnNotes su versioni di Ubuntu che non sono più aggiornate su Ubuntu Launchpad, quindi puoi utilizzare i repository da [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 
 Di seguito sono riportati esempi di chiamate per il repository xUbuntu 16.10.
 
-Eseguire il seguente comando della shell per considerare attendibile il repository.
+Esegui il seguente comando shell per considerare attendibile il repository.
 
 ```bash
 wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/xUbuntu_16.10/Release.key -O - | sudo apt-key add -
 ```
 
-Eseguire i seguenti comandi della shell per aggiungere il repository e installare QOwnNotes da lì.
+Esegui i seguenti comandi shell per aggiungere il repository e installare QOwnNotes da lì.
 
 ```bash
 sudo su -

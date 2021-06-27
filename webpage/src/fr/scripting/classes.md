@@ -29,7 +29,7 @@ class NoteApi {
 };
 ```
 
-You can use the methods from [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) to work with `fileCreated` or `fileLastModified`.
+Vous pouvez utiliser les méthodes de [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) pour travailler avec `fileCreated` ou `fileLastModified`.
 
 ### Exemple
 ```js
@@ -57,7 +57,7 @@ class NoteSubFolderApi {
 };
 ```
 
-### Example
+### Exemple
 ```js
 script.log(noteSubFolder.id);
 script.log(noteSubFolder.name);

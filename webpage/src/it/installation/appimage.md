@@ -1,11 +1,11 @@
 # Installa come AppImage
 
-Puoi scaricare l'ultima AppImage dalla [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases). Dovrebbe essere chiamato come `QOwnNotes-x86_64.AppImage` su quella pagina.
+Puoi scaricare l'ultima AppImage dalla pagina [Releases](https://github.com/pbek/QOwnNotes/releases) di QOwnNotes. Nella pagina, si dovrebbe chiamare `QOwnNotes-x86_64.AppImage`.
 
-Quindi puoi modificare i permessi di esecuzione sul file:
+Quindi puoi modificare i permessi di esecuzione del file:
 
 ```bash
 chmod a+x QOwnNotes-*.AppImage
 ```
 
-Successivamente dovresti essere in grado di eseguire l'AppImage per eseguire QOwnNotes.
+Successivamente dovresti essere in grado di eseguire l'AppImage per lanciare QOwnNotes.
