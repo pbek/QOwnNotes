@@ -76,7 +76,7 @@ Es gibt viele Möglichkeiten, Listen zu erstellen.
 2. Ein weiterer Eintrag
    * Ungeordnete Unterliste.
 1. Tatsächliche Zahlen spielen keine Rolle, nur dass es eine Zahl ist!
-   1. Geordnete Unterliste
+   1. Ordered sub-list (only works in the editor, not the preview)
 4. Und noch ein Eintrag.
 
 * Ungeordnete Liste kann Sternchen verwenden

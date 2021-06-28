@@ -76,7 +76,7 @@ Hay muchas formas de crear listas.
 2. Otro articulo
    * Sublista desordenada.
 1. Los números reales no importan, solo que es un número
-   1. Sublista ordenada
+   1. Ordered sub-list (only works in the editor, not the preview)
 4. Y otro artículo.
 
 * La lista desordenada puede usar asteriscos

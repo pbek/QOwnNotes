@@ -76,7 +76,7 @@ Er zijn veel manieren om lijsten te maken.
 2. Een ander item
    * Ongeordende sublijst.
 1. Werkelijke cijfers doen er niet toe, alleen dat het een nummer is
-   1. Geordende sublijst
+   1. Ordered sub-list (only works in the editor, not the preview)
 4. En nog een item.
 
 * Ongeordende lijst kan asterisken gebruiken

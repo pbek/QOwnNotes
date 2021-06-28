@@ -10,7 +10,7 @@ Sie können diese Parameter auf der Befehlszeilenschnittstelle verwenden:
 | `--dump-settings`            | Druckt einen Speicherauszug der Einstellungen und anderer Informationen zur Anwendung und Umgebung in GitHub Markdown aus und beendet die Anwendung |
 | `--session <name>`     | Führt die Anwendung in einem anderen Kontext für Einstellungen und interne Dateien aus                                                              |
 | `--allow-multiple-instances` | Ermöglicht das Starten mehrerer Instanzen von QOwnNotes, auch wenn dies in den Einstellungen nicht zulässig ist                                     |
-| `--action <name>`      | Triggers a menu action after the application was started (see below)                                                                                |
+| `--action <name>`      | Löst eine Menüaktion aus, nachdem die Anwendung gestartet wurde (siehe unten).                                                                      |
 
 ::: tip
 Wenn Sie bei der Installation von QOwnNotes auf Probleme stoßen, können Sie die Anwendung mit neuen Einstellungen starten, ohne Ihre aktuellen Einstellungen mithilfe des Parameters der `Sitzung` zu verlieren.
@@ -28,18 +28,18 @@ Sie können die Anwendung auf der Befehlszeilenschnittstelle unter verschiedenen
 | macOS          | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes`    |
 | Windows        | `QOwnNotes.exe`                                           |
 
-## Trigger menu actions after startup
+## Menüaktionen nach dem Start auslösen
 
-With the parameter `--action <name>` you can trigger menu actions after the application was started.
+Mit dem Parameter `--action <name>` können Sie nach dem Start der Anwendung Menüaktionen auslösen.
 
-For example to open the todo list dialog after startup use:
+Um beispielsweise den Todo-Listen-Dialog nach dem Start zu öffnen:
 
 ```bash
 QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time.
+Die Objektnamen der Menüaktion erhalten Sie von [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Suchen Sie einfach nach dem englischen Menütitel. Beachten Sie, dass sich diese Texte im Laufe der Zeit ändern können.
 :::
 
 Verwenden Sie zum Auslösen von [Skriptaktionen](../scripting/methods-and-objects.md#registering-a-custom-action) ` customAction_` gefolgt von der Kennung der benutzerdefinierten Aktion. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.
