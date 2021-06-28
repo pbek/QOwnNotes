@@ -77,7 +77,7 @@ There are many ways to create lists.
 2. Another item
   * Unordered sub-list.
 1. Actual numbers don't matter, just that it's a number
-  1. Ordered sub-list
+  1. Ordered sub-list (only works in the editor, not the preview)
 4. And another item.
 
 * Unordered list can use asterisks
