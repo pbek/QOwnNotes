@@ -6,6 +6,10 @@
 - when automatic downscaling of images is enabled in the *General settings* the images
   are now not scaled up any more when they are smaller than the chosen resolution
   (for [#2170](https://github.com/pbek/QOwnNotes/issues/2170))
+- when automatic downscaling of images is enabled in the *General settings* and a too large
+  SVG image is inserted into a note then it now will not get resized automatically, because
+  Qt can't resize SVG images and this this would result into a 0 byte file
+  (for [#2171](https://github.com/pbek/QOwnNotes/issues/2171))
 - an attempt was made to fix the builds for Qt versions older than 5.8 for the fakevim library
   (for [#2134](https://github.com/pbek/QOwnNotes/issues/2134), thank you @Waqar144)
 

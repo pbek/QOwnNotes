@@ -3559,6 +3559,14 @@ bool Note::scaleDownImageFileIfNeeded(QFile &file) {
         return true;
     }
 
+    QMimeDatabase db;
+    QMimeType type = db.mimeTypeForFile(file);
+
+    // we don't want to resize SVGs because Qt can't store them
+    if (type.name().contains("image/svg")) {
+        return true;
+    }
+
     QImage image;
 
     if (!image.load(file.fileName())) {
