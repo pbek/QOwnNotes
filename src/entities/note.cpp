@@ -3572,6 +3572,12 @@ bool Note::scaleDownImageFileIfNeeded(QFile &file) {
         settings.value(QStringLiteral("imageScaleDownMaximumHeight"), 1024)
             .toInt();
 
+    // don't scale if image is already small enough
+    if (image.width() <= width && image.height() <= height) {
+        return true;
+    }
+
+
     const QPixmap &pixmap = QPixmap::fromImage(image.scaled(
         width, height, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
