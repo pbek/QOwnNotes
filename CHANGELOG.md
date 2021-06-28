@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.6.8
+- an attempt was made to fix the builds for Qt versions older than 5.8 for the fakevim library
+  (for [#2134](https://github.com/pbek/QOwnNotes/issues/2134), thank you @Waqar144)
+
 ## 21.6.7
 - the fakevim library was updated and adapted to work with qmake and cmake and integrated
   into QOwnNotes (for [#2134](https://github.com/pbek/QOwnNotes/issues/2134), thank you @Waqar144)
