@@ -77,7 +77,7 @@ void ImageDialog::on_openButton_clicked() {
     QStringList nameFilters;
     nameFilters << tr("Image files") +
                        " (*.jpg *.jpeg *.png *.gif *.svg *.bmp *.pbm *.pgm "
-                       "*.ppm *.xbm *.xpm)"
+                       "*.ppm *.xbm *.xpm *.webp)"
                 << tr("Any files") + " (*)";
 
     FileDialog dialog(QStringLiteral("InsertImage"));
