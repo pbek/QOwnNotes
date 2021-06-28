@@ -15,3 +15,4 @@ The various ways to get involved with QOwnNotes
 - Report problems or share ideas for new features on the [QOwnNotes **GitHub issues** page](https://github.com/pbek/QOwnNotes/issues)
 - If you have made a great editor schema please also post it at the [**GitHub issues** page](https://github.com/pbek/QOwnNotes/issues)
 - Share your scripts at the [**QOwnNotes scripts** GitHub page](https://github.com/qownnotes/scripts)
+- Publish your **experience** with QOwnNotes **on Youtube**! [Send audio/video/text to](mailto:amydoralang@aol.de)
