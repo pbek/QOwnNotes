@@ -50,7 +50,7 @@ jobs:
         include:
           - os: ubuntu-16.04
             qt-version: '5.5.1'
-            experimental: true
+            experimental: false
           - os: ubuntu-latest
             qt-version: '6.2.0'
             experimental: true
