@@ -66,7 +66,7 @@ A listák létrehozásának számos módja van.
 2. Egy másik elem
   * Rendezetlen allista.
 1. A tényleges számok nem számítanak, csak az, hogy ez egy szám
-  1. Ordered sub-list (only works in the editor, not the preview)
+  1. Rendezett allista (csak a szerkesztőben működik, az előnézetben nem)
 4. És még egy elem.
 
 * A rendezetlen lista csillagokat használhat

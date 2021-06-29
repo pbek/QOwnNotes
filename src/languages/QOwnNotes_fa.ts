@@ -719,8 +719,8 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
-<translation>برای بدست آوردن یک فایل enex، باید یک یا چند یادداشت را در مشتری دسکتاپ اورنوت های خود انتخاب و در فهرست پرونده روی &quot;خروج یادداشت ها...&quot; کلیک کنید.</translation>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<translation>برای بدست آوردن یک فایل enex، باید یک یا چند یادداشت را در مشتری دسکتاپ اورنوت های خود انتخاب و در فهرست پرونده روی "خروج یادداشت ها..." کلیک کنید.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -878,158 +878,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1043,8 +1043,8 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
-<translation>&quot;%1&quot; علامت گذاری نشده است.</translation>
+<source>Mark "%1" not set.</source>
+<translation>"%1" علامت گذاری نشده است.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
@@ -1067,18 +1067,14 @@
 <translation>در FakeVim پیاده سازی نشده است.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">برای خروج از حالت FakeVim کلیدهای Alt و V را فشار دهید.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1105,22 +1101,23 @@
 <source>%n lines moved.</source>
 <translation>
 <numerusform>خطوط %n منتقل شدند.</numerusform>
+<numerusform>%n از خطوط منتقل شدند.</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
-<translation>پرونده &quot;%1&quot; موجود است (جهت ابطال ! را اضافه کنید)</translation>
+<source>File "%1" exists (add ! to override)</source>
+<translation>پرونده "%1" موجود است (جهت ابطال ! را اضافه کنید)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
-<translation>گشودن پرونده &quot;%1&quot; برای نوشتن امکان پذیر نیست</translation>
+<source>Cannot open file "%1" for writing</source>
+<translation>گشودن پرونده "%1" برای نوشتن امکان پذیر نیست</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
-<translation>&quot;%1&quot; %2 %3L, %4C نوشته شده است.</translation>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>"%1" %2 %3L, %4C نوشته شده است.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
@@ -1129,19 +1126,20 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
-<translation>گشودن پرونده &quot;%1&quot; برای خواندن امکان پذیر نیست</translation>
+<source>Cannot open file "%1" for reading</source>
+<translation>گشودن پرونده "%1" برای خواندن امکان پذیر نیست</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
-<translation>&quot;%1&quot; %2L, %3C</translation>
+<source>"%1" %2L, %3C</source>
+<translation>"%1" %2L, %3C</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
 <source>%n lines filtered.</source>
 <translation>
 <numerusform>خطوط %n فیلتر شدند.</numerusform>
+<numerusform>%n از خطوط فیلتر شدند.</numerusform>
 </translation>
 </message>
 <message>
@@ -1189,19 +1187,14 @@
 <source>%n lines indented.</source>
 <translation>
 <numerusform>خطوط %n به صورت تورفته هستند.</numerusform>
+<numerusform>%n از خطوط به صورت تورفته هستند.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
+<translation>
 <numerusform>خطوط %n زمان %1ed %2.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
 <numerusform>خطوط %n زمان %1ed %2.</numerusform>
 </translation>
 </message>
@@ -1210,6 +1203,7 @@
 <source>%n lines yanked.</source>
 <translation>
 <numerusform>خطوط %n رونوشت برداری شدند.</numerusform>
+<numerusform>خطوط %n کپی شدند.</numerusform>
 </translation>
 </message>
 <message>
@@ -1468,7 +1462,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>چیدمان پنهان</translation>
 </message>
 <message>
@@ -1568,7 +1562,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
+<source>Don't copy image to media folder</source>
 <translation>از تصویر به پوشه رسانه رونوشت برداری نکن</translation>
 </message>
 <message>
@@ -1844,7 +1838,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>پرونده &lt;strong&gt;%1&lt;/strong&gt; قابل خواندن و بازیابی نیست!</translation>
 </message>
 <message numerus="yes">
@@ -1852,6 +1846,7 @@
 <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
 <numerusform>آیا می خواهید &lt;strong&gt;%n&lt;/strong&gt; یادداشت منتخب را بازیابی کنید؟</numerusform>
+<numerusform>بازیابی &lt;strong&gt;%n&lt;/strong&gt; یادداشت منتخب؟</numerusform>
 </translation>
 </message>
 <message>
@@ -1864,6 +1859,7 @@
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; یادداشت بازیابی شد</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; یادداشت بازیابی شد</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -1871,6 +1867,7 @@
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
 <numerusform>آیا می خواهید &lt;strong&gt;%n&lt;/strong&gt; یادداشت منتخب را حذف کنید؟</numerusform>
+<numerusform>حذف &lt;strong&gt;%n&lt;/strong&gt; یادداشت منتخب؟</numerusform>
 </translation>
 </message>
 <message>
@@ -1882,6 +1879,7 @@
 <location filename="../dialogs/localtrashdialog.cpp" line="266"/>
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
 <translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; یادداشت حذف شد</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; یادداشت حذف شد</numerusform>
 </translation>
 </message>
@@ -2350,7 +2348,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1610"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>درج تصویر (تصویر در پوشه &quot;رسانه&quot; در پوشه یادداشت های کنونی رونوشت می شود)</translation>
+<translation>درج تصویر (تصویر در پوشه "رسانه" در پوشه یادداشت های کنونی رونوشت می شود)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1622"/>
@@ -2524,7 +2522,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation>اتاق ماتریکس (المان) QOwnNotes را باز کنید</translation>
 </message>
 <message>
@@ -2801,8 +2799,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-<translation>یک معادله ساده مانند &quot;(2 + 3) * 6 =&quot; را در خط کنونی حل کنید</translation>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>یک معادله ساده مانند "(2 + 3) * 6 =" را در خط کنونی حل کنید</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2933,7 +2931,8 @@ Restore current note?</source>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="vanished">
+<translation>
+<numerusform>%n یادداشت در دیسک ذخیره شده است</numerusform>
 <numerusform>%n یادداشت در دیسک ذخیره شده است</numerusform>
 </translation>
 </message>
@@ -2982,6 +2981,7 @@ Restore current note?</source>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>رونوشت های پایگاه داده متناقض %n حذف شده</numerusform>
+<numerusform>رونوشت های پایگاه داده متناقض %n حذف شد</numerusform>
 </translation>
 </message>
 <message>
@@ -3026,7 +3026,7 @@ Restore current note?</source>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>یادداشت قابل رمزگشایی نیست!</translation>
 </message>
 <message>
@@ -3047,6 +3047,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>
 <numerusform>آیا می خواهید یادداشت های منتخب &lt;strong&gt;%n&lt;/strong&gt; را حذف کنید؟
 اگر سطل زباله روی سرور اون کلاود شما فعال شده است، شما باید قادر باشید آنها را از آنجا بازیابی کنید.</numerusform>
+<numerusform>آیا می خواهید &lt;strong&gt;%n&lt;/strong&gt; یادداشت منتخب را حذف کنید؟
+اگر سطل زباله روی سرور اون کلاود شما فعال شده است، شما باید قادر باشید آنها را از آنجا بازیابی کنید.</numerusform>
 </translation>
 </message>
 <message>
@@ -3060,6 +3062,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
 <numerusform>آیا می خواهید &lt;strong&gt;%n&lt;/strong&gt; پوشه منتخب را حذف کنید؟
+&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; همه پرونده ها و پوشه های موجود در این پوشه ها نیز حذف خواهند شد!</numerusform>
+<numerusform>آیا می خواهید پوشه (های) منتخب &lt;strong&gt;%n&lt;/strong&gt; را حذف کنید؟
 &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; همه پرونده ها و پوشه های موجود در این پوشه ها نیز حذف خواهند شد!</numerusform>
 </translation>
 </message>
@@ -3079,6 +3083,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>
 <numerusform>آیا می خواهید برچسب (های) منتخب &lt;strong&gt;%n&lt;/strong&gt; را حذف کنید؟
 هیچ یادداشتی در این فرآیند حذف نخواهد شد.</numerusform>
+<numerusform>آیا می خواهید &lt;strong&gt;%n&lt;/strong&gt; برچسب منتخب را حذف کنید؟
+هیچ یادداشتی در این فرآیند حذف نخواهد شد.</numerusform>
 </translation>
 </message>
 <message>
@@ -3092,6 +3098,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>آیا می خواهید %n یادداشت منتخب را به &lt;strong&gt;%2&lt;/strong&gt; منتقل کنید؟</numerusform>
+<numerusform>آیا می خواهید یادداشت (های) منتخب %n را به &lt;strong&gt;%2&lt;/strong&gt; منتقل کنید؟</numerusform>
 </translation>
 </message>
 <message>
@@ -3105,6 +3112,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>آیا می خواهید از %n یادداشت منتخب به &lt;strong&gt;%2&lt;/strong&gt; رونوشت برداری کنید؟</numerusform>
+<numerusform>آیا می خواهید از یادداشت (های) منتخب %n به &lt;strong&gt;%2&lt;/strong&gt; رونوشت برداری کنید؟</numerusform>
 </translation>
 </message>
 <message>
@@ -3118,6 +3126,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>یادداشت (های) %n به &lt;strong&gt;%2&lt;/strong&gt; رونوشت برداری شد.</numerusform>
+<numerusform>%n یادداشت به &lt;strong&gt;%2&lt;/strong&gt; رونوشت برداری شد.</numerusform>
 </translation>
 </message>
 <message>
@@ -3130,6 +3139,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>آیا می خواهید %n یادداشت منتخب را با &lt;strong&gt;%2&lt;/strong&gt; برچسب گذاری کنید؟</numerusform>
+<numerusform>آیا می خواهید یادداشت (های) منتخب %n را با &lt;strong&gt;%2&lt;/strong&gt; برچسب گذاری کنید؟</numerusform>
 </translation>
 </message>
 <message>
@@ -3172,6 +3182,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; رویداد (ها) از هر عبارت &lt;strong&gt;%1&lt;/strong&gt; یافت شد</numerusform>
+<numerusform>رویداد (های) &lt;strong&gt;%n&lt;/strong&gt; از هر عبارت &lt;strong&gt;%1&lt;/strong&gt; یافت شد</numerusform>
 </translation>
 </message>
 <message>
@@ -3282,6 +3293,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n یادداشت به %1 رونوشت برداری شد</numerusform>
+<numerusform>یادداشت (های) %n به %1 رونوشت برداری شد</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3289,6 +3301,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>رونوشت برداری از %n یادداشت (به احتمال زیاد موجود) انجام نشد</numerusform>
+<numerusform>رونوشت برداری از یادداشت (های) %n (به احتمال زیاد موجود) انجام نشد</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3296,6 +3309,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>انصراف از رونوشت برداری از %n یادداشت (بدون مارک داون یا پرونده متنی یا غیرقابل خواندن)</numerusform>
+<numerusform>انصراف از رونوشت برداری از یادداشت (های) %n (بدون مارک داون یا پرونده متنی یا غیرقابل خواندن)</numerusform>
 </translation>
 </message>
 <message>
@@ -3305,7 +3319,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>پرونده موقت قابل باز شدن نیست</translation>
 </message>
 <message>
@@ -3316,18 +3330,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>بازنشانی اندازه قلم در pt %1</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
-<translation>حذف برچسب &apos;%1&apos; از یادداشت کنونی</translation>
+<source>Remove tag '%1' from the current note</source>
+<translation>حذف برچسب '%1' از یادداشت کنونی</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
-<translation>حذف برچسب &apos;%1&apos; از یادداشت های منتخب</translation>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>حذف برچسب '%1' از یادداشت های منتخب</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9315"/>
@@ -3382,7 +3396,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>پرش به زیر پوشه یادداشت</translation>
 </message>
 <message>
@@ -3516,6 +3530,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <comment>characters</comment>
 <translation>
 <numerusform>%n نویسه</numerusform>
+<numerusform>نویسه های %n</numerusform>
 </translation>
 </message>
 <message>
@@ -3535,8 +3550,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
-<translation>سرخط یادداشت &quot;%1&quot; به کلیپ بورد رونوشت برداری شد</translation>
+<source>Note headline '%1' was copied to the clipboard</source>
+<translation>سرخط یادداشت "%1" به کلیپ بورد رونوشت برداری شد</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12757"/>
@@ -3558,6 +3573,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n یادداشت انتخاب شد</numerusform>
+<numerusform>یادداشت های %n انتخاب شدند</numerusform>
 </translation>
 </message>
 <message>
@@ -3581,6 +3597,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>آیا می خواهید برچسب &lt;strong&gt;%1&lt;/strong&gt; را از %n یادداشت منتخب حذف کنید؟</numerusform>
+<numerusform>آیا می خواهید برچسب &lt;strong&gt;%1&lt;/strong&gt; را از یادداشت (های) منتخب %n حذف کنید؟</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3588,6 +3605,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>برچسب &lt;strong&gt; %1 &lt;/strong&gt; از %n یادداشت حذف شد</numerusform>
+<numerusform>برچسب &lt;strong&gt; %1 &lt;/strong&gt; از یادداشت (های) %n حذف شد</numerusform>
 </translation>
 </message>
 <message>
@@ -3720,6 +3738,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>آیا می خواهید %n یادداشت منتخب را به زیر پوشه یادداشت &lt;strong&gt;%2&lt;/strong&gt; منتقل کنید؟</numerusform>
+<numerusform>آیا می خواهید یادداشت (های) منتخب %n را به زیر پوشه یادداشت &lt;strong&gt;%2&lt;/strong&gt; منتقل کنید؟</numerusform>
 </translation>
 </message>
 <message>
@@ -3730,9 +3749,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
-<numerusform>%n یادداشت به زیر پوشه یادداشت &quot;%2&quot; منتقل شد</numerusform>
+<numerusform>%n یادداشت به زیر پوشه یادداشت "%2" منتقل شد</numerusform>
+<numerusform>یادداشت (های) %n به زیر پوشه یادداشت "%2" منتقل شد</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3740,13 +3760,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>آیا می خواهید از %n یادداشت منتخب به زیر پوشه یادداشت &lt;strong&gt;%2&lt;/strong&gt; رونوشت برداری کنید؟</numerusform>
+<numerusform>آیا می خواهید از یادداشت (های) منتخب %n به زیر پوشه یادداشت &lt;strong&gt;%2&lt;/strong&gt; رونوشت برداری کنید؟</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
-<numerusform>%n یادداشت به زیر پوشه یادداشت &quot;%2&quot; رونوشت برداری شد</numerusform>
+<numerusform>%n یادداشت به زیر پوشه یادداشت "%2" رونوشت برداری شد</numerusform>
+<numerusform>یادداشت (های) %n به زیر پوشه یادداشت "%2" رونوشت برداری شد</numerusform>
 </translation>
 </message>
 <message>
@@ -3865,6 +3887,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>%n یادداشت در دیسک ذخیره شد</numerusform>
+<numerusform>یادداشت (های) %n در دیسک ذخیره شد</numerusform>
 </translation>
 </message>
 <message>
@@ -3900,18 +3923,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
-<translation>انتقال برچسب &quot;%1&quot; به این برچسب امکان پذیر نیست</translation>
+<source>Cannot move tag '%1' to this tag</source>
+<translation>انتقال برچسب "%1" به این برچسب امکان پذیر نیست</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
-<translation>برچسب &apos;%1&apos; به برچسب جدید منتقل شد</translation>
+<source>Moved tag '%1' to new tag</source>
+<translation>برچسب '%1' به برچسب جدید منتقل شد</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
-<translation>نمایش تمام یادداشت های دارای برچسب &apos;%1&apos; (%2)</translation>
+<source>show all notes tagged with '%1' (%2)</source>
+<translation>نمایش تمام یادداشت های دارای برچسب '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9318"/>
@@ -4030,8 +4053,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
-<translation>نمایش یادداشت ها در پوشه &quot;%1&quot; (%2)</translation>
+<source>show notes in folder '%1' (%2)</source>
+<translation>نمایش یادداشت ها در پوشه "%1" (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2615"/>
@@ -4079,13 +4102,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>آیا می خواهید روند حذف خودکار &lt;strong&gt;%n&lt;/strong&gt; رونوشت پایگاه داده متناقض را که ممکن است فرآیند همگام سازی اون کلاود شما را مسدود کند ادامه دهید؟</numerusform>
+<numerusform>آیا می خواهید روند حذف خودکار رونوشت های پایگاه داده متناقض &lt;strong&gt;%n&lt;/strong&gt; را که ممکن است فرآیند همگام سازی اون کلاود شما را مسدود کند ادامه دهید؟</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
-<numerusform>%n یادداشت با &quot;%2&quot; برچسب گذاری شد</numerusform>
+<numerusform>%n یادداشت با "%2" برچسب گذاری شد</numerusform>
+<numerusform>یادداشت (های) %n با "%2" برچسب گذاری شد</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4093,6 +4118,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; رویداد &lt;strong&gt;%1&lt;/strong&gt; یافت شد</numerusform>
+<numerusform>رویداد (های) &lt;strong&gt;%n&lt;/strong&gt; مربوط به &lt;strong&gt;%1&lt;/strong&gt; یافت شد</numerusform>
 </translation>
 </message>
 <message>
@@ -4391,7 +4417,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>هیچ نسخه ای برای این یادداشت وجود ندارد یا یادداشت در سرور یافت نشد.</translation>
 </message>
 <message>
@@ -4417,7 +4443,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>سرور CalDAV شما به هیچ چیزی پاسخ نداد!</translation>
 </message>
 <message>
@@ -4460,7 +4486,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>گذرواژه ها مطابقت ندارند!</translation>
 </message>
 </context>
@@ -4506,6 +4532,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
 <translation>
 <numerusform>تغییری در مسیر یادداشت مشاهده شد. آیا می خواهید تمام رویدادهای پیوندهای &lt;strong&gt;%1&lt;/strong&gt; را با &lt;strong&gt;%2&lt;/strong&gt; و پیوندهای دارای نام پرونده &lt;strong&gt;%3&lt;/strong&gt; را با &lt;strong&gt;%4&lt;/strong&gt; در پرونده (های) یادداشت &lt;strong&gt;%n&lt;/strong&gt; جایگزین کنید؟</numerusform>
+<numerusform>تغییری در مسیر یادداشت مشاهده شد. آیا می خواهید تمام رویدادهای پیوندهای &lt;strong&gt;%1&lt;/strong&gt; را با &lt;strong&gt;%2&lt;/strong&gt; و پیوندهای دارای نام پرونده &lt;strong&gt;%3&lt;/strong&gt; را با &lt;strong&gt;%4&lt;/strong&gt; در &lt;strong&gt;%n&lt;/strong&gt; پرونده یادداشت جایگزین کنید؟</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4513,6 +4540,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>... و %n یادداشت بیشتر</numerusform>
+<numerusform>... و یادداشت (های) بیشتر %n</numerusform>
 </translation>
 </message>
 <message>
@@ -4528,12 +4556,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>دوباره نپرس!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>دوباره نشان نده!</translation>
 </message>
 <message>
@@ -4600,13 +4628,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>پوشه با نام &lt;b&gt;%1&lt;/b&gt; قابل ایجاد شدن نیست زیرا به صورت داخلی توسط برنامه استفاده می شود!
 </translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>پوشه با نام &lt;b&gt;%1&lt;/b&gt; قابل ایجاد شدن نیست زیرا در لیست زیر پوشه های چشم پوشی شده است! شما می توانید آن را در &lt;i&gt;تنظیمات پنل ها&lt;/i&gt; تغییر دهید.
 </translation>
 </message>
@@ -4621,12 +4649,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
 <translation>
 <numerusform>%n یادداشت از این پیوست استفاده می کنند. آیا همچنان مایل به تغییر نام این پیوست ها در یادداشت (ها) هستید؟</numerusform>
+<numerusform>%n یادداشت از این پیوست استفاده می کنند. آیا همچنان مایل به تغییر نام این پیوست ها در یادداشت (ها) هستید؟</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
 <translation>
+<numerusform>%n یادداشت از این تصویر استفاده می کنند. آیا همچنان مایل به تغییر نام این تصاویر در یادداشت (ها) هستید؟</numerusform>
 <numerusform>%n یادداشت از این تصویر استفاده می کنند. آیا همچنان مایل به تغییر نام این تصاویر در یادداشت (ها) هستید؟</numerusform>
 </translation>
 </message>
@@ -4845,9 +4875,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-<translation>برقراری ارتباط پایگاه داده با پرونده &quot;%1&quot; امکان پذیر نیست.
+<translation>برقراری ارتباط پایگاه داده با پرونده "%1" امکان پذیر نیست.
 آیا پوشه و پرونده قابل نوشتن هستند؟</translation>
 </message>
 <message>
@@ -4862,9 +4892,9 @@ Are the folder and the file writeable?</source>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-<translation>برای ادغام &quot;%1&quot; برقراری ارتباط پایگاه داده با پایگاه داده پوشه یادداشت امکان پذیر نیست.
+<translation>برای ادغام "%1" برقراری ارتباط پایگاه داده با پایگاه داده پوشه یادداشت امکان پذیر نیست.
 آیا پوشه و پرونده قابل نوشتن هستند؟</translation>
 </message>
 </context>
@@ -5012,7 +5042,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>لطفاً برای کار کردن این اسکریپت، بروز رسانی چیدمان QOwnNotes را فراموش نکنید!</translation>
 </message>
 <message>
@@ -5053,7 +5083,7 @@ Do you want to install it anyway?</source>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>پرونده موجود نیست</translation>
 </message>
 </context>
@@ -5076,6 +5106,8 @@ Do you want to install it anyway?</source>
 <translation>
 <numerusform>&lt;strong&gt;
 %n نشانک&lt;/strong&gt; در سرور یافت شد</numerusform>
+<numerusform>&lt;strong&gt;نشانک های %n
+&lt;/strong&gt; در سرور یافت شدند</numerusform>
 </translation>
 </message>
 </context>
@@ -5134,10 +5166,10 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;
 لطفاً URL سرور اون کلاود خود را وارد کنید. برای مثال: 
-&lt;span style=&quot; font-style:italic;&quot;&gt;
+&lt;span style=" font-style:italic;"&gt;
 https://cloud.yourserver.com
 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
@@ -5221,13 +5253,13 @@ https://cloud.yourserver.com
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;
 &lt;head/&gt;
 &lt;body&gt;
 &lt;p&gt;
-برای نصب یا بروزرسانی QOwnNotesAPI و فعال سازی اپ های اصلی، &lt;span style=&quot; font-weight:600;&quot;&gt;نسخه ها&lt;/span&gt; و &lt;span style=&quot; font-weight:600;&quot;&gt;پرونده های حذف شده&lt;/span&gt; صفحه
-&lt;span style=&quot; font-weight:600;&quot;&gt;
+برای نصب یا بروزرسانی QOwnNotesAPI و فعال سازی اپ های اصلی، &lt;span style=" font-weight:600;"&gt;نسخه ها&lt;/span&gt; و &lt;span style=" font-weight:600;"&gt;پرونده های حذف شده&lt;/span&gt; صفحه
+&lt;span style=" font-weight:600;"&gt;
 پیکربندی اپ
 &lt;/span&gt;
 سرور اون کلاود خود را در مرورگر باز کنید.
@@ -5257,15 +5289,15 @@ https://cloud.yourserver.com
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;
 &lt;head/&gt;
 &lt;body&gt;
 &lt;p&gt;همچنین باید دو اپ اصلی اون کلاود 
-&lt;span style=&quot; font-weight:600;&quot;&gt;نسخه ها
+&lt;span style=" font-weight:600;"&gt;نسخه ها
 &lt;/span&gt;
 و
-&lt;span style=&quot; font-weight:600;&quot;&gt;
+&lt;span style=" font-weight:600;"&gt;
 پرونده های حذف شده
 &lt;/span&gt;
 را داشته باشید که در سرور اون کلاود شما فعال هستند (این باید پیش فرض باشد).
@@ -5500,9 +5532,9 @@ https://cloud.yourserver.com
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; شما می توانید یک گواهی SSL رایگان از 
-&lt;a href=&quot;https://letsencrypt.org/&quot;&gt;
+&lt;a href="https://letsencrypt.org/"&gt;
 بیایید رمزنگاری کنیم &lt;/a&gt;دریافت کنید&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
@@ -5537,13 +5569,13 @@ https://cloud.yourserver.com
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;
 &lt;head/&gt;
 &lt;body&gt;
 &lt;p&gt;
 در صورت علامت گذاری، همیشه درباره اصلاحات خارجی مطلع خواهید شد، حتی اگر یادداشت کنونی در آخرین لحظه ویرایش نشده باشد. توصیه می شود که
-&lt;span style=&quot; font-style:italic;&quot;&gt;
+&lt;span style=" font-style:italic;"&gt;
 علامت گذاری نشود
 &lt;/span&gt;.
 &lt;/p&gt;
@@ -5637,7 +5669,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>داده کاربری ناشناس به شما امکان می دهد تصمیم بگیرید که چه قسمت هایی از QOwnNotes برای نسخه بعدی بهبود یابد و چه اشکلاتی باید پیدا شده و برطرف گردند. اگر واقعاً نمی توانید با آن کار کنید، لطفاً آن را غیرفعال کنید.</translation>
 </message>
 <message>
@@ -5737,9 +5769,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
-<translation>مسیر &quot;یادداشت ها&quot; در سرور شما</translation>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
+<translation>مسیر "یادداشت ها" در سرور شما</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
@@ -5789,8 +5821,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>اگر می خواهید QOwnNotes بتواند به نسخه های یادداشت و یادداشت های حذف شده دسترسی داشته باشد، لطفاً آخرین نسخه &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>اگر می خواهید QOwnNotes بتواند به نسخه های یادداشت و یادداشت های حذف شده دسترسی داشته باشد، لطفاً آخرین نسخه &lt;a href="https://github.com/pbek/qownnotesapi"&gt;
 QOwnNotesAPI 
 &lt;/span&gt; 
 &lt;/a&gt;
@@ -5798,10 +5830,10 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; شما برای همگام سازی یادداشت های خود هنوز هم به
-&lt;a href=&quot;https://owncloud.org/&quot;&gt;
-&lt;span style=&quot; font-weight:600&quot;&gt;
+&lt;a href="https://owncloud.org/"&gt;
+&lt;span style=" font-weight:600"&gt;
 مشتری همگام سازی اون کلاود 
 &lt;/span&gt;
 &lt;/a&gt; (یا مشتری همگام سازی دسکتاپ دیگر) نیاز دارید!
@@ -5865,7 +5897,7 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>توجه داشته باشید که اپ یادداشت های اون کلاود از زیر پوشه ها پشتیبانی نمی کند!</translation>
 </message>
 <message>
@@ -6224,13 +6256,13 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;
 &lt;head/&gt;
 &lt;body&gt;
 &lt;p&gt;
 بهترین راه برای پست مسئله استفاده از دستیار مسئله با فشار دادن دکمه
-&lt;span style=&quot; font-weight:600;&quot;&gt;
+&lt;span style=" font-weight:600;"&gt;
 باز کردن دستیار مسئله
 &lt;/span&gt;
 در پایین صفحه است.
@@ -6300,14 +6332,14 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
+<source>If your password doesn't work, create an app password (button on the right)</source>
 <translation>در صورتی که رمز عبور شما کار نمی کند، یک رمز عبور برای برنامه ایجاد کنید (دکمه سمت راست)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
 <translation>در صورت تمایل برای کمک به ترجمه QOwnNotes یا به روزرسانی ترجمه موجود لطفاً این مطلب را بخوانید:
-&lt;a href=&quot;%1&quot;&gt;
+&lt;a href="%1"&gt;
 چطور می توانم به ترجمه QOwnNotes کمک کنم؟
 &lt;/a&gt;</translation>
 </message>
@@ -6398,7 +6430,7 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>گیت هاب نیازی به دو فضا در انتهای خط برای نقطه سر خط ندارد</translation>
 </message>
 <message>
@@ -6418,7 +6450,7 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>لطفاً در ایشو ترکر از این مورد استفاده نکنید</translation>
 </message>
 <message>
@@ -6438,13 +6470,13 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;
 &lt;head/&gt;
 &lt;body&gt;
 &lt;p&gt;
 شاید بخواهید به تمام
-&lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;
+&lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;
 قالب های زمانی 
 &lt;/a&gt;
 در دسترس نگاهی بیندازید.
@@ -6480,8 +6512,8 @@ QOwnNotesAPI
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
-<translation>عبارات باقاعده از زیر پوشه های یادداشت برای چشم پوشی، جدا شده با &quot;؛&quot;</translation>
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
+<translation>عبارات باقاعده از زیر پوشه های یادداشت برای چشم پوشی، جدا شده با "؛"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5651"/>
@@ -6500,8 +6532,8 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
-<translation>مخفی کردن &quot;تعداد یادداشت&quot; با برچسب ها (عملکرد را افزایش می دهد)</translation>
+<source>Hide 'Note count' with tags (increases performance)</source>
+<translation>مخفی کردن "تعداد یادداشت" با برچسب ها (عملکرد را افزایش می دهد)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5824"/>
@@ -6510,8 +6542,8 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation>شما می توانید از &lt;a href=&quot;%1&quot;&gt;برنامه تحت وب QOwnNotes&lt;/a&gt; استفاده کنید تا قادر به درج تصاویر در QOwnNotes در دسکتاپ خود باشید.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation>شما می توانید از &lt;a href="%1"&gt;برنامه تحت وب QOwnNotes&lt;/a&gt; استفاده کنید تا قادر به درج تصاویر در QOwnNotes در دسکتاپ خود باشید.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6615,8 +6647,8 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>افزونه مرورگر به طور پیش فرض تمام پیوندهای یادداشت کنونی را نشان می دهد. همچنین می توانید با یک برچسب معین، آن را مجاب کنید پیوندهای ویژه نشانک یادداشت ها را نشان دهد. برای اطلاعات بیشتر در مورد چیدمان پیوند نشانک &lt;a href=&quot;%1&quot;&gt;اینجا&lt;/a&gt; کلیک کنید.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>افزونه مرورگر به طور پیش فرض تمام پیوندهای یادداشت کنونی را نشان می دهد. همچنین می توانید با یک برچسب معین، آن را مجاب کنید پیوندهای ویژه نشانک یادداشت ها را نشان دهد. برای اطلاعات بیشتر در مورد چیدمان پیوند نشانک &lt;a href="%1"&gt;اینجا&lt;/a&gt; کلیک کنید.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6666,16 +6698,16 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>&lt;a href=&quot;%1&quot;&gt;
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>&lt;a href="%1"&gt;
 افزونه مرورگر همراه وب
 &lt;/a&gt;
 را از
-&lt;a href=&quot;%2&quot;&gt;
+&lt;a href="%2"&gt;
 کروم وب استور
 &lt;/a&gt;
 یا
-&lt;a href=&quot;%3&quot;&gt;
+&lt;a href="%3"&gt;
 صفحه افزونه های فایرفاکس
 &lt;/a&gt;
 نصب کنید تا از QOwnNotes به عنوان وب کلیپر استفاده کنید.</translation>
@@ -6777,14 +6809,14 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>فرمانی را وارد کنید تا برای نمایش git log استفاده شود (مانند مثال &quot;gitk&quot;)</translation>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>فرمانی را وارد کنید تا برای نمایش git log استفاده شود (مانند مثال "gitk")</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>در صورت استفاده از این تنظیمات، با کلیک راست کردن روی یک یادداشت، منوی جدیدی برای نمایش نسخه های گیت دریافت خواهید کرد.</translation>
 </message>
 <message>
@@ -6804,7 +6836,7 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>فراموش نکنید که برای پوشه های یادداشت خود پشتیبانی گیت را فعال کنید و نام و آدرس پست الکترونیک خود را برای مشتری گیت خود پیکربندی کنید. به عنوان مثال با این دستورات ترمینال:</translation>
 </message>
 <message>
@@ -6859,8 +6891,8 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
-<translation>مخفی کردن جستجوی &quot;یافتن یا ایجاد برچسب&quot;</translation>
+<source>Hide 'Find or create tag' search</source>
+<translation>مخفی کردن جستجوی "یافتن یا ایجاد برچسب"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5568"/>
@@ -6885,8 +6917,8 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
-<translation>مخفی کردن جستجوی &quot;یافتن یا ایجاد زیر پوشه یادداشت&quot;</translation>
+<source>Hide 'Find or create note subfolder' search</source>
+<translation>مخفی کردن جستجوی "یافتن یا ایجاد زیر پوشه یادداشت"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6900,9 +6932,9 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>شما در صورت تمایل می توانید برای مسیر یادداشت از &quot;%notePath%&quot; استفاده کنید.</translation>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>شما در صورت تمایل می توانید برای مسیر یادداشت از "%notePath%" استفاده کنید.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -6962,7 +6994,7 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>برای نسخه های قدیمی تر اون کلاود که در آن تنظیم پیش فرض کار نمی کند</translation>
 </message>
 <message>
@@ -7127,8 +7159,8 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
-<translation>قالب زمانی سفارشی خود را وارد کنید. برای مثال &quot;dd.MM.yyyy hh:mm&quot;</translation>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation>قالب زمانی سفارشی خود را وارد کنید. برای مثال "dd.MM.yyyy hh:mm"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7228,7 +7260,7 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>چشم پوشی از تقویم هایی که از موارد انجام دادنی پشتیبانی نمی کنند</translation>
 </message>
 <message>
@@ -7298,8 +7330,8 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-<translation>اگر افزونه های سفارشی را اضافه می کنید فقط در افزونه عبارتی مانند &quot;تسک پیپر&quot; را تایپ کنید.</translation>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+<translation>اگر افزونه های سفارشی را اضافه می کنید فقط در افزونه عبارتی مانند "تسک پیپر" را تایپ کنید.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7313,7 +7345,7 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
+<source>Don't show the update dialog automatically</source>
 <translation>عدم نمایش خودکار کادر گفتگوی بروزرسانی</translation>
 </message>
 <message>
@@ -7352,24 +7384,24 @@ QOwnNotesAPI
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
 <translation>&lt;html&gt;
 &lt;head/&gt;
 &lt;body&gt;
 &lt;p&gt;
 اگر 
-&lt;span style=&quot; font-weight:600;&quot;&gt;سوال یا مشکلی
+&lt;span style=" font-weight:600;"&gt;سوال یا مشکلی
 &lt;/span&gt; 
 با QOwnNotes دارید، می توانید
 این متن (یا بخش هایی از این متن) را در
-&lt;span style=&quot; font-weight:600;&quot;&gt;
+&lt;span style=" font-weight:600;"&gt;
 مسئله
 &lt;/span&gt;
 و در
-&lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;
+&lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;
 صفحه مسائل QOwnNotes
 &lt;/a&gt;
-&lt;span style=&quot; font-weight:600;&quot;&gt;
+&lt;span style=" font-weight:600;"&gt;
 رونوشت کرده و بچسبانید
 &lt;/span&gt;.
 داده ای که به شدت حساس باشد در این اطلاعات مخفی می شود.
@@ -7439,7 +7471,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>لطفاً در ایشو ترکر از این استفاده نکنید و متن اطلاعات اشکال زدایی را مستقیماً در مسئله رونوشت کنید.</translation>
 </message>
 <message>
@@ -7454,7 +7486,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>داده کاربری ناشناس به شما امکان می دهد تصمیم بگیرید که چه قسمت هایی از QOwnNotes برای نسخه بعدی بهبود یابد و چه اشکلاتی باید پیدا شده و برطرف گردند. &lt;br /&gt; اگر واقعاً نمی توانید با آن کار کنید، لطفاً آن را غیرفعال کنید.&lt;br /&gt;
 &lt;br /&gt;
 آیا واقعاً می خواهید ردیابی کاربری را غیرفعال کنید؟</translation>
@@ -7491,18 +7523,18 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>بارگذاری پوشه ها از سرور در &quot;%1&quot;</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>بارگذاری پوشه ها از سرور در "%1"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>برای شروع سریع، به &lt;a href=&quot;%1&quot;&gt;سندسازی اسکریپت نویسی&lt;/a&gt; نگاهی بیندازید.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>برای شروع سریع، به &lt;a href="%1"&gt;سندسازی اسکریپت نویسی&lt;/a&gt; نگاهی بیندازید.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>اگر در QOwnNotes نیاز به دسترسی به عملکرد خاصی دارید، لطفاً یک مسئله را در &lt;a href=&quot;%1&quot;&gt;صفحه مسئله QOwnNotes
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>اگر در QOwnNotes نیاز به دسترسی به عملکرد خاصی دارید، لطفاً یک مسئله را در &lt;a href="%1"&gt;صفحه مسئله QOwnNotes
 &lt;/a&gt; باز کنید.</translation>
 </message>
 <message>
@@ -7719,9 +7751,9 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
 <translation>می توانید مشتری گیت خود را از اینجا بارگیری کنید:
-&lt;a href=&quot;%url&quot;&gt;
+&lt;a href="%url"&gt;
 گیت برای ویندوز
 &lt;/a&gt;</translation>
 </message>
@@ -7747,7 +7779,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>پایگاه داده اس کیو ال لایت داخلی و تنظیمات در داخل یک پوشه &lt;code&gt;داده&lt;/code&gt; در محل دودویی ذخیره می شوند</translation>
 </message>
 <message>
@@ -8096,6 +8128,7 @@ Your notes will stay intact!</source>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation>
 <numerusform>آیا می خواهید &lt;strong&gt;%n&lt;/strong&gt; پرونده منتخب را حذف کنید؟</numerusform>
+<numerusform>آیا می خواهید &lt;strong&gt;%n&lt;/strong&gt; پرونده منتخب را حذف کنید؟</numerusform>
 </translation>
 </message>
 <message>
@@ -8120,12 +8153,12 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
+<source>File doesn't exist</source>
 <translation>پرونده موجود نیست</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation>پرونده &lt;strong&gt;%1&lt;/strong&gt; موجود نمی باشد؛ در نتیجه شما قادر به تغییر نام آن نیستید!</translation>
 </message>
 <message>
@@ -8246,16 +8279,17 @@ Your notes will stay intact!</source>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation>
 <numerusform>آیا می خواهید &lt;strong&gt;%n&lt;/strong&gt; پرونده منتخب را حذف کنید؟</numerusform>
+<numerusform>آیا می خواهید &lt;strong&gt;%n&lt;/strong&gt; پرونده منتخب را حذف کنید؟</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
+<source>File doesn't exist</source>
 <translation>پرونده موجود نیست</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation>پرونده &lt;strong&gt;%1&lt;/strong&gt; موجود نمی باشد؛ در نتیجه شما قادر به تغییر نام آن نیستید!</translation>
 </message>
 <message>
@@ -8831,8 +8865,8 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href=&quot;%1&quot;&gt;
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href="%1"&gt;
 با QOwnNotes مشارکت کنید
 &lt;/a&gt;</translation>
 </message>
@@ -8845,10 +8879,6 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;بروز رسانی</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">&amp;بارگیری آخرین</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8867,7 +8897,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>عدم نمایش خودکار این کادر گفتگو</translation>
 </message>
 <message>
@@ -8943,77 +8973,77 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">راه اندازی مجدد برنامه</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">راه اندازی مجدد</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished">لغو</translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>اسکریپت بروزرسانی &quot;%1&quot; موجود نیست!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>اسکریپت بروزرسانی "%1" موجود نیست!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>اجراپذیر غیرفشرده بروزرسانی &quot;%1&quot; موجود نیست!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>اجراپذیر غیرفشرده بروزرسانی "%1" موجود نیست!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>رونوشت برداری از اسکریپت بروزرسانی &quot;%1&quot; به &quot;%2&quot; امکان پذیر نیست!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>رونوشت برداری از اسکریپت بروزرسانی "%1" به "%2" امکان پذیر نیست!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>یافتن اسکریپت بروزرسانی امکان پذیر نیست: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
+<source>Couldn't find unzip executable: %1</source>
 <translation>یافتن اجراپذیر غیرفشرده امکان پذیر نیست: %1</translation>
 </message>
 <message>
@@ -9142,6 +9172,7 @@ This cannot be undone!</source>
 <source>%n bookmark(s) created</source>
 <translation>
 <numerusform>%n نشانک ایجاد شد</numerusform>
+<numerusform>نشانک (های) %n ایجاد شد</numerusform>
 </translation>
 </message>
 <message>
@@ -9279,7 +9310,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>این مسیر یادداشت موجود نیست!</translation>
 </message>
 <message>

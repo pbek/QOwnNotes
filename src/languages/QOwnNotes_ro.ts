@@ -713,7 +713,7 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
 <translation>Pentru a obține un fișier enex, trebuie să selectați una sau mai multe note din aplicația dumneavoastră Evernote și să faceți clic pe „Exportare notă...” din meniul Fișier.</translation>
 </message>
 <message>
@@ -872,158 +872,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1037,8 +1037,8 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
-<translation>Marca &quot;%1&quot; nu e configurată.</translation>
+<source>Mark "%1" not set.</source>
+<translation>Marca "%1" nu e configurată.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
@@ -1061,18 +1061,14 @@
 <translation>Nu este implementat în FakeVim.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">Tastați Alt-V, Alt-V pentru a ieși din modul FakeVim.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1105,18 +1101,18 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
-<translation>Fișierul &quot;%1&quot; există (a se adăuga! pentru a trece peste)</translation>
+<source>File "%1" exists (add ! to override)</source>
+<translation>Fișierul "%1" există (a se adăuga! pentru a trece peste)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
-<translation>Imposibil de deschis fişierul &quot;%1&quot; pentru scris</translation>
+<source>Cannot open file "%1" for writing</source>
+<translation>Imposibil de deschis fişierul "%1" pentru scris</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
-<translation>&quot;%1&quot; %2 %3L, %4C scris.</translation>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>"%1" %2 %3L, %4C scris.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
@@ -1125,13 +1121,13 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
-<translation>Nu se poate deschide fișierul &quot;%1&quot; pentru citire</translation>
+<source>Cannot open file "%1" for reading</source>
+<translation>Nu se poate deschide fișierul "%1" pentru citire</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
-<translation>&quot;%1&quot; %2L, %3C</translation>
+<source>"%1" %2L, %3C</source>
+<translation>"%1" %2L, %3C</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
@@ -1194,16 +1190,7 @@
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
-<numerusform>%n line %1ed %2 timp.</numerusform>
-<numerusform>%n linii %1ed %2 timp.</numerusform>
-<numerusform>%n linii %1ed %2 timp.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
+<translation>
 <numerusform>%n line %1ed %2 timp.</numerusform>
 <numerusform>%n linii %1ed %2 timp.</numerusform>
 <numerusform>%n linii %1ed %2 timp.</numerusform>
@@ -1474,7 +1461,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>Sintaxa mascat</translation>
 </message>
 <message>
@@ -1574,7 +1561,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
+<source>Don't copy image to media folder</source>
 <translation>Nu copiați imaginea în folderul media</translation>
 </message>
 <message>
@@ -1850,7 +1837,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>Fișierul &lt;strong&gt;%1 &lt;/ strong&gt; nu poate fi citit și nu poate fi restabilit!</translation>
 </message>
 <message numerus="yes">
@@ -2364,7 +2351,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1610"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Inseraţi imaginea (imaginea va fi copiat în folderul &apos;media&apos; în folderul curent note)</translation>
+<translation>Inseraţi imaginea (imaginea va fi copiat în folderul 'media' în folderul curent note)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1622"/>
@@ -2538,7 +2525,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
 </message>
 <message>
@@ -2818,8 +2805,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-<translation>Rezolva o ecuaţie simplă ca &apos;(2+3) * 6 =&apos; în linia curentă</translation>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>Rezolva o ecuaţie simplă ca '(2+3) * 6 =' în linia curentă</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2951,7 +2938,7 @@ Restabiliți nota curentă?</translation>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="obsolete">
+<translation type="unfinished">
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
@@ -3048,7 +3035,7 @@ Restabiliți nota curentă?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>Notă nu poate fi decriptată!</translation>
 </message>
 <message>
@@ -3352,7 +3339,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>Imposibil de deschis fișierul temporar</translation>
 </message>
 <message>
@@ -3363,18 +3350,18 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Resetaţi dimensiunea fontului la %1 pt</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
-<translation>Elimina Tag-ul &apos;%1&apos; de curent Notă</translation>
+<source>Remove tag '%1' from the current note</source>
+<translation>Elimina Tag-ul '%1' de curent Notă</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
-<translation>Elimina Tag-ul &apos;%1&apos; din notele explicative selectate</translation>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>Elimina Tag-ul '%1' din notele explicative selectate</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9315"/>
@@ -3429,7 +3416,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>Salt la subfolderul notei
 </translation>
 </message>
@@ -3590,8 +3577,8 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
-<translation>Notă titlul &apos;%1&apos; a fost copiat în clipboard</translation>
+<source>Note headline '%1' was copied to the clipboard</source>
+<translation>Notă titlul '%1' a fost copiat în clipboard</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12757"/>
@@ -3793,11 +3780,11 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
-<numerusform>Notă %n a fost mutată în subfolderul &quot;%2&quot;</numerusform>
-<numerusform>%n notele au fost mutate în subfolderul &quot;%2&quot;</numerusform>
-<numerusform>%n notele au fost mutate în subfolderul &quot;%2&quot;</numerusform>
+<numerusform>Notă %n a fost mutată în subfolderul "%2"</numerusform>
+<numerusform>%n notele au fost mutate în subfolderul "%2"</numerusform>
+<numerusform>%n notele au fost mutate în subfolderul "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3811,11 +3798,11 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
-<numerusform>Notă %n a fost copiată în subfolderul &quot;%2&quot;</numerusform>
-<numerusform>Au fost copiate notele %n în subfolderul &quot;%2&quot;</numerusform>
-<numerusform>Au fost copiate notele %n în subfolderul &quot;%2&quot;</numerusform>
+<numerusform>Notă %n a fost copiată în subfolderul "%2"</numerusform>
+<numerusform>Au fost copiate notele %n în subfolderul "%2"</numerusform>
+<numerusform>Au fost copiate notele %n în subfolderul "%2"</numerusform>
 </translation>
 </message>
 <message>
@@ -3971,18 +3958,18 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
-<translation>Nu se poate muta eticheta &quot;%1&quot; la această etichetă</translation>
+<source>Cannot move tag '%1' to this tag</source>
+<translation>Nu se poate muta eticheta "%1" la această etichetă</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
-<translation>Eticheta mutată &apos;%1&apos; la eticheta nouă</translation>
+<source>Moved tag '%1' to new tag</source>
+<translation>Eticheta mutată '%1' la eticheta nouă</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
-<translation>arată toate notele etichetate cu &apos;%1&apos; (%2)</translation>
+<source>show all notes tagged with '%1' (%2)</source>
+<translation>arată toate notele etichetate cu '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9318"/>
@@ -4102,8 +4089,8 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
-<translation>arată note în folderul &apos;%1&apos; (%2)</translation>
+<source>show notes in folder '%1' (%2)</source>
+<translation>arată note în folderul '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2615"/>
@@ -4157,11 +4144,11 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
-<numerusform>%n note(s) au fost etichetate cu &quot;%2&quot;</numerusform>
-<numerusform>%n note(s) au fost etichetate cu &quot;%2&quot;</numerusform>
-<numerusform>%n note(s) au fost etichetate cu &quot;%2&quot;</numerusform>
+<numerusform>%n note(s) au fost etichetate cu "%2"</numerusform>
+<numerusform>%n note(s) au fost etichetate cu "%2"</numerusform>
+<numerusform>%n note(s) au fost etichetate cu "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4468,7 +4455,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Există versiuni pentru această notă sau nota nu a fost gasit pe server.</translation>
 </message>
 <message>
@@ -4494,7 +4481,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>Server-ul CalDAV nu raspunde nimic!</translation>
 </message>
 <message>
@@ -4537,7 +4524,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>Parolele nu se potrivesc!</translation>
 </message>
 </context>
@@ -4609,12 +4596,12 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>Nu se întreabă din nou!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>Nu arată din nou!</translation>
 </message>
 <message>
@@ -4683,13 +4670,13 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>Folderul cu numele &lt;b&gt;%1 &lt;/b&gt; nu poate fi creat, deoarece este folosit intern de aplicație!
 </translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>Folderul cu numele &lt;b&gt;%1 &lt;/b&gt; nu poate fi creat, deoarece se află pe lista subfolderelor ignorate! Puteți schimba asta în &lt;i&gt; Setări panouri &lt;/i&gt;.
 </translation>
 </message>
@@ -4932,9 +4919,9 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-<translation>Imposibil de stabilit o conexiune la baza de date cu fișierul &apos;%1&apos;.
+<translation>Imposibil de stabilit o conexiune la baza de date cu fișierul '%1'.
 Dosarul și fișierul pot fi înregistrate?</translation>
 </message>
 <message>
@@ -4949,7 +4936,7 @@ Dosarul și fișierul pot fi înregistrate?</translation>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
 <translation>Nu se poate stabili o conexiune a bazei de date cu baza de date cu folderul de note pentru a combina „%1”.
 Se pot scrie folderul și fișierul?</translation>
@@ -5099,7 +5086,7 @@ Doriți să o instalați oricum?</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Vă rugăm să nu uitați să vă actualizați instalarea QOwnNotes pentru a face acest script să funcționeze!</translation>
 </message>
 <message>
@@ -5140,7 +5127,7 @@ Doriți să o instalați oricum?</translation>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>fișierul nu există</translation>
 </message>
 </context>
@@ -5222,8 +5209,8 @@ Doriți să o instalați oricum?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vă rugăm să introduceţi adresa URL a serverului de ownCloud, de exemplu: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vă rugăm să introduceţi adresa URL a serverului de ownCloud, de exemplu: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5289,8 +5276,8 @@ Doriți să o instalați oricum?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;deschide configurare a App ownCloud serverului &lt;span style=&quot; font-weight:600;&quot;&gt;&lt;/span&gt; a şterge dosar de filme în webbrowser dumneavoastră să instalaţi sau actualizaţi QOwnNotesAPI şi pentru a permite core apps &lt;span style=&quot; font-weight:600;&quot;&gt;versiuni&lt;/span&gt; şi &lt;span style=&quot; font-weight:600;&quot;&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;deschide configurare a App ownCloud serverului &lt;span style=" font-weight:600;"&gt;&lt;/span&gt; a şterge dosar de filme în webbrowser dumneavoastră să instalaţi sau actualizaţi QOwnNotesAPI şi pentru a permite core apps &lt;span style=" font-weight:600;"&gt;versiuni&lt;/span&gt; şi &lt;span style=" font-weight:600;"&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5314,8 +5301,8 @@ Doriți să o instalați oricum?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;trebuie, de asemenea, să aibă două ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;versiuni&lt;/span&gt; şi &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; activat pe serverul de ownCloud (care ar trebui să fie implicit).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;trebuie, de asemenea, să aibă două ownCloud core apps &lt;span style=" font-weight:600;"&gt;versiuni&lt;/span&gt; şi &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; activat pe serverul de ownCloud (care ar trebui să fie implicit).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5544,8 +5531,8 @@ Doriți să o instalați oricum?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Poate doriți să luați în considerare obținerea unui certificat SSL gratuit de la &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Să criptați &lt;/a&gt;. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Poate doriți să luați în considerare obținerea unui certificat SSL gratuit de la &lt;a href="https://letsencrypt.org/"&gt; Să criptați &lt;/a&gt;. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5579,8 +5566,8 @@ Doriți să o instalați oricum?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Dacă este bifată, veți fi mereu notificat despre modificările externe, chiar dacă nota curentă nu a fost editată în ultimul moment. Recomandată este &lt;span style = &quot;font-style: italic;&quot;&gt; neînchis &lt;/ span&gt;. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Dacă este bifată, veți fi mereu notificat despre modificările externe, chiar dacă nota curentă nu a fost editată în ultimul moment. Recomandată este &lt;span style = "font-style: italic;"&gt; neînchis &lt;/ span&gt;. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5669,7 +5656,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>Datele de utilizare anonime ajută la a decide ce părți din QOwnNotes să se îmbunătățească în continuare și să găsească și să remedieze erorile. Dezactivați-o numai dacă nu puteți trăi cu adevărat.</translation>
 </message>
 <message>
@@ -5769,14 +5756,14 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
-<translation>Cale &quot;Note&quot; de pe serverul dvs</translation>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
+<translation>Cale "Note" de pe serverul dvs</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
 <source>&amp;Use as ownCloud path</source>
-<translation>&amp;Utilizați drept cale &quot;ownCloud&quot;</translation>
+<translation>&amp;Utilizați drept cale "ownCloud"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="644"/>
@@ -5821,13 +5808,13 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Vă rugăm să instalați cea mai recentă versiune de &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt; &lt;span style = &quot;font-weight: 600;&quot;&gt; QOwnNotesAPI &lt;/ span&gt; &lt;/a&gt; (cel puțin versiunea QOWNNOTESAPI_MIN_VERSION) pe serverul propriuCloud dacă doriți ca QOwnNotes să poată accesa versiunile de note și notele trasate.</translation>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Vă rugăm să instalați cea mai recentă versiune de &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-weight: 600;"&gt; QOwnNotesAPI &lt;/ span&gt; &lt;/a&gt; (cel puțin versiunea QOWNNOTESAPI_MIN_VERSION) pe serverul propriuCloud dacă doriți ca QOwnNotes să poată accesa versiunile de note și notele trasate.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Veți avea totuși nevoie de &lt;a href=&quot;https://owncloud.org/&quot;&gt; &lt;span style = &quot;font-weight: 600&quot;&gt; propriul client de sincronizare &lt;/span&gt; &lt;/a&gt; (sau un alt client de sincronizare desktop) pentru a vă sincroniza notele! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Veți avea totuși nevoie de &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; propriul client de sincronizare &lt;/span&gt; &lt;/a&gt; (sau un alt client de sincronizare desktop) pentru a vă sincroniza notele! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5885,7 +5872,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>Fiți conștienți că aplicația ownCloud note nu acceptă subfoldere!
 </translation>
 </message>
@@ -6246,8 +6233,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;Html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Cel mai bun mod de a posta probleme este să utilizați asistentul de problemă apăsând &lt;span style = &quot;font-weight: 600;&quot;&gt; Deschideți asistentul de emitere &lt;/ span&gt; în partea de jos. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;Html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Cel mai bun mod de a posta probleme este să utilizați asistentul de problemă apăsând &lt;span style = "font-weight: 600;"&gt; Deschideți asistentul de emitere &lt;/ span&gt; în partea de jos. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6311,13 +6298,13 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn&apos;t work, create an app password (button on the right)</translation>
+<source>If your password doesn't work, create an app password (button on the right)</source>
+<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation>Dacă doriți să ajutați la traducerea QOwnNotes sau să actualizați o traducere existentă, vă rugăm să citiți: &lt;a href=&quot;%1&quot;&gt; Cum pot ajuta la traducerea QOwnNotes? &lt;/a&gt;
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation>Dacă doriți să ajutați la traducerea QOwnNotes sau să actualizați o traducere existentă, vă rugăm să citiți: &lt;a href="%1"&gt; Cum pot ajuta la traducerea QOwnNotes? &lt;/a&gt;
 </translation>
 </message>
 <message>
@@ -6407,7 +6394,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub nu are nevoie de două spații la sfârșitul liniei pentru a face o pauză de linie</translation>
 </message>
 <message>
@@ -6427,7 +6414,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>Vă rugăm să nu folosiți acest lucru în trackerul de probleme</translation>
 </message>
 <message>
@@ -6447,8 +6434,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Poate doriți să aruncați o privire asupra tuturor &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;formatelor de timp&lt;/a&gt; disponibile.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Poate doriți să aruncați o privire asupra tuturor &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;formatelor de timp&lt;/a&gt; disponibile.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6478,8 +6465,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
-<translation>Expresii regulate ale subfolderelor de notă de ignorat, separate prin &quot;;&quot;
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
+<translation>Expresii regulate ale subfolderelor de notă de ignorat, separate prin ";"
 </translation>
 </message>
 <message>
@@ -6501,7 +6488,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
+<source>Hide 'Note count' with tags (increases performance)</source>
 <translation>Ascundeți „numărul de note” cu cuvinte cheie (crește performanța)</translation>
 </message>
 <message>
@@ -6511,8 +6498,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6617,8 +6604,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>În mod implicit, extensia browserului va afișa toate legăturile notei curente. De asemenea, puteți să arătați link-uri speciale de note de note cu o anumită etichetă. Pentru mai multe informații despre sintaxa link-ului de marcaj, dați clic pe &lt;a href=&quot;%1&quot;&gt; aici &lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>În mod implicit, extensia browserului va afișa toate legăturile notei curente. De asemenea, puteți să arătați link-uri speciale de note de note cu o anumită etichetă. Pentru mai multe informații despre sintaxa link-ului de marcaj, dați clic pe &lt;a href="%1"&gt; aici &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6668,8 +6655,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>Instalați &lt;a href=&quot;%1&quot;&gt; extensia de browser web Companion &lt;/a&gt; din &lt;a href=&quot;%2&quot;&gt; Magazinul web Chrome &lt;/a&gt; sau &lt;a href=&quot;%3&quot;&gt; Add- ons page &lt;/a&gt; pentru a utiliza QOwnNotes ca web clipper.</translation>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>Instalați &lt;a href="%1"&gt; extensia de browser web Companion &lt;/a&gt; din &lt;a href="%2"&gt; Magazinul web Chrome &lt;/a&gt; sau &lt;a href="%3"&gt; Add- ons page &lt;/a&gt; pentru a utiliza QOwnNotes ca web clipper.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6764,14 +6751,14 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Introduceți o comandă care să fie utilizată pentru a afișa un jurnal git (de exemplu, &quot;gitk&quot;)</translation>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Introduceți o comandă care să fie utilizată pentru a afișa un jurnal git (de exemplu, "gitk")</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Dacă utilizați această setare, veți primi o nouă intrare de meniu pentru a afișa versiunile git dacă faceți clic dreapta pe o notă.</translation>
 </message>
 <message>
@@ -6791,7 +6778,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Nu uitați să activați suportul git pentru dosarele de note și să vă configurați numele și adresa de e-mail pentru clientul dvs. git, de exemplu cu aceste comenzi terminale:</translation>
 </message>
 <message>
@@ -6846,8 +6833,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
-<translation>Ascundeți căutarea &quot;Găsiți sau creați etichete&quot;</translation>
+<source>Hide 'Find or create tag' search</source>
+<translation>Ascundeți căutarea "Găsiți sau creați etichete"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5568"/>
@@ -6872,8 +6859,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
-<translation>Ascundeți căutarea &quot;Găsiți sau creați subdirectoare de notă&quot;</translation>
+<source>Hide 'Find or create note subfolder' search</source>
+<translation>Ascundeți căutarea "Găsiți sau creați subdirectoare de notă"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6887,9 +6874,9 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Opțional puteți utiliza &quot;%notePath%&quot; pentru calea notei.</translation>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Opțional puteți utiliza "%notePath%" pentru calea notei.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -6949,7 +6936,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>Pentru versiunile mai vechi ale ownCloud unde setarea implicită nu funcționează</translation>
 </message>
 <message>
@@ -7114,8 +7101,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
-<translation>Introduceți formatul dvs. personalizat, cum ar fi &quot;dd.MM.aaaa hh: mm&quot;</translation>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation>Introduceți formatul dvs. personalizat, cum ar fi "dd.MM.aaaa hh: mm"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7215,7 +7202,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>Ignorați calendarele care nu acceptă articolele todo</translation>
 </message>
 <message>
@@ -7285,8 +7272,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-<translation>Dacă adăugați extensii personalizate, doar tastați extensia, cum ar fi &quot;taskpaper&quot;.</translation>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+<translation>Dacă adăugați extensii personalizate, doar tastați extensia, cum ar fi "taskpaper".</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7300,7 +7287,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
+<source>Don't show the update dialog automatically</source>
 <translation>Nu afișați automat dialogul de actualizare</translation>
 </message>
 <message>
@@ -7339,8 +7326,8 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;span style = &quot;font-weight: 600;&quot;&gt; copiați și lipiți &lt;/ span&gt; acest text (sau părți ale acestui text) într-un &lt;span style = &quot;font-weight: 600;&quot;&gt; issue &lt;/ span&gt; pe &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; pagina de probleme QOwnNotes &lt;/a&gt; dacă aveți &lt;span style = &quot;font-weight: 600;&quot;&gt; întrebări sau probleme &lt;/ span&gt; cu QOwnNotes. Datele care sunt prea sensibile sunt ascunse în aceste informații. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;span style = "font-weight: 600;"&gt; copiați și lipiți &lt;/ span&gt; acest text (sau părți ale acestui text) într-un &lt;span style = "font-weight: 600;"&gt; issue &lt;/ span&gt; pe &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; pagina de probleme QOwnNotes &lt;/a&gt; dacă aveți &lt;span style = "font-weight: 600;"&gt; întrebări sau probleme &lt;/ span&gt; cu QOwnNotes. Datele care sunt prea sensibile sunt ascunse în aceste informații. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7404,7 +7391,7 @@ Mesaj de eroare de conectare: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Vă rugăm să nu folosiți acest lucru în următorul de probleme, copiați textul informațiilor de depanare direct în problema.</translation>
 </message>
 <message>
@@ -7419,7 +7406,7 @@ Mesaj de eroare de conectare: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Datele de utilizare anonime ajută la a decide ce părți din QOwnNotes să se îmbunătățească în continuare și să găsească și să remedieze erorile. &lt;br /&gt; Vă rugăm să o dezactivați numai dacă într-adevăr nu puteți trăi cu ea. &lt;br /&gt; &lt;br /&gt; Într-adevăr dezactivați urmărirea utilizării?</translation>
 </message>
 <message>
@@ -7454,18 +7441,18 @@ Mesaj de eroare de conectare: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>Încărcarea folderelor în &apos;%1&apos; de pe server</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>Încărcarea folderelor în '%1' de pe server</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Uitați-vă la &lt;a href=&quot;%1&quot;&gt; documentația Scripting &lt;/a&gt; pentru a începe rapid.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Uitați-vă la &lt;a href="%1"&gt; documentația Scripting &lt;/a&gt; pentru a începe rapid.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Dacă aveți nevoie de acces la o anumită funcție în QOwnNotes, deschideți o problemă pe &lt;a href=&quot;%1&quot;&gt; pagina de problemă QOwnNotes &lt;/a&gt;.</translation>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Dacă aveți nevoie de acces la o anumită funcție în QOwnNotes, deschideți o problemă pe &lt;a href="%1"&gt; pagina de problemă QOwnNotes &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
@@ -7679,8 +7666,8 @@ Mesaj de eroare de conectare: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Puteți descărca clientul dvs. git aici: &lt;a href=&quot;%url&quot;&gt; Git for Windows &lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation>Puteți descărca clientul dvs. git aici: &lt;a href="%url"&gt; Git for Windows &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7704,7 +7691,7 @@ Mesaj de eroare de conectare: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>baza de date internă sqlite și setările vor fi stocate într-un director &lt;code&gt; Data &lt;/ code&gt; în locația binar</translation>
 </message>
 <message>
@@ -8077,13 +8064,13 @@ Notele dvs. vor rămâne intacte!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
@@ -8209,13 +8196,13 @@ Notele dvs. vor rămâne intacte!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
@@ -8772,8 +8759,8 @@ Acest lucru nu poate fi anulat!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href=&quot;%1&quot;&gt; Implică-te în QOwnNotes &lt;/a&gt;</translation>
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href="%1"&gt; Implică-te în QOwnNotes &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8784,10 +8771,6 @@ Acest lucru nu poate fi anulat!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;Actualizați</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">&amp;Descărcați mai târziu</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8806,7 +8789,7 @@ Acest lucru nu poate fi anulat!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>Nu afișați automat acest dialog</translation>
 </message>
 <message>
@@ -8882,77 +8865,77 @@ Acest lucru nu poate fi anulat!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">Reporniți aplicația</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">Repornire</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Scriptul de actualizare &quot;%1&quot; nu există!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>Scriptul de actualizare "%1" nu există!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Actualizatorul de dezarhivare a programului de actualizare &apos;%1&apos; nu exista!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>Actualizatorul de dezarhivare a programului de actualizare '%1' nu exista!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>Nu s-a putut copia scriptul updater &apos;%1&apos; la &apos;%2&apos;!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>Nu s-a putut copia scriptul updater '%1' la '%2'!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>Nu am găsit scriptul updater: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
+<source>Couldn't find unzip executable: %1</source>
 <translation>Nu s-a putut găsi executabilul dezarhivat: %1</translation>
 </message>
 <message>
@@ -9219,7 +9202,7 @@ Acest lucru nu poate fi anulat!</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>Această cale a notei nu există!</translation>
 </message>
 <message>

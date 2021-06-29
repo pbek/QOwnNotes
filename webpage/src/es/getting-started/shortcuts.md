@@ -68,14 +68,14 @@
     - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> hace lo mismo
 - <kbd>Alt</kbd> + <kbd>Backspace</kbd> elimina la línea actual
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> elimina la palabra actual
-- <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
-- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
+- <kbd>Ctrl</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de texto (también funciona con el texto seleccionado)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de nota
+- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserta la fecha actual en formato ISO 8601
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserta una imagen (la imagen se copiará en la carpeta `media` en la carpeta de notas actual)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserta un archivo adjunto (el archivo se copiará a la carpeta `adjuntos` en la carpeta de notas actual)
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserta una tabla
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserta un bloque de código en la posición actual
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserta una cita en bloque en la posición actual
 - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic
 - <kbd>Ctrl</kbd> + <kbd>U</kbd> formats the selected text underline
@@ -84,23 +84,23 @@
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> after an unordered list character indents the list item
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
-- <kbd>Return</kbd> in lists creates a new list item
-- <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
-    - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
-- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
-- <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
-- <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
-- <kbd>Ctrl</kbd> + <kbd>0</kbd> resets the note text font size
-- <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in front of the cursor, auto-completes text or opens urls
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> después de un carácter de lista desordenado, sangra el elemento de la lista
+- <kbd>Return</kbd> en listas crea un nuevo elemento de lista
+- <kbd>Alt</kbd> + <kbd>Left</kbd> retrocede en el historial de notas
+    - <kbd>Alt</kbd> + <kbd>Right</kbd> salta hacia adelante en el historial de notas
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> establece un marcador de notas en la ranura de marcador 1..9
+- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> salta al marcador de notas en la ranura de marcador 0..9
+- <kbd>Ctrl</kbd> + <kbd>+</kbd> aumenta el tamaño de la fuente del texto de la nota en un punto
+- <kbd>Ctrl</kbd> + <kbd>-</kbd> disminuye el tamaño de la fuente del texto de la nota en un punto
+- <kbd>Ctrl</kbd> + <kbd>0</kbd> restablece el tamaño de fuente del texto de la nota
+- <kbd>Ctrl</kbd> + <kbd>Espacio</kbd> intenta resolver ecuaciones simples como `(4+5)*3=` delante del cursor, completa automáticamente el texto o abre urls
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserta un título del nombre de archivo de la nota en la parte superior de la nota
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> divide la nota actual en dos notas en la posición actual del cursor
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
-- <kbd>Ctrl</kbd> + <kbd>Up</kbd> scrolls the content up
-- <kbd>Ctrl</kbd> + <kbd>Down</kbd> scrolls the content down
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> moves the current line down
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> moves the current line up
+- <kbd>Ctrl</kbd> + <kbd>Up</kbd> desplaza el contenido hacia arriba
+- <kbd>Ctrl</kbd> + <kbd>Down</kbd> desplaza el contenido hacia abajo
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> mueve la línea actual hacia abajo
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> mueve la alineación actual
 - <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### En el panel de vista previa de notas
@@ -184,37 +184,37 @@
     - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Down</kbd> Hace la misma
 - <kbd>⌘</kbd> + <kbd>Retroceso</kbd> elimina la línea actual
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> elimina la palabra actual
-- <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
-- <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
-- <kbd>⌘</kbd> + <kbd>B</kbd> formats the selected text bold
-- <kbd>⌘</kbd> + <kbd>I</kbd> formats the selected text italic
-- <kbd>⌘</kbd> + <kbd>U</kbd> formats the selected text underline
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
-- <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
-- <kbd>Tab</kbd> after an unordered list character indents the list item
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
-- <kbd>Return</kbd> in lists creates a new list item
-- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> jumps back in the note history
-    - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> jumps forward in the note history
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
-- <kbd>⌘</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
-- <kbd>⌘</kbd> + <kbd>+</kbd> increases the note text font size by one point
-- <kbd>⌘</kbd> + <kbd>-</kbd> decreases the note text font size by one point
-- <kbd>⌘</kbd> + <kbd>0</kbd> resets the note text font size
-- <kbd>⌘</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor, auto-completes text or opens urls
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>⌘</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de texto (también funciona con el texto seleccionado)
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> abre un cuadro de diálogo para agregar un enlace de nota
+- <kbd>⌘</kbd> + <kbd>T</kbd> inserta la fecha actual en formato ISO 8601
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserta una imagen (la imagen se copiará a la carpeta `media` en la carpeta de notas actual)
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserta un archivo adjunto (el archivo se copiará a la carpeta `adjuntos` en las notas actuales carpeta)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserta una tabla
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserta un bloque de código en la posición actual
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserta una cita en bloque en la posición actual
+- <kbd>⌘</kbd> + <kbd>B</kbd> formatea el texto seleccionado en negrita
+- <kbd>⌘</kbd> + <kbd>I</kbd> formatea el texto seleccionado en cursiva
+- <kbd>⌘</kbd> + <kbd>U</kbd> formatea el texto seleccionado subrayado
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> tacha el texto seleccionado
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> recorre los casos del texto seleccionado
+- <kbd>Tab</kbd> sangra el texto seleccionado (también funciona en varias líneas)
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> desangra el texto seleccionado
+- <kbd>Tab</kbd> después de que un carácter de lista desordenado sangra el elemento de la lista
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> después de un carácter de lista desordenado, sangra el elemento de la lista
+- <kbd>Return</kbd> en listas crea un nuevo elemento de lista
+- <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> retrocede en el historial de notas
+    - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Right</kbd> salta hacia adelante en el historial de notas
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> establece un marcador de notas en la ranura de marcador 1..9
+- <kbd>⌘</kbd> + <kbd>0..9</kbd> salta al marcador de notas en la ranura de marcador 0..9
+- <kbd>⌘</kbd> + <kbd>+</kbd> aumenta el tamaño de la fuente del texto de la nota en un punto
+- <kbd>⌘</kbd> + <kbd>-</kbd> reduce el tamaño de la fuente del texto de la nota en un punto
+- <kbd>⌘</kbd> + <kbd>0</kbd> restablece el tamaño de fuente del texto de la nota
+- <kbd>⌘</kbd> + <kbd>Espacio</kbd> intenta resolver ecuaciones simples como `(4+5)*3=` en la línea actual frente al cursor, auto- completa el texto o abre las URL
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserta un título del nombre de archivo de la nota en la parte superior de la nota
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> divide la nota actual en dos notas en la posición actual del cursor
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
-- <kbd>⌘</kbd> + <kbd>Up</kbd> scrolls the content up
-- <kbd>⌘</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>⌘</kbd> + <kbd>Up</kbd> desplaza el contenido hacia arriba
+- <kbd>⌘</kbd> + <kbd>Down</kbd> desplaza el contenido hacia abajo
 - <kbd>⇧</kbd> + <kbd>Return</kbd> adds two spaces and a newline character to force a markdown newline
 
 ### En el panel de vista previa de notas

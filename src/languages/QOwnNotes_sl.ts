@@ -719,8 +719,8 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
-<translation>Za pridobitev enex datoteke morate izbrati eno ali več zapisov v vašem Evernotes odjemalcu in klikniti &quot;Export notes...&quot; v meniju File.</translation>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<translation>Za pridobitev enex datoteke morate izbrati eno ali več zapisov v vašem Evernotes odjemalcu in klikniti "Export notes..." v meniju File.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -879,158 +879,158 @@ Atributi opombe</translation>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1044,8 +1044,8 @@ Atributi opombe</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
-<translation>Oznaka &quot;%1&quot; ni nastavljena.</translation>
+<source>Mark "%1" not set.</source>
+<translation>Oznaka "%1" ni nastavljena.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
@@ -1068,18 +1068,14 @@ Atributi opombe</translation>
 <translation>Ni implementirano v programu FakeVim.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">Pritisni Alt-V, Alt-V za izhod iz FakeVim načina.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1113,18 +1109,18 @@ Atributi opombe</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
-<translation>Datoteka &quot;%1&quot; obstaja (dodajte ! za prepis)</translation>
+<source>File "%1" exists (add ! to override)</source>
+<translation>Datoteka "%1" obstaja (dodajte ! za prepis)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
-<translation>Datoteke &quot;%1&quot; ni mogoče odpreti za pisanje</translation>
+<source>Cannot open file "%1" for writing</source>
+<translation>Datoteke "%1" ni mogoče odpreti za pisanje</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
-<translation>&quot;%1&quot; %2 %3L, %4C napisano.</translation>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>"%1" %2 %3L, %4C napisano.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
@@ -1133,13 +1129,13 @@ Atributi opombe</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
-<translation>Datoteke &quot;%1&quot; ni mogoče odpreti za branje</translation>
+<source>Cannot open file "%1" for reading</source>
+<translation>Datoteke "%1" ni mogoče odpreti za branje</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
-<translation>&quot;%1&quot; %2L, %3C</translation>
+<source>"%1" %2L, %3C</source>
+<translation>"%1" %2L, %3C</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
@@ -1174,7 +1170,7 @@ Atributi opombe</translation>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6907"/>
 <source>Search hit BOTTOM, continuing at TOP.</source>
-<translation>Iskanje je doseglo &apos;bottom&apos;, nadaljevanje na &apos;top&apos;.</translation>
+<translation>Iskanje je doseglo 'bottom', nadaljevanje na 'top'.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6908"/>
@@ -1204,17 +1200,7 @@ Atributi opombe</translation>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
-<numerusform>%n vrstica %1ed %2 čas.</numerusform>
-<numerusform>%n vrstic %1eal %2 čas.</numerusform>
-<numerusform>%n vrstic %1eal %2 čas.</numerusform>
-<numerusform>%n vrstic %1eal %2 čas.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
+<translation>
 <numerusform>%n vrstica %1ed %2 čas.</numerusform>
 <numerusform>%n vrstic %1eal %2 čas.</numerusform>
 <numerusform>%n vrstic %1eal %2 čas.</numerusform>
@@ -1487,7 +1473,7 @@ Atributi opombe</translation>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>Prikriti sintaksa</translation>
 </message>
 <message>
@@ -1587,7 +1573,7 @@ Atributi opombe</translation>
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
+<source>Don't copy image to media folder</source>
 <translation>Ne kopirajte slike v mapo predstavnosti</translation>
 </message>
 <message>
@@ -1863,7 +1849,7 @@ Atributi opombe</translation>
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>Datoteka &lt;strong&gt;%1&lt;/strong&gt; ni berljiva in je ni mogoče obnoviti!</translation>
 </message>
 <message numerus="yes">
@@ -2381,7 +2367,7 @@ Atributi opombe</translation>
 <message>
 <location filename="../mainwindow.ui" line="1610"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Vstavi sliko (slika se bo kopirala v mapo &quot;media&quot; v trenutni mapi z opombami)</translation>
+<translation>Vstavi sliko (slika se bo kopirala v mapo "media" v trenutni mapi z opombami)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1622"/>
@@ -2555,7 +2541,7 @@ Atributi opombe</translation>
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
 </message>
 <message>
@@ -2836,8 +2822,8 @@ Atributi opombe</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-<translation>Rešite preprosto enačbo, kot je &quot;(2 + 3) * 6 =&quot; v trenutni vrstici</translation>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>Rešite preprosto enačbo, kot je "(2 + 3) * 6 =" v trenutni vrstici</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2969,7 +2955,7 @@ Obnovitev trenutne beležke?</translation>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="obsolete">
+<translation type="unfinished">
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
@@ -3068,7 +3054,7 @@ Obnovitev trenutne beležke?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>Opombe ni mogoče dešifrirati!</translation>
 </message>
 <message>
@@ -3385,7 +3371,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>Začasne datoteke ni mogoče odpreti</translation>
 </message>
 <message>
@@ -3396,18 +3382,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Ponastavi velikost pisave na %1 pt</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
-<translation>Odstrani oznako &apos;%1&apos; iz trenutne opombe</translation>
+<source>Remove tag '%1' from the current note</source>
+<translation>Odstrani oznako '%1' iz trenutne opombe</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
-<translation>Odstrani oznako &apos;%1&apos; iz izbranega opombe</translation>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>Odstrani oznako '%1' iz izbranega opombe</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9315"/>
@@ -3462,7 +3448,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>Pojdi na podmapo
 </translation>
 </message>
@@ -3624,8 +3610,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
-<translation>Naslov »&quot;%1&quot; je bil kopiran v odložišče</translation>
+<source>Note headline '%1' was copied to the clipboard</source>
+<translation>Naslov »"%1" je bil kopiran v odložišče</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12757"/>
@@ -3831,12 +3817,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
-<numerusform>%n opomba je bila premaknjena v podmapo &quot;%2&quot;</numerusform>
-<numerusform>%n beležk je bilo premaknjenih v podmapo &quot;%2&quot;</numerusform>
-<numerusform>%n beležk je bilo premaknjenih v podmapo &quot;%2&quot;</numerusform>
-<numerusform>%n beležk je bilo premaknjenih v podmapo &quot;%2&quot;</numerusform>
+<numerusform>%n opomba je bila premaknjena v podmapo "%2"</numerusform>
+<numerusform>%n beležk je bilo premaknjenih v podmapo "%2"</numerusform>
+<numerusform>%n beležk je bilo premaknjenih v podmapo "%2"</numerusform>
+<numerusform>%n beležk je bilo premaknjenih v podmapo "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3851,12 +3837,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
-<numerusform>%n opomba je bila kopirana v podmapo za beležke &quot;%2&quot;</numerusform>
-<numerusform>%n opomb je bilo kopiranih v podmapo za beležke &quot;%2&quot;</numerusform>
-<numerusform>%n opomb je bilo kopiranih v podmapo za beležke &quot;%2&quot;</numerusform>
-<numerusform>%n opomb je bilo kopiranih v podmapo za beležke &quot;%2&quot;</numerusform>
+<numerusform>%n opomba je bila kopirana v podmapo za beležke "%2"</numerusform>
+<numerusform>%n opomb je bilo kopiranih v podmapo za beležke "%2"</numerusform>
+<numerusform>%n opomb je bilo kopiranih v podmapo za beležke "%2"</numerusform>
+<numerusform>%n opomb je bilo kopiranih v podmapo za beležke "%2"</numerusform>
 </translation>
 </message>
 <message>
@@ -4013,18 +3999,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
-<translation>To oznako ni mogoče premakniti oznako &quot;%1&quot;</translation>
+<source>Cannot move tag '%1' to this tag</source>
+<translation>To oznako ni mogoče premakniti oznako "%1"</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
-<translation>Oznako &quot;%1&quot; preselili v novo oznako</translation>
+<source>Moved tag '%1' to new tag</source>
+<translation>Oznako "%1" preselili v novo oznako</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
-<translation>prikaži vse opombe, ki so označena z &quot;%1&quot; (%2)</translation>
+<source>show all notes tagged with '%1' (%2)</source>
+<translation>prikaži vse opombe, ki so označena z "%1" (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9318"/>
@@ -4144,8 +4130,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
-<translation>prikaži opombe v mapi &apos;%1&apos; (%2)</translation>
+<source>show notes in folder '%1' (%2)</source>
+<translation>prikaži opombe v mapi '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2615"/>
@@ -4200,12 +4186,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
-<numerusform>%n opomba je bila označena z &quot;%2&quot;</numerusform>
-<numerusform>%n beležk je bilo označenih z &quot;%2&quot;</numerusform>
-<numerusform>%n beležk je bilo označenih z &quot;%2&quot;</numerusform>
-<numerusform>%n beležk je bilo označenih z &quot;%2&quot;</numerusform>
+<numerusform>%n opomba je bila označena z "%2"</numerusform>
+<numerusform>%n beležk je bilo označenih z "%2"</numerusform>
+<numerusform>%n beležk je bilo označenih z "%2"</numerusform>
+<numerusform>%n beležk je bilo označenih z "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4514,7 +4500,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Za to beležko ni različic ali pa opomba ni bila najdena na strežniku.</translation>
 </message>
 <message>
@@ -4540,7 +4526,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>Vaš strežnik CalDAV ni ničesar odgovoril!</translation>
 </message>
 <message>
@@ -4583,7 +4569,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>Gesla se ne ujemajo!</translation>
 </message>
 </context>
@@ -4657,12 +4643,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>Ne sprašuj več!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>Ne prikaži več!</translation>
 </message>
 <message>
@@ -4731,13 +4717,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>Mape z imenom &lt;b&gt;%1 &lt;/b&gt; ni mogoče ustvariti, ker jo interno uporablja aplikacija!
 </translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>Mape z imenom &lt;b&gt;%1 &lt;/b&gt; ni mogoče ustvariti, ker je na seznamu prezrtih podmap! To lahko spremenite v &lt;i&gt; Nastavitvah panelov &lt;/i&gt;.
 </translation>
 </message>
@@ -4982,9 +4968,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-<translation>Povezave baze podatkov z datoteko &quot;%1&quot; ni mogoče vzpostaviti.
+<translation>Povezave baze podatkov z datoteko "%1" ni mogoče vzpostaviti.
 Ali sta mapa in datoteka zapisljivi?</translation>
 </message>
 <message>
@@ -4999,9 +4985,9 @@ Ali sta mapa in datoteka zapisljivi?</translation>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-<translation>Ni mogoče vzpostaviti povezave z bazo podatkov z bazo podatkovnih map, da bi združili &apos;%1&apos;.
+<translation>Ni mogoče vzpostaviti povezave z bazo podatkov z bazo podatkovnih map, da bi združili '%1'.
 Ali je mapo in datoteko mogoče pisati?</translation>
 </message>
 </context>
@@ -5149,7 +5135,7 @@ Ali ga želite vseeno namestiti?</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Ne pozabite posodobiti namestitve QOwnNotes, da bo ta skript deloval!</translation>
 </message>
 <message>
@@ -5190,7 +5176,7 @@ Ali ga želite vseeno namestiti?</translation>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>datoteka ne obstaja</translation>
 </message>
 </context>
@@ -5273,8 +5259,8 @@ Ali ga želite vseeno namestiti?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Vnesite URL svojega strežnika ownCloud, na primer: &lt;span style = &quot;font-style: italic;&quot;&gt; https://cloud.yourserver.com &lt;/span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Vnesite URL svojega strežnika ownCloud, na primer: &lt;span style = "font-style: italic;"&gt; https://cloud.yourserver.com &lt;/span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5340,8 +5326,8 @@ Ali ga želite vseeno namestiti?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt; head/&gt;&lt;body&gt; &lt;p&gt;Odpre strežnik ownCloud &lt;span style = &quot;font-weight: 600;&quot;&gt; stran za konfiguracijo aplikacije &lt;/span&gt; v spletnem brskalniku, da namesti ali posodobi QOwnNotesAPI in omogoči osnovne aplikacije &lt;span style = &quot;font-weight: 600;&quot; &gt; Različice &lt;/span&gt; in &lt;span style = &quot;font-weight: 600;&quot;&gt; Izbrisane datoteke &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt; head/&gt;&lt;body&gt; &lt;p&gt;Odpre strežnik ownCloud &lt;span style = "font-weight: 600;"&gt; stran za konfiguracijo aplikacije &lt;/span&gt; v spletnem brskalniku, da namesti ali posodobi QOwnNotesAPI in omogoči osnovne aplikacije &lt;span style = "font-weight: 600;" &gt; Različice &lt;/span&gt; in &lt;span style = "font-weight: 600;"&gt; Izbrisane datoteke &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5365,8 +5351,8 @@ Ali ga želite vseeno namestiti?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Prav tako morate imeti dve osnovni aplikaciji ownCloud &lt;span style = &quot;font-weight: 600;&quot;&gt; Versions &lt;/span&gt; in &lt;span style = &quot;font-weight: 600; &quot;&gt; Izbrisane datoteke &lt;/span&gt; omogočene na vašem lastnem strežnikuCloud (to bi moralo biti privzeto). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Prav tako morate imeti dve osnovni aplikaciji ownCloud &lt;span style = "font-weight: 600;"&gt; Versions &lt;/span&gt; in &lt;span style = "font-weight: 600; "&gt; Izbrisane datoteke &lt;/span&gt; omogočene na vašem lastnem strežnikuCloud (to bi moralo biti privzeto). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5595,8 +5581,8 @@ Ali ga želite vseeno namestiti?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Morda boste želeli dobiti brezplačno potrdilo SSL iz &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Šifriraj &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Morda boste želeli dobiti brezplačno potrdilo SSL iz &lt;a href="https://letsencrypt.org/"&gt; Šifriraj &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5630,8 +5616,8 @@ Ali ga želite vseeno namestiti?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Če je označeno, boste vedno obveščeni o zunanjih spremembah, tudi če trenutna opomba ni bila urejena v zadnji minuti. Priporočeno je &lt;span style = &quot;font-style: italic;&quot;&gt; nepreverjeno &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Če je označeno, boste vedno obveščeni o zunanjih spremembah, tudi če trenutna opomba ni bila urejena v zadnji minuti. Priporočeno je &lt;span style = "font-style: italic;"&gt; nepreverjeno &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5720,7 +5706,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>Anonimni podatki o uporabi pomagajo pri odločanju, kateri deli QOwnNotes bodo izboljšali naslednje in našli in odpravili napake. Onemogočite ga samo, če res ne morete živeti z njim.</translation>
 </message>
 <message>
@@ -5820,9 +5806,9 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
-<translation>Pot &quot;opombe&quot; na vašem strežniku</translation>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
+<translation>Pot "opombe" na vašem strežniku</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
@@ -5872,13 +5858,13 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Namestite najnovejšo različico &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt; &lt;span style = &quot;font-weight: 600;&quot;&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; (vsaj različica QOWNNOTESAPI_MIN_VERSION) na strežniku ownCloud, če želite, da bo funkcija QOwnNotes lahko dostopala do različic beležk in zabeleženih sporočil.</translation>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Namestite najnovejšo različico &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-weight: 600;"&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; (vsaj različica QOWNNOTESAPI_MIN_VERSION) na strežniku ownCloud, če želite, da bo funkcija QOwnNotes lahko dostopala do različic beležk in zabeleženih sporočil.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Še vedno boste potrebovali &lt;a href=&quot;https://owncloud.org/&quot;&gt; &lt;span style = &quot;font-weight: 600&quot;&gt; odjemalca za sinhronizacijo ownCloud &lt;/span&gt; &lt;/a&gt; (ali drug odjemalec za sinhronizacijo namizja), da sinhronizira beležke! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Še vedno boste potrebovali &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; odjemalca za sinhronizacijo ownCloud &lt;/span&gt; &lt;/a&gt; (ali drug odjemalec za sinhronizacijo namizja), da sinhronizira beležke! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5936,7 +5922,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>Zavedajte se, da aplikacija ownCloud notes ne podpira podmap!
 </translation>
 </message>
@@ -6297,8 +6283,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Najboljši način objavljanja vprašanj je uporaba pomočnika za izdajo tako, da pritisnete gumb &lt;span style = &quot;font-weight: 600;&quot;&gt; Vklopite pomočnika za vprašanja &lt;/span&gt; na dnu. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Najboljši način objavljanja vprašanj je uporaba pomočnika za izdajo tako, da pritisnete gumb &lt;span style = "font-weight: 600;"&gt; Vklopite pomočnika za vprašanja &lt;/span&gt; na dnu. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6362,13 +6348,13 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn&apos;t work, create an app password (button on the right)</translation>
+<source>If your password doesn't work, create an app password (button on the right)</source>
+<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation>Če želite pomagati pri prevajanju QOwnNotes ali posodobiti obstoječi prevod, preberite: &lt;a href=&quot;%1&quot;&gt; Kako lahko pomagam pri prevajanju QOwnNotes? &lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation>Če želite pomagati pri prevajanju QOwnNotes ali posodobiti obstoječi prevod, preberite: &lt;a href="%1"&gt; Kako lahko pomagam pri prevajanju QOwnNotes? &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6458,7 +6444,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub nepotrebuje na zalomenie riadku dve medzery</translation>
 </message>
 <message>
@@ -6478,7 +6464,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>Tega ne uporabljajte v sledilniku težav</translation>
 </message>
 <message>
@@ -6498,8 +6484,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Morda si želite ogledati vse razpoložljive &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;časovne formate&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Morda si želite ogledati vse razpoložljive &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;časovne formate&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6529,8 +6515,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
-<translation>Redni izrazi podmap opomb, ki jih ne upoštevamo, ločeni z &quot;;&quot;
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
+<translation>Redni izrazi podmap opomb, ki jih ne upoštevamo, ločeni z ";"
 </translation>
 </message>
 <message>
@@ -6552,7 +6538,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
+<source>Hide 'Note count' with tags (increases performance)</source>
 <translation>Skrij „število opomb“ s ključnimi besedami (povečuje uspešnost)</translation>
 </message>
 <message>
@@ -6562,8 +6548,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6668,8 +6654,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>Razširitev brskalnika privzeto prikaže vse povezave trenutne beležke. Prav tako lahko prikaže posebne povezave zaznamkov z določeno oznako. Če želite več informacij o sintaksi povezave z zaznamki, kliknite &lt;a href=&quot;%1&quot;&gt; tukaj &lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>Razširitev brskalnika privzeto prikaže vse povezave trenutne beležke. Prav tako lahko prikaže posebne povezave zaznamkov z določeno oznako. Če želite več informacij o sintaksi povezave z zaznamki, kliknite &lt;a href="%1"&gt; tukaj &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6719,8 +6705,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>Namestite &lt;a href=&quot;%1&quot;&gt; Razširitev brskalnika Web Companion &lt;/a&gt; iz &lt;a href=&quot;%2&quot;&gt; Spletna trgovina Chrome &lt;/a&gt; ali &lt;a href=&quot;%3&quot;&gt; stran za dodatke za Firefox &lt;/a&gt; za uporabo orodja QOwnNotes kot spletni brskalnik.</translation>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>Namestite &lt;a href="%1"&gt; Razširitev brskalnika Web Companion &lt;/a&gt; iz &lt;a href="%2"&gt; Spletna trgovina Chrome &lt;/a&gt; ali &lt;a href="%3"&gt; stran za dodatke za Firefox &lt;/a&gt; za uporabo orodja QOwnNotes kot spletni brskalnik.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6815,14 +6801,14 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Vnesite ukaz, ki bo uporabljen za prikaz git dnevnika (npr. &quot;Gitk&quot;)</translation>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Vnesite ukaz, ki bo uporabljen za prikaz git dnevnika (npr. "Gitk")</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Če uporabite to nastavitev, boste dobili nov vnos v meniju, ki bo prikazal git različice, če z desno miškino tipko kliknete opombo.</translation>
 </message>
 <message>
@@ -6842,7 +6828,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Ne pozabite omogočiti git podpore za mape z opombami in konfigurirati svoje ime in e-poštni naslov za odjemalca git, na primer s temi ukazi za terminal:</translation>
 </message>
 <message>
@@ -6897,8 +6883,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
-<translation>Skrij iskanje &quot;Iskanje ali ustvarjanje oznake&quot;</translation>
+<source>Hide 'Find or create tag' search</source>
+<translation>Skrij iskanje "Iskanje ali ustvarjanje oznake"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5568"/>
@@ -6923,8 +6909,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
-<translation>Skrij iskanje &quot;Iskanje ali ustvarjanje podmape za beležke&quot;</translation>
+<source>Hide 'Find or create note subfolder' search</source>
+<translation>Skrij iskanje "Iskanje ali ustvarjanje podmape za beležke"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6938,9 +6924,9 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Po želji lahko uporabite &quot;%notePath%&quot; za pot opombe.</translation>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Po želji lahko uporabite "%notePath%" za pot opombe.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -7000,7 +6986,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>Za starejše različice ownCloud, kjer privzeta nastavitev ne deluje</translation>
 </message>
 <message>
@@ -7165,8 +7151,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
-<translation>Vnesite obliko zapisa po meri, na primer &quot;dd.MM.yyyy hh:mm&quot;</translation>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation>Vnesite obliko zapisa po meri, na primer "dd.MM.yyyy hh:mm"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7266,7 +7252,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>Prezri koledarje, ki ne podpirajo določenih elementov</translation>
 </message>
 <message>
@@ -7336,8 +7322,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-<translation>Če dodate prilagojene razširitve, samo vtipkajte pripono, na primer &quot;taskpaper&quot;.</translation>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+<translation>Če dodate prilagojene razširitve, samo vtipkajte pripono, na primer "taskpaper".</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7351,7 +7337,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
+<source>Don't show the update dialog automatically</source>
 <translation>Ne prikažite samodejno pogovornega okna</translation>
 </message>
 <message>
@@ -7390,8 +7376,8 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Lahko &lt;span style = &quot;font-weight: 600;&quot;&gt; kopirate in prilepite &lt;/span&gt; to besedilo (ali dele tega besedila) v &lt;span style = &quot;font-weight: 600;&quot;&gt; izdaja &lt;/span&gt; na &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; strani z vprašanji QOwnNotes &lt;/a&gt;, če imate &lt;span style = &quot;font-weight: 600;&quot;&gt; vprašanja ali težave &lt;/span&gt; s QOwnNotes. Podatki, ki so preveč občutljivi, so skriti v teh informacijah. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Lahko &lt;span style = "font-weight: 600;"&gt; kopirate in prilepite &lt;/span&gt; to besedilo (ali dele tega besedila) v &lt;span style = "font-weight: 600;"&gt; izdaja &lt;/span&gt; na &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; strani z vprašanji QOwnNotes &lt;/a&gt;, če imate &lt;span style = "font-weight: 600;"&gt; vprašanja ali težave &lt;/span&gt; s QOwnNotes. Podatki, ki so preveč občutljivi, so skriti v teh informacijah. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7455,7 +7441,7 @@ Sporočilo o napaki povezave: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Ne uporabljajte tega v sledilniku težav, kopirajte besedilo informacij o napaki neposredno v številko.</translation>
 </message>
 <message>
@@ -7470,7 +7456,7 @@ Sporočilo o napaki povezave: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Anonimni podatki o uporabi pomagajo pri odločanju, kateri deli QOwnNotes se bodo izboljšali, in pri iskanju in odpravljanju napak. &lt;br /&gt; Prosimo, onemogočite ga samo, če res ne morete živeti z njim. &lt;br /&gt; &lt;br /&gt; Resnično onemogočite sledenje uporabe?</translation>
 </message>
 <message>
@@ -7505,18 +7491,18 @@ Sporočilo o napaki povezave: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>Nalaganje map v strežniku &quot;%1&quot;</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>Nalaganje map v strežniku "%1"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Če želite začeti hitro, si oglejte &lt;a href=&quot;%1&quot;&gt; dokumentacijo za skriptiranje &lt;/a&gt;.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Če želite začeti hitro, si oglejte &lt;a href="%1"&gt; dokumentacijo za skriptiranje &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Če potrebujete dostop do določene funkcije v orodju QOwnNotes, odprite težavo na &lt;a href=&quot;%1&quot;&gt; strani izdaje QOwnNotes &lt;/a&gt;.</translation>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Če potrebujete dostop do določene funkcije v orodju QOwnNotes, odprite težavo na &lt;a href="%1"&gt; strani izdaje QOwnNotes &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
@@ -7730,8 +7716,8 @@ Sporočilo o napaki povezave: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Svoj git odjemalec lahko prenesete tukaj: &lt;a href=&quot;%url&quot;&gt; Git za Windows &lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation>Svoj git odjemalec lahko prenesete tukaj: &lt;a href="%url"&gt; Git za Windows &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7755,7 +7741,7 @@ Sporočilo o napaki povezave: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>notranja baza podatkov sqlite in nastavitve bodo shranjene v mapi &lt;code&gt; Data &lt;/code&gt; na binarni lokaciji</translation>
 </message>
 <message>
@@ -8129,13 +8115,13 @@ Vaše beležke bodo ostale nedotaknjene!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
@@ -8262,13 +8248,13 @@ Vaše beležke bodo ostale nedotaknjene!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
@@ -8830,8 +8816,8 @@ To ni mogoče razveljaviti!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href=&quot;%1&quot;&gt; Vključite se v QOwnNotes &lt;/a&gt;</translation>
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href="%1"&gt; Vključite se v QOwnNotes &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8842,10 +8828,6 @@ To ni mogoče razveljaviti!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;Nadgradnja</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">&amp;Prenesite najnovejše</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8864,7 +8846,7 @@ To ni mogoče razveljaviti!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>Ne prikažite tega pogovornega okna samodejno</translation>
 </message>
 <message>
@@ -8940,77 +8922,77 @@ To ni mogoče razveljaviti!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">Znova zaženite aplikacijo</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">Ponovni zagon</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished">Prekliči</translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Modernizirati scenarij &quot;%1&quot; ne obstaja!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>Modernizirati scenarij "%1" ne obstaja!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Updater razširite izvršljiv &quot;%1&quot; ne obstaja!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>Updater razširite izvršljiv "%1" ne obstaja!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>Modernizirati scenarij &quot;%1&quot; &quot;%2&quot; ni bilo mogoče kopirati!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>Modernizirati scenarij "%1" "%2" ni bilo mogoče kopirati!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>Mogel najti modernizirati scenarij: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
+<source>Couldn't find unzip executable: %1</source>
 <translation>Mogel najti razširite izvršljiv: %1</translation>
 </message>
 <message>
@@ -9278,7 +9260,7 @@ To ni mogoče razveljaviti!</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>Ta opomba pot ne obstaja!</translation>
 </message>
 <message>

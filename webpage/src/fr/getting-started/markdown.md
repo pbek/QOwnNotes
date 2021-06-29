@@ -76,8 +76,8 @@ Il existe de nombreuses façons de créer des listes.
 2. Un autre article
    * Sous-liste non ordonnée.
 1. Les chiffres réels n'ont pas d'importance, juste que c'est un nombre
-   1. Ordered sub-list (only works in the editor, not the preview)
-4. Et un autre article.
+   1. Sous-liste ordonnée (ne fonctionne que dans l'éditeur, pas dans l'aperçu)
+4e Et un autre article.
 
 * La liste non ordonnée peut utiliser des astérisques
 - Ou moins

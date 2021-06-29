@@ -719,7 +719,7 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
 <translation>Aby otrzymać plik ENEX, w programie Evernote na komputer stacjonarny należy zaznaczyć jedną lub więcej notatek, a następnie w menu Plik wybrać pozycję „Eksportuj notatki...”.</translation>
 </message>
 <message>
@@ -878,158 +878,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1043,7 +1043,7 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
+<source>Mark "%1" not set.</source>
 <translation>Nie ustawiono znacznika „%1”.</translation>
 </message>
 <message>
@@ -1067,18 +1067,14 @@
 <translation>Niezaimplementowane w FakeVim.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">Wpisz Alt-V, Alt-V, aby wyjść z trybu FakeVim.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1107,21 +1103,22 @@
 <numerusform>Przeniesiono %n wiersz.</numerusform>
 <numerusform>Przeniesiono %n wiersze.</numerusform>
 <numerusform>Przeniesiono %n wierszy.</numerusform>
+<numerusform>Przeniesiono %n wiersza.</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
+<source>File "%1" exists (add ! to override)</source>
 <translation>Plik „%1” już istnieje (dodaj ! aby go nadpisać)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
+<source>Cannot open file "%1" for writing</source>
 <translation>Nie można otworzyć pliku „%1” do zapisu</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
+<source>"%1" %2 %3L, %4C written.</source>
 <translation>„%1” %2 %3L, %4C napisano.</translation>
 </message>
 <message>
@@ -1131,12 +1128,12 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
+<source>Cannot open file "%1" for reading</source>
 <translation>Nie można otworzyć pliku „%1” do odczytu</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
+<source>"%1" %2L, %3C</source>
 <translation>„%1” %2L, %3C</translation>
 </message>
 <message numerus="yes">
@@ -1146,6 +1143,7 @@
 <numerusform>Odfiltrowano %n wiersz.</numerusform>
 <numerusform>Odfiltrowano %n wiersze.</numerusform>
 <numerusform>Odfiltrowano %n wierszy.</numerusform>
+<numerusform>Odfiltrowano %n wiersza.</numerusform>
 </translation>
 </message>
 <message>
@@ -1195,24 +1193,17 @@
 <numerusform>Wcięto %n wiersz.</numerusform>
 <numerusform>Wcięto %n wiersze.</numerusform>
 <numerusform>Wcięto %n wierszy.</numerusform>
+<numerusform>Wcięto %n wiersza.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
+<translation>
 <numerusform>%n wiersz %1ed %2 raz.</numerusform>
 <numerusform>%n wiersze %1ed %2 raz.</numerusform>
 <numerusform>%n wierszy %1ed %2 raz.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
-<numerusform>%n wiersz %1ed %2 raz.</numerusform>
-<numerusform>%n wiersze %1ed %2 raz.</numerusform>
-<numerusform>%n wierszy %1ed %2 raz.</numerusform>
+<numerusform>%n wiersza %1ed %2 raz.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -1222,6 +1213,7 @@
 <numerusform>Szarpnięto %n wiersz.</numerusform>
 <numerusform>Szarpnięto %n wiersze.</numerusform>
 <numerusform>Szarpnięto %n wierszy.</numerusform>
+<numerusform>Szarpnięto %n wiersza.</numerusform>
 </translation>
 </message>
 <message>
@@ -1480,7 +1472,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>Składnia maskowana</translation>
 </message>
 <message>
@@ -1580,7 +1572,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
+<source>Don't copy image to media folder</source>
 <translation>Nie kopiuj obrazu do folderu multimediów</translation>
 </message>
 <message>
@@ -1856,7 +1848,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>Pliku &lt;strong&gt;%1&lt;/strong&gt; nie można odczytać ani przywrócić.</translation>
 </message>
 <message numerus="yes">
@@ -1866,6 +1858,7 @@
 <numerusform>Przywrócić &lt;strong&gt;%n&lt;/strong&gt; zaznaczoną notatkę?</numerusform>
 <numerusform>Przywrócić &lt;strong&gt;%n&lt;/strong&gt; zaznaczone notatki?</numerusform>
 <numerusform>Przywrócić &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych notatek?</numerusform>
+<numerusform>Przywrócić &lt;strong&gt;%n&lt;/strong&gt; zaznaczonej notatki?</numerusform>
 </translation>
 </message>
 <message>
@@ -1880,6 +1873,7 @@
 <numerusform>Przywrócono &lt;strong&gt;%n&lt;/strong&gt; notatkę</numerusform>
 <numerusform>Przywrócono &lt;strong&gt;%n&lt;/strong&gt; notatki</numerusform>
 <numerusform>Przywrócono &lt;strong&gt;%n&lt;/strong&gt; notatek</numerusform>
+<numerusform>Przywrócono &lt;strong&gt;%n&lt;/strong&gt; notatki</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -1889,6 +1883,7 @@
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczoną notatkę?</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone notatki?</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych notatek?</numerusform>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonej notatki?</numerusform>
 </translation>
 </message>
 <message>
@@ -1903,6 +1898,7 @@
 <numerusform>Usunięto &lt;strong&gt;%n&lt;/strong&gt; notatkę</numerusform>
 <numerusform>Usunięto &lt;strong&gt;%n&lt;/strong&gt; notatki</numerusform>
 <numerusform>Usunięto &lt;strong&gt;%n&lt;/strong&gt; notatek</numerusform>
+<numerusform>Usunięto &lt;strong&gt;%n&lt;/strong&gt; notatki</numerusform>
 </translation>
 </message>
 </context>
@@ -2512,7 +2508,7 @@
 <location filename="../mainwindow.ui" line="1989"/>
 <location filename="../mainwindow.ui" line="1992"/>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-<translation>Otwórz kanał IRC #qownnotes (Kiwi), musisz być&#xa0;on-line by dostać odpowiedź.</translation>
+<translation>Otwórz kanał IRC #qownnotes (Kiwi), musisz być on-line by dostać odpowiedź.</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2056"/>
@@ -2544,7 +2540,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation>Otwórz pokój QOwnNotes w kliencie Matrix (Element)</translation>
 </message>
 <message>
@@ -2820,7 +2816,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
 <translation>Oblicza proste działania – jak na przykład „(2+3)*6*” w bieżącej linii</translation>
 </message>
 <message>
@@ -2952,10 +2948,11 @@ Przywrócić notatkę?</translation>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="vanished">
+<translation>
 <numerusform>zachowano %n notatkę na dysku</numerusform>
 <numerusform>zachowano %n notatki na dysku</numerusform>
 <numerusform>zachowano %n notatek na dysku</numerusform>
+<numerusform>zachowano %n notatki na dysku</numerusform>
 </translation>
 </message>
 <message>
@@ -3005,6 +3002,7 @@ Przywrócić notatkę?</translation>
 <numerusform>Usunięto %n kopię bazy danych powodującą konflikt</numerusform>
 <numerusform>Usunięto %n kopie bazy danych powodujące konflikt</numerusform>
 <numerusform>Usunięto %n kopii bazy danych powodujących konflikt</numerusform>
+<numerusform>Usunięto %n kopii bazy danych powodujące konflikt</numerusform>
 </translation>
 </message>
 <message>
@@ -3049,7 +3047,7 @@ Przywrócić notatkę?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>Notatka nie może zostać odszyfrowana!</translation>
 </message>
 <message>
@@ -3077,6 +3075,9 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych notatek?
 
 Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamtąd przywrócić notatki.</numerusform>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonej notatki?
+
+Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamtąd przywrócić notatkę.</numerusform>
 </translation>
 </message>
 <message>
@@ -3092,6 +3093,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczony folder?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nim pliki i foldery zostaną również usunięte.</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone foldery?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nich pliki i foldery zostaną również usunięte.</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych folderów?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nich pliki i foldery zostaną również usunięte.</numerusform>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonego folderu?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Wszystkie zawarte w nim pliki i foldery zostaną również usunięte.</numerusform>
 </translation>
 </message>
 <message>
@@ -3111,6 +3113,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczony tag? Żadna notatka nie zostanie usunięta.</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone tagi? Żadna notatka nie zostanie usunięta.</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych tagów? Żadna notatka nie zostanie usunięta.</numerusform>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonego tagu? Żadna notatka nie zostanie usunięta.</numerusform>
 </translation>
 </message>
 <message>
@@ -3126,6 +3129,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Przenieść %n zaznaczoną notatkę do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Przenieść %n zaznaczone notatki do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Przenieść %n zaznaczonych notatek do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Przenieść %n zaznaczonej notatki do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -3141,6 +3145,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Skopiować %n zaznaczoną notatkę do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Skopiować %n zaznaczone notatki do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Skopiować %n zaznaczonych notatek do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Skopiować %n zaznaczonej notatki do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -3156,6 +3161,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>%n notatka została skopiowana do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>%n notatki zostały skopiowane do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>%n notatek zostało skopiowanych do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+<numerusform>%n notatki zostało skopiowane do lokalizacji &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 </translation>
 </message>
 <message>
@@ -3170,6 +3176,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Dodać do %n zaznaczonej notatki tag &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Dodać do %n zaznaczonych notatek tag &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Dodać do %n zaznaczonych notatek tag &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Dodać do %n zaznaczonej notatki tag &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -3214,6 +3221,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Znaleziono &lt;strong&gt;%n &lt;/strong&gt; wystąpienie dowolnego terminu &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 <numerusform>Znaleziono &lt;strong&gt;%n &lt;/strong&gt; wystąpienia dowolnego terminu &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 <numerusform>Znaleziono &lt;strong&gt;%n &lt;/strong&gt; wystąpień dowolnego terminu &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+<numerusform>Znaleziono &lt;strong&gt;%n &lt;/strong&gt; wystąpienia dowolnego terminu &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
@@ -3326,6 +3334,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Skopiowano %n notatkę do lokalizacji %1</numerusform>
 <numerusform>Skopiowano %n notatki do lokalizacji %1</numerusform>
 <numerusform>Skopiowano %n notatek do lokalizacji %1</numerusform>
+<numerusform>Skopiowano %n notatki do lokalizacji %1</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3335,6 +3344,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Nie udało się skopiować %n notatki (najprawdopodobniej już istnieje)</numerusform>
 <numerusform>Nie udało się skopiować %n notatek (najprawdopodobniej już istnieją)</numerusform>
 <numerusform>Nie udało się skopiować %n notatek (najprawdopodobniej już istnieją)</numerusform>
+<numerusform>Nie udało się skopiować %n notatki (najprawdopodobniej już istnieje)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3344,6 +3354,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Pominięto kopiowanie %n notatki (brak markdown lub pliku tekstowego lub możliwości odczytu)</numerusform>
 <numerusform>Pominięto kopiowanie %n notatek (brak markdown lub pliku tekstowego lub możliwości odczytu)</numerusform>
 <numerusform>Pominięto kopiowanie %n notatek (brak markdown lub pliku tekstowego lub możliwości odczytu)</numerusform>
+<numerusform>Pominięto kopiowanie %n notatki (brak markdown lub pliku tekstowego lub możliwości odczytu)</numerusform>
 </translation>
 </message>
 <message>
@@ -3353,7 +3364,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>Plik tymczasowy nie mógł zostać otwarty</translation>
 </message>
 <message>
@@ -3364,17 +3375,17 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Ustaw rozmiar czcionki na domyślne %1 pt</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
+<source>Remove tag '%1' from the current note</source>
 <translation>Usuń tag „%1” z bieżącej notatki</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
+<source>Remove tag '%1' from the selected notes</source>
 <translation>Usuń tag „%1” z zaznaczonych notatek</translation>
 </message>
 <message>
@@ -3430,7 +3441,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>Przejdź do podfolderu notatki
 </translation>
 </message>
@@ -3567,6 +3578,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>%n znak</numerusform>
 <numerusform>%n znaki</numerusform>
 <numerusform>%n znaków</numerusform>
+<numerusform>%n znaku</numerusform>
 </translation>
 </message>
 <message>
@@ -3586,7 +3598,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
+<source>Note headline '%1' was copied to the clipboard</source>
 <translation>Nagłówek notatki „%1” został skopiowany do schowka</translation>
 </message>
 <message>
@@ -3611,6 +3623,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Zaznaczono %n notatkę</numerusform>
 <numerusform>Zaznaczono %n notatki</numerusform>
 <numerusform>Zaznaczono %n notatek</numerusform>
+<numerusform>Zaznaczono %n notatki</numerusform>
 </translation>
 </message>
 <message>
@@ -3636,6 +3649,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Usunąć tag &lt;strong&gt;%1&lt;/strong&gt; z %n zaznaczonej notatki?</numerusform>
 <numerusform>Usunąć tag&lt;strong&gt;%1&lt;/strong&gt; z %n zaznaczonych notatek?</numerusform>
 <numerusform>Usunąć tag&lt;strong&gt;%1&lt;/strong&gt; z %n zaznaczonych notatek?</numerusform>
+<numerusform>Usunąć tag&lt;strong&gt;%1&lt;/strong&gt; z %n zaznaczonej notatki?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3645,6 +3659,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; został usunięty z %n notatki</numerusform>
 <numerusform>Tag&lt;strong&gt;%1&lt;/strong&gt; został usunięty z %n notatek</numerusform>
 <numerusform>Tag&lt;strong&gt;%1&lt;/strong&gt; został usunięty z %n notatek</numerusform>
+<numerusform>Tag&lt;strong&gt;%1&lt;/strong&gt; został usunięty z %n notatki</numerusform>
 </translation>
 </message>
 <message>
@@ -3779,6 +3794,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Przenieść %n zaznaczoną notatkę do podfolderu notatek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Przenieść %n zaznaczone notatki do podfolderu notatek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Przenieść %n zaznaczonych notatek do podfolderu notatek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Przenieść %n zaznaczonej notatki do podfolderu notatek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -3789,11 +3805,12 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>%n notatka została przeniesiona do podfolderu notatek „%2”</numerusform>
 <numerusform>%n notatki zostały przeniesione do podfolderu notatek „%2”</numerusform>
 <numerusform>%n notatek zostało przeniesionych do podfolderu notatek „%2”</numerusform>
+<numerusform>%n notatki zostało przeniesione do podfolderu notatek „%2”</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3803,15 +3820,17 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Skopiować %n zaznaczoną notatkę do podfolderu notatek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Skopiować %n zaznaczone notatki do podfolderu notatek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Skopiować %n zaznaczonych notatek do podfolderu notatek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Skopiować %n zaznaczonej notatki do podfolderu notatek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n notatka została skopiowana do podfolderu notatek „%2”</numerusform>
 <numerusform>%n notatki zostały skopiowane do podfolderu notatek „%2”</numerusform>
 <numerusform>%n notatek zostało skopiowanych do podfolderu notatek „%2”</numerusform>
+<numerusform>%n notatki zostało skopiowane do podfolderu notatek „%2”</numerusform>
 </translation>
 </message>
 <message>
@@ -3932,6 +3951,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Zachowano %n notatkę na dysku</numerusform>
 <numerusform>Zachowano %n notatki na dysku</numerusform>
 <numerusform>Zachowano %n notatek na dysku</numerusform>
+<numerusform>Zachowano %n notatki na dysku</numerusform>
 </translation>
 </message>
 <message>
@@ -3967,17 +3987,17 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
+<source>Cannot move tag '%1' to this tag</source>
 <translation>Nie można przenieść tagu „%1” do tego tagu</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
+<source>Moved tag '%1' to new tag</source>
 <translation>Przeniesiono tag „%1” do nowego tagu</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
+<source>show all notes tagged with '%1' (%2)</source>
 <translation>wyświetl wszystkie notatki oznaczone tagiem „%1” (%2)</translation>
 </message>
 <message>
@@ -4097,8 +4117,8 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
-<translation>pokaż notatki w folderze &apos;%1&apos; (%2)</translation>
+<source>show notes in folder '%1' (%2)</source>
+<translation>pokaż notatki w folderze '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2615"/>
@@ -4148,15 +4168,17 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Przejść do automatycznego usunięcia &lt;strong&gt;%n &lt;/strong&gt; kopii bazy danych powodującej konflikt, która może blokować proces synchronizacji ownCloud?</numerusform>
 <numerusform>Przejść do automatycznego usunięcia &lt;strong&gt;%n &lt;/strong&gt; kopii bazy danych powodujących konflikt, które mogą blokować proces synchronizacji ownCloud?</numerusform>
 <numerusform>Przejść do automatycznego usunięcia &lt;strong&gt;%n &lt;/strong&gt; kopii bazy danych powodujących konflikt, które mogą blokować proces synchronizacji ownCloud?</numerusform>
+<numerusform>Przejść do automatycznego usunięcia &lt;strong&gt;%n &lt;/strong&gt; kopii bazy danych powodującej konflikt, która może blokować proces synchronizacji ownCloud?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>%n notatka została oznaczona tagiem „%2”</numerusform>
 <numerusform>%n notatki zostały oznaczone tagiem „%2”</numerusform>
 <numerusform>%n notatek zostało oznaczonych tagiem „%2”</numerusform>
+<numerusform>%n notatki zostało oznaczone tagiem „%2”</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4166,6 +4188,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Znaleziono &lt;strong&gt;%n&lt;/strong&gt; wystąpienie &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 <numerusform>Znaleziono &lt;strong&gt;%n&lt;/strong&gt; wystąpienia &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 <numerusform>Znaleziono &lt;strong&gt;%n&lt;/strong&gt; wystąpień &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+<numerusform>Znaleziono &lt;strong&gt;%n&lt;/strong&gt; wystąpienia &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
@@ -4462,7 +4485,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Nie znaleziono żadnej wersji tej notatki lub nie ma notatki na serwerze.</translation>
 </message>
 <message>
@@ -4488,7 +4511,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>Twój serwer CalDAV nie przesłał żadnej odpowiedzi!</translation>
 </message>
 <message>
@@ -4531,7 +4554,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>Podane hasła są różne!</translation>
 </message>
 </context>
@@ -4579,6 +4602,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zamienić wszystkie wystąpienia linków &lt;strong&gt;%1&lt;/strong&gt; na &lt;strong&gt;%2&lt;/strong&gt; i linków z nazwą pliku &lt;strong&gt;%3&lt;/strong&gt; na &lt;strong&gt;%4&lt;/strong&gt; w &lt;strong&gt;%n&lt;/strong&gt; pliku notatki?</numerusform>
 <numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zamienić wszystkie wystąpienia linków &lt;strong&gt;%1&lt;/strong&gt; na &lt;strong&gt;%2&lt;/strong&gt; i linków z nazwą pliku &lt;strong&gt;%3&lt;/strong&gt; na &lt;strong&gt;%4&lt;/strong&gt; w &lt;strong&gt;%n&lt;/strong&gt; plikach notatki?</numerusform>
 <numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zamienić wszystkie wystąpienia linków &lt;strong&gt;%1&lt;/strong&gt; na &lt;strong&gt;%2&lt;/strong&gt; i linków z nazwą pliku &lt;strong&gt;%3&lt;/strong&gt; na &lt;strong&gt;%4&lt;/strong&gt; w &lt;strong&gt;%n&lt;/strong&gt; plikach notatki?</numerusform>
+<numerusform>Wykryto zmianę ścieżki notatki. Czy chcesz zamienić wszystkie wystąpienia linków &lt;strong&gt;%1&lt;/strong&gt; na &lt;strong&gt;%2&lt;/strong&gt; i linków z nazwą pliku &lt;strong&gt;%3&lt;/strong&gt; na &lt;strong&gt;%4&lt;/strong&gt; w &lt;strong&gt;%n&lt;/strong&gt; pliku notatki?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4588,6 +4612,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>…i %n kolejna notatka</numerusform>
 <numerusform>…i %n kolejne notatki</numerusform>
 <numerusform>…i %n kolejnych notatek</numerusform>
+<numerusform>…i %n kolejnej notatki</numerusform>
 </translation>
 </message>
 <message>
@@ -4603,12 +4628,12 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>Nie pytaj ponownie!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>Nie pokazuj ponownie!</translation>
 </message>
 <message>
@@ -4674,12 +4699,12 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>Nie można utworzyć folderu o nazwie &lt;b&gt;%1&lt;/b&gt;, ponieważ jest on używany wewnętrznie przez aplikację.</translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>Nie można utworzyć folderu o nazwie &lt;b&gt;%1&lt;/b&gt;, ponieważ znajduje się on na liście ignorowanych podfolderów. Możesz to zmienić w &lt;i&gt;Ustawieniach paneli&lt;/i&gt;.</translation>
 </message>
 <message>
@@ -4695,6 +4720,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <numerusform>Jedna uwaga używa tego załącznika. Czy chcesz również zmienić nazwy tych załączników w notatce?</numerusform>
 <numerusform>%n notatek używa tego załącznika. Czy chcesz również zmienić nazwy tych załączników w notatkach?</numerusform>
 <numerusform>%n notatek używa tego załącznika. Czy chcesz również zmienić nazwy tych załączników w notatkach?</numerusform>
+<numerusform>%n notatek używa tego załącznika. Czy chcesz również zmienić nazwy tych załączników w notatkach?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4702,6 +4728,7 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
 <translation>
 <numerusform>Jedna uwaga używa tego obrazu. Czy chcesz również zmienić nazwy tych obrazów w notatce?</numerusform>
+<numerusform>%n notatek używa tego obrazu. Czy chcesz również zmienić nazwy tych obrazów w notatkach?</numerusform>
 <numerusform>%n notatek używa tego obrazu. Czy chcesz również zmienić nazwy tych obrazów w notatkach?</numerusform>
 <numerusform>%n notatek używa tego obrazu. Czy chcesz również zmienić nazwy tych obrazów w notatkach?</numerusform>
 </translation>
@@ -4921,9 +4948,9 @@ Jeżeli funkcja kosza jest włączona na Twoim serwerze ownCloud, możesz stamt�
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-<translation>Nie można ustanowić połączenia z bazą danych z pliku &apos;%1&apos;. czy folder i plik są zapisywalne?</translation>
+<translation>Nie można ustanowić połączenia z bazą danych z pliku '%1'. czy folder i plik są zapisywalne?</translation>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="148"/>
@@ -4937,7 +4964,7 @@ Are the folder and the file writeable?</source>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
 <translation>Nie można nawiązać połączenia z bazą danych folderu notatek w celu scalenia „%1”.
 Czy folder i plik są zapisywalne?</translation>
@@ -5086,7 +5113,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Proszę nie zapomnij zaktualizować QOwnNotes aby ten skrypt zadziałał!</translation>
 </message>
 <message>
@@ -5127,7 +5154,7 @@ Do you want to install it anyway?</source>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>plik nie istnieje</translation>
 </message>
 </context>
@@ -5151,6 +5178,7 @@ Do you want to install it anyway?</source>
 <numerusform>Na serwerze znaleziono &lt;strong&gt;%n zakładkę&lt;/strong&gt;</numerusform>
 <numerusform>Na serwerze znaleziono &lt;strong&gt;%n zakładki&lt;/strong&gt;</numerusform>
 <numerusform>Na serwerze znaleziono &lt;strong&gt;%n zakładek&lt;/strong&gt;</numerusform>
+<numerusform>Na serwerze znaleziono &lt;strong&gt;%n zakładki&lt;/strong&gt;</numerusform>
 </translation>
 </message>
 </context>
@@ -5209,8 +5237,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wpisz adres swojego serwera ownCloud, na przykład: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wpisz adres swojego serwera ownCloud, na przykład: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5276,8 +5304,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Otwiera &lt;span style=&quot; font-weight:600;&quot;&gt;konfigurację aplikacji&lt;/span&gt; na Twoim serwerze, aby zainstalować bądź uaktualnić QOwnNotesAPI, a także by uruchomić podstawowe aplikacje &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; oraz &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Otwiera &lt;span style=" font-weight:600;"&gt;konfigurację aplikacji&lt;/span&gt; na Twoim serwerze, aby zainstalować bądź uaktualnić QOwnNotesAPI, a także by uruchomić podstawowe aplikacje &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; oraz &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5301,8 +5329,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Musisz także mieć włączone podstawowe aplikacje ownCloud &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; i &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; (to jest ustawienie domyślne).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Musisz także mieć włączone podstawowe aplikacje ownCloud &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; i &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; (to jest ustawienie domyślne).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5531,8 +5559,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Warto rozważyć uzyskanie bezpłatnego certyfikatu SSL od &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Warto rozważyć uzyskanie bezpłatnego certyfikatu SSL od &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5566,8 +5594,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeśli zaznaczone, będziesz zawsze informowany o zewnętrznych modyfikacjach, nawet jeżeli bieżąca notatka nie była edytowana w ostatnim czasie. Zalecane: &lt;span style=&quot; font-style:italic;&quot;&gt;niezaznaczone&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeśli zaznaczone, będziesz zawsze informowany o zewnętrznych modyfikacjach, nawet jeżeli bieżąca notatka nie była edytowana w ostatnim czasie. Zalecane: &lt;span style=" font-style:italic;"&gt;niezaznaczone&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5656,7 +5684,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>Anonimowe dane dotyczące korzystania z aplikacji pomagają zdecydować, które części QOwnNotes wymagają poprawy, a także pomagają znaleźć i naprawiać błędy. Prosimy o wyłączenie tej opcji tylko, jeżeli nie możesz bez tego żyć.</translation>
 </message>
 <message>
@@ -5667,7 +5695,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1740"/>
 <source>App heartbeat</source>
-<translation>&quot;Bicie serca&quot;</translation>
+<translation>"Bicie serca"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1758"/>
@@ -5756,8 +5784,8 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
 <translation>Ścieżka „notatek” na serwerze</translation>
 </message>
 <message>
@@ -5808,13 +5836,13 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Jeśli chcesz, aby QOwnNotes miał dostęp do poprzednich wersji notatek oraz notatek przeniesionych do kosza, zainstaluj najnowszą wersję &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (nie niższą niż QOWNNOTESAPI_MIN_VERSION) na swoim serwerze ownCloud.</translation>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Jeśli chcesz, aby QOwnNotes miał dostęp do poprzednich wersji notatek oraz notatek przeniesionych do kosza, zainstaluj najnowszą wersję &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (nie niższą niż QOWNNOTESAPI_MIN_VERSION) na swoim serwerze ownCloud.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nadal będziesz potrzebować &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;klienta synchronizacji ownCloud&lt;/span&gt;&lt;/a&gt; (lub innego klasycznego klienta synchronizacji), aby synchronizować swoje notatki.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nadal będziesz potrzebować &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;klienta synchronizacji ownCloud&lt;/span&gt;&lt;/a&gt; (lub innego klasycznego klienta synchronizacji), aby synchronizować swoje notatki.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5872,7 +5900,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>Pamiętaj, że aplikacja do notatek ownCloud nie obsługuje podfolderów.</translation>
 </message>
 <message>
@@ -6231,8 +6259,8 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Najlepszym sposobem na zgłoszenie problemu jest skorzystanie z kreatora zgłaszania problemów, naciskając znajdujący się u dołu przycisk &lt;span style=&quot; font-weight:600;&quot;&gt;Otwórz kreatora zgłaszania problemów&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Najlepszym sposobem na zgłoszenie problemu jest skorzystanie z kreatora zgłaszania problemów, naciskając znajdujący się u dołu przycisk &lt;span style=" font-weight:600;"&gt;Otwórz kreatora zgłaszania problemów&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6296,13 +6324,13 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
+<source>If your password doesn't work, create an app password (button on the right)</source>
 <translation>Jeśli twoje hasło nie działa, stwórz hasło aplikacji (przycisk po prawej)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation>Jeśli chcesz pomóc przetłumaczyć QOwnNotes lub zaktualizować obecne tłumaczenie, przeczytaj: &lt;a href=&quot;%1&quot;&gt;Jak mogę pomóc tłumaczyć QOwnNotes?&lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation>Jeśli chcesz pomóc przetłumaczyć QOwnNotes lub zaktualizować obecne tłumaczenie, przeczytaj: &lt;a href="%1"&gt;Jak mogę pomóc tłumaczyć QOwnNotes?&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6391,7 +6419,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub nie wymaga dwóch spacji na końcu wiersza, aby utworzyć podział wiersza</translation>
 </message>
 <message>
@@ -6411,7 +6439,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>Nie używaj tego w narzędziu do śledzenia problemów</translation>
 </message>
 <message>
@@ -6431,8 +6459,8 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Możesz przyjrzeć się wszystkim dostępnym &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;formatom czasu&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Możesz przyjrzeć się wszystkim dostępnym &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;formatom czasu&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6462,7 +6490,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>Wyrażenia regularne podfolderów notatek do zignorowania, oddzielone znakiem „;”</translation>
 </message>
 <message>
@@ -6482,7 +6510,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
+<source>Hide 'Note count' with tags (increases performance)</source>
 <translation>Ukryj „Liczbę notatek” w tagach (zwiększa wydajność)</translation>
 </message>
 <message>
@@ -6492,8 +6520,8 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation>Możesz użyć &lt;a href=&quot;%1&quot;&gt;aplikacji internetowej QOwnNotes&lt;/a&gt;, aby móc wstawiać zdjęcia do QOwnNotes na pulpicie.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation>Możesz użyć &lt;a href="%1"&gt;aplikacji internetowej QOwnNotes&lt;/a&gt;, aby móc wstawiać zdjęcia do QOwnNotes na pulpicie.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6597,8 +6625,8 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>Domyślnie rozszerzenie przeglądarki wyświetli wszystkie linki bieżącej notatki. Możesz także ustawić, aby wyświetlane były specjalne linki zakładek dla notatek z określonym tagiem. Aby uzyskać więcej informacji na temat składni linków zakładek, kliknij &lt;a href=&quot;%1&quot;&gt; tutaj &lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>Domyślnie rozszerzenie przeglądarki wyświetli wszystkie linki bieżącej notatki. Możesz także ustawić, aby wyświetlane były specjalne linki zakładek dla notatek z określonym tagiem. Aby uzyskać więcej informacji na temat składni linków zakładek, kliknij &lt;a href="%1"&gt; tutaj &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6648,8 +6676,8 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>Aby używać QOwnNotes jako narzędzia do wycinania fragmentów stron (web clipper), zainstaluj &lt;a href=&quot;%1&quot;&gt;rozszerzenie przeglądarki Web Companion&lt;/a&gt; ze sklepu &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; lub ze strony &lt;a href=&quot;%3&quot;&gt;Dodatki do Firefoxa&lt;/a&gt;.</translation>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>Aby używać QOwnNotes jako narzędzia do wycinania fragmentów stron (web clipper), zainstaluj &lt;a href="%1"&gt;rozszerzenie przeglądarki Web Companion&lt;/a&gt; ze sklepu &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; lub ze strony &lt;a href="%3"&gt;Dodatki do Firefoxa&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6744,14 +6772,14 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Wprowadź polecenie, za pomocą którego będzie wyświetlany dziennik zatwierdzeń git log (na przykład „gitk”)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Jeśli użyjesz tego ustawienia, a następnie klikniesz notatkę prawym przyciskiem myszy, w menu zobaczysz nową pozycję służącą do wyświetlania wersji git.</translation>
 </message>
 <message>
@@ -6771,7 +6799,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Nie zapomnij włączyć obsługi Git dla swoich folderów notatek oraz skonfigurować nazwy i adresu e-mail swojego klienta Git, na przykład przy pomocy poniższych poleceń wprowadzanych w terminalu:</translation>
 </message>
 <message>
@@ -6826,7 +6854,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
+<source>Hide 'Find or create tag' search</source>
 <translation>Ukryj wyszukiwanie „Znajdź lub utwórz tag”</translation>
 </message>
 <message>
@@ -6852,7 +6880,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
+<source>Hide 'Find or create note subfolder' search</source>
 <translation>Ukryj „Znajdź lub utwórz podfolder notatek”</translation>
 </message>
 <message>
@@ -6867,8 +6895,8 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Opcjonalnie możesz użyć „%notePath%” w celu podstawienia ścieżki notatki.</translation>
 </message>
 <message>
@@ -6929,7 +6957,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>Dla starszych wersji ownCloud, w przypadku których domyślne ustawienia nie działają</translation>
 </message>
 <message>
@@ -7094,7 +7122,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
 <translation>Wprowadź swój format daty i czasu, np.: „yyyy.MM.dd hh:mm”</translation>
 </message>
 <message>
@@ -7195,7 +7223,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>Ignoruj kalendarze, które nie obsługują zadań</translation>
 </message>
 <message>
@@ -7266,8 +7294,8 @@ wstawieniem nowej linii w aplikacji notatek ownCloud/Nextcloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-<translation>Jeśli dodasz niestandardowe rozszerzenie wystarczy wpisać rozszerzenie, takie jak &quot;taskpaper&quot;.</translation>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+<translation>Jeśli dodasz niestandardowe rozszerzenie wystarczy wpisać rozszerzenie, takie jak "taskpaper".</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7281,7 +7309,7 @@ wstawieniem nowej linii w aplikacji notatek ownCloud/Nextcloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
+<source>Don't show the update dialog automatically</source>
 <translation>Nie pokazuj okna aktualizacji automatycznie</translation>
 </message>
 <message>
@@ -7320,8 +7348,8 @@ wstawieniem nowej linii w aplikacji notatek ownCloud/Nextcloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeżeli masz jakieś &lt;span style=&quot; font-weight:600;&quot;&gt;pytania lub problemy&lt;/span&gt; odnośnie QOwnNotes możesz &lt;span style=&quot; font-weight:600;&quot;&gt;skopiować i wkleić&lt;/span&gt; ten tekst (lub jego część) na &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;stronie zgłaszania problemów QOwnNotes&lt;/a&gt; na zakładce &lt;span style=&quot; font-weight:600;&quot;&gt;problemy&lt;/span&gt;. Informacje wrażliwe zostały ukryte.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeżeli masz jakieś &lt;span style=" font-weight:600;"&gt;pytania lub problemy&lt;/span&gt; odnośnie QOwnNotes możesz &lt;span style=" font-weight:600;"&gt;skopiować i wkleić&lt;/span&gt; ten tekst (lub jego część) na &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;stronie zgłaszania problemów QOwnNotes&lt;/a&gt; na zakładce &lt;span style=" font-weight:600;"&gt;problemy&lt;/span&gt;. Informacje wrażliwe zostały ukryte.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7385,7 +7413,7 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Nie używaj tego w narzędziu do śledzenia problemów; skopiuj tekst informacji debugowania bezpośrednio do zgłaszanego problemu.</translation>
 </message>
 <message>
@@ -7400,7 +7428,7 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Anonimowe dane dotyczące korzystania z aplikacji pomagają zdecydować, które części QOwnNotes wymagają poprawy, a także pomagają znaleźć i naprawiać błędy.&lt;br /&gt;Prosimy o wyłączenie tej opcji tylko, jeżeli nie możesz bez tego żyć.&lt;br /&gt;&lt;br /&gt;Na pewno wyłączyć rejestrowanie sposobu używania?</translation>
 </message>
 <message>
@@ -7435,18 +7463,18 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>Ładowanie folderów do &apos;%1&apos; z serwera</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>Ładowanie folderów do '%1' z serwera</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Aby szybko rozpocząć pracę zapoznaj się z &lt;a href=&quot;%1&quot;&gt;dokumentacją tworzenia skryptów&lt;/a&gt;.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Aby szybko rozpocząć pracę zapoznaj się z &lt;a href="%1"&gt;dokumentacją tworzenia skryptów&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Jeżeli potrzebujesz dostępu do konkretnych funkcji z QOwnNotes otwórz zdarzenie na &lt;a href=&quot;%1&quot;&gt;stronie propozycji QOwnNotes&lt;/a&gt;.</translation>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Jeżeli potrzebujesz dostępu do konkretnych funkcji z QOwnNotes otwórz zdarzenie na &lt;a href="%1"&gt;stronie propozycji QOwnNotes&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
@@ -7656,8 +7684,8 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Łącze do pobrania klienta git: &lt;a href=&quot;%url&quot;&gt;Git dla systemu Windows&lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation>Łącze do pobrania klienta git: &lt;a href="%url"&gt;Git dla systemu Windows&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7681,7 +7709,7 @@ Wiadomość błędu: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>ustawienia i wewnętrzna baza danych SQLite będą przechowywane w folderze &lt;code&gt;Dane (Data)&lt;/code&gt; w lokalizacji danych binarnych</translation>
 </message>
 <message>
@@ -8030,6 +8058,7 @@ Twoje notatki pozostaną nietknięte!</translation>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczony plik?</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone pliki?</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych plików?</numerusform>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych plików?</numerusform>
 </translation>
 </message>
 <message>
@@ -8054,12 +8083,12 @@ Twoje notatki pozostaną nietknięte!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
+<source>File doesn't exist</source>
 <translation>Plik nie istnieje</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation>Plik &lt;strong&gt;%1&lt;/strong&gt; nie istnieje, nie możesz zmienić jego nazwy!</translation>
 </message>
 <message>
@@ -8182,16 +8211,17 @@ Twoje notatki pozostaną nietknięte!</translation>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczony plik?</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone pliki?</numerusform>
 <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych plików?</numerusform>
+<numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonego pliku?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
+<source>File doesn't exist</source>
 <translation>Plik nie istnieje</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation>Plik &lt;strong&gt;%1&lt;/strong&gt; nie istnieje, nie możesz zmienić jego nazwy!</translation>
 </message>
 <message>
@@ -8749,8 +8779,8 @@ Nie można tego cofnąć!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href=&quot;%1&quot;&gt;Zaangażuj się w projekt QOwnNotes&lt;/a&gt;</translation>
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href="%1"&gt;Zaangażuj się w projekt QOwnNotes&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8761,10 +8791,6 @@ Nie można tego cofnąć!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;Aktualizuj</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">Ściągnij najnowszy</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8783,7 +8809,7 @@ Nie można tego cofnąć!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>Nie pokazuj tego okna dialogowego automatycznie</translation>
 </message>
 <message>
@@ -8858,77 +8884,77 @@ Nie można tego cofnąć!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">Uruchom ponownie aplikację</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">Uruchom ponownie</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished">Anuluj</translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Skrypt aktualizacji &apos;%1&apos; nie istnieje!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>Skrypt aktualizacji '%1' nie istnieje!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Plik wykonywalny unzip pakietu aktualizacyjnego &apos;%1&apos; nie istnieje!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>Plik wykonywalny unzip pakietu aktualizacyjnego '%1' nie istnieje!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>Nie można skopiować skryptu aktualizacji z &apos;%1&apos; do &apos;%2&apos;!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>Nie można skopiować skryptu aktualizacji z '%1' do '%2'!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>Nie można znaleźć skryptu aktualizacji: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
+<source>Couldn't find unzip executable: %1</source>
 <translation>Nie można znaleźć pliku wykonywalnego unzip: %1</translation>
 </message>
 <message>
@@ -9058,6 +9084,7 @@ Nie można tego cofnąć!</translation>
 <numerusform>Utworzono %n zakładkę</numerusform>
 <numerusform>Utworzono %n zakładki</numerusform>
 <numerusform>Utworzono %n zakładek</numerusform>
+<numerusform>Utworzono %n zakładki</numerusform>
 </translation>
 </message>
 <message>
@@ -9195,7 +9222,7 @@ Nie można tego cofnąć!</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>Ścieżka notatki nie istnieje!</translation>
 </message>
 <message>

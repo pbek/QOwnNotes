@@ -719,8 +719,8 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
-<translation>Chcete-li získat enex soubor, je třeba vybrat jednu nebo více poznámek v Evernote klientovi pro desktop a kliknout na tlačítko &quot;Exportovat poznámky...&quot; v menu Soubor.</translation>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<translation>Chcete-li získat enex soubor, je třeba vybrat jednu nebo více poznámek v Evernote klientovi pro desktop a kliknout na tlačítko "Exportovat poznámky..." v menu Soubor.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -878,158 +878,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1043,8 +1043,8 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
-<translation>Označení &quot;%1&quot; není nastaveno.</translation>
+<source>Mark "%1" not set.</source>
+<translation>Označení "%1" není nastaveno.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
@@ -1067,18 +1067,14 @@
 <translation>V FakeVim není implementován.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">Zadejte Alt-V, Alt-V pro ukončení režimu FakeVim.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1107,22 +1103,23 @@
 <numerusform>%n řádek přesunut.</numerusform>
 <numerusform>Přesunula se %n řádků.</numerusform>
 <numerusform>Přesunula se %n řádků.</numerusform>
+<numerusform>Přesunula se %n řádků.</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
-<translation>Soubor &quot;%1&quot; existuje (přidat! Chcete-li přepsat)</translation>
+<source>File "%1" exists (add ! to override)</source>
+<translation>Soubor "%1" existuje (přidat! Chcete-li přepsat)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
-<translation>Nelze otevřít soubor &quot;%1&quot; pro zápis</translation>
+<source>Cannot open file "%1" for writing</source>
+<translation>Nelze otevřít soubor "%1" pro zápis</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
-<translation>&quot;%1&quot;%2 % 3L, %4C napsáno.</translation>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>"%1"%2 % 3L, %4C napsáno.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
@@ -1131,19 +1128,20 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
-<translation>Nelze otevřít soubor &quot;%1&quot; pro čtení</translation>
+<source>Cannot open file "%1" for reading</source>
+<translation>Nelze otevřít soubor "%1" pro čtení</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
-<translation>&quot;%1&quot; %2L, %3C</translation>
+<source>"%1" %2L, %3C</source>
+<translation>"%1" %2L, %3C</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
 <source>%n lines filtered.</source>
 <translation>
 <numerusform>%n řádek filtrován.</numerusform>
+<numerusform>%n řádků filtrováno.</numerusform>
 <numerusform>%n řádků filtrováno.</numerusform>
 <numerusform>%n řádků filtrováno.</numerusform>
 </translation>
@@ -1195,22 +1193,15 @@
 <numerusform>%n řádek odsazen.</numerusform>
 <numerusform>%n řádků odsazených.</numerusform>
 <numerusform>%n řádků odsazených.</numerusform>
+<numerusform>%n řádků odsazených.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
+<translation>
 <numerusform>%n řádek %1ed% 2 čas.</numerusform>
 <numerusform>%n řádků %1ed% 2 čas.</numerusform>
-<numerusform>%n řádků %1ed% 2 čas.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
-<numerusform>%n řádek %1ed% 2 čas.</numerusform>
 <numerusform>%n řádků %1ed% 2 čas.</numerusform>
 <numerusform>%n řádků %1ed% 2 čas.</numerusform>
 </translation>
@@ -1219,6 +1210,7 @@
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7615"/>
 <source>%n lines yanked.</source>
 <translation>
+<numerusform>%n řádků yanked.</numerusform>
 <numerusform>%n řádků yanked.</numerusform>
 <numerusform>%n řádků yanked.</numerusform>
 <numerusform>%n řádků yanked.</numerusform>
@@ -1480,7 +1472,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>Maskovaná syntaxe</translation>
 </message>
 <message>
@@ -1580,7 +1572,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
+<source>Don't copy image to media folder</source>
 <translation>Nekopírujte obrázek do složky médií</translation>
 </message>
 <message>
@@ -1856,7 +1848,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>Soubor &lt;strong&gt;%1&lt;/strong&gt; není čitelný a není možné jej obnovit!</translation>
 </message>
 <message numerus="yes">
@@ -1864,6 +1856,7 @@
 <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
 <numerusform>Obnovení &lt;strong&gt;%n&lt;/strong&gt; vybrané poznámky?</numerusform>
+<numerusform>Obnovení &lt;strong&gt;%n&lt;/strong&gt; vybraných poznámkek?</numerusform>
 <numerusform>Obnovení &lt;strong&gt;%n&lt;/strong&gt; vybraných poznámkek?</numerusform>
 <numerusform>Obnovení &lt;strong&gt;%n&lt;/strong&gt; vybraných poznámkek?</numerusform>
 </translation>
@@ -1880,6 +1873,7 @@
 <numerusform>Byla obnovena poznámka &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámky byly obnoveny</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámky byly obnoveny</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámky byly obnoveny</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -1888,6 +1882,7 @@
 <translation>
 <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybranou poznámku?</numerusform>
 <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybrané poznámky?</numerusform>
+<numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybraných poznámek?</numerusform>
 <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybraných poznámek?</numerusform>
 </translation>
 </message>
@@ -1901,6 +1896,7 @@
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
 <translation>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámka byla odebrána</numerusform>
+<numerusform>&lt;strong&gt;%n &lt;/strong&gt; poznámky byly odstraněny</numerusform>
 <numerusform>&lt;strong&gt;%n &lt;/strong&gt; poznámky byly odstraněny</numerusform>
 <numerusform>&lt;strong&gt;%n &lt;/strong&gt; poznámky byly odstraněny</numerusform>
 </translation>
@@ -2370,7 +2366,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1610"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Vložit obrázek (obrázek bude zkopírován do složky &quot;média&quot; v aktuální složce poznámky)</translation>
+<translation>Vložit obrázek (obrázek bude zkopírován do složky "média" v aktuální složce poznámky)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1622"/>
@@ -2544,7 +2540,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
 </message>
 <message>
@@ -2824,8 +2820,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-<translation>Vyřešit jednoduchou rovnici např. &apos;(2+3)*6=&apos; na současném řádku</translation>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>Vyřešit jednoduchou rovnici např. '(2+3)*6=' na současném řádku</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2955,7 +2951,8 @@ Restore current note?</source>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="obsolete">
+<translation type="unfinished">
+<numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
@@ -3008,6 +3005,7 @@ Restore current note?</source>
 <numerusform>Byla odebrána %n kopie konfliktu databáze</numerusform>
 <numerusform>Byly odebrány %n kopie konfliktu databáze</numerusform>
 <numerusform>Byly odebrány %n kopie konfliktu databáze</numerusform>
+<numerusform>Byly odebrány %n kopie konfliktu databáze</numerusform>
 </translation>
 </message>
 <message>
@@ -3052,7 +3050,7 @@ Restore current note?</source>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>Poznámka nemůže být dešifrována!</translation>
 </message>
 <message>
@@ -3076,6 +3074,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odstraněné složky obnovit.</numerusform>
 <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybranou složku(y).
 Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odstraněné složky obnovit.</numerusform>
+<numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybranou složku(y).
+Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odstraněné složky obnovit.</numerusform>
 </translation>
 </message>
 <message>
@@ -3088,6 +3088,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <location filename="../mainwindow.cpp" line="4747"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
+<numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybranou složku(y)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Všechny soubory a složky v těchto složkách budou odstraněny také!</numerusform>
 <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybranou složku(y)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Všechny soubory a složky v těchto složkách budou odstraněny také!</numerusform>
 <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybranou složku(y)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Všechny soubory a složky v těchto složkách budou odstraněny také!</numerusform>
 <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybranou složku(y)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Všechny soubory a složky v těchto složkách budou odstraněny také!</numerusform>
@@ -3110,6 +3111,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybraných štítků? Žádné poznámky nebudou při tomto procesu odstraněny.</numerusform>
 <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané značky? V tomto procesu nebudou odstraněny žádné poznámky.</numerusform>
 <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané značky? V tomto procesu nebudou odstraněny žádné poznámky.</numerusform>
+<numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané značky? V tomto procesu nebudou odstraněny žádné poznámky.</numerusform>
 </translation>
 </message>
 <message>
@@ -3125,6 +3127,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Přesunout %n vybranou poznámku do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Přesunout %n vybrané poznámky do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Přesunout %n vybrané poznámky do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Přesunout %n vybrané poznámky do &lt;strong&gt; %2 &lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -3138,6 +3141,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Přesunout %n vybraných poznámek do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Kopírovat %n vybraných poznámek do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 <numerusform>Kopírovat %n vybraných poznámek do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 <numerusform>Kopírovat %n vybraných poznámek do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 </translation>
@@ -3155,6 +3159,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>%n poznamka byla zkopírovány do &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>%n poznámky byly zkopírovány do &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
 <numerusform>%n poznámky byly zkopírovány do &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
+<numerusform>%n poznámky byly zkopírovány do &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
 </translation>
 </message>
 <message>
@@ -3169,6 +3174,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Přidat štítek &lt;strong&gt;%2&lt;/strong&gt; k %n vybrané poznámce?</numerusform>
 <numerusform>Označit %n vybraných poznámek pomocí &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 <numerusform>Označit %n vybraných poznámek pomocí &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+<numerusform>Přidat štítek &lt;strong&gt;%2&lt;/strong&gt; k %n vybraným poznámkám?</numerusform>
 </translation>
 </message>
 <message>
@@ -3211,6 +3217,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Nalezeno &lt;strong&gt;%n &lt;/strong&gt; výskyt jakéhokoli výrazu &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+<numerusform>Nalezeno &lt;strong&gt;%n &lt;/strong&gt; výskytů jakéhokoli výrazu &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Nalezeno &lt;strong&gt;%n &lt;/strong&gt; výskytů jakéhokoli výrazu &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Nalezeno &lt;strong&gt;%n &lt;/strong&gt; výskytů jakéhokoli výrazu &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
@@ -3325,6 +3332,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Zkopírována %n poznámka do %1</numerusform>
 <numerusform>Zkopírováno %n poznámek do %1</numerusform>
 <numerusform>Zkopírováno %n poznámek do %1</numerusform>
+<numerusform>Zkopírováno %n poznámek do %1</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3332,6 +3340,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Nepodařilo se zkopírovat poznámku %n (pravděpodobně již existovala)</numerusform>
+<numerusform>Nepodařilo se zkopírovat poznámky %n (pravděpodobně již existující)</numerusform>
 <numerusform>Nepodařilo se zkopírovat poznámky %n (pravděpodobně již existující)</numerusform>
 <numerusform>Nepodařilo se zkopírovat poznámky %n (pravděpodobně již existující)</numerusform>
 </translation>
@@ -3343,6 +3352,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Přeskočené kopírování poznámky %n (bez označení nebo textového souboru nebo nečitelné)</numerusform>
 <numerusform>Přeskočené kopírování poznámek %n (bez označení nebo textového souboru nebo nečitelné)</numerusform>
 <numerusform>Přeskočené kopírování poznámek %n (bez označení nebo textového souboru nebo nečitelné)</numerusform>
+<numerusform>Přeskočené kopírování poznámek %n (bez označení nebo textového souboru nebo nečitelné)</numerusform>
 </translation>
 </message>
 <message>
@@ -3352,7 +3362,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>Dočasný soubor nemůže být otevřen</translation>
 </message>
 <message>
@@ -3363,18 +3373,18 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Velikost písma obnovena na %1 pt</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
-<translation>Z aktuální poznámky odeberte značku &apos;%1&apos;</translation>
+<source>Remove tag '%1' from the current note</source>
+<translation>Z aktuální poznámky odeberte značku '%1'</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
-<translation>Odstraňte značku &apos;%1&apos; z vybraných poznámek</translation>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>Odstraňte značku '%1' z vybraných poznámek</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9315"/>
@@ -3429,7 +3439,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>Přejít na podsložku poznámky
 </translation>
 </message>
@@ -3567,6 +3577,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>%n znak</numerusform>
 <numerusform>%n znaky</numerusform>
 <numerusform>%n znaky</numerusform>
+<numerusform>%n znaků</numerusform>
 </translation>
 </message>
 <message>
@@ -3586,7 +3597,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
+<source>Note headline '%1' was copied to the clipboard</source>
 <translation>Titulek poznámky „%1“ byl zkopírován do schránky</translation>
 </message>
 <message>
@@ -3609,6 +3620,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n poznámka vybrána</numerusform>
+<numerusform>%n poznámek vybráno</numerusform>
 <numerusform>%n poznámek vybráno</numerusform>
 <numerusform>%n poznámek vybráno</numerusform>
 </translation>
@@ -3636,6 +3648,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Odstranit &lt;strong&gt;%1&lt;/strong&gt; štítky z %n vybrané poznámky?</numerusform>
 <numerusform>Odstranit &lt;strong&gt;%1&lt;/strong&gt; štítků z %n vybraných poznámek?</numerusform>
 <numerusform>Odstranit &lt;strong&gt;%1&lt;/strong&gt; štítků z %n vybraných poznámek?</numerusform>
+<numerusform>Odstranit &lt;strong&gt;%1&lt;/strong&gt; štítků z %n vybraných poznámek?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3644,6 +3657,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <translation>
 <numerusform>Značka &lt;strong&gt;%1 &lt;/strong&gt; byla odstraněna z poznámky %n</numerusform>
 <numerusform>Značka &lt;strong&gt;%1 &lt;/strong&gt; byla odstraněna z poznámek %n</numerusform>
+<numerusform>Značka &lt;strong&gt; %1 &lt;/strong&gt; byla odstraněna z poznámek %n</numerusform>
 <numerusform>Značka &lt;strong&gt; %1 &lt;/strong&gt; byla odstraněna z poznámek %n</numerusform>
 </translation>
 </message>
@@ -3779,6 +3793,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Přesnost %n vybranou poznámku do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 <numerusform>Přesnost %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 <numerusform>Přesnost %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+<numerusform>Přesnost %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -3789,11 +3804,12 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
-<numerusform>%n poznámka byla přesunuta do podsložky &quot;%2&quot;</numerusform>
-<numerusform>%n poznámek bylo přesunuto do podadresáře poznámky &quot;%2&quot;</numerusform>
-<numerusform>%n poznámek bylo přesunuto do podadresáře poznámky &quot;%2&quot;</numerusform>
+<numerusform>%n poznámka byla přesunuta do podsložky "%2"</numerusform>
+<numerusform>%n poznámek bylo přesunuto do podadresáře poznámky "%2"</numerusform>
+<numerusform>%n poznámek bylo přesunuto do podadresáře poznámky "%2"</numerusform>
+<numerusform>%n poznámek bylo přesunuto do podadresáře poznámky "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3803,13 +3819,15 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Kopírovat %n vybranou poznámku do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 <numerusform>Kopírovat %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 <numerusform>Kopírovat %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+<numerusform>Kopírovat %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>%n poznámka byla zkopírována do podsložky poznámky „% 2“</numerusform>
+<numerusform>%n poznámky byly zkopírovány do podsložky poznámek „% 2“</numerusform>
 <numerusform>%n poznámky byly zkopírovány do podsložky poznámek „% 2“</numerusform>
 <numerusform>%n poznámky byly zkopírovány do podsložky poznámek „% 2“</numerusform>
 </translation>
@@ -3932,6 +3950,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Uložena %n poznámka na disk</numerusform>
 <numerusform>Uloženy %n poznámky na disk</numerusform>
 <numerusform>Uloženy %n poznámky na disk</numerusform>
+<numerusform>Uloženo %n poznámek na disk</numerusform>
 </translation>
 </message>
 <message>
@@ -3967,18 +3986,18 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
+<source>Cannot move tag '%1' to this tag</source>
 <translation>Do této značky nelze přesunout značku „%1“</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
+<source>Moved tag '%1' to new tag</source>
 <translation>Značka „%1“ byla přesunuta do nové značky</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
-<translation>zobrazit všechny poznámky označené &apos;%1&apos; (%2)</translation>
+<source>show all notes tagged with '%1' (%2)</source>
+<translation>zobrazit všechny poznámky označené '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9318"/>
@@ -4098,8 +4117,8 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
-<translation>zobrazit poznámky ve složce &apos;%1&apos; (%2)</translation>
+<source>show notes in folder '%1' (%2)</source>
+<translation>zobrazit poznámky ve složce '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2615"/>
@@ -4149,15 +4168,17 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Pokračujte s automatickým smazáním kopie konfliktu databáze &lt;strong&gt;%n&lt;/strong&gt;, která může blokovat váš proces synchronizace ownCloud?</numerusform>
 <numerusform>Pokračujte s automatickým smazáním kopií s konfliktem &lt;strong&gt;%n &lt;/strong&gt;, které mohou blokovat váš proces synchronizace ownCloud?</numerusform>
 <numerusform>Pokračujte s automatickým smazáním kopií s konfliktem &lt;strong&gt;%n &lt;/strong&gt;, které mohou blokovat váš proces synchronizace ownCloud?</numerusform>
+<numerusform>Pokračujte s automatickým smazáním kopií s konfliktem &lt;strong&gt;%n &lt;/strong&gt;, které mohou blokovat váš proces synchronizace ownCloud?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
-<numerusform>Počet příspěvků %n byl označen jako &quot;%2&quot;</numerusform>
-<numerusform>Počet příspěvků %n byl označen jako &quot;%2&quot;</numerusform>
-<numerusform>Počet příspěvků %n byl označen jako &quot;%2&quot;</numerusform>
+<numerusform>Počet příspěvků %n byl označen jako "%2"</numerusform>
+<numerusform>Počet příspěvků %n byl označen jako "%2"</numerusform>
+<numerusform>Počet příspěvků %n byl označen jako "%2"</numerusform>
+<numerusform>Počet příspěvků %n byl označen jako "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4165,6 +4186,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Nalezeno &lt;strong&gt;%n &lt;/strong&gt; výskyt &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Nalezeno &lt;strong&gt;%n &lt;/strong&gt; výskytů &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 <numerusform>Nalezeno &lt;strong&gt;%n &lt;/strong&gt; výskytů &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 <numerusform>Nalezeno &lt;strong&gt;%n &lt;/strong&gt; výskytů &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 </translation>
@@ -4464,7 +4486,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Neexistují žádné verze této poznámky nebo poznámka nebyla nalezena na serveru.</translation>
 </message>
 <message>
@@ -4490,7 +4512,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>Váš server CalDAV neodpověděl nic!</translation>
 </message>
 <message>
@@ -4533,7 +4555,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>Hesla se neshodují!</translation>
 </message>
 </context>
@@ -4581,12 +4603,14 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>Byla detekována změna cesty poznámky. Chcete nahradit všechny výskyty &lt;strong&gt;%1 &lt;/strong&gt; odkazů &lt;strong&gt;%2 &lt;/strong&gt; a odkazy s názvem &lt;strong&gt;%3 &lt;/strong&gt; za &lt;strong&gt;%4 &lt;/ strong &gt; v &lt;strong&gt;%n &lt;/strong&gt; souboru poznámek?</numerusform>
 <numerusform>Byla detekována změna cesty poznámky. Chcete nahradit všechny výskyty &lt;strong&gt;%1 &lt;/strong&gt; odkazů &lt;strong&gt;%2 &lt;/strong&gt; a odkazy s názvem &lt;strong&gt;%3 &lt;/strong&gt; za &lt;strong&gt;%4 &lt;/ strong &gt; v &lt;strong&gt;%n &lt;/strong&gt; souborech poznámek?</numerusform>
 <numerusform>Byla detekována změna cesty poznámky. Chcete nahradit všechny výskyty &lt;strong&gt;%1 &lt;/strong&gt; odkazů &lt;strong&gt;%2 &lt;/strong&gt; a odkazy s názvem &lt;strong&gt;%3 &lt;/strong&gt; za &lt;strong&gt;%4 &lt;/strong &gt; v &lt;strong&gt;%n &lt;/strong&gt; souborech poznámek?</numerusform>
+<numerusform>Byla detekována změna cesty poznámky. Chcete nahradit všechny výskyty &lt;strong&gt;%1 &lt;/strong&gt; odkazů &lt;strong&gt;%2 &lt;/strong&gt; a odkazy s názvem &lt;strong&gt;%3 &lt;/strong&gt; za &lt;strong&gt;%4 &lt;/strong &gt; v &lt;strong&gt;%n &lt;/strong&gt; souborech poznámek?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../entities/note.cpp" line="3802"/>
 <source>…and %n more note(s)</source>
 <translation>
+<numerusform>… a %n více poznámek</numerusform>
 <numerusform>… a %n více poznámek</numerusform>
 <numerusform>… a %n více poznámek</numerusform>
 <numerusform>… a %n více poznámek</numerusform>
@@ -4605,12 +4629,12 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>Neptát se znovu!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>Nezobrazovat znovu!</translation>
 </message>
 <message>
@@ -4679,13 +4703,13 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>Složku s názvem &lt;b&gt;%1 &lt;/b&gt; nelze vytvořit, protože ji interně používá aplikace!
 </translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>Složku s názvem &lt;b&gt;%1&lt;/b&gt; nelze vytvořit, protože je na seznamu ignorovaných podsložek! Můžete to změnit v &lt;i&gt; Nastavení panelů &lt;/i&gt;.
 </translation>
 </message>
@@ -4702,12 +4726,14 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
+<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
 <translation type="unfinished">
+<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
@@ -4928,9 +4954,9 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-<translation>Nelze vytvořit databázové připojení se souborem &apos;%1&apos;.
+<translation>Nelze vytvořit databázové připojení se souborem '%1'.
 Jsou složku a soubor zapisovatelné?</translation>
 </message>
 <message>
@@ -4945,9 +4971,9 @@ Jsou složku a soubor zapisovatelné?</translation>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-<translation>Nelze navázat spojení databáze s databází složek poznámek a sloučit &apos;%1&apos;.
+<translation>Nelze navázat spojení databáze s databází složek poznámek a sloučit '%1'.
 Lze složku a soubor zapisovat?</translation>
 </message>
 </context>
@@ -5095,7 +5121,7 @@ Chcete přesto nainstalovat?</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Prosím, nezapomeňte aktualizovat instalaci QOwnNotes, aby tento skript mohl pracovat!</translation>
 </message>
 <message>
@@ -5136,7 +5162,7 @@ Chcete přesto nainstalovat?</translation>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>soubor neexistuje</translation>
 </message>
 </context>
@@ -5158,6 +5184,7 @@ Chcete přesto nainstalovat?</translation>
 <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
 <translation>
 <numerusform>&lt;strong&gt;%n záložka &lt;/strong&gt; nalezená na serveru</numerusform>
+<numerusform>&lt;strong&gt;%n záložek &lt;/strong&gt; nalezených na serveru</numerusform>
 <numerusform>&lt;strong&gt;%n záložek &lt;/strong&gt; nalezených na serveru</numerusform>
 <numerusform>&lt;strong&gt;%n záložek &lt;/strong&gt; nalezených na serveru</numerusform>
 </translation>
@@ -5218,8 +5245,8 @@ Chcete přesto nainstalovat?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Zadejte prosím adresu svého vlastního serveru, například: &lt;span style = &quot;font-style: kurzíva;&quot;&gt; https://cloud.yourserver.com &lt;/ span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Zadejte prosím adresu svého vlastního serveru, například: &lt;span style = "font-style: kurzíva;"&gt; https://cloud.yourserver.com &lt;/ span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5271,22 +5298,22 @@ Chcete přesto nainstalovat?</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1334"/>
 <source>versions app enabled on server</source>
-<translation>aplikace &quot;Versions&quot; povolena na serveru</translation>
+<translation>aplikace "Versions" povolena na serveru</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1351"/>
 <source>trash app enabled on server</source>
-<translation>aplikace &quot;Deleted files&quot; povolena na serveru</translation>
+<translation>aplikace "Deleted files" povolena na serveru</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1368"/>
 <source>notes path found on server</source>
-<translation>aplikace &quot;Notes&quot; povolena na serveru</translation>
+<translation>aplikace "Notes" povolena na serveru</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Otevírá server ownCloud &lt;span style = &quot;font-weight: 600;&quot;&gt; Stránka konfigurace aplikace &lt;/span&gt; ve webovém prohlížeči pro instalaci nebo aktualizaci QOwnNotesAPI a povolení základních aplikací &lt;span style = &quot;font-weight: 600;&quot; &gt; Verze &lt;/span&gt; a &lt;span style = &quot;font-weight: 600;&quot;&gt; Odstraněné soubory &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Otevírá server ownCloud &lt;span style = "font-weight: 600;"&gt; Stránka konfigurace aplikace &lt;/span&gt; ve webovém prohlížeči pro instalaci nebo aktualizaci QOwnNotesAPI a povolení základních aplikací &lt;span style = "font-weight: 600;" &gt; Verze &lt;/span&gt; a &lt;span style = "font-weight: 600;"&gt; Odstraněné soubory &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5310,8 +5337,8 @@ Chcete přesto nainstalovat?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Musíte mít také dvě základní aplikace &lt;Czech&gt; &lt;span style = &quot;font-weight: 600;&quot;&gt; Verze &lt;/span&gt; a &lt;span style = &quot;font-weight: 600; &quot;&gt; Smazané soubory &lt;/span&gt; jsou povoleny na serveru ownCloud (to by mělo být výchozí nastavení). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Musíte mít také dvě základní aplikace &lt;Czech&gt; &lt;span style = "font-weight: 600;"&gt; Verze &lt;/span&gt; a &lt;span style = "font-weight: 600; "&gt; Smazané soubory &lt;/span&gt; jsou povoleny na serveru ownCloud (to by mělo být výchozí nastavení). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5540,8 +5567,8 @@ Chcete přesto nainstalovat?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Z &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Zašifrování &lt;/a&gt; můžete zvážit získání certifikátu SSL zdarma. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Z &lt;a href="https://letsencrypt.org/"&gt; Zašifrování &lt;/a&gt; můžete zvážit získání certifikátu SSL zdarma. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5575,8 +5602,8 @@ Chcete přesto nainstalovat?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Pokud je zaškrtnuto, budete vždy informováni o externích úpravách, a to iv případě, že aktuální poznámka nebyla v poslední minutě upravena. Doporučeno je &lt;span style = &quot;font-style: kurzíva;&quot;&gt; nezaškrtnuté &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Pokud je zaškrtnuto, budete vždy informováni o externích úpravách, a to iv případě, že aktuální poznámka nebyla v poslední minutě upravena. Doporučeno je &lt;span style = "font-style: kurzíva;"&gt; nezaškrtnuté &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5665,7 +5692,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>Anonymní data o použití pomáhají rozhodnout, které části QOwnNotes se budou dále vylepšovat a najít a opravit chyby. Zakažte ho pouze tehdy, pokud s ním skutečně nemůžete žít.</translation>
 </message>
 <message>
@@ -5765,9 +5792,9 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
-<translation>Cesta &quot;Poznámky&quot; na vašem serveru</translation>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
+<translation>Cesta "Poznámky" na vašem serveru</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
@@ -5817,13 +5844,13 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Nainstalujte prosím nejnovější verzi &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt; &lt;span style = &quot;font-weight: 600;&quot;&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; (alespoň verze QOWNNOTESAPI_MIN_VERSION) na serveru ownCloud, pokud chcete, aby aplikace QOwnNotes mohla přistupovat k verzím poznámek a poznámkám do koše.</translation>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Nainstalujte prosím nejnovější verzi &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-weight: 600;"&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; (alespoň verze QOWNNOTESAPI_MIN_VERSION) na serveru ownCloud, pokud chcete, aby aplikace QOwnNotes mohla přistupovat k verzím poznámek a poznámkám do koše.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pro synchronizaci vašich poznámek budete stále potřebovat vlastního synchronizačního&lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt; ownCloud klienta &lt;/span&gt;&lt;/a&gt; (nebo jiného klientského synchronizačního počítače)!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pro synchronizaci vašich poznámek budete stále potřebovat vlastního synchronizačního&lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt; ownCloud klienta &lt;/span&gt;&lt;/a&gt; (nebo jiného klientského synchronizačního počítače)!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5881,7 +5908,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>Uvědomte si, že aplikace ownCloud notes nepodporuje podsložky!
 </translation>
 </message>
@@ -6242,8 +6269,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Nejlepším způsobem, jak publikovat problémy, je použít pomocníka pro otázky pomocí tlačítka &lt;span style = &quot;font-weight: 600;&quot;&gt; dole. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Nejlepším způsobem, jak publikovat problémy, je použít pomocníka pro otázky pomocí tlačítka &lt;span style = "font-weight: 600;"&gt; dole. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6307,13 +6334,13 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn&apos;t work, create an app password (button on the right)</translation>
+<source>If your password doesn't work, create an app password (button on the right)</source>
+<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation>Pokud chcete pomoci s překladem QOwnNotes nebo aktualizovat stávající překlad, přečtěte si: &lt;a href=&quot;%1&quot;&gt; Jak mohu pomoci s překladem QOwnNotes? &lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation>Pokud chcete pomoci s překladem QOwnNotes nebo aktualizovat stávající překlad, přečtěte si: &lt;a href="%1"&gt; Jak mohu pomoci s překladem QOwnNotes? &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6402,7 +6429,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub nepotřebuje na konci řádku dva mezery, aby mohl přerušit řádek</translation>
 </message>
 <message>
@@ -6422,7 +6449,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>Nepoužívejte to v nástroji pro sledování problémů</translation>
 </message>
 <message>
@@ -6442,8 +6469,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Možná byste se měli podívat na všechny dostupné &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;časové formáty&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Možná byste se měli podívat na všechny dostupné &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;časové formáty&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6473,7 +6500,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
 <translation>Regulární výrazy podsložek not, které mají být ignorovány, oddělené znakem „;“
 </translation>
 </message>
@@ -6496,7 +6523,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
+<source>Hide 'Note count' with tags (increases performance)</source>
 <translation>Skrýt „počet poznámek“ s klíčovými slovy (zvyšuje výkon)</translation>
 </message>
 <message>
@@ -6506,8 +6533,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6612,8 +6639,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>Ve výchozím nastavení rozšíření prohlížeče zobrazí všechny odkazy aktuální poznámky. Můžete také učinit, aby se zobrazovaly speciální záložky odkazů s určitou značkou. Další informace o syntaxi odkazu záložky naleznete &lt;a href=&quot;%1&quot;&gt;zde&lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>Ve výchozím nastavení rozšíření prohlížeče zobrazí všechny odkazy aktuální poznámky. Můžete také učinit, aby se zobrazovaly speciální záložky odkazů s určitou značkou. Další informace o syntaxi odkazu záložky naleznete &lt;a href="%1"&gt;zde&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6663,8 +6690,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>V &lt;a href=&quot;%1&quot;&gt; rozšíření prohlížeče Web Companion &lt;/a&gt; nainstalujte &lt;a href=&quot;%2&quot;&gt; Internetový obchod Chrome &lt;/a&gt; nebo &lt;a href=&quot;%3&quot;&gt; Doplněk Firefoxu &lt;/a&gt;. na stránce &lt;/a&gt; pro použití QOwnNotes jako webového clipperu.</translation>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>V &lt;a href="%1"&gt; rozšíření prohlížeče Web Companion &lt;/a&gt; nainstalujte &lt;a href="%2"&gt; Internetový obchod Chrome &lt;/a&gt; nebo &lt;a href="%3"&gt; Doplněk Firefoxu &lt;/a&gt;. na stránce &lt;/a&gt; pro použití QOwnNotes jako webového clipperu.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6759,14 +6786,14 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Zadejte příkaz, který se má použít k zobrazení protokolu git (například &quot;gitk&quot;)</translation>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Zadejte příkaz, který se má použít k zobrazení protokolu git (například "gitk")</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Použijete-li toto nastavení, získáte novou položku nabídky pro zobrazení verzí git, pokud klepnete pravým tlačítkem na poznámku.</translation>
 </message>
 <message>
@@ -6786,7 +6813,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Nezapomeňte povolit podporu git pro složky s poznámkami a nakonfigurovat své jméno a e-mailovou adresu pro váš klient git, například pomocí těchto terminálových příkazů:</translation>
 </message>
 <message>
@@ -6841,8 +6868,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
-<translation>Schovat vyhledávání &apos;Najít nebo vytvořit štítek&apos;</translation>
+<source>Hide 'Find or create tag' search</source>
+<translation>Schovat vyhledávání 'Najít nebo vytvořit štítek'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5568"/>
@@ -6867,8 +6894,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
-<translation>Schovat vyhledávání &apos;Vyhledat nebo vytvořit poznámku&apos;</translation>
+<source>Hide 'Find or create note subfolder' search</source>
+<translation>Schovat vyhledávání 'Vyhledat nebo vytvořit poznámku'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6882,8 +6909,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Volitelně můžete použít cestu %notePath% pro cestu poznámky.</translation>
 </message>
 <message>
@@ -6944,7 +6971,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>U starších verzí vlastníCloud, kde výchozí nastavení nefunguje</translation>
 </message>
 <message>
@@ -7109,8 +7136,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
-<translation>Zadejte vlastní formát času, například &quot;dd.MM.rrrr hh:mm&quot;</translation>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation>Zadejte vlastní formát času, například "dd.MM.rrrr hh:mm"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7210,7 +7237,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>Ignorovat kalendáře, které nepodporují položky todo</translation>
 </message>
 <message>
@@ -7280,8 +7307,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-<translation>Pokud přidáte vlastní rozšíření, jednoduše zadejte rozšíření, například &quot;úloha&quot;.</translation>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+<translation>Pokud přidáte vlastní rozšíření, jednoduše zadejte rozšíření, například "úloha".</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7295,7 +7322,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
+<source>Don't show the update dialog automatically</source>
 <translation>Automaticky nezobrazovat dialog pro aktualizaci</translation>
 </message>
 <message>
@@ -7334,8 +7361,8 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Můžete &lt;span style = &quot;font-weight: 600;&quot;&gt; kopírovat a vložit &lt;/span&gt; tento text (nebo jeho části) do &lt;span stylu = &quot;font-weight: 600;&quot;&gt; vydat &lt;/span&gt; na stránce &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; otázky týkající se otázek QOwnNotes &lt;/a&gt;, pokud máte &lt;span style = &quot;font-weight: 600;&quot;&gt; otázky nebo problémy &lt;/span&gt; s QOwnNotes. Příliš citlivá data jsou v těchto informacích skryta. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Můžete &lt;span style = "font-weight: 600;"&gt; kopírovat a vložit &lt;/span&gt; tento text (nebo jeho části) do &lt;span stylu = "font-weight: 600;"&gt; vydat &lt;/span&gt; na stránce &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; otázky týkající se otázek QOwnNotes &lt;/a&gt;, pokud máte &lt;span style = "font-weight: 600;"&gt; otázky nebo problémy &lt;/span&gt; s QOwnNotes. Příliš citlivá data jsou v těchto informacích skryta. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7399,7 +7426,7 @@ Chybová zpráva připojení: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Nepoužívejte to v nástroji pro sledování problémů, zkopírujte text informací o ladění přímo do problému.</translation>
 </message>
 <message>
@@ -7414,7 +7441,7 @@ Chybová zpráva připojení: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Anonymní data o použití pomáhají rozhodnout, které části QOwnNotes se budou dále vylepšovat a najít a opravit chyby. &lt;br/&gt;Zakažte je pouze tehdy, pokud s ním skutečně nemůžete žít. &lt;br/&gt; &lt;br/&gt; Opravdu zakažte sledování využití?</translation>
 </message>
 <message>
@@ -7449,18 +7476,18 @@ Chybová zpráva připojení: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>Načítání složek v &apos;%1&apos; ze serveru</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>Načítání složek v '%1' ze serveru</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Chcete-li začít rychle, podívejte se na &lt;a href=&quot;%1&quot;&gt; dokumentaci ke skriptování &lt;/a&gt;.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Chcete-li začít rychle, podívejte se na &lt;a href="%1"&gt; dokumentaci ke skriptování &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Pokud potřebujete přístup k určité funkci v QOwnNotes, prosím, otevřete problém na &lt;a href=&quot;%1&quot;&gt; stránce problémů QOwnNotes &lt;/a&gt;.</translation>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Pokud potřebujete přístup k určité funkci v QOwnNotes, prosím, otevřete problém na &lt;a href="%1"&gt; stránce problémů QOwnNotes &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
@@ -7673,8 +7700,8 @@ Chybová zpráva připojení: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Zde si můžete stáhnout svůj git klienta: &lt;a href=&quot;%url&quot;&gt;Git pro Windows&lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation>Zde si můžete stáhnout svůj git klienta: &lt;a href="%url"&gt;Git pro Windows&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7698,7 +7725,7 @@ Chybová zpráva připojení: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>interní databáze sqlite a nastavení budou uloženy uvnitř složky &lt;code&gt;Data&lt;/code&gt; na binárním umístění</translation>
 </message>
 <message>
@@ -8047,6 +8074,7 @@ Vaše poznámky zůstanou neporušené!</translation>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 </translation>
 </message>
 <message>
@@ -8071,13 +8099,13 @@ Vaše poznámky zůstanou neporušené!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
@@ -8199,17 +8227,18 @@ Vaše poznámky zůstanou neporušené!</translation>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
@@ -8770,8 +8799,8 @@ To nelze vrátit zpět!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href=&quot;%1&quot;&gt; Zapojte se do QOwnNotes &lt;/a&gt;</translation>
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href="%1"&gt; Zapojte se do QOwnNotes &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8782,10 +8811,6 @@ To nelze vrátit zpět!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;Aktualizovat</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">&amp;Stáhnout nejnovější</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8804,7 +8829,7 @@ To nelze vrátit zpět!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>Nezobrazujte automaticky tento dialog</translation>
 </message>
 <message>
@@ -8880,77 +8905,77 @@ To nelze vrátit zpět!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">Restartovat aplikaci</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">Restartovat</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished">Zrušit</translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Skript updater &apos;%1&apos; neexistuje!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>Skript updater '%1' neexistuje!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Aktualizátor rozbalení spustitelného souboru &apos;%1&apos; neexistuje!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>Aktualizátor rozbalení spustitelného souboru '%1' neexistuje!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>Nelze kopírovat aktualizační skript &apos;%1&apos; na &apos;%2&apos;!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>Nelze kopírovat aktualizační skript '%1' na '%2'!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>Nelze najít aktualizační skript: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
+<source>Couldn't find unzip executable: %1</source>
 <translation>Nelze najít rozbalitelný spustitelný soubor: %1</translation>
 </message>
 <message>
@@ -9078,6 +9103,7 @@ To nelze vrátit zpět!</translation>
 <source>%n bookmark(s) created</source>
 <translation>
 <numerusform>Vytvořeno záložky %n</numerusform>
+<numerusform>%n vytvořených záložek</numerusform>
 <numerusform>%n vytvořených záložek</numerusform>
 <numerusform>%n vytvořených záložek</numerusform>
 </translation>
@@ -9217,7 +9243,7 @@ To nelze vrátit zpět!</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>Cesta k souboru poznámky neexistuje!</translation>
 </message>
 <message>

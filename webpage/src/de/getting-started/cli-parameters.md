@@ -42,14 +42,14 @@ QOwnNotes --action actionShow_Todo_List
 Die Objektnamen der Menüaktion erhalten Sie von [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Suchen Sie einfach nach dem englischen Menütitel. Beachten Sie, dass sich diese Texte im Laufe der Zeit ändern können.
 :::
 
-Verwenden Sie zum Auslösen von [Skriptaktionen](../scripting/methods-and-objects.md#registering-a-custom-action) ` customAction_` gefolgt von der Kennung der benutzerdefinierten Aktion. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.
+Verwenden Sie zum Auslösen von [Skriptaktionen](../scripting/methods-and-objects.md#registering-a-custom-action) ` customAction_` gefolgt von der Kennung der benutzerdefinierten Aktion. Der Bezeichner der benutzerdefinierten Aktion ist der erste Parameter des Aufrufs `script.registerCustomAction` im Skript.
 
-For example to run the custom action `myAction` start QOwnNotes like this:
+Um beispielsweise die benutzerdefinierte Aktion `myAction` auszuführen, starten Sie QOwnNotes wie folgt:
 
 ```bash
 QOwnNotes --action customAction_myAction
 ```
 
 ::: tip
-If you run QOwnNotes a second time with the action parameter and only have allowed one application instance, then the menu action will be triggered in the first instance.
+Wenn Sie QOwnNotes ein zweites Mal mit dem Parameter action ausführen und nur eine Anwendungsinstanz zugelassen haben, wird die Menüaktion in der ersten Instanz ausgelöst.
 :::

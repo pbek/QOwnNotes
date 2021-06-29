@@ -15,3 +15,4 @@ Les différentes façons de s'impliquer avec QOwnNotes
 - Signaler des problèmes ou partager des idées de nouvelles fonctionnalités sur la page [QOwnNotes **Problèmes GitHub**](https://github.com/pbek/QOwnNotes/issues)
 - Si vous avez créé un excellent schéma d'éditeur, veuillez également le publier sur la [page **Problèmes GitHub**](https://github.com/pbek/QOwnNotes/issues)
 - Partagez vos scripts sur la page [**scripts QOwnNotes** GitHub](https://github.com/qownnotes/scripts)
+- You are most welcome to share **your experience with QOwnNotes** on your own YouTube channel, while you are also invited to share positive feedback by [sending audio/video/text to Amy](mailto:amydoralang@aol.de) for upload on our own YT channel [**QOwnNotes in a Nutshell**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos).

@@ -161,7 +161,7 @@ zypper install qownnotes
 
 ## SLE 12 SP3 Backports
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+Führen Sie die folgenden Shell-Befehle als root aus, um das Repository hinzuzufügen und von dort aus QOwnNotes zu installieren.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports/home:pbek:QOwnNotes.repo

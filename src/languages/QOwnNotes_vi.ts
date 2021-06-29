@@ -645,7 +645,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="153"/>
 <source>Uzbek</source>
-<translation>O&apos;zbek</translation>
+<translation>O'zbek</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="154"/>
@@ -719,8 +719,8 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
-<translation>Để có được một tệp enex, bạn cần chọn một hoặc nhiều ghi chú trong ứng dụng khách máy tính để bàn Evernotes của bạn và nhấp vào &quot;Xuất ghi chú&quot; trong menu Tệp.</translation>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<translation>Để có được một tệp enex, bạn cần chọn một hoặc nhiều ghi chú trong ứng dụng khách máy tính để bàn Evernotes của bạn và nhấp vào "Xuất ghi chú" trong menu Tệp.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -878,158 +878,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1043,8 +1043,8 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
-<translation>Đánh dấu &quot;%1&quot; chưa được đặt.</translation>
+<source>Mark "%1" not set.</source>
+<translation>Đánh dấu "%1" chưa được đặt.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
@@ -1067,18 +1067,14 @@
 <translation>Không được thực hiện trong FakeVim.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">Nhập Alt-V, Alt-V để thoát chế độ FakeVim.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1109,18 +1105,18 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
-<translation>Tệp &quot;%1&quot; tồn tại (thêm ! Để ghi đè)</translation>
+<source>File "%1" exists (add ! to override)</source>
+<translation>Tệp "%1" tồn tại (thêm ! Để ghi đè)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
-<translation>Không thể mở tệp &quot;%1&quot; để viết</translation>
+<source>Cannot open file "%1" for writing</source>
+<translation>Không thể mở tệp "%1" để viết</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
-<translation>&quot;%1&quot; %2 %3L, %4C bằng văn bản.</translation>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>"%1" %2 %3L, %4C bằng văn bản.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
@@ -1129,13 +1125,13 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
-<translation>Không thể mở tệp &quot;%1&quot; để đọc</translation>
+<source>Cannot open file "%1" for reading</source>
+<translation>Không thể mở tệp "%1" để đọc</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
-<translation>&quot;%1&quot; %2L, %3C</translation>
+<source>"%1" %2L, %3C</source>
+<translation>"%1" %2L, %3C</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
@@ -1194,14 +1190,7 @@
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
-<numerusform>%n dòng %1ed %2 lần.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
+<translation>
 <numerusform>%n dòng %1ed %2 lần.</numerusform>
 </translation>
 </message>
@@ -1468,7 +1457,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>Cú pháp đeo mặt nạ</translation>
 </message>
 <message>
@@ -1568,7 +1557,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
+<source>Don't copy image to media folder</source>
 <translation>Không sao chép hình ảnh vào thư mục phương tiện</translation>
 </message>
 <message>
@@ -1844,7 +1833,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>Tệp &lt;strong&gt;%1&lt;/strong&gt; không thể đọc được và không thể khôi phục!</translation>
 </message>
 <message numerus="yes">
@@ -2524,7 +2513,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
 </message>
 <message>
@@ -2805,8 +2794,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-<translation>Giải phương trình đơn giản như &apos;(2 + 3) * 6 =&apos; trong dòng hiện tại</translation>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>Giải phương trình đơn giản như '(2 + 3) * 6 =' trong dòng hiện tại</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2938,7 +2927,7 @@ Khôi phục lưu ý hiện tại?</translation>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="obsolete">
+<translation type="unfinished">
 <numerusform>stored %n note(s) to disk</numerusform>
 </translation>
 </message>
@@ -2960,22 +2949,22 @@ Khôi phục lưu ý hiện tại?</translation>
 <message>
 <location filename="../mainwindow.cpp" line="3534"/>
 <source>Removed duplicate conflicted database: %1</source>
-<translation>Qarama-qarshi ma&apos;lumotlar bazasi nusxasi o&apos;chirildi: %1</translation>
+<translation>Qarama-qarshi ma'lumotlar bazasi nusxasi o'chirildi: %1</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="3535"/>
 <source>Could not remove duplicate conflicted database: %1</source>
-<translation>Bir-biriga zid bo&apos;lgan ma&apos;lumotlar bazasini o&apos;chirib bo&apos;lmadi: %1</translation>
+<translation>Bir-biriga zid bo'lgan ma'lumotlar bazasini o'chirib bo'lmadi: %1</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="3541"/>
 <source>Removed merged conflicted database: %1</source>
-<translation>Birlashtirilgan qarama-qarshi ma&apos;lumotlar bazasi o&apos;chirildi: %1</translation>
+<translation>Birlashtirilgan qarama-qarshi ma'lumotlar bazasi o'chirildi: %1</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="3542"/>
 <source>Could not remove merged conflicted database: %1</source>
-<translation>Birlashtirilgan qarama-qarshi ma&apos;lumotlar bazasini o&apos;chirib bo&apos;lmadi: %1</translation>
+<translation>Birlashtirilgan qarama-qarshi ma'lumotlar bazasini o'chirib bo'lmadi: %1</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="3557"/>
@@ -3031,7 +3020,7 @@ Khôi phục lưu ý hiện tại?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>Lưu ý không thể được giải mã!</translation>
 </message>
 <message>
@@ -3309,7 +3298,7 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>Không thể mở tập tin tạm thời</translation>
 </message>
 <message>
@@ -3320,18 +3309,18 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Đặt lại kích thước phông chữ thành %1 pt</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
-<translation>Xóa thẻ &apos;%1&apos; khỏi ghi chú hiện tại</translation>
+<source>Remove tag '%1' from the current note</source>
+<translation>Xóa thẻ '%1' khỏi ghi chú hiện tại</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
-<translation>Xóa thẻ &apos;%1&apos; khỏi ghi chú đã chọn</translation>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>Xóa thẻ '%1' khỏi ghi chú đã chọn</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9315"/>
@@ -3386,7 +3375,7 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>Chuyển đến thư mục con của ghi chú
 </translation>
 </message>
@@ -3545,8 +3534,8 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
-<translation>Lưu ý tiêu đề &apos;%1&apos; đã được sao chép vào bảng tạm</translation>
+<source>Note headline '%1' was copied to the clipboard</source>
+<translation>Lưu ý tiêu đề '%1' đã được sao chép vào bảng tạm</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12757"/>
@@ -3740,9 +3729,9 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
-<numerusform>%n ghi chú đã được di chuyển để ghi chú thư mục con &quot;%2&quot;</numerusform>
+<numerusform>%n ghi chú đã được di chuyển để ghi chú thư mục con "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3754,9 +3743,9 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
-<numerusform>%n ghi chú đã được sao chép để ghi chú thư mục con &quot;%2&quot;</numerusform>
+<numerusform>%n ghi chú đã được sao chép để ghi chú thư mục con "%2"</numerusform>
 </translation>
 </message>
 <message>
@@ -3910,18 +3899,18 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
-<translation>Không thể di chuyển thẻ &apos;%1&apos; sang thẻ này</translation>
+<source>Cannot move tag '%1' to this tag</source>
+<translation>Không thể di chuyển thẻ '%1' sang thẻ này</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
-<translation>Đã chuyển thẻ &apos;%1&apos; sang thẻ mới</translation>
+<source>Moved tag '%1' to new tag</source>
+<translation>Đã chuyển thẻ '%1' sang thẻ mới</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
-<translation>hiển thị tất cả các ghi chú được gắn thẻ &apos;%1&apos; (%2)</translation>
+<source>show all notes tagged with '%1' (%2)</source>
+<translation>hiển thị tất cả các ghi chú được gắn thẻ '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9318"/>
@@ -4041,8 +4030,8 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
-<translation>hiển thị ghi chú trong thư mục &apos;%1&apos; (%2)</translation>
+<source>show notes in folder '%1' (%2)</source>
+<translation>hiển thị ghi chú trong thư mục '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2615"/>
@@ -4094,9 +4083,9 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
-<numerusform>%n ghi chú được gắn thẻ &quot;%2&quot;</numerusform>
+<numerusform>%n ghi chú được gắn thẻ "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4402,7 +4391,7 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Không có phiên bản cho ghi chú này hoặc ghi chú không được tìm thấy trên máy chủ.</translation>
 </message>
 <message>
@@ -4428,7 +4417,7 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>Máy chủ CalDAV của bạn đã không trả lời bất cứ điều gì!</translation>
 </message>
 <message>
@@ -4471,7 +4460,7 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>Mật khẩu không khớp!</translation>
 </message>
 </context>
@@ -4539,12 +4528,12 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>Đừng hỏi lại!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>Đừng hiển thị lại!</translation>
 </message>
 <message>
@@ -4613,13 +4602,13 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>Không thể tạo thư mục có tên &lt;b&gt;%1&lt;/ b&gt; vì ứng dụng được sử dụng nội bộ!
 </translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>Không thể tạo thư mục có tên &lt;b&gt;%1 &lt;/ b&gt; vì nó nằm trong danh sách các thư mục con bị bỏ qua! Bạn có thể thay đổi điều đó trong &lt;i&gt; Cài đặt bảng &lt;/ i&gt;.
 </translation>
 </message>
@@ -4858,9 +4847,9 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-<translation>Không thể thiết lập kết nối cơ sở dữ liệu với tệp &apos;%1&apos;.
+<translation>Không thể thiết lập kết nối cơ sở dữ liệu với tệp '%1'.
 Là thư mục và các tập tin có thể ghi?</translation>
 </message>
 <message>
@@ -4875,9 +4864,9 @@ Là thư mục và các tập tin có thể ghi?</translation>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-<translation>Không thể thiết lập kết nối cơ sở dữ liệu với cơ sở dữ liệu thư mục ghi chú để hợp nhất &apos;%1&apos;.
+<translation>Không thể thiết lập kết nối cơ sở dữ liệu với cơ sở dữ liệu thư mục ghi chú để hợp nhất '%1'.
 Là thư mục và các tập tin có thể ghi?</translation>
 </message>
 </context>
@@ -5025,7 +5014,7 @@ Bạn có muốn cài đặt nó không?</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Xin đừng quên cập nhật cài đặt QOwnNotes của bạn để làm cho tập lệnh này hoạt động!</translation>
 </message>
 <message>
@@ -5066,7 +5055,7 @@ Bạn có muốn cài đặt nó không?</translation>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>tập tin không tồn tại</translation>
 </message>
 </context>
@@ -5146,8 +5135,8 @@ Bạn có muốn cài đặt nó không?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Vui lòng nhập URL của máy chủ ownCloud của bạn, ví dụ: &lt;span style = &quot;font-style: italic;&quot;&gt; https://cloud.yourserver.com &lt;/span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Vui lòng nhập URL của máy chủ ownCloud của bạn, ví dụ: &lt;span style = "font-style: italic;"&gt; https://cloud.yourserver.com &lt;/span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5213,8 +5202,8 @@ Bạn có muốn cài đặt nó không?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Mở máy chủ của riêng bạn &lt;span style = &quot;font-weight: 600;&quot;&gt; Trang cấu hình ứng dụng &lt;/ span&gt; trong trình duyệt web của bạn để cài đặt hoặc cập nhật QOwnNotesAPI và để bật lõi ứng dụng &lt;span style = &quot;font-weight: 600;&quot;&gt; Phiên bản &lt;/ span&gt; và &lt;span style = &quot;font-weight: 600;&quot;&gt; Đã xóa các tệp &lt;/ span&gt;. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Mở máy chủ của riêng bạn &lt;span style = "font-weight: 600;"&gt; Trang cấu hình ứng dụng &lt;/ span&gt; trong trình duyệt web của bạn để cài đặt hoặc cập nhật QOwnNotesAPI và để bật lõi ứng dụng &lt;span style = "font-weight: 600;"&gt; Phiên bản &lt;/ span&gt; và &lt;span style = "font-weight: 600;"&gt; Đã xóa các tệp &lt;/ span&gt;. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5238,8 +5227,8 @@ Bạn có muốn cài đặt nó không?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn cũng cần có hai ứng dụng lõi ownCloud &lt;span style = &quot;font-weight: 600;&quot;&gt; Phiên bản &lt;/ span&gt; và &lt;span style = &quot;font-weight: 600; &quot;&gt; Đã xóa các tệp &lt;/ span&gt; trên máy chủ của riêng bạn (đó phải là mặc định). &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn cũng cần có hai ứng dụng lõi ownCloud &lt;span style = "font-weight: 600;"&gt; Phiên bản &lt;/ span&gt; và &lt;span style = "font-weight: 600; "&gt; Đã xóa các tệp &lt;/ span&gt; trên máy chủ của riêng bạn (đó phải là mặc định). &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5468,8 +5457,8 @@ Bạn có muốn cài đặt nó không?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn có thể muốn xem xét nhận chứng chỉ SSL miễn phí từ &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Hãy mã hóa &lt;/a&gt;. &lt;/ p&gt; &lt;/body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn có thể muốn xem xét nhận chứng chỉ SSL miễn phí từ &lt;a href="https://letsencrypt.org/"&gt; Hãy mã hóa &lt;/a&gt;. &lt;/ p&gt; &lt;/body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5503,8 +5492,8 @@ Bạn có muốn cài đặt nó không?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Nếu được chọn, bạn sẽ luôn được thông báo về các sửa đổi bên ngoài, ngay cả khi ghi chú hiện tại không được chỉnh sửa trong phút cuối. Đề xuất là &lt;span style = &quot;font-style: italic;&quot;&gt; không được chọn &lt;/ span&gt;. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Nếu được chọn, bạn sẽ luôn được thông báo về các sửa đổi bên ngoài, ngay cả khi ghi chú hiện tại không được chỉnh sửa trong phút cuối. Đề xuất là &lt;span style = "font-style: italic;"&gt; không được chọn &lt;/ span&gt;. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5593,7 +5582,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>Dữ liệu sử dụng ẩn danh giúp quyết định phần nào của QOwnNotes để cải thiện tiếp theo cũng như tìm và sửa lỗi. Vui lòng vô hiệu hóa nó chỉ khi bạn thực sự không thể sống với nó.</translation>
 </message>
 <message>
@@ -5693,9 +5682,9 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
-<translation>&quot;Notes&quot; đường dẫn trên máy chủ của bạn</translation>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
+<translation>"Notes" đường dẫn trên máy chủ của bạn</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
@@ -5745,13 +5734,13 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Vui lòng cài đặt phiên bản mới nhất của &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt; &lt;span style = &quot;font-weight: 600;&quot;&gt; QOwnNotesAPI &lt;/ span&gt; &lt;/a&gt; (ít nhất là phiên bản QOWNNOTESAPI_MIN_VERSION) trên máy chủ của riêng bạn nếu bạn muốn QOwnNotes có thể truy cập các phiên bản ghi chú và ghi chú rác.</translation>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Vui lòng cài đặt phiên bản mới nhất của &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-weight: 600;"&gt; QOwnNotesAPI &lt;/ span&gt; &lt;/a&gt; (ít nhất là phiên bản QOWNNOTESAPI_MIN_VERSION) trên máy chủ của riêng bạn nếu bạn muốn QOwnNotes có thể truy cập các phiên bản ghi chú và ghi chú rác.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn vẫn sẽ cần &lt;a href=&quot;https://owncloud.org/&quot;&gt; &lt;span style = &quot;font-weight: 600&quot;&gt; máy khách đồng bộ hóa ownCloud &lt;/ span&gt; &lt;/a&gt; (hoặc ứng dụng khách đồng bộ hóa máy tính để bàn khác) để đồng bộ hóa ghi chú của bạn! &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn vẫn sẽ cần &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; máy khách đồng bộ hóa ownCloud &lt;/ span&gt; &lt;/a&gt; (hoặc ứng dụng khách đồng bộ hóa máy tính để bàn khác) để đồng bộ hóa ghi chú của bạn! &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5809,7 +5798,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>Xin lưu ý rằng ứng dụng ghi chú ownCloud không hỗ trợ các thư mục con!
 </translation>
 </message>
@@ -5982,7 +5971,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2635"/>
 <source>Uzbek</source>
-<translation>O&apos;zbek</translation>
+<translation>O'zbek</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2679"/>
@@ -6170,8 +6159,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Cách tốt nhất để đăng các vấn đề là sử dụng trợ lý sự cố bằng cách nhấn nút &lt;span style = &quot;font-weight: 600;&quot;&gt; Mở trợ lý vấn đề &lt;/ span&gt; trên phía dưới. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Cách tốt nhất để đăng các vấn đề là sử dụng trợ lý sự cố bằng cách nhấn nút &lt;span style = "font-weight: 600;"&gt; Mở trợ lý vấn đề &lt;/ span&gt; trên phía dưới. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6216,7 +6205,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="956"/>
 <source>Open your ownCloud server App Password page</source>
-<translation>O&apos;zingizning virtual serveringiz App parolini oching</translation>
+<translation>O'zingizning virtual serveringiz App parolini oching</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2569"/>
@@ -6235,13 +6224,13 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn&apos;t work, create an app password (button on the right)</translation>
+<source>If your password doesn't work, create an app password (button on the right)</source>
+<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation>Nếu bạn muốn giúp dịch QOwnNotes hoặc cập nhật bản dịch hiện có, vui lòng đọc: &lt;a href=&quot;%1&quot;&gt; Tôi có thể giúp dịch QOwnNotes như thế nào? &lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation>Nếu bạn muốn giúp dịch QOwnNotes hoặc cập nhật bản dịch hiện có, vui lòng đọc: &lt;a href="%1"&gt; Tôi có thể giúp dịch QOwnNotes như thế nào? &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6331,7 +6320,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub không cần hai dấu cách ở cuối dòng để ngắt dòng</translation>
 </message>
 <message>
@@ -6351,7 +6340,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>Vui lòng không sử dụng điều này trong trình theo dõi vấn đề</translation>
 </message>
 <message>
@@ -6371,8 +6360,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bạn có thể muốn xem tất cả các định dạng &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt; thời gian có sẵn &lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bạn có thể muốn xem tất cả các định dạng &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt; thời gian có sẵn &lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6382,7 +6371,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5243"/>
 <source>Automatically remove trailing spaces in the note text</source>
-<translation>Qayd matni bo&apos;sh joylarini avtomatik ravishda olib tashlang</translation>
+<translation>Qayd matni bo'sh joylarini avtomatik ravishda olib tashlang</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5253"/>
@@ -6402,8 +6391,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
-<translation>Biểu thức chính quy của các thư mục con ghi chú để bỏ qua, phân tách bằng &quot;;&quot;
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
+<translation>Biểu thức chính quy của các thư mục con ghi chú để bỏ qua, phân tách bằng ";"
 </translation>
 </message>
 <message>
@@ -6425,8 +6414,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
-<translation>Ẩn &apos;số lượng ghi chú&apos; bằng từ khóa (tăng hiệu suất)</translation>
+<source>Hide 'Note count' with tags (increases performance)</source>
+<translation>Ẩn 'số lượng ghi chú' bằng từ khóa (tăng hiệu suất)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5824"/>
@@ -6435,8 +6424,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6541,8 +6530,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>Theo mặc định, phần mở rộng trình duyệt sẽ hiển thị tất cả các liên kết của ghi chú hiện tại. Bạn cũng có thể làm cho nó hiển thị các liên kết đánh dấu đặc biệt của ghi chú với một thẻ nhất định. Để biết thêm thông tin về cú pháp liên kết dấu trang, hãy nhấp vào &lt;a href=&quot;%1&quot;&gt; tại đây &lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>Theo mặc định, phần mở rộng trình duyệt sẽ hiển thị tất cả các liên kết của ghi chú hiện tại. Bạn cũng có thể làm cho nó hiển thị các liên kết đánh dấu đặc biệt của ghi chú với một thẻ nhất định. Để biết thêm thông tin về cú pháp liên kết dấu trang, hãy nhấp vào &lt;a href="%1"&gt; tại đây &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6592,8 +6581,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>Cài đặt &lt;a href=&quot;%1&quot;&gt; tiện ích mở rộng trình duyệt Đồng hành web &lt;/a&gt; từ &lt;a href=&quot;%2&quot;&gt; Cửa hàng Chrome trực tuyến &lt;/a&gt; hoặc &lt;a href=&quot;%3&quot;&gt; Firefox Add- trang ons &lt;/a&gt; để sử dụng QOwnNotes làm web clipper.</translation>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>Cài đặt &lt;a href="%1"&gt; tiện ích mở rộng trình duyệt Đồng hành web &lt;/a&gt; từ &lt;a href="%2"&gt; Cửa hàng Chrome trực tuyến &lt;/a&gt; hoặc &lt;a href="%3"&gt; Firefox Add- trang ons &lt;/a&gt; để sử dụng QOwnNotes làm web clipper.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6688,14 +6677,14 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Nhập một lệnh sẽ được sử dụng để hiển thị nhật ký git (ví dụ như &quot;gitk&quot;)</translation>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Nhập một lệnh sẽ được sử dụng để hiển thị nhật ký git (ví dụ như "gitk")</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Nếu bạn sử dụng cài đặt này, bạn sẽ nhận được một mục menu mới để hiển thị các phiên bản git nếu bạn nhấp chuột phải vào một ghi chú.</translation>
 </message>
 <message>
@@ -6715,7 +6704,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Đừng quên bật hỗ trợ git cho các thư mục ghi chú của bạn và định cấu hình tên và địa chỉ email cho ứng dụng khách git của bạn, ví dụ như với các lệnh đầu cuối này:</translation>
 </message>
 <message>
@@ -6770,8 +6759,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
-<translation>Ẩn &apos;Tìm hoặc tạo thẻ&apos; tìm kiếm</translation>
+<source>Hide 'Find or create tag' search</source>
+<translation>Ẩn 'Tìm hoặc tạo thẻ' tìm kiếm</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5568"/>
@@ -6796,8 +6785,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
-<translation>Ẩn tìm kiếm &apos;Tìm hoặc tạo thư mục con&apos;</translation>
+<source>Hide 'Find or create note subfolder' search</source>
+<translation>Ẩn tìm kiếm 'Tìm hoặc tạo thư mục con'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6811,9 +6800,9 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Bạn có thể tùy ý sử dụng &quot;%notePath%&quot; cho đường dẫn của ghi chú.</translation>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Bạn có thể tùy ý sử dụng "%notePath%" cho đường dẫn của ghi chú.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -6873,7 +6862,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>Đối với các phiên bản cũ hơn của ownCloud, nơi cài đặt mặc định không hoạt động</translation>
 </message>
 <message>
@@ -7038,8 +7027,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
-<translation>Nhập định dạng thời gian tùy chỉnh của bạn, như &quot;dd.MM.yyyy hh:mm&quot;</translation>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation>Nhập định dạng thời gian tùy chỉnh của bạn, như "dd.MM.yyyy hh:mm"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7139,7 +7128,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>Bỏ qua các lịch không hỗ trợ các mục việc cần làm</translation>
 </message>
 <message>
@@ -7209,8 +7198,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-<translation>Nếu bạn thêm tiện ích mở rộng tùy chỉnh, chỉ cần nhập vào tiện ích mở rộng, như &quot;giấy tờ nhiệm vụ&quot;.</translation>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+<translation>Nếu bạn thêm tiện ích mở rộng tùy chỉnh, chỉ cần nhập vào tiện ích mở rộng, như "giấy tờ nhiệm vụ".</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7224,7 +7213,7 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
+<source>Don't show the update dialog automatically</source>
 <translation>Không tự động hiển thị hộp thoại cập nhật</translation>
 </message>
 <message>
@@ -7263,8 +7252,8 @@ Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn có thể &lt;span style = &quot;font-weight: 600;&quot;&gt; sao chép và dán &lt;/ span&gt; văn bản này (hoặc các phần của văn bản này) trong &lt;span style = &quot;font-weight: 600;&quot;&gt; vấn đề &lt;/ span&gt; trên &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; trang vấn đề QOwnNotes &lt;/a&gt; nếu bạn có &lt;span style = &quot;font-weight: 600;&quot;&gt; câu hỏi hoặc rắc rối &lt;/ span&gt; với QOwnNotes. Dữ liệu quá nhạy cảm bị ẩn trong thông tin này. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Bạn có thể &lt;span style = "font-weight: 600;"&gt; sao chép và dán &lt;/ span&gt; văn bản này (hoặc các phần của văn bản này) trong &lt;span style = "font-weight: 600;"&gt; vấn đề &lt;/ span&gt; trên &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; trang vấn đề QOwnNotes &lt;/a&gt; nếu bạn có &lt;span style = "font-weight: 600;"&gt; câu hỏi hoặc rắc rối &lt;/ span&gt; với QOwnNotes. Dữ liệu quá nhạy cảm bị ẩn trong thông tin này. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7328,7 +7317,7 @@ Thông báo lỗi kết nối: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Vui lòng không sử dụng điều này trong trình theo dõi vấn đề, sao chép văn bản thông tin gỡ lỗi trực tiếp vào vấn đề.</translation>
 </message>
 <message>
@@ -7343,7 +7332,7 @@ Thông báo lỗi kết nối: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Dữ liệu sử dụng ẩn danh giúp quyết định phần nào của QOwnNote sẽ cải thiện tiếp theo cũng như tìm và sửa lỗi. &lt;br /&gt; Vui lòng vô hiệu hóa nó chỉ khi bạn thực sự không thể sống với nó. &lt;br /&gt; &lt;br/&gt; Thực sự vô hiệu hóa theo dõi sử dụng?</translation>
 </message>
 <message>
@@ -7378,18 +7367,18 @@ Thông báo lỗi kết nối: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>Đang tải các thư mục trong &apos;%1&apos; từ máy chủ</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>Đang tải các thư mục trong '%1' từ máy chủ</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Hãy xem tài liệu &lt;a href=&quot;%1&quot;&gt; Scripting &lt;/a&gt; để bắt đầu nhanh.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Hãy xem tài liệu &lt;a href="%1"&gt; Scripting &lt;/a&gt; để bắt đầu nhanh.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Nếu bạn cần quyền truy cập vào một chức năng nhất định trong QOwnNotes, vui lòng mở một vấn đề trên trang vấn đề &lt;a href=&quot;%1&quot;&gt; QOwnNotes &lt;/a&gt;.</translation>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Nếu bạn cần quyền truy cập vào một chức năng nhất định trong QOwnNotes, vui lòng mở một vấn đề trên trang vấn đề &lt;a href="%1"&gt; QOwnNotes &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
@@ -7603,8 +7592,8 @@ Thông báo lỗi kết nối: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Bạn có thể tải xuống ứng dụng khách git của mình tại đây: &lt;a href=&quot;%url&quot;&gt; Git cho Windows &lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation>Bạn có thể tải xuống ứng dụng khách git của mình tại đây: &lt;a href="%url"&gt; Git cho Windows &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7628,7 +7617,7 @@ Thông báo lỗi kết nối: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>cơ sở dữ liệu sqlite nội bộ và các cài đặt sẽ được lưu trữ trong thư mục &lt;code&gt; Dữ liệu &lt;/ code&gt; tại vị trí của tệp nhị phân</translation>
 </message>
 <message>
@@ -7999,13 +7988,13 @@ Ghi chú của bạn sẽ được giữ nguyên!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
@@ -8129,13 +8118,13 @@ Ghi chú của bạn sẽ được giữ nguyên!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
@@ -8697,8 +8686,8 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href=&quot;%1&quot;&gt; Tham gia với QOwnNotes &lt;/a&gt;</translation>
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href="%1"&gt; Tham gia với QOwnNotes &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8709,10 +8698,6 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;Cập nhật</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">&amp;Tải về mới nhất</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8731,7 +8716,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>Không tự động hiển thị hộp thoại này</translation>
 </message>
 <message>
@@ -8807,77 +8792,77 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">Khỏi động lại ưng dụng</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">Khởi động lại</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished">Hủy bỏ</translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Tập lệnh cập nhật &apos;%1&apos; không tồn tại!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>Tập lệnh cập nhật '%1' không tồn tại!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Trình cập nhật giải nén &apos;%1&apos; không tồn tại!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>Trình cập nhật giải nén '%1' không tồn tại!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>Không thể sao chép tập lệnh cập nhật &apos;%1&apos; thành &apos;%2&apos;!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>Không thể sao chép tập lệnh cập nhật '%1' thành '%2'!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>Không thể tìm thấy tập lệnh cập nhật: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
+<source>Couldn't find unzip executable: %1</source>
 <translation>Không thể tìm thấy giải nén giải nén: %1</translation>
 </message>
 <message>
@@ -9142,7 +9127,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>Con đường ghi chú này không tồn tại!</translation>
 </message>
 <message>

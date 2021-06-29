@@ -719,8 +719,8 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
-<translation>ਏਨੀਕਸ ਫਾਈਲ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਆਪਣੇ ਈਵਰਨੋਟਸ ਡੈਸਕਟਾਪ ਕਲਾਇੰਟ ਵਿੱਚ ਇੱਕ ਜਾਂ ਮਲਟੀਪਲ ਨੋਟਸ ਦੀ ਚੋਣ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ ਅਤੇ ਫਾਈਲ ਮੀਨੂੰ ਵਿੱਚ &quot;ਐਕਸਪੋਰਟ ਨੋਟਸ…&quot; ਤੇ ਕਲਿਕ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ.</translation>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<translation>ਏਨੀਕਸ ਫਾਈਲ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਆਪਣੇ ਈਵਰਨੋਟਸ ਡੈਸਕਟਾਪ ਕਲਾਇੰਟ ਵਿੱਚ ਇੱਕ ਜਾਂ ਮਲਟੀਪਲ ਨੋਟਸ ਦੀ ਚੋਣ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ ਅਤੇ ਫਾਈਲ ਮੀਨੂੰ ਵਿੱਚ "ਐਕਸਪੋਰਟ ਨੋਟਸ…" ਤੇ ਕਲਿਕ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -878,158 +878,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1043,8 +1043,8 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
-<translation>ਮਾਰਕ ਕਰੋ &quot;%1&quot; ਸੈਟ ਨਹੀਂ ਕੀਤਾ ਗਿਆ.</translation>
+<source>Mark "%1" not set.</source>
+<translation>ਮਾਰਕ ਕਰੋ "%1" ਸੈਟ ਨਹੀਂ ਕੀਤਾ ਗਿਆ.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
@@ -1067,18 +1067,14 @@
 <translation>ਫੇਕਵਿਮ ਵਿੱਚ ਲਾਗੂ ਨਹੀਂ ਕੀਤਾ ਗਿਆ.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">ਫੇਕਵਿਮ ਮੋਡ ਛੱਡਣ ਲਈ Alt-V, Alt-V ਟਾਈਪ ਕਰੋ.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1110,18 +1106,18 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
-<translation>ਫਾਈਲ &quot;%1&quot; ਮੌਜੂਦ ਹੈ (ਓਵਰਰਾਈਡ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ !)</translation>
+<source>File "%1" exists (add ! to override)</source>
+<translation>ਫਾਈਲ "%1" ਮੌਜੂਦ ਹੈ (ਓਵਰਰਾਈਡ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ !)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
-<translation>ਲਿਖਣ ਲਈ ਫਾਈਲ &quot;%1&quot; ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ</translation>
+<source>Cannot open file "%1" for writing</source>
+<translation>ਲਿਖਣ ਲਈ ਫਾਈਲ "%1" ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
-<translation>&quot;%1&quot; %2 %3L, %4C ਲਿਖਿਆ ਗਿਆ.</translation>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>"%1" %2 %3L, %4C ਲਿਖਿਆ ਗਿਆ.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
@@ -1130,13 +1126,13 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
-<translation>&quot;%1&quot; ਨੂੰ ਪੜਨ ਲਈ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ</translation>
+<source>Cannot open file "%1" for reading</source>
+<translation>"%1" ਨੂੰ ਪੜਨ ਲਈ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
-<translation>&quot;%1&quot; %2L, %3C</translation>
+<source>"%1" %2L, %3C</source>
+<translation>"%1" %2L, %3C</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
@@ -1169,12 +1165,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6907"/>
 <source>Search hit BOTTOM, continuing at TOP.</source>
-<translation>ਸਰਚ ਜਾਰੀ ਰੱਖੋ, ਸਿਖਰ &apos;ਤੇ ਜਾਰੀ ਰੱਖੋ. ਪੈਟਰਨ ਨਹੀਂ ਮਿਲਿਆ: %1.</translation>
+<translation>ਸਰਚ ਜਾਰੀ ਰੱਖੋ, ਸਿਖਰ 'ਤੇ ਜਾਰੀ ਰੱਖੋ. ਪੈਟਰਨ ਨਹੀਂ ਮਿਲਿਆ: %1.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6908"/>
 <source>Search hit TOP, continuing at BOTTOM.</source>
-<translation>ਤਲ &apos;ਤੇ ਜਾਰੀ ਰੱਖੋ, ਸਰਚ ਹਿੱਟ ਕਰੋ.</translation>
+<translation>ਤਲ 'ਤੇ ਜਾਰੀ ਰੱਖੋ, ਸਰਚ ਹਿੱਟ ਕਰੋ.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6913"/>
@@ -1197,15 +1193,7 @@
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
-<numerusform>%n ਲਾਈਨ %1ed %2 ਵਾਰ.</numerusform>
-<numerusform>%n ਲਾਈਨਾਂ %1ed %2 ਵਾਰ.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
+<translation>
 <numerusform>%n ਲਾਈਨ %1ed %2 ਵਾਰ.</numerusform>
 <numerusform>%n ਲਾਈਨਾਂ %1ed %2 ਵਾਰ.</numerusform>
 </translation>
@@ -1226,7 +1214,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="8515"/>
 <source>Already at newest change.</source>
-<translation>ਪਹਿਲਾਂ ਤੋਂ ਹੀ ਨਵੀਂ ਤਬਦੀਲੀ &apos;ਤੇ.</translation>
+<translation>ਪਹਿਲਾਂ ਤੋਂ ਹੀ ਨਵੀਂ ਤਬਦੀਲੀ 'ਤੇ.</translation>
 </message>
 </context>
 <context>
@@ -1474,7 +1462,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>ਮਾਸਕਡ ਸਿੰਟੈਕਸ</translation>
 </message>
 <message>
@@ -1574,7 +1562,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
+<source>Don't copy image to media folder</source>
 <translation>ਚਿੱਤਰ ਨੂੰ ਮੀਡੀਆ ਫੋਲਡਰ ਵਿੱਚ ਕਾਪੀ ਨਾ ਕਰੋ</translation>
 </message>
 <message>
@@ -1726,7 +1714,7 @@
 <location filename="../widgets/layoutwidget.cpp" line="208"/>
 <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
 <comment>Layout description</comment>
-<translation>ਇਕ ਦੂਜੇ ਦੇ ਸਿਖਰ &apos;ਤੇ ਨੋਟ ਖੋਜ, ਨੋਟ ਸੂਚੀ ਅਤੇ ਨੋਟ ਸੰਪਾਦਨ ਦੇ ਨਾਲ ਇਕ ਕਾਲਮ ਦਾ ਖਾਕਾ.</translation>
+<translation>ਇਕ ਦੂਜੇ ਦੇ ਸਿਖਰ 'ਤੇ ਨੋਟ ਖੋਜ, ਨੋਟ ਸੂਚੀ ਅਤੇ ਨੋਟ ਸੰਪਾਦਨ ਦੇ ਨਾਲ ਇਕ ਕਾਲਮ ਦਾ ਖਾਕਾ.</translation>
 </message>
 </context>
 <context>
@@ -1804,7 +1792,7 @@
 <message>
 <location filename="../dialogs/localtrashdialog.ui" line="14"/>
 <source>Locally trashed notes</source>
-<translation>ਸਥਾਨਕ ਤੌਰ &apos;ਤੇ ਰੱਦੀ ਦੇ ਨੋਟ</translation>
+<translation>ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਰੱਦੀ ਦੇ ਨੋਟ</translation>
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.ui" line="55"/>
@@ -1850,7 +1838,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>ਫਾਈਲ &lt;strong&gt;%1 &lt;/strong&gt; ਪੜ੍ਹਨ ਯੋਗ ਨਹੀਂ ਹੈ ਅਤੇ ਰੀਸਟੋਰ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ!</translation>
 </message>
 <message numerus="yes">
@@ -2269,7 +2257,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1199"/>
 <source>Jump to</source>
-<translation>&apos;ਤੇ ਜਾਓ</translation>
+<translation>'ਤੇ ਜਾਓ</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1236"/>
@@ -2534,7 +2522,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
 </message>
 <message>
@@ -2814,8 +2802,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-<translation>ਮੌਜੂਦਾ ਲਾਈਨ ਵਿਚ &apos;(2 + 3) * 6 =&apos; ਜਿਹੇ ਸਧਾਰਣ ਸਮੀਕਰਣ ਨੂੰ ਹੱਲ ਕਰੋ</translation>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>ਮੌਜੂਦਾ ਲਾਈਨ ਵਿਚ '(2 + 3) * 6 =' ਜਿਹੇ ਸਧਾਰਣ ਸਮੀਕਰਣ ਨੂੰ ਹੱਲ ਕਰੋ</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2912,7 +2900,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2118"/>
 <source>Split note at cursor position</source>
-<translation>ਕਰਸਰ ਸਥਿਤੀ &apos;ਤੇ ਨੋਟ ਵੰਡੋ</translation>
+<translation>ਕਰਸਰ ਸਥਿਤੀ 'ਤੇ ਨੋਟ ਵੰਡੋ</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2138"/>
@@ -2946,7 +2934,7 @@ Restore current note?</source>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="obsolete">
+<translation type="unfinished">
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
 </translation>
@@ -3041,7 +3029,7 @@ Restore current note?</source>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>ਨੋਟ ਡਿਕ੍ਰਿਪਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ!</translation>
 </message>
 <message>
@@ -3263,7 +3251,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7378"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-<translation>ਤੁਹਾਡਾ ਨੋਟ ਡਿਕ੍ਰਿਪਟ ਕੀਤਾ ਜਾਵੇਗਾ ਅਤੇ ਦੁਬਾਰਾ ਸਾਦੇ ਟੈਕਸਟ ਦੇ ਰੂਪ ਵਿੱਚ ਸਟੋਰ ਕੀਤਾ ਜਾਵੇਗਾ. ਇਹ ਯਾਦ ਰੱਖੋ ਕਿ ਨਾ-ਇਕ੍ਰਿਪਟਡ ਨੋਟ ਨੂੰ ਸੰਭਾਵਤ ਤੌਰ &apos;ਤੇ ਤੁਹਾਡੇ ਸਰਵਰ ਨਾਲ ਸਿੰਕ ਕੀਤਾ ਜਾਏਗਾ ਅਤੇ ਸੰਵੇਦਨਸ਼ੀਲ ਟੈਕਸਟ ਖੋਲ੍ਹਿਆ ਜਾ ਸਕਦਾ ਹੈ! &lt;br /&gt; ਕੀ ਤੁਸੀਂ ਆਪਣੇ ਨੋਟ ਨੂੰ ਡੀ੍ਰਿਪਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</translation>
+<translation>ਤੁਹਾਡਾ ਨੋਟ ਡਿਕ੍ਰਿਪਟ ਕੀਤਾ ਜਾਵੇਗਾ ਅਤੇ ਦੁਬਾਰਾ ਸਾਦੇ ਟੈਕਸਟ ਦੇ ਰੂਪ ਵਿੱਚ ਸਟੋਰ ਕੀਤਾ ਜਾਵੇਗਾ. ਇਹ ਯਾਦ ਰੱਖੋ ਕਿ ਨਾ-ਇਕ੍ਰਿਪਟਡ ਨੋਟ ਨੂੰ ਸੰਭਾਵਤ ਤੌਰ 'ਤੇ ਤੁਹਾਡੇ ਸਰਵਰ ਨਾਲ ਸਿੰਕ ਕੀਤਾ ਜਾਏਗਾ ਅਤੇ ਸੰਵੇਦਨਸ਼ੀਲ ਟੈਕਸਟ ਖੋਲ੍ਹਿਆ ਜਾ ਸਕਦਾ ਹੈ! &lt;br /&gt; ਕੀ ਤੁਸੀਂ ਆਪਣੇ ਨੋਟ ਨੂੰ ਡੀ੍ਰਿਪਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7475"/>
@@ -3278,7 +3266,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="7547"/>
 <source>Jumped to bookmark position at slot %1</source>
-<translation>ਸਲਾਟ %1 &apos;ਤੇ ਬੁੱਕਮਾਰਕ ਸਥਿਤੀ&apos; ਤੇ ਗਏ</translation>
+<translation>ਸਲਾਟ %1 'ਤੇ ਬੁੱਕਮਾਰਕ ਸਥਿਤੀ' ਤੇ ਗਏ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7775"/>
@@ -3333,7 +3321,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>ਆਰਜ਼ੀ ਫਾਈਲ ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ</translation>
 </message>
 <message>
@@ -3344,18 +3332,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>ਫੋਂਟ ਅਕਾਰ ਨੂੰ %1 pt ਤੇ ਸੈੱਟ ਕਰੋ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
-<translation>ਮੌਜੂਦਾ ਨੋਟ ਤੋਂ ਟੈਗ &apos;%1&apos; ਨੂੰ ਹਟਾਓ</translation>
+<source>Remove tag '%1' from the current note</source>
+<translation>ਮੌਜੂਦਾ ਨੋਟ ਤੋਂ ਟੈਗ '%1' ਨੂੰ ਹਟਾਓ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
-<translation>ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਵਿਚੋਂ &apos;%1&apos; ਟੈਗ ਹਟਾਓ</translation>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>ਚੁਣੇ ਗਏ ਨੋਟਾਂ ਵਿਚੋਂ '%1' ਟੈਗ ਹਟਾਓ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9315"/>
@@ -3410,7 +3398,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>ਨੋਟ ਦੇ ਸਬਫੋਲਡਰ ਤੇ ਜਾਓ
 </translation>
 </message>
@@ -3570,8 +3558,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
-<translation>ਨੋਟ ਸਿਰਲੇਖ &apos;%1&apos; ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕੀਤਾ ਗਿਆ ਸੀ</translation>
+<source>Note headline '%1' was copied to the clipboard</source>
+<translation>ਨੋਟ ਸਿਰਲੇਖ '%1' ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕੀਤਾ ਗਿਆ ਸੀ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12757"/>
@@ -3769,10 +3757,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
-<numerusform>%n ਨੋਟ ਨੂੰ ਸਬਫੋਲਡਰ &quot;%2&quot; ਨੋਟ ਕਰਨ ਲਈ ਭੇਜਿਆ ਗਿਆ ਹੈ</numerusform>
-<numerusform>%n ਨੋਟਜ਼ ਨੂੰ ਸਬਫੋਲਡਰ &quot;%2&quot; ਨੋਟ ਕਰਨ ਲਈ ਭੇਜਿਆ ਗਿਆ ਹੈ</numerusform>
+<numerusform>%n ਨੋਟ ਨੂੰ ਸਬਫੋਲਡਰ "%2" ਨੋਟ ਕਰਨ ਲਈ ਭੇਜਿਆ ਗਿਆ ਹੈ</numerusform>
+<numerusform>%n ਨੋਟਜ਼ ਨੂੰ ਸਬਫੋਲਡਰ "%2" ਨੋਟ ਕਰਨ ਲਈ ਭੇਜਿਆ ਗਿਆ ਹੈ</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3785,10 +3773,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
-<numerusform>ਸਬ-ਫੋਲਡਰ &quot;%2&quot; ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ %n ਨੋਟ ਨਕਲ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
-<numerusform>ਸਬ-ਫੋਲਡਰ &quot;%2&quot; ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ %n ਨੋਟ ਨਕਲ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
+<numerusform>ਸਬ-ਫੋਲਡਰ "%2" ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ %n ਨੋਟ ਨਕਲ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
+<numerusform>ਸਬ-ਫੋਲਡਰ "%2" ਨੂੰ ਨੋਟ ਕਰਨ ਲਈ %n ਨੋਟ ਨਕਲ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
 </translation>
 </message>
 <message>
@@ -3943,18 +3931,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
-<translation>ਟੈਗ &apos;%1&apos; ਨੂੰ ਇਸ ਟੈਗ ਤੇ ਨਹੀਂ ਲਿਜਾਇਆ ਜਾ ਸਕਦਾ</translation>
+<source>Cannot move tag '%1' to this tag</source>
+<translation>ਟੈਗ '%1' ਨੂੰ ਇਸ ਟੈਗ ਤੇ ਨਹੀਂ ਲਿਜਾਇਆ ਜਾ ਸਕਦਾ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
-<translation>&apos;%1&apos; ਨੂੰ ਨਵੇਂ ਟੈਗ ਤੇ ਭੇਜਿਆ ਗਿਆ</translation>
+<source>Moved tag '%1' to new tag</source>
+<translation>'%1' ਨੂੰ ਨਵੇਂ ਟੈਗ ਤੇ ਭੇਜਿਆ ਗਿਆ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
-<translation>&apos;%1&apos; (%2) ਨਾਲ ਟੈਗ ਕੀਤੇ ਸਾਰੇ ਨੋਟ ਦਿਖਾਓ</translation>
+<source>show all notes tagged with '%1' (%2)</source>
+<translation>'%1' (%2) ਨਾਲ ਟੈਗ ਕੀਤੇ ਸਾਰੇ ਨੋਟ ਦਿਖਾਓ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9318"/>
@@ -4069,12 +4057,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="2003"/>
 <source>Switch to note folder</source>
-<translation>ਨੋਟ ਫੋਲਡਰ &apos;ਤੇ ਜਾਓ</translation>
+<translation>ਨੋਟ ਫੋਲਡਰ 'ਤੇ ਜਾਓ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
-<translation>ਫੋਲਡਰ &apos;%1&apos; (%2) ਵਿੱਚ ਨੋਟਸ ਵੇਖੋ</translation>
+<source>show notes in folder '%1' (%2)</source>
+<translation>ਫੋਲਡਰ '%1' (%2) ਵਿੱਚ ਨੋਟਸ ਵੇਖੋ</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2615"/>
@@ -4127,10 +4115,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
-<numerusform>%n ਨੋਟ ਨੂੰ &quot;%2&quot; ਨਾਲ ਟੈਗ ਕੀਤਾ ਗਿਆ ਸੀ</numerusform>
-<numerusform>%n ਨੋਟ &quot;%2&quot; ਨਾਲ ਟੈਗ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
+<numerusform>%n ਨੋਟ ਨੂੰ "%2" ਨਾਲ ਟੈਗ ਕੀਤਾ ਗਿਆ ਸੀ</numerusform>
+<numerusform>%n ਨੋਟ "%2" ਨਾਲ ਟੈਗ ਕੀਤੇ ਗਏ ਸਨ</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4437,7 +4425,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>ਇਸ ਨੋਟ ਲਈ ਕੋਈ ਸੰਸਕਰਣ ਨਹੀਂ ਹਨ ਜਾਂ ਸਰਵਰ ਤੇ ਇਹ ਨੋਟ ਨਹੀਂ ਮਿਲਿਆ.</translation>
 </message>
 <message>
@@ -4463,7 +4451,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>ਤੁਹਾਡੇ CalDAV ਸਰਵਰ ਨੇ ਕੁਝ ਵੀ ਜਵਾਬ ਨਹੀਂ ਦਿੱਤਾ!</translation>
 </message>
 <message>
@@ -4506,7 +4494,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>ਪਾਸਵਰਡ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ!</translation>
 </message>
 </context>
@@ -4576,12 +4564,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>ਦੁਬਾਰਾ ਨਾ ਪੁੱਛੋ!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ!</translation>
 </message>
 <message>
@@ -4650,13 +4638,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>&lt;b&gt;% 1 &lt;/b&gt; ਨਾਮ ਵਾਲਾ ਫੋਲਡਰ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ, ਕਿਉਂਕਿ ਇਹ ਅੰਦਰੂਨੀ ਤੌਰ ਤੇ ਐਪਲੀਕੇਸ਼ਨ ਦੁਆਰਾ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ!
 </translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>&lt;b&gt;%1&lt;/b&gt; ਨਾਮ ਵਾਲਾ ਫੋਲਡਰ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ, ਕਿਉਂਕਿ ਇਹ ਨਜ਼ਰ ਅੰਦਾਜ਼ ਸਬ-ਫੋਲਡਰਾਂ ਦੀ ਸੂਚੀ ਵਿੱਚ ਹੈ! ਤੁਸੀਂ ਇਸਨੂੰ &lt;i&gt; ਪੈਨਲ ਸੈਟਿੰਗ &lt;/ i&gt; ਵਿਚ ਬਦਲ ਸਕਦੇ ਹੋ.
 </translation>
 </message>
@@ -4897,9 +4885,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-<translation>ਫਾਈਲ &apos;%1&apos; ਨਾਲ ਡਾਟਾਬੇਸ ਕਨੈਕਸ਼ਨ ਸਥਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ.
+<translation>ਫਾਈਲ '%1' ਨਾਲ ਡਾਟਾਬੇਸ ਕਨੈਕਸ਼ਨ ਸਥਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ.
 ਕੀ ਫੋਲਡਰ ਅਤੇ ਫਾਈਲ ਲਿਖਣ ਯੋਗ ਹਨ?</translation>
 </message>
 <message>
@@ -4914,9 +4902,9 @@ Are the folder and the file writeable?</source>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-<translation>&apos;%1&apos; ਨੂੰ ਅਭੇਦ ਕਰਨ ਲਈ ਨੋਟ ਫੋਲਡਰ ਡੇਟਾਬੇਸ ਨਾਲ ਡਾਟਾਬੇਸ ਕਨੈਕਸ਼ਨ ਸਥਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ.
+<translation>'%1' ਨੂੰ ਅਭੇਦ ਕਰਨ ਲਈ ਨੋਟ ਫੋਲਡਰ ਡੇਟਾਬੇਸ ਨਾਲ ਡਾਟਾਬੇਸ ਕਨੈਕਸ਼ਨ ਸਥਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ.
 ਕੀ ਫੋਲਡਰ ਅਤੇ ਫਾਈਲ ਲਿਖਣ ਯੋਗ ਹਨ?</translation>
 </message>
 </context>
@@ -5064,7 +5052,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਸਕ੍ਰਿਪਟ ਨੂੰ ਕੰਮ ਕਰਨ ਲਈ QOwnNotes ਦੀ ਸਥਾਪਨਾ ਨੂੰ ਅਪਡੇਟ ਕਰਨਾ ਨਾ ਭੁੱਲੋ!</translation>
 </message>
 <message>
@@ -5105,7 +5093,7 @@ Do you want to install it anyway?</source>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>ਫਾਈਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ</translation>
 </message>
 </context>
@@ -5186,8 +5174,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਖੁਦ ਦੇ ਕਲਾਉਡ ਸਰਵਰ ਦਾ URL ਦਾਖਲ ਕਰੋ, ਉਦਾਹਰਣ ਵਜੋਂ: &lt;span style = &quot;font-style: italic;&quot;&gt; https://cloud.yourserver.com &lt;/span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਖੁਦ ਦੇ ਕਲਾਉਡ ਸਰਵਰ ਦਾ URL ਦਾਖਲ ਕਰੋ, ਉਦਾਹਰਣ ਵਜੋਂ: &lt;span style = "font-style: italic;"&gt; https://cloud.yourserver.com &lt;/span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5253,8 +5241,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ਤੁਹਾਡਾ ਆਪਣਾ ਕਲਾਉਡ ਸਰਵਰ ਖੋਲ੍ਹਦਾ ਹੈ &lt;span style=&quot; font-weight:600;&quot;&gt; ਐਪ ਕੌਨਫਿਗਰੇਸ਼ਨ &lt;/span&gt; ਤੁਹਾਡੇ ਵੈਬ ਬਰਾserਜ਼ਰ ਵਿੱਚ ਪੇਜ QOwnNotesAPI ਸਥਾਪਤ ਕਰਨ ਜਾਂ ਅਪਡੇਟ ਕਰਨ ਅਤੇ ਕੋਰ ਐਪਸ ਨੂੰ ਸਮਰੱਥ ਕਰਨ ਲਈ&lt;span style=&quot; font-weight:600;&quot;&gt;ਵਰਜਨ&lt;/span&gt;ਅਤੇ&lt;span style=&quot; font-weight:600;&quot;&gt;ਹਟਾਈਆਂ ਫਾਈਲਾਂ&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ਤੁਹਾਡਾ ਆਪਣਾ ਕਲਾਉਡ ਸਰਵਰ ਖੋਲ੍ਹਦਾ ਹੈ &lt;span style=" font-weight:600;"&gt; ਐਪ ਕੌਨਫਿਗਰੇਸ਼ਨ &lt;/span&gt; ਤੁਹਾਡੇ ਵੈਬ ਬਰਾserਜ਼ਰ ਵਿੱਚ ਪੇਜ QOwnNotesAPI ਸਥਾਪਤ ਕਰਨ ਜਾਂ ਅਪਡੇਟ ਕਰਨ ਅਤੇ ਕੋਰ ਐਪਸ ਨੂੰ ਸਮਰੱਥ ਕਰਨ ਲਈ&lt;span style=" font-weight:600;"&gt;ਵਰਜਨ&lt;/span&gt;ਅਤੇ&lt;span style=" font-weight:600;"&gt;ਹਟਾਈਆਂ ਫਾਈਲਾਂ&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5278,8 +5266,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head/&gt;&lt;body&gt; &lt;p&gt;ਤੁਹਾਡੇ ਕੋਲ ਦੋ ਖੁਦ ਦੇ ਕਲਾਉਡ ਕੋਰ ਐਪਸ ਹੋਣ ਦੀ ਵੀ ਜ਼ਰੂਰਤ ਹੈ &lt;span style = &quot;font-weight: 600;&quot;&gt; ਵਰਜਨ &lt;/ span&gt; ਅਤੇ &lt;span style=&quot;font-weight: 600;&quot;&gt; ਮਿਟਾਏ ਗਏ ਫਾਈਲਾਂ &lt;/span&gt; ਨੂੰ ਚਾਲੂ ਤੁਹਾਡਾ ਆਪਣਾ ਕਲਾਉਡ ਸਰਵਰ (ਜੋ ਕਿ ਡਿਫਾਲਟ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head/&gt;&lt;body&gt; &lt;p&gt;ਤੁਹਾਡੇ ਕੋਲ ਦੋ ਖੁਦ ਦੇ ਕਲਾਉਡ ਕੋਰ ਐਪਸ ਹੋਣ ਦੀ ਵੀ ਜ਼ਰੂਰਤ ਹੈ &lt;span style = "font-weight: 600;"&gt; ਵਰਜਨ &lt;/ span&gt; ਅਤੇ &lt;span style="font-weight: 600;"&gt; ਮਿਟਾਏ ਗਏ ਫਾਈਲਾਂ &lt;/span&gt; ਨੂੰ ਚਾਲੂ ਤੁਹਾਡਾ ਆਪਣਾ ਕਲਾਉਡ ਸਰਵਰ (ਜੋ ਕਿ ਡਿਫਾਲਟ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5434,7 +5422,7 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3857"/>
 <source>Do this at your own risk!</source>
-<translation>ਆਪਣੇ ਜੋਖਮ &apos;ਤੇ ਇਹ ਕਰੋ!</translation>
+<translation>ਆਪਣੇ ਜੋਖਮ 'ਤੇ ਇਹ ਕਰੋ!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3860"/>
@@ -5508,8 +5496,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ਤੁਸੀਂ &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; ਆਓ ਐਨਕ੍ਰਿਪਟ &lt;/a&gt; ਤੋਂ ਇੱਕ ਮੁਫਤ SSL ਸਰਟੀਫਿਕੇਟ ਪ੍ਰਾਪਤ ਕਰਨ ਬਾਰੇ ਵਿਚਾਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; ਤੁਸੀਂ &lt;a href="https://letsencrypt.org/"&gt; ਆਓ ਐਨਕ੍ਰਿਪਟ &lt;/a&gt; ਤੋਂ ਇੱਕ ਮੁਫਤ SSL ਸਰਟੀਫਿਕੇਟ ਪ੍ਰਾਪਤ ਕਰਨ ਬਾਰੇ ਵਿਚਾਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5543,8 +5531,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ਜੇ ਜਾਂਚ ਕੀਤੀ ਗਈ ਤਾਂ ਤੁਹਾਨੂੰ ਹਮੇਸ਼ਾਂ ਬਾਹਰੀ ਸੋਧ ਬਾਰੇ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ, ਭਾਵੇਂ ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਪਿਛਲੇ ਮਿੰਟ ਵਿੱਚ ਸੰਪਾਦਿਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਸੀ. ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ&lt;span style=&quot; font-style:italic;&quot;&gt; ਚੈੱਕ ਨਾ ਕੀਤਾ &lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ਜੇ ਜਾਂਚ ਕੀਤੀ ਗਈ ਤਾਂ ਤੁਹਾਨੂੰ ਹਮੇਸ਼ਾਂ ਬਾਹਰੀ ਸੋਧ ਬਾਰੇ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ, ਭਾਵੇਂ ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਪਿਛਲੇ ਮਿੰਟ ਵਿੱਚ ਸੰਪਾਦਿਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਸੀ. ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ&lt;span style=" font-style:italic;"&gt; ਚੈੱਕ ਨਾ ਕੀਤਾ &lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5633,7 +5621,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>ਅਗਿਆਤ ਉਪਯੋਗਤਾ ਡਾਟਾ ਇਹ ਨਿਰਣਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ ਕਿ ਕਿO ਓਨਨੋਟਸ ਦੇ ਕਿਹੜੇ ਹਿੱਸੇ ਅਗਲੇ ਵਿੱਚ ਸੁਧਾਰ ਕਰਨ ਅਤੇ ਬੱਗ ਲੱਭਣ ਅਤੇ ਠੀਕ ਕਰਨ ਲਈ ਹਨ. ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਅਯੋਗ ਕਰੋ ਜੇ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਇਸ ਨਾਲ ਨਹੀਂ ਰਹਿ ਸਕਦੇ.</translation>
 </message>
 <message>
@@ -5729,13 +5717,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="762"/>
 <source>Path where your notes are stored locally</source>
-<translation>ਮਾਰਗ ਜਿੱਥੇ ਤੁਹਾਡੇ ਨੋਟ ਸਥਾਨਕ ਤੌਰ &apos;ਤੇ ਸਟੋਰ ਕੀਤੇ ਜਾਂਦੇ ਹਨ</translation>
+<translation>ਮਾਰਗ ਜਿੱਥੇ ਤੁਹਾਡੇ ਨੋਟ ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਸਟੋਰ ਕੀਤੇ ਜਾਂਦੇ ਹਨ</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
-<translation>ਤੁਹਾਡੇ ਸਰਵਰ ਉੱਤੇ &quot;ਨੋਟਸ&quot; ਮਾਰਗ</translation>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
+<translation>ਤੁਹਾਡੇ ਸਰਵਰ ਉੱਤੇ "ਨੋਟਸ" ਮਾਰਗ</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
@@ -5750,7 +5738,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="664"/>
 <source>Path on your ownCloud server:</source>
-<translation>ਤੁਹਾਡੇ ownCloud ਸਰਵਰ &apos;ਤੇ ਮਾਰਗ:</translation>
+<translation>ਤੁਹਾਡੇ ownCloud ਸਰਵਰ 'ਤੇ ਮਾਰਗ:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="785"/>
@@ -5785,13 +5773,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>ਕਿਰਪਾ ਕਰਕੇ &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt; &lt;span ਸ਼ੈਲੀ = &quot;ਫੋਂਟ-ਵਜ਼ਨ: 600;&quot;&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; (ਘੱਟੋ ਘੱਟ ਸੰਸਕਰਣ) ਦਾ ਨਵੀਨਤਮ ਸੰਸਕਰਣ ਸਥਾਪਿਤ ਕਰੋ. QOWNNOTESAPI_MIN_VERSION) ਤੁਹਾਡੇ ਆਪਣੇ ਕਲਾਉਡ ਸਰਵਰ ਤੇ ਜੇ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਕਿ QOwnNotes ਨੋਟ ਸੰਸਕਰਣਾਂ ਅਤੇ ਰੱਦੀ ਨੋਟਾਂ ਨੂੰ ਵੇਖਣ ਦੇ ਯੋਗ ਹੋ.</translation>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>ਕਿਰਪਾ ਕਰਕੇ &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span ਸ਼ੈਲੀ = "ਫੋਂਟ-ਵਜ਼ਨ: 600;"&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; (ਘੱਟੋ ਘੱਟ ਸੰਸਕਰਣ) ਦਾ ਨਵੀਨਤਮ ਸੰਸਕਰਣ ਸਥਾਪਿਤ ਕਰੋ. QOWNNOTESAPI_MIN_VERSION) ਤੁਹਾਡੇ ਆਪਣੇ ਕਲਾਉਡ ਸਰਵਰ ਤੇ ਜੇ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਕਿ QOwnNotes ਨੋਟ ਸੰਸਕਰਣਾਂ ਅਤੇ ਰੱਦੀ ਨੋਟਾਂ ਨੂੰ ਵੇਖਣ ਦੇ ਯੋਗ ਹੋ.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&gt; &lt;p&gt; ਤੁਹਾਨੂੰ ਅਜੇ ਵੀ &lt;a href=&quot;https://owncloud.org/ &quot;&gt; &lt;span ਸ਼ੈਲੀ = &quot;ਫੋਂਟ-ਵਜ਼ਨ: 600&quot;&gt; ਆਪਣੇ ਕਲਾਉਡ ਸਿੰਕ ਕਲਾਇੰਟ &lt;/ ਆਪਣੇ ਨੋਟ ਸਿੰਕ ਕਰਨ ਲਈ &lt;/ p&gt; &lt;/a&gt; (ਜਾਂ ਕੋਈ ਹੋਰ ਡੈਸਕਟੌਪ ਸਿੰਕ ਕਲਾਇੰਟ)! &lt;/ p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&gt; &lt;p&gt; ਤੁਹਾਨੂੰ ਅਜੇ ਵੀ &lt;a href="https://owncloud.org/ "&gt; &lt;span ਸ਼ੈਲੀ = "ਫੋਂਟ-ਵਜ਼ਨ: 600"&gt; ਆਪਣੇ ਕਲਾਉਡ ਸਿੰਕ ਕਲਾਇੰਟ &lt;/ ਆਪਣੇ ਨੋਟ ਸਿੰਕ ਕਰਨ ਲਈ &lt;/ p&gt; &lt;/a&gt; (ਜਾਂ ਕੋਈ ਹੋਰ ਡੈਸਕਟੌਪ ਸਿੰਕ ਕਲਾਇੰਟ)! &lt;/ p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5849,7 +5837,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>ਧਿਆਨ ਰੱਖੋ ਕਿ ਖੁਦ ਦਾ ਕਲਾਉਡ ਨੋਟਸ ਉਪ-ਫੋਲਡਰਾਂ ਨੂੰ ਸਮਰਥਨ ਨਹੀਂ ਦੇ ਰਿਹਾ!
 </translation>
 </message>
@@ -6211,8 +6199,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; ਮੁੱਦਿਆਂ ਨੂੰ ਪੋਸਟ ਕਰਨ ਦਾ ਸਭ ਤੋਂ ਉੱਤਮ isੰਗ ਹੈ ਨੂੰ ਦਬਾ ਕੇ ਮੁੱਦਾ ਸਹਾਇਕ ਦੀ ਵਰਤੋਂ ਕਰਨਾ &lt;span style=&quot; font-weight:600;&quot;&gt; ਤਲ &apos;ਤੇ ਜਾਰੀ ਮੁੱਦਾ ਸਹਾਇਕ &lt;/span&gt; ਬਟਨ ਨੂੰ ਖੋਲ੍ਹੋ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; ਮੁੱਦਿਆਂ ਨੂੰ ਪੋਸਟ ਕਰਨ ਦਾ ਸਭ ਤੋਂ ਉੱਤਮ isੰਗ ਹੈ ਨੂੰ ਦਬਾ ਕੇ ਮੁੱਦਾ ਸਹਾਇਕ ਦੀ ਵਰਤੋਂ ਕਰਨਾ &lt;span style=" font-weight:600;"&gt; ਤਲ 'ਤੇ ਜਾਰੀ ਮੁੱਦਾ ਸਹਾਇਕ &lt;/span&gt; ਬਟਨ ਨੂੰ ਖੋਲ੍ਹੋ. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6252,12 +6240,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="953"/>
 <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-<translation>ਐਪਲੀਕੇਸ਼ਨ ਲਈ ਨਵਾਂ ਐਪ ਪਾਸਵਰਡ ਬਣਾਉਣ ਲਈ ਤੁਹਾਡੇ ਵੈਬ ਬ੍ਰਾ browserਜ਼ਰ ਵਿਚ ਤੁਹਾਡਾ &apos;ਆਪਣਾ ਕਲਾਉਡ&apos; ਸਰਵਰ ਐਪ ਪਾਸਵਰਡ ਪੰਨਾ ਖੋਲ੍ਹਦਾ ਹੈ</translation>
+<translation>ਐਪਲੀਕੇਸ਼ਨ ਲਈ ਨਵਾਂ ਐਪ ਪਾਸਵਰਡ ਬਣਾਉਣ ਲਈ ਤੁਹਾਡੇ ਵੈਬ ਬ੍ਰਾ browserਜ਼ਰ ਵਿਚ ਤੁਹਾਡਾ 'ਆਪਣਾ ਕਲਾਉਡ' ਸਰਵਰ ਐਪ ਪਾਸਵਰਡ ਪੰਨਾ ਖੋਲ੍ਹਦਾ ਹੈ</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="956"/>
 <source>Open your ownCloud server App Password page</source>
-<translation>ਆਪਣਾ &apos;ਆਪਣੀ ਕਲਾਉਡ&apos; ਸਰਵਰ ਐਪ ਪਾਸਵਰਡ ਪੰਨਾ ਖੋਲ੍ਹੋ</translation>
+<translation>ਆਪਣਾ 'ਆਪਣੀ ਕਲਾਉਡ' ਸਰਵਰ ਐਪ ਪਾਸਵਰਡ ਪੰਨਾ ਖੋਲ੍ਹੋ</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2569"/>
@@ -6276,13 +6264,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn&apos;t work, create an app password (button on the right)</translation>
+<source>If your password doesn't work, create an app password (button on the right)</source>
+<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6371,7 +6359,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>ਲਾਈਨ ਬਰੇਕ ਕਰਨ ਲਈ ਗਿੱਟਹਬ ਨੂੰ ਲਾਈਨ ਦੇ ਅੰਤ ਵਿੱਚ ਦੋ ਖਾਲੀ ਥਾਵਾਂ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ</translation>
 </message>
 <message>
@@ -6391,7 +6379,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਇਸ਼ੂ ਟ੍ਰੈਕਰ ਵਿੱਚ ਨਾ ਵਰਤੋ</translation>
 </message>
 <message>
@@ -6411,8 +6399,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ਤੁਸੀਂ ਸਾਰੇ ਉਪਲਬਧ ਸਮੇਂ ਦੇ ਫਾਰਮੈਟਾਂ &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;&apos;ਤੇ ਝਾਤ ਮਾਰ ਸਕਦੇ ਹੋ&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ਤੁਸੀਂ ਸਾਰੇ ਉਪਲਬਧ ਸਮੇਂ ਦੇ ਫਾਰਮੈਟਾਂ &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;'ਤੇ ਝਾਤ ਮਾਰ ਸਕਦੇ ਹੋ&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6442,8 +6430,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
-<translation>ਨੋਟ ਸਬਫੋਲਡਰਾਂ ਦੀ ਨਿਯਮਤ ਸਮੀਕਰਨ ਨੂੰ ਅਣਡਿੱਠ ਕਰਨ ਲਈ, &quot;&quot; ਦੁਆਰਾ ਵੱਖ ਕੀਤੇ;
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
+<translation>ਨੋਟ ਸਬਫੋਲਡਰਾਂ ਦੀ ਨਿਯਮਤ ਸਮੀਕਰਨ ਨੂੰ ਅਣਡਿੱਠ ਕਰਨ ਲਈ, "" ਦੁਆਰਾ ਵੱਖ ਕੀਤੇ;
 </translation>
 </message>
 <message>
@@ -6465,8 +6453,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
-<translation>ਕੀਵਰਡਸ ਨਾਲ &apos;ਨੋਟਾਂ ਦੀ ਗਿਣਤੀ&apos; ਛੁਪਾਓ (ਪ੍ਰਦਰਸ਼ਨ ਵਿੱਚ ਵਾਧਾ)</translation>
+<source>Hide 'Note count' with tags (increases performance)</source>
+<translation>ਕੀਵਰਡਸ ਨਾਲ 'ਨੋਟਾਂ ਦੀ ਗਿਣਤੀ' ਛੁਪਾਓ (ਪ੍ਰਦਰਸ਼ਨ ਵਿੱਚ ਵਾਧਾ)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5824"/>
@@ -6475,8 +6463,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6580,8 +6568,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>ਮੂਲ ਰੂਪ ਵਿੱਚ ਬ੍ਰਾ browserਜ਼ਰ ਐਕਸਟੈਂਸ਼ਨ ਮੌਜੂਦਾ ਨੋਟ ਦੇ ਸਾਰੇ ਲਿੰਕ ਦਿਖਾਏਗਾ. ਤੁਸੀਂ ਇਸ ਨੂੰ ਨਿਸ਼ਚਤ ਟੈਗ ਦੇ ਨਾਲ ਨੋਟਾਂ ਦੇ ਵਿਸ਼ੇਸ਼ ਬੁੱਕਮਾਰਕ ਲਿੰਕ ਵੀ ਦਿਖਾ ਸਕਦੇ ਹੋ. ਬੁੱਕਮਾਰਕ ਲਿੰਕ ਸਿੰਟੈਕਸ ਬਾਰੇ ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ &lt;a href=&quot;%1&quot;&gt; ਇੱਥੇ &lt;/a&gt; ਕਲਿੱਕ ਕਰੋ.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>ਮੂਲ ਰੂਪ ਵਿੱਚ ਬ੍ਰਾ browserਜ਼ਰ ਐਕਸਟੈਂਸ਼ਨ ਮੌਜੂਦਾ ਨੋਟ ਦੇ ਸਾਰੇ ਲਿੰਕ ਦਿਖਾਏਗਾ. ਤੁਸੀਂ ਇਸ ਨੂੰ ਨਿਸ਼ਚਤ ਟੈਗ ਦੇ ਨਾਲ ਨੋਟਾਂ ਦੇ ਵਿਸ਼ੇਸ਼ ਬੁੱਕਮਾਰਕ ਲਿੰਕ ਵੀ ਦਿਖਾ ਸਕਦੇ ਹੋ. ਬੁੱਕਮਾਰਕ ਲਿੰਕ ਸਿੰਟੈਕਸ ਬਾਰੇ ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ &lt;a href="%1"&gt; ਇੱਥੇ &lt;/a&gt; ਕਲਿੱਕ ਕਰੋ.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6631,8 +6619,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>&lt;a href=&quot;%1 &quot;&gt; ਵੈੱਬ ਕੰਪੇਨਰ ਬ੍ਰਾ browserਜ਼ਰ ਐਕਸਟੈਂਸ਼ਨ &lt;/a&gt; ਨੂੰ &lt;a href=&quot;%2 &quot;&gt; ਕਰੋਮ ਵੈੱਬ ਸਟੋਰ &lt;/a&gt; ਜਾਂ &lt;a href=&quot;%3 &quot;&gt; ਫਾਇਰਫਾਕਸ ਐਡ- ਆਨ ਪੇਜ &lt;/a&gt; ਤੇ ਵੈੱਬ ਕਲੀਪਰ ਵਜੋਂ QOwnNotes ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ.</translation>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>&lt;a href="%1 "&gt; ਵੈੱਬ ਕੰਪੇਨਰ ਬ੍ਰਾ browserਜ਼ਰ ਐਕਸਟੈਂਸ਼ਨ &lt;/a&gt; ਨੂੰ &lt;a href="%2 "&gt; ਕਰੋਮ ਵੈੱਬ ਸਟੋਰ &lt;/a&gt; ਜਾਂ &lt;a href="%3 "&gt; ਫਾਇਰਫਾਕਸ ਐਡ- ਆਨ ਪੇਜ &lt;/a&gt; ਤੇ ਵੈੱਬ ਕਲੀਪਰ ਵਜੋਂ QOwnNotes ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6727,14 +6715,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>ਇੱਕ ਗੀਟ ਲਾੱਗ ਦਿਖਾਉਣ ਲਈ ਵਰਤੀ ਜਾਣ ਵਾਲੀ ਕਮਾਂਡ ਦਾਖਲ ਕਰੋ (ਉਦਾਹਰਣ ਵਜੋਂ &quot;gitk&quot;)</translation>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>ਇੱਕ ਗੀਟ ਲਾੱਗ ਦਿਖਾਉਣ ਲਈ ਵਰਤੀ ਜਾਣ ਵਾਲੀ ਕਮਾਂਡ ਦਾਖਲ ਕਰੋ (ਉਦਾਹਰਣ ਵਜੋਂ "gitk")</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>ਜੇ ਤੁਸੀਂ ਇਸ ਸੈਟਿੰਗ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋ ਤਾਂ ਤੁਹਾਨੂੰ ਗੀਟ ਸੰਸਕਰਣਾਂ ਨੂੰ ਪ੍ਰਦਰਸ਼ਤ ਕਰਨ ਲਈ ਇੱਕ ਨਵਾਂ ਮੀਨੂ ਐਂਟਰੀ ਮਿਲੇਗੀ ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਨੋਟ ਤੇ ਸੱਜਾ ਕਲਿੱਕ ਕਰਦੇ ਹੋ.</translation>
 </message>
 <message>
@@ -6754,7 +6742,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>ਆਪਣੇ ਨੋਟ ਫੋਲਡਰਾਂ ਲਈ ਗਿੱਟ ਸਪੋਰਟ ਨੂੰ ਯੋਗ ਕਰਨਾ ਅਤੇ ਆਪਣੇ ਗੀਟ ਕਲਾਇੰਟ ਲਈ ਆਪਣਾ ਨਾਮ ਅਤੇ ਈਮੇਲ ਪਤਾ ਕੌਂਫਿਗਰ ਕਰਨਾ ਨਾ ਭੁੱਲੋ, ਉਦਾਹਰਣ ਲਈ ਇਹਨਾਂ ਟਰਮੀਨਲ ਕਮਾਂਡਾਂ ਨਾਲ:</translation>
 </message>
 <message>
@@ -6809,7 +6797,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
+<source>Hide 'Find or create tag' search</source>
 <translation>ਖੋਜ ਲੱਭੋ ਜਾਂ ਬਣਾਓ ਟੈਗ ਬਣਾਓ</translation>
 </message>
 <message>
@@ -6835,8 +6823,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
-<translation>&apos;ਨੋਟ ਸਬਫੋਲਡਰ ਲੱਭੋ ਜਾਂ ਬਣਾਓ&apos; ਖੋਜ ਨੂੰ ਲੁਕਾਓ</translation>
+<source>Hide 'Find or create note subfolder' search</source>
+<translation>'ਨੋਟ ਸਬਫੋਲਡਰ ਲੱਭੋ ਜਾਂ ਬਣਾਓ' ਖੋਜ ਨੂੰ ਲੁਕਾਓ</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6850,9 +6838,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>ਤੁਸੀਂ ਚੋਣਵੇਂ ਰੂਪ ਵਿੱਚ ਨੋਟ ਦੇ ਮਾਰਗ ਲਈ &quot;%ਨੋਟਪਥ%&quot; ਵਰਤ ਸਕਦੇ ਹੋ.</translation>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>ਤੁਸੀਂ ਚੋਣਵੇਂ ਰੂਪ ਵਿੱਚ ਨੋਟ ਦੇ ਮਾਰਗ ਲਈ "%ਨੋਟਪਥ%" ਵਰਤ ਸਕਦੇ ਹੋ.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -6912,7 +6900,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>ਖੁਦ ਦੇ ਕਲਾਉਡ ਦੇ ਪੁਰਾਣੇ ਸੰਸਕਰਣਾਂ ਲਈ ਜਿੱਥੇ ਡਿਫੌਲਟ ਸੈਟਿੰਗ ਕੰਮ ਨਹੀਂ ਕਰਦੀ</translation>
 </message>
 <message>
@@ -7077,8 +7065,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
-<translation>ਆਪਣਾ ਕਸਟਮ ਟਾਈਮ ਫਾਰਮੈਟ ਭਰੋ, ਜਿਵੇਂ &quot;dd.MM.yyyy hh:mm&quot;</translation>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation>ਆਪਣਾ ਕਸਟਮ ਟਾਈਮ ਫਾਰਮੈਟ ਭਰੋ, ਜਿਵੇਂ "dd.MM.yyyy hh:mm"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7178,7 +7166,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>ਕੈਲੰਡਰ ਅਣਡਿੱਠ ਕਰੋ ਜੋ ਟੂਡ ਆਈਟਮਾਂ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੇ</translation>
 </message>
 <message>
@@ -7248,8 +7236,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-<translation>ਜੇ ਤੁਸੀਂ ਕਸਟਮ ਐਕਸਟੈਂਸ਼ਨਾਂ ਨੂੰ ਜੋੜਦੇ ਹੋ ਸਿਰਫ ਐਕਸਟੈਂਸ਼ਨ ਵਿੱਚ ਟਾਈਪ ਕਰੋ ਜਿਵੇਂ &quot;ਟਾਸਕ ਪੇਪਰ&quot;.</translation>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+<translation>ਜੇ ਤੁਸੀਂ ਕਸਟਮ ਐਕਸਟੈਂਸ਼ਨਾਂ ਨੂੰ ਜੋੜਦੇ ਹੋ ਸਿਰਫ ਐਕਸਟੈਂਸ਼ਨ ਵਿੱਚ ਟਾਈਪ ਕਰੋ ਜਿਵੇਂ "ਟਾਸਕ ਪੇਪਰ".</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7263,7 +7251,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
+<source>Don't show the update dialog automatically</source>
 <translation>ਅਪਡੇਟ ਡਾਇਲਾਗ ਆਪਣੇ ਆਪ ਨਾ ਦਿਖਾਓ</translation>
 </message>
 <message>
@@ -7302,8 +7290,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; ਤੁਸੀਂ &lt;ਸਪੈਨ ਸ਼ੈਲੀ = &quot;ਫੋਂਟ-ਵਜ਼ਨ: 600;&quot;&gt; ਇਸ ਟੈਕਸਟ ਨੂੰ (ਜਾਂ ਇਸ ਟੈਕਸਟ ਦੇ ਕੁਝ ਹਿੱਸੇ) &lt;ਸਪੈਨ ਸ਼ੈਲੀ = ਵਿੱਚ ਪੇਸਟ ਕਰ ਸਕਦੇ ਹੋ. &quot;ਫੋਂਟ-ਵਜ਼ਨ: 600;&quot;&gt; ਮੁੱਦਾ &lt;/ span&gt; &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; QOwnNotes ਮੁੱਦੇ ਪੇਜ ਤੇ &lt;/a&gt; ਜੇ ਤੁਹਾਡੇ ਕੋਲ &lt;span style = &quot;ਫੋਂਟ-ਵਜ਼ਨ: 600;&quot;&gt; ਪ੍ਰਸ਼ਨ ਜਾਂ ਪ੍ਰੇਸ਼ਾਨੀ &lt;/ span&gt; QOwnNotes ਨਾਲ. ਡਾਟਾ ਜੋ ਬਹੁਤ ਜ਼ਿਆਦਾ ਸੰਵੇਦਨਸ਼ੀਲ ਹੈ ਇਸ ਜਾਣਕਾਰੀ ਵਿੱਚ ਲੁਕਿਆ ਹੋਇਆ ਹੈ. &lt;/ P&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; ਤੁਸੀਂ &lt;ਸਪੈਨ ਸ਼ੈਲੀ = "ਫੋਂਟ-ਵਜ਼ਨ: 600;"&gt; ਇਸ ਟੈਕਸਟ ਨੂੰ (ਜਾਂ ਇਸ ਟੈਕਸਟ ਦੇ ਕੁਝ ਹਿੱਸੇ) &lt;ਸਪੈਨ ਸ਼ੈਲੀ = ਵਿੱਚ ਪੇਸਟ ਕਰ ਸਕਦੇ ਹੋ. "ਫੋਂਟ-ਵਜ਼ਨ: 600;"&gt; ਮੁੱਦਾ &lt;/ span&gt; &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; QOwnNotes ਮੁੱਦੇ ਪੇਜ ਤੇ &lt;/a&gt; ਜੇ ਤੁਹਾਡੇ ਕੋਲ &lt;span style = "ਫੋਂਟ-ਵਜ਼ਨ: 600;"&gt; ਪ੍ਰਸ਼ਨ ਜਾਂ ਪ੍ਰੇਸ਼ਾਨੀ &lt;/ span&gt; QOwnNotes ਨਾਲ. ਡਾਟਾ ਜੋ ਬਹੁਤ ਜ਼ਿਆਦਾ ਸੰਵੇਦਨਸ਼ੀਲ ਹੈ ਇਸ ਜਾਣਕਾਰੀ ਵਿੱਚ ਲੁਕਿਆ ਹੋਇਆ ਹੈ. &lt;/ P&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7367,7 +7355,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਇਸ਼ੂ ਟ੍ਰੈਕਰ ਵਿੱਚ ਨਾ ਵਰਤੋ, ਡੀਬੱਗ ਜਾਣਕਾਰੀ ਟੈਕਸਟ ਨੂੰ ਸਿੱਧੇ ਮੁੱਦੇ ਵਿੱਚ ਕਾਪੀ ਕਰੋ.</translation>
 </message>
 <message>
@@ -7382,7 +7370,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>ਅਗਿਆਤ ਉਪਯੋਗਤਾ ਡਾਟਾ ਇਹ ਨਿਰਣਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ ਕਿ ਕਿO ਓਨਨੋਟਸ ਦੇ ਕਿਹੜੇ ਹਿੱਸੇ ਅਗਲੇ ਵਿੱਚ ਸੁਧਾਰ ਕਰਨ ਅਤੇ ਬੱਗ ਲੱਭਣ ਅਤੇ ਠੀਕ ਕਰਨ ਲਈ ਹਨ.&lt;br /&gt;ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਅਯੋਗ ਕਰੋ ਜੇ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਇਸ ਨਾਲ ਨਹੀਂ ਰਹਿ ਸਕਦੇ.&lt;br /&gt;&lt;br /&gt;ਸੱਚਮੁੱਚ ਵਰਤੋਂ ਟਰੈਕਿੰਗ ਨੂੰ ਅਸਮਰੱਥ ਬਣਾਉਣਾ ਹੈ?</translation>
 </message>
 <message>
@@ -7417,18 +7405,18 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>ਸਰਵਰ ਤੋਂ &apos;%1&apos; ਵਿੱਚ ਫੋਲਡਰ ਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>ਸਰਵਰ ਤੋਂ '%1' ਵਿੱਚ ਫੋਲਡਰ ਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>ਤੇਜ਼ੀ ਨਾਲ ਸ਼ੁਰੂ ਕਰਨ ਲਈ &lt;a href=&quot;%1&quot;&gt; ਸਕ੍ਰਿਪਟਿੰਗ ਦਸਤਾਵੇਜ਼ &lt;/a&gt; ਤੇ ਇੱਕ ਨਜ਼ਰ ਮਾਰੋ.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>ਤੇਜ਼ੀ ਨਾਲ ਸ਼ੁਰੂ ਕਰਨ ਲਈ &lt;a href="%1"&gt; ਸਕ੍ਰਿਪਟਿੰਗ ਦਸਤਾਵੇਜ਼ &lt;/a&gt; ਤੇ ਇੱਕ ਨਜ਼ਰ ਮਾਰੋ.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>ਜੇ ਤੁਹਾਨੂੰ QOwnNotes ਵਿੱਚ ਕਿਸੇ ਖਾਸ ਕਾਰਜਕੁਸ਼ਲਤਾ ਦੀ ਐਕਸੈਸ ਦੀ ਜ਼ਰੂਰਤ ਹੈ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ &lt;a href=&quot;%1&quot;&gt; QOwnNotes ਮੁੱਦੇ ਪੇਜ &lt;/a&gt; ਤੇ ਇੱਕ ਮੁੱਦਾ ਖੋਲ੍ਹੋ.</translation>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>ਜੇ ਤੁਹਾਨੂੰ QOwnNotes ਵਿੱਚ ਕਿਸੇ ਖਾਸ ਕਾਰਜਕੁਸ਼ਲਤਾ ਦੀ ਐਕਸੈਸ ਦੀ ਜ਼ਰੂਰਤ ਹੈ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ &lt;a href="%1"&gt; QOwnNotes ਮੁੱਦੇ ਪੇਜ &lt;/a&gt; ਤੇ ਇੱਕ ਮੁੱਦਾ ਖੋਲ੍ਹੋ.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
@@ -7642,8 +7630,8 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
-<translation>ਤੁਸੀਂ ਆਪਣੇ ਗਿੱਟ ਕਲਾਇੰਟ ਨੂੰ ਇੱਥੇ ਡਾ downloadਨਲੋਡ ਕਰ ਸਕਦੇ ਹੋ: &lt;a href=&quot;%url&quot;&gt; ਵਿੰਡੋਜ਼ ਲਈ ਗਿਟ &lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation>ਤੁਸੀਂ ਆਪਣੇ ਗਿੱਟ ਕਲਾਇੰਟ ਨੂੰ ਇੱਥੇ ਡਾ downloadਨਲੋਡ ਕਰ ਸਕਦੇ ਹੋ: &lt;a href="%url"&gt; ਵਿੰਡੋਜ਼ ਲਈ ਗਿਟ &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7667,7 +7655,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>ਅੰਦਰੂਨੀ ਸਕਲਾਈਟ ਡਾਟਾਬੇਸ ਅਤੇ ਸੈਟਿੰਗਾਂ ਨੂੰ ਬਾਈਨਰੀ ਦੇ ਸਥਾਨ ਤੇ &lt;code&gt; ਡੇਟਾ &lt;/code&gt; ਫੋਲਡਰ ਵਿੱਚ ਸਟੋਰ ਕੀਤਾ ਜਾਵੇਗਾ</translation>
 </message>
 <message>
@@ -7714,7 +7702,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="489"/>
 <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-<translation>ਤੁਹਾਨੂੰ ਇੱਕ ਲੱਭ ਜਾਵੇਗਾ &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; &#xa0; ਪੋਰਟੇਬਲ ਮੋਡ ਵਿੱਚ QOwnNotes ਨੂੰ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਰੀਲਿਜ਼ ਮਾਰਗ ਵਿੱਚ.</translation>
+<translation>ਤੁਹਾਨੂੰ ਇੱਕ ਲੱਭ ਜਾਵੇਗਾ &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt;   ਪੋਰਟੇਬਲ ਮੋਡ ਵਿੱਚ QOwnNotes ਨੂੰ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਰੀਲਿਜ਼ ਮਾਰਗ ਵਿੱਚ.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2304"/>
@@ -7742,7 +7730,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="40"/>
 <source>Share note on ownCloud</source>
-<translation>ਸਾਂਝਾ ਕਰੋ ਨੋਟ ownCloud &apos;ਤੇ</translation>
+<translation>ਸਾਂਝਾ ਕਰੋ ਨੋਟ ownCloud 'ਤੇ</translation>
 </message>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="73"/>
@@ -8039,13 +8027,13 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
@@ -8170,13 +8158,13 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
@@ -8733,8 +8721,8 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation type="unfinished">&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation type="unfinished">&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8745,10 +8733,6 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;ਅਪਡੇਟ</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">&amp;ਤਾਜ਼ਾ ਡਾ. ਨਲੋਡ ਕਰੋ</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8767,7 +8751,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>ਇਸ ਵਾਰਤਾਲਾਪ ਨੂੰ ਆਪਣੇ ਆਪ ਨਾ ਦਿਖਾਓ</translation>
 </message>
 <message>
@@ -8843,77 +8827,77 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰੋ</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">ਮੁੜ ਚਾਲੂ ਕਰੋ</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished">ਰੱਦ ਕਰੋ</translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>ਅਪਡੇਟਰ ਸਕ੍ਰਿਪਟ &apos;%1&apos; ਮੌਜੂਦ ਨਹੀਂ ਹੈ!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>ਅਪਡੇਟਰ ਸਕ੍ਰਿਪਟ '%1' ਮੌਜੂਦ ਨਹੀਂ ਹੈ!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>ਅਪਡੇਟਰ ਅਨਜ਼ਿਪ ਐਕਜ਼ੀਕਿਯੂਟੇਬਲ &apos;%1&apos; ਮੌਜੂਦ ਨਹੀਂ ਹੈ!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>ਅਪਡੇਟਰ ਅਨਜ਼ਿਪ ਐਕਜ਼ੀਕਿਯੂਟੇਬਲ '%1' ਮੌਜੂਦ ਨਹੀਂ ਹੈ!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>ਅਪਡੇਟਰ ਸਕ੍ਰਿਪਟ &apos;%1&apos; ਨੂੰ &apos;%2&apos; ਤੇ ਨਕਲ ਨਹੀਂ ਕਰ ਸਕਿਆ!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>ਅਪਡੇਟਰ ਸਕ੍ਰਿਪਟ '%1' ਨੂੰ '%2' ਤੇ ਨਕਲ ਨਹੀਂ ਕਰ ਸਕਿਆ!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>ਅਪਡੇਟਰ ਸਕ੍ਰਿਪਟ ਨਹੀਂ ਲੱਭ ਸਕਿਆ: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
+<source>Couldn't find unzip executable: %1</source>
 <translation>ਅਣ - ਜ਼ਿਪ ਚਲਾਉਣਯੋਗ ਨਹੀਂ ਲੱਭ ਸਕਿਆ: %1</translation>
 </message>
 <message>
@@ -9155,7 +9139,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="319"/>
 <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-<translation>ਜੇ ਤੁਸੀਂ ਆਪਣੇ ਖੁਦ ਦੇ ਕਲਾਉਡ ਸਰਵਰ &apos;ਤੇ ਆਪਣੇ ਨੋਟ ਸੰਸਕਰਣਾਂ ਅਤੇ ਤੁਹਾਡੇ ਰੱਦੀ ਨੋਟਾਂ ਤੱਕ ਪਹੁੰਚ ਪ੍ਰਾਪਤ ਕਰਨ ਦੇ ਯੋਗ ਹੋਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਤੁਸੀਂ ਹੁਣ ਇਸਦੇ ਲਈ QOwnNotes ਨੂੰ ਕੌਂਫਿਗਰ ਕਰ ਸਕਦੇ ਹੋ. ਤੁਸੀਂ ਬਾਅਦ ਵਿਚ ਇਹ ਵੀ ਕਰ ਸਕਦੇ ਹੋ.</translation>
+<translation>ਜੇ ਤੁਸੀਂ ਆਪਣੇ ਖੁਦ ਦੇ ਕਲਾਉਡ ਸਰਵਰ 'ਤੇ ਆਪਣੇ ਨੋਟ ਸੰਸਕਰਣਾਂ ਅਤੇ ਤੁਹਾਡੇ ਰੱਦੀ ਨੋਟਾਂ ਤੱਕ ਪਹੁੰਚ ਪ੍ਰਾਪਤ ਕਰਨ ਦੇ ਯੋਗ ਹੋਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਤੁਸੀਂ ਹੁਣ ਇਸਦੇ ਲਈ QOwnNotes ਨੂੰ ਕੌਂਫਿਗਰ ਕਰ ਸਕਦੇ ਹੋ. ਤੁਸੀਂ ਬਾਅਦ ਵਿਚ ਇਹ ਵੀ ਕਰ ਸਕਦੇ ਹੋ.</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="349"/>
@@ -9179,7 +9163,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>ਇਹ ਨੋਟ ਮਾਰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ!</translation>
 </message>
 <message>

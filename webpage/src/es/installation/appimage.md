@@ -9,3 +9,7 @@ chmod a+x QOwnNotes-*.AppImage
 ```
 
 Después, debería poder ejecutar AppImage para ejecutar QOwnNotes.
+
+::: warning
+If you want to use the **automatic updater** please make sure to put your AppImage in a place where your user account has write access to, like somewhere in your home directory.
+:::

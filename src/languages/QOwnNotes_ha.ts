@@ -240,7 +240,7 @@
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
 <source>Afrikaans</source>
-<translation>&apos;Yan Afirka</translation>
+<translation>'Yan Afirka</translation>
 </message>
 <message>
 <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
@@ -719,8 +719,8 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
-<translation>Don samun fayil ɗin enex kana buƙatar zaɓar ɗaya ko mahara bayanin kula a cikin abokin cinikin tebur ɗin ka kasance danna danna &quot;Export note…&quot; a cikin menu Fayil.</translation>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<translation>Don samun fayil ɗin enex kana buƙatar zaɓar ɗaya ko mahara bayanin kula a cikin abokin cinikin tebur ɗin ka kasance danna danna "Export note…" a cikin menu Fayil.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -878,158 +878,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1043,8 +1043,8 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
-<translation>Yi alamar &quot;%1&quot; ba a saita ba.</translation>
+<source>Mark "%1" not set.</source>
+<translation>Yi alamar "%1" ba a saita ba.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
@@ -1067,18 +1067,14 @@
 <translation>Ba a aiwatar da shi a cikin FakeVim ba.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">Rubuta Alt-V, Alt-V don barin yanayin FakeVim.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1093,12 +1089,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6302"/>
 <source>Trailing characters:</source>
-<translation>Haruffa masu ma&apos;ana:</translation>
+<translation>Haruffa masu ma'ana:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6384"/>
 <source>Move lines into themselves.</source>
-<translation>Haruffa masu ma&apos;ana.</translation>
+<translation>Haruffa masu ma'ana.</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6426"/>
@@ -1110,18 +1106,18 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
-<translation>Fayil &quot;%1&quot; ya kasance (ƙara ! Don shawo kan)</translation>
+<source>File "%1" exists (add ! to override)</source>
+<translation>Fayil "%1" ya kasance (ƙara ! Don shawo kan)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
-<translation>Ba za a iya buɗe fayil ba &quot;%1&quot; don rubutu</translation>
+<source>Cannot open file "%1" for writing</source>
+<translation>Ba za a iya buɗe fayil ba "%1" don rubutu</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
-<translation>&quot;%1&quot; %2 %3L, %4C rubuta.</translation>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>"%1" %2 %3L, %4C rubuta.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
@@ -1130,13 +1126,13 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
-<translation>Ba za a iya buɗe fayil ba &quot;%1&quot; don karatu</translation>
+<source>Cannot open file "%1" for reading</source>
+<translation>Ba za a iya buɗe fayil ba "%1" don karatu</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
-<translation>&quot;%1&quot; %2L, %3C</translation>
+<source>"%1" %2L, %3C</source>
+<translation>"%1" %2L, %3C</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
@@ -1197,15 +1193,7 @@
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
-<numerusform>%n layin %1ed %2 lokaci.</numerusform>
-<numerusform>%n layin %1ed %2 lokaci.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
+<translation>
 <numerusform>%n layin %1ed %2 lokaci.</numerusform>
 <numerusform>%n layin %1ed %2 lokaci.</numerusform>
 </translation>
@@ -1394,7 +1382,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
 <source>Code (type)</source>
-<translation>Lambar (nau&apos;in)</translation>
+<translation>Lambar (nau'in)</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="211"/>
@@ -1474,7 +1462,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>Syntax masked</translation>
 </message>
 <message>
@@ -1500,7 +1488,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="255"/>
 <source>This item will be used to preset colors for the other items</source>
-<translation>Za&apos;a yi amfani da wannan abun don saiti launuka don sauran abubuwan</translation>
+<translation>Za'a yi amfani da wannan abun don saiti launuka don sauran abubuwan</translation>
 </message>
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="519"/>
@@ -1574,7 +1562,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
+<source>Don't copy image to media folder</source>
 <translation>Kar a kwafa hoto zuwa babban fayil</translation>
 </message>
 <message>
@@ -1654,7 +1642,7 @@
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="91"/>
 <source>The application will be restarted afterwards.</source>
-<translation>Za&apos;a sake kunna aikace-aikacen daga baya.</translation>
+<translation>Za'a sake kunna aikace-aikacen daga baya.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="158"/>
@@ -1690,7 +1678,7 @@
 <location filename="../widgets/layoutwidget.cpp" line="174"/>
 <source>The note edit panel is the central widget that will be resized automatically.</source>
 <comment>Layout description</comment>
-<translation>Faifan shirya allon rubutu shine widget din tsakiya wanda za&apos;a zazzage shi ta atomatik.</translation>
+<translation>Faifan shirya allon rubutu shine widget din tsakiya wanda za'a zazzage shi ta atomatik.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="179"/>
@@ -1734,7 +1722,7 @@
 <message>
 <location filename="../dialogs/linkdialog.ui" line="14"/>
 <source>Link an url or note</source>
-<translation>Kula da rubutu ta wayar da kan jama&apos;a, tare da kulawa da kulawa, kula da kulawa da kulawa sosai</translation>
+<translation>Kula da rubutu ta wayar da kan jama'a, tare da kulawa da kulawa, kula da kulawa da kulawa sosai</translation>
 </message>
 <message>
 <location filename="../dialogs/linkdialog.ui" line="51"/>
@@ -1846,11 +1834,11 @@
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="99"/>
 <source>File will be restored to: %1</source>
-<translation>Za&apos;a mayar da fayil ɗin zuwa: %1</translation>
+<translation>Za'a mayar da fayil ɗin zuwa: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>Fayil &lt;strong&gt;%1 &lt;/strong&gt; ba za a iya karantawa ba kuma ba za a iya mayar da shi ba!</translation>
 </message>
 <message numerus="yes">
@@ -2014,7 +2002,7 @@
 <location filename="../mainwindow.ui" line="1240"/>
 <location filename="../mainwindow.cpp" line="6941"/>
 <source>Custom actions</source>
-<translation>Ayyukan al&apos;ada</translation>
+<translation>Ayyukan al'ada</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1260"/>
@@ -2054,7 +2042,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1378"/>
 <source>Post questions, feature requests or issues</source>
-<translation>Tambayi tambayoyi, buƙatun fasalin ko al&apos;amurra</translation>
+<translation>Tambayi tambayoyi, buƙatun fasalin ko al'amurra</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1389"/>
@@ -2360,7 +2348,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1610"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Sanya hoto (za&apos;a kwafa hoton a babban fayil a cikin babban fayil din a yanzu)</translation>
+<translation>Sanya hoto (za'a kwafa hoton a babban fayil a cikin babban fayil din a yanzu)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1622"/>
@@ -2534,7 +2522,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
 </message>
 <message>
@@ -2641,7 +2629,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2413"/>
 <source>Find scripts in script repository</source>
-<translation>Nemo rubutun a cikin ma&apos;aunin rubutun</translation>
+<translation>Nemo rubutun a cikin ma'aunin rubutun</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2425"/>
@@ -2814,8 +2802,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-<translation>Warware daidaitaccen mai sauƙi kamar &apos;(2 + 3) * 6 =&apos; a layin yanzu</translation>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>Warware daidaitaccen mai sauƙi kamar '(2 + 3) * 6 =' a layin yanzu</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2948,7 +2936,7 @@ Dawo da bayanin kula na yanzu?</translation>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="obsolete">
+<translation type="unfinished">
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
 </translation>
@@ -3043,7 +3031,7 @@ Dawo da bayanin kula na yanzu?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>Lura ba za a iya ɗauka ba!</translation>
 </message>
 <message>
@@ -3096,8 +3084,8 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <location filename="../mainwindow.cpp" line="4779"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
-<numerusform>Cire &lt;strong&gt;%n&lt;/strong&gt; alamun tag aka zaɓa? Babu bayanin da za&apos;a cire a wannan aikin.</numerusform>
-<numerusform>Cire &lt;strong&gt;%n&lt;/strong&gt; alamun tag aka zaɓa? Babu bayanin da za&apos;a cire a wannan aikin.</numerusform>
+<numerusform>Cire &lt;strong&gt;%n&lt;/strong&gt; alamun tag aka zaɓa? Babu bayanin da za'a cire a wannan aikin.</numerusform>
+<numerusform>Cire &lt;strong&gt;%n&lt;/strong&gt; alamun tag aka zaɓa? Babu bayanin da za'a cire a wannan aikin.</numerusform>
 </translation>
 </message>
 <message>
@@ -3227,7 +3215,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../mainwindow.cpp" line="6785"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
-<translation>Ana ɗaukar nau&apos;ikan bayanin kula a halin yanzu daga uwar garken naku</translation>
+<translation>Ana ɗaukar nau'ikan bayanin kula a halin yanzu daga uwar garken naku</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6802"/>
@@ -3262,7 +3250,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../mainwindow.cpp" line="7378"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-<translation>Bayaninku za a karba kuma a adana shi azaman rubutu a sarari. Ka tuna cewa bayanin da ba a ɓoye ba zai yiwu a daidaita saiti zuwa uwar garken ka kuma za&apos;a iya fallasa rubutu mai ƙima! &lt;br /&gt; Shin kana son murƙushe bayanin kula?</translation>
+<translation>Bayaninku za a karba kuma a adana shi azaman rubutu a sarari. Ka tuna cewa bayanin da ba a ɓoye ba zai yiwu a daidaita saiti zuwa uwar garken ka kuma za'a iya fallasa rubutu mai ƙima! &lt;br /&gt; Shin kana son murƙushe bayanin kula?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7475"/>
@@ -3321,8 +3309,8 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <location filename="../mainwindow.cpp" line="7818"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
-<numerusform>Skipped kwafa na %n bayanin kula (babu alamar rubutu ko fayil ɗin rubutu ko ba&apos;a iya karantawa)</numerusform>
-<numerusform>Skipped kwafa na %n bayanin kulas (babu alamar rubutu ko fayil ɗin rubutu ko ba&apos;a iya karantawa)</numerusform>
+<numerusform>Skipped kwafa na %n bayanin kula (babu alamar rubutu ko fayil ɗin rubutu ko ba'a iya karantawa)</numerusform>
+<numerusform>Skipped kwafa na %n bayanin kulas (babu alamar rubutu ko fayil ɗin rubutu ko ba'a iya karantawa)</numerusform>
 </translation>
 </message>
 <message>
@@ -3332,7 +3320,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>Ba za a iya buɗe fayil na wucin gadi ba</translation>
 </message>
 <message>
@@ -3343,18 +3331,18 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Sake saita sigar font zuwa %1 pt</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
-<translation>Cire alamar &apos;%1&apos; daga bayanin da ke yanzu</translation>
+<source>Remove tag '%1' from the current note</source>
+<translation>Cire alamar '%1' daga bayanin da ke yanzu</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
-<translation>Cire alamar &apos;%1&apos; daga bayanan da aka zaɓa</translation>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>Cire alamar '%1' daga bayanan da aka zaɓa</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9315"/>
@@ -3409,7 +3397,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>Tsara zuwa babban fayil ɗin bayanin kula
 </translation>
 </message>
@@ -3431,7 +3419,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../mainwindow.cpp" line="12394"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
-<translation>An samo sabuntawa zuwa rubutunku a cikin ma&apos;aunin rubutun! Shin kana son sabunta su?
+<translation>An samo sabuntawa zuwa rubutunku a cikin ma'aunin rubutun! Shin kana son sabunta su?
 </translation>
 </message>
 <message>
@@ -3565,8 +3553,8 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
-<translation>Bayanin kula &apos;&apos;%1&apos;&apos; an kwafa shi a allo</translation>
+<source>Note headline '%1' was copied to the clipboard</source>
+<translation>Bayanin kula ''%1'' an kwafa shi a allo</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12757"/>
@@ -3576,7 +3564,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../mainwindow.cpp" line="12944"/>
 <source>Custom editor width</source>
-<translation>Faɗin edita na al&apos;ada</translation>
+<translation>Faɗin edita na al'ada</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12944"/>
@@ -3764,10 +3752,10 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
-<numerusform>%n bayanin kula an motsa zuwa bayanin babban fayil &quot;%2&quot;</numerusform>
-<numerusform>%n bayanin kulas an motsa zuwa bayanin babban fayil &quot;%2&quot;</numerusform>
+<numerusform>%n bayanin kula an motsa zuwa bayanin babban fayil "%2"</numerusform>
+<numerusform>%n bayanin kulas an motsa zuwa bayanin babban fayil "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3780,10 +3768,10 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
-<numerusform>%n kula an kwafa don nuna babban fayil &quot;%2&quot;</numerusform>
-<numerusform>%n kulas an kwafa don nuna babban fayil &quot;%2&quot;</numerusform>
+<numerusform>%n kula an kwafa don nuna babban fayil "%2"</numerusform>
+<numerusform>%n kulas an kwafa don nuna babban fayil "%2"</numerusform>
 </translation>
 </message>
 <message>
@@ -3854,7 +3842,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../mainwindow.cpp" line="5569"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-<translation>QOwnNotes zaiyi amfani da bayanan rashin amfani, wanda ke taimakawa yanke shawarar menene sassan QOwnNotes don inganta gaba da kuma ganowa da gyara kwari. Kuna iya kashe wannan ɗabi&apos;ar a cikin saitunan.</translation>
+<translation>QOwnNotes zaiyi amfani da bayanan rashin amfani, wanda ke taimakawa yanke shawarar menene sassan QOwnNotes don inganta gaba da kuma ganowa da gyara kwari. Kuna iya kashe wannan ɗabi'ar a cikin saitunan.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5573"/>
@@ -3938,18 +3926,18 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
-<translation>Ba za a iya motsa alamar &apos;%1&apos; zuwa wannan alamar ba</translation>
+<source>Cannot move tag '%1' to this tag</source>
+<translation>Ba za a iya motsa alamar '%1' zuwa wannan alamar ba</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
-<translation>Alamar da aka motsa &apos;%1&apos; zuwa sabon alama</translation>
+<source>Moved tag '%1' to new tag</source>
+<translation>Alamar da aka motsa '%1' zuwa sabon alama</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
-<translation>a nuna duk bayanan da aka yiwa alama da &apos;%1&apos; (%2)</translation>
+<source>show all notes tagged with '%1' (%2)</source>
+<translation>a nuna duk bayanan da aka yiwa alama da '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9318"/>
@@ -4069,8 +4057,8 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
-<translation>nuna bayanin kula a babban fayil &apos;%1&apos; (%2)</translation>
+<source>show notes in folder '%1' (%2)</source>
+<translation>nuna bayanin kula a babban fayil '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2615"/>
@@ -4123,10 +4111,10 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
-<numerusform>%n tag bayanin kula da &quot;%2&quot;</numerusform>
-<numerusform>%n tag bayanin kula da alamar &quot;%2&quot;</numerusform>
+<numerusform>%n tag bayanin kula da "%2"</numerusform>
+<numerusform>%n tag bayanin kula da alamar "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4281,7 +4269,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../dialogs/notediffdialog.cpp" line="38"/>
 <source>No</source>
-<translation>A&apos;a</translation>
+<translation>A'a</translation>
 </message>
 </context>
 <context>
@@ -4389,7 +4377,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../services/owncloudservice.cpp" line="585"/>
 <source>API app version too low</source>
-<translation>Appa&apos;idar API ta ƙasa tayi ƙasa da ƙasa</translation>
+<translation>Appa'idar API ta ƙasa tayi ƙasa da ƙasa</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="586"/>
@@ -4404,7 +4392,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../services/owncloudservice.cpp" line="1204"/>
 <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-<translation>kuskuren uwar ownCloud&apos;: &lt;strong&gt;%1&lt;/strong&gt; &lt;br/&gt; Da fatan za a duba tsarin ownCloud.</translation>
+<translation>kuskuren uwar ownCloud': &lt;strong&gt;%1&lt;/strong&gt; &lt;br/&gt; Da fatan za a duba tsarin ownCloud.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1224"/>
@@ -4424,7 +4412,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../services/owncloudservice.cpp" line="1295"/>
 <source>Done with loading note versions</source>
-<translation>Anyi tare da juzu&apos;in bayanin kula</translation>
+<translation>Anyi tare da juzu'in bayanin kula</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1340"/>
@@ -4433,8 +4421,8 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
-<translation>Babu sigogin wannan bayanin ko ba&apos;a samo bayanin a kan sabar ba.</translation>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
+<translation>Babu sigogin wannan bayanin ko ba'a samo bayanin a kan sabar ba.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1361"/>
@@ -4459,7 +4447,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>Unguwa ta CalDAV bata amsa komai ba!</translation>
 </message>
 <message>
@@ -4502,7 +4490,7 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>Kalmomin shiga ba su dace ba!</translation>
 </message>
 </context>
@@ -4572,12 +4560,12 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>Kar a sake tambaya!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>Kar a sake nunawa!</translation>
 </message>
 <message>
@@ -4643,12 +4631,12 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>Jaka mai suna &lt;b&gt;%1 &lt;/b&gt; ba za a iya kirkirar shi ba, saboda aikace-aikacen yana amfani da shi a ciki!</translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>Fayil mai suna &lt;b&gt;%1 &lt;/b&gt; ba za a iya ƙirƙirar shi ba, saboda yana kan jerin manyan fayilolin mataimaka da aka manta! Kuna iya canza wancan a cikin &lt;i&gt; Saitin bangarori &lt;/i&gt;.
 </translation>
 </message>
@@ -4889,9 +4877,9 @@ Idan an kunna tarkace a uwar garken naku to ya kamata ku iya dawo dasu daga can.
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-<translation>An kasa kafa tushen bayanai tare da fayil din &apos;%1&apos;.
+<translation>An kasa kafa tushen bayanai tare da fayil din '%1'.
 Shin babban fayil ɗin da fayil ɗin za a iya rubutawa?</translation>
 </message>
 <message>
@@ -4906,9 +4894,9 @@ Shin babban fayil ɗin da fayil ɗin za a iya rubutawa?</translation>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-<translation>An kasa kafa tushen bayanan bayanai tare da bayanan babban fayil domin hade &apos;%1&apos;.
+<translation>An kasa kafa tushen bayanan bayanai tare da bayanan babban fayil domin hade '%1'.
 Shin babban fayil ɗin da fayil ɗin za a iya rubutawa?</translation>
 </message>
 </context>
@@ -5056,7 +5044,7 @@ Kuna so ku saka shi ta wata hanya?</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Da fatan kar a manta da sabunta shigarwa na QOwnNotes don yin rubutun wannan aiki!</translation>
 </message>
 <message>
@@ -5097,7 +5085,7 @@ Kuna so ku saka shi ta wata hanya?</translation>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>fayil din babu shi</translation>
 </message>
 </context>
@@ -5178,8 +5166,8 @@ Kuna so ku saka shi ta wata hanya?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Da fatan za a shigar da URL na uwar garke naka, misali: &lt;span style = &quot;font-style: italic;&quot;&gt; https://cloud.yourserver.com &lt;/ span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Da fatan za a shigar da URL na uwar garke naka, misali: &lt;span style = "font-style: italic;"&gt; https://cloud.yourserver.com &lt;/ span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5245,8 +5233,8 @@ Kuna so ku saka shi ta wata hanya?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Yana buɗe uwar garken naku &lt;span style = &quot;font-nauyi: 600;&quot;&gt; Shafin aikace-aikacen &lt;/span&gt; shafin yanar gizonku don sakawa ko sabunta QOwnNotesAPI kuma don kunna tushen apps &lt;span style = &quot;font-nauyi: 600;&quot;&gt; Ayoyi &lt;/span&gt; da &lt;span style = &quot;font-nauyi: 600;&quot;&gt; Share fayiloli &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/ html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Yana buɗe uwar garken naku &lt;span style = "font-nauyi: 600;"&gt; Shafin aikace-aikacen &lt;/span&gt; shafin yanar gizonku don sakawa ko sabunta QOwnNotesAPI kuma don kunna tushen apps &lt;span style = "font-nauyi: 600;"&gt; Ayoyi &lt;/span&gt; da &lt;span style = "font-nauyi: 600;"&gt; Share fayiloli &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/ html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5270,8 +5258,8 @@ Kuna so ku saka shi ta wata hanya?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Hakanan kuna buƙatar samun kayan aikin kansu na asali guda biyu &lt;span style = &quot;font-nauyi: 600;&quot;&gt; Ayoyi &lt;/span&gt; da &lt;span style = &quot;font-nauyi: 600;&quot;&gt; Share fayiloli &lt;/span&gt;kunna a sabar saitin naka (wanda hakan zai zama tsoho).&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Hakanan kuna buƙatar samun kayan aikin kansu na asali guda biyu &lt;span style = "font-nauyi: 600;"&gt; Ayoyi &lt;/span&gt; da &lt;span style = "font-nauyi: 600;"&gt; Share fayiloli &lt;/span&gt;kunna a sabar saitin naka (wanda hakan zai zama tsoho).&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5346,7 +5334,7 @@ Kuna so ku saka shi ta wata hanya?</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3006"/>
 <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-<translation>Wasu launuka kawai za&apos;a daidaita dasu, taken teburinku zai sarrafa sauran. Kuna buƙatar sake kunna aikace-aikacen don barin waɗannan canje-canje suyi aiki.</translation>
+<translation>Wasu launuka kawai za'a daidaita dasu, taken teburinku zai sarrafa sauran. Kuna buƙatar sake kunna aikace-aikacen don barin waɗannan canje-canje suyi aiki.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3009"/>
@@ -5500,8 +5488,8 @@ Kuna so ku saka shi ta wata hanya?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kuna iya la&apos;akari da samun takardar shedar SSL kyauta daga &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Bari mu rufaffen &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kuna iya la'akari da samun takardar shedar SSL kyauta daga &lt;a href="https://letsencrypt.org/"&gt; Bari mu rufaffen &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5535,8 +5523,8 @@ Kuna so ku saka shi ta wata hanya?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Idan an bincika koyaushe za a sanar da kai game da gyare-gyare na waje, koda ba a gyara bayanin yanzu ba a cikin minti na ƙarshe. An ba da shawarar shi ne &lt;span style = &quot;font-style: italic;&quot;&gt; ba&apos;a kula da shi ba &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Idan an bincika koyaushe za a sanar da kai game da gyare-gyare na waje, koda ba a gyara bayanin yanzu ba a cikin minti na ƙarshe. An ba da shawarar shi ne &lt;span style = "font-style: italic;"&gt; ba'a kula da shi ba &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5625,7 +5613,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>Bayanan amfani da ba a sani ba suna taimakawa wajen yanke shawarar menene ɓangarorin QOwnNotes don inganta gaba da nemowa da kuma gyara kwari. Da fatan za a kashe shi kawai idan har da gaske ne ba za ku iya rayuwa da shi ba.</translation>
 </message>
 <message>
@@ -5701,7 +5689,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="311"/>
 <source>Portable mode</source>
-<translation>Yanayin da za&apos;a iya ɗauka</translation>
+<translation>Yanayin da za'a iya ɗauka</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="323"/>
@@ -5725,9 +5713,9 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
-<translation>Hanyar &quot;Bayanan kula&quot; akan uwar garke</translation>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
+<translation>Hanyar "Bayanan kula" akan uwar garke</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
@@ -5777,13 +5765,13 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Da fatan za a sanya sabuwar sigar &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt; &lt;span style = &quot;font-nauyi: 600;&quot;&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt;(a kalla sigar QOWNNOTESAPI_MIN_VERSION)a kan uwar garken naku idan kuna son QOwnNotes zai iya samun damar zuwa sigogin bayanin kula da bayanan ɓoye.</translation>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Da fatan za a sanya sabuwar sigar &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-nauyi: 600;"&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt;(a kalla sigar QOWNNOTESAPI_MIN_VERSION)a kan uwar garken naku idan kuna son QOwnNotes zai iya samun damar zuwa sigogin bayanin kula da bayanan ɓoye.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Har yanzu kuna buƙatar &lt;a href=&quot;https://owncloud.org/&quot;&gt; &lt;span style = &quot;font-nauyi: 600&quot;&gt; abokin ciniki mai daidaita kansa &lt;/ span&gt; &lt;/a&gt; (ko wani abokin ciniki na daidaita daidaitawa) don daidaita bayanan ka! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Har yanzu kuna buƙatar &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-nauyi: 600"&gt; abokin ciniki mai daidaita kansa &lt;/ span&gt; &lt;/a&gt; (ko wani abokin ciniki na daidaita daidaitawa) don daidaita bayanan ka! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5841,7 +5829,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>Kasance da lura cewa app na bayanin kula na sirri baya goyon bayan manyan fayiloli mataimaka!
 </translation>
 </message>
@@ -6078,7 +6066,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2899"/>
 <source>Chinese Traditional</source>
-<translation>Al&apos;adun kasar Sin</translation>
+<translation>Al'adun kasar Sin</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2979"/>
@@ -6143,7 +6131,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3897"/>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-<translation>Lokacin buɗe bayanin kula da siginan kwamfuta a cikin bayanin kula yanzu za&apos;a dawo dashi wurin lokacin da aka kula da bayanin kula a zaman na yanzu</translation>
+<translation>Lokacin buɗe bayanin kula da siginan kwamfuta a cikin bayanin kula yanzu za'a dawo dashi wurin lokacin da aka kula da bayanin kula a zaman na yanzu</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3867"/>
@@ -6201,8 +6189,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Hanya mafi kyawun hanyar sanya batutuwan ita ce amfani da mai taimakawa batun ta hanyar latsa &lt;span style = &quot;font-nauyi: 600;&quot;&gt; Bude mai taimakawa batun &lt;/span&gt; kasan. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Hanya mafi kyawun hanyar sanya batutuwan ita ce amfani da mai taimakawa batun ta hanyar latsa &lt;span style = "font-nauyi: 600;"&gt; Bude mai taimakawa batun &lt;/span&gt; kasan. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6217,7 +6205,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4722"/>
 <source>Enable underline rendering</source>
-<translation>Sanya ma&apos;ana daidai</translation>
+<translation>Sanya ma'ana daidai</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5132"/>
@@ -6266,13 +6254,13 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn&apos;t work, create an app password (button on the right)</translation>
+<source>If your password doesn't work, create an app password (button on the right)</source>
+<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation type="unfinished">If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6361,7 +6349,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub baya buƙatar sarari biyu a ƙarshen layin don yin hutun layi</translation>
 </message>
 <message>
@@ -6381,7 +6369,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>Da fatan kar a yi amfani da wannan a cikin bin diddigin batun</translation>
 </message>
 <message>
@@ -6401,8 +6389,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kuna iya bincika duk samammatun &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;tsarin lokaci&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kuna iya bincika duk samammatun &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;tsarin lokaci&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6432,8 +6420,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
-<translation>Abubuwan nuna rubutu na yau da kullun masu nuna alama don watsi, &quot;;&quot; rabe ta &quot;;&quot;
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
+<translation>Abubuwan nuna rubutu na yau da kullun masu nuna alama don watsi, ";" rabe ta ";"
 </translation>
 </message>
 <message>
@@ -6455,8 +6443,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
-<translation>Boye &apos;lambar bayanin kula&apos; tare da kalmomin shiga (yana kara aiki)</translation>
+<source>Hide 'Note count' with tags (increases performance)</source>
+<translation>Boye 'lambar bayanin kula' tare da kalmomin shiga (yana kara aiki)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5824"/>
@@ -6465,8 +6453,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6557,7 +6545,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6065"/>
 <source>Notes with this tag will be used for fetching bookmarks</source>
-<translation>Notes tare da wannan alamar za&apos;a yi amfani dasu don samo alamun alamun shafi</translation>
+<translation>Notes tare da wannan alamar za'a yi amfani dasu don samo alamun alamun shafi</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6068"/>
@@ -6571,8 +6559,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>Ta hanyar tsohuwar hanyar mai binciken zai nuna duk hanyoyin haɗin bayanin sanarwa na yanzu. Hakanan zaka iya sa ya nuna alamomin alamar shafi na musamman tare da takamammen alama. Don ƙarin bayani game da hanyar daidaita alamomin alamar danna danna &lt;a href=&quot;%1&quot;&gt; nan &lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>Ta hanyar tsohuwar hanyar mai binciken zai nuna duk hanyoyin haɗin bayanin sanarwa na yanzu. Hakanan zaka iya sa ya nuna alamomin alamar shafi na musamman tare da takamammen alama. Don ƙarin bayani game da hanyar daidaita alamomin alamar danna danna &lt;a href="%1"&gt; nan &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6582,7 +6570,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6102"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
-<translation>Za&apos;a yi amfani da wannan bayanin don ƙara sabbin alamun shafi daga haɓakar mai lilo</translation>
+<translation>Za'a yi amfani da wannan bayanin don ƙara sabbin alamun shafi daga haɓakar mai lilo</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6105"/>
@@ -6622,8 +6610,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>Shigar da &lt;a href=&quot;%1&quot;&gt; Fadada mai binciken gidan yanar gizo &lt;/a&gt; daga &lt;a href=&quot;%2&quot;&gt; Chrome Web Store &lt;/a&gt; ko &lt;a href=&quot;%3&quot;&gt; Firefox Add- a kan shafin yanar gizo &lt;/a&gt; don amfani da QOwnNotes azaman kampanin yanar gizo.</translation>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>Shigar da &lt;a href="%1"&gt; Fadada mai binciken gidan yanar gizo &lt;/a&gt; daga &lt;a href="%2"&gt; Chrome Web Store &lt;/a&gt; ko &lt;a href="%3"&gt; Firefox Add- a kan shafin yanar gizo &lt;/a&gt; don amfani da QOwnNotes azaman kampanin yanar gizo.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6643,7 +6631,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5696"/>
 <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-<translation>Yi amfani da bayanin shirya bayanin kula azaman widget din tsakiyar da za&apos;a gyara idan taga ko sauran bangarori</translation>
+<translation>Yi amfani da bayanin shirya bayanin kula azaman widget din tsakiyar da za'a gyara idan taga ko sauran bangarori</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5811"/>
@@ -6718,15 +6706,15 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Shigar da umarnin da za a yi amfani da shi don nuna git log (misali &quot;gitk&quot;)</translation>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Shigar da umarnin da za a yi amfani da shi don nuna git log (misali "gitk")</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Idan kayi amfani da wannan saitin zaka sami sabon shigowar menu domin nuna nau&apos;in git din idan ka latsa bayanin kula.</translation>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Idan kayi amfani da wannan saitin zaka sami sabon shigowar menu domin nuna nau'in git din idan ka latsa bayanin kula.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5499"/>
@@ -6745,7 +6733,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Kar ka manta ka kunna tallafin git don manyan fayilolin bayanin ka kuma saita sunanka da adireshin email don abokin cinikinka, misali tare da wadannan umarnin:</translation>
 </message>
 <message>
@@ -6800,8 +6788,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
-<translation>Boye &apos;nemo ko kirkiro alama&apos;</translation>
+<source>Hide 'Find or create tag' search</source>
+<translation>Boye 'nemo ko kirkiro alama'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5568"/>
@@ -6826,8 +6814,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
-<translation>Boye &apos;nemo ko ƙirƙirar binciken bayanai&apos;</translation>
+<source>Hide 'Find or create note subfolder' search</source>
+<translation>Boye 'nemo ko ƙirƙirar binciken bayanai'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6841,9 +6829,9 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Kuna iya yin amfani da &quot;%notePath%&quot; don hanyar bayanin.</translation>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Kuna iya yin amfani da "%notePath%" don hanyar bayanin.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -6903,8 +6891,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
-<translation>Ga tsofaffin nau&apos;ikan nasuCloud inda saitin tsoho bai yi aiki ba</translation>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
+<translation>Ga tsofaffin nau'ikan nasuCloud inda saitin tsoho bai yi aiki ba</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1848"/>
@@ -7068,8 +7056,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
-<translation>Shigar da tsarin lokacinku na al&apos;ada, kamar &quot;dd.MM.yyyy hh: mm&quot;</translation>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation>Shigar da tsarin lokacinku na al'ada, kamar "dd.MM.yyyy hh: mm"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7169,7 +7157,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>Yi watsi da kalandarku waɗanda ba sa tallafar abubuwa</translation>
 </message>
 <message>
@@ -7230,17 +7218,17 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4164"/>
 <source>Add a custom file extension</source>
-<translation>Sanya fadada fayil na al&apos;ada</translation>
+<translation>Sanya fadada fayil na al'ada</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4178"/>
 <source>Remove a custom file extension</source>
-<translation>Cire fadada fayil na al&apos;ada</translation>
+<translation>Cire fadada fayil na al'ada</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-<translation>Idan ka kara kayan haɓaka na al&apos;ada kawai a buga a fadada, kamar &quot;aikin allo&quot;.</translation>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+<translation>Idan ka kara kayan haɓaka na al'ada kawai a buga a fadada, kamar "aikin allo".</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7254,7 +7242,7 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
+<source>Don't show the update dialog automatically</source>
 <translation>Karka nuna maganganun sabuntawa kai tsaye</translation>
 </message>
 <message>
@@ -7293,8 +7281,8 @@ Kawai gwada kanka idan ka sami rikice-rikice kuma saita wata babbar darajar idan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Zaku iya &lt;span style=&quot; font-weight:600;&quot;&gt;kwafa da liƙa &lt;/span&gt; wannan rubutun (ko ɓangarorin wannan rubutun) a cikin salon &lt;span style=&quot; font-weight:600;&quot;&gt; fitowar &lt;/span&gt; akan &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; QOwnNotes shafi abubuwan &lt;/a&gt; idan kuna da &lt;span style=&quot; font-weight:600;&quot;&gt; tambayoyi ko matsaloli &lt;/span&gt; tare da QOwnNotes. Bayanin da suke da matukar saukarwa ana ɓoye a cikin wannan bayanin. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Zaku iya &lt;span style=" font-weight:600;"&gt;kwafa da liƙa &lt;/span&gt; wannan rubutun (ko ɓangarorin wannan rubutun) a cikin salon &lt;span style=" font-weight:600;"&gt; fitowar &lt;/span&gt; akan &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; QOwnNotes shafi abubuwan &lt;/a&gt; idan kuna da &lt;span style=" font-weight:600;"&gt; tambayoyi ko matsaloli &lt;/span&gt; tare da QOwnNotes. Bayanin da suke da matukar saukarwa ana ɓoye a cikin wannan bayanin. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7358,7 +7346,7 @@ Saƙon kuskuren haɗin: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Don Allah kar a yi amfani da wannan a cikin mahayin batun, kwafin rubutun cire kuskure kai tsaye cikin batun.</translation>
 </message>
 <message>
@@ -7373,7 +7361,7 @@ Saƙon kuskuren haɗin: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Bayanan amfani da ba a sani ba suna taimakawa wajen yanke shawarar menene ɓangarorin QOwnNotes don inganta gaba da nemowa da kuma gyara kwari. &lt;br/&gt; Da fatan za a kashe shi kawai idan har da gaske ne ba za ku iya rayuwa da shi ba. &lt;br/&gt; &lt;br/&gt; Da gaske za a kashe amfani da sawu?</translation>
 </message>
 <message>
@@ -7408,18 +7396,18 @@ Saƙon kuskuren haɗin: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>Ana loda manyan fayiloli a &apos;%1&apos; daga sabar</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>Ana loda manyan fayiloli a '%1' daga sabar</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Kalli &lt;a href=&quot;%1&quot;&gt; Littattafan rubutun &lt;/a&gt; don farawa da sauri.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Kalli &lt;a href="%1"&gt; Littattafan rubutun &lt;/a&gt; don farawa da sauri.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Idan kuna buƙatar samun dama ga takamaiman aikin a cikin QOwnNotes, da fatan za a bude wani batun a shafin &lt;a href=&quot;%1&quot;&gt; QOwnNotes shafi shafi &lt;/a&gt;.</translation>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Idan kuna buƙatar samun dama ga takamaiman aikin a cikin QOwnNotes, da fatan za a bude wani batun a shafin &lt;a href="%1"&gt; QOwnNotes shafi shafi &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
@@ -7455,7 +7443,7 @@ Saƙon kuskuren haɗin: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4081"/>
 <source>The application will be restarted after the import.</source>
-<translation>Za&apos;a sake kunna aikace-aikacen bayan shigo da shi.</translation>
+<translation>Za'a sake kunna aikace-aikacen bayan shigo da shi.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4313"/>
@@ -7563,7 +7551,7 @@ Saƙon kuskuren haɗin: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3285"/>
 <source>Enter your custom file extension:</source>
-<translation>Shigar da fayel fayil na al&apos;ada:</translation>
+<translation>Shigar da fayel fayil na al'ada:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3614"/>
@@ -7633,8 +7621,8 @@ Saƙon kuskuren haɗin: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Zaku iya saukar da abokin aikin naku anan: &lt;a href=&quot;%url&quot;&gt; Git for Windows &lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation>Zaku iya saukar da abokin aikin naku anan: &lt;a href="%url"&gt; Git for Windows &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7649,16 +7637,16 @@ Saƙon kuskuren haɗin: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="464"/>
 <source>Portable mode is currently:</source>
-<translation>Yanayin da za&apos;a iya ɗauka a halin yanzu:</translation>
+<translation>Yanayin da za'a iya ɗauka a halin yanzu:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="467"/>
 <source>In portable mode</source>
-<translation>A yanayin da za&apos;a iya ɗauka</translation>
+<translation>A yanayin da za'a iya ɗauka</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>za a adana bayanai na cikin gida sannan za a adana saitin a cikin babban akwati &lt;code&gt; Data &lt;/code&gt; a wurin binary</translation>
 </message>
 <message>
@@ -7669,7 +7657,7 @@ Saƙon kuskuren haɗin: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="473"/>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-<translation>manyan fayilolin bayanin kula, alamomin rubutu da hanya zuwa ga edita na waje za&apos;a adana su ta atomatik dangane da babban fayil ɗin &lt;code&gt; Data &lt;/code&gt; ta yadda za a ɗora manyan fayilolin bayanin kula, rubutun da edita na waje ba tare da inda saitin QOwnNotes ɗin ba a halin yanzu</translation>
+<translation>manyan fayilolin bayanin kula, alamomin rubutu da hanya zuwa ga edita na waje za'a adana su ta atomatik dangane da babban fayil ɗin &lt;code&gt; Data &lt;/code&gt; ta yadda za a ɗora manyan fayilolin bayanin kula, rubutun da edita na waje ba tare da inda saitin QOwnNotes ɗin ba a halin yanzu</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="483"/>
@@ -7743,7 +7731,7 @@ Bayanan kula ku za su zauna lafiya!</translation>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="30"/>
 <source>The public url of your note</source>
-<translation>Url na jama&apos;a na bayanin ka</translation>
+<translation>Url na jama'a na bayanin ka</translation>
 </message>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="47"/>
@@ -8030,13 +8018,13 @@ Bayanan kula ku za su zauna lafiya!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
@@ -8161,13 +8149,13 @@ Bayanan kula ku za su zauna lafiya!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
-<translation type="unfinished">File doesn&apos;t exist</translation>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
@@ -8512,7 +8500,7 @@ Ba za a sake yin wannan ba!</translation>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
 <source>List the available toolbars. The selected one will be edited</source>
-<translation>Lissafa kayan aikin da ke akwai. Wanda aka zaɓa za&apos;a gyara shi</translation>
+<translation>Lissafa kayan aikin da ke akwai. Wanda aka zaɓa za'a gyara shi</translation>
 </message>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
@@ -8715,7 +8703,7 @@ Ba za a sake yin wannan ba!</translation>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="76"/>
 <source>QOwnNotes will be downloaded in your default browser.</source>
-<translation>Za&apos;a saukar da QOwnNotes a cikin tsoffin bincikenku.</translation>
+<translation>Za'a saukar da QOwnNotes a cikin tsoffin bincikenku.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="83"/>
@@ -8724,8 +8712,8 @@ Ba za a sake yin wannan ba!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation type="unfinished">&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation type="unfinished">&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8736,10 +8724,6 @@ Ba za a sake yin wannan ba!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;Sabuntawa</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">&amp;Sauke sabo</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8758,7 +8742,7 @@ Ba za a sake yin wannan ba!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>Karka nuna wannan sakon ta atomatik</translation>
 </message>
 <message>
@@ -8834,77 +8818,77 @@ Ba za a sake yin wannan ba!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">Sake kunna aikace-aikace</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">Sake kunnawa</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished">Soke</translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Rubutun sabuntawa &apos;%1&apos; babu!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>Rubutun sabuntawa '%1' babu!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Updater ba za a iya aiwatar da &apos;%1&apos; ba!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>Updater ba za a iya aiwatar da '%1' ba!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>Ba za a iya kwafar rubutun sabuntawa &apos;%1&apos; zuwa &apos;%2&apos;!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>Ba za a iya kwafar rubutun sabuntawa '%1' zuwa '%2'!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>Ba a iya nemo rubutun sabuntawa ba: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
+<source>Couldn't find unzip executable: %1</source>
 <translation>Ba za a iya gano abin da za a kashe ba: %1</translation>
 </message>
 <message>
@@ -9146,7 +9130,7 @@ Ba za a sake yin wannan ba!</translation>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="319"/>
 <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-<translation>Idan kuna so ku sami damar shiga cikin nau&apos;ikan bayanin kulaku da bayanan ɓoyayyenku akan uwar garken naku, zaku iya saita QOwnNotes don shi yanzu. Hakanan zaka iya yin shi a wani lokaci mai zuwa.</translation>
+<translation>Idan kuna so ku sami damar shiga cikin nau'ikan bayanin kulaku da bayanan ɓoyayyenku akan uwar garken naku, zaku iya saita QOwnNotes don shi yanzu. Hakanan zaka iya yin shi a wani lokaci mai zuwa.</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="349"/>
@@ -9156,7 +9140,7 @@ Ba za a sake yin wannan ba!</translation>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="391"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-<translation>QOwnNotes zaiyi amfani da bayanan rashin amfani, wanda ke taimakawa yanke shawarar menene sassan QOwnNotes don inganta gaba da kuma ganowa da gyara kwari. Kuna iya kashe wannan ɗabi&apos;ar a cikin saitunan.</translation>
+<translation>QOwnNotes zaiyi amfani da bayanan rashin amfani, wanda ke taimakawa yanke shawarar menene sassan QOwnNotes don inganta gaba da kuma ganowa da gyara kwari. Kuna iya kashe wannan ɗabi'ar a cikin saitunan.</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="122"/>
@@ -9170,7 +9154,7 @@ Ba za a sake yin wannan ba!</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>Wannan hanyar bayanin ba ta wanzu!</translation>
 </message>
 <message>

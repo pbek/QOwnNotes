@@ -27,7 +27,7 @@ Führen Sie die folgenden Shell-Befehle als root aus, um dem Repository zu vertr
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+Führen Sie die folgenden Shell-Befehle als root aus, um das Repository hinzuzufügen und von dort aus QOwnNotes zu installieren.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL

@@ -74,15 +74,15 @@
 - <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> fügt ein Bild ein (das Bild wird in den Ordner `media` im aktuellen Notizenordner kopiert)
 - <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> fügt einen Anhang ein (die Datei wird in den Ordner `Anhänge` des aktuellen Notizenordners kopiert)
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> fügt eine Tabelle ein
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
-- <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold
-- <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic
-- <kbd>Ctrl</kbd> + <kbd>U</kbd> formats the selected text underline
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
-- <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> fügt an der aktuellen Position einen Codeblock ein
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> fügt an der aktuellen Position ein Blockzitat ein
+- <kbd>Strg</kbd> + <kbd>B</kbd> formatiert den ausgewählten Text fett
+- <kbd>Strg</kbd> + <kbd>I</kbd> formatiert den ausgewählten Text kursiv
+- <kbd>Strg</kbd> + <kbd>U</kbd> formatiert den ausgewählten Text unterstrichen
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> streicht den ausgewählten Text durch
+- <kbd>Strg</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> durchläuft die Buchstaben des ausgewählten Textes
+- <kbd>Tab</kbd> rückt den ausgewählten Text ein (funktioniert auch für mehrere Zeilen)
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> hebt die Einrückung für den ausgewählten Text auf
 - <kbd>Tab</kbd> rückt das Listenelement nach einem ungeordneten Listenzeichen ein
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> hebt das Listenelement nach einem ungeordneten Listenzeichen auf
 - <kbd>Eingabe</kbd> in Listen erstellt ein neues Listenelement

@@ -719,8 +719,8 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
-<translation>Για να αποκτήσετε ένα αρχείο enex θα πρέπει να επιλέξετε μία η πολλαπλές σημειώσεις στη desktop εφαρμογή του Evernote και να κάνετε κλικ στην &quot;Εξαγωγή σημειώσεων...&quot; στο μενού Αρχείο.</translation>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<translation>Για να αποκτήσετε ένα αρχείο enex θα πρέπει να επιλέξετε μία η πολλαπλές σημειώσεις στη desktop εφαρμογή του Evernote και να κάνετε κλικ στην "Εξαγωγή σημειώσεων..." στο μενού Αρχείο.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -878,158 +878,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1043,8 +1043,8 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
-<translation>Η ένδειξη &quot;%1&quot; δεν έχει οριστεί.</translation>
+<source>Mark "%1" not set.</source>
+<translation>Η ένδειξη "%1" δεν έχει οριστεί.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
@@ -1067,18 +1067,14 @@
 <translation>Δεν έχει εφαρμοστεί στο FakeVim.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">Πληκτρολογήστε Alt-V, Alt-V για έξοδο από τη λειτουργία FakeVim.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1110,18 +1106,18 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
-<translation>Το αρχείο &quot;%1&quot; υπάρχει (προσθέστε &apos;!&apos; για παράκαμψη)</translation>
+<source>File "%1" exists (add ! to override)</source>
+<translation>Το αρχείο "%1" υπάρχει (προσθέστε '!' για παράκαμψη)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
-<translation>Αδυνατό το άνοιγμα του αρχείου &quot;%1&quot; για γραφή</translation>
+<source>Cannot open file "%1" for writing</source>
+<translation>Αδυνατό το άνοιγμα του αρχείου "%1" για γραφή</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
-<translation>&quot;%1&quot; %2 %3L, %4C γραμμένα.</translation>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>"%1" %2 %3L, %4C γραμμένα.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
@@ -1130,13 +1126,13 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
-<translation>Αδύνατο το άνοιγμα του αρχείου &quot;%1&quot; για ανάγνωση</translation>
+<source>Cannot open file "%1" for reading</source>
+<translation>Αδύνατο το άνοιγμα του αρχείου "%1" για ανάγνωση</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
-<translation>&quot;%1&quot;%2L, %3C</translation>
+<source>"%1" %2L, %3C</source>
+<translation>"%1"%2L, %3C</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
@@ -1197,15 +1193,7 @@
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
-<numerusform>%n γραμμές %1αν %2 φορές.</numerusform>
-<numerusform>%n γραμμές %1αν %2 φορές.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
+<translation>
 <numerusform>%n γραμμές %1αν %2 φορές.</numerusform>
 <numerusform>%n γραμμές %1αν %2 φορές.</numerusform>
 </translation>
@@ -1474,7 +1462,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>Κρυφή σύνταξη</translation>
 </message>
 <message>
@@ -1574,7 +1562,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
+<source>Don't copy image to media folder</source>
 <translation>Να μην αντιγραφεί η εικόνα στον φάκελο πολυμέσων</translation>
 </message>
 <message>
@@ -1850,7 +1838,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>Το αρχείο &lt;strong&gt;%1&lt;/strong&gt; δεν είναι αναγνώσιμο και δεν μπορεί γίνει επαναφορά του!</translation>
 </message>
 <message numerus="yes">
@@ -2360,7 +2348,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1610"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Εισαγωγή εικόνας (η εικόνα θα αντιγραφεί στο φάκελο &apos;μέσα&apos; στον τρέχοντα φάκελο σημειώσεων)</translation>
+<translation>Εισαγωγή εικόνας (η εικόνα θα αντιγραφεί στο φάκελο 'μέσα' στον τρέχοντα φάκελο σημειώσεων)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1622"/>
@@ -2534,7 +2522,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation>Ανοίξτε την QOwnNotes αίθουσα συνομιλίας στο Matrix (Element)</translation>
 </message>
 <message>
@@ -2814,8 +2802,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-<translation>Λύστε μια απλή εξίσωση όπως &apos;(2+3)* 6=&apos; στην τρέχουσα γραμμή</translation>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>Λύστε μια απλή εξίσωση όπως '(2+3)* 6=' στην τρέχουσα γραμμή</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2836,7 +2824,7 @@
 <location filename="../mainwindow.ui" line="2219"/>
 <location filename="../mainwindow.ui" line="2222"/>
 <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-<translation>Ανοίξτε τη συζήτηση &apos;qownnotes&apos; στο Gitter, για να συνδεθείτε, χρειάζεστε ένα λογαριασμό GitHub ή Twitter, αλλά μπορείτε να λάβετε μηνύματα εκτός σύνδεσης</translation>
+<translation>Ανοίξτε τη συζήτηση 'qownnotes' στο Gitter, για να συνδεθείτε, χρειάζεστε ένα λογαριασμό GitHub ή Twitter, αλλά μπορείτε να λάβετε μηνύματα εκτός σύνδεσης</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="992"/>
@@ -2946,7 +2934,7 @@ Restore current note?</source>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="obsolete">
+<translation type="unfinished">
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
 </translation>
@@ -3041,7 +3029,7 @@ Restore current note?</source>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>Η σημείωση δεν μπορεί να αποκρυπτογραφηθεί!</translation>
 </message>
 <message>
@@ -3332,7 +3320,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>Δεν είναι δυνατό το άνοιγμα του προσωρινού αρχείου</translation>
 </message>
 <message>
@@ -3343,18 +3331,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Επαναφορά του μεγέθους γραμματοσειράς σε %1 pt</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
-<translation>Αφαίρεση ετικέτας &apos;%1&apos; από την τρέχουσα σημείωση</translation>
+<source>Remove tag '%1' from the current note</source>
+<translation>Αφαίρεση ετικέτας '%1' από την τρέχουσα σημείωση</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
-<translation>Αφαίρεση ετικέτας &apos;%1&apos; από τις επιλεγμένες σημειώσεις</translation>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>Αφαίρεση ετικέτας '%1' από τις επιλεγμένες σημειώσεις</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9315"/>
@@ -3409,7 +3397,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>Μετάβαση στον υποφάκελο της σημείωσης
 </translation>
 </message>
@@ -3564,8 +3552,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
-<translation>Ο τίτλος σημείωσης &apos;%1&apos; αντιγράφηκε στο πρόχειρο</translation>
+<source>Note headline '%1' was copied to the clipboard</source>
+<translation>Ο τίτλος σημείωσης '%1' αντιγράφηκε στο πρόχειρο</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12757"/>
@@ -3763,10 +3751,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
-<numerusform>%n σημείωση(-ειώσεις) μεταφέρθηκε(-αν) στον υποφάκελο σημειώσεων &quot;%2&quot;</numerusform>
-<numerusform>%n σημείωση(-ειώσεις) μεταφέρθηκε(-αν) στον υποφάκελο σημειώσεων &quot;%2&quot;</numerusform>
+<numerusform>%n σημείωση(-ειώσεις) μεταφέρθηκε(-αν) στον υποφάκελο σημειώσεων "%2"</numerusform>
+<numerusform>%n σημείωση(-ειώσεις) μεταφέρθηκε(-αν) στον υποφάκελο σημειώσεων "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3779,10 +3767,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
-<numerusform>%n σημείωση(-ειώσεις) αντιγράφηκε(-αν) στον υποφάκελο σημειώσεων &quot;%2&quot;</numerusform>
-<numerusform> %n σημείωση(-ειώσεις) αντιγράφηκε(-αν) στον υποφάκελο σημειώσεων &quot;%2&quot;</numerusform>
+<numerusform>%n σημείωση(-ειώσεις) αντιγράφηκε(-αν) στον υποφάκελο σημειώσεων "%2"</numerusform>
+<numerusform> %n σημείωση(-ειώσεις) αντιγράφηκε(-αν) στον υποφάκελο σημειώσεων "%2"</numerusform>
 </translation>
 </message>
 <message>
@@ -3937,18 +3925,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
-<translation>Δεν είναι δυνατή η μετακίνηση της ετικέτας &apos;%1&apos; σε αυτήν την ετικέτα</translation>
+<source>Cannot move tag '%1' to this tag</source>
+<translation>Δεν είναι δυνατή η μετακίνηση της ετικέτας '%1' σε αυτήν την ετικέτα</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
-<translation>Μετακινήθηκε η ετικέτα &apos;%1&apos; σε νέα ετικέτα</translation>
+<source>Moved tag '%1' to new tag</source>
+<translation>Μετακινήθηκε η ετικέτα '%1' σε νέα ετικέτα</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
-<translation>εμφάνιση όλων των σημειώσεων με ετικέτα με &apos;%1&apos; (%2)</translation>
+<source>show all notes tagged with '%1' (%2)</source>
+<translation>εμφάνιση όλων των σημειώσεων με ετικέτα με '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9318"/>
@@ -4068,8 +4056,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
-<translation>εμφάνιση σημειώσεων στον φάκελο &apos;%1&apos; (%2)</translation>
+<source>show notes in folder '%1' (%2)</source>
+<translation>εμφάνιση σημειώσεων στον φάκελο '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2615"/>
@@ -4122,10 +4110,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
-<numerusform> %n σημείωση(-ειώσεις) έχει(-ουν) επισημανθεί με &quot;%2&quot;</numerusform>
-<numerusform>%n σημείωση(-ειώσεις) έχει(-ουν) επισημανθεί με &quot;%2&quot;</numerusform>
+<numerusform> %n σημείωση(-ειώσεις) έχει(-ουν) επισημανθεί με "%2"</numerusform>
+<numerusform>%n σημείωση(-ειώσεις) έχει(-ουν) επισημανθεί με "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4430,7 +4418,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Δεν υπάρχουν εκδόσεις για αυτήν τη σημείωση ή η σημείωση δεν βρέθηκε στον διακομιστή.</translation>
 </message>
 <message>
@@ -4456,7 +4444,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>Ο διακομιστής σας CalDAV δεν ανταποκρίθηκε σε τίποτα!</translation>
 </message>
 <message>
@@ -4499,7 +4487,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>Οι κωδικοί πρόσβασης δεν ταιριάζουν!</translation>
 </message>
 </context>
@@ -4569,12 +4557,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>Να μην ερωτηθώ ξανά!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>Να μην εμφανιστεί ξανά!</translation>
 </message>
 <message>
@@ -4643,13 +4631,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>Δεν είναι δυνατή η δημιουργία φακέλου με όνομα &lt;b&gt;%1&lt;/b&gt;, επειδή χρησιμοποιείται εσωτερικά από την εφαρμογή!
 </translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>Δεν είναι δυνατή η δημιουργία φακέλου με όνομα &lt;b&gt;%1&lt;/b&gt;, επειδή βρίσκεται στη λίστα των αγνοούμενων υποφακέλων! Μπορείτε να το αλλάξετε στον &lt;i&gt;Πίνακα ρυθμίσεων&lt;/i&gt;.
 </translation>
 </message>
@@ -4890,9 +4878,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-<translation>Δεν είναι δυνατή η δημιουργία σύνδεσης βάσης δεδομένων με το αρχείο &apos;%1&apos;.
+<translation>Δεν είναι δυνατή η δημιουργία σύνδεσης βάσης δεδομένων με το αρχείο '%1'.
 Είναι ο φάκελος και το αρχείο εγγράψιμα; </translation>
 </message>
 <message>
@@ -4907,9 +4895,9 @@ Are the folder and the file writeable?</source>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-<translation>Δεν είναι δυνατή η δημιουργία σύνδεσης βάσης δεδομένων με τη βάση δεδομένων του φακέλου σημειώσεων προς συγχώνευση &apos;%1&apos;.
+<translation>Δεν είναι δυνατή η δημιουργία σύνδεσης βάσης δεδομένων με τη βάση δεδομένων του φακέλου σημειώσεων προς συγχώνευση '%1'.
 Είναι ο φάκελος και το αρχείο εγγράψιμα; </translation>
 </message>
 </context>
@@ -5057,7 +5045,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Παρακαλώ μην ξεχάσετε να ενημερώσετε την εγκατάσταση του QOwnNotes ώστε να λειτουργήσει αυτό το σενάριο!</translation>
 </message>
 <message>
@@ -5098,7 +5086,7 @@ Do you want to install it anyway?</source>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>Το αρχείο δεν υπάρχει</translation>
 </message>
 </context>
@@ -5179,8 +5167,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Παρακαλούμε εισάγετε τη διεύθυνση URL του δικού σας διακομιστή ownCloud, για παράδειγμα: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Παρακαλούμε εισάγετε τη διεύθυνση URL του δικού σας διακομιστή ownCloud, για παράδειγμα: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5246,8 +5234,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt; &lt;p&gt; Ανοίγει τον δικό σας διακομιστή ownCloud &lt;span style=&quot; font-weight:600;&quot;&gt;Σελίδα ρυθμίσεων &lt;/span&gt; εφαρμογής στο πρόγραμμα περιήγησης &lt;span style=&quot; font-weight:600;&quot;&gt;για να εγκαταστήσει ή να ενημερώσει το QOwnNotesAPI &lt;span style=&quot; font-weight:600;&quot;&gt;Εκδόσεις&lt;/span&gt; και&lt;span style=&quot; font-weight:600;&quot;&gt;Διαγραμμένα αρχεία&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt; &lt;p&gt; Ανοίγει τον δικό σας διακομιστή ownCloud &lt;span style=" font-weight:600;"&gt;Σελίδα ρυθμίσεων &lt;/span&gt; εφαρμογής στο πρόγραμμα περιήγησης &lt;span style=" font-weight:600;"&gt;για να εγκαταστήσει ή να ενημερώσει το QOwnNotesAPI &lt;span style=" font-weight:600;"&gt;Εκδόσεις&lt;/span&gt; και&lt;span style=" font-weight:600;"&gt;Διαγραμμένα αρχεία&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5271,8 +5259,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Επίσης πρέπει να έχετε τις δύο κεντρικές εφαρμογές ownCloud  &lt;span style=&quot; font-weight:600;&quot;&gt;Εκδόσεις&lt;/span&gt; και&lt;span style=&quot; font-weight:600;&quot;&gt;Διαγραμμένα αρχεία &lt;/span&gt;ενεργοποιημένες στον διακομιστή σας ownCloud (που θα πρέπει να είναι ο προεπιλεγμένος). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Επίσης πρέπει να έχετε τις δύο κεντρικές εφαρμογές ownCloud  &lt;span style=" font-weight:600;"&gt;Εκδόσεις&lt;/span&gt; και&lt;span style=" font-weight:600;"&gt;Διαγραμμένα αρχεία &lt;/span&gt;ενεργοποιημένες στον διακομιστή σας ownCloud (που θα πρέπει να είναι ο προεπιλεγμένος). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5501,8 +5489,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; Ίσως θελήσετε να λάβετε ένα δωρεάν πιστοποιητικό SSL από το &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Ας κρυπτογραφήσουμε &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; Ίσως θελήσετε να λάβετε ένα δωρεάν πιστοποιητικό SSL από το &lt;a href="https://letsencrypt.org/"&gt; Ας κρυπτογραφήσουμε &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5536,8 +5524,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt; Εάν έχει ελεγχθεί, θα λαμβάνετε ειδοποιήσεις πάντα για εξωτερικές τροποποιήσεις, ακόμη και αν η τρέχουσα σημείωση δεν είχε υποστεί επεξεργασία την τελευταία στιγμή. Συνιστάται &lt;span style=&quot; font-style:italic;&quot;&gt;μη ελεγμένο&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt; Εάν έχει ελεγχθεί, θα λαμβάνετε ειδοποιήσεις πάντα για εξωτερικές τροποποιήσεις, ακόμη και αν η τρέχουσα σημείωση δεν είχε υποστεί επεξεργασία την τελευταία στιγμή. Συνιστάται &lt;span style=" font-style:italic;"&gt;μη ελεγμένο&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5626,7 +5614,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>Τα ανώνυμα δεδομένα χρήσης βοηθούν να αποφασίσετε ποια μέρη του QOwnNotes θα βελτιωθούν στη συνέχεια και να εντοπίσετε και να διορθώσετε σφάλματα. Απενεργοποιήστε το μόνο εάν δεν μπορείτε πραγματικά να ζήσετε με αυτό.</translation>
 </message>
 <message>
@@ -5726,9 +5714,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
-<translation>Διαδρομή &quot;σημειώσεων&quot; στον διακομιστή σας</translation>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
+<translation>Διαδρομή "σημειώσεων" στον διακομιστή σας</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
@@ -5778,14 +5766,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Παρακαλούμε εγκαταστήστε την τελευταία έκδοση του &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Παρακαλούμε εγκαταστήστε την τελευταία έκδοση του &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;
 (τουλάχιστον έκδοση QOWNNOTESAPI_MIN_VERSION) στον διακομιστή σας ownCloud, αν θέλετε τα QOwnNotes να έχουν πρόσβαση στις εκδόσεις σημειώσεων και τις σημειώσεις του κάδου απορριμάτων.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Θα χρειαστείτε ακόμα τον &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;πελάτη συγχρονισμού του ownCloud&lt;/span&gt;&lt;/a&gt; (ή άλλο πελάτη συγχρονισμού επιφάνειας εργασίας) για να συγχρονίσετε τις σημειώσεις σας!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Θα χρειαστείτε ακόμα τον &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;πελάτη συγχρονισμού του ownCloud&lt;/span&gt;&lt;/a&gt; (ή άλλο πελάτη συγχρονισμού επιφάνειας εργασίας) για να συγχρονίσετε τις σημειώσεις σας!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5843,7 +5831,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>Λάβετε υπόψη ότι η εφαρμογή σημειώσεων ownCloud δεν υποστηρίζει υποφακέλους!
 </translation>
 </message>
@@ -6205,8 +6193,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Ο καλύτερος τρόπος για να αναρτήσετε ζητήματα είναι να χρησιμοποιήσετε τον βοηθό υποστήριξης πατώντας το &lt;span style=&quot; font-weight:600;&quot;&gt;Άνοιγμα πλήκτρου βοηθού υποστήριξης &lt;/span&gt; στο κάτω μέρος. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Ο καλύτερος τρόπος για να αναρτήσετε ζητήματα είναι να χρησιμοποιήσετε τον βοηθό υποστήριξης πατώντας το &lt;span style=" font-weight:600;"&gt;Άνοιγμα πλήκτρου βοηθού υποστήριξης &lt;/span&gt; στο κάτω μέρος. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6246,12 +6234,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="953"/>
 <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-<translation>Ανοίγει τη σελίδα &quot;Κωδικός πρόσβασης εφαρμογής&quot; του διακομιστή ownCloud στον φυλλομετρητή σας για να δημιουργήσετε έναν νέο κωδικό πρόσβασης εφαρμογής για την εφαρμογή</translation>
+<translation>Ανοίγει τη σελίδα "Κωδικός πρόσβασης εφαρμογής" του διακομιστή ownCloud στον φυλλομετρητή σας για να δημιουργήσετε έναν νέο κωδικό πρόσβασης εφαρμογής για την εφαρμογή</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="956"/>
 <source>Open your ownCloud server App Password page</source>
-<translation>Ανοίξτε τη σελίδα &quot;Κωδικός πρόσβασης εφαρμογής&quot; του διακομιστή ownCloud</translation>
+<translation>Ανοίξτε τη σελίδα "Κωδικός πρόσβασης εφαρμογής" του διακομιστή ownCloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2569"/>
@@ -6270,13 +6258,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
+<source>If your password doesn't work, create an app password (button on the right)</source>
 <translation>Εάν ο κωδικός πρόσβασής σας δεν λειτουργεί, δημιουργήστε ένα κωδικό πρόσβασης εφαρμογής (κουμπί στα δεξιά)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation>Εάν θέλετε να βοηθήσετε στη μετάφραση των QOwnNotes ή να ενημερώσετε μια υπάρχουσα μετάφραση, παρακαλείσθε να διαβάσετε: &lt;a href=&quot;%1&quot;&gt; Πώς μπορώ να βοηθήσω στη μετάφραση των QOwnNotes? &lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation>Εάν θέλετε να βοηθήσετε στη μετάφραση των QOwnNotes ή να ενημερώσετε μια υπάρχουσα μετάφραση, παρακαλείσθε να διαβάσετε: &lt;a href="%1"&gt; Πώς μπορώ να βοηθήσω στη μετάφραση των QOwnNotes? &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6365,7 +6353,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>Το GitHub δεν χρειάζεται δύο διαστήματα στο τέλος της γραμμής για να πραγματοποιήσει αλλαγή γραμμής</translation>
 </message>
 <message>
@@ -6385,7 +6373,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>Παρακαλούμε μην το χρησιμοποιείτε στον ανιχνευτή προβλημάτων</translation>
 </message>
 <message>
@@ -6405,8 +6393,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ίσως θελήσετε να ρίξετε μια ματιά σε όλες τις διαθέσιμες &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;μορφές ώρας&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ίσως θελήσετε να ρίξετε μια ματιά σε όλες τις διαθέσιμες &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;μορφές ώρας&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6436,8 +6424,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
-<translation>Τακτικές εκφράσεις υποφακέλων σημειώσεων προς παράβλεψη, διαχωρισμένες με &quot;·&quot;
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
+<translation>Τακτικές εκφράσεις υποφακέλων σημειώσεων προς παράβλεψη, διαχωρισμένες με "·"
 </translation>
 </message>
 <message>
@@ -6459,8 +6447,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
-<translation>Απόκρυψη &apos;καταμέτρησης σημειώσεων&apos; με ετικέτες (αυξάνει την απόδοση)</translation>
+<source>Hide 'Note count' with tags (increases performance)</source>
+<translation>Απόκρυψη 'καταμέτρησης σημειώσεων' με ετικέτες (αυξάνει την απόδοση)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5824"/>
@@ -6469,8 +6457,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6574,8 +6562,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>Από προεπιλογή, η επέκταση του προγράμματος περιήγησης εμφανίζει όλους τους συνδέσμους της τρέχουσας σημείωσης. Μπορείτε επίσης να το κάνετε να εμφανίζει συνδέσμους ειδικών σελιδοδεικτών για σημειώσεις με συγκεκριμένη ετικέτα. Για περισσότερες πληροφορίες σχετικά με τη σύνταξη συνδέσμων σελιδοδεικτών, κάντε κλικ  &lt;a href=&quot;%1&quot;&gt; εδώ &lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>Από προεπιλογή, η επέκταση του προγράμματος περιήγησης εμφανίζει όλους τους συνδέσμους της τρέχουσας σημείωσης. Μπορείτε επίσης να το κάνετε να εμφανίζει συνδέσμους ειδικών σελιδοδεικτών για σημειώσεις με συγκεκριμένη ετικέτα. Για περισσότερες πληροφορίες σχετικά με τη σύνταξη συνδέσμων σελιδοδεικτών, κάντε κλικ  &lt;a href="%1"&gt; εδώ &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6625,8 +6613,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>Εγκαταστήστε την &lt;a href=&quot;%1&quot;&gt; επέκταση προγράμματος περιήγησης Companion Web &lt;/a&gt; από το &lt;a href=&quot;%2&quot;&gt; Chrome Web Store &lt;/a&gt; ή το &lt;a href=&quot;%3&quot;&gt; Add- ons page &lt;/a&gt; για να χρησιμοποιήσετε το QOwnNotes ως web clipper.</translation>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>Εγκαταστήστε την &lt;a href="%1"&gt; επέκταση προγράμματος περιήγησης Companion Web &lt;/a&gt; από το &lt;a href="%2"&gt; Chrome Web Store &lt;/a&gt; ή το &lt;a href="%3"&gt; Add- ons page &lt;/a&gt; για να χρησιμοποιήσετε το QOwnNotes ως web clipper.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6717,18 +6705,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5353"/>
 <source>External git log command to show the git versions of a note</source>
-<translation>Εξωτερική εντολή git log για εμφάνιση των &quot;εκδόσεων&quot; μιας σημείωσης</translation>
+<translation>Εξωτερική εντολή git log για εμφάνιση των "εκδόσεων" μιας σημείωσης</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Εισάγετε μια εντολή που θα χρησιμοποιηθεί για την εμφάνιση ενός αρχείου git (όπως για παράδειγμα &quot;gitk&quot;)</translation>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Εισάγετε μια εντολή που θα χρησιμοποιηθεί για την εμφάνιση ενός αρχείου git (όπως για παράδειγμα "gitk")</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Αν χρησιμοποιείτε αυτήν τη ρύθμιση, θα λάβετε μια νέα καταχώρηση μενού για να εμφανίσετε τις εκδόσεις git εάν κάνετε δεξί κλικ σε μια σημείωση.</translation>
 </message>
 <message>
@@ -6748,7 +6736,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Μην ξεχάσετε να ενεργοποιήσετε την υποστήριξη git για τους φακέλους σημειώσεων και να διαμορφώσετε το όνομα και τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας για τον πελάτη git, για παράδειγμα με αυτές τις εντολές τερματικού:</translation>
 </message>
 <message>
@@ -6803,8 +6791,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
-<translation>Απόκρυψη αναζήτησης &apos;Εύρεση ή δημιουργία ετικετών&apos;</translation>
+<source>Hide 'Find or create tag' search</source>
+<translation>Απόκρυψη αναζήτησης 'Εύρεση ή δημιουργία ετικετών'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5568"/>
@@ -6829,8 +6817,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
-<translation>Απόκρυψη αναζήτησης &apos;Εύρεση ή δημιουργία υποφακέλου σημειώσεων&apos;</translation>
+<source>Hide 'Find or create note subfolder' search</source>
+<translation>Απόκρυψη αναζήτησης 'Εύρεση ή δημιουργία υποφακέλου σημειώσεων'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6844,9 +6832,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Μπορείτε προαιρετικά να χρησιμοποιήσετε το &quot;%notePath%&quot; για τη διαδρομή της σημείωσης.</translation>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Μπορείτε προαιρετικά να χρησιμοποιήσετε το "%notePath%" για τη διαδρομή της σημείωσης.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -6906,7 +6894,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>Για παλαιότερες εκδόσεις του ownCloud, όπου η προεπιλεγμένη ρύθμιση δεν λειτουργεί</translation>
 </message>
 <message>
@@ -7071,8 +7059,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
-<translation>Εισάγετε προσαρμοσμένη μορφή ώρας, όπως &quot;dd.MM.yyyy hh: mm&quot;</translation>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation>Εισάγετε προσαρμοσμένη μορφή ώρας, όπως "dd.MM.yyyy hh: mm"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7172,7 +7160,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>Παράβλεψη των ημερολογίων που δεν υποστηρίζουν τα στοιχεία εκκρεμών εργασιών</translation>
 </message>
 <message>
@@ -7242,8 +7230,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-<translation>Αν προσθέσετε προσαρμοσμένες επεκτάσεις, απλά πληκτρολογήστε την επέκταση, όπως &quot;taskpaper&quot;.</translation>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+<translation>Αν προσθέσετε προσαρμοσμένες επεκτάσεις, απλά πληκτρολογήστε την επέκταση, όπως "taskpaper".</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7257,7 +7245,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
+<source>Don't show the update dialog automatically</source>
 <translation>Να μην εμφανίζεται αυτόματα το παράθυρο διαλόγου ενημέρωσης</translation>
 </message>
 <message>
@@ -7296,8 +7284,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Μπορείτε &lt;span style=&quot; font-weight:600;&quot;&gt;&lt;/span&gt;να αντιγράψετε και να επικολλήσετε &lt;/span&gt;αυτό το κείμενο (ή τμήματα αυτού του κειμένου) σε ένα &lt;span style=&quot; font-weight:600;&quot;&gt; θέμα &lt;/span&gt;  &lt;span style = &quot;font-weight: 600;&quot;&gt; &gt; στη &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; σελίδα με τα θέματα του QOwnNotes &lt;/a&gt; αν έχετε &lt;span style=&quot; font-weight:600;&quot;&gt;ερωτήσεις ή προβλήματα &lt;/span&gt;  με το QOwnNotes. Τα δεδομένα που είναι πολύ ευαίσθητα είναι κρυμμένα σε αυτές τις πληροφορίες. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Μπορείτε &lt;span style=" font-weight:600;"&gt;&lt;/span&gt;να αντιγράψετε και να επικολλήσετε &lt;/span&gt;αυτό το κείμενο (ή τμήματα αυτού του κειμένου) σε ένα &lt;span style=" font-weight:600;"&gt; θέμα &lt;/span&gt;  &lt;span style = "font-weight: 600;"&gt; &gt; στη &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; σελίδα με τα θέματα του QOwnNotes &lt;/a&gt; αν έχετε &lt;span style=" font-weight:600;"&gt;ερωτήσεις ή προβλήματα &lt;/span&gt;  με το QOwnNotes. Τα δεδομένα που είναι πολύ ευαίσθητα είναι κρυμμένα σε αυτές τις πληροφορίες. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7361,7 +7349,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Παρακαλώ μην χρησιμοποιείς αυτό στον ανιχνευτή θεμάτων, αντέγραψε την πληροφορία εκσφαλμάτωσης κατευθείαν στο θέμα.</translation>
 </message>
 <message>
@@ -7376,7 +7364,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Τα ανώνυμα δεδομένα χρήσης βοηθούν να αποφασίσετε ποια μέρη του QOwnNotes θα βελτιωθούν στη συνέχεια και να εντοπίσετε και να διορθώσετε σφάλματα. &lt;br /&gt; Παρακαλώ απενεργοποιήστε το μόνο αν πραγματικά δεν μπορείτε να ζήσετε με αυτό. Επιθυμείτε πραγματικά απενεργοποίηση της παρακολούθησης χρήσης;</translation>
 </message>
 <message>
@@ -7411,18 +7399,18 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>Φόρτωση φακέλων στο &apos;%1&apos; από τον διακομιστή</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>Φόρτωση φακέλων στο '%1' από τον διακομιστή</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Ρίξτε μια ματιά στη &lt;a href=&quot;%1&quot;&gt; τεκμηρίωση δέσμης ενεργειών (scripting) &lt;/a&gt; για να ξεκινήσετε γρήγορα.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Ρίξτε μια ματιά στη &lt;a href="%1"&gt; τεκμηρίωση δέσμης ενεργειών (scripting) &lt;/a&gt; για να ξεκινήσετε γρήγορα.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Εάν χρειάζεστε πρόσβαση σε μια συγκεκριμένη λειτουργία στο QOwnNotes, παρακαλείσθε να ανοίξετε ένα ζήτημα στη &lt;a href=&quot;%1&quot;&gt;σελίδα ζητημάτων του QOwnNotes&lt;/a&gt;.</translation>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Εάν χρειάζεστε πρόσβαση σε μια συγκεκριμένη λειτουργία στο QOwnNotes, παρακαλείσθε να ανοίξετε ένα ζήτημα στη &lt;a href="%1"&gt;σελίδα ζητημάτων του QOwnNotes&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
@@ -7636,8 +7624,8 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Μπορείτε να κάνετε λήψη του πελάτη git εδώ: &lt;a href=&quot;%url&quot;&gt; Git για Windows &lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation>Μπορείτε να κάνετε λήψη του πελάτη git εδώ: &lt;a href="%url"&gt; Git για Windows &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7661,7 +7649,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>η εσωτερική βάση δεδομένων sqlite και οι ρυθμίσεις θα αποθηκευτούν μέσα σε ένα φάκελο &lt;code&gt;Data&lt;/code&gt; στη θέση του δυαδικού αρχείου</translation>
 </message>
 <message>
@@ -8033,12 +8021,12 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
+<source>File doesn't exist</source>
 <translation>Το αρχείο δεν υπάρχει</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation>Το αρχείο &lt;strong&gt;%1&lt;/strong&gt; δεν υπάρχει, δεν είναι δυνατή η μετονομασία του!</translation>
 </message>
 <message>
@@ -8164,12 +8152,12 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
+<source>File doesn't exist</source>
 <translation>Το αρχείο δεν υπάρχει</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation>Το αρχείο &lt;strong&gt;%1&lt;/strong&gt; δεν υπάρχει, δεν είναι δυνατή η μετονομασία του!</translation>
 </message>
 <message>
@@ -8268,7 +8256,7 @@ Your notes will stay intact!</source>
 <message>
 <location filename="../dialogs/tabledialog.ui" line="133"/>
 <source>The amount of dash characters in the separator</source>
-<translation>Το μέγεθος των χαρακτήρων &quot;παύλα&quot; στο διαχωριστικό</translation>
+<translation>Το μέγεθος των χαρακτήρων "παύλα" στο διαχωριστικό</translation>
 </message>
 <message>
 <location filename="../dialogs/tabledialog.ui" line="260"/>
@@ -8727,8 +8715,8 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href=&quot;%1&quot;&gt; Συμμετάσχετε στο QOwnNotes &lt;/a&gt;</translation>
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href="%1"&gt; Συμμετάσχετε στο QOwnNotes &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8739,10 +8727,6 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;Ενημέρωση</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">&amp;Κάντε λήψη του πιο πρόσφατου</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8761,7 +8745,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>Να μην εμφανίζεται αυτόματα αυτό το παράθυρο διαλόγου</translation>
 </message>
 <message>
@@ -8837,77 +8821,77 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">Επανεκκίνηση εφαρμογής</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">Επανεκκίνηση</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished">Ακύρωση</translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Το σενάριο/η δέσμη ενεργειών του ενημερωτή &apos;%1&apos; δεν υπάρχει!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>Το σενάριο/η δέσμη ενεργειών του ενημερωτή '%1' δεν υπάρχει!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Το σενάριο/η δέσμη ενεργειών του Updater (Ενημερωτή) &apos;%1&apos; δεν υπάρχει!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>Το σενάριο/η δέσμη ενεργειών του Updater (Ενημερωτή) '%1' δεν υπάρχει!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>Δεν ήταν δυνατή η αντιγραφή του σεναρίου ενημερωτή &apos;%1&apos; στο &apos;%2!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>Δεν ήταν δυνατή η αντιγραφή του σεναρίου ενημερωτή '%1' στο '%2!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>Δεν βρέθηκε σενάριο/δέσμη ενεργειών ενημερωτή: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
+<source>Couldn't find unzip executable: %1</source>
 <translation>Δεν ήταν δυνατή η εύρεση εκτελέσιμου αρχείου αποσυμπίεσης: %1</translation>
 </message>
 <message>
@@ -9173,7 +9157,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>Αυτή η διαδρομή σημειώσεων δεν υπάρχει!</translation>
 </message>
 <message>

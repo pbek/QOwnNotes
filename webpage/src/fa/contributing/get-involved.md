@@ -15,3 +15,4 @@
 - در [ صفحه ** مسائل گیت هاب ** QOwnNotes ](https://github.com/pbek/QOwnNotes/issues) مشکلات را گزارش دهید و ایده های مربوط به ویژگی های جدید را به اشتراک بگذارید
 - اگر طرحواره ویرایشگر بزرگی ساخته اید، لطفاً آن را در [ صفحه ** مسائل گیت هاب ** ](https://github.com/pbek/QOwnNotes/issues) هم پست کنید
 - اسکریپت های خود را در [ صفحه گیت هاب ** اسکریپت های QOwnNotes ** ](https://github.com/qownnotes/scripts) به اشتراک بگذارید
+- You are most welcome to share **your experience with QOwnNotes** on your own YouTube channel, while you are also invited to share positive feedback by [sending audio/video/text to Amy](mailto:amydoralang@aol.de) for upload on our own YT channel [**QOwnNotes in a Nutshell**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos).

@@ -118,15 +118,29 @@ class MainWindow {
 
 ### Beispiel
 ```js
-// Force a reload of the note list
+// Erzwinge ein Neuladen der Notizliste
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
-// Creates a new note subfolder "My fancy folder" in the current subfolder
+// Erstellt einen neuen Notiz-Unterordner "Mein schicker Ordner" im aktuellen Unterordner
 mainWindow.createNewNoteSubFolder("My fancy folder");
 
-// Inserts html in the current note as markdown
+// Fügt HTML als Markdown in die aktuelle Notiz ein
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Set 'Edit' workspace as current workspace
+// Arbeitsbereich 'Bearbeiten' als aktuellen Arbeitsbereich festlegen
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
+
+
+
+
+mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
+
+// Erstellt einen neuen Notiz-Unterordner "Mein schicker Ordner" im aktuellen Unterordner
+mainWindow.createNewNoteSubFolder("Mein ausgefallener Ordner");
+
+// Fügt HTML als Markdown in die aktuelle Notiz ein
+mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<0>meine Überschrift</0>etwas Text");
+
+
+mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Bearbeiten"));
 ```

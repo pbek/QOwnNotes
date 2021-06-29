@@ -269,7 +269,7 @@ script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr
 A continuación, es posible que desee utilizar el identificador con función `customActionInvoked` en un script como [acciones-personalizadas.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-You can also trigger a custom action after the application was started with the parameter `--action customAction_<identifier>`. For more information please take a look at [Trigger menu actions after startup](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
+También puede activar una acción personalizada después de iniciar la aplicación con el parámetro `--action customAction_<identifier>`. Para obtener más información, consulte [Activar acciones del menú después del inicio](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup).
 :::
 
 Registrar una etiqueta
@@ -295,11 +295,11 @@ script.registerLabel("long-label", "another very long text, another very long te
 script.registerLabel("counter-label");
 ```
 
-The labels will be visible in the scripting dock widget.
+Las etiquetas estarán visibles en el widget de la base de secuencias de comandos.
 
-You can use both plain text or html in the labels. The text will be selectable and links can be clicked.
+Puede utilizar texto sin formato o html en las etiquetas. Se podrá seleccionar el texto y se podrá hacer clic en los enlaces.
 
-You may then want to take a look at the example script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
+A continuación, es posible que desee echar un vistazo al script de ejemplo [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
 Configurar el texto de una etiqueta registrada
 --------------------------------------
@@ -320,9 +320,9 @@ void ScriptingService::setLabelText(QString identifier, QString text);
 script.setLabelText("counter-label", "counter text");
 ```
 
-You can use both plain text or html in the labels. The text will be selectable and links can be clicked.
+Puede utilizar texto sin formato o html en las etiquetas. Se podrá seleccionar el texto y se podrá hacer clic en los enlaces.
 
-You may then want to take a look at the example script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
+A continuación, es posible que desee echar un vistazo al script de ejemplo [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
 Creando una nota nueva
 -------------------
@@ -330,7 +330,7 @@ Creando una nota nueva
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Creates a new note
+ * Crea una nota nueva
  *
  * @param text the note text
  */
@@ -342,10 +342,10 @@ void ScriptingService::createNote(QString text);
 script.createNote("My note headline\n===\n\nMy text");
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Es posible que desee echar un vistazo al ejemplo [acciones-personalizadas.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-If you turned off that your note headline determines the note filename then you have to rename your note file yourself afterwards, like this:
+Si desactivó que el título de su nota determina el nombre del archivo de la nota, luego debe cambiar el nombre de su archivo de nota usted mismo, así:
 
 ```js
 var note = script.currentNote();
@@ -372,7 +372,7 @@ var clipboardText = script.clipboard();
 var clipboardHtml = script.clipboard(true);
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Es posible que desee echar un vistazo al ejemplo [acciones-personalizadas.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 Escribir texto en la edición de texto de la nota
 --------------------------------
@@ -380,7 +380,7 @@ Escribir texto en la edición de texto de la nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Writes text to the current cursor position in the note text edit
+ * Escribe texto en la posición actual del cursor en la edición de texto de la nota
  *
  * @param text
  */
@@ -389,13 +389,13 @@ void ScriptingService::noteTextEditWrite(QString text);
 
 ### Ejemplo
 ```js
-// write text to the note text edit
+// escribir texto en la nota editar texto
 script.noteTextEditWrite("My custom text");
 ```
 
-You might want to look at the custom action `transformTextRot13` in the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Es posible que desee ver la acción personalizada `transformTextRot13` en el ejemplo [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-You can use this together with `noteTextEditSelectAll` to overwrite the whole text of the current note.
+Puede usar esto junto con `noteTextEditSelectAll` para sobrescribir todo el texto de la nota actual.
 
 Leer el texto seleccionado en la edición de texto de la nota
 --------------------------------------------
@@ -403,7 +403,7 @@ Leer el texto seleccionado en la edición de texto de la nota
 ### Parámetros y llamada al método
 ```cpp
 /**
- * Reads the selected text in the note text edit
+ * Lee el texto seleccionado en la edición de texto de la nota
  *
  * @return
  */
@@ -699,7 +699,7 @@ noteIds.forEach(function (noteId){
 });
 ```
 
-You may want to take a look at the example [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/unique-note-id.qml).
+Es posible que desee echar un vistazo al ejemplo [unique-note-id.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/unique-note-id.qml).
 
 Agregar una hoja de estilo personalizada
 -----------------------
@@ -720,13 +720,13 @@ void ScriptingService::addStyleSheet(QString stylesheet);
 script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 ```
 
-You may want to take a look at the example [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml).
+Es posible que desee echar un vistazo al ejemplo [hoja de estilo personalizada.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-stylesheet.qml).
 
 You can get the object names from the `*.ui` files, for example [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
 
-Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) for a reference of what styles are available.
+Eche un vistazo a [Referencia de hoja de estilo](http://doc.qt.io/qt-5/stylesheet-reference.html) para obtener una referencia de los estilos disponibles.
 
-If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
+Si desea inyectar estilos en la vista previa html para modificar la forma en que se obtienen las notas, mire [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 Recarga del motor de secuencias de comandos
 ------------------------------
@@ -787,7 +787,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 script.fetchNoteById(243);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Es posible que desee echar un vistazo al ejemplo [exportar notas como uno-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Comprobando si una nota existe por su nombre de archivo
 ------------------------------------------
@@ -835,7 +835,7 @@ void ScriptingService::setClipboardText(QString text, bool asHtml);
 script.setClipboardText("text to copy");
 ```
 
-You may want to take a look at the example [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
+Es posible que desee echar un vistazo al ejemplo [marcada-seleccionada-a-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
 Saltando a una nota
 -----------------
@@ -856,7 +856,7 @@ void ScriptingService::setCurrentNote (NoteApi *nota);
 script.setCurrentNote(note);
 ```
 
-You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
+Es posible que desee echar un vistazo al ejemplo [entrada-diario.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
 
 Saltar a una subcarpeta de notas
 ---------------------------
@@ -884,7 +884,7 @@ script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
 ::: tip
-You can create a new note subfolder in the current subfolder by calling [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
+Puede crear una nueva subcarpeta de notas en la subcarpeta actual llamando a [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
 :::
 
 Mostrar un cuadro de mensaje de información
@@ -937,9 +937,9 @@ var result = script.questionMessageBox(
 script.log(result);
 ```
 
-For information about buttons see [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
+Para obtener información sobre los botones, consulte [Botón estándar](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
-You may also want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Quizás también quieras echar un vistazo al ejemplo [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
 Mostrar un cuadro de diálogo de archivo abierto
 ---------------------------
@@ -987,14 +987,14 @@ QString ScriptingService::getSaveFileName(QString caption, QString dir,
 var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Es posible que desee echar un vistazo al ejemplo [exportar notas como uno-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Registro de variables de configuración de script
 -------------------------------------
 
-You need to define your settings variables as properties in your script and register them in a property named `settingsVariables`.
+Debe definir sus variables de configuración como propiedades en su script y registrarlas en una propiedad llamada `settingsVariables`.
 
-The user can then set these properties in the script settings.
+Luego, el usuario puede establecer estas propiedades en la configuración del script.
 
 ### Ejemplo
 ```js
@@ -1047,7 +1047,7 @@ property variant settingsVariables: [
 ];
 ```
 
-In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+Además, puede anular las `settingsVariables` con una función especial `registerSettingsVariables ()` como esta:
 
 ### Ejemplo
 ```js
@@ -1065,7 +1065,7 @@ function registerSettingsVariables() {
 }
 ```
 
-You may also want to take a look at the example [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
+Quizás también quieras echar un vistazo al ejemplo [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
 
 Almacenar y cargar variables persistentes
 ----------------------------------------
@@ -1104,9 +1104,9 @@ script.setPersistentVariable("PersistentVariablesTest/myVar", result);
 script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "no hay nada todavía"));
 ```
 
-Please make sure to use a meaningful prefix in your key like `PersistentVariablesTest/myVar` because the variables are accessible from all scripts.
+Asegúrese de usar un prefijo significativo en su clave como `PersistentVariablesTest / myVar` porque las variables son accesibles desde todos los scripts.
 
-You may also want to take a look at the example [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
+Quizás también quieras echar un vistazo al ejemplo [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
 
 Cargando variables de configuración de la aplicación
 --------------------------------------
@@ -1130,12 +1130,12 @@ QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
 script.log(script.getApplicationSettingsVariable ("gitExecutablePath"));
 ```
 
-Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` is only used if the setting doesn't exist at all.
+Tenga en cuenta que la configuración en realidad puede estar vacía, debe ocuparse de eso usted mismo. `defaultValue` solo se usa si la configuración no existe en absoluto.
 
 Creando un directorio de caché
 --------------------------
 
-You can cache files at the default cache location of your system.
+Puede almacenar en caché los archivos en la ubicación de caché predeterminada de su sistema.
 
 ### Parámetros y llamada al método
 ```cpp
@@ -1157,7 +1157,7 @@ var cacheDirForScript = script.cacheDir("my-script-id");
 Borrar un directorio de caché
 --------------------------
 
-You can clear the cache files of your script by passing its name to clearCacheDir().
+Puede borrar los archivos de caché de su script pasando su nombre a clearCacheDir().
 
 ### Parámetros y llamada al método
 ```cpp
@@ -1179,20 +1179,20 @@ script.clearCacheDir("my-script-id");
 Leer la ruta al directorio de su script
 ------------------------------------------------
 
-If you need to get the path to the directory where your script is placed to for example load other files you have to register a `property string scriptDirPath;`. This property will be set with the path to the script's directory.
+Si necesita obtener la ruta al directorio donde se coloca su script para, por ejemplo, cargar otros archivos, debe registrar un `cadena de propiedad scriptDirPath;`. Esta propiedad se establecerá con la ruta al directorio del script.
 
 ### Ejemplo
 ```js
-import QtQml 2.0
-import QOwnNotesTypes 1.0
+importar QtQml 2.0
+importar QOwnNotesTypes 1.0
 
 Script {
-    // the path to the script's directory will be set here
-    property string scriptDirPath;
+     // la ruta al directorio del script se establecerá aquí
+     property string scriptDirPath;
 
-    function init() {
-        script.log(scriptDirPath);
-    }
+     function init () {
+         script.log (scriptDirPath);
+     }
 }
 ```
 

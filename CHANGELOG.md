@@ -9,6 +9,7 @@
     - you can now also choose to just download the latest app image in the update dialog
 - an attempt was made to fix more builds for older Qt versions
   (for [#2134](https://github.com/pbek/QOwnNotes/issues/2134), thank you @Waqar144)
+- added more translation (thank you rawfreeamy, mguerra, amirkbrpr)
 
 ## 21.6.8
 - the *Insert image* dialog now allows the selection of webp images by default

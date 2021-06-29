@@ -1,4 +1,4 @@
-# Shortcuts
+# Raccourcis
 
 ## Linux / Windows
 
@@ -83,22 +83,22 @@
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> fait défiler les cas du texte sélectionné
 - <kbd>Tab</kbd> indente le texte sélectionné (fonctionne également sur plusieurs lignes)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> annule le retrait du texte sélectionné
-- <kbd>Tab</kbd> after an unordered list character indents the list item
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character un-indents the list item
-- <kbd>Return</kbd> in lists creates a new list item
-- <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
-    - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> sets a note bookmark on bookmark slot 1..9
-- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
-- <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
-- <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
-- <kbd>Ctrl</kbd> + <kbd>0</kbd> resets the note text font size
-- <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in front of the cursor, auto-completes text or opens urls
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
-- <kbd>Ctrl</kbd> + <kbd>Up</kbd> scrolls the content up
-- <kbd>Ctrl</kbd> + <kbd>Down</kbd> scrolls the content down
+- <kbd>Tab</kbd> après qu'un caractère de liste non ordonné met en retrait l'élément de liste
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> après un caractère de liste non ordonné
+- <kbd>Return</kbd> dans les listes crée un nouvel élément de liste
+- <kbd>Alt</kbd> + <kbd>Left</kbd> revient dans l'historique des notes
+    - <kbd>Alt</kbd> + <kbd>Right</kbd> saute en avant dans l'historique des notes
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>1..9</kbd> définit un signet de note sur l'emplacement de signet 1..9
+- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> passe au signet de la note sur l'emplacement de signet 0..9
+- <kbd>Ctrl</kbd> + <kbd>+</kbd> augmente la taille de la police du texte de la note d'un point
+- <kbd>Ctrl</kbd> + <kbd>-</kbd> diminue la taille de la police du texte de la note d'un point
+- <kbd>Ctrl</kbd> + <kbd>0</kbd> réinitialise la taille de la police du texte de la note
+- <kbd>Ctrl</kbd> + <kbd>Espace</kbd> tente de résoudre des équations simples comme `(4+5)*3=` devant le curseur, complète automatiquement le texte ou s'ouvre URL
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> insère un titre à partir du nom de fichier de la note en haut de la note
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> divise la note actuelle en deux notes à la position actuelle du curseur
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> recherche le texte sélectionné sur le Web
+- <kbd>Ctrl</kbd> + <kbd>Up</kbd> fait défiler le contenu vers le haut
+- <kbd>Ctrl</kbd> + <kbd>Down</kbd> fait défiler le contenu vers le bas
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Down</kbd> déplace la ligne actuelle vers le bas
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>Up</kbd> déplace la ligne actuelle vers le haut
 - <kbd>⇧</kbd> + <kbd>Return</kbd> ajoute deux espaces et un caractère de nouvelle ligne pour forcer une nouvelle ligne de démarque

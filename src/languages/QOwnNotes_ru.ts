@@ -719,8 +719,8 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
-<translation>Чтобы получить enex-файл, необходимо выбрать одну или несколько заметок в вашем настольном Evernote клиенте и нажать кнопку «Экспортировать заметки...» в меню &quot;Файл&quot;.</translation>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<translation>Чтобы получить enex-файл, необходимо выбрать одну или несколько заметок в вашем настольном Evernote клиенте и нажать кнопку «Экспортировать заметки...» в меню "Файл".</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -878,158 +878,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1043,8 +1043,8 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
-<translation>Отметка &quot;%1&quot; не установлена.</translation>
+<source>Mark "%1" not set.</source>
+<translation>Отметка "%1" не установлена.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
@@ -1067,18 +1067,14 @@
 <translation>Не реализовано в FakeVim.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">Наберите Alt-V, Alt-V, чтобы выйти из режима FakeVim.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1107,22 +1103,23 @@
 <numerusform>%n строк перемещено.</numerusform>
 <numerusform>%n строки перемещено.</numerusform>
 <numerusform>%n строк перемещено.</numerusform>
+<numerusform>%n строк перемещено.</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
-<translation>Файл &quot;%1&quot; существует (добавьте ! для замены)</translation>
+<source>File "%1" exists (add ! to override)</source>
+<translation>Файл "%1" существует (добавьте ! для замены)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
-<translation>Не удается открыть для записи файл &quot;%1&quot;</translation>
+<source>Cannot open file "%1" for writing</source>
+<translation>Не удается открыть для записи файл "%1"</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
-<translation>%1&quot; %2 %3L, %4C записано.</translation>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>%1" %2 %3L, %4C записано.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
@@ -1131,13 +1128,13 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
-<translation>Не удается открыть файл &quot;%1&quot; для чтения</translation>
+<source>Cannot open file "%1" for reading</source>
+<translation>Не удается открыть файл "%1" для чтения</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
-<translation>&quot;%1&quot; %2L, %3C</translation>
+<source>"%1" %2L, %3C</source>
+<translation>"%1" %2L, %3C</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
@@ -1145,6 +1142,7 @@
 <translation>
 <numerusform>%n строк отфильтровано.</numerusform>
 <numerusform>%n строки отфильтровано.</numerusform>
+<numerusform>%n строк отфильтровано.</numerusform>
 <numerusform>%n строк отфильтровано.</numerusform>
 </translation>
 </message>
@@ -1195,23 +1193,16 @@
 <numerusform>Отступили строку.</numerusform>
 <numerusform>%n строки отступили.</numerusform>
 <numerusform>%n строк отступили.</numerusform>
+<numerusform>%n строк отступили.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
+<translation>
 <numerusform>Строка %1 %2 раз.</numerusform>
 <numerusform>%n строки %1 %2 раз.</numerusform>
 <numerusform>%n строк %1 %2 раз.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
-<numerusform>Строка %1 %2 раз.</numerusform>
-<numerusform>%n строки %1 %2 раз.</numerusform>
 <numerusform>%n строк %1 %2 раз.</numerusform>
 </translation>
 </message>
@@ -1221,6 +1212,7 @@
 <translation>
 <numerusform>Строка выдернута.</numerusform>
 <numerusform>%n строки выдернуто.</numerusform>
+<numerusform>%n строк выдернуто.</numerusform>
 <numerusform>%n строк выдернуто.</numerusform>
 </translation>
 </message>
@@ -1480,7 +1472,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>Отмеченный синтакс</translation>
 </message>
 <message>
@@ -1580,7 +1572,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
+<source>Don't copy image to media folder</source>
 <translation>Не копировать изображение в папку медиа</translation>
 </message>
 <message>
@@ -1786,7 +1778,7 @@
 <message>
 <location filename="../dialogs/linkdialog.ui" line="109"/>
 <source>Search for notes or create new notes by entering text and pressing return</source>
-<translation>Поиск существующих или создание новых заметок путем ввода текста и нажатия клавиши &quot;возврат&quot;</translation>
+<translation>Поиск существующих или создание новых заметок путем ввода текста и нажатия клавиши "возврат"</translation>
 </message>
 <message>
 <location filename="../dialogs/linkdialog.ui" line="124"/>
@@ -1857,7 +1849,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>Файл &lt;strong&gt;%1&lt;/strong&gt; не читается и не может быть восстановлен!</translation>
 </message>
 <message numerus="yes">
@@ -1866,6 +1858,7 @@
 <translation>
 <numerusform>Восстановить выбранную заметку?</numerusform>
 <numerusform>Восстановить &lt;strong&gt;%n&lt;/strong&gt; выбранные заметки?</numerusform>
+<numerusform>Восстановить &lt;strong&gt;%n&lt;/strong&gt; выбранных заметок?</numerusform>
 <numerusform>Восстановить &lt;strong&gt;%n&lt;/strong&gt; выбранных заметок?</numerusform>
 </translation>
 </message>
@@ -1881,12 +1874,14 @@
 <numerusform>Восстановлено &lt;strong&gt;%n&lt;/strong&gt; заметок</numerusform>
 <numerusform>Восстановлено &lt;strong&gt;%n&lt;/strong&gt; заметок</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; заметок было восстановлено</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; заметок было восстановлено</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных заметок?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных заметок?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных заметок?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных заметок?</numerusform>
@@ -1903,6 +1898,7 @@
 <translation>
 <numerusform>Заметка была удалена</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; заметки были удалены</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; заметок было удалено</numerusform>
 <numerusform>&lt;strong&gt;%n&lt;/strong&gt; заметок было удалено</numerusform>
 </translation>
 </message>
@@ -2151,7 +2147,7 @@
 <message>
 <location filename="../mainwindow.ui" line="292"/>
 <source>Search for notes or create new notes by entering text and pressing return</source>
-<translation>Поиск существующих или создание новых заметок путем ввода текста и нажатия клавиши &quot;возврат&quot;</translation>
+<translation>Поиск существующих или создание новых заметок путем ввода текста и нажатия клавиши "возврат"</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="306"/>
@@ -2371,7 +2367,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1610"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Вставка изображения (файл будет скопирован в каталог &apos;media&apos; внутри текущего каталога с заметками)</translation>
+<translation>Вставка изображения (файл будет скопирован в каталог 'media' внутри текущего каталога с заметками)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1622"/>
@@ -2545,7 +2541,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation>Откройте комнату QOwnNotes Matrix (Element)</translation>
 </message>
 <message>
@@ -2820,8 +2816,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-<translation>Решение простого уравнение типа &apos;(2+3) * 6 =&apos; в текущей строке</translation>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>Решение простого уравнение типа '(2+3) * 6 =' в текущей строке</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2842,7 +2838,7 @@
 <location filename="../mainwindow.ui" line="2219"/>
 <location filename="../mainwindow.ui" line="2222"/>
 <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-<translation>Откройте qownnotes Gitter-&quot;комнату&quot;, вам нужен GitHub или Twitter аккаунт для входа, но вы можете получать сообщения в автономном режиме</translation>
+<translation>Откройте qownnotes Gitter-"комнату", вам нужен GitHub или Twitter аккаунт для входа, но вы можете получать сообщения в автономном режиме</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="992"/>
@@ -2952,10 +2948,11 @@ Restore current note?</source>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="obsolete">
+<translation type="unfinished">
 <numerusform>на диск сохранена %n заметка</numerusform>
 <numerusform>на диск сохранены %n заметки</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
+<numerusform>на диск сохранено %n заметок</numerusform>
 </translation>
 </message>
 <message>
@@ -3005,6 +3002,7 @@ Restore current note?</source>
 <numerusform>Удалена одна конфликтная копия базы данных</numerusform>
 <numerusform>Удалены %n конфликтные копии базы данных</numerusform>
 <numerusform>Удалено %n конфликтных копий базы данных</numerusform>
+<numerusform>Удалено %n конфликтных копий базы данных</numerusform>
 </translation>
 </message>
 <message>
@@ -3049,7 +3047,7 @@ Restore current note?</source>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>Заметку невозможно расшифровать!</translation>
 </message>
 <message>
@@ -3077,6 +3075,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенных заметок?
 
 Если на сервере ownCloud/NextCloud включена корзина, то заметки можно будет восстановить из неё.</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенных заметок?
+
+Если на сервере ownCloud/NextCloud включена корзина, то заметки можно будет восстановить из неё.</numerusform>
 </translation>
 </message>
 <message>
@@ -3091,6 +3092,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>
 <numerusform>Удалить выбранную папку?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этой папке также будут удалены!</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранные папки? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Все файлы и папки в этих папках также будут удалены!</numerusform>
 </translation>
 </message>
@@ -3111,6 +3113,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Удалить выделенный тег? Заметки удалены не будут.</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенных тега? Заметки удалены не будут.</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенных тегов? Заметки удалены не будут.</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенных тегов? Заметки удалены не будут.</numerusform>
 </translation>
 </message>
 <message>
@@ -3125,6 +3128,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>
 <numerusform>Переместить выбранную заметку в &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Переместить %n выбранные заметки в &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Переместить %n выбранных заметок в &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Переместить %n выбранных заметок в &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
@@ -3141,6 +3145,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Копировать выбранную заметку в &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Копировать %n выбранные заметки в &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Копировать %n выбранных заметок в &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Копировать %n выбранных заметок в &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -3156,6 +3161,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Заметка скопирована в &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>%n заметки скопированы в &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>%n заметок скопировано в &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+<numerusform>%n заметок скопировано в &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 </translation>
 </message>
 <message>
@@ -3169,6 +3175,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>
 <numerusform>Пометить выбранную заметку тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Пометить %n выбранные заметки тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Пометить %n выбранных заметок тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Пометить %n выбранных заметок тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
@@ -3213,6 +3220,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>
 <numerusform>Обнаружено &lt;strong&gt;%n&lt;/strong&gt; проявление любого условия из &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Обнаружено &lt;strong&gt;%n&lt;/strong&gt; проявления любого условия из &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Обнаружено &lt;strong&gt;%n&lt;/strong&gt; проявлений любого условия из &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Обнаружено &lt;strong&gt;%n&lt;/strong&gt; проявлений любого условия из &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
 </message>
@@ -3326,6 +3334,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Скопирована %n заметка в %1</numerusform>
 <numerusform>Скопированы %n заметки в %1</numerusform>
 <numerusform>Скопировано %n заметок в %1</numerusform>
+<numerusform>Скопировано %n заметок в %1</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3335,6 +3344,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Не удалось скопировать заметку (скорее всего она уже существует)</numerusform>
 <numerusform>Не удалось скопировать %n заметки (скорее всего они уже существуют)</numerusform>
 <numerusform>Не удалось скопировать %n заметок (скорее всего они уже существуют)</numerusform>
+<numerusform>Не удалось скопировать %n заметок (скорее всего они уже существуют)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3342,6 +3352,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Пропущено копирование заметки (неизвестный формат или нечитаемая)</numerusform>
+<numerusform>Пропущено копирование %n заметок (неизвестный формат или нечитаемые)</numerusform>
 <numerusform>Пропущено копирование %n заметок (неизвестный формат или нечитаемые)</numerusform>
 <numerusform>Пропущено копирование %n заметок (неизвестный формат или нечитаемые)</numerusform>
 </translation>
@@ -3353,7 +3364,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>Невозможно открыть временный файл</translation>
 </message>
 <message>
@@ -3364,18 +3375,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Размер шрифта сброшен до %1 пунктов</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
-<translation>Удалить тег &apos;%1&apos; у текущей заметки</translation>
+<source>Remove tag '%1' from the current note</source>
+<translation>Удалить тег '%1' у текущей заметки</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
-<translation>Удалить тег &apos;%1&apos; у выбранных заметок</translation>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>Удалить тег '%1' у выбранных заметок</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9315"/>
@@ -3430,7 +3441,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>Перейти к подпапке заметки</translation>
 </message>
 <message>
@@ -3565,6 +3576,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>%n символ</numerusform>
 <numerusform>%n символа</numerusform>
 <numerusform>%n символов</numerusform>
+<numerusform>%n символов</numerusform>
 </translation>
 </message>
 <message>
@@ -3584,8 +3596,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
-<translation>Заголовок заметки &apos;%1&apos; был скопирован в буфер обмена</translation>
+<source>Note headline '%1' was copied to the clipboard</source>
+<translation>Заголовок заметки '%1' был скопирован в буфер обмена</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12757"/>
@@ -3608,6 +3620,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>
 <numerusform>%n заметка выбрана</numerusform>
 <numerusform>%n заметки выбраны</numerusform>
+<numerusform>%n заметок выбрано</numerusform>
 <numerusform>%n заметок выбрано</numerusform>
 </translation>
 </message>
@@ -3634,6 +3647,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Удалить тег &lt;strong&gt;%1&lt;/strong&gt; у выбранной заметки?</numerusform>
 <numerusform>Удалить тег &lt;strong&gt;%1&lt;/strong&gt; у %n выбранных заметок?</numerusform>
 <numerusform>Удалить тег &lt;strong&gt;%1&lt;/strong&gt; у %n выбранных заметок?</numerusform>
+<numerusform>Удалить тег &lt;strong&gt;%1&lt;/strong&gt; у %n выбранных заметок?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3641,6 +3655,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>Тег &lt;strong&gt;%1&lt;/strong&gt; был удален из заметки</numerusform>
+<numerusform>Тег &lt;strong&gt;%1&lt;/strong&gt; был удален из %n заметок</numerusform>
 <numerusform>Тег &lt;strong&gt;%1&lt;/strong&gt; был удален из %n заметок</numerusform>
 <numerusform>Тег &lt;strong&gt;%1&lt;/strong&gt; был удален из %n заметок</numerusform>
 </translation>
@@ -3777,6 +3792,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Переместить выбранную заметку в подпапку &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Переместить %n выбранные заметки в подпапку &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Переместить %n выбранных заметок в подпапку &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Переместить %n выбранных заметок в подпапку &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
@@ -3787,10 +3803,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
 <numerusform>заметка перемещена в подпапку «%2»</numerusform>
 <numerusform>%n заметки перемещены в подпапку «%2»</numerusform>
+<numerusform>%n заметок перемещено в подпапку «%2»</numerusform>
 <numerusform>%n заметок перемещено в подпапку «%2»</numerusform>
 </translation>
 </message>
@@ -3801,14 +3818,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Копировать выбранную заметку в подпапку &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Копировать %n выбранные заметки в подпапку &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Копировать %n выбранных заметок в подпапку &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Копировать %n выбранных заметок в подпапку &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
 <numerusform>заметка скопирована в подпапку «%2»</numerusform>
 <numerusform>%n заметки скопированы в подпапку «%2»</numerusform>
+<numerusform>%n заметок скопировано в подпапку «%2»</numerusform>
 <numerusform>%n заметок скопировано в подпапку «%2»</numerusform>
 </translation>
 </message>
@@ -3930,6 +3949,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Заметка сохранена на диск</numerusform>
 <numerusform>На диск сохранены %n заметки</numerusform>
 <numerusform>На диск сохранено %n заметок</numerusform>
+<numerusform>На диск сохранено %n заметок</numerusform>
 </translation>
 </message>
 <message>
@@ -3965,18 +3985,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
-<translation>Нельзя переместить тег &apos;%1&apos; в этот тег</translation>
+<source>Cannot move tag '%1' to this tag</source>
+<translation>Нельзя переместить тег '%1' в этот тег</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
-<translation>Тег &apos;%1&apos; перенесен в новый тег</translation>
+<source>Moved tag '%1' to new tag</source>
+<translation>Тег '%1' перенесен в новый тег</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
-<translation>показать все заметки с тегами &apos;%1&apos; (%2)</translation>
+<source>show all notes tagged with '%1' (%2)</source>
+<translation>показать все заметки с тегами '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9318"/>
@@ -4095,7 +4115,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
+<source>show notes in folder '%1' (%2)</source>
 <translation>показать заметки в папке «%1» (%2)</translation>
 </message>
 <message>
@@ -4146,14 +4166,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Продолжить автоматическое удаление &lt;strong&gt;%n&lt;/strong&gt; конфликтующей копии базы данных, которая может блокировать процесс синхронизации ownCloud?</numerusform>
 <numerusform>Продолжить автоматическое удаление &lt;strong&gt;%n&lt;/strong&gt; конфликтующих копий базы данных, которые могут блокировать процесс синхронизации ownCloud?</numerusform>
 <numerusform>Продолжить автоматическое удаление &lt;strong&gt;%n&lt;/strong&gt; конфликтующих копий базы данных, которые могут блокировать процесс синхронизации ownCloud?</numerusform>
+<numerusform>Продолжить автоматическое удаление &lt;strong&gt;%n&lt;/strong&gt; конфликтующих копий базы данных, которые могут блокировать процесс синхронизации ownCloud?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
 <numerusform>заметка была помечена тегом «%2»</numerusform>
 <numerusform>%n заметки были помечены тегом «%2»</numerusform>
+<numerusform>%n заметок было помечено тегом «%2»</numerusform>
 <numerusform>%n заметок было помечено тегом «%2»</numerusform>
 </translation>
 </message>
@@ -4163,6 +4185,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>
 <numerusform>Обнаружено &lt;strong&gt;%n&lt;/strong&gt; проявление из &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Обнаружено &lt;strong&gt;%n&lt;/strong&gt; проявления из &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Обнаружено &lt;strong&gt;%n&lt;/strong&gt; проявлений из &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Обнаружено &lt;strong&gt;%n&lt;/strong&gt; проявлений из &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
 </message>
@@ -4460,7 +4483,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Для этой заметки нет версий или заметка не была найдена на сервере.</translation>
 </message>
 <message>
@@ -4486,7 +4509,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>Ваш сервер CalDAV не ответил ничего!</translation>
 </message>
 <message>
@@ -4529,7 +4552,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>Пароли не совпадают!</translation>
 </message>
 </context>
@@ -4577,6 +4600,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Обнаружено изменение пути до файла заметки. Хотите заменить все вхождения &lt;strong&gt;%1&lt;/strong&gt; ссылок с &lt;strong&gt;%2&lt;/strong&gt; и ссылок с именем файла &lt;strong&gt;%3&lt;/strong&gt; как &lt;strong&gt;%4&lt;/strong&gt; в &lt;strong&gt;%n&lt;/strong&gt; файле заметок?</numerusform>
 <numerusform>Обнаружено изменение пути до файла заметки. Хотите заменить все вхождения &lt;strong&gt;%1&lt;/strong&gt; ссылок с &lt;strong&gt;%2&lt;/strong&gt; и ссылок с именем файла &lt;strong&gt;%3&lt;/strong&gt; как &lt;strong&gt;%4&lt;/strong&gt; в &lt;strong&gt;%n&lt;/strong&gt; файлах заметок?</numerusform>
 <numerusform>Обнаружено изменение пути до файла заметки. Хотите заменить все вхождения &lt;strong&gt;%1&lt;/strong&gt; ссылок с &lt;strong&gt;%2&lt;/strong&gt; и ссылок с именем файла &lt;strong&gt;%3&lt;/strong&gt; как &lt;strong&gt;%4&lt;/strong&gt; в &lt;strong&gt;%n&lt;/strong&gt; файлах заметок?</numerusform>
+<numerusform>Обнаружено изменение пути до файла заметки. Хотите заменить все вхождения &lt;strong&gt;%1&lt;/strong&gt; ссылок с &lt;strong&gt;%2&lt;/strong&gt; и ссылок с именем файла &lt;strong&gt;%3&lt;/strong&gt; как &lt;strong&gt;%4&lt;/strong&gt; в &lt;strong&gt;%n&lt;/strong&gt; файлах заметок?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4585,6 +4609,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <translation>
 <numerusform>…и ещё одна заметка</numerusform>
 <numerusform>…и ещё %n заметки</numerusform>
+<numerusform>…и ещё %n заметок</numerusform>
 <numerusform>…и ещё %n заметок</numerusform>
 </translation>
 </message>
@@ -4601,12 +4626,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>Не спрашивать снова!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>Не показывать снова!</translation>
 </message>
 <message>
@@ -4672,12 +4697,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
 <translation>Папка с именем &lt;b&gt;%1&lt;/b&gt; не может быть создана, потому что она используется внутри приложения!</translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>Папка с именем &lt;b&gt;%1&lt;/b&gt; не может быть создана, поскольку она находится в списке игнорируемых подпапок! Вы можете изменить это в &lt;i&gt;Настройках панелей&lt;/i&gt;.</translation>
 </message>
 <message>
@@ -4693,12 +4718,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <numerusform>Заметка использует это вложение. Переименовать также это вложение в заметке?</numerusform>
 <numerusform>%n заметки используют это вложение. Переименовать также эти вложения в заметках?</numerusform>
 <numerusform>%n заметок используют это вложение. Переименовать также эти вложения в заметках?</numerusform>
+<numerusform>%n заметок используют это вложение. Переименовать также эти вложения в заметках?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
 <translation type="unfinished">
+<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
@@ -4919,7 +4946,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
 <translation>Не удается установить подключение к базе данных в файле «%1». Папка и файл доступны для записи?</translation>
 </message>
@@ -4935,9 +4962,9 @@ Are the folder and the file writeable?</source>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-<translation>Невозможно установить соединение с базой данных с папкой для заметок для объединения &apos;%1&apos;.
+<translation>Невозможно установить соединение с базой данных с папкой для заметок для объединения '%1'.
 Папка и файл доступны для записи?</translation>
 </message>
 </context>
@@ -5084,7 +5111,7 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Пожалуйста, не забудьте обновить QOwnNotes чтобы этот сценарий заработал!</translation>
 </message>
 <message>
@@ -5125,7 +5152,7 @@ Do you want to install it anyway?</source>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>файл не существует</translation>
 </message>
 </context>
@@ -5148,6 +5175,7 @@ Do you want to install it anyway?</source>
 <translation>
 <numerusform>&lt;strong&gt;%n закладка&lt;/strong&gt; найдено на сервере</numerusform>
 <numerusform>&lt;strong&gt;%n закладки&lt;/strong&gt; найдено на сервере</numerusform>
+<numerusform>&lt;strong&gt;%n закладок&lt;/strong&gt; найдено на сервере</numerusform>
 <numerusform>&lt;strong&gt;%n закладок&lt;/strong&gt; найдено на сервере</numerusform>
 </translation>
 </message>
@@ -5207,8 +5235,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите адрес своего сервера ownCloud, например: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите адрес своего сервера ownCloud, например: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5274,8 +5302,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Открыть в браузере страницу &lt;span style=&quot; font-weight:600;&quot;&gt;Приложения&lt;/span&gt; на сервере ownCloud, чтобы установить или обновить QOwnNotesAPI и включить стандартные приложения &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; и &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Открыть в браузере страницу &lt;span style=" font-weight:600;"&gt;Приложения&lt;/span&gt; на сервере ownCloud, чтобы установить или обновить QOwnNotesAPI и включить стандартные приложения &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; и &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5299,8 +5327,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вам также необходимо запустить 2 основных приложения на сервере ownCloud: &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; и &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; (они по умолчанию должны быть включены, проверьте).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вам также необходимо запустить 2 основных приложения на сервере ownCloud: &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; и &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; (они по умолчанию должны быть включены, проверьте).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5380,17 +5408,17 @@ Do you want to install it anyway?</source>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3009"/>
 <source>Optimize preview colors for dark mode desktop themes</source>
-<translation>Оптимизация цветов просмотра для &quot;темной&quot; темы рабочего стола</translation>
+<translation>Оптимизация цветов просмотра для "темной" темы рабочего стола</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2996"/>
 <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-<translation>Это включает &quot;темный режим&quot;, интерфейс и значки будут изменены. Необходимо перезапустить приложение, чтобы эти изменения вступили в действие.</translation>
+<translation>Это включает "темный режим", интерфейс и значки будут изменены. Необходимо перезапустить приложение, чтобы эти изменения вступили в действие.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2999"/>
 <source>Enable dark mode</source>
-<translation>Включить &quot;темный режим&quot;</translation>
+<translation>Включить "темный режим"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3025"/>
@@ -5529,8 +5557,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Вы можете воспользоваться возможностью получения бесплатного SSL-сертификата от проекта &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Вы можете воспользоваться возможностью получения бесплатного SSL-сертификата от проекта &lt;a href="https://letsencrypt.org/"&gt; Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5564,8 +5592,8 @@ Do you want to install it anyway?</source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если выбрано, то уведомления об изменениях внешними программами будут появляться, даже если текущая заметка не будет отредактирована. Рекомендуемое значение: &lt;span style=&quot; font-style:italic;&quot;&gt;отключить&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если выбрано, то уведомления об изменениях внешними программами будут появляться, даже если текущая заметка не будет отредактирована. Рекомендуемое значение: &lt;span style=" font-style:italic;"&gt;отключить&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5654,7 +5682,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>QOwnNotes собирает обезличенные данные об использовании, чтобы определить какие части программы нуждаются в улучшении и исправлении ошибок. Пожалуйста, отключайте только при необходимости.</translation>
 </message>
 <message>
@@ -5754,8 +5782,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
 <translation>Путь к папке с заметками на вашем сервере</translation>
 </message>
 <message>
@@ -5806,13 +5834,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Установите последнюю версию &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (по крайней мере, версию QOWNNOTESAPI_MIN_VERSION) на вашем сервере ownCloud, если вы хотите, чтобы QOwnNotes имел доступ к версиям и удаленным заметкам.</translation>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Установите последнюю версию &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (по крайней мере, версию QOWNNOTESAPI_MIN_VERSION) на вашем сервере ownCloud, если вы хотите, чтобы QOwnNotes имел доступ к версиям и удаленным заметкам.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вам также необходим &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;клиент синхронизации ownCloud&lt;/span&gt;&lt;/a&gt; (или другой идентичный) для синхронизации заметок!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вам также необходим &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;клиент синхронизации ownCloud&lt;/span&gt;&lt;/a&gt; (или другой идентичный) для синхронизации заметок!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5870,7 +5898,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
 <translation>Помните, что приложение ownCloud notes не поддерживает подпапки!</translation>
 </message>
 <message>
@@ -6111,12 +6139,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2979"/>
 <source>Enable dark mode application icon and tray icon</source>
-<translation>Включить &quot;темный режим&quot; значков приложения и трея</translation>
+<translation>Включить "темный режим" значков приложения и трея</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2986"/>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-<translation>Возможно, вам захочется выбрать другую цветовую палитру в настройках редактора в &quot;темном режиме&quot;.</translation>
+<translation>Возможно, вам захочется выбрать другую цветовую палитру в настройках редактора в "темном режиме".</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3089"/>
@@ -6229,8 +6257,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вопросы лучше задавать через помощника по проблемам, нажав &lt;span style=&quot; font-weight:600;&quot;&gt;Открыть помощника по проблемам&lt;/span&gt; кнопку снизу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вопросы лучше задавать через помощника по проблемам, нажав &lt;span style=" font-weight:600;"&gt;Открыть помощника по проблемам&lt;/span&gt; кнопку снизу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6294,13 +6322,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
+<source>If your password doesn't work, create an app password (button on the right)</source>
 <translation>Если ваш пароль не работает, создайте пароль приложения (кнопка справа)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation>Если вы хотите помочь с переводом QOwnNotes или обновить существующий перевод, прочтите: &lt;a href=&quot;%1&quot;&gt;Как я могу помочь с переводом QOwnNotes?&lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation>Если вы хотите помочь с переводом QOwnNotes или обновить существующий перевод, прочтите: &lt;a href="%1"&gt;Как я могу помочь с переводом QOwnNotes?&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6389,7 +6417,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
 <translation>GitHub не требует двух пробелов в конце строки, чтобы сделать разрыв строки</translation>
 </message>
 <message>
@@ -6409,7 +6437,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>Пожалуйста, не используйте это в системе отслеживания ошибок</translation>
 </message>
 <message>
@@ -6429,8 +6457,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Возможно, вы захотите взглянуть на все доступные &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;форматы времени&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Возможно, вы захотите взглянуть на все доступные &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;форматы времени&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6460,8 +6488,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
-<translation>Регулярные выражения подпапок для заметок, которые следует игнорировать, разделенные с помощью &quot;;&quot;</translation>
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
+<translation>Регулярные выражения подпапок для заметок, которые следует игнорировать, разделенные с помощью ";"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5651"/>
@@ -6480,8 +6508,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
-<translation>Скрыть &apos;Счетчик заметок&apos; с помощью тегов (увеличивает производительность)</translation>
+<source>Hide 'Note count' with tags (increases performance)</source>
+<translation>Скрыть 'Счетчик заметок' с помощью тегов (увеличивает производительность)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5824"/>
@@ -6490,8 +6518,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation>Вы можете использовать &lt;a href=&quot;%1&quot;&gt;веб-приложение QOwnNotes&lt;/a&gt;, чтобы иметь возможность вставлять фотографии в QOwnNotes на своем рабочем столе.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation>Вы можете использовать &lt;a href="%1"&gt;веб-приложение QOwnNotes&lt;/a&gt;, чтобы иметь возможность вставлять фотографии в QOwnNotes на своем рабочем столе.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6595,8 +6623,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>По умолчанию расширение браузера покажет все ссылки из текущей заметки. Вы также можете заставить показывать специальные ссылки закладки заметок с определенным тегом. Для получения дополнительных сведений о синтаксисе ссылок закладки нажмите &lt;a href=&quot;%1&quot;&gt;здесь&lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>По умолчанию расширение браузера покажет все ссылки из текущей заметки. Вы также можете заставить показывать специальные ссылки закладки заметок с определенным тегом. Для получения дополнительных сведений о синтаксисе ссылок закладки нажмите &lt;a href="%1"&gt;здесь&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6646,8 +6674,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>Установить &lt;a href=&quot;%1&quot;&gt;браузерное расширение Web Companion&lt;/a&gt; из &lt;a href=&quot;%2&quot;&gt;магазина приложений Chrome&lt;/a&gt; или &lt;a href=&quot;%3&quot;&gt;страницы дополнений Firefox&lt;/a&gt; для использования QOwnNotes в качестве веб-клиппера.</translation>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>Установить &lt;a href="%1"&gt;браузерное расширение Web Companion&lt;/a&gt; из &lt;a href="%2"&gt;магазина приложений Chrome&lt;/a&gt; или &lt;a href="%3"&gt;страницы дополнений Firefox&lt;/a&gt; для использования QOwnNotes в качестве веб-клиппера.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6742,14 +6770,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Введите команду, которая будет использоваться для отображения журнала git (например &quot;gitk&quot;)</translation>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Введите команду, которая будет использоваться для отображения журнала git (например "gitk")</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Если использовать эту настройку, то появится новый пункт меню, показывающий git-версии по правому клику на заметке.</translation>
 </message>
 <message>
@@ -6769,7 +6797,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Не забудьте включить поддержку git для ваших папок с заметками и настроить имя и адрес электронной почты в git клиенте, например, с помощью этих команд терминала:</translation>
 </message>
 <message>
@@ -6824,7 +6852,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
+<source>Hide 'Find or create tag' search</source>
 <translation>Скрыть поле «Найти или создать тег»</translation>
 </message>
 <message>
@@ -6850,7 +6878,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
+<source>Hide 'Find or create note subfolder' search</source>
 <translation>Скрыть поле «Найти или создать подпапку»</translation>
 </message>
 <message>
@@ -6865,9 +6893,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>При необходимости можно использовать &quot;%notePath%&quot; для пути до заметки.</translation>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>При необходимости можно использовать "%notePath%" для пути до заметки.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -6927,7 +6955,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
 <translation>Для более старых версий ownCloud, где не работает по умолчанию</translation>
 </message>
 <message>
@@ -7092,8 +7120,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
-<translation>Введите ваш пользовательский формат времени, типа &quot;dd.MM.yyyy hh:mm&quot;</translation>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation>Введите ваш пользовательский формат времени, типа "dd.MM.yyyy hh:mm"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7193,7 +7221,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>Игнорировать календари, которые не поддерживают элементы todo</translation>
 </message>
 <message>
@@ -7263,7 +7291,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
 <translation>При добавлении пользовательских расширений просто введите название, вроде «taskpaper».</translation>
 </message>
 <message>
@@ -7278,7 +7306,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
+<source>Don't show the update dialog automatically</source>
 <translation>Не показывать диалоговое окно обновления автоматически</translation>
 </message>
 <message>
@@ -7317,8 +7345,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Можно &lt;span style=&quot; font-weight:600;&quot;&gt;скопировать и вставить&lt;/span&gt; этот текст (или его части) в &lt;span style=&quot; font-weight:600;&quot;&gt;сообщение о проблеме&lt;/span&gt; на &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;странице проблем QOwnNotes&lt;/a&gt;, если у вас есть &lt;span style=&quot; font-weight:600;&quot;&gt;вопросы или проблемы&lt;/span&gt; с QOwnNotes. Важные данные не выводятся в это информационное поле.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Можно &lt;span style=" font-weight:600;"&gt;скопировать и вставить&lt;/span&gt; этот текст (или его части) в &lt;span style=" font-weight:600;"&gt;сообщение о проблеме&lt;/span&gt; на &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;странице проблем QOwnNotes&lt;/a&gt;, если у вас есть &lt;span style=" font-weight:600;"&gt;вопросы или проблемы&lt;/span&gt; с QOwnNotes. Важные данные не выводятся в это информационное поле.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7382,7 +7410,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Пожалуйста, не используйте это в системе отслеживания ошибок, скопируйте текст отладочной информации непосредственно в issue.</translation>
 </message>
 <message>
@@ -7397,7 +7425,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Анонимное отслеживание данных помогает решить, какие улучшить QOwnNotes и исправлять ошибки.&lt;br/&gt;Пожалуйста, отключите его, только если вы действительно не можете это терпеть. &lt;br/&gt;&lt;br/&gt;Отключить отслеживание?</translation>
 </message>
 <message>
@@ -7432,18 +7460,18 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>Загрузка папок с сервера в &apos;%1&apos;</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>Загрузка папок с сервера в '%1'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Взгляните на &lt;a href=&quot;%1&quot;&gt; сценарии документации&lt;/a&gt;, для быстрого старта.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Взгляните на &lt;a href="%1"&gt; сценарии документации&lt;/a&gt;, для быстрого старта.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Если вам нужен доступ к определенным функциям в QOwnNotes, пожалуйста, откройте запрос на &lt;a href=&quot;%1&quot;&gt; QOwnNotes странице запросов&lt;/a&gt;.</translation>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Если вам нужен доступ к определенным функциям в QOwnNotes, пожалуйста, откройте запрос на &lt;a href="%1"&gt; QOwnNotes странице запросов&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
@@ -7653,8 +7681,8 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Вы можете скачать ваш клиент git здесь: &lt;a href=&quot;%url&quot;&gt;Git для Windows&lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation>Вы можете скачать ваш клиент git здесь: &lt;a href="%url"&gt;Git для Windows&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7678,7 +7706,7 @@ Connection error message: </source>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>внутренняя база данных sqlite и параметры будут храниться в папке &lt;code&gt;Data&lt;/code&gt;</translation>
 </message>
 <message>
@@ -8027,6 +8055,7 @@ Your notes will stay intact!</source>
 <numerusform>Удалить выбранный файл?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файла?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
 </translation>
 </message>
 <message>
@@ -8051,12 +8080,12 @@ Your notes will stay intact!</source>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
+<source>File doesn't exist</source>
 <translation>Файл не существует</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation>Файл &lt;strong&gt;%1&lt;/strong&gt; не существует, вы не можете его переименовать!</translation>
 </message>
 <message>
@@ -8179,16 +8208,17 @@ Your notes will stay intact!</source>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранныйх файлов?</numerusform>
 <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранныйх файлов?</numerusform>
+<numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранныйх файлов?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
+<source>File doesn't exist</source>
 <translation>Файл не существует</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation>Файл &lt;strong&gt;%1&lt;/strong&gt; не существует, вы не можете его переименовать!</translation>
 </message>
 <message>
@@ -8746,8 +8776,8 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href=&quot;%1&quot;&gt;Присоединяйтесь к QOwnNotes&lt;/a&gt;</translation>
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href="%1"&gt;Присоединяйтесь к QOwnNotes&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8758,10 +8788,6 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;Обновление</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">&amp;Загрузить</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8780,7 +8806,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>Не показывать это диалоговое окно автоматически</translation>
 </message>
 <message>
@@ -8856,78 +8882,78 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">Перезапустить приложение</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">Перезагрузка</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished">Отмена</translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Скрипт обновления &apos;%1&apos; не существует!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>Скрипт обновления '%1' не существует!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Распакованный командный файл &apos;%1&apos; не существует!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>Распакованный командный файл '%1' не существует!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>Не удалось скопировать скрипт обновления из &apos;%1&apos; в &apos;%2&apos;!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>Не удалось скопировать скрипт обновления из '%1' в '%2'!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>Не получилось найти скрипт обновления: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
-<translation>Не получилось найти распакованный командный файл: &apos;%1&apos;</translation>
+<source>Couldn't find unzip executable: %1</source>
+<translation>Не получилось найти распакованный командный файл: '%1'</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="333"/>
@@ -9055,6 +9081,7 @@ This cannot be undone!</source>
 <translation>
 <numerusform>Закладка создана</numerusform>
 <numerusform>%n закладки созданы</numerusform>
+<numerusform>%n закладок создано</numerusform>
 <numerusform>%n закладок создано</numerusform>
 </translation>
 </message>
@@ -9193,7 +9220,7 @@ This cannot be undone!</source>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>Этот путь к заметкам не существует!</translation>
 </message>
 <message>

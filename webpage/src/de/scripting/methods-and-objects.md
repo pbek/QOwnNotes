@@ -359,11 +359,11 @@ Zugriff auf die Zwischenablage
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Returns the content of the clipboard as text or html
- *
- * @param asHtml returns the clipboard content as html instead of text
- */
-QString ScriptingService::clipboard(bool asHtml);
+     * Gibt den Inhalt der Zwischenablage als Text oder HTML zurück
+     *
+     * @param asHtml gibt den Inhalt der Zwischenablage als HTML anstelle von Text zurück
+     */
+QString ScriptingService::clipboard (bool asHtml);
 ```
 
 ### Beispiel
@@ -380,7 +380,7 @@ Schreiben Sie Text in die Notiztextbearbeitung
 ### Methodenaufruf und Parameter
 ```cpp
 /**
- * Writes text to the current cursor position in the note text edit
+ * Schreibt Text an die aktuelle Cursorposition in der Notiztextbearbeitung
  *
  * @param text
  */
@@ -389,8 +389,8 @@ void ScriptingService::noteTextEditWrite(QString text);
 
 ### Beispiel
 ```js
-// write text to the note text edit
-script.noteTextEditWrite("My custom text");
+/ schreibe Text in die Notiz Textbearbeitung
+script.noteTextEditWrite ("Mein benutzerdefinierter Text");
 ```
 
 Möglicherweise möchten Sie die benutzerdefinierte Aktion `transformTextRot13` im Beispiel [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml) anzeigen.

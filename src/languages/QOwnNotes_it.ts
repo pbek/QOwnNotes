@@ -719,13 +719,13 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
-<translation>Per ottenere un file enex è necessario selezionare una o più note nell&apos;applicazione desktop di Evernote e fare clic su &quot;Esporta note...&quot; nel menù File.</translation>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<translation>Per ottenere un file enex è necessario selezionare una o più note nell'applicazione desktop di Evernote e fare clic su "Esporta note..." nel menù File.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
 <source>Please select the Evernote enex file you want to import:</source>
-<translation>Seleziona l&apos;enex file di Evernote che vuoi importare:</translation>
+<translation>Seleziona l'enex file di Evernote che vuoi importare:</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
@@ -878,158 +878,158 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Read .vimrc from location:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show position of text marks</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass control keys</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Pass keys in insert mode</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Start of line</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Tabulator size:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Smart tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Highlight search results</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Shift width:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Expand tabulators</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Automatic indentation</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Incremental search</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use search dialog</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use ignorecase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Blinking cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Scroll offset:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keyword characters:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Use Vim-style Editing</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Vim tabstop option.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Default: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1039,12 +1039,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
 <source>Argument must be positive: %1=%2</source>
-<translation>L&apos;argomento deve essere positivo: %1=%2</translation>
+<translation>L'argomento deve essere positivo: %1=%2</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
-<source>Mark &quot;%1&quot; not set.</source>
-<translation>Contrassegno &quot;%1&quot; non impostato.</translation>
+<source>Mark "%1" not set.</source>
+<translation>Contrassegno "%1" non impostato.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
@@ -1067,18 +1067,14 @@
 <translation>Non implementato in FakeVim.</translation>
 </message>
 <message>
-<source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation type="vanished">Digitare ALT-V, ALT-V per uscire dalla modalità FakeVim.</translation>
-</message>
-<message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1110,18 +1106,18 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
-<source>File &quot;%1&quot; exists (add ! to override)</source>
-<translation>Il file &quot;%1&quot; esiste (aggiungere ! per sovrascrivere)</translation>
+<source>File "%1" exists (add ! to override)</source>
+<translation>Il file "%1" esiste (aggiungere ! per sovrascrivere)</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
-<source>Cannot open file &quot;%1&quot; for writing</source>
-<translation>Impossibile aprire il file &quot;%1&quot; per la scrittura</translation>
+<source>Cannot open file "%1" for writing</source>
+<translation>Impossibile aprire il file "%1" per la scrittura</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
-<source>&quot;%1&quot; %2 %3L, %4C written.</source>
-<translation>&quot;%1&quot; %2 %3L, %4C scritti.</translation>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>"%1" %2 %3L, %4C scritti.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
@@ -1130,13 +1126,13 @@
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
-<source>Cannot open file &quot;%1&quot; for reading</source>
-<translation>Impossibile aprire il file &quot;%1&quot; per la lettura</translation>
+<source>Cannot open file "%1" for reading</source>
+<translation>Impossibile aprire il file "%1" per la lettura</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
-<source>&quot;%1&quot; %2L, %3C</source>
-<translation>&quot;%1&quot; %2L, %3C</translation>
+<source>"%1" %2L, %3C</source>
+<translation>"%1" %2L, %3C</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
@@ -1154,7 +1150,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6765"/>
 <source>Not an editor command: %1</source>
-<translation>Non un comando dell&apos;editor: %1</translation>
+<translation>Non un comando dell'editor: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6867"/>
@@ -1184,7 +1180,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6914"/>
 <source>Search hit TOP without match for: %1</source>
-<translation>La ricerca è arrivata all&apos;INIZIO senza riscontri per: %1</translation>
+<translation>La ricerca è arrivata all'INIZIO senza riscontri per: %1</translation>
 </message>
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7021"/>
@@ -1197,15 +1193,7 @@
 <message numerus="yes">
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<translation type="unfinished">
-<numerusform>%n linea %1ta %2 volte.</numerusform>
-<numerusform>%n linee %1ed %2 volte.</numerusform>
-</translation>
-</message>
-<message numerus="yes">
-<source>%n lines %1ed %2 time.</source>
-<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
-<translation type="vanished">
+<translation>
 <numerusform>%n linea %1ta %2 volte.</numerusform>
 <numerusform>%n linee %1ed %2 volte.</numerusform>
 </translation>
@@ -1474,7 +1462,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
+<comment>text that will highlighted in a way that it's barely visible</comment>
 <translation>Testo disabilitato</translation>
 </message>
 <message>
@@ -1570,12 +1558,12 @@
 <message>
 <location filename="../dialogs/imagedialog.ui" line="30"/>
 <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-<translation>Il percorso o l&apos;URL verranno inseriti direttamente, i percorsi dei file verranno creati in relazione alla nota corrente</translation>
+<translation>Il percorso o l'URL verranno inseriti direttamente, i percorsi dei file verranno creati in relazione alla nota corrente</translation>
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don&apos;t copy image to media folder</source>
-<translation>Non copiare l&apos;immagine nella cartella media</translation>
+<source>Don't copy image to media folder</source>
+<translation>Non copiare l'immagine nella cartella media</translation>
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="56"/>
@@ -1649,12 +1637,12 @@
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="90"/>
 <source>The application will be quit afterwards.</source>
-<translation>L&apos;applicazione verrà chiusa in seguito.</translation>
+<translation>L'applicazione verrà chiusa in seguito.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="91"/>
 <source>The application will be restarted afterwards.</source>
-<translation>L&apos;applicazione verrà riavviata in seguito.</translation>
+<translation>L'applicazione verrà riavviata in seguito.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="158"/>
@@ -1696,37 +1684,37 @@
 <location filename="../widgets/layoutwidget.cpp" line="179"/>
 <source>Because of this there is no central widget that will be resized automatically.</source>
 <comment>Layout description</comment>
-<translation>Per questo motivo non c&apos;è alcun widget centrale che verrà ridimensionato automaticamente.</translation>
+<translation>Per questo motivo non c'è alcun widget centrale che verrà ridimensionato automaticamente.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="184"/>
 <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>Per impostazione predefinita sono abilitati solamente l&apos;elenco delle note sulla sinistra e il pannello di modifica note sulla destra.</translation>
+<translation>Per impostazione predefinita sono abilitati solamente l'elenco delle note sulla sinistra e il pannello di modifica note sulla destra.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="189"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>Per impostazione predefinita sono abilitati la maggior parte dei pannelli, come ad esempio l&apos;elenco delle note sulla sinistra, i pannelli per le etichette, il pannello di modifica delle note al centro e il pannello di anteprima sulla destra.</translation>
+<translation>Per impostazione predefinita sono abilitati la maggior parte dei pannelli, come ad esempio l'elenco delle note sulla sinistra, i pannelli per le etichette, il pannello di modifica delle note al centro e il pannello di anteprima sulla destra.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="195"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another workspace to actually edit notes!</source>
 <comment>Layout description</comment>
-<translation>La maggior parte dei pannelli, come l&apos;elenco delle note a sinistra, i pannelli delle etichette e il solo pannello dell&apos;anteprima a destra, come impostazione predefinita sono abilitati. Sarà necessaria un&apos;altra area di lavoro per modificare le note!</translation>
+<translation>La maggior parte dei pannelli, come l'elenco delle note a sinistra, i pannelli delle etichette e il solo pannello dell'anteprima a destra, come impostazione predefinita sono abilitati. Sarà necessaria un'altra area di lavoro per modificare le note!</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="201"/>
 <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
 <comment>Layout description</comment>
-<translation>Per impostazione predefinita sono abilitati la maggior parte dei pannelli, come ad esempio l&apos;elenco delle note sulla sinistra, i pannelli per le etichette, il pannello di modifica delle note a destra e il pannello di anteprima in alto.</translation>
+<translation>Per impostazione predefinita sono abilitati la maggior parte dei pannelli, come ad esempio l'elenco delle note sulla sinistra, i pannelli per le etichette, il pannello di modifica delle note a destra e il pannello di anteprima in alto.</translation>
 </message>
 <message>
 <location filename="../widgets/layoutwidget.cpp" line="208"/>
 <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
 <comment>Layout description</comment>
-<translation>Layout minimo a singola colonna, con ricerca note, elenco note e modifica note uno sopra l&apos;altro.</translation>
+<translation>Layout minimo a singola colonna, con ricerca note, elenco note e modifica note uno sopra l'altro.</translation>
 </message>
 </context>
 <context>
@@ -1850,7 +1838,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
 <translation>Il file &lt;strong&gt;%1&lt;/strong&gt; non è leggibile e non può essere ripristinato!</translation>
 </message>
 <message numerus="yes">
@@ -1978,7 +1966,7 @@
 <location filename="../mainwindow.ui" line="696"/>
 <location filename="../mainwindow.cpp" line="9037"/>
 <source>Add a tag to the current note</source>
-<translation>Aggiungi un&apos;etichetta alla nota corrente</translation>
+<translation>Aggiungi un'etichetta alla nota corrente</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="867"/>
@@ -2003,7 +1991,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1147"/>
 <source>Editor width in distraction free mode</source>
-<translation>Larghezza dell&apos;editor in modalità anti-distrazione</translation>
+<translation>Larghezza dell'editor in modalità anti-distrazione</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1150"/>
@@ -2150,7 +2138,7 @@
 <message>
 <location filename="../mainwindow.cpp" line="9038"/>
 <source>Add a tag to the selected notes</source>
-<translation>Aggiungi un&apos;etichetta alle note selezionate</translation>
+<translation>Aggiungi un'etichetta alle note selezionate</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="710"/>
@@ -2284,7 +2272,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1381"/>
 <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-<translation>Invia domande, richieste di funzionalità o problemi con l&apos;aiuto dell&apos;assistente dei problemi</translation>
+<translation>Invia domande, richieste di funzionalità o problemi con l'aiuto dell'assistente dei problemi</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1439"/>
@@ -2360,7 +2348,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1610"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Inserisci immagine (l&apos;immagine verrà copiata nella sotto-cartella &quot;media&quot; nella cartella delle note corrente)</translation>
+<translation>Inserisci immagine (l'immagine verrà copiata nella sotto-cartella "media" nella cartella delle note corrente)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1622"/>
@@ -2385,7 +2373,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1661"/>
 <source>&amp;Open note in external editor</source>
-<translation>&amp;Apri nota nell&apos;editor esterno</translation>
+<translation>&amp;Apri nota nell'editor esterno</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1673"/>
@@ -2534,7 +2522,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>&quot;Element&quot; as in the chat service</extracomment>
+<extracomment>"Element" as in the chat service</extracomment>
 <translation>Apri la stanza QOwnNotes Matrix (Element)</translation>
 </message>
 <message>
@@ -2561,7 +2549,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2270"/>
 <source>Switch to previous workspace</source>
-<translation>Passa all&apos;area di lavoro precedente</translation>
+<translation>Passa all'area di lavoro precedente</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2278"/>
@@ -2577,7 +2565,7 @@
 <location filename="../mainwindow.ui" line="2290"/>
 <location filename="../mainwindow.ui" line="2293"/>
 <source>Find an action from the menu</source>
-<translation>Trova un&apos;azione nel menù</translation>
+<translation>Trova un'azione nel menù</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2305"/>
@@ -2615,7 +2603,7 @@
 <location filename="../mainwindow.ui" line="2364"/>
 <location filename="../mainwindow.cpp" line="10686"/>
 <source>Open note in different window</source>
-<translation>Apri nota in un&apos;altra finestra</translation>
+<translation>Apri nota in un'altra finestra</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2376"/>
@@ -2641,7 +2629,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2413"/>
 <source>Find scripts in script repository</source>
-<translation>Trova script nell&apos;archivio degli script</translation>
+<translation>Trova script nell'archivio degli script</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2425"/>
@@ -2687,7 +2675,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2511"/>
 <source>Jump to note list panel</source>
-<translation>Vai al pannello dell&apos;elenco delle note</translation>
+<translation>Vai al pannello dell'elenco delle note</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2519"/>
@@ -2809,8 +2797,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-<translation>Risolvere una semplice equazione come &apos;(2+3) * 6 =&apos; nella riga corrente</translation>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>Risolvere una semplice equazione come '(2+3) * 6 =' nella riga corrente</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2866,7 +2854,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2015"/>
 <source>Use softwrap in note editor and preview</source>
-<translation>Usa ritorno a capo “soft” nell&apos;editor e nell&apos;anteprima delle note</translation>
+<translation>Usa ritorno a capo “soft” nell'editor e nell'anteprima delle note</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2023"/>
@@ -2922,7 +2910,7 @@
 <message>
 <location filename="../mainwindow.cpp" line="2966"/>
 <source>Note was removed externally!</source>
-<translation>La nota è stata cancellata dall&apos;esterno!</translation>
+<translation>La nota è stata cancellata dall'esterno!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2967"/>
@@ -2940,7 +2928,7 @@ Restore current note?</source>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="vanished">
+<translation>
 <numerusform>%n nota salvata su disco</numerusform>
 <numerusform>%n note salvate su disco</numerusform>
 </translation>
@@ -3035,7 +3023,7 @@ Restore current note?</source>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="4485"/>
-<source>Note can&apos;t be decrypted!</source>
+<source>Note can't be decrypted!</source>
 <translation>La nota non può essere decifrata!</translation>
 </message>
 <message>
@@ -3152,17 +3140,17 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="5256"/>
 <source>Restart application</source>
-<translation>Riavviare l&apos;applicazione</translation>
+<translation>Riavviare l'applicazione</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5262"/>
 <source>You may need to restart the application manually to let the changes take effect.</source>
-<translation>Potrebbe essere necessario riavviare l&apos;applicazione manualmente per rendere effettive le modifiche.</translation>
+<translation>Potrebbe essere necessario riavviare l'applicazione manualmente per rendere effettive le modifiche.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5267"/>
 <source>You may need to restart the application to let the changes take effect.</source>
-<translation>Potrebbe essere necessario riavviare l&apos;applicazione per rendere effettive le modifiche.</translation>
+<translation>Potrebbe essere necessario riavviare l'applicazione per rendere effettive le modifiche.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5269"/>
@@ -3326,7 +3314,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="7850"/>
-<source>Temporary file can&apos;t be opened</source>
+<source>Temporary file can't be opened</source>
 <translation>Non è possibile aprire il file temporaneo</translation>
 </message>
 <message>
@@ -3337,18 +3325,18 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
 <translation>Resettata la dimensione del font a %1</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9083"/>
-<source>Remove tag &apos;%1&apos; from the current note</source>
-<translation>Rimuovi etichetta &apos;%1&apos; dalla nota corrente</translation>
+<source>Remove tag '%1' from the current note</source>
+<translation>Rimuovi etichetta '%1' dalla nota corrente</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9084"/>
-<source>Remove tag &apos;%1&apos; from the selected notes</source>
-<translation>Rimuovi etichetta &apos;%1&apos; dalle note selezionate</translation>
+<source>Remove tag '%1' from the selected notes</source>
+<translation>Rimuovi etichetta '%1' dalle note selezionate</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9315"/>
@@ -3389,7 +3377,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="10199"/>
 <source>Result for equation: %1 = %2</source>
-<translation>Risultato dell&apos;equazione: %1 = %2</translation>
+<translation>Risultato dell'equazione: %1 = %2</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10304"/>
@@ -3403,7 +3391,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10622"/>
-<source>Jump to the note&apos;s subfolder</source>
+<source>Jump to the note's subfolder</source>
 <translation>Vai alla sottocartella della nota</translation>
 </message>
 <message>
@@ -3523,7 +3511,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="11833"/>
 <source>Remove the current workspace?</source>
-<translation>Rimuovere l&apos;area di lavoro attuale?</translation>
+<translation>Rimuovere l'area di lavoro attuale?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="11873"/>
@@ -3556,8 +3544,8 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12663"/>
-<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
-<translation>Il titolo della nota &apos;%1&apos; è stato copiato negli appunti</translation>
+<source>Note headline '%1' was copied to the clipboard</source>
+<translation>Il titolo della nota '%1' è stato copiato negli appunti</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12757"/>
@@ -3567,7 +3555,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="12944"/>
 <source>Custom editor width</source>
-<translation>Larghezza dell&apos;editor personalizzato</translation>
+<translation>Larghezza dell'editor personalizzato</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="12944"/>
@@ -3755,10 +3743,10 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9903"/>
-<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were moved to note subfolder "%2"</source>
 <translation>
-<numerusform>%n nota è stata spostata nella sotto-cartella delle note &quot;%2&quot;</numerusform>
-<numerusform>%n note sono state spostate nella sotto-cartella delle note &quot;%2&quot;</numerusform>
+<numerusform>%n nota è stata spostata nella sotto-cartella delle note "%2"</numerusform>
+<numerusform>%n note sono state spostate nella sotto-cartella delle note "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -3771,16 +3759,16 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="9994"/>
-<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
+<source>%n note(s) were copied to note subfolder "%2"</source>
 <translation>
-<numerusform>%n nota è stata copiata nella sotto-cartella delle note &quot;%2&quot;</numerusform>
-<numerusform>%n note sono state copiate nella sotto-cartella delle note &quot;%2&quot;</numerusform>
+<numerusform>%n nota è stata copiata nella sotto-cartella delle note "%2"</numerusform>
+<numerusform>%n note sono state copiate nella sotto-cartella delle note "%2"</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10684"/>
 <source>Open note in external editor</source>
-<translation>Apri nota con l&apos;editor esterno</translation>
+<translation>Apri nota con l'editor esterno</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10688"/>
@@ -3790,7 +3778,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="10773"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-<translation>Se vuoi rinominare la tua nota, è necessario abilitare l&apos;opzione per consentire che il nome del file della nota sia diverso dalla testata.</translation>
+<translation>Se vuoi rinominare la tua nota, è necessario abilitare l'opzione per consentire che il nome del file della nota sia diverso dalla testata.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="10993"/>
@@ -3845,7 +3833,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="5569"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-<translation>QOwnNotes raccoglierà in modo anonimo dei dati sull&apos;utilizzo dell&apos;applicazione, ciò sarà utile per decidere quali parti di QOwnNotes migliorare prossimamente, trovare e sistemare bug. Puoi disabilitare questo comportamento dalle impostazioni.</translation>
+<translation>QOwnNotes raccoglierà in modo anonimo dei dati sull'utilizzo dell'applicazione, ciò sarà utile per decidere quali parti di QOwnNotes migliorare prossimamente, trovare e sistemare bug. Puoi disabilitare questo comportamento dalle impostazioni.</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="5573"/>
@@ -3929,18 +3917,18 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9594"/>
-<source>Cannot move tag &apos;%1&apos; to this tag</source>
-<translation>Non è possibile spostare il tag &apos;%1&apos; in questo tag</translation>
+<source>Cannot move tag '%1' to this tag</source>
+<translation>Non è possibile spostare il tag '%1' in questo tag</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9643"/>
-<source>Moved tag &apos;%1&apos; to new tag</source>
-<translation>Tag &apos;%1&apos; spostato</translation>
+<source>Moved tag '%1' to new tag</source>
+<translation>Tag '%1' spostato</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="8521"/>
-<source>show all notes tagged with &apos;%1&apos; (%2)</source>
-<translation>mostra tutte le note con tag con &apos;%1&apos; (%2)</translation>
+<source>show all notes tagged with '%1' (%2)</source>
+<translation>mostra tutte le note con tag con '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="9318"/>
@@ -3960,7 +3948,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="598"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation>Non trovo l&apos;azione di menù &lt;code&gt;%1&lt;/code&gt;! L&apos;hai scritta correttamente?</translation>
+<translation>Non trovo l'azione di menù &lt;code&gt;%1&lt;/code&gt;! L'hai scritta correttamente?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="885"/>
@@ -4015,7 +4003,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="1264"/>
 <source>inserting toolbar</source>
-<translation>barra degli strumenti &quot;inserisci&quot;</translation>
+<translation>barra degli strumenti "inserisci"</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="1271"/>
@@ -4059,8 +4047,8 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2398"/>
-<source>show notes in folder &apos;%1&apos; (%2)</source>
-<translation>mostra note nella cartella &apos;%1&apos; (%2)</translation>
+<source>show notes in folder '%1' (%2)</source>
+<translation>mostra note nella cartella '%1' (%2)</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="2615"/>
@@ -4101,7 +4089,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../mainwindow.cpp" line="3189"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
-<translation>Fare clic qui per vedere cosa è cambiato e per aggiornare all&apos;ultima versione</translation>
+<translation>Fare clic qui per vedere cosa è cambiato e per aggiornare all'ultima versione</translation>
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="3559"/>
@@ -4113,10 +4101,10 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message numerus="yes">
 <location filename="../mainwindow.cpp" line="5041"/>
-<source>%n note(s) were tagged with &quot;%2&quot;</source>
+<source>%n note(s) were tagged with "%2"</source>
 <translation>
-<numerusform>%n nota è stata etichettata con &quot;%2&quot;</numerusform>
-<numerusform>%n note sono state etichettate con &quot;%2&quot;</numerusform>
+<numerusform>%n nota è stata etichettata con "%2"</numerusform>
+<numerusform>%n note sono state etichettate con "%2"</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4239,7 +4227,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../dialogs/notediffdialog.ui" line="41"/>
 <source>The current note was modified outside of this application!</source>
-<translation>La nota corrente è stata modificata all&apos;esterno di questa applicazione!</translation>
+<translation>La nota corrente è stata modificata all'esterno di questa applicazione!</translation>
 </message>
 <message>
 <location filename="../dialogs/notediffdialog.ui" line="48"/>
@@ -4277,7 +4265,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../widgets/notepreviewwidget.cpp" line="263"/>
 <source>Copy image file path</source>
-<translation>Copia percorso del file dell&apos;immagine</translation>
+<translation>Copia percorso del file dell'immagine</translation>
 </message>
 <message>
 <location filename="../widgets/notepreviewwidget.cpp" line="264"/>
@@ -4377,12 +4365,12 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../services/owncloudservice.cpp" line="585"/>
 <source>API app version too low</source>
-<translation>Versione dell&apos;app delle API troppo datata</translation>
+<translation>Versione dell'app delle API troppo datata</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="586"/>
 <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-<translation>Considerare di aggiornare l&apos;app QOwnNotesAPI sul proprio server: la versione %1 dell&apos;app è troppo datata e potrebbe causare problemi in QOwnNotes.</translation>
+<translation>Considerare di aggiornare l'app QOwnNotesAPI sul proprio server: la versione %1 dell'app è troppo datata e potrebbe causare problemi in QOwnNotes.</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1199"/>
@@ -4421,7 +4409,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
 <translation>Non ci sono versioni per questa nota oppure la nota non è stata trovata sul server.</translation>
 </message>
 <message>
@@ -4447,13 +4435,13 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn&apos;t reply anything!</source>
+<source>Your CalDAV server didn't reply anything!</source>
 <translation>Il proprio server CalDAV non ha fornito alcuna risposta!</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1457"/>
 <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-<translation>Messaggio d&apos;errore dal proprio server CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+<translation>Messaggio d'errore dal proprio server CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="2145"/>
@@ -4490,7 +4478,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don&apos;t match!</source>
+<source>Passwords don't match!</source>
 <translation>Le password non coincidono!</translation>
 </message>
 </context>
@@ -4504,7 +4492,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../entities/note.cpp" line="1309"/>
 <source>Could not store note file: %1 - Error message: %2</source>
-<translation>Non è stato possibile salvare il file della nota: %1 - Messaggio d&apos;errore: %2</translation>
+<translation>Non è stato possibile salvare il file della nota: %1 - Messaggio d'errore: %2</translation>
 </message>
 <message>
 <location filename="../entities/note.cpp" line="1389"/>
@@ -4514,7 +4502,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../entities/note.cpp" line="1397"/>
 <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-<translation>Non è stato possibile rimuovere il file delle note rinominato: %1 - Messaggio d&apos;errore: %2</translation>
+<translation>Non è stato possibile rimuovere il file delle note rinominato: %1 - Messaggio d'errore: %2</translation>
 </message>
 <message>
 <location filename="../entities/note.cpp" line="1539"/>
@@ -4524,7 +4512,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../entities/note.cpp" line="2600"/>
 <source>Could not read image file: %1</source>
-<translation>Non è stato possibile leggere il file dell&apos;immagine: %1</translation>
+<translation>Non è stato possibile leggere il file dell'immagine: %1</translation>
 </message>
 <message>
 <location filename="../entities/note.cpp" line="3221"/>
@@ -4560,12 +4548,12 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don&apos;t ask again!</source>
+<source>Don't ask again!</source>
 <translation>Non chiederlo di nuovo!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don&apos;t show again!</source>
+<source>Don't show again!</source>
 <translation>Non mostrarlo di nuovo!</translation>
 </message>
 <message>
@@ -4631,12 +4619,12 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
-<translation>La cartella con nome &lt;b&gt;%1&lt;/b&gt; non può essere creata, perchè è usata internamente dall&apos;applicazione!</translation>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
+<translation>La cartella con nome &lt;b&gt;%1&lt;/b&gt; non può essere creata, perchè è usata internamente dall'applicazione!</translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>La cartella con il nome &lt;b&gt;%1&lt;/b&gt; non può essere creata, perché è nella lista delle sotto cartelle ignorate! Puoi cambiare questo nelle &lt;i&gt;Impostazioni Pannelli&lt;/i&gt;.</translation>
 </message>
 <message>
@@ -4876,9 +4864,9 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file &apos;%1&apos;.
+<source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-<translation>Impossibile stabilire una connessione al database con il file &apos;%1&apos;. La cartella e il file sono scrivibili?</translation>
+<translation>Impossibile stabilire una connessione al database con il file '%1'. La cartella e il file sono scrivibili?</translation>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="148"/>
@@ -4892,9 +4880,9 @@ Are the folder and the file writeable?</source>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
+<source>Unable to establish a database connection with note folder database to merge '%1'.
 Are the folder and the file writeable?</source>
-<translation>Non è stato possibile connettersi al database con la cartella delle note da unire &apos;%1&apos;.
+<translation>Non è stato possibile connettersi al database con la cartella delle note da unire '%1'.
 La cartella e il file sono scrivibili?</translation>
 </message>
 </context>
@@ -5028,7 +5016,7 @@ La cartella e il file sono scrivibili?</translation>
 <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
 <translation>La piattaforma non è supportata da questo script!
-Si desidera procedere con l&apos;installazione comunque?</translation>
+Si desidera procedere con l'installazione comunque?</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="482"/>
@@ -5042,7 +5030,7 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Ricordarsi di aggiornare la propria installazione di QOwnNotes per far funzionare questo script!</translation>
 </message>
 <message>
@@ -5071,7 +5059,7 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 <message>
 <location filename="../widgets/scriptsettingwidget.ui" line="92"/>
 <source>The setting name</source>
-<translation>Il nome dell&apos;impostazione</translation>
+<translation>Il nome dell'impostazione</translation>
 </message>
 <message>
 <location filename="../widgets/scriptsettingwidget.cpp" line="193"/>
@@ -5083,7 +5071,7 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn&apos;t exist</source>
+<source>file doesn't exist</source>
 <translation>file inesistente</translation>
 </message>
 </context>
@@ -5164,8 +5152,8 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Inserire l&apos;URL del proprio server ownCloud, ad esempio: &lt;span style=&quot;font-style:italic;&quot;&gt; https://cloud.server.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Inserire l'URL del proprio server ownCloud, ad esempio: &lt;span style="font-style:italic;"&gt; https://cloud.server.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5231,8 +5219,8 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Apri la pagina di&lt;span style=&quot; font-weight:600;&quot;&gt;configurazione App&lt;/span&gt; del tuo server ownCloud sul tuo browser per installare e aggiornare QOwnNotesAPI e per abilitare il le core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; e i &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Apri la pagina di&lt;span style=" font-weight:600;"&gt;configurazione App&lt;/span&gt; del tuo server ownCloud sul tuo browser per installare e aggiornare QOwnNotesAPI e per abilitare il le core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; e i &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5256,8 +5244,8 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;E&apos; necessario abilitare le core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; e &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; sul proprio server ownCloud (dovrebbero essere abilitate di default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;E' necessario abilitare le core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; e &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; sul proprio server ownCloud (dovrebbero essere abilitate di default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5332,7 +5320,7 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3006"/>
 <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-<translation>Solo alcuni colori verranno adattati, il tema del tuo desktop farà il resto. Occorre riavviare l&apos;applicazione per rendere effettivi i cambiamenti.</translation>
+<translation>Solo alcuni colori verranno adattati, il tema del tuo desktop farà il resto. Occorre riavviare l'applicazione per rendere effettivi i cambiamenti.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3009"/>
@@ -5342,7 +5330,7 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2996"/>
 <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-<translation>Questo abilita la modalità scura, interfaccia ed icone verranno modificate. Occorre riavviare l&apos;applicazione per rendere effettive le modifiche.</translation>
+<translation>Questo abilita la modalità scura, interfaccia ed icone verranno modificate. Occorre riavviare l'applicazione per rendere effettive le modifiche.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2999"/>
@@ -5355,7 +5343,7 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 <location filename="../dialogs/settingsdialog.ui" line="3066"/>
 <location filename="../dialogs/settingsdialog.ui" line="3076"/>
 <source>You need to restart the application to let this setting take effect</source>
-<translation>È necessario riavviare l&apos;applicazione per applicare questa impostazione</translation>
+<translation>È necessario riavviare l'applicazione per applicare questa impostazione</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3105"/>
@@ -5375,7 +5363,7 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2162"/>
 <source>Interface language</source>
-<translation>Lingua dell&apos;interfaccia</translation>
+<translation>Lingua dell'interfaccia</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2192"/>
@@ -5472,7 +5460,7 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1711"/>
 <source>Usage tracking is done on a private Piwik server.</source>
-<translation>Il tracciamento dell&apos;utilizzo viene fatto su un server Piwik privato.</translation>
+<translation>Il tracciamento dell'utilizzo viene fatto su un server Piwik privato.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1771"/>
@@ -5486,13 +5474,13 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Potresti prendere in considerazione di ottenere un certificato SSL gratuito da &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Potresti prendere in considerazione di ottenere un certificato SSL gratuito da &lt;a href="https://letsencrypt.org/"&gt; Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
 <source>If you change the language you have to restart the application for the changes to take action.</source>
-<translation>Se modifichi la lingua devi riavviare l&apos;applicazione per rendere effettive le modifiche.</translation>
+<translation>Se modifichi la lingua devi riavviare l'applicazione per rendere effettive le modifiche.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3686"/>
@@ -5521,8 +5509,8 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Se selezionata verranno sempre notificate eventuali modifiche esterne, anche se la nota corrente non è stata modificata nell&apos;ultimo minuto. Consigliato &lt;span style=&quot;font-style:italic;&quot;&gt; deselezionata&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Se selezionata verranno sempre notificate eventuali modifiche esterne, anche se la nota corrente non è stata modificata nell'ultimo minuto. Consigliato &lt;span style="font-style:italic;"&gt; deselezionata&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5564,7 +5552,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4283"/>
 <source>Clear application data and exit</source>
-<translation>Cancella i dati dell&apos;applicazione ed esci</translation>
+<translation>Cancella i dati dell'applicazione ed esci</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4289"/>
@@ -5575,12 +5563,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="4299"/>
 <location filename="../dialogs/settingsdialog.cpp" line="2377"/>
 <source>Clear app data and exit</source>
-<translation>Azzera i dati dell&apos;app ed esci</translation>
+<translation>Azzera i dati dell'app ed esci</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4078"/>
 <source>Update dialog</source>
-<translation>Finestra di dialogo dell&apos;aggiornamento</translation>
+<translation>Finestra di dialogo dell'aggiornamento</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4158"/>
@@ -5595,7 +5583,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4256"/>
 <source>path to external editor, leave empty for default</source>
-<translation>percorso dell&apos;editor esterno, lasciare vuoto per quello predefinito</translation>
+<translation>percorso dell'editor esterno, lasciare vuoto per quello predefinito</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4266"/>
@@ -5606,17 +5594,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1636"/>
 <source>App metrics</source>
-<translation>Metriche dell&apos;app</translation>
+<translation>Metriche dell'app</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
 <translation>I dati di utilizzo anonimi aiutano a decidere quali parti di QOwnNotes sono da migliorare, nonché per trovare e correggere i bug. Disattivarlo solo se davvero non si può vivere con questa impostazione attivata.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1686"/>
 <source>This data includes anonymous information about what features of the app are used.</source>
-<translation>Questi dati comprendono informazioni anonime sulle funzioni dell&apos;app che vengono usate.</translation>
+<translation>Questi dati comprendono informazioni anonime sulle funzioni dell'app che vengono usate.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1740"/>
@@ -5626,7 +5614,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1758"/>
 <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-<translation>Periodicamente durante l&apos;esecuzione di QOwnNotes, viene inviata una richiesta heartbeat (simile ad un ping). Fai felice uno sviluppatore facendogli sapere che qualcuno sta usando QOwnNotes.</translation>
+<translation>Periodicamente durante l'esecuzione di QOwnNotes, viene inviata una richiesta heartbeat (simile ad un ping). Fai felice uno sviluppatore facendogli sapere che qualcuno sta usando QOwnNotes.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2492"/>
@@ -5671,7 +5659,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="202"/>
 <source>Editor fonts &amp; colors</source>
-<translation>Caratteri e colori dell&apos;editor</translation>
+<translation>Caratteri e colori dell'editor</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="215"/>
@@ -5710,8 +5698,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>&quot;Notes&quot; path on your server</source>
-<extracomment>&quot;Notes&quot; should not be translated</extracomment>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
 <translation>Percorso di Notes sul proprio server</translation>
 </message>
 <message>
@@ -5762,13 +5750,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Installare l&apos;ultima versione di &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (almeno la versione QOWNNOTESAPI_MIN_VERSION) nel proprio server ownCloud se si desidera che QOwnNotes possa accedere alle versioni delle note e alle note cestinate.</translation>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Installare l'ultima versione di &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (almeno la versione QOWNNOTESAPI_MIN_VERSION) nel proprio server ownCloud se si desidera che QOwnNotes possa accedere alle versioni delle note e alle note cestinate.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;E&apos; necessario installare &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;un programma di sincronizzazione per ownCloud&lt;/span&gt;&lt;/a&gt; (o uno equivalente per desktop) per sincronizzare le proprie note!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;E' necessario installare &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;un programma di sincronizzazione per ownCloud&lt;/span&gt;&lt;/a&gt; (o uno equivalente per desktop) per sincronizzare le proprie note!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5826,8 +5814,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
-<translation>Prestare attenzione: l&apos;app delle note &quot;ownCloud&quot; non supporta le sottocartelle!</translation>
+<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
+<translation>Prestare attenzione: l'app delle note "ownCloud" non supporta le sottocartelle!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="738"/>
@@ -5837,7 +5825,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1404"/>
 <source>Enable QOwnNotesAPI app</source>
-<translation>Abilita l&apos;app QOwnNotesAPI</translation>
+<translation>Abilita l'app QOwnNotesAPI</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1810"/>
@@ -5857,7 +5845,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2013"/>
 <source>Select the calendars you want to use for the Todo list</source>
-<translation>Selezionare i calendari da usare per l&apos;elenco della lista delle cose da fare</translation>
+<translation>Selezionare i calendari da usare per l'elenco della lista delle cose da fare</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2088"/>
@@ -6067,12 +6055,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2979"/>
 <source>Enable dark mode application icon and tray icon</source>
-<translation>Abilita la modalità scura per l&apos;icona dell&apos;applicazione e l&apos;icona nell&apos;area di notifica</translation>
+<translation>Abilita la modalità scura per l'icona dell'applicazione e l'icona nell'area di notifica</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2986"/>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-<translation>È anche possibile impostare un altro schema di colori dell&apos;editor nelle impostazioni dell&apos;editor in modalità scura.</translation>
+<translation>È anche possibile impostare un altro schema di colori dell'editor nelle impostazioni dell'editor in modalità scura.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3089"/>
@@ -6087,12 +6075,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3028"/>
 <source>Show system tray icon</source>
-<translation>Mostra icona nell&apos;area di notifica</translation>
+<translation>Mostra icona nell'area di notifica</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3038"/>
 <source>Start application hidden</source>
-<translation>Avvia l&apos;applicazione nascosta</translation>
+<translation>Avvia l'applicazione nascosta</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3048"/>
@@ -6107,12 +6095,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3185"/>
 <source>Override interface font size</source>
-<translation>Sostituisci la dimensione del carattere dell&apos;interfaccia</translation>
+<translation>Sostituisci la dimensione del carattere dell'interfaccia</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3194"/>
 <source>Interface font size:</source>
-<translation>Dimensione carattere dell&apos;interfaccia:</translation>
+<translation>Dimensione carattere dell'interfaccia:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3406"/>
@@ -6127,7 +6115,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3897"/>
 <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-<translation>All&apos;apertura delle note, la posizione del cursore all&apos;interno della nota verrà impostata alla posizione attiva l&apos;ultima volta che la nota è stata aperta nella sessione corrente</translation>
+<translation>All'apertura delle note, la posizione del cursore all'interno della nota verrà impostata alla posizione attiva l'ultima volta che la nota è stata aperta nella sessione corrente</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3867"/>
@@ -6185,8 +6173,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il miglior modo di segnalare problemi è utilizzare l&apos;assistente dei problemi premendo il pulsante &lt;span style=&quot; font-weight:600;&quot;&gt;Apri assistente dei problemi&lt;/span&gt; posto in fondo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il miglior modo di segnalare problemi è utilizzare l'assistente dei problemi premendo il pulsante &lt;span style=" font-weight:600;"&gt;Apri assistente dei problemi&lt;/span&gt; posto in fondo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6226,12 +6214,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="953"/>
 <source>Opens your ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
-<translation>Apre nel browser la pagina della password dell&apos;app sul tuo server ownCloud per creare una nuova password per l&apos;applicazione</translation>
+<translation>Apre nel browser la pagina della password dell'app sul tuo server ownCloud per creare una nuova password per l'applicazione</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="956"/>
 <source>Open your ownCloud server App Password page</source>
-<translation>Apri la pagina della password dell&apos;app nel tuo server ownCloud</translation>
+<translation>Apri la pagina della password dell'app nel tuo server ownCloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2569"/>
@@ -6250,13 +6238,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
-<translation>Se la tua password non funziona, crea una password per l&apos;app (pulsante a destra)</translation>
+<source>If your password doesn't work, create an app password (button on the right)</source>
+<translation>Se la tua password non funziona, crea una password per l'app (pulsante a destra)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation>Se vuoi aiutare a tradurre QOwnNotes o aggiornare una traduzione esistente, leggi: &lt;a href=&quot;%1&quot;&gt;Come posso aiutare a tradurre QOwnNotes?&lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation>Se vuoi aiutare a tradurre QOwnNotes o aggiornare una traduzione esistente, leggi: &lt;a href="%1"&gt;Come posso aiutare a tradurre QOwnNotes?&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6321,17 +6309,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3907"/>
 <source>Disable this if you want to launch the application without opening a note</source>
-<translation>Disabilitare questa opzione per avviare l&apos;applicazione senza aprire una nota</translation>
+<translation>Disabilitare questa opzione per avviare l'applicazione senza aprire una nota</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3910"/>
 <source>Open last accessed note at application startup</source>
-<translation>Apri ultima nota all&apos;avvio dell&apos;applicazione</translation>
+<translation>Apri ultima nota all'avvio dell'applicazione</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4357"/>
 <source>Checks the disk database integrity and fixes problems</source>
-<translation>Verifica l&apos;integrità del database e risolvi i problemi riscontrati</translation>
+<translation>Verifica l'integrità del database e risolvi i problemi riscontrati</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4360"/>
@@ -6341,12 +6329,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4367"/>
 <source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
-<translation>Attenzione, la reinizializzazione del database comporta anche l&apos;eliminazione dei compiti memorizzati nella cache, delle cartelle configurate per le note e degli script!</translation>
+<translation>Attenzione, la reinizializzazione del database comporta anche l'eliminazione dei compiti memorizzati nella cache, delle cartelle configurate per le note e degli script!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
-<translation>GitHub non ha bisogno di due spazi alla fine della riga per fare un&apos;interruzione di riga</translation>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
+<translation>GitHub non ha bisogno di due spazi alla fine della riga per fare un'interruzione di riga</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4473"/>
@@ -6365,13 +6353,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don&apos;t use this in the issue tracker</source>
+<source>Please don't use this in the issue tracker</source>
 <translation>Non usare questo valore nel gestore dei problemi</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4729"/>
 <source>Use editor highlighting styles also for the preview</source>
-<translation>Usa gli stili di evidenziazione dell&apos;editor anche nell&apos;anteprima</translation>
+<translation>Usa gli stili di evidenziazione dell'editor anche nell'anteprima</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4752"/>
@@ -6381,12 +6369,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4758"/>
 <source>Use internal export styling for the PDF export and printing of the preview</source>
-<translation>Usa lo stile di esportazione interno per l&apos;esportazione in PDF e l&apos;anteprima di stampa</translation>
+<translation>Usa lo stile di esportazione interno per l'esportazione in PDF e l'anteprima di stampa</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potresti dare un&apos;occhiata a tutti i &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;formati di ora&lt;/a&gt; disponibili.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potresti dare un'occhiata a tutti i &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;formati di ora&lt;/a&gt; disponibili.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6416,8 +6404,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
-<translation>Espressioni regolari delle sottocartelle delle note da ignorare, separate da &quot;;&quot;</translation>
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
+<translation>Espressioni regolari delle sottocartelle delle note da ignorare, separate da ";"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5651"/>
@@ -6432,12 +6420,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5703"/>
 <source>Restore open note tabs at application startup and when note folders are switched</source>
-<translation>Ripristina le schede aperte delle note all&apos;avvio dell&apos;applicazione quando si cambiano cartelle delle note</translation>
+<translation>Ripristina le schede aperte delle note all'avvio dell'applicazione quando si cambiano cartelle delle note</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
-<translation>Nascondi &quot;Conteggio note&quot; con i tag (aumenta le prestazioni)</translation>
+<source>Hide 'Note count' with tags (increases performance)</source>
+<translation>Nascondi "Conteggio note" con i tag (aumenta le prestazioni)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5824"/>
@@ -6446,8 +6434,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation>Puoi utilizzare l &apos;&lt;a href=&quot;%1&quot;&gt;app Web QOwnNotes&lt;/a&gt; per inserire foto in QOwnNotes sul desktop.</translation>
+<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation>Puoi utilizzare l '&lt;a href="%1"&gt;app Web QOwnNotes&lt;/a&gt; per inserire foto in QOwnNotes sul desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6467,12 +6455,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6272"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
-<translation>È necessario immettere questo token nell&apos;applicazione Web QOwnNotes per poter parlare con l&apos;applicazione desktop QOwnNotes.</translation>
+<translation>È necessario immettere questo token nell'applicazione Web QOwnNotes per poter parlare con l'applicazione desktop QOwnNotes.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6296"/>
 <source>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</source>
-<translation>Verrà aperta una connessione websocket a questo server per fungere da ponte tra l&apos;applicazione web QOwnNotes e l&apos;applicazione desktop QOwnNotes.</translation>
+<translation>Verrà aperta una connessione websocket a questo server per fungere da ponte tra l'applicazione web QOwnNotes e l'applicazione desktop QOwnNotes.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6322"/>
@@ -6487,7 +6475,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6350"/>
 <source>Reset the URL to default</source>
-<translation>Reimposta l&apos;URL sul valore predefinito</translation>
+<translation>Reimposta l'URL sul valore predefinito</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6370"/>
@@ -6497,7 +6485,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6376"/>
 <source>Enable web application support</source>
-<translation>Abilita il supporto dell&apos;applicazione web</translation>
+<translation>Abilita il supporto dell'applicazione web</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5479"/>
@@ -6507,7 +6495,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5485"/>
 <source>Show notes in the note list with preview</source>
-<translation>Mostra note nell&apos;elenco delle note con anteprima</translation>
+<translation>Mostra note nell'elenco delle note con anteprima</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5558"/>
@@ -6551,8 +6539,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
-<translation>Per impostazione predefinita, l&apos;estensione per il browser mostrerà tutti i collegamenti della nota corrente. Si può anche visualizzare i collegamenti a speciali segnalibri delle note con una determinata etichetta. Per ulteriori informazioni sulla sintassi dei collegamenti con segnalibri, fare clic &lt;a href=&quot;%1&quot;&gt;qui&lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation>Per impostazione predefinita, l'estensione per il browser mostrerà tutti i collegamenti della nota corrente. Si può anche visualizzare i collegamenti a speciali segnalibri delle note con una determinata etichetta. Per ulteriori informazioni sulla sintassi dei collegamenti con segnalibri, fare clic &lt;a href="%1"&gt;qui&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6562,12 +6550,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6102"/>
 <source>This note will be used for adding new bookmarks from the browser extension</source>
-<translation>Questa nota verrà utilizzata per aggiungere nuovi segnalibri dall&apos;estensione del browser</translation>
+<translation>Questa nota verrà utilizzata per aggiungere nuovi segnalibri dall'estensione del browser</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6105"/>
 <source>Note name for adding new bookmarks</source>
-<translation>Nome della nota per l&apos;aggiunta di nuovi segnalibri</translation>
+<translation>Nome della nota per l'aggiunta di nuovi segnalibri</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6115"/>
@@ -6602,8 +6590,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>Installa l&apos;estensione &lt;a href=&quot;%1&quot;&gt;del browser web&lt;/a&gt; dal &lt;a href=&quot;%2&quot;&gt;Web Store di Chrome&lt;/a&gt; o dalla &lt;a href=&quot;%3&quot;&gt;pagina delle estensioni di Firefox&lt;/a&gt; per utilizzare QOwnNotes come clipper web.</translation>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>Installa l'estensione &lt;a href="%1"&gt;del browser web&lt;/a&gt; dal &lt;a href="%2"&gt;Web Store di Chrome&lt;/a&gt; o dalla &lt;a href="%3"&gt;pagina delle estensioni di Firefox&lt;/a&gt; per utilizzare QOwnNotes come clipper web.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6698,20 +6686,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>Inserire un comando da usare per mostrare un registro di git (come ad esempio &quot;gitk&quot;)</translation>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>Inserire un comando da usare per mostrare un registro di git (come ad esempio "gitk")</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<extracomment>Please don't translate "%notePath%"</extracomment>
 <translation>Se si usa questa impostazione, verrà mostrata una nuova voce di menù per mostrare le versioni sotto git quando si fa clic col pulsante destro su una nota.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5499"/>
 <source>Show all notes of a tag including the notes of their children-tags</source>
-<translation>Mostra tutte le note con un&apos;etichetta, includendo le note associate alle relative sotto-etichette</translation>
+<translation>Mostra tutte le note con un'etichetta, includendo le note associate alle relative sotto-etichette</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5492"/>
@@ -6725,7 +6713,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Ricordarsi di abilitare il supporto di git per le proprie cartelle delle note e di configurare il client git con il proprio nome e indirizzo email, per esempio con questi comandi da terminale:</translation>
 </message>
 <message>
@@ -6764,7 +6752,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5222"/>
 <source>Only use editor width setting in distraction free mode</source>
-<translation>Usa l&apos;impostazione della larghezza dell&apos;editor solo nella modalità anti-distrazione</translation>
+<translation>Usa l'impostazione della larghezza dell'editor solo nella modalità anti-distrazione</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5512"/>
@@ -6780,8 +6768,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide &apos;Find or create tag&apos; search</source>
-<translation>Nascondi ricerca &apos;Trova o crea etichetta&apos;</translation>
+<source>Hide 'Find or create tag' search</source>
+<translation>Nascondi ricerca 'Trova o crea etichetta'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5568"/>
@@ -6806,8 +6794,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide &apos;Find or create note subfolder&apos; search</source>
-<translation>Nascondi ricerca &apos;Trova o crea sottocartella note&apos;</translation>
+<source>Hide 'Find or create note subfolder' search</source>
+<translation>Nascondi ricerca 'Trova o crea sottocartella note'</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6817,13 +6805,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2919"/>
 <source>Search script repository</source>
-<translation>Cerca nell&apos;archivio degli script</translation>
+<translation>Cerca nell'archivio degli script</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
-<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-<translation>È possibile utilizzare &quot;%notePath%&quot; per il percorso della nota.</translation>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation>È possibile utilizzare "%notePath%" per il percorso della nota.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -6833,7 +6821,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5408"/>
 <source>Path to git executable:</source>
-<translation>Percorso dell&apos;eseguibile git:</translation>
+<translation>Percorso dell'eseguibile git:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5398"/>
@@ -6883,8 +6871,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
-<translation>Per le installazioni di ownCloud più vecchie, per le quali l&apos;impostazione predefinita non funziona</translation>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
+<translation>Per le installazioni di ownCloud più vecchie, per le quali l'impostazione predefinita non funziona</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1848"/>
@@ -6904,7 +6892,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1912"/>
 <source>Please enter the CalDAV base url to your calendar.</source>
-<translation>Inserire l&apos;URL di base di CalDAV del proprio calendario.</translation>
+<translation>Inserire l'URL di base di CalDAV del proprio calendario.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1982"/>
@@ -6999,7 +6987,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3900"/>
 <source>Restore cursor position when opening a note</source>
-<translation>Ripristina la posizione del cursore all&apos;apertura di una nota</translation>
+<translation>Ripristina la posizione del cursore all'apertura di una nota</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4890"/>
@@ -7024,7 +7012,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4950"/>
 <source>Fake old version number to trigger update</source>
-<translation>Forza l&apos;aggiornamento falsificando i numeri di versione</translation>
+<translation>Forza l'aggiornamento falsificando i numeri di versione</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4978"/>
@@ -7034,7 +7022,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5040"/>
 <source>Here you can set your own time format for inserting the current time into a note.</source>
-<translation>Qui è possibile impostare il proprio formato orario quando si inserisce l&apos;ora corrente in una nota.</translation>
+<translation>Qui è possibile impostare il proprio formato orario quando si inserisce l'ora corrente in una nota.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5043"/>
@@ -7048,8 +7036,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
-<translation>Inserire il proprio formato orario, come per esempio &quot;dd.MM.yyyy hh:mm&quot;</translation>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation>Inserire il proprio formato orario, come per esempio "dd.MM.yyyy hh:mm"</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7094,7 +7082,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2035"/>
 <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-<translation>In questo modo tutti gli elementi dell&apos;elenco di compiti verranno ricaricati dal server alla prossima apertura della finestra di dialogo dei compiti.</translation>
+<translation>In questo modo tutti gli elementi dell'elenco di compiti verranno ricaricati dal server alla prossima apertura della finestra di dialogo dei compiti.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2038"/>
@@ -7104,7 +7092,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2061"/>
 <source>Click here to reload the list of calendars from your calendar server.</source>
-<translation>Fare clic qui per ricaricare l&apos;elenco dei calendario dal proprio server dei calendari.</translation>
+<translation>Fare clic qui per ricaricare l'elenco dei calendario dal proprio server dei calendari.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2067"/>
@@ -7115,7 +7103,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <location filename="../dialogs/settingsdialog.ui" line="2976"/>
 <location filename="../dialogs/settingsdialog.ui" line="3086"/>
 <source>You may need to restart the application to let these changes take effect</source>
-<translation>È necessario riavviare l&apos;applicazione per rendere effettive queste modifiche</translation>
+<translation>È necessario riavviare l'applicazione per rendere effettive queste modifiche</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3121"/>
@@ -7149,7 +7137,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don&apos;t support todo items</source>
+<source>Ignore calendars that don't support todo items</source>
 <translation>Ignora i calendari che non supportano le liste di compiti</translation>
 </message>
 <message>
@@ -7195,7 +7183,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3887"/>
 <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-<translation>È possibile utilizzarlo per esempio in Windows se si hanno problemi con i ritorni a capo nell&apos;app delle note di ownCloud / Nextcloud</translation>
+<translation>È possibile utilizzarlo per esempio in Windows se si hanno problemi con i ritorni a capo nell'app delle note di ownCloud / Nextcloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4062"/>
@@ -7205,22 +7193,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4068"/>
 <source>Only allow one app instance at the same time</source>
-<translation>Permetti l&apos;esecuzione di una sola istanza dell&apos;app per volta</translation>
+<translation>Permetti l'esecuzione di una sola istanza dell'app per volta</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4164"/>
 <source>Add a custom file extension</source>
-<translation>Aggiungi un&apos;estensione di file personalizzata</translation>
+<translation>Aggiungi un'estensione di file personalizzata</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4178"/>
 <source>Remove a custom file extension</source>
-<translation>Rimuovi un&apos;estensione di file personalizzata</translation>
+<translation>Rimuovi un'estensione di file personalizzata</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-<translation>Se si aggiungono estensioni personalizzate, basta digitare l&apos;estensione, ad esempio &quot;listacompiti&quot;.</translation>
+<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+<translation>Se si aggiungono estensioni personalizzate, basta digitare l'estensione, ad esempio "listacompiti".</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7230,12 +7218,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4249"/>
 <source>Path to external editor:</source>
-<translation>Percorso dell&apos;editor esterno:</translation>
+<translation>Percorso dell'editor esterno:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don&apos;t show the update dialog automatically</source>
-<translation>Non mostrare automaticamente la finestra di dialogo dell&apos;aggiornamento</translation>
+<source>Don't show the update dialog automatically</source>
+<translation>Non mostrare automaticamente la finestra di dialogo dell'aggiornamento</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4547"/>
@@ -7273,8 +7261,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;È possibile &lt;span style=&quot;font-weight:600;&quot;&gt;copiare e incollare&lt;/span&gt; questo testo (o parti di esso) in una &lt;span style=&quot;font-weight:600;&quot;&gt;segnalazione&lt;/span&gt; nella &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;pagina segnalazioni di QOwnNotes&lt;/a&gt; se si hanno &lt;span style=&quot;font-weight:600;&quot;&gt;domande o problemi&lt;/span&gt; con QOwnNotes. I dati sensibili verranno nascosti in queste informazioni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;È possibile &lt;span style="font-weight:600;"&gt;copiare e incollare&lt;/span&gt; questo testo (o parti di esso) in una &lt;span style="font-weight:600;"&gt;segnalazione&lt;/span&gt; nella &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;pagina segnalazioni di QOwnNotes&lt;/a&gt; se si hanno &lt;span style="font-weight:600;"&gt;domande o problemi&lt;/span&gt; con QOwnNotes. I dati sensibili verranno nascosti in queste informazioni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7284,7 +7272,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="507"/>
 <source>hostname of proxy server</source>
-<translation>nome dell&apos;host del server proxy</translation>
+<translation>nome dell'host del server proxy</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="508"/>
@@ -7332,13 +7320,13 @@ You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
 <translation>Si è verificato un errore di connessione al Server ownCloud!
-È inoltre necessario avere installato e attivato l&apos;app di QOwnNotesAPI!
+È inoltre necessario avere installato e attivato l'app di QOwnNotesAPI!
 
 Messaggio di errore: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
-<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Usare questo valore nel gestore dei problemi, copiare il testo delle informazioni di debug direttamente nel rapporto sul problema.</translation>
 </message>
 <message>
@@ -7349,12 +7337,12 @@ Messaggio di errore: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2358"/>
 <source>Disable usage tracking</source>
-<translation>Disabilita il tracciamento dell&apos;utilizzo</translation>
+<translation>Disabilita il tracciamento dell'utilizzo</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2359"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-<translation>I dati anonimi sull&apos;utilizzo sono utili per decidere quali parti di QOwnNotes vanno migliorate e per rilevare e correggere bug.&lt;br /&gt;Disabilitare questa funzione solo se lo ritieni strettamente necessario.&lt;br /&gt;&lt;br /&gt;Disabilitare il tracciamento dell&apos;utilizzo?</translation>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<translation>I dati anonimi sull'utilizzo sono utili per decidere quali parti di QOwnNotes vanno migliorate e per rilevare e correggere bug.&lt;br /&gt;Disabilitare questa funzione solo se lo ritieni strettamente necessario.&lt;br /&gt;&lt;br /&gt;Disabilitare il tracciamento dell'utilizzo?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2592"/>
@@ -7388,18 +7376,18 @@ Messaggio di errore: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
-<source>Loading folders in &apos;%1&apos; from server</source>
-<translation>Caricamento delle cartelle in &apos;%1&apos; dal server</translation>
+<source>Loading folders in '%1' from server</source>
+<translation>Caricamento delle cartelle in '%1' dal server</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2904"/>
-<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Consultare la &lt;a href=&quot;%1&quot;&gt;documentazione sugli script&lt;/a&gt; per iniziare.</translation>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Consultare la &lt;a href="%1"&gt;documentazione sugli script&lt;/a&gt; per iniziare.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2908"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Se si deve accedere a una determinata funzionalità di QOwnNotes è possibile creare segnalare la questione nella &lt;a href=&quot;%1&quot;&gt;Pagina dei problemi di QOwnNotes&lt;/a&gt;.</translation>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Se si deve accedere a una determinata funzionalità di QOwnNotes è possibile creare segnalare la questione nella &lt;a href="%1"&gt;Pagina dei problemi di QOwnNotes&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2930"/>
@@ -7430,12 +7418,12 @@ Messaggio di errore: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4080"/>
 <source>The application will be quit after the import.</source>
-<translation>L&apos;applicazione verrà chiusa al termine dell&apos;importazione.</translation>
+<translation>L'applicazione verrà chiusa al termine dell'importazione.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4081"/>
 <source>The application will be restarted after the import.</source>
-<translation>L&apos;applicazione verrà riavviata al termine dell&apos;importazione.</translation>
+<translation>L'applicazione verrà riavviata al termine dell'importazione.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4313"/>
@@ -7445,17 +7433,17 @@ Messaggio di errore: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4334"/>
 <source>The integrity of the disk database is valid.</source>
-<translation>L&apos;integrità del disco del database è valida.</translation>
+<translation>L'integrità del disco del database è valida.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4339"/>
 <source>The integrity of the disk database is not valid!</source>
-<translation>L&apos;integrità del disco del database non è valida.</translation>
+<translation>L'integrità del disco del database non è valida.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2924"/>
 <source>Find a script in the script repository</source>
-<translation>Trova uno script nell&apos;archivio degli script</translation>
+<translation>Trova uno script nell'archivio degli script</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="295"/>
@@ -7540,7 +7528,7 @@ Messaggio di errore: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3285"/>
 <source>Enter your custom file extension:</source>
-<translation>Inserire l&apos;estensione di file personalizzata:</translation>
+<translation>Inserire l'estensione di file personalizzata:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3614"/>
@@ -7560,7 +7548,7 @@ Messaggio di errore: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3697"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-<translation>Reimpostare tutte le barre degli strumenti? L&apos;applicazione verrà chiusa durante questo processo: le barre degli strumenti predefinite verranno ripristinate all&apos;avvio successivo.</translation>
+<translation>Reimpostare tutte le barre degli strumenti? L'applicazione verrà chiusa durante questo processo: le barre degli strumenti predefinite verranno ripristinate all'avvio successivo.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="3701"/>
@@ -7610,8 +7598,8 @@ Messaggio di errore: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
-<translation>È possibile scaricare il client git qui: &lt;a href=&quot;%url&quot;&gt;Git per Windows&lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation>È possibile scaricare il client git qui: &lt;a href="%url"&gt;Git per Windows&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7635,7 +7623,7 @@ Messaggio di errore: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
 <translation>il database sqlite interno e le impostazioni verranno salvate in una cartella &lt;code&gt;Data&lt;/code&gt; nella posizione del programma</translation>
 </message>
 <message>
@@ -7646,7 +7634,7 @@ Messaggio di errore: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="473"/>
 <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-<translation>le cartelle delle note, i percorsi degli script e il percorso di un editor esterno verranno salvati come percorsi relativi alla cartella &lt;code&gt;Data&lt;/code&gt;: in tal modo i percorsi di note, script ed editor esterno saranno sempre corretti indipendentemente dall&apos;attuale cartella di installazione di QOwnNotes</translation>
+<translation>le cartelle delle note, i percorsi degli script e il percorso di un editor esterno verranno salvati come percorsi relativi alla cartella &lt;code&gt;Data&lt;/code&gt;: in tal modo i percorsi di note, script ed editor esterno saranno sempre corretti indipendentemente dall'attuale cartella di installazione di QOwnNotes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="483"/>
@@ -7697,7 +7685,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2498"/>
 <source>Select editor application</source>
-<translation>Selezionare l&apos;applicazione per la modifica</translation>
+<translation>Selezionare l'applicazione per la modifica</translation>
 </message>
 </context>
 <context>
@@ -7720,7 +7708,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="30"/>
 <source>The public url of your note</source>
-<translation>L&apos;url pubblico della nota</translation>
+<translation>L'url pubblico della nota</translation>
 </message>
 <message>
 <location filename="../dialogs/sharedialog.ui" line="47"/>
@@ -8007,12 +7995,12 @@ Le proprie note non verranno modificate!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn&apos;t exist</source>
+<source>File doesn't exist</source>
 <translation>File inesistente</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation>Il file &lt;strong&gt;%1&lt;/strong&gt; non esiste, non puoi rinominarlo!</translation>
 </message>
 <message>
@@ -8071,7 +8059,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="78"/>
 <source>Open image externally</source>
-<translation>Apri l&apos;immagine esternamente</translation>
+<translation>Apri l'immagine esternamente</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="81"/>
@@ -8138,12 +8126,12 @@ Le proprie note non verranno modificate!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn&apos;t exist</source>
+<source>File doesn't exist</source>
 <translation>File inesistente</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
 <translation>Il file &lt;strong&gt;%1&lt;/strong&gt; non esiste, non puoi rinominarlo!</translation>
 </message>
 <message>
@@ -8169,7 +8157,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="436"/>
 <source>&amp;Open image externally</source>
-<translation>&amp;Apri l&apos;immagine esternamente</translation>
+<translation>&amp;Apri l'immagine esternamente</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="437"/>
@@ -8212,7 +8200,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/tabledialog.ui" line="37"/>
 <source>Insert a table heading separator</source>
-<translation>Inserisci un separatore nell&apos;intestazione della tabella</translation>
+<translation>Inserisci un separatore nell'intestazione della tabella</translation>
 </message>
 <message>
 <location filename="../dialogs/tabledialog.ui" line="47"/>
@@ -8277,7 +8265,7 @@ Le proprie note non verranno modificate!</translation>
 <message>
 <location filename="../dialogs/tabledialog.ui" line="274"/>
 <source>First line is the table heading</source>
-<translation>La prima riga è l&apos;intestazione della tabella</translation>
+<translation>La prima riga è l'intestazione della tabella</translation>
 </message>
 <message>
 <location filename="../dialogs/tabledialog.ui" line="267"/>
@@ -8446,7 +8434,7 @@ Le proprie note non verranno modificate!</translation>
 <source>Remove the selected todo item?
 This cannot be undone!</source>
 <translation>Rimuovere il compito selezionato?
-Non sarà possibile annullare l&apos;operazione!</translation>
+Non sarà possibile annullare l'operazione!</translation>
 </message>
 <message>
 <location filename="../dialogs/tododialog.cpp" line="867"/>
@@ -8560,7 +8548,7 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
 <source>Adds the selected menu action to the toolbar</source>
-<translation>Aggiunge l&apos;azione di menu selezionata alla barra degli strumenti</translation>
+<translation>Aggiunge l'azione di menu selezionata alla barra degli strumenti</translation>
 </message>
 <message>
 <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
@@ -8634,7 +8622,7 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="47"/>
 <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-<translation>&lt;h3&gt;Più veloce, ma senza il controllo di versione&lt;/h3&gt; &lt;p&gt;La nota verrà creata con il testo dall&apos;anteprima.&lt;/p&gt; &lt;p&gt;Le versioni della nota sul vostro server ownCloud non verranno ripristinate e la nota rimane nel Cestino.&lt;/p&gt; &lt;p&gt;E&apos; sempre possibile ripristinare la nota e le sue versioni più tardi.&lt;/p&gt;</translation>
+<translation>&lt;h3&gt;Più veloce, ma senza il controllo di versione&lt;/h3&gt; &lt;p&gt;La nota verrà creata con il testo dall'anteprima.&lt;/p&gt; &lt;p&gt;Le versioni della nota sul vostro server ownCloud non verranno ripristinate e la nota rimane nel Cestino.&lt;/p&gt; &lt;p&gt;E' sempre possibile ripristinare la nota e le sue versioni più tardi.&lt;/p&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/trashdialog.cpp" line="59"/>
@@ -8697,12 +8685,12 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="83"/>
 <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-<translation>Ricordarsi che per poter effettuare l&apos;aggiornamento automatico QOwnNotes deve essere eseguito da una posizione dove si ha accesso in scrittura!</translation>
+<translation>Ricordarsi che per poter effettuare l'aggiornamento automatico QOwnNotes deve essere eseguito da una posizione dove si ha accesso in scrittura!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href=&quot;%1&quot;&gt;Partecipa a QOwnNotes&lt;/a&gt;</translation>
+<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href="%1"&gt;Partecipa a QOwnNotes&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8713,10 +8701,6 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>A&amp;ggiorna</translation>
-</message>
-<message>
-<source>&amp;Download latest</source>
-<translation type="vanished">Scarica &amp;più recente</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -8735,7 +8719,7 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="75"/>
-<source>Don&apos;t show this dialog automatically</source>
+<source>Don't show this dialog automatically</source>
 <translation>Non mostrare automaticamente questa finestra di dialogo</translation>
 </message>
 <message>
@@ -8804,91 +8788,91 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="351"/>
 <source>Could not find updater file:
 %1</source>
-<translation>Non è stato possibile trovare il file dell&apos;aggiornamento:
+<translation>Non è stato possibile trovare il file dell'aggiornamento:
 %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="431"/>
 <location filename="../dialogs/updatedialog.cpp" line="443"/>
 <source>Permission error</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">Permission error</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="432"/>
-<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished"></translation>
+<source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="444"/>
-<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
-<translation type="unfinished"></translation>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="454"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="464"/>
-<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
-<translation type="unfinished"></translation>
+<source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
 <source>Restart application</source>
-<translation type="unfinished">Riavviare l&apos;applicazione</translation>
+<translation type="unfinished">Restart application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="477"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="483"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished"></translation>
+<translation type="unfinished">You now can restart the application to complete the update process.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Restart</source>
-<translation type="unfinished">Riavvia</translation>
+<translation type="unfinished">Restart</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="484"/>
 <source>Cancel</source>
-<translation type="unfinished">Annulla</translation>
+<translation type="unfinished">Cancel</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="511"/>
-<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>Lo script di aggiornamento &apos;%1&apos; non esiste!</translation>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>Lo script di aggiornamento '%1' non esiste!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
-<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-<translation>L&apos;eseguibile unzip dell&apos;aggiornamento &apos;%1&apos; non esiste!</translation>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>L'eseguibile unzip dell'aggiornamento '%1' non esiste!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="528"/>
 <location filename="../dialogs/updatedialog.cpp" line="537"/>
-<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-<translation>Non è stato possibile copiare lo script di aggiornamento &apos;%1&apos; su &apos;%2&apos;!</translation>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>Non è stato possibile copiare lo script di aggiornamento '%1' su '%2'!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="547"/>
-<source>Couldn&apos;t find updater script: %1</source>
+<source>Couldn't find updater script: %1</source>
 <translation>Non è stato possibile trovare lo script di aggiornamento: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="556"/>
-<source>Couldn&apos;t find unzip executable: %1</source>
-<translation>Non è stato possibile trovare l&apos;eseguibile unzip: %1</translation>
+<source>Couldn't find unzip executable: %1</source>
+<translation>Non è stato possibile trovare l'eseguibile unzip: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="333"/>
 <location filename="../dialogs/updatedialog.cpp" line="561"/>
 <source>Proceed with update</source>
-<translation>Procedi con l&apos;aggiornamento</translation>
+<translation>Procedi con l'aggiornamento</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="562"/>
@@ -8984,7 +8968,7 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <message>
 <location filename="../services/webappclientservice.cpp" line="140"/>
 <source>Insert image received from QOwnNotes web application?</source>
-<translation>Inserire l&apos;immagine ricevuta dall&apos;applicazione web QOwnNotes?</translation>
+<translation>Inserire l'immagine ricevuta dall'applicazione web QOwnNotes?</translation>
 </message>
 </context>
 <context>
@@ -9028,7 +9012,7 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <message>
 <location filename="../dialogs/websockettokendialog.ui" line="26"/>
 <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-<translation>Per garantire all&apos;estensione QOwnNotes del proprio browser l&apos;accesso alle proprie note, incollare il token di sicurezza nelle impostazioni dell&apos;estensione del proprio browser:</translation>
+<translation>Per garantire all'estensione QOwnNotes del proprio browser l'accesso alle proprie note, incollare il token di sicurezza nelle impostazioni dell'estensione del proprio browser:</translation>
 </message>
 <message>
 <location filename="../dialogs/websockettokendialog.ui" line="65"/>
@@ -9133,7 +9117,7 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <message>
 <location filename="../dialogs/welcomedialog.ui" line="391"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-<translation>QOwnNotes raccoglierà in modo anonimo dei dati sull&apos;utilizzo dell&apos;applicazione, ciò sarà utile per decidere quali parti di QOwnNotes migliorare e per trovare e sistemare bug per le future versioni. Puoi disabilitare questo comportamento dalle impostazioni.</translation>
+<translation>QOwnNotes raccoglierà in modo anonimo dei dati sull'utilizzo dell'applicazione, ciò sarà utile per decidere quali parti di QOwnNotes migliorare e per trovare e sistemare bug per le future versioni. Puoi disabilitare questo comportamento dalle impostazioni.</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="122"/>
@@ -9147,7 +9131,7 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn&apos;t exist!</source>
+<source>This note path doesn't exist!</source>
 <translation>Questo percorso di note non esiste!</translation>
 </message>
 <message>
@@ -9166,12 +9150,12 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <message>
 <location filename="../main.cpp" line="96"/>
 <source>Runs the application in portable mode.</source>
-<translation>Esegue l&apos;applicazione in modalità portatile.</translation>
+<translation>Esegue l'applicazione in modalità portatile.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="102"/>
 <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-<translation>Esporta in formato Markdown l&apos;elenco delle impostazioni e altre informazioni su applicazione e ambiente ed esce dall&apos;applicazione.</translation>
+<translation>Esporta in formato Markdown l'elenco delle impostazioni e altre informazioni su applicazione e ambiente ed esce dall'applicazione.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="111"/>
@@ -9181,17 +9165,17 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <message>
 <location filename="../main.cpp" line="118"/>
 <source>Clears the settings and runs the application.</source>
-<translation>Azzera le impostazioni e avvia l&apos;applicazione.</translation>
+<translation>Azzera le impostazioni e avvia l'applicazione.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="124"/>
 <source>Runs the application in a different context for settings and internal files.</source>
-<translation>Esegue l&apos;applicazione in un contesto differente per le impostazioni e i file interni.</translation>
+<translation>Esegue l'applicazione in un contesto differente per le impostazioni e i file interni.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="133"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation>Attiva un&apos;azione di menu dopo l&apos;avvio dell&apos;applicazione.</translation>
+<translation>Attiva un'azione di menu dopo l'avvio dell'applicazione.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="553"/>
@@ -9201,7 +9185,7 @@ Non sarà possibile annullare l&apos;operazione!</translation>
 <message>
 <location filename="../main.cpp" line="565"/>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-<translation>Un&apos;altra istanza di QOwnNotes era già stata avviata! È possibile disattivare la modalità a istanza singola nelle impostazioni o utilizzando il parametro --allow-multiple-instances.</translation>
+<translation>Un'altra istanza di QOwnNotes era già stata avviata! È possibile disattivare la modalità a istanza singola nelle impostazioni o utilizzando il parametro --allow-multiple-instances.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="615"/>
