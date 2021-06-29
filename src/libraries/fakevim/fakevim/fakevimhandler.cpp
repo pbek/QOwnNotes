@@ -107,11 +107,7 @@
 // Added by waqar144
 // Purpose: We support Qt <= 5.8
 #ifndef Q_FALLTHROUGH
-#  if (defined(Q_CC_GNU) && Q_CC_GNU >= 700) && !defined(Q_CC_INTEL)
-#    define Q_FALLTHROUGH() __attribute__((fallthrough))
-#  else
-#    define Q_FALLTHROUGH() (void)0
-#  endif
+#  define Q_FALLTHROUGH() (void)0
 #endif
 
 namespace FakeVim {
