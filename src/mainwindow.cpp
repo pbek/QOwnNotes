@@ -2758,6 +2758,10 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     ui->noteTextEdit->setCursorWidth(cursorWidth);
     ui->encryptedNoteTextEdit->setCursorWidth(cursorWidth);
 
+    // TODO: Enable with setting
+//    ui->noteTextEdit->setLineNumberEnabled(true);
+//    ui->encryptedNoteTextEdit->setLineNumberEnabled(true);
+
     ui->noteTextEdit->setPaperMargins();
     ui->encryptedNoteTextEdit->setPaperMargins();
 

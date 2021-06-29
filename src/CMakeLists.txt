@@ -212,6 +212,7 @@ set(SOURCE_FILES
     libraries/md4c/md4c/md4c.c
     libraries/md4c/md2html/render_html.c
     libraries/md4c/md2html/entity.c
+    libraries/qmarkdowntextedit/linenumberarea.h
     libraries/qmarkdowntextedit/qownlanguagedata.cpp
     libraries/qmarkdowntextedit/qownlanguagedata.h
     libraries/qmarkdowntextedit/markdownhighlighter.cpp
