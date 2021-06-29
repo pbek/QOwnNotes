@@ -100,7 +100,7 @@ jobs:
     - if: steps.changes.outputs.DO_BUILD && matrix.os == 'ubuntu-16.04'
       name: Install Qt 5.5.1 on Ubuntu 16.04
       run: |
-        sudo apt install g++ libc6 qt5-default libqt5qml5 qtdeclarative5-dev qt5-qmake libqt5xml5 libqt5xmlpatterns5 libqt5xmlpatterns5-dev
+        sudo apt install g++ libc6 qt5-default libqt5qml5 qtdeclarative5-dev qt5-qmake libqt5xml5 libqt5xmlpatterns5 libqt5xmlpatterns5-dev qttools5-dev build-essential libqt5svg5-dev qttools5-dev-tools libqt5websockets5-dev libqt5x11extras5-dev
     - if: steps.changes.outputs.DO_BUILD && matrix.os != 'ubuntu-16.04'
       name: Cache Qt
       id: cache-qt
@@ -175,7 +175,7 @@ jobs:
     - if: steps.changes.outputs.DO_BUILD && matrix.os == 'ubuntu-16.04'
       name: Build QOwnNotes for Qt 5.5.1
       run: |
-        qmake && make
+        lrelease QOwnNotes.pro && qmake && make
 
       #
       # Build QOwnNotes Windows Release and store it as artifact
