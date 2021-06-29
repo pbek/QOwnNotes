@@ -100,7 +100,7 @@ jobs:
     - if: steps.changes.outputs.DO_BUILD && matrix.os == 'ubuntu-16.04'
       name: Install Qt 5.5.1 on Ubuntu 16.04
       run: |
-        sudo apt install g++ libc6 qt5-default qt5-qmake
+        sudo apt install g++ libc6 qt5-default libqt5qml5 qtdeclarative5-dev qt5-qmake libqt5xml5 libqt5xmlpatterns5 libqt5xmlpatterns5-dev
     - if: steps.changes.outputs.DO_BUILD && matrix.os != 'ubuntu-16.04'
       name: Cache Qt
       id: cache-qt
