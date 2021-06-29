@@ -719,8 +719,8 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-<translation>Untuk mendapatkan berkas enex, Anda harus memilih satu atau lebih catatan di aplikasi desktop Evernote anda dan klik menu "Ekspor catatan…" di dalam menu Berkas.</translation>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
+<translation>Untuk mendapatkan berkas enex, Anda harus memilih satu atau lebih catatan di aplikasi desktop Evernote anda dan klik menu &quot;Ekspor catatan…&quot; di dalam menu Berkas.</translation>
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -876,8 +876,163 @@
 <context>
 <name>FakeVim</name>
 <message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
+<source>Use FakeVim</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
+<source>Read .vimrc from location:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
+<source>Show position of text marks</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
+<source>Pass control keys</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
+<source>Pass keys in insert mode</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
+<source>Start of line</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
+<source>Tabulator size:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
+<source>Smart tabulators</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
+<source>Highlight search results</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
+<source>Shift width:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
+<source>Expand tabulators</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
+<source>Automatic indentation</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
+<source>Incremental search</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
+<source>Use search dialog</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
+<source>Use smartcase</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
+<source>Use ignorecase</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
+<source>Use wrapscan</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
+<source>Use tildeop</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
+<source>Show partial command</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
+<source>Show line numbers relative to cursor</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
+<source>Blinking cursor</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
+<source>Scroll offset:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
+<source>Backspace:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
+<source>Keyword characters:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
+<source>Use Vim-style Editing</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
+<source>Displays line numbers relative to the line containing text cursor.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
+<source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
+<source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
+<source>Vim tabstop option.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
+<source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
+<source>Default: %1</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
-<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
 <source>Unknown option: %1</source>
 <translation>Opsi tak dikenal: %1</translation>
 </message>
@@ -887,168 +1042,183 @@
 <translation>Argumen harus positif: %1=%2</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
-<source>Mark "%1" not set.</source>
-<translation>Tandai "%1" belum disetel.</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
+<source>Mark &quot;%1&quot; not set.</source>
+<translation>Tandai &quot;%1&quot; belum disetel.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2848"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
 <source>Recursive mapping</source>
 <translation>Pemetaan rekursif</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3717"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3992"/>
 <source>%1%2%</source>
 <translation>%1%2%</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3719"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3994"/>
 <source>%1All</source>
 <translation>%1Semua</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3733"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4008"/>
 <source>Not implemented in FakeVim.</source>
 <translation>Belum diimplementasikan dalam FakeVim.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4313"/>
 <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation>Ketik Alt-V, Alt-V untuk keluar dari mode FakeVim.</translation>
+<translation type="vanished">Ketik Alt-V, Alt-V untuk keluar dari mode FakeVim.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
+<source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
+<source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
 <source>Unknown option:</source>
 <translation>Opsi tak dikenal:</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5771"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6300"/>
 <source>Invalid argument:</source>
 <translation>Argumen tidak valid:</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5773"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6302"/>
 <source>Trailing characters:</source>
 <translation>Karakter tambahan:</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6384"/>
 <source>Move lines into themselves.</source>
 <translation>Pindahkan garis ke diri mereka sendiri.</translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6426"/>
 <source>%n lines moved.</source>
 <translation>
 <numerusform>%n baris dipindah.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5958"/>
-<source>File "%1" exists (add ! to override)</source>
-<translation>Berkas "%1" sudah ada (tambahkan ! untuk menimpa ulang)</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
+<source>File &quot;%1&quot; exists (add ! to override)</source>
+<translation>Berkas &quot;%1&quot; sudah ada (tambahkan ! untuk menimpa ulang)</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5972"/>
-<source>Cannot open file "%1" for writing</source>
-<translation>Tidak bisa membuka berkas "%1" untuk penulisan</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
+<source>Cannot open file &quot;%1&quot; for writing</source>
+<translation>Tidak bisa membuka berkas &quot;%1&quot; untuk penulisan</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5978"/>
-<source>"%1" %2 %3L, %4C written.</source>
-<translation>"% 1"% 2% 3L,% 4C tertulis.</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
+<source>&quot;%1&quot; %2 %3L, %4C written.</source>
+<translation>&quot;% 1&quot;% 2% 3L,% 4C tertulis.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5979"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
 <source> [New] </source>
 <translation> [Baru] </translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5987"/>
-<source>Cannot open file "%1" for reading</source>
-<translation>Tidak bisa membuka berkas "%1" untuk dibaca</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
+<source>Cannot open file &quot;%1&quot; for reading</source>
+<translation>Tidak bisa membuka berkas &quot;%1&quot; untuk dibaca</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6015"/>
-<source>"%1" %2L, %3C</source>
-<translation>"%1" %2L, %3C</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
+<source>&quot;%1&quot; %2L, %3C</source>
+<translation>&quot;%1&quot; %2L, %3C</translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
 <source>%n lines filtered.</source>
 <translation>
 <numerusform>%n baris terfilter.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6130"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6692"/>
 <source>Cannot open file %1</source>
 <translation>Tidak bisa membuka berkas %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6203"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6765"/>
 <source>Not an editor command: %1</source>
 <translation>Bukan perintah penyunting: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6867"/>
 <source>Invalid regular expression: %1</source>
 <translation>Ekspresi regular tidak valid: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6333"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6903"/>
 <source>Pattern not found: %1</source>
 <translation>Pola tidak ditemukan: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6337"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6907"/>
 <source>Search hit BOTTOM, continuing at TOP.</source>
 <translation>Hasil pencarian BAWAH, berlanjut di ATAS.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6338"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6908"/>
 <source>Search hit TOP, continuing at BOTTOM.</source>
 <translation>Hasil pencarian ATAS, berlanjut di BAWAH.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6343"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6913"/>
 <source>Search hit BOTTOM without match for: %1</source>
 <translation>Hasil pencarian BAWAH tanpa kecocokan untuk: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6914"/>
 <source>Search hit TOP without match for: %1</source>
 <translation>Hasil pencarian ATAS tanpa kecocokan untuk: %1</translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7021"/>
 <source>%n lines indented.</source>
 <translation>
 <numerusform>%n baris diindentasi.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<comment>%1 can be '&gt;' or '&lt;'</comment>
-<translation>
+<translation type="unfinished">
 <numerusform>%n baris %1ed %2 waktu.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
+<source>%n lines %1ed %2 time.</source>
+<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
+<translation type="vanished">
+<numerusform>%n baris %1ed %2 waktu.</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7615"/>
 <source>%n lines yanked.</source>
 <translation>
 <numerusform>%n baris ditarik.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7778"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="8514"/>
 <source>Already at oldest change.</source>
 <translation>Sudah pada perubahan terlama.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7779"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="8515"/>
 <source>Already at newest change.</source>
 <translation>Sudah ada pada perubahan terbaru.</translation>
 </message>
@@ -1298,7 +1468,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it's barely visible</comment>
+<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
 <translation>Penyorotan sintaksis</translation>
 </message>
 <message>
@@ -1398,7 +1568,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don't copy image to media folder</source>
+<source>Don&apos;t copy image to media folder</source>
 <translation>Jangan salin gambar ke folder media</translation>
 </message>
 <message>
@@ -1674,7 +1844,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
 <translation>Berkas &lt;strong&gt;%1&lt;/strong&gt; tidak bisa dibaca dan tidak bisa dipulihkan!</translation>
 </message>
 <message numerus="yes">
@@ -1785,7 +1955,7 @@
 <message>
 <location filename="../mainwindow.ui" line="411"/>
 <location filename="../mainwindow.ui" line="911"/>
-<location filename="../mainwindow.cpp" line="845"/>
+<location filename="../mainwindow.cpp" line="944"/>
 <source>Navigation</source>
 <translation>Navigasi</translation>
 </message>
@@ -1796,7 +1966,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8921"/>
+<location filename="../mainwindow.cpp" line="9037"/>
 <source>Add a tag to the current note</source>
 <translation>Tambahkan tag ke catatan ini</translation>
 </message>
@@ -1832,7 +2002,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1240"/>
-<location filename="../mainwindow.cpp" line="6842"/>
+<location filename="../mainwindow.cpp" line="6941"/>
 <source>Custom actions</source>
 <translation>Tindakan khusus</translation>
 </message>
@@ -1913,12 +2083,12 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1447"/>
-<location filename="../mainwindow.cpp" line="10594"/>
+<location filename="../mainwindow.cpp" line="10710"/>
 <source>Select &amp;all notes</source>
 <translation>Pilih &amp;semua catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6750"/>
+<location filename="../mainwindow.cpp" line="6849"/>
 <source>Insert &amp;link</source>
 <translation>Sisipkan &amp;tautan</translation>
 </message>
@@ -1968,7 +2138,7 @@
 <translation>Cari atau buat catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8922"/>
+<location filename="../mainwindow.cpp" line="9038"/>
 <source>Add a tag to the selected notes</source>
 <translation>Tambahkan tag ke catatan yang dipilih</translation>
 </message>
@@ -1979,7 +2149,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="886"/>
-<location filename="../mainwindow.cpp" line="6804"/>
+<location filename="../mainwindow.cpp" line="6903"/>
 <source>Export</source>
 <translation>Ekspor</translation>
 </message>
@@ -1990,7 +2160,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="928"/>
-<location filename="../mainwindow.cpp" line="6785"/>
+<location filename="../mainwindow.cpp" line="6884"/>
 <source>Print</source>
 <translation>Cetak</translation>
 </message>
@@ -2061,7 +2231,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1160"/>
-<location filename="../mainwindow.cpp" line="773"/>
+<location filename="../mainwindow.cpp" line="872"/>
 <source>Workspaces</source>
 <translation>Ruang kerja</translation>
 </message>
@@ -2354,7 +2524,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>"Element" as in the chat service</extracomment>
+<extracomment>&quot;Element&quot; as in the chat service</extracomment>
 <translation>Buka room QOwnNotes Matrix (Elemen)</translation>
 </message>
 <message>
@@ -2364,7 +2534,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2243"/>
-<location filename="../mainwindow.cpp" line="11716"/>
+<location filename="../mainwindow.cpp" line="11832"/>
 <source>Remove current workspace</source>
 <translation>Buang ruang kerja saat ini</translation>
 </message>
@@ -2406,7 +2576,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2317"/>
-<location filename="../mainwindow.cpp" line="6759"/>
+<location filename="../mainwindow.cpp" line="6858"/>
 <source>Insert block &amp;quote</source>
 <translation>Sisipkan blok k&amp;utipan</translation>
 </message>
@@ -2433,7 +2603,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2364"/>
-<location filename="../mainwindow.cpp" line="10570"/>
+<location filename="../mainwindow.cpp" line="10686"/>
 <source>Open note in different window</source>
 <translation>Buka catatan di jendela yang berbeda</translation>
 </message>
@@ -2454,7 +2624,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2404"/>
-<location filename="../mainwindow.cpp" line="10578"/>
+<location filename="../mainwindow.cpp" line="10694"/>
 <source>Show note git versions</source>
 <translation>Tampilkan versi git catatan</translation>
 </message>
@@ -2537,7 +2707,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2566"/>
-<location filename="../mainwindow.cpp" line="12704"/>
+<location filename="../mainwindow.cpp" line="12826"/>
 <source>Automatically detect</source>
 <translation>Deteksi otomatis</translation>
 </message>
@@ -2634,8 +2804,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-<translation>Memecahkan persamaan sederhana seperti '(2+3)*6=' dalam baris saat ini</translation>
+<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
+<translation>Memecahkan persamaan sederhana seperti &apos;(2+3)*6=&apos; dalam baris saat ini</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2745,135 +2915,135 @@
 <translation>Impor catatan dari Evernote</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2867"/>
+<location filename="../mainwindow.cpp" line="2966"/>
 <source>Note was removed externally!</source>
 <translation>Catan dibuang secara eksternal!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2868"/>
+<location filename="../mainwindow.cpp" line="2967"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>Catatan ini dihapus di luar aplikasi ini!
 Pulihkan catatan saat ini?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5489"/>
-<location filename="../mainwindow.cpp" line="5512"/>
-<location filename="../mainwindow.cpp" line="7266"/>
-<location filename="../mainwindow.cpp" line="10660"/>
+<location filename="../mainwindow.cpp" line="5588"/>
+<location filename="../mainwindow.cpp" line="5611"/>
+<location filename="../mainwindow.cpp" line="7382"/>
+<location filename="../mainwindow.cpp" line="10776"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Batal</translation>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation>
+<translation type="vanished">
 <numerusform>simpan %n catatan ke diska</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3104"/>
+<location filename="../mainwindow.cpp" line="3203"/>
 <source>new version %1 available</source>
 <translation>versi baru %1 tersedia</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3221"/>
+<location filename="../mainwindow.cpp" line="3320"/>
 <source>Abort</source>
 <translation>Batal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3221"/>
+<location filename="../mainwindow.cpp" line="3320"/>
 <source>Loading notes…</source>
 <translation>Memuat catatan…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3435"/>
+<location filename="../mainwindow.cpp" line="3534"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>Menghapus basis data ganda yang bertentangan: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3436"/>
+<location filename="../mainwindow.cpp" line="3535"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>Tidak dapat menghapus basis data ganda  yang bertentangan: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3442"/>
+<location filename="../mainwindow.cpp" line="3541"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>Basis data tergabung bertentangan yang dihapus: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3443"/>
+<location filename="../mainwindow.cpp" line="3542"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>Tidak dapat menghapus basis data tergabung yang bertentangan: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3458"/>
+<location filename="../mainwindow.cpp" line="3557"/>
 <source>Delete conflicted database copies</source>
 <translation>Hapus salinan basis data yang bertentangan</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3481"/>
+<location filename="../mainwindow.cpp" line="3580"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>Dihapus %n salinan basis data yang bertentangan</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3645"/>
+<location filename="../mainwindow.cpp" line="3744"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>Silakan pilih folder tempat catatan anda akan disimpan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3671"/>
+<location filename="../mainwindow.cpp" line="3770"/>
 <source>No folder was selected</source>
 <translation>Tidak ada folder yang dipilih</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3673"/>
+<location filename="../mainwindow.cpp" line="3772"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
 <translation>Anda harus memilih folder catatan ownCloud Anda agar perangkat lunak ini bisa bekerja!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3675"/>
+<location filename="../mainwindow.cpp" line="3774"/>
 <source>&amp;Retry</source>
 <translation>&amp;Ulangi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3675"/>
+<location filename="../mainwindow.cpp" line="3774"/>
 <source>&amp;Exit</source>
 <translation>&amp;Keluar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4003"/>
+<location filename="../mainwindow.cpp" line="4102"/>
 <source>Remove current note</source>
 <translation>Hapus catatan ini</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4004"/>
+<location filename="../mainwindow.cpp" line="4103"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Buang catatan ini: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4363"/>
+<location filename="../mainwindow.cpp" line="4462"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>Silakan masukkan &lt;strong&gt;kata sandi&lt;/strong&gt; dari catatan terenkripsi ini.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4386"/>
-<source>Note can't be decrypted!</source>
+<location filename="../mainwindow.cpp" line="4485"/>
+<source>Note can&apos;t be decrypted!</source>
 <translation>Catatan tidak bisa didekripsi!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4387"/>
+<location filename="../mainwindow.cpp" line="4486"/>
 <source>It seems that your password is not valid!</source>
 <translation>Sepertinya sandi anda tidak valid!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4555"/>
+<location filename="../mainwindow.cpp" line="4654"/>
 <source>Remove selected notes</source>
 <translation>Buang catatan yang dipilih</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4557"/>
+<location filename="../mainwindow.cpp" line="4656"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -2884,472 +3054,472 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4647"/>
-<location filename="../mainwindow.cpp" line="10883"/>
+<location filename="../mainwindow.cpp" line="4746"/>
+<location filename="../mainwindow.cpp" line="10999"/>
 <source>Remove selected folders</source>
 <translation>Buang folder yang dipilih</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4648"/>
+<location filename="../mainwindow.cpp" line="4747"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
 <numerusform>Buang &lt;strong&gt;%n&lt;/strong&gt; catatan yang dipilih?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Semua berkas dan folder di dalam folder ini juga akan dibuang!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4659"/>
+<location filename="../mainwindow.cpp" line="4758"/>
 <source>Removed note subfolder: %1</source>
 <translation>Subfolder catatan yang dibuang: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4679"/>
+<location filename="../mainwindow.cpp" line="4778"/>
 <source>Remove selected tags</source>
 <translation>Buang tag yang dipilih</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4680"/>
+<location filename="../mainwindow.cpp" line="4779"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>Buang &lt;strong&gt;%n&lt;/strong&gt; tag yang dipilih? Tidak akan ada catatan yang dibuang dalam proses ini.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4732"/>
-<location filename="../mainwindow.cpp" line="9707"/>
+<location filename="../mainwindow.cpp" line="4831"/>
+<location filename="../mainwindow.cpp" line="9823"/>
 <source>Move selected notes</source>
 <translation>Pindah catatan yang dipilih</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4733"/>
+<location filename="../mainwindow.cpp" line="4832"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Pindah %n catatan yang dipilih ke &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4838"/>
-<location filename="../mainwindow.cpp" line="9816"/>
+<location filename="../mainwindow.cpp" line="4937"/>
+<location filename="../mainwindow.cpp" line="9932"/>
 <source>Copy selected notes</source>
 <translation>Salin catatan yang dipilih</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4839"/>
+<location filename="../mainwindow.cpp" line="4938"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Salin %n catatan yang dipilih ke &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4869"/>
-<location filename="../mainwindow.cpp" line="5018"/>
+<location filename="../mainwindow.cpp" line="4968"/>
+<location filename="../mainwindow.cpp" line="5117"/>
 <source>Done</source>
 <translation>Selesai</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4870"/>
+<location filename="../mainwindow.cpp" line="4969"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>%n catatan telah disalin ke &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4883"/>
+<location filename="../mainwindow.cpp" line="4982"/>
 <source>Tag selected notes</source>
 <translation>Tag catatan yang dipilih</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4884"/>
+<location filename="../mainwindow.cpp" line="4983"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Tag %n catatan yang dipilih dengan &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5157"/>
+<location filename="../mainwindow.cpp" line="5256"/>
 <source>Restart application</source>
 <translation>Mulai ulang aplikasi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5163"/>
+<location filename="../mainwindow.cpp" line="5262"/>
 <source>You may need to restart the application manually to let the changes take effect.</source>
 <translation>Anda mungkin perlu memulai ulang aplikasi secara manual agar perubahan memiliki dampak.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5168"/>
+<location filename="../mainwindow.cpp" line="5267"/>
 <source>You may need to restart the application to let the changes take effect.</source>
 <translation>Anda mungkin perlu memulai ulang aplikasi agar perubahan memiliki dampak.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5170"/>
+<location filename="../mainwindow.cpp" line="5269"/>
 <source>Restart</source>
 <translation>Mulai ulang</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5401"/>
+<location filename="../mainwindow.cpp" line="5500"/>
 <source>PDF files</source>
 <translation>Berkas PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5485"/>
+<location filename="../mainwindow.cpp" line="5584"/>
 <source>Todo lists disabled!</source>
 <translation>Daftar todo dinonaktifkan!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5486"/>
+<location filename="../mainwindow.cpp" line="5585"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Anda telah menonaktifkan daftar todo.&lt;br /&gt;Silakan periksa konfigurasi &lt;strong&gt;Todo&lt;/strong&gt; Anda di dalam pengaturan!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5738"/>
+<location filename="../mainwindow.cpp" line="5837"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Ditemukan kemunculan  &lt;strong&gt;%n&lt;/strong&gt;  dari istilah apa pun dari &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6314"/>
-<location filename="../mainwindow.cpp" line="6335"/>
+<location filename="../mainwindow.cpp" line="6413"/>
+<location filename="../mainwindow.cpp" line="6434"/>
 <source>Note was not found</source>
 <translation>Catatan tidak ditemukan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6325"/>
+<location filename="../mainwindow.cpp" line="6424"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Catatan tidak ditemukan, buat catatan &lt;strong&gt;%1&lt;/strong&gt; baru?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6374"/>
+<location filename="../mainwindow.cpp" line="6473"/>
 <source>Failed to create note</source>
 <translation>Gagal untuk membuat catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6375"/>
+<location filename="../mainwindow.cpp" line="6474"/>
 <source>Note creation failed</source>
 <translation>Pembuatan catatan gagal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6563"/>
+<location filename="../mainwindow.cpp" line="6662"/>
 <source>Note folders</source>
 <translation>Folder catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6686"/>
+<location filename="../mainwindow.cpp" line="6785"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Versi catatan saat ini dimuat dari server ownCloud Anda</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6703"/>
+<location filename="../mainwindow.cpp" line="6802"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Catatan dalam keranjang sampah saat ini dimuat dari server ownCloud Anda</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6769"/>
+<location filename="../mainwindow.cpp" line="6868"/>
 <source>Copy code block</source>
 <translation>Salin blok kode</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6793"/>
+<location filename="../mainwindow.cpp" line="6892"/>
 <source>Print selected text</source>
 <translation>Cetak teks yang dipilih</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6799"/>
+<location filename="../mainwindow.cpp" line="6898"/>
 <source>Print selected text (preview)</source>
 <translation>Cetak teks yang dipilih (pratinjau)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6817"/>
+<location filename="../mainwindow.cpp" line="6916"/>
 <source>Export selected text as PDF</source>
 <translation>Ekspor teks yang dipilih sebagai PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6823"/>
+<location filename="../mainwindow.cpp" line="6922"/>
 <source>Export selected text as PDF (preview)</source>
 <translation>Ekspor teks yang dipilih sebagai PDF (pratinjau)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7262"/>
+<location filename="../mainwindow.cpp" line="7378"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Catatan Anda akan didekripsi dan disimpan sebagai teks biasa lagi. Harap diingat bahwa ada kemungkinan catatan yang tidak terenkripsi tetap disinkronkan ke server Anda dan teks yang berisi informasi sensitif mungkin akan terbuka secara publik!&lt;br /&gt;Apakah Anda ingin mendekripsi catatan Anda?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7359"/>
+<location filename="../mainwindow.cpp" line="7475"/>
 <source>Markdown files</source>
 <translation>Berkas markdown</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7416"/>
+<location filename="../mainwindow.cpp" line="7532"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Posisi catatan bertanda di slot %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7431"/>
+<location filename="../mainwindow.cpp" line="7547"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>Lompat ke posisi markah pada slot %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7659"/>
-<location filename="../mainwindow.cpp" line="7728"/>
+<location filename="../mainwindow.cpp" line="7775"/>
+<location filename="../mainwindow.cpp" line="7844"/>
 <source>Inserting image</source>
 <translation>Menyisipkan gambar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7664"/>
-<location filename="../mainwindow.cpp" line="7732"/>
+<location filename="../mainwindow.cpp" line="7780"/>
+<location filename="../mainwindow.cpp" line="7848"/>
 <source>Done inserting image</source>
 <translation>Selesai menyisipkan gambar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7666"/>
+<location filename="../mainwindow.cpp" line="7782"/>
 <source>Inserting attachment</source>
 <translation>Menyisipkan lampiran</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7671"/>
+<location filename="../mainwindow.cpp" line="7787"/>
 <source>Done inserting attachment</source>
 <translation>Selesai menyisipkan lampiran</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7683"/>
+<location filename="../mainwindow.cpp" line="7799"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>%n catatan disalin ke %1</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7692"/>
+<location filename="../mainwindow.cpp" line="7808"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Gagal menyalin %n catatan (besar kemungkinan sudah ada)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7702"/>
+<location filename="../mainwindow.cpp" line="7818"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Melewatkan penyalinan %n catatan (tidak ada markdown atau berkas teks atau tidak bisa dibaca)</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7715"/>
+<location filename="../mainwindow.cpp" line="7831"/>
 <source>Saving temporary image</source>
 <translation>Menyimpan gambar sementara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7734"/>
-<source>Temporary file can't be opened</source>
+<location filename="../mainwindow.cpp" line="7850"/>
+<source>Temporary file can&apos;t be opened</source>
 <translation>Berkas sementara tidak bisa dibuka</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7772"/>
+<location filename="../mainwindow.cpp" line="7888"/>
 <source>Downloading %1</source>
 <translation>Mengunduh %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7967"/>
+<location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
+<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
 <translation>Setel ulang ukuran fon ke %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8967"/>
-<source>Remove tag '%1' from the current note</source>
-<translation>Buang tag '%1' dari catatan ini</translation>
+<location filename="../mainwindow.cpp" line="9083"/>
+<source>Remove tag &apos;%1&apos; from the current note</source>
+<translation>Buang tag &apos;%1&apos; dari catatan ini</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8968"/>
-<source>Remove tag '%1' from the selected notes</source>
-<translation>Buang tag '%1' dari catatan yang dipilih</translation>
+<location filename="../mainwindow.cpp" line="9084"/>
+<source>Remove tag &apos;%1&apos; from the selected notes</source>
+<translation>Buang tag &apos;%1&apos; dari catatan yang dipilih</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9199"/>
+<location filename="../mainwindow.cpp" line="9315"/>
 <source>Rename tag</source>
 <translation>Ubah nama tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9200"/>
+<location filename="../mainwindow.cpp" line="9316"/>
 <source>Assign color</source>
 <translation>Tetapkan warna</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9201"/>
+<location filename="../mainwindow.cpp" line="9317"/>
 <source>Disable color</source>
 <translation>Nonaktifkan warna</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9205"/>
+<location filename="../mainwindow.cpp" line="9321"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Pindah tag ke…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9416"/>
+<location filename="../mainwindow.cpp" line="9532"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Pindah ke root</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9960"/>
+<location filename="../mainwindow.cpp" line="10076"/>
 <source>An url was opened at the current cursor position</source>
 <translation>Sebuah url dibuka di posisi kursor saat ini</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10063"/>
+<location filename="../mainwindow.cpp" line="10179"/>
 <source>No equation was found in front of the cursor</source>
 <translation>Tidak ada persamaan yang ditemukan di muka kursor</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10083"/>
+<location filename="../mainwindow.cpp" line="10199"/>
 <source>Result for equation: %1 = %2</source>
 <translation>Hasil dari persamaan: %1 = %2</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10188"/>
+<location filename="../mainwindow.cpp" line="10304"/>
 <source>The scripting engine was reloaded</source>
 <translation>Mesin skrip telah dimuat ulang</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10222"/>
+<location filename="../mainwindow.cpp" line="10338"/>
 <source>HTML files</source>
 <translation>Berkas HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10506"/>
-<source>Jump to the note's subfolder</source>
+<location filename="../mainwindow.cpp" line="10622"/>
+<source>Jump to the note&apos;s subfolder</source>
 <translation>Lompat ke subfolder catatan
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10563"/>
+<location filename="../mainwindow.cpp" line="10679"/>
 <source>Open note in tab</source>
 <translation>Buka catatan di tab
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12271"/>
+<location filename="../mainwindow.cpp" line="12387"/>
 <source>A script update was found!</source>
 <translation>Pembaruan skrip ditemukan!
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12277"/>
+<location filename="../mainwindow.cpp" line="12393"/>
 <source>Script updates</source>
 <translation>Pembaruan skrip
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12278"/>
+<location filename="../mainwindow.cpp" line="12394"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Pembaruan skrip Anda ditemukan di repositori skrip! Apakah Anda ingin memperbaruinya?
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12293"/>
+<location filename="../mainwindow.cpp" line="12409"/>
 <source>No script updates were found</source>
 <translation>Tidak ada pembaruan skrip yang ditemukan
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12937"/>
+<location filename="../mainwindow.cpp" line="13059"/>
 <source>Toggle note stickiness</source>
 <translation>Aktif/nonaktifkan sifat menempel catatan
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12943"/>
+<location filename="../mainwindow.cpp" line="13065"/>
 <source>Close other note tabs</source>
 <translation>Tutup tab catatan lainnya</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10450"/>
-<location filename="../mainwindow.cpp" line="10644"/>
+<location filename="../mainwindow.cpp" line="10566"/>
+<location filename="../mainwindow.cpp" line="10760"/>
 <source>Rename note</source>
 <translation>Ubah nama catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10452"/>
+<location filename="../mainwindow.cpp" line="10568"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Memungkinkan anda mengubah nama berkas catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10466"/>
+<location filename="../mainwindow.cpp" line="10582"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Pindah catatan ke…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10467"/>
+<location filename="../mainwindow.cpp" line="10583"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Salin catatan ke…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10510"/>
+<location filename="../mainwindow.cpp" line="10626"/>
 <source>Move notes to subfolder…</source>
 <translation>Pindah catatan ke subfolder…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10514"/>
+<location filename="../mainwindow.cpp" line="10630"/>
 <source>Copy notes to subfolder…</source>
 <translation>Salin catatan ke subfolder…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10522"/>
+<location filename="../mainwindow.cpp" line="10638"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Tag catatan yang dipilih dengan…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10546"/>
+<location filename="../mainwindow.cpp" line="10662"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Buang tag dari catatan yang dipilih…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10644"/>
+<location filename="../mainwindow.cpp" line="10760"/>
 <source>Name:</source>
 <translation>Nama:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10656"/>
+<location filename="../mainwindow.cpp" line="10772"/>
 <source>Note renaming not enabled!</source>
 <translation>Pengubahan nama catatan tidak diaktifkan!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10882"/>
+<location filename="../mainwindow.cpp" line="10998"/>
 <source>Rename subfolder</source>
 <translation>Ubah nama subfolder</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11487"/>
+<location filename="../mainwindow.cpp" line="11603"/>
 <source>Create new workspace</source>
 <translation>Buat ruang kerja baru</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11488"/>
-<location filename="../mainwindow.cpp" line="11758"/>
+<location filename="../mainwindow.cpp" line="11604"/>
+<location filename="../mainwindow.cpp" line="11874"/>
 <source>Workspace name:</source>
 <translation>Nama ruang kerja:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11613"/>
+<location filename="../mainwindow.cpp" line="11729"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>lengkap</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11620"/>
+<location filename="../mainwindow.cpp" line="11736"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>minimal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11717"/>
+<location filename="../mainwindow.cpp" line="11833"/>
 <source>Remove the current workspace?</source>
 <translation>Buang ruang kerja saat ini?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11757"/>
+<location filename="../mainwindow.cpp" line="11873"/>
 <source>Rename workspace</source>
 <translation>Ubah nama ruang kerja</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="11939"/>
+<location filename="../mainwindow.cpp" line="12055"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
@@ -3357,42 +3527,42 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12210"/>
+<location filename="../mainwindow.cpp" line="12326"/>
 <source>Disallow all note editing</source>
 <translation>Larang semua penyuntingan catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12452"/>
+<location filename="../mainwindow.cpp" line="12568"/>
 <source>Select text files to import</source>
 <translation>Pilih berkas teks untuk diimpor</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12482"/>
+<location filename="../mainwindow.cpp" line="12598"/>
 <source>Importing: %1</source>
 <translation>Mengimpor: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12547"/>
-<source>Note headline '%1' was copied to the clipboard</source>
-<translation>Judul catatan '%1' telah disalin ke papan klip</translation>
+<location filename="../mainwindow.cpp" line="12663"/>
+<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
+<translation>Judul catatan &apos;%1&apos; telah disalin ke papan klip</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12641"/>
+<location filename="../mainwindow.cpp" line="12757"/>
 <source>Leave full-screen mode</source>
 <translation>Keluar dari mode layar penuh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12822"/>
+<location filename="../mainwindow.cpp" line="12944"/>
 <source>Custom editor width</source>
 <translation>Lebar penyunting tersuai</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12822"/>
+<location filename="../mainwindow.cpp" line="12944"/>
 <source>Characters:</source>
 <translation>Karakter:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8941"/>
+<location filename="../mainwindow.cpp" line="9057"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n catatan dipilih</numerusform>
@@ -3400,7 +3570,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2449"/>
-<location filename="../mainwindow.cpp" line="12211"/>
+<location filename="../mainwindow.cpp" line="12327"/>
 <source>Allow all note editing</source>
 <translation>Izinkan semua penyuntingan catatan</translation>
 </message>
@@ -3410,602 +3580,602 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 <translation>&amp;Tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4958"/>
+<location filename="../mainwindow.cpp" line="5057"/>
 <source>Remove tag from selected notes</source>
 <translation>Buang tag dari catatan yang dipilih</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4959"/>
+<location filename="../mainwindow.cpp" line="5058"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>Buang tag &lt;strong&gt;%1&lt;/strong&gt; dari %n catatan yang dipilih?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5019"/>
+<location filename="../mainwindow.cpp" line="5118"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; telah dibuang dari %n catatan</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5064"/>
+<location filename="../mainwindow.cpp" line="5163"/>
 <source>Current notes folder: </source>
 <translation>Folder catatan ini: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5067"/>
+<location filename="../mainwindow.cpp" line="5166"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>Tetapkan folder catatan. Folder catatan ini: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5269"/>
+<location filename="../mainwindow.cpp" line="5368"/>
 <source>Print note</source>
 <translation>Cetak catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5344"/>
+<location filename="../mainwindow.cpp" line="5443"/>
 <source>Letter</source>
 <translation>Letter</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5374"/>
+<location filename="../mainwindow.cpp" line="5473"/>
 <source>Portrait</source>
 <translation>Potret</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5374"/>
+<location filename="../mainwindow.cpp" line="5473"/>
 <source>Landscape</source>
 <translation>Lanskap</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5379"/>
+<location filename="../mainwindow.cpp" line="5478"/>
 <source>Orientation</source>
 <translation>Orientasi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5379"/>
+<location filename="../mainwindow.cpp" line="5478"/>
 <source>Orientation:</source>
 <translation>Orientasi:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5402"/>
+<location filename="../mainwindow.cpp" line="5501"/>
 <source>Export current note as PDF</source>
 <translation>Ekspor catatan ini sebagai PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5509"/>
+<location filename="../mainwindow.cpp" line="5608"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Anda sama sekali belum memilih daftar todo.&lt;br /&gt;Silakan periksa konfigurasi &lt;strong&gt;Todo&lt;/strong&gt; anda di pengaturan!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6545"/>
+<location filename="../mainwindow.cpp" line="6644"/>
 <source>Open QOwnNotes</source>
 <translation>Buka QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6096"/>
-<location filename="../mainwindow.cpp" line="6595"/>
-<location filename="../mainwindow.cpp" line="10446"/>
-<location filename="../mainwindow.cpp" line="10876"/>
+<location filename="../mainwindow.cpp" line="6195"/>
+<location filename="../mainwindow.cpp" line="6694"/>
+<location filename="../mainwindow.cpp" line="10562"/>
+<location filename="../mainwindow.cpp" line="10992"/>
 <source>New note</source>
 <translation>Catatan baru</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6612"/>
+<location filename="../mainwindow.cpp" line="6711"/>
 <source>Recent notes</source>
 <translation>Catatan baru-baru ini</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6628"/>
+<location filename="../mainwindow.cpp" line="6727"/>
 <source>Show todo lists</source>
 <translation>Tampilkan daftar todo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6640"/>
+<location filename="../mainwindow.cpp" line="6739"/>
 <source>Recent tasks</source>
 <translation>Tugas baru-baru ini</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6661"/>
+<location filename="../mainwindow.cpp" line="6760"/>
 <source>Quit</source>
 <translation>Keluar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8140"/>
+<location filename="../mainwindow.cpp" line="8256"/>
 <source>show notes from all note subfolders (%1)</source>
 <translation>tampilkan catatan dari semua subfolder catatan (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8163"/>
+<location filename="../mainwindow.cpp" line="8279"/>
 <source>show notes in note root folder (%1)</source>
 <translation>tampilkan catatan di folder root catatan (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
-<location filename="../mainwindow.cpp" line="817"/>
-<location filename="../mainwindow.cpp" line="2143"/>
-<location filename="../mainwindow.cpp" line="8175"/>
+<location filename="../mainwindow.cpp" line="916"/>
+<location filename="../mainwindow.cpp" line="2242"/>
+<location filename="../mainwindow.cpp" line="8291"/>
 <source>Note folder</source>
 <translation>Folder catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9588"/>
-<location filename="../mainwindow.cpp" line="9655"/>
+<location filename="../mainwindow.cpp" line="9704"/>
+<location filename="../mainwindow.cpp" line="9771"/>
 <source>Copy to note folder</source>
 <translation>Salin ke folder catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9588"/>
-<location filename="../mainwindow.cpp" line="9656"/>
+<location filename="../mainwindow.cpp" line="9704"/>
+<location filename="../mainwindow.cpp" line="9772"/>
 <source>Move to note folder</source>
 <translation>Pindah ke folder catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9589"/>
-<location filename="../mainwindow.cpp" line="9657"/>
+<location filename="../mainwindow.cpp" line="9705"/>
+<location filename="../mainwindow.cpp" line="9773"/>
 <source>Copy to this subfolder</source>
 <translation>Salin ke subfolder ini</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9590"/>
-<location filename="../mainwindow.cpp" line="9658"/>
+<location filename="../mainwindow.cpp" line="9706"/>
+<location filename="../mainwindow.cpp" line="9774"/>
 <source>Move to this subfolder</source>
 <translation>Pindah ke subfolder ini</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9702"/>
+<location filename="../mainwindow.cpp" line="9818"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Pindah %n catatan yang dipilih ke subfolder catatan &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5170"/>
-<location filename="../mainwindow.cpp" line="12466"/>
+<location filename="../mainwindow.cpp" line="5269"/>
+<location filename="../mainwindow.cpp" line="12582"/>
 <source>Cancel</source>
 <translation>Batal</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9787"/>
-<source>%n note(s) were moved to note subfolder "%2"</source>
+<location filename="../mainwindow.cpp" line="9903"/>
+<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
 <translation>
-<numerusform>%n catatan telah dipindah ke subfolder catatan "%2"</numerusform>
+<numerusform>%n catatan telah dipindah ke subfolder catatan &quot;%2&quot;</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9811"/>
+<location filename="../mainwindow.cpp" line="9927"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Salin %n catatan yang dipilih ke subfolder catatan &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9878"/>
-<source>%n note(s) were copied to note subfolder "%2"</source>
+<location filename="../mainwindow.cpp" line="9994"/>
+<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
 <translation>
-<numerusform>%n catatan telah disalin ke subfolder catatan "%2"</numerusform>
+<numerusform>%n catatan telah disalin ke subfolder catatan &quot;%2&quot;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10568"/>
+<location filename="../mainwindow.cpp" line="10684"/>
 <source>Open note in external editor</source>
 <translation>Buka catatan di penyunting eksternal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10572"/>
+<location filename="../mainwindow.cpp" line="10688"/>
 <source>Show note in file manager</source>
 <translation>Tampilkan catatan di pengelola berkas</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10657"/>
+<location filename="../mainwindow.cpp" line="10773"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Jika Anda ingin mengubah nama catatan, Anda harus mengaktifkan opsi yang mengizinkan nama berkas catatan berbeda dari judul.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10877"/>
+<location filename="../mainwindow.cpp" line="10993"/>
 <source>New subfolder</source>
 <translation>Subfolder baru</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10887"/>
+<location filename="../mainwindow.cpp" line="11003"/>
 <source>Show folder in file manager</source>
 <translation>Tampilkan folder di pengelola berkas</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10932"/>
+<location filename="../mainwindow.cpp" line="11048"/>
 <source>Create a new folder</source>
 <translation>Buat folder baru</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10933"/>
+<location filename="../mainwindow.cpp" line="11049"/>
 <source>Folder name:</source>
 <translation>Nama folder:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8099"/>
+<location filename="../mainwindow.cpp" line="8215"/>
 <source>show all untagged notes (%1)</source>
 <translation>tampilkan semua catatan tanpa tag (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8101"/>
+<location filename="../mainwindow.cpp" line="8217"/>
 <source>Untagged notes</source>
 <translation>Catatan tanpa tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10223"/>
+<location filename="../mainwindow.cpp" line="10339"/>
 <source>Export current note as HTML file</source>
 <translation>Ekspor catatan ini sebagai HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5353"/>
+<location filename="../mainwindow.cpp" line="5452"/>
 <source>Page size</source>
 <translation>Ukuran halaman</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1189"/>
+<location filename="../mainwindow.cpp" line="1288"/>
 <source>quit toolbar</source>
 <translation>bilah perkakas keluar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5353"/>
+<location filename="../mainwindow.cpp" line="5452"/>
 <source>Page size:</source>
 <translation>Ukuran halaman:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5470"/>
+<location filename="../mainwindow.cpp" line="5569"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>QOwnNotes akan melacak data penggunaan secara anonim, hal tersebut membantu untuk menentukan bagian-bagian QOwnNotes yang perlu ditingkatkan dan memperbaiki masalah yang ada. Anda bisa menonaktifkan perilaku tersebut dalam pengaturan.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5474"/>
+<location filename="../mainwindow.cpp" line="5573"/>
 <source>&amp;Ok</source>
 <translation>&amp;Ok</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10456"/>
+<location filename="../mainwindow.cpp" line="10572"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Buang catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6750"/>
+<location filename="../mainwindow.cpp" line="6849"/>
 <source>&amp;Link selected text</source>
 <translation>&amp;Tautkan teks yang dipilih</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1115"/>
+<location filename="../mainwindow.cpp" line="1214"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>Tugas-tugas Anda sedang dimuat dari server Anda</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2798"/>
+<location filename="../mainwindow.cpp" line="2897"/>
 <source>Current note was modified externally</source>
 <translation>Catatan ini telah diubah secara eksternal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2881"/>
-<location filename="../mainwindow.cpp" line="6034"/>
+<location filename="../mainwindow.cpp" line="2980"/>
+<location filename="../mainwindow.cpp" line="6133"/>
 <source>Stored current note to disk</source>
 <translation>Catatan ini telah disimpan ke disk</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2899"/>
+<location filename="../mainwindow.cpp" line="2998"/>
 <source>Note was modified externally: %1</source>
 <translation>Catatan telah diubah secara eksternal: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2921"/>
+<location filename="../mainwindow.cpp" line="3020"/>
 <source>Notes directory was modified externally</source>
 <translation>Direktori catatan telah diubah secara eksternal</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="2982"/>
+<location filename="../mainwindow.cpp" line="3081"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>%n catatan telah disimpan ke diska</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8065"/>
+<location filename="../mainwindow.cpp" line="8181"/>
 <source>show all notes (%1)</source>
 <translation>tampilkan semua catatan (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8068"/>
-<location filename="../mainwindow.cpp" line="8143"/>
+<location filename="../mainwindow.cpp" line="8184"/>
+<location filename="../mainwindow.cpp" line="8259"/>
 <source>All notes</source>
 <translation>Semua catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9191"/>
+<location filename="../mainwindow.cpp" line="9307"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Tambah tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9239"/>
+<location filename="../mainwindow.cpp" line="9355"/>
 <source>Tag could not be created!</source>
 <translation>Tag tidak bisa dibuat!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9418"/>
+<location filename="../mainwindow.cpp" line="9534"/>
 <source>Move to this tag</source>
 <translation>Pindah ke tag ini</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9453"/>
+<location filename="../mainwindow.cpp" line="9569"/>
 <source>Tag this</source>
 <translation>Tag catatan ini</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9478"/>
-<source>Cannot move tag '%1' to this tag</source>
-<translation>Tidak bisa memindahkan tag '%1' ke tag ini</translation>
+<location filename="../mainwindow.cpp" line="9594"/>
+<source>Cannot move tag &apos;%1&apos; to this tag</source>
+<translation>Tidak bisa memindahkan tag &apos;%1&apos; ke tag ini</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9527"/>
-<source>Moved tag '%1' to new tag</source>
-<translation>Pindah tag '%1' ke tag baru</translation>
+<location filename="../mainwindow.cpp" line="9643"/>
+<source>Moved tag &apos;%1&apos; to new tag</source>
+<translation>Pindah tag &apos;%1&apos; ke tag baru</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8405"/>
-<source>show all notes tagged with '%1' (%2)</source>
-<translation>tampilkan semua catatan dengan tag '%1' (%2)</translation>
+<location filename="../mainwindow.cpp" line="8521"/>
+<source>show all notes tagged with &apos;%1&apos; (%2)</source>
+<translation>tampilkan semua catatan dengan tag &apos;%1&apos; (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9202"/>
+<location filename="../mainwindow.cpp" line="9318"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Buang tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5508"/>
+<location filename="../mainwindow.cpp" line="5607"/>
 <source>No selected todo lists!</source>
 <translation>Tidak ada daftar todo yang dipilih!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="578"/>
+<location filename="../mainwindow.cpp" line="597"/>
 <source>Action not found!</source>
 <translation type="unfinished">Action not found!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="579"/>
+<location filename="../mainwindow.cpp" line="598"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
 <translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="786"/>
+<location filename="../mainwindow.cpp" line="885"/>
 <source>Subfolders</source>
 <translation>Subfolder</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="798"/>
+<location filename="../mainwindow.cpp" line="897"/>
 <source>Tags</source>
 <translation>Tag</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="807"/>
+<location filename="../mainwindow.cpp" line="906"/>
 <source>Note search</source>
 <translation>Pencarian catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="836"/>
+<location filename="../mainwindow.cpp" line="935"/>
 <source>Note list</source>
 <translation>Daftar catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="861"/>
+<location filename="../mainwindow.cpp" line="960"/>
 <source>Note edit</source>
 <translation>Suntingan catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="873"/>
+<location filename="../mainwindow.cpp" line="972"/>
 <source>Note tags</source>
 <translation>Tag catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="884"/>
+<location filename="../mainwindow.cpp" line="983"/>
 <source>Note preview</source>
 <translation>Pratinjau catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="892"/>
+<location filename="../mainwindow.cpp" line="991"/>
 <source>Log</source>
 <translation>Log</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="901"/>
+<location filename="../mainwindow.cpp" line="1000"/>
 <source>Scripting</source>
 <translation>Skrip</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1156"/>
+<location filename="../mainwindow.cpp" line="1255"/>
 <source>formatting toolbar</source>
 <translation>bilah perkakas pemformatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1165"/>
+<location filename="../mainwindow.cpp" line="1264"/>
 <source>inserting toolbar</source>
 <translation>bilah perkakas penyisipan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1172"/>
+<location filename="../mainwindow.cpp" line="1271"/>
 <source>encryption toolbar</source>
 <translation>bilah perkakas pengenkripsian</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1179"/>
+<location filename="../mainwindow.cpp" line="1278"/>
 <source>window toolbar</source>
 <translation>bilah perkakas jendela</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1184"/>
+<location filename="../mainwindow.cpp" line="1283"/>
 <source>custom action toolbar</source>
 <translation>bilah perkakas tindakan khusus</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1204"/>
+<location filename="../mainwindow.cpp" line="1303"/>
 <source>Workspace selector</source>
 <translation>Pemilih ruang kerja</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1354"/>
+<location filename="../mainwindow.cpp" line="1453"/>
 <source>Show %1 panel</source>
 <translation>Tampilkan panel %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1399"/>
+<location filename="../mainwindow.cpp" line="1498"/>
 <source>Show %1</source>
 <translation>Tampilkan %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1722"/>
+<location filename="../mainwindow.cpp" line="1821"/>
 <source>Leave distraction free mode</source>
 <translation>Keluar dari mode bebas gangguan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1904"/>
+<location filename="../mainwindow.cpp" line="2003"/>
 <source>Switch to note folder</source>
 <translation>Beralih ke folder catatan
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2299"/>
-<source>show notes in folder '%1' (%2)</source>
-<translation>tampilkan catatan dalam folder '%1' (%2)</translation>
+<location filename="../mainwindow.cpp" line="2398"/>
+<source>show notes in folder &apos;%1&apos; (%2)</source>
+<translation>tampilkan catatan dalam folder &apos;%1&apos; (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2516"/>
+<location filename="../mainwindow.cpp" line="2615"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>Bilah perkakas tidak bisa dimuat tanpa nama</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2825"/>
+<location filename="../mainwindow.cpp" line="2924"/>
 <source>Overwriting external changes of: %1</source>
 <translation>Menimpa perubahan eksternal: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2846"/>
+<location filename="../mainwindow.cpp" line="2945"/>
 <source>Loading external changes from: %1</source>
 <translation>Memuat perubahan eksternal dari: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2882"/>
-<location filename="../mainwindow.cpp" line="6035"/>
+<location filename="../mainwindow.cpp" line="2981"/>
+<location filename="../mainwindow.cpp" line="6134"/>
 <source>Current note could not be stored to disk</source>
 <translation>Catatan ini tidak bisa disimpan ke diska</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3061"/>
+<location filename="../mainwindow.cpp" line="3160"/>
 <source>Read-only</source>
 <translation>Hanya-baca</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3063"/>
+<location filename="../mainwindow.cpp" line="3162"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>Penyuntingan catatan dinonaktifkan, klik untuk mengaktifkan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3080"/>
+<location filename="../mainwindow.cpp" line="3179"/>
 <source>Line numbers</source>
 <translation>Nomor baris</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3090"/>
+<location filename="../mainwindow.cpp" line="3189"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Klik di sini untuk melihat apa yang telah diubah dan bisa untuk diperbarui ke versi terbaru</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3460"/>
+<location filename="../mainwindow.cpp" line="3559"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
 <numerusform>Lanjutkan dengan penghapusan otomatis &lt;strong&gt;%n&lt;/strong&gt; salinan basis data yang bertentangan yang dapat memblokir proses ownCloud Anda sendiri?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4942"/>
-<source>%n note(s) were tagged with "%2"</source>
+<location filename="../mainwindow.cpp" line="5041"/>
+<source>%n note(s) were tagged with &quot;%2&quot;</source>
 <translation>
-<numerusform>%n catatan ditag dengan "%2"</numerusform>
+<numerusform>%n catatan ditag dengan &quot;%2&quot;</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5734"/>
+<location filename="../mainwindow.cpp" line="5833"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Ditemukan kemunculan &lt;strong&gt;%n&lt;/strong&gt; dari &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6096"/>
+<location filename="../mainwindow.cpp" line="6195"/>
 <source>Note headline</source>
 <translation>Judul catatan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6315"/>
+<location filename="../mainwindow.cpp" line="6414"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
 <translation>Tidak bisa menemukan catatan.&lt;br /&gt;Tidak bisa secara otomatis membuat catatan di lokasi, karena subfolder dinonaktifkan untuk folder catatan saat ini.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6329"/>
+<location filename="../mainwindow.cpp" line="6428"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6756"/>
+<location filename="../mainwindow.cpp" line="6855"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
 <translation>&amp;Kutip semua teks yang dipilih</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7784"/>
+<location filename="../mainwindow.cpp" line="7900"/>
 <source>Downloading images finished</source>
 <translation>Selesai mengunduh gambar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7939"/>
+<location filename="../mainwindow.cpp" line="8055"/>
 <source>Increased font size to %1 pt</source>
 <translation>Tingkatkan ukuran fon menjadi %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7956"/>
+<location filename="../mainwindow.cpp" line="8072"/>
 <source>Decreased font size to %1 pt</source>
 <translation>Kurangi ukuran fon menjadi %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5474"/>
-<location filename="../mainwindow.cpp" line="5489"/>
-<location filename="../mainwindow.cpp" line="5512"/>
-<location filename="../mainwindow.cpp" line="10660"/>
+<location filename="../mainwindow.cpp" line="5573"/>
+<location filename="../mainwindow.cpp" line="5588"/>
+<location filename="../mainwindow.cpp" line="5611"/>
+<location filename="../mainwindow.cpp" line="10776"/>
 <source>Open &amp;settings</source>
 <translation>Buka &amp;pengaturan</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1719"/>
-<location filename="../mainwindow.cpp" line="12618"/>
+<location filename="../mainwindow.cpp" line="1818"/>
+<location filename="../mainwindow.cpp" line="12734"/>
 <source>leave</source>
 <translation>keluar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7205"/>
+<location filename="../mainwindow.cpp" line="7304"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Silakan masukkan &lt;strong&gt;sandi&lt;/strong&gt; Anda untuk mengenkripsi catatan.&lt;br /&gt;Harap diingat bahwa Anda harus &lt;strong&gt;mengingat&lt;/strong&gt; sandi Anda agar bisa membaca isi dari catatan&lt;br /&gt; dan anda &lt;strong&gt;hanya&lt;/strong&gt; bisa melakukan itu &lt;strong&gt;di QOwnNotes&lt;/strong&gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7261"/>
+<location filename="../mainwindow.cpp" line="7377"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Dekripsi catatan dan simpan sebagai teks biasa</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7266"/>
+<location filename="../mainwindow.cpp" line="7382"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Dekripsi</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7291"/>
+<location filename="../mainwindow.cpp" line="7407"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br /&gt;Anda akan bisa menyunting catatan anda yang terenkripsi.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7360"/>
+<location filename="../mainwindow.cpp" line="7476"/>
 <source>Export current note as Markdown file</source>
 <translation>Ekspor catatan ini sebagai berkas markdown</translation>
 </message>
@@ -4230,7 +4400,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn't found on the server.</source>
+<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
 <translation>Tidak ada versi untuk catatan ini atau catatan tidak ditemukan pada server.</translation>
 </message>
 <message>
@@ -4256,7 +4426,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn't reply anything!</source>
+<source>Your CalDAV server didn&apos;t reply anything!</source>
 <translation>Sama sekali tidak ada respon dari server CalDAV anda!</translation>
 </message>
 <message>
@@ -4299,7 +4469,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don't match!</source>
+<source>Passwords don&apos;t match!</source>
 <translation>Kata sandi tidak cocok!</translation>
 </message>
 </context>
@@ -4348,7 +4518,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3788"/>
+<location filename="../entities/note.cpp" line="3802"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>…dan %n catatan lainnya</numerusform>
@@ -4367,12 +4537,12 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don't ask again!</source>
+<source>Don&apos;t ask again!</source>
 <translation>Jangan tanya lagi!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don't show again!</source>
+<source>Don&apos;t show again!</source>
 <translation>Jangan tampilkan lagi!</translation>
 </message>
 <message>
@@ -4408,7 +4578,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 <translation>Perintah &lt;code&gt;%1&lt;/code&gt; dengan argumen &lt;code&gt;%2&lt;/code&gt; gagal!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4251"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4263"/>
 <source>New connection</source>
 <translation>Koneksi baru</translation>
 </message>
@@ -4441,13 +4611,13 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
 <translation>Folder dengan nama  &lt;b&gt;%1&lt;/b&gt; tidak dapat dibuat, karena ini digunakan secara internal oleh aplikasi!
 </translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>Folder dengan nama  &lt;b&gt;%1&lt;/b&gt; tidak dapat dibuat, karena itu ada dalam daftar subfolder yang diabaikan! Anda dapat mengubahnya di &lt;i&gt; Pengaturan panel &lt;/i&gt;.
 </translation>
 </message>
@@ -4475,27 +4645,27 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="604"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="628"/>
 <source>No suggestions for %1</source>
 <translation>Tidak ada saran untuk %1</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="616"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="640"/>
 <source>Ignore</source>
 <translation>Abaikan</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="641"/>
 <source>Add to Dictionary</source>
 <translation>Tambahkan ke Kamus</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="674"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="698"/>
 <source>Note editing disabled</source>
 <translation>Penyuntingan catatan dinonaktifkan</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="675"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="699"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation>Penyuntingan catatan saat ini dinonaktifkan, apakah Anda ingin mengaktifkannya kembali?</translation>
 </message>
@@ -4686,9 +4856,9 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, Anda bisa memulihkan
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file '%1'.
+<source>Unable to establish a database connection with file &apos;%1&apos;.
 Are the folder and the file writeable?</source>
-<translation>Tidak bisa membuat koneksi basis data dengan berkas '%1'.
+<translation>Tidak bisa membuat koneksi basis data dengan berkas &apos;%1&apos;.
 Apakah folder dan berkas tersebut bisa ditransfer?</translation>
 </message>
 <message>
@@ -4703,9 +4873,9 @@ Apakah folder dan berkas tersebut bisa ditransfer?</translation>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
+<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
 Are the folder and the file writeable?</source>
-<translation>Tidak dapat membuat koneksi basis data dengan basis data folder catatan untuk menggabungkan '%1'.
+<translation>Tidak dapat membuat koneksi basis data dengan basis data folder catatan untuk menggabungkan &apos;%1&apos;.
 Apakah folder dan file bisa ditransfer?</translation>
 </message>
 </context>
@@ -4853,7 +5023,7 @@ Apakah Anda tetap ingin memasangnya?</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Jangan lupa untuk memperbarui QOwnNotes agar skrip ini dapat bekerja!</translation>
 </message>
 <message>
@@ -4894,7 +5064,7 @@ Apakah Anda tetap ingin memasangnya?</translation>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn't exist</source>
+<source>file doesn&apos;t exist</source>
 <translation>berkas tidak ada</translation>
 </message>
 </context>
@@ -4974,8 +5144,8 @@ Apakah Anda tetap ingin memasangnya?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Silakan masukkan URL server ownCloud Anda, contoh: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Silakan masukkan URL server ownCloud Anda, contoh: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5041,8 +5211,8 @@ Apakah Anda tetap ingin memasangnya?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Buka halaman &lt;span style=" font-weight:600;"&gt;Konfigurasi aplikasi&lt;/span&gt; server ownCloud Anda di peramban web untuk memasang atau memperbarui QOwnNotesAPI dan mengaktifkan fitur inti aplikasi, &lt;span style=" font-weight:600;"&gt;Versi&lt;/span&gt; dan &lt;span style=" font-weight:600;"&gt;Berkas terhapus&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Buka halaman &lt;span style=&quot; font-weight:600;&quot;&gt;Konfigurasi aplikasi&lt;/span&gt; server ownCloud Anda di peramban web untuk memasang atau memperbarui QOwnNotesAPI dan mengaktifkan fitur inti aplikasi, &lt;span style=&quot; font-weight:600;&quot;&gt;Versi&lt;/span&gt; dan &lt;span style=&quot; font-weight:600;&quot;&gt;Berkas terhapus&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5066,8 +5236,8 @@ Apakah Anda tetap ingin memasangnya?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda juga membutuhkan dua aplikasi inti ownCloud, &lt;span style=" font-weight:600;"&gt;Versi&lt;/span&gt; dan &lt;span style=" font-weight:600;"&gt;Berkas terhapus&lt;/span&gt;, aktif pada server ownCloud Anda (secara bawaan sudah aktif).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda juga membutuhkan dua aplikasi inti ownCloud, &lt;span style=&quot; font-weight:600;&quot;&gt;Versi&lt;/span&gt; dan &lt;span style=&quot; font-weight:600;&quot;&gt;Berkas terhapus&lt;/span&gt;, aktif pada server ownCloud Anda (secara bawaan sudah aktif).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5296,8 +5466,8 @@ Apakah Anda tetap ingin memasangnya?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda mungkin perlu mempertimbangkan untuk mendapatkan sertifikat SSL gratis dari &lt;a href="https://letsencrypt.org/"&gt;Ayo enskripsikan&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda mungkin perlu mempertimbangkan untuk mendapatkan sertifikat SSL gratis dari &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Ayo enskripsikan&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5331,8 +5501,8 @@ Apakah Anda tetap ingin memasangnya?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jika dicentang, Anda akan selalu diberitahu tentang perubahan eksternal, walaupun catatan tidak disunting dalam beberapa menit terakhir. Direkomendasikan untuk &lt;span style=" font-style:italic;"&gt;tidak dicentang&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jika dicentang, Anda akan selalu diberitahu tentang perubahan eksternal, walaupun catatan tidak disunting dalam beberapa menit terakhir. Direkomendasikan untuk &lt;span style=&quot; font-style:italic;&quot;&gt;tidak dicentang&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5360,10 +5530,10 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4344"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2297"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2305"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4321"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4326"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2303"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4333"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4338"/>
 <source>Database</source>
 <translation>Basis data</translation>
 </message>
@@ -5384,7 +5554,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4299"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2371"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2377"/>
 <source>Clear app data and exit</source>
 <translation>Hapus data aplikasi dan keluar</translation>
 </message>
@@ -5421,7 +5591,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
 <translation>Data penggunaan anonim membantu menentukan bagian-bagian dari QOwnNotes yang perlu ditingkatkan dan memperbaiki masalah-masalah yang ada. Silakan nonaktifkan jika Anda benar-benar merasa tidak nyaman dengan opsi ini.</translation>
 </message>
 <message>
@@ -5521,9 +5691,9 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>"Notes" path on your server</source>
-<extracomment>"Notes" should not be translated</extracomment>
-<translation>Jalur "Catatan" pada server Anda</translation>
+<source>&quot;Notes&quot; path on your server</source>
+<extracomment>&quot;Notes&quot; should not be translated</extracomment>
+<translation>Jalur &quot;Catatan&quot; pada server Anda</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
@@ -5573,13 +5743,13 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Silakan pasang versi terbaru &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style ="font-weight: 600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (setidaknya versi QOWNNOTESAPI_MIN_VERSION) di server ownCloud Anda sendiri jika Anda ingin QOwnNotes dapat mengakses versi catatan dan catatan yang dihapus.</translation>
+<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Silakan pasang versi terbaru &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style =&quot;font-weight: 600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (setidaknya versi QOWNNOTESAPI_MIN_VERSION) di server ownCloud Anda sendiri jika Anda ingin QOwnNotes dapat mengakses versi catatan dan catatan yang dihapus.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda masih memerlukan &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;aplikasi sinkronisasi ownCloud&lt;/span&gt;&lt;/a&gt; (atau aplikasi sinkronisasi desktop lainnya) untuk menyinkronkan catatan Anda!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda masih memerlukan &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;aplikasi sinkronisasi ownCloud&lt;/span&gt;&lt;/a&gt; (atau aplikasi sinkronisasi desktop lainnya) untuk menyinkronkan catatan Anda!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5637,7 +5807,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
 <translation>Ketahuilah bahwa aplikasi catatan ownCloud tidak mendukung subfolder!
 </translation>
 </message>
@@ -5974,20 +6144,20 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4128"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3991"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4003"/>
 <source>Reset message boxes</source>
 <translation>Setel ulang kotak pesan</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4321"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4057"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4069"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
 <source>Import settings</source>
 <translation>Impor pengaturan</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4328"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4023"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4035"/>
 <source>Export settings</source>
 <translation>Ekspor pengaturan</translation>
 </message>
@@ -5998,8 +6168,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cara terbaik untuk mengirimkan laporan masalah adalah dengan menggunakan asisten masalah, klik tombol &lt;span style=" font-weight:600;"&gt;Buka asisten masalah&lt;/span&gt; di bawah.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cara terbaik untuk mengirimkan laporan masalah adalah dengan menggunakan asisten masalah, klik tombol &lt;span style=&quot; font-weight:600;&quot;&gt;Buka asisten masalah&lt;/span&gt; di bawah.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6063,13 +6233,13 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn't work, create an app password (button on the right)</source>
+<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
 <translation>Jika kata sandi Anda tidak dapat digunakan, buat sebuah kata sandi aplikasi (tombol di kanan)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation>Jika anda ingin membantu menerjemahkan QOwnNotes atau meningkatkan terjemahan yang sudah ada silakan baca: &lt;a href="%1"&gt;Bagaimana saya membantu menerjemahkan QOwnNotes?&lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation>Jika anda ingin membantu menerjemahkan QOwnNotes atau meningkatkan terjemahan yang sudah ada silakan baca: &lt;a href=&quot;%1&quot;&gt;Bagaimana saya membantu menerjemahkan QOwnNotes?&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6158,7 +6328,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
 <translation>Tidak perlu dua spasi di akhir kalimat memisahkan kalimat pada GitHub</translation>
 </message>
 <message>
@@ -6178,7 +6348,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don't use this in the issue tracker</source>
+<source>Please don&apos;t use this in the issue tracker</source>
 <translation>Jangan gunakan ini di dalam pelacak masalah</translation>
 </message>
 <message>
@@ -6198,8 +6368,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Disarankan untuk melihat semua &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;format waktu &lt;/a&gt;yang tersedia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Disarankan untuk melihat semua &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;format waktu &lt;/a&gt;yang tersedia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6229,8 +6399,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-<translation>Ekspresi reguler dari subfolder catatan untuk diabaikan, dipisahkan oleh ";"
+<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
+<translation>Ekspresi reguler dari subfolder catatan untuk diabaikan, dipisahkan oleh &quot;;&quot;
 </translation>
 </message>
 <message>
@@ -6252,8 +6422,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide 'Note count' with tags (increases performance)</source>
-<translation>Sembunyikan 'jumlah catatan' dengan tengara (meningkatkan kinerja)</translation>
+<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
+<translation>Sembunyikan &apos;jumlah catatan&apos; dengan tengara (meningkatkan kinerja)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5824"/>
@@ -6262,8 +6432,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation>Anda dapat menggunakan &lt;a href="%1"&gt;Aplikasi Web QOwnNotes&lt;/a&gt; untuk dapat menyisipkan foto kedalam QOwnNotes di desktop Anda.</translation>
+<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation>Anda dapat menggunakan &lt;a href=&quot;%1&quot;&gt;Aplikasi Web QOwnNotes&lt;/a&gt; untuk dapat menyisipkan foto kedalam QOwnNotes di desktop Anda.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6367,8 +6537,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation>Secara bawaan ekstensi peramban akan menampilkan semua tautan ke catatan yang sedang disunting. Anda juga bisa membuatnya menampilkan tautan markah catatan spesial dengan tag tertentu. Untuk informasi selanjutnya tentang sintaksis tautan markah, klik &lt;a href="%1"&gt;di sini&lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
+<translation>Secara bawaan ekstensi peramban akan menampilkan semua tautan ke catatan yang sedang disunting. Anda juga bisa membuatnya menampilkan tautan markah catatan spesial dengan tag tertentu. Untuk informasi selanjutnya tentang sintaksis tautan markah, klik &lt;a href=&quot;%1&quot;&gt;di sini&lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6418,8 +6588,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>Pasang &lt;a href="%1"&gt;ekstensi peramban Web Companion&lt;/a&gt; dari &lt;a href="%2"&gt;Toko Web Chrome&lt;/a&gt; atau &lt;a href="%3"&gt;laman pengaya Firefox&lt;/a&gt; untuk menggunakan QOwnNotes sebagai web clipper.</translation>
+<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>Pasang &lt;a href=&quot;%1&quot;&gt;ekstensi peramban Web Companion&lt;/a&gt; dari &lt;a href=&quot;%2&quot;&gt;Toko Web Chrome&lt;/a&gt; atau &lt;a href=&quot;%3&quot;&gt;laman pengaya Firefox&lt;/a&gt; untuk menggunakan QOwnNotes sebagai web clipper.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6514,14 +6684,14 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example "gitk")</source>
-<extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Masukkan perintah yang akan digunakan untuk menampilkan log git (contohnya "gitk")</translation>
+<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
+<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<translation>Masukkan perintah yang akan digunakan untuk menampilkan log git (contohnya &quot;gitk&quot;)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don't translate "%notePath%"</extracomment>
+<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
 <translation>Jika Anda menggunakan pengaturan ini, Anda akan mendapatkan entri menu baru untuk menampilkan versi git jika Anda mengklik kanan sebuah catatan.</translation>
 </message>
 <message>
@@ -6541,7 +6711,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
 <translation>Jangan lupa mengaktifkan dukungan git untuk folder catatan Anda dan atur nama dan alamat surel untuk aplikasi git Anda, contohnya dengan perintah terminal berikut ini:</translation>
 </message>
 <message>
@@ -6596,8 +6766,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide 'Find or create tag' search</source>
-<translation>Sembunyikan kotak masukan 'Temukan atau buat tag'</translation>
+<source>Hide &apos;Find or create tag&apos; search</source>
+<translation>Sembunyikan kotak masukan &apos;Temukan atau buat tag&apos;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5568"/>
@@ -6622,8 +6792,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide 'Find or create note subfolder' search</source>
-<translation>Sembunyikan kotak masukan 'Temukan atau buat subfolder catatan'</translation>
+<source>Hide &apos;Find or create note subfolder&apos; search</source>
+<translation>Sembunyikan kotak masukan &apos;Temukan atau buat subfolder catatan&apos;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6631,15 +6801,15 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 <translation>Tampilkan subfolder catatan sebagai pohon penuh</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2907"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2919"/>
 <source>Search script repository</source>
 <translation>Cari repositori skrip</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use "%notePath%" for the path of the note.</source>
-<extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Secara opsional Anda bisa menggunakan "%notePath%" untuk jalur catatan.</translation>
+<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
+<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<translation>Secara opsional Anda bisa menggunakan &quot;%notePath%&quot; untuk jalur catatan.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -6699,7 +6869,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn't work</source>
+<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
 <translation>Untuk versi lama ownCloud yang pengaturan bawaannya tidak bekerja</translation>
 </message>
 <message>
@@ -6864,8 +7034,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-<translation>Masukkan format waktu khusus, contoh "dd.MM.yyyy hh:mm"</translation>
+<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
+<translation>Masukkan format waktu khusus, contoh &quot;dd.MM.yyyy hh:mm&quot;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -6965,7 +7135,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don't support todo items</source>
+<source>Ignore calendars that don&apos;t support todo items</source>
 <translation>Abaikan kalender yang tidak mendukung item todo</translation>
 </message>
 <message>
@@ -7035,8 +7205,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-<translation>Jika Anda menambahkan ekstensi tersuai, cukup ketik ekstensinya saja, sebagai contoh "jurnal".</translation>
+<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
+<translation>Jika Anda menambahkan ekstensi tersuai, cukup ketik ekstensinya saja, sebagai contoh &quot;jurnal&quot;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7050,7 +7220,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don't show the update dialog automatically</source>
+<source>Don&apos;t show the update dialog automatically</source>
 <translation>Jangan tampilkan dialog pembaruan secara otomatis</translation>
 </message>
 <message>
@@ -7082,15 +7252,15 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi dan
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4411"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2316"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4300"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2322"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4312"/>
 <source>Debug information</source>
 <translation>Informasi awakutu</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda bisa &lt;span style=" font-weight:600;"&gt;menyalin dan menempel&lt;/span&gt; teks ini (atau sebagian dari teks) ke dalam &lt;span style=" font-weight:600;"&gt;masalah&lt;/span&gt; pada &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;halaman masalah QOwnNotes&lt;/a&gt;, jika Anda memiliki &lt;span style=" font-weight:600;"&gt;pertanyaan atau kesulitan&lt;/span&gt; dengan QOwnNotes. Data yang sifatnya sangat sensitif, akan selalu disembunyikan di dalam informasi ini.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda bisa &lt;span style=&quot; font-weight:600;&quot;&gt;menyalin dan menempel&lt;/span&gt; teks ini (atau sebagian dari teks) ke dalam &lt;span style=&quot; font-weight:600;&quot;&gt;masalah&lt;/span&gt; pada &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;halaman masalah QOwnNotes&lt;/a&gt;, jika Anda memiliki &lt;span style=&quot; font-weight:600;&quot;&gt;pertanyaan atau kesulitan&lt;/span&gt; dengan QOwnNotes. Data yang sifatnya sangat sensitif, akan selalu disembunyikan di dalam informasi ini.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7153,123 +7323,123 @@ Anda juga perlu memasang dan mengaktifkan aplikasi QOwnNotesAPI!
 Pesan kesalahan koneksi: </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2317"/>
-<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<location filename="../dialogs/settingsdialog.cpp" line="2323"/>
+<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Jangan gunakan ini di dalam pelacak masalah, langsung salin teks informasi awakutu ke dalam masalah. </translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2324"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2330"/>
 <source>Markdown files</source>
 <translation>Berkas markdown</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2352"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2358"/>
 <source>Disable usage tracking</source>
 <translation>Nonaktifkan pelacakan penggunaan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2353"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<location filename="../dialogs/settingsdialog.cpp" line="2359"/>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Data penggunaan anonim membantu menentukan bagian-bagian dari QOwnNotes yang perlu ditingkatkan dan memperbaiki masalah-masalah yang ada.&lt;br /&gt;Silakan nonaktifkan jika Anda benar-benar merasa tidak nyaman dengan opsi ini.&lt;br /&gt;&lt;br /&gt;Yakin ingin menonaktifkan pelacakan penggunaan?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2580"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2592"/>
 <source>new folder</source>
 <translation>folder baru</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2614"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2626"/>
 <source>Remove note folder</source>
 <translation>Buang folder catatan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2615"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2627"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Buang folder catatan ini &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2696"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2708"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>Silakan pilih folder tempat catatan Anda akan disimpan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2731"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2743"/>
 <source>Loading folders from server</source>
 <translation>Memuat folder dari server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2746"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2758"/>
 <source>No more folders were found in the current folder</source>
 <translation>Tidak ada folder lagi yang ditemukan di dalam folder saat ini</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2819"/>
-<source>Loading folders in '%1' from server</source>
-<translation>Memuat folder di dalam '%1' dari server</translation>
+<location filename="../dialogs/settingsdialog.cpp" line="2831"/>
+<source>Loading folders in &apos;%1&apos; from server</source>
+<translation>Memuat folder di dalam &apos;%1&apos; dari server</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2892"/>
-<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Kunjungi &lt;a href="%1"&gt;Dokumentasi skrip&lt;/a&gt; untuk memulai dengan cepat.</translation>
+<location filename="../dialogs/settingsdialog.cpp" line="2904"/>
+<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Kunjungi &lt;a href=&quot;%1&quot;&gt;Dokumentasi skrip&lt;/a&gt; untuk memulai dengan cepat.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2896"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Jika Anda membutuhkan akses ke fungsi tertentu di dalam QOwnNotes, silakan buat laporan pada halaman &lt;a href="%1"&gt;masalah QOwnNotes&lt;/a&gt;.</translation>
+<location filename="../dialogs/settingsdialog.cpp" line="2908"/>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Jika Anda membutuhkan akses ke fungsi tertentu di dalam QOwnNotes, silakan buat laporan pada halaman &lt;a href=&quot;%1&quot;&gt;masalah QOwnNotes&lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2918"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2930"/>
 <source>Check for script updates</source>
 <translation>Periksa pembaruan skrip</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2925"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2937"/>
 <source>Add local script</source>
 <translation>Tambah skrip lokal</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2929"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2941"/>
 <source>Add an existing, local script</source>
 <translation>Tambah skrip lokal yang sudah ada</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4022"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4080"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4034"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4092"/>
 <source>INI files</source>
 <translation>Berkas INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4070"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Apakah Anda benar-benar ingin mengimpor pengaturan? Pengaturan Anda yang berlaku saat ini akan dihapus dan tidak semua pengaturan bisa dipulihkan, seperti pengaturan folder catatan dan skrip yang Anda gunakan. Anda juga harus menyesuaikan beberapa pengaturan lainnya, terutama di lintas platform. Jangan khawatir, seluruh catatan Anda tidak akan berubah dan akan tetap utuh seperti sebelumnya!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4068"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4080"/>
 <source>The application will be quit after the import.</source>
 <translation>Aplikasi akan ditutup setelah proses impor selesai.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4069"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
 <source>The application will be restarted after the import.</source>
 <translation>Aplikasi akan dimulai ulang setelah proses impor selesai.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4301"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4313"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Informasi awakutu telah disalin ke papan klip.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4322"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4334"/>
 <source>The integrity of the disk database is valid.</source>
 <translation>Integritas dari database disk/penyimpanan valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4327"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4339"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation>Integritas dari database disk/penyimpanan tidak valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2912"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2924"/>
 <source>Find a script in the script repository</source>
 <translation>Temukan skrip di dalam repositori skrip</translation>
 </message>
@@ -7315,110 +7485,110 @@ Pesan kesalahan koneksi: </translation>
 <translation>Pintasan &lt;strong&gt;%1&lt;/strong&gt; sudah ditetapkan untuk &lt;strong&gt;%2&lt;/strong&gt;! Apakah anda ingin langsung ke pintasan tersebut?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3005"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3017"/>
 <source>Remove script</source>
 <translation>Buang skrip</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3006"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3018"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Buang skrip saat ini &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3056"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3068"/>
 <source>QML files</source>
 <translation>Berkas QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3057"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3069"/>
 <source>Please select your QML file</source>
 <translation>Silakan pilih berkas QML Anda</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3146"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3158"/>
 <source>Open repository</source>
 <translation>Buka repositori</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3204"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3216"/>
 <source>Your script seems to be valid</source>
 <translation>Skrip Anda tampaknya valid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3205"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3217"/>
 <source>There were script errors:
 %1</source>
 <translation>Terdapat kesalahan skrip:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3273"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3285"/>
 <source>File extension</source>
 <translation>Ekstensi berkas</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3273"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3285"/>
 <source>Enter your custom file extension:</source>
 <translation>Masukkan ekstensi khusus berkas Anda:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3602"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3614"/>
 <source>Calendar cache emptied</source>
 <translation>Tembolok kalender dikosongkan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3603"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3615"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Tembolok kalender anda telah dikosongkan.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3684"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3696"/>
 <source>Reset toolbars and exit</source>
 <translation>Setel ulang bilah perkakas dan keluar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3685"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3697"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>Apakah Anda benar-benar ingin menyetel ulang semua bilah perkakas? Dalam prosesnya, aplikasi akan ditutup. Bilah perkakas bawaan akan dipulihkan saat anda menjalankan aplikasi ini lagi.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3689"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
 <source>Reset and &amp;exit</source>
 <translation>Setel ulang dan &amp;keluar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3847"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3859"/>
 <source>Log file cleared</source>
 <translation>Berkas log dihapus</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3848"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3860"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Berkas log &lt;strong&gt;%1&lt;/strong&gt; telah dihapus.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3884"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3896"/>
 <source>Executable files</source>
 <translation>Berkas yang bisa dijalankan</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3885"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3887"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3897"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3899"/>
 <source>All files</source>
 <translation>Semua berkas</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3895"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3907"/>
 <source>Please select the path of your git executable</source>
 <translation>Silakan pilih jalur aplikasi cli git anda</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3992"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4004"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>Apakah anda benar-benar ingin menyetel ulang penggantian semua kotak pesan?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2306"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2312"/>
 <source>The Database was reinitialized.</source>
 <translation>Basis data diinisialisasi ulang.</translation>
 </message>
@@ -7429,8 +7599,8 @@ Pesan kesalahan koneksi: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Anda bisa mengunduh aplikasi git di sini: &lt;a href="%url"&gt;Git untuk Windows&lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
+<translation>Anda bisa mengunduh aplikasi git di sini: &lt;a href=&quot;%url&quot;&gt;Git untuk Windows&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7454,7 +7624,7 @@ Pesan kesalahan koneksi: </translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
 <translation>basis data sqlite dan pengaturan internal akan disimpan di dalam folder &lt;code&gt;Data&lt;/code&gt; di lokasi binari QOwnNotes berada</translation>
 </message>
 <message>
@@ -7473,12 +7643,12 @@ Pesan kesalahan koneksi: </translation>
 <translation>Akan diaktifkan jika Anda menjalankan QOwnNotes dengan parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2325"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2331"/>
 <source>Save debug information</source>
 <translation>Simpan informasi awakutu</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2372"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2378"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -7487,14 +7657,14 @@ Your notes will stay intact!</source>
 Catatan Anda akan tetap utuh!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2375"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
 <source>Clear and &amp;exit</source>
 <translation>Hapus dan &amp;keluar</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2301"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2375"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3689"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Batal</translation>
 </message>
@@ -7504,17 +7674,17 @@ Catatan Anda akan tetap utuh!</translation>
 <translation>Anda akan menemukan &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; di dalam folder rilis untuk menjalankan QOwnNotes dalam mode portabel.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2298"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2304"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Apakah Anda benar-benar ingin menghapus basis data lokal? Ini juga akan menghapus folder catatan yang telah dikonfigurasi dan item todo yang tersimpan!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2301"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
 <source>Clear &amp;database</source>
 <translation>Hapus basis &amp;data</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2486"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2498"/>
 <source>Select editor application</source>
 <translation>Pilih aplikasi penyunting</translation>
 </message>
@@ -7825,12 +7995,12 @@ Catatan Anda akan tetap utuh!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn't exist</source>
+<source>File doesn&apos;t exist</source>
 <translation>Berkas tidak tersedia</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
 <translation>Berkas  &lt;strong&gt;%1&lt;/strong&gt; tidak tersedia, Anda tidak dapat menamai ulang berkasnya!</translation>
 </message>
 <message>
@@ -7955,12 +8125,12 @@ Catatan Anda akan tetap utuh!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn't exist</source>
+<source>File doesn&apos;t exist</source>
 <translation>Berkas tidak tersedia</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
 <translation>Berkas  &lt;strong&gt;%1&lt;/strong&gt; tidak tersedia, Anda tidak dapat menamai ulang berkasnya!</translation>
 </message>
 <message>
@@ -8522,8 +8692,8 @@ Ini tidak dapat dibatalkan!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href="%1"&gt;Ikut terlibat dengan QOwnNotes&lt;/a&gt;</translation>
+<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href=&quot;%1&quot;&gt;Ikut terlibat dengan QOwnNotes&lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8531,136 +8701,188 @@ Ini tidak dapat dibatalkan!</translation>
 <translation>%p% terunduh</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="49"/>
+<location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>Per&amp;barui</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="60"/>
 <source>&amp;Download latest</source>
-<translation>&amp;Unduh terbaru</translation>
+<translation type="vanished">&amp;Unduh terbaru</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="58"/>
+<location filename="../dialogs/updatedialog.cpp" line="56"/>
 <source>Just download</source>
 <translation>Hanya unduh</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="73"/>
+<location filename="../dialogs/updatedialog.cpp" line="66"/>
 <source>&amp;Skip version</source>
 <translation>&amp;Lewati versi</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="81"/>
+<location filename="../dialogs/updatedialog.cpp" line="74"/>
 <source>&amp;Disable dialog</source>
 <translation>&amp;Nonaktifkan dialog</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="82"/>
-<source>Don't show this dialog automatically</source>
+<location filename="../dialogs/updatedialog.cpp" line="75"/>
+<source>Don&apos;t show this dialog automatically</source>
 <translation>Jangan tampilkan dialog ini secara otomatis</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="90"/>
+<location filename="../dialogs/updatedialog.cpp" line="83"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Batal</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="245"/>
+<location filename="../dialogs/updatedialog.cpp" line="236"/>
 <source>Download error</source>
 <translation>Unduh gagal</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="246"/>
+<location filename="../dialogs/updatedialog.cpp" line="237"/>
 <source>Error while downloading:
 %1</source>
 <translation>Terjadi kesalahan saat mengunduh:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="248"/>
+<location filename="../dialogs/updatedialog.cpp" line="239"/>
 <source>network error: %1</source>
 <translation>kesalahan jaringan: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="270"/>
-<location filename="../dialogs/updatedialog.cpp" line="291"/>
-<location filename="../dialogs/updatedialog.cpp" line="385"/>
+<location filename="../dialogs/updatedialog.cpp" line="261"/>
+<location filename="../dialogs/updatedialog.cpp" line="282"/>
+<location filename="../dialogs/updatedialog.cpp" line="376"/>
+<location filename="../dialogs/updatedialog.cpp" line="453"/>
+<location filename="../dialogs/updatedialog.cpp" line="463"/>
 <source>File error</source>
 <translation>Kesalahan berkas</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="271"/>
-<location filename="../dialogs/updatedialog.cpp" line="386"/>
+<location filename="../dialogs/updatedialog.cpp" line="262"/>
+<location filename="../dialogs/updatedialog.cpp" line="377"/>
 <source>Could not open temporary file:
 %1</source>
 <translation>Tidak bisa membuka berkas sementara:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="292"/>
+<location filename="../dialogs/updatedialog.cpp" line="283"/>
 <source>Could not store downloaded file:
 %1</source>
 <translation>Tidak bisa menyimpan berkas yang diunduh:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="343"/>
+<location filename="../dialogs/updatedialog.cpp" line="334"/>
 <source>Do you want to update and restart QOwnNotes?</source>
 <translation>Apakah Anda ingin memperbarui dan memulai ulang QOwnNotes?</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="359"/>
-<location filename="../dialogs/updatedialog.cpp" line="444"/>
-<location filename="../dialogs/updatedialog.cpp" line="452"/>
-<location filename="../dialogs/updatedialog.cpp" line="461"/>
-<location filename="../dialogs/updatedialog.cpp" line="470"/>
-<location filename="../dialogs/updatedialog.cpp" line="480"/>
-<location filename="../dialogs/updatedialog.cpp" line="489"/>
+<location filename="../dialogs/updatedialog.cpp" line="350"/>
+<location filename="../dialogs/updatedialog.cpp" line="510"/>
+<location filename="../dialogs/updatedialog.cpp" line="518"/>
+<location filename="../dialogs/updatedialog.cpp" line="527"/>
+<location filename="../dialogs/updatedialog.cpp" line="536"/>
+<location filename="../dialogs/updatedialog.cpp" line="546"/>
+<location filename="../dialogs/updatedialog.cpp" line="555"/>
 <source>Error</source>
 <translation>Kesalahan</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="360"/>
+<location filename="../dialogs/updatedialog.cpp" line="351"/>
 <source>Could not find updater file:
 %1</source>
 <translation>Tidak bisa menemukan berkas pembaru:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="445"/>
-<source>Updater script '%1' doesn't exist!</source>
-<translation>Pembaru skrip '%1' tidak ada!</translation>
+<location filename="../dialogs/updatedialog.cpp" line="431"/>
+<location filename="../dialogs/updatedialog.cpp" line="443"/>
+<source>Permission error</source>
+<translation type="unfinished"></translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="453"/>
-<source>Updater unzip executable '%1' doesn't exist!</source>
-<translation>Aplikasi cli unzip pembaru '%1' tidak ada!</translation>
+<location filename="../dialogs/updatedialog.cpp" line="432"/>
+<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished"></translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="462"/>
+<location filename="../dialogs/updatedialog.cpp" line="444"/>
+<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="454"/>
+<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="464"/>
+<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
-<source>Could not copy updater script '%1' to '%2'!</source>
-<translation>Jangan salin pembaru skrip '%1' ke '%2'!</translation>
+<source>Restart application</source>
+<translation type="unfinished">Mulai ulang aplikasi</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="481"/>
-<source>Couldn't find updater script: %1</source>
+<location filename="../dialogs/updatedialog.cpp" line="477"/>
+<source>You now need to restart the application manually to complete the update process.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="483"/>
+<source>You now can restart the application to complete the update process.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="484"/>
+<source>Restart</source>
+<translation type="unfinished">Mulai ulang</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="484"/>
+<source>Cancel</source>
+<translation type="unfinished">Batal</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="511"/>
+<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
+<translation>Pembaru skrip &apos;%1&apos; tidak ada!</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="519"/>
+<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
+<translation>Aplikasi cli unzip pembaru &apos;%1&apos; tidak ada!</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="528"/>
+<location filename="../dialogs/updatedialog.cpp" line="537"/>
+<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
+<translation>Jangan salin pembaru skrip &apos;%1&apos; ke &apos;%2&apos;!</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="547"/>
+<source>Couldn&apos;t find updater script: %1</source>
 <translation>Tidak bisa menemukan skrip pembaru: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="490"/>
-<source>Couldn't find unzip executable: %1</source>
+<location filename="../dialogs/updatedialog.cpp" line="556"/>
+<source>Couldn&apos;t find unzip executable: %1</source>
 <translation>Tidak bisa menemukan aplikasi cli unzip: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="342"/>
-<location filename="../dialogs/updatedialog.cpp" line="495"/>
+<location filename="../dialogs/updatedialog.cpp" line="333"/>
+<location filename="../dialogs/updatedialog.cpp" line="561"/>
 <source>Proceed with update</source>
 <translation>Lanjutkan dengan pembaruan</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="496"/>
+<location filename="../dialogs/updatedialog.cpp" line="562"/>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
 <translation>Unduhan telah selesai. Apakah Anda ingin memperbarui dan memulai ulang QOwnNotes?</translation>
 </message>
@@ -8915,7 +9137,7 @@ Ini tidak dapat dibatalkan!</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn't exist!</source>
+<source>This note path doesn&apos;t exist!</source>
 <translation>Jalur catatan ini tidak ada!</translation>
 </message>
 <message>
@@ -8967,12 +9189,12 @@ Ini tidak dapat dibatalkan!</translation>
 <translation>Mode aplikasi tunggal tidak didukung pada sistem Anda!</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="563"/>
+<location filename="../main.cpp" line="565"/>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
 <translation>Sudah ada aplikasi QOwnNotes yang sedang berjalan! Anda bisa menonaktifkan mode aplikasi tunggal di dalam pengaturan atau gunakan parameter --allow-multiple-instances.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="591"/>
+<location filename="../main.cpp" line="615"/>
 <source>A second instance of QOwnNotes was attempted to be started!</source>
 <translation>Contoh kedua dari QOwnNotes dicoba untuk dimulai!</translation>
 </message>

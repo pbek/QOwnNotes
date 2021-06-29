@@ -719,7 +719,7 @@
 </message>
 <message>
 <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
-<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
 <translation>Chun comhad enex a fháil ní mór duit nóta amháin nó níos mó a roghnú i do chliant deisce Evernotes agus cliceáil ar “Onnmhairí nótaí…” sa roghchlár File.</translation>
 </message>
 <message>
@@ -876,8 +876,163 @@
 <context>
 <name>FakeVim</name>
 <message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
+<source>Use FakeVim</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
+<source>Read .vimrc from location:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
+<source>Show position of text marks</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
+<source>Pass control keys</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
+<source>Pass keys in insert mode</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
+<source>Start of line</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
+<source>Tabulator size:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
+<source>Smart tabulators</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
+<source>Highlight search results</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
+<source>Shift width:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
+<source>Expand tabulators</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
+<source>Automatic indentation</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
+<source>Incremental search</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
+<source>Use search dialog</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
+<source>Use smartcase</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
+<source>Use ignorecase</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
+<source>Use wrapscan</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
+<source>Use tildeop</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
+<source>Show partial command</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
+<source>Show line numbers relative to cursor</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
+<source>Blinking cursor</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
+<source>Scroll offset:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
+<source>Backspace:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
+<source>Keyword characters:</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
+<source>Use Vim-style Editing</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
+<source>Displays line numbers relative to the line containing text cursor.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
+<source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
+<source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
+<source>Vim tabstop option.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
+<source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
+<source>Default: %1</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
-<location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
 <source>Unknown option: %1</source>
 <translation>Rogha anaithnid: %1</translation>
 </message>
@@ -887,188 +1042,195 @@
 <translation>Caithfidh an argóint a bheith dearfach: %1 = %2</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
-<source>Mark "%1" not set.</source>
-<translation>Níl "%1" mar chomhartha.</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="1170"/>
+<source>Mark &quot;%1&quot; not set.</source>
+<translation>Níl &quot;%1&quot; mar chomhartha.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2848"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3100"/>
 <source>Recursive mapping</source>
 <translation>Mapáil athfhillteach</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3717"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3992"/>
 <source>%1%2%</source>
 <translation>%1%2%</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3719"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3994"/>
 <source>%1All</source>
 <translation>%1Gach</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3733"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4008"/>
 <source>Not implemented in FakeVim.</source>
 <translation>Níor cuireadh i bhfeidhm é i FakeVim.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4313"/>
 <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-<translation>Clóscríobh Alt-V, Alt-V chun modh FakeVim a scor.</translation>
+<translation type="vanished">Clóscríobh Alt-V, Alt-V chun modh FakeVim a scor.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
+<source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
+<source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
 <source>Unknown option:</source>
 <translation>Rogha anaithnid:</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5771"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6300"/>
 <source>Invalid argument:</source>
 <translation>Argóint neamhbhailí:</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5773"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6302"/>
 <source>Trailing characters:</source>
 <translation>Carachtair trailing:</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6384"/>
 <source>Move lines into themselves.</source>
 <translation>Bog línte isteach iad féin.</translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6426"/>
 <source>%n lines moved.</source>
 <translation>
 <numerusform>%n líne aistrithe.</numerusform>
 <numerusform>%n línte aistrithe.</numerusform>
 <numerusform>%n línte aistrithe.</numerusform>
-<numerusform>%n línte aistrithe.</numerusform>
-<numerusform>%n línte aistrithe.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5958"/>
-<source>File "%1" exists (add ! to override)</source>
-<translation>Tá an comhad "%1" ann (cuir isteach!)</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6487"/>
+<source>File &quot;%1&quot; exists (add ! to override)</source>
+<translation>Tá an comhad &quot;%1&quot; ann (cuir isteach!)</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5972"/>
-<source>Cannot open file "%1" for writing</source>
-<translation>Ní féidir an comhad "%1" a oscailt le haghaidh scríbhneoireachta</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6501"/>
+<source>Cannot open file &quot;%1&quot; for writing</source>
+<translation>Ní féidir an comhad &quot;%1&quot; a oscailt le haghaidh scríbhneoireachta</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5978"/>
-<source>"%1" %2 %3L, %4C written.</source>
-<translation>"%1" %2 %3L, %4C scríofa.</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
+<source>&quot;%1&quot; %2 %3L, %4C written.</source>
+<translation>&quot;%1&quot; %2 %3L, %4C scríofa.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5979"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6508"/>
 <source> [New] </source>
 <translation>[Nua]</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5987"/>
-<source>Cannot open file "%1" for reading</source>
-<translation>Ní féidir an comhad "%1" a oscailt don léamh</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6516"/>
+<source>Cannot open file &quot;%1&quot; for reading</source>
+<translation>Ní féidir an comhad &quot;%1&quot; a oscailt don léamh</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6015"/>
-<source>"%1" %2L, %3C</source>
-<translation>"%1" %2L, %3C</translation>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6544"/>
+<source>&quot;%1&quot; %2L, %3C</source>
+<translation>&quot;%1&quot; %2L, %3C</translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6571"/>
 <source>%n lines filtered.</source>
 <translation>
 <numerusform>%n líne scagtha.</numerusform>
 <numerusform>%n línte scagtha.</numerusform>
 <numerusform>%n línte scagtha.</numerusform>
-<numerusform>%n línte scagtha.</numerusform>
-<numerusform>%n línte scagtha.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6130"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6692"/>
 <source>Cannot open file %1</source>
 <translation>Ní féidir comhad %1 a oscailt</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6203"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6765"/>
 <source>Not an editor command: %1</source>
 <translation>Ní ordú eagarthóra é: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6867"/>
 <source>Invalid regular expression: %1</source>
 <translation>Léiriú rialta neamhbhailí: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6333"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6903"/>
 <source>Pattern not found: %1</source>
 <translation>Níor aimsíodh an patrún: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6337"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6907"/>
 <source>Search hit BOTTOM, continuing at TOP.</source>
 <translation>Cuardaigh ag bun an leathanaigh, ag leanúint ar a bharr.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6338"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6908"/>
 <source>Search hit TOP, continuing at BOTTOM.</source>
 <translation>Cuardaigh an barr buailte, ag leanúint ag bun an leathanaigh.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6343"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6913"/>
 <source>Search hit BOTTOM without match for: %1</source>
 <translation>Cuardaigh an bun an leathanaigh gan mheaitseáil le haghaidh: %1</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6914"/>
 <source>Search hit TOP without match for: %1</source>
 <translation>Bhuail an cuardach TOP gan mheaitseáil le haghaidh: %1</translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7021"/>
 <source>%n lines indented.</source>
 <translation>
 <numerusform>%n líne dínn.</numerusform>
 <numerusform>%n línte dínn.</numerusform>
 <numerusform>%n línte dínn.</numerusform>
-<numerusform>%n línte dínn.</numerusform>
-<numerusform>%n línte dínn.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7077"/>
 <source>%n lines %1ed %2 time.</source>
-<comment>%1 can be '&gt;' or '&lt;'</comment>
-<translation>
+<translation type="unfinished">
 <numerusform>%n líne %1ed %2 am.</numerusform>
 <numerusform>%n línte %1ed %2 am.</numerusform>
 <numerusform>%n línte %1ed %2 am.</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n lines %1ed %2 time.</source>
+<comment>%1 can be &apos;&gt;&apos; or &apos;&lt;&apos;</comment>
+<translation type="vanished">
+<numerusform>%n líne %1ed %2 am.</numerusform>
 <numerusform>%n línte %1ed %2 am.</numerusform>
 <numerusform>%n línte %1ed %2 am.</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7615"/>
 <source>%n lines yanked.</source>
 <translation>
 <numerusform>%n líne luchtaithe.</numerusform>
 <numerusform>%n línte luchtaithe.</numerusform>
 <numerusform>%n línte luchtaithe.</numerusform>
-<numerusform>%n línte luchtaithe.</numerusform>
-<numerusform>%n línte luchtaithe.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7778"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="8514"/>
 <source>Already at oldest change.</source>
 <translation>Athrú is sine cheana féin.</translation>
 </message>
 <message>
-<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7779"/>
+<location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="8515"/>
 <source>Already at newest change.</source>
 <translation>Ag an athrú is nuaí cheana féin.</translation>
 </message>
@@ -1318,7 +1480,7 @@
 <message>
 <location filename="../widgets/fontcolorwidget.cpp" line="236"/>
 <source>Masked syntax</source>
-<comment>text that will highlighted in a way that it's barely visible</comment>
+<comment>text that will highlighted in a way that it&apos;s barely visible</comment>
 <translation>Comhréir masked</translation>
 </message>
 <message>
@@ -1418,7 +1580,7 @@
 </message>
 <message>
 <location filename="../dialogs/imagedialog.ui" line="33"/>
-<source>Don't copy image to media folder</source>
+<source>Don&apos;t copy image to media folder</source>
 <translation>Ná déan cóip den fhillteán íomhá chuig na meáin</translation>
 </message>
 <message>
@@ -1694,7 +1856,7 @@
 </message>
 <message>
 <location filename="../dialogs/localtrashdialog.cpp" line="109"/>
-<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn&apos;t readable and can&apos;t be restored!</source>
 <translation>Níl comhad &lt;strong&gt;%1&lt;/strong&gt; inléite agus ní féidir é a athchóiriú!</translation>
 </message>
 <message numerus="yes">
@@ -1702,8 +1864,6 @@
 <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
 <numerusform>Athchóirigh &lt;strong&gt;%n/strong&gt; nóta roghnaithe?</numerusform>
-<numerusform>Athchóirigh &lt;strong&gt;%n/strong&gt; nótaí roghnaithe?</numerusform>
-<numerusform>Athchóirigh &lt;strong&gt;%n/strong&gt; nótaí roghnaithe?</numerusform>
 <numerusform>Athchóirigh &lt;strong&gt;%n/strong&gt; nótaí roghnaithe?</numerusform>
 <numerusform>Athchóirigh &lt;strong&gt;%n/strong&gt; nótaí roghnaithe?</numerusform>
 </translation>
@@ -1720,8 +1880,6 @@
 <numerusform>Athchóiríodh nóta &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
 <numerusform>Athchóiríodh nótaí &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
 <numerusform>Athchóiríodh nótaí &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
-<numerusform>Athchóiríodh nótaí &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
-<numerusform>Athchóiríodh nótaí &lt;strong&gt;%n&lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -1729,8 +1887,6 @@
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
 <translation>
 <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; nóta roghnaithe?</numerusform>
-<numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; nótaí roghnaithe?</numerusform>
-<numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; nótaí roghnaithe?</numerusform>
 <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; nótaí roghnaithe?</numerusform>
 <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; nótaí roghnaithe?</numerusform>
 </translation>
@@ -1745,8 +1901,6 @@
 <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
 <translation>
 <numerusform>Baineadh amach nód &lt;strong&gt;%n&lt;/string&gt;</numerusform>
-<numerusform>Baineadh na nóid &lt;strong&gt;%n&lt;/strong&gt; amach</numerusform>
-<numerusform>Baineadh na nóid &lt;strong&gt;%n&lt;/strong&gt; amach</numerusform>
 <numerusform>Baineadh na nóid &lt;strong&gt;%n&lt;/strong&gt; amach</numerusform>
 <numerusform>Baineadh na nóid &lt;strong&gt;%n&lt;/strong&gt; amach</numerusform>
 </translation>
@@ -1821,7 +1975,7 @@
 <message>
 <location filename="../mainwindow.ui" line="411"/>
 <location filename="../mainwindow.ui" line="911"/>
-<location filename="../mainwindow.cpp" line="845"/>
+<location filename="../mainwindow.cpp" line="944"/>
 <source>Navigation</source>
 <translation>Nascleanúint</translation>
 </message>
@@ -1832,7 +1986,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="696"/>
-<location filename="../mainwindow.cpp" line="8921"/>
+<location filename="../mainwindow.cpp" line="9037"/>
 <source>Add a tag to the current note</source>
 <translation>Cuir tag leis an nóta reatha</translation>
 </message>
@@ -1868,7 +2022,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1240"/>
-<location filename="../mainwindow.cpp" line="6842"/>
+<location filename="../mainwindow.cpp" line="6941"/>
 <source>Custom actions</source>
 <translation>Saincheap gníomhaíochtaí</translation>
 </message>
@@ -1949,12 +2103,12 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1447"/>
-<location filename="../mainwindow.cpp" line="10594"/>
+<location filename="../mainwindow.cpp" line="10710"/>
 <source>Select &amp;all notes</source>
 <translation>Roghnaigh &amp;na nótaí go léir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6750"/>
+<location filename="../mainwindow.cpp" line="6849"/>
 <source>Insert &amp;link</source>
 <translation>Cuir isteach &amp;nasc</translation>
 </message>
@@ -2004,7 +2158,7 @@
 <translation>Cuardaigh nó cruthaigh nóta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8922"/>
+<location filename="../mainwindow.cpp" line="9038"/>
 <source>Add a tag to the selected notes</source>
 <translation>Cuir tag leis na nótaí roghnaithe</translation>
 </message>
@@ -2015,7 +2169,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="886"/>
-<location filename="../mainwindow.cpp" line="6804"/>
+<location filename="../mainwindow.cpp" line="6903"/>
 <source>Export</source>
 <translation>Easpórtáil</translation>
 </message>
@@ -2026,7 +2180,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="928"/>
-<location filename="../mainwindow.cpp" line="6785"/>
+<location filename="../mainwindow.cpp" line="6884"/>
 <source>Print</source>
 <translation>Priontáil</translation>
 </message>
@@ -2097,7 +2251,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1160"/>
-<location filename="../mainwindow.cpp" line="773"/>
+<location filename="../mainwindow.cpp" line="872"/>
 <source>Workspaces</source>
 <translation>Spásanna oibre</translation>
 </message>
@@ -2216,7 +2370,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1610"/>
 <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-<translation>Cuir isteach íomhá (déanfar an íomhá a chóipeáil chuig an bhfillteán `meáin 'sa fhillteán nótaí reatha)</translation>
+<translation>Cuir isteach íomhá (déanfar an íomhá a chóipeáil chuig an bhfillteán `meáin &apos;sa fhillteán nótaí reatha)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1622"/>
@@ -2390,7 +2544,7 @@
 <location filename="../mainwindow.ui" line="2204"/>
 <location filename="../mainwindow.ui" line="2207"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
-<extracomment>"Element" as in the chat service</extracomment>
+<extracomment>&quot;Element&quot; as in the chat service</extracomment>
 <translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
 </message>
 <message>
@@ -2400,7 +2554,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2243"/>
-<location filename="../mainwindow.cpp" line="11716"/>
+<location filename="../mainwindow.cpp" line="11832"/>
 <source>Remove current workspace</source>
 <translation>Bain amach an spás oibre reatha</translation>
 </message>
@@ -2442,7 +2596,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2317"/>
-<location filename="../mainwindow.cpp" line="6759"/>
+<location filename="../mainwindow.cpp" line="6858"/>
 <source>Insert block &amp;quote</source>
 <translation>Cuir isteach luachana &amp;bloc</translation>
 </message>
@@ -2469,7 +2623,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2364"/>
-<location filename="../mainwindow.cpp" line="10570"/>
+<location filename="../mainwindow.cpp" line="10686"/>
 <source>Open note in different window</source>
 <translation>Oscail nóta i bhfuinneog dhifriúil</translation>
 </message>
@@ -2490,7 +2644,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2404"/>
-<location filename="../mainwindow.cpp" line="10578"/>
+<location filename="../mainwindow.cpp" line="10694"/>
 <source>Show note git versions</source>
 <translation>Taispeáin leaganacha nótaí git</translation>
 </message>
@@ -2573,7 +2727,7 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2566"/>
-<location filename="../mainwindow.cpp" line="12704"/>
+<location filename="../mainwindow.cpp" line="12826"/>
 <source>Automatically detect</source>
 <translation>Braith go huathoibríoch</translation>
 </message>
@@ -2670,8 +2824,8 @@
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1933"/>
-<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-<translation>Réitigh cothromóid shimplí cosúil le '(2 + 3) * 6 =' sa líne reatha</translation>
+<source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
+<translation>Réitigh cothromóid shimplí cosúil le &apos;(2 + 3) * 6 =&apos; sa líne reatha</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1941"/>
@@ -2782,143 +2936,139 @@
 <translation>Iompórtáil nótaí ó Evernote</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2867"/>
+<location filename="../mainwindow.cpp" line="2966"/>
 <source>Note was removed externally!</source>
 <translation>Baineadh nóta amach go seachtrach!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2868"/>
+<location filename="../mainwindow.cpp" line="2967"/>
 <source>Current note was removed outside of this application!
 Restore current note?</source>
 <translation>Baineadh an nóta reatha lasmuigh den iarratas seo!
 Athchóirigh nóta reatha?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5489"/>
-<location filename="../mainwindow.cpp" line="5512"/>
-<location filename="../mainwindow.cpp" line="7266"/>
-<location filename="../mainwindow.cpp" line="10660"/>
+<location filename="../mainwindow.cpp" line="5588"/>
+<location filename="../mainwindow.cpp" line="5611"/>
+<location filename="../mainwindow.cpp" line="7382"/>
+<location filename="../mainwindow.cpp" line="10776"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Cealaigh</translation>
 </message>
 <message numerus="yes">
 <source>stored %n note(s) to disk</source>
-<translation type="unfinished">
-<numerusform>stored %n note(s) to disk</numerusform>
-<numerusform>stored %n note(s) to disk</numerusform>
+<translation type="obsolete">
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
 <numerusform>stored %n note(s) to disk</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3104"/>
+<location filename="../mainwindow.cpp" line="3203"/>
 <source>new version %1 available</source>
 <translation>leagan nua %1 ar fáil</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3221"/>
+<location filename="../mainwindow.cpp" line="3320"/>
 <source>Abort</source>
 <translation>Tobscoir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3221"/>
+<location filename="../mainwindow.cpp" line="3320"/>
 <source>Loading notes…</source>
 <translation>Nótaí luchtaithe…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3435"/>
+<location filename="../mainwindow.cpp" line="3534"/>
 <source>Removed duplicate conflicted database: %1</source>
 <translation>Bunachar sonraí comhshuite dúblach: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3436"/>
+<location filename="../mainwindow.cpp" line="3535"/>
 <source>Could not remove duplicate conflicted database: %1</source>
 <translation>Níorbh fhéidir an bunachar sonraí comhshuite dúblach a bhaint: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3442"/>
+<location filename="../mainwindow.cpp" line="3541"/>
 <source>Removed merged conflicted database: %1</source>
 <translation>Bunachar sonraí contrártha a cuireadh as oifig a baineadh as: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3443"/>
+<location filename="../mainwindow.cpp" line="3542"/>
 <source>Could not remove merged conflicted database: %1</source>
 <translation>Níorbh fhéidir an bunachar sonraí comhchruinnithe a bhaint: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3458"/>
+<location filename="../mainwindow.cpp" line="3557"/>
 <source>Delete conflicted database copies</source>
 <translation>Scrios cóipeanna bunachar sonraí atá contrártha</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3481"/>
+<location filename="../mainwindow.cpp" line="3580"/>
 <source>Removed %n conflicted database copies</source>
 <translation>
 <numerusform>Rinneadh %n amháin de bhunachar sonraí a bhaint</numerusform>
 <numerusform>Rinneadh %n chóip bhunachar sonraí atá contrártha a bhaint</numerusform>
 <numerusform>Rinneadh %n chóip bhunachar sonraí atá contrártha a bhaint</numerusform>
-<numerusform>Rinneadh %n chóip bhunachar sonraí atá contrártha a bhaint</numerusform>
-<numerusform>Rinneadh %n chóip bhunachar sonraí atá contrártha a bhaint</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3645"/>
+<location filename="../mainwindow.cpp" line="3744"/>
 <source>Please select the folder where your notes will get stored</source>
 <translation>Roghnaigh an fillteán ina stórálfar do chuid nótaí</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3671"/>
+<location filename="../mainwindow.cpp" line="3770"/>
 <source>No folder was selected</source>
 <translation>Níor roghnaíodh aon fhillteán</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3673"/>
+<location filename="../mainwindow.cpp" line="3772"/>
 <source>You have to select your ownCloud notes folder to make this software work!</source>
-<translation>Caithfidh tú d'fhillteán nótaí ownCloud a roghnú chun an obair bogearraí seo a dhéanamh!</translation>
+<translation>Caithfidh tú d&apos;fhillteán nótaí ownCloud a roghnú chun an obair bogearraí seo a dhéanamh!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3675"/>
+<location filename="../mainwindow.cpp" line="3774"/>
 <source>&amp;Retry</source>
 <translation>&amp;Atosaigh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3675"/>
+<location filename="../mainwindow.cpp" line="3774"/>
 <source>&amp;Exit</source>
 <translation>&amp;An slí amach</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4003"/>
+<location filename="../mainwindow.cpp" line="4102"/>
 <source>Remove current note</source>
 <translation>Bain an nóta reatha</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4004"/>
+<location filename="../mainwindow.cpp" line="4103"/>
 <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Bain an nóta reatha: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4363"/>
+<location filename="../mainwindow.cpp" line="4462"/>
 <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
 <translation>Cuir isteach &lt;strong&gt; an focal faire &lt;/strong&gt; den nóta criptithe seo le do thoil.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4386"/>
-<source>Note can't be decrypted!</source>
+<location filename="../mainwindow.cpp" line="4485"/>
+<source>Note can&apos;t be decrypted!</source>
 <translation>Ní féidir nóta a dhíchriptiú!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4387"/>
+<location filename="../mainwindow.cpp" line="4486"/>
 <source>It seems that your password is not valid!</source>
 <translation>Dealraíonn sé nach bhfuil do phasfhocal bailí!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4555"/>
+<location filename="../mainwindow.cpp" line="4654"/>
 <source>Remove selected notes</source>
 <translation>Bain na nótaí roghnaithe</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4557"/>
+<location filename="../mainwindow.cpp" line="4656"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -2932,579 +3082,549 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
 <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; nótaí roghnaithe?
 
 Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá in ann iad a chur ar ais ón áit sin.</numerusform>
-<numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; nótaí roghnaithe?
-
-Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá in ann iad a chur ar ais ón áit sin.</numerusform>
-<numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; nótaí roghnaithe?
-
-Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá in ann iad a chur ar ais ón áit sin.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4647"/>
-<location filename="../mainwindow.cpp" line="10883"/>
+<location filename="../mainwindow.cpp" line="4746"/>
+<location filename="../mainwindow.cpp" line="10999"/>
 <source>Remove selected folders</source>
 <translation>Bain fillteáin roghnaithe</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4648"/>
+<location filename="../mainwindow.cpp" line="4747"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
 <translation>
 <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; fillteán roghnaithe? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Bainfear gach comhad agus fillteán sna fillteáin seo chomh maith!</numerusform>
 <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; fillteáin roghnaithe? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Bainfear gach comhad agus fillteán sna fillteáin seo chomh maith!</numerusform>
 <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; fillteáin roghnaithe? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Bainfear gach comhad agus fillteán sna fillteáin seo chomh maith!</numerusform>
-<numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; fillteáin roghnaithe? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Bainfear gach comhad agus fillteán sna fillteáin seo chomh maith!</numerusform>
-<numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; fillteáin roghnaithe? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Bainfear gach comhad agus fillteán sna fillteáin seo chomh maith!</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4659"/>
+<location filename="../mainwindow.cpp" line="4758"/>
 <source>Removed note subfolder: %1</source>
 <translation>Fillteán nótaí bainte: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4679"/>
+<location filename="../mainwindow.cpp" line="4778"/>
 <source>Remove selected tags</source>
 <translation>Bain clibeanna roghnaithe</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4680"/>
+<location filename="../mainwindow.cpp" line="4779"/>
 <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
 <translation>
 <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; clib roghnaithe? Ní bhainfear aon nótaí sa phróiseas seo.</numerusform>
 <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; clibeanna roghnaithe? Ní bhainfear aon nótaí sa phróiseas seo.</numerusform>
 <numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; clibeanna roghnaithe? Ní bhainfear aon nótaí sa phróiseas seo.</numerusform>
-<numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; clibeanna roghnaithe? Ní bhainfear aon nótaí sa phróiseas seo.</numerusform>
-<numerusform>Bain &lt;strong&gt;%n&lt;/strong&gt; clibeanna roghnaithe? Ní bhainfear aon nótaí sa phróiseas seo.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4732"/>
-<location filename="../mainwindow.cpp" line="9707"/>
+<location filename="../mainwindow.cpp" line="4831"/>
+<location filename="../mainwindow.cpp" line="9823"/>
 <source>Move selected notes</source>
 <translation>Bog nótaí roghnaithe</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4733"/>
+<location filename="../mainwindow.cpp" line="4832"/>
 <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Bog %n nóta roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Bog %n nótaí roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Bog %n nótaí roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Bog %n nótaí roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Bog %n nótaí roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4838"/>
-<location filename="../mainwindow.cpp" line="9816"/>
+<location filename="../mainwindow.cpp" line="4937"/>
+<location filename="../mainwindow.cpp" line="9932"/>
 <source>Copy selected notes</source>
 <translation>Cóipeáil nótaí roghnaithe</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4839"/>
+<location filename="../mainwindow.cpp" line="4938"/>
 <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Cóipeáil %n nóta roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Cóipeáil %n nótaí roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Cóipeáil %n nótaí roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Cóipeáil %n nótaí roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Cóipeáil %n nótaí roghnaithe go &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4869"/>
-<location filename="../mainwindow.cpp" line="5018"/>
+<location filename="../mainwindow.cpp" line="4968"/>
+<location filename="../mainwindow.cpp" line="5117"/>
 <source>Done</source>
 <translation>Arna dhéanamh</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4870"/>
+<location filename="../mainwindow.cpp" line="4969"/>
 <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
 <translation>
 <numerusform>Déanadh cóip ar %n nóta chuig &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>Déanadh cóip de %n nótaí chuig &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 <numerusform>Déanadh cóip de %n nótaí chuig &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-<numerusform>Déanadh cóip de %n nótaí chuig &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-<numerusform>Déanadh cóip de %n nótaí chuig &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4883"/>
+<location filename="../mainwindow.cpp" line="4982"/>
 <source>Tag selected notes</source>
 <translation>Clibeáil nótaí roghnaithe</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4884"/>
+<location filename="../mainwindow.cpp" line="4983"/>
 <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Nóta clibe %n roghnaithe le &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Clib %n nótaí roghnaithe le &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 <numerusform>Clib %n nótaí roghnaithe le &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Clib %n nótaí roghnaithe le &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-<numerusform>Clib %n nótaí roghnaithe le &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5157"/>
+<location filename="../mainwindow.cpp" line="5256"/>
 <source>Restart application</source>
 <translation>Iarratas a atosú</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5163"/>
+<location filename="../mainwindow.cpp" line="5262"/>
 <source>You may need to restart the application manually to let the changes take effect.</source>
 <translation>Seans go mbeidh ort an t-iarratas a atosú de láimh chun ligean do na hathruithe teacht i bhfeidhm.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5168"/>
+<location filename="../mainwindow.cpp" line="5267"/>
 <source>You may need to restart the application to let the changes take effect.</source>
-<translation>B'fhéidir go mbeidh ort an t-iarratas a atosú chun ligean do na hathruithe teacht i bhfeidhm.</translation>
+<translation>B&apos;fhéidir go mbeidh ort an t-iarratas a atosú chun ligean do na hathruithe teacht i bhfeidhm.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5170"/>
+<location filename="../mainwindow.cpp" line="5269"/>
 <source>Restart</source>
 <translation>Tosaigh arís</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5401"/>
+<location filename="../mainwindow.cpp" line="5500"/>
 <source>PDF files</source>
 <translation>Comhaid PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5485"/>
+<location filename="../mainwindow.cpp" line="5584"/>
 <source>Todo lists disabled!</source>
 <translation>Liostaí Le Déanamh díchumasaithe!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5486"/>
+<location filename="../mainwindow.cpp" line="5585"/>
 <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Tá liostaí Le Déanamh díchumasaithe agat. &lt;br /&gt; Seiceáil an chumraíocht &lt;strong&gt; Le Déanamh &lt;/strong&gt; sna socruithe!</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5738"/>
+<location filename="../mainwindow.cpp" line="5837"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; teagmhas ar bith de &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-<numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; tarluithe d'aon téarma de &lt;strong&gt;%1&lt;/ strong&gt;</numerusform>
-<numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; tarluithe d'aon téarma de &lt;strong&gt;%1&lt;/ strong&gt;</numerusform>
-<numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; tarluithe d'aon téarma de &lt;strong&gt;%1&lt;/ strong&gt;</numerusform>
-<numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; tarluithe d'aon téarma de &lt;strong&gt;%1&lt;/ strong&gt;</numerusform>
+<numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; tarluithe d&apos;aon téarma de &lt;strong&gt;%1&lt;/ strong&gt;</numerusform>
+<numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; tarluithe d&apos;aon téarma de &lt;strong&gt;%1&lt;/ strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6314"/>
-<location filename="../mainwindow.cpp" line="6335"/>
+<location filename="../mainwindow.cpp" line="6413"/>
+<location filename="../mainwindow.cpp" line="6434"/>
 <source>Note was not found</source>
 <translation>Níor aimsíodh nóta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6325"/>
+<location filename="../mainwindow.cpp" line="6424"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Níor aimsíodh nóta, cruthaigh nóta nua &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6374"/>
+<location filename="../mainwindow.cpp" line="6473"/>
 <source>Failed to create note</source>
 <translation type="unfinished">Failed to create note</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6375"/>
+<location filename="../mainwindow.cpp" line="6474"/>
 <source>Note creation failed</source>
 <translation type="unfinished">Note creation failed</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6563"/>
+<location filename="../mainwindow.cpp" line="6662"/>
 <source>Note folders</source>
 <translation>Tabhair faoi deara fillteáin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6686"/>
+<location filename="../mainwindow.cpp" line="6785"/>
 <source>Note versions are currently loaded from your ownCloud server</source>
 <translation>Tá leaganacha faoi deara á lódáil faoi láthair ó do fhreastalaí ownCloud</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6703"/>
+<location filename="../mainwindow.cpp" line="6802"/>
 <source>Trashed notes are currently loaded from your ownCloud server</source>
 <translation>Tá nótaí Trashed á luchtú ó do fhreastalaí ownCloud faoi láthair</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6769"/>
+<location filename="../mainwindow.cpp" line="6868"/>
 <source>Copy code block</source>
 <translation>Bloc cód cóipeála</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6793"/>
+<location filename="../mainwindow.cpp" line="6892"/>
 <source>Print selected text</source>
 <translation>Priontáil téacs roghnaithe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6799"/>
+<location filename="../mainwindow.cpp" line="6898"/>
 <source>Print selected text (preview)</source>
 <translation>Priontáil an téacs roghnaithe (réamhamharc)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6817"/>
+<location filename="../mainwindow.cpp" line="6916"/>
 <source>Export selected text as PDF</source>
 <translation>Easpórtáil téacs roghnaithe mar PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6823"/>
+<location filename="../mainwindow.cpp" line="6922"/>
 <source>Export selected text as PDF (preview)</source>
 <translation>Easpórtáil téacs roghnaithe mar PDF (réamhamharc)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7262"/>
+<location filename="../mainwindow.cpp" line="7378"/>
 <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
 <translation>Déanfar do nóta a dhíchriptiú agus a stóráil mar ghnáth-théacs arís. Coinnigh i gcuimhne go mbeidh an nóta neamhchriptithe sínithe le do fhreastalaí agus d’fhéadfadh go mbeadh téacs íogair nochta! &lt;br /&gt; An bhfuil tú ag iarraidh do nóta a dhíchriptiú?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7359"/>
+<location filename="../mainwindow.cpp" line="7475"/>
 <source>Markdown files</source>
 <translation>Comhaid marcáilte</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7416"/>
+<location filename="../mainwindow.cpp" line="7532"/>
 <source>Bookmarked note position at slot %1</source>
 <translation>Post an nóta leabharmharcáilte ag sliotán %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7431"/>
+<location filename="../mainwindow.cpp" line="7547"/>
 <source>Jumped to bookmark position at slot %1</source>
 <translation>Léim go postmharc ag sliotán %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7659"/>
-<location filename="../mainwindow.cpp" line="7728"/>
+<location filename="../mainwindow.cpp" line="7775"/>
+<location filename="../mainwindow.cpp" line="7844"/>
 <source>Inserting image</source>
 <translation>Íomhá a chur isteach</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7664"/>
-<location filename="../mainwindow.cpp" line="7732"/>
+<location filename="../mainwindow.cpp" line="7780"/>
+<location filename="../mainwindow.cpp" line="7848"/>
 <source>Done inserting image</source>
 <translation>Arna chur isteach an íomhá</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7666"/>
+<location filename="../mainwindow.cpp" line="7782"/>
 <source>Inserting attachment</source>
 <translation>Ceangaltán a chur isteach</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7671"/>
+<location filename="../mainwindow.cpp" line="7787"/>
 <source>Done inserting attachment</source>
 <translation>Arna chur isteach i gceangal</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7683"/>
+<location filename="../mainwindow.cpp" line="7799"/>
 <source>Copied %n note(s) to %1</source>
 <translation>
 <numerusform>Cóipeáil %n nóta go %1</numerusform>
 <numerusform>Cóipeáil %n nótaí go %1</numerusform>
 <numerusform>Cóipeáil %n nótaí go %1</numerusform>
-<numerusform>Cóipeáil %n nótaí go %1</numerusform>
-<numerusform>Cóipeáil %n nótaí go %1</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7692"/>
+<location filename="../mainwindow.cpp" line="7808"/>
 <source>Failed to copy %n note(s) (most likely already existing)</source>
 <translation>
 <numerusform>Níorbh fhéidir cóip %n nóta a chóipeáil (is dócha go bhfuil sé ann cheana féin)</numerusform>
 <numerusform>Theip ar %n nótaí a chóipeáil (is dócha go bhfuil siad ann cheana féin)</numerusform>
 <numerusform>Theip ar %n nótaí a chóipeáil (is dócha go bhfuil siad ann cheana féin)</numerusform>
-<numerusform>Theip ar %n nótaí a chóipeáil (is dócha go bhfuil siad ann cheana féin)</numerusform>
-<numerusform>Theip ar chóipeáil %n nóta (nóta is dócha)</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="7702"/>
+<location filename="../mainwindow.cpp" line="7818"/>
 <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
 <translation>
 <numerusform>Scipeáil cóipeála de nóta %n (gan aon chomhad marcáilte nó téacs nó níl sé inléite)</numerusform>
 <numerusform>Cóipeáil neadaithe de nótaí %n (gan aon chomhad marcáilte nó téacs nó gan a bheith inléite)</numerusform>
 <numerusform>Cóipeáil neadaithe de nótaí %n (gan aon chomhad marcáilte nó téacs nó gan a bheith inléite)</numerusform>
-<numerusform>Cóipeáil neadaithe de nótaí %n (gan aon chomhad marcáilte nó téacs nó gan a bheith inléite)</numerusform>
-<numerusform>Scipeáil cóipeála de %n nóta (nó aon chomhad marcála nó téacs nó níl sé inléite)</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7715"/>
+<location filename="../mainwindow.cpp" line="7831"/>
 <source>Saving temporary image</source>
 <translation>Ag cosaint íomhá shealadaigh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7734"/>
-<source>Temporary file can't be opened</source>
+<location filename="../mainwindow.cpp" line="7850"/>
+<source>Temporary file can&apos;t be opened</source>
 <translation>Ní féidir comhad sealadach a oscailt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7772"/>
+<location filename="../mainwindow.cpp" line="7888"/>
 <source>Downloading %1</source>
 <translation>%1 a íoslódáil</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7967"/>
+<location filename="../mainwindow.cpp" line="8083"/>
 <source>Reset font size to %1 pt</source>
-<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
+<comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
 <translation>Athraigh méid an chló go %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8967"/>
-<source>Remove tag '%1' from the current note</source>
-<translation>Bain an clib '%1' ón nóta reatha</translation>
+<location filename="../mainwindow.cpp" line="9083"/>
+<source>Remove tag &apos;%1&apos; from the current note</source>
+<translation>Bain an clib &apos;%1&apos; ón nóta reatha</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8968"/>
-<source>Remove tag '%1' from the selected notes</source>
-<translation>Bain an clib '%1' as na nótaí roghnaithe</translation>
+<location filename="../mainwindow.cpp" line="9084"/>
+<source>Remove tag &apos;%1&apos; from the selected notes</source>
+<translation>Bain an clib &apos;%1&apos; as na nótaí roghnaithe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9199"/>
+<location filename="../mainwindow.cpp" line="9315"/>
 <source>Rename tag</source>
 <translation>Athainmnigh an chlib</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9200"/>
+<location filename="../mainwindow.cpp" line="9316"/>
 <source>Assign color</source>
 <translation>Dath a shannadh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9201"/>
+<location filename="../mainwindow.cpp" line="9317"/>
 <source>Disable color</source>
 <translation>Díchumasaigh an dath</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9205"/>
+<location filename="../mainwindow.cpp" line="9321"/>
 <source>&amp;Move tags to…</source>
 <translation>&amp;Bog clibeanna chuig…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9416"/>
+<location filename="../mainwindow.cpp" line="9532"/>
 <source>Move to the root</source>
 <comment>to move a tag to the current tag in the tag context menu</comment>
 <translation>Bog go dtí an fhréamh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9960"/>
+<location filename="../mainwindow.cpp" line="10076"/>
 <source>An url was opened at the current cursor position</source>
 <translation>Osclaíodh url ag staid an chúrsóra reatha</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10063"/>
+<location filename="../mainwindow.cpp" line="10179"/>
 <source>No equation was found in front of the cursor</source>
 <translation>Níor aimsíodh aon chothromóid os comhair an chúrsóra</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10083"/>
+<location filename="../mainwindow.cpp" line="10199"/>
 <source>Result for equation: %1 = %2</source>
 <translation>Toradh ar chothromóid: %1 = %2</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10188"/>
+<location filename="../mainwindow.cpp" line="10304"/>
 <source>The scripting engine was reloaded</source>
 <translation>Rinneadh an t-inneall scripteála a athlódáil</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10222"/>
+<location filename="../mainwindow.cpp" line="10338"/>
 <source>HTML files</source>
 <translation>Comhaid HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10506"/>
-<source>Jump to the note's subfolder</source>
+<location filename="../mainwindow.cpp" line="10622"/>
+<source>Jump to the note&apos;s subfolder</source>
 <translation>Léim go fo-fhillteán an nóta
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10563"/>
+<location filename="../mainwindow.cpp" line="10679"/>
 <source>Open note in tab</source>
 <translation>Nóta oscailte sa chluaisín
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12271"/>
+<location filename="../mainwindow.cpp" line="12387"/>
 <source>A script update was found!</source>
 <translation>Fuarthas nuashonrú script!
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12277"/>
+<location filename="../mainwindow.cpp" line="12393"/>
 <source>Script updates</source>
 <translation>Nuashonruithe scripte</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12278"/>
+<location filename="../mainwindow.cpp" line="12394"/>
 <source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
 <translation>Fuarthas nuashonruithe ar do scripteanna sa stór script! Ar mhaith leat iad a nuashonrú?
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12293"/>
+<location filename="../mainwindow.cpp" line="12409"/>
 <source>No script updates were found</source>
 <translation>Ní bhfuarthas aon nuashonruithe script
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12937"/>
+<location filename="../mainwindow.cpp" line="13059"/>
 <source>Toggle note stickiness</source>
 <translation>Toggle greamaitheacht nóta
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12943"/>
+<location filename="../mainwindow.cpp" line="13065"/>
 <source>Close other note tabs</source>
 <translation>Dún cluaisíní nótaí eile</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10450"/>
-<location filename="../mainwindow.cpp" line="10644"/>
+<location filename="../mainwindow.cpp" line="10566"/>
+<location filename="../mainwindow.cpp" line="10760"/>
 <source>Rename note</source>
 <translation>Athainmnigh nóta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10452"/>
+<location filename="../mainwindow.cpp" line="10568"/>
 <source>Allows you to rename the filename of the note</source>
 <translation>Ceadaíonn sé duit ainm comhaid an nóta a athainmniú</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10466"/>
+<location filename="../mainwindow.cpp" line="10582"/>
 <source>&amp;Move notes to…</source>
 <translation>&amp;Bog nótaí go…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10467"/>
+<location filename="../mainwindow.cpp" line="10583"/>
 <source>&amp;Copy notes to…</source>
 <translation>&amp;Cóipeáil nótaí chuig…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10510"/>
+<location filename="../mainwindow.cpp" line="10626"/>
 <source>Move notes to subfolder…</source>
 <translation>Bog nótaí chuig an bhfillteán…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10514"/>
+<location filename="../mainwindow.cpp" line="10630"/>
 <source>Copy notes to subfolder…</source>
 <translation>Cóipeáil nótaí chuig an bhfillteán…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10522"/>
+<location filename="../mainwindow.cpp" line="10638"/>
 <source>&amp;Tag selected notes with…</source>
 <translation>&amp;Clib na nótaí roghnaithe le…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10546"/>
+<location filename="../mainwindow.cpp" line="10662"/>
 <source>&amp;Remove tag from selected notes…</source>
 <translation>&amp;Bain an clib ó nótaí roghnaithe…</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10644"/>
+<location filename="../mainwindow.cpp" line="10760"/>
 <source>Name:</source>
 <translation>Ainm:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10656"/>
+<location filename="../mainwindow.cpp" line="10772"/>
 <source>Note renaming not enabled!</source>
 <translation>Tabhair faoi deara nach bhfuil an t-athainmniú ar chumas!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10882"/>
+<location filename="../mainwindow.cpp" line="10998"/>
 <source>Rename subfolder</source>
 <translation>Athfhuaimniú an fhillteán</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11487"/>
+<location filename="../mainwindow.cpp" line="11603"/>
 <source>Create new workspace</source>
 <translation>Cruthaigh spás oibre nua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11488"/>
-<location filename="../mainwindow.cpp" line="11758"/>
+<location filename="../mainwindow.cpp" line="11604"/>
+<location filename="../mainwindow.cpp" line="11874"/>
 <source>Workspace name:</source>
 <translation>Ainm an spáis oibre:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11613"/>
+<location filename="../mainwindow.cpp" line="11729"/>
 <source>full</source>
 <comment>full workspace</comment>
 <translation>iomlán</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11620"/>
+<location filename="../mainwindow.cpp" line="11736"/>
 <source>minimal</source>
 <comment>minimal workspace</comment>
 <translation>íosta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11717"/>
+<location filename="../mainwindow.cpp" line="11833"/>
 <source>Remove the current workspace?</source>
 <translation>Bain an spás oibre reatha?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="11757"/>
+<location filename="../mainwindow.cpp" line="11873"/>
 <source>Rename workspace</source>
 <translation>Athainmnigh spás oibre</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="11939"/>
+<location filename="../mainwindow.cpp" line="12055"/>
 <source>%n chars</source>
 <comment>characters</comment>
 <translation>
 <numerusform>%n carachtar</numerusform>
 <numerusform>%n carachtair</numerusform>
 <numerusform>%n carachtair</numerusform>
-<numerusform>%n carachtair</numerusform>
-<numerusform>%n carachtair</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12210"/>
+<location filename="../mainwindow.cpp" line="12326"/>
 <source>Disallow all note editing</source>
 <translation>Diúltú do gach eagarthóireacht nótaí</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12452"/>
+<location filename="../mainwindow.cpp" line="12568"/>
 <source>Select text files to import</source>
 <translation>Roghnaigh comhaid téacs le hiompórtáil</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12482"/>
+<location filename="../mainwindow.cpp" line="12598"/>
 <source>Importing: %1</source>
 <translation>Á Iompórtáil: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12547"/>
-<source>Note headline '%1' was copied to the clipboard</source>
-<translation>Déan cóip den cheannlíne '%1' a chóipeáil chuig an ghearrthaisce</translation>
+<location filename="../mainwindow.cpp" line="12663"/>
+<source>Note headline &apos;%1&apos; was copied to the clipboard</source>
+<translation>Déan cóip den cheannlíne &apos;%1&apos; a chóipeáil chuig an ghearrthaisce</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12641"/>
+<location filename="../mainwindow.cpp" line="12757"/>
 <source>Leave full-screen mode</source>
 <translation>Fág mód an scáileáin iomláin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12822"/>
+<location filename="../mainwindow.cpp" line="12944"/>
 <source>Custom editor width</source>
 <translation>Leithead eagarthóra an chustaiméara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="12822"/>
+<location filename="../mainwindow.cpp" line="12944"/>
 <source>Characters:</source>
 <translation>Carachtair:</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="8941"/>
+<location filename="../mainwindow.cpp" line="9057"/>
 <source>%n notes selected</source>
 <translation>
 <numerusform>%n nóta roghnaithe</numerusform>
-<numerusform>%n nótaí roghnaithe</numerusform>
-<numerusform>%n nótaí roghnaithe</numerusform>
 <numerusform>%n nótaí roghnaithe</numerusform>
 <numerusform>%n nótaí roghnaithe</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2449"/>
-<location filename="../mainwindow.cpp" line="12211"/>
+<location filename="../mainwindow.cpp" line="12327"/>
 <source>Allow all note editing</source>
 <translation>Lig do gach eagarthóireacht nóta</translation>
 </message>
@@ -3514,644 +3634,624 @@ Má tá an bruscar cumasaithe ar do fhreastalaí ownCloud ba chóir go mbeifeá 
 <translation>&amp;Clib</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="4958"/>
+<location filename="../mainwindow.cpp" line="5057"/>
 <source>Remove tag from selected notes</source>
 <translation>Bain an clib ó nótaí roghnaithe</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4959"/>
+<location filename="../mainwindow.cpp" line="5058"/>
 <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
 <translation>
 <numerusform>Bain an chlib &lt;strong&gt;%1&lt;/strong&gt; ó nóta roghnaithe %n?</numerusform>
 <numerusform>Bain an chlib &lt;strong&gt;%1&lt;/strong&gt; ó %n nótaí roghnaithe?</numerusform>
 <numerusform>Bain an chlib &lt;strong&gt;%1&lt;/strong&gt; ó %n nótaí roghnaithe?</numerusform>
-<numerusform>Bain an chlib &lt;strong&gt;%1&lt;/strong&gt; ó %n nótaí roghnaithe?</numerusform>
-<numerusform>Bain an chlib &lt;strong&gt;%1&lt;/strong&gt; ó %n nótaí roghnaithe?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5019"/>
+<location filename="../mainwindow.cpp" line="5118"/>
 <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
 <translation>
 <numerusform>Baineadh clib &lt;strong&gt;%1&lt;/strong&gt; as nóta %n</numerusform>
 <numerusform>Baineadh clib &lt;strong&gt;%1&lt;/strong&gt; as nótaí %n</numerusform>
 <numerusform>Baineadh clib &lt;strong&gt;%1&lt;/strong&gt; as nótaí %n</numerusform>
-<numerusform>Baineadh clib &lt;strong&gt;%1&lt;/strong&gt; as nótaí %n</numerusform>
-<numerusform>Baineadh clib &lt;strong&gt;%1&lt;/strong&gt; as nótaí %n</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5064"/>
+<location filename="../mainwindow.cpp" line="5163"/>
 <source>Current notes folder: </source>
 <translation>Fillteán nótaí reatha: </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5067"/>
+<location filename="../mainwindow.cpp" line="5166"/>
 <source>Set the notes folder. Current notes folder: </source>
 <translation>Socraigh an fillteán nótaí. Fillteán nótaí reatha:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5269"/>
+<location filename="../mainwindow.cpp" line="5368"/>
 <source>Print note</source>
 <translation>Priontáil nóta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5344"/>
+<location filename="../mainwindow.cpp" line="5443"/>
 <source>Letter</source>
 <translation>Litir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5374"/>
+<location filename="../mainwindow.cpp" line="5473"/>
 <source>Portrait</source>
 <translation>Portráid</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5374"/>
+<location filename="../mainwindow.cpp" line="5473"/>
 <source>Landscape</source>
 <translation>Tírdhreach</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5379"/>
+<location filename="../mainwindow.cpp" line="5478"/>
 <source>Orientation</source>
 <translation>Treoshuíomh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5379"/>
+<location filename="../mainwindow.cpp" line="5478"/>
 <source>Orientation:</source>
 <translation>Treoshuíomh:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5402"/>
+<location filename="../mainwindow.cpp" line="5501"/>
 <source>Export current note as PDF</source>
 <translation>Easpórtáil nóta reatha mar PDF</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5509"/>
+<location filename="../mainwindow.cpp" line="5608"/>
 <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
 <translation>Níor roghnaigh tú aon liostaí todo. &lt;br/&gt; Déan seiceáil ar do chumraíocht &lt;strong&gt; Todo &lt;/strong&gt; sna suímh!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6545"/>
+<location filename="../mainwindow.cpp" line="6644"/>
 <source>Open QOwnNotes</source>
 <translation>Oscail QOwnNotes</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6096"/>
-<location filename="../mainwindow.cpp" line="6595"/>
-<location filename="../mainwindow.cpp" line="10446"/>
-<location filename="../mainwindow.cpp" line="10876"/>
+<location filename="../mainwindow.cpp" line="6195"/>
+<location filename="../mainwindow.cpp" line="6694"/>
+<location filename="../mainwindow.cpp" line="10562"/>
+<location filename="../mainwindow.cpp" line="10992"/>
 <source>New note</source>
 <translation>Nóta nua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6612"/>
+<location filename="../mainwindow.cpp" line="6711"/>
 <source>Recent notes</source>
 <translation>Nótaí le déanaí</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6628"/>
+<location filename="../mainwindow.cpp" line="6727"/>
 <source>Show todo lists</source>
 <translation>Taispeáin liostaí todo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6640"/>
+<location filename="../mainwindow.cpp" line="6739"/>
 <source>Recent tasks</source>
 <translation>Tascanna le déanaí</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6661"/>
+<location filename="../mainwindow.cpp" line="6760"/>
 <source>Quit</source>
 <translation>Scoir</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8140"/>
+<location filename="../mainwindow.cpp" line="8256"/>
 <source>show notes from all note subfolders (%1)</source>
 <translation>taispeáin nótaí ó gach fo-fhillteán nótaí (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8163"/>
+<location filename="../mainwindow.cpp" line="8279"/>
 <source>show notes in note root folder (%1)</source>
 <translation>taispeáin nótaí i bhfillteán fréamhacha nóta (%1)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="316"/>
-<location filename="../mainwindow.cpp" line="817"/>
-<location filename="../mainwindow.cpp" line="2143"/>
-<location filename="../mainwindow.cpp" line="8175"/>
+<location filename="../mainwindow.cpp" line="916"/>
+<location filename="../mainwindow.cpp" line="2242"/>
+<location filename="../mainwindow.cpp" line="8291"/>
 <source>Note folder</source>
 <translation>Fillteán faoi deara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9588"/>
-<location filename="../mainwindow.cpp" line="9655"/>
+<location filename="../mainwindow.cpp" line="9704"/>
+<location filename="../mainwindow.cpp" line="9771"/>
 <source>Copy to note folder</source>
 <translation>Cóip le fillteán a thabhairt faoi deara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9588"/>
-<location filename="../mainwindow.cpp" line="9656"/>
+<location filename="../mainwindow.cpp" line="9704"/>
+<location filename="../mainwindow.cpp" line="9772"/>
 <source>Move to note folder</source>
 <translation>Fillteán bogadh go nóta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9589"/>
-<location filename="../mainwindow.cpp" line="9657"/>
+<location filename="../mainwindow.cpp" line="9705"/>
+<location filename="../mainwindow.cpp" line="9773"/>
 <source>Copy to this subfolder</source>
 <translation>Cóipeáil chuig an bhfillteán seo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9590"/>
-<location filename="../mainwindow.cpp" line="9658"/>
+<location filename="../mainwindow.cpp" line="9706"/>
+<location filename="../mainwindow.cpp" line="9774"/>
 <source>Move to this subfolder</source>
 <translation>Bog chuig an bhfillteán seo</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9702"/>
+<location filename="../mainwindow.cpp" line="9818"/>
 <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Bog %n nóta roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
 <numerusform>Bog %n nótaí roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
 <numerusform>Bog %n nótaí roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
-<numerusform>Bog %n nótaí roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
-<numerusform>Bog %n nótaí roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5170"/>
-<location filename="../mainwindow.cpp" line="12466"/>
+<location filename="../mainwindow.cpp" line="5269"/>
+<location filename="../mainwindow.cpp" line="12582"/>
 <source>Cancel</source>
 <translation>Cealaigh</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9787"/>
-<source>%n note(s) were moved to note subfolder "%2"</source>
+<location filename="../mainwindow.cpp" line="9903"/>
+<source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
 <translation>
-<numerusform>Bogadh %n nóta chun nóta an fhillteora "%2" a thabhairt faoi deara</numerusform>
-<numerusform>Bogadh %n nótaí chun nóta an fhillteora "%2" a thabhairt faoi deara</numerusform>
-<numerusform>Bogadh %n nótaí chun nóta an fhillteora "%2" a thabhairt faoi deara</numerusform>
-<numerusform>Bogadh %n nótaí chun nóta an fhillteora "%2" a thabhairt faoi deara</numerusform>
-<numerusform>Bogadh %n nótaí chun nóta an fhillteora "%2" a thabhairt faoi deara</numerusform>
+<numerusform>Bogadh %n nóta chun nóta an fhillteora &quot;%2&quot; a thabhairt faoi deara</numerusform>
+<numerusform>Bogadh %n nótaí chun nóta an fhillteora &quot;%2&quot; a thabhairt faoi deara</numerusform>
+<numerusform>Bogadh %n nótaí chun nóta an fhillteora &quot;%2&quot; a thabhairt faoi deara</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9811"/>
+<location filename="../mainwindow.cpp" line="9927"/>
 <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation>
 <numerusform>Cóipeáil %n nóta roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
 <numerusform>Cóipeáil %n nótaí roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
 <numerusform>Cóipeáil %n nótaí roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
-<numerusform>Cóipeáil %n nótaí roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
-<numerusform>Cóipeáil %n nótaí roghnaithe chun an fillteán &lt;strong&gt;%2&lt;/strong&gt; a thabhairt faoi deara?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="9878"/>
-<source>%n note(s) were copied to note subfolder "%2"</source>
+<location filename="../mainwindow.cpp" line="9994"/>
+<source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
 <translation>
 <numerusform>Cóipeáladh %n nóta amháin chun nóta “%2” a thabhairt faoi deara</numerusform>
-<numerusform>Cóipeáladh %n nóta chun an fhillteán "%2" a thabhairt faoi deara</numerusform>
-<numerusform>Cóipeáladh %n nóta chun an fhillteán "%2" a thabhairt faoi deara</numerusform>
-<numerusform>Cóipeáladh %n nóta chun an fhillteán "%2" a thabhairt faoi deara</numerusform>
-<numerusform>Cóipeáladh %n nóta chun an fhillteán "%2" a thabhairt faoi deara</numerusform>
+<numerusform>Cóipeáladh %n nóta chun an fhillteán &quot;%2&quot; a thabhairt faoi deara</numerusform>
+<numerusform>Cóipeáladh %n nóta chun an fhillteán &quot;%2&quot; a thabhairt faoi deara</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10568"/>
+<location filename="../mainwindow.cpp" line="10684"/>
 <source>Open note in external editor</source>
 <translation>Nóta oscailte in eagarthóir seachtrach</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10572"/>
+<location filename="../mainwindow.cpp" line="10688"/>
 <source>Show note in file manager</source>
 <translation>Taispeáin nóta i mbainisteoir comhad</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10657"/>
+<location filename="../mainwindow.cpp" line="10773"/>
 <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
 <translation>Más mian leat do nóta a athainmniú ní mór duit an rogha a chumasú chun go mbeidh ainm an chomhartha nótaí difriúil ón gceannlíne.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10877"/>
+<location filename="../mainwindow.cpp" line="10993"/>
 <source>New subfolder</source>
 <translation>Fillteán nua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10887"/>
+<location filename="../mainwindow.cpp" line="11003"/>
 <source>Show folder in file manager</source>
 <translation>Taispeáin an fillteán i mbainisteoir comhad</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10932"/>
+<location filename="../mainwindow.cpp" line="11048"/>
 <source>Create a new folder</source>
 <translation>Cruthaigh fillteán nua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10933"/>
+<location filename="../mainwindow.cpp" line="11049"/>
 <source>Folder name:</source>
 <translation>Ainm an fhillteáin:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8099"/>
+<location filename="../mainwindow.cpp" line="8215"/>
 <source>show all untagged notes (%1)</source>
 <translation>taispeáin na nótaí neamhchaolaithe go léir (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8101"/>
+<location filename="../mainwindow.cpp" line="8217"/>
 <source>Untagged notes</source>
 <translation>Nótaí neamhchaite</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10223"/>
+<location filename="../mainwindow.cpp" line="10339"/>
 <source>Export current note as HTML file</source>
 <translation>Easpórtáil nóta reatha mar chomhad HTML</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5353"/>
+<location filename="../mainwindow.cpp" line="5452"/>
 <source>Page size</source>
 <translation>Méid an leathanaigh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1189"/>
+<location filename="../mainwindow.cpp" line="1288"/>
 <source>quit toolbar</source>
 <translation>scor an barra uirlisí</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5353"/>
+<location filename="../mainwindow.cpp" line="5452"/>
 <source>Page size:</source>
 <translation>Méid an leathanaigh:</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5470"/>
+<location filename="../mainwindow.cpp" line="5569"/>
 <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
 <translation>Déanfaidh QOwnNotes sonraí úsáide gan ainm a rianú, a chuidíonn le cinneadh a dhéanamh ar na codanna de QOwnNotes a fheabhsóidh seo chugainn agus chun bugaí a aimsiú agus a shocrú. Is féidir leat an t-iompar sin a dhíchumasú sna suíomhanna.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5474"/>
+<location filename="../mainwindow.cpp" line="5573"/>
 <source>&amp;Ok</source>
 <translation>&amp;OK</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="10456"/>
+<location filename="../mainwindow.cpp" line="10572"/>
 <source>&amp;Remove notes</source>
 <translation>&amp;Bain nótaí</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6750"/>
+<location filename="../mainwindow.cpp" line="6849"/>
 <source>&amp;Link selected text</source>
 <translation>&amp;Nasc téacs roghnaithe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1115"/>
+<location filename="../mainwindow.cpp" line="1214"/>
 <source>Your tasks are being loaded from your server</source>
 <translation>Tá do chuid tascanna á luchtú ó do fhreastalaí</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2798"/>
+<location filename="../mainwindow.cpp" line="2897"/>
 <source>Current note was modified externally</source>
 <translation>Athraíodh an nóta reatha go seachtrach</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2881"/>
-<location filename="../mainwindow.cpp" line="6034"/>
+<location filename="../mainwindow.cpp" line="2980"/>
+<location filename="../mainwindow.cpp" line="6133"/>
 <source>Stored current note to disk</source>
 <translation>Nóta reatha stóráilte ar an diosca</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2899"/>
+<location filename="../mainwindow.cpp" line="2998"/>
 <source>Note was modified externally: %1</source>
 <translation>Athraíodh an Nóta go seachtrach: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2921"/>
+<location filename="../mainwindow.cpp" line="3020"/>
 <source>Notes directory was modified externally</source>
 <translation>Athraíodh eolaire na nótaí go seachtrach</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="2982"/>
+<location filename="../mainwindow.cpp" line="3081"/>
 <source>Stored %n note(s) to disk</source>
 <translation>
 <numerusform>Nóta stóráilte %n ar dhiosca</numerusform>
 <numerusform>Stóráiltear %n nóta ar an diosca</numerusform>
 <numerusform>Stóráiltear %n nóta ar an diosca</numerusform>
-<numerusform>Stóráiltear %n nóta ar an diosca</numerusform>
-<numerusform>Stóráiltear %n nóta ar an diosca</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8065"/>
+<location filename="../mainwindow.cpp" line="8181"/>
 <source>show all notes (%1)</source>
 <translation>taispeáin na nótaí go léir (%1)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8068"/>
-<location filename="../mainwindow.cpp" line="8143"/>
+<location filename="../mainwindow.cpp" line="8184"/>
+<location filename="../mainwindow.cpp" line="8259"/>
 <source>All notes</source>
 <translation>Gach nóta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9191"/>
+<location filename="../mainwindow.cpp" line="9307"/>
 <source>&amp;Add tag</source>
 <translation>&amp;Cuir tag leis</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9239"/>
+<location filename="../mainwindow.cpp" line="9355"/>
 <source>Tag could not be created!</source>
 <translation>Ní fhéadfaí clib a chruthú!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9418"/>
+<location filename="../mainwindow.cpp" line="9534"/>
 <source>Move to this tag</source>
 <translation>Téigh go dtí an chlib seo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9453"/>
+<location filename="../mainwindow.cpp" line="9569"/>
 <source>Tag this</source>
 <translation>Clib é seo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9478"/>
-<source>Cannot move tag '%1' to this tag</source>
-<translation>Ní féidir clib '%1' a aistriú chuig an gclib seo</translation>
+<location filename="../mainwindow.cpp" line="9594"/>
+<source>Cannot move tag &apos;%1&apos; to this tag</source>
+<translation>Ní féidir clib &apos;%1&apos; a aistriú chuig an gclib seo</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9527"/>
-<source>Moved tag '%1' to new tag</source>
-<translation>Bog tag '%1' ar chlib nua</translation>
+<location filename="../mainwindow.cpp" line="9643"/>
+<source>Moved tag &apos;%1&apos; to new tag</source>
+<translation>Bog tag &apos;%1&apos; ar chlib nua</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="8405"/>
-<source>show all notes tagged with '%1' (%2)</source>
-<translation>taispeáin gach nóta clibeáilte le '%1' (%2)</translation>
+<location filename="../mainwindow.cpp" line="8521"/>
+<source>show all notes tagged with &apos;%1&apos; (%2)</source>
+<translation>taispeáin gach nóta clibeáilte le &apos;%1&apos; (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="9202"/>
+<location filename="../mainwindow.cpp" line="9318"/>
 <source>&amp;Remove tags</source>
 <translation>&amp;Bain clibeanna</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5508"/>
+<location filename="../mainwindow.cpp" line="5607"/>
 <source>No selected todo lists!</source>
 <translation>Uimh liostaí todo roghnaithe!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="578"/>
+<location filename="../mainwindow.cpp" line="597"/>
 <source>Action not found!</source>
 <translation type="unfinished">Action not found!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="579"/>
+<location filename="../mainwindow.cpp" line="598"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
 <translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="786"/>
+<location filename="../mainwindow.cpp" line="885"/>
 <source>Subfolders</source>
 <translation>Fillteáin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="798"/>
+<location filename="../mainwindow.cpp" line="897"/>
 <source>Tags</source>
 <translation>Clibeanna</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="807"/>
+<location filename="../mainwindow.cpp" line="906"/>
 <source>Note search</source>
 <translation>Déan cuardach a thabhairt faoi deara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="836"/>
+<location filename="../mainwindow.cpp" line="935"/>
 <source>Note list</source>
 <translation>Liosta nótaí</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="861"/>
+<location filename="../mainwindow.cpp" line="960"/>
 <source>Note edit</source>
 <translation>Cuir nótaí in eagar</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="873"/>
+<location filename="../mainwindow.cpp" line="972"/>
 <source>Note tags</source>
 <translation>Clibeanna Nóta</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="884"/>
+<location filename="../mainwindow.cpp" line="983"/>
 <source>Note preview</source>
 <translation>Tabhair réamhamharc faoi deara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="892"/>
+<location filename="../mainwindow.cpp" line="991"/>
 <source>Log</source>
 <translation>Logáil isteach</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="901"/>
+<location filename="../mainwindow.cpp" line="1000"/>
 <source>Scripting</source>
 <translation>Scriptiú</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1156"/>
+<location filename="../mainwindow.cpp" line="1255"/>
 <source>formatting toolbar</source>
 <translation>barra uirlisí a fhormáidiú</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1165"/>
+<location filename="../mainwindow.cpp" line="1264"/>
 <source>inserting toolbar</source>
 <translation>cuir uirlisí isteach</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1172"/>
+<location filename="../mainwindow.cpp" line="1271"/>
 <source>encryption toolbar</source>
 <translation>barra uirlisí criptithe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1179"/>
+<location filename="../mainwindow.cpp" line="1278"/>
 <source>window toolbar</source>
 <translation>barra uirlisí fuinneoige</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1184"/>
+<location filename="../mainwindow.cpp" line="1283"/>
 <source>custom action toolbar</source>
 <translation>barra uirlisí gníomh saincheaptha</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1204"/>
+<location filename="../mainwindow.cpp" line="1303"/>
 <source>Workspace selector</source>
 <translation>Roghnóir spás oibre</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1354"/>
+<location filename="../mainwindow.cpp" line="1453"/>
 <source>Show %1 panel</source>
 <translation>Taispeáin %1 painéal</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1399"/>
+<location filename="../mainwindow.cpp" line="1498"/>
 <source>Show %1</source>
 <translation>Taispeáin %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1722"/>
+<location filename="../mainwindow.cpp" line="1821"/>
 <source>Leave distraction free mode</source>
 <translation>Fág mód saor ó chur isteach</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1904"/>
+<location filename="../mainwindow.cpp" line="2003"/>
 <source>Switch to note folder</source>
 <translation>Athraigh go fillteán nótaí
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2299"/>
-<source>show notes in folder '%1' (%2)</source>
-<translation>taispeáin nótaí san fhillteán '%1' (%2)</translation>
+<location filename="../mainwindow.cpp" line="2398"/>
+<source>show notes in folder &apos;%1&apos; (%2)</source>
+<translation>taispeáin nótaí san fhillteán &apos;%1&apos; (%2)</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2516"/>
+<location filename="../mainwindow.cpp" line="2615"/>
 <source>Toolbar could not be loaded without name</source>
 <translation>Ní fhéadfaí Barra Uirlisí a luchtú gan ainm</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2825"/>
+<location filename="../mainwindow.cpp" line="2924"/>
 <source>Overwriting external changes of: %1</source>
 <translation>Athscríobh a dhéanamh ar athruithe seachtracha de: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2846"/>
+<location filename="../mainwindow.cpp" line="2945"/>
 <source>Loading external changes from: %1</source>
 <translation>Athruithe seachtracha a lódáil ó: %1</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="2882"/>
-<location filename="../mainwindow.cpp" line="6035"/>
+<location filename="../mainwindow.cpp" line="2981"/>
+<location filename="../mainwindow.cpp" line="6134"/>
 <source>Current note could not be stored to disk</source>
 <translation>Níorbh fhéidir an nóta reatha a stóráil ar dhiosca</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3061"/>
+<location filename="../mainwindow.cpp" line="3160"/>
 <source>Read-only</source>
 <translation>Léamh amháin</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3063"/>
+<location filename="../mainwindow.cpp" line="3162"/>
 <source>Note editing is disabled, click to enable</source>
 <translation>Tá eagarthóireacht nótaí faoi mhíchumas, cliceáil chun a chumasú</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3080"/>
+<location filename="../mainwindow.cpp" line="3179"/>
 <source>Line numbers</source>
 <translation>Uimhreacha líne</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="3090"/>
+<location filename="../mainwindow.cpp" line="3189"/>
 <source>Click here to see what has changed and to be able to update to the latest version</source>
 <translation>Cliceáil anseo chun an méid atá athraithe a fheiceáil agus chun an leagan is déanaí a nuashonrú</translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="3460"/>
+<location filename="../mainwindow.cpp" line="3559"/>
 <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
 <translation>
-<numerusform>Lean ar aghaidh le scriosadh uathoibríoch de chóip bhunachar sonraí &lt;strong&gt;%n &lt;/strong&gt; a d'fhéadfadh do phróiseas ownCloud a chosc?</numerusform>
-<numerusform>Lean ar aghaidh le scriosadh huathoibríoch de chóipeanna bunachar sonraí &lt;strong&gt;%n &lt;/strong&gt; a d'fhéadfadh do phróiseas ownCloud a chosc?</numerusform>
-<numerusform>Lean ar aghaidh le scriosadh huathoibríoch de chóipeanna bunachar sonraí &lt;strong&gt;%n &lt;/strong&gt; a d'fhéadfadh do phróiseas ownCloud a chosc?</numerusform>
-<numerusform>Lean ar aghaidh le scriosadh huathoibríoch de chóipeanna bunachar sonraí &lt;strong&gt;%n &lt;/strong&gt; a d'fhéadfadh do phróiseas ownCloud a chosc?</numerusform>
-<numerusform>Lean ar aghaidh le scriosadh huathoibríoch de chóipeanna bunachar sonraí &lt;strong&gt;%n &lt;/strong&gt; a d'fhéadfadh do phróiseas ownCloud a chosc?</numerusform>
+<numerusform>Lean ar aghaidh le scriosadh uathoibríoch de chóip bhunachar sonraí &lt;strong&gt;%n &lt;/strong&gt; a d&apos;fhéadfadh do phróiseas ownCloud a chosc?</numerusform>
+<numerusform>Lean ar aghaidh le scriosadh huathoibríoch de chóipeanna bunachar sonraí &lt;strong&gt;%n &lt;/strong&gt; a d&apos;fhéadfadh do phróiseas ownCloud a chosc?</numerusform>
+<numerusform>Lean ar aghaidh le scriosadh huathoibríoch de chóipeanna bunachar sonraí &lt;strong&gt;%n &lt;/strong&gt; a d&apos;fhéadfadh do phróiseas ownCloud a chosc?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="4942"/>
-<source>%n note(s) were tagged with "%2"</source>
+<location filename="../mainwindow.cpp" line="5041"/>
+<source>%n note(s) were tagged with &quot;%2&quot;</source>
 <translation>
-<numerusform>Clibeáladh %n nóta le "%2"</numerusform>
-<numerusform>Clibeáladh %n nótaí le "%2"</numerusform>
-<numerusform>Clibeáladh %n nótaí le "%2"</numerusform>
-<numerusform>Clibeáladh %n nótaí le "%2"</numerusform>
-<numerusform>Clibeáladh %n nótaí le "%2"</numerusform>
+<numerusform>Clibeáladh %n nóta le &quot;%2&quot;</numerusform>
+<numerusform>Clibeáladh %n nótaí le &quot;%2&quot;</numerusform>
+<numerusform>Clibeáladh %n nótaí le &quot;%2&quot;</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../mainwindow.cpp" line="5734"/>
+<location filename="../mainwindow.cpp" line="5833"/>
 <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
 <translation>
 <numerusform>Aimsíodh &lt;strong&gt;%n&lt;/ strong&gt; tharla an &lt;strong&gt;%1&lt;/ strong&gt;</numerusform>
 <numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; tarluithe &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 <numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; tarluithe &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-<numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; tarluithe &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-<numerusform>Aimsíodh &lt;strong&gt;%n&lt;/strong&gt; tarluithe &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
 </translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6096"/>
+<location filename="../mainwindow.cpp" line="6195"/>
 <source>Note headline</source>
 <translation>Tabhair ceannlíne faoi deara</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6315"/>
+<location filename="../mainwindow.cpp" line="6414"/>
 <source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
 <translation type="unfinished">Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6329"/>
+<location filename="../mainwindow.cpp" line="6428"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
 <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="6756"/>
+<location filename="../mainwindow.cpp" line="6855"/>
 <source>Block &amp;quote selected text</source>
 <comment>Action to apply a block quote formatting to the selected text</comment>
 <translation>Bloc &amp;luaigh an téacs roghnaithe</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7784"/>
+<location filename="../mainwindow.cpp" line="7900"/>
 <source>Downloading images finished</source>
 <translation>Críochnaíodh íomhánna a íoslódáil</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7939"/>
+<location filename="../mainwindow.cpp" line="8055"/>
 <source>Increased font size to %1 pt</source>
 <translation>Méid an chló mhéadaithe go %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7956"/>
+<location filename="../mainwindow.cpp" line="8072"/>
 <source>Decreased font size to %1 pt</source>
 <translation>Méid an chló laghdaithe go %1 pt</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="5474"/>
-<location filename="../mainwindow.cpp" line="5489"/>
-<location filename="../mainwindow.cpp" line="5512"/>
-<location filename="../mainwindow.cpp" line="10660"/>
+<location filename="../mainwindow.cpp" line="5573"/>
+<location filename="../mainwindow.cpp" line="5588"/>
+<location filename="../mainwindow.cpp" line="5611"/>
+<location filename="../mainwindow.cpp" line="10776"/>
 <source>Open &amp;settings</source>
 <translation>Suíomhanna &amp;oscailte</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="1719"/>
-<location filename="../mainwindow.cpp" line="12618"/>
+<location filename="../mainwindow.cpp" line="1818"/>
+<location filename="../mainwindow.cpp" line="12734"/>
 <source>leave</source>
 <translation>fág</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7205"/>
+<location filename="../mainwindow.cpp" line="7304"/>
 <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
 <translation>Cuir isteach do &lt;strong&gt; focal faire &lt;/strong&gt; chun an nóta a chriptiú. &lt;br /&gt;
 
 Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt; do phasfhocal a léamh ar an ábhar ar an &lt;br /&gt; faoi deara agus gur féidir leat &lt;strong&gt; ach &lt;/ strong&gt; é sin a dhéanamh &lt;strong&gt; in QOwnNotes &lt;/ strong &gt;!</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7261"/>
+<location filename="../mainwindow.cpp" line="7377"/>
 <source>Decrypt note and store it as plain text</source>
 <translation>Díchriptigh nóta agus déan é a stóráil mar ghnáth-théacs</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7266"/>
+<location filename="../mainwindow.cpp" line="7382"/>
 <source>&amp;Decrypt</source>
 <translation>&amp;Díchriptigh</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7291"/>
+<location filename="../mainwindow.cpp" line="7407"/>
 <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
 <translation>&lt;br/&gt;Beidh tú in ann do nóta criptithe a chur in eagar.</translation>
 </message>
 <message>
-<location filename="../mainwindow.cpp" line="7360"/>
+<location filename="../mainwindow.cpp" line="7476"/>
 <source>Export current note as Markdown file</source>
 <translation>Onnmhairigh nóta reatha mar chomhad Markdown</translation>
 </message>
@@ -4279,7 +4379,7 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 <message>
 <location filename="../services/owncloudservice.cpp" line="253"/>
 <source>Your calendar username or password is incorrect!</source>
-<translation>Tá d’ainm úsáideora nó d'fhocal faire mícheart!</translation>
+<translation>Tá d’ainm úsáideora nó d&apos;fhocal faire mícheart!</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="313"/>
@@ -4374,7 +4474,7 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1341"/>
-<source>There are no versions for this note or the note wasn't found on the server.</source>
+<source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
 <translation>Níl aon leaganacha ann don nóta seo nó níor aimsíodh an nóta ar an bhfreastalaí.</translation>
 </message>
 <message>
@@ -4400,7 +4500,7 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="1430"/>
-<source>Your CalDAV server didn't reply anything!</source>
+<source>Your CalDAV server didn&apos;t reply anything!</source>
 <translation>Earráid agus liostaí todo á lódáil!</translation>
 </message>
 <message>
@@ -4443,7 +4543,7 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 </message>
 <message>
 <location filename="../dialogs/passworddialog.ui" line="54"/>
-<source>Passwords don't match!</source>
+<source>Passwords don&apos;t match!</source>
 <translation>Ní oireann pasfhocail!</translation>
 </message>
 </context>
@@ -4491,17 +4591,13 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 <numerusform>Braitheadh athrú ar an gcosán nótaí. Ar mhaith leat naisc le &lt;strong&gt;%1&lt;/strong&gt; a athsholáthar le &lt;strong&gt;%2&lt;/strong&gt; agus naisc leis an ainm comhaid &lt;strong&gt;%3&lt;/strong&gt; le &lt;strong&gt;%4&lt;/ láidir &gt; i gcomhad &lt;strong&gt;%n&lt;/strong&gt; nóta?</numerusform>
 <numerusform>Braitheadh athrú ar an gcosán nótaí. Ar mhaith leat naisc le &lt;strong&gt;%1&lt;/strong&gt; a athsholáthar le &lt;strong&gt;%2&lt;/strong&gt; agus naisc leis an ainm comhaid &lt;strong&gt;%3&lt;/strong&gt; le &lt;strong&gt;%4&lt;/ láidir &gt; i gcomhaid nóta &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
 <numerusform>Braitheadh athrú ar an gcosán nótaí. Ar mhaith leat naisc le &lt;strong&gt;%1&lt;/strong&gt; a athsholáthar le &lt;strong&gt;%2&lt;/strong&gt; agus naisc leis an ainm comhaid &lt;strong&gt;%3&lt;/strong&gt; le &lt;strong&gt;%4&lt;/ láidir &gt; i gcomhaid nóta &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
-<numerusform>Braitheadh athrú ar an gcosán nótaí. Ar mhaith leat naisc le &lt;strong&gt;%1&lt;/strong&gt; a athsholáthar le &lt;strong&gt;%2&lt;/strong&gt; agus naisc leis an ainm comhaid &lt;strong&gt;%3&lt;/strong&gt; le &lt;strong&gt;%4&lt;/ láidir &gt; i gcomhaid nóta &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
-<numerusform>Braitheadh athrú ar an gcosán nótaí. Ar mhaith leat naisc le &lt;strong&gt;%1&lt;/strong&gt; a athsholáthar le &lt;strong&gt;%2&lt;/strong&gt; agus naisc leis an ainm comhaid &lt;strong&gt;%3&lt;/strong&gt; le &lt;strong&gt;%4&lt;/ láidir &gt; i gcomhaid nóta &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
-<location filename="../entities/note.cpp" line="3788"/>
+<location filename="../entities/note.cpp" line="3802"/>
 <source>…and %n more note(s)</source>
 <translation>
 <numerusform>… Agus %n nóta eile</numerusform>
-<numerusform>… Agus %n níos mó nótaí</numerusform>
-<numerusform>… Agus %n níos mó nótaí</numerusform>
 <numerusform>… Agus %n níos mó nótaí</numerusform>
 <numerusform>… Agus %n níos mó nótaí</numerusform>
 </translation>
@@ -4519,12 +4615,12 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="334"/>
-<source>Don't ask again!</source>
+<source>Don&apos;t ask again!</source>
 <translation>Ná cuir ceist arís!</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="335"/>
-<source>Don't show again!</source>
+<source>Don&apos;t show again!</source>
 <translation>Ná taispeáin arís!</translation>
 </message>
 <message>
@@ -4560,7 +4656,7 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4251"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4263"/>
 <source>New connection</source>
 <translation>Nasc nua</translation>
 </message>
@@ -4593,13 +4689,13 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="551"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s internally used by the application!</source>
 <translation>Ní féidir fillteán leis an ainm &lt;b&gt;% 1 &lt;/b&gt; a chruthú, toisc go n-úsáideann an feidhmchlár go hinmheánach é!
 </translation>
 </message>
 <message>
 <location filename="../entities/notesubfolder.cpp" line="578"/>
-<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can&apos;t be created, because it&apos;s on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
 <translation>Ní féidir fillteán leis an ainm &lt;b&gt;% 1 &lt;/b&gt; a chruthú, toisc go bhfuil sé ar liosta na bhfofhillteán a ndearnadh neamhaird air! Is féidir leat é sin a athrú i socruithe &lt;i&gt; na bPainéal &lt;/i&gt;.
 </translation>
 </message>
@@ -4616,8 +4712,6 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
@@ -4627,35 +4721,33 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 <numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
 </translation>
 </message>
 </context>
 <context>
 <name>QOwnNotesMarkdownTextEdit</name>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="604"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="628"/>
 <source>No suggestions for %1</source>
 <translation>Níl aon mholtaí do %1</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="616"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="640"/>
 <source>Ignore</source>
 <translation>Déan neamhaird</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="641"/>
 <source>Add to Dictionary</source>
 <translation>Cuir leis an bhFoclóir</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="674"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="698"/>
 <source>Note editing disabled</source>
 <translation>Eagarthóireacht nótaí faoi mhíchumas</translation>
 </message>
 <message>
-<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="675"/>
+<location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="699"/>
 <source>Note editing is currently disabled, do you want to allow it again?</source>
 <translation>Tá eagarthóireacht nótaí faoi mhíchumas faoi láthair, an bhfuil tú ag iarraidh ligean arís?</translation>
 </message>
@@ -4846,9 +4938,9 @@ Coinnigh i gcuimhne go bhfuil tú chun &lt;strong&gt; cuimhnigh &lt;/ strong&gt;
 <message>
 <location filename="../services/databaseservice.cpp" line="125"/>
 <location filename="../services/databaseservice.cpp" line="149"/>
-<source>Unable to establish a database connection with file '%1'.
+<source>Unable to establish a database connection with file &apos;%1&apos;.
 Are the folder and the file writeable?</source>
-<translation>Ní féidir nasc bunachar sonraí a bhunú leis an gcomhad '%1'.
+<translation>Ní féidir nasc bunachar sonraí a bhunú leis an gcomhad &apos;%1&apos;.
 An bhfuil an fillteán agus an comhad scríofa?</translation>
 </message>
 <message>
@@ -4863,9 +4955,9 @@ An bhfuil an fillteán agus an comhad scríofa?</translation>
 </message>
 <message>
 <location filename="../services/databaseservice.cpp" line="917"/>
-<source>Unable to establish a database connection with note folder database to merge '%1'.
+<source>Unable to establish a database connection with note folder database to merge &apos;%1&apos;.
 Are the folder and the file writeable?</source>
-<translation>Ní féidir nasc bunachar sonraí a bhunú le bunachar fillteán nótaí chun '%1' a chumasc.
+<translation>Ní féidir nasc bunachar sonraí a bhunú le bunachar fillteán nótaí chun &apos;%1&apos; a chumasc.
 An bhfuil an fillteán agus an comhad scríofa?</translation>
 </message>
 </context>
@@ -5013,7 +5105,7 @@ Ar mhaith leat é a shuiteáil ar aon nós?</translation>
 </message>
 <message>
 <location filename="../dialogs/scriptrepositorydialog.cpp" line="490"/>
-<source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
+<source>Please don&apos;t forget to update your installation of QOwnNotes to make this script work!</source>
 <translation>Ná déan dearmad do shuiteáil QOwnNotes a nuashonrú chun an obair scripte seo a dhéanamh!</translation>
 </message>
 <message>
@@ -5054,7 +5146,7 @@ Ar mhaith leat é a shuiteáil ar aon nós?</translation>
 <name>ScriptingService</name>
 <message>
 <location filename="../services/scriptingservice.cpp" line="261"/>
-<source>file doesn't exist</source>
+<source>file doesn&apos;t exist</source>
 <translation>níl comhad ann</translation>
 </message>
 </context>
@@ -5076,8 +5168,6 @@ Ar mhaith leat é a shuiteáil ar aon nós?</translation>
 <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
 <translation>
 <numerusform>aimsíodh &lt;strong&gt;%n leabharmharc &lt;/strong&gt; ar an bhfreastalaí</numerusform>
-<numerusform>aimsíodh &lt;strong&gt;%n leabharmharcanna &lt;/strong&gt; ar an bhfreastalaí</numerusform>
-<numerusform>aimsíodh &lt;strong&gt;%n leabharmharcanna &lt;/strong&gt; ar an bhfreastalaí</numerusform>
 <numerusform>aimsíodh &lt;strong&gt;%n leabharmharcanna &lt;/strong&gt; ar an bhfreastalaí</numerusform>
 <numerusform>aimsíodh &lt;strong&gt;%n leabharmharcanna &lt;/strong&gt; ar an bhfreastalaí</numerusform>
 </translation>
@@ -5138,8 +5228,8 @@ Ar mhaith leat é a shuiteáil ar aon nós?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1122"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Iontráil URL do fhreastalaí ownCloud, mar shampla: &lt;span style = "cló-stíl: iodálach;"&gt; https://cloud.yourserver.com &lt;/span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Iontráil URL do fhreastalaí ownCloud, mar shampla: &lt;span style = &quot;cló-stíl: iodálach;&quot;&gt; https://cloud.yourserver.com &lt;/span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1160"/>
@@ -5206,8 +5296,8 @@ Ar mhaith leat é a shuiteáil ar aon nós?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="933"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Osclaíonn tú do fhreastalaí féinCloud &lt;span style = "font-weight: 600;"&gt; leathanach "Cumraíocht App &lt;/span&gt; i do bhrabhsálaí gréasáin chun QOwnNotesAPI a shuiteáil nó a nuashonrú agus chun an croí apps&lt;span style=" font-weight:600;"&gt;Leaganacha &lt;/span&gt; agus &lt;span style=" font-weight:600;"&gt; Scrios comhaid &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Osclaíonn tú do fhreastalaí féinCloud &lt;span style = &quot;font-weight: 600;&quot;&gt; leathanach &quot;Cumraíocht App &lt;/span&gt; i do bhrabhsálaí gréasáin chun QOwnNotesAPI a shuiteáil nó a nuashonrú agus chun an croí apps&lt;span style=&quot; font-weight:600;&quot;&gt;Leaganacha &lt;/span&gt; agus &lt;span style=&quot; font-weight:600;&quot;&gt; Scrios comhaid &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="636"/>
@@ -5231,8 +5321,8 @@ Ar mhaith leat é a shuiteáil ar aon nós?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="901"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Ní mór duit freisin an dá chroí-apps féin a bheith agat &lt;span style = "font-meáchan: 600;"&gt; Leaganacha &lt;/span&gt; agus &lt;span style = "font-weight: 600;"&gt; Ar chumas comhaid scriosta &lt;/span&gt; ar do fhreastalaí ownCloud (ba chóir go mbeadh an réamhshocrú). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt;Ní mór duit freisin an dá chroí-apps féin a bheith agat &lt;span style = &quot;font-meáchan: 600;&quot;&gt; Leaganacha &lt;/span&gt; agus &lt;span style = &quot;font-weight: 600;&quot;&gt; Ar chumas comhaid scriosta &lt;/span&gt; ar do fhreastalaí ownCloud (ba chóir go mbeadh an réamhshocrú). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1000"/>
@@ -5461,8 +5551,8 @@ Ar mhaith leat é a shuiteáil ar aon nós?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1620"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; B'fhéidir gur mhaith leat smaoineamh ar theastas SSL saor in aisce a fháil ó &lt;a href="https://letsencrypt.org/"&gt; Déanaimis criptiú &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; B&apos;fhéidir gur mhaith leat smaoineamh ar theastas SSL saor in aisce a fháil ó &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Déanaimis criptiú &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2181"/>
@@ -5496,8 +5586,8 @@ Ar mhaith leat é a shuiteáil ar aon nós?</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3877"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Má sheiceálfar thú cuirfear in iúl duit i gcónaí faoi mhodhnuithe seachtracha, fiú mura raibh an nóta reatha curtha in eagar sa nóiméad deireanach. Is é atá molta ná &lt;span style = "cló-stíl: iodálach;&gt;&gt; unchecked &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Má sheiceálfar thú cuirfear in iúl duit i gcónaí faoi mhodhnuithe seachtracha, fiú mura raibh an nóta reatha curtha in eagar sa nóiméad deireanach. Is é atá molta ná &lt;span style = &quot;cló-stíl: iodálach;&gt;&gt; unchecked &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3973"/>
@@ -5505,7 +5595,7 @@ Ar mhaith leat é a shuiteáil ar aon nós?</translation>
 <location filename="../dialogs/settingsdialog.ui" line="5884"/>
 <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-<translation>D'fhéadfá rith i dtrioblóidí info le leaganacha níos sine de infoCloud info nuair a théann i bhfad faoi bhun 10 soic.
+<translation>D&apos;fhéadfá rith i dtrioblóidí info le leaganacha níos sine de infoCloud info nuair a théann i bhfad faoi bhun 10 soic.
 Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí info agus socraigh luach níos airde má tá.</translation>
 </message>
 <message>
@@ -5525,10 +5615,10 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4344"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2297"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2305"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4321"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4326"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2303"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2311"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4333"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4338"/>
 <source>Database</source>
 <translation>Bunachar Sonraí</translation>
 </message>
@@ -5549,7 +5639,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4299"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2371"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2377"/>
 <source>Clear app data and exit</source>
 <translation>Sonraí agus app glan soiléir</translation>
 </message>
@@ -5586,7 +5676,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1654"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
 <translation>Cabhraíonn sonraí úsáide gan ainm le cinneadh a dhéanamh ar na codanna de QOwnNotes a fheabhsóidh seo chugainn agus bugs a aimsiú agus a shocrú. Ná díchumasaigh é ach amháin más rud é nach féidir leat maireachtáil leis.</translation>
 </message>
 <message>
@@ -5686,9 +5776,9 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="809"/>
-<source>"Notes" path on your server</source>
-<extracomment>"Notes" should not be translated</extracomment>
-<translation>Cosán "Nótaí" ar do fhreastalaí</translation>
+<source>&quot;Notes&quot; path on your server</source>
+<extracomment>&quot;Notes&quot; should not be translated</extracomment>
+<translation>Cosán &quot;Nótaí&quot; ar do fhreastalaí</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="605"/>
@@ -5738,13 +5828,13 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="888"/>
-<source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-<translation>Cuir an leagan is déanaí de &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-meáchan: 600;";&gt;&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; (leagan ar a laghad QOWNNOTESAPI_MIN_VERSION) ar do fhreastalaí ownCloud más mian leat go mbeidh QOwnNotes in ann rochtain a fháil ar leaganacha nótaí agus ar nótaí sa Bhruscar.</translation>
+<source>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+<translation>Cuir an leagan is déanaí de &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt; &lt;span style = &quot;font-meáchan: 600;&quot;;&gt;&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; (leagan ar a laghad QOWNNOTESAPI_MIN_VERSION) ar do fhreastalaí ownCloud más mian leat go mbeidh QOwnNotes in ann rochtain a fháil ar leaganacha nótaí agus ar nótaí sa Bhruscar.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="914"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Beidh ort fós &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-meáchan: 600"&gt; infoCloud sync cliant &lt;/ span&gt; &lt;/a&gt; (nó cliant eile deisce deisce) chun do nótaí a chomhshó! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Beidh ort fós &lt;a href=&quot;https://owncloud.org/&quot;&gt; &lt;span style = &quot;font-meáchan: 600&quot;&gt; infoCloud sync cliant &lt;/ span&gt; &lt;/a&gt; (nó cliant eile deisce deisce) chun do nótaí a chomhshó! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1033"/>
@@ -5772,7 +5862,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1163"/>
 <source>Your ownCloud username</source>
-<translation>D'ainm úsáideora ownCloud</translation>
+<translation>D&apos;ainm úsáideora ownCloud</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1173"/>
@@ -5802,7 +5892,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="735"/>
-<source>Be aware that the ownCloud notes app doesn't support subfolders!</source>
+<source>Be aware that the ownCloud notes app doesn&apos;t support subfolders!</source>
 <translation>Bíodh a fhios agat nach dtacaíonn an aip nótaí ownCloud le fofhillteáin!
 </translation>
 </message>
@@ -6050,7 +6140,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2986"/>
 <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-<translation>B'fhéidir gur mhaith leat scéim dathanna eagarthóra eile a roghnú sna socruithe eagarthóra i mód dhorcha.</translation>
+<translation>B&apos;fhéidir gur mhaith leat scéim dathanna eagarthóra eile a roghnú sna socruithe eagarthóra i mód dhorcha.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3089"/>
@@ -6139,20 +6229,20 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4128"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3991"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4003"/>
 <source>Reset message boxes</source>
 <translation>Athshocraigh boscaí teachtaireachta</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4321"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4057"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4069"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4093"/>
 <source>Import settings</source>
 <translation>Iompórtáil socruithe</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4328"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4023"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4035"/>
 <source>Export settings</source>
 <translation>Suíomhanna onnmhairithe</translation>
 </message>
@@ -6163,8 +6253,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4443"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Is é an bealach is fearr chun ceisteanna a phostáil ná an cúntóir eisiúna a úsáid ach an &lt;span style=" font-weight:600;"&gt; Cúntóir eisiúna oscailte&lt;/span&gt; cnaipe ar an mbun. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Is é an bealach is fearr chun ceisteanna a phostáil ná an cúntóir eisiúna a úsáid ach an &lt;span style=&quot; font-weight:600;&quot;&gt; Cúntóir eisiúna oscailte&lt;/span&gt; cnaipe ar an mbun. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4708"/>
@@ -6228,13 +6318,13 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-<source>If your password doesn't work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
+<source>If your password doesn&apos;t work, create an app password (button on the right)</source>
+<translation type="unfinished">If your password doesn&apos;t work, create an app password (button on the right)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
-<translation>Más mian leat cabhrú le QOwnNotes a aistriú nó aistriúchán atá ann cheana a nuashonrú léigh: &lt;a href="%1"&gt; Conas is féidir liom cabhrú le QOwnNotes a aistriú? &lt;/a&gt;</translation>
+<source>If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;%1&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;</source>
+<translation>Más mian leat cabhrú le QOwnNotes a aistriú nó aistriúchán atá ann cheana a nuashonrú léigh: &lt;a href=&quot;%1&quot;&gt; Conas is féidir liom cabhrú le QOwnNotes a aistriú? &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2525"/>
@@ -6323,7 +6413,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4450"/>
-<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
+<source>GitHub doesn&apos;t need two spaces at the end of the line to do a line break</source>
 <translation>Níl dhá spás ag teastáil ó GitHub ag deireadh na líne chun briseadh líne a dhéanamh</translation>
 </message>
 <message>
@@ -6343,7 +6433,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4501"/>
-<source>Please don't use this in the issue tracker</source>
+<source>Please don&apos;t use this in the issue tracker</source>
 <translation>Ná húsáid é seo le do thoil sa lorgaire eisiúna</translation>
 </message>
 <message>
@@ -6363,8 +6453,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5066"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;B’fhéidir gur mhaith leat féachaint ar gach &lt;a href="http://docs.qownnotes.org/en/latest/editor/time-formats/"&gt;formáid ama&lt;/a&gt; atá ar fáil.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;B’fhéidir gur mhaith leat féachaint ar gach &lt;a href=&quot;http://docs.qownnotes.org/en/latest/editor/time-formats/&quot;&gt;formáid ama&lt;/a&gt; atá ar fáil.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5236"/>
@@ -6394,8 +6484,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5648"/>
 <location filename="../dialogs/settingsdialog.ui" line="5657"/>
-<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
-<translation>Sloinn rialta fofhillteáin nótaí le neamhaird, scartha le ";"
+<source>Regular expressions of note subfolders to ignore, separated by &quot;;&quot;</source>
+<translation>Sloinn rialta fofhillteáin nótaí le neamhaird, scartha le &quot;;&quot;
 </translation>
 </message>
 <message>
@@ -6417,8 +6507,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5788"/>
-<source>Hide 'Note count' with tags (increases performance)</source>
-<translation>Folaigh 'líon nótaí' le heochairfhocail (méadaíonn an fheidhmíocht)</translation>
+<source>Hide &apos;Note count&apos; with tags (increases performance)</source>
+<translation>Folaigh &apos;líon nótaí&apos; le heochairfhocail (méadaíonn an fheidhmíocht)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5824"/>
@@ -6427,8 +6517,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6229"/>
-<source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<source>You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
+<translation type="unfinished">You can use the &lt;a href=&quot;%1&quot;&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6245"/>
@@ -6532,8 +6622,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6082"/>
-<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-<translation>De réir réamhshocraithe taispeánfaidh síneadh an bhrabhsálaí gach nasc den nóta reatha. Is féidir leat a dhéanamh freisin go dtaispeánfaidh sé naisc leabharmharcanna speisialta nótaí le clib áirithe. Le haghaidh tuilleadh eolais faoi chomhréir an naisc leabharmharc cliceáil &lt;a href="%1"&gt; anseo &lt;/a&gt;.</translation>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
+<translation>De réir réamhshocraithe taispeánfaidh síneadh an bhrabhsálaí gach nasc den nóta reatha. Is féidir leat a dhéanamh freisin go dtaispeánfaidh sé naisc leabharmharcanna speisialta nótaí le clib áirithe. Le haghaidh tuilleadh eolais faoi chomhréir an naisc leabharmharc cliceáil &lt;a href=&quot;%1&quot;&gt; anseo &lt;/a&gt;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6095"/>
@@ -6583,8 +6673,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6172"/>
-<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-<translation>Suiteáil an síneadh bhrabhsálaí &lt;a href="%1"&gt; Brabhsálaí Gréasáin &lt;/a&gt; ón &lt;a href="%2"&gt; Chrome Web Store &lt;/a&gt; nó &lt;a href="%3"&gt; Firefox Breiseán&lt;/a&gt; leathanach QownNotes a úsáid mar chlipper gréasáin.</translation>
+<source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+<translation>Suiteáil an síneadh bhrabhsálaí &lt;a href=&quot;%1&quot;&gt; Brabhsálaí Gréasáin &lt;/a&gt; ón &lt;a href=&quot;%2&quot;&gt; Chrome Web Store &lt;/a&gt; nó &lt;a href=&quot;%3&quot;&gt; Firefox Breiseán&lt;/a&gt; leathanach QownNotes a úsáid mar chlipper gréasáin.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="819"/>
@@ -6679,14 +6769,14 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5359"/>
-<source>Enter a command to be used to show a git log (like for example "gitk")</source>
-<extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Iontráil ordú a úsáidfear chun log git a thaispeáint (mar shampla "gitk")</translation>
+<source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
+<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<translation>Iontráil ordú a úsáidfear chun log git a thaispeáint (mar shampla &quot;gitk&quot;)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5379"/>
 <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-<extracomment>Please don't translate "%notePath%"</extracomment>
+<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
 <translation>Má úsáideann tú an suíomh seo gheobhaidh tú iontráil roghchlár nua chun na leaganacha git a thaispeáint má chliceálann tú ar nóta ar dheis.</translation>
 </message>
 <message>
@@ -6706,8 +6796,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-<translation>Ná déan dearmad tacaíocht git a chur ar do fhillteáin nótaí agus d'ainm agus do sheoladh ríomhphoist a chumrú do do chliant git, mar shampla leis na horduithe teirminéil seo:</translation>
+<source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<translation>Ná déan dearmad tacaíocht git a chur ar do fhillteáin nótaí agus d&apos;ainm agus do sheoladh ríomhphoist a chumrú do do chliant git, mar shampla leis na horduithe teirminéil seo:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5729"/>
@@ -6761,8 +6851,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5781"/>
-<source>Hide 'Find or create tag' search</source>
-<translation>Folaigh cuardach 'Aimsigh nó cruthaigh clib'</translation>
+<source>Hide &apos;Find or create tag&apos; search</source>
+<translation>Folaigh cuardach &apos;Aimsigh nó cruthaigh clib&apos;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5568"/>
@@ -6787,8 +6877,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5634"/>
-<source>Hide 'Find or create note subfolder' search</source>
-<translation>Folaigh cuardach 'Faigh nó cruthaigh fo-fhillteán nótaí'</translation>
+<source>Hide &apos;Find or create note subfolder&apos; search</source>
+<translation>Folaigh cuardach &apos;Faigh nó cruthaigh fo-fhillteán nótaí&apos;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5641"/>
@@ -6796,15 +6886,15 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 <translation>Taispeáin fo-fhillteáin nótaí mar chrann iomlán</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2907"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2919"/>
 <source>Search script repository</source>
 <translation>Stór scripte cuardaigh</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5369"/>
-<source>You optionally can use "%notePath%" for the path of the note.</source>
-<extracomment>Please don't translate "%notePath%"</extracomment>
-<translation>Is féidir leat "%notePath%" a úsáid le haghaidh cosán na nóta.</translation>
+<source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
+<extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+<translation>Is féidir leat &quot;%notePath%&quot; a úsáid le haghaidh cosán na nóta.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5392"/>
@@ -6864,7 +6954,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1845"/>
-<source>For older versions of ownCloud where the default setting doesn't work</source>
+<source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
 <translation>I gcás leaganacha níos sine de ownCloud nuair nach n-oibríonn an suíomh réamhshocraithe</translation>
 </message>
 <message>
@@ -7029,8 +7119,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5056"/>
-<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-<translation>Iontráil do bhformáid ama saincheaptha, cosúil le "dd.MM.yyyy hh: mm"</translation>
+<source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
+<translation>Iontráil do bhformáid ama saincheaptha, cosúil le &quot;dd.MM.yyyy hh: mm&quot;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5145"/>
@@ -7065,7 +7155,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1950"/>
 <source>Your CalDAV username</source>
-<translation>D'ainm úsáideora CalDAV</translation>
+<translation>D&apos;ainm úsáideora CalDAV</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1988"/>
@@ -7096,7 +7186,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 <location filename="../dialogs/settingsdialog.ui" line="2976"/>
 <location filename="../dialogs/settingsdialog.ui" line="3086"/>
 <source>You may need to restart the application to let these changes take effect</source>
-<translation>B'fhéidir go mbeidh ort an t-iarratas a atosú chun ligean do na hathruithe seo teacht i bhfeidhm</translation>
+<translation>B&apos;fhéidir go mbeidh ort an t-iarratas a atosú chun ligean do na hathruithe seo teacht i bhfeidhm</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3121"/>
@@ -7130,7 +7220,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2078"/>
-<source>Ignore calendars that don't support todo items</source>
+<source>Ignore calendars that don&apos;t support todo items</source>
 <translation>Déan neamhaird de fhéilirí nach dtacaíonn le míreanna todo</translation>
 </message>
 <message>
@@ -7200,8 +7290,8 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4217"/>
-<source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-<translation>Má chuireann tú síntí saincheaptha leis, cuir isteach sa síneadh, ar nós "tascpháipéar".</translation>
+<source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
+<translation>Má chuireann tú síntí saincheaptha leis, cuir isteach sa síneadh, ar nós &quot;tascpháipéar&quot;.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4221"/>
@@ -7215,7 +7305,7 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4084"/>
-<source>Don't show the update dialog automatically</source>
+<source>Don&apos;t show the update dialog automatically</source>
 <translation>Ná taispeáin an dialóg nuashonraithe go huathoibríoch</translation>
 </message>
 <message>
@@ -7247,15 +7337,15 @@ Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí i
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4411"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2316"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4300"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2322"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4312"/>
 <source>Debug information</source>
 <translation>Faisnéis dhífhabhtaithe</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Is féidir leat &lt;span style = "font-weight: 600;"&gt; an téacs seo&lt;/span&gt; (nó codanna den téacs seo) a chóipeáil agus a ghreamú i stíl &lt;span "font-weight: 600;"&gt; &lt;/span&gt; a eisiúint ar &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; leathanach saincheisteanna QOwnNotes &lt;/a&gt; má tá &lt;span style=" font-weight:600;"&gt; ceisteanna nó trioblóidí &lt;/span&gt; le QOwnNotes. Tá na sonraí atá ró-íogair i bhfolach san fhaisnéis seo. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Is féidir leat &lt;span style = &quot;font-weight: 600;&quot;&gt; an téacs seo&lt;/span&gt; (nó codanna den téacs seo) a chóipeáil agus a ghreamú i stíl &lt;span &quot;font-weight: 600;&quot;&gt; &lt;/span&gt; a eisiúint ar &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; leathanach saincheisteanna QOwnNotes &lt;/a&gt; má tá &lt;span style=&quot; font-weight:600;&quot;&gt; ceisteanna nó trioblóidí &lt;/span&gt; le QOwnNotes. Tá na sonraí atá ró-íogair i bhfolach san fhaisnéis seo. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4504"/>
@@ -7318,123 +7408,123 @@ Ní mór duit an app QOwnNotesAPI a shuiteáil agus a chumasú freisin!
 Teachtaireacht earráide ceangail:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2317"/>
-<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<location filename="../dialogs/settingsdialog.cpp" line="2323"/>
+<source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
 <translation>Ná húsáid é seo le do thoil sa lorgaire eisiúna, déan cóip dhíreach den téacs faisnéise dífhabhtaithe.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2324"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2330"/>
 <source>Markdown files</source>
 <translation>Comhaid marcáilte</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2352"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2358"/>
 <source>Disable usage tracking</source>
 <translation>Díchumasaigh rianú úsáide</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2353"/>
-<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<location filename="../dialogs/settingsdialog.cpp" line="2359"/>
+<source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
 <translation>Cabhraíonn sonraí úsáide gan ainm le cinneadh a dhéanamh ar na codanna de QOwnNotes a fheabhsóidh seo chugainn agus bugs a aimsiú agus a shocrú. &lt;br/&gt; Ná díchumasaigh é ach amháin más rud é nach féidir leat maireachtáil leis. &lt;br/&gt;&lt;br/&gt; Ar ndóigh, díchumasaigh rianú úsáide?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2580"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2592"/>
 <source>new folder</source>
 <translation>fillteán nua</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2614"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2626"/>
 <source>Remove note folder</source>
 <translation>Bain fillteán nóta</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2615"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2627"/>
 <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Bain an fillteán nóta reatha &lt;strong&gt;%1 &lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2696"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2708"/>
 <source>Please select the folder where your notes will get stored to</source>
 <translation>Roghnaigh an fillteán ina stórálfar do chuid nótaí</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2731"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2743"/>
 <source>Loading folders from server</source>
 <translation>Fillteáin á lódáil ón bhfreastalaí</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2746"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2758"/>
 <source>No more folders were found in the current folder</source>
 <translation>Níor aimsíodh aon fhillteáin eile san fhillteán reatha</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2819"/>
-<source>Loading folders in '%1' from server</source>
-<translation>Fillteáin á lódáil i '%1' ón bhfreastalaí</translation>
+<location filename="../dialogs/settingsdialog.cpp" line="2831"/>
+<source>Loading folders in &apos;%1&apos; from server</source>
+<translation>Fillteáin á lódáil i &apos;%1&apos; ón bhfreastalaí</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2892"/>
-<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-<translation>Féach ar an &lt;a href="%1"&gt; doiciméadú Scripteála &lt;/a&gt; chun tús a chur go tapa.</translation>
+<location filename="../dialogs/settingsdialog.cpp" line="2904"/>
+<source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation>Féach ar an &lt;a href=&quot;%1&quot;&gt; doiciméadú Scripteála &lt;/a&gt; chun tús a chur go tapa.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2896"/>
-<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-<translation>Má theastaíonn rochtain uait ar fheidhmiúlacht áirithe i QOwnNotes oscail ceist ar leathanach eisiúna &lt;a href="%1"&gt; QOwnNotes &lt;/a&gt;.</translation>
+<location filename="../dialogs/settingsdialog.cpp" line="2908"/>
+<source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+<translation>Má theastaíonn rochtain uait ar fheidhmiúlacht áirithe i QOwnNotes oscail ceist ar leathanach eisiúna &lt;a href=&quot;%1&quot;&gt; QOwnNotes &lt;/a&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2918"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2930"/>
 <source>Check for script updates</source>
 <translation>Seiceáil le haghaidh nuashonruithe scripte</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2925"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2937"/>
 <source>Add local script</source>
 <translation>Cuir script áitiúil leis</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2929"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2941"/>
 <source>Add an existing, local script</source>
 <translation>Cuir script áitiúil atá ann cheana féin leis</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4022"/>
-<location filename="../dialogs/settingsdialog.cpp" line="4080"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4034"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4092"/>
 <source>INI files</source>
 <translation>Comhaid INI</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4058"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4070"/>
 <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
 <translation>Ar mhaith leat socruithe a iompórtáil i ndáiríre? Bainfear do chuid socruithe reatha agus b’fhéidir nach gcuirfear ar ais gach socrú, mar shampla na socruithe don fillteán nótaí agus na scripteanna a bhí in úsáid agat. Beidh ort roinnt socruithe a oiriúnú freisin, go háirithe thar ardáin éagsúla, ach fanfaidh do nótaí slán!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4068"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4080"/>
 <source>The application will be quit after the import.</source>
 <translation>Scoirfear an feidhmchlár tar éis na hiompórtála.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4069"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4081"/>
 <source>The application will be restarted after the import.</source>
 <translation>Atosófar an feidhmchlár tar éis na hiompórtála.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4301"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4313"/>
 <source>The debug information was copied to the clipboard.</source>
 <translation>Rinneadh an fhaisnéis dhífhabhtaithe a chóipeáil chuig an ghearrthaisce.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4322"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4334"/>
 <source>The integrity of the disk database is valid.</source>
 <translation type="unfinished">The integrity of the disk database is valid.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="4327"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4339"/>
 <source>The integrity of the disk database is not valid!</source>
 <translation type="unfinished">The integrity of the disk database is not valid!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2912"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2924"/>
 <source>Find a script in the script repository</source>
 <translation>Faigh script sa stór scripte</translation>
 </message>
@@ -7480,110 +7570,110 @@ Teachtaireacht earráide ceangail:</translation>
 <translation>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3005"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3017"/>
 <source>Remove script</source>
 <translation>Bain an script</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3006"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3018"/>
 <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
 <translation>Bain an script reatha &lt;strong&gt;%1&lt;/strong&gt;?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3056"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3068"/>
 <source>QML files</source>
 <translation>Comhaid QML</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3057"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3069"/>
 <source>Please select your QML file</source>
 <translation>Roghnaigh do chomhad QML le do thoil</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3146"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3158"/>
 <source>Open repository</source>
 <translation>Stór oscailte</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3204"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3216"/>
 <source>Your script seems to be valid</source>
 <translation>Is cosúil go bhfuil do script bailí</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3205"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3217"/>
 <source>There were script errors:
 %1</source>
 <translation>Bhí earráidí scripte ann:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3273"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3285"/>
 <source>File extension</source>
 <translation>Síneadh comhaid</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3273"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3285"/>
 <source>Enter your custom file extension:</source>
 <translation>Cuir isteach do shíneadh comhaid saincheaptha:</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3602"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3614"/>
 <source>Calendar cache emptied</source>
 <translation>Folaítear taisce an fhéilire</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3603"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3615"/>
 <source>Your calendar cache was emptied.</source>
 <translation>Folaíodh do taisce féilire.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3684"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3696"/>
 <source>Reset toolbars and exit</source>
 <translation>Athshocraigh barraí uirlisí agus imeacht</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3685"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3697"/>
 <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
 <translation>An bhfuil tú cinnte gur mian leat gach barra uirlisí a athshocrú? Dúnfar an t-iarratas sa phróiseas, athchóirítear na barraí uirlisí réamhshocraithe nuair a thosaíonn tú é arís.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3689"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
 <source>Reset and &amp;exit</source>
 <translation>Athshocraigh agus &amp;scoir</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3847"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3859"/>
 <source>Log file cleared</source>
 <translation>Glanadh an comhad logála</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3848"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3860"/>
 <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
 <translation>Glanadh an comhad logála &lt;strong&gt;%1 &lt;/strong&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3884"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3896"/>
 <source>Executable files</source>
 <translation>Comhaid inréadaithe</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3885"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3887"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3897"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3899"/>
 <source>All files</source>
 <translation>Gach comhad</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3895"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3907"/>
 <source>Please select the path of your git executable</source>
 <translation>Roghnaigh cosán do inrite git le do thoil</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="3992"/>
+<location filename="../dialogs/settingsdialog.cpp" line="4004"/>
 <source>Do you really want to reset the overrides of all message boxes?</source>
 <translation>An bhfuil tú cinnte gur mian leat na sáraitheacha ar gach bosca teachtaireachtaí a athshocrú?</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2306"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2312"/>
 <source>The Database was reinitialized.</source>
 <translation>Athchóiríodh an Bunachar Sonraí.</translation>
 </message>
@@ -7594,8 +7684,8 @@ Teachtaireacht earráide ceangail:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="107"/>
-<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-<translation>Is féidir leat do chliant git a íoslódáil anseo: &lt;a href="%url"&gt; Git do Windows &lt;/a&gt;</translation>
+<source>You can download your git client here: &lt;a href=&quot;%url&quot;&gt;Git for Windows&lt;/a&gt;</source>
+<translation>Is féidir leat do chliant git a íoslódáil anseo: &lt;a href=&quot;%url&quot;&gt; Git do Windows &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="462"/>
@@ -7619,8 +7709,8 @@ Teachtaireacht earráide ceangail:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="468"/>
-<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
-<translation>stórálfar an bunachar sonraí sqlite inmheánach agus na socruithe laistigh d'fhillteán &lt;code&gt; Data &lt;/code&gt; ag suíomh an dénártha</translation>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
+<translation>stórálfar an bunachar sonraí sqlite inmheánach agus na socruithe laistigh d&apos;fhillteán &lt;code&gt; Data &lt;/code&gt; ag suíomh an dénártha</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="471"/>
@@ -7638,12 +7728,12 @@ Teachtaireacht earráide ceangail:</translation>
 <translation>Cuirfear i bhfeidhm é má ritheann tú QOwnNotes leis an bparaiméadar &lt;code&gt; - iniompartha &lt;/code&gt;.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2325"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2331"/>
 <source>Save debug information</source>
 <translation>Sábháil faisnéis dhífhabhtaithe</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2372"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2378"/>
 <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -7652,14 +7742,14 @@ Your notes will stay intact!</source>
 Fanfaidh do nótaí slán!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2375"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
 <source>Clear and &amp;exit</source>
 <translation>Glan agus &amp;imeacht</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2301"/>
-<location filename="../dialogs/settingsdialog.cpp" line="2375"/>
-<location filename="../dialogs/settingsdialog.cpp" line="3689"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2381"/>
+<location filename="../dialogs/settingsdialog.cpp" line="3701"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Cealaigh</translation>
 </message>
@@ -7669,17 +7759,17 @@ Fanfaidh do nótaí slán!</translation>
 <translation>Gheobhaidh tú &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; i do chosán scaoileadh chun QOwnNotes a thosú i mód iniompartha.</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2298"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2304"/>
 <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
 <translation>Ar mhaith leat an bunachar áitiúil a ghlanadh? Bainfidh sé seo freisin do fhillteáin nóta cumraithe agus do mhíreanna todo taisce!</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2301"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2307"/>
 <source>Clear &amp;database</source>
 <translation>Bunachar sonraí &amp;soiléir</translation>
 </message>
 <message>
-<location filename="../dialogs/settingsdialog.cpp" line="2486"/>
+<location filename="../dialogs/settingsdialog.cpp" line="2498"/>
 <source>Select editor application</source>
 <translation>Feidhmchlár eagarthóra a roghnú</translation>
 </message>
@@ -7968,8 +8058,6 @@ Fanfaidh do nótaí slán!</translation>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 </translation>
 </message>
 <message>
@@ -7994,13 +8082,13 @@ Fanfaidh do nótaí slán!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
-<source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<source>File doesn&apos;t exist</source>
+<translation type="unfinished">File doesn&apos;t exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
@@ -8122,19 +8210,17 @@ Fanfaidh do nótaí slán!</translation>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
-<source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<source>File doesn&apos;t exist</source>
+<translation type="unfinished">File doesn&apos;t exist</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
-<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn&apos;t exist, you cannot rename it!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
@@ -8695,8 +8781,8 @@ Ní féidir é seo a dhiúltú!</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="93"/>
-<source>&lt;a href="%1"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-<translation>&lt;a href="%1"&gt; Glac páirt le QOwnNotes &lt;/a&gt;</translation>
+<source>&lt;a href=&quot;%1&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+<translation>&lt;a href=&quot;%1&quot;&gt; Glac páirt le QOwnNotes &lt;/a&gt;</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.ui" line="106"/>
@@ -8704,136 +8790,188 @@ Ní féidir é seo a dhiúltú!</translation>
 <translation>%p% íoslódáil</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="49"/>
+<location filename="../dialogs/updatedialog.cpp" line="48"/>
 <source>&amp;Update</source>
 <translation>&amp;Nuashonrú</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="60"/>
 <source>&amp;Download latest</source>
-<translation>&amp;Íoslódáil an ceann is déanaí</translation>
+<translation type="vanished">&amp;Íoslódáil an ceann is déanaí</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="58"/>
+<location filename="../dialogs/updatedialog.cpp" line="56"/>
 <source>Just download</source>
 <translation>Just a íoslódáil</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="73"/>
+<location filename="../dialogs/updatedialog.cpp" line="66"/>
 <source>&amp;Skip version</source>
 <translation>&amp;Scipeáil leagan</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="81"/>
+<location filename="../dialogs/updatedialog.cpp" line="74"/>
 <source>&amp;Disable dialog</source>
 <translation>&amp;Díchumasaigh dialóg</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="82"/>
-<source>Don't show this dialog automatically</source>
+<location filename="../dialogs/updatedialog.cpp" line="75"/>
+<source>Don&apos;t show this dialog automatically</source>
 <translation>Ná taispeáin an dialóg seo go huathoibríoch</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="90"/>
+<location filename="../dialogs/updatedialog.cpp" line="83"/>
 <source>&amp;Cancel</source>
 <translation>&amp;Cealaigh</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="245"/>
+<location filename="../dialogs/updatedialog.cpp" line="236"/>
 <source>Download error</source>
 <translation>Íoslódáil earráid</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="246"/>
+<location filename="../dialogs/updatedialog.cpp" line="237"/>
 <source>Error while downloading:
 %1</source>
 <translation>Earráid agus é á íoslódáil:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="248"/>
+<location filename="../dialogs/updatedialog.cpp" line="239"/>
 <source>network error: %1</source>
 <translation>earráid líonra: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="270"/>
-<location filename="../dialogs/updatedialog.cpp" line="291"/>
-<location filename="../dialogs/updatedialog.cpp" line="385"/>
+<location filename="../dialogs/updatedialog.cpp" line="261"/>
+<location filename="../dialogs/updatedialog.cpp" line="282"/>
+<location filename="../dialogs/updatedialog.cpp" line="376"/>
+<location filename="../dialogs/updatedialog.cpp" line="453"/>
+<location filename="../dialogs/updatedialog.cpp" line="463"/>
 <source>File error</source>
 <translation>Earráid chomhaid</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="271"/>
-<location filename="../dialogs/updatedialog.cpp" line="386"/>
+<location filename="../dialogs/updatedialog.cpp" line="262"/>
+<location filename="../dialogs/updatedialog.cpp" line="377"/>
 <source>Could not open temporary file:
 %1</source>
 <translation>Níorbh fhéidir comhad sealadach a oscailt:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="292"/>
+<location filename="../dialogs/updatedialog.cpp" line="283"/>
 <source>Could not store downloaded file:
 %1</source>
 <translation>Níorbh fhéidir comhad íoslódáilte a stóráil:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="343"/>
+<location filename="../dialogs/updatedialog.cpp" line="334"/>
 <source>Do you want to update and restart QOwnNotes?</source>
 <translation>Ar mhaith leat QOwnNotes a nuashonrú agus a atosú?</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="359"/>
-<location filename="../dialogs/updatedialog.cpp" line="444"/>
-<location filename="../dialogs/updatedialog.cpp" line="452"/>
-<location filename="../dialogs/updatedialog.cpp" line="461"/>
-<location filename="../dialogs/updatedialog.cpp" line="470"/>
-<location filename="../dialogs/updatedialog.cpp" line="480"/>
-<location filename="../dialogs/updatedialog.cpp" line="489"/>
+<location filename="../dialogs/updatedialog.cpp" line="350"/>
+<location filename="../dialogs/updatedialog.cpp" line="510"/>
+<location filename="../dialogs/updatedialog.cpp" line="518"/>
+<location filename="../dialogs/updatedialog.cpp" line="527"/>
+<location filename="../dialogs/updatedialog.cpp" line="536"/>
+<location filename="../dialogs/updatedialog.cpp" line="546"/>
+<location filename="../dialogs/updatedialog.cpp" line="555"/>
 <source>Error</source>
 <translation>Earráid</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="360"/>
+<location filename="../dialogs/updatedialog.cpp" line="351"/>
 <source>Could not find updater file:
 %1</source>
 <translation>Níorbh fhéidir an comhad nuashonraithe a aimsiú:
 %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="445"/>
-<source>Updater script '%1' doesn't exist!</source>
-<translation>Níl script nuashonraithe '%1' ann!</translation>
+<location filename="../dialogs/updatedialog.cpp" line="431"/>
+<location filename="../dialogs/updatedialog.cpp" line="443"/>
+<source>Permission error</source>
+<translation type="unfinished"></translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="453"/>
-<source>Updater unzip executable '%1' doesn't exist!</source>
-<translation>Ní dhéanann an t-uasdátaitheoir an inrite '%1' a dhífhabhtú!</translation>
+<location filename="../dialogs/updatedialog.cpp" line="432"/>
+<source>Your QOwnNotes executable &apos;%1&apos; is not writeable! It must be writeable by the current user in order to be updated.</source>
+<translation type="unfinished"></translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="462"/>
+<location filename="../dialogs/updatedialog.cpp" line="444"/>
+<source>The temporary file &apos;%1&apos; could not be made executable! You need to replace &apos;%2&apos; yourself.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="454"/>
+<source>Your old QOwnNotes executable &apos;%1&apos; could not be removed! You need to replace it yourself with &apos;%2&apos;.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="464"/>
+<source>Your old QOwnNotes executable &apos;%1&apos; could not be overwritten be replaced by the new file &apos;%2&apos;! You need to replace it yourself.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
 <location filename="../dialogs/updatedialog.cpp" line="471"/>
-<source>Could not copy updater script '%1' to '%2'!</source>
-<translation>Níorbh fhéidir an script nuashonraithe '%1' a chóipeáil go '%2'!</translation>
+<source>Restart application</source>
+<translation type="unfinished">Iarratas a atosú</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="481"/>
-<source>Couldn't find updater script: %1</source>
+<location filename="../dialogs/updatedialog.cpp" line="477"/>
+<source>You now need to restart the application manually to complete the update process.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="483"/>
+<source>You now can restart the application to complete the update process.</source>
+<translation type="unfinished"></translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="484"/>
+<source>Restart</source>
+<translation type="unfinished">Tosaigh arís</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="484"/>
+<source>Cancel</source>
+<translation type="unfinished">Cealaigh</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="511"/>
+<source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
+<translation>Níl script nuashonraithe &apos;%1&apos; ann!</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="519"/>
+<source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
+<translation>Ní dhéanann an t-uasdátaitheoir an inrite &apos;%1&apos; a dhífhabhtú!</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="528"/>
+<location filename="../dialogs/updatedialog.cpp" line="537"/>
+<source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
+<translation>Níorbh fhéidir an script nuashonraithe &apos;%1&apos; a chóipeáil go &apos;%2&apos;!</translation>
+</message>
+<message>
+<location filename="../dialogs/updatedialog.cpp" line="547"/>
+<source>Couldn&apos;t find updater script: %1</source>
 <translation>Níorbh fhéidir script nuashonraithe a fháil: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="490"/>
-<source>Couldn't find unzip executable: %1</source>
+<location filename="../dialogs/updatedialog.cpp" line="556"/>
+<source>Couldn&apos;t find unzip executable: %1</source>
 <translation>Níorbh fhéidir inrite unzip a fháil: %1</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="342"/>
-<location filename="../dialogs/updatedialog.cpp" line="495"/>
+<location filename="../dialogs/updatedialog.cpp" line="333"/>
+<location filename="../dialogs/updatedialog.cpp" line="561"/>
 <source>Proceed with update</source>
 <translation>Lean ar aghaidh leis an nuashonrú</translation>
 </message>
 <message>
-<location filename="../dialogs/updatedialog.cpp" line="496"/>
+<location filename="../dialogs/updatedialog.cpp" line="562"/>
 <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
 <translation>Tá an íoslódáil críochnaithe anois. Ar mhaith leat QOwnNotes a nuashonrú agus a atosú?</translation>
 </message>
@@ -8951,8 +9089,6 @@ Ní féidir é seo a dhiúltú!</translation>
 <source>%n bookmark(s) created</source>
 <translation>
 <numerusform>%n leabharmharc cruthaithe</numerusform>
-<numerusform>%n leabharmharcanna cruthaithe</numerusform>
-<numerusform>%n leabharmharcanna cruthaithe</numerusform>
 <numerusform>%n leabharmharcanna cruthaithe</numerusform>
 <numerusform>%n leabharmharcanna cruthaithe</numerusform>
 </translation>
@@ -9092,7 +9228,7 @@ Ní féidir é seo a dhiúltú!</translation>
 </message>
 <message>
 <location filename="../dialogs/welcomedialog.cpp" line="135"/>
-<source>This note path doesn't exist!</source>
+<source>This note path doesn&apos;t exist!</source>
 <translation>Ní ann don chonair nóta seo!</translation>
 </message>
 <message>
@@ -9144,12 +9280,12 @@ Ní féidir é seo a dhiúltú!</translation>
 <translation>Ní thacaítear le mód iarratais aonair ar do chóras!</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="563"/>
+<location filename="../main.cpp" line="565"/>
 <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
 <translation>Cuireadh tús le cás eile de QOwnNotes cheana féin! Is féidir leat an mód aonuaire a mhúchadh sna socruithe nó an paraiméadar a úsáid.</translation>
 </message>
 <message>
-<location filename="../main.cpp" line="591"/>
+<location filename="../main.cpp" line="615"/>
 <source>A second instance of QOwnNotes was attempted to be started!</source>
 <translation>Rinneadh iarracht an dara cás de QOwnNotes a thosú!</translation>
 </message>
