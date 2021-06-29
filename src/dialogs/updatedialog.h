@@ -52,6 +52,8 @@ class UpdateDialog : public MasterDialog {
 
     bool initializeUpdateProcess(const QString &filePath);
 
+    bool initializeLinuxUpdateProcess(const QString &filePath);
+
     bool initializeWindowsUpdateProcess(const QString &filePath);
 
     bool initializeMacOSUpdateProcess(const QString &releaseUrl);

@@ -43,24 +43,17 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
     this->releaseVersionString = releaseVersionString;
     this->releaseUrl = releaseUrl;
 
-    QPushButton *button;
     ui->buttonBox->clear();
 
     _updateButton = new QPushButton(tr("&Update"));
 
     // automatic updates are only available for Windows and macOS
-#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
     _updateButton->setProperty("ActionRole", Update);
     _updateButton->setDefault(true);
     _updateButton->setIcon(QIcon::fromTheme(
         "svn-update", QIcon(":/icons/breeze-qownnotes/16x16/svn-update.svg")));
     ui->buttonBox->addButton(_updateButton, QDialogButtonBox::ActionRole);
-    QString downloadButtonText = tr("Just download");
-#else
-    QString downloadButtonText = tr("&Download latest");
-#endif
-
-    button = new QPushButton(downloadButtonText);
+    auto button = new QPushButton(tr("Just download"));
     button->setProperty("ActionRole", Download);
 #ifdef Q_OS_LINUX
     button->setDefault(true);
@@ -150,9 +143,7 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
                 QDesktopServices::openUrl(QUrl(releaseUrl.toUtf8()));
             } else if ((release == QLatin1String("AppImage"))) {
                 // download the new release
-                QDesktopServices::openUrl(
-                    QUrl("https://download.opensuse.org/repositories/home:/"
-                         "pbek:/QOwnNotes/AppImage/"));
+                QDesktopServices::openUrl(QUrl(releaseUrl.toUtf8()));
             } else {
                 // open the installation page
                 QDesktopServices::openUrl(QUrl(
@@ -254,7 +245,7 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
 #elif defined(Q_OS_WIN)
     QString suffix = "zip";
 #elif defined(Q_OS_LINUX)
-    QString suffix = QStringLiteral("deb");
+    QString suffix = QStringLiteral("AppImage");
 #else
     QString suffix = "download";
 #endif
@@ -319,7 +310,7 @@ bool UpdateDialog::initializeUpdateProcess(const QString &filePath) {
 #elif defined(Q_OS_WIN)
     return initializeWindowsUpdateProcess(filePath);
 #elif defined(Q_OS_LINUX)
-    Q_UNUSED(filePath);
+    return initializeLinuxUpdateProcess(filePath);
 #endif
 
     return true;
@@ -422,6 +413,81 @@ bool UpdateDialog::initializeMacOSUpdateProcess(const QString &releaseUrl) {
 
     qApp->quit();
     return true;
+}
+
+/**
+ * Initializes the Linux update process
+ */
+bool UpdateDialog::initializeLinuxUpdateProcess(const QString &filePath) {
+    const QString appPath = qApp->property("arguments").toStringList()[0];
+
+    qDebug() << __func__ << " - 'filePath': " << filePath;
+    qDebug() << __func__ << " - 'appPath': " << appPath;
+
+    QFile file(appPath);
+    QFileInfo fileInfo(appPath);
+
+    if (!fileInfo.isWritable()) {
+        QMessageBox::critical(0, tr("Permission error"),
+          tr("Your QOwnNotes executable '%1' is not writeable! It must be "
+             "writeable by the current user in order to be updated.")
+              .arg(appPath));
+
+        return false;
+    }
+
+    QFile updateFile(filePath);
+
+    // make the new AppImage executable
+    if (!updateFile.setPermissions(updateFile.permissions() | QFileDevice::ExeOwner)) {
+        QMessageBox::critical(0, tr("Permission error"),
+          tr("The temporary file '%1' could not be made executable! "
+            "You need to replace '%2' yourself.")
+              .arg(filePath, appPath));
+
+        return false;
+    }
+
+    // remove the current binary
+    if (!file.remove()) {
+        QMessageBox::critical(0, tr("File error"),
+          tr("Your old QOwnNotes executable '%1' could not be removed! "
+                "You need to replace it yourself with '%2'.")
+              .arg(appPath, filePath));
+
+        return false;
+    }
+
+    // rename the new AppImage to the path of the current binary
+    if (!updateFile.rename(appPath)) {
+        QMessageBox::critical(0, tr("File error"),
+          tr("Your old QOwnNotes executable '%1' could not be overwritten be replaced "
+                "by the new file '%2'! You need to replace it yourself.")
+              .arg(appPath, filePath));
+
+        return false;
+    }
+
+    const QString title = tr("Restart application");
+    bool singleApplication = qApp->property("singleApplication").toBool();
+
+    if (singleApplication) {
+        QMessageBox::information(
+            this, title,
+            tr("You now need to restart the application manually to complete the update process."));
+
+        qApp->quit();
+    } else {
+        if (QMessageBox::information(
+                this, title,
+                tr("You now can restart the application to complete the update process."),
+                tr("Restart"), tr("Cancel"), QString(), 0, 1) == 0) {
+            Utils::Misc::restartApplication();
+        }
+    }
+
+    // we want to close the update dialog after the last information
+    return false;
 }
 
 /**

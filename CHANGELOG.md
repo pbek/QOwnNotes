@@ -3,6 +3,10 @@
 ## 21.6.9
 - the x86 64bit AppImage is now built with Ubuntu 18.04 instead of Ubuntu 16.04,
   because it was now made possible by [linuxdeployqt](https://github.com/probonopd/linuxdeployqt/issues/340)
+- you now are able to **update the AppImage version of QOwnNotes** directly from
+  within the application if you have write permissions to the AppImage executable
+  (for [#2176](https://github.com/pbek/QOwnNotes/issues/2176))
+    - you can now also choose to just download the latest app image in the update dialog
 - an attempt was made to fix more builds for older Qt versions
   (for [#2134](https://github.com/pbek/QOwnNotes/issues/2134), thank you @Waqar144)
 
