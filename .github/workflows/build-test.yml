@@ -78,8 +78,7 @@ jobs:
       shell: bash
       run: |
         unset DO_BUILD
-        if ! hash mapfile 2>/dev/null
-        then
+        if [ "${{ matrix.os }}" = "ubuntu-16.04" ]; then
           DO_BUILD='true'
         else
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
