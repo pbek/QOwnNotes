@@ -73,27 +73,24 @@ jobs:
       run: |
         brew install bash
         sudo mv /usr/local/bin/bash /bin/bash
-    - if: matrix.os != 'ubuntu-16.04'
-      id: changes
+    - id: changes
       name: Check if we want to build QOwnNotes
       shell: bash
       run: |
         unset DO_BUILD
-        mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
-        for changed_file in "${added_modified_files[@]}"; do
-          if [[ ${changed_file} = src* ]] || [[ ${changed_file} = tests* ]] || [[ ${changed_file} = build-systems/github/* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
-          then
-            echo "'${changed_file}' matches, we will build"
-            DO_BUILD='true'
-          fi
-        done
-        echo "DO_BUILD: ${DO_BUILD}"
-        echo ::set-output name=DO_BUILD::${DO_BUILD}
-    - if: matrix.os == 'ubuntu-16.04'
-      id: changes
-      name: Set DO_BUILD=true for Ubuntu 16.04
-      run: |
-        DO_BUILD='true'
+        if ! hash mapfile 2>/dev/null
+        then
+          DO_BUILD='true'
+        else
+          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
+          for changed_file in "${added_modified_files[@]}"; do
+            if [[ ${changed_file} = src* ]] || [[ ${changed_file} = tests* ]] || [[ ${changed_file} = build-systems/github/* ]] || [[ ${changed_file} = ".github/workflows/build-test.yml" ]] ;
+            then
+              echo "'${changed_file}' matches, we will build"
+              DO_BUILD='true'
+            fi
+          done
+        fi
         echo "DO_BUILD: ${DO_BUILD}"
         echo ::set-output name=DO_BUILD::${DO_BUILD}
 
