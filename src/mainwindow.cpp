@@ -775,7 +775,7 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
 
     // regular signal
     QObject::connect(
-                proxy, &FakeVimProxy::handleInput, handler,
+                proxy.data(), &FakeVimProxy::handleInput, handler,
                 [handler](const QString &text) { handler->handleInput(text); });
 }
 
