@@ -168,12 +168,8 @@ jobs:
       # Build QOwnNotes
       #
 
-    - if: steps.changes.outputs.DO_BUILD && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' )) && matrix.os != 'ubuntu-16.04'
+    - if: steps.changes.outputs.DO_BUILD && !(contains( matrix.os, 'windows') && ( matrix.qt-version == '5.15.2' ))
       name: Build QOwnNotes
-      run: |
-        lrelease QOwnNotes.pro && qmake && make
-    - if: steps.changes.outputs.DO_BUILD && matrix.os == 'ubuntu-16.04'
-      name: Build QOwnNotes for Qt 5.5.1
       run: |
         lrelease QOwnNotes.pro && qmake && make
 
