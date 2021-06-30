@@ -11,5 +11,5 @@ chmod a+x QOwnNotes-*.AppImage
 Anschließend sollten Sie AppImage ausführen können, um QOwnNotes zu starten.
 
 ::: warning
-If you want to use the **automatic updater** please make sure to put your AppImage in a place where your user account has write access to, like somewhere in your home directory.
+Wenn Sie den **automatischen Updater** verwenden möchten, stellen Sie bitte sicher, dass Sie Ihr AppImage an einem Ort ablegen, auf den Ihr Benutzerkonto Schreibzugriff hat, z. B. irgendwo in Ihrem Home-Verzeichnis.
 :::

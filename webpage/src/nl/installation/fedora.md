@@ -10,11 +10,17 @@ Futtassa a következő shell parancsokat rootként a lerakat hozzáadásához.
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
 
 dnf makecache
-dnf install qownotes
+dnf install qownnotes
 ```
 
 ::: tip
-Előfordulhat, hogy el kell fogadnia a repo kulcsot, mielőtt letölthetné róla.
+Mogelijk moet u de repo-sleutel accepteren voordat u deze kunt downloaden.
+
+Als je problemen hebt met het zelf importeren van de sleutel met:
+
+```bash
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
+```
 :::
 
 ## Régi telepítési módszer

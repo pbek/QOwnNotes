@@ -10,11 +10,17 @@ Run the following shell commands as root to add the repository.
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
 
 dnf makecache
-dnf install qownotes
+dnf install qownnotes
 ```
 
 ::: tip
 You may need to accept the repo key before you can download from it.
+
+If you have troubles import the key yourself with:
+
+```bash
+rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
+```
 :::
 
 ## Legacy install method

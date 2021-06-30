@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.7.0
+- added more translation (thank you rawfreeamy, amirkbrpr, whenwesober)
+
 ## 21.6.9
 - the x86 64bit AppImage is now built with Ubuntu 18.04 instead of Ubuntu 16.04,
   because it was now made possible by [linuxdeployqt](https://github.com/probonopd/linuxdeployqt/issues/340)
