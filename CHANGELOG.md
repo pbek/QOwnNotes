@@ -5,7 +5,7 @@
   (for [#2091](https://github.com/pbek/QOwnNotes/issues/2091))
   - they cannot be used with turned off `Only use editor width setting in distraction free mode`
   - in the distraction free mode line numbers are turned off as well
-  - the colors of the line number of the current line is currently only suited for dark mode 
+  - the colors of the line number of the current line are currently only suited for dark mode 
 - under Linux the `Update` button will now only be shown for the AppImage version
   of QOwnNotes, like it should (for [#2176](https://github.com/pbek/QOwnNotes/issues/2176))
 
