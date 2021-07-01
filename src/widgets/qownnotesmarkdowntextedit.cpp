@@ -381,6 +381,7 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
         int lineWidthLeftMargin = lineNumberArea()->isLineNumAreaEnabled() ?
             lineNumberArea()->lineNumAreaWidth() : 0;
 
+        setLineNumberLeftMarginOffset(10);
         setViewportMargins(10 + lineWidthLeftMargin, 10, 10, 0);
     }
 }
