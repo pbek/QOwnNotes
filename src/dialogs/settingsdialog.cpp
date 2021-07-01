@@ -768,6 +768,8 @@ void SettingsDialog::storeSettings() {
                       ui->autoBracketRemovalCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/removeTrailingSpaces"),
                       ui->removeTrailingSpacesCheckBox->isChecked());
+    settings.setValue(QStringLiteral("Editor/showLineNumbers"),
+                      ui->showLineNumbersInEditorCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/highlightCurrentLine"),
                       ui->highlightCurrentLineCheckBox->isChecked());
     settings.setValue(QStringLiteral("Editor/editorWidthInDFMOnly"),
@@ -1167,6 +1169,8 @@ void SettingsDialog::readSettings() {
             .toBool());
     ui->removeTrailingSpacesCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/removeTrailingSpaces")).toBool());
+    ui->showLineNumbersInEditorCheckBox->setChecked(
+        settings.value(QStringLiteral("Editor/showLineNumbers")).toBool());
     ui->highlightCurrentLineCheckBox->setChecked(
         settings.value(QStringLiteral("Editor/highlightCurrentLine"), true)
             .toBool());
@@ -4364,4 +4368,18 @@ void SettingsDialog::on_webAppGenerateTokenButton_clicked() {
 void SettingsDialog::on_enableWebApplicationCheckBox_toggled() {
     bool checked = ui->enableWebApplicationCheckBox->isChecked();
     ui->webAppFrame->setEnabled(checked);
+}
+
+void SettingsDialog::on_showLineNumbersInEditorCheckBox_toggled(bool checked) {
+    if (checked && !ui->editorWidthInDFMOnlyCheckBox->isChecked()) {
+        const QSignalBlocker blocker(ui->editorWidthInDFMOnlyCheckBox);
+        ui->editorWidthInDFMOnlyCheckBox->setChecked(true);
+    }
+}
+
+void SettingsDialog::on_editorWidthInDFMOnlyCheckBox_toggled(bool checked) {
+    if (!checked && ui->showLineNumbersInEditorCheckBox->isChecked()) {
+        const QSignalBlocker blocker(ui->showLineNumbersInEditorCheckBox);
+        ui->showLineNumbersInEditorCheckBox->setChecked(false);
+    }
 }

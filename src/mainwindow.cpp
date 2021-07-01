@@ -1865,9 +1865,13 @@ void MainWindow::setDistractionFreeMode(const bool enabled) {
             ui->noteEditTabWidget->tabBar()->show();
         }
 
-        // TODO: turn line numbers on again if they were enabled
-//        ui->noteTextEdit->setLineNumberEnabled(true);
-//        ui->encryptedNoteTextEdit->setLineNumberEnabled(true);
+        bool showLineNumbersInEditor = settings.value(QStringLiteral("Editor/showLineNumbers")).toBool();
+
+        // turn line numbers on again if they were enabled
+        if (showLineNumbersInEditor) {
+            ui->noteTextEdit->setLineNumberEnabled(true);
+            ui->encryptedNoteTextEdit->setLineNumberEnabled(true);
+        }
     }
 
     ui->noteTextEdit->setPaperMargins();
@@ -2766,9 +2770,10 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     ui->noteTextEdit->setCursorWidth(cursorWidth);
     ui->encryptedNoteTextEdit->setCursorWidth(cursorWidth);
 
-    // TODO: Enable with setting
-//    ui->noteTextEdit->setLineNumberEnabled(true);
-//    ui->encryptedNoteTextEdit->setLineNumberEnabled(true);
+    // turn line numbers on if enabled
+    bool showLineNumbersInEditor = settings.value(QStringLiteral("Editor/showLineNumbers")).toBool();
+    ui->noteTextEdit->setLineNumberEnabled(showLineNumbersInEditor);
+    ui->encryptedNoteTextEdit->setLineNumberEnabled(showLineNumbersInEditor);
 
     ui->noteTextEdit->setPaperMargins();
     ui->encryptedNoteTextEdit->setPaperMargins();

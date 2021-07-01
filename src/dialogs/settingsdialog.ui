@@ -409,7 +409,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>20</number>
+            <number>14</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -991,6 +991,7 @@
                    <font>
                     <weight>50</weight>
                     <bold>false</bold>
+                    <kerning>true</kerning>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -5152,37 +5153,24 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="0" colspan="4">
-                 <widget class="QCheckBox" name="autoBracketClosingCheckBox">
+                <item row="2" column="0" rowspan="2" colspan="4">
+                 <widget class="QCheckBox" name="highlightCurrentLineCheckBox">
                   <property name="text">
-                   <string>Enable automatic closing of brackets and markdown formatting characters</string>
+                   <string>Highlight the current line</string>
                   </property>
                  </widget>
                 </item>
-                <item row="7" column="3">
-                 <spacer name="horizontalSpacer_13">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="7" column="2">
-                 <widget class="QToolButton" name="cursorWidthResetButton">
-                  <property name="toolTip">
-                   <string>Reset the cursor width</string>
-                  </property>
+                <item row="6" column="0" colspan="4">
+                 <widget class="QCheckBox" name="disableCursorBlinkingCheckBox">
                   <property name="text">
-                   <string notr="true">…</string>
+                   <string>Disable cursor blinking</string>
                   </property>
-                  <property name="icon">
-                   <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
-                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                 </widget>
+                </item>
+                <item row="8" column="0" colspan="4">
+                 <widget class="QCheckBox" name="removeTrailingSpacesCheckBox">
+                  <property name="text">
+                   <string>Automatically remove trailing spaces in the note text</string>
                   </property>
                  </widget>
                 </item>
@@ -5206,6 +5194,47 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
+                <item row="4" column="0" colspan="4">
+                 <widget class="QCheckBox" name="editorWidthInDFMOnlyCheckBox">
+                  <property name="text">
+                   <string>Only use editor width setting in distraction free mode</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="4">
+                 <widget class="QCheckBox" name="autoBracketClosingCheckBox">
+                  <property name="text">
+                   <string>Enable automatic closing of brackets and markdown formatting characters</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="2">
+                 <widget class="QToolButton" name="cursorWidthResetButton">
+                  <property name="toolTip">
+                   <string>Reset the cursor width</string>
+                  </property>
+                  <property name="text">
+                   <string notr="true">…</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="3">
+                 <spacer name="horizontalSpacer_13">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
                 <item row="1" column="0" colspan="4">
                  <widget class="QCheckBox" name="autoBracketRemovalCheckBox">
                   <property name="toolTip">
@@ -5216,31 +5245,10 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="0" colspan="4">
-                 <widget class="QCheckBox" name="editorWidthInDFMOnlyCheckBox">
+                <item row="9" column="0" colspan="4">
+                 <widget class="QCheckBox" name="showLineNumbersInEditorCheckBox">
                   <property name="text">
-                   <string>Only use editor width setting in distraction free mode</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="0" rowspan="2" colspan="4">
-                 <widget class="QCheckBox" name="highlightCurrentLineCheckBox">
-                  <property name="text">
-                   <string>Highlight the current line</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="6" column="0" colspan="4">
-                 <widget class="QCheckBox" name="disableCursorBlinkingCheckBox">
-                  <property name="text">
-                   <string>Disable cursor blinking</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="8" column="0" colspan="4">
-                 <widget class="QCheckBox" name="removeTrailingSpacesCheckBox">
-                  <property name="text">
-                   <string>Automatically remove trailing spaces in the note text</string>
+                   <string>Show line numbers</string>
                   </property>
                  </widget>
                 </item>

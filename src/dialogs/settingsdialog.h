@@ -304,6 +304,10 @@ class SettingsDialog : public MasterDialog {
 
     void on_enableWebApplicationCheckBox_toggled();
 
+    void on_showLineNumbersInEditorCheckBox_toggled(bool checked);
+
+    void on_editorWidthInDFMOnlyCheckBox_toggled(bool checked);
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
