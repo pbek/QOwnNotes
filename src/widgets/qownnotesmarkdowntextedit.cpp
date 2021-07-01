@@ -15,6 +15,7 @@
 #include "entities/notefolder.h"
 #include "helpers/qownspellchecker.h"
 #include "mainwindow.h"
+#include "libraries/qmarkdowntextedit/linenumberarea.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     : QMarkdownTextEdit(parent, false) {
@@ -377,7 +378,10 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
 
         setViewportMargins(margin, 20, margin, 0);
     } else {
-        setViewportMargins(10, 10, 10, 0);
+        int lineWidthLeftMargin = lineNumberArea()->isLineNumAreaEnabled() ?
+            lineNumberArea()->lineNumAreaWidth() : 0;
+
+        setViewportMargins(10 + lineWidthLeftMargin, 10, 10, 0);
     }
 }
 

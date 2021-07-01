@@ -1764,6 +1764,10 @@ void MainWindow::setDistractionFreeMode(const bool enabled) {
         // enter the distraction free mode
         //
 
+        // turn off line numbers because they would look broken in dfm
+        ui->noteTextEdit->setLineNumberEnabled(false);
+        ui->encryptedNoteTextEdit->setLineNumberEnabled(false);
+
         // store the current workspace in case we changed something
         storeCurrentWorkspace();
 
@@ -1860,6 +1864,10 @@ void MainWindow::setDistractionFreeMode(const bool enabled) {
         if (ui->noteEditTabWidget->count() > 1) {
             ui->noteEditTabWidget->tabBar()->show();
         }
+
+        // TODO: turn line numbers on again if they were enabled
+//        ui->noteTextEdit->setLineNumberEnabled(true);
+//        ui->encryptedNoteTextEdit->setLineNumberEnabled(true);
     }
 
     ui->noteTextEdit->setPaperMargins();
