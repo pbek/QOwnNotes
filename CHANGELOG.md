@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.7.1
+- under Linux the `Update` button will now only be shown for the AppImage version
+  of QOwnNotes, like it should (for [#2176](https://github.com/pbek/QOwnNotes/issues/2176))
+
 ## 21.7.0
 - added more translation (thank you rawfreeamy, amirkbrpr, whenwesober)
 

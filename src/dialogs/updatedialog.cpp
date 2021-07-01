@@ -45,19 +45,27 @@ UpdateDialog::UpdateDialog(QWidget *parent, const QString &changesHtml,
 
     ui->buttonBox->clear();
 
-    _updateButton = new QPushButton(tr("&Update"));
+    auto button = new QPushButton(tr("Just download"));
+    button->setProperty("ActionRole", Download);
 
-    // automatic updates are only available for Windows and macOS
+    _updateButton = new QPushButton(tr("&Update"));
     _updateButton->setProperty("ActionRole", Update);
     _updateButton->setDefault(true);
     _updateButton->setIcon(QIcon::fromTheme(
         "svn-update", QIcon(":/icons/breeze-qownnotes/16x16/svn-update.svg")));
     ui->buttonBox->addButton(_updateButton, QDialogButtonBox::ActionRole);
-    auto button = new QPushButton(tr("Just download"));
-    button->setProperty("ActionRole", Download);
+
 #ifdef Q_OS_LINUX
-    button->setDefault(true);
+    QString release = qApp->property("release").toString();
+
+    // under Linux automatic updates are only available for the AppImage
+    if (release != "AppImage") {
+        ui->buttonBox->removeButton(_updateButton);
+        button->setText(tr("&Download latest"));
+        button->setDefault(true);
+    }
 #endif
+
     button->setIcon(QIcon::fromTheme(
         QStringLiteral("edit-download"),
         QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
