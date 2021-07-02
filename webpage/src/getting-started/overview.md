@@ -171,13 +171,14 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 
 
 ## Appearance
+- **Markdown highlighting** of notes and a **markdown preview mode**
 - **Dark mode theme support**
 - **Theming support** for the **markdown syntax highlighting**
 - All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
 - Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
 - **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
+- **Line numbers**  
 - **Differences** between current note and externally changed note are **showed** in a dialog
-- **Markdown highlighting** of notes and a **markdown preview mode**
 
 ## Languages
 - **Available in more than 60 different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
