@@ -168,13 +168,14 @@
 
 
 ## Appearance
-- **Soporte de tema de modo oscuro**
-- **Soporte de temas** para la sintaxis de rebajas **resaltando**
-- Todos los paneles **pueden colocarse donde desee**, incluso pueden **flotar** o **apilar** (totalmente acoplables)
-- Soporte para **iconos de tema de escritorio gratuito**, puede usar QOwnNotes con sus **iconos de escritorio nativos** y con su **tema de escritorio oscuro favorito**
-- **Modo sin distracciones**, **Modo de pantalla completa** y **Modo de máquina de escribir**
-- **Las diferencias** entre la nota actual y la nota modificada externamente se **se muestran** en un diálogo
-- **Markdown resaltando** de notas y un **modo de vista previa de Markdown**
+- **Markdown highlighting** of notes and a **markdown preview mode**
+- **Dark mode theme support**
+- **Theming support** for the **markdown syntax highlighting**
+- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
+- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
+- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
+- **Line numbers**
+- **Differences** between current note and externally changed note are **showed** in a dialog
 
 ## Lenguajes
 - **Disponible en más de 60 idiomas diferentes** como inglés, alemán, francés, polaco, chino, japonés, ruso, portugués, húngaro, holandés y español

@@ -168,13 +168,14 @@
 
 
 ## ظاهر
-- **پشتیبانی از پوسته حالت تاریک**
-- **پشتیبانی از پوسته سازی** برای **برجسته سازی چیدمان مارک داون**
-- همه **پنل ها در هر جایی که می خواهید می توانند قرار بگیرند**، حتی می توانند **شناور** یا **انباشته** باشند (کاملاً قابل اتصال)
-- با پشتیبانی از **شمایل های پوسته freedesktop**، می توانید با **شمایل های دسکتاپ مجلی** خود یا **پوسته دسکتاپ تاریک** و محبوب خود از QOwnNotes بهره مند شوید
-- **حالت بدون مزاحمت**، **حالت تمام صفحه** و **حالت ماشین تحریر**
-- **اختلاف** بین یادداشت کنونی و یادداشتی که به صورت خارجی تغییر یافته است در یک کادر گفتگو **نشان** داده می شود
-- **برجسته سازی مارک داون** یادداشت ها و **حالت پیش نمایش مارک داون**
+- **Markdown highlighting** of notes and a **markdown preview mode**
+- **Dark mode theme support**
+- **Theming support** for the **markdown syntax highlighting**
+- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
+- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
+- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
+- **Line numbers**
+- **Differences** between current note and externally changed note are **showed** in a dialog
 
 ## زبان ها
 - **در دسترس برای بیش از 60 زبان مختلف** مانند انگلیسی، آلمانی، فرانسوی، لهستانی، چینی، ژاپنی، روسی، پرتغالی، مجاری، هلندی و اسپانیایی

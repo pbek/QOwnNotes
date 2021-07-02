@@ -166,13 +166,14 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 
 
 ## Appearance
+- **Markdown highlighting** of notes and a **markdown preview mode**
 - **Dark mode theme support**
 - **Theming support** for the **markdown syntax highlighting**
 - All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
 - Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
 - **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
+- **Line numbers**
 - **Differences** between current note and externally changed note are **showed** in a dialog
-- A jegyzetek **markdown kiemelése** és egy **markdown előnézeti mód**
 
 ## Nyelvek
 - **Több mint 60 különböző nyelven érhető el**, mint például angol, német, francia, lengyel, kínai, japán, orosz, portugál, magyar, holland és spanyol

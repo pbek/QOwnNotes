@@ -14,7 +14,7 @@ dnf install qownnotes
 ```
 
 ::: tip
-You may need to accept the repo key before you can download from it.
+Potrebbe essere necessario accettare la chiave del repository prima di poter scaricare.
 
 If you have troubles import the key yourself with:
 

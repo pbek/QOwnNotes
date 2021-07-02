@@ -168,13 +168,14 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 
 
 ## Aspetto
-- **Supporto per temi in modalità scura**
-- **Supporto dei tem** per l'evidenziazione della **sintassi del markdown**
-- Tutti i **pannelli possono essere posizionati dove vuoi**, possono anche **galleggiare** o **impilare** (completamente agganciabili)
-- Supporto per **icone del tema freedesktop**, puoi usare QOwnNotes con le tue **icone desktop native** e con il tuo **tema desktop scuro** preferito
-- **Modalità senza distrazioni**, **Modalità a schermo intero** e **Modalità macchina da scrivere**
-- **Le differenze** tra la nota corrente e la nota modificata esternamente sono **mostrate** in una finestra di dialogo
-- **Evidenziazione del markdown** delle note e **modalità di anteprima del markdown**
+- **Markdown highlighting** of notes and a **markdown preview mode**
+- **Dark mode theme support**
+- **Theming support** for the **markdown syntax highlighting**
+- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
+- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
+- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
+- **Line numbers**
+- **Differences** between current note and externally changed note are **showed** in a dialog
 
 ## Lingue
 - **Disponibile in più di 60 lingue diverse** come inglese, tedesco, francese, polacco, cinese, giapponese, russo, portoghese, ungherese, olandese e spagnolo

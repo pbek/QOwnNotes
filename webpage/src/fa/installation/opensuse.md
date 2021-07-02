@@ -89,7 +89,7 @@ zypper install qownnotes
 
 [بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Leap_15.0)
 
-## openSUSE Leap 42.3
+## اوپن سوزه لیپ 42.3
 
 فرمان های پوسته زیر را به صورت ریشه برای اطمینان از مخزن اجرا کنید.
 
@@ -108,7 +108,7 @@ zypper install qownnotes
 
 [بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Leap_42.3)
 
-## openSUSE Leap 42.2
+## اوپن سوزه لیپ 42.2
 
 فرمان های پوسته زیر را به صورت ریشه برای اطمینان از مخزن اجرا کنید.
 
@@ -127,7 +127,7 @@ zypper install qownnotes
 
 [بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Leap_42.2)
 
-## openSUSE Leap 42.1
+## اوپن سوزه لیپ 42.1
 
 فرمان های پوسته زیر را به صورت ریشه برای اطمینان از مخزن اجرا کنید.
 
@@ -146,9 +146,9 @@ zypper install qownnotes
 
 [بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Leap_42.1)
 
-## openSUSE Tumbleweed
+## اوپن سوزه تامبل وید
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+فرمان های پوسته ای زیر را برای افزودن مخزن به صورت ریشه اجرا کرده و QOwnNotes را از آنجا نصب کنید.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Tumbleweed/home:pbek:QOwnNotes.repo
@@ -156,12 +156,12 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Tumbleweed)
+[بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/openSUSE_Tumbleweed)
 
 
 ## SLE 12 SP3 Backports
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+فرمان های پوسته ای زیر را برای افزودن مخزن به صورت ریشه اجرا کرده و QOwnNotes را از آنجا نصب کنید.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/SLE_12_SP3_Backports/home:pbek:QOwnNotes.repo
@@ -169,7 +169,7 @@ zypper refresh
 zypper install qownnotes
 ```
 
-[Direct Download](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/SLE_12_SP3_Backports)
+[بارگیری مستقیم](https://build.opensuse.org/package/binaries/home:pbek:QOwnNotes/desktop/SLE_12_SP3_Backports)
 
 ## SLE 15
 

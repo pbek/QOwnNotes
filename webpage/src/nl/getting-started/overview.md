@@ -168,13 +168,14 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 
 
 ## Appearance
+- **Markdown highlighting** of notes and a **markdown preview mode**
 - **Dark mode theme support**
-- **Theming support**  voor de **markdown syntaxisaccentuering **
-- Alle **panelen kunnen worden geplaatst waar u maar wilt**, ze kunnen zelfs **zweven** of **stapelen** (volledig dockbaar)
-- Ondersteuning voor **freedesktop-themapictogrammen**, u kunt QOwnNotes gebruiken met uw **native bureaubladpictogrammen** en met uw favoriete **donkere bureaubladthema**
-- **Distraction free mode**, **Full-screen mode** en **Typewriter mode**
-- **Verschillen** tussen huidige notitie en extern gewijzigde notitie worden **getoond** in een dialoogvenster
-- **Markdown-markering** van notities en een **markdown-voorbeeldmodus**
+- **Theming support** for the **markdown syntax highlighting**
+- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
+- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
+- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
+- **Line numbers**
+- **Differences** between current note and externally changed note are **showed** in a dialog
 
 ## Talen
 - **Beschikbaar in meer dan 60 verschillende talen** zoals Engels, Duits, Frans, Pools, Chinees, Japans, Russisch, Portugees, Hongaars, Nederlands en Spaans

@@ -168,13 +168,14 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 
 
 ## Appearance
-- **Prise en charge du thème du mode sombre**
-- **Prise en charge de la thématisation** pour la mise en évidence de la syntaxe de démarque****
-- Tous les panneaux **peuvent être placés où vous voulez**, ils peuvent même **flotter** ou **empiler** (entièrement ancrable)
-- Prise en charge des **icônes de thème freedesktop**, vous pouvez utiliser QOwnNotes avec vos **icônes de bureau natives** et avec votre **thème de bureau sombre préféré**
-- **Distraction free mode**, **Full-screen mode** en **Typewriter mode**
-- **Les différences** entre la note actuelle et la note modifiée de l'extérieur sont **affichées** dans une boîte de dialogue
-- **Mise en évidence de Markdown** des notes et un **mode de prévisualisation de Markdown**
+- **Markdown highlighting** of notes and a **markdown preview mode**
+- **Dark mode theme support**
+- **Theming support** for the **markdown syntax highlighting**
+- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
+- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
+- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
+- **Line numbers**
+- **Differences** between current note and externally changed note are **showed** in a dialog
 
 ## Langues
 - **Disponible dans plus de 60 langues différentes** comme l'anglais, l'allemand, le français, le polonais, le chinois, le japonais, le russe, le portugais, le hongrois, le néerlandais et l'espagnol
