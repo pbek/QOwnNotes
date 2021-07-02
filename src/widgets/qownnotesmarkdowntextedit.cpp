@@ -409,6 +409,7 @@ QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     return QMarkdownTextEdit::viewportMargins();
 #else
+    // This most likely will break line numbers, they aren't really supported in Qt < 5.5
     return QMargins();
 #endif
 }
