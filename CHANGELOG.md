@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 21.7.2
+- the color of the current line number is now adapted if dark mode is disabled
+  (for [#2091](https://github.com/pbek/QOwnNotes/issues/2091))
 - a build error for Qt < 5.5 was fixed (for [#2091](https://github.com/pbek/QOwnNotes/issues/2091))
 
 ## 21.7.1

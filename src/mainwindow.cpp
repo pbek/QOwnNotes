@@ -2771,9 +2771,16 @@ void MainWindow::readSettingsFromSettingsDialog(const bool isAppLaunch) {
     ui->encryptedNoteTextEdit->setCursorWidth(cursorWidth);
 
     // turn line numbers on if enabled
-    bool showLineNumbersInEditor = settings.value(QStringLiteral("Editor/showLineNumbers")).toBool();
+    bool showLineNumbersInEditor = settings.value(
+        QStringLiteral("Editor/showLineNumbers")).toBool();
     ui->noteTextEdit->setLineNumberEnabled(showLineNumbersInEditor);
     ui->encryptedNoteTextEdit->setLineNumberEnabled(showLineNumbersInEditor);
+
+    if (showLineNumbersInEditor) {
+        bool darkMode = settings.value(QStringLiteral("darkMode")).toBool();
+        ui->noteTextEdit->setLineNumbersCurrentLineColor(QColor(darkMode ?
+            QStringLiteral("#eef067") : QStringLiteral("##141414")));
+    }
 
     ui->noteTextEdit->setPaperMargins();
     ui->encryptedNoteTextEdit->setPaperMargins();
