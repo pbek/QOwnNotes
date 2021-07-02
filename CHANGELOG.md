@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 21.7.2
+- a build error for Qt < 5.5 was fixed (for [#2091](https://github.com/pbek/QOwnNotes/issues/2091))
+
 ## 21.7.1
 - you can now turn on **line numbers** for the note editor in the *Editor settings*
   (for [#2091](https://github.com/pbek/QOwnNotes/issues/2091))
