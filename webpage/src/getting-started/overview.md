@@ -168,6 +168,7 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 - **Portable mode** for carrying QOwnNotes around on USB sticks
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
 - **Vim mode**
+- [Web application](web-app.md) to insert photos from your mobile phone into the current note in QOwnNotes on your desktop
 
 
 ## Appearance
