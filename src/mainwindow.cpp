@@ -11700,8 +11700,6 @@ void MainWindow::onWorkspaceComboBoxCurrentIndexChanged(int index) {
  * Sets a new current workspace
  */
 void MainWindow::setCurrentWorkspace(const QString &uuid) {
-    QWidget *focusWidget = qApp->focusWidget();
-
     // store the current workspace
     storeCurrentWorkspace();
 
@@ -11715,12 +11713,6 @@ void MainWindow::setCurrentWorkspace(const QString &uuid) {
 
     // update the menu and combo box (but don't rebuild it)
     updateWorkspaceLists(false);
-
-    if (focusWidget != Q_NULLPTR) {
-        // set the focus to the widget that had the focus before
-        // the workspace was restored
-        focusWidget->setFocus();
-    }
 
     // update the preview in case it was disable previously
     setNoteTextFromNote(&currentNote, true);
@@ -11747,6 +11739,7 @@ void MainWindow::storeCurrentWorkspace() {
 void MainWindow::restoreCurrentWorkspace() {
     QSettings settings;
     QStringList workspaces = getWorkspaceUuidList();
+    QWidget *focusWidget = qApp->focusWidget();
 
     // create a default workspace if there is none yet
     if (workspaces.count() == 0) {
@@ -11811,6 +11804,12 @@ void MainWindow::restoreCurrentWorkspace() {
 
         settings.remove(QStringLiteral("initialWorkspace"));
         centerAndResize();
+    }
+
+    if (focusWidget != Q_NULLPTR) {
+        // set the focus to the widget that had the focus before
+        // the workspace was restored
+        focusWidget->setFocus();
     }
 }
 

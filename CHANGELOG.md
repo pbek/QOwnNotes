@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.7.3
+- the restoring of the focus after switching workspaces was fixed
+  (for [#2180](https://github.com/pbek/QOwnNotes/issues/2180))
+
 ## 21.7.2
 - the color of the current line number is now adapted if dark mode is disabled
   (for [#2091](https://github.com/pbek/QOwnNotes/issues/2091))
