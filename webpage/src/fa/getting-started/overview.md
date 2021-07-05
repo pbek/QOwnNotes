@@ -157,25 +157,26 @@
 - **یادداشت های حذف شده** از سرور **نکست کلود یا اون کلود** شما قابل **بازیابی** هستند
 - **تغییرات خارجی** پرونده های یادداشت **مشاهده** می شوند (یادداشت ها یا لیست یادداشت بارگذاری مجدد می شود)
 - پشتیبانی از **برچسب گذاری سلسله مراتبی یادداشت** و **زیرپوشه های یادداشت**
-- **رمزنگاری** گزینشی یادداشت ها (جایی که AES-256 در آن ایجاد می شود یا می توانید از روش رمزنگاری سفارشی مانند **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) یا **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) بهره گیرید)
+- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - **پوشه یادداشت ها** می توانند **به راحتی انتخاب** شوند (چندین پوشه یادداشت قابل استفاده می باشد)
 - **جستجوی زیر رشته** یادداشت ها امکان پذیر است و نتایج جستجو در یادداشت ها برجسته می شود
-- [افزونه مرورگر](browser-extension.md) برای اضافه کردن یادداشت ها از متن منتخب، تهیه نماگرفت ها یا مدیریت نشانک های شما
+- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
 - پشتیبانی از [**غلط یابی**](../editor/spellchecking.md)
 - **حالت قابل حمل** برای حمل QOwnNotes با استفاده از USB فلش ها
 - **پشتیبانی از اسکریپت نویسی** و [**مخزن اسکریپت**](https://github.com/qownnotes/scripts) برخط که در آن می توانید اسکریپت ها را درون برنامه نصب کنید
 - **حالت Vim**
+- [Web application](web-app.md) to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
 
 ## ظاهر
-- **Markdown highlighting** of notes and a **markdown preview mode**
-- **Dark mode theme support**
-- **Theming support** for the **markdown syntax highlighting**
-- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
-- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
-- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
-- **Line numbers**
-- **Differences** between current note and externally changed note are **showed** in a dialog
+- **برجسته سازی مارک داون** یادداشت ها و **حالت پیش نمایش مارک داون**
+- **پشتیبانی از پوسته حالت تاریک**
+- **پشتیبانی از پوسته سازی** برای **برجسته سازی چیدمان مارک داون**
+- همه **پنل ها در هر جایی که می خواهید می توانند قرار بگیرند**، حتی می توانند **شناور** یا **انباشته** باشند (کاملاً قابل اتصال)
+- با پشتیبانی از **شمایل های پوسته freedesktop**، می توانید با **شمایل های دسکتاپ مجلی** و با **پوسته دسکتاپ تاریک** و محبوب خود از QOwnNotes بهره مند شوید
+- **حالت بدون مزاحمت**، **حالت تمام صفحه** و **حالت ماشین تحریر**
+- **شماره خط**
+- **تفاوت های** بین یادداشت کنونی و یادداشتی که به صورت خارجی تغییر یافته است در یک کادر گفتگو **نشان** داده می شود
 
 ## زبان ها
 - **در دسترس برای بیش از 60 زبان مختلف** مانند انگلیسی، آلمانی، فرانسوی، لهستانی، چینی، ژاپنی، روسی، پرتغالی، مجاری، هلندی و اسپانیایی

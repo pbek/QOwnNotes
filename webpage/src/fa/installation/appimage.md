@@ -11,5 +11,5 @@ chmod a+x QOwnNotes-*.AppImage
 پس از آن حتماً قادر به اجرای AppImage برای استفاده از QOwnNotes خواهید بود.
 
 ::: warning
-If you want to use the **automatic updater** please make sure to put your AppImage in a place where your user account has write access to, like somewhere in your home directory.
+در صورت تمایل به استفاده از **بروز رسان خودکار**، لطفاً مطمئن شوید که AppImage خود را در جایی که حساب کاربری شما به آن دسترسی نوشتاری دارد (مثلاً در فهرست شخصی)، قرار دهید.
 :::

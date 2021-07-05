@@ -3,6 +3,7 @@
 ## 21.7.3
 - the restoring of the focus after switching workspaces was fixed
   (for [#2180](https://github.com/pbek/QOwnNotes/issues/2180))
+- added more translation (thank you mguerra, marcoxbresciani, amirkbrpr, rawfreeamy)
 
 ## 21.7.2
 - the color of the current line number is now adapted if dark mode is disabled

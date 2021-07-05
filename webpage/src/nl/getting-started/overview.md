@@ -157,25 +157,26 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 - **Notities naar prullenbak** kunnen worden **hersteld** vanaf uw **Nextcloud / ownCloud** -server
 - **Externe wijzigingen** van notitiebestanden worden **bekeken** (notities of notitielijst worden opnieuw geladen)
 - Ondersteuning voor **hiërarchische tagging van notities** en **submappen van notities**
-- Optioneel **encryption** van opmerkingen (AES-256 is ingebouwd of u kunt aangepaste versleutelingsmethoden gebruiken zoals **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) of **PGP** ([encryptie-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
+- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - De **notitiemap** kan **vrij gekozen worden** (meerdere notitiemappen kunnen worden gebruikt)
 - **Substring zoeken** van notities is mogelijk en zoekresultaten worden gemarkeerd in de notities
-- [Browserextensie](browser-extension.md) om notities van de geselecteerde tekst toe te voegen, screenshots te maken of uw bladwijzers te beheren
+- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
 - [**Spellingcontrole**](../editor/spellchecking.md) ondersteuning
 - **Portable mode** om QOwnNotes mee te nemen op USB-sticks
 - **Ondersteuning voor scripts** en een online [**scriptrepository**](https://github.com/qownnotes/scripts) waar u scripts in de applicatie kunt installeren
 - **Vim mode**
+- [Web application](web-app.md) to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
 
 ## Appearance
-- **Markdown highlighting** of notes and a **markdown preview mode**
-- **Dark mode theme support**
-- **Theming support** for the **markdown syntax highlighting**
-- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
-- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
-- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
-- **Line numbers**
-- **Differences** between current note and externally changed note are **showed** in a dialog
+- **Markdown-markering** van notities en een **markdown-voorbeeldmodus**
+- **Thema-ondersteuning voor donkere modus**
+- **Theming support**  voor de **markdown syntaxisaccentuering **
+- Alle **panelen kunnen worden geplaatst waar u maar wilt**, ze kunnen zelfs **zweven** of **stapelen** (volledig dockbaar)
+- Ondersteuning voor **freedesktop-themapictogrammen**, u kunt QOwnNotes gebruiken met uw **native bureaubladpictogrammen** en met uw favoriete **donkere bureaubladthema**
+- **Distraction free mode**, **Full-screen mode** en **Typewriter mode**
+- **Regelnummers**
+- **Verschillen** tussen huidige notitie en extern gewijzigde notitie worden **getoond** in een dialoogvenster
 
 ## Talen
 - **Beschikbaar in meer dan 60 verschillende talen** zoals Engels, Duits, Frans, Pools, Chinees, Japans, Russisch, Portugees, Hongaars, Nederlands en Spaans

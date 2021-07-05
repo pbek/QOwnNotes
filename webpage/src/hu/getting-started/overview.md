@@ -155,25 +155,26 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 - **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
 - **External changes** of note files are **watched** (notes or note list are reloaded)
 - Support for **hierarchical note tagging** and **note subfolders**
-- Optional **encryption** of notes (AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
+- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - The **notes folder** can be **freely chosen** (multiple note folders can be used)
 - **Sub-string searching** of notes is possible and search results are highlighted in the notes
-- [Browser extension](browser-extension.md) to add notes from the selected text, make screenshots or manage your bookmarks
+- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
 - [**Spellchecking**](../editor/spellchecking.md) support
 - **Portable mode** for carrying QOwnNotes around on USB sticks
 - **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
 - **Vim mode**
+- [Web application](web-app.md) to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
 
 ## Appearance
-- **Markdown highlighting** of notes and a **markdown preview mode**
-- **Dark mode theme support**
-- **Theming support** for the **markdown syntax highlighting**
-- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
-- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
-- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
-- **Line numbers**
-- **Differences** between current note and externally changed note are **showed** in a dialog
+- A jegyzetek **jelölésének kiemelése** és egy **jelölés előnézeti mód**
+- **Sötét módú téma támogatás**
+- **Támogatás** a **jelölés szintaxis kiemeléséhez**
+- Minden **panel tetszőlegesen elhelyezhető**, akár **lebeghet** vagy **teljesen dokkolható**
+- Támogatja a **freedesktop téma ikonokat**, használhatja a QOwnNotes programot a **natív asztali ikonokkal** és a kedvenc **sötét asztali témájával**
+- **Figyelemelterelés mentes mód**, **teljes képernyős mód** és **Írógép mód**
+- **Sorszám**
+- **Az aktuális és a külsőleg megváltozott jegyzet közötti különbségeket** egy párbeszédpanelen **mutatják**
 
 ## Nyelvek
 - **Több mint 60 különböző nyelven érhető el**, mint például angol, német, francia, lengyel, kínai, japán, orosz, portugál, magyar, holland és spanyol

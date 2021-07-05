@@ -157,25 +157,26 @@ Rejoignez notre [Groupe Telegram](https://t.me/QOwnNotes) pour discuter, apprend
 - **Les notes mises dans la corbeille** peuvent être **restaurées** depuis votre serveur **Nextcloud / ownCloud**
 - **Les modifications externes** des fichiers de notes sont **surveillées** (les notes ou la liste de notes sont rechargées)
 - Prise en charge du **balisage hiérarchique des notes** et **sous-dossiers de notes**
-- **cryptage** facultatif des notes (AES-256 est intégré ou vous pouvez utiliser des méthodes de cryptage personnalisées telles que **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) ou **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
+- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - Le **dossier de notes** peut être **librement choisi**(plusieurs dossiers de notes peuvent être utilisés)
 - **La recherche de sous-chaînes** de notes est possible et les résultats de la recherche sont mis en évidence dans les notes
-- [Extension de navigateur](browser-extension.md) pour ajouter des notes à partir du texte sélectionné, faire des captures d'écran ou gérer vos signets
+- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
 - [**Spellchecking**](../editor/spellchecking.md) soutien
 - **Mode portable** pour transporter QOwnNotes sur des clés USB
 - **Prise en charge des scripts** et un [**référentiel de scripts**](https://github.com/qownnotes/scripts) en ligne où vous pouvez installer des scripts à l'intérieur de l'application
 - **Mode Vim**
+- [Web application](web-app.md) to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
 
 ## Appearance
-- **Markdown highlighting** of notes and a **markdown preview mode**
-- **Dark mode theme support**
-- **Theming support** for the **markdown syntax highlighting**
-- All **panels can be placed wherever you want**, they can even **float** or **stack** (fully dockable)
-- Support for **freedesktop theme icons**, you can use QOwnNotes with your **native desktop icons** and with your favorite **dark desktop theme**
-- **Distraction free mode**, **Full-screen mode** and **Typewriter mode**
-- **Line numbers**
-- **Differences** between current note and externally changed note are **showed** in a dialog
+- **Mise en évidence de Markdown** des notes et un **mode de prévisualisation de Markdown**
+- **Prise en charge du thème du mode sombre**
+- **Prise en charge de la thématisation** pour la mise en évidence de la syntaxe de démarque****
+- Tous les panneaux **peuvent être placés où vous voulez**, ils peuvent même **flotter** ou **empiler** (entièrement ancrable)
+- Prise en charge des **icônes de thème freedesktop**, vous pouvez utiliser QOwnNotes avec vos **icônes de bureau natives** et avec votre **thème de bureau sombre préféré**
+- **Distraction free mode**, **Full-screen mode** en **Typewriter mode**
+- **Nombre de lignes**
+- **Les différences** entre la note actuelle et la note modifiée de l'extérieur sont **affichées** dans une boîte de dialogue
 
 ## Langues
 - **Disponible dans plus de 60 langues différentes** comme l'anglais, l'allemand, le français, le polonais, le chinois, le japonais, le russe, le portugais, le hongrois, le néerlandais et l'espagnol

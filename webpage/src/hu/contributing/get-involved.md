@@ -15,4 +15,5 @@ A QOwnNotes részvételének különféle módjai
 - Jelentse a problémákat vagy ossza meg ötleteit az új funkciókkal kapcsolatban a [QOwnNotes **GitHub problémák** oldalon](https://github.com/pbek/QOwnNotes/issues)
 - Ha nagyszerű szerkesztő sémát készített, akkor kérjük, tegye közzé a [**GitHub problémák** oldalon](https://github.com/pbek/QOwnNotes/issues) is.
 - Ossza meg szkriptjeit a [**QOwnNotes szkriptek** GitHub oldalán](https://github.com/qownnotes/scripts)
-- You are most welcome to share **your experience with QOwnNotes** on your own YouTube channel, while you are also invited to share positive feedback by [sending audio/video/text to Amy](mailto:amydoralang@aol.de) for upload on our own YT channel [**QOwnNotes in a Nutshell**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos).
+- Share **your experience with QOwnNotes** on your own **YouTube** - or other - channel, but also gladly [**send your audio/video/text to Amy**](mailto:amydoralang@aol.de) to be uploaded on [**QOwnNotes in a Nutshell**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos)
+- You may want to answer a few, anonymous [**questions**](https://freeonlinesurveys.com/s/nA8t17k8) for us to help you getting better results with QOwnNotes
