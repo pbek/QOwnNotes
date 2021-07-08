@@ -162,17 +162,16 @@ void Utils::Git::showLog(const QString& filePath) {
 
     QStringList parameters = QStringList();
 
+#ifdef Q_OS_WIN
+    // we are executing the full command with parameters directly
+    // using "cmd.exe /c" doesn't work
+    QString command = gitLogCommand;
+#else
     // we need a shell to be able to use the executable with the parameters
     // together
-#ifdef Q_OS_WIN
-    QString command = "cmd.exe";
-    parameters << "/c";
-#else
     QString command = "bash";
-    parameters << "-c";
+    parameters << "-c" << gitLogCommand;
 #endif
-
-    parameters << gitLogCommand;
 
     Utils::Misc::startDetachedProcess(command, parameters,
                                       NoteFolder::currentLocalPath());

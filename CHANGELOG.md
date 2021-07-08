@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 21.7.4
+- the execution of git log commands has been fixed for Windows
+  (for [#2182](https://github.com/pbek/QOwnNotes/issues/2182))
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 21.7.0 to support Nextcloud 22
 
