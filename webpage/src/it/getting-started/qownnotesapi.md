@@ -3,7 +3,7 @@
 
 ![qownnotesapi](/img/qownnotesapi.png)
 
-[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) può gestire l '**accesso** alle **note spostate nel cestino** e alle <1versioni delle note</strong> per te.
+[**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) può gestire l '**accesso** alle **note spostate nel cestino** e alle **versioni delle note** per te.
 
 ::: tip
 Puoi abilitare QOwnNotesAPI direttamente nella tua istanza **Nextcloud** o **ownCloud** cercando `qownnotes` nella **pagina delle app** del tuo server su `https://<your-cloud-domain>/settings/apps`.

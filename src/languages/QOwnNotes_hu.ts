@@ -6391,7 +6391,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5251"/>
 <source>Show line numbers</source>
-<translation type="unfinished">Show line numbers</translation>
+<translation>Vonalszámok megjelenítése</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5261"/>
@@ -8716,7 +8716,7 @@ Nem lehet visszavonni!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="64"/>
 <source>&amp;Download latest</source>
-<translation type="unfinished">&amp;Download latest</translation>
+<translation>A legfrissebb &amp;letöltése</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="74"/>

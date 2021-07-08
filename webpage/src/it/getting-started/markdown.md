@@ -38,29 +38,29 @@ Per impostazione predefinita QOwnNotes crea il **nome file di una nota** dall'in
 ```markdown
 Enfasi, alias corsivo, con *asterischi*.
 
-Forte enfasi, anche nota in grassetto, con **asterischi**.
+Forte enfasi, ovvero grassetto, con **asterischi**.
 ```
 
 ::: tip
 Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + B</kbd> per rendere il testo in grassetto e <kbd>Ctrl + I</kbd> per renderlo corsivo.
 :::
 
-## Sottolinea
+## Sottolineatura
 
 Esiste anche un'impostazione opzionale per abilitare il rendering sottolineato nelle *Impostazioni anteprima*.
 
 ```markdown
-_underline_
+_sottolineato_
 ```
 
 ::: tip
 Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + U</kbd> per sottolineare un testo.
 :::
 
-## Strike out
+## Cancellato
 
 ```markdown
-~~strike out~~
+~~cancellato~~
 ```
 
 ::: tip
@@ -72,35 +72,35 @@ Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Alt + Maiusc + S</kbd> per
 Esistono molti modi per creare elenchi.
 
 ```markdown
-1. First ordered list item
-2. Another item
-  * Unordered sub-list.
-1. Actual numbers don't matter, just that it's a number
-  1. Ordered sub-list (only works in the editor, not the preview)
-4. And another item.
+1. Primo elemento di una lista ordinata
+2. Un altro elemento
+  * Sotto-lista non ordinata
+1. I numeri usati non sono importanti, basta che sia un numero
+  1. Sotto-lista ordinata (funziona solo nell'editor, non nell'anteprima)
+4. E un altro elemento.
 
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
+* Le lista non ordinate possono usare gli asterichi
+- O i meno
++ o i più
 ```
 
 ::: tip
 Se si preme <kbd>Invio</kbd> alla fine di un elenco verrà creato un nuovo elemento dell'elenco.
 :::
 
-## Links
+## Collegamenti
 
 Esistono diversi modi per creare collegamenti.
 
 ```markdown
-[I'm an inline-style link](https://www.google.com)
+[Sono un collegamento in linea](https://www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[Sono un collegamento in linea, con titolo](https://www.google.com "Homepage di Google")
 
-[You can use numbers for reference-style link definitions][1]
+[Puoi usare i numeri per i collegamenti a riferimenti][1]
 
-URLs and URLs in angle brackets will automatically get turned into links in the preview. 
-http://www.example.com or <http://www.example.com>
+URL e URL tra virgolette basse singole saranno automaticamente trasformati in collegamenti nell'anteprima. 
+http://www.example.com oppure <http://www.example.com>
 
 [1]: https://www.qownnotes.org
 ```
@@ -108,29 +108,29 @@ http://www.example.com or <http://www.example.com>
 ::: tip
 Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + L</kbd> per **creare collegamenti a pagine web o altre note**.
 
-Utilizzando <kbd>Ctrl + Maiusc + X</kbd> verrà visualizzata una finestra di dialogo che ti aiuterà a **inserire allegati** nella nota.
+Usando <kbd>Ctrl + Maiusc + X</kbd> verrà visualizzata una finestra di dialogo che ti aiuterà a **inserire allegati** nella nota.
 
-È possibile premere <kbd>Ctrl + Spazio</kbd> mentre il cursore si trova su un collegamento nella modifica della nota per seguire il collegamento.
+Puoi premere <kbd>Ctrl + Spazio</kbd> mentre il cursore si trova su un collegamento nella modifica della nota per seguire il collegamento.
 :::
 
-### Bookmarks
+### Segnalibri
 
-I segnalibri utilizzati dall'estensione del browser [QOwnNotes Web Companion](./browser-extension.md) utilizzano collegamenti negli elenchi.
+I segnalibri usati dall'estensione del browser [QOwnNotes Web Companion](./browser-extension.md) usano collegamenti in elenchi.
 
 ```markdown
-- [Webpage name](https://www.example.com) #tag1 #tag2 some description and tags
+- [Nome pagina web](https://www.example.com) #etichetta1 #etichetta2 una descrizione e etichette
 ```
 
 ## Immagini
 
-Le immagini possono essere incorporate in QOwnNotes. Verranno mostrati nell'anteprima.
+Le immagini possono essere incorporate in QOwnNotes. Verranno mostrate nell'anteprima.
 
 ```markdown
-![alt text](media/my-image.jpg)
+![testo alternativo](media/immagine.jpg)
 ```
 
 ::: tip
-Puoi utilizzare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Maiusc + I</kbd> per inserire un'immagine in una nota. L'immagine può anche essere negli appunti, la finestra di dialogo la rileverà e mostrerà un'anteprima.
+Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Maiusc + I</kbd> per inserire un'immagine in una nota. L'immagine può anche essere negli appunti, la finestra di dialogo la rileverà e mostrerà un'anteprima.
 
 Puoi anche incollare direttamente un'immagine dagli appunti nella tua nota con <kbd>Ctrl + Maiusc + V</kbd>.
 :::

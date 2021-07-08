@@ -5,6 +5,7 @@
   (for [#2182](https://github.com/pbek/QOwnNotes/issues/2182))
 - the [QOwnNotesAPI Nextcloud App](https://apps.nextcloud.com/apps/qownnotesapi)
   was updated to version 21.7.0 to support Nextcloud 22
+- added more translation (thank you rawfreeamy, marcoxbresciani, amirkbrpr, mguerra, marterra)
 
 ## 21.7.3
 - the restoring of the focus after switching workspaces was fixed

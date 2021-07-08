@@ -7,7 +7,7 @@
 - <kbd>Ctrl</kbd> + <kbd>N</kbd> crea una nuova nota con la data e l'ora correnti nel nome
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>N</kbd> crea una nuova nota in una nuova scheda
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> ti permette di cercare note (nel nome della nota e nel suo contenuto)
-- <kbd>Alt</kbd> + <kbd>F</kbd> ti consente di cercare note in tutti i tag / sottocartelle
+- <kbd>Alt</kbd> + <kbd>F</kbd> ti consente di cercare note in tutte le etichette / sottocartelle
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> passa all'area di lavoro precedente
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> modifica una nota crittografata
 - <kbd>Alt</kbd> + <kbd>R</kbd> rimuove la nota corrente
@@ -21,21 +21,21 @@
     - la scorciatoia alternativa è <kbd>Ctrl</kbd> + <kbd>PgUp</kbd>
 - <kbd>Alt</kbd> + <kbd>Down</kbd> passa alla successiva nota visibile
     - la scorciatoia alternativa è <kbd>Ctrl</kbd> + <kbd>PgDown</kbd>
-- <kbd>Alt</kbd> + <kbd>PgUp</kbd> jumps to the previous note tab
-- <kbd>Alt</kbd> + <kbd>PgDn</kbd> passa alla scheda della nota successiva
-- <kbd>Ctrl</kbd> + <kbd>W</kbd> chiude la scheda della nota corrente
+- <kbd>Alt</kbd> + <kbd>PgUp</kbd> salta alla scheda note precedente
+- <kbd>Alt</kbd> + <kbd>PgDn</kbd> passa alla scheda note successiva
+- <kbd>Ctrl</kbd> + <kbd>W</kbd> chiude la scheda note corrente
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> attiva / disattiva la modalità senza distrazioni
-    - puoi anche chiuderlo con <kbd>Esc</kbd>
+    - puoi anche chiuderla con <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> stampa la nota corrente come testo
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> stampa la nota corrente come markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> incolla note, immagini e html dagli appunti
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> apre le impostazioni
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> aggiunge un nuovo tag a una nota
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> aggiunge una nuova etichetta a una nota
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> ricarica la cartella delle note corrente
 - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> consente di selezionare una cartella di note diversa
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> ricarica il motore di scripting
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> nasconde o mostra la barra del menu principale
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> ti consente di cercare azioni
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> consente di cercare azioni
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> salva manualmente le note modificate
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> apre la finestra di dialogo Repository di script
 - <kbd>F4</kbd> passa al pannello di modifica delle note
@@ -43,14 +43,14 @@
 - <kbd>F6<0> vai al pannello delle sottocartelle delle note</li> 
   
   <li>
-    <kbd>F7<0> vai al pannello dei tag</li> 
+    <kbd>F7<0> vai al pannello delle etichette</li> 
     
     <li>
       <kbd>F8</kbd> salta al pannello di navigazione
     </li>
     
     <li>
-      <kbd>F10</kbd> attiva il menu contestuale del widget corrente
+      <kbd>F10</kbd> attiva il menù contestuale del widget corrente
     </li>
     
     <li>
@@ -67,10 +67,10 @@
 
 <ul>
   <li>
-    <kbd>Down</kbd> or <kbd>Tab</kbd> imposta lo stato attivo sull'elenco delle note
+    <kbd>Freccia giù</kbd> or <kbd>Tab</kbd> imposta lo stato attivo sull'elenco delle note
   </li>
   <li>
-    <kbd>Return</kbd> crea una nuova nota con il testo della barra di ricerca come titolo
+    <kbd>Invio</kbd> crea una nuova nota con il testo della barra di ricerca come titolo
   </li>
 </ul>
 
@@ -83,7 +83,7 @@
     <kbd>Ctrl</kbd> + <kbd>A</kbd> seleziona tutte le note (per spostarle, copiarle o rimuoverle con un clic destro)
   </li>
   <li>
-    <kbd>Tab</kbd> o <kbd>Return</kbd> consente di modificare la nota corrente
+    <kbd>Tab</kbd> o <kbd>Invio</kbd> consente di modificare la nota corrente
   </li>
 </ul>
 
@@ -93,7 +93,7 @@
 
 <ul>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>Fare clic su</kbd> su un collegamento per aprirlo
+    <kbd>Ctrl</kbd> + <kbd>clic</kbd> su un collegamento per aprirlo
   </li>
   <li>
     <p spaces-before="0">
@@ -102,7 +102,7 @@
     <ul>
       <li>
         <p spaces-before="0">
-          utilizzare i tasti <kbd>Su</kbd> e <kbd>Giù</kbd> o <kbd>F3</kbd> e <kbd>⇧</kbd> + <kbd>F3</kbd> tasti per passare alla corrispondenza precedente e successiva
+          usare i tasti <kbd>Su</kbd> e <kbd>Giù</kbd> o <kbd>F3</kbd> e <kbd>⇧</kbd> + <kbd>F3</kbd> tasti per passare alla corrispondenza precedente e successiva
         </p>
       </li>
       <li>
@@ -129,16 +129,16 @@
     <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> cancella la parola corrente
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a text link (also works on selected text)
+    <kbd>Ctrl</kbd> + <kbd>L</kbd> apre una finestra di dialogo per aggiungere un collegamento di testo (funziona anche sul testo selezionato)
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> opens a dialog to add note link
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>L</kbd> apre una finestra di dialogo per aggiungere un collegamento a una nota
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+    <kbd>Ctrl</kbd> + <kbd>T</kbd> inserisce la data corrente nel formato ISO 8601
   </li>
   <li>
-    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the <code>media</code> folder in the current notes folder)
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserisce un'immagine (l'immagine sarà copiata nella cartella <code>media</code> della cartella note corrente)
   </li>
   <li>
     <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> inserts an attachment (the file will be copied to the <code>attachments</code> folder in the current notes folder)

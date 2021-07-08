@@ -6395,7 +6395,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5251"/>
 <source>Show line numbers</source>
-<translation type="unfinished">Show line numbers</translation>
+<translation>Toon regelnummers</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5261"/>
@@ -8725,7 +8725,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="64"/>
 <source>&amp;Download latest</source>
-<translation type="unfinished">&amp;Download latest</translation>
+<translation>Download hier de laatste</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="74"/>

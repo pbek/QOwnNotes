@@ -134,12 +134,12 @@
 <v-divider />
 
 **Q** per il [framework Qt](https://www.qt.io/) utilizzato  
-**Possiedi** perché possiedi le tue note  
+**Own** perché possiedi le tue note  
 **Note** per le note che prendi
 
 <v-divider />
 
-[QOwnNotes](https://www.qownnotes.org/) è l '**open source** (GPL) file di testo semplice **annotazione di markdown che prende** l'applicazione per **GNU / Linux**, **macOS** e **Windows**, che (opzionalmente) funziona insieme all '[**applicazione note**](https://github.com/nextcloud/notes) di [Nextcloud](https://nextcloud.com/) e [ownCloud](https://owncloud.org/).
+[QOwnNotes](https://www.qownnotes.org/) è l'applicazione **open source** (GPL) file di testo semplice per **prendere note in markdown** per **GNU / Linux**, **macOS** e **Windows**, che (opzionalmente) funziona insieme all '[**applicazione note**](https://github.com/nextcloud/notes) di [Nextcloud](https://nextcloud.com/) e [ownCloud](https://owncloud.org/).
 
 ::: tip
 Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, imparare e entrare in contatto con la comunità QOwnNotes.
@@ -148,22 +148,22 @@ Unisciti al nostro [Gruppo Telegram](https://t.me/QOwnNotes) per discutere, impa
 [Comprendere il concetto di QOwnNotes](concept.md)
 
 ## Caratteristiche
-- Puoi utilizzare i tuoi **file di testo o markdown esistenti**, senza bisogno di importazione la maggior parte delle volte
+- Puoi utilizzare la maggior parte delle volte i tuoi **file di testo o markdown esistenti**, senza bisogno di importarli
 - **Importa da Evernote**
 - **Compatibile** con l'applicazione Notes di **Nextcloud / ownCloud** e **mobile** e Nextcloud Text
 - Supporto per **condivisione di note** sul tuo server **ownCloud** / **Nextcloud**
-- Gestisci i tuoi Nextcloud / ownCloud **elenchi di cose da fare** (**attività Nextcloud** o **Tasks Plus** /**Calendar Plus**) o usa un altro **Server CalDAV** su cui sincronizzare le tue attività
+- Gestisci i tuoi **elenchi di cose da fare** (**attività Nextcloud** o **Tasks Plus** /**Calendar Plus**) Nextcloud / ownCloud o usa un altro **Server CalDAV** su cui sincronizzare le tue attività
 - Le **versioni** precedenti delle tue note possono essere **ripristinate** dal tuo server **Nextcloud / ownCloud**
 - **Le note cancellate** possono essere **ripristinate** dal tuo server **Nextcloud / ownCloud**
-- **Le modifiche esterne ** dei file delle note vengono **guardate ** (le note o l'elenco delle note vengono ricaricate)
+- **Le modifiche esterne ** dei file delle note vengono **monitorate** (le note o l'elenco delle note vengono ricaricate)
 - Supporto per **etichettatura gerarchica delle note** e **sottocartelle delle note**
 - **Cifratura** opzionale delle note. È disponibile AES-256 oppure puoi usare metodi di cifratura personalizzabili come **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) o **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
 - La **cartella note** può essere **scelta liberamente** (è possibile utilizzare più cartelle note)
-- **La ricerca di sotto-stringa** di note è possibile e i risultati della ricerca sono evidenziati nelle note
+- **La ricerca di stringhe parziali** di note è possibile e i risultati della ricerca sono evidenziati nelle note
 - [**Estensione del browser**](browser-extension.md) per **aggiungere note dal testo selezionato**, **catturare schermate** o **gestire i tuoi segnalibri**
 - [**Supporto per il controllo ortografico**](../editor/spellchecking.md)
 - **Modalità portatile** per portare in giro QOwnNotes su chiavette USB
-- **Supporto per script** e un [**repository di script**](https://github.com/qownnotes/scripts) online in cui è possibile installare script all'interno dell'applicazione
+- **Supporto per script** e un [**repository di script**](https://github.com/qownnotes/scripts) online da cui è possibile installare script all'interno dell'applicazione
 - **Modalità Vim**
 - [Applicazione web](web-app.md) per **inserire foto dal tuo telefono cellulare** nella nota corrente di QOwnNotes sul tuo desktop
 
