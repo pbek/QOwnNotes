@@ -37,3 +37,4 @@ copy ..\..\Qt\5.15.2\mingw81_64\bin\libgcc_s_seh-1.dll .
 copy ..\..\Qt\5.15.2\mingw81_64\bin\libstdc++-6.dll .
 # create zip archive
 Compress-Archive -Path * -DestinationPath ..\QOwnNotes.zip
+$(CertUtil -hashfile ..\QOwnNotes.zip SHA256)[1] -replace " ","" | Out-File -FilePath ..\QOwnNotes.zip.sha256

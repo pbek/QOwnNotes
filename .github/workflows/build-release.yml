@@ -258,6 +258,16 @@ jobs:
         asset_path: ./QOwnNotes.zip
         asset_name: QOwnNotes.zip
         asset_content_type: application/zip
+    - if: contains( matrix.os, 'windows')
+      name: Upload sha256 sum for Windows
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.create_release.outputs.upload_url }}
+        asset_path: ./QOwnNotes.zip.sha256
+        asset_name: QOwnNotes.zip.sha256
+        asset_content_type: text/plain
 
   publish_release:
     name: Publish release
