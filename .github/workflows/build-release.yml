@@ -235,7 +235,7 @@ jobs:
         upload_url: ${{ needs.create_release.outputs.upload_url }}
         asset_path: ./src/QOwnNotes-x86_64.AppImage.sha256sum
         asset_name: QOwnNotes-x86_64.AppImage.sha256sum
-        asset_content_type: application/vnd.appimage
+        asset_content_type: text/plain
 
     - if: contains( matrix.os, 'macos')
       name: Release DMG for macOS
