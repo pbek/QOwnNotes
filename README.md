@@ -74,6 +74,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 
 ## Features
 
+- QOwnNotes is written in C++ and is optimized low **resource consumption** (no CPU and memory-hungry Electron app)
 - **multiple note folders** can be used
 - you can **use your existing text or markdown files**, no need for an import most of the times
 - older **versions of your notes** can be restored from your Nextcloud / ownCloud server
