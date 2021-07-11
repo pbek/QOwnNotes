@@ -14,7 +14,7 @@ You can use these parameters on the command line interface:
 
 ::: tip
 If you run into troubles with your installation of QOwnNotes you may want start
-the application with fresh settings without loosing your current settings by using
+the application with fresh settings without losing your current settings by using
 the `--session` parameter.
 
 ```bash
