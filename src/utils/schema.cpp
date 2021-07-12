@@ -525,6 +525,10 @@ QString Utils::Schema::encodeCssFont(const QFont& refFont) {
         QStringLiteral("font-family: ") + famList.join(QStringLiteral(", "));
     fields << famStr;
 
+    // reset font-weight to "normal" so headers and bold tags can be
+    // "normal" if they are not set to "bold"
+    fields << QStringLiteral("font-weight: normal");
+
     // **************************************
     // *** (2) Font Weight: Bold or Not ***
     // **************************************
