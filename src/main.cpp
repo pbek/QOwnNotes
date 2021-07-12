@@ -599,6 +599,7 @@ int main(int argc, char *argv[]) {
 
         // receive messages from the primary app
         QObject::connect(&app, &SingleApplication::receivedMessage, [&](quint32 instanceId, QByteArray message) {
+            Q_UNUSED(instanceId)
             qDebug() << __func__ << " - 'message': " << message;
 
             // trigger the startup menu action
