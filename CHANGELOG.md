@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 21.7.5
+- if you uncheck `Bold` for `Strong text` in the *Editor fonts & colors* settings
+  the text is now really not bold anymore in the editor (for [#2182](https://github.com/pbek/QOwnNotes/issues/2182))
+    - the preview now also allows tags like headings and strong to not be bold
+      when the editor highlighting styles are used for the preview
+
 ## 21.7.4
 - the execution of git log commands has been fixed for Windows
   (for [#2182](https://github.com/pbek/QOwnNotes/issues/2182))
