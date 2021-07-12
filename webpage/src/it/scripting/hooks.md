@@ -1,4 +1,4 @@
-# Ganci
+# Connessioni
 
 onNoteStored
 ------------
@@ -7,8 +7,8 @@ onNoteStored
 ```js
 /**
   * Questa funzione viene chiamata quando una nota viene archiviata su disco
-  * Non è possibile modificare le note memorizzate, sarebbe un disastro da allora
-  * molto probabilmente li stai modificando a mano allo stesso tempo
+  * Non è possibile modificare le note memorizzate, poiché sarebbe tutto complicato
+  * dal fatto che probabilmente le stai contemporaneamente anche modificando a mano
   *
   * @param {NoteApi} note - l'oggetto nota della nota memorizzata
  */
@@ -59,7 +59,7 @@ Se questa funzione è definita in più script, vince il primo script che restitu
 ```js
 /**
   * @param fileName stringa il percorso del file multimediale di origine prima che fosse copiato nella cartella multimediale
-  * @param markdownText stringa il testo del markdown del file multimediale, ad es. ! [mia-immagine] (media / mia-immagine-4101461585.jpg)
+  * @param markdownText stringa il testo del markdown del file multimediale, ad es. ![mia-immagine](media/mia-immagine-4101461585.jpg)
   * @return string il nuovo testo di markdown del file multimediale
  */
 function insertMediaHook(fileName, markdownText);
@@ -78,7 +78,7 @@ Se questa funzione è definita in più script, vince il primo script che restitu
 ```js
 /**
   * @param fileName stringa il percorso del file allegato di origine prima che fosse copiato nella cartella degli allegati
-  * @param markdownText stringa il testo del markdown del file allegato, ad es. [mio-file.txt] (allegati / mio-file-4245650967.txt)
+  * @param markdownText stringa il testo del markdown del file allegato, ad es. [mio-file.txt](allegati/mio-file-4245650967.txt)
   * @return stringa il nuovo testo di markdown del file allegato
  */
 function insertAttachmentHook(fileName, markdownText);

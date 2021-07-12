@@ -2,9 +2,9 @@
 
 Esistono repository QOwnNotes per **Fedora 28 e versioni successive**.
 
-## On systems with config-manager dnf plugin
+## Sui sistemi con plugin dnf config-manager
 
-Run the following shell commands as root to add the repository.
+<0>Estensione del browser</0> per <1>aggiungere note dal testo selezionato</1>, <1>fare screenshot</1> o <1>gestire i tuoi segnalibri</1>
 
 ```bash
 dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_\$releasever/
@@ -16,7 +16,7 @@ dnf install qownnotes
 ::: tip
 Potrebbe essere necessario accettare la chiave del repository prima di poter scaricare.
 
-If you have troubles import the key yourself with:
+Se hai problemi a importare tu stesso la chiave con:
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key

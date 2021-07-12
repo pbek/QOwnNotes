@@ -1,4 +1,4 @@
-# Concept
+# Concetto
 
 ```mermaid
 graph TB
@@ -133,8 +133,8 @@ Puoi accedere al codice sorgente di [api.qownnotes.org](https://api.qownnotes.or
 
 ## QOwnNotes Web App
 
-You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
+Puoi inserire foto dal tuo cellulare nella nota corrente in QOwnNotes sul desktop tramite l'**applicazione web** su [app.qownnotes.org](https://app.qownnotes.org/).
 
 ::: tip
-Please visit [QOwnNotes Web App](web-app.md) for more information.
+Visita [App Web QOwnNotes](web-app.md) per ulteriori informazioni.
 :::

@@ -149,22 +149,23 @@ Treten Sie unserer [Telegram Gruppe](https://t.me/QOwnNotes) bei, um zu diskutie
 
 ## Eigenschaften
 - Sie können Ihre **vorhandenen Text- oder Markdown-Dateien** verwenden, ohne dass ein Import erforderlich ist
-- **Evernote-Import**
-- **Kompatibel** mit der Notes-Anwendung von **Nextcloud / ownCloud** und **mobile** und Nextcloud Text
-- Unterstützung für **das Teilen von Notizen** auf Ihrem **ownCloud** / **Nextcloud** -Server
-- Verwalten Sie Ihre Nextcloud / ownCloud **Aufgabenlisten** (**Nextcloud-Aufgaben** oder **Tasks Plus** / **Calendar Plus**) oder verwenden Sie einen anderen **CalDAV-Server**, mit dem Sie Ihre Aufgaben synchronisieren können
-- Ältere **Versionen** Ihrer Notizen können von Ihrem **Nextcloud / ownCloud **Server** wiederhergestellt werden**
-- **Gelöschten Notizen** können von Ihrem **Nextcloud / ownCloud** Server **wiederhergestellt werden**
-- **Externe Änderungen** von Notizdateien werden **überwacht** (Notizen oder Notizliste werden neu geladen)
-- Unterstützung für **hierarchische Notizkennzeichnung** und **Notizunterordner**
-- Optionale **Verschlüsselung** von Notizen, (AES-256 ist integriert oder Sie können benutzerdefinierte Verschlüsselungsmethoden wie **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) oder **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) verwenden.)
-- Der **Notizenordner** kann **frei gewählt werden** (mehrere Notizordner können verwendet werden)
-- **Die Suche nach Teilzeichenfolgen** von Notizen ist möglich, und die Suchergebnisse werden in den Notizen hervorgehoben
+- QOwnNotes is written in C++ and optimized for **low resource consumption** (no CPU and memory-hungry Electron app)
+- **Evernote import**
+- **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
+- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
+- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
+- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
+- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
+- **External changes** of note files are **watched** (notes or note list are reloaded)
+- Support for **hierarchical note tagging** and **note subfolders**
+- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
+- The **notes folder** can be **freely chosen** (multiple note folders can be used)
+- **Sub-string searching** of notes is possible and search results are highlighted in the notes
 - [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
-- Unterstützung für [**Rechtschreibprüfung**](../editor/spellchecking.md)
-- **Tragbarer Modus** zum Mitnehmen von QOwnNotes auf USB-Sticks
-- **Skriptunterstützung** und ein [**Online-Skript-Repository**](https://github.com/qownnotes/scripts), in dem Sie Skripte in der Anwendung installieren können
-- **Vim-Modus**
+- [**Spellchecking**](../editor/spellchecking.md) support
+- **Portable mode** for carrying QOwnNotes around on USB sticks
+- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
+- **Vim mode**
 - [Web application](web-app.md) to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
 
 

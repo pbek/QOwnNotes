@@ -118,7 +118,7 @@ class MainWindow {
 
 ### Beispiel
 ```js
-// Erzwinge ein Neuladen der Notizliste
+// Erzwingt ein Neuladen der Notizliste
 mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
 
 // Erstellt einen neuen Notiz-Unterordner "Mein schicker Ordner" im aktuellen Unterordner
@@ -127,7 +127,7 @@ mainWindow.createNewNoteSubFolder("My fancy folder");
 // Fügt HTML als Markdown in die aktuelle Notiz ein
 mainWindow.insertHtmlAsMarkdownIntoCurrentNote("<h2>my headline</h2>some text");
 
-// Arbeitsbereich 'Bearbeiten' als aktuellen Arbeitsbereich festlegen
+// Legt Arbeitsbereich 'Bearbeiten' als aktuellen Arbeitsbereich fest
 mainWindow.setCurrentWorkspace(mainWindow.getWorkspaceUuid("Edit"));
 
 

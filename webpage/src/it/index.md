@@ -1,7 +1,7 @@
 ---
 title: QOwnNotes
 description: Applicativo per salvare note in formato markdown per Linux, MacOS e Windows che lavora in sintonia con le note di Nexcloud
-home: vero
+home: true
 heroImage: /screenshots/screenshot.png
 tagline: Applicativo per salvare note in formato markdown gratuito e open source che si integra con Nextcloud / ownCloud
 actionText: Avvio veloce →

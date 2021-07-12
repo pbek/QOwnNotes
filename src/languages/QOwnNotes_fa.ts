@@ -1009,7 +1009,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>این قابلیت کلیدهای ترکیبی نظیر Ctrl-S را در FakeVim پشتیبانی نمی کند اما آنها را به صورت میانبرهای مرتب در نظر می گیرد. این ویژگی دسترسی راحت تری را به قابلیت های اصلی حتی به قیمت از دست دادن برخی امکانات FakeVim فراهم می کند.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>

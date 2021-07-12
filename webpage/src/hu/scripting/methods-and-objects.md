@@ -266,7 +266,7 @@ script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr
 
 Ezután érdemes használni az azonosítót a function funkcióval `customActionInvoked` egy hasonló szkriptben [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-::: tip You can also trigger a custom action after the application was started with the parameter `--action customAction_<identifier>`. For more information please take a look at [Trigger menu actions after startup](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup). :::
+::: tip Egyéni műveletet is kiválthat az alkalmazás indítása után a(z) `--action customAction_<identifier>` paraméterrel. További információért tekintse meg a(z) [Indítás utáni menüműveletek](../getting-started/cli-parameters.md#trigger-menu-actions-after-startup)et. :::
 
 Címke regisztrálása
 -------------------
@@ -1334,7 +1334,7 @@ script.triggerMenuAction("actionAllow_note_editing", 1);
 
 Érdemes megnézni a példát [disable-readonly-mode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/disable-readonly-mode.qml).
 
-::: tip You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time. :::
+::: tip A menümű objektumneveit innen szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Csak keresse meg az angol menü címét. Ne feledje, hogy ezek a szövegek idővel változhatnak. :::
 
 Beviteli párbeszédpanel megnyitása egy kiválasztott mezővel
 -----------------------------------------

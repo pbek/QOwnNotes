@@ -147,23 +147,24 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 
 ## Funkciók
 - You can use your **existing text or markdown files**, no need for an import most of the times
+- QOwnNotes is written in C++ and optimized for **low resource consumption** (no CPU and memory-hungry Electron app)
 - **Evernote import**
-- **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
-- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
-- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
-- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
-- **External changes** of note files are **watched** (notes or note list are reloaded)
-- Support for **hierarchical note tagging** and **note subfolders**
-- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
-- The **notes folder** can be **freely chosen** (multiple note folders can be used)
-- **Sub-string searching** of notes is possible and search results are highlighted in the notes
-- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
-- [**Spellchecking**](../editor/spellchecking.md) support
-- **Portable mode** for carrying QOwnNotes around on USB sticks
-- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
-- **Vim mode**
-- [Web application](web-app.md) to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
+- **Kompatibilis** a **Nextcloud / ownCloud** és a **mobile** és a Nextcloud Text Notes alkalmazásával
+- Támogatás a **jegyzetek megosztásához** a **ownCloud** / **Nextcloud** kiszolgálón
+- A Nextcloud / ownCloud **témalistáinak kezelése** (**Nextcloud-feladatok** vagy **Tasks Plus** / **Calendar Plus**) vagy használjon egy másik **CalDAV szervert** a feladatok szinkronizálásához
+- A jegyzetek régebbi **verziói** **visszaállíthatók** a **Nextcloud / ownCloud** szerverről
+- **A kukába helyezett jegyzetek** **visszaállíthatók** a **Nextcloud / ownCloud** szerverről
+- A jegyzetfájlok **külső változásai** ** figyelésre kerülnek** (a jegyzetek vagy a jegyzetlista újratöltődnek)
+- A **hierarchikus jegyzetcímkézés** és a **jegyzetmappák** támogatása
+- Opcionális jegyzetek **titkosítása** (beépített AES-256 vagy használhat egyedi titkosítási módszereket, például **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) vagy **PGP** ([titkosítás-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
+- A **jegyzetek mappa** **szabadon választható** (több jegyzetmappa is használható)
+- A jegyzetek **alsztring keresése** lehetséges, és a keresési eredmények kiemelésre kerülnek a jegyzetekben
+- [**Estensione del browser**](browser-extension.md) per **aggiungere note dal testo selezionato**, **fare screenshot** o **gestire i tuoi segnalibri**
+- [**Helyesírás-ellenőrzés**](../editor/spellchecking.md) támogatás
+- **Hordozható mód** a QOwnNotes hordozásához USB-meghajtókon
+- **A szkriptek támogatása** és az online [**szkriptek tárháza**](https://github.com/qownnotes/scripts), ahol parancsfájlokat telepíthet az alkalmazásba
+- **Vim mód**
+- [Webalkalmazás](web-app.md) a **fényképek beillesztéséhez a mobiltelefonról** az asztali QOwnNotes aktuális jegyzetébe
 
 
 ## Appearance

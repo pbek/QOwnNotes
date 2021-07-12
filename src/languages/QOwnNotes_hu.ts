@@ -878,7 +878,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Használja a FakeVim-et</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
@@ -888,68 +888,68 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>A szövegjelek helyzetének megjelenítése</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>Adja át a vezérlőgombokat</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>Pass keys beszúrás módban</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>A sor kezdete</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Táblagép mérete:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Intelligens táblázók</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>Jelölje ki a keresési eredményeket</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished">Shift width:</translation>
+<translation>Váltás szélessége:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Bontsa ki a tabulátorokat</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>Automatikus behúzás</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>Növekményes keresés</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Használja a keresési párbeszédpanelt</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>Használjon smartcase-t</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
@@ -959,32 +959,32 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>Use wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>Használja a tildeopot</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>Részleges parancs megjelenítése</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Vonalszámok megjelenítése a kurzorhoz képest</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>Villogó kurzor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>Görgetés eltolás:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
@@ -1004,17 +1004,17 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>Megjeleníti a sorszámokat a kurzort tartalmazó sorhoz képest.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>Nem értelmezi a kulcsszekvenciákat, mint például a Ctrl-S a FakeVim-ben, hanem rendszeres parancsikonként kezeli azokat. Ez megkönnyíti az alapvető funkciók elérését, a FakeVim egyes funkcióinak elvesztése árán.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>Nem értelmezi egyes billentyűkombinációkat beszúrási módban, így a kódot megfelelően ki lehet tölteni és kibővíteni.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
@@ -1029,7 +1029,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>Alapértelmezett: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1069,12 +1069,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>Írja be a Meta-Shift-Y, Meta-Shift-Y parancsot a FakeVim módból való kilépéshez.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>Írja be az Alt-Y, az Alt-Y billentyűt a FakeVim módból való kilépéshez.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -8806,52 +8806,52 @@ Nem lehet visszavonni!</translation>
 <location filename="../dialogs/updatedialog.cpp" line="439"/>
 <location filename="../dialogs/updatedialog.cpp" line="451"/>
 <source>Permission error</source>
-<translation type="unfinished">Permission error</translation>
+<translation>Engedélyezési hiba</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="440"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
+<translation>QOwnNotes '%1' futtatható fájlja nem írható! A frissítéshez az aktuális felhasználónak írhatónak kell lennie.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="452"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
+<translation>A(z) '%1' ideiglenes fájlt nem lehet futtathatóvá tenni! A „%2” szót magának kell kicserélnie.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="462"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>A régi QOwnNotes '%1' futtatható fájlját nem sikerült eltávolítani! Magának le kell cserélnie '%2'-re.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="472"/>
 <source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
+<translation>A régi QOwnNotes futtatható %1 fájlt nem lehet felülírni, helyette az új fájlt '%2'! Magának kell kicserélnie.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="479"/>
 <source>Restart application</source>
-<translation type="unfinished">Restart application</translation>
+<translation>Indítsa újra az alkalmazást</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="485"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
+<translation>A frissítési folyamat befejezéséhez most kézzel kell újraindítania az alkalmazást.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="491"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished">You now can restart the application to complete the update process.</translation>
+<translation>Most újraindíthatja az alkalmazást a frissítési folyamat befejezéséhez.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Restart</source>
-<translation type="unfinished">Restart</translation>
+<translation>Újból indít</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>Mégse</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>

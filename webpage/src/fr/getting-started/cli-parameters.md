@@ -12,7 +12,8 @@ Vous pouvez utiliser ces paramètres sur l'interface de ligne de commande:
 | `--allow-multiple-instances` | Permet de démarrer plusieurs instances de QOwnNotes même si elles ne sont pas autorisées dans les paramètres                                |
 | `--action <name>`      | Triggers a menu action after the application was started (see below)                                                                        |
 
-Si vous rencontrez des problèmes avec votre installation de QOwnNotes, vous voudrez peut-être commencer l'application avec de nouveaux paramètres sans perdre vos paramètres actuels en utilisant le paramètre `--session`.
+::: tip
+If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
 
 ```bash
 QOwnNotes --session test

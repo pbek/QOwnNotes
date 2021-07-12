@@ -13,7 +13,7 @@ Puede utilizar estos parámetros en la interfaz de línea de comandos:
 | `--action <name>`      | Triggers a menu action after the application was started (see below)                                                                      |
 
 ::: tip
-Si tiene problemas con la instalación de QOwnNotes, es posible que desee iniciar la aplicación con una configuración nueva sin perder la configuración actual utilizando el parámetro `--session`.
+If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
 
 ```bash
 QOwnNotes --session test

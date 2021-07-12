@@ -25,7 +25,7 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 
 ## Régi telepítési módszer
 
-Használja ezt a módszert, ha a Fedora verziója nem támogatja a ` config-manager ` dnf bővítményt, futtassa ezeket a parancsokat rootként.
+Gebruik deze methode als je Fedora-versie de `config-manager` dnf-plug-in niet ondersteunt, voer deze commando's uit als root.
 
 Voer de volgende shell-opdrachten uit als root om de repository te vertrouwen.
 

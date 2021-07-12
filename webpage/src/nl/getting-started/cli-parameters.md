@@ -13,7 +13,7 @@ U kunt deze parameters gebruiken op de opdrachtregelinterface:
 | `--action <name>`      | Activeert een menuactie nadat de applicatie is gestart (zie hieronder)                                                              |
 
 ::: tip
-Als u problemen ondervindt bij het installeren van QOwnNotes, wilt u misschien de toepassing starten met nieuwe instellingen zonder uw huidige instellingen te verliezen door de parameter `--session` te gebruiken.
+If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
 
 ```bash
 QOwnNotes --session test

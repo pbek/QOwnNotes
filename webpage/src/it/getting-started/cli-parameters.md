@@ -13,7 +13,7 @@
 | `--action <name>`      | Attiva un'azione di menu dopo l'avvio dell'applicazione (vedi sotto)                                                              |
 
 ::: tip
-Se si verificano problemi con l'installazione di QOwnNotes, è possibile avviare l'applicazione con nuove impostazioni senza perdere le impostazioni correnti utilizzando il parametro `--session`.
+If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
 
 ```bash
 QOwnNotes --session test
@@ -28,18 +28,18 @@ QOwnNotes --session test
 | macOS             | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes` |
 | Windows           | `QOwnNotes.exe`                                        |
 
-## Trigger menu actions after startup
+## Attiva le azioni del menu dopo l'avvio
 
-With the parameter `--action <name>` you can trigger menu actions after the application was started.
+Con il parametro `--action <name>` è possibile attivare azioni di menu dopo l'avvio dell'applicazione.
 
-For example to open the todo list dialog after startup use:
+Ad esempio, per aprire la finestra di dialogo dell'elenco delle cose da fare dopo l'utilizzo all'avvio:
 
 ```bash
 QOwnNotes --action actionShow_Todo_List
 ```
 
 ::: tip
-You can get the object names of the menu action from [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Just search for the English menu title. Note that these texts can change over time.
+Puoi ottenere i nomi degli oggetti dell'azione del menu da [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Basta cercare il titolo del menu in inglese. Note that these texts can change over time.
 :::
 
 To trigger [scripting actions](../scripting/methods-and-objects.md#registering-a-custom-action) use `customAction_` followed by the identifier of the custom action. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.

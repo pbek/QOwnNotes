@@ -13,7 +13,7 @@
 | `--عملیات <name>`     | پس از اینکه برنامه شروع به کار کرد، یک منو اکشن را راه اندازی کنید (قسمت زیر را ملاحظه کنید).                       |
 
 ::: tip
-اگر با نصب QOwnNotes به مشکل برخورد کردید، شاید بخواهید با استفاده از پارامتر `--دوره` برنامه را با تنظیمات جدید و بدون از دست دادن تنظیمات فعلی خود آغاز کنید.
+If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
 
 ```bash
 QOwnNotes --تست دوره

@@ -7,7 +7,7 @@ Cosa hanno detto gli altri su QOwnNotes ...
 - [Educators for free and open source resources: Note taking software](http://freeandopensourcesineducation.blogspot.co.at/2016/01/note-taking-software.html)
 - **Linux Voice 25**
     - <http://shop.linuxvoice.com/products/single-issues?src=menu>
-    - [QOwnNotes è stato recensito su Linux Voice 25](https://www.qownnotes.org/blog/2016-03-25-QOwnNotes-got-featured-in-Linux-Voice-25.html)
+    - [QOwnNotes got featured in Linux Voice 25](https://www.qownnotes.org/blog/2016-03-25-QOwnNotes-got-featured-in-Linux-Voice-25.html)
 - **Linux Action Show 410 / Desktop App Pick**
     - <http://www.jupiterbroadcasting.com/98121/floating-on-owncloud-9-las-410/>
     - <http://jupiterbroadcasting.com/laspicks/desktop-apps.php>
@@ -27,32 +27,32 @@ Cosa hanno detto gli altri su QOwnNotes ...
 - [Софт для Linux: графические программы на основе библиотеки Qt - QOwnNotes](http://linsoft.info/soft/qownnotes.html)
 - [qOwnNotes - pumprock.net](https://pumprock.net/aperalesf/note/w18MhAa6SY6ffK93PAd_lQ)
 - [beOpen | QOwnNotes 16.07.2](http://beopen.bplaced.net/2016/07/qownnotes-16-07-2/)
-- **[Articolo su Linux Magazin numero 2016/09](http://www.linux-magazin.de/Ausgaben/2016/09/Tooltipps)**
+- **[Linux Magazin article in issue 2016/09](http://www.linux-magazin.de/Ausgaben/2016/09/Tooltipps)**
 - [QOwnNotes Is A Note Taking And Todo List App That Integrates With ownCloud ~ Web Upd8: Ubuntu / Linux blog](http://www.webupd8.org/2016/09/qownnotes-is-note-taking-and-todo-list.html)
-- [Manage your notes in your ownCloud with QOwnNotes](https://felixhefner.de/manage-your-notes-in-your-owncloud-with-qownnotes/)
+- [Manage your notes in your ownCloud with QownNotes](https://felixhefner.de/manage-your-notes-in-your-owncloud-with-qownnotes/)
 - <http://www.hksilicon.com/articles/1127258?lang=cn>
 - <http://blog.csdn.net/qyvlik/article/details/51460736>
 - <http://jdev.tw/blog/4836/markdown-text-editor-qownnotes>
 - [Un gestor de notas para Linux Mint y Ubuntu multiplataforma](https://www.atareao.es/ubuntu/un-gestor-de-notas-para-linux-mint-y-ubuntu/)
-- [QOwnNotes su The Portable Freeware Collection](http://www.portablefreeware.com/forums/viewtopic.php?f=4&t=23143)
+- [QOwnNotes at The Portable Freeware Collection](http://www.portablefreeware.com/forums/viewtopic.php?f=4&t=23143)
 - [QOwnNotes su Softpedia](http://mac.softpedia.com/get/Utilities/QOwnNotes.shtml)
 - [QOwnNotes su Neowin](https://www.neowin.net/news/qownnotes-16118-build-2489)
-- [QOwnNotes su Solus OS](https://dev.solus-project.com/T1687)
+- [QOwnNotes at Solus OS](https://dev.solus-project.com/T1687)
     - <https://git.solus-project.com/packages/qownnotes>
-- [QOwnNotes su beOpen](http://beopen.bplaced.net/2016/11/qownnotes-16-11-14/)
-- [QOwnNotes su Yazı Kovanı](http://www.yazikovani.com/2016/11/06/gnulinux-icin-not-tutma-programlari)
-- [QOwnNotes su sDown](https://www.sdown.eu/windows/qownnotes.html)
-- [QOwnNotes su Betanews](http://betanews.com/2016/12/12/qownnotes-is-a-versatile-notepad-and-to-do-list-manager/)
-- [QOwnNotes su Downloadcrew](http://www.downloadcrew.com/article/34723-qownnotes)
-- [QOwnNotes su PC Advisor](http://www.pcadvisor.co.uk/download/system-desktop-tools/qownnotes-1625-3331133/)
+- [QOwnNotes on beOpen](http://beopen.bplaced.net/2016/11/qownnotes-16-11-14/)
+- [QOwnNotes on Yazı Kovanı](http://www.yazikovani.com/2016/11/06/gnulinux-icin-not-tutma-programlari)
+- [QOwnNotes on sDown](https://www.sdown.eu/windows/qownnotes.html)
+- [QOwnNotes on Betanews](http://betanews.com/2016/12/12/qownnotes-is-a-versatile-notepad-and-to-do-list-manager/)
+- [QOwnNotes on Downloadcrew](http://www.downloadcrew.com/article/34723-qownnotes)
+- [QOwnNotes on PC Advisor](http://www.pcadvisor.co.uk/download/system-desktop-tools/qownnotes-1625-3331133/)
 - **[QOwnNotes – App of the Week – ownCloud](https://owncloud.org/news/qownnotes-app-week/)**
 - [10 Must Have Linux Apps You Should Use](https://youtu.be/oSSyLNb8jA8?t=2m19s)
 - [QOwnNotes 17.01.3 portable - Programy portable](http://portable.info.pl/qownnotes-portable/)
-- [QOwnNotes su filecluster](http://www.filecluster.com/Business-Office/PIMS-Organizers/Download-QOwnNotes.html)
+- [QOwnNotes on filecluster](http://www.filecluster.com/Business-Office/PIMS-Organizers/Download-QOwnNotes.html)
 - [QOwnNotes - ownCloudと連携も可能なMarkdownエディタ MOONGIFT](http://www.moongift.jp/2017/03/qownnotes-owncloud%E3%81%A8%E9%80%A3%E6%90%BA%E3%82%82%E5%8F%AF%E8%83%BD%E3%81%AAmarkdown%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/)
-- [QOwnNotes su LinuxHints](https://www.linuxhint.com/install-qownnotes-linux/)
+- [QOwnNotes on LinuxHints](https://www.linuxhint.com/install-qownnotes-linux/)
 - [QOwnNotes：一款记录笔记和待办事项的应用，集成 ownCloud 云服务-软件 ◆ 分享|Linux.中国-开源社区](https://linux.cn/article-7769-1.html)
-- [QOwnNotes su Chocolatey](https://chocolatey.org/packages/qownnotes)
+- [QOwnNotes on Chocolatey](https://chocolatey.org/packages/qownnotes)
 - [What comes after Evernote? A QOwnNotes review. | JawFodder](http://www.jawfodder.com/what-comes-after-evernote-a-qownnotes-review/)
 - [Taking Notes with Nextcloud, QOwnNotes, and Notebooks](https://lifemeetscode.com/blog/2017/05/03/taking-notes-nextcloud-qownnotes-notebooks/)
     - using [Notebooks](http://www.notebooksapp.com/) to sync Notes via WebDAV on iOS
@@ -61,7 +61,7 @@ Cosa hanno detto gli altri su QOwnNotes ...
 - [The 6 Best Windows Notepad Alternatives](http://www.makeuseof.com/tag/best-windows-notepad-alternatives/)
 - [Synchronisation des notes (QOwnNotes) — Wiki de la mère Zaclys](https://wiki.zaclys.com/index.php/Synchronisation_des_notes_(QOwnNotes))
 - [QOwnNotes 17.06.06 z notatkami w chmurach | przystajnik](https://404.g-net.pl/2017/06/qownnotes-17-06-06-notatkami-chmurach/)
-- [QOwnNotes 17.06.06 z notatkami w chmurach | przystajnik](http://ubuntuhandbook.org/index.php/2017/06/install-qownnotes-ubuntu/)
+- [How to Install QOwnNotes Note-taking & Todo List Manager in Ubuntu | UbuntuHandbook](http://ubuntuhandbook.org/index.php/2017/06/install-qownnotes-ubuntu/)
 - [How to install QOwnNotes on Ubuntu | CONNECTwww.com](https://connectwww.com/how-to-install-qownnotes-on-ubuntu/5518/)
 - [Qownnotes | Framalibre](https://framalibre.org/content/qownnotes)
 - [QOwnNotes - opensource offline аналог Evernote — Talks — Форум](https://www.linux.org.ru/forum/talks/13382351)
@@ -82,8 +82,8 @@ Cosa hanno detto gli altri su QOwnNotes ...
 - [Scout Archives - QOwnNotes](https://scout.wisc.edu/archives/r49075)
     - [The Scout Report -- Volume 23, Number 49 | Internet Scout](https://scout.wisc.edu/report/2017/1208)
 - [QOwnNotes – App of the Week - ownCloud](https://owncloud.org/news/qownnotes-app-week)
-- [Snapcraft su Twitter: "Get your notes on order! 📝 @QOwnNotes is a fast and beautiful text editor which supports local saving and storage in your own cloud. Install… https://t.co/2yGYmPb7g2"](https://twitter.com/snapcraftio/status/951109910410027010)
-- [Ubuntu su Twitter: "Get your notes on order! 📝 @QOwnNotes is a fast and beautiful text editor which supports local saving and storage in your own cloud. Instal… https://t.co/4W4o9OfdFo"](https://twitter.com/ubuntu/status/951472292495876096)
+- [Snapcraft su Twitter: "Ricevi le tue note sull'ordine! 📝 @QOwnNotes è un editor di testo veloce e bello che supporta il salvataggio e l'archiviazione locali nel tuo cloud. Install… https://t.co/2yGYmPb7g2"](https://twitter.com/snapcraftio/status/951109910410027010)
+- [Ubuntu su Twitter: "Get your notes on order! 📝 @QOwnNotes è un editor di testo veloce e bello che supporta il salvataggio e l'archiviazione locali nel tuo cloud. Instal… https://t.co/4W4o9OfdFo"](https://twitter.com/ubuntu/status/951472292495876096)
 - [QOwnNotes - Notizverwaltung auf Nextcloud - Die Welt und ich](https://www.kussaw.de/2017/02/qownnotes-notizen-auf-nextcloud/)
     - <https://www.kussaw.de/2017/04/qownnotes-und-android/>
 - [QOwnNotes / Приложение для ведения заметок, блокнот с поддержкой менеджера списка задач](http://zenway.ru/page/qownnotes)
@@ -127,7 +127,7 @@ Cosa hanno detto gli altri su QOwnNotes ...
 - [MOONGIFT su Twitter: "(MOONGIFT) QOwnNotes - ownCloudと連携も可能なMarkdownエディタ : ノートアプリは一つ用意しておくと便利です。気がついた時にささっ... https://t.co/SljDsxHsVc"](https://twitter.com/moongift/status/841423757306601473)
 - [QOwnNotes - ownCloudと連携も可能なMarkdownエディタ MOONGIFT](https://www.moongift.jp/2017/03/qownnotes-owncloud%e3%81%a8%e9%80%a3%e6%90%ba%e3%82%82%e5%8f%af%e8%83%bd%e3%81%aamarkdown%e3%82%a8%e3%83%87%e3%82%a3%e3%82%bf/)
 - [QOwnNotes / Приложение для ведения заметок, блокнот с поддержкой менеджера списка задач](https://zenway.ru/page/qownnotes)
-- [QOwnNotes is an open source note taking tool that supports Markdown - gHacks Tech News](https://www.ghacks.net/2019/11/22/qownnotes-is-an-open-source-note-taking-tool-that-supports-markdown/)
+- [QOwnNotes è uno strumento per prendere appunti open source che supporta Markdown - gHacks Tech News](https://www.ghacks.net/2019/11/22/qownnotes-is-an-open-source-note-taking-tool-that-supports-markdown/)
 - [10 Must Have Linux Apps You Should Install | Beebom](https://beebom.com/must-have-linux-apps)
 - [Кроссплатформенное ведение базы личных записей (2018) | Mal-BioIT](http://mal-bioit.ru/cross-platform-note-taking#qownnotes)
 - [QOwnNotes bei Computerbild](https://www.computerbild.de/download/QOwnNotes-17767577.html)

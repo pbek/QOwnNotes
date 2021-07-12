@@ -12,7 +12,7 @@ Ezeket a paramétereket a parancssori felületen használhatja:
 | `--allow-multiple-instances` | Lehetővé teszi, hogy a QOwnNotes több példányát indítsa, még akkor is, ha a beállításokban nincs engedélyezve                            |
 | `--action <name>`      | Menüműveletet indít el az alkalmazás elindítása után (lásd alább)                                                                        |
 
-::: tip Ha problémái adódnak a QOwnNotes telepítésével, akkor érdemes új beállításokkal indítani az alkalmazást anélkül, hogy elveszítené az aktuális beállításokat a `--session` paraméter használatával.
+::: tip If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
 
 ```bash
 QOwnNotes --session test
@@ -39,7 +39,7 @@ QOwnNotes --action actionShow_Todo_List
 
 ::: tip A menümű objektumneveit innen szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Csak keresse meg az angol menü címét. Ne feledje, hogy ezek a szövegek idővel változhatnak. :::
 
-To trigger [scripting actions](../scripting/methods-and-objects.md#registering-a-custom-action) use `customAction_` followed by the identifier of the custom action. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.
+A [parancsfájl-műveletek](../scripting/methods-and-objects.md#registering-a-custom-action) elindításához használja a(z) `customAction_` elemet, amelyet az egyéni művelet azonosítója követ. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.
 
 For example to run the custom action `myAction` start QOwnNotes like this:
 
