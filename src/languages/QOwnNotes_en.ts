@@ -6446,7 +6446,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="6429"/>
-        <source>Show QR Code</source>
+        <source>Show QR code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

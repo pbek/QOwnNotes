@@ -6426,7 +6426,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                       </size>
                      </property>
                      <property name="text">
-                      <string>Show QR Code</string>
+                      <string>Show QR code</string>
                      </property>
                     </widget>
                    </item>
