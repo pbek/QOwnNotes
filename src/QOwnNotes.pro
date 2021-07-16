@@ -170,6 +170,7 @@ SOURCES += main.cpp\
     widgets/scriptsettingwidget.cpp \
     api/scriptapi.cpp \
     widgets/label.cpp \
+    widgets/qrcodewidget.cpp \
     widgets/lineedit.cpp \
     widgets/qtexteditsearchwidget.cpp \
     widgets/scriptlistwidget.cpp \
@@ -181,7 +182,8 @@ SOURCES += main.cpp\
     dialogs/imagedialog.cpp \
     dialogs/commandbar.cpp \
     models/commandmodel.cpp \
-    libraries/fuzzy/kfuzzymatcher.cpp
+    libraries/fuzzy/kfuzzymatcher.cpp \
+    libraries/qr-code-generator/QrCode.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -269,6 +271,7 @@ HEADERS  += mainwindow.h \
     widgets/scriptsettingwidget.h \
     api/scriptapi.h \
     widgets/label.h \
+    widgets/qrcodewidget.h \
     widgets/lineedit.h \
     widgets/qtexteditsearchwidget.h \
     widgets/scriptlistwidget.h \
@@ -280,7 +283,8 @@ HEADERS  += mainwindow.h \
     dialogs/imagedialog.h \
     dialogs/commandbar.h \
     models/commandmodel.h \
-    libraries/fuzzy/kfuzzymatcher.h
+    libraries/fuzzy/kfuzzymatcher.h \
+    libraries/qr-code-generator/QrCode.hpp
 
 FORMS    += mainwindow.ui \
     dialogs/attachmentdialog.ui \

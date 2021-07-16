@@ -281,6 +281,8 @@ set(SOURCE_FILES
     libraries/sonnet/src/core/tokenizer.cpp
     libraries/sonnet/src/core/tokenizer_p.h
     libraries/fuzzy/kfuzzymatcher.cpp
+    libraries/qr-code-generator/QrCode.hpp
+    libraries/qr-code-generator/QrCode.cpp
 
     threads/scriptthread.cpp
     threads/scriptthread.h
@@ -307,6 +309,8 @@ set(SOURCE_FILES
     widgets/logwidget.ui
     widgets/label.cpp
     widgets/label.h
+    widgets/qrcodewidget.cpp
+    widgets/qrcodewidget.h
     widgets/lineedit.cpp
     widgets/lineedit.h
     widgets/scriptsettingwidget.cpp

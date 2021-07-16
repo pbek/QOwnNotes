@@ -93,6 +93,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent)
         ui->settingsStackedWidget->addWidget(scrollArea);
     }
 
+    ui->qrCodeWidget->hide();
     ui->connectionTestLabel->hide();
     ui->darkModeInfoLabel->hide();
     ui->connectButton->setDefault(true);
@@ -4382,4 +4383,13 @@ void SettingsDialog::on_editorWidthInDFMOnlyCheckBox_toggled(bool checked) {
         const QSignalBlocker blocker(ui->showLineNumbersInEditorCheckBox);
         ui->showLineNumbersInEditorCheckBox->setChecked(false);
     }
+}
+
+void SettingsDialog::on_webAppTokenLineEdit_textChanged(const QString &arg1) {
+    ui->qrCodeWidget->setText(QStringLiteral("qontoken://") + arg1);
+}
+
+void SettingsDialog::on_showQRCodeButton_clicked() {
+    ui->showQRCodeButton->hide();
+    ui->qrCodeWidget->show();
 }

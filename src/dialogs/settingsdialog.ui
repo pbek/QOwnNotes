@@ -409,7 +409,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>14</number>
+            <number>20</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -6213,6 +6213,35 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            </widget>
            <widget class="QWidget" name="webApplicationPage">
             <layout class="QGridLayout" name="gridLayout_79">
+             <item row="2" column="0">
+              <spacer name="verticalSpacer_19">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="groupBox_37">
+               <property name="title">
+                <string>QOwnNotes web application support</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_31">
+                <item>
+                 <widget class="QCheckBox" name="enableWebApplicationCheckBox">
+                  <property name="text">
+                   <string>Enable web application support</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
              <item row="1" column="0">
               <widget class="QFrame" name="webAppFrame">
                <property name="frameShape">
@@ -6253,10 +6282,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string>QOwnNotes web application</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_80">
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_35">
+                   <item row="2" column="1" colspan="3">
+                    <widget class="QLineEdit" name="webAppTokenLineEdit">
+                     <property name="inputMask">
+                      <string notr="true">NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</string>
+                     </property>
                      <property name="text">
-                      <string>Server URL:</string>
+                      <string/>
+                     </property>
+                     <property name="maxLength">
+                      <number>32</number>
+                     </property>
+                     <property name="echoMode">
+                      <enum>QLineEdit::Password</enum>
                      </property>
                     </widget>
                    </item>
@@ -6267,20 +6305,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      </property>
                     </widget>
                    </item>
+                   <item row="1" column="1" colspan="6">
+                    <widget class="QLabel" name="label_38">
+                     <property name="text">
+                      <string>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</string>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="2" column="0">
                     <widget class="QLabel" name="label_36">
                      <property name="text">
                       <string>Security token:</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="1" colspan="6">
-                    <widget class="QLabel" name="label_37">
-                     <property name="text">
-                      <string>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</string>
-                     </property>
-                     <property name="wordWrap">
-                      <bool>true</bool>
                      </property>
                     </widget>
                    </item>
@@ -6298,29 +6336,50 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="1" colspan="6">
-                    <widget class="QLabel" name="label_38">
-                     <property name="text">
-                      <string>A web socket connetion to this server will be opened to act as bridge between the QOwnNotes web application and the QOwnNotes desktop application.</string>
+                   <item row="2" column="6">
+                    <widget class="QToolButton" name="webAppGenerateTokenButton">
+                     <property name="toolTip">
+                      <string>Generate new security token</string>
                      </property>
-                     <property name="wordWrap">
-                      <bool>true</bool>
+                     <property name="text">
+                      <string notr="true">…</string>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
+                       <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="1" colspan="3">
-                    <widget class="QLineEdit" name="webAppTokenLineEdit">
-                     <property name="inputMask">
-                      <string notr="true">NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</string>
+                   <item row="4" column="1">
+                    <widget class="QRCodeWidget" name="qrCodeWidget" native="true">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
                      </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>150</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_35">
                      <property name="text">
-                      <string/>
+                      <string>Server URL:</string>
                      </property>
-                     <property name="maxLength">
-                      <number>32</number>
+                    </widget>
+                   </item>
+                   <item row="5" column="1" colspan="6">
+                    <widget class="QLabel" name="label_37">
+                     <property name="text">
+                      <string>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</string>
                      </property>
-                     <property name="echoMode">
-                      <enum>QLineEdit::Password</enum>
+                     <property name="wordWrap">
+                      <bool>true</bool>
                      </property>
                     </widget>
                    </item>
@@ -6338,20 +6397,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="6">
-                    <widget class="QToolButton" name="webAppGenerateTokenButton">
-                     <property name="toolTip">
-                      <string>Generate new security token</string>
-                     </property>
-                     <property name="text">
-                      <string notr="true">…</string>
-                     </property>
-                     <property name="icon">
-                      <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
-                       <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="0" column="4">
                     <widget class="QToolButton" name="webAppServerUrlResetButton">
                      <property name="toolTip">
@@ -6366,40 +6411,30 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      </property>
                     </widget>
                    </item>
+                   <item row="3" column="1">
+                    <widget class="QPushButton" name="showQRCodeButton">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>150</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Show QR Code</string>
+                     </property>
+                    </widget>
+                   </item>
                   </layout>
                  </widget>
                 </item>
                </layout>
               </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QGroupBox" name="groupBox_37">
-               <property name="title">
-                <string>QOwnNotes web application support</string>
-               </property>
-               <layout class="QVBoxLayout" name="verticalLayout_31">
-                <item>
-                 <widget class="QCheckBox" name="enableWebApplicationCheckBox">
-                  <property name="text">
-                   <string>Enable web application support</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <spacer name="verticalSpacer_19">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
-               </property>
-              </spacer>
              </item>
             </layout>
            </widget>
@@ -6461,6 +6496,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
    <class>NoteFolderListWidget</class>
    <extends>QListWidget</extends>
    <header>widgets/notefolderlistwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QRCodeWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">widgets/qrcodewidget.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <tabstops>

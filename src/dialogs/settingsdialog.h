@@ -308,6 +308,10 @@ class SettingsDialog : public MasterDialog {
 
     void on_editorWidthInDFMOnlyCheckBox_toggled(bool checked);
 
+    void on_webAppTokenLineEdit_textChanged(const QString &arg1);
+
+    void on_showQRCodeButton_clicked();
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;
