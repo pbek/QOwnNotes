@@ -12,7 +12,8 @@
 [Telegram Group](https://t.me/QOwnNotes) |
 [IRC Chat](https://web.libera.chat/#qownnotes) |
 [Gitter Chat](https://gitter.im/qownnotes/qownnotes) |
-[QOwnNotes Web Companion Chrome extension](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+[QOwnNotes Web Companion Chrome extension](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
+[QOwnNotes Web App](https://app.qownnotes.org/)
 
 [![Build Status GitHub Actions](https://github.com/pbek/QOwnNotes/workflows/build-test/badge.svg?branch=develop)](https://github.com/pbek/QOwnNotes/actions)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
