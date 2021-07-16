@@ -33,5 +33,5 @@ Se vuoi proporre uno script per il **repository di script** segui le istruzioni 
 Se hai bisogno di accedere a una determinata funzionalità in QOwnNotes o hai domande o idee, apri un problema nella [pagina del problema QOwnNotes](https://github.com/pbek/QOwnNotes/issues).
 
 ::: tip
-Per la registrazione è possibile utilizzare il comando `script.log()` per accedere al widget di registro.
+Per il tracciamento puoi usare il comando `script.log()` per accedere al widget di registro.
 :::

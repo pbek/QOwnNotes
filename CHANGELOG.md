@@ -10,6 +10,7 @@
 - you are now able to **generate a QR code** from your QOwnNotes Web application token
   in the settings dialog that can be scanned with the QOwnNotes Web application
   [app.qownnotes.org](https://app.qownnotes.org/) (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
+- added more translation (thank you rakekniven, amirkbrpr, mguerra, pgrules7, marcoxbresciani)
 
 ## 21.7.5
 - if you uncheck `Bold` for `Strong text` in the *Editor fonts & colors* settings

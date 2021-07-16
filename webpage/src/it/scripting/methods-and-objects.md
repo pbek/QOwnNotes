@@ -11,7 +11,7 @@ Avvio di un programma esterno in background
   *
   * @param executablePath il percorso dell'eseguibile
   * @param parameters un elenco di stringhe di parametri
-  * @param callbackIdentifier un identificatore da utilizzare nella funzione onDetachedProcessCallback () (opzionale)
+  * @param callbackIdentifier un identificatore da utilizzare nella funzione onDetachedProcessCallback() (opzionale)
   * @param callbackParameter un parametro aggiuntivo per i loop o simili (opzionale)
   * @param processData dati scritti nel processo se viene utilizzata la richiamata (opzionale)
   * @return true in caso di successo, false in caso contrario
@@ -44,7 +44,7 @@ function onDetachedProcessCallback(callbackIdentifier, resultSet, cmd, thread) {
 }
 ```
 
-Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml) or [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/execute-command-after-note-update.qml).
+Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml), [callback.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/callback.qml) o [execute-command-after-note-update.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/execute-command-after-note-update.qml).
 
 Potresti anche voler dare un'occhiata all'hook [onDetachedProcessCallback](hooks.html#ondetachedprocesscallback).
 
@@ -80,9 +80,9 @@ Ottenere il percorso della cartella della nota corrente
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * QML wrapper to get the current note folder path
+ * Wrapper QML per ottenere il percorso della cartella della nota corrente
  *
- * @return the path of the current note folder
+ * @return il percorso della cartella della nota corrente
  */
 QString currentNoteFolderPath();
 ```
@@ -100,9 +100,9 @@ Ottenere la nota corrente
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * QML wrapper to get the current note
+ * Wrapper QML per ottenere la nota corrente
  *
- * @returns {NoteApi} the the current note object
+ * @returns {NoteApi} l'oggetto nota corrente
  */
 NoteApi currentNote();
 ```
@@ -120,7 +120,7 @@ Accesso al widget di registro
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * QML wrapper to log to the log widget
+ * Wrapper QML per accedere al registro
  *
  * @param text
  */
@@ -138,10 +138,10 @@ Download di un URL in una stringa
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * QML wrapper to download an url and returning it as text
+ * Wrapper QML per scaricare un url e ritornarlo come testo
  *
  * @param url
- * @return {QString} the content of the downloaded url
+ * @return {QString} il contenuto del url  scaricato
  */
 QString downloadUrlToString(QUrl url);
 ```
@@ -186,7 +186,7 @@ Inserimento di un file multimediale nella cartella multimediale
   * l'URL del supporto o il testo dell'immagine di markdown del supporto relativo alla nota corrente
   *
   * @param {QString} mediaFilePath
-  * @param {bool} returnUrlOnly if true solo l'URL multimediale verrà restituito (valore predefinito false)
+  * @param {bool} returnUrlOnly se true solo l'URL multimediale verrà restituito (valore predefinito false)
   * @return {QString} il markdown multimediale o l'URL
 ```
 
