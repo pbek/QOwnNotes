@@ -17,7 +17,7 @@ There was a settings page **Web application** to add support for the web applica
 
 ![QOwnNotes Web Application settings](/img/blog/web-application-settings.png "Setup communication to web application")
 
-Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes.
+Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes. You can also scan the token from the QR code with your phone in the web application.
 
 You can find the source code of the web application at [web-app on GitHub](https://github.com/qownnotes/web-app).
 
