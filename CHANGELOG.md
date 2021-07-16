@@ -1,5 +1,16 @@
 # QOwnNotes Changelog
 
+## 21.7.6
+- version 0.1.11 of the **QOwnNotes Web application** [app.qownnotes.org](https://app.qownnotes.org/)
+  was released (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
+    - you are now able to view the token
+    - you can now **scan the token from a QR code** in the settings dialog of
+      QOwnNotes 21.7.6 or newer
+    - all `console.log` commands are now `console.debug`
+- you are now able to **generate a QR code** from your QOwnNotes Web application token
+  in the settings dialog that can be scanned with the QOwnNotes Web application
+  [app.qownnotes.org](https://app.qownnotes.org/) (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))
+
 ## 21.7.5
 - if you uncheck `Bold` for `Strong text` in the *Editor fonts & colors* settings
   the text is now really not bold anymore in the editor (for [#2182](https://github.com/pbek/QOwnNotes/issues/2182))
