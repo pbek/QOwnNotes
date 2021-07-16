@@ -763,7 +763,7 @@ You can get the object names from the `*.ui` files, for example
 ::: tip
 The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of
 [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle)
-might also be a good reference for styles you might want to change.
+might also be a good reference for styles you can change.
 :::
 
 Take a look at [Style Sheet
