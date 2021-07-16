@@ -760,6 +760,12 @@ You may want to take a look at the example
 You can get the object names from the `*.ui` files, for example
 [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
 
+::: tip
+The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of
+[qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle)
+might also be a good reference for styles you might want to change.
+:::
+
 Take a look at [Style Sheet
 Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) for a
 reference of what styles are available.
