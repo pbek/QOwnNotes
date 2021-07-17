@@ -312,6 +312,8 @@ class SettingsDialog : public MasterDialog {
 
     void on_showQRCodeButton_clicked();
 
+    void on_scriptReloadEngineButton2_clicked();
+
 private:
     Ui::SettingsDialog *ui;
     QStatusBar *noteFolderRemotePathTreeStatusBar;

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.7.7
+- there now also is a `Reload script engine` button for scripts from the script
+  repository in the settings dialog (for [#2187](https://github.com/pbek/QOwnNotes/issues/2187))
+    - this makes it for example easier to test changes to the user interface 
+
 ## 21.7.6
 - version 0.1.11 of the **QOwnNotes Web application** [app.qownnotes.org](https://app.qownnotes.org/)
   was released (for [#2104](https://github.com/pbek/QOwnNotes/issues/2104))

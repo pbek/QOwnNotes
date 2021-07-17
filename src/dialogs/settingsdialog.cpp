@@ -3147,6 +3147,7 @@ void SettingsDialog::reloadCurrentScriptPage() {
         ui->scriptPathButton->setDisabled(isScriptFromRepository);
         ui->scriptRepositoryItemFrame->setVisible(isScriptFromRepository);
         ui->localScriptItemFrame->setHidden(isScriptFromRepository);
+        ui->repositoryScriptItemFrame->setHidden(!isScriptFromRepository);
         ui->scriptNameLineEdit->setHidden(isScriptFromRepository);
         ui->scriptNameLineEditLabel->setHidden(isScriptFromRepository);
 
@@ -4392,4 +4393,8 @@ void SettingsDialog::on_webAppTokenLineEdit_textChanged(const QString &arg1) {
 void SettingsDialog::on_showQRCodeButton_clicked() {
     ui->showQRCodeButton->hide();
     ui->qrCodeWidget->show();
+}
+
+void SettingsDialog::on_scriptReloadEngineButton2_clicked() {
+    on_scriptReloadEngineButton_clicked();
 }
