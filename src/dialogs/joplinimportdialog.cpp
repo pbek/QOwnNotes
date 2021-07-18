@@ -11,7 +11,6 @@ JoplinImportDialog::JoplinImportDialog(QWidget *parent)
     ui->setupUi(this);
 
     ui->groupBox->setVisible(false);
-    ui->tagImportCheckBox->setDisabled(true);
     ui->imageImportCheckBox->setDisabled(true);
     ui->attachmentImportCheckBox->setDisabled(true);
 
@@ -199,8 +198,10 @@ bool JoplinImportDialog::importNote(const QString& id, const QString& text,
     note.store();
     note.storeNoteTextFileToDisk();
 
-    // tag the note if tags are found
-    tagNote(id, note);
+    if (ui->tagImportCheckBox->isChecked()) {
+        // tag the note if tags are found
+        tagNote(id, note);
+    }
 
     return true;
 }
