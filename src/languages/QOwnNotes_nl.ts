@@ -7418,7 +7418,7 @@ Verbinding foutbericht: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2317"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>De database is opnieuw geïnitialiseerd. Start de applicatie nu opnieuw!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2328"/>

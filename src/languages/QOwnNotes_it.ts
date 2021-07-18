@@ -7412,7 +7412,7 @@ Messaggio di errore: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2317"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>Il database è stato reinizializzato. Si prega di riavviare l'applicazione ora!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2328"/>

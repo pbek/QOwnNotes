@@ -873,7 +873,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Usar FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
@@ -883,7 +883,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>Mostrar posição dos marcadores de texto</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
@@ -898,7 +898,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Início da linha</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
@@ -914,7 +914,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>Destacar resultados da busca</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
@@ -929,17 +929,17 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>Indentação automática</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>Pesquisa incremental</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Usar diálogo de busca</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
@@ -1024,7 +1024,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>Padrão: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1596,7 +1596,7 @@
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
 <source>Minimum 8 characters</source>
-<translation>Minimo de 8 caracteres</translation>
+<translation>Mínimo de 8 caracteres</translation>
 </message>
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1604,7 +1604,7 @@
 <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
 <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
 <source>Minimum 10 characters</source>
-<translation>Minimo de 10 caracteres</translation>
+<translation>Mínimo de 10 caracteres</translation>
 </message>
 </context>
 <context>
@@ -1612,7 +1612,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Importação do Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
@@ -1622,37 +1622,37 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="27"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Selecionar diretório</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="38"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Importar imagens</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="51"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>%v de %m foram importados</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="92"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Importar notas</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="119"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Importar tags</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="129"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Se você tem um arquivo "JEX - Joplin Export File", por favor extraia o conteúdo dele para um diretório e então o escolha</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>Metadata to import</source>
-<translation type="unfinished">Metadata to import</translation>
+<translation>Metadados para importar</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="185"/>
@@ -1662,7 +1662,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="192"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Importar anexos</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="202"/>
@@ -2350,7 +2350,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1460"/>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1477"/>
@@ -2553,7 +2553,7 @@
 <location filename="../mainwindow.ui" line="1990"/>
 <location filename="../mainwindow.ui" line="1993"/>
 <source>Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
-<translation type="unfinished">Open the #qownnotes IRC (Kiwi) channel, you have to stay online to get a response</translation>
+<translation>Abir o canal #qownnotes no IRC (Kiwi). Você terá que ficar online para receber a resposta</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2057"/>
@@ -2586,7 +2586,7 @@
 <location filename="../mainwindow.ui" line="2208"/>
 <source>Open the QOwnNotes Matrix (Element) room</source>
 <extracomment>"Element" as in the chat service</extracomment>
-<translation type="unfinished">Open the QOwnNotes Matrix (Element) room</translation>
+<translation>Abrir a sala QOwnNotes no Matrix (Element)</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2235"/>
@@ -2723,7 +2723,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2491"/>
 <source>Manage stored attachments</source>
-<translation type="unfinished">Manage stored attachments</translation>
+<translation>Gerenciar anexos armazenados</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2496"/>
@@ -2835,12 +2835,12 @@
 <message>
 <location filename="../mainwindow.ui" line="2673"/>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>Importar notas do Joplin</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -2881,7 +2881,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2178"/>
 <source>Manage stored image files</source>
-<translation type="unfinished">Manage stored image files</translation>
+<translation>Gerenciar arquivos de imagens armazenados</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2220"/>
@@ -4010,12 +4010,12 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../mainwindow.cpp" line="598"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>Ação não encontrada!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="599"/>
 <source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
-<translation type="unfinished">Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</translation>
+<translation>Não foi possível encontrar o menu de ação &lt;code&gt;%1&lt;/code&gt;! Você digitou ele corretamente?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="886"/>
@@ -4195,7 +4195,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../mainwindow.cpp" line="6453"/>
 <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
-<translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+<translation>A nota não foi encontrada. Deseja criar &lt;strong&gt;%1&lt;/strong&gt; em &lt;strong&gt;%2&lt;/strong&gt;?</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6880"/>
@@ -4365,13 +4365,13 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../services/owncloudservice.cpp" line="235"/>
 <source>incorrect</source>
-<translation type="unfinished">incorrect</translation>
+<translation>incorreto</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="237"/>
 <location filename="../services/owncloudservice.cpp" line="535"/>
 <source>not connected</source>
-<translation type="unfinished">not connected</translation>
+<translation>não conectado</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="252"/>
@@ -4404,19 +4404,19 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../services/owncloudservice.cpp" line="331"/>
 <source>not detected</source>
-<translation type="unfinished">not detected</translation>
+<translation>não detectado</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="434"/>
 <location filename="../services/owncloudservice.cpp" line="529"/>
 <source>not found</source>
-<translation type="unfinished">not found</translation>
+<translation>não encontrado</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="471"/>
 <location filename="../services/owncloudservice.cpp" line="473"/>
 <source>unknown</source>
-<translation type="unfinished">unknown</translation>
+<translation>desconhecido</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="482"/>
@@ -4427,7 +4427,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <location filename="../services/owncloudservice.cpp" line="503"/>
 <location filename="../services/owncloudservice.cpp" line="511"/>
 <source>not enabled</source>
-<translation type="unfinished">not enabled</translation>
+<translation>não ativado</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="585"/>
@@ -4636,12 +4636,12 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../utils/gui.cpp" line="1020"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; última modificação: %2</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1025"/>
 <source>&lt;br /&gt;path: %1</source>
-<translation type="unfinished">&lt;br /&gt;path: %1</translation>
+<translation>&lt;br /&gt;caminho: %1</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4651,7 +4651,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../utils/git.cpp" line="77"/>
 <source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
-<translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</translation>
+<translation>O comando &lt;code&gt;%1&lt;/code&gt; com os argumentos &lt;code&gt;%2&lt;/code&gt; falhou!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="4269"/>
@@ -4698,22 +4698,22 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
 <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
 <source>File name changed</source>
-<translation type="unfinished">File name changed</translation>
+<translation>O nome do arquivo foi alterado</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
 <source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</numerusform>
+<translation>
+<numerusform>%n nota está usando esse anexo. Você também gostaria de renomear esse arquivo na respectiva nota?</numerusform>
+<numerusform>%n notas estão usando esse anexo. Você também gostaria de renomear esse arquivo nas respectivas notas?</numerusform>
 </translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="376"/>
 <source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
-<translation type="unfinished">
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
-<numerusform>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</numerusform>
+<translation>
+<numerusform>%n nota está usando essa imagem. Você também gostaria de renomear esse arquivo na respectiva nota?</numerusform>
+<numerusform>%n notas estão usando essa imagem. Você também gostaria de renomear esse arquivo nas respectivas notas?</numerusform>
 </translation>
 </message>
 </context>
@@ -6305,12 +6305,12 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
 <source>Web application</source>
-<translation type="unfinished">Web application</translation>
+<translation>Aplicação Web</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1418"/>
 <source>If your password doesn't work, create an app password (button on the right)</source>
-<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
+<translation>Se sua senha não funciona, crie uma senha de aplicativo (na parte inferior direita)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="2169"/>
@@ -6511,7 +6511,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6307"/>
 <source>You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</source>
-<translation type="unfinished">You can use the &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; to be able to insert photos into QOwnNotes on your desktop.</translation>
+<translation>Você pode utilizar o &lt;a href="%1"&gt;QOwnNotes Web App&lt;/a&gt; para inserir fotos no QOwnNotes do seu desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6323"/>
@@ -6521,22 +6521,22 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6413"/>
 <source>Server URL:</source>
-<translation type="unfinished">Server URL:</translation>
+<translation>URL do servidor:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6470"/>
 <source>Show QR code</source>
-<translation type="unfinished">Show QR code</translation>
+<translation>Exibir QR code</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6362"/>
 <source>Security token:</source>
-<translation type="unfinished">Security token:</translation>
+<translation>Token de segurança:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6420"/>
 <source>You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</source>
-<translation type="unfinished">You need to enter this token in the QOwnNotes web application to be able to talk to your QOwnNotes desktop application.</translation>
+<translation>Você precisa inserir esse token no QOwnNotes web app para permitir a comunicação com a aplicação desktop.</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6352"/>
@@ -6546,12 +6546,12 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6430"/>
 <source>Copy security token to clipboard</source>
-<translation type="unfinished">Copy security token to clipboard</translation>
+<translation>Copiar token de segurança para à área de transferência (clipboard)</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6383"/>
 <source>Generate new security token</source>
-<translation type="unfinished">Generate new security token</translation>
+<translation>Gerar novo token de segurança</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6444"/>
@@ -6561,7 +6561,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6273"/>
 <source>QOwnNotes web application support</source>
-<translation type="unfinished">QOwnNotes web application support</translation>
+<translation>Suporte ao QOwnNotes web app</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6279"/>
@@ -7956,135 +7956,135 @@ sufixos "ise"</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="378"/>
 <source>Delete selected attachments</source>
-<translation type="unfinished">Delete selected attachments</translation>
+<translation>Deletar anexos selecionados</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="381"/>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>Deletar</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
 <source>Stored attachments</source>
-<translation type="unfinished">Stored attachments</translation>
+<translation>Anexos armazenados</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
 <source>Used in notes:</source>
-<translation type="unfinished">Used in notes:</translation>
+<translation>Usado nas notas:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
 <source>Find attachment</source>
-<translation type="unfinished">Find attachment</translation>
+<translation>Procurar anexo</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
 <source>Only show images that are not used in notes</source>
-<translation type="unfinished">Only show images that are not used in notes</translation>
+<translation>Somente exibir imagens que não estão sendo utilizadas em notas</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
 <source>Only show orphaned attachments</source>
-<translation type="unfinished">Only show orphaned attachments</translation>
+<translation>Somente exibir imagens órfãs   </translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
 <source>Add selected attachments to the current note</source>
-<translation type="unfinished">Add selected attachments to the current note</translation>
+<translation>Adicionar o anexo selecionado para à nota atual</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="342"/>
 <source>Add to current note</source>
-<translation type="unfinished">Add to current note</translation>
+<translation>Adicionar à nota atual</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="353"/>
 <source>Open &amp;attachment</source>
-<translation type="unfinished">Open &amp;attachment</translation>
+<translation>Abrir &amp;anexo</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="364"/>
 <source>Open the attachments folder</source>
-<translation type="unfinished">Open the attachments folder</translation>
+<translation>Abrir pasta dos anexos</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="367"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>Abrir &amp;pasta</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="392"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>Atualizar</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="102"/>
 <source>File size:</source>
-<translation type="unfinished">File size:</translation>
+<translation>Tamanho do arquivo:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="194"/>
 <source>File type:</source>
-<translation type="unfinished">File type:</translation>
+<translation>Tipo do arquivo:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="207"/>
 <source>File path:</source>
-<translation type="unfinished">File path:</translation>
+<translation>Caminho do arquivo:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>Última modificação em %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>Caminho: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>Deletar arquivos selecionados</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-<translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<translation>
+<numerusform>Deletar o arquivo selecionado (&lt;strong&gt;%n&lt;/strong&gt;)?</numerusform>
+<numerusform>Deletar os arquivos selecionados (&lt;strong&gt;%n&lt;/strong&gt;)?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
 <source>&amp;Open attachment</source>
-<translation type="unfinished">&amp;Open attachment</translation>
+<translation>&amp;Abrir anexo</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
 <source>&amp;Rename attachment</source>
-<translation type="unfinished">&amp;Rename attachment</translation>
+<translation>&amp;Renomear anexo</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
 <source>&amp;Delete attachments</source>
-<translation type="unfinished">&amp;Delete attachments</translation>
+<translation>&amp;Deletar anexos</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
 <source>&amp;Add attachments to current note</source>
-<translation type="unfinished">&amp;Add attachments to current note</translation>
+<translation>&amp;Adicionar anexos para à nota atual</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>Arquivo não existe</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>O arquivo &lt;strong&gt;%1&lt;/strong&gt; não existe. Você não pode renomeá-lo!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
@@ -8099,17 +8099,17 @@ sufixos "ise"</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>Falha ao renomear o arquivo</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>Falha ao renomear o arquivo &lt;strong&gt;%1&lt;/strong&gt;!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>&amp;Abrir nota</translation>
 </message>
 </context>
 <context>
@@ -8117,105 +8117,105 @@ sufixos "ise"</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
 <source>Stored images</source>
-<translation type="unfinished">Stored images</translation>
+<translation>Imagens armazenadas</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
 <source>Find image</source>
-<translation type="unfinished">Find image</translation>
+<translation>Procurar imagem</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="126"/>
 <source>Add selected images to the current note</source>
-<translation type="unfinished">Add selected images to the current note</translation>
+<translation>Adicionar imagens à nota atual</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
 <source>Open the media folder</source>
-<translation type="unfinished">Open the media folder</translation>
+<translation>Abrir pasta de mídia</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="67"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>Abrir &amp;pasta</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="78"/>
 <source>Open image externally</source>
-<translation type="unfinished">Open image externally</translation>
+<translation>&amp;Abrir imagem externamente</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="81"/>
 <source>Open image</source>
-<translation type="unfinished">Open image</translation>
+<translation>Abrir imagem</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="129"/>
 <source>Add to current note</source>
-<translation type="unfinished">Add to current note</translation>
+<translation>Adicionar à nota atual</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="140"/>
 <source>Delete selected images</source>
-<translation type="unfinished">Delete selected images</translation>
+<translation>Deletar imagens selecionadas</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="143"/>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>Deletar</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="175"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>Atualizar</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
 <source>Used in notes:</source>
-<translation type="unfinished">Used in notes:</translation>
+<translation>Usado nas notas:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
 <source>Only show images that are not used in notes</source>
-<translation type="unfinished">Only show images that are not used in notes</translation>
+<translation>Somente exibir imagens que não estão sendo utilizadas em notas</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
 <source>Only show orphaned images</source>
-<translation type="unfinished">Only show orphaned images</translation>
+<translation>Somente exibir imagens órfãs   </translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="83"/>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>Última modificação em %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="148"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>Caminho: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="187"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>Deletar arquivos selecionados</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="188"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-<translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<translation>
+<numerusform>Deletar o arquivo selecionado (&lt;strong&gt;%n&lt;/strong&gt;)?</numerusform>
+<numerusform>Deletar os arquivos selecionados (&lt;strong&gt;%n&lt;/strong&gt;)?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>Arquivo não existe</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>O arquivo &lt;strong&gt;%1&lt;/strong&gt; não existe. Você não pode renomeá-lo!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
@@ -8230,37 +8230,37 @@ sufixos "ise"</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="359"/>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>Falha ao renomear o arquivo</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="360"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>Falha ao renomear o arquivo &lt;strong&gt;%1&lt;/strong&gt;!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="436"/>
 <source>&amp;Open image externally</source>
-<translation type="unfinished">&amp;Open image externally</translation>
+<translation>&amp;Abrir imagem externamente</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="437"/>
 <source>&amp;Rename image</source>
-<translation type="unfinished">&amp;Rename image</translation>
+<translation>&amp;Renomear imagem</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="438"/>
 <source>&amp;Delete images</source>
-<translation type="unfinished">&amp;Delete images</translation>
+<translation>&amp;Deletar imagens</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="439"/>
 <source>&amp;Add images to current note</source>
-<translation type="unfinished">&amp;Add images to current note</translation>
+<translation>&amp;Adicionar imagens para à nota atual</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="472"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>&amp;Abrir nota</translation>
 </message>
 </context>
 <context>
@@ -8888,12 +8888,12 @@ Isso não poderá ser desfeito!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="440"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
+<translation>O executável do QOwnNotes '%1' não tem permissões de escrita! Ela é necessária para para que à atualização seja feita.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="452"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
+<translation>Não foi possível tornar o arquivo temporário '%1' executável. Você precisa substituir '%2' manualmente.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="462"/>
@@ -8908,27 +8908,27 @@ Isso não poderá ser desfeito!</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="479"/>
 <source>Restart application</source>
-<translation type="unfinished">Restart application</translation>
+<translation>Reiniciar o aplicativo</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="485"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
+<translation>Você precisa reiniciar a aplicação manualmente para completar o processo de atualização.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="491"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished">You now can restart the application to complete the update process.</translation>
+<translation>Agora você pode reiniciar a aplicação para completar o processo de atualização.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Restart</source>
-<translation type="unfinished">Restart</translation>
+<translation>Reiniciar</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>Cancelar</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
@@ -9036,7 +9036,7 @@ Isso não poderá ser desfeito!</translation>
 <message>
 <location filename="../services/webappclientservice.cpp" line="102"/>
 <source>QOwnNotes is now connected via websocket to %1</source>
-<translation type="unfinished">QOwnNotes is now connected via websocket to %1</translation>
+<translation>O QOwnNotes agora está conectado via websocket ao %1</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="111"/>
@@ -9051,12 +9051,12 @@ Isso não poderá ser desfeito!</translation>
 <message>
 <location filename="../services/webappclientservice.cpp" line="139"/>
 <source>Image received</source>
-<translation type="unfinished">Image received</translation>
+<translation>Imagem recebida</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="140"/>
 <source>Insert image received from QOwnNotes web application?</source>
-<translation type="unfinished">Insert image received from QOwnNotes web application?</translation>
+<translation>Inserir imagem recebida do QOwnNotes web app?</translation>
 </message>
 </context>
 <context>
@@ -9263,7 +9263,7 @@ Isso não poderá ser desfeito!</translation>
 <message>
 <location filename="../main.cpp" line="133"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>Ativa uma ação do menu após à aplicação ser iniciada.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="553"/>

@@ -7,6 +7,7 @@
     - the raw metadata part at the bottom of the note are now be not imported any more
     - numbers and points are now only removed from the beginning of the note
       name instead of the whole note name
+- added more translation (thank you i****myself, amirkbrpr, rawfreeamy)
 
 ## 21.7.8
 - you now can **import notes** from a *RAW - Joplin Export Directory* of
@@ -257,7 +258,7 @@
   (for [#2099](https://github.com/pbek/QOwnNotes/issues/2099))
 - fixed more Qt 6 build errors (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304), thank you @Waqar144)
 - added more translation (thank you amirkbrpr, polkillas, mguerra, rogepix,
-  whenwesober, ihatemyself, rawfreeamy, marcoxbresciani)
+  whenwesober, i****myself, rawfreeamy, marcoxbresciani)
 
 ## 21.4.0
 - added the **new editor color schema** *Gruvbox*
@@ -269,7 +270,7 @@
       for a list of all shortcuts
 - fixed more Qt 6 build errors (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
 - added more translation (thank you yoshua-chan, rakekniven, mguerra, rogepix,
-  gregory.k, ihatemyself, gbabin, whenwesober, rawfreeamy)
+  gregory.k, i****myself, gbabin, whenwesober, rawfreeamy)
 
 ## 21.3.9
 - added the **new editor color schema** *Serious*
@@ -688,7 +689,7 @@
 - the feature to jump to the start/end of the document when in the first/last line
   was improved to detect the visible line (for [#1892](https://github.com/pbek/QOwnNotes/issues/1892))
 - added more translation (thank you zmni, gbabin, silviact, VasilikiBotsou, filipedias321,
-  unchase, mlimacarlos, cberetta, richarson, rakekniven, ihatemyself, amirkbrpr)
+  unchase, mlimacarlos, cberetta, richarson, rakekniven, i****myself, amirkbrpr)
 
 ## 20.9.11
 - the web socket server for the QOwnNotes browser extension is now only listening

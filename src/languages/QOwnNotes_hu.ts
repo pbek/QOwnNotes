@@ -1617,67 +1617,67 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Jegyzetek importálása Joplinból</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Válassza ki a "RAW - Joplin Export Directory" -t, ahonnan jegyzeteket szeretne importálni:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="27"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Válassza ki a könyvtárat</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="38"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Képek importálása</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="51"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>%v fájl importálva %m fájlból</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="92"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Jegyzetek importálása</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="119"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Címkék importálása</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="129"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Ha csak "JEX - Joplin Export File" fájlja van, kérjük, vonja ki a fájl tartalmát egy könyvtárba, és válassza ki azt a könyvtárat.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>Metadata to import</source>
-<translation type="unfinished">Metadata to import</translation>
+<translation>Metaadatok importálása</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="185"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Joplin Export Directory</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="192"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Mellékletek importálása</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="202"/>
 <source>There is no distinction between different Joplin notebooks, all notes will just be imported.</source>
-<translation type="unfinished">There is no distinction between different Joplin notebooks, all notes will just be imported.</translation>
+<translation>Nincs különbség a különböző Joplin notebookok között, az összes jegyzet csak importálásra kerül.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="56"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Az importáláshoz válassza a „RAW - Joplin Export Directory” lehetőséget</translation>
 </message>
 </context>
 <context>
@@ -2845,7 +2845,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>Jegyzetek importálása Joplin-ból</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -7414,7 +7414,7 @@ Kapcsolathiba üzenet: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2317"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>Az adatbázist újraindították. Kérjük, indítsa újra az alkalmazást most!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2328"/>

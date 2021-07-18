@@ -1617,67 +1617,67 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Joplin-Import</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Bitte wählen Sie das "RAW - Joplin Export Directory" aus, aus dem Sie Notizen importieren möchten:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="27"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Verzeichnis auswählen</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="38"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Bilder importieren</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="51"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>%v von %m Datei(en) importiert</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="92"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Notizen importieren</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="119"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Tags importieren</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="129"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Wenn Sie nur eine "JEX - Joplin Export File" haben, extrahieren Sie den Inhalt dieser Datei in ein Verzeichnis und wählen Sie dieses Verzeichnis aus.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>Metadata to import</source>
-<translation type="unfinished">Metadata to import</translation>
+<translation>Zu importierende Metadaten auswählen</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="185"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Joplin-Exportverzeichnis</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="192"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Anhänge importieren</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="202"/>
 <source>There is no distinction between different Joplin notebooks, all notes will just be imported.</source>
-<translation type="unfinished">There is no distinction between different Joplin notebooks, all notes will just be imported.</translation>
+<translation>Es gibt keine Unterscheidung zwischen verschiedenen Joplin-Notizbüchern, alle Notizen werden nur importiert.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="56"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Wählen Sie 'RAW - Joplin Export Directory' zum Importieren</translation>
 </message>
 </context>
 <context>
@@ -2846,7 +2846,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>Notizen aus Joplin importieren</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -7413,7 +7413,7 @@ Fehlermeldung: </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2317"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>Die Datenbank wurde neu initialisiert. Bitte starten Sie die Anwendung jetzt neu!</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2328"/>
