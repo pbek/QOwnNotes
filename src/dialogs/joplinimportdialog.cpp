@@ -114,7 +114,7 @@ bool JoplinImportDialog::importNote(const QString& text, const QString& dirPath)
         QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
 
     auto title = textLines.at(0);
-    title.remove(QRegularExpression("[\\d+\\.]"));
+    title.remove(QRegularExpression("^[\\d+\\.]+"));
     auto noteText = Note::createNoteHeader(title.trimmed());
     noteText += text.trimmed();
 
