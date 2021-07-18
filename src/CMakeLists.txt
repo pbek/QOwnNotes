@@ -129,6 +129,9 @@ set(SOURCE_FILES
     dialogs/evernoteimportdialog.cpp
     dialogs/evernoteimportdialog.h
     dialogs/evernoteimportdialog.ui
+    dialogs/joplinimportdialog.cpp
+    dialogs/joplinimportdialog.h
+    dialogs/joplinimportdialog.ui
     dialogs/serverbookmarksimportdialog.cpp
     dialogs/serverbookmarksimportdialog.h
     dialogs/serverbookmarksimportdialog.ui

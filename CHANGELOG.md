@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 21.7.8
+- you now can **import notes** from a *RAW - Joplin Export Directory* of
+  **[Joplin](https://joplinapp.org/)** with a new import dialog in the *Note menu*
+  (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))
+    - this first draft of the feature supports only importing all files that are
+      marked as "note" in a rudimentary fashion
+    - if you just have a *JEX - Joplin Export File* please extract the content
+      of that file to a directory and select that directory in the import dialog
+    - note that this import is done by reverse engineering, since there is no
+      documentation for the Joplin export format
+    - no tags, images or attachments are yet imported
+
 ## 21.7.7
 - there now also is a `Reload script engine` button for scripts from the script
   repository in the settings dialog (for [#2187](https://github.com/pbek/QOwnNotes/issues/2187))

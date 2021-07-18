@@ -18,6 +18,7 @@
 #include <dialogs/attachmentdialog.h>
 #include <dialogs/dictionarymanagerdialog.h>
 #include <dialogs/evernoteimportdialog.h>
+#include <dialogs/joplinimportdialog.h>
 #include <dialogs/filedialog.h>
 #include <dialogs/imagedialog.h>
 #include <dialogs/localtrashdialog.h>
@@ -13128,4 +13129,19 @@ bool MainWindow::insertDataUrlAsFileIntoCurrentNote(const QString &dataUrl) {
     insertNoteText(markdownCode);
 
     return true;
+}
+
+void MainWindow::on_actionImport_notes_from_Joplin_triggered() {
+    const QSignalBlocker blocker(noteDirectoryWatcher);
+    Q_UNUSED(blocker)
+
+    auto dialog = new JoplinImportDialog(this);
+    dialog->exec();
+
+    if (dialog->getImportCount() > 0) {
+        // reload the note folder after importing new notes
+        buildNotesIndexAndLoadNoteDirectoryList(true, true);
+    }
+
+    delete (dialog);
 }

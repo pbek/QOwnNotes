@@ -158,6 +158,7 @@ SOURCES += main.cpp\
     dialogs/sharedialog.cpp \
     widgets/fontcolorwidget.cpp \
     dialogs/evernoteimportdialog.cpp \
+    dialogs/joplinimportdialog.cpp \
     dialogs/storedimagesdialog.cpp \
     dialogs/storedattachmentsdialog.cpp \
     dialogs/actiondialog.cpp \
@@ -255,6 +256,7 @@ HEADERS  += mainwindow.h \
     dialogs/sharedialog.h \
     widgets/fontcolorwidget.h \
     dialogs/evernoteimportdialog.h \
+    dialogs/joplinimportdialog.h \
     dialogs/storedimagesdialog.h \
     dialogs/storedattachmentsdialog.h \
     dialogs/actiondialog.h \
@@ -306,6 +308,7 @@ FORMS    += mainwindow.ui \
     dialogs/sharedialog.ui \
     widgets/fontcolorwidget.ui \
     dialogs/evernoteimportdialog.ui \
+    dialogs/joplinimportdialog.ui \
     dialogs/storedimagesdialog.ui \
     dialogs/storedattachmentsdialog.ui \
     dialogs/actiondialog.ui \

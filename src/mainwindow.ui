@@ -903,6 +903,7 @@ p, li { white-space: pre-wrap; }
        <normaloff>.</normaloff>.</iconset>
      </property>
      <addaction name="actionImport_notes_from_Evernote"/>
+     <addaction name="actionImport_notes_from_Joplin"/>
      <addaction name="actionImport_notes_from_text_files"/>
      <addaction name="actionImport_bookmarks_from_server"/>
     </widget>
@@ -2670,6 +2671,15 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+L</string>
+   </property>
+  </action>
+  <action name="actionImport_notes_from_Joplin">
+   <property name="icon">
+    <iconset theme="text-x-markdown" resource="breeze-dark-qownnotes.qrc">
+     <normaloff>:/icons/breeze-dark-qownnotes/16x16/text-x-markdown.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/text-x-markdown.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Import notes from Joplin</string>
    </property>
   </action>
  </widget>

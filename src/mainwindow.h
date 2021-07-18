@@ -674,6 +674,8 @@ class MainWindow : public QMainWindow {
 
     void on_actionInsert_note_link_triggered();
 
+    void on_actionImport_notes_from_Joplin_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
