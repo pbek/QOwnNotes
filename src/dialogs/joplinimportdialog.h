@@ -42,4 +42,6 @@ class JoplinImportDialog : public MasterDialog {
     bool importNote(const QString& id, const QString& text,
                     const QString& dirPath);
     void tagNote(const QString& id, const Note& note);
+    void handleImages(Note& note, const QString& dirPath);
+    void handleAttachments(Note& note, const QString& dirPath);
 };

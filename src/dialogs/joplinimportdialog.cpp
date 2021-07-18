@@ -11,15 +11,17 @@ JoplinImportDialog::JoplinImportDialog(QWidget *parent)
     ui->setupUi(this);
 
     ui->groupBox->setVisible(false);
-    ui->imageImportCheckBox->setDisabled(true);
-    ui->attachmentImportCheckBox->setDisabled(true);
-
     ui->progressBar->hide();
     ui->progressBar->setMinimum(0);
     ui->progressBar->setValue(0);
     _importCount = 0;
 
     QSettings settings;
+    ui->tagImportCheckBox->setChecked(
+        settings
+            .value(QStringLiteral("JoplinImport/TagImportCheckBoxChecked"),
+                   true)
+            .toBool());
     ui->imageImportCheckBox->setChecked(
         settings
             .value(QStringLiteral("JoplinImport/ImageImportCheckBoxChecked"),
@@ -35,6 +37,9 @@ JoplinImportDialog::JoplinImportDialog(QWidget *parent)
 
 JoplinImportDialog::~JoplinImportDialog() {
     QSettings settings;
+    settings.setValue(
+        QStringLiteral("JoplinImport/TagImportCheckBoxChecked"),
+        ui->tagImportCheckBox->isChecked());
     settings.setValue(
         QStringLiteral("JoplinImport/ImageImportCheckBoxChecked"),
         ui->imageImportCheckBox->isChecked());
@@ -84,7 +89,6 @@ void JoplinImportDialog::on_importButton_clicked() {
     }
 
     QStringList files = dir.entryList(QStringList() << "*.md", QDir::Files);
-    qDebug() << __func__ << " - 'files': " << files;
     ui->importButton->setEnabled(false);
     ui->progressBar->setMaximum(files.count());
     ui->progressBar->show();
@@ -118,9 +122,9 @@ void JoplinImportDialog::on_importButton_clicked() {
                        "^type_: 4$", QRegularExpression::MultilineOption))) {
             if (text.contains(QRegularExpression(
                     "^mime: image/", QRegularExpression::MultilineOption))) {
-                _imageData[id] = textLines[0];
+                _imageData[id] = text;
             } else {
-                _attachmentData[id] = textLines[0];
+                _attachmentData[id] = text;
             }
         }
         // check if text contains a tag
@@ -206,6 +210,16 @@ bool JoplinImportDialog::importNote(const QString& id, const QString& text,
         tagNote(id, note);
     }
 
+    if (ui->imageImportCheckBox->isChecked()) {
+        handleImages(note, dirPath);
+        note.storeNoteTextFileToDisk();
+    }
+
+    if (ui->attachmentImportCheckBox->isChecked()) {
+        handleAttachments(note, dirPath);
+        note.storeNoteTextFileToDisk();
+    }
+
     return true;
 }
 
@@ -234,4 +248,102 @@ void JoplinImportDialog::tagNote(const QString& id, const Note& note) {
             tag.linkToNote(note);
         }
     }
+}
+
+/**
+ * Handle note images
+ *
+ * @param note
+ * @param dirPath
+ */
+void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
+    QString noteText = note.getNoteText();
+    auto i = QRegularExpression(R"(!\[([^\]]+)\]\(:\/([\w\d]+)\))")
+                 .globalMatch(noteText);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString imageTag = match.captured(0);
+        QString imageName = match.captured(1);
+        QString imageId = match.captured(2);
+        QString imageData = _imageData[imageId];
+
+        qDebug() << __func__ << " - 'imageName': " << imageName;
+        qDebug() << __func__ << " - 'imageId': " << imageId;
+
+        auto fileExtensionMatch = QRegularExpression("^file_extension: (.+)$",
+                          QRegularExpression::MultilineOption).match(imageData);
+
+        if (!fileExtensionMatch.hasMatch()) {
+            continue;
+        }
+
+        QString fileExtension = fileExtensionMatch.captured(1);
+
+        auto *mediaFile = new QFile(dirPath + "/resources/" + imageId +
+                                    "." + fileExtension);
+
+        qDebug() << __func__ << " - 'mediaFile': " << mediaFile;
+
+        if (!mediaFile->exists()) {
+            continue;
+        }
+
+        QString mediaMarkdown = note.getInsertMediaMarkdown(
+            mediaFile, false, false, imageName);
+
+        qDebug() << __func__ << " - 'mediaMarkdown': " << mediaMarkdown;
+        noteText.replace(imageTag, mediaMarkdown);
+    }
+
+    note.setNoteText(noteText);
+}
+
+/**
+ * Handle note attachments
+ *
+ * @param note
+ * @param dirPath
+ */
+void JoplinImportDialog::handleAttachments(Note& note, const QString& dirPath) {
+    QString noteText = note.getNoteText();
+    auto i = QRegularExpression(R"([^!](\[([^\]]+)\]\(:\/([\w\d]+)\)))")
+                 .globalMatch(noteText);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString attachmentTag = match.captured(1);
+        QString attachmentName = match.captured(2);
+        QString attachmentId = match.captured(3);
+        QString attachmentData = _attachmentData[attachmentId];
+
+        qDebug() << __func__ << " - 'attachmentName': " << attachmentName;
+        qDebug() << __func__ << " - 'attachmentId': " << attachmentId;
+
+        auto fileExtensionMatch = QRegularExpression("^file_extension: (.+)$",
+                          QRegularExpression::MultilineOption).match(attachmentData);
+
+        if (!fileExtensionMatch.hasMatch()) {
+            continue;
+        }
+
+        QString fileExtension = fileExtensionMatch.captured(1);
+
+        auto *mediaFile = new QFile(dirPath + "/resources/" + attachmentId +
+                                    "." + fileExtension);
+
+        qDebug() << __func__ << " - 'mediaFile': " << mediaFile;
+
+        if (!mediaFile->exists()) {
+            continue;
+        }
+
+        QString mediaMarkdown = note.getInsertAttachmentMarkdown(
+            mediaFile, attachmentName);
+
+        qDebug() << __func__ << " - 'mediaMarkdown': " << mediaMarkdown;
+        noteText.replace(attachmentTag, mediaMarkdown);
+    }
+
+    note.setNoteText(noteText);
 }
