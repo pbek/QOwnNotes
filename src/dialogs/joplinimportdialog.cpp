@@ -258,7 +258,7 @@ void JoplinImportDialog::tagNote(const QString& id, const Note& note) {
  */
 void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
     QString noteText = note.getNoteText();
-    auto i = QRegularExpression(R"(!\[([^\]]+)\]\(:\/([\w\d]+)\))")
+    auto i = QRegularExpression(R"(!\[([^\]]*)\]\(:\/([\w\d]+)\))")
                  .globalMatch(noteText);
 
     while (i.hasNext()) {
@@ -307,7 +307,7 @@ void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
  */
 void JoplinImportDialog::handleAttachments(Note& note, const QString& dirPath) {
     QString noteText = note.getNoteText();
-    auto i = QRegularExpression(R"([^!](\[([^\]]+)\]\(:\/([\w\d]+)\)))")
+    auto i = QRegularExpression(R"([^!](\[([^\]]*)\]\(:\/([\w\d]+)\)))")
                  .globalMatch(noteText);
 
     while (i.hasNext()) {
