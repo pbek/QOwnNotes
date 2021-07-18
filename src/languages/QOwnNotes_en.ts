@@ -7324,6 +7324,11 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="2317"/>
+        <source>The Database was reinitialized. Please restart the application now!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.cpp" line="2328"/>
         <source>Please don&apos;t use this in the issue tracker, copy the debug information text directly into the issue.</source>
         <translation type="unfinished"></translation>
@@ -7582,11 +7587,6 @@ Connection error message: </source>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="4010"/>
         <source>Do you really want to reset the overrides of all message boxes?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2317"/>
-        <source>The Database was reinitialized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

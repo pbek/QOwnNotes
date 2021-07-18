@@ -2314,7 +2314,7 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
         NoteFolder::migrateToNoteFolders();
 
         Utils::Gui::information(this, tr("Database"),
-                                tr("The Database was reinitialized."),
+                                tr("The Database was reinitialized. Please restart the application now!"),
                                 QStringLiteral("database-reinitialized"));
     }
 }
