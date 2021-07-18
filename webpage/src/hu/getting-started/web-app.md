@@ -14,7 +14,7 @@ A webalkalmazás támogatásának megadásához volt egy beállítási oldal **W
 
 ![QOwnNotes webalkalmazás beállításai](/img/blog/web-application-settings.png "A kommunikáció beállítása a webalkalmazáshoz")
 
-Ne felejtse el **másolni a titkos tokent** a QOwnNotes beállítások oldaláról az [app.qownnotes fájlba.org](https://app.qownnotes.org/), hogy kommunikálni tudjon a QOwnNotes helyi példányával.
+Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes. You can also scan the token from the QR code with your phone in the web application.
 
 A webalkalmazás forráskódját a [webalkalmazás a GitHub webhelyen találja meg](https://github.com/qownnotes/web-app).
 

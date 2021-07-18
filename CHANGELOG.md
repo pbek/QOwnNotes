@@ -11,6 +11,7 @@
     - note that this import is done by reverse engineering, since there is no
       documentation for the Joplin export format
     - no tags, images or attachments are yet imported
+- added more Persian translation (thank you amirkbrpr)
 
 ## 21.7.7
 - there now also is a `Reload script engine` button for scripts from the script

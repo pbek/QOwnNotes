@@ -14,7 +14,7 @@ Er was een instellingenpagina **Webapplicatie** om ondersteuning voor de webappl
 
 ![QOwnNotes Web Application-instellingen](/img/blog/web-application-settings.png "Setup communicatie naar webapplicatie")
 
-Vergeet niet **uw geheime token te kopiëren** van de instellingenpagina van QOwnNotes naar [app.qownnotes.org](https://app.qownnotes.org/) om te kunnen communiceren met uw lokale instantie van QOwnNotes.
+Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes. You can also scan the token from the QR code with your phone in the web application.
 
 Je kunt de broncode van de webapplicatie vinden op [web-app op GitHub](https://github.com/qownnotes/web-app).
 

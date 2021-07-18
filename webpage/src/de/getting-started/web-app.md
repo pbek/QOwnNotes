@@ -14,7 +14,7 @@ Es gab eine Einstellungsseite **Webanwendung**, um Unterstützung für die Weban
 
 ![QOwnNotes Webanwendungseinstellungen](/img/blog/web-application-settings.png "Richten Sie die Kommunikation zur Webanwendung ein")
 
-Vergessen Sie nicht, **Ihr geheimes Token** von der QOwnNotes-Einstellungsseite nach [app.qownnotes zu kopieren. org](https://app.qownnotes.org/), um mit Ihrer lokalen Instanz von QOwnNotes kommunizieren zu können.
+Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes. You can also scan the token from the QR code with your phone in the web application.
 
 Den Quellcode der Webanwendung finden Sie unter [Webanwendung auf GitHub](https://github.com/qownnotes/web-app).
 

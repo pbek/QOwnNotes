@@ -14,7 +14,7 @@ Il y avait une page de paramètres **Application Web** pour ajouter la prise en 
 
 ![Paramètres de l'application Web QOwnNotes](/img/blog/web-application-settings.png "Configurer la communication avec l'application Web")
 
-N'oubliez pas de **copier votre jeton secret** de la page des paramètres de QOwnNotes vers [app.qownnotes. org](https://app.qownnotes.org/) pour pouvoir communiquer avec votre instance locale de QOwnNotes.
+Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes. You can also scan the token from the QR code with your phone in the web application.
 
 Vous pouvez trouver le code source de l'application Web sur [web-app sur GitHub](https://github.com/qownnotes/web-app).
 

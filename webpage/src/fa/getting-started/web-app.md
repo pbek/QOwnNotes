@@ -14,7 +14,7 @@ image: /img/blog/web-application-settings.png
 
 ![تنظیمات برنامه تحت وب QOwnNotes](/img/blog/web-application-settings.png "ارتباط راه اندازی با برنامه تحت وب")
 
-به خاطر داشته باشید که از **توکن مخفی خود** از صفحه تنظیمات QOwnNotes به [app.qownnotes.org](https://app.qownnotes.org/) رونوشت برداری کنید تا قادر به برقراری ارتباط با طرح مقطعی خود در QOwnNotes باشید.
+به خاطر داشته باشید که از **توکن مخفی خود** از صفحه تنظیمات QOwnNotes به [app.qownnotes.org](https://app.qownnotes.org/) رونوشت برداری کنید تا قادر به برقراری ارتباط با طرح مقطعی خود در QOwnNotes باشید. شما همچنین می توانید توکن را با تلفن خود در برنامه تحت وب از کیو آر کد اسکن کنید.
 
 شما می توانید کد منبع برنامه تحت وب را در [web-app on GitHub](https://github.com/qownnotes/web-app) بیابید.
 
