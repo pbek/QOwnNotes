@@ -187,8 +187,11 @@ bool JoplinImportDialog::importNote(const QString& id, const QString& text,
     auto noteText = Note::createNoteHeader(title.trimmed());
     noteText += text.trimmed();
 
+    auto parts = noteText.split(QRegularExpression("^id: " + id + "$",
+                                      QRegularExpression::MultilineOption));
+
     Note note = Note();
-    note.setNoteText(noteText);
+    note.setNoteText(parts[0]);
 
     // in case the user enabled that the filename can be different
     // from the note name
