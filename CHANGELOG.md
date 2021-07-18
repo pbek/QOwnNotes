@@ -3,8 +3,8 @@
 ## 21.7.9
 - the **[Joplin](https://joplinapp.org/) note import** was improved
   (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))
-    - tags, images and attachments will now also be imported
-    - the raw metadata part at the bottom of the note will now be not imported any more
+    - tags, images and attachments are now also be imported
+    - the raw metadata part at the bottom of the note are now be not imported any more
     - numbers and points are now only removed from the beginning of the note
       name instead of the whole note name
 
