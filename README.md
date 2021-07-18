@@ -117,7 +117,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - **portable mode** for carrying QOwnNotes around on USB sticks
 - **Vim mode**
 - **distraction free mode**, **full-screen mode**, **typewriter mode**
-- Evernote import
+- Evernote and Joplin import
 - QOwnNotes is **available in over 60 different languages** like English, German,
   French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
 	- [Your help](https://www.qownnotes.org/contributing/translation.html) is

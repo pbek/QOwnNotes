@@ -153,7 +153,7 @@ of [Nextcloud](https://nextcloud.com/) and [ownCloud](https://owncloud.org/).
 ## Features
 - You can use your **existing text or markdown files**, no need for an import most of the times
 - QOwnNotes is written in C++ and optimized for **low resource consumption** (no CPU and memory-hungry Electron app)
-- **Evernote import**
+- **Evernote and Joplin import**
 - **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
 - Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
 - Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to

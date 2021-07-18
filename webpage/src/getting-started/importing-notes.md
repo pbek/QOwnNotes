@@ -4,6 +4,10 @@
 
 There is an Evernote import dialog you can reach in the `Note / Import` menu.
 
+## Joplin
+
+There is a Joplin import dialog you can reach in the `Note / Import` menu.
+
 ## Tomboy
 
 You can import your Tomboy Notes using a script called [Trombone](https://github.com/samba/trombone).
