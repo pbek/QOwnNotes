@@ -33,6 +33,13 @@ class JoplinImportDialog : public MasterDialog {
    private:
     Ui::JoplinImportDialog *ui;
     int _importCount;
+    QHash <QString, QString> _noteData;
+    QHash <QString, QString> _tagData;
+    QHash <QString, QStringList> _tagAssignmentData;
+    QHash <QString, QString> _imageData;
+    QHash <QString, QString> _attachmentData;
 
-    static bool importNote(const QString& text, const QString& dirPath);
+    bool importNote(const QString& id, const QString& text,
+                    const QString& dirPath);
+    void tagNote(const QString& id, const Note& note);
 };

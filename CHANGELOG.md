@@ -3,7 +3,9 @@
 ## 21.7.9
 - the **[Joplin](https://joplinapp.org/) note import** was improved
   (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))
-  - numbers and points are now only removed from the beginning of the note name
+    - tags will now also imported
+    - numbers and points are now only removed from the beginning of the note
+      name instead of the whole note name
 
 ## 21.7.8
 - you now can **import notes** from a *RAW - Joplin Export Directory* of

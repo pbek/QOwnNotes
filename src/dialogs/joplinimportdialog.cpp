@@ -71,6 +71,12 @@ void JoplinImportDialog::on_directoryButton_clicked() {
  */
 void JoplinImportDialog::on_importButton_clicked() {
     _importCount = 0;
+    _noteData.clear();
+    _tagData.clear();
+    _tagAssignmentData.clear();
+    _imageData.clear();
+    _attachmentData.clear();
+
     auto directoryName = ui->directoryLineEdit->text();
     QDir dir(directoryName);
 
@@ -95,12 +101,67 @@ void JoplinImportDialog::on_importButton_clicked() {
         }
 
         QTextStream ts(&file);
-        QString text = ts.readAll();
+        const auto text = ts.readAll();
+        auto textLines = text.split(QRegularExpression(
+            QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+        const auto id = fileName.remove(QRegularExpression("\\.md$"));
 
-        if (text.contains("type_: 1")) {
-            importNote(text, dir.path());
-            _importCount++;
+        // check if text contains a note
+        if (text.contains(QRegularExpression(
+                "^type_: 1$", QRegularExpression::MultilineOption))) {
+            _noteData[id] = text;
+
+            // don't increase the progress bar yet
+            continue;
         }
+        // check if text contains an image or attachment
+        else if (text.contains(QRegularExpression(
+                       "^type_: 4$", QRegularExpression::MultilineOption))) {
+            if (text.contains(QRegularExpression(
+                    "^mime: image/", QRegularExpression::MultilineOption))) {
+                _imageData[id] = textLines[0];
+            } else {
+                _attachmentData[id] = textLines[0];
+            }
+        }
+        // check if text contains a tag
+        else if (text.contains(QRegularExpression(
+            "^type_: 5$", QRegularExpression::MultilineOption))) {
+            _tagData[id] = textLines[0];
+        }
+        // check if text contains a tag assignment
+        else if (text.contains(QRegularExpression(
+            "^type_: 6$", QRegularExpression::MultilineOption))) {
+            auto noteIdMatch = QRegularExpression("^note_id: (.+)$",
+                QRegularExpression::MultilineOption).match(text);
+            QString noteId;
+
+            if (noteIdMatch.hasMatch()) {
+                noteId = noteIdMatch.captured(1);
+            }
+
+            auto tagIdMatch = QRegularExpression("^tag_id: (.+)$",
+                QRegularExpression::MultilineOption).match(text);
+            QString tagId;
+
+            if (tagIdMatch.hasMatch()) {
+                tagId = tagIdMatch.captured(1);
+            }
+
+            _tagAssignmentData[noteId].append(tagId);
+        }
+
+        ui->progressBar->setValue(ui->progressBar->value() + 1);
+        QCoreApplication::processEvents();
+    }
+
+    // now that we have tag-, image- and attachment-data really import the notes
+    QHashIterator<QString, QString> noteDataIterator(_noteData);
+    while (noteDataIterator.hasNext()) {
+        noteDataIterator.next();
+
+        importNote(noteDataIterator.key(), noteDataIterator.value(), dir.path());
+        _importCount++;
 
         ui->progressBar->setValue(ui->progressBar->value() + 1);
         QCoreApplication::processEvents();
@@ -109,7 +170,16 @@ void JoplinImportDialog::on_importButton_clicked() {
     ui->importButton->setEnabled(true);
 }
 
-bool JoplinImportDialog::importNote(const QString& text, const QString& dirPath) {
+/**
+ * Handle importing of a note
+ *
+ * @param id
+ * @param text
+ * @param dirPath
+ * @return
+ */
+bool JoplinImportDialog::importNote(const QString& id, const QString& text,
+                                    const QString& dirPath) {
     auto textLines = text.split(QRegularExpression(
         QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
 
@@ -129,7 +199,35 @@ bool JoplinImportDialog::importNote(const QString& text, const QString& dirPath)
     note.store();
     note.storeNoteTextFileToDisk();
 
+    // tag the note if tags are found
+    tagNote(id, note);
+
     return true;
 }
 
 int JoplinImportDialog::getImportCount() const { return _importCount; }
+
+/**
+ * Handle note tagging
+ * @param id
+ * @param note
+ */
+void JoplinImportDialog::tagNote(const QString& id, const Note& note) {
+    QStringList tagAssignmentData = _tagAssignmentData[id];
+
+    foreach(QString tagId, tagAssignmentData) {
+        QString tagName = _tagData[tagId];
+
+        // create a new tag if it doesn't exist
+        Tag tag = Tag::fetchByName(tagName);
+        if (!tag.isFetched()) {
+            tag.setName(tagName);
+            tag.store();
+        }
+
+        // link the note to the tag
+        if (tag.isFetched()) {
+            tag.linkToNote(note);
+        }
+    }
+}
