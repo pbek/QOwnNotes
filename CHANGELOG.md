@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 21.7.10
+- the **[Joplin](https://joplinapp.org/) note import** was improved
+  (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))
+    - the whole notebook / folder structure can now now also be imported as note sub-folders
+
 ## 21.7.9
 - the **[Joplin](https://joplinapp.org/) note import** was improved
   (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))

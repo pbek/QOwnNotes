@@ -17,11 +17,16 @@ JoplinImportDialog::JoplinImportDialog(QWidget *parent)
     _importCount = 0;
 
     QSettings settings;
-    ui->tagImportCheckBox->setChecked(
+    ui->folderImportCheckBox->setChecked(
         settings
-            .value(QStringLiteral("JoplinImport/TagImportCheckBoxChecked"),
+            .value(QStringLiteral("JoplinImport/FolderImportCheckBoxChecked"),
                    true)
             .toBool());
+    ui->tagImportCheckBox->setChecked(
+                settings
+                .value(QStringLiteral("JoplinImport/TagImportCheckBoxChecked"),
+                       true)
+                .toBool());
     ui->imageImportCheckBox->setChecked(
         settings
             .value(QStringLiteral("JoplinImport/ImageImportCheckBoxChecked"),
@@ -38,8 +43,11 @@ JoplinImportDialog::JoplinImportDialog(QWidget *parent)
 JoplinImportDialog::~JoplinImportDialog() {
     QSettings settings;
     settings.setValue(
-        QStringLiteral("JoplinImport/TagImportCheckBoxChecked"),
-        ui->tagImportCheckBox->isChecked());
+        QStringLiteral("JoplinImport/FolderImportCheckBoxChecked"),
+        ui->folderImportCheckBox->isChecked());
+    settings.setValue(
+                QStringLiteral("JoplinImport/TagImportCheckBoxChecked"),
+                ui->tagImportCheckBox->isChecked());
     settings.setValue(
         QStringLiteral("JoplinImport/ImageImportCheckBoxChecked"),
         ui->imageImportCheckBox->isChecked());
@@ -80,6 +88,8 @@ void JoplinImportDialog::on_importButton_clicked() {
     _tagAssignmentData.clear();
     _imageData.clear();
     _attachmentData.clear();
+    _folderData.clear();
+    _importedFolders.clear();
 
     auto directoryName = ui->directoryLineEdit->text();
     QDir dir(directoryName);
@@ -89,6 +99,7 @@ void JoplinImportDialog::on_importButton_clicked() {
     }
 
     QStringList files = dir.entryList(QStringList() << "*.md", QDir::Files);
+    _dirPath = dir.path();
     ui->importButton->setEnabled(false);
     ui->progressBar->setMaximum(files.count());
     ui->progressBar->show();
@@ -116,6 +127,11 @@ void JoplinImportDialog::on_importButton_clicked() {
 
             // don't increase the progress bar yet
             continue;
+        }
+        // check if text contains a folder
+        if (text.contains(QRegularExpression(
+                "^type_: 2$", QRegularExpression::MultilineOption))) {
+            _folderData[id] = text;
         }
         // check if text contains an image or attachment
         else if (text.contains(QRegularExpression(
@@ -158,6 +174,11 @@ void JoplinImportDialog::on_importButton_clicked() {
         QCoreApplication::processEvents();
     }
 
+    // import the folders first so we will not get into troubles when importing the notes
+    if (ui->folderImportCheckBox->isChecked()) {
+        importFolders();
+    }
+
     // now that we have tag-, image- and attachment-data really import the notes
     QHashIterator<QString, QString> noteDataIterator(_noteData);
     while (noteDataIterator.hasNext()) {
@@ -171,6 +192,74 @@ void JoplinImportDialog::on_importButton_clicked() {
     }
 
     ui->importButton->setEnabled(true);
+}
+
+bool JoplinImportDialog::importFolders() {
+    QHashIterator<QString, QString> folderDataIterator(_folderData);
+    while (folderDataIterator.hasNext()) {
+        folderDataIterator.next();
+
+        importFolder(folderDataIterator.key(), folderDataIterator.value());
+    }
+
+    return true;
+}
+
+NoteSubFolder JoplinImportDialog::importFolder(const QString& id, const QString& text) {
+    // return NoteSubFolder if it was already created
+    if (_importedFolders.contains(id)) {
+        return _importedFolders[id];
+    }
+
+    auto parentSubFolder = NoteSubFolder();
+    auto parentIdMatch = QRegularExpression("^parent_id: (.+)$",
+                      QRegularExpression::MultilineOption).match(text);
+
+    // check if we need to create the parent first
+    if (parentIdMatch.hasMatch()) {
+        QString parentId = parentIdMatch.captured(1).trimmed();
+
+        if (!parentId.isEmpty()) {
+            parentSubFolder = importFolder(parentId, _folderData[parentId]);
+
+            if (parentSubFolder.getId() == 0) {
+                return NoteSubFolder();
+            }
+        }
+    }
+
+    auto textLines = text.split(QRegularExpression(
+        QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+
+    auto folderName = textLines.at(0).trimmed();
+
+    if (folderName.isEmpty()) {
+        return NoteSubFolder();
+    }
+
+    QDir dir;
+    QString path = parentSubFolder.fullPath();
+    path += "/" + folderName;
+
+    // create the folder on the disk
+    if (!dir.mkpath(path)) {
+        return NoteSubFolder();
+    }
+
+    // try to fetch NoteSubFolder object
+    auto noteSubFolder = NoteSubFolder::fetchByNameAndParentId(folderName, parentSubFolder.getId());
+
+    if (noteSubFolder.getId() > 0) {
+        return noteSubFolder;
+    }
+
+    // if NoteSubFolder didn't exist create it
+    noteSubFolder.setName(folderName);
+    noteSubFolder.setParentId(parentSubFolder.getId());
+    noteSubFolder.store();
+    _importedFolders[id] = noteSubFolder;
+
+    return noteSubFolder;
 }
 
 /**
@@ -196,6 +285,24 @@ bool JoplinImportDialog::importNote(const QString& id, const QString& text,
 
     Note note = Note();
     note.setNoteText(parts[0]);
+
+    if (ui->folderImportCheckBox->isChecked()) {
+        auto parentIdMatch = QRegularExpression("^parent_id: (.+)$",
+                          QRegularExpression::MultilineOption).match(text);
+
+        // check if we need to create note sub-folders
+        if (parentIdMatch.hasMatch()) {
+            QString parentId = parentIdMatch.captured(1).trimmed();
+
+            if (!parentId.isEmpty()) {
+                auto noteSubFolder = importFolder(parentId, _folderData[parentId]);
+
+                if (noteSubFolder.getId() != 0) {
+                    note.setNoteSubFolder(noteSubFolder);
+                }
+            }
+        }
+    }
 
     // in case the user enabled that the filename can be different
     // from the note name

@@ -6,21 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>726</width>
-    <height>427</height>
+    <width>780</width>
+    <height>505</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Joplin Import</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Please select the &quot;RAW - Joplin Export Directory&quot; from which you want to import notes:</string>
-     </property>
-    </widget>
-   </item>
    <item row="1" column="1">
     <widget class="QPushButton" name="directoryButton">
      <property name="text">
@@ -29,26 +22,6 @@
      <property name="icon">
       <iconset theme="folder" resource="../breeze-qownnotes.qrc">
        <normaloff>:/icons/breeze-qownnotes/16x16/folder.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder.svg</iconset>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="0" colspan="2">
-    <widget class="QCheckBox" name="imageImportCheckBox">
-     <property name="text">
-      <string>Import images</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="0" colspan="2">
-    <widget class="QProgressBar" name="progressBar">
-     <property name="value">
-      <number>0</number>
-     </property>
-     <property name="format">
-      <string>%v of %m file(s) imported</string>
      </property>
     </widget>
    </item>
@@ -113,22 +86,32 @@
      </layout>
     </widget>
    </item>
-   <item row="4" column="0" colspan="2">
-    <widget class="QCheckBox" name="tagImportCheckBox">
+   <item row="5" column="0" colspan="2">
+    <widget class="QCheckBox" name="imageImportCheckBox">
      <property name="text">
-      <string>Import tags</string>
+      <string>Import images</string>
      </property>
      <property name="checked">
       <bool>true</bool>
      </property>
     </widget>
    </item>
-   <item row="2" column="0" colspan="2">
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>If you just have a &quot;JEX - Joplin Export File&quot; please extract the content of that file to a directory and select that directory.</string>
+   <item row="9" column="0" colspan="2">
+    <widget class="QProgressBar" name="progressBar">
+     <property name="value">
+      <number>0</number>
      </property>
-     <property name="wordWrap">
+     <property name="format">
+      <string>%v of %m file(s) imported</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QCheckBox" name="folderImportCheckBox">
+     <property name="text">
+      <string>Import folders</string>
+     </property>
+     <property name="checked">
       <bool>true</bool>
      </property>
     </widget>
@@ -145,6 +128,53 @@
       </size>
      </property>
     </spacer>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="directoryLineEdit">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>RAW - Joplin Export Directory</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Please select the &quot;RAW - Joplin Export Directory&quot; from which you want to import notes:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>If you just have a &quot;JEX - Joplin Export File&quot; please extract the content of that file to a directory and select that directory.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QCheckBox" name="tagImportCheckBox">
+     <property name="text">
+      <string>Import tags</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QCheckBox" name="attachmentImportCheckBox">
+     <property name="text">
+      <string>Import attachments</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="7" column="0" colspan="2">
     <widget class="QGroupBox" name="groupBox">
@@ -174,36 +204,6 @@
        </widget>
       </item>
      </layout>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QLineEdit" name="directoryLineEdit">
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-     <property name="placeholderText">
-      <string>RAW - Joplin Export Directory</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0" colspan="2">
-    <widget class="QCheckBox" name="attachmentImportCheckBox">
-     <property name="text">
-      <string>Import attachments</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0" colspan="2">
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string>There is no distinction between different Joplin notebooks, all notes will just be imported.</string>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
-     </property>
     </widget>
    </item>
   </layout>
