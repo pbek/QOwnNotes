@@ -1620,62 +1620,62 @@
 <translation>Jegyzetek importálása Joplinból</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="20"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="112"/>
+<source>Import folders</source>
+<translation type="unfinished">Import folders</translation>
+</message>
+<message>
+<location filename="../dialogs/joplinimportdialog.ui" line="145"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
 <translation>Válassza ki a "RAW - Joplin Export Directory" -t, ahonnan jegyzeteket szeretne importálni:</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="27"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Select directory</source>
 <translation>Válassza ki a könyvtárat</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="38"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="92"/>
 <source>Import images</source>
 <translation>Képek importálása</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="51"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="105"/>
 <source>%v of %m file(s) imported</source>
 <translation>%v fájl importálva %m fájlból</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="92"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="65"/>
 <source>Import notes</source>
 <translation>Jegyzetek importálása</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="119"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
 <translation>Címkék importálása</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="129"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
 <translation>Ha csak "JEX - Joplin Export File" fájlja van, kérjük, vonja ki a fájl tartalmát egy könyvtárba, és válassza ki azt a könyvtárat.</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="152"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>Metadata to import</source>
 <translation>Metaadatok importálása</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="185"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="138"/>
 <source>RAW - Joplin Export Directory</source>
 <translation>RAW - Joplin Export Directory</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="192"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
 <translation>Mellékletek importálása</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="202"/>
-<source>There is no distinction between different Joplin notebooks, all notes will just be imported.</source>
-<translation>Nincs különbség a különböző Joplin notebookok között, az összes jegyzet csak importálásra kerül.</translation>
-</message>
-<message>
-<location filename="../dialogs/joplinimportdialog.cpp" line="56"/>
+<location filename="../dialogs/joplinimportdialog.cpp" line="68"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
 <translation>Az importáláshoz válassza a „RAW - Joplin Export Directory” lehetőséget</translation>
 </message>

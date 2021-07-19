@@ -1615,62 +1615,62 @@
 <translation>Importação do Joplin</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="20"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="112"/>
+<source>Import folders</source>
+<translation type="unfinished">Import folders</translation>
+</message>
+<message>
+<location filename="../dialogs/joplinimportdialog.ui" line="145"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
 <translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="27"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Select directory</source>
 <translation>Selecionar diretório</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="38"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="92"/>
 <source>Import images</source>
 <translation>Importar imagens</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="51"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="105"/>
 <source>%v of %m file(s) imported</source>
 <translation>%v de %m foram importados</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="92"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="65"/>
 <source>Import notes</source>
 <translation>Importar notas</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="119"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
 <translation>Importar tags</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="129"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
 <translation>Se você tem um arquivo "JEX - Joplin Export File", por favor extraia o conteúdo dele para um diretório e então o escolha</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="152"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>Metadata to import</source>
 <translation>Metadados para importar</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="185"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="138"/>
 <source>RAW - Joplin Export Directory</source>
 <translation type="unfinished">RAW - Joplin Export Directory</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="192"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
 <translation>Importar anexos</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="202"/>
-<source>There is no distinction between different Joplin notebooks, all notes will just be imported.</source>
-<translation type="unfinished">There is no distinction between different Joplin notebooks, all notes will just be imported.</translation>
-</message>
-<message>
-<location filename="../dialogs/joplinimportdialog.cpp" line="56"/>
+<location filename="../dialogs/joplinimportdialog.cpp" line="68"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
 <translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
 </message>
@@ -2278,7 +2278,7 @@
 <message>
 <location filename="../mainwindow.ui" line="1111"/>
 <source>Spelling backend</source>
-<translation>backend para verificação ortográfica</translation>
+<translation>Backend para verificação ortográfica</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1138"/>
@@ -2876,12 +2876,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1957"/>
 <source>Reload scripting engine</source>
-<translation>Recarregar o script</translation>
+<translation>Recarregar scripts</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2178"/>
 <source>Manage stored image files</source>
-<translation>Gerenciar arquivos de imagens armazenados</translation>
+<translation>Gerenciar imagens armazenadas</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2220"/>
@@ -2922,7 +2922,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2016"/>
 <source>Use softwrap in note editor and preview</source>
-<translation>Usar o softwrap no editor de nota e na pré-visualização</translation>
+<translation>Usar quebra de linha no editor e na pré-visualização</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2024"/>
@@ -5560,7 +5560,7 @@ Você deseja instalá-lo de qualquer maneira?</translation>
 <location filename="../dialogs/settingsdialog.ui" line="3724"/>
 <location filename="../dialogs/settingsdialog.ui" line="3799"/>
 <source>Reload scripting engine</source>
-<translation>Recarregar o script</translation>
+<translation>Recarregar scripts</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="3714"/>
@@ -6566,7 +6566,7 @@ Se encontrar conflitos de sincronização, utilize um valor maior.</translation>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6279"/>
 <source>Enable web application support</source>
-<translation type="unfinished">Enable web application support</translation>
+<translation>Ativar</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5528"/>
@@ -8172,7 +8172,7 @@ sufixos "ise"</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
 <source>Used in notes:</source>
-<translation>Usado nas notas:</translation>
+<translation>Usada nas notas:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="116"/>

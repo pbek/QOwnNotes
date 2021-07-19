@@ -91,7 +91,7 @@ Ovviamente altre soluzioni, come **Dropbox**, **Syncthing**, **Seafile** o BitTo
 Per ulteriori informazioni, visita l '[app QOwnNotesAPI Nextcloud](qownnotesapi.md).
 :::
 
-## Nextcloud Notes server app
+## Applicazione server Nextcloud Notes
 
 Usa [**Nextcloud Notes**](https://github.com/nextcloud/notes) per modificare le tue note nel **web**.
 

@@ -1620,62 +1620,62 @@
 <translation>ورودی جاپلین</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="20"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="112"/>
+<source>Import folders</source>
+<translation type="unfinished">Import folders</translation>
+</message>
+<message>
+<location filename="../dialogs/joplinimportdialog.ui" line="145"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
 <translation>لطفاً «دایرکتوری خروجی جاپلین - RAW» را که از آن تمایل به وارد کردن یادداشت ها دارید، انتخاب کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="27"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Select directory</source>
 <translation>انتخاب دایرکتوری</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="38"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="92"/>
 <source>Import images</source>
 <translation>ورود تصاویر</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="51"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="105"/>
 <source>%v of %m file(s) imported</source>
 <translation>٪v از ٪m پرونده وارد شد</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="92"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="65"/>
 <source>Import notes</source>
 <translation>ورود یادداشت ها</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="119"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
 <translation>ورود برچسب ها</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="129"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
 <translation>اگر به «پرونده خروجی جاپلین - JEX» دسترسی دارید، لطفاً محتوای آن پرونده را استخراج و در دایرکتوری وارد کرده و آن را انتخاب کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="152"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>Metadata to import</source>
 <translation>فراداده برای ورود</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="185"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="138"/>
 <source>RAW - Joplin Export Directory</source>
 <translation type="unfinished">RAW - Joplin Export Directory</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="192"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
 <translation>ورود پیوست ها</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="202"/>
-<source>There is no distinction between different Joplin notebooks, all notes will just be imported.</source>
-<translation type="unfinished">There is no distinction between different Joplin notebooks, all notes will just be imported.</translation>
-</message>
-<message>
-<location filename="../dialogs/joplinimportdialog.cpp" line="56"/>
+<location filename="../dialogs/joplinimportdialog.cpp" line="68"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
 <translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
 </message>

@@ -150,7 +150,7 @@ Word lid van onze [Telegram Group](https://t.me/QOwnNotes) om te discussiëren, 
 ## Kenmerken
 - U kunt uw **bestaande tekst- of markdown-bestanden** gebruiken, meestal is importeren niet nodig
 - QOwnNotes is written in C++ and optimized for **low resource consumption** (no CPU and memory-hungry Electron app)
-- **Evernote import**
+- **Evernote and Joplin import**
 - **Compatibel** met de Notes-applicatie van **Nextcloud / ownCloud** en **mobiel** en Nextcloud Text
 - Ondersteuning voor **het delen van notities** op uw **ownCloud** / **Nextcloud** -server
 - Beheer je Nextcloud / ownCloud **takenlijsten** (**Nextcloud-taken** of **Tasks Plus** / **Calendar Plus**) of gebruik een andere **CalDAV-server** om uw taken mee te synchroniseren

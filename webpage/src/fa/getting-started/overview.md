@@ -150,7 +150,7 @@
 ## ویژگی ها
 - شما می توانید **متن موجود یا پرونده های مارک داون** خود را بدون نیاز به صرف زمان زیادی استفاده کنید.
 - QOwnNotes در ++C نوشته شده و برای **مصرف منابع کم** بهینه سازی شده است (بدون برنامه الکترونی نیازمند (hungry Electron app) به حافظه و CPU).
-- **ورود از اورنوت**
+- **Evernote and Joplin import**
 - **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
 - Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
 - Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to

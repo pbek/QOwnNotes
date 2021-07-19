@@ -148,7 +148,7 @@ Csatlakozzon a [Telegram csoport](https://t.me/QOwnNotes)unkhoz, beszélgetés, 
 ## Funkciók
 - You can use your **existing text or markdown files**, no need for an import most of the times
 - QOwnNotes is written in C++ and optimized for **low resource consumption** (no CPU and memory-hungry Electron app)
-- **Evernote import**
+- **Evernote and Joplin import**
 - **Kompatibilis** a **Nextcloud / ownCloud** és a **mobile** és a Nextcloud Text Notes alkalmazásával
 - Támogatás a **jegyzetek megosztásához** a **ownCloud** / **Nextcloud** kiszolgálón
 - A Nextcloud / ownCloud **témalistáinak kezelése** (**Nextcloud-feladatok** vagy **Tasks Plus** / **Calendar Plus**) vagy használjon egy másik **CalDAV szervert** a feladatok szinkronizálásához

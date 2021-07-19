@@ -1620,62 +1620,62 @@
 <translation>Joplin-Import</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="20"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="112"/>
+<source>Import folders</source>
+<translation type="unfinished">Import folders</translation>
+</message>
+<message>
+<location filename="../dialogs/joplinimportdialog.ui" line="145"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
 <translation>Bitte wählen Sie das "RAW - Joplin Export Directory" aus, aus dem Sie Notizen importieren möchten:</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="27"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="20"/>
 <source>Select directory</source>
 <translation>Verzeichnis auswählen</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="38"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="92"/>
 <source>Import images</source>
 <translation>Bilder importieren</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="51"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="105"/>
 <source>%v of %m file(s) imported</source>
 <translation>%v von %m Datei(en) importiert</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="92"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="65"/>
 <source>Import notes</source>
 <translation>Notizen importieren</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="119"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import tags</source>
 <translation>Tags importieren</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="129"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="152"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
 <translation>Wenn Sie nur eine "JEX - Joplin Export File" haben, extrahieren Sie den Inhalt dieser Datei in ein Verzeichnis und wählen Sie dieses Verzeichnis aus.</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="152"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="182"/>
 <source>Metadata to import</source>
 <translation>Zu importierende Metadaten auswählen</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="185"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="138"/>
 <source>RAW - Joplin Export Directory</source>
 <translation>RAW - Joplin-Exportverzeichnis</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="192"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
 <translation>Anhänge importieren</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="202"/>
-<source>There is no distinction between different Joplin notebooks, all notes will just be imported.</source>
-<translation>Es gibt keine Unterscheidung zwischen verschiedenen Joplin-Notizbüchern, alle Notizen werden nur importiert.</translation>
-</message>
-<message>
-<location filename="../dialogs/joplinimportdialog.cpp" line="56"/>
+<location filename="../dialogs/joplinimportdialog.cpp" line="68"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
 <translation>Wählen Sie 'RAW - Joplin Export Directory' zum Importieren</translation>
 </message>
