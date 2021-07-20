@@ -50,4 +50,7 @@ private slots:
     void handleAttachments(Note& note, const QString& dirPath);
     bool importFolders();
     NoteSubFolder importFolder(const QString &id, const QString &text);
+    void importImage(Note &note, const QString &dirPath, QString& noteText,
+                     const QString &imageTag, const QString &imageId,
+                     const QString &imageName = "");
 };

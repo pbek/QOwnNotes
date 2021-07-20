@@ -27,6 +27,11 @@ JoplinImportDialog::JoplinImportDialog(QWidget *parent)
                 .value(QStringLiteral("JoplinImport/TagImportCheckBoxChecked"),
                        true)
                 .toBool());
+    ui->metadataImportCheckBox->setChecked(
+                settings
+                .value(QStringLiteral("JoplinImport/MetadataImportCheckBoxChecked"),
+                       true)
+                .toBool());
     ui->imageImportCheckBox->setChecked(
         settings
             .value(QStringLiteral("JoplinImport/ImageImportCheckBoxChecked"),
@@ -49,8 +54,11 @@ JoplinImportDialog::~JoplinImportDialog() {
                 QStringLiteral("JoplinImport/TagImportCheckBoxChecked"),
                 ui->tagImportCheckBox->isChecked());
     settings.setValue(
-        QStringLiteral("JoplinImport/ImageImportCheckBoxChecked"),
-        ui->imageImportCheckBox->isChecked());
+        QStringLiteral("JoplinImport/MetadataImportCheckBoxChecked"),
+        ui->metadataImportCheckBox->isChecked());
+    settings.setValue(
+                QStringLiteral("JoplinImport/ImageImportCheckBoxChecked"),
+                ui->imageImportCheckBox->isChecked());
     settings.setValue(
         QStringLiteral("JoplinImport/AttachmentImportCheckBoxChecked"),
         ui->attachmentImportCheckBox->isChecked());
@@ -284,7 +292,15 @@ bool JoplinImportDialog::importNote(const QString& id, const QString& text,
                                       QRegularExpression::MultilineOption));
 
     Note note = Note();
-    note.setNoteText(parts[0]);
+    QString newNoteText;
+
+    // add metadata as frontmatter
+    if (ui->metadataImportCheckBox->isChecked()) {
+        newNoteText = "---\nid: " + id + parts[1] + "\n---\n\n";
+    }
+
+    newNoteText += parts[0];
+    note.setNoteText(newNoteText);
 
     if (ui->folderImportCheckBox->isChecked()) {
         auto parentIdMatch = QRegularExpression("^parent_id: (.+)$",
@@ -373,37 +389,62 @@ void JoplinImportDialog::handleImages(Note& note, const QString& dirPath) {
         QString imageTag = match.captured(0);
         QString imageName = match.captured(1);
         QString imageId = match.captured(2);
-        QString imageData = _imageData[imageId];
 
-        qDebug() << __func__ << " - 'imageName': " << imageName;
-        qDebug() << __func__ << " - 'imageId': " << imageId;
+        importImage(note, dirPath, noteText, imageTag, imageId, imageName);
+    }
 
-        auto fileExtensionMatch = QRegularExpression("^file_extension: (.+)$",
-                          QRegularExpression::MultilineOption).match(imageData);
+    i = QRegularExpression(R"(<img src=\":\/([\w\d]+)\"\/>)")
+                 .globalMatch(noteText);
 
-        if (!fileExtensionMatch.hasMatch()) {
-            continue;
-        }
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString imageTag = match.captured(0);
+        QString imageId = match.captured(1);
 
-        QString fileExtension = fileExtensionMatch.captured(1);
-
-        auto *mediaFile = new QFile(dirPath + "/resources/" + imageId +
-                                    "." + fileExtension);
-
-        qDebug() << __func__ << " - 'mediaFile': " << mediaFile;
-
-        if (!mediaFile->exists()) {
-            continue;
-        }
-
-        QString mediaMarkdown = note.getInsertMediaMarkdown(
-            mediaFile, false, false, imageName);
-
-        qDebug() << __func__ << " - 'mediaMarkdown': " << mediaMarkdown;
-        noteText.replace(imageTag, mediaMarkdown);
+        importImage(note, dirPath, noteText, imageTag, imageId);
     }
 
     note.setNoteText(noteText);
+}
+
+void JoplinImportDialog::importImage(Note& note, const QString& dirPath, QString& noteText,
+                                     const QString& imageTag, const QString& imageId,
+                                     const QString& imageName) {
+    QString imageData = _imageData[imageId];
+
+    qDebug() << __func__ << " - 'imageName': " << imageName;
+    qDebug() << __func__ << " - 'imageId': " << imageId;
+    // qDebug() << __func__ << " - 'imageData': " << imageData;
+
+    QString fileExtension;
+    auto fileExtensionMatch = QRegularExpression("^file_extension: (.+)$",
+                      QRegularExpression::MultilineOption).match(imageData);
+
+    if (fileExtensionMatch.hasMatch()) {
+        fileExtension = fileExtensionMatch.captured(1);
+    } else {
+        // if the extension wasn't set we'll try to get it from the original file
+        auto imageDataLines = imageData.split(QRegularExpression(
+            QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+        auto originalFileName = imageDataLines[0];
+        auto fileInfo = QFileInfo(originalFileName);
+        fileExtension = fileInfo.suffix();
+    }
+
+    auto *mediaFile = new QFile(dirPath + "/resources/" + imageId +
+                                "." + fileExtension);
+
+    qDebug() << __func__ << " - 'mediaFile': " << mediaFile;
+
+    if (!mediaFile->exists()) {
+        return;
+    }
+
+    QString mediaMarkdown = note.getInsertMediaMarkdown(
+        mediaFile, false, false, imageName);
+
+    qDebug() << __func__ << " - 'mediaMarkdown': " << mediaMarkdown;
+    noteText.replace(imageTag, mediaMarkdown);
 }
 
 /**
@@ -427,14 +468,20 @@ void JoplinImportDialog::handleAttachments(Note& note, const QString& dirPath) {
         qDebug() << __func__ << " - 'attachmentName': " << attachmentName;
         qDebug() << __func__ << " - 'attachmentId': " << attachmentId;
 
+        QString fileExtension;
         auto fileExtensionMatch = QRegularExpression("^file_extension: (.+)$",
                           QRegularExpression::MultilineOption).match(attachmentData);
 
-        if (!fileExtensionMatch.hasMatch()) {
-            continue;
+        if (fileExtensionMatch.hasMatch()) {
+            fileExtension = fileExtensionMatch.captured(1);
+        } else {
+            // if the extension wasn't set we'll try to get it from the original file
+            auto attachmentDataLines = attachmentData.split(QRegularExpression(
+                QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
+            auto originalFileName = attachmentDataLines[0];
+            auto fileInfo = QFileInfo(originalFileName);
+            fileExtension = fileInfo.suffix();
         }
-
-        QString fileExtension = fileExtensionMatch.captured(1);
 
         auto *mediaFile = new QFile(dirPath + "/resources/" + attachmentId +
                                     "." + fileExtension);
