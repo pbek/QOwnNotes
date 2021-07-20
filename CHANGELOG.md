@@ -3,7 +3,7 @@
 ## 21.7.11
 - the **[Joplin](https://joplinapp.org/) note import** was improved
   (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))
-    - if Joplin didn't set the the file extension of attachments or images in the export
+    - if Joplin didn't set the file extension of attachments or images in the export
       we now will try to get it from the original file name
     - importing of images from image html tags like `<img src=":/ID"/>` is now also supported
     - the metadata of notes can now optionally be imported as frontmatter
