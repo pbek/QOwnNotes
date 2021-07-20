@@ -10,9 +10,9 @@
     - the metadata of notes can now optionally be imported as frontmatter
 
 ## 21.7.10
-    - the **[Joplin](https://joplinapp.org/) note import** was improved
-      (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))
-        - the whole notebook / folder structure can now now also be imported as note sub-folders
+- the **[Joplin](https://joplinapp.org/) note import** was improved
+  (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))
+    - the whole notebook / folder structure can now now also be imported as note sub-folders
 - added more Italian, Brazilian Portuguese translation (thank you rawfreeamy, i****myself)
 
 ## 21.7.9
