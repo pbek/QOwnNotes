@@ -1619,52 +1619,57 @@
 <translation type="unfinished">Joplin Import</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="112"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import folders</source>
 <translation type="unfinished">Import folders</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="145"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="111"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
 <translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="20"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="141"/>
 <source>Select directory</source>
 <translation type="unfinished">Select directory</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="92"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="192"/>
 <source>Import images</source>
 <translation type="unfinished">Import images</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="105"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="185"/>
 <source>%v of %m file(s) imported</source>
 <translation type="unfinished">%v of %m file(s) imported</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="65"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="54"/>
 <source>Import notes</source>
 <translation type="unfinished">Import notes</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="162"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="131"/>
 <source>Import tags</source>
 <translation type="unfinished">Import tags</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="152"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="202"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
 <translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="182"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="212"/>
+<source>Import metadata</source>
+<translation type="unfinished">Import metadata</translation>
+</message>
+<message>
+<location filename="../dialogs/joplinimportdialog.ui" line="81"/>
 <source>Metadata to import</source>
 <translation type="unfinished">Metadata to import</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="138"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="155"/>
 <source>RAW - Joplin Export Directory</source>
 <translation type="unfinished">RAW - Joplin Export Directory</translation>
 </message>
@@ -1674,7 +1679,7 @@
 <translation type="unfinished">Import attachments</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.cpp" line="68"/>
+<location filename="../dialogs/joplinimportdialog.cpp" line="76"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
 <translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
 </message>

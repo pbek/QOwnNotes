@@ -8,6 +8,7 @@
     - importing of images from image html tags like `<img src=":/ID"/>` is now
       also supported (@laurent22, thank you for mentioning)
     - the metadata of notes can now optionally be imported as frontmatter
+- added more Persian translation (thank you amirkbrpr)
 
 ## 21.7.10
 - the **[Joplin](https://joplinapp.org/) note import** was improved

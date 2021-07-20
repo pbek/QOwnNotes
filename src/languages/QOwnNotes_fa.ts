@@ -1620,54 +1620,59 @@
 <translation>ورودی جاپلین</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="112"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>ورود پوشه ها</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="145"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="111"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
 <translation>لطفاً «دایرکتوری خروجی جاپلین - RAW» را که از آن تمایل به وارد کردن یادداشت ها دارید، انتخاب کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="20"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="141"/>
 <source>Select directory</source>
 <translation>انتخاب دایرکتوری</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="92"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="192"/>
 <source>Import images</source>
 <translation>ورود تصاویر</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="105"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="185"/>
 <source>%v of %m file(s) imported</source>
 <translation>٪v از ٪m پرونده وارد شد</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="65"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="54"/>
 <source>Import notes</source>
 <translation>ورود یادداشت ها</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="162"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="131"/>
 <source>Import tags</source>
 <translation>ورود برچسب ها</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="152"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="202"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation>اگر به «پرونده خروجی جاپلین - JEX» دسترسی دارید، لطفاً محتوای آن پرونده را استخراج و در دایرکتوری وارد کرده و آن را انتخاب کنید.</translation>
+<translation>اگر به «پرونده خروجی جاپلین - JEX» دسترسی دارید، لطفاً محتوای آن پرونده را در دایرکتوری استخراج کرده و آن را انتخاب کنید.</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="182"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="212"/>
+<source>Import metadata</source>
+<translation type="unfinished">Import metadata</translation>
+</message>
+<message>
+<location filename="../dialogs/joplinimportdialog.ui" line="81"/>
 <source>Metadata to import</source>
 <translation>فراداده برای ورود</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.ui" line="138"/>
+<location filename="../dialogs/joplinimportdialog.ui" line="155"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>دایرکتوری خروجی جاپلین - RAW</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
@@ -1675,9 +1680,9 @@
 <translation>ورود پیوست ها</translation>
 </message>
 <message>
-<location filename="../dialogs/joplinimportdialog.cpp" line="68"/>
+<location filename="../dialogs/joplinimportdialog.cpp" line="76"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>برای ورود «دایرکتوری خروجی جاپلین - RAW» را انتخاب کنید</translation>
 </message>
 </context>
 <context>
@@ -2847,7 +2852,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>ورود یادداشت ها از جاپلین</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>

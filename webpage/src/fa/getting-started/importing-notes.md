@@ -2,17 +2,17 @@
 
 ## اورنوت
 
-کادر گفتگوی ورود اورنوت در دسترس قرار دارد تا بتوانید به فهرست `یادداشت / ورود` دست پیدا کنید.
+کادر گفتگوی ورودی اورنوت در دسترس قرار دارد تا بتوانید به فهرست `یادداشت / ورود` دسترسی داشته باشید.
 
-## Joplin
+## جاپلین
 
-There is a Joplin import dialog you can reach in the `Note / Import` menu.
+کادر گفتگوی ورودی جاپلین در دسترس قرار دارد تا بتوانید به فهرست `یادداشت / ورود` دسترسی داشته باشید.
 
-## Tomboy
+## تام بوی
 
-You can import your Tomboy Notes using a script called [Trombone](https://github.com/samba/trombone).
+با استفاده از اسکریپتی به نام [ترومبون](https://github.com/samba/trombone) می توانید یادداشت های تام بوی خود را وارد کنید.
 
-You might install python2 to make the script work. It will convert your Tomboy notes to an Evernote `.enex` file, which then you are able to import to QOwnNotes.
+با نصب python2 می توانید اسکریپت را به کار بیندازید. It will convert your Tomboy notes to an Evernote `.enex` file, which then you are able to import to QOwnNotes.
 
 For anyone wanting to do this, first make sure you have Python2 installed and you might want to also install `python-is-python2` (you can remove that later):
 
