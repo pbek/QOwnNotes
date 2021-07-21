@@ -3,6 +3,8 @@
 ## 21.7.12
 - you can now jump to the same headline multiple times in the navigation panel
   (for [#2192](https://github.com/pbek/QOwnNotes/issues/2192))
+- the focus will now stay in the navigation panel after using it via mouse or keyboard
+  (for [#2193](https://github.com/pbek/QOwnNotes/issues/2193))
 
 ## 21.7.11
 - the **[Joplin](https://joplinapp.org/) note import** was improved
