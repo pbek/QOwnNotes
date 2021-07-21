@@ -4,6 +4,8 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QSettings>
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
 #include "ui_joplinimportdialog.h"
 
 JoplinImportDialog::JoplinImportDialog(QWidget *parent)
