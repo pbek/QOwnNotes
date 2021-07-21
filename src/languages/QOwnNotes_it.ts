@@ -1617,72 +1617,72 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Importa da Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Importa cartelle</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="111"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Per favore scegli la "RAW - Joplin Export Directory" da cui vuoi importare le note:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="141"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Scegli cartella</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="192"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Importa immagini</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="185"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>%v di %m file importati</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="54"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Importa note</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="131"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Importa etichette</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="202"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Se hai un "JEX - Joplin Export File", per favore estraine il contenuto in una cartella e scegli quella cartella.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="212"/>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>Importa metadati</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="81"/>
 <source>Metadata to import</source>
-<translation type="unfinished">Metadata to import</translation>
+<translation>Metadati da importare</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="155"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Joplin Export Directory</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Importa allegati</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="76"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Scegli la 'RAW - Joplin Export Directory' da importare</translation>
 </message>
 </context>
 <context>
@@ -2850,7 +2850,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>Importa note da Joplin</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -6535,7 +6535,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6470"/>
 <source>Show QR code</source>
-<translation type="unfinished">Show QR code</translation>
+<translation>Mostra codice QR</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6362"/>

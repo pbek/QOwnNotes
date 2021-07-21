@@ -36,18 +36,18 @@ graph TB
 ## QOwnNotes
 
 - QOwnNotes **memorizza le note** nella cartella **note come file markdown**
-- Può parlare al tuo server Nextcloud / ownCloud **per condividere pubblicamente le note** con altre persone
+- Può collegarsi al tuo server Nextcloud / ownCloud **per condividere pubblicamente le note** con altre persone
 - Puoi anche **accedere alla cronologia delle note e al cestino** sul tuo server Nextcloud / ownCloud tramite l '[app QOwnNotesApi Nextcloud](#qownnotesapi-nextcloud-app)
-- È possibile accedere agli elenchi di cose da fare sul tuo server Nextcloud / ownCloud da QOwnNotes
+- Da QOwnNotes puoi accedere agli elenchi di cose da fare sul tuo server Nextcloud / ownCloud
 - **QOwnNotes non sincronizza le tue note** e i file multimediali / allegati!
     - La sincronizzazione dei file è un'attività complessa, esistono già ottime soluzioni per la sincronizzazione dei file (vedi [Client di sincronizzazione desktop Nextcloud](#nextcloud-desktop-sync-client))
 
 
-## File di note di Markdown
+## File di note Markdown
 
-- **Possiedi** tutte le tue note e file multimediali / allegati!
-- Le tue note vengono archiviate come **file Markdown di testo normale** sul tuo computer desktop
-- Puoi utilizzare qualsiasi editor di testo che ti piace accanto a QOwnNotes per visualizzare o modificare i file delle note
+- Tutte le tue note e file multimediali / allegati **sono tue**!
+- Le tue note vengono archiviate come **file di testo Markdown** sul tuo computer
+- Puoi usare qualsiasi tuo editor di testo preferito insieme a QOwnNotes per visualizzare o modificare i file delle note
 - **Sincronizza le tue note** con altri dispositivi (desktop e mobili) con il tuo client di sincronizzazione [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) sul tuo server
 
 
@@ -56,17 +56,17 @@ graph TB
 Puoi gestire i **segnalibri del tuo browser** con QOwnNotes o usarlo come **web clipper**.
 
 ::: tip
-Per ulteriori informazioni, visita l '[estensione del browser QOwnNotes Web Companion](browser-extension.md).
+Per ulteriori informazioni, visita l'[estensione del browser QOwnNotes Web Companion](browser-extension.md).
 :::
 
 ## Client di sincronizzazione desktop Nextcloud
 
-**Sincronizza le tue note** con altri dispositivi (desktop & mobili) con il tuo client di sincronizzazione [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) sul tuo server.
+**Sincronizza le tue note** con altri dispositivi (desktop e mobili) con il tuo client di sincronizzazione [Nextcloud](https://nextcloud.com/) o [ownCloud](https://owncloud.org/) sul tuo server.
 
 ::: tip
-Ovviamente altre soluzioni, come **Dropbox**, **Syncthing**, **Seafile** o BitTorrent Sync possono essere utilizzate anche per sincronizzare le tue note e altri file.
+Ovviamente possono essere usate anche altre soluzioni, come **Dropbox**, **Syncthing**, **Seafile** o BitTorrent Sync per sincronizzare le tue note e altri file.
 
-Puoi anche utilizzare **git** per eseguire la sincronizzazione con strumenti come [gitomatic](https://github.com/muesli/gitomatic/).
+Puoi anche usare **git** per eseguire la sincronizzazione con strumenti come [gitomatic](https://github.com/muesli/gitomatic/).
 :::
 
 ## Server Nextcloud

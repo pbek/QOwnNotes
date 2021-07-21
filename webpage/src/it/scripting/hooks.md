@@ -6,9 +6,11 @@ onNoteStored
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * Questa funzione viene chiamata quando una nota viene archiviata su disco
-  * Non è possibile modificare le note memorizzate, poiché sarebbe tutto complicato
-  * dal fatto che probabilmente le stai contemporaneamente anche modificando a mano
+  * Questa funzione viene chiamata quando una nota viene archiviata su
+  * disco
+  * Non è possibile modificare le note memorizzate, poiché sarebbe tutto
+  * complicato dal fatto che probabilmente le stai contemporaneamente
+  * anche modificando a mano
   *
   * @param {NoteApi} note - l'oggetto nota della nota memorizzata
  */
@@ -58,8 +60,12 @@ Se questa funzione è definita in più script, vince il primo script che restitu
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * @param fileName stringa il percorso del file multimediale di origine prima che fosse copiato nella cartella multimediale
-  * @param markdownText stringa il testo del markdown del file multimediale, ad es. ![mia-immagine](media/mia-immagine-4101461585.jpg)
+  * @param fileName string il percorso del file multimediale di origine
+  *                        prima che fosse copiato nella cartella
+  *                        multimediale
+  * @param markdownText string il testo del markdown del file
+  *                            multimediale, ad es.
+  *                            ![mia-immagine](media/mia-immagine-4101461585.jpg)
   * @return string il nuovo testo di markdown del file multimediale
  */
 function insertMediaHook(fileName, markdownText);

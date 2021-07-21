@@ -16,7 +16,7 @@ Script {
 }
 ```
 
-Potete spostare questi documenti QML dovunque preferite e **aggiungerli a QOwnNotes** aggiungendoli nelle **impostazioni di scripting** (tramite il bottone `Aggiungi script`/`Aggiungi script locale`).
+Potete mettere questi documenti QML ovunque preferite e **aggiungerli a QOwnNotes** tramite le **impostazioni di scripting** (c'è un bottone `Aggiungi script`/`Aggiungi script locale`).
 
 ::: tip
 Dai un'occhiata agli [script di esempio](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples) per iniziare velocemente.

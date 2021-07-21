@@ -1662,7 +1662,7 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="212"/>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>Metaadatok importálása</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="81"/>

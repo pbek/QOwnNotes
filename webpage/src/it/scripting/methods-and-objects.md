@@ -371,13 +371,13 @@ var clipboardHtml = script.clipboard(true);
 
 Puoi dare un'occhiata all'esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Scrivi il testo nella modifica del testo della nota
+Scrivi il testo nella finestra di modifica del testo della nota
 --------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Scrive il testo nella posizione corrente del cursore nella modifica del testo della nota
+  * Scrive il testo nella posizione corrente del cursore nella finestra di modifica del testo della nota
  *
  * @param text
  */
@@ -386,7 +386,7 @@ void ScriptingService::noteTextEditWrite(QString text);
 
 ### Esempio
 ```js
-// scrive il testo nella modifica del testo della nota
+// scrive il testo nella finestra di modifica del testo della nota
 script.noteTextEditWrite("My custom text");
 ```
 
@@ -394,13 +394,13 @@ Potresti voler esaminare l'azione personalizzata  `transformTextRot13` nel file 
 
 Puoi usarlo insieme a `noteTextEditSelectAll` per sovrascrivere l'intero testo della nota corrente.
 
-Leggi il testo selezionato nella modifica del testo della nota
+Leggi il testo selezionato nella finestra di modifica del testo della nota
 --------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Legge il testo selezionato nella modifica del testo della nota
+  * Legge il testo selezionato nella finestra di modifica del testo della nota
  *
  * @return
  */
@@ -410,19 +410,19 @@ QString ScriptingService::noteTextEditSelectedText();
 
 ### Esempio
 ```js
-// read the selected text from the note text edit
+// legge il testo selezionato nella finestra di modifica del testo della nota
 var text = script.noteTextEditSelectedText();
 ```
 
 Potresti voler esaminare l'azione personalizzata  `transformTextRot13` nel file esempio [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
-Seleziona tutto il testo nella modifica del testo della nota
+Seleziona tutto il testo nella finestra di modifica del testo della nota
 -------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Selects all text in the note text edit
+ * Seleziona tutto il testo nella finestra di modifica del testo della nota
  */
 void ScriptingService::noteTextEditSelectAll();
 ```
@@ -434,13 +434,13 @@ script.noteTextEditSelectAll();
 
 Puoi usarlo insieme a `noteTextEditWrite` per sovrascrivere l'intero testo della nota corrente.
 
-Seleziona la riga corrente nella modifica del testo della nota
+Seleziona la riga corrente nella finestra di modifica del testo della nota
 ---------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Seleziona la riga corrente nella modifica del testo della nota
+  * Seleziona la riga corrente nella finestra di modifica del testo della nota
   */
 void ScriptingService::noteTextEditSelectCurrentLine();
 ```
@@ -450,13 +450,13 @@ void ScriptingService::noteTextEditSelectCurrentLine();
 script.noteTextEditSelectCurrentLine();
 ```
 
-Seleziona la parola corrente nella modifica del testo della nota
+Seleziona la parola corrente nella finestra di modifica del testo della nota
 ---------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Seleziona la riga corrente nella modifica del testo della nota
+  * Seleziona la riga corrente nella finestra di modifica del testo della nota
   */
 void ScriptingService::noteTextEditSelectCurrentWord();
 ```
@@ -466,13 +466,13 @@ void ScriptingService::noteTextEditSelectCurrentWord();
 script.noteTextEditSelectCurrentWord();
 ```
 
-Imposta il testo attualmente selezionato nella modifica del testo della nota
+Imposta il testo attualmente selezionato nella finestra di modifica del testo della nota
 -----------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Sets the currently selected text in the note text edit
+ * Imposta il testo selezionato nella finestra di modifica del testo della nota
  *
  * @param start
  * @param end
@@ -482,19 +482,19 @@ void ScriptingService::noteTextEditSetSelection(int start, int end);
 
 ### Esempio
 ```js
-// expands the current selection by one character
+// espande la selezione corrente di un carattere
 script.noteTextEditSetSelection(
     script.noteTextEditSelectionStart() - 1,
     script.noteTextEditSelectionEnd() + 1);
 ```
 
-Ottieni la posizione iniziale della selezione corrente nella modifica del testo della nota
+Ottieni la posizione iniziale della selezione corrente nella finestra di modifica del testo della nota
 ---------------------------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Restituisce la posizione iniziale della selezione corrente nella modifica del testo della nota
+  * Restituisce la posizione iniziale della selezione corrente nella finestra di modifica del testo della nota
   */
 int ScriptingService::noteTextEditSelectionStart();
 ```
@@ -504,13 +504,13 @@ int ScriptingService::noteTextEditSelectionStart();
 script.log(script.noteTextEditSelectionStart());
 ```
 
-Ottieni la posizione finale della selezione corrente nella modifica del testo della nota
+Ottieni la posizione finale della selezione corrente nella finestra di modifica del testo della nota
 -------------------------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Restituisce la posizione finale della selezione corrente nella modifica del testo della nota
+  * Restituisce la posizione finale della selezione corrente nella finestra di modifica del testo della nota
   */
 int ScriptingService::noteTextEditSelectionEnd();
 ```
@@ -520,15 +520,15 @@ int ScriptingService::noteTextEditSelectionEnd();
 script.log(script.noteTextEditSelectionEnd());
 ```
 
-Impostare il cursore del testo nella modifica del testo della nota su una determinata posizione
+Impostare il cursore del testo nella finestra di modifica del testo della nota su una determinata posizione
 ---------------------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Sets the text cursor in the note text edit to a certain position
- * 0 would be the beginning of the note
- * special case: -1 would be the end of the note
+ * Imposta il cursore del testo nella finestra di modifica del testo nella nota su una determinata posizione
+ * 0 è l'inizio della nota
+ * caso speciale: -1 è la fine della nota
  *
  * @param position
  */
@@ -537,20 +537,20 @@ void ScriptingService::noteTextEditSetCursorPosition(int position);
 
 ### Esempio
 ```js
-// jump to the 11th character in the note
+// salta all'undicesimo carattere nella nota
 script.noteTextEditSetCursorPosition(10);
 
-// jump to the end of the note
+// salta alla fine della nota
 script.noteTextEditSetCursorPosition(-1);
 ```
 
-Ottieni la posizione corrente del cursore del testo nella modifica del testo della nota
+Ottieni la posizione corrente del cursore del testo nella finestra di modifica del testo della nota
 -----------------------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Restituisce la posizione corrente del cursore del testo nella modifica del testo della nota
+  * Restituisce la posizione corrente del cursore del testo nella finestra di modifica del testo della nota
   * 0 sarebbe l'inizio della nota
   */
 int ScriptingService::noteTextEditCursorPosition();
@@ -561,17 +561,18 @@ int ScriptingService::noteTextEditCursorPosition();
 script.log(script.noteTextEditCursorPosition());
 ```
 
-Leggi la parola corrente dalla modifica del testo della nota
+Leggi la parola corrente dalla finestra di modifica del testo della nota
 ---------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Reads the current word in the note text edit
+ * Legge la parola corrente dalla finestra di modifica del testo della
+ * nota
  *
- * @param withPreviousCharacters also get more characters at the beginning
- *                               to get characters like "@" that are not
- *                               word-characters
+ * @param withPreviousCharacters recupera ulteriori caratteri all'inizio,
+ *                               per ricevere caratteri come "@" che non
+ *                               sono caratteri di parole
  * @return
  */
 QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
@@ -579,11 +580,11 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
 
 ### Esempio
 ```js
-// read the current word in the note text edit
+// legge la parola corrente dalla finestra di modifica del testo della nota
 var text = script.noteTextEditCurrentWord();
 ```
 
-You may want to take a look at the example [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
+Puoi dare un'occhiata all'esempio [autocompletion.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/autocompletion.qml).
 
 Controlla se la piattaforma è Linux, OS X o Windows
 ------------------------------------------------
@@ -598,7 +599,7 @@ bool ScriptingService::platformIsWindows();
 ### Esempio
 ```js
 if (script.platformIsLinux()) {
-    // only will be executed if under Linux
+    // eseguito solamente in Linux
 }
 ```
 
@@ -608,7 +609,7 @@ Contrassegna la nota corrente
 ### Chiamata al metodo e parametri
 ```cpp
 /**
-  * Tag la nota corrente con un tag denominato tagName
+  * Contrassegna la nota corrente con un'entichetta denominata tagName
   *
   * @param tagName
   */
@@ -617,24 +618,27 @@ void ScriptingService::tagCurrentNote(QString tagName);
 
 ### Esempio
 ```js
-// add a "favorite" tag to the current note
-script.tagCurrentNote("favorite");
+// aggiungi un'etichetta "preferito" alla nota corrente
+script.tagCurrentNote("preferito");
 ```
 
-You might want to look at the custom action `favoriteNote` in the example [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
+Potresti voler dare un'occhiata all'azione personalizzata `favoriteNote` nell'esempio [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/favorite-note.qml).
 
-Create or fetch a tag by its name breadcrumb list
+Crea o recupera un'etichetta dal una lista di elementi
 -------------------------------------------------
 
 ### Chiamata al metodo e parametri
 ```cpp
 /**
- * Fetches or creates a tag by its "breadcrumb list" of tag names
- * Element nameList[0] would be highest in the tree (with parentId: 0)
+ * Recupera o crea un'etichetta tramite la lista dei suoi nomi
+ * L'elemento nameList[0] è il più alto nella gerarchia (con parentId:
+ * 0)
  *
  * @param nameList
- * @param createMissing {bool} if true (default) all missing tags will be created
- * @return TagApi object of deepest tag of the name breadcrumb list
+ * @param createMissing {bool} se true (default) tutte le etichette
+ *                             mancanti vengono create
+ * @return TagApi oggetto associateo all'etichetta alla massima
+ *                profondità
  */
 TagApi *ScriptingService::getTagByNameBreadcrumbList(
     const QStringList &nameList, bool createMissing);
@@ -642,13 +646,13 @@ TagApi *ScriptingService::getTagByNameBreadcrumbList(
 
 ### Esempio
 ```js
-// creates all tags until the 3rd level and returns the tag object for
-// tag "level3", which would look like that in the tag tree:
+// crea tutte le etichette fino al terzo livello e restituisce l'oggetto
+// etichetta associato a "level3" che, nell'albero delle etichette, sarà:
 // level1 > level2 > level3
 var tag = script.getTagByNameBreadcrumbList(["level1", "level2", "level3"]);
 ```
 
-Cerca i tag per nome
+Cerca le etichette per nome
 -----------------------
 
 ### Chiamata al metodo e parametri
