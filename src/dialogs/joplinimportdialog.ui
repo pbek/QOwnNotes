@@ -7,14 +7,75 @@
     <x>0</x>
     <y>0</y>
     <width>780</width>
-    <height>509</height>
+    <height>377</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Joplin Import</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="12" column="0" colspan="2">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Please select the &quot;RAW - Joplin Export Directory&quot; from which you want to import notes:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="2">
+    <widget class="QProgressBar" name="progressBar">
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="format">
+      <string>%v of %m file(s) imported</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="directoryButton">
+     <property name="text">
+      <string>Select directory</string>
+     </property>
+     <property name="icon">
+      <iconset theme="folder" resource="../breeze-qownnotes.qrc">
+       <normaloff>:/icons/breeze-qownnotes/16x16/folder.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QCheckBox" name="folderImportCheckBox">
+     <property name="text">
+      <string>Import folders</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0" colspan="2">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="directoryLineEdit">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>RAW - Joplin Export Directory</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" colspan="2">
     <widget class="QFrame" name="frame">
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
@@ -75,91 +136,30 @@
      </layout>
     </widget>
    </item>
-   <item row="8" column="0" colspan="2">
-    <widget class="QGroupBox" name="groupBox">
-     <property name="title">
-      <string>Metadata to import</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QTreeWidget" name="metaDataTreeWidget">
-        <property name="selectionMode">
-         <enum>QAbstractItemView::NoSelection</enum>
-        </property>
-        <property name="selectionBehavior">
-         <enum>QAbstractItemView::SelectRows</enum>
-        </property>
-        <property name="rootIsDecorated">
-         <bool>false</bool>
-        </property>
-        <property name="headerHidden">
-         <bool>true</bool>
-        </property>
-        <column>
-         <property name="text">
-          <string notr="true">1</string>
-         </property>
-        </column>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="label_2">
+   <item row="7" column="0" colspan="2">
+    <widget class="QCheckBox" name="metadataImportCheckBox">
      <property name="text">
-      <string>Please select the &quot;RAW - Joplin Export Directory&quot; from which you want to import notes:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="0" colspan="2">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="4" column="0" colspan="2">
-    <widget class="QCheckBox" name="tagImportCheckBox">
-     <property name="text">
-      <string>Import tags</string>
+      <string>Import metadata</string>
      </property>
      <property name="checked">
       <bool>true</bool>
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="directoryButton">
+   <item row="5" column="0" colspan="2">
+    <widget class="QCheckBox" name="imageImportCheckBox">
      <property name="text">
-      <string>Select directory</string>
+      <string>Import images</string>
      </property>
-     <property name="icon">
-      <iconset theme="folder" resource="../breeze-qownnotes.qrc">
-       <normaloff>:/icons/breeze-qownnotes/16x16/folder.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder.svg</iconset>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QLineEdit" name="directoryLineEdit">
-     <property name="readOnly">
+     <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="placeholderText">
-      <string>RAW - Joplin Export Directory</string>
-     </property>
     </widget>
    </item>
-   <item row="3" column="0" colspan="2">
-    <widget class="QCheckBox" name="folderImportCheckBox">
+   <item row="4" column="0" colspan="2">
+    <widget class="QCheckBox" name="tagImportCheckBox">
      <property name="text">
-      <string>Import folders</string>
+      <string>Import tags</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -176,42 +176,12 @@
      </property>
     </widget>
    </item>
-   <item row="10" column="0" colspan="2">
-    <widget class="QProgressBar" name="progressBar">
-     <property name="value">
-      <number>0</number>
-     </property>
-     <property name="format">
-      <string>%v of %m file(s) imported</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="0" colspan="2">
-    <widget class="QCheckBox" name="imageImportCheckBox">
-     <property name="text">
-      <string>Import images</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
    <item row="2" column="0" colspan="2">
     <widget class="QLabel" name="label_3">
      <property name="text">
       <string>If you just have a &quot;JEX - Joplin Export File&quot; please extract the content of that file to a directory and select that directory.</string>
      </property>
      <property name="wordWrap">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="0" colspan="2">
-    <widget class="QCheckBox" name="metadataImportCheckBox">
-     <property name="text">
-      <string>Import metadata</string>
-     </property>
-     <property name="checked">
       <bool>true</bool>
      </property>
     </widget>
