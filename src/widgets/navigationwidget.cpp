@@ -24,8 +24,12 @@
 
 NavigationWidget::NavigationWidget(QWidget *parent)
     : QTreeWidget(parent), _document(nullptr) {
+    // we want to handle currentItemChanged because it also works with the keyboard
     QObject::connect(this, &NavigationWidget::currentItemChanged, this,
                      &NavigationWidget::onCurrentItemChanged);
+    // we want to handle itemClicked because it alows to click on an item a 2nd time
+    QObject::connect(this, &NavigationWidget::itemClicked, this,
+                     &NavigationWidget::onItemClicked);
 
     _parseFutureWatcher = new QFutureWatcher<QVector<Node>>(this);
     connect(_parseFutureWatcher, &QFutureWatcher<QVector<Node>>::finished, this,
@@ -44,12 +48,26 @@ void NavigationWidget::setDocument(const QTextDocument *document) {
 }
 
 /**
- * Emits the positionClicked signal to jump to the clicked navigation item's
+ * Emits the positionClicked signal to jump to the changed navigation item's
  * position
  */
 void NavigationWidget::onCurrentItemChanged(QTreeWidgetItem *current,
                                             QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
+
+    if (current == nullptr) {
+        return;
+    }
+
+    emit positionClicked(current->data(0, Qt::UserRole).toInt());
+}
+
+/**
+ * Emits the positionClicked signal to jump to the clicked navigation item's
+ * position
+ */
+void NavigationWidget::onItemClicked(QTreeWidgetItem *current, int column) {
+    Q_UNUSED(column)
 
     if (current == nullptr) {
         return;

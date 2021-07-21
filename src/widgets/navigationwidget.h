@@ -44,6 +44,7 @@ class NavigationWidget : public QTreeWidget {
    private slots:
     void onCurrentItemChanged(QTreeWidgetItem *current,
                               QTreeWidgetItem *previous);
+    void onItemClicked(QTreeWidgetItem *current, int column);
     void onParseCompleted();
 
    signals:

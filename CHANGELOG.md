@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.7.12
+- you can now jump to the same headline multiple times in the navigation panel
+  (for [#2192](https://github.com/pbek/QOwnNotes/issues/2192))
+
 ## 21.7.11
 - the **[Joplin](https://joplinapp.org/) note import** was improved
   (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))
