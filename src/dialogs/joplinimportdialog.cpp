@@ -10,7 +10,6 @@ JoplinImportDialog::JoplinImportDialog(QWidget *parent)
     : MasterDialog(parent), ui(new Ui::JoplinImportDialog) {
     ui->setupUi(this);
 
-    ui->groupBox->setVisible(false);
     ui->progressBar->hide();
     ui->progressBar->setMinimum(0);
     ui->progressBar->setValue(0);
