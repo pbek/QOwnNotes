@@ -6,7 +6,7 @@
       <v-row>
         <v-col
           align-self="start"
-          cols="2"
+          cols="12" md="3" lg="2"
         >
           <v-avatar
             class="profile"
@@ -18,7 +18,7 @@
             <v-img v-bind:src="img"></v-img>
           </v-avatar>
         </v-col>
-        <v-col cols="10">
+        <v-col cols="12" md="9" lg="10">
           <v-list-item
           >
             <v-list-item-content>
