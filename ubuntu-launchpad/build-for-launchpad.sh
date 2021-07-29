@@ -16,7 +16,7 @@ BRANCH=develop
 #BRANCH=master
 
 # https://wiki.ubuntu.com/Releases
-UBUNTU_RELEASES=( "xenial" "bionic" "focal" "groovy" "hirsute" "impish" )
+UBUNTU_RELEASES=( "xenial" "bionic" "focal" "hirsute" "impish" )
 
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
