@@ -13,7 +13,7 @@ Sie können diese Parameter auf der Befehlszeilenschnittstelle verwenden:
 | `--action <name>`      | Löst eine Menüaktion aus, nachdem die Anwendung gestartet wurde (siehe unten).                                                                      |
 
 ::: tip
-If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
+Wenn bei der Installation von QOwnNotes Probleme auftreten, möchten Sie die Anwendung möglicherweise mit neuen Einstellungen starten, ohne Ihre aktuellen Einstellungen zu verlieren, indem Sie den Parameter `--session` verwenden.
 
 ```bash
 QOwnNotes --session test

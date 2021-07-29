@@ -11,7 +11,7 @@ Besuchen Sie den [Chrome Web Store](https://chrome.google.com/webstore/detail/qo
 Sie finden die Erweiterung auch unter [GitHub](https://github.com/qownnotes/web-companion/).
 
 ::: tip Info
-QOwnNotes needs to be running for the Web Companion browser extension to work.
+QOwnNotes muss ausgeführt werden, damit die Web Companion-Browsererweiterung funktioniert.
 :::
 
 ## Web clipper

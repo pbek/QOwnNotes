@@ -402,26 +402,24 @@
     <kbd>F5</kbd> salta all'elenco delle note
   </li>
   <li>
-    <kbd>F6<0> vai al pannello delle sottocartelle delle note</li> 
-    
-    <li>
-      <kbd>F7<0> vai al pannello dei tag</li> 
-      
-      <li>
-        <kbd>F8</kbd> salta al pannello di navigazione
-      </li>
-      
-      <li>
-        <kbd>F10</kbd> attiva il menu contestuale del widget corrente
-      </li>
-      
-      <li>
-        <kbd>⌘</kbd> + <kbd>F11</kbd> attiva / disattiva la modalità a schermo intero
-      </li>
-      
-      <li>
-        <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copia il titolo della nota corrente
-      </li></ul>
+    <kbd>F6</kbd> vai al pannello delle sottocartelle delle note
+  </li>
+  <li>
+    <kbd>F7</kbd> vai al pannello dei tag
+  </li>
+  <li>
+    <kbd>F8</kbd> salta al pannello di navigazione
+  </li>
+  <li>
+    <kbd>F10</kbd> attiva il menu contestuale del widget corrente
+  </li>
+  <li>
+    <kbd>⌘</kbd> + <kbd>F11</kbd> attiva / disattiva la modalità a schermo intero
+  </li>
+  <li>
+    <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copia il titolo della nota corrente
+  </li>
+</ul>
 
 <h3 spaces-before="0">
   Nella barra di ricerca delle note

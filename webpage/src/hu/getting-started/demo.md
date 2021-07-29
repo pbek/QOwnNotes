@@ -6,7 +6,7 @@ A következő utasításokat követve kipróbálhatja a **QOwnNotes** t webböng
 
 ![screenshot01](/img/demo/playwithdocker01.png)
 
-3) Várjon, amíg a tartály létrejön, és felpörög. Ezután képesnek kell lennie a tetején a **6080** gombra kattintani (lásd a képernyőképes bullet **2** pontot). Ha hibát észlel, várjon még egy kicsit, és próbálkozzon újra a *6080* gombra kattintással, eltart egy ideig, amíg az asztali környezet betöltődik.
+3) Wait until the container is created and spun up. Ezután képesnek kell lennie a tetején a **6080** gombra kattintani (lásd a képernyőképes **2-es** pontot). Ha hibát észlel, várjon még egy kicsit, és próbálkozzon újra a *6080* gombra kattintással, eltart egy ideig, amíg az asztali környezet betöltődik.
 
 ![screenshot02](/img/demo/playwithdocker02.png)
 

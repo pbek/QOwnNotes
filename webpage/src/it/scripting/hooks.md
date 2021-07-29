@@ -83,9 +83,13 @@ Se questa funzione è definita in più script, vince il primo script che restitu
 ### Chiamata al metodo e parametri
 ```js
 /**
-  * @param fileName stringa il percorso del file allegato di origine prima che fosse copiato nella cartella degli allegati
-  * @param markdownText stringa il testo del markdown del file allegato, ad es. [mio-file.txt](allegati/mio-file-4245650967.txt)
-  * @return stringa il nuovo testo di markdown del file allegato
+  * @param fileName string il percorso del file allegato di origine
+  *                        prima che fosse copiato nella cartella degli
+  *                        allegati
+  * @param markdownText string il testo del markdown del file allegato,
+  *                            ad es.
+  *                            [mio-file.txt](allegati/mio-file-4245650967.txt)
+  * @return string il nuovo testo di markdown del file allegato
  */
 function insertAttachmentHook(fileName, markdownText);
 ```

@@ -326,7 +326,7 @@ Puoi creare semplici elenchi di cose da fare con elenchi di caselle di controllo
 Puoi selezionare / deselezionare le caselle di controllo nell'anteprima.
 :::
 
-## Frontmatter
+## Pagine preliminari
 
 In QOwnNotes puoi usare un frontmatter (es.YAML) per aggiungere alcune meta informazioni extra. **Non verrà mostrato nell'anteprima** e **non disturberà la generazione automatica del nome del file della nota**.
 

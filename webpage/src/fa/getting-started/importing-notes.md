@@ -12,15 +12,15 @@
 
 با استفاده از اسکریپتی به نام [ترومبون](https://github.com/samba/trombone) می توانید یادداشت های تام بوی خود را وارد کنید.
 
-با نصب python2 می توانید اسکریپت را به کار بیندازید. It will convert your Tomboy notes to an Evernote `.enex` file, which then you are able to import to QOwnNotes.
+با نصب python2 می توانید اسکریپت را به کار بیندازید. این قابلیت یادداشت های تام بوی شما را به یک پرونده `.enex` اورنوت تبدیل کرده که به دنبال آن شما قادر به ورود به QOwnNotes خواهید بود.
 
-For anyone wanting to do this, first make sure you have Python2 installed and you might want to also install `python-is-python2` (you can remove that later):
+برای هر کسی که قصد انجام این کار را دارد، نخست مطمئن شوید که Python2 را نصب کرده اید. همچنین می توانید `python-is-python2` را نصب کنید (بعداً می توانید آن را حذف کنید):
 
 ```bash
  python2 python-is-python2 ،sudo apt را نصب می کند 
 ```
 
-Download the trombone file from GitHub, extract and jump into that folder:
+پرونده ترومبون را از گیت هاب بارگیری، استخراج و به آن پوشه پرش دهید:
 
 ```bash
 cd ~/Downloads/trombone-master
@@ -29,18 +29,18 @@ sudo make
 sudo make install
 ```
 
-Then cd into the folder where your tomboy notes are:
+سپس به پوشه ای که یادداشت های تام بوی شما در آن قرار دارد cd کنید:
 
 ```bash
  cd ~/.local/share/tomboy/
 ```
 
-Then run this:
+سپس این را اجرا کنید:
 
 ```bash
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-If you get unicode errors about specific notes, just remove each note and run the conversion again until it gives a message saying `Saving...` . You will have a file called `EXPORT.enex` which can then be imported into QOwnNotes.
+درصورتی که خطاهای یونیکد در مورد یادداشت های معین دریافت می کنید، فقط هر یادداشت را حذف کنید و تا زمانی که آن پیامی مبنی بر ` ذخیره گذاری...` را صادر کند، تبدیل را دوباره اجرا کنید. پرونده ای به نام `EXPORT.enex` در اختیار خواهید داشت که در این صورت می تواند به QOwnNotes وارد شود.
 
-During the import into QOwnNotes you might uncheck all of the attributes to import except maybe the creation/modification date, since Tomboy does not have those features.
+طی ورود به QOwnNotes، می توانید علامت همه مشخصه ها (احتمالاً بجز تاریخ ایجاد و تغییر) را برای ورود بردارید، زیرا تام بوی فاقد آن ویژگی هاست.

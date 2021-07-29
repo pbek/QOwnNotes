@@ -3,6 +3,7 @@
 ## 21.7.13
 - added a new editor color schema *Oomox Shack* by @LetsHaveKiddos
   (for [#2196](https://github.com/pbek/QOwnNotes/issues/2196))
+- added more translation (thank you rawfreeamy, manuelasmiley, p-bo, amirkbrpr, marcoxbresciani)
 
 ## 21.7.12
 - you can now jump to the same headline multiple times in the navigation panel

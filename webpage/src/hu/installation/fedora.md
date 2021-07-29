@@ -13,9 +13,9 @@ dnf makecache
 dnf install qownnotes
 ```
 
-::: tip You may need to accept the repo key before you can download from it.
+::: tip Előfordulhat, hogy el kell fogadnia a repo kulcsot, mielőtt letölthet róla.
 
-If you have troubles import the key yourself with:
+Ha problémái vannak, akkor a kulcsot maga importálja:
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
@@ -24,15 +24,15 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 
 ## Régi telepítési módszer
 
-Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+Használja ezt a módszert, ha a Fedora verziója nem támogatja a `config-manager` dnf bővítményt, futtassa ezeket a parancsokat rootként.
 
-Run the following shell commands as root to trust the repository.
+Futtassa a következő shell parancsokat rootként, hogy megbízhasson a tárban.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key
 ```
 
-Run the following shell commands as root to add the repository and install QOwnNotes from there.
+Futtassa rootként a következő shell parancsokat a repository hozzáadásához és a QOwnNotes telepítéséhez onnan.
 
 ```bash
 cat > /etc/yum.repos.d/QOwnNotes.repo << EOL

@@ -20,7 +20,7 @@ For anyone wanting to do this, first make sure you have Python2 installed and yo
 sudo apt install python2 python-is-python2
 ```
 
-Download the trombone file from GitHub, extract and jump into that folder:
+Download het trombone-bestand van GitHub, pak het uit en spring naar die map:
 
 ```bash
 cd ~/Downloads/trombone-master
