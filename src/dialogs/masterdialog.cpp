@@ -89,8 +89,10 @@ void MasterDialog::handleOpenDialog() {
         }
     }
 
-    // send metrics
-    MetricsService::instance()->sendVisitIfEnabled("dialog/" + objectName());
+    // send metrics for all dialogs but the MainWindow
+    if (objectName() != QStringLiteral("MainWindow")) {
+        MetricsService::instance()->sendVisitIfEnabled("dialog/" + objectName());
+    }
 }
 
 void MasterDialog::setIgnoreReturnKey(bool ignore) {
