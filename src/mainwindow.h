@@ -690,7 +690,7 @@ private:
     bool notifyAllExternalModifications;
     int noteSaveIntervalTime;
     QTimer *noteSaveTimer;
-    QTimer *todoReminderTimer;
+    QTimer *_frequentPeriodicTimer;
     QTimer *_noteViewUpdateTimer;
     QTimer *_gitCommitTimer;
     QTimer *_todoListTimer;

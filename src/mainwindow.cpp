@@ -322,12 +322,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     _gitCommitTimer->start(_gitCommitInterval * 1000);
 
-    // check if we have a tasks reminder every minute
-    this->todoReminderTimer = new QTimer(this);
-    connect(this->todoReminderTimer, &QTimer::timeout, this,
+    // do some stuff periodically
+    this->_frequentPeriodicTimer = new QTimer(this);
+    connect(this->_frequentPeriodicTimer, &QTimer::timeout, this,
             &MainWindow::frequentPeriodicChecker);
-
-    this->todoReminderTimer->start(60000);
+    this->_frequentPeriodicTimer->start(60000);
 
     QObject::connect(&this->noteDirectoryWatcher,
                      SIGNAL(directoryChanged(QString)), this,
