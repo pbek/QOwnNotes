@@ -319,8 +319,10 @@ MainWindow::MainWindow(QWidget *parent)
     _gitCommitTimer = new QTimer(this);
     connect(_gitCommitTimer, &QTimer::timeout, this,
             &MainWindow::gitCommitCurrentNoteFolder);
-
     _gitCommitTimer->start(_gitCommitInterval * 1000);
+
+    // set last heartbeat in the past so it gets called the first time
+    _lastHeartbeat = QDateTime::currentDateTime().addDays(-1);
 
     // do some stuff periodically
     this->_frequentPeriodicTimer = new QTimer(this);
@@ -3156,7 +3158,11 @@ void MainWindow::storeUpdatedNotesToDisk() {
 void MainWindow::frequentPeriodicChecker() {
     CalendarItem::alertTodoReminders();
     Note::expireCryptoKeys();
-    MetricsService::instance()->sendHeartbeat();
+
+    if (QDateTime::currentDateTime().addSecs(-1200) >= _lastHeartbeat) {
+        _lastHeartbeat = QDateTime::currentDateTime();
+        MetricsService::instance()->sendHeartbeat();
+    }
 
     QSettings settings;
     QDateTime lastUpdateCheck =
