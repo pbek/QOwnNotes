@@ -11,7 +11,6 @@ const contactNavItems = [
   { text: 'Matrix/Element.io Room', link: 'https://app.element.io/#/room/#qownnotes:matrix.org' },
   { text: 'Gitter Chat', link: 'https://gitter.im/qownnotes/qownnotes' },
   { text: 'IRC Channel', link: 'https://web.libera.chat/#qownnotes' },
-  { text: 'IRC Log', link: 'https://quodlibet.duckdns.org/irc/qownnotes/latest.log.html' },
 ];
 
 const gettingStartedNavItems = [
