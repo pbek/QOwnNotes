@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.7.14
+- the first app is now shown if a 2nd instance is started in single instance mode
+  (for [#2198](https://github.com/pbek/QOwnNotes/issues/2198))
+
 ## 21.7.13
 - added a new editor color schema *Oomox Shack* by @LetsHaveKiddos
   (for [#2196](https://github.com/pbek/QOwnNotes/issues/2196))

@@ -558,7 +558,9 @@ int main(int argc, char *argv[]) {
 
     // if only one app instance is allowed use SingleApplication
     if (allowOnlyOneAppInstance) {
-        SingleApplication app(argc, argv, true);
+        SingleApplication app(argc, argv, true,
+                              SingleApplication::Mode::User |
+                              SingleApplication::Mode::SecondaryNotification);
 
         // quit app if it was already started
         if (app.isSecondary()) {
