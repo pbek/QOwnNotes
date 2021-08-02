@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 21.8.0
+- after notes are imported by draging and dropping text files into the application
+  the note folder is now reloaded automatically so the notes show up in the note list
+
 ## 21.7.14
 - the first app is now shown if a 2nd instance is started in single instance mode
   (for [#2198](https://github.com/pbek/QOwnNotes/issues/2198))

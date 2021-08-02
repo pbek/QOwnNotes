@@ -7827,6 +7827,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
         if (successCount > 0) {
             message +=
                 tr("Copied %n note(s) to %1", "", successCount).arg(notesPath);
+            on_action_Reload_note_folder_triggered();
         }
 
         if (failureCount > 0) {
