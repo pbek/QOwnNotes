@@ -1455,15 +1455,15 @@ var result = script.writeToFile(filePath, html);
 script.log(result);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Es posible que desee echar un vistazo al ejemplo [exportar notas como uno-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Trabajando con websockets
 -----------------------
 
-You can remote control QOwnNotes by using `WebSocketServer`.
+Puede controlar QOwnNotes de forma remota utilizando `WebSocketServer`.
 
-Please take a look at the example [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). You can test the socket server by connecting to it on [Websocket test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
+Por favor, mire el ejemplo [websocket-server.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-server.qml). Puede probar el servidor de socket conectándose a él en [Websocket prueba](https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345).
 
-You can also listen to sockets with `WebSocket`. Please take look at the example [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
+También puede escuchar sockets con `WebSocket`. Por favor, mira el ejemplo [websocket-client.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/websocket-client.qml).
 
-Keep in mind that you need to have Qt's QML `websocket` library installed to use this. For example under Ubuntu Linux you can install `qml-module-qtwebsockets`.
+Tenga en cuenta que debe tener instalada la biblioteca QML `websocket` de Qt para usar esto. Por ejemplo, en Ubuntu Linux puede instalar `módulo-qml-qtwebsockets`.

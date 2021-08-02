@@ -320,9 +320,9 @@ void ScriptingService :: setLabelText (identificateur QString, texte QString);
 script.setLabelText("counter-label", "counter text");
 ```
 
-You can use both plain text or html in the labels. The text will be selectable and links can be clicked.
+Vous pouvez utiliser à la fois du texte brut ou du html dans les étiquettes. Le texte sera sélectionnable et les liens pourront être cliqués.
 
-You may then want to take a look at the example script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
+Vous pouvez ensuite jeter un œil à l'exemple de script [scripting-label-demo.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/scripting-label-demo.qml).
 
 Créer une nouvelle note
 -------------------
@@ -337,15 +337,15 @@ Créer une nouvelle note
 void ScriptingService::createNote(QString text);
 ```
 
-### Example
+### Exemple
 ```js
 script.createNote("My note headline\n===\n\nMy text");
 ```
 
-You may want to take a look at the example [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/custom-actions.qml).
 
 ::: tip
-If you turned off that your note headline determines the note filename then you have to rename your note file yourself afterwards, like this:
+Si vous avez désactivé que le titre de votre note détermine le nom de fichier de la note, vous devez renommer votre fichier de note vous-même par la suite, comme ceci:
 
 ```js
 var note = script.currentNote();
@@ -730,9 +730,9 @@ Vous pouvez obtenir les noms d'objets à partir des fichiers `*.ui`, par exemple
 The [style.qss](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle/style.qss) of [qdarkstyle](https://github.com/pbek/QOwnNotes/blob/develop/src/libraries/qdarkstyle) might also be a good reference for styles you can change.
 :::
 
-Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) for a reference of what styles are available.
+Jetez un œil à la feuille de style  [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html) pour un référence des styles disponibles.
 
-If you want to inject styles into html preview to alter the way notes are previewed please look at [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
+Si vous souhaitez injecter des styles dans l'aperçu html pour modifier la façon dont les notes sont prévisualisées, veuillez consulter [notetomarkdownhtmlhook](hooks.html#notetomarkdownhtmlhook).
 
 Recharger le moteur de script
 ------------------------------
@@ -793,7 +793,7 @@ NoteApi* ScriptingService::fetchNoteById(int id);
 script.fetchNoteById(243);
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Vérifier si une note existe par son nom de fichier
 ------------------------------------------
@@ -819,7 +819,7 @@ booléen ScriptingService :: noteExistsByFileName (QString fileName,
 script.noteExistsByFileName ("ma note.md", note.id);
 ```
 
-You may want to take a look at the example [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/use-tag-names-in-filename.qml).
 
 Copier du texte dans le presse-papiers
 -------------------------------
@@ -841,7 +841,7 @@ void ScriptingService::setClipboardText(QString text, bool asHtml);
 script.setClipboardText("text to copy");
 ```
 
-You may want to take a look at the example [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/selected-markdown-to-bbcode.qml).
 
 Passer à une note
 -----------------
@@ -862,7 +862,7 @@ void ScriptingService::setCurrentNote(NoteApi *note);
 script.setCurrentNote (note);
 ```
 
-You may want to take a look at the example [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/journal-entry.qml).
 
 Accéder à un sous-dossier de notes
 ---------------------------
@@ -890,7 +890,7 @@ script.jumpToNoteSubFolder("a sub folder/sub");
 ```
 
 ::: tip
-You can create a new note subfolder in the current subfolder by calling [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
+Vous pouvez créer un nouveau sous-dossier de notes dans le sous-dossier actuel en appelant [`mainWindow.createNewNoteSubFolder`](classes.html#example-2).
 :::
 
 Affichage d'une boîte de message d'information
@@ -943,9 +943,9 @@ var result = script.questionMessageBox (
 script.log (résultat);
 ```
 
-For information about buttons see [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
+Pour plus d'informations sur les boutons, voir [StandardButton](https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum).
 
-You may also want to take a look at the example [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
+Vous pouvez également jeter un œil à l'exemple [input-dialogs.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/input-dialogs.qml).
 
 Affichage d'une boîte de dialogue de fichier ouvert
 ---------------------------
@@ -993,14 +993,14 @@ QString ScriptingService::getSaveFileName (légende QString, répertoire QString
 var fileName = script.getSaveFileName ("Veuillez sélectionner le fichier HTML à enregistrer", "output.html", "HTML (*.html)");
 ```
 
-You may want to take a look at the example [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
+Vous voudrez peut-être jeter un coup d'œil à l'exemple [export-notes-as-one-html.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/export-notes-as-one-html.qml).
 
 Enregistrement des variables de paramètres de script
 -------------------------------------
 
-You need to define your settings variables as properties in your script and register them in a property named `settingsVariables`.
+Vous devez définir vos variables de paramètres en tant que propriétés dans votre script et les enregistrer dans une propriété nommée `settingsVariables`.
 
-The user can then set these properties in the script settings.
+L'utilisateur peut ensuite définir ces propriétés dans les paramètres du script.
 
 ### Exemple
 ```js
@@ -1024,7 +1024,7 @@ property variant settingsVariables: [
         "name": "I am a line edit",
 ```
 
-In addition you can override the `settingsVariables` with a special function `registerSettingsVariables()` like this:
+De plus, vous pouvez remplacer les `settingsVariables` avec une fonction spéciale `registerSettingsVariables ()` comme ceci:
 
 ### Exemple
 ```js
@@ -1042,7 +1042,7 @@ function registerSettingsVariables() {
 }
 ```
 
-You may also want to take a look at the example [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
+Vous pouvez également jeter un œil à l'exemple [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/variables.qml).
 
 Stockage et chargement de variables persistantes
 ----------------------------------------
@@ -1081,9 +1081,9 @@ script.setPersistentVariable ("PersistentVariablesTest/myVar", résultat);
 script.log (script.getPersistentVariable ("PersistentVariablesTest/myVar", "rien ici encore"));
 ```
 
-Please make sure to use a meaningful prefix in your key like `PersistentVariablesTest/myVar` because the variables are accessible from all scripts.
+Veuillez vous assurer d'utiliser un préfixe significatif dans votre clé comme `PersistentVariablesTest / myVar` car les variables sont accessibles depuis tous les scripts.
 
-You may also want to take a look at the example [persistent-variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
+Vous voudrez peut-être également jeter un coup d'œil à l'exemple [variables-persistantes.qml](https://github.com/pbek/QOwnNotes/blob/develop/docs/scripting/examples/persistent-variables.qml).
 
 Chargement des variables de paramètres d'application
 --------------------------------------
@@ -1107,12 +1107,12 @@ QVariant ScriptingService :: getApplicationSettingsVariable (const QString & amp
 script.log (script.getApplicationSettingsVariable ("gitExecutablePath"));
 ```
 
-Keep in mind that settings actually can be empty, you have to take care about that yourself. `defaultValue` is only used if the setting doesn't exist at all.
+Gardez à l'esprit que les paramètres peuvent être vides, vous devez vous en occuper vous-même. `defaultValue` n'est utilisé que si le paramètre n'existe pas du tout.
 
 Créer un répertoire de cache
 --------------------------
 
-You can cache files at the default cache location of your system.
+Vous pouvez mettre en cache les fichiers à l'emplacement de cache par défaut de votre système.
 
 ### Appel de méthode et paramètres
 ```cpp
@@ -1134,7 +1134,7 @@ var cacheDirForScript = script.cacheDir ("mon-id-script");
 Effacer un répertoire de cache
 --------------------------
 
-You can clear the cache files of your script by passing its name to clearCacheDir().
+Vous pouvez effacer les fichiers cache de votre script en passant son nom à clearCacheDir().
 
 ### Appel de méthode et paramètres
 ```cpp
@@ -1156,7 +1156,7 @@ script.clearCacheDir("my-script-id");
 Lecture du chemin vers le répertoire de votre script
 ------------------------------------------------
 
-If you need to get the path to the directory where your script is placed to for example load other files you have to register a `property string scriptDirPath;`. This property will be set with the path to the script's directory.
+Si vous avez besoin d'obtenir le chemin d'accès au répertoire où votre script est placé pour, par exemple, charger d'autres fichiers, vous devez enregistrer une chaîne de propriété `scriptDirPath;`. Cette propriété sera définie avec le chemin d'accès au répertoire du script.
 
 ### Exemple
 ```js

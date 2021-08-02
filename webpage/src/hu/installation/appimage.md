@@ -10,4 +10,4 @@ chmod a+x QOwnNotes-*.AppImage
 
 Ezután képesnek kell lennie az AppImage futtatására a QOwnNotes futtatásához.
 
-::: warning If you want to use the **automatic updater** please make sure to put your AppImage in a place where your user account has write access to, like somewhere in your home directory. :::
+::: warning Ha az **automatikus frissítőt** szeretné használni, feltétlenül helyezze el az AppImage -ot olyan helyre, ahová felhasználói fiókja írási jogosultsággal rendelkezik, például valahol a saját könyvtárában. :::

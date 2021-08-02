@@ -878,17 +878,17 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation>Koristi FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
 <source>Read .vimrc from location:</source>
-<translation type="unfinished">Read .vimrc from location:</translation>
+<translation>Čitaj .vimrc iz mjesta:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>Pokaži pozicije tekstualnih oznaka</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
@@ -903,58 +903,58 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Početak retka</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Veličina tabulatora:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Pametni tabulatori</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>Istakni rezultate pretrage</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished">Shift width:</translation>
+<translation>Širina pomaka:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Proširi tabulatore</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>Automatska uvlaka</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>Inkrementalna pretraga</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Koristi dijalog pretrage</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>Koristi pametno razlikovanje velikih/malih slova</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>Koristi nerazlikovanje velikih/malih slova</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
@@ -969,27 +969,27 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>Pokaži dio naredbe</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Pokaži broj redaka relativno u odnosu na kursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>Trepereći kursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>Odmak klizanja:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>Tipka backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
@@ -999,7 +999,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Koristi Vim-stil uređivanje</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
@@ -1029,7 +1029,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>Standardno: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1069,12 +1069,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>Utipkaj Meta-Shift-Y, Meta-Shift-Y za prekidanje FakeVim modusa.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>Utipkaj Alt-Y, Alt-Y za prekidanje FakeVim modusa.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1606,7 +1606,7 @@
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="201"/>
 <source>Minimum 8 characters</source>
-<translation type="unfinished">Minimum 8 characters</translation>
+<translation>Barem 8 znakova</translation>
 </message>
 <message>
 <location filename="../dialogs/issueassistantdialog.ui" line="244"/>
@@ -1614,7 +1614,7 @@
 <location filename="../dialogs/issueassistantdialog.ui" line="276"/>
 <location filename="../dialogs/issueassistantdialog.ui" line="292"/>
 <source>Minimum 10 characters</source>
-<translation type="unfinished">Minimum 10 characters</translation>
+<translation>Barem 10 znakova</translation>
 </message>
 </context>
 <context>
@@ -1622,72 +1622,72 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Joplin uvoz</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Uvezi mape</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="111"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Odaberi „RAW – Joplin mapa izvoza” iz koje želiš izvesti bilješke:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="141"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Odaberi mapu</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="192"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Uvezi slike</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="185"/>
 <source>%v of %m file(s) imported</source>
-<translation type="unfinished">%v of %m file(s) imported</translation>
+<translation>%v od %m datoteka uvezeno</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="54"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Uvezi bilješke</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="131"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Uvezi oznake</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="202"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Ako imaš samo „RAW – Joplin mapa izvoza”, izdvoji sadržaj te datoteke u mapu i odaberi tu mapu.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="212"/>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>Uvezi metapodatke</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="81"/>
 <source>Metadata to import</source>
-<translation type="unfinished">Metadata to import</translation>
+<translation>Metapodaci za uvoz</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="155"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW – Joplin mapa izvoza</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Uvezi privitak</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="76"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Odaberi „RAW – Joplin mapa izvoza” za izvoz</translation>
 </message>
 </context>
 <context>
@@ -2364,12 +2364,12 @@
 <message>
 <location filename="../mainwindow.ui" line="1457"/>
 <source>Insert text &amp;link</source>
-<translation type="unfinished">Insert text &amp;link</translation>
+<translation>Umetni tekstualnu &amp;poveznicu</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1460"/>
 <source>Ctrl+L</source>
-<translation type="unfinished">Ctrl+L</translation>
+<translation>Ctrl+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1477"/>
@@ -2742,7 +2742,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2491"/>
 <source>Manage stored attachments</source>
-<translation type="unfinished">Manage stored attachments</translation>
+<translation>Upravljaj spremljenim privitcima</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2496"/>
@@ -2844,7 +2844,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2658"/>
 <source>Jump to navigation panel</source>
-<translation type="unfinished">Jump to navigation panel</translation>
+<translation>Prijeđi na navigacijsku ploču</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2670"/>
@@ -2854,12 +2854,12 @@
 <message>
 <location filename="../mainwindow.ui" line="2673"/>
 <source>Ctrl+Shift+L</source>
-<translation type="unfinished">Ctrl+Shift+L</translation>
+<translation>Ctrl+Shift+L</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>Uvezi bilješke iz Joplina</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -3289,12 +3289,12 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../mainwindow.cpp" line="6498"/>
 <source>Failed to create note</source>
-<translation type="unfinished">Failed to create note</translation>
+<translation>Neuspjela izrada bilješke</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6499"/>
 <source>Note creation failed</source>
-<translation type="unfinished">Note creation failed</translation>
+<translation>Neuspjela izrada bilješke</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="6687"/>
@@ -4051,7 +4051,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../mainwindow.cpp" line="598"/>
 <source>Action not found!</source>
-<translation type="unfinished">Action not found!</translation>
+<translation>Radnja nije pronađena!</translation>
 </message>
 <message>
 <location filename="../mainwindow.cpp" line="599"/>
@@ -4410,13 +4410,13 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../services/owncloudservice.cpp" line="235"/>
 <source>incorrect</source>
-<translation type="unfinished">incorrect</translation>
+<translation>neispravno</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="237"/>
 <location filename="../services/owncloudservice.cpp" line="535"/>
 <source>not connected</source>
-<translation type="unfinished">not connected</translation>
+<translation>nepovezano</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="252"/>
@@ -4439,29 +4439,29 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <location filename="../services/owncloudservice.cpp" line="508"/>
 <location filename="../services/owncloudservice.cpp" line="526"/>
 <source>ok</source>
-<translation type="unfinished">ok</translation>
+<translation>u redu</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="318"/>
 <source>not correct</source>
-<translation type="unfinished">not correct</translation>
+<translation>nije ispravno</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="331"/>
 <source>not detected</source>
-<translation type="unfinished">not detected</translation>
+<translation>nije prepoznato</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="434"/>
 <location filename="../services/owncloudservice.cpp" line="529"/>
 <source>not found</source>
-<translation type="unfinished">not found</translation>
+<translation>nije pronađeno</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="471"/>
 <location filename="../services/owncloudservice.cpp" line="473"/>
 <source>unknown</source>
-<translation type="unfinished">unknown</translation>
+<translation>nepoznato</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="482"/>
@@ -4472,7 +4472,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <location filename="../services/owncloudservice.cpp" line="503"/>
 <location filename="../services/owncloudservice.cpp" line="511"/>
 <source>not enabled</source>
-<translation type="unfinished">not enabled</translation>
+<translation>nije aktivirano</translation>
 </message>
 <message>
 <location filename="../services/owncloudservice.cpp" line="585"/>
@@ -4683,12 +4683,12 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <message>
 <location filename="../utils/gui.cpp" line="1020"/>
 <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+<translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;zadnja promjena: %2</translation>
 </message>
 <message>
 <location filename="../utils/gui.cpp" line="1025"/>
 <source>&lt;br /&gt;path: %1</source>
-<translation type="unfinished">&lt;br /&gt;path: %1</translation>
+<translation>&lt;br /&gt;staza: %1</translation>
 </message>
 <message>
 <location filename="../utils/git.cpp" line="76"/>
@@ -4746,7 +4746,7 @@ Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali biste ju mo�
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="452"/>
 <location filename="../dialogs/storedimagesdialog.cpp" line="375"/>
 <source>File name changed</source>
-<translation type="unfinished">File name changed</translation>
+<translation>Ime datoteke promijenjeno</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="453"/>
@@ -6357,7 +6357,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="288"/>
 <source>Web application</source>
-<translation type="unfinished">Web application</translation>
+<translation>Internetski program</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="1418"/>
@@ -6447,7 +6447,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4402"/>
 <source>Check integrity</source>
-<translation type="unfinished">Check integrity</translation>
+<translation>Provjeri integritet</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="4409"/>
@@ -6512,7 +6512,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5292"/>
 <source>Show line numbers</source>
-<translation type="unfinished">Show line numbers</translation>
+<translation>Pokaži brojeve redaka</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5302"/>
@@ -6571,17 +6571,17 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6323"/>
 <source>QOwnNotes web application</source>
-<translation type="unfinished">QOwnNotes web application</translation>
+<translation>Internetski program QOwnNotes</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6413"/>
 <source>Server URL:</source>
-<translation type="unfinished">Server URL:</translation>
+<translation>URL poslužitelja:</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6470"/>
 <source>Show QR code</source>
-<translation type="unfinished">Show QR code</translation>
+<translation>Pokaži QR kod</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6362"/>
@@ -6611,7 +6611,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6444"/>
 <source>Reset the URL to default</source>
-<translation type="unfinished">Reset the URL to default</translation>
+<translation>Vrati URL adresu na standardnu</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6273"/>
@@ -8013,17 +8013,17 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="378"/>
 <source>Delete selected attachments</source>
-<translation type="unfinished">Delete selected attachments</translation>
+<translation>Izbriši odabrane privitke</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="381"/>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>Izbriši</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="14"/>
 <source>Stored attachments</source>
-<translation type="unfinished">Stored attachments</translation>
+<translation>Spremljeni privici</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="65"/>
@@ -8033,17 +8033,17 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="312"/>
 <source>Find attachment</source>
-<translation type="unfinished">Find attachment</translation>
+<translation>Pronađi privitak</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="322"/>
 <source>Only show images that are not used in notes</source>
-<translation type="unfinished">Only show images that are not used in notes</translation>
+<translation>Prikaži samo slike koje se ne koriste u bilješkama</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="325"/>
 <source>Only show orphaned attachments</source>
-<translation type="unfinished">Only show orphaned attachments</translation>
+<translation>Prikaži samo samostalne privitke</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="339"/>
@@ -8053,121 +8053,121 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="342"/>
 <source>Add to current note</source>
-<translation type="unfinished">Add to current note</translation>
+<translation>Dodaj u trenutačnu bilješku</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="353"/>
 <source>Open &amp;attachment</source>
-<translation type="unfinished">Open &amp;attachment</translation>
+<translation>Otvori &amp;privitak</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="364"/>
 <source>Open the attachments folder</source>
-<translation type="unfinished">Open the attachments folder</translation>
+<translation>Otvori mapu privitaka</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="367"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>Otvori &amp;mapu</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="392"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>Aktualiziraj</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="102"/>
 <source>File size:</source>
-<translation type="unfinished">File size:</translation>
+<translation>Veličina datoteke:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="194"/>
 <source>File type:</source>
-<translation type="unfinished">File type:</translation>
+<translation>Vrsta datoteke:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.ui" line="207"/>
 <source>File path:</source>
-<translation type="unfinished">File path:</translation>
+<translation>Staza datoteke:</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="86"/>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>Zadnja promjena %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="160"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>Staza: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="200"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>Izbriši odabrane datoteke</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="201"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
 <translation type="unfinished">
 <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<numerusform>Izbrisati &lt;strong&gt;%n&lt;/strong&gt; odabrane datoteke?</numerusform>
+<numerusform>Izbrisati &lt;strong&gt;%n&lt;/strong&gt; odabranih datoteka?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="309"/>
 <source>&amp;Open attachment</source>
-<translation type="unfinished">&amp;Open attachment</translation>
+<translation>&amp;Otvori privitak</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="310"/>
 <source>&amp;Rename attachment</source>
-<translation type="unfinished">&amp;Rename attachment</translation>
+<translation>&amp;Preimenuj privitak</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="311"/>
 <source>&amp;Delete attachments</source>
-<translation type="unfinished">&amp;Delete attachments</translation>
+<translation>&amp;Izbriši privitke</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="312"/>
 <source>&amp;Add attachments to current note</source>
-<translation type="unfinished">&amp;Add attachments to current note</translation>
+<translation>&amp;Dodaj privitak trenutačnoj bilješci</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="412"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>Datoteka ne postoji</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="413"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>Datoteka &lt;strong&gt;%1&lt;/strong&gt; ne postoji. Ne možeš je preimenovati!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="425"/>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>Datoteka postoji</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="426"/>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+<translation>Datoteka &lt;strong&gt;%1&lt;/strong&gt; već postoji. Moraš je ukloniti prije biranja &lt;strong&gt;%2&lt;/strong&gt; kao novo ime datoteke!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="436"/>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>Preimenovanje datoteke neuspjelo</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="437"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>Preimenovanje datoteke &lt;strong&gt;%1&lt;/strong&gt; neuspjelo!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedattachmentsdialog.cpp" line="494"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>&amp;Otvori bilješku</translation>
 </message>
 </context>
 <context>
@@ -8175,57 +8175,57 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="14"/>
 <source>Stored images</source>
-<translation type="unfinished">Stored images</translation>
+<translation>Spremljene slike</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="165"/>
 <source>Find image</source>
-<translation type="unfinished">Find image</translation>
+<translation>Pronađi sliku</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="126"/>
 <source>Add selected images to the current note</source>
-<translation type="unfinished">Add selected images to the current note</translation>
+<translation>Dodaj odabrane slike trenutačnoj bilješci</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="64"/>
 <source>Open the media folder</source>
-<translation type="unfinished">Open the media folder</translation>
+<translation>Otvori mapu medija</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="67"/>
 <source>Open &amp;folder</source>
-<translation type="unfinished">Open &amp;folder</translation>
+<translation>Otvori &amp;mapu</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="78"/>
 <source>Open image externally</source>
-<translation type="unfinished">Open image externally</translation>
+<translation>Otvori sliku u vanjskom programu</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="81"/>
 <source>Open image</source>
-<translation type="unfinished">Open image</translation>
+<translation>Otvori sliku</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="129"/>
 <source>Add to current note</source>
-<translation type="unfinished">Add to current note</translation>
+<translation>Dodaj u trenutačnu bilješku</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="140"/>
 <source>Delete selected images</source>
-<translation type="unfinished">Delete selected images</translation>
+<translation>Izbriši odabrane slike</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="143"/>
 <source>Delete</source>
-<translation type="unfinished">Delete</translation>
+<translation>Izbriši</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="175"/>
 <source>Refresh</source>
-<translation type="unfinished">Refresh</translation>
+<translation>Aktualiziraj</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="234"/>
@@ -8235,91 +8235,91 @@ Vaše bilješke će ostati netaknute!</translation>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="116"/>
 <source>Only show images that are not used in notes</source>
-<translation type="unfinished">Only show images that are not used in notes</translation>
+<translation>Prikaži samo slike koje se ne koriste u bilješkama</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.ui" line="119"/>
 <source>Only show orphaned images</source>
-<translation type="unfinished">Only show orphaned images</translation>
+<translation>Prikaži samo samostalne slike</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="83"/>
 <source>Last modified at %1</source>
-<translation type="unfinished">Last modified at %1</translation>
+<translation>Zadnja promjena %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="148"/>
 <source>Path: %1</source>
-<translation type="unfinished">Path: %1</translation>
+<translation>Staza: %1</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="187"/>
 <source>Delete selected files</source>
-<translation type="unfinished">Delete selected files</translation>
+<translation>Izbriši odabrane datoteke</translation>
 </message>
 <message numerus="yes">
 <location filename="../dialogs/storedimagesdialog.cpp" line="188"/>
 <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
-<translation type="unfinished">
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
-<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</numerusform>
+<translation>
+<numerusform>Izbrisati &lt;strong&gt;%n&lt;/strong&gt; odabranu datoteku?</numerusform>
+<numerusform>Izbrisati &lt;strong&gt;%n&lt;/strong&gt; odabrane datoteke?</numerusform>
+<numerusform>Izbrisati &lt;strong&gt;%n&lt;/strong&gt; odabranih datoteka?</numerusform>
 </translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="335"/>
 <source>File doesn't exist</source>
-<translation type="unfinished">File doesn't exist</translation>
+<translation>Datoteka ne postoji</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="336"/>
 <source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
-<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+<translation>Datoteka &lt;strong&gt;%1&lt;/strong&gt; ne postoji. Ne možeš je preimenovati!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="348"/>
 <source>File exists</source>
-<translation type="unfinished">File exists</translation>
+<translation>Datoteka postoji</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="349"/>
 <source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
-<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+<translation>Datoteka &lt;strong&gt;%1&lt;/strong&gt; već postoji. Moraš je ukloniti prije biranja &lt;strong&gt;%2&lt;/strong&gt; kao novo ime datoteke!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="359"/>
 <source>File renaming failed</source>
-<translation type="unfinished">File renaming failed</translation>
+<translation>Preimenovanje datoteke neuspjelo</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="360"/>
 <source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
-<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+<translation>Preimenovanje datoteke &lt;strong&gt;%1&lt;/strong&gt; neuspjelo!</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="436"/>
 <source>&amp;Open image externally</source>
-<translation type="unfinished">&amp;Open image externally</translation>
+<translation>&amp;Otvori sliku u vanjskom programu</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="437"/>
 <source>&amp;Rename image</source>
-<translation type="unfinished">&amp;Rename image</translation>
+<translation>P&amp;reimenuj sliku</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="438"/>
 <source>&amp;Delete images</source>
-<translation type="unfinished">&amp;Delete images</translation>
+<translation>&amp;Izbriši slike</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="439"/>
 <source>&amp;Add images to current note</source>
-<translation type="unfinished">&amp;Add images to current note</translation>
+<translation>&amp;Dodaj slike trenutačnoj bilješci</translation>
 </message>
 <message>
 <location filename="../dialogs/storedimagesdialog.cpp" line="472"/>
 <source>&amp;Open note</source>
-<translation type="unfinished">&amp;Open note</translation>
+<translation>&amp;Otvori bilješku</translation>
 </message>
 </context>
 <context>
@@ -8855,7 +8855,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="64"/>
 <source>&amp;Download latest</source>
-<translation type="unfinished">&amp;Download latest</translation>
+<translation>&amp;Preuzmi najnoviju verziju</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="74"/>
@@ -8945,7 +8945,7 @@ This cannot be undone!</source>
 <location filename="../dialogs/updatedialog.cpp" line="439"/>
 <location filename="../dialogs/updatedialog.cpp" line="451"/>
 <source>Permission error</source>
-<translation type="unfinished">Permission error</translation>
+<translation>Greška dozvole</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="440"/>
@@ -8970,27 +8970,27 @@ This cannot be undone!</source>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="479"/>
 <source>Restart application</source>
-<translation type="unfinished">Restart application</translation>
+<translation>Ponovno pokreni program</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="485"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
+<translation>Za završavanje aktualiziranja ponovo pokreni program ručno.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="491"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished">You now can restart the application to complete the update process.</translation>
+<translation>Za završavanje aktualiziranja sada možeš ponovo pokrenuti program.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Restart</source>
-<translation type="unfinished">Restart</translation>
+<translation>Ponovno pokretanje</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>Odustani</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>
@@ -9108,17 +9108,17 @@ This cannot be undone!</source>
 <message>
 <location filename="../services/webappclientservice.cpp" line="127"/>
 <source>Web app warning</source>
-<translation type="unfinished">Web app warning</translation>
+<translation>Upozorenje internetskog programa</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="139"/>
 <source>Image received</source>
-<translation type="unfinished">Image received</translation>
+<translation>Slika je primljena</translation>
 </message>
 <message>
 <location filename="../services/webappclientservice.cpp" line="140"/>
 <source>Insert image received from QOwnNotes web application?</source>
-<translation type="unfinished">Insert image received from QOwnNotes web application?</translation>
+<translation>Umetnuti sliku primljenu iz web programa QOwnNotes?</translation>
 </message>
 </context>
 <context>
@@ -9326,7 +9326,7 @@ This cannot be undone!</source>
 <message>
 <location filename="../main.cpp" line="133"/>
 <source>Triggers a menu action after the application was started.</source>
-<translation type="unfinished">Triggers a menu action after the application was started.</translation>
+<translation>Pokreće radnju izbornika nakon pokretanja programa.</translation>
 </message>
 <message>
 <location filename="../main.cpp" line="553"/>

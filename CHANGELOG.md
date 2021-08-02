@@ -3,6 +3,7 @@
 ## 21.8.0
 - after notes are imported by draging and dropping text files into the application
   the note folder is now reloaded automatically so the notes show up in the note list
+- added more translation (thank you manuelasmiley, rawfreeamy, milotype)
 
 ## 21.7.14
 - the first app is now shown if a 2nd instance is started in single instance mode

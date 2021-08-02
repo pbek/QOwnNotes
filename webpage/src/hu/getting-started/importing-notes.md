@@ -6,21 +6,21 @@ Van egy Evernote importáló párbeszédpanel, amelyet elérhet a `Jegyzet / Imp
 
 ## Joplin
 
-There is a Joplin import dialog you can reach in the `Note / Import` menu.
+Van egy Joplin import párbeszédablak, amelyet a `Jegyzet / Importálás` menüben érhet el.
 
 ## Tomboy
 
-You can import your Tomboy Notes using a script called [Trombone](https://github.com/samba/trombone).
+A Tomboy Notes programot a [Trombone](https://github.com/samba/trombone) nevű szkript segítségével importálhatja.
 
-You might install python2 to make the script work. It will convert your Tomboy notes to an Evernote `.enex` file, which then you are able to import to QOwnNotes.
+Lehetséges, hogy telepíti a python2-t a szkript működéséhez. Konvertálja a Tomboy-jegyzeteit egy Evernote `.enex` fájlba, amelyet aztán importálhat a QOwnNotes fájlba.
 
-For anyone wanting to do this, first make sure you have Python2 installed and you might want to also install `python-is-python2` (you can remove that later):
+Aki ezt meg akarja tenni, először ellenőrizze, hogy telepítve van-e a Python2, és érdemes lehet a `python-is-python2` -t is telepíteni (ezt később eltávolíthatja):
 
 ```bash
 sudo apt install python2 python-is-python2
 ```
 
-Download the trombone file from GitHub, extract and jump into that folder:
+Töltse le a trombone fájlt a GitHubról, bontsa ki és ugorjon abba a mappába:
 
 ```bash
 cd ~/Downloads/trombone-master
@@ -29,18 +29,18 @@ sudo make
 sudo make install
 ```
 
-Then cd into the folder where your tomboy notes are:
+Ezután cd-t abba a mappába, ahol a jegyzetei vannak:
 
 ```bash
  cd ~/.local/share/tomboy/
 ```
 
-Then run this:
+Ezután futtassa ezt:
 
 ```bash
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-If you get unicode errors about specific notes, just remove each note and run the conversion again until it gives a message saying `Saving...` . You will have a file called `EXPORT.enex` which can then be imported into QOwnNotes.
+Ha unicode hibákat tapasztal egyes megjegyzésekkel kapcsolatban, egyszerűen távolítsa el az egyes jegyzeteket, és futtassa újra az átalakítást, amíg a `Mentés ...` üzenetet nem kap. Lesz egy `EXPORT.enex` nevű fájlja, amelyet aztán importálhat a QOwnNotes fájlba.
 
-During the import into QOwnNotes you might uncheck all of the attributes to import except maybe the creation/modification date, since Tomboy does not have those features.
+A QOwnNotes programba történő importálás során törölheti az összes importálandó attribútum jelölését, kivéve talán a létrehozás / módosítás dátumát, mivel a Tomboy nem rendelkezik ilyen tulajdonságokkal.

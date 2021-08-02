@@ -878,7 +878,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="84"/>
 <source>Use FakeVim</source>
-<translation type="unfinished">Use FakeVim</translation>
+<translation> Utiliser FakeVim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="87"/>
@@ -888,138 +888,138 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>Afficher la position des marques de texte</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>Passer les clés de contrôle</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>Passes clés en mode insertion</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Début de ligne</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Taille de la tabulatrice :</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Tabulateurs intelligents</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>Mettre en évidence les résultats de la recherche</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished">Shift width:</translation>
+<translation>Largeur de décalage :</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Développer les tabulateurs</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>Indentation automatique</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>Recherche incrémentale</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Utiliser la boîte de dialogue de recherche</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>Utiliser smartcase</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>Utiliser ignorer la casse</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>Utiliser wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>Utiliser tildeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>Show partial command</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Show line numbers relative to cursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>Curseur clignotant</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>Décalage de défilement :</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>Retour arrière :</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished">Keyword characters:</translation>
+<translation>Caractères des mots clés :</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Utiliser l'édition de style Vim</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>Affiche les numéros de ligne relatifs à la ligne contenant le curseur de texte.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>N'interprète pas les séquences de touches comme Ctrl-S dans FakeVim mais les gère comme des raccourcis normaux. Cela donne un accès plus facile aux fonctionnalités de base au prix de la perte de certaines fonctionnalités de FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>N'interprète pas certaines pressions de touche en mode insertion afin que le code puisse être correctement complété et développé.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Option de tabulation Vim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
@@ -1029,7 +1029,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>Par défaut : %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1069,7 +1069,7 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>Tapez Meta-Shift-Y, Meta-Shift-Y pour quitter le mode FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
@@ -1617,27 +1617,27 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Importation Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Importer des dossiers</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="111"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Veuillez sélectionner le "RAW - Joplin Export Directory" à partir duquel vous souhaitez importer des notes :</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="141"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Sélectionnez le répertoire</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="192"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Importer des images</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="185"/>
@@ -1647,42 +1647,42 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="54"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Importer des notes</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="131"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Importer des balises</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="202"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Si vous n'avez qu'un "JEX - Joplin Export File", veuillez extraire le contenu de ce fichier dans un répertoire et sélectionnez ce répertoire.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="212"/>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>Importer des métadonnées</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="81"/>
 <source>Metadata to import</source>
-<translation type="unfinished">Metadata to import</translation>
+<translation>Métadonnées à importer</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="155"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - Répertoire d'exportation Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Importer les pièces jointes</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="76"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Sélectionnez 'RAW - Joplin Export Directory' pour importer</translation>
 </message>
 </context>
 <context>
@@ -2850,7 +2850,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>Importer des notes depuis Joplin</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -6471,7 +6471,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5292"/>
 <source>Show line numbers</source>
-<translation type="unfinished">Show line numbers</translation>
+<translation>Afficher les numéros de ligne</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5302"/>
@@ -6537,7 +6537,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6470"/>
 <source>Show QR code</source>
-<translation type="unfinished">Show QR code</translation>
+<translation>Afficher le code QR</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6362"/>
@@ -7419,7 +7419,7 @@ Le message d'erreur de connexion est : </translation>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2317"/>
 <source>The Database was reinitialized. Please restart the application now!</source>
-<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+<translation>La base de données a été réinitialisée. Veuillez redémarrer l'application maintenant !</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.cpp" line="2328"/>
@@ -8806,7 +8806,7 @@ Cela ne peut être annuler !</translation>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="64"/>
 <source>&amp;Download latest</source>
-<translation type="unfinished">&amp;Download latest</translation>
+<translation>&amp;Télécharger la dernière version</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="74"/>
@@ -8896,52 +8896,52 @@ Cela ne peut être annuler !</translation>
 <location filename="../dialogs/updatedialog.cpp" line="439"/>
 <location filename="../dialogs/updatedialog.cpp" line="451"/>
 <source>Permission error</source>
-<translation type="unfinished">Permission error</translation>
+<translation>Erreur d'autorisation</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="440"/>
 <source>Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</source>
-<translation type="unfinished">Your QOwnNotes executable '%1' is not writeable! It must be writeable by the current user in order to be updated.</translation>
+<translation>Votre exécutable QOwnNotes '%1' n'est pas accessible en écriture ! Il doit être accessible en écriture par l'utilisateur courant pour être mis à jour.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="452"/>
 <source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
-<translation type="unfinished">The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</translation>
+<translation>Le fichier temporaire '%1' n'a pas pu être rendu exécutable ! Vous devez remplacer '%2' vous-même.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="462"/>
 <source>Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</translation>
+<translation>Votre ancien exécutable QOwnNotes '%1' n'a pas pu être supprimé ! Vous devez le remplacer vous-même par « %2 ».</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="472"/>
 <source>Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</source>
-<translation type="unfinished">Your old QOwnNotes executable '%1' could not be overwritten be replaced by the new file '%2'! You need to replace it yourself.</translation>
+<translation>Votre ancien exécutable QOwnNotes '%1' n'a pas pu être remplacé par le nouveau fichier '%2' ! Vous devez le remplacer vous-même.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="479"/>
 <source>Restart application</source>
-<translation type="unfinished">Restart application</translation>
+<translation>Redémarrer l'application</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="485"/>
 <source>You now need to restart the application manually to complete the update process.</source>
-<translation type="unfinished">You now need to restart the application manually to complete the update process.</translation>
+<translation>Vous devez maintenant redémarrer l'application manuellement pour terminer le processus de mise à jour.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="491"/>
 <source>You now can restart the application to complete the update process.</source>
-<translation type="unfinished">You now can restart the application to complete the update process.</translation>
+<translation>Vous pouvez maintenant redémarrer l'application pour terminer le processus de mise à jour.</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Restart</source>
-<translation type="unfinished">Restart</translation>
+<translation>Redémarrer</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="492"/>
 <source>Cancel</source>
-<translation type="unfinished">Cancel</translation>
+<translation>Annuler</translation>
 </message>
 <message>
 <location filename="../dialogs/updatedialog.cpp" line="519"/>

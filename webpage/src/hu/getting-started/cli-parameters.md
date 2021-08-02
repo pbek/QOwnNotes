@@ -39,12 +39,12 @@ QOwnNotes --action actionShow_Todo_List
 
 ::: tip A menümű objektumneveit innen szerezheti be [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui). Csak keresse meg az angol menü címét. Ne feledje, hogy ezek a szövegek idővel változhatnak. :::
 
-A [parancsfájl-műveletek](../scripting/methods-and-objects.md#registering-a-custom-action) elindításához használja a(z) `customAction_` elemet, amelyet az egyéni művelet azonosítója követ. The identifier of the custom action is the first parameter of the `script.registerCustomAction` call in the script.
+A [parancsfájl-műveletek](../scripting/methods-and-objects.md#registering-a-custom-action) elindításához használja a(z) `customAction_` elemet, amelyet az egyéni művelet azonosítója követ. Az egyéni művelet azonosítója a parancsfájl `script.registerCustomAction` hívásának első paramétere.
 
-For example to run the custom action `myAction` start QOwnNotes like this:
+Például a `myAction` egyéni művelet futtatásához indítsa el a következőképpen a QOwnNotes programot:
 
 ```bash
 QOwnNotes --action customAction_myAction
 ```
 
-::: tip If you run QOwnNotes a second time with the action parameter and only have allowed one application instance, then the menu action will be triggered in the first instance. :::
+::: tip Ha másodszor futtatja a QOwnNotes műveleti paramétert, és csak egy alkalmazáspéldányt engedélyezett, akkor a menüművelet első lépésben aktiválódik. :::

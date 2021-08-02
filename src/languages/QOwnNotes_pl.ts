@@ -888,148 +888,148 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="89"/>
 <source>Show position of text marks</source>
-<translation type="unfinished">Show position of text marks</translation>
+<translation>Pokaż pozycję znaków tekstowych</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="90"/>
 <source>Pass control keys</source>
-<translation type="unfinished">Pass control keys</translation>
+<translation>Przekaż klawisze sterujące</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="91"/>
 <source>Pass keys in insert mode</source>
-<translation type="unfinished">Pass keys in insert mode</translation>
+<translation>Wprowadź klucze w trybie wstawiania</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="94"/>
 <source>Start of line</source>
-<translation type="unfinished">Start of line</translation>
+<translation>Początek linii</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="95"/>
 <source>Tabulator size:</source>
-<translation type="unfinished">Tabulator size:</translation>
+<translation>Rozmiar tabulatora:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="96"/>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="101"/>
 <source>Smart tabulators</source>
-<translation type="unfinished">Smart tabulators</translation>
+<translation>Inteligentne tabulatory</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="97"/>
 <source>Highlight search results</source>
-<translation type="unfinished">Highlight search results</translation>
+<translation>Wyróżnij wyniki wyszukiwania</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="98"/>
 <source>Shift width:</source>
-<translation type="unfinished">Shift width:</translation>
+<translation>Szerokość przesunięcia:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="99"/>
 <source>Expand tabulators</source>
-<translation type="unfinished">Expand tabulators</translation>
+<translation>Rozwiń tabulatory</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="100"/>
 <source>Automatic indentation</source>
-<translation type="unfinished">Automatic indentation</translation>
+<translation>Automatyczne wcięcie</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="102"/>
 <source>Incremental search</source>
-<translation type="unfinished">Incremental search</translation>
+<translation>Wyszukiwanie przyrostowe</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="103"/>
 <source>Use search dialog</source>
-<translation type="unfinished">Use search dialog</translation>
+<translation>Użyj okna wyszukiwania</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="104"/>
 <source>Use smartcase</source>
-<translation type="unfinished">Use smartcase</translation>
+<translation>Użyj etui na smartfona</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="105"/>
 <source>Use ignorecase</source>
-<translation type="unfinished">Use ignorecase</translation>
+<translation>Użyj ignorowanych liter</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="106"/>
 <source>Use wrapscan</source>
-<translation type="unfinished">Use wrapscan</translation>
+<translation>Użyj wrapscan</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="107"/>
 <source>Use tildeop</source>
-<translation type="unfinished">Use tildeop</translation>
+<translation>Użyj tyldeop</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="108"/>
 <source>Show partial command</source>
-<translation type="unfinished">Show partial command</translation>
+<translation>Pokaż polecenie częściowe</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="109"/>
 <source>Show line numbers relative to cursor</source>
-<translation type="unfinished">Show line numbers relative to cursor</translation>
+<translation>Pokaż numery linii względem kursora</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="110"/>
 <source>Blinking cursor</source>
-<translation type="unfinished">Blinking cursor</translation>
+<translation>Migający kursor</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="111"/>
 <source>Scroll offset:</source>
-<translation type="unfinished">Scroll offset:</translation>
+<translation>Przesunięcie przewijania:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="113"/>
 <source>Backspace:</source>
-<translation type="unfinished">Backspace:</translation>
+<translation>Backspace:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="115"/>
 <source>Keyword characters:</source>
-<translation type="unfinished">Keyword characters:</translation>
+<translation>Znaki słów kluczowych:</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="127"/>
 <source>Use Vim-style Editing</source>
-<translation type="unfinished">Use Vim-style Editing</translation>
+<translation>Użyj edycji w stylu Vima</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="129"/>
 <source>Displays line numbers relative to the line containing text cursor.</source>
-<translation type="unfinished">Displays line numbers relative to the line containing text cursor.</translation>
+<translation>Wyświetla numery linii względem linii zawierającej kursor tekstowy.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="132"/>
 <source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
-<translation type="unfinished">Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</translation>
+<translation>Nie interpretuje sekwencji klawiszy, takich jak Ctrl-S w FakeVim, ale traktuje je jako zwykłe skróty. Daje to łatwiejszy dostęp do podstawowych funkcji za cenę utraty niektórych funkcji FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="136"/>
 <source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
-<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+<translation>Nie interpretuje niektórych naciśnięć klawiszy w trybie wstawiania, dzięki czemu kod może być prawidłowo uzupełniany i rozszerzany.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="139"/>
 <source>Vim tabstop option.</source>
-<translation type="unfinished">Vim tabstop option.</translation>
+<translation>Opcja tabulatora Vima.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="148"/>
 <source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
-<translation type="unfinished">Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</translation>
+<translation>Pozostaw puste, aby użyć domyślnej ścieżki, tj. %USERPROFILE%\_vimrc w systemie Windows, w przeciwnym razie ~/.vimrc.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="150"/>
 <source>Default: %1</source>
-<translation type="unfinished">Default: %1</translation>
+<translation>Domyślnie: %1</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
@@ -1069,12 +1069,12 @@
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4693"/>
 <source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+<translation>Wpisz Meta-Shift-Y, Meta-Shift-Y, aby wyjść z trybu FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4695"/>
 <source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
-<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+<translation>Wpisz Alt-Y, Alt-Y, aby wyjść z trybu FakeVim.</translation>
 </message>
 <message>
 <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6290"/>
@@ -1627,27 +1627,27 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="14"/>
 <source>Joplin Import</source>
-<translation type="unfinished">Joplin Import</translation>
+<translation>Import z Joplina</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="162"/>
 <source>Import folders</source>
-<translation type="unfinished">Import folders</translation>
+<translation>Importuj foldery</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="111"/>
 <source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
-<translation type="unfinished">Please select the "RAW - Joplin Export Directory" from which you want to import notes:</translation>
+<translation>Wybierz "RAW - katalog eksportu Joplin", z którego chcesz zaimportować notatki:</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="141"/>
 <source>Select directory</source>
-<translation type="unfinished">Select directory</translation>
+<translation>Wybierz katalog</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="192"/>
 <source>Import images</source>
-<translation type="unfinished">Import images</translation>
+<translation>Importowanie obrazów</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="185"/>
@@ -1657,42 +1657,42 @@
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="54"/>
 <source>Import notes</source>
-<translation type="unfinished">Import notes</translation>
+<translation>Importuj notatki</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="131"/>
 <source>Import tags</source>
-<translation type="unfinished">Import tags</translation>
+<translation>Importuj tagi</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="202"/>
 <source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
-<translation type="unfinished">If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</translation>
+<translation>Jeśli masz tylko plik „JEX - Joplin Export File”, wyodrębnij zawartość tego pliku do katalogu i wybierz ten katalog.</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="212"/>
 <source>Import metadata</source>
-<translation type="unfinished">Import metadata</translation>
+<translation>Importuj metadane</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="81"/>
 <source>Metadata to import</source>
-<translation type="unfinished">Metadata to import</translation>
+<translation>Metadane do zaimportowania</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="155"/>
 <source>RAW - Joplin Export Directory</source>
-<translation type="unfinished">RAW - Joplin Export Directory</translation>
+<translation>RAW - katalog eksportu Joplin</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.ui" line="172"/>
 <source>Import attachments</source>
-<translation type="unfinished">Import attachments</translation>
+<translation>Importuj załączniki</translation>
 </message>
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="76"/>
 <source>Select 'RAW - Joplin Export Directory' to import</source>
-<translation type="unfinished">Select 'RAW - Joplin Export Directory' to import</translation>
+<translation>Wybierz „RAW - katalog eksportu Joplin”, aby zaimportować</translation>
 </message>
 </context>
 <context>
@@ -2869,7 +2869,7 @@
 <message>
 <location filename="../mainwindow.ui" line="2682"/>
 <source>Import notes from Joplin</source>
-<translation type="unfinished">Import notes from Joplin</translation>
+<translation>Importuj notatki z Joplin</translation>
 </message>
 <message>
 <location filename="../mainwindow.ui" line="1908"/>
@@ -6555,7 +6555,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5292"/>
 <source>Show line numbers</source>
-<translation type="unfinished">Show line numbers</translation>
+<translation>Pokaż numery linii</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="5302"/>
@@ -6621,7 +6621,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6470"/>
 <source>Show QR code</source>
-<translation type="unfinished">Show QR code</translation>
+<translation>Pokaż kod QR</translation>
 </message>
 <message>
 <location filename="../dialogs/settingsdialog.ui" line="6362"/>
