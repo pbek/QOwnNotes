@@ -1,4 +1,4 @@
-# Installation
+# Instalación
 
 Vous pouvez installer **QOwnNotes** sur de nombreux systèmes d'exploitation ou [le créer vous-même](building.md).
 

@@ -15,5 +15,5 @@ Les différentes façons de s'impliquer avec QOwnNotes
 - Signaler des problèmes ou partager des idées de nouvelles fonctionnalités sur la page [QOwnNotes **Problèmes GitHub**](https://github.com/pbek/QOwnNotes/issues)
 - Si vous avez créé un excellent schéma d'éditeur, veuillez également le publier sur la [page **Problèmes GitHub**](https://github.com/pbek/QOwnNotes/issues)
 - Partagez vos scripts sur la page [**scripts QOwnNotes** GitHub](https://github.com/qownnotes/scripts)
-- Share **your experience with QOwnNotes** on your own **YouTube** - or other - channel, but also gladly [**send your audio/video/text to Amy**](mailto:amydoralang@aol.de) to be uploaded on [**QOwnNotes in a Nutshell**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos)
-- You may want to answer a few, anonymous [**questions**](https://freeonlinesurveys.com/s/nA8t17k8) for us to help you getting better results with QOwnNotes
+- Partagez **votre expérience avec QOwnNotes** sur votre propre chaîne **YouTube** - ou autre -, mais aussi volontiers [**envoyez votre audio/vidéo/texte à Amy**](mailto:amydoralang@aol.de) pour être téléchargé sur [**QOwnNotes - Own your notes!**](https://www.youtube.com/channel/UC6Xpk_B1MFfvhBCsH_MrOEw/videos)
+- Vous voudrez peut-être répondre à quelques [**questions**](https://freeonlinesurveys.com/s/nA8t17k8) anonymes pour que nous vous aidions à obtenir de meilleurs résultats avec QOwnNotes

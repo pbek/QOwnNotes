@@ -133,7 +133,7 @@ Puede acceder al código fuente de [api.qownnotes.org](https://api.qownnotes.org
 
 ## QOwnNotes Web App
 
-You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
+Puede insertar fotos de su teléfono móvil en la nota actual en QOwnNotes en su escritorio a través de la **aplicación web ** en [app.qownnotes.org](https://app.qownnotes.org/).
 
 ::: tip
 Please visit [QOwnNotes Web App](web-app.md) for more information.

@@ -4,18 +4,18 @@ image: /img/blog/web-application-settings.png
 
 # QOwnNotes Web App
 
-You can insert photos from your mobile phone into the current note in QOwnNotes on your desktop via the **web application** on [app.qownnotes.org](https://app.qownnotes.org/).
+Puoi inserire foto dal tuo cellulare nella nota corrente in QOwnNotes sul desktop tramite l'**applicazione web** su [app.qownnotes.org](https://app.qownnotes.org/).
 
-![QOwnNotes Web Application browser](/img/blog/web-application-browser.png "Send photos from your mobile phone to QOwnNotes on the desktop")
+![QBrowser dell'applicazione Web OwnNotes](/img/blog/web-application-browser.png "Invia foto dal tuo cellulare a QOwnNotes sul desktop")
 
-The web application on your phone communicates with your QOwnNotes desktop application over the internet. The communication between QOwnNotes and the web service is **transport encrypted**. No images will be stored on the server.
+L'applicazione web sul telefono comunica con l'applicazione desktop QOwnNotes su Internet. La comunicazione tra QOwnNotes e il servizio web è **trasporto crittografato**. Nessuna immagine verrà archiviata sul server.
 
-There was a settings page **Web application** to add support for the web application.
+C'era una pagina delle impostazioni **Applicazione web** per aggiungere il supporto per l'applicazione web.
 
-![QOwnNotes Web Application settings](/img/blog/web-application-settings.png "Setup communication to web application")
+![QImpostazioni dell'applicazione Web OwnNotes](/img/blog/web-application-settings.png "Imposta la comunicazione con l'applicazione web")
 
-Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes. You can also scan the token from the QR code with your phone in the web application.
+Don't forget to **copy your secret token** from the QOwnNotes settings page to [app.qownnotes.org](https://app.qownnotes.org/) to be able to communicate with your local instance of QOwnNotes. Puoi anche scansionare il token dal codice QR con il tuo telefono nell'applicazione web.
 
-You can find the source code of the web application at [web-app on GitHub](https://github.com/qownnotes/web-app).
+Puoi trovare il codice sorgente dell'applicazione web su [web-app su GitHub](https://github.com/qownnotes/web-app).
 
-You can also host this web service yourself, the freshly built docker images are available at [qownnotes-web-app on DockerHub](https://hub.docker.com/repository/docker/pbeke/qownnotes-web-app).
+Puoi anche ospitare questo servizio web da solo, le immagini docker appena create sono disponibili su [qownnotes-web-app su DockerHub](https://hub.docker.com/repository/docker/pbeke/qownnotes-web-app).

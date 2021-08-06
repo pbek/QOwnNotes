@@ -23,11 +23,11 @@ rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fed
 ```
 :::
 
-## Legacy install method
+## Metodo di installazione legacy
 
-Use this method if your Fedora version doesn't support the `config-manager` dnf plugin, run these commands as root.
+Usa questo metodo se la tua versione di Fedora non supporta il plugin dnf `config-manager`, esegui questi comandi come root.
 
-Run the following shell commands as root to trust the repository.
+Eseguire i seguenti comandi della shell come root per considerare attendibile il repository.
 
 ```bash
 rpm --import http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Fedora_34/repodata/repomd.xml.key

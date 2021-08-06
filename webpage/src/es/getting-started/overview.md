@@ -3,19 +3,19 @@
 <template>
 <v-carousel cycle show-arrows-on-hover>
   <v-carousel-item>
-    <img src="/screenshots/screenshot.png" alt="QOwnNotes screenshot" />
+    <img src="/screenshots/screenshot.png" alt="Captura de pantalla de QOwnNotes" />
     <div class="sheet">
-      Edit your notes with markdown highlighting, colored tags and subfolders
+      Edite sus notas con resaltado de rebajas, etiquetas de colores y subcarpetas
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-minimal.png" alt="Minimal view" />
+    <img src="/screenshots/screenshot-minimal.png" alt="Vista mínima" />
     <div class="sheet">
-      Minimal default user interface that can be stripped even more
+      Interfaz de usuario mínima predeterminada que se puede quitar aún más
     </div>
   </v-carousel-item>
   <v-carousel-item>
-    <img src="/screenshots/screenshot-vertical.png" alt="Vertical view" />
+    <img src="/screenshots/screenshot-vertical.png" alt="Vista vertical" />
     <div class="sheet">
       Vea sus notas en una vista de rebaja vertical moviendo los paneles
     </div>
@@ -149,27 +149,27 @@
 
 ## Características
 - Puede usar sus **archivos de texto o rebajas existentes**, sin necesidad de importar la mayoría de las veces
-- QOwnNotes is written in C++ and optimized for **low resource consumption** (no CPU and memory-hungry Electron app)
-- **Evernote and Joplin import**
-- **Compatible** with the Notes application of **Nextcloud / ownCloud** and **mobile** and Nextcloud Text
-- Support for **sharing notes** on your **ownCloud** / **Nextcloud** server
-- Manage your Nextcloud / ownCloud **todo lists** (**Nextcloud tasks** or **Tasks Plus** / **Calendar Plus**) or use another **CalDAV server** to sync your tasks to
-- Older **versions** of your notes can be **restored** from your **Nextcloud / ownCloud** server
-- **Trashed notes** can be **restored** from your **Nextcloud / ownCloud** server
-- **External changes** of note files are **watched** (notes or note list are reloaded)
-- Support for **hierarchical note tagging** and **note subfolders**
-- Optional **encryption** of notes, AES-256 is built in or you can use custom encryption methods like **[Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
-- The **notes folder** can be **freely chosen** (multiple note folders can be used)
-- **Sub-string searching** of notes is possible and search results are highlighted in the notes
-- [**Browser extension**](browser-extension.md) to **add notes from the selected text**, **make screenshots** or **manage your bookmarks**
-- [**Spellchecking**](../editor/spellchecking.md) support
-- **Portable mode** for carrying QOwnNotes around on USB sticks
-- **Scripting support** and an online [**script repository**](https://github.com/qownnotes/scripts) where you can install scripts inside the application
-- **Vim mode**
-- [Web application](web-app.md) to **insert photos from your mobile phone** into the current note in QOwnNotes on your desktop
+- QOwnNotes está escrito en C ++ y optimizado para **bajo consumo de recursos** (sin CPU y aplicación de Electron que consume mucha memoria)
+- **Importación de Evernote y Joplin**
+- **Compatible** con la aplicación Notes de **Nextcloud / ownCloud** y **mobil** y Nextcloud Text
+- Soporte para **compartir notas** en su servidor **ownCloud** / **Nextcloud**
+- Administre sus **listas de tareas** de Nextcloud / ownCloud (**tareas de Nextcloud** o **Tasks Plus** / **Calendar Plus**) o use otro **servidor CalDAV** para sincronizar sus tareas con
+- Las **versiones anteriores** de sus notas se pueden **restaurar** desde su servidor **Nextcloud / ownCloud**
+- **Las notas enviadas a la papelera** se pueden **restaurar** desde su servidor **Nextcloud / ownCloud**
+- **Los cambios externos** de los archivos de notas son **supervisados** (las notas o la lista de notas se vuelven a cargar)
+- Soporte para **etiquetado jerárquico de notas** y **subcarpetas de notas**
+- **Cifrado** opcional de notas, (AES-256 está integrado o puede utilizar métodos de cifrado personalizados como **[ Keybase.io](https://keybase.io/)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) o **PGP** ([encriptación-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml))
+- La **carpeta de notas** se puede **elegir libremente** (se pueden utilizar varias carpetas de notas)
+- **La búsqueda de subcadena** de notas es posible y los resultados de la búsqueda se resaltan en las notas
+- [**Extensión del navegador**](browser-extension.md) para **agregar notas del texto seleccionado**, **hacer capturas de pantalla** o **administrar sus marcadores**
+- <0 Soporte de corrección ortográfica</strong></a>
+- **Modo portátil** para llevar QOwnNotes en memorias USB
+- **Soporte de secuencias de comandos** y un [**repositorio de secuencias de comandos**](https://github.com/qownnotes/scripts) en línea donde puede instalar secuencias de comandos dentro de la aplicación
+- **Modo Vim**
+- [Aplicación web](web-app.md) para **insertar fotos desde su teléfono móvil** en la nota actual en QOwnNotes en su escritorio
 
 
-## Appearance
+## Apariencia
 - **Markdown resaltando** de notas y un **modo de vista previa de Markdown**
 - **Soporte de tema de modo oscuro**
 - **Soporte de temas** para la sintaxis de rebajas **resaltando**

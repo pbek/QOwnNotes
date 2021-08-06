@@ -5,6 +5,7 @@
   was updated to version 21.8.0
     - migrated to webextension-toolbox 4 and webpack 5 to fix vulnerabilities
     - added more Croatian translation
+- added more French, Spanish translation (thank you rawfreeamy)
 
 ## 21.8.0
 - after notes are imported by draging and dropping text files into the application

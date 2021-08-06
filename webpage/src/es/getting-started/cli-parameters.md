@@ -10,10 +10,10 @@ Puede utilizar estos parámetros en la interfaz de línea de comandos:
 | `--dump-settings`            | Imprime un volcado de la configuración y otra información sobre la aplicación y el entorno en markdown de GitHub, y sale de la aplicación |
 | `--session <name>`     | Ejecuta la aplicación en un contexto diferente para la configuración y archivos internos                                                  |
 | `--allow-multiple-instances` | Permite iniciar varias instancias de QOwnNotes aunque no esté permitido en la configuración                                               |
-| `--action <name>`      | Triggers a menu action after the application was started (see below)                                                                      |
+| `--action <name>`      | Activa una acción de menú después de que se inició la aplicación (vea abajo)                                                              |
 
 ::: tip
-If you run into troubles with your installation of QOwnNotes you may want start the application with fresh settings without losing your current settings by using the `--session` parameter.
+Si tiene problemas con la instalación de QOwnNotes, es posible que desee iniciar la aplicación con una configuración nueva sin perder la configuración actual mediante el parámetro `--session`.
 
 ```bash
 QOwnNotes --session test

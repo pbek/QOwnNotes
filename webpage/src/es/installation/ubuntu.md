@@ -28,7 +28,7 @@ chmod a+x QOwnNotes-*.AppImage
 
 Después, debería poder ejecutar AppImage para ejecutar QOwnNotes.
 
-## OBS Repository
+## Repositorio OBS
 
 También puede usar QOwnNotes en versiones de Ubuntu que no están más actualizadas en Ubuntu Launchpad, luego puede usar los repositorios del [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 

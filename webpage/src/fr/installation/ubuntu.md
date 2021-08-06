@@ -28,7 +28,7 @@ chmod a+x QOwnNotes-*.AppImage
 
 Ensuite, vous devriez être en mesure d'exécuter AppImage pour exécuter QOwnNotes.
 
-## OBS Repository
+## Référentiel OBS
 
 Vous pouvez également utiliser les QOwnNotes sur les versions d'Ubuntu qui ne sont plus mises à jour sur Ubuntu Launchpad, vous pouvez alors utiliser les référentiels du [Open Build Service](https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop).
 

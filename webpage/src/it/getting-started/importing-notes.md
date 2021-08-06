@@ -10,17 +10,17 @@ There is a Joplin import dialog you can reach in the `Note / Import` menu.
 
 ## Tomboy
 
-You can import your Tomboy Notes using a script called [Trombone](https://github.com/samba/trombone).
+Puoi importare le tue note Tomboy utilizzando uno script chiamato [Trombone](https://github.com/samba/trombone).
 
-You might install python2 to make the script work. It will convert your Tomboy notes to an Evernote `.enex` file, which then you are able to import to QOwnNotes.
+Potresti dover installare python2 per far funzionare lo script. Convertirà le tue note Tomboy in un file Evernote `.enex`, che potrai importare in QOwnNotes.
 
-For anyone wanting to do this, first make sure you have Python2 installed and you might want to also install `python-is-python2` (you can remove that later):
+Per chiunque desideri farlo, assicurati prima di aver installato Python2 e potresti voler installare anche `python-is-python2` (puoi rimuoverlo in seguito):
 
 ```bash
 sudo apt install python2 python-is-python2
 ```
 
-Download the trombone file from GitHub, extract and jump into that folder:
+Scarica il file trombone da GitHub, estrailo e vai in quella cartella:
 
 ```bash
 cd ~/Downloads/trombone-master
@@ -29,18 +29,18 @@ sudo make
 sudo make install
 ```
 
-Then cd into the folder where your tomboy notes are:
+Quindi entra nella cartella in cui sono le tue note Tomboy:
 
 ```bash
  cd ~/.local/share/tomboy/
 ```
 
-Then run this:
+Quindi esegui questo:
 
 ```bash
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-If you get unicode errors about specific notes, just remove each note and run the conversion again until it gives a message saying `Saving...` . You will have a file called `EXPORT.enex` which can then be imported into QOwnNotes.
+Se ricevi errori Unicode su note specifiche, rimuovi ogni nota ed esegui di nuovo la conversione finché non viene visualizzato un messaggio che dice `Salvataggio in corso ...`. Avrai un file chiamato `EXPORT.enex` che può essere importato in QOwnNotes.
 
-During the import into QOwnNotes you might uncheck all of the attributes to import except maybe the creation/modification date, since Tomboy does not have those features.
+Durante l'importazione in QOwnNotes potresti deselezionare tutti gli attributi da importare tranne forse la data di creazione / modifica, poiché Tomboy non ha queste caratteristiche.
