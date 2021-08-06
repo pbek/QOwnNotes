@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 21.8.1
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 21.8.0
+    - migrated to webextension-toolbox 4 and webpack 5 to fix vulnerabilities
+    - added more Croatian translation
+
 ## 21.8.0
 - after notes are imported by draging and dropping text files into the application
   the note folder is now reloaded automatically so the notes show up in the note list
