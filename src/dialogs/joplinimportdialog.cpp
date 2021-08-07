@@ -1,11 +1,15 @@
 #include "joplinimportdialog.h"
-#include "filedialog.h"
+
 #include <entities/note.h>
+#include <entities/notefolder.h>
+
 #include <QDebug>
 #include <QFileDialog>
-#include <QSettings>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
+#include <QSettings>
+
+#include "filedialog.h"
 #include "ui_joplinimportdialog.h"
 
 JoplinImportDialog::JoplinImportDialog(QWidget *parent)
@@ -18,11 +22,19 @@ JoplinImportDialog::JoplinImportDialog(QWidget *parent)
     _importCount = 0;
 
     QSettings settings;
+    bool showFolders = NoteFolder::isCurrentShowSubfolders();
+
+    if (!showFolders) {
+        ui->folderImportCheckBox->setToolTip(QObject::tr(
+            "Turned on note subfolders for the current note folder to be "
+            "able to import folders."));
+    }
+
+    ui->folderImportCheckBox->setEnabled(showFolders);
     ui->folderImportCheckBox->setChecked(
-        settings
-            .value(QStringLiteral("JoplinImport/FolderImportCheckBoxChecked"),
-                   true)
-            .toBool());
+        settings.value(
+        QStringLiteral("JoplinImport/FolderImportCheckBoxChecked"), true)
+        .toBool() && showFolders);
     ui->tagImportCheckBox->setChecked(
                 settings
                 .value(QStringLiteral("JoplinImport/TagImportCheckBoxChecked"),

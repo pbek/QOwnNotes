@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 21.8.2
+- if you don't have note subfolders enabled for the current note folder the
+  import of folders is now automatically disabled in the
+  **[Joplin](https://joplinapp.org/) note import**
+  (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))
+
 ## 21.8.1
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 21.8.0
