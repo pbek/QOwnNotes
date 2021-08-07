@@ -8,7 +8,7 @@
 - added more French, Spanish translation (thank you rawfreeamy)
 
 ## 21.8.0
-- after notes are imported by draging and dropping text files into the application
+- after notes are imported by dragging and dropping text files into the application
   the note folder is now reloaded automatically so the notes show up in the note list
 - added more translation (thank you manuelasmiley, rawfreeamy, milotype)
 
