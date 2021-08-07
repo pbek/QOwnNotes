@@ -8,6 +8,7 @@
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 21.8.1
     - update dependencies
+- added more Italian translation (thank you marcoxbresciani)
 
 ## 21.8.1
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)

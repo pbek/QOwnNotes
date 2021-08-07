@@ -3,17 +3,17 @@
 Scarica l'ultimo **archivio di Windows** da [QOwnNotes Releases su GitHub](https://github.com/pbek/QOwnNotes/releases) e decomprimilo dove preferisci. Non è necessaria alcuna installazione!
 
 ::: warning
-Se desideri utilizzare l'** aggiornamento automatico ** assicurati di decomprimerlo in un punto in cui il tuo account utente ha accesso in scrittura. Per impostazione predefinita, molto probabilmente il tuo account utente **non ha accesso in scrittura** a posizioni come `C:\Program Files (x86)` o `C:\Program Files`.
+Se vuoi usare l'**aggiornamento automatico** assicurati di decomprimerlo in un punto in cui il tuo account utente ha accesso in scrittura. Per impostazione predefinita, molto probabilmente il tuo account utente **non ha accesso in scrittura** a posizioni come `C:\Program Files (x86)` o `C:\Program Files`.
 :::
 
 Puoi eseguire direttamente `QOwnNotes.exe` dalla cartella `QOwnNotes`, non è richiesta alcuna installazione.
 
-### Modalità portabile
+### Modalità portatile
 
-Usa `QOwnNotesPortable.bat` per eseguire QOwnNotes in **modalità portabile** dove tutto (comprese le note) verrà memorizzato solo nella tua cartella `QOwnNotes`.
+Usa `QOwnNotesPortable.bat` per eseguire QOwnNotes in **modalità portatile** dove tutto (comprese le note) sarà memorizzato solo nella tua cartella `QOwnNotes`.
 
 ::: tip
-Non hai bisogno della modalità portabile se non disponi delle autorizzazioni di amministrazione per il tuo computer. QOwnNotes non ha bisogno di essere installato!
+Non hai bisogno della modalità portatile se non disponi delle autorizzazioni di amministrazione per il tuo computer. QOwnNotes non ha bisogno di essere installato!
 :::
 
 ## Windows XP
@@ -28,7 +28,7 @@ Il meccanismo di aggiornamento automatico non funziona con la build AppVeyor per
 
 ## Chocolatey
 
-In [Chocolatey](https://chocolatey.org/packages/qownnotes/) c'è un pacchetto gestito dalla comunità di QOwnNotes.
+In [Chocolatey](https://chocolatey.org/packages/qownnotes/) c'è un pacchetto di QOwnNotes gestito dalla comunità.
 
 Puoi installarlo con:
 

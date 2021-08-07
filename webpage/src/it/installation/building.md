@@ -12,9 +12,9 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Quindi scarica [Qt Creator](https://www.qt.io/download-open-source), apri il file di progetto `src/QOwnNotes.pro` e fai clic su **Build** / **Build Project QOwnNotes** .
+Quindi scarica [Qt Creator](https://www.qt.io/download-open-source), apri il file di progetto `src/QOwnNotes.pro` e fai clic su **Build** / **Build Project QOwnNotes**.
 
-Oppure puoi crearlo direttamente nel tuo terminale:
+Oppure puoi crearlo direttamente dal tuo terminale:
 
 ```bash
 cd src

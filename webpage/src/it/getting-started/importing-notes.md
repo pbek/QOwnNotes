@@ -6,7 +6,7 @@ C'è una finestra di dialogo di importazione Evernote che puoi raggiungere nel m
 
 ## Joplin
 
-There is a Joplin import dialog you can reach in the `Note / Import` menu.
+C'è una finestra di dialogo di importazione Joplin che puoi raggiungere nel menu `Nota / Importa`.
 
 ## Tomboy
 
@@ -41,6 +41,6 @@ Quindi esegui questo:
 find ./ -type f -name '*.note' -print0 | xargs -0 trombone > EXPORT.enex
 ```
 
-Se ricevi errori Unicode su note specifiche, rimuovi ogni nota ed esegui di nuovo la conversione finché non viene visualizzato un messaggio che dice `Salvataggio in corso ...`. Avrai un file chiamato `EXPORT.enex` che può essere importato in QOwnNotes.
+Se ricevi errori Unicode su note specifiche, rimuovi ognuna di queste note ed esegui di nuovo la conversione finché non viene visualizzato un messaggio che dice `Salvataggio in corso ...`. Avrai un file chiamato `EXPORT.enex` che può essere importato in QOwnNotes.
 
-Durante l'importazione in QOwnNotes potresti deselezionare tutti gli attributi da importare tranne forse la data di creazione / modifica, poiché Tomboy non ha queste caratteristiche.
+Durante l'importazione in QOwnNotes dovresti deselezionare tutti gli attributi da importare tranne forse la data di creazione / modifica, poiché Tomboy non ha queste caratteristiche.

@@ -1,6 +1,6 @@
 # Installa su macOS™
 
-Scarica l'ultima **immagine del disco macOS** da [QOwnNotes Releases su GitHub](https://github.com/pbek/QOwnNotes/releases), aprila e trascina l'app **QOwnNotes** nella tua **cartella dell'applicazione**.
+Scarica l'ultima **immagine del disco macOS** da [QOwnNotes Releases su GitHub](https://github.com/pbek/QOwnNotes/releases), aprila e trascina l'app **QOwnNotes** nella tua **cartella delle applicazioni**.
 
 La prima volta devi fare clic con il pulsante destro del mouse sull'applicazione e fare clic su **Apri** per aprire QOwnNotes.
 
@@ -10,7 +10,7 @@ Se ricevi un messaggio di errore `Impossibile aprire QOwnNotes.app perché lo sv
 
 ## Homebrew
 
-C'è un pacchetto mantenuto dalla comunità di QOwnNotes su [Homebrew](https://formulae.brew.sh/cask/qownnotes).
+C'è un pacchetto manutenuto dalla comunità di QOwnNotes su [Homebrew](https://formulae.brew.sh/cask/qownnotes).
 
 Puoi installarlo con:
 

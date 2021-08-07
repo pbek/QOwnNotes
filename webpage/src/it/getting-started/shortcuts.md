@@ -102,7 +102,7 @@
     <ul>
       <li>
         <p spaces-before="0">
-          usare i tasti <kbd>Su</kbd> e <kbd>Giù</kbd> o <kbd>F3</kbd> e <kbd>⇧</kbd> + <kbd>F3</kbd> tasti per passare alla corrispondenza precedente e successiva
+          usare i tasti <kbd>Su</kbd> e <kbd>Giù</kbd> o <kbd>F3</kbd> e <kbd>⇧</kbd> + <kbd>F3</kbd> per passare alla corrispondenza precedente e successiva
         </p>
       </li>
       <li>

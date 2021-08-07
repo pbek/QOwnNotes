@@ -2,7 +2,7 @@
 
 ## pacman
 
-Aggiungi le seguenti righe al tuo `/etc/pacman.conf` with `sudo nano /etc/pacman.conf`:
+Aggiungi le seguenti righe al tuo `/etc/pacman.conf` con `sudo nano /etc/pacman.conf`:
 
 ```ini
 [home_pbek_QOwnNotes_Arch_Extra]
@@ -17,7 +17,7 @@ wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Arch_Extra/
 sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB
 ```
 
-Se il comando `sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB` non riesce con un messaggio del tipo: `ERRORE: FFC43FC94539B8B0 non può essere firmato localmente.`, potresti prima scoprire l'effettivo *keyid* della chiave scaricata, cioè con il comando (e l'output):
+Se il comando `sudo pacman-key --lsign-key F2205FB121DF142B31450865A3BA514562A835DB` non riesce con un messaggio del tipo: `ERRORE: FFC43FC94539B8B0 non può essere firmato localmente.`, devi prima trovare l'effettivo *keyid* della chiave scaricata, con il comando (e l'output):
 
 ```bash
 gpg /path/to/downloaded/home_pbek_QOwnNotes_Arch_Extra.key

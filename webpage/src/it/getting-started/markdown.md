@@ -153,7 +153,7 @@ I blocchi di codice sono delimitati da linee con tre apici inversi o sono rientr
 Aggiungi quattro spazi davanti al codice per contrassegnarlo come blocco di codice.
 
 ```markdown
-    s = "Code with space indent"
+    s = "Codice con rientro a spazi"
     print s
 ```
 
@@ -162,17 +162,17 @@ Aggiungi quattro spazi davanti al codice per contrassegnarlo come blocco di codi
 Puoi anche usare tre apici inversi per creare un blocco di codice.
 ~~~markdown
 ```
-Code goes here
-Code goes here
+Il codice va qui
+Il codice va qui
 ```
 ~~~
 
 ::: tip
-You can use the [shortcut](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> on
-multiple selected lines of text or in an empty line to create a code block. 
+Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> su più linee di testo selezionate o sua una linea vuota per creare un blocco di codice. 
 :::
 
 ### Blocco con apice inverso con evidenziazione del codice
+
 C'è anche un po' di evidenziazione della sintessi nei blocchi di codice di QOwnNotes.
 
 ~~~markdown
@@ -216,6 +216,7 @@ I linguaggi supportati al momento (e i loro identificativi di blocco) sono:
 
 
 ## Tabelle
+
 Le tabelle non sono parte della specifica Markdown originale, ma l'anteprima QOwnNotes le supporta. 
 
 ```markdown

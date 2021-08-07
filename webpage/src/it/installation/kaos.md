@@ -1,6 +1,6 @@
 # Installa su KaOS Linux
 
-C'è un pacchetto gestito dalla comunità `qownnotes` nel repository [KaOS Community Packages](https://github.com/KaOS-Community-Packages/qownnotes).
+C'è un pacchetto `qownnotes` gestito dalla comunità nel repository [KaOS Community Packages](https://github.com/KaOS-Community-Packages/qownnotes).
 
 Puoi installarlo digitando:
 
