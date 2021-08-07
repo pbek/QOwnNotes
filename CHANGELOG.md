@@ -5,6 +5,9 @@
   import of folders is now automatically disabled in the
   **[Joplin](https://joplinapp.org/) note import**
   (for [#2189](https://github.com/pbek/QOwnNotes/issues/2189))
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 21.8.1
+    - update dependencies
 
 ## 21.8.1
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
