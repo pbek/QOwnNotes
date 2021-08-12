@@ -1,4 +1,4 @@
-# Concetto
+# Idea
 
 ```mermaid
 graph TB
@@ -83,7 +83,7 @@ Esiste un [elenco di provider Nextcloud gestito dalla community](https://github.
 Ovviamente puoi usare altre soluzioni, come **Dropbox**, **Syncthing**, **Seafile** o BitTorrent Sync anche per ospitare le tue note e altri file
 :::
 
-## QOwnNotesAPI Nextcloud App
+## App QOwnNotesAPI Nextcloud
 
 [**QOwnNotesAPI**](https://github.com/pbek/qownnotesapi) ti consente di accedere alle **note spostate nel cestino** e alle **versioni delle note** lato server.
 

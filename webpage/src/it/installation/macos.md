@@ -10,7 +10,7 @@ Se ricevi un messaggio di errore `Impossibile aprire QOwnNotes.app perché lo sv
 
 ## Homebrew
 
-C'è un pacchetto manutenuto dalla comunità di QOwnNotes su [Homebrew](https://formulae.brew.sh/cask/qownnotes).
+C'è un pacchetto di QOwnNotes manutenuto dalla comunità su [Homebrew](https://formulae.brew.sh/cask/qownnotes).
 
 Puoi installarlo con:
 

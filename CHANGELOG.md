@@ -3,6 +3,7 @@
 ## 21.8.3
 - UTF-8 problems on Windows with the Joplin note import were fixed
   (for [#2200](https://github.com/pbek/QOwnNotes/issues/2200))
+- added more translation (thank you marcoxbresciani, fitoschido, marterra, mguerra, amirkbrpr)
 
 ## 21.8.2
 - if you don't have note subfolders enabled for the current note folder the

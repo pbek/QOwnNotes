@@ -4726,7 +4726,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="28"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>Se activaron las subcarpetas de notas en la carpeta actual para poder importar carpetas.</translation>
 </message>
 </context>
 <context>

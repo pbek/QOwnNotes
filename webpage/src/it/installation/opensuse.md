@@ -9,7 +9,7 @@
 
 Puoi installare QOwnNotes usando lo strumento [OBS Package Installer](https://github.com/openSUSE/opi)
 
-Eseguire i seguenti comandi della shell come root per installare `opi`:
+Esegui i seguenti comandi della shell come root per installare `opi`:
 
 ```bash
 zypper install opi
@@ -32,7 +32,7 @@ Controlla anche che il repository scelto sia quello ufficiale `home:pbek:QOwnNot
 
 ## openSUSE 13.2
 
-Eseguire i seguenti comandi della shell come root per aggiungere il repository e installare QOwnNotes da lì.
+Esegui i seguenti comandi della shell come root per aggiungere il repository e installare QOwnNotes da lì.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_13.2/home:pbek:QOwnNotes.repo
@@ -44,7 +44,7 @@ zypper install qownnotes
 
 ## openSUSE Leap 15.3
 
-Eseguire i seguenti comandi della shell come root per aggiungere il repository e installare QOwnNotes da lì.
+Esegui i seguenti comandi della shell come root per aggiungere il repository e installare QOwnNotes da lì.
 
 ```bash
 zypper addrepo -f http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/openSUSE_Leap_15.3/home:pbek:QOwnNotes.repo

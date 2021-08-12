@@ -139,7 +139,7 @@ Puoi anche incollare direttamente un'immagine dagli appunti nella tua nota con <
 ## Codice in linea e blocchi di codice
 
 ```markdown
-Il `codice` inline ha` segni di graduazione indietro 'intorno ad esso.
+Il `codice` inline ha `apici inversi` intorno ad esso.
 ```
 
 ::: tip
@@ -173,7 +173,7 @@ Puoi usare la [scorciatoia](./shortcuts.md) <kbd>Ctrl + Shift + C</kbd> su più 
 
 ### Blocco con apice inverso con evidenziazione del codice
 
-C'è anche un po' di evidenziazione della sintessi nei blocchi di codice di QOwnNotes.
+C'è anche un po' di evidenziazione della sintassi nei blocchi di codice di QOwnNotes.
 
 ~~~markdown
 ```bash

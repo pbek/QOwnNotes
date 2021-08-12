@@ -4725,7 +4725,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="28"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>Attiva le sottocartelle note per la cartella note corrente per poter importare le cartelle.</translation>
 </message>
 </context>
 <context>

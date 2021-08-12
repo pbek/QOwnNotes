@@ -4736,7 +4736,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="28"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>زیرپوشه های یادداشت را برای پوشه یادداشت کنونی فعال کنید تا قادر به وارد کردن پوشه ها باشید.</translation>
 </message>
 </context>
 <context>

@@ -4719,7 +4719,7 @@ Se a lixeira estiver ativada no seu servidor ownCloud, você poderá restaurá-l
 <message>
 <location filename="../dialogs/joplinimportdialog.cpp" line="28"/>
 <source>Turned on note subfolders for the current note folder to be able to import folders.</source>
-<translation type="unfinished">Turned on note subfolders for the current note folder to be able to import folders.</translation>
+<translation>Subpastas de anotações habilitadas para que a pasta de anotações atual possa importar pastas.</translation>
 </message>
 </context>
 <context>
