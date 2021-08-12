@@ -135,8 +135,7 @@ void JoplinImportDialog::on_importButton_clicked() {
             continue;
         }
 
-        QTextStream ts(&file);
-        const auto text = ts.readAll();
+        const QString text = file.readAll();
         auto textLines = text.split(QRegularExpression(
             QStringLiteral(R"((\r\n)|(\n\r)|\r|\n)")));
         const auto id = fileName.remove(QRegularExpression("\\.md$"));
