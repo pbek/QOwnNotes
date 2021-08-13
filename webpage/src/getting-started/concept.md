@@ -59,6 +59,7 @@ graph TB
 You can manage your **browser bookmarks** with QOwnNotes or use it as a **web clipper**.
 
 ::: tip
+The browser extensions works **offline**, no internet connection needed.
 Please visit [QOwnNotes Web Companion browser extension](browser-extension.md) for more information.
 :::
 
