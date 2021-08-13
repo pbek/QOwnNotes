@@ -11,7 +11,7 @@ Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes
 You can also find the extension on [GitHub](https://github.com/qownnotes/web-companion/).
 
 ::: tip Info
-QOwnNotes needs to be running for the Web Companion browser extension to work.
+QOwnNotes needs to be running for the Web Companion browser extension to work. The browser extensions works **offline**, no internet connection needed.
 :::
 
 ## Web clipper
